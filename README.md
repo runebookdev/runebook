@@ -1,4 +1,4 @@
-# runebook
+# Runebook.dev
 
 https://runebook.dev/
 
