@@ -3,6 +3,14 @@
   <file source-language="en" target-language="ja" datatype="htmlbody" original="haskell">
     <body>
       <group id="haskell">
+        <trans-unit id="722dfe2339359bc8455fa059b0c2ff7e3c1b3b76" translate="yes" xml:space="preserve">
+          <source>Reads the line input history from the given file. Returns &lt;code&gt;&lt;a href=&quot;system-console-haskeline-history#v:emptyHistory&quot;&gt;emptyHistory&lt;/a&gt;&lt;/code&gt; if the file does not exist or could not be read.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="ef042421d404f2b4e066a957f7c03bc5b97e85a1" translate="yes" xml:space="preserve">
+          <source>Reads vector; offset in bytes.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="35688a4a54ddf8e2c084064bb89a3f81c25ec6d0" translate="yes" xml:space="preserve">
           <source>Reads vector; offset in scalar elements.</source>
           <target state="new"/>
@@ -147,8 +155,8 @@
           <source>Rectangular form</source>
           <target state="new"/>
         </trans-unit>
-        <trans-unit id="32d60d214ec82650229160460a4242385c20f8e0" translate="yes" xml:space="preserve">
-          <source>Recursive &lt;code&gt;do&lt;/code&gt;-statements (see &lt;a href=&quot;https://ghc.haskell.org/trac/ghc/ticket/1262&quot;&gt;Trac #1262&lt;/a&gt;)</source>
+        <trans-unit id="716fd56982c99c47413170dcc01f043f0ea5c5dd" translate="yes" xml:space="preserve">
+          <source>Recursive &lt;code&gt;do&lt;/code&gt;-statements (see &lt;a href=&quot;https://gitlab.haskell.org/ghc/ghc/issues/1262&quot;&gt;Issue #1262&lt;/a&gt;)</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="2c0e843943bdbb03678f7b901c80e258f54ba263" translate="yes" xml:space="preserve">
@@ -177,6 +185,10 @@
         </trans-unit>
         <trans-unit id="a7b3350c72033f92144bca80ed9c6189a91698b5" translate="yes" xml:space="preserve">
           <source>Redirects all generated FFI stub files into ⟨dir⟩. Stub files are generated when the Haskell source contains a &lt;code&gt;foreign export&lt;/code&gt; or &lt;code&gt;foreign import &quot;&amp;amp;wrapper&quot;&lt;/code&gt; declaration (see &lt;a href=&quot;ffi-chap#foreign-export-ghc&quot;&gt;Using foreign export and foreign import ccall &amp;ldquo;wrapper&amp;rdquo; with GHC&lt;/a&gt;). The &lt;code&gt;-stubdir&lt;/code&gt; option behaves in exactly the same way as &lt;code&gt;-odir&lt;/code&gt; and &lt;code&gt;-hidir&lt;/code&gt; with respect to hierarchical modules.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="3486a9a9a04e6a11f983fe636c723b4aeb99470d" translate="yes" xml:space="preserve">
+          <source>Redirects all generated extended interface files into ⟨dir⟩, instead of the default.</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="fafb4cb103b058c31d0ca01a68bbcf1d4a74a011" translate="yes" xml:space="preserve">
@@ -620,12 +632,12 @@
           <source>Report a warning to the user, and carry on.</source>
           <target state="new"/>
         </trans-unit>
-        <trans-unit id="5ac656d868f74d0d322d7eb08c66336d780f95e3" translate="yes" xml:space="preserve">
-          <source>Report all unused type variables which arise from explicit, user-written &lt;code&gt;forall&lt;/code&gt; statements. For instance:</source>
+        <trans-unit id="b29cc263854e35bdc210f347658ec81f2657154e" translate="yes" xml:space="preserve">
+          <source>Report all unused implicitly bound type variables which arise from patterns in type family and data family instances. For instance:</source>
           <target state="new"/>
         </trans-unit>
-        <trans-unit id="a7e19420eccab519203e064648f9b304ece8ef81" translate="yes" xml:space="preserve">
-          <source>Report all unused type variables which arise from patterns in type family and data family instances. For instance:</source>
+        <trans-unit id="5ac656d868f74d0d322d7eb08c66336d780f95e3" translate="yes" xml:space="preserve">
+          <source>Report all unused type variables which arise from explicit, user-written &lt;code&gt;forall&lt;/code&gt; statements. For instance:</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="7e5640248d20d9738f29370ad53212fe64c17e0c" translate="yes" xml:space="preserve">
@@ -672,16 +684,16 @@
           <source>Report expressions occurring in &lt;code&gt;do&lt;/code&gt; and &lt;code&gt;mdo&lt;/code&gt; blocks that appear to silently throw information away. For instance &lt;code&gt;do { mapM popInt xs ; return 10 }&lt;/code&gt; would report the first statement in the &lt;code&gt;do&lt;/code&gt; block as suspicious, as it has the type &lt;code&gt;StackM [Int]&lt;/code&gt; and not &lt;code&gt;StackM ()&lt;/code&gt;, but that &lt;code&gt;[Int]&lt;/code&gt; value is not bound to anything. The warning is suppressed by explicitly mentioning in the source code that your program is throwing something away:</source>
           <target state="new"/>
         </trans-unit>
-        <trans-unit id="2b3ede8c817cdc66ddc527a796d4911c3f9c8561" translate="yes" xml:space="preserve">
-          <source>Report warnings when &lt;a href=&quot;glasgow_exts#defer-type-errors&quot;&gt;deferred type errors&lt;/a&gt; are enabled. This option is enabled by default. See &lt;a href=&quot;#ghc-flag--fdefer-type-errors&quot;&gt;&lt;code&gt;-fdefer-type-errors&lt;/code&gt;&lt;/a&gt;.</source>
+        <trans-unit id="b51caa4097d27e97021974ca37a3eb172d1faa25" translate="yes" xml:space="preserve">
+          <source>Report warnings when &lt;a href=&quot;glasgow_exts#defer-type-errors&quot;&gt;deferred type errors&lt;/a&gt; are enabled. This option is enabled by default. See &lt;a href=&quot;using-warnings#ghc-flag--fdefer-type-errors&quot;&gt;&lt;code&gt;-fdefer-type-errors&lt;/code&gt;&lt;/a&gt;.</source>
           <target state="new"/>
         </trans-unit>
-        <trans-unit id="8dafdc45dea3094ac00bc1304953605b648ac9b6" translate="yes" xml:space="preserve">
-          <source>Report warnings when &lt;a href=&quot;glasgow_exts#typed-holes&quot;&gt;typed hole&lt;/a&gt; errors are &lt;a href=&quot;glasgow_exts#defer-type-errors&quot;&gt;deferred until runtime&lt;/a&gt;. See &lt;a href=&quot;#ghc-flag--fdefer-typed-holes&quot;&gt;&lt;code&gt;-fdefer-typed-holes&lt;/code&gt;&lt;/a&gt;.</source>
+        <trans-unit id="eb8d962b7ceb76b163fd6f75585fd61427a421ba" translate="yes" xml:space="preserve">
+          <source>Report warnings when &lt;a href=&quot;glasgow_exts#typed-holes&quot;&gt;typed hole&lt;/a&gt; errors are &lt;a href=&quot;glasgow_exts#defer-type-errors&quot;&gt;deferred until runtime&lt;/a&gt;. See &lt;a href=&quot;using-warnings#ghc-flag--fdefer-typed-holes&quot;&gt;&lt;code&gt;-fdefer-typed-holes&lt;/code&gt;&lt;/a&gt;.</source>
           <target state="new"/>
         </trans-unit>
-        <trans-unit id="262763674f2094ae86b1ca63534fa0c9a318a99a" translate="yes" xml:space="preserve">
-          <source>Report warnings when variable out-of-scope errors are &lt;a href=&quot;glasgow_exts#defer-type-errors&quot;&gt;deferred until runtime&lt;/a&gt;. See &lt;a href=&quot;#ghc-flag--fdefer-out-of-scope-variables&quot;&gt;&lt;code&gt;-fdefer-out-of-scope-variables&lt;/code&gt;&lt;/a&gt;.</source>
+        <trans-unit id="3876a176e0cb586bc4ba95c55f3d4c1969ddb9dc" translate="yes" xml:space="preserve">
+          <source>Report warnings when variable out-of-scope errors are &lt;a href=&quot;glasgow_exts#defer-type-errors&quot;&gt;deferred until runtime&lt;/a&gt;. See &lt;a href=&quot;using-warnings#ghc-flag--fdefer-out-of-scope-variables&quot;&gt;&lt;code&gt;-fdefer-out-of-scope-variables&lt;/code&gt;&lt;/a&gt;.</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="0148d6cc97deecd36edc0baa1b6a3f9dcb097f11" translate="yes" xml:space="preserve">
@@ -978,6 +990,10 @@
         </trans-unit>
         <trans-unit id="1c913a795a1f09102a325857b15b734b517d6fd9" translate="yes" xml:space="preserve">
           <source>Retain intermediate &lt;code&gt;.hi&lt;/code&gt; files (the default).</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="94f8149a3370382a007aedc88c60d2a9c3a7ac93" translate="yes" xml:space="preserve">
+          <source>Retain intermediate &lt;code&gt;.hscpp&lt;/code&gt; files.</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="a97f4a882fdd81370c7271183798db3e068d96e5" translate="yes" xml:space="preserve">
@@ -1284,32 +1300,8 @@
           <source>Returns &lt;code&gt;1#&lt;/code&gt; if valid, &lt;code&gt;0#&lt;/code&gt; otherwise.</source>
           <target state="new"/>
         </trans-unit>
-        <trans-unit id="8c3a26589b63421f8d9618079a63c1426f13cd9a" translate="yes" xml:space="preserve">
-          <source>Returns &lt;code&gt;&lt;a href=&quot;../base-4.12.0.0/data-bool#v:True&quot;&gt;True&lt;/a&gt;&lt;/code&gt; if the current process's standard error is attached to a MinTTY console (e.g., Cygwin or MSYS). Returns &lt;code&gt;&lt;a href=&quot;../base-4.12.0.0/data-bool#v:False&quot;&gt;False&lt;/a&gt;&lt;/code&gt; otherwise.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="25a4f81603fd76846ae62b9d0e6510b6a3707762" translate="yes" xml:space="preserve">
-          <source>Returns &lt;code&gt;&lt;a href=&quot;../base-4.12.0.0/data-bool#v:True&quot;&gt;True&lt;/a&gt;&lt;/code&gt; if the document is empty</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="0a3f49fc70bd7fa418b93fbbd34889ea3e768113" translate="yes" xml:space="preserve">
-          <source>Returns &lt;code&gt;&lt;a href=&quot;../base-4.12.0.0/data-bool#v:True&quot;&gt;True&lt;/a&gt;&lt;/code&gt; if the supplied &lt;code&gt;&lt;a href=&quot;control-concurrent-stm-tbqueue#t:TBQueue&quot;&gt;TBQueue&lt;/a&gt;&lt;/code&gt; is empty.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="c3da44ccc5bb632535476eca89b1f4705e8362cd" translate="yes" xml:space="preserve">
-          <source>Returns &lt;code&gt;&lt;a href=&quot;../base-4.12.0.0/data-bool#v:True&quot;&gt;True&lt;/a&gt;&lt;/code&gt; if the supplied &lt;code&gt;&lt;a href=&quot;control-concurrent-stm-tbqueue#t:TBQueue&quot;&gt;TBQueue&lt;/a&gt;&lt;/code&gt; is full.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="9c00fea57ef9eb6b4a2403299bfb549d5e829f17" translate="yes" xml:space="preserve">
-          <source>Returns &lt;code&gt;&lt;a href=&quot;../base-4.12.0.0/data-bool#v:True&quot;&gt;True&lt;/a&gt;&lt;/code&gt; if the supplied &lt;code&gt;&lt;a href=&quot;control-concurrent-stm-tchan#t:TChan&quot;&gt;TChan&lt;/a&gt;&lt;/code&gt; is empty.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="035790ff2381b23214177b9b55ed060ef25e9632" translate="yes" xml:space="preserve">
-          <source>Returns &lt;code&gt;&lt;a href=&quot;../base-4.12.0.0/data-bool#v:True&quot;&gt;True&lt;/a&gt;&lt;/code&gt; if the supplied &lt;code&gt;&lt;a href=&quot;control-concurrent-stm-tqueue#t:TQueue&quot;&gt;TQueue&lt;/a&gt;&lt;/code&gt; is empty.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="9b1753061d3a3010567e6e438cd7252182d741f9" translate="yes" xml:space="preserve">
-          <source>Returns &lt;code&gt;&lt;a href=&quot;../base-4.12.0.0/data-bool#v:True&quot;&gt;True&lt;/a&gt;&lt;/code&gt; is the given handle is attached to a MinTTY console (e.g., Cygwin or MSYS). Returns &lt;code&gt;&lt;a href=&quot;../base-4.12.0.0/data-bool#v:False&quot;&gt;False&lt;/a&gt;&lt;/code&gt; otherwise.</source>
+        <trans-unit id="66861a05c2b6a00a48f4b73591c9c11c31784b76" translate="yes" xml:space="preserve">
+          <source>Returns &lt;code&gt;&lt;a href=&quot;../base-4.13.0.0/data-bool#v:True&quot;&gt;True&lt;/a&gt;&lt;/code&gt; if the current process's standard error is attached to a MinTTY console (e.g., Cygwin or MSYS). Returns &lt;code&gt;&lt;a href=&quot;../base-4.13.0.0/data-bool#v:False&quot;&gt;False&lt;/a&gt;&lt;/code&gt; otherwise.</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="1cb06e70b306281690d4964d1014d6443ff8910b" translate="yes" xml:space="preserve">
@@ -1318,6 +1310,26 @@
         </trans-unit>
         <trans-unit id="55ddad51179261e3fce77d477585e6ee7b9c48be" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;&lt;a href=&quot;../base-4.13.0.0/data-bool#v:True&quot;&gt;True&lt;/a&gt;&lt;/code&gt; if the document is empty</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="f6bcb06cf572ace1fb67c627721d6fa9375571e5" translate="yes" xml:space="preserve">
+          <source>Returns &lt;code&gt;&lt;a href=&quot;../base-4.13.0.0/data-bool#v:True&quot;&gt;True&lt;/a&gt;&lt;/code&gt; if the supplied &lt;code&gt;&lt;a href=&quot;control-concurrent-stm-tbqueue#t:TBQueue&quot;&gt;TBQueue&lt;/a&gt;&lt;/code&gt; is empty.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="d4381b423b7ed3206027d100df0db8796fec244b" translate="yes" xml:space="preserve">
+          <source>Returns &lt;code&gt;&lt;a href=&quot;../base-4.13.0.0/data-bool#v:True&quot;&gt;True&lt;/a&gt;&lt;/code&gt; if the supplied &lt;code&gt;&lt;a href=&quot;control-concurrent-stm-tbqueue#t:TBQueue&quot;&gt;TBQueue&lt;/a&gt;&lt;/code&gt; is full.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="e3dacac11929a3bbcaac1dcae5a04ad003fad46c" translate="yes" xml:space="preserve">
+          <source>Returns &lt;code&gt;&lt;a href=&quot;../base-4.13.0.0/data-bool#v:True&quot;&gt;True&lt;/a&gt;&lt;/code&gt; if the supplied &lt;code&gt;&lt;a href=&quot;control-concurrent-stm-tchan#t:TChan&quot;&gt;TChan&lt;/a&gt;&lt;/code&gt; is empty.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="64d6bd42612b74dc3ea59431fe9eb65e59aa3cf2" translate="yes" xml:space="preserve">
+          <source>Returns &lt;code&gt;&lt;a href=&quot;../base-4.13.0.0/data-bool#v:True&quot;&gt;True&lt;/a&gt;&lt;/code&gt; if the supplied &lt;code&gt;&lt;a href=&quot;control-concurrent-stm-tqueue#t:TQueue&quot;&gt;TQueue&lt;/a&gt;&lt;/code&gt; is empty.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="1052b9398d6120dfadc74e0d652efcf7d43679cc" translate="yes" xml:space="preserve">
+          <source>Returns &lt;code&gt;&lt;a href=&quot;../base-4.13.0.0/data-bool#v:True&quot;&gt;True&lt;/a&gt;&lt;/code&gt; is the given handle is attached to a MinTTY console (e.g., Cygwin or MSYS). Returns &lt;code&gt;&lt;a href=&quot;../base-4.13.0.0/data-bool#v:False&quot;&gt;False&lt;/a&gt;&lt;/code&gt; otherwise.</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="dfb1dc66a9aba039d8fb00faff4adccb11d691b4" translate="yes" xml:space="preserve">
@@ -1846,8 +1858,8 @@
           <source>Run demand analysis again, at the end of the simplification pipeline</source>
           <target state="new"/>
         </trans-unit>
-        <trans-unit id="5d17d988cd79974c5d3bb749bedf9bd7b049e0e6" translate="yes" xml:space="preserve">
-          <source>Run demand analysis again, at the end of the simplification pipeline. We found some opportunities for discovering strictness that were not visible earlier; and optimisations like &lt;a href=&quot;#ghc-flag--fspec-constr&quot;&gt;&lt;code&gt;-fspec-constr&lt;/code&gt;&lt;/a&gt; can create functions with unused arguments which are eliminated by late demand analysis. Improvements are modest, but so is the cost. See notes on the &lt;a href=&quot;https://ghc.haskell.org/trac/ghc/wiki/LateDmd&quot;&gt;Trac wiki page&lt;/a&gt;.</source>
+        <trans-unit id="777b64f39eb2cb43ba27899e14df6d6e3da4eaa1" translate="yes" xml:space="preserve">
+          <source>Run demand analysis again, at the end of the simplification pipeline. We found some opportunities for discovering strictness that were not visible earlier; and optimisations like &lt;a href=&quot;#ghc-flag--fspec-constr&quot;&gt;&lt;code&gt;-fspec-constr&lt;/code&gt;&lt;/a&gt; can create functions with unused arguments which are eliminated by late demand analysis. Improvements are modest, but so is the cost. See notes on the &lt;a href=&quot;https://gitlab.haskell.org/ghc/ghc/wikis/LateDmd&quot;&gt;Trac wiki page&lt;/a&gt;.</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="14d6eb1f35c6369d6e742b2bcde845dc224c6e2f" translate="yes" xml:space="preserve">
@@ -1954,8 +1966,8 @@
           <source>Running the program generates a file with the &lt;code&gt;.tix&lt;/code&gt; suffix, in this case &lt;code&gt;Recip.tix&lt;/code&gt;, which contains the coverage data for this run of the program. The program may be run multiple times (e.g. with different test data), and the coverage data from the separate runs is accumulated in the &lt;code&gt;.tix&lt;/code&gt; file. To reset the coverage data and start again, just remove the &lt;code&gt;.tix&lt;/code&gt; file. You can control where the &lt;code&gt;.tix&lt;/code&gt; file is generated using the environment variable &lt;a href=&quot;#envvar-HPCTIXFILE&quot; id=&quot;index-9&quot;&gt;&lt;code&gt;HPCTIXFILE&lt;/code&gt;&lt;/a&gt;.</source>
           <target state="new"/>
         </trans-unit>
-        <trans-unit id="cabf1e632867d8bbc0978c43bdd14c85009d8dc9" translate="yes" xml:space="preserve">
-          <source>Runs a &lt;code&gt;Reader&lt;/code&gt; and extracts the final value from it. (The inverse of &lt;code&gt;&lt;a href=&quot;../transformers-0.5.5.0/control-monad-trans-reader#v:reader&quot;&gt;reader&lt;/a&gt;&lt;/code&gt;.)</source>
+        <trans-unit id="ebe0179422c905f3cf2c2e60f92ac32bd6424cf7" translate="yes" xml:space="preserve">
+          <source>Runs a &lt;code&gt;Reader&lt;/code&gt; and extracts the final value from it. (The inverse of &lt;code&gt;&lt;a href=&quot;../transformers-0.5.6.2/control-monad-trans-reader#v:reader&quot;&gt;reader&lt;/a&gt;&lt;/code&gt;.)</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="d81daff38a2e8becbe69003e3d64a0d02582ad64" translate="yes" xml:space="preserve">
@@ -1984,6 +1996,10 @@
         </trans-unit>
         <trans-unit id="2ac0263c85df97edaad82961ff458ab2a1952c1b" translate="yes" xml:space="preserve">
           <source>Runs a raw command, optionally specifying &lt;code&gt;&lt;a href=&quot;../base-4.13.0.0/ghc-io-handle#t:Handle&quot;&gt;Handle&lt;/a&gt;&lt;/code&gt;s from which to take the &lt;code&gt;stdin&lt;/code&gt;, &lt;code&gt;stdout&lt;/code&gt; and &lt;code&gt;stderr&lt;/code&gt; channels for the new process (otherwise these handles are inherited from the current process).</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="5cb758bfedb5892b023f8cd504b7def95c728d00" translate="yes" xml:space="preserve">
+          <source>Runs a series of sanity checks and lints on the extended interface files that are being written out. These include testing things properties such as variables not occuring outside of their expected scopes.</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="3fe6084c1a3fd5b43bacc585f14f922412cce042" translate="yes" xml:space="preserve">
@@ -2406,8 +2422,8 @@
           <source>See &lt;a href=&quot;#recursive-and-polymorphic-let-bindings&quot;&gt;Semantics of let bindings with bang patterns&lt;/a&gt; for the detailed semantics.</source>
           <target state="new"/>
         </trans-unit>
-        <trans-unit id="fff4c2aff639e1ddbdbf94ca9aed085e25fcc11f" translate="yes" xml:space="preserve">
-          <source>See &lt;a href=&quot;../libraries/base-4.12.0.0/ghc-staticptr#t:IsStatic&quot;&gt;GHC.StaticPtr.IsStatic&lt;/a&gt;.</source>
+        <trans-unit id="b1f2d904d5a6d15342e041470413d0dbc8b15aad" translate="yes" xml:space="preserve">
+          <source>See &lt;a href=&quot;../libraries/base-4.13.0.0/ghc-staticptr#t:IsStatic&quot;&gt;GHC.StaticPtr.IsStatic&lt;/a&gt;.</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="b103cec5a426d82d1f0f3b305273d3fc5fa5b795" translate="yes" xml:space="preserve">
@@ -2492,7 +2508,7 @@
         </trans-unit>
         <trans-unit id="2d8243a2c0e464492c9d563c4f92c56ae3421bcc" translate="yes" xml:space="preserve">
           <source>See also</source>
-          <target state="translated">参照</target>
+          <target state="translated">関連情報</target>
         </trans-unit>
         <trans-unit id="792a116eabc7383cf8c24e606c9b84b1fb2c92cf" translate="yes" xml:space="preserve">
           <source>See also &lt;a href=&quot;#actions-at-prompt&quot;&gt;I/O actions at the prompt&lt;/a&gt; for how the monad of a computational expression defaults to &lt;code&gt;IO&lt;/code&gt; if possible.</source>
@@ -2514,12 +2530,12 @@
           <source>See also &lt;a href=&quot;#instance-overlap&quot;&gt;Overlapping instances&lt;/a&gt; for flags that loosen the instance resolution rules.</source>
           <target state="new"/>
         </trans-unit>
-        <trans-unit id="1479f9108ff2662a8425f44c4eac660188d98101" translate="yes" xml:space="preserve">
-          <source>See also &lt;a href=&quot;https://ghc.haskell.org/trac/ghc/ticket/7347&quot;&gt;Trac #7347&lt;/a&gt;.</source>
-          <target state="new"/>
-        </trans-unit>
         <trans-unit id="68bec63d7198462a9a405bc8b9bfd8eea044f5f1" translate="yes" xml:space="preserve">
           <source>See also &lt;a href=&quot;https://ghc.haskell.org/trac/ghc/wiki/Commentary/Libraries/Integer&quot;&gt;GHC Commentary: Libraries/Integer&lt;/a&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="bae01c432460f8f4807fff5321397d8daf2f6631" translate="yes" xml:space="preserve">
+          <source>See also &lt;a href=&quot;https://gitlab.haskell.org/ghc/ghc/issues/7347&quot;&gt;Issue #7347&lt;/a&gt;.</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="c593dec67f89b0b8a48390421d4674b799715947" translate="yes" xml:space="preserve">
@@ -2562,12 +2578,12 @@
           <source>See also the function &lt;code&gt;traceStack&lt;/code&gt; in the module &lt;code&gt;Debug.Trace&lt;/code&gt; for another way to view call stacks.</source>
           <target state="new"/>
         </trans-unit>
-        <trans-unit id="07f9c7e1f4edb6eb5d15efc55f22e77a126558d0" translate="yes" xml:space="preserve">
-          <source>See also: &lt;code&gt;&lt;a href=&quot;../base-4.12.0.0/foreign-marshal-utils#v:maybePeek&quot;&gt;maybePeek&lt;/a&gt;&lt;/code&gt; function.</source>
+        <trans-unit id="cb6db37620dbcc1339dd7c9ee105029b4650573c" translate="yes" xml:space="preserve">
+          <source>See also: &lt;code&gt;&lt;a href=&quot;../base-4.13.0.0/foreign-marshal-utils#v:maybePeek&quot;&gt;maybePeek&lt;/a&gt;&lt;/code&gt; function.</source>
           <target state="new"/>
         </trans-unit>
-        <trans-unit id="944faea09e45a5e9d2806dce25ec65a4a134de33" translate="yes" xml:space="preserve">
-          <source>See also: &lt;code&gt;&lt;a href=&quot;../base-4.12.0.0/foreign-marshal-utils#v:maybeWith&quot;&gt;maybeWith&lt;/a&gt;&lt;/code&gt; function.</source>
+        <trans-unit id="8b3b279d8e2b97e201733853f5f17667d054456c" translate="yes" xml:space="preserve">
+          <source>See also: &lt;code&gt;&lt;a href=&quot;../base-4.13.0.0/foreign-marshal-utils#v:maybeWith&quot;&gt;maybeWith&lt;/a&gt;&lt;/code&gt; function.</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="29b443ed246b867336cd161ca8d820cc0d6bc9bc" translate="yes" xml:space="preserve">
@@ -2586,8 +2602,8 @@
           <source>See examples in &lt;a href=&quot;control-monad-reader&quot;&gt;Control.Monad.Reader&lt;/a&gt;. Note, the partially applied function type &lt;code&gt;(-&amp;gt;) r&lt;/code&gt; is a simple reader monad. See the &lt;code&gt;instance&lt;/code&gt; declaration below.</source>
           <target state="new"/>
         </trans-unit>
-        <trans-unit id="87059f66a28a9bd67e81188fa74646528ba907f1" translate="yes" xml:space="preserve">
-          <source>See the &lt;a href=&quot;https://ghc.haskell.org/trac/ghc/wiki/PatternSynonyms&quot;&gt;Wiki page&lt;/a&gt; for more details.</source>
+        <trans-unit id="9639b57ad9c93125c26e7276738fa7285d5924f0" translate="yes" xml:space="preserve">
+          <source>See the &lt;a href=&quot;https://gitlab.haskell.org/ghc/ghc/wikis/PatternSynonyms&quot;&gt;Wiki page&lt;/a&gt; for more details.</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="d756583aed3555a5a65eb4cd9d152d5b8bc07cc4" translate="yes" xml:space="preserve">
@@ -3002,8 +3018,8 @@
           <source>Set the number of Haskell threads that can run truly simultaneously (on separate physical processors) at any given time. The number passed to &lt;code&gt;&lt;a href=&quot;ghc-conc-sync#v:forkOn&quot;&gt;forkOn&lt;/a&gt;&lt;/code&gt; is interpreted modulo this value. The initial value is given by the &lt;code&gt;+RTS -N&lt;/code&gt; runtime flag.</source>
           <target state="new"/>
         </trans-unit>
-        <trans-unit id="0414b84b7a96039a3dc8ac15c3f146cb75fb8d77" translate="yes" xml:space="preserve">
-          <source>Set the number of entries GHCi keeps for &lt;code&gt;:history&lt;/code&gt;. See &lt;a href=&quot;#ghci-debugger&quot;&gt;The GHCi Debugger&lt;/a&gt;.</source>
+        <trans-unit id="49914586be421c1a51499082896596cdc3d1b52d" translate="yes" xml:space="preserve">
+          <source>Set the number of entries GHCi keeps for &lt;code&gt;:history&lt;/code&gt;. See &lt;a href=&quot;ghci#ghci-debugger&quot;&gt;The GHCi Debugger&lt;/a&gt;.</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="78111973c0a6975132f723e2af152cf8bff28dbe" translate="yes" xml:space="preserve">
@@ -3016,6 +3032,14 @@
         </trans-unit>
         <trans-unit id="9d55f6df845d396fb3f26af370d6593432197c2d" translate="yes" xml:space="preserve">
           <source>Set the permissions of a file or directory.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="581f262ffcc5b132fc178bf2b945da3fa032db33" translate="yes" xml:space="preserve">
+          <source>Set the prefix of the filenames used for debugging output.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="27569170844fcd82a186fdf61977ee9c0555a54c" translate="yes" xml:space="preserve">
+          <source>Set the prefix of the filenames used for debugging output. For example, &lt;code&gt;-ddump-file-prefix=Foo&lt;/code&gt; will cause the output from &lt;a href=&quot;#ghc-flag--ddump-simpl&quot;&gt;&lt;code&gt;-ddump-simpl&lt;/code&gt;&lt;/a&gt; to be dumped to &lt;code&gt;Foo.dump-simpl&lt;/code&gt;.</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="ee90ac8ed288a340065381772b8b9d149143a2f0" translate="yes" xml:space="preserve">
@@ -3066,6 +3090,10 @@
           <source>SetWindowPosFlags</source>
           <target state="translated">SetWindowPosFlags</target>
         </trans-unit>
+        <trans-unit id="5d59fc0c1ba1d0f45cfcd2a1a313a95a2f55060a" translate="yes" xml:space="preserve">
+          <source>Sets edge weights used by the new code layout algorithm.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="ea257dcefad7ec78df6ea3c4001b110c8fb57d58" translate="yes" xml:space="preserve">
           <source>Sets how many iterations of the pattern-match checker will perform before giving up. This limit is to catch cases where pattern-match checking might be excessively costly (due to the exponential complexity of coverage checking in the general case). It typically shouldn&amp;rsquo;t be necessary to set this unless GHC informs you that it has exceeded the pattern match checker&amp;rsquo;s iteration limit (in which case you may want to consider refactoring your pattern match, for the sake of future readers of your code.</source>
           <target state="new"/>
@@ -3112,6 +3140,10 @@
         </trans-unit>
         <trans-unit id="311542d39835606741eb83c49a3747557cb52c29" translate="yes" xml:space="preserve">
           <source>Sets the context switch interval to ⟨s⟩ seconds. A context switch will occur at the next heap block allocation after the timer expires (a heap block allocation occurs every 4k of allocation). With &lt;code&gt;-C0&lt;/code&gt; or &lt;code&gt;-C&lt;/code&gt;, context switches will occur as often as possible (at every heap block allocation).</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="a7155bad6d4be2ffdb5bd3858939d96fb2158b21" translate="yes" xml:space="preserve">
+          <source>Sets the destination for the eventlog produced with the &lt;a href=&quot;profiling#rts-flag--l&quot;&gt;&lt;code&gt;-l&lt;/code&gt;&lt;/a&gt; flag.</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="3eeab4f5d8791e9b07157ed1c993b7d984742a51" translate="yes" xml:space="preserve">
@@ -3434,16 +3466,16 @@
           <source>Show just a single field of the installed package description for &lt;code&gt;P&lt;/code&gt;. Multiple fields can be selected by separating them with commas</source>
           <target state="new"/>
         </trans-unit>
-        <trans-unit id="ce7d2d39daad19ce9c11d296461c7f883e564dfb" translate="yes" xml:space="preserve">
-          <source>Show output from each C-\- pipeline pass</source>
-          <target state="new"/>
-        </trans-unit>
         <trans-unit id="d0faea938c36bd656177bef1c36b6444e9ed91c5" translate="yes" xml:space="preserve">
           <source>Show output from each STG-to-STG pass</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="0ed1cebcb7a9bc78d1767f4efa25a6ddab123221" translate="yes" xml:space="preserve">
           <source>Show output from each core-to-core pass</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="e4b24a50e7f3934afbfc83402685bb6ced50bb4b" translate="yes" xml:space="preserve">
+          <source>Show output from main C-\- pipeline passes</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="40203dda604b39e83b98b0160a4fa91c962373fb" translate="yes" xml:space="preserve">
@@ -3486,8 +3518,8 @@
           <source>Show the list of modules currently loaded.</source>
           <target state="new"/>
         </trans-unit>
-        <trans-unit id="b8dc7a7feeb59aa4df4183df55b855f9f3d99187" translate="yes" xml:space="preserve">
-          <source>Show the names of modules that GHCi loaded after a &lt;a href=&quot;#ghci-cmd-:load&quot;&gt;&lt;code&gt;:load&lt;/code&gt;&lt;/a&gt; command.</source>
+        <trans-unit id="31b56e398b4d864e4d7a8a31be37cb76a8a54c5f" translate="yes" xml:space="preserve">
+          <source>Show the names of modules that GHCi loaded after a &lt;a href=&quot;ghci#ghci-cmd-:load&quot;&gt;&lt;code&gt;:load&lt;/code&gt;&lt;/a&gt; command.</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="b58222d59ce5f7ecd6949b5835cc64ddea5909ec" translate="yes" xml:space="preserve">
@@ -3851,7 +3883,8 @@
           <target state="new"/>
         </trans-unit>
         <trans-unit id="e030b36993167c6a650b53e7ddf9b917012e5ada" translate="yes" xml:space="preserve">
-          <source>Since GHC 7.6.1, GHCi prints the result of expressions typed at the prompt using the function &lt;code&gt;System.IO.print&lt;/code&gt;. Its type signature is &lt;code&gt;Show a =&amp;gt; a -&amp;gt; IO ()&lt;/code&gt;, and it works by converting the value to &lt;code&gt;String&lt;/code&gt; using &lt;code&gt;show&lt;/code&gt;.</source>
+          <source>Since GHC 7.6.1, GHCi prints the result of expressions typed at the prompt using the function &lt;code&gt;System.IO.print&lt;/code&gt;. Its type signature is &lt;code&gt;Show a =&amp;gt; a -&amp;gt;
+IO ()&lt;/code&gt;, and it works by converting the value to &lt;code&gt;String&lt;/code&gt; using &lt;code&gt;show&lt;/code&gt;.</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="bd3de9296edafefe93b1d0ef0e92bf1198bbce4d" translate="yes" xml:space="preserve">
@@ -3972,38 +4005,6 @@
         </trans-unit>
         <trans-unit id="dcde35893e4d6dc32d096855f15dcf5ea3247487" translate="yes" xml:space="preserve">
           <source>Since: base-3.0</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="be060310da47406378288eb54af64a5df3346140" translate="yes" xml:space="preserve">
-          <source>Since: base-4.0</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="4f866c74c054a47d6140e4fc6d5be8de11f99994" translate="yes" xml:space="preserve">
-          <source>Since: base-4.0.0.0</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="7d12eeaf7cce814b0171237c84978cff10f83652" translate="yes" xml:space="preserve">
-          <source>Since: base-4.1.0.0</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="05d33b2fd09ae58a6be7191730fc97d0c21a2f4d" translate="yes" xml:space="preserve">
-          <source>Since: base-4.10</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="13f96c7c19da91d3b76637089fe3d61114bac377" translate="yes" xml:space="preserve">
-          <source>Since: base-4.10.0.0</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="f0b4e2c80c6439234dda497542e0fb4b91039b2a" translate="yes" xml:space="preserve">
-          <source>Since: base-4.11</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="683ec4ab5b5bc414eea9901a86c5ba15f8e88688" translate="yes" xml:space="preserve">
-          <source>Since: base-4.11.0.0</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="e8a5cd5f7f090603e16566046cda15e3e4135697" translate="yes" xml:space="preserve">
-          <source>Since: base-4.12.0.0</source>
           <target state="new"/>
         </trans-unit>
       </group>
