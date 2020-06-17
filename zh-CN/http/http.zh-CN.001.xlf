@@ -9,11 +9,11 @@
         </trans-unit>
         <trans-unit id="fcb95aec6b94b1ef5fb9e8f1ffca6d1afa3dc701" translate="yes" xml:space="preserve">
           <source>&quot;&lt;code&gt;script&lt;/code&gt;&quot; and the MIME type is not a &lt;a href=&quot;https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type&quot;&gt;JavaScript MIME type&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">&quot;&lt;code&gt;script&lt;/code&gt;&quot; and the MIME type is not a &lt;a href=&quot;https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type&quot;&gt;JavaScript MIME type&lt;/a&gt;.</target>
         </trans-unit>
         <trans-unit id="fe5d7d98de54a5c2fa36656c24c8d568f67dae74" translate="yes" xml:space="preserve">
           <source>&quot;&lt;code&gt;style&lt;/code&gt;&quot; and the MIME type is not &quot;&lt;code&gt;text/css&lt;/code&gt;&quot;, or</source>
-          <target state="new"/>
+          <target state="translated">&quot;&lt;code&gt;style&lt;/code&gt;&quot; and the MIME type is not &quot;&lt;code&gt;text/css&lt;/code&gt;&quot;, or</target>
         </trans-unit>
         <trans-unit id="06b03d83589bd2cf6c3bd1cb0f73131e097a2f7e" translate="yes" xml:space="preserve">
           <source>&quot;no-referrer&quot;</source>
@@ -29,7 +29,7 @@
         </trans-unit>
         <trans-unit id="80facb011f46d4dc85d9d90dddbd46f8243a38c8" translate="yes" xml:space="preserve">
           <source>&quot;origin-when-cross-origin&quot; / &quot;origin-when-crossorigin&quot;</source>
-          <target state="new"/>
+          <target state="translated">&quot;origin-when-cross-origin&quot; / &quot;origin-when-crossorigin&quot;</target>
         </trans-unit>
         <trans-unit id="5a14fca69c01f98ef5bda5811b53d4d914013117" translate="yes" xml:space="preserve">
           <source>&quot;unsafe-url&quot;</source>
@@ -37,11 +37,11 @@
         </trans-unit>
         <trans-unit id="8c1326a1e69f883ac3c75a7c7a9c911c4a14cc88" translate="yes" xml:space="preserve">
           <source>&amp;copy; 2005&amp;ndash;2018 Mozilla Developer Network and individual contributors.</source>
-          <target state="new"/>
+          <target state="translated">&amp;copy; 2005&amp;ndash;2018 Mozilla Developer Network and individual contributors.</target>
         </trans-unit>
         <trans-unit id="e5b061b391df798f61fb5eb8bce2a591fc30a1f7" translate="yes" xml:space="preserve">
           <source>&amp;copy; document authors. All rights reserved.</source>
-          <target state="new"/>
+          <target state="translated">&amp;copy; document authors. All rights reserved.</target>
         </trans-unit>
         <trans-unit id="c8028a37fa55180ed4471e6a4df84ea6c2ae78f4" translate="yes" xml:space="preserve">
           <source>&amp;gt;&amp;gt;Request
@@ -75,7 +75,37 @@
    error copying R2, none of R2's members were copied.  However, no
    errors were listed for those members due to the error minimization
    rules.</source>
-          <target state="new"/>
+          <target state="translated">&amp;gt;&amp;gt;Request
+
+     COPY /container/ HTTP/1.1
+     Host: www.example.com
+     Destination: http://www.example.com/othercontainer/
+     Depth: infinity
+
+   &amp;gt;&amp;gt;Response
+
+     HTTP/1.1 207 Multi-Status
+     Content-Type: application/xml; charset=&quot;utf-8&quot;
+     Content-Length: xxxx
+
+     &amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&amp;gt;
+
+     &amp;lt;d:multistatus xmlns:d=&quot;DAV:&quot;&amp;gt;
+       &amp;lt;d:response&amp;gt;
+         &amp;lt;d:href&amp;gt;http://www.example.com/othercontainer/R2/&amp;lt;/d:href&amp;gt;
+         &amp;lt;d:status&amp;gt;HTTP/1.1 423 Locked&amp;lt;/d:status&amp;gt;
+         &amp;lt;d:error&amp;gt;&amp;lt;d:lock-token-submitted/&amp;gt;&amp;lt;/d:error&amp;gt;
+       &amp;lt;/d:response&amp;gt;
+     &amp;lt;/d:multistatus&amp;gt;
+
+   The Depth header is unnecessary as the default behavior of COPY on a
+   collection is to act as if a &quot;Depth: infinity&quot; header had been
+   submitted.  In this example, most of the resources, along with the
+   collection, were copied successfully.  However, the collection R2
+   failed because the destination R2 is locked.  Because there was an
+   error copying R2, none of R2's members were copied.  However, no
+   errors were listed for those members due to the error minimization
+   rules.</target>
         </trans-unit>
         <trans-unit id="0b0942e9acc86adfbe79ce93ee34872ebcdd8123" translate="yes" xml:space="preserve">
           <source>&amp;gt;&amp;gt;Request
@@ -95,7 +125,23 @@
    with a lock token of &quot;urn:uuid:181d4fae-7d8c-11d0-a765-00a0c91e6bf2&quot;
    and have a weak entity tag W/&quot;A weak ETag&quot; or it must have a strong
    entity tag &quot;strong ETag&quot;.</source>
-          <target state="new"/>
+          <target state="translated">&amp;gt;&amp;gt;Request
+
+     COPY /resource1 HTTP/1.1
+     Host: www.example.com
+     Destination: /resource2
+     If: &amp;lt;/resource1&amp;gt;
+       (&amp;lt;urn:uuid:181d4fae-7d8c-11d0-a765-00a0c91e6bf2&amp;gt;
+       [W/&quot;A weak ETag&quot;]) ([&quot;strong ETag&quot;])
+
+   In this example, http://www.example.com/resource1 is being copied to
+   http://www.example.com/resource2.  When the method is first applied
+   to http://www.example.com/resource1, resource1 must be in the state
+   specified by &quot;(&amp;lt;urn:uuid:181d4fae-7d8c-11d0-a765-00a0c91e6bf2&amp;gt; [W/&quot;A
+   weak ETag&quot;]) ([&quot;strong ETag&quot;])&quot;.  That is, either it must be locked
+   with a lock token of &quot;urn:uuid:181d4fae-7d8c-11d0-a765-00a0c91e6bf2&quot;
+   and have a weak entity tag W/&quot;A weak ETag&quot; or it must have a strong
+   entity tag &quot;strong ETag&quot;.</target>
         </trans-unit>
         <trans-unit id="b48c39039a919c52ddee7dbf690996e1d769b244" translate="yes" xml:space="preserve">
           <source>&amp;gt;&amp;gt;Request
@@ -117,7 +163,25 @@
    example, user agent authentication has previously occurred via a
    mechanism outside the scope of the HTTP protocol, in the underlying
    transport layer.</source>
-          <target state="new"/>
+          <target state="translated">&amp;gt;&amp;gt;Request
+
+     COPY /~fielding/index.html HTTP/1.1
+     Host: www.example.com
+     Destination: http://www.example.com/users/f/fielding/index.html
+     If: &amp;lt;http://www.example.com/users/f/fielding/index.html&amp;gt;
+         (&amp;lt;urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6&amp;gt;)
+
+   &amp;gt;&amp;gt;Response
+
+     HTTP/1.1 204 No Content
+
+   In this example, even though both the source and destination are
+   locked, only one lock token must be submitted (the one for the lock
+   on the destination).  This is because the source resource is not
+   modified by a COPY, and hence unaffected by the write lock.  In this
+   example, user agent authentication has previously occurred via a
+   mechanism outside the scope of the HTTP protocol, in the underlying
+   transport layer.</target>
         </trans-unit>
         <trans-unit id="857902ba21bc64e56dbca6fe95afd08be1d22317" translate="yes" xml:space="preserve">
           <source>&amp;gt;&amp;gt;Request
@@ -149,7 +213,35 @@
    parent cannot be deleted unless its child has also been deleted.
    Even though a Depth header has not been included, a depth of infinity
    is assumed because the method is on a collection.</source>
-          <target state="new"/>
+          <target state="translated">&amp;gt;&amp;gt;Request
+
+     DELETE  /container/ HTTP/1.1
+     Host: www.example.com 
+
+   &amp;gt;&amp;gt;Response
+
+     HTTP/1.1 207 Multi-Status
+     Content-Type: application/xml; charset=&quot;utf-8&quot;
+     Content-Length: xxxx
+
+     &amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&amp;gt;
+     &amp;lt;d:multistatus xmlns:d=&quot;DAV:&quot;&amp;gt;
+       &amp;lt;d:response&amp;gt;
+         &amp;lt;d:href&amp;gt;http://www.example.com/container/resource3&amp;lt;/d:href&amp;gt;
+         &amp;lt;d:status&amp;gt;HTTP/1.1 423 Locked&amp;lt;/d:status&amp;gt;
+         &amp;lt;d:error&amp;gt;&amp;lt;d:lock-token-submitted/&amp;gt;&amp;lt;/d:error&amp;gt;
+       &amp;lt;/d:response&amp;gt;
+     &amp;lt;/d:multistatus&amp;gt;
+
+   In this example, the attempt to delete
+   http://www.example.com/container/resource3 failed because it is
+   locked, and no lock token was submitted with the request.
+   Consequently, the attempt to delete http://www.example.com/container/
+   also failed.  Thus, the client knows that the attempt to delete
+   http://www.example.com/container/ must have also failed since the
+   parent cannot be deleted unless its child has also been deleted.
+   Even though a Depth header has not been included, a depth of infinity
+   is assumed because the method is on a collection.</target>
         </trans-unit>
         <trans-unit id="a1fd0201a3a060283eca7044371bd6a2c195158d" translate="yes" xml:space="preserve">
           <source>&amp;gt;&amp;gt;Request
@@ -209,7 +301,63 @@
 
    In this example, the nonce, response, and opaque fields have not been
    calculated in the Authorization request header.</source>
-          <target state="new"/>
+          <target state="translated">&amp;gt;&amp;gt;Request
+
+     LOCK /webdav/ HTTP/1.1
+     Host: example.com
+     Timeout: Infinite, Second-4100000000
+     Depth: infinity
+     Content-Type: application/xml; charset=&quot;utf-8&quot;
+     Content-Length: xxxx
+     Authorization: Digest username=&quot;ejw&quot;,
+       realm=&quot;ejw@example.com&quot;, nonce=&quot;...&quot;, 
+
+       uri=&quot;/workspace/webdav/proposal.doc&quot;,
+       response=&quot;...&quot;, opaque=&quot;...&quot;
+
+     &amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&amp;gt;
+     &amp;lt;D:lockinfo xmlns:D=&quot;DAV:&quot;&amp;gt;
+       &amp;lt;D:locktype&amp;gt;&amp;lt;D:write/&amp;gt;&amp;lt;/D:locktype&amp;gt;
+       &amp;lt;D:lockscope&amp;gt;&amp;lt;D:exclusive/&amp;gt;&amp;lt;/D:lockscope&amp;gt;
+       &amp;lt;D:owner&amp;gt;
+         &amp;lt;D:href&amp;gt;http://example.org/~ejw/contact.html&amp;lt;/D:href&amp;gt;
+       &amp;lt;/D:owner&amp;gt;
+     &amp;lt;/D:lockinfo&amp;gt;
+
+   &amp;gt;&amp;gt;Response
+
+     HTTP/1.1 207 Multi-Status
+     Content-Type: application/xml; charset=&quot;utf-8&quot;
+     Content-Length: xxxx
+
+     &amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&amp;gt;
+     &amp;lt;D:multistatus xmlns:D=&quot;DAV:&quot;&amp;gt;
+       &amp;lt;D:response&amp;gt;
+         &amp;lt;D:href&amp;gt;http://example.com/webdav/secret&amp;lt;/D:href&amp;gt;
+         &amp;lt;D:status&amp;gt;HTTP/1.1 403 Forbidden&amp;lt;/D:status&amp;gt;
+       &amp;lt;/D:response&amp;gt;
+       &amp;lt;D:response&amp;gt;
+         &amp;lt;D:href&amp;gt;http://example.com/webdav/&amp;lt;/D:href&amp;gt;
+         &amp;lt;D:status&amp;gt;HTTP/1.1 424 Failed Dependency&amp;lt;/D:status&amp;gt;
+       &amp;lt;/D:response&amp;gt;
+     &amp;lt;/D:multistatus&amp;gt;
+
+
+   This example shows a request for an exclusive write lock on a
+   collection and all its children.  In this request, the client has
+   specified that it desires an infinite-length lock, if available,
+   otherwise a timeout of 4.1 billion seconds, if available.  The
+   request entity body contains the contact information for the
+   principal taking out the lock -- in this case, a Web page URL.
+
+   The error is a 403 (Forbidden) response on the resource
+   http://example.com/webdav/secret.  Because this resource could not be
+   locked, none of the resources were locked.  Note also that the a
+   'response' element for the Request-URI itself has been included as
+   required.
+
+   In this example, the nonce, response, and opaque fields have not been
+   calculated in the Authorization request header.</target>
         </trans-unit>
         <trans-unit id="76cf5318d3357aface272602b20dee789d25e1e6" translate="yes" xml:space="preserve">
           <source>&amp;gt;&amp;gt;Request
@@ -273,7 +421,67 @@
    to automatically be removed after 1 week (604800 seconds).  Note that
    the nonce, response, and opaque fields have not been calculated in
    the Authorization request header.</source>
-          <target state="new"/>
+          <target state="translated">&amp;gt;&amp;gt;Request
+
+     LOCK /workspace/webdav/proposal.doc HTTP/1.1
+     Host: example.com
+     Timeout: Infinite, Second-4100000000
+     Content-Type: application/xml; charset=&quot;utf-8&quot;
+     Content-Length: xxxx
+     Authorization: Digest username=&quot;ejw&quot;,
+       realm=&quot;ejw@example.com&quot;, nonce=&quot;...&quot;,
+       uri=&quot;/workspace/webdav/proposal.doc&quot;,
+       response=&quot;...&quot;, opaque=&quot;...&quot;
+
+     &amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&amp;gt;
+     &amp;lt;D:lockinfo xmlns:D='DAV:'&amp;gt;
+       &amp;lt;D:lockscope&amp;gt;&amp;lt;D:exclusive/&amp;gt;&amp;lt;/D:lockscope&amp;gt;
+       &amp;lt;D:locktype&amp;gt;&amp;lt;D:write/&amp;gt;&amp;lt;/D:locktype&amp;gt;
+       &amp;lt;D:owner&amp;gt;
+         &amp;lt;D:href&amp;gt;http://example.org/~ejw/contact.html&amp;lt;/D:href&amp;gt;
+       &amp;lt;/D:owner&amp;gt;
+     &amp;lt;/D:lockinfo&amp;gt;
+
+   &amp;gt;&amp;gt;Response
+
+     HTTP/1.1 200 OK
+     Lock-Token: &amp;lt;urn:uuid:e71d4fae-5dec-22d6-fea5-00a0c91e6be4&amp;gt;
+     Content-Type: application/xml; charset=&quot;utf-8&quot;
+     Content-Length: xxxx
+
+     &amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&amp;gt;
+     &amp;lt;D:prop xmlns:D=&quot;DAV:&quot;&amp;gt; 
+
+       &amp;lt;D:lockdiscovery&amp;gt;
+         &amp;lt;D:activelock&amp;gt;
+           &amp;lt;D:locktype&amp;gt;&amp;lt;D:write/&amp;gt;&amp;lt;/D:locktype&amp;gt;
+           &amp;lt;D:lockscope&amp;gt;&amp;lt;D:exclusive/&amp;gt;&amp;lt;/D:lockscope&amp;gt;
+           &amp;lt;D:depth&amp;gt;infinity&amp;lt;/D:depth&amp;gt;
+           &amp;lt;D:owner&amp;gt;
+             &amp;lt;D:href&amp;gt;http://example.org/~ejw/contact.html&amp;lt;/D:href&amp;gt;
+           &amp;lt;/D:owner&amp;gt;
+           &amp;lt;D:timeout&amp;gt;Second-604800&amp;lt;/D:timeout&amp;gt;
+           &amp;lt;D:locktoken&amp;gt;
+             &amp;lt;D:href
+             &amp;gt;urn:uuid:e71d4fae-5dec-22d6-fea5-00a0c91e6be4&amp;lt;/D:href&amp;gt;
+           &amp;lt;/D:locktoken&amp;gt;
+           &amp;lt;D:lockroot&amp;gt;
+             &amp;lt;D:href
+             &amp;gt;http://example.com/workspace/webdav/proposal.doc&amp;lt;/D:href&amp;gt;
+           &amp;lt;/D:lockroot&amp;gt;
+         &amp;lt;/D:activelock&amp;gt;
+       &amp;lt;/D:lockdiscovery&amp;gt;
+     &amp;lt;/D:prop&amp;gt;
+
+
+   This example shows the successful creation of an exclusive write lock
+   on resource http://example.com/workspace/webdav/proposal.doc.  The
+   resource http://example.org/~ejw/contact.html contains contact
+   information for the creator of the lock.  The server has an activity-
+   based timeout policy in place on this resource, which causes the lock
+   to automatically be removed after 1 week (604800 seconds).  Note that
+   the nonce, response, and opaque fields have not been calculated in
+   the Authorization request header.</target>
         </trans-unit>
         <trans-unit id="a2fe170677a16e7b61518916f2fb4c767b7e689d" translate="yes" xml:space="preserve">
           <source>&amp;gt;&amp;gt;Request
@@ -322,7 +530,52 @@
    client asked for an infinite time out but the server choose to ignore
    the request.  In this example, the nonce, response, and opaque fields
    have not been calculated in the Authorization request header.</source>
-          <target state="new"/>
+          <target state="translated">&amp;gt;&amp;gt;Request
+
+     LOCK /workspace/webdav/proposal.doc HTTP/1.1
+     Host: example.com
+     Timeout: Infinite, Second-4100000000
+     If: (&amp;lt;urn:uuid:e71d4fae-5dec-22d6-fea5-00a0c91e6be4&amp;gt;)
+     Authorization: Digest username=&quot;ejw&quot;,
+       realm=&quot;ejw@example.com&quot;, nonce=&quot;...&quot;,
+       uri=&quot;/workspace/webdav/proposal.doc&quot;,
+       response=&quot;...&quot;, opaque=&quot;...&quot; 
+
+   &amp;gt;&amp;gt;Response
+
+     HTTP/1.1 200 OK
+     Content-Type: application/xml; charset=&quot;utf-8&quot;
+     Content-Length: xxxx
+
+     &amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&amp;gt;
+     &amp;lt;D:prop xmlns:D=&quot;DAV:&quot;&amp;gt;
+       &amp;lt;D:lockdiscovery&amp;gt;
+         &amp;lt;D:activelock&amp;gt;
+           &amp;lt;D:locktype&amp;gt;&amp;lt;D:write/&amp;gt;&amp;lt;/D:locktype&amp;gt;
+           &amp;lt;D:lockscope&amp;gt;&amp;lt;D:exclusive/&amp;gt;&amp;lt;/D:lockscope&amp;gt;
+           &amp;lt;D:depth&amp;gt;infinity&amp;lt;/D:depth&amp;gt;
+           &amp;lt;D:owner&amp;gt;
+             &amp;lt;D:href&amp;gt;http://example.org/~ejw/contact.html&amp;lt;/D:href&amp;gt;
+           &amp;lt;/D:owner&amp;gt;
+           &amp;lt;D:timeout&amp;gt;Second-604800&amp;lt;/D:timeout&amp;gt;
+           &amp;lt;D:locktoken&amp;gt;
+             &amp;lt;D:href
+             &amp;gt;urn:uuid:e71d4fae-5dec-22d6-fea5-00a0c91e6be4&amp;lt;/D:href&amp;gt;
+           &amp;lt;/D:locktoken&amp;gt;
+           &amp;lt;D:lockroot&amp;gt;
+             &amp;lt;D:href
+             &amp;gt;http://example.com/workspace/webdav/proposal.doc&amp;lt;/D:href&amp;gt;
+           &amp;lt;/D:lockroot&amp;gt;
+         &amp;lt;/D:activelock&amp;gt;
+       &amp;lt;/D:lockdiscovery&amp;gt;
+     &amp;lt;/D:prop&amp;gt;
+
+
+   This request would refresh the lock, attempting to reset the timeout
+   to the new value specified in the timeout header.  Notice that the
+   client asked for an infinite time out but the server choose to ignore
+   the request.  In this example, the nonce, response, and opaque fields
+   have not been calculated in the Authorization request header.</target>
         </trans-unit>
         <trans-unit id="04313e255b6720dee0abae5aedad87168f5283eb" translate="yes" xml:space="preserve">
           <source>&amp;gt;&amp;gt;Request
@@ -361,7 +614,42 @@
    error minimization rules.  User agent authentication has previously
    occurred via a mechanism outside the scope of the HTTP protocol, in
    an underlying transport layer.</source>
-          <target state="new"/>
+          <target state="translated">&amp;gt;&amp;gt;Request
+
+     MOVE /container/ HTTP/1.1
+     Host: www.example.com
+     Destination: http://www.example.com/othercontainer/
+     Overwrite: F
+     If: (&amp;lt;urn:uuid:fe184f2e-6eec-41d0-c765-01adc56e6bb4&amp;gt;)
+        (&amp;lt;urn:uuid:e454f3f3-acdc-452a-56c7-00a5c91e4b77&amp;gt;)
+
+   &amp;gt;&amp;gt;Response
+
+     HTTP/1.1 207 Multi-Status
+     Content-Type: application/xml; charset=&quot;utf-8&quot;
+     Content-Length: xxxx
+
+     &amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&amp;gt;
+     &amp;lt;d:multistatus xmlns:d='DAV:'&amp;gt;
+       &amp;lt;d:response&amp;gt;
+         &amp;lt;d:href&amp;gt;http://www.example.com/othercontainer/C2/&amp;lt;/d:href&amp;gt;
+         &amp;lt;d:status&amp;gt;HTTP/1.1 423 Locked&amp;lt;/d:status&amp;gt;
+         &amp;lt;d:error&amp;gt;&amp;lt;d:lock-token-submitted/&amp;gt;&amp;lt;/d:error&amp;gt;
+       &amp;lt;/d:response&amp;gt;
+     &amp;lt;/d:multistatus&amp;gt; 
+
+   In this example, the client has submitted a number of lock tokens
+   with the request.  A lock token will need to be submitted for every
+   resource, both source and destination, anywhere in the scope of the
+   method, that is locked.  In this case, the proper lock token was not
+   submitted for the destination
+   http://www.example.com/othercontainer/C2/.  This means that the
+   resource /container/C2/ could not be moved.  Because there was an
+   error moving /container/C2/, none of /container/C2's members were
+   moved.  However, no errors were listed for those members due to the
+   error minimization rules.  User agent authentication has previously
+   occurred via a mechanism outside the scope of the HTTP protocol, in
+   an underlying transport layer.</target>
         </trans-unit>
         <trans-unit id="c0061dbff2789c60427f9f3c14e1462d6aca0e88" translate="yes" xml:space="preserve">
           <source>&amp;gt;&amp;gt;Request
@@ -404,7 +692,46 @@
          &amp;lt;/D:propstat&amp;gt;
        &amp;lt;/D:response&amp;gt;
      &amp;lt;/D:multistatus&amp;gt;</source>
-          <target state="new"/>
+          <target state="translated">&amp;gt;&amp;gt;Request
+
+     PROPFIND /container/ HTTP/1.1
+     Host: www.example.com
+     Content-Length: xxxx
+     Content-Type: application/xml; charset=&quot;utf-8&quot;
+
+     &amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&amp;gt;
+     &amp;lt;D:propfind xmlns:D=&quot;DAV:&quot;&amp;gt;
+       &amp;lt;D:prop&amp;gt;&amp;lt;D:supportedlock/&amp;gt;&amp;lt;/D:prop&amp;gt;
+     &amp;lt;/D:propfind&amp;gt;
+
+   &amp;gt;&amp;gt;Response
+
+     HTTP/1.1 207 Multi-Status
+     Content-Type: application/xml; charset=&quot;utf-8&quot;
+     Content-Length: xxxx
+
+     &amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&amp;gt;
+     &amp;lt;D:multistatus xmlns:D=&quot;DAV:&quot;&amp;gt;
+       &amp;lt;D:response&amp;gt;
+         &amp;lt;D:href&amp;gt;http://www.example.com/container/&amp;lt;/D:href&amp;gt;
+         &amp;lt;D:propstat&amp;gt;
+           &amp;lt;D:prop&amp;gt;
+             &amp;lt;D:supportedlock&amp;gt;
+               &amp;lt;D:lockentry&amp;gt;
+                 &amp;lt;D:lockscope&amp;gt;&amp;lt;D:exclusive/&amp;gt;&amp;lt;/D:lockscope&amp;gt;
+                 &amp;lt;D:locktype&amp;gt;&amp;lt;D:write/&amp;gt;&amp;lt;/D:locktype&amp;gt;
+               &amp;lt;/D:lockentry&amp;gt;
+               &amp;lt;D:lockentry&amp;gt;
+                 &amp;lt;D:lockscope&amp;gt;&amp;lt;D:shared/&amp;gt;&amp;lt;/D:lockscope&amp;gt; 
+
+                 &amp;lt;D:locktype&amp;gt;&amp;lt;D:write/&amp;gt;&amp;lt;/D:locktype&amp;gt;
+               &amp;lt;/D:lockentry&amp;gt;
+             &amp;lt;/D:supportedlock&amp;gt;
+           &amp;lt;/D:prop&amp;gt;
+           &amp;lt;D:status&amp;gt;HTTP/1.1 200 OK&amp;lt;/D:status&amp;gt;
+         &amp;lt;/D:propstat&amp;gt;
+       &amp;lt;/D:response&amp;gt;
+     &amp;lt;/D:multistatus&amp;gt;</target>
         </trans-unit>
         <trans-unit id="37435af7042bc447e720b85913ec08d04c68e1e7" translate="yes" xml:space="preserve">
           <source>&amp;gt;&amp;gt;Request
@@ -455,7 +782,54 @@
 
    This resource has a single exclusive write lock on it, with an
    infinite timeout.</source>
-          <target state="new"/>
+          <target state="translated">&amp;gt;&amp;gt;Request
+
+     PROPFIND /container/ HTTP/1.1
+     Host: www.example.com
+     Content-Length: xxxx
+     Content-Type: application/xml; charset=&quot;utf-8&quot;
+
+     &amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&amp;gt;
+     &amp;lt;D:propfind xmlns:D='DAV:'&amp;gt;
+       &amp;lt;D:prop&amp;gt;&amp;lt;D:lockdiscovery/&amp;gt;&amp;lt;/D:prop&amp;gt;
+     &amp;lt;/D:propfind&amp;gt;
+
+   &amp;gt;&amp;gt;Response
+
+     HTTP/1.1 207 Multi-Status
+     Content-Type: application/xml; charset=&quot;utf-8&quot;
+     Content-Length: xxxx
+
+     &amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&amp;gt;
+     &amp;lt;D:multistatus xmlns:D='DAV:'&amp;gt;
+       &amp;lt;D:response&amp;gt;
+         &amp;lt;D:href&amp;gt;http://www.example.com/container/&amp;lt;/D:href&amp;gt;
+         &amp;lt;D:propstat&amp;gt;
+           &amp;lt;D:prop&amp;gt;
+             &amp;lt;D:lockdiscovery&amp;gt;
+              &amp;lt;D:activelock&amp;gt;
+               &amp;lt;D:locktype&amp;gt;&amp;lt;D:write/&amp;gt;&amp;lt;/D:locktype&amp;gt;
+               &amp;lt;D:lockscope&amp;gt;&amp;lt;D:exclusive/&amp;gt;&amp;lt;/D:lockscope&amp;gt;
+               &amp;lt;D:depth&amp;gt;0&amp;lt;/D:depth&amp;gt;
+               &amp;lt;D:owner&amp;gt;Jane Smith&amp;lt;/D:owner&amp;gt;
+               &amp;lt;D:timeout&amp;gt;Infinite&amp;lt;/D:timeout&amp;gt;
+               &amp;lt;D:locktoken&amp;gt;
+                 &amp;lt;D:href
+             &amp;gt;urn:uuid:f81de2ad-7f3d-a1b2-4f3c-00a0c91a9d76&amp;lt;/D:href&amp;gt;
+               &amp;lt;/D:locktoken&amp;gt;
+               &amp;lt;D:lockroot&amp;gt;
+                 &amp;lt;D:href&amp;gt;http://www.example.com/container/&amp;lt;/D:href&amp;gt;
+               &amp;lt;/D:lockroot&amp;gt;
+              &amp;lt;/D:activelock&amp;gt;
+             &amp;lt;/D:lockdiscovery&amp;gt;
+           &amp;lt;/D:prop&amp;gt;
+           &amp;lt;D:status&amp;gt;HTTP/1.1 200 OK&amp;lt;/D:status&amp;gt;
+         &amp;lt;/D:propstat&amp;gt;
+       &amp;lt;/D:response&amp;gt;
+     &amp;lt;/D:multistatus&amp;gt; 
+
+   This resource has a single exclusive write lock on it, with an
+   infinite timeout.</target>
         </trans-unit>
         <trans-unit id="ed2b3a0d503d0cb891f8b10e8ff8e3e027ee4635" translate="yes" xml:space="preserve">
           <source>&amp;gt;&amp;gt;Request
@@ -539,7 +913,87 @@
    a prefix, the namespace applies by default to all enclosed elements.
    Hence, all elements that do not explicitly state the namespace to
    which they belong are members of the &quot;DAV:&quot; namespace.</source>
-          <target state="new"/>
+          <target state="translated">&amp;gt;&amp;gt;Request
+
+     PROPFIND /container/ HTTP/1.1
+     Host: www.example.com
+     Content-Type: application/xml; charset=&quot;utf-8&quot;
+     Content-Length: xxxx
+
+     &amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&amp;gt;
+     &amp;lt;propfind xmlns=&quot;DAV:&quot;&amp;gt;
+       &amp;lt;propname/&amp;gt;
+     &amp;lt;/propfind&amp;gt;
+
+
+   &amp;gt;&amp;gt;Response
+
+     HTTP/1.1 207 Multi-Status
+     Content-Type: application/xml; charset=&quot;utf-8&quot;
+     Content-Length: xxxx
+
+     &amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&amp;gt;
+     &amp;lt;multistatus xmlns=&quot;DAV:&quot;&amp;gt;
+       &amp;lt;response&amp;gt;
+         &amp;lt;href&amp;gt;http://www.example.com/container/&amp;lt;/href&amp;gt;
+         &amp;lt;propstat&amp;gt;
+           &amp;lt;prop xmlns:R=&quot;http://ns.example.com/boxschema/&quot;&amp;gt;
+             &amp;lt;R:bigbox/&amp;gt;
+             &amp;lt;R:author/&amp;gt;
+             &amp;lt;creationdate/&amp;gt;
+             &amp;lt;displayname/&amp;gt;
+             &amp;lt;resourcetype/&amp;gt;
+             &amp;lt;supportedlock/&amp;gt;
+           &amp;lt;/prop&amp;gt;
+           &amp;lt;status&amp;gt;HTTP/1.1 200 OK&amp;lt;/status&amp;gt; 
+
+         &amp;lt;/propstat&amp;gt;
+       &amp;lt;/response&amp;gt;
+       &amp;lt;response&amp;gt;
+         &amp;lt;href&amp;gt;http://www.example.com/container/front.html&amp;lt;/href&amp;gt;
+         &amp;lt;propstat&amp;gt;
+           &amp;lt;prop xmlns:R=&quot;http://ns.example.com/boxschema/&quot;&amp;gt;
+             &amp;lt;R:bigbox/&amp;gt;
+             &amp;lt;creationdate/&amp;gt;
+             &amp;lt;displayname/&amp;gt;
+             &amp;lt;getcontentlength/&amp;gt;
+             &amp;lt;getcontenttype/&amp;gt;
+             &amp;lt;getetag/&amp;gt;
+             &amp;lt;getlastmodified/&amp;gt;
+             &amp;lt;resourcetype/&amp;gt;
+             &amp;lt;supportedlock/&amp;gt;
+           &amp;lt;/prop&amp;gt;
+           &amp;lt;status&amp;gt;HTTP/1.1 200 OK&amp;lt;/status&amp;gt;
+         &amp;lt;/propstat&amp;gt;
+       &amp;lt;/response&amp;gt;
+     &amp;lt;/multistatus&amp;gt;
+
+   In this example, PROPFIND is invoked on the collection resource
+   http://www.example.com/container/, with a propfind XML element
+   containing the propname XML element, meaning the name of all
+   properties should be returned.  Since no Depth header is present, it
+   assumes its default value of &quot;infinity&quot;, meaning the name of the
+   properties on the collection and all its descendants should be
+   returned.
+
+   Consistent with the previous example, resource
+   http://www.example.com/container/ has six properties defined on it:
+   bigbox and author in the &quot;http://ns.example.com/boxschema/&quot;
+   namespace, and creationdate, displayname, resourcetype, and
+   supportedlock in the &quot;DAV:&quot; namespace.
+
+   The resource http://www.example.com/container/index.html, a member of
+   the &quot;container&quot; collection, has nine properties defined on it, bigbox
+   in the &quot;http://ns.example.com/boxschema/&quot; namespace and creationdate,
+   displayname, getcontentlength, getcontenttype, getetag,
+   getlastmodified, resourcetype, and supportedlock in the &quot;DAV:&quot;
+   namespace.
+
+   This example also demonstrates the use of XML namespace scoping and
+   the default namespace.  Since the &quot;xmlns&quot; attribute does not contain
+   a prefix, the namespace applies by default to all enclosed elements.
+   Hence, all elements that do not explicitly state the namespace to
+   which they belong are members of the &quot;DAV:&quot; namespace.</target>
         </trans-unit>
         <trans-unit id="5a189c0b20f4fae9bf546beba3a8aaf5467f1a34" translate="yes" xml:space="preserve">
           <source>&amp;gt;&amp;gt;Request
@@ -601,7 +1055,65 @@
    case, only two properties were returned, since the principal issuing
    the request did not have sufficient access rights to see the third
    and fourth properties.</source>
-          <target state="new"/>
+          <target state="translated">&amp;gt;&amp;gt;Request
+
+     PROPFIND /file HTTP/1.1
+     Host: www.example.com
+     Content-type: application/xml; charset=&quot;utf-8&quot;
+     Content-Length: xxxx
+
+     &amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&amp;gt;
+     &amp;lt;D:propfind xmlns:D=&quot;DAV:&quot;&amp;gt;
+       &amp;lt;D:prop xmlns:R=&quot;http://ns.example.com/boxschema/&quot;&amp;gt;
+         &amp;lt;R:bigbox/&amp;gt;
+         &amp;lt;R:author/&amp;gt;
+         &amp;lt;R:DingALing/&amp;gt;
+         &amp;lt;R:Random/&amp;gt;
+       &amp;lt;/D:prop&amp;gt;
+     &amp;lt;/D:propfind&amp;gt;
+
+
+   &amp;gt;&amp;gt;Response
+
+     HTTP/1.1 207 Multi-Status
+     Content-Type: application/xml; charset=&quot;utf-8&quot;
+     Content-Length: xxxx
+
+     &amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&amp;gt;
+     &amp;lt;D:multistatus xmlns:D=&quot;DAV:&quot;&amp;gt;
+       &amp;lt;D:response xmlns:R=&quot;http://ns.example.com/boxschema/&quot;&amp;gt;
+         &amp;lt;D:href&amp;gt;http://www.example.com/file&amp;lt;/D:href&amp;gt;
+         &amp;lt;D:propstat&amp;gt;
+           &amp;lt;D:prop&amp;gt;
+             &amp;lt;R:bigbox&amp;gt;
+               &amp;lt;R:BoxType&amp;gt;Box type A&amp;lt;/R:BoxType&amp;gt;
+             &amp;lt;/R:bigbox&amp;gt;
+             &amp;lt;R:author&amp;gt;
+               &amp;lt;R:Name&amp;gt;J.J. Johnson&amp;lt;/R:Name&amp;gt;
+             &amp;lt;/R:author&amp;gt;
+           &amp;lt;/D:prop&amp;gt;
+           &amp;lt;D:status&amp;gt;HTTP/1.1 200 OK&amp;lt;/D:status&amp;gt;
+         &amp;lt;/D:propstat&amp;gt;
+         &amp;lt;D:propstat&amp;gt;
+           &amp;lt;D:prop&amp;gt;&amp;lt;R:DingALing/&amp;gt;&amp;lt;R:Random/&amp;gt;&amp;lt;/D:prop&amp;gt;
+           &amp;lt;D:status&amp;gt;HTTP/1.1 403 Forbidden&amp;lt;/D:status&amp;gt;
+           &amp;lt;D:responsedescription&amp;gt; The user does not have access to the
+      DingALing property.
+           &amp;lt;/D:responsedescription&amp;gt;
+         &amp;lt;/D:propstat&amp;gt; 
+
+       &amp;lt;/D:response&amp;gt;
+       &amp;lt;D:responsedescription&amp;gt; There has been an access violation error.
+       &amp;lt;/D:responsedescription&amp;gt;
+     &amp;lt;/D:multistatus&amp;gt;
+
+
+   In this example, PROPFIND is executed on a non-collection resource
+   http://www.example.com/file.  The propfind XML element specifies the
+   name of four properties whose values are being requested.  In this
+   case, only two properties were returned, since the principal issuing
+   the request did not have sufficient access rights to see the third
+   and fourth properties.</target>
         </trans-unit>
         <trans-unit id="9fe61c02ad2874dac289a4e5e35ec4561c4a861f" translate="yes" xml:space="preserve">
           <source>&amp;gt;&amp;gt;Request
@@ -626,7 +1138,28 @@
    client requests the values of all live properties defined in this
    specification, plus all dead properties, plus two more live
    properties defined in [&lt;a href=&quot;https://tools.ietf.org/html/rfc3253&quot;&gt;RFC3253&lt;/a&gt;].  The response is not shown.</source>
-          <target state="new"/>
+          <target state="translated">&amp;gt;&amp;gt;Request
+
+     PROPFIND /mycol/ HTTP/1.1
+     Host: www.example.com
+     Depth: 1
+     Content-Type: application/xml; charset=&quot;utf-8&quot;
+     Content-Length: xxxx
+
+     &amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&amp;gt;
+     &amp;lt;D:propfind xmlns:D=&quot;DAV:&quot;&amp;gt;
+       &amp;lt;D:allprop/&amp;gt;
+       &amp;lt;D:include&amp;gt;
+         &amp;lt;D:supported-live-property-set/&amp;gt;
+         &amp;lt;D:supported-report-set/&amp;gt;
+       &amp;lt;/D:include&amp;gt;
+     &amp;lt;/D:propfind&amp;gt; 
+
+   In this example, PROPFIND is executed on the resource
+   http://www.example.com/mycol/ and its internal member resources.  The
+   client requests the values of all live properties defined in this
+   specification, plus all dead properties, plus two more live
+   properties defined in [&lt;a href=&quot;https://tools.ietf.org/html/rfc3253&quot;&gt;RFC3253&lt;/a&gt;].  The response is not shown.</target>
         </trans-unit>
         <trans-unit id="7d626e14c2e5b24b52d3b7d48842db97bf788b56" translate="yes" xml:space="preserve">
           <source>&amp;gt;&amp;gt;Request
@@ -684,7 +1217,61 @@
    modifications occur.  The 424 (Failed Dependency) status code for the
    Authors property indicates this action would have succeeded if it
    were not for the conflict with removing the Copyright-Owner property.</source>
-          <target state="new"/>
+          <target state="translated">&amp;gt;&amp;gt;Request
+
+     PROPPATCH /bar.html HTTP/1.1
+     Host: www.example.com
+     Content-Type: application/xml; charset=&quot;utf-8&quot;
+     Content-Length: xxxx
+
+     &amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&amp;gt;
+     &amp;lt;D:propertyupdate xmlns:D=&quot;DAV:&quot;
+             xmlns:Z=&quot;http://ns.example.com/standards/z39.50/&quot;&amp;gt;
+       &amp;lt;D:set&amp;gt;
+         &amp;lt;D:prop&amp;gt;
+           &amp;lt;Z:Authors&amp;gt;
+             &amp;lt;Z:Author&amp;gt;Jim Whitehead&amp;lt;/Z:Author&amp;gt;
+             &amp;lt;Z:Author&amp;gt;Roy Fielding&amp;lt;/Z:Author&amp;gt;
+           &amp;lt;/Z:Authors&amp;gt;
+         &amp;lt;/D:prop&amp;gt;
+       &amp;lt;/D:set&amp;gt;
+       &amp;lt;D:remove&amp;gt;
+         &amp;lt;D:prop&amp;gt;&amp;lt;Z:Copyright-Owner/&amp;gt;&amp;lt;/D:prop&amp;gt;
+       &amp;lt;/D:remove&amp;gt;
+     &amp;lt;/D:propertyupdate&amp;gt; 
+
+   &amp;gt;&amp;gt;Response
+
+     HTTP/1.1 207 Multi-Status
+     Content-Type: application/xml; charset=&quot;utf-8&quot;
+     Content-Length: xxxx
+
+     &amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&amp;gt;
+     &amp;lt;D:multistatus xmlns:D=&quot;DAV:&quot;
+             xmlns:Z=&quot;http://ns.example.com/standards/z39.50/&quot;&amp;gt;
+       &amp;lt;D:response&amp;gt;
+         &amp;lt;D:href&amp;gt;http://www.example.com/bar.html&amp;lt;/D:href&amp;gt;
+         &amp;lt;D:propstat&amp;gt;
+           &amp;lt;D:prop&amp;gt;&amp;lt;Z:Authors/&amp;gt;&amp;lt;/D:prop&amp;gt;
+           &amp;lt;D:status&amp;gt;HTTP/1.1 424 Failed Dependency&amp;lt;/D:status&amp;gt;
+         &amp;lt;/D:propstat&amp;gt;
+         &amp;lt;D:propstat&amp;gt;
+           &amp;lt;D:prop&amp;gt;&amp;lt;Z:Copyright-Owner/&amp;gt;&amp;lt;/D:prop&amp;gt;
+           &amp;lt;D:status&amp;gt;HTTP/1.1 409 Conflict&amp;lt;/D:status&amp;gt;
+         &amp;lt;/D:propstat&amp;gt;
+         &amp;lt;D:responsedescription&amp;gt; Copyright Owner cannot be deleted or
+           altered.&amp;lt;/D:responsedescription&amp;gt;
+       &amp;lt;/D:response&amp;gt;
+     &amp;lt;/D:multistatus&amp;gt;
+
+   In this example, the client requests the server to set the value of
+   the &quot;Authors&quot; property in the
+   &quot;http://ns.example.com/standards/z39.50/&quot; namespace, and to remove
+   the property &quot;Copyright-Owner&quot; in the same namespace.  Since the
+   Copyright-Owner property could not be removed, no property
+   modifications occur.  The 424 (Failed Dependency) status code for the
+   Authors property indicates this action would have succeeded if it
+   were not for the conflict with removing the Copyright-Owner property.</target>
         </trans-unit>
         <trans-unit id="dedf01719cdb0850adcd2ca9ea95f16e85c1586f" translate="yes" xml:space="preserve">
           <source>&amp;gt;&amp;gt;Request
@@ -710,7 +1297,29 @@
 
    In this example, the nonce, response, and opaque fields have not been
    calculated in the Authorization request header.</source>
-          <target state="new"/>
+          <target state="translated">&amp;gt;&amp;gt;Request
+
+     UNLOCK /workspace/webdav/info.doc HTTP/1.1
+     Host: example.com
+     Lock-Token: &amp;lt;urn:uuid:a515cfa4-5da4-22e1-f5b5-00a0451e6bf7&amp;gt;
+     Authorization: Digest username=&quot;ejw&quot;
+       realm=&quot;ejw@example.com&quot;, nonce=&quot;...&quot;,
+       uri=&quot;/workspace/webdav/proposal.doc&quot;,
+       response=&quot;...&quot;, opaque=&quot;...&quot;
+
+   &amp;gt;&amp;gt;Response
+
+     HTTP/1.1 204 No Content
+
+   In this example, the lock identified by the lock token
+   &quot;urn:uuid:a515cfa4-5da4-22e1-f5b5-00a0451e6bf7&quot; is successfully
+   removed from the resource
+   http://example.com/workspace/webdav/info.doc.  If this lock included
+   more than just one resource, the lock is removed from all resources
+   included in the lock.
+
+   In this example, the nonce, response, and opaque fields have not been
+   calculated in the Authorization request header.</target>
         </trans-unit>
         <trans-unit id="3e88d968e5833a874f810170b5c9e1fd0d9d9772" translate="yes" xml:space="preserve">
           <source>&amp;lt;?xml version=&quot;1.0&quot; ?&amp;gt;
@@ -731,7 +1340,24 @@
    appear in an Atom Entry or Feed Document, it would appear as:
 
    &amp;lt;atom:category scheme=&quot;http://example.com/cats/big3&quot; term=&quot;mineral&quot;/&amp;gt;</source>
-          <target state="new"/>
+          <target state="translated">&amp;lt;?xml version=&quot;1.0&quot; ?&amp;gt;
+       &amp;lt;app:categories
+           xmlns:app=&quot;http://www.w3.org/2007/app&quot;
+           xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot;
+           fixed=&quot;yes&quot; scheme=&quot;http://example.com/cats/big3&quot;&amp;gt;
+         &amp;lt;atom:category term=&quot;animal&quot; /&amp;gt;
+         &amp;lt;atom:category term=&quot;vegetable&quot; /&amp;gt;
+         &amp;lt;atom:category term=&quot;mineral&quot; /&amp;gt;
+       &amp;lt;/app:categories&amp;gt;
+
+   This Category Document contains atom:category elements, with the
+   terms 'animal', 'vegetable', and 'mineral'.  None of the categories
+   use the &quot;label&quot; attribute defined in [&lt;a href=&quot;https://tools.ietf.org/html/rfc4287&quot;&gt;RFC4287&lt;/a&gt;].  They all inherit the
+   &quot;http://example.com/cats/big3&quot; &quot;scheme&quot; attribute declared on the
+   app:categories element.  Therefore if the 'mineral' category were to
+   appear in an Atom Entry or Feed Document, it would appear as:
+
+   &amp;lt;atom:category scheme=&quot;http://example.com/cats/big3&quot; term=&quot;mineral&quot;/&amp;gt;</target>
         </trans-unit>
         <trans-unit id="7536e6eb314bac5b333db2c2a7144b5c39d5300d" translate="yes" xml:space="preserve">
           <source>&amp;lt;?xml version=&quot;1.0&quot; encoding='utf-8'?&amp;gt;
@@ -794,7 +1420,66 @@
    Collection provides a category list within the Service Document, but
    states the list is fixed, signaling a request from the server that
    Entries be POSTed using only those two categories.</source>
-          <target state="new"/>
+          <target state="translated">&amp;lt;?xml version=&quot;1.0&quot; encoding='utf-8'?&amp;gt;
+   &amp;lt;service xmlns=&quot;http://www.w3.org/2007/app&quot;
+            xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot;&amp;gt;
+     &amp;lt;workspace&amp;gt;
+       &amp;lt;atom:title&amp;gt;Main Site&amp;lt;/atom:title&amp;gt;
+       &amp;lt;collection
+           href=&quot;http://example.org/blog/main&quot; &amp;gt;
+         &amp;lt;atom:title&amp;gt;My Blog Entries&amp;lt;/atom:title&amp;gt;
+         &amp;lt;categories
+            href=&quot;http://example.com/cats/forMain.cats&quot; /&amp;gt;
+       &amp;lt;/collection&amp;gt;
+       &amp;lt;collection
+           href=&quot;http://example.org/blog/pic&quot; &amp;gt;
+         &amp;lt;atom:title&amp;gt;Pictures&amp;lt;/atom:title&amp;gt;
+         &amp;lt;accept&amp;gt;image/png&amp;lt;/accept&amp;gt;
+         &amp;lt;accept&amp;gt;image/jpeg&amp;lt;/accept&amp;gt;
+         &amp;lt;accept&amp;gt;image/gif&amp;lt;/accept&amp;gt;
+       &amp;lt;/collection&amp;gt;
+     &amp;lt;/workspace&amp;gt;
+     &amp;lt;workspace&amp;gt;
+       &amp;lt;atom:title&amp;gt;Sidebar Blog&amp;lt;/atom:title&amp;gt;
+       &amp;lt;collection
+           href=&quot;http://example.org/sidebar/list&quot; &amp;gt;
+         &amp;lt;atom:title&amp;gt;Remaindered Links&amp;lt;/atom:title&amp;gt;
+         &amp;lt;accept&amp;gt;application/atom+xml;type=entry&amp;lt;/accept&amp;gt;
+         &amp;lt;categories fixed=&quot;yes&quot;&amp;gt;
+           &amp;lt;atom:category
+             scheme=&quot;http://example.org/extra-cats/&quot;
+             term=&quot;joke&quot; /&amp;gt;
+           &amp;lt;atom:category
+             scheme=&quot;http://example.org/extra-cats/&quot;
+             term=&quot;serious&quot; /&amp;gt; 
+
+         &amp;lt;/categories&amp;gt;
+       &amp;lt;/collection&amp;gt;
+     &amp;lt;/workspace&amp;gt;
+   &amp;lt;/service&amp;gt;
+
+   The Service Document above describes two Workspaces.  The first
+   Workspace is called &quot;Main Site&quot;, and has two Collections called &quot;My
+   Blog Entries&quot; and &quot;Pictures&quot;, whose IRIs are
+   &quot;http://example.org/blog/main&quot; and &quot;http://example.org/blog/pic&quot;
+   respectively.  The &quot;Pictures&quot; Collection includes three &quot;accept&quot;
+   elements indicating the types of image files the client can send to
+   the Collection to create new Media Resources (entries associated with
+   Media Resources are discussed in &lt;a href=&quot;#section-9.6&quot;&gt;Section 9.6&lt;/a&gt;).
+
+   The second Workspace is called &quot;Sidebar Blog&quot; and has a single
+   Collection called &quot;Remaindered Links&quot; whose IRI is
+   &quot;http://example.org/sidebar/list&quot;.  The Collection has an &quot;accept&quot;
+   element whose content is &quot;application/atom+xml;type=entry&quot;,
+   indicating it will accept Atom Entries from a client.
+
+   Within each of the two Entry Collections, the &quot;categories&quot; element
+   provides a list of available categories for Member Entries.  In the
+   &quot;My Blog Entries&quot; Collection, the list of available categories is
+   available through the &quot;href&quot; attribute.  The &quot;Sidebar Blog&quot;
+   Collection provides a category list within the Service Document, but
+   states the list is fixed, signaling a request from the server that
+   Entries be POSTed using only those two categories.</target>
         </trans-unit>
         <trans-unit id="d054d772e32a6ebe54f20cfa54b45c5cb0e8327d" translate="yes" xml:space="preserve">
           <source>&amp;lt;allowlist&amp;gt;</source>
@@ -854,7 +1539,7 @@
         </trans-unit>
         <trans-unit id="989a03f519ef6a702aa0a44ba563b8e53ed88034" translate="yes" xml:space="preserve">
           <source>&amp;lt;host&amp;gt; and &amp;lt;port&amp;gt;</source>
-          <target state="new"/>
+          <target state="translated">&amp;lt;host&amp;gt; and &amp;lt;port&amp;gt;</target>
         </trans-unit>
         <trans-unit id="a16c178a1ffe4516fe811d58f70025b06e0731e4" translate="yes" xml:space="preserve">
           <source>&amp;lt;host-source&amp;gt;</source>
@@ -902,11 +1587,11 @@
         </trans-unit>
         <trans-unit id="e01e26eefb270e5cda2b7737e6c738c28b02828e" translate="yes" xml:space="preserve">
           <source>&amp;lt;origin(s)&amp;gt;: The feature is allowed for specific origins (for example, https://example.com). Origins should be separated by a space.</source>
-          <target state="new"/>
+          <target state="translated">&amp;lt;origin(s)&amp;gt;: The feature is allowed for specific origins (for example, https://example.com). Origins should be separated by a space.</target>
         </trans-unit>
         <trans-unit id="a5d47b3d586d6565be25ed6d48ac55a6418e8e88" translate="yes" xml:space="preserve">
           <source>&amp;lt;port&amp;gt; Optional</source>
-          <target state="new"/>
+          <target state="translated">&amp;lt;port&amp;gt; Optional</target>
         </trans-unit>
         <trans-unit id="38e4d80903845c90bac301008a23d424e58ad4dc" translate="yes" xml:space="preserve">
           <source>&amp;lt;product&amp;gt;</source>
@@ -930,7 +1615,7 @@
         </trans-unit>
         <trans-unit id="2161e7ddb07d6c9c1f32d98777d40c7f29010e74" translate="yes" xml:space="preserve">
           <source>&amp;lt;proxy1&amp;gt;, &amp;lt;proxy2&amp;gt;</source>
-          <target state="new"/>
+          <target state="translated">&amp;lt;proxy1&amp;gt;, &amp;lt;proxy2&amp;gt;</target>
         </trans-unit>
         <trans-unit id="dc0ffacfd0de8f2aed9c5492d49f35e83955134c" translate="yes" xml:space="preserve">
           <source>&amp;lt;pseudonym&amp;gt;</source>
@@ -962,7 +1647,7 @@
         </trans-unit>
         <trans-unit id="27d1fb401505603ac61ad2a2e72c18f4aaa442e2" translate="yes" xml:space="preserve">
           <source>&amp;lt;source&amp;gt; can be one of the following:</source>
-          <target state="new"/>
+          <target state="translated">&amp;lt;source&amp;gt; can be one of the following:</target>
         </trans-unit>
         <trans-unit id="be229d09307e200a990d89bb79f7f97c0c22fcb4" translate="yes" xml:space="preserve">
           <source>&amp;lt;type&amp;gt;</source>
@@ -1010,7 +1695,7 @@
         </trans-unit>
         <trans-unit id="277e6ad8e3d840efde448fdfb893713f5e25fd05" translate="yes" xml:space="preserve">
           <source>'&lt;code&gt;data:&lt;/code&gt;' Allows &lt;a href=&quot;../../basics_of_http/data_uris&quot;&gt;&lt;code&gt;data:&lt;/code&gt; URIs&lt;/a&gt; to be used as a content source.&lt;em&gt; This is insecure; an attacker can also inject arbitrary data: URIs. Use this sparingly and definitely not for scripts.&lt;/em&gt;</source>
-          <target state="new"/>
+          <target state="translated">'&lt;code&gt;data:&lt;/code&gt;' Allows &lt;a href=&quot;../../basics_of_http/data_uris&quot;&gt;&lt;code&gt;data:&lt;/code&gt; URIs&lt;/a&gt; to be used as a content source.&lt;em&gt; This is insecure; an attacker can also inject arbitrary data: URIs. Use this sparingly and definitely not for scripts.&lt;/em&gt;</target>
         </trans-unit>
         <trans-unit id="40fd82521f470b9248946bec9649789280f10b85" translate="yes" xml:space="preserve">
           <source>'nonce-&amp;lt;base64-value&amp;gt;'</source>
@@ -1026,27 +1711,27 @@
         </trans-unit>
         <trans-unit id="9f7e0f66a318aa3cfe4927555efb00e191d34578" translate="yes" xml:space="preserve">
           <source>(Encrypted) &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API&quot;&gt;WebSocket&lt;/a&gt; connections</source>
-          <target state="new"/>
+          <target state="translated">(Encrypted) &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API&quot;&gt;WebSocket&lt;/a&gt; connections</target>
         </trans-unit>
         <trans-unit id="bf043950a4332e350951caa09e3bfefab1a15d2f" translate="yes" xml:space="preserve">
           <source>(Note: as described below, the actual POST request does not include the Access-Control-Request-* headers; they are needed only for the OPTIONS request.)</source>
-          <target state="new"/>
+          <target state="translated">(Note: as described below, the actual POST request does not include the Access-Control-Request-* headers; they are needed only for the OPTIONS request.)</target>
         </trans-unit>
         <trans-unit id="0a40a012fd83d7ca6d4438a5c5c36aca8d38ee5a" translate="yes" xml:space="preserve">
           <source>(web cookie, browser cookie) is a small piece of data that a server sends to the user's web browser. The browser may store it and send it back with the next request to the same server. Typically, it's used to tell if two requests came from the same browser &amp;mdash; keeping a user logged-in, for example. It remembers stateful information for the &lt;a href=&quot;overview#HTTP_is_stateless_but_not_sessionless&quot;&gt;stateless&lt;/a&gt; HTTP protocol.</source>
-          <target state="new"/>
+          <target state="translated">(web cookie, browser cookie) is a small piece of data that a server sends to the user's web browser. The browser may store it and send it back with the next request to the same server. Typically, it's used to tell if two requests came from the same browser &amp;mdash; keeping a user logged-in, for example. It remembers stateful information for the &lt;a href=&quot;overview#HTTP_is_stateless_but_not_sessionless&quot;&gt;stateless&lt;/a&gt; HTTP protocol.</target>
         </trans-unit>
         <trans-unit id="15d21b2f43c8e07ac3535e4b5c3647e6f432bb31" translate="yes" xml:space="preserve">
           <source>. The first two digits are owned by the Mozilla product team and denote versions with new features (eg: v1.1, 1.2, etc). The third digit is incremented with regular version tags (about every 6 weeks) for security updates, and the fourth is owned by the OEM.</source>
-          <target state="new"/>
+          <target state="translated">. The first two digits are owned by the Mozilla product team and denote versions with new features (eg: v1.1, 1.2, etc). The third digit is incremented with regular version tags (about every 6 weeks) for security updates, and the fourth is owned by the OEM.</target>
         </trans-unit>
         <trans-unit id="ac8e0b0b695aab17f7cd5cb01b7e6f7468e5ce23" translate="yes" xml:space="preserve">
           <source>.com domain</source>
-          <target state="new"/>
+          <target state="translated">.com domain</target>
         </trans-unit>
         <trans-unit id="4040f024503a8d57ac8ace7dbd83d0d2d619b99a" translate="yes" xml:space="preserve">
           <source>.edu domain</source>
-          <target state="new"/>
+          <target state="translated">.edu domain</target>
         </trans-unit>
         <trans-unit id="178c6e0a743af9eb872892b7d326f4a3303acfcd" translate="yes" xml:space="preserve">
           <source>0 &amp;mdash; &lt;code&gt;no-referrer&lt;/code&gt;</source>
@@ -1070,7 +1755,7 @@
         </trans-unit>
         <trans-unit id="f189b8dbc452ee2bcbb7cf6ade70c1f019a52882" translate="yes" xml:space="preserve">
           <source>1.  Introduction</source>
-          <target state="new"/>
+          <target state="translated">1.1.导言</target>
         </trans-unit>
         <trans-unit id="e217df7fe1a85c8bf0ebd9484ef098bff933f446" translate="yes" xml:space="preserve">
           <source>1.0 (WebView Mobile)</source>
@@ -1278,7 +1963,7 @@
         </trans-unit>
         <trans-unit id="f74f51ed1b6ae265800adfcf8027c01c0018665f" translate="yes" xml:space="preserve">
           <source>10.4.10 409 Conflict</source>
-          <target state="new"/>
+          <target state="translated">10.4.10 409 冲突</target>
         </trans-unit>
         <trans-unit id="70318f09da8d8a26e5644a3230b315ea952e71aa" translate="yes" xml:space="preserve">
           <source>10.4.10.  Example - Matching Lock Tokens with Collection Locks</source>
@@ -1322,7 +2007,7 @@
         </trans-unit>
         <trans-unit id="601ddb27c5aa384b78e6409f1d8339fc08089828" translate="yes" xml:space="preserve">
           <source>10.4.2 401 Unauthorized</source>
-          <target state="new"/>
+          <target state="translated">10.4.2 401未经授权</target>
         </trans-unit>
         <trans-unit id="35210bf0743e6b22de497c7e9b6bdfb058b3254c" translate="yes" xml:space="preserve">
           <source>10.4.2.  Syntax</source>
@@ -1338,7 +2023,7 @@
         </trans-unit>
         <trans-unit id="b8e7873076b6c906e234028e26265d5d9f1d735a" translate="yes" xml:space="preserve">
           <source>10.4.4 403 Forbidden</source>
-          <target state="new"/>
+          <target state="translated">10.4.4.4 403 禁止</target>
         </trans-unit>
         <trans-unit id="ab22d0e80ef8abb89efdf227d4da2b8389569533" translate="yes" xml:space="preserve">
           <source>10.4.4.  Matching State Tokens and ETags</source>
@@ -2802,7 +3487,7 @@
         </trans-unit>
         <trans-unit id="b0d4058e5e2b6c0e351b82a4dbae25d2d0bae7b0" translate="yes" xml:space="preserve">
           <source>3.1.  401 Unauthorized</source>
-          <target state="new"/>
+          <target state="translated">3.1.401未经授权</target>
         </trans-unit>
         <trans-unit id="d55d3667069535656246d60d2d4144fd29adbd27" translate="yes" xml:space="preserve">
           <source>3.1.  If-Match</source>
@@ -4434,7 +5119,7 @@
         </trans-unit>
         <trans-unit id="7ad66cd067ce8cdac6ccae933c5f01f426b20dd4" translate="yes" xml:space="preserve">
           <source>6.5.3.  403 Forbidden</source>
-          <target state="new"/>
+          <target state="translated">6.5.3.403 禁止</target>
         </trans-unit>
         <trans-unit id="fde0585658dc5a2bced772b06133b673e0964a14" translate="yes" xml:space="preserve">
           <source>6.5.4.  404 Not Found</source>
