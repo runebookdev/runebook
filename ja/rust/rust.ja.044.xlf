@@ -13,7 +13,7 @@
         </trans-unit>
         <trans-unit id="c5a4a196ff419cb4ace58ac8718f985652b454f9" translate="yes" xml:space="preserve">
           <source>An enum with the representation hint &lt;code&gt;repr(transparent)&lt;/code&gt; had zero or more than one variants.</source>
-          <target state="translated">表現ヒント &lt;code&gt;repr(transparent)&lt;/code&gt; を持つ列挙型には、0個以上のバリアントがありました。</target>
+          <target state="translated">表現ヒント &lt;code&gt;repr(transparent)&lt;/code&gt; を持つ列挙型には、ゼロまたは1つ以上のバリアントがありました。</target>
         </trans-unit>
         <trans-unit id="3dc999ff5594fd4673ff8dbd7678f9024bdecf27" translate="yes" xml:space="preserve">
           <source>An enumeration of possible errors associated with a &lt;a href=&quot;type.trylockresult&quot;&gt;&lt;code&gt;TryLockResult&lt;/code&gt;&lt;/a&gt; which can occur while trying to acquire a lock, from the &lt;a href=&quot;struct.mutex#method.try_lock&quot;&gt;&lt;code&gt;try_lock&lt;/code&gt;&lt;/a&gt; method on a &lt;a href=&quot;struct.mutex&quot;&gt;&lt;code&gt;Mutex&lt;/code&gt;&lt;/a&gt; or the &lt;a href=&quot;struct.rwlock#method.try_read&quot;&gt;&lt;code&gt;try_read&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;struct.rwlock#method.try_write&quot;&gt;&lt;code&gt;try_write&lt;/code&gt;&lt;/a&gt; methods on an &lt;a href=&quot;struct.rwlock&quot;&gt;&lt;code&gt;RwLock&lt;/code&gt;&lt;/a&gt;.</source>
@@ -49,7 +49,7 @@
         </trans-unit>
         <trans-unit id="49b49c608a0a48a5c64a8db743785c3d4f2cbc87" translate="yes" xml:space="preserve">
           <source>An error returned by &lt;a href=&quot;struct.refcell#method.try_borrow_mut&quot;&gt;&lt;code&gt;RefCell::try_borrow_mut&lt;/code&gt;&lt;/a&gt;.</source>
-          <target state="translated">&lt;a href=&quot;struct.refcell#method.try_borrow_mut&quot;&gt; &lt;code&gt;RefCell::try_borrow_mut&lt;/code&gt; &lt;/a&gt;返されたエラー。</target>
+          <target state="translated">&lt;a href=&quot;struct.refcell#method.try_borrow_mut&quot;&gt; &lt;code&gt;RefCell::try_borrow_mut&lt;/code&gt; &lt;/a&gt;によって返されたエラー。</target>
         </trans-unit>
         <trans-unit id="6a9d323634dc21ac2ba61947c9f4ada5b0523975" translate="yes" xml:space="preserve">
           <source>An error returned by &lt;code&gt;into_inner&lt;/code&gt; which combines an error that happened while writing out the buffer, and the buffered writer object which may be used to recover from the condition.</source>
@@ -161,7 +161,7 @@
         </trans-unit>
         <trans-unit id="056ff1cdb43a917deab8c9dc0f118b2d9dd496e8" translate="yes" xml:space="preserve">
           <source>An example of a non-&lt;code&gt;Send&lt;/code&gt; type is the reference-counting pointer &lt;a href=&quot;../rc/struct.rc&quot;&gt;&lt;code&gt;rc::Rc&lt;/code&gt;&lt;/a&gt;. If two threads attempt to clone &lt;a href=&quot;../rc/struct.rc&quot;&gt;&lt;code&gt;Rc&lt;/code&gt;&lt;/a&gt;s that point to the same reference-counted value, they might try to update the reference count at the same time, which is &lt;a href=&quot;../../reference/behavior-considered-undefined&quot;&gt;undefined behavior&lt;/a&gt; because &lt;a href=&quot;../rc/struct.rc&quot;&gt;&lt;code&gt;Rc&lt;/code&gt;&lt;/a&gt; doesn't use atomic operations. Its cousin &lt;a href=&quot;../sync/struct.arc&quot;&gt;&lt;code&gt;sync::Arc&lt;/code&gt;&lt;/a&gt; does use atomic operations (incurring some overhead) and thus is &lt;code&gt;Send&lt;/code&gt;.</source>
-          <target state="translated">非 &lt;code&gt;Send&lt;/code&gt; タイプの例は、参照カウントポインター&lt;a href=&quot;../rc/struct.rc&quot;&gt; &lt;code&gt;rc::Rc&lt;/code&gt; &lt;/a&gt;です。 2つのスレッドが同じ参照カウント値を指す&lt;a href=&quot;../rc/struct.rc&quot;&gt; &lt;code&gt;Rc&lt;/code&gt; &lt;/a&gt;のクローンを作成しようとすると、それらは同時に参照カウントを更新しようとする可能性があります。これは、&lt;a href=&quot;../rc/struct.rc&quot;&gt; &lt;code&gt;Rc&lt;/code&gt; &lt;/a&gt;がアトミック操作を使用しないため、&lt;a href=&quot;../../reference/behavior-considered-undefined&quot;&gt;未定義の&lt;/a&gt;動作です。その従兄弟の&lt;a href=&quot;../sync/struct.arc&quot;&gt; &lt;code&gt;sync::Arc&lt;/code&gt; &lt;/a&gt;はアトミック操作を使用し（オーバーヘッドが発生します）、したがって &lt;code&gt;Send&lt;/code&gt; になります。</target>
+          <target state="translated">非 &lt;code&gt;Send&lt;/code&gt; タイプの例は、参照カウントポインター&lt;a href=&quot;../rc/struct.rc&quot;&gt; &lt;code&gt;rc::Rc&lt;/code&gt; &lt;/a&gt;です。2つのスレッドが同じ参照カウント値を指す&lt;a href=&quot;../rc/struct.rc&quot;&gt; &lt;code&gt;Rc&lt;/code&gt; &lt;/a&gt;のクローンを作成しようとすると、参照カウントを同時に更新しようとする可能性があります。これは、&lt;a href=&quot;../rc/struct.rc&quot;&gt; &lt;code&gt;Rc&lt;/code&gt; &lt;/a&gt;がアトミック操作を使用しないため、&lt;a href=&quot;../../reference/behavior-considered-undefined&quot;&gt;未定義の&lt;/a&gt;動作です。その従兄弟の&lt;a href=&quot;../sync/struct.arc&quot;&gt; &lt;code&gt;sync::Arc&lt;/code&gt; &lt;/a&gt;はアトミック操作を使用し（オーバーヘッドが発生します）、したがって &lt;code&gt;Send&lt;/code&gt; になります。</target>
         </trans-unit>
         <trans-unit id="e38ec369f62f9a0e9cf71faa19b5cb843376b06e" translate="yes" xml:space="preserve">
           <source>An example of a parenthesized expression:</source>
@@ -173,7 +173,7 @@
         </trans-unit>
         <trans-unit id="f97a42d4af253ea16c2f098f9cd1358538ff9ccc" translate="yes" xml:space="preserve">
           <source>An example of a trait that can&amp;rsquo;t be derived is &lt;code&gt;Display&lt;/code&gt;, which handles formatting for end users. You should always consider the appropriate way to display a type to an end user. What parts of the type should an end user be allowed to see? What parts would they find relevant? What format of the data would be most relevant to them? The Rust compiler doesn&amp;rsquo;t have this insight, so it can&amp;rsquo;t provide appropriate default behavior for you.</source>
-          <target state="translated">派生できない特性の例は、エンドユーザーのフォーマットを処理する &lt;code&gt;Display&lt;/code&gt; です。エンドユーザーにタイプを表示する適切な方法を常に検討する必要があります。エンドユーザーに表示を許可する必要があるのは、タイプのどの部分ですか？彼らはどの部分に関連があると思いますか？それらに最も関連するデータの形式は何ですか？Rustコンパイラーにはこの洞察がないため、適切なデフォルトの動作を提供できません。</target>
+          <target state="translated">派生できない特性の例は &lt;code&gt;Display&lt;/code&gt; で、これはエンドユーザーのフォーマットを処理します。エンドユーザーにタイプを表示する適切な方法を常に検討する必要があります。エンドユーザーに表示を許可する必要があるのは、タイプのどの部分ですか？彼らはどの部分に関連があると思いますか？それらに最も関連するデータの形式は何ですか？Rustコンパイラーにはこの洞察がないため、適切なデフォルトの動作を提供できません。</target>
         </trans-unit>
         <trans-unit id="b2a6dc626aff375aa4d434c66ea264d4dc08b800" translate="yes" xml:space="preserve">
           <source>An example of a trait whose methods are not object safe is the standard library&amp;rsquo;s &lt;code&gt;Clone&lt;/code&gt; trait. The signature for the &lt;code&gt;clone&lt;/code&gt; method in the &lt;code&gt;Clone&lt;/code&gt; trait looks like this:</source>
@@ -241,11 +241,11 @@
         </trans-unit>
         <trans-unit id="f42b2c8e58eff03a7089947fa8ffae92137b9b5f" translate="yes" xml:space="preserve">
           <source>An example of when you might want to use an array rather than a vector is in a program that needs to know the names of the months of the year. It&amp;rsquo;s very unlikely that such a program will need to add or remove months, so you can use an array because you know it will always contain 12 items:</source>
-          <target state="translated">ベクトルではなく配列を使用する場合の例として、月の名前を知る必要があるプログラムがあります。このようなプログラムで月数を追加または削除する必要が生じる可能性は非常に低いため、配列には常に12項目が含まれることがわかっているため、配列を使用できます。</target>
+          <target state="translated">ベクトルではなく配列を使用したい場合の例は、年の月の名前を知る必要があるプログラムです。このようなプログラムで月数を追加または削除する必要が生じる可能性は非常に低いため、配列には常に12項目が含まれることがわかっているため、配列を使用できます。</target>
         </trans-unit>
         <trans-unit id="bd0712d619a2d60e4c146e231ccdfbad8aba4743" translate="yes" xml:space="preserve">
           <source>An example of where you would want to only accept &lt;code&gt;fn&lt;/code&gt; and not closures is when interfacing with external code that doesn&amp;rsquo;t have closures: C functions can accept functions as arguments, but C doesn&amp;rsquo;t have closures.</source>
-          <target state="translated">クロージャーではなく &lt;code&gt;fn&lt;/code&gt; のみを受け入れたい場合の例は、クロージャーを持たない外部コードとインターフェースする場合です。C関数は引数として関数を受け入れることができますが、Cにはクロージャーがありません。</target>
+          <target state="translated">クロージャーではなく &lt;code&gt;fn&lt;/code&gt; のみを受け入れたい場合の例は、クロージャーを持たない外部コードとインターフェースする場合です。C関数は関数を引数として受け入れることができますが、Cにはクロージャーがありません。</target>
         </trans-unit>
         <trans-unit id="e73f9f6c8b4fbcf9f4fd470408b5fff3f081d3b9" translate="yes" xml:space="preserve">
           <source>An example using a closure:</source>
@@ -265,7 +265,7 @@
         </trans-unit>
         <trans-unit id="0a0f5c759335e3ef134a90149eb082ea59cf661b" translate="yes" xml:space="preserve">
           <source>An executing Rust program consists of a collection of native OS threads, each with their own stack and local state. Threads can be named, and provide some built-in support for low-level synchronization.</source>
-          <target state="translated">実行中のRustプログラムは、ネイティブOSのスレッドのコレクションで構成されており、それぞれが独自のスタックとローカルステートを持っています。スレッドは名前を付けることができ、低レベルの同期化のためのいくつかの組み込みサポートを提供します。</target>
+          <target state="translated">実行中のRustプログラムは、ネイティブOSのスレッドのコレクションで構成されており、それぞれが独自のスタックとローカルステートを持っています。スレッドは名前を付けることができ、低レベルの同期のためのいくつかの組み込みサポートを提供します。</target>
         </trans-unit>
         <trans-unit id="12c993ee363617797c480ae0e7fa61fa88f7540e" translate="yes" xml:space="preserve">
           <source>An explicit conversion from a &lt;code&gt;&amp;amp;str&lt;/code&gt; to a String is done as follows:</source>
@@ -277,15 +277,15 @@
         </trans-unit>
         <trans-unit id="b0b2d07f6ff343f37bbb2da0dbd07ed7ea53cb5d" translate="yes" xml:space="preserve">
           <source>An expression is a combination of values, constants, variables, operators and functions that evaluate to a single value, with or without side-effects.</source>
-          <target state="translated">式とは、値、定数、変数、演算子、関数の組み合わせで、副作用の有無にかかわらず、1つの値に評価されるものです。</target>
+          <target state="translated">式とは、値、定数、変数、演算子、関数の組み合わせで、副作用の有無にかかわらず、単一の値に評価されるものです。</target>
         </trans-unit>
         <trans-unit id="8a470e20ec20f9f17fbbac4266c615aa43cc21c3" translate="yes" xml:space="preserve">
           <source>An expression may have two roles: it always produces a &lt;em&gt;value&lt;/em&gt;, and it may have &lt;em&gt;effects&lt;/em&gt; (otherwise known as &quot;side effects&quot;). An expression &lt;em&gt;evaluates to&lt;/em&gt; a value, and has effects during &lt;em&gt;evaluation&lt;/em&gt;. Many expressions contain sub-expressions (operands). The meaning of each kind of expression dictates several things:</source>
-          <target state="translated">式には2つの役割があります。それは常に&lt;em&gt;値を&lt;/em&gt;生成する&lt;em&gt;ことと&lt;/em&gt;、&lt;em&gt;影響&lt;/em&gt;（別の方法として「副作用」として知られること）を持つことです。式は値に&lt;em&gt;評価され&lt;/em&gt;、&lt;em&gt;評価&lt;/em&gt;中に影響を与えます。多くの式にはサブ式（オペランド）が含まれています。それぞれの種類の表現の意味は、いくつかのことを指示します。</target>
+          <target state="translated">式には2つの役割があります。それは常に&lt;em&gt;値を&lt;/em&gt;生成する&lt;em&gt;ことと&lt;/em&gt;、&lt;em&gt;効果&lt;/em&gt;（または「副作用」として知られていること）を持つことです。式は値に&lt;em&gt;評価され&lt;/em&gt;、&lt;em&gt;評価&lt;/em&gt;中に影響を与えます。多くの式にはサブ式（オペランド）が含まれています。各種類の表現の意味は、いくつかのことを決定します。</target>
         </trans-unit>
         <trans-unit id="894873bc5f587b4733b17f7dfb18b0f3059d2176" translate="yes" xml:space="preserve">
           <source>An expression that consists of only a &lt;a href=&quot;expressions/block-expr&quot;&gt;block expression&lt;/a&gt; or control flow expression, if used in a context where a statement is permitted, can omit the trailing semicolon. This can cause an ambiguity between it being parsed as a standalone statement and as a part of another expression; in this case, it is parsed as a statement. The type of &lt;a href=&quot;expressions&quot;&gt;&lt;em&gt;ExpressionWithBlock&lt;/em&gt;&lt;/a&gt; expressions when used as statements must be the unit type.</source>
-          <target state="translated">&lt;a href=&quot;expressions/block-expr&quot;&gt;ブロック式&lt;/a&gt;または制御フロー式のみで構成される式は、ステートメントが許可されているコンテキストで使用される場合、末尾のセミコロンを省略できます。これにより、スタンドアロンのステートメントとして解析されるか、別の式の一部として解析されるかのあいまいさが生じる可能性があります。この場合、ステートメントとして解析されます。ステートメントとして使用する場合の&lt;a href=&quot;expressions&quot;&gt;&lt;em&gt;ExpressionWithBlock&lt;/em&gt;&lt;/a&gt;式のタイプは、ユニットタイプである必要があります。</target>
+          <target state="translated">&lt;a href=&quot;expressions/block-expr&quot;&gt;ブロック式&lt;/a&gt;または制御フロー式のみで構成される式は、ステートメントが許可されているコンテキストで使用される場合、末尾のセミコロンを省略できます。これにより、スタンドアロンのステートメントとして解析されることと、別の式の一部として解析されることのあいまいさが生じる可能性があります。この場合、ステートメントとして解析されます。ステートメントとして使用する場合の&lt;a href=&quot;expressions&quot;&gt;&lt;em&gt;ExpressionWithBlock&lt;/em&gt;&lt;/a&gt;式のタイプは、ユニットタイプである必要があります。</target>
         </trans-unit>
         <trans-unit id="3db9b6e5300ec2a35e045cae789d7d65bc1644c2" translate="yes" xml:space="preserve">
           <source>An extension trait for concatenating slices</source>
@@ -293,7 +293,7 @@
         </trans-unit>
         <trans-unit id="12147a5a52fb5c2a1b9d7472abd1e716e6699134" translate="yes" xml:space="preserve">
           <source>An external crate dependency can be declared without binding its name in scope by using an underscore with the form &lt;code&gt;extern crate foo as _&lt;/code&gt;. This may be useful for crates that only need to be linked, but are never referenced, and will avoid being reported as unused.</source>
-          <target state="translated">外部クレート依存関係は、 &lt;code&gt;extern crate foo as _&lt;/code&gt; の形式でアンダースコアを使用することにより、スコープ内でその名前をバインドせずに宣言できます。これは、リンクする必要があるだけで参照されないクレートに役立ち、未使用として報告されないようにします。</target>
+          <target state="translated">外部クレート依存関係は、 &lt;code&gt;extern crate foo as _&lt;/code&gt; の形式でアンダースコアを使用することにより、スコープ内でその名前をバインドせずに宣言できます。これは、リンクする必要があるだけで参照されないクレートの場合に役立ち、未使用として報告されないようにします。</target>
         </trans-unit>
         <trans-unit id="af0969299b70206aefe5265b359a29ba784a7b81" translate="yes" xml:space="preserve">
           <source>An feature unstable in &lt;code&gt;const&lt;/code&gt; contexts was used.</source>
@@ -321,7 +321,7 @@
         </trans-unit>
         <trans-unit id="4ba45e243c916e58a2890a2d541b968fddd22dd8" translate="yes" xml:space="preserve">
           <source>An implementation can take type and lifetime parameters, which can be used in the rest of the implementation. Type parameters declared for an implementation must be used at least once in either the trait or the implementing type of an implementation. Implementation parameters are written directly after the &lt;code&gt;impl&lt;/code&gt; keyword.</source>
-          <target state="translated">実装は、残りの実装で使用できるタイプと存続期間のパラメーターを取ることができます。実装に対して宣言された型パラメーターは、実装の特性または実装タイプのいずれかで少なくとも1回使用する必要があります。実装パラメーターは、 &lt;code&gt;impl&lt;/code&gt; キーワードの直後に書き込まれます。</target>
+          <target state="translated">実装は、残りの実装で使用できるタイプと存続期間のパラメーターを取ることができます。実装用に宣言された型パラメーターは、実装の特性または実装タイプのいずれかで少なくとも1回使用する必要があります。実装パラメーターは、 &lt;code&gt;impl&lt;/code&gt; キーワードの直後に書き込まれます。</target>
         </trans-unit>
         <trans-unit id="5c1c04198ba70d5ee214d020749cca1de7fc7d00" translate="yes" xml:space="preserve">
           <source>An implementation of &lt;code&gt;Alloc&lt;/code&gt; can allocate, reallocate, and deallocate arbitrary blocks of data described via &lt;code&gt;Layout&lt;/code&gt;.</source>
@@ -357,7 +357,7 @@
         </trans-unit>
         <trans-unit id="b5b904d460aff616075d9ff33295d995d4012b99" translate="yes" xml:space="preserve">
           <source>An implementation of &lt;code&gt;Neg&lt;/code&gt; for &lt;code&gt;Sign&lt;/code&gt;, which allows the use of &lt;code&gt;-&lt;/code&gt; to negate its value.</source>
-          <target state="translated">&lt;code&gt;Neg&lt;/code&gt; for &lt;code&gt;Sign&lt;/code&gt; の実装。これにより、 &lt;code&gt;-&lt;/code&gt; を使用してその値を無効にすることができます。</target>
+          <target state="translated">実装 &lt;code&gt;Neg&lt;/code&gt; のための &lt;code&gt;Sign&lt;/code&gt; の使用を可能にし、 &lt;code&gt;-&lt;/code&gt; その価値を否定します。</target>
         </trans-unit>
         <trans-unit id="873b42d4cd981f821fbfc718a707b146669b45da" translate="yes" xml:space="preserve">
           <source>An implementation of &lt;code&gt;Not&lt;/code&gt; for &lt;code&gt;Answer&lt;/code&gt;, which enables the use of &lt;code&gt;!&lt;/code&gt; to invert its value.</source>
@@ -369,7 +369,7 @@
         </trans-unit>
         <trans-unit id="8e679f132f9bdc673ab7525c566b308cef626454" translate="yes" xml:space="preserve">
           <source>An implementation of &lt;code&gt;Shl&lt;/code&gt; that spins a vector leftward by a given amount.</source>
-          <target state="translated">指定された量だけベクトルを左にスピンする &lt;code&gt;Shl&lt;/code&gt; の実装。</target>
+          <target state="translated">&lt;code&gt;Shl&lt;/code&gt; の実装で、指定された量だけベクトルを左にスピンします。</target>
         </trans-unit>
         <trans-unit id="4b9ea2f9d110fb7b7d2e508e8eb895f2a6c76af4" translate="yes" xml:space="preserve">
           <source>An implementation of &lt;code&gt;ShlAssign&lt;/code&gt; for a wrapper around &lt;code&gt;usize&lt;/code&gt;.</source>
@@ -381,7 +381,7 @@
         </trans-unit>
         <trans-unit id="00b6c1f0f935bcc3f078a1d4c1fb779815701d8c" translate="yes" xml:space="preserve">
           <source>An implementation of &lt;code&gt;Shr&lt;/code&gt; that spins a vector rightward by a given amount.</source>
-          <target state="translated">指定された量だけベクトルを右にスピンする &lt;code&gt;Shr&lt;/code&gt; の実装。</target>
+          <target state="translated">&lt;code&gt;Shr&lt;/code&gt; の実装で、指定された量だけベクトルを右にスピンします。</target>
         </trans-unit>
         <trans-unit id="fef3f9c26a074ccf18bb7e56e8695a2a73f26459" translate="yes" xml:space="preserve">
           <source>An implementation of &lt;code&gt;ShrAssign&lt;/code&gt; for a wrapper around &lt;code&gt;usize&lt;/code&gt;.</source>
@@ -401,7 +401,7 @@
         </trans-unit>
         <trans-unit id="29610251a6990ca267c18a3b17be65ef65d80c1f" translate="yes" xml:space="preserve">
           <source>An important part of the process of learning Rust is learning how to read the error messages the compiler displays: these will guide you toward working code. As such, we&amp;rsquo;ll provide many examples that don&amp;rsquo;t compile along with the error message the compiler will show you in each situation. Know that if you enter and run a random example, it may not compile! Make sure you read the surrounding text to see whether the example you&amp;rsquo;re trying to run is meant to error. Ferris will also help you distinguish code that isn&amp;rsquo;t meant to work:</source>
-          <target state="translated">Rustを学習するプロセスの重要な部分は、コンパイラが表示するエラーメッセージの読み方を学ぶことです。これらは、コードを機能させるためのガイドになります。そのため、コンパイルできない多くの例と、コンパイラがそれぞれの状況で表示するエラーメッセージを提供します。ランダムな例を入力して実行すると、コンパイルされない可能性があることに注意してください。周囲のテキストを読んで、実行しようとしている例がエラーを意味するものかどうかを確認してください。Ferrisは、機能しないコードを区別するのにも役立ちます。</target>
+          <target state="translated">Rustを学習するプロセスの重要な部分は、コンパイラーが表示するエラーメッセージの読み方を学ぶことです。これらは、コードを機能させるためのガイドになります。そのため、コンパイルできない多くの例と、コンパイラがそれぞれの状況で表示するエラーメッセージを提供します。ランダムな例を入力して実行すると、コンパイルされない可能性があることに注意してください。周囲のテキストを読んで、実行しようとしている例がエラーを意味するものかどうかを確認してください。Ferrisは、機能しないコードを区別するのにも役立ちます。</target>
         </trans-unit>
         <trans-unit id="9068331ccd5e98287382db124205efdfb79f7cfb" translate="yes" xml:space="preserve">
           <source>An important thing to remember is that the type &lt;code&gt;fmt::Error&lt;/code&gt; should not be confused with &lt;a href=&quot;../io/struct.error&quot;&gt;&lt;code&gt;std::io::Error&lt;/code&gt;&lt;/a&gt; or &lt;a href=&quot;../error/trait.error&quot;&gt;&lt;code&gt;std::error::Error&lt;/code&gt;&lt;/a&gt;, which you may also have in scope.</source>
@@ -413,7 +413,7 @@
         </trans-unit>
         <trans-unit id="192433a73b5ee226652b56c2bf60e3939daf0558" translate="yes" xml:space="preserve">
           <source>An inclusive range needs an end in order to &lt;em&gt;include&lt;/em&gt; it. If you just need a start and no end, use a non-inclusive range (with &lt;code&gt;..&lt;/code&gt;):</source>
-          <target state="translated">包含範囲に&lt;em&gt;は、&lt;/em&gt;それを&lt;em&gt;含める&lt;/em&gt;ために終了が必要です。開始のみで終了なしが必要な場合は、（ &lt;code&gt;..&lt;/code&gt; で）非包含範囲を使用します。</target>
+          <target state="translated">包括的範囲に&lt;em&gt;は、&lt;/em&gt;それを&lt;em&gt;含める&lt;/em&gt;ために終了が必要です。あなただけの開始と終わりが必要な場合は、（と非包括範囲を使用 &lt;code&gt;..&lt;/code&gt; ）：</target>
         </trans-unit>
         <trans-unit id="50920c083a024a331ce9d74584285d9788301b90" translate="yes" xml:space="preserve">
           <source>An inclusive range was used with no end.</source>
@@ -429,7 +429,7 @@
         </trans-unit>
         <trans-unit id="f2f7f4bb84396a832ec236ff6b02e7c811f6141c" translate="yes" xml:space="preserve">
           <source>An inherent implementation is defined as the sequence of the &lt;code&gt;impl&lt;/code&gt; keyword, generic type declarations, a path to a nominal type, a where clause, and a bracketed set of associable items.</source>
-          <target state="translated">固有の実装は、 &lt;code&gt;impl&lt;/code&gt; キーワードのシーケンス、ジェネリック型宣言、名義型へのパス、where句、および関連付けられた一連の関連付けられた項目として定義されます。</target>
+          <target state="translated">固有の実装は、 &lt;code&gt;impl&lt;/code&gt; キーワードのシーケンス、ジェネリック型宣言、名義型へのパス、where句、および関連付けられた一連の関連項目として定義されます。</target>
         </trans-unit>
         <trans-unit id="eaca7587ab66134ebcc5c9d98dddc7a6d1b623fb" translate="yes" xml:space="preserve">
           <source>An instance of &lt;code&gt;DirEntry&lt;/code&gt; represents an entry inside of a directory on the filesystem. Each entry can be inspected via methods to learn about the full path or possibly other metadata through per-platform extension traits.</source>
@@ -437,7 +437,7 @@
         </trans-unit>
         <trans-unit id="1fbc585e6de8e6bcaf356cf9f8023d57041f924e" translate="yes" xml:space="preserve">
           <source>An instance of &lt;code&gt;Layout&lt;/code&gt; describes a particular layout of memory. You build a &lt;code&gt;Layout&lt;/code&gt; up as an input to give to an allocator.</source>
-          <target state="translated">&lt;code&gt;Layout&lt;/code&gt; のインスタンスは、メモリの特定のレイアウトを記述します。アロケーターに与える入力として &lt;code&gt;Layout&lt;/code&gt; 作成します。</target>
+          <target state="translated">&lt;code&gt;Layout&lt;/code&gt; のインスタンスは、メモリの特定のレイアウトを記述します。アロケータに与える入力として &lt;code&gt;Layout&lt;/code&gt; 作成します。</target>
         </trans-unit>
         <trans-unit id="b190fdcf2cbfcbc1313cacaba62570eb78c828a4" translate="yes" xml:space="preserve">
           <source>An instance of a &lt;code&gt;File&lt;/code&gt; can be read and/or written depending on what options it was opened with. Files also implement &lt;a href=&quot;../io/trait.seek&quot;&gt;&lt;code&gt;Seek&lt;/code&gt;&lt;/a&gt; to alter the logical cursor that the file contains internally.</source>
@@ -505,23 +505,23 @@
         </trans-unit>
         <trans-unit id="4f7d60e521538ea62f876d5c70c545dc3addec69" translate="yes" xml:space="preserve">
           <source>An iterator adaptor similar to [&lt;code&gt;fold&lt;/code&gt;] that holds internal state and produces a new iterator. &lt;a href=&quot;../../../iter/trait.iterator#method.scan&quot;&gt;Read more&lt;/a&gt;</source>
-          <target state="translated">[ &lt;code&gt;fold&lt;/code&gt; ]に類似した、内部状態を保持して新しいイテレーターを生成するイテレーターアダプター。&lt;a href=&quot;../../../iter/trait.iterator#method.scan&quot;&gt;続きを読む&lt;/a&gt;</target>
+          <target state="translated">[ &lt;code&gt;fold&lt;/code&gt; ]に似た、内部状態を保持して新しい反復子を生成する反復子アダプター。&lt;a href=&quot;../../../iter/trait.iterator#method.scan&quot;&gt;続きを読む&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="7a650dc159a2fda49c7766be96685d0f790f13a0" translate="yes" xml:space="preserve">
           <source>An iterator adaptor similar to [&lt;code&gt;fold&lt;/code&gt;] that holds internal state and produces a new iterator. &lt;a href=&quot;../../iter/trait.iterator#method.scan&quot;&gt;Read more&lt;/a&gt;</source>
-          <target state="translated">[ &lt;code&gt;fold&lt;/code&gt; ]に類似した、内部状態を保持して新しいイテレーターを生成するイテレーターアダプター。&lt;a href=&quot;../../iter/trait.iterator#method.scan&quot;&gt;続きを読む&lt;/a&gt;</target>
+          <target state="translated">[ &lt;code&gt;fold&lt;/code&gt; ]に似た、内部状態を保持して新しい反復子を生成する反復子アダプター。&lt;a href=&quot;../../iter/trait.iterator#method.scan&quot;&gt;続きを読む&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="3e898bdaf274bb7754df65ccfb97b6bd04568d2d" translate="yes" xml:space="preserve">
           <source>An iterator adaptor similar to [&lt;code&gt;fold&lt;/code&gt;] that holds internal state and produces a new iterator. &lt;a href=&quot;../iter/trait.iterator#method.scan&quot;&gt;Read more&lt;/a&gt;</source>
-          <target state="translated">[ &lt;code&gt;fold&lt;/code&gt; ]に類似した、内部状態を保持して新しいイテレーターを生成するイテレーターアダプター。&lt;a href=&quot;../iter/trait.iterator#method.scan&quot;&gt;続きを読む&lt;/a&gt;</target>
+          <target state="translated">[ &lt;code&gt;fold&lt;/code&gt; ]に似た、内部状態を保持して新しい反復子を生成する反復子アダプター。&lt;a href=&quot;../iter/trait.iterator#method.scan&quot;&gt;続きを読む&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="e2996431c0507a4a842fe331c88d08e4bb45dcce" translate="yes" xml:space="preserve">
           <source>An iterator adaptor similar to [&lt;code&gt;fold&lt;/code&gt;] that holds internal state and produces a new iterator. &lt;a href=&quot;iter/trait.iterator#method.scan&quot;&gt;Read more&lt;/a&gt;</source>
-          <target state="translated">[ &lt;code&gt;fold&lt;/code&gt; ]に類似した、内部状態を保持して新しいイテレーターを生成するイテレーターアダプター。&lt;a href=&quot;iter/trait.iterator#method.scan&quot;&gt;続きを読む&lt;/a&gt;</target>
+          <target state="translated">[ &lt;code&gt;fold&lt;/code&gt; ]に似た、内部状態を保持して新しい反復子を生成する反復子アダプター。&lt;a href=&quot;iter/trait.iterator#method.scan&quot;&gt;続きを読む&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="ae7a2ef58596a8f574790d9946d5c7b0d3e0427f" translate="yes" xml:space="preserve">
           <source>An iterator adaptor similar to [&lt;code&gt;fold&lt;/code&gt;] that holds internal state and produces a new iterator. &lt;a href=&quot;trait.iterator#method.scan&quot;&gt;Read more&lt;/a&gt;</source>
-          <target state="translated">[ &lt;code&gt;fold&lt;/code&gt; ]に類似した、内部状態を保持して新しいイテレーターを生成するイテレーターアダプター。&lt;a href=&quot;trait.iterator#method.scan&quot;&gt;続きを読む&lt;/a&gt;</target>
+          <target state="translated">[ &lt;code&gt;fold&lt;/code&gt; ]に似た、内部状態を保持して新しい反復子を生成する反復子アダプター。&lt;a href=&quot;trait.iterator#method.scan&quot;&gt;続きを読む&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="9ad9db34c1f6ac7b97514886d275ac1277b33c65" translate="yes" xml:space="preserve">
           <source>An iterator for stepping iterators by a custom amount.</source>
@@ -529,7 +529,7 @@
         </trans-unit>
         <trans-unit id="fb45f260d1289d4ddcd0c03f93e3cf026ce37b59" translate="yes" xml:space="preserve">
           <source>An iterator has a method, &lt;a href=&quot;trait.iterator#tymethod.next&quot;&gt;&lt;code&gt;next&lt;/code&gt;&lt;/a&gt;, which when called, returns an &lt;a href=&quot;../option/enum.option&quot;&gt;&lt;code&gt;Option&lt;/code&gt;&lt;/a&gt;&lt;code&gt;&amp;lt;Item&amp;gt;&lt;/code&gt;. &lt;a href=&quot;trait.iterator#tymethod.next&quot;&gt;&lt;code&gt;next&lt;/code&gt;&lt;/a&gt; will return &lt;code&gt;Some(Item)&lt;/code&gt; as long as there are elements, and once they've all been exhausted, will return &lt;code&gt;None&lt;/code&gt; to indicate that iteration is finished. Individual iterators may choose to resume iteration, and so calling &lt;a href=&quot;trait.iterator#tymethod.next&quot;&gt;&lt;code&gt;next&lt;/code&gt;&lt;/a&gt; again may or may not eventually start returning &lt;code&gt;Some(Item)&lt;/code&gt; again at some point.</source>
-          <target state="translated">イテレータにはメソッド&lt;a href=&quot;trait.iterator#tymethod.next&quot;&gt; &lt;code&gt;next&lt;/code&gt; &lt;/a&gt;があり、呼び出されると&lt;a href=&quot;../option/enum.option&quot;&gt; &lt;code&gt;Option&lt;/code&gt; &lt;/a&gt; &lt;code&gt;&amp;lt;Item&amp;gt;&lt;/code&gt; を返します。&lt;a href=&quot;trait.iterator#tymethod.next&quot;&gt; &lt;code&gt;next&lt;/code&gt; &lt;/a&gt;は、要素が存在する限り、 &lt;code&gt;Some(Item)&lt;/code&gt; を返します。要素がすべて使い果たされると、 &lt;code&gt;None&lt;/code&gt; を返し、反復が終了したことを示します。個々のイテレータは反復を再開することを選択する場合があるため、&lt;a href=&quot;trait.iterator#tymethod.next&quot;&gt; &lt;code&gt;next&lt;/code&gt; を&lt;/a&gt;再度呼び出すと、ある時点で最終的に &lt;code&gt;Some(Item)&lt;/code&gt; が返されるようになる場合とそうでない場合があります。</target>
+          <target state="translated">イテレータにはメソッド&lt;a href=&quot;trait.iterator#tymethod.next&quot;&gt; &lt;code&gt;next&lt;/code&gt; &lt;/a&gt;があり、呼び出されると&lt;a href=&quot;../option/enum.option&quot;&gt; &lt;code&gt;Option&lt;/code&gt; &lt;/a&gt; &lt;code&gt;&amp;lt;Item&amp;gt;&lt;/code&gt; を返します。&lt;a href=&quot;trait.iterator#tymethod.next&quot;&gt; &lt;code&gt;next&lt;/code&gt; &lt;/a&gt;は、要素がある限り &lt;code&gt;Some(Item)&lt;/code&gt; を返します。要素がすべて使い果たされると、 &lt;code&gt;None&lt;/code&gt; を返し、反復が終了したことを示します。個々のイテレータは反復を再開することを選択する可能性があるため、&lt;a href=&quot;trait.iterator#tymethod.next&quot;&gt; &lt;code&gt;next&lt;/code&gt; を&lt;/a&gt;再度呼び出すと、ある時点で最終的に &lt;code&gt;Some(Item)&lt;/code&gt; が返されるようになる場合とそうでない場合があります。</target>
         </trans-unit>
         <trans-unit id="e31522f53dadc02b86f505f8fd01b611f6643e8b" translate="yes" xml:space="preserve">
           <source>An iterator method that applies a fallible function to each item in the iterator, stopping at the first error and returning that error.</source>
@@ -645,7 +645,7 @@
         </trans-unit>
         <trans-unit id="c74c624cf35ae570735e4b7f11b57db582409878" translate="yes" xml:space="preserve">
           <source>An iterator over a mutable reference to the &lt;a href=&quot;enum.result#variant.Ok&quot;&gt;&lt;code&gt;Ok&lt;/code&gt;&lt;/a&gt; variant of a &lt;a href=&quot;enum.result&quot;&gt;&lt;code&gt;Result&lt;/code&gt;&lt;/a&gt;.</source>
-          <target state="translated">&lt;a href=&quot;enum.result&quot;&gt; &lt;code&gt;Result&lt;/code&gt; の&lt;/a&gt;&lt;a href=&quot;enum.result#variant.Ok&quot;&gt; &lt;code&gt;Ok&lt;/code&gt; &lt;/a&gt;バリアントへの変更可能な参照に対するイテレータ。</target>
+          <target state="translated">&lt;a href=&quot;enum.result&quot;&gt; &lt;code&gt;Result&lt;/code&gt; の&lt;/a&gt;&lt;a href=&quot;enum.result#variant.Ok&quot;&gt; &lt;code&gt;Ok&lt;/code&gt; &lt;/a&gt;バリアントへの可変参照に対するイテレータ。</target>
         </trans-unit>
         <trans-unit id="f4de84f3b1b68ec9fb8cadcc939ec573f412a94a" translate="yes" xml:space="preserve">
           <source>An iterator over a reference to the &lt;a href=&quot;enum.option#variant.Some&quot;&gt;&lt;code&gt;Some&lt;/code&gt;&lt;/a&gt; variant of an &lt;a href=&quot;enum.option&quot;&gt;&lt;code&gt;Option&lt;/code&gt;&lt;/a&gt;.</source>
@@ -669,7 +669,7 @@
         </trans-unit>
         <trans-unit id="590e04be01e914183b27d18dc8eff4e3ae5668f0" translate="yes" xml:space="preserve">
           <source>An iterator over a slice in (non-overlapping) mutable chunks (&lt;code&gt;chunk_size&lt;/code&gt; elements at a time), starting at the end of the slice.</source>
-          <target state="translated">（重複しない）可変チャンク（一度に &lt;code&gt;chunk_size&lt;/code&gt; 要素）内のスライスの反復子。スライスの最後から開始します。</target>
+          <target state="translated">（オーバーラップしない）可変チャンク（一度に &lt;code&gt;chunk_size&lt;/code&gt; 要素）内のスライスの反復子。スライスの最後から開始します。</target>
         </trans-unit>
         <trans-unit id="68ad6606a48079fe489aab3faf8c6e3a26b992ca" translate="yes" xml:space="preserve">
           <source>An iterator over a snapshot of the environment variables of this process.</source>
@@ -693,7 +693,7 @@
         </trans-unit>
         <trans-unit id="034a20701e995ae32aa63104e2d5dff0ab5db4e6" translate="yes" xml:space="preserve">
           <source>An iterator over overlapping subslices of length &lt;code&gt;size&lt;/code&gt;.</source>
-          <target state="translated">長さ &lt;code&gt;size&lt;/code&gt; の重複するサブスライスに対するイテレータ。</target>
+          <target state="translated">長さ &lt;code&gt;size&lt;/code&gt; の重複するサブスライスの反復子。</target>
         </trans-unit>
         <trans-unit id="ba3bd9fb0e96735ece0b2069d478b585f0d8e7fe" translate="yes" xml:space="preserve">
           <source>An iterator over subslices separated by elements that match a predicate function, limited to a given number of splits, starting from the end of the slice.</source>
@@ -713,11 +713,11 @@
         </trans-unit>
         <trans-unit id="e1f02e8fb3b3f7adf4ed8a711ed0b9c2ca4cda3e" translate="yes" xml:space="preserve">
           <source>An iterator over substrings of &lt;code&gt;self&lt;/code&gt;, separated by characters matched by a pattern and yielded in reverse order.</source>
-          <target state="translated">パターンに一致する文字で区切られ、逆の順序で生成される、 &lt;code&gt;self&lt;/code&gt; の部分文字列の反復子。</target>
+          <target state="translated">パターンに一致する文字で区切られ、逆の順序で生成される &lt;code&gt;self&lt;/code&gt; の部分文字列の反復子。</target>
         </trans-unit>
         <trans-unit id="61c715ce9520941f9108744caef70fb9d86c6529" translate="yes" xml:space="preserve">
           <source>An iterator over substrings of the given string slice, separated by a pattern, restricted to returning at most &lt;code&gt;n&lt;/code&gt; items.</source>
-          <target state="translated">パターンで区切られた、指定された文字列スライスの部分文字列の反復子。最大 &lt;code&gt;n&lt;/code&gt; 個のアイテムを返すように制限されています。</target>
+          <target state="translated">パターンで区切られた、指定された文字列スライスの部分文字列に対するイテレータ。最大 &lt;code&gt;n&lt;/code&gt; 個のアイテムを返すように制限されています。</target>
         </trans-unit>
         <trans-unit id="44ffc34ab178359db4b3169f249d963fd153689b" translate="yes" xml:space="preserve">
           <source>An iterator over substrings of the given string slice, separated by characters matched by a pattern and yielded in reverse order.</source>
@@ -745,7 +745,7 @@
         </trans-unit>
         <trans-unit id="94f1d147d9aa55e9343a89220481dd294b3c1ca7" translate="yes" xml:space="preserve">
           <source>An iterator over the &lt;a href=&quot;enum.component&quot;&gt;&lt;code&gt;Component&lt;/code&gt;&lt;/a&gt;s of a &lt;a href=&quot;struct.path&quot;&gt;&lt;code&gt;Path&lt;/code&gt;&lt;/a&gt;, as &lt;a href=&quot;../ffi/struct.osstr&quot;&gt;&lt;code&gt;OsStr&lt;/code&gt;&lt;/a&gt; slices.</source>
-          <target state="translated">&lt;a href=&quot;../ffi/struct.osstr&quot;&gt; &lt;code&gt;OsStr&lt;/code&gt; &lt;/a&gt;スライスとしての&lt;a href=&quot;struct.path&quot;&gt; &lt;code&gt;Path&lt;/code&gt; の&lt;/a&gt;&lt;a href=&quot;enum.component&quot;&gt; &lt;code&gt;Component&lt;/code&gt; &lt;/a&gt;の反復子。</target>
+          <target state="translated">&lt;a href=&quot;../ffi/struct.osstr&quot;&gt; &lt;code&gt;OsStr&lt;/code&gt; &lt;/a&gt;スライスとしての&lt;a href=&quot;struct.path&quot;&gt; &lt;code&gt;Path&lt;/code&gt; の&lt;/a&gt;&lt;a href=&quot;enum.component&quot;&gt; &lt;code&gt;Component&lt;/code&gt; &lt;/a&gt;のイテレータ。</target>
         </trans-unit>
         <trans-unit id="81b7c7eac770fb32d5f49a8fa6788046e188a635" translate="yes" xml:space="preserve">
           <source>An iterator over the &lt;a href=&quot;enum.component&quot;&gt;&lt;code&gt;Component&lt;/code&gt;&lt;/a&gt;s of a &lt;a href=&quot;struct.path&quot;&gt;&lt;code&gt;Path&lt;/code&gt;&lt;/a&gt;.</source>
@@ -753,11 +753,11 @@
         </trans-unit>
         <trans-unit id="0046da9ead2fd2c36a6a2fa82a2d2ece3e53ebf5" translate="yes" xml:space="preserve">
           <source>An iterator over the arguments of a process, yielding a &lt;a href=&quot;../string/struct.string&quot;&gt;&lt;code&gt;String&lt;/code&gt;&lt;/a&gt; value for each argument.</source>
-          <target state="translated">プロセスの引数の反復子。各引数の&lt;a href=&quot;../string/struct.string&quot;&gt; &lt;code&gt;String&lt;/code&gt; &lt;/a&gt;値を生成します。</target>
+          <target state="translated">プロセスの引数に対するイテレータ。各引数の&lt;a href=&quot;../string/struct.string&quot;&gt; &lt;code&gt;String&lt;/code&gt; &lt;/a&gt;値を生成します。</target>
         </trans-unit>
         <trans-unit id="ebb5d1c5d63504b0108ad325cad0bf7d2676c9ed" translate="yes" xml:space="preserve">
           <source>An iterator over the arguments of a process, yielding an &lt;a href=&quot;../ffi/struct.osstring&quot;&gt;&lt;code&gt;OsString&lt;/code&gt;&lt;/a&gt; value for each argument.</source>
-          <target state="translated">プロセスの引数に対するイテレータ。各引数の&lt;a href=&quot;../ffi/struct.osstring&quot;&gt; &lt;code&gt;OsString&lt;/code&gt; &lt;/a&gt;値を生成します。</target>
+          <target state="translated">プロセスの引数の反復子。各引数の&lt;a href=&quot;../ffi/struct.osstring&quot;&gt; &lt;code&gt;OsString&lt;/code&gt; &lt;/a&gt;値を生成します。</target>
         </trans-unit>
         <trans-unit id="db156c74a7f7733ec8d2fb32dcfb0fa41d392992" translate="yes" xml:space="preserve">
           <source>An iterator over the bytes of a string slice.</source>
@@ -769,7 +769,7 @@
         </trans-unit>
         <trans-unit id="df77d35e2c4e122e560661a4bc012ddb30bf89c7" translate="yes" xml:space="preserve">
           <source>An iterator over the disjoint matches of a pattern within &lt;code&gt;self&lt;/code&gt;, yielded in reverse order along with the index of the match.</source>
-          <target state="translated">一致のインデックスとともに逆の順序で生成された、 &lt;code&gt;self&lt;/code&gt; 内のパターンの素の一致に対する反復子。</target>
+          <target state="translated">一致のインデックスと逆の順序で生成された、 &lt;code&gt;self&lt;/code&gt; 内のパターンの素の一致に対する反復子。</target>
         </trans-unit>
         <trans-unit id="f7d549ea470a7ac3f5b7f05549ca71296a3cf479" translate="yes" xml:space="preserve">
           <source>An iterator over the disjoint matches of a pattern within the given string slice.</source>
@@ -789,7 +789,7 @@
         </trans-unit>
         <trans-unit id="60a4b99de7b2aa615fb862b4ef6662bf265a07b3" translate="yes" xml:space="preserve">
           <source>An iterator over the elements of a &lt;code&gt;LinkedList&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;LinkedList&lt;/code&gt; の要素の反復子。</target>
+          <target state="translated">&lt;code&gt;LinkedList&lt;/code&gt; の要素に対するイテレータ。</target>
         </trans-unit>
         <trans-unit id="2f97f18a1c5aa5746176c6f51c4eafd84be2fce3" translate="yes" xml:space="preserve">
           <source>An iterator over the elements of a &lt;code&gt;VecDeque&lt;/code&gt;.</source>
@@ -877,11 +877,11 @@
         </trans-unit>
         <trans-unit id="d90f64072c9b86fb5e160826e11d54a35519d306" translate="yes" xml:space="preserve">
           <source>An iterator produced by calling &lt;code&gt;drain_filter&lt;/code&gt; on Vec.</source>
-          <target state="translated">Vecで &lt;code&gt;drain_filter&lt;/code&gt; を呼び出すことによって生成されるイテレータ。</target>
+          <target state="translated">Vecで &lt;code&gt;drain_filter&lt;/code&gt; を呼び出して作成されたイテレーター。</target>
         </trans-unit>
         <trans-unit id="e2f38bdab7ee3f88662413a8d0762d07987cc9e4" translate="yes" xml:space="preserve">
           <source>An iterator that always continues to yield &lt;code&gt;None&lt;/code&gt; when exhausted.</source>
-          <target state="translated">使い尽くされたときに常に &lt;code&gt;None&lt;/code&gt; を生成し続ける反復子。</target>
+          <target state="translated">使い尽くされたときに常に &lt;code&gt;None&lt;/code&gt; を生成し続けるイテレータ。</target>
         </trans-unit>
         <trans-unit id="d75b48632d15091a831b75304f768ce72229865c" translate="yes" xml:space="preserve">
           <source>An iterator that attempts to yield all pending values for a &lt;a href=&quot;struct.receiver&quot;&gt;&lt;code&gt;Receiver&lt;/code&gt;&lt;/a&gt;, created by &lt;a href=&quot;struct.receiver#method.try_iter&quot;&gt;&lt;code&gt;try_iter&lt;/code&gt;&lt;/a&gt;.</source>
@@ -945,7 +945,7 @@
         </trans-unit>
         <trans-unit id="473994edf3f2b12636ecfbae9c0cf95e9976442a" translate="yes" xml:space="preserve">
           <source>An iterator that rejects elements while &lt;code&gt;predicate&lt;/code&gt; returns &lt;code&gt;true&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;predicate&lt;/code&gt; が &lt;code&gt;true&lt;/code&gt; を返す間、要素を拒否する反復子。</target>
+          <target state="translated">&lt;code&gt;predicate&lt;/code&gt; が &lt;code&gt;true&lt;/code&gt; を返す間、要素を拒否するイテレータ。</target>
         </trans-unit>
         <trans-unit id="0464de53ba73fee454800ae2dd5fef9380113b90" translate="yes" xml:space="preserve">
           <source>An iterator that repeats an element endlessly.</source>
@@ -981,7 +981,7 @@
         </trans-unit>
         <trans-unit id="290a4df52520d8c2cd218b2c5a66207c17bd76b5" translate="yes" xml:space="preserve">
           <source>An iterator that yields &lt;code&gt;None&lt;/code&gt; forever after the underlying iterator yields &lt;code&gt;None&lt;/code&gt; once.</source>
-          <target state="translated">基礎となるイテレーターが &lt;code&gt;None&lt;/code&gt; を 1回生成した後、 &lt;code&gt;None&lt;/code&gt; を永続的に生成するイテレーター。</target>
+          <target state="translated">基礎となるイテレータが &lt;code&gt;None&lt;/code&gt; を 1回生成した後、 &lt;code&gt;None&lt;/code&gt; を永続的に生成するイテレータ。</target>
         </trans-unit>
         <trans-unit id="8077f46e4926a9ba2fe0c3a0111f99b3bfd0cee7" translate="yes" xml:space="preserve">
           <source>An iterator that yields a single element of type &lt;code&gt;A&lt;/code&gt; by applying the provided closure &lt;code&gt;F: FnOnce() -&amp;gt; A&lt;/code&gt;.</source>
@@ -1009,11 +1009,11 @@
         </trans-unit>
         <trans-unit id="47ba4cac2215dd1a04b338eb0e4a94df69cf3c0f" translate="yes" xml:space="preserve">
           <source>An iterator visiting all elements in arbitrary order. The iterator element type is &lt;code&gt;&amp;amp;'a T&lt;/code&gt;.</source>
-          <target state="translated">すべての要素を任意の順序で訪問する反復子。イテレータ要素のタイプは &lt;code&gt;&amp;amp;'a T&lt;/code&gt; です。</target>
+          <target state="translated">すべての要素を任意の順序で訪問する反復子。イテレーター要素のタイプは &lt;code&gt;&amp;amp;'a T&lt;/code&gt; です。</target>
         </trans-unit>
         <trans-unit id="7550894b7d1bb85e45b801eaeed48efa989854c0" translate="yes" xml:space="preserve">
           <source>An iterator visiting all key-value pairs in arbitrary order, with mutable references to the values. The iterator element type is &lt;code&gt;(&amp;amp;'a K, &amp;amp;'a mut V)&lt;/code&gt;.</source>
-          <target state="translated">すべてのキーと値のペアを任意の順序で訪問し、値への可変参照を使用する反復子。イテレーター要素のタイプは &lt;code&gt;(&amp;amp;'a K, &amp;amp;'a mut V)&lt;/code&gt; です。</target>
+          <target state="translated">すべてのキーと値のペアを任意の順序で訪問し、値への参照を変更できるイテレータ。イテレーター要素のタイプは &lt;code&gt;(&amp;amp;'a K, &amp;amp;'a mut V)&lt;/code&gt; です。</target>
         </trans-unit>
         <trans-unit id="1b08b2653f7dcb8dc940ed24069740a24ab5b76a" translate="yes" xml:space="preserve">
           <source>An iterator visiting all key-value pairs in arbitrary order. The iterator element type is &lt;code&gt;(&amp;amp;'a K, &amp;amp;'a V)&lt;/code&gt;.</source>
@@ -1021,11 +1021,11 @@
         </trans-unit>
         <trans-unit id="a52b26a20f6e5a2edebe10f6f90cf9507490a85c" translate="yes" xml:space="preserve">
           <source>An iterator visiting all keys in arbitrary order. The iterator element type is &lt;code&gt;&amp;amp;'a K&lt;/code&gt;.</source>
-          <target state="translated">すべてのキーを任意の順序で訪問する反復子。イテレーター要素のタイプは &lt;code&gt;&amp;amp;'a K&lt;/code&gt; です。</target>
+          <target state="translated">すべてのキーを任意の順序で訪問する反復子。イテレータ要素のタイプは &lt;code&gt;&amp;amp;'a K&lt;/code&gt; です。</target>
         </trans-unit>
         <trans-unit id="cee3468b8b5e0fdd5a440c2d5df35c4c2db2ae90" translate="yes" xml:space="preserve">
           <source>An iterator visiting all values in arbitrary order. The iterator element type is &lt;code&gt;&amp;amp;'a V&lt;/code&gt;.</source>
-          <target state="translated">すべての値を任意の順序で訪問する反復子。イテレータ要素のタイプは &lt;code&gt;&amp;amp;'a V&lt;/code&gt; です。</target>
+          <target state="translated">任意の順序ですべての値を訪問する反復子。イテレータ要素のタイプは &lt;code&gt;&amp;amp;'a V&lt;/code&gt; です。</target>
         </trans-unit>
         <trans-unit id="7ae307f212519994d8b694a5d942377f4aec4823" translate="yes" xml:space="preserve">
           <source>An iterator visiting all values mutably in arbitrary order. The iterator element type is &lt;code&gt;&amp;amp;'a mut V&lt;/code&gt;.</source>
@@ -1053,7 +1053,7 @@
         </trans-unit>
         <trans-unit id="d7f5308e6f605cdab4dbb8b387f9c93de98d0922" translate="yes" xml:space="preserve">
           <source>An order is a total order if it is (for all &lt;code&gt;a&lt;/code&gt;, &lt;code&gt;b&lt;/code&gt; and &lt;code&gt;c&lt;/code&gt;):</source>
-          <target state="translated">次の場合、注文は合計注文になります（すべての &lt;code&gt;a&lt;/code&gt; 、 &lt;code&gt;b&lt;/code&gt; 、 &lt;code&gt;c&lt;/code&gt; の場合）：</target>
+          <target state="translated">注文は、それが（ &lt;code&gt;a&lt;/code&gt; 、 &lt;code&gt;b&lt;/code&gt; 、および &lt;code&gt;c&lt;/code&gt; のすべてに対して）である場合、合計注文です。</target>
         </trans-unit>
         <trans-unit id="e7c75396d6933448cc7456d6beaf9cf648ea0ef5" translate="yes" xml:space="preserve">
           <source>An ordering where a compared value is equal to another.</source>
@@ -1101,7 +1101,7 @@
         </trans-unit>
         <trans-unit id="ef6f78f2a2dbde9b33ceeac921bd77fbb502b5bc" translate="yes" xml:space="preserve">
           <source>An owning iterator over the items of a &lt;code&gt;BTreeSet&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;BTreeSet&lt;/code&gt; の項目に対する所有イテレータ。</target>
+          <target state="translated">&lt;code&gt;BTreeSet&lt;/code&gt; のアイテムに対する所有イテレータ。</target>
         </trans-unit>
         <trans-unit id="427fdeccedc75e2673269080f0ce6c0924e6c1bd" translate="yes" xml:space="preserve">
           <source>An owning iterator over the items of a &lt;code&gt;HashSet&lt;/code&gt;.</source>
@@ -1117,7 +1117,7 @@
         </trans-unit>
         <trans-unit id="3caad6b327abced5bae6f8ff205241ca33ed53ab" translate="yes" xml:space="preserve">
           <source>An unchecked assertion allows a program in an inconsistent state to keep running, which might have unexpected consequences but does not introduce unsafety as long as this only happens in safe code. The performance cost of assertions, is however, not measurable in general. Replacing &lt;a href=&quot;macro.assert&quot;&gt;&lt;code&gt;assert!&lt;/code&gt;&lt;/a&gt; with &lt;code&gt;debug_assert!&lt;/code&gt; is thus only encouraged after thorough profiling, and more importantly, only in safe code!</source>
-          <target state="translated">チェックされていないアサーションは、不整合な状態のプログラムが実行を継続できるようにします。これは予期しない結果をもたらす可能性がありますが、これが安全なコードでのみ発生する限り、安全ではありません。ただし、アサーションのパフォーマンスコストは一般に測定できません。&lt;a href=&quot;macro.assert&quot;&gt; &lt;code&gt;assert!&lt;/code&gt; &lt;/a&gt;置き換える！ &lt;code&gt;debug_assert!&lt;/code&gt; したがって、徹底的なプロファイリングの後にのみ、そしてさらに重要なことに、安全なコードでのみ推奨されます！</target>
+          <target state="translated">チェックされていないアサーションにより、一貫性のない状態のプログラムを実行し続けることができます。これは予期しない結果をもたらす可能性がありますが、これが安全なコードでのみ発生する限り、安全ではありません。ただし、アサーションのパフォーマンスコストは一般に測定できません。&lt;a href=&quot;macro.assert&quot;&gt; &lt;code&gt;assert!&lt;/code&gt; &lt;/a&gt;置き換える！ &lt;code&gt;debug_assert!&lt;/code&gt; したがって、徹底的なプロファイリングの後にのみ、さらに重要なことに、安全なコードでのみ推奨されます！</target>
         </trans-unit>
         <trans-unit id="490b1d248ac38d604233cacff667b31a463976df" translate="yes" xml:space="preserve">
           <source>An undeclared label was used.</source>
@@ -1489,11 +1489,11 @@
         </trans-unit>
         <trans-unit id="b91a984e8eba980f8ed5afc44476d8d32720a1d5" translate="yes" xml:space="preserve">
           <source>And finally, let&amp;rsquo;s make sure that we don&amp;rsquo;t get any lines when we search for a word that isn&amp;rsquo;t anywhere in the poem, such as &amp;ldquo;monomorphization&amp;rdquo;:</source>
-          <target state="translated">そして最後に、詩のどこにもない単語を検索するときに「モノモーフィゼーション」などの行を取得しないようにします。</target>
+          <target state="translated">そして最後に、詩のどこにもない単語を検索するときに、「モノモーフィゼーション」などのように、行を取得しないようにします。</target>
         </trans-unit>
         <trans-unit id="8ddbbced7930dcaf198948383ed803d74e9323cf" translate="yes" xml:space="preserve">
           <source>And finally, the standard library exports a number of standard macros, and &lt;a href=&quot;#macros&quot;&gt;lists them on this page&lt;/a&gt; (technically, not all of the standard macros are defined by the standard library - some are defined by the compiler - but they are documented here the same). Like the prelude, the standard macros are imported by default into all crates.</source>
-          <target state="translated">そして最後に、標準ライブラリはいくつかの標準マクロをエクスポート&lt;a href=&quot;#macros&quot;&gt;し、このページに一覧表示します&lt;/a&gt;（技術的には、すべての標準マクロが標準ライブラリによって定義されているわけではありません-一部はコンパイラによって定義されています-それらはここでも同じようにドキュメント化されています）。 。プレリュードと同様に、標準マクロはデフォルトですべてのクレートにインポートされます。</target>
+          <target state="translated">そして最後に、標準ライブラリはいくつかの標準マクロをエクスポート&lt;a href=&quot;#macros&quot;&gt;し、このページにリストします&lt;/a&gt;（技術的には、すべての標準マクロが標準ライブラリによって定義されているわけではありません-一部はコンパイラによって定義されています-それらはここでも同じようにドキュメント化されています）。 。プレリュードと同様に、標準マクロはデフォルトですべてのクレートにインポートされます。</target>
         </trans-unit>
         <trans-unit id="01c604c6cbed200d9271efd93c6961cdbaa99ebc" translate="yes" xml:space="preserve">
           <source>And now let's give working examples:</source>
@@ -1533,7 +1533,7 @@
         </trans-unit>
         <trans-unit id="406aea8920a159db743c7e055df50170c501f68e" translate="yes" xml:space="preserve">
           <source>And we&amp;rsquo;re done&amp;mdash;all of Listing 17-11 now works! We&amp;rsquo;ve implemented the state pattern with the rules of the blog post workflow. The logic related to the rules lives in the state objects rather than being scattered throughout &lt;code&gt;Post&lt;/code&gt;.</source>
-          <target state="translated">これで完了です。リスト17-11のすべてが機能します。ブログ投稿ワークフローのルールを使用して状態パターンを実装しました。ルールに関連するロジックは、 &lt;code&gt;Post&lt;/code&gt; 全体に分散するのではなく、状態オブジェクトに存在します。</target>
+          <target state="translated">これで完了です。リスト17-11のすべてが機能するようになりました。ブログ投稿ワークフローのルールを使用して状態パターンを実装しました。ルールに関連するロジックは、 &lt;code&gt;Post&lt;/code&gt; 全体に分散するのではなく、状態オブジェクトに存在します。</target>
         </trans-unit>
         <trans-unit id="d71a2256704824ddf84d5c0504e7d9d40555e056" translate="yes" xml:space="preserve">
           <source>And you make a hard link of the program:</source>
@@ -1573,19 +1573,19 @@
         </trans-unit>
         <trans-unit id="36e9fb79f8131b77a6b5deaea1a5127794ef21b6" translate="yes" xml:space="preserve">
           <source>Another data type that does not have ownership is the &lt;em&gt;slice&lt;/em&gt;. Slices let you reference a contiguous sequence of elements in a collection rather than the whole collection.</source>
-          <target state="translated">所有権を持たないもう1つのデータ型は&lt;em&gt;スライス&lt;/em&gt;です。スライスを使用すると、コレクション全体ではなく、コレクション内の隣接する要素のシーケンスを参照できます。</target>
+          <target state="translated">所有権を持たないもう1つのデータ型は&lt;em&gt;スライス&lt;/em&gt;です。スライスを使用すると、コレクション全体ではなく、コレクション内の連続した要素のシーケンスを参照できます。</target>
         </trans-unit>
         <trans-unit id="2188fdee49af653aee0e28e4ac63dee8849194f0" translate="yes" xml:space="preserve">
           <source>Another detail to note is that Rust can&amp;rsquo;t protect you from all kinds of logic errors when you use &lt;code&gt;Mutex&amp;lt;T&amp;gt;&lt;/code&gt;. Recall in Chapter 15 that using &lt;code&gt;Rc&amp;lt;T&amp;gt;&lt;/code&gt; came with the risk of creating reference cycles, where two &lt;code&gt;Rc&amp;lt;T&amp;gt;&lt;/code&gt; values refer to each other, causing memory leaks. Similarly, &lt;code&gt;Mutex&amp;lt;T&amp;gt;&lt;/code&gt; comes with the risk of creating &lt;em&gt;deadlocks&lt;/em&gt;. These occur when an operation needs to lock two resources and two threads have each acquired one of the locks, causing them to wait for each other forever. If you&amp;rsquo;re interested in deadlocks, try creating a Rust program that has a deadlock; then research deadlock mitigation strategies for mutexes in any language and have a go at implementing them in Rust. The standard library API documentation for &lt;code&gt;Mutex&amp;lt;T&amp;gt;&lt;/code&gt; and &lt;code&gt;MutexGuard&lt;/code&gt; offers useful information.</source>
-          <target state="translated">もう1つ注意すべき点は、Ruteは &lt;code&gt;Mutex&amp;lt;T&amp;gt;&lt;/code&gt; を使用する場合、あらゆる種類の論理エラーから保護できるわけではないことです。第15章では、 &lt;code&gt;Rc&amp;lt;T&amp;gt;&lt;/code&gt; を使用すると参照サイクルが作成され、2つの &lt;code&gt;Rc&amp;lt;T&amp;gt;&lt;/code&gt; 値が相互に参照してメモリリークを引き起こすリスクがあったことを思い出してください。同様に、 &lt;code&gt;Mutex&amp;lt;T&amp;gt;&lt;/code&gt; は&lt;em&gt;デッドロック&lt;/em&gt;を作成するリスクが伴います&lt;em&gt;&lt;/em&gt;。これらは、操作が2つのリソースをロックする必要があり、2つのスレッドがそれぞれロックの1つを取得していて、それらが互いを永久に待機させる場合に発生します。デッドロックに興味がある場合は、デッドロックを持つRustプログラムを作成してみてください。次に、ミューテックスのデッドロック緩和戦略を任意の言語で調査し、Rustでの実装に取り​​掛かります。 &lt;code&gt;Mutex&amp;lt;T&amp;gt;&lt;/code&gt; および &lt;code&gt;MutexGuard&lt;/code&gt; の標準ライブラリAPIドキュメントには、役立つ情報が含まれています。</target>
+          <target state="translated">もう1つ注意すべき点は、Ruteは &lt;code&gt;Mutex&amp;lt;T&amp;gt;&lt;/code&gt; を使用する場合、あらゆる種類の論理エラーから保護できるわけではないということです。第15章で、 &lt;code&gt;Rc&amp;lt;T&amp;gt;&lt;/code&gt; を使用すると、2つの &lt;code&gt;Rc&amp;lt;T&amp;gt;&lt;/code&gt; 値が相互に参照し、メモリリークを引き起こす参照サイクルが作成されるリスクがあったことを思い出してください。同様に、 &lt;code&gt;Mutex&amp;lt;T&amp;gt;&lt;/code&gt; は&lt;em&gt;デッドロックが発生&lt;/em&gt;するリスクがあります。&lt;em&gt;&lt;/em&gt;。これらは、操作が2つのリソースをロックする必要があり、2つのスレッドがそれぞれロックの1つを取得している場合に発生します。デッドロックに興味がある場合は、デッドロックを持つRustプログラムを作成してみてください。次に、ミューテックスのデッドロック緩和戦略を任意の言語で調査し、それらをRustに実装します。 &lt;code&gt;Mutex&amp;lt;T&amp;gt;&lt;/code&gt; および &lt;code&gt;MutexGuard&lt;/code&gt; の標準ライブラリAPIドキュメントには、役立つ情報が含まれています。</target>
         </trans-unit>
         <trans-unit id="a89f510396bf7e7d6ce47105d5094f9ffdc43c0a" translate="yes" xml:space="preserve">
           <source>Another difference between constants and static variables is that static variables can be mutable. Accessing and modifying mutable static variables is &lt;em&gt;unsafe&lt;/em&gt;. Listing 19-10 shows how to declare, access, and modify a mutable static variable named &lt;code&gt;COUNTER&lt;/code&gt;.</source>
-          <target state="translated">定数と静的変数のもう1つの違いは、静的変数が可変である可能性があることです。変更可能な静的変数へのアクセスと変更は&lt;em&gt;安全で&lt;/em&gt;はあり&lt;em&gt;ません&lt;/em&gt;。リスト19-10は &lt;code&gt;COUNTER&lt;/code&gt; という名前の変更可能な静的変数を宣言、アクセス、変更する方法を示しています。</target>
+          <target state="translated">定数と静的変数のもう1つの違いは、静的変数が変更可能になる可能性があることです。変更可能な静的変数へのアクセスと変更は&lt;em&gt;安全で&lt;/em&gt;はあり&lt;em&gt;ません&lt;/em&gt;。リスト19-10は、 &lt;code&gt;COUNTER&lt;/code&gt; という名前の変更可能な静的変数を宣言、アクセス、変更する方法を示しています。</target>
         </trans-unit>
         <trans-unit id="7e6b390982d432e5d51ecddfefa741ac598bed4a" translate="yes" xml:space="preserve">
           <source>Another downside is that we&amp;rsquo;ve duplicated some logic. To eliminate some of the duplication, we might try to make default implementations for the &lt;code&gt;request_review&lt;/code&gt; and &lt;code&gt;approve&lt;/code&gt; methods on the &lt;code&gt;State&lt;/code&gt; trait that return &lt;code&gt;self&lt;/code&gt;; however, this would violate object safety, because the trait doesn&amp;rsquo;t know what the concrete &lt;code&gt;self&lt;/code&gt; will be exactly. We want to be able to use &lt;code&gt;State&lt;/code&gt; as a trait object, so we need its methods to be object safe.</source>
-          <target state="translated">もう1つの欠点は、ロジックが重複していることです。一部の重複を排除するために、 &lt;code&gt;request_review&lt;/code&gt; のデフォルトの実装を作成し、 &lt;code&gt;State&lt;/code&gt; トレイトで &lt;code&gt;self&lt;/code&gt; を返すメソッドを &lt;code&gt;approve&lt;/code&gt; する場合があります。ただし、特性は具体的な &lt;code&gt;self&lt;/code&gt; が正確に何であるかを知らないため、これはオブジェクトの安全性に違反します。 &lt;code&gt;State&lt;/code&gt; を特性オブジェクトとして使用できるようにしたいので、そのメソッドはオブジェクトセーフである必要があります。</target>
+          <target state="translated">もう1つの欠点は、ロジックが重複していることです。重複の一部を排除するために、 &lt;code&gt;request_review&lt;/code&gt; のデフォルト実装を作成し、 &lt;code&gt;State&lt;/code&gt; トレイトで &lt;code&gt;self&lt;/code&gt; を返すメソッドを &lt;code&gt;approve&lt;/code&gt; しようとする場合があります。ただし、特性は具体的な &lt;code&gt;self&lt;/code&gt; が正確に何であるかを知らないため、これはオブジェクトの安全性に違反します。 &lt;code&gt;State&lt;/code&gt; を特性オブジェクトとして使用できるようにしたいので、そのメソッドはオブジェクトセーフである必要があります。</target>
         </trans-unit>
         <trans-unit id="0b90ca84780d33c44fc3e74f14be69eb7fd048f1" translate="yes" xml:space="preserve">
           <source>Another erroneous code example:</source>
@@ -1593,7 +1593,7 @@
         </trans-unit>
         <trans-unit id="b9c6fc1e93014c21a06c17d750322f830024d1b0" translate="yes" xml:space="preserve">
           <source>Another example of a complex NT is &lt;code&gt;$(hi $e:expr ;)+&lt;/code&gt;, which matches any fragment of the form &lt;code&gt;hi &amp;lt;expr&amp;gt;; hi &amp;lt;expr&amp;gt;; ...&lt;/code&gt; where &lt;code&gt;hi &amp;lt;expr&amp;gt;;&lt;/code&gt; occurs at least once. Note that this complex NT does not have a dedicated separator token.</source>
-          <target state="translated">複雑なNTの別の例は &lt;code&gt;$(hi $e:expr ;)+&lt;/code&gt; 、これは &lt;code&gt;hi &amp;lt;expr&amp;gt;; hi &amp;lt;expr&amp;gt;; ...&lt;/code&gt; 形式の任意のフラグメントに一致します。こんにちは&amp;lt;expr&amp;gt;; ...ここで &lt;code&gt;hi &amp;lt;expr&amp;gt;;&lt;/code&gt; 少なくとも1回発生します。この複雑なNTには専用のセパレータートークンがないことに注意してください。</target>
+          <target state="translated">複雑なNTのもう1つの例は &lt;code&gt;$(hi $e:expr ;)+&lt;/code&gt; 、これは &lt;code&gt;hi &amp;lt;expr&amp;gt;; hi &amp;lt;expr&amp;gt;; ...&lt;/code&gt; 形式のフラグメントに一致します。こんにちは&amp;lt;expr&amp;gt;; ...ここで &lt;code&gt;hi &amp;lt;expr&amp;gt;;&lt;/code&gt; 少なくとも1回発生します。この複雑なNTには専用の分離トークンがないことに注意してください。</target>
         </trans-unit>
         <trans-unit id="93c5ab10f51e34387707bf7df6173ca28d162973" translate="yes" xml:space="preserve">
           <source>Another example of a non-&lt;code&gt;Sync&lt;/code&gt; type is the reference-counting pointer &lt;a href=&quot;../rc/struct.rc&quot;&gt;&lt;code&gt;rc::Rc&lt;/code&gt;&lt;/a&gt;. Given any reference &lt;a href=&quot;../rc/struct.rc&quot;&gt;&lt;code&gt;&amp;amp;Rc&amp;lt;T&amp;gt;&lt;/code&gt;&lt;/a&gt;, you can clone a new &lt;a href=&quot;../rc/struct.rc&quot;&gt;&lt;code&gt;Rc&amp;lt;T&amp;gt;&lt;/code&gt;&lt;/a&gt;, modifying the reference counts in a non-atomic way.</source>
@@ -1601,7 +1601,7 @@
         </trans-unit>
         <trans-unit id="5d9b32be0b7923daf9aadae8867f04bd738917c6" translate="yes" xml:space="preserve">
           <source>Another example showing how to keep &lt;code&gt;Cow&lt;/code&gt; in a struct:</source>
-          <target state="translated">&lt;code&gt;Cow&lt;/code&gt; を構造体に留めておく方法を示す別の例：</target>
+          <target state="translated">&lt;code&gt;Cow&lt;/code&gt; を構造体に保つ方法を示す別の例：</target>
         </trans-unit>
         <trans-unit id="73dbef5057ac390e03a6e177bceb38dfa0e2cca7" translate="yes" xml:space="preserve">
           <source>Another implication of the 4-byte fixed size of a &lt;code&gt;char&lt;/code&gt; is that per-&lt;code&gt;char&lt;/code&gt; processing can end up using a lot more memory:</source>
@@ -1609,19 +1609,19 @@
         </trans-unit>
         <trans-unit id="8ab43d76c6773436cfee7acbc8b6406943d7ca07" translate="yes" xml:space="preserve">
           <source>Another important difference between macros and functions is that you must define macros or bring them into scope &lt;em&gt;before&lt;/em&gt; you call them in a file, as opposed to functions you can define anywhere and call anywhere.</source>
-          <target state="translated">マクロと関数のもう1つの重要な違いは、どこでも定義してどこからでも呼び出すことができる関数とは対照的に、ファイルで呼び出す&lt;em&gt;前に&lt;/em&gt;マクロを定義するか、マクロをスコープ&lt;em&gt;に&lt;/em&gt;含める必要があることです。</target>
+          <target state="translated">マクロと関数のもう1つの重要な違いは、どこにでも定義してどこにでも呼び出すことができる関数とは対照的に、ファイルで呼び出す&lt;em&gt;前に&lt;/em&gt;マクロを定義するか、マクロをスコープ&lt;em&gt;に&lt;/em&gt;入れる必要があることです。</target>
         </trans-unit>
         <trans-unit id="6f8bbe73702fb41924bac262bfb8595f3c660f2c" translate="yes" xml:space="preserve">
           <source>Another indicator that shows there&amp;rsquo;s room for improvement is the &lt;code&gt;config&lt;/code&gt; part of &lt;code&gt;parse_config&lt;/code&gt;, which implies that the two values we return are related and are both part of one configuration value. We&amp;rsquo;re not currently conveying this meaning in the structure of the data other than by grouping the two values into a tuple; we could put the two values into one struct and give each of the struct fields a meaningful name. Doing so will make it easier for future maintainers of this code to understand how the different values relate to each other and what their purpose is.</source>
-          <target state="translated">改善の余地があります示すことが別の指標である &lt;code&gt;config&lt;/code&gt; の一部 &lt;code&gt;parse_config&lt;/code&gt; 我々は戻り二つの値が関連しており、一つの構成値の両方の一部であることを意味します。現在のところ、2つの値をタプルにグループ化する以外の方法では、データの構造でこの意味を伝えていません。 2つの値を1つの構造体に入れ、各構造体フィールドに意味のある名前を付けることができます。そうすることで、このコードの将来のメンテナーが、異なる値が互いにどのように関連しているか、およびそれらの目的が何であるかを理解しやすくなります。</target>
+          <target state="translated">改善の余地があります示すことが別の指標である &lt;code&gt;config&lt;/code&gt; の一部 &lt;code&gt;parse_config&lt;/code&gt; 我々は戻り二つの値が関連しており、一つの構成値の両方の一部であることを意味します。現在のところ、2つの値をタプルにグループ化する以外の方法では、データの構造でこの意味を伝えていません。 2つの値を1つの構造体に入れ、各構造体フィールドに意味のある名前を付けることができます。そうすることで、このコードの将来のメンテナーが、異なる値が互いにどのように関連しているか、そしてそれらの目的が何であるかを理解しやすくなります。</target>
         </trans-unit>
         <trans-unit id="00e0685682ab1fea96a488f384eaf2fdca89f82c" translate="yes" xml:space="preserve">
           <source>Another kind of generic that we&amp;rsquo;ve already been using is called &lt;em&gt;lifetimes&lt;/em&gt;. Rather than ensuring that a type has the behavior we want, lifetimes ensure that references are valid as long as we need them to be. Let&amp;rsquo;s look at how lifetimes do that.</source>
-          <target state="translated">すでに使用しているもう1つのジェネリックは、&lt;em&gt;ライフタイム&lt;/em&gt;と呼ばれます。ライフタイムは、型が希望する動作をすることを保証するのではなく、必要な限り参照が有効であることを保証します。生涯がそれをどのように行うかを見てみましょう。</target>
+          <target state="translated">私たちがすでに使用している別の種類のジェネリックは、&lt;em&gt;ライフタイム&lt;/em&gt;と呼ばれています。ライフタイムは、型が希望する動作をすることを保証するのではなく、必要な限り参照が有効であることを保証します。生涯がどのようにそれを行うか見てみましょう。</target>
         </trans-unit>
         <trans-unit id="310cbb5c9fbbbdff4450ff99ffebe8e97470ef1e" translate="yes" xml:space="preserve">
           <source>Another method, &lt;code&gt;expect&lt;/code&gt;, which is similar to &lt;code&gt;unwrap&lt;/code&gt;, lets us also choose the &lt;code&gt;panic!&lt;/code&gt; error message. Using &lt;code&gt;expect&lt;/code&gt; instead of &lt;code&gt;unwrap&lt;/code&gt; and providing good error messages can convey your intent and make tracking down the source of a panic easier. The syntax of &lt;code&gt;expect&lt;/code&gt; looks like this:</source>
-          <target state="translated">&lt;code&gt;unwrap&lt;/code&gt; に似た別の方法である &lt;code&gt;expect&lt;/code&gt; は、 &lt;code&gt;panic!&lt;/code&gt; も選択できるようにします！エラーメッセージ。 &lt;code&gt;unwrap&lt;/code&gt; の代わりに &lt;code&gt;expect&lt;/code&gt; を使用して適切なエラーメッセージを提供すると、意図が伝わり、パニックの原因を突き止めやすくなります。 &lt;code&gt;expect&lt;/code&gt; の構文は次のようになります。</target>
+          <target state="translated">&lt;code&gt;unwrap&lt;/code&gt; に類似した別の方法である &lt;code&gt;expect&lt;/code&gt; は、 &lt;code&gt;panic!&lt;/code&gt; も選択できるようにします！エラーメッセージ。 &lt;code&gt;unwrap&lt;/code&gt; の代わりに &lt;code&gt;expect&lt;/code&gt; を使用して適切なエラーメッセージを提供すると、意図が伝わり、パニックの原因を追跡しやすくなります。 &lt;code&gt;expect&lt;/code&gt; の構文は次のようになります。</target>
         </trans-unit>
         <trans-unit id="f5499cba2c47a56c76648e5bfb00e8274cd4700a" translate="yes" xml:space="preserve">
           <source>Another point about UTF-8 is that there are actually three relevant ways to look at strings from Rust&amp;rsquo;s perspective: as bytes, scalar values, and grapheme clusters (the closest thing to what we would call &lt;em&gt;letters&lt;/em&gt;).</source>
@@ -1633,7 +1633,7 @@
         </trans-unit>
         <trans-unit id="aac5c18dffed07c8f0aa7695dfba8d6c18e4b19b" translate="yes" xml:space="preserve">
           <source>Another reason Rust has an unsafe alter ego is that the underlying computer hardware is inherently unsafe. If Rust didn&amp;rsquo;t let you do unsafe operations, you couldn&amp;rsquo;t do certain tasks. Rust needs to allow you to do low-level systems programming, such as directly interacting with the operating system or even writing your own operating system. Working with low-level systems programming is one of the goals of the language. Let&amp;rsquo;s explore what we can do with unsafe Rust and how to do it.</source>
-          <target state="translated">Rustが安全でない代替エゴを持っているもう1つの理由は、基盤となるコンピューターハードウェアが本質的に安全でないためです。 Rustが安全でない操作を許可しないと、特定のタスクを実行できません。 Rustは、オペレーティングシステムと直接対話したり、独自のオペレーティングシステムを作成したりするなど、低レベルのシステムプログラミングを実行できるようにする必要があります。低レベルシステムプログラミングでの作業は、言語の目標の1つです。安全でないRustを使用して何ができるか、そしてそれを行う方法を探りましょう。</target>
+          <target state="translated">Rustが安全でない代替エゴを持っているもう1つの理由は、基盤となるコンピューターハードウェアが本質的に安全でないためです。 Rustが安全でない操作を許可していない場合、特定のタスクを実行できません。 Rustは、オペレーティングシステムと直接対話したり、独自のオペレーティングシステムを作成したりするなど、低レベルのシステムプログラミングを実行できるようにする必要があります。低レベルシステムプログラミングでの作業は、言語の目標の1つです。安全でないRustで何ができるか、そしてそれをどのように行うかを探りましょう。</target>
         </trans-unit>
         <trans-unit id="ea0e4d862c74d436d68a36a2f5a91a9f7ba71ea8" translate="yes" xml:space="preserve">
           <source>Another shortcut for struct instantiation is available, used when you need to make a new struct that has the same values as most of a previous struct of the same type, called struct update syntax:</source>
@@ -1645,7 +1645,7 @@
         </trans-unit>
         <trans-unit id="34208ffcc5dda542066ff03ecbdd472bf7d5f1c2" translate="yes" xml:space="preserve">
           <source>Another solution for avoiding reference cycles is reorganizing your data structures so that some references express ownership and some references don&amp;rsquo;t. As a result, you can have cycles made up of some ownership relationships and some non-ownership relationships, and only the ownership relationships affect whether or not a value can be dropped. In Listing 15-25, we always want &lt;code&gt;Cons&lt;/code&gt; variants to own their list, so reorganizing the data structure isn&amp;rsquo;t possible. Let&amp;rsquo;s look at an example using graphs made up of parent nodes and child nodes to see when non-ownership relationships are an appropriate way to prevent reference cycles.</source>
-          <target state="translated">参照サイクルを回避するための別の解決策は、一部の参照が所有権を表し、一部の参照が所有権を表さないようにデータ構造を再編成することです。その結果、いくつかの所有権関係といくつかの非所有権関係で構成されるサイクルがあり、値を削除できるかどうかには所有権関係のみが影響します。リスト15-25では、 &lt;code&gt;Cons&lt;/code&gt; バリアントが常にリストを所有するようにしたいので、データ構造を再編成することはできません。親ノードと子ノードで構成されるグラフを使用した例を見て、所有権以外の関係が参照循環を防ぐ適切な方法であるかどうかを確認してみましょう。</target>
+          <target state="translated">参照サイクルを回避するための別のソリューションは、一部の参照が所有権を表し、一部の参照が所有権を表さないようにデータ構造を再編成することです。その結果、いくつかの所有関係といくつかの非所有関係で構成されるサイクルがあり、値を削除できるかどうかには所有関係のみが影響します。リスト15-25では、常に &lt;code&gt;Cons&lt;/code&gt; のバリアントがリストを所有するようにしたいので、データ構造を再編成することは不可能です。親ノードと子ノードで構成されるグラフを使用した例を見て、所有権以外の関係が参照循環を防ぐ適切な方法であるかどうかを確認してみましょう。</target>
         </trans-unit>
         <trans-unit id="561d97b6164c78f724fabd7e84d16f2ca6a5f05e" translate="yes" xml:space="preserve">
           <source>Another style of doc comment, &lt;code&gt;//!&lt;/code&gt;, adds documentation to the item that contains the comments rather than adding documentation to the items following the comments. We typically use these doc comments inside the crate root file (&lt;em&gt;src/lib.rs&lt;/em&gt; by convention) or inside a module to document the crate or the module as a whole.</source>
@@ -1657,7 +1657,7 @@
         </trans-unit>
         <trans-unit id="5796386c80b53dfd4fee86ac2eb96a8dcc028b10" translate="yes" xml:space="preserve">
           <source>Another useful feature of &lt;code&gt;impl&lt;/code&gt; blocks is that we&amp;rsquo;re allowed to define functions within &lt;code&gt;impl&lt;/code&gt; blocks that &lt;em&gt;don&amp;rsquo;t&lt;/em&gt; take &lt;code&gt;self&lt;/code&gt; as a parameter. These are called &lt;em&gt;associated functions&lt;/em&gt; because they&amp;rsquo;re associated with the struct. They&amp;rsquo;re still functions, not methods, because they don&amp;rsquo;t have an instance of the struct to work with. You&amp;rsquo;ve already used the &lt;code&gt;String::from&lt;/code&gt; associated function.</source>
-          <target state="translated">別の便利な機能 &lt;code&gt;impl&lt;/code&gt; ブロックは、我々は内の関数を定義することが許されているということです &lt;code&gt;impl&lt;/code&gt; ブロック&lt;em&gt;しません&lt;/em&gt;取る &lt;code&gt;self&lt;/code&gt; パラメータとして。これらは、構造体に関連付けられているため、&lt;em&gt;関連関数&lt;/em&gt;と呼ばれます。それらは、機能する構造体のインスタンスを持たないため、メソッドではなく機能のままです。 &lt;code&gt;String::from&lt;/code&gt; 関連関数をすでに使用しています。</target>
+          <target state="translated">別の便利な機能 &lt;code&gt;impl&lt;/code&gt; ブロックは、我々は内の関数を定義することが許されているということです &lt;code&gt;impl&lt;/code&gt; ブロック&lt;em&gt;しません&lt;/em&gt;取る &lt;code&gt;self&lt;/code&gt; パラメータとして。これらは、構造体に関連付けられているため、&lt;em&gt;関連関数&lt;/em&gt;と呼ばれます。機能する構造体のインスタンスがないので、メソッドではなく関数のままです。 &lt;code&gt;String::from&lt;/code&gt; 関連関数をすでに使用しています。</target>
         </trans-unit>
         <trans-unit id="30235cc37ef7579d4a5373609eca2f1e91e01f9f" translate="yes" xml:space="preserve">
           <source>Another useful feature of match arms is that they can bind to the parts of the values that match the pattern. This is how we can extract values out of enum variants.</source>
@@ -1669,19 +1669,19 @@
         </trans-unit>
         <trans-unit id="ccc69aa411fffd31870708506663671f3a6766b5" translate="yes" xml:space="preserve">
           <source>Another way of constructing a hash map is by using the &lt;code&gt;collect&lt;/code&gt; method on a vector of tuples, where each tuple consists of a key and its value. The &lt;code&gt;collect&lt;/code&gt; method gathers data into a number of collection types, including &lt;code&gt;HashMap&lt;/code&gt;. For example, if we had the team names and initial scores in two separate vectors, we could use the &lt;code&gt;zip&lt;/code&gt; method to create a vector of tuples where &amp;ldquo;Blue&amp;rdquo; is paired with 10, and so forth. Then we could use the &lt;code&gt;collect&lt;/code&gt; method to turn that vector of tuples into a hash map, as shown in Listing 8-21.</source>
-          <target state="translated">ハッシュマップを作成する別の方法は、タプルのベクトルに対して &lt;code&gt;collect&lt;/code&gt; メソッドを使用することです。この場合、各タプルはキーとその値で構成されます。 &lt;code&gt;collect&lt;/code&gt; 方法は、以下を含むコレクション・タイプの数、にデータを収集し &lt;code&gt;HashMap&lt;/code&gt; 。たとえば、2つの別々のベクトルにチーム名と初期スコアがある場合、 &lt;code&gt;zip&lt;/code&gt; メソッドを使用して、「Blue」が10とペアになっているタプルのベクトルを作成できます。次に、リスト8-21に示すように、 &lt;code&gt;collect&lt;/code&gt; メソッドを使用して、タプルのベクトルをハッシュマップに変換します。</target>
+          <target state="translated">ハッシュマップを作成する別の方法は、タプルのベクトルに対して &lt;code&gt;collect&lt;/code&gt; メソッドを使用することです。この場合、各タプルはキーとその値で構成されます。 &lt;code&gt;collect&lt;/code&gt; 方法は、以下を含むコレクション・タイプの数、にデータを収集し &lt;code&gt;HashMap&lt;/code&gt; 。たとえば、チーム名と初期スコアが2つの別々のベクトルにある場合、 &lt;code&gt;zip&lt;/code&gt; を使用できますメソッドを使用して、「Blue」が10とペアになっているタプルのベクトルを作成。次に、リスト8-21に示すように、 &lt;code&gt;collect&lt;/code&gt; メソッドを使用して、タプルのベクトルをハッシュマップに変換します。</target>
         </trans-unit>
         <trans-unit id="56bc825abe2ef1255ee87da2e4f261c23258e491" translate="yes" xml:space="preserve">
           <source>Another way of thinking about &lt;code&gt;flat_map()&lt;/code&gt;: &lt;a href=&quot;#method.map&quot;&gt;&lt;code&gt;map&lt;/code&gt;&lt;/a&gt;'s closure returns one item for each element, and &lt;code&gt;flat_map()&lt;/code&gt;'s closure returns an iterator for each element.</source>
-          <target state="translated">&lt;code&gt;flat_map()&lt;/code&gt; についての別の考え方：&lt;a href=&quot;#method.map&quot;&gt; &lt;code&gt;map&lt;/code&gt; &lt;/a&gt;のクロージャは各要素に対して1つのアイテムを返し、 &lt;code&gt;flat_map()&lt;/code&gt; のクロージャは各要素に対してイテレータを返します。</target>
+          <target state="translated">&lt;code&gt;flat_map()&lt;/code&gt; についての別の考え方：&lt;a href=&quot;#method.map&quot;&gt; &lt;code&gt;map&lt;/code&gt; &lt;/a&gt;のクロージャーは、要素ごとに1つのアイテムを返します。 &lt;code&gt;flat_map()&lt;/code&gt; のクロージャは各要素に対してイテレータを返します。</target>
         </trans-unit>
         <trans-unit id="590fe2daae703b4f29d9d514cb7fe9863489ba23" translate="yes" xml:space="preserve">
           <source>Another way to access union fields is to use pattern matching. Pattern matching on union fields uses the same syntax as struct patterns, except that the pattern must specify exactly one field. Since pattern matching is like reading the union with a particular field, it has to be placed in &lt;code&gt;unsafe&lt;/code&gt; blocks as well.</source>
-          <target state="translated">ユニオンフィールドにアクセスする別の方法は、パターンマッチングを使用することです。ユニオンフィールドのパターンマッチングでは、構造体パターンと同じ構文を使用しますが、パターンではフィールドを1つだけ指定する必要があります。パターンマッチングは、特定のフィールドでユニオンを読み取るようなものなので、 &lt;code&gt;unsafe&lt;/code&gt; でないブロックにも配置する必要があります。</target>
+          <target state="translated">ユニオンフィールドにアクセスする別の方法は、パターンマッチングを使用することです。ユニオンフィールドのパターンマッチングでは、構造体パターンと同じ構文を使用します。ただし、パターンはフィールドを1つだけ指定する必要があります。パターンマッチングは特定のフィールドとの共用体を読み取るようなものなので、次の場所に配置する必要があります &lt;code&gt;unsafe&lt;/code&gt; ブロックあります。</target>
         </trans-unit>
         <trans-unit id="1b9e5f7972ceab35649387701cac506db165c92f" translate="yes" xml:space="preserve">
           <source>Another way to have a collection of multiple values is with an &lt;em&gt;array&lt;/em&gt;. Unlike a tuple, every element of an array must have the same type. Arrays in Rust are different from arrays in some other languages because arrays in Rust have a fixed length, like tuples.</source>
-          <target state="translated">複数の値のコレクションを作成する別の方法は、&lt;em&gt;配列を使用すること&lt;/em&gt;です。タプルとは異なり、配列のすべての要素は同じ型でなければなりません。Rustの配列はタプルのように固定長であるため、Rustの配列は他のいくつかの言語の配列とは異なります。</target>
+          <target state="translated">複数の値のコレクションを取得する別の方法は、 &lt;em&gt;配列を使用すること&lt;/em&gt;です。タプルとは異なり、配列のすべての要素は同じ型でなければなりません。Rustの配列はタプルのように固定長であるため、Rustの配列は他のいくつかの言語の配列とは異なります。</target>
         </trans-unit>
         <trans-unit id="6b16dbbf7d35ba29c07c44408e5ca0fc777803bb" translate="yes" xml:space="preserve">
           <source>Another way to provide the compiler with enough information, is to specify the generic type parameter:</source>
@@ -1697,7 +1697,7 @@
         </trans-unit>
         <trans-unit id="28a9dd9802c2f2d457b2df1a706228a0fe1e9650" translate="yes" xml:space="preserve">
           <source>Any &lt;code&gt;BuildHasherDefault&lt;/code&gt; is &lt;a href=&quot;https://doc.rust-lang.org/nomicon/exotic-sizes.html#zero-sized-types-zsts&quot;&gt;zero-sized&lt;/a&gt;. It can be created with &lt;a href=&quot;#method.default&quot;&gt;&lt;code&gt;default&lt;/code&gt;&lt;/a&gt;. When using &lt;code&gt;BuildHasherDefault&lt;/code&gt; with &lt;a href=&quot;../collections/struct.hashmap&quot;&gt;&lt;code&gt;HashMap&lt;/code&gt;&lt;/a&gt; or &lt;a href=&quot;../collections/struct.hashset&quot;&gt;&lt;code&gt;HashSet&lt;/code&gt;&lt;/a&gt;, this doesn't need to be done, since they implement appropriate &lt;a href=&quot;../default/trait.default&quot;&gt;&lt;code&gt;Default&lt;/code&gt;&lt;/a&gt; instances themselves.</source>
-          <target state="translated">どれ &lt;code&gt;BuildHasherDefault&lt;/code&gt; はある&lt;a href=&quot;https://doc.rust-lang.org/nomicon/exotic-sizes.html#zero-sized-types-zsts&quot;&gt;ゼロ・サイズ&lt;/a&gt;。&lt;a href=&quot;#method.default&quot;&gt; &lt;code&gt;default&lt;/code&gt; &lt;/a&gt;で作成できます。&lt;a href=&quot;../collections/struct.hashmap&quot;&gt; &lt;code&gt;HashMap&lt;/code&gt; &lt;/a&gt;または&lt;a href=&quot;../collections/struct.hashset&quot;&gt; &lt;code&gt;HashSet&lt;/code&gt; &lt;/a&gt;で &lt;code&gt;BuildHasherDefault&lt;/code&gt; を使用する場合、適切な&lt;a href=&quot;../default/trait.default&quot;&gt; &lt;code&gt;Default&lt;/code&gt; &lt;/a&gt;インスタンス自体を実装するため、これを行う必要はありません。</target>
+          <target state="translated">どれ &lt;code&gt;BuildHasherDefault&lt;/code&gt; はある&lt;a href=&quot;https://doc.rust-lang.org/nomicon/exotic-sizes.html#zero-sized-types-zsts&quot;&gt;ゼロ・サイズ&lt;/a&gt;。&lt;a href=&quot;#method.default&quot;&gt; &lt;code&gt;default&lt;/code&gt; &lt;/a&gt;で作成できます。 &lt;code&gt;BuildHasherDefault&lt;/code&gt; を&lt;a href=&quot;../collections/struct.hashmap&quot;&gt; &lt;code&gt;HashMap&lt;/code&gt; &lt;/a&gt;または&lt;a href=&quot;../collections/struct.hashset&quot;&gt; &lt;code&gt;HashSet&lt;/code&gt; &lt;/a&gt;で使用する場合、適切な&lt;a href=&quot;../default/trait.default&quot;&gt; &lt;code&gt;Default&lt;/code&gt; &lt;/a&gt;インスタンス自体を実装するため、これを行う必要はありません。</target>
         </trans-unit>
         <trans-unit id="61c0cc711bc6806236220ae14adf5485763a3373" translate="yes" xml:space="preserve">
           <source>Any &lt;code&gt;enum&lt;/code&gt; value consumes as much memory as the largest variant for its corresponding &lt;code&gt;enum&lt;/code&gt; type, as well as the size needed to store a discriminant.</source>
@@ -1705,7 +1705,7 @@
         </trans-unit>
         <trans-unit id="6ab54097a9523b84f57f773009ba255a131e3917" translate="yes" xml:space="preserve">
           <source>Any &lt;code&gt;with_capacity&lt;/code&gt; constructor will instruct the collection to allocate enough space for the specified number of elements. Ideally this will be for exactly that many elements, but some implementation details may prevent this. See collection-specific documentation for details. In general, use &lt;code&gt;with_capacity&lt;/code&gt; when you know exactly how many elements will be inserted, or at least have a reasonable upper-bound on that number.</source>
-          <target state="translated">どれ &lt;code&gt;with_capacity&lt;/code&gt; のコンストラクタは、要素の指定された数のための十分なスペースを割り当てるコレクションを指示します。理想的には、これはまさにその多くの要素に対するものですが、実装の詳細によってはこれを防ぐことができます。詳細については、コレクション固有のドキュメントを参照してください。一般に、挿入される要素の数が正確にわかっている場合、または少なくともその数に適切な上限がある場合は、 &lt;code&gt;with_capacity&lt;/code&gt; を使用します。</target>
+          <target state="translated">どれ &lt;code&gt;with_capacity&lt;/code&gt; のコンストラクタは、要素の指定された数のための十分なスペースを割り当てるコレクションを指示します。理想的には、これはまさにその多くの要素に対するものですが、実装の詳細によってはこれを妨げる場合があります。詳細については、コレクション固有のドキュメントを参照してください。一般的には、 &lt;code&gt;with_capacity&lt;/code&gt; 挿入される要素の数が正確にわかっている場合、または少なくともその数に適切な上限がある場合は with_capacityをします。</target>
         </trans-unit>
         <trans-unit id="0b673eb46a7f5984769da2ecfe123198574739d4" translate="yes" xml:space="preserve">
           <source>Any I/O error not part of this list.</source>
@@ -1717,7 +1717,7 @@
         </trans-unit>
         <trans-unit id="771cc11d8125e00769bce8eb3a9472fcb3c21cb2" translate="yes" xml:space="preserve">
           <source>Any character in the 'printable ASCII' range &lt;code&gt;0x20&lt;/code&gt; .. &lt;code&gt;0x7e&lt;/code&gt; inclusive is not escaped.</source>
-          <target state="translated">「印刷可能なASCII」の範囲 &lt;code&gt;0x20&lt;/code&gt; .. &lt;code&gt;0x7e&lt;/code&gt; を含む文字はエスケープされません。</target>
+          <target state="translated">「印刷可能なASCII」の範囲内の任意の文字 &lt;code&gt;0x20&lt;/code&gt; .. &lt;code&gt;0x7e&lt;/code&gt; 含むはエスケープされません。</target>
         </trans-unit>
         <trans-unit id="3e6eb82cfd1ccce10703d68820085fb1a0e36401" translate="yes" xml:space="preserve">
           <source>Any characters, except this sequence</source>
@@ -1741,7 +1741,7 @@
         </trans-unit>
         <trans-unit id="4cbac428240bad16fb03767cc5cca3e5e71622e2" translate="yes" xml:space="preserve">
           <source>Any non-Unicode sequences are replaced with &lt;a href=&quot;../char/constant.replacement_character&quot;&gt;&lt;code&gt;U+FFFD REPLACEMENT CHARACTER&lt;/code&gt;&lt;/a&gt;.</source>
-          <target state="translated">非Unicodeシーケンスは&lt;a href=&quot;../char/constant.replacement_character&quot;&gt; &lt;code&gt;U+FFFD REPLACEMENT CHARACTER&lt;/code&gt; に&lt;/a&gt;置き換えられます。</target>
+          <target state="translated">非Unicodeシーケンスは&lt;a href=&quot;../char/constant.replacement_character&quot;&gt; &lt;code&gt;U+FFFD REPLACEMENT CHARACTER&lt;/code&gt; &lt;/a&gt;置換文字に置き換えられますます。</target>
         </trans-unit>
         <trans-unit id="3df46fe98310c858bb458ed2bc6017d791596b12" translate="yes" xml:space="preserve">
           <source>Any of the characters in the range</source>
@@ -1773,11 +1773,11 @@
         </trans-unit>
         <trans-unit id="972a6afc1089fd19efd410e0369cd9e91a4ef0f3" translate="yes" xml:space="preserve">
           <source>Any time a type or function is provided by the standard library and you&amp;rsquo;re not sure what it does or how to use it, use the application programming interface (API) documentation to find out!</source>
-          <target state="translated">型または関数が標準ライブラリによって提供されていて、その機能や使用方法がわからない場合は、アプリケーションプログラミングインターフェイス（API）のドキュメントを使用して調べてください。</target>
+          <target state="translated">タイプまたは関数が標準ライブラリによって提供されていて、その機能や使用方法がわからない場合は、アプリケーションプログラミングインターフェイス（API）のドキュメントを使用して調べてください。</target>
         </trans-unit>
         <trans-unit id="76deb7250dd43b06f05ef65522ed5c978849b0e5" translate="yes" xml:space="preserve">
           <source>Any type composed entirely of &lt;code&gt;Send&lt;/code&gt; types is automatically marked as &lt;code&gt;Send&lt;/code&gt; as well. Almost all primitive types are &lt;code&gt;Send&lt;/code&gt;, aside from raw pointers, which we&amp;rsquo;ll discuss in Chapter 19.</source>
-          <target state="translated">完全に &lt;code&gt;Send&lt;/code&gt; タイプで構成されるタイプはすべて、自動的に &lt;code&gt;Send&lt;/code&gt; としてもマークされます。ほぼすべてのプリミティブ型は &lt;code&gt;Send&lt;/code&gt; ですが、これについては第19章で説明する生のポインタを除きます。</target>
+          <target state="translated">完全に &lt;code&gt;Send&lt;/code&gt; タイプで構成されるタイプは、自動的に &lt;code&gt;Send&lt;/code&gt; としてもマークされます。ほとんどすべてのプリミティブ型は &lt;code&gt;Send&lt;/code&gt; 、これは19章で説明する生のポインタを除きます。</target>
         </trans-unit>
         <trans-unit id="af69a2cb47235b6ee090b2e8285120ce18b240b2" translate="yes" xml:space="preserve">
           <source>Any type parameter or lifetime parameter of an &lt;code&gt;impl&lt;/code&gt; must meet at least one of the following criteria:</source>
@@ -1785,11 +1785,11 @@
         </trans-unit>
         <trans-unit id="07027ef0df88ca520ae158040613bfcdb04fbd90" translate="yes" xml:space="preserve">
           <source>Any types with interior mutability must also use the &lt;a href=&quot;../cell/struct.unsafecell&quot;&gt;&lt;code&gt;cell::UnsafeCell&lt;/code&gt;&lt;/a&gt; wrapper around the value(s) which can be mutated through a shared reference. Failing to doing this is &lt;a href=&quot;../../reference/behavior-considered-undefined&quot;&gt;undefined behavior&lt;/a&gt;. For example, &lt;a href=&quot;../mem/fn.transmute&quot;&gt;&lt;code&gt;transmute&lt;/code&gt;&lt;/a&gt;-ing from &lt;code&gt;&amp;amp;T&lt;/code&gt; to &lt;code&gt;&amp;amp;mut T&lt;/code&gt; is invalid.</source>
-          <target state="translated">内部で変更可能なタイプでは、共有参照を介して変更できる値の周りに&lt;a href=&quot;../cell/struct.unsafecell&quot;&gt; &lt;code&gt;cell::UnsafeCell&lt;/code&gt; &lt;/a&gt;ラッパーも使用する必要があります。これを実行し&lt;a href=&quot;../../reference/behavior-considered-undefined&quot;&gt;ない&lt;/a&gt;と、未定義の動作になります。例えば、&lt;a href=&quot;../mem/fn.transmute&quot;&gt; &lt;code&gt;transmute&lt;/code&gt; &lt;/a&gt;から-ing &lt;code&gt;&amp;amp;T&lt;/code&gt; に &lt;code&gt;&amp;amp;mut T&lt;/code&gt; 無効です。</target>
+          <target state="translated">内部で変更可能なタイプでは、共有参照を介して変更できる値の周りに&lt;a href=&quot;../cell/struct.unsafecell&quot;&gt; &lt;code&gt;cell::UnsafeCell&lt;/code&gt; &lt;/a&gt;ラッパーも使用する必要があります。これを実行し&lt;a href=&quot;../../reference/behavior-considered-undefined&quot;&gt;ない&lt;/a&gt;と、未定義の動作になります。例えば、&lt;a href=&quot;../mem/fn.transmute&quot;&gt; &lt;code&gt;transmute&lt;/code&gt; &lt;/a&gt;から-ing &lt;code&gt;&amp;amp;T&lt;/code&gt; の &lt;code&gt;&amp;amp;mut T&lt;/code&gt; 無効です。</target>
         </trans-unit>
         <trans-unit id="4098bab2016a26a2da921c6a4c090c6509eb5934" translate="yes" xml:space="preserve">
           <source>Any use other than with &lt;code&gt;if&lt;/code&gt; statements will probably not have an effect.</source>
-          <target state="translated">&lt;code&gt;if&lt;/code&gt; ステートメント以外で使用しても、おそらく効果はありません。</target>
+          <target state="translated">&lt;code&gt;if&lt;/code&gt; 以外の用途ステートメントは、おそらく効果がありません。</target>
         </trans-unit>
         <trans-unit id="910dd93279c47bcced2d261d2b21071bc5cf465a" translate="yes" xml:space="preserve">
           <source>Any::downcast_mut</source>
@@ -1813,7 +1813,7 @@
         </trans-unit>
         <trans-unit id="4cde3fadbf976f0b359d3c2a1968c555ccde759f" translate="yes" xml:space="preserve">
           <source>Anyone can write RFCs to improve Rust, and the proposals are reviewed and discussed by the Rust team, which is comprised of many topic subteams. There&amp;rsquo;s a full list of the teams &lt;a href=&quot;https://www.rust-lang.org/governance&quot;&gt;on Rust&amp;rsquo;s website&lt;/a&gt;, which includes teams for each area of the project: language design, compiler implementation, infrastructure, documentation, and more. The appropriate team reads the proposal and the comments, writes some comments of their own, and eventually, there&amp;rsquo;s consensus to accept or reject the feature.</source>
-          <target state="translated">Rustを改善するために誰でもRFCを作成でき、提案は多くのトピックサブチームで構成されるRustチームによってレビューおよび議論されます。&lt;a href=&quot;https://www.rust-lang.org/governance&quot;&gt;RustのWebサイトには&lt;/a&gt;、言語の設計、コンパイラーの実装、インフラストラクチャ、ドキュメントなど、プロジェクトの各領域のチームを含むチームの完全なリストがあります。適切なチームが提案とコメントを読み、独自のコメントをいくつか書き込みます。最終的には、機能を受け入れるか拒否するかについてのコンセンサスがあります。</target>
+          <target state="translated">Rustを改善するために誰でもRFCを作成できます。提案は、多くのトピックサブチームで構成されるRustチームによってレビューおよび議論されます。&lt;a href=&quot;https://www.rust-lang.org/governance&quot;&gt;RustのWebサイトには&lt;/a&gt;、言語設計、コンパイラーの実装、インフラストラクチャ、ドキュメントなど、プロジェクトの各領域のチームを含むチームの完全なリストがあります。適切なチームが提案とコメントを読み、独自のコメントをいくつか書き込みます。最終的には、機能を受け入れるか拒否するかについてのコンセンサスがあります。</target>
         </trans-unit>
         <trans-unit id="53fc70bfdc4b06ea1c2fe17e53fbb9c43726838e" translate="yes" xml:space="preserve">
           <source>Apart from a method or function with a generic type parameter, this error can occur when a type parameter of a struct or trait cannot be inferred. In that case it is not always possible to use a type annotation, because all candidates have the same return type. For instance:</source>
@@ -1833,7 +1833,7 @@
         </trans-unit>
         <trans-unit id="4c40c194c9cdc4d680691d4aa8fa1913dc98b2c3" translate="yes" xml:space="preserve">
           <source>Appendix A, &amp;ldquo;Keywords,&amp;rdquo; also explains the new raw identifiers feature that enables code written in the 2015 Edition and the 2018 Edition to interoperate.</source>
-          <target state="translated">付録A「キーワード」では、2015 Editionと2018 Editionで記述されたコードの相互運用を可能にする新しい未加工識別子機能についても説明しています。</target>
+          <target state="translated">付録A「キーワード」では、2015年版と2018年版で記述されたコードの相互運用を可能にする新しい未加工識別子機能についても説明します。</target>
         </trans-unit>
         <trans-unit id="8415247b515164394b09f1335fc5dabc83b9e17a" translate="yes" xml:space="preserve">
           <source>Appendix A: Keywords</source>
@@ -1865,7 +1865,7 @@
         </trans-unit>
         <trans-unit id="cd9cd2e1d4c917e818f77ba2a0d93ffcdf7874d2" translate="yes" xml:space="preserve">
           <source>Appendix G - How Rust is Made and &amp;ldquo;Nightly Rust&amp;rdquo;</source>
-          <target state="translated">付録G-錆の作り方と「毎晩錆び」</target>
+          <target state="translated">付録G-錆の発生方法と「夜間に錆びる」</target>
         </trans-unit>
         <trans-unit id="7ea8d3526ea6b8af40ac97da94b0ad40d6cea127" translate="yes" xml:space="preserve">
           <source>Appendix chapters providing rationale and references to languages that influenced the design.</source>
@@ -1933,7 +1933,7 @@
         </trans-unit>
         <trans-unit id="1ff8e99aa0f8295d1776562bee993cb0a364606b" translate="yes" xml:space="preserve">
           <source>Applies the &quot;?&quot; operator. A return of &lt;code&gt;Ok(t)&lt;/code&gt; means that the execution should continue normally, and the result of &lt;code&gt;?&lt;/code&gt; is the value &lt;code&gt;t&lt;/code&gt;. A return of &lt;code&gt;Err(e)&lt;/code&gt; means that execution should branch to the innermost enclosing &lt;code&gt;catch&lt;/code&gt;, or return from the function.</source>
-          <target state="translated">「？」を適用します オペレーター。 &lt;code&gt;Ok(t)&lt;/code&gt; の戻り値は、実行が正常に継続する必要があることを意味し、 &lt;code&gt;?&lt;/code&gt; 値 &lt;code&gt;t&lt;/code&gt; です。 &lt;code&gt;Err(e)&lt;/code&gt; の戻り値は、実行が最も内側の外側の &lt;code&gt;catch&lt;/code&gt; に分岐するか、関数から戻る必要があることを意味します。</target>
+          <target state="translated">「？」を適用します オペレーター。 &lt;code&gt;Ok(t)&lt;/code&gt; の戻り値は、実行が正常に継続する必要があることを意味し、 &lt;code&gt;?&lt;/code&gt; 値 &lt;code&gt;t&lt;/code&gt; です。 &lt;code&gt;Err(e)&lt;/code&gt; の戻り値は、実行が最も内側の囲んでいる &lt;code&gt;catch&lt;/code&gt; に分岐することを意味しますか、関数から戻るます。</target>
         </trans-unit>
         <trans-unit id="d771dbfeb7c050dea75fe4d6749833e3ae20e4ae" translate="yes" xml:space="preserve">
           <source>Applies the &quot;?&quot; operator. A return of &lt;code&gt;Ok(t)&lt;/code&gt; means that the execution should continue normally, and the result of &lt;code&gt;?&lt;/code&gt; is the value &lt;code&gt;t&lt;/code&gt;. A return of &lt;code&gt;Err(e)&lt;/code&gt; means that execution should branch to the innermost enclosing &lt;code&gt;catch&lt;/code&gt;, or return from the function. &lt;a href=&quot;../ops/trait.try#tymethod.into_result&quot;&gt;Read more&lt;/a&gt;</source>
@@ -2761,7 +2761,7 @@
         </trans-unit>
         <trans-unit id="60b48e4141151169e113485ecab80a4bb3c30bdc" translate="yes" xml:space="preserve">
           <source>Arguments passed to &lt;code&gt;ok_or&lt;/code&gt; are eagerly evaluated; if you are passing the result of a function call, it is recommended to use &lt;a href=&quot;#method.ok_or_else&quot;&gt;&lt;code&gt;ok_or_else&lt;/code&gt;&lt;/a&gt;, which is lazily evaluated.</source>
-          <target state="translated">&lt;code&gt;ok_or&lt;/code&gt; に渡される引数は熱心に評価されます。関数呼び出しの結果を渡す場合は、遅延評価される&lt;a href=&quot;#method.ok_or_else&quot;&gt; &lt;code&gt;ok_or_else&lt;/code&gt; &lt;/a&gt;を使用することをお勧めします。</target>
+          <target state="translated">&lt;code&gt;ok_or&lt;/code&gt; に渡される引数は熱心に評価されます。関数呼び出しの結果を渡す場合は、&lt;a href=&quot;#method.ok_or_else&quot;&gt; &lt;code&gt;ok_or_else&lt;/code&gt; &lt;/a&gt;を使用することをお勧めしますは、遅延評価される。</target>
         </trans-unit>
         <trans-unit id="b34ba4a25e5cb9253c52e9c96f12b4a3b5b442c1" translate="yes" xml:space="preserve">
           <source>Arguments passed to &lt;code&gt;or&lt;/code&gt; are eagerly evaluated; if you are passing the result of a function call, it is recommended to use &lt;a href=&quot;#method.or_else&quot;&gt;&lt;code&gt;or_else&lt;/code&gt;&lt;/a&gt;, which is lazily evaluated.</source>
@@ -2881,7 +2881,7 @@
         </trans-unit>
         <trans-unit id="1fd516c87a7c389dccca9649a7b656d2f047d85d" translate="yes" xml:space="preserve">
           <source>Arity refers to the number of arguments a function or operator takes. For some examples, &lt;code&gt;f(2, 3)&lt;/code&gt; and &lt;code&gt;g(4, 6)&lt;/code&gt; have arity 2, while &lt;code&gt;h(8, 2, 6)&lt;/code&gt; has arity 3. The &lt;code&gt;!&lt;/code&gt; operator has arity 1.</source>
-          <target state="translated">アリティは、関数または演算子が取る引数の数を指します。いくつかの例については、 &lt;code&gt;f(2, 3)&lt;/code&gt; 及び &lt;code&gt;g(4, 6)&lt;/code&gt; しながら、アリティ2を持っている &lt;code&gt;h(8, 2, 6)&lt;/code&gt; アリティ3.有します &lt;code&gt;!&lt;/code&gt; オペレーターはアリティ1を持っています。</target>
+          <target state="translated">アリティは、関数または演算子が取る引数の数を指します。いくつかの例として、 &lt;code&gt;f(2, 3)&lt;/code&gt; 及び &lt;code&gt;g(4, 6)&lt;/code&gt; しながら、アリティ2を持っている &lt;code&gt;h(8, 2, 6)&lt;/code&gt; アリティ3.有します &lt;code&gt;!&lt;/code&gt; オペレーターはアリティ1を持っています。</target>
         </trans-unit>
         <trans-unit id="107004472b7ba4e5e31f3082ee1fb5a1239eec61" translate="yes" xml:space="preserve">
           <source>Array</source>
@@ -2921,7 +2921,7 @@
         </trans-unit>
         <trans-unit id="41d08ca772cf664e0e365d09949f5835931ea185" translate="yes" xml:space="preserve">
           <source>Array literals, where the array has type &lt;code&gt;[U; n]&lt;/code&gt;. Each sub-expression in the array literal is a coercion site for coercion to type &lt;code&gt;U&lt;/code&gt;.</source>
-          <target state="translated">配列リテラル &lt;code&gt;[U; n]&lt;/code&gt; 配列のタイプは[U; n]。配列リテラルの各部分式は、 &lt;code&gt;U&lt;/code&gt; 型を強制するための強制サイトです。</target>
+          <target state="translated">配列リテラル &lt;code&gt;[U; n]&lt;/code&gt; 配列のタイプは[U; n]。配列リテラルの各部分式は、 &lt;code&gt;U&lt;/code&gt; 型を強制する強制サイトです。</target>
         </trans-unit>
         <trans-unit id="ea9dbd560327931c17a47c31880f0fcea2d052f4" translate="yes" xml:space="preserve">
           <source>Array to pointer cast</source>
@@ -2945,11 +2945,11 @@
         </trans-unit>
         <trans-unit id="c11c5b2f8cc2056c662bde9d8e7265077775fda2" translate="yes" xml:space="preserve">
           <source>Array types, for all sizes, if the item type also implements &lt;code&gt;Copy&lt;/code&gt; (e.g., &lt;code&gt;[i32; 123456]&lt;/code&gt;)</source>
-          <target state="translated">すべてのサイズの配列タイプ（アイテムタイプが &lt;code&gt;Copy&lt;/code&gt; も実装している場合）（例： &lt;code&gt;[i32; 123456]&lt;/code&gt; ）</target>
+          <target state="translated">すべてのサイズの配列タイプ（項目タイプも &lt;code&gt;Copy&lt;/code&gt; 実装している場合（例： &lt;code&gt;[i32; 123456]&lt;/code&gt; ）</target>
         </trans-unit>
         <trans-unit id="aa557f1be66399eaf12f2be07d75660861cacf56" translate="yes" xml:space="preserve">
           <source>Arrays are laid out so that the &lt;code&gt;nth&lt;/code&gt; element of the array is offset from the start of the array by &lt;code&gt;n * the size of the type&lt;/code&gt; bytes. An array of &lt;code&gt;[T; n]&lt;/code&gt; has a size of &lt;code&gt;size_of::&amp;lt;T&amp;gt;() * n&lt;/code&gt; and the same alignment of &lt;code&gt;T&lt;/code&gt;.</source>
-          <target state="translated">配列は、配列の &lt;code&gt;nth&lt;/code&gt; 要素が配列の先頭から &lt;code&gt;n * the size of the type&lt;/code&gt; バイトのサイズだけオフセットされるようにレイアウトされます。 &lt;code&gt;[T; n]&lt;/code&gt; の配列n]のサイズは &lt;code&gt;size_of::&amp;lt;T&amp;gt;() * n&lt;/code&gt; で、 &lt;code&gt;T&lt;/code&gt; と同じ配置です。</target>
+          <target state="translated">配列は、配列の &lt;code&gt;nth&lt;/code&gt; 要素が配列の先頭から &lt;code&gt;n * the size of the type&lt;/code&gt; バイトのサイズだけオフセットされるようにレイアウトされます。 &lt;code&gt;[T; n]&lt;/code&gt; の配列 n]のサイズは &lt;code&gt;size_of::&amp;lt;T&amp;gt;() * n&lt;/code&gt; で、 &lt;code&gt;T&lt;/code&gt; と同じ配置です。</target>
         </trans-unit>
         <trans-unit id="02fe2a892020ef77103f56bebff06ee9353b3385" translate="yes" xml:space="preserve">
           <source>Arrays are useful when you want your data allocated on the stack rather than the heap (we will discuss the stack and the heap more in Chapter 4) or when you want to ensure you always have a fixed number of elements. An array isn&amp;rsquo;t as flexible as the vector type, though. A vector is a similar collection type provided by the standard library that &lt;em&gt;is&lt;/em&gt; allowed to grow or shrink in size. If you&amp;rsquo;re unsure whether to use an array or a vector, you should probably use a vector. Chapter 8 discusses vectors in more detail.</source>
@@ -2989,7 +2989,7 @@
         </trans-unit>
         <trans-unit id="0024a0a24aed0a7ac58334f18eea8263ecf48ec1" translate="yes" xml:space="preserve">
           <source>As a language, Rust cares a &lt;em&gt;lot&lt;/em&gt; about the stability of your code. We want Rust to be a rock-solid foundation you can build on, and if things were constantly changing, that would be impossible. At the same time, if we can&amp;rsquo;t experiment with new features, we may not find out important flaws until after their release, when we can no longer change things.</source>
-          <target state="translated">言語としては、錆が気に&lt;em&gt;多くのことを&lt;/em&gt;あなたのコードの安定性について。私たちは、Rustをあなたが構築できる強固な基盤にしたいと考えています。物事が絶えず変化している場合、それは不可能です。同時に、新しい機能を試すことができない場合、重要な欠陥がリリースされてから変更できなくなるまで、その欠陥を見つけられない可能性があります。</target>
+          <target state="translated">言語としては、錆が気に&lt;em&gt;多くのことを&lt;/em&gt;あなたのコードの安定性について。私たちは、Rustをあなたが構築できる強固な基盤にしたいと考えています。物事が絶えず変化している場合、それは不可能です。同時に、新しい機能を試すことができない場合は、リリース後になって変更を加えることができなくなるまで、重要な欠陥を見つけられない可能性があります。</target>
         </trans-unit>
         <trans-unit id="c7163ba6f2bf3417c3c81c5ac8d3af7e28902510" translate="yes" xml:space="preserve">
           <source>As a library author, you should always prefer implementing &lt;a href=&quot;trait.from&quot;&gt;&lt;code&gt;From&amp;lt;T&amp;gt;&lt;/code&gt;&lt;/a&gt; or &lt;a href=&quot;trait.tryfrom&quot;&gt;&lt;code&gt;TryFrom&amp;lt;T&amp;gt;&lt;/code&gt;&lt;/a&gt; rather than &lt;a href=&quot;trait.into&quot;&gt;&lt;code&gt;Into&amp;lt;U&amp;gt;&lt;/code&gt;&lt;/a&gt; or &lt;a href=&quot;trait.tryinto&quot;&gt;&lt;code&gt;TryInto&amp;lt;U&amp;gt;&lt;/code&gt;&lt;/a&gt;, as &lt;a href=&quot;trait.from&quot;&gt;&lt;code&gt;From&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;trait.tryfrom&quot;&gt;&lt;code&gt;TryFrom&lt;/code&gt;&lt;/a&gt; provide greater flexibility and offer equivalent &lt;a href=&quot;trait.into&quot;&gt;&lt;code&gt;Into&lt;/code&gt;&lt;/a&gt; or &lt;a href=&quot;trait.tryinto&quot;&gt;&lt;code&gt;TryInto&lt;/code&gt;&lt;/a&gt; implementations for free, thanks to a blanket implementation in the standard library. Only implement &lt;a href=&quot;trait.into&quot;&gt;&lt;code&gt;Into&lt;/code&gt;&lt;/a&gt; or &lt;a href=&quot;trait.tryinto&quot;&gt;&lt;code&gt;TryInto&lt;/code&gt;&lt;/a&gt; when a conversion to a type outside the current crate is required.</source>
@@ -3005,7 +3005,7 @@
         </trans-unit>
         <trans-unit id="0f98a89f1abd2dd1d5bfe499fd5b56372a5800c2" translate="yes" xml:space="preserve">
           <source>As a result, this method consider addresses such as &lt;code&gt;fe80:0:0:1::&lt;/code&gt; or &lt;code&gt;fe81::&lt;/code&gt; to be unicast link-local addresses, whereas &lt;a href=&quot;struct.ipv6addr#method.is_unicast_link_local_strict&quot;&gt;&lt;code&gt;is_unicast_link_local_strict()&lt;/code&gt;&lt;/a&gt; does not. If you need a strict validation fully compliant with the RFC, use &lt;a href=&quot;struct.ipv6addr#method.is_unicast_link_local_strict&quot;&gt;&lt;code&gt;is_unicast_link_local_strict()&lt;/code&gt;&lt;/a&gt;.</source>
-          <target state="translated">その結果、このメソッドは &lt;code&gt;fe80:0:0:1::&lt;/code&gt; や &lt;code&gt;fe81::&lt;/code&gt; アドレスをユニキャストリンクローカルアドレスと&lt;a href=&quot;struct.ipv6addr#method.is_unicast_link_local_strict&quot;&gt; &lt;code&gt;is_unicast_link_local_strict()&lt;/code&gt; &lt;/a&gt;ますが、is_unicast_link_local_strict（）はそうではありません。RFCに完全に準拠した厳密な検証が必要な場合は、&lt;a href=&quot;struct.ipv6addr#method.is_unicast_link_local_strict&quot;&gt; &lt;code&gt;is_unicast_link_local_strict()&lt;/code&gt; を&lt;/a&gt;使用します。</target>
+          <target state="translated">その結果、このメソッドは &lt;code&gt;fe80:0:0:1::&lt;/code&gt; または &lt;code&gt;fe81::&lt;/code&gt; アドレスをユニキャストリンクローカルアドレスと&lt;a href=&quot;struct.ipv6addr#method.is_unicast_link_local_strict&quot;&gt; &lt;code&gt;is_unicast_link_local_strict()&lt;/code&gt; &lt;/a&gt;ますが、is_unicast_link_local_strict（）はそうではありません。RFCに完全に準拠した厳密な検証が必要な場合は、&lt;a href=&quot;struct.ipv6addr#method.is_unicast_link_local_strict&quot;&gt; &lt;code&gt;is_unicast_link_local_strict()&lt;/code&gt; を&lt;/a&gt;使用します。</target>
         </trans-unit>
         <trans-unit id="486c7c23286a7b0e1299ccac2ee0a869b3e82ee5" translate="yes" xml:space="preserve">
           <source>As a string slice consists of a sequence of bytes, we can iterate through a string slice by byte. This method returns such an iterator.</source>
@@ -3029,11 +3029,11 @@
         </trans-unit>
         <trans-unit id="b4d78aa978dc16456ba4fafe0a526ad6183e3881" translate="yes" xml:space="preserve">
           <source>As always, remember that a human intuition for 'character' may not map to Unicode's definitions. For example, despite looking similar, the '&amp;eacute;' character is one Unicode code point while 'é' is two Unicode code points:</source>
-          <target state="translated">いつものように、「文字」に対する人間の直感は、Unicodeの定義にマッピングされない場合があることを覚えておいてください。たとえば、似ているように見えても、「&amp;eacute;」文字は1つのUnicodeコードポイントであり、「&amp;eacute;」は2つのUnicodeコードポイントです。</target>
+          <target state="translated">いつものように、「文字」に対する人間の直感は、Unicodeの定義にマッピングされない場合があることを覚えておいてください。たとえば、似ているように見えますが、「&amp;eacute;」文字は1つのUnicodeコードポイントであり、「&amp;eacute;」は2つのUnicodeコードポイントです。</target>
         </trans-unit>
         <trans-unit id="8d82369403176e5c690373478594ff76e764a9ef" translate="yes" xml:space="preserve">
           <source>As always, we can use curly brackets to create a new scope, allowing for multiple mutable references, just not &lt;em&gt;simultaneous&lt;/em&gt; ones:</source>
-          <target state="translated">いつものように、中かっこを使用して新しいスコープを作成し、複数の可変参照を許可することができます。&lt;em&gt;同時&lt;/em&gt;参照ではありません。</target>
+          <target state="translated">いつものように、中かっこを使用して新しいスコープを作成できます。これにより、&lt;em&gt;同時&lt;/em&gt;参照ではなく、複数の可変参照を使用できます。</target>
         </trans-unit>
         <trans-unit id="c5be02ef05f525885a914931855842d0bd0941ea" translate="yes" xml:space="preserve">
           <source>As an example of how to use a mutex, let&amp;rsquo;s start by using a mutex in a single-threaded context, as shown in Listing 16-12:</source>
@@ -3053,7 +3053,7 @@
         </trans-unit>
         <trans-unit id="53691b327422875e6972393627946b878398498e" translate="yes" xml:space="preserve">
           <source>As an example, a macro matcher like &lt;code&gt;$i:expr [ , ]&lt;/code&gt; could in theory be accepted in Rust today, since &lt;code&gt;[,]&lt;/code&gt; cannot be part of a legal expression and therefore the parse would always be unambiguous. However, because &lt;code&gt;[&lt;/code&gt; can start trailing expressions, &lt;code&gt;[&lt;/code&gt; is not a character which can safely be ruled out as coming after an expression. If &lt;code&gt;[,]&lt;/code&gt; were accepted in a later version of Rust, this matcher would become ambiguous or would misparse, breaking working code. Matchers like &lt;code&gt;$i:expr,&lt;/code&gt; or &lt;code&gt;$i:expr;&lt;/code&gt; would be legal, however, because &lt;code&gt;,&lt;/code&gt; and &lt;code&gt;;&lt;/code&gt; are legal expression separators. The specific rules are:</source>
-          <target state="translated">一例として、のようなマクロマッチャー &lt;code&gt;$i:expr [ , ]&lt;/code&gt; 理論的には今日ルーストに受け入れられる可能性は、以来、 &lt;code&gt;[,]&lt;/code&gt; 、法的表現の一部にすることはできませんので、解析は、常に明確なことでしょう。ただし、 &lt;code&gt;[&lt;/code&gt; は後続の式を開始できるため、 &lt;code&gt;[&lt;/code&gt; は式の後に来ると安全に除外できる文字ではありません。 &lt;code&gt;[,]&lt;/code&gt; が新しいバージョンのRustで受け入れられた場合、このマッチャーはあいまいになるか、誤って解析され、機能するコードが壊れます。 &lt;code&gt;$i:expr,&lt;/code&gt; や &lt;code&gt;$i:expr;&lt;/code&gt; などのマッチャー。なぜなら、しかし、法的になり &lt;code&gt;,&lt;/code&gt; と &lt;code&gt;;&lt;/code&gt; 正しい式の区切り文字です。具体的なルールは次のとおりです。</target>
+          <target state="translated">一例として、のようなマクロマッチャー &lt;code&gt;$i:expr [ , ]&lt;/code&gt; 理論的には今日ルーストに受け入れられる可能性は、以来、 &lt;code&gt;[,]&lt;/code&gt; 、法的表現の一部にすることはできませんので、解析は、常に明確なことでしょう。ただし、 &lt;code&gt;[&lt;/code&gt; は後続の式を開始できるため、 &lt;code&gt;[&lt;/code&gt; は式の後に来ると安全に除外できる文字ではありません。 &lt;code&gt;[,]&lt;/code&gt; がRustの以降のバージョンで受け入れられた場合、このマッチャーはあいまいになるか、誤って解析され、機能するコードが壊れます。などのマッチャ &lt;code&gt;$i:expr,&lt;/code&gt; または &lt;code&gt;$i:expr;&lt;/code&gt; なぜなら、しかし、法的になり &lt;code&gt;,&lt;/code&gt; と &lt;code&gt;;&lt;/code&gt; 正当な式の区切り文字です。具体的なルールは次のとおりです。</target>
         </trans-unit>
         <trans-unit id="3c5226f2d8790540dbbe88f9ad68f2409b55a32e" translate="yes" xml:space="preserve">
           <source>As an example, change the &lt;em&gt;src/main.rs&lt;/em&gt; file in your &lt;em&gt;loops&lt;/em&gt; directory to look like this:</source>
@@ -3061,7 +3061,7 @@
         </trans-unit>
         <trans-unit id="7f0fd43eedc8fb375dd6813798e9b7e3996a0f09" translate="yes" xml:space="preserve">
           <source>As an example, let&amp;rsquo;s change one of our enum variants to hold data inside it. From 1999 through 2008, the United States minted quarters with different designs for each of the 50 states on one side. No other coins got state designs, so only quarters have this extra value. We can add this information to our &lt;code&gt;enum&lt;/code&gt; by changing the &lt;code&gt;Quarter&lt;/code&gt; variant to include a &lt;code&gt;UsState&lt;/code&gt; value stored inside it, which we&amp;rsquo;ve done here in Listing 6-4.</source>
-          <target state="translated">例として、列挙型バリアントの1つを変更して、その中にデータを保持しましょう。米国は、1999年から2008年まで、一方の50州のそれぞれに異なるデザインの区画を作りました。他のコインには州のデザインがありません。そのため、この追加の価値を持つのは四半期のみです。リスト6-4で行ったように、 &lt;code&gt;Quarter&lt;/code&gt; バリアントを変更して内部に格納されている &lt;code&gt;UsState&lt;/code&gt; 値を含めることで、この情報を &lt;code&gt;enum&lt;/code&gt; 追加できます。</target>
+          <target state="translated">例として、列挙型バリアントの1つを変更して、その中にデータを保持するようにします。米国は、1999年から2008年まで、一方の50州のそれぞれに異なるデザインの区画を作りました。他のコインには州のデザインがありません。そのため、この追加の価値を持つのは四半期のみです。リスト6-4で行ったように、 &lt;code&gt;Quarter&lt;/code&gt; バリアントを変更して内部に格納されている &lt;code&gt;UsState&lt;/code&gt; 値を含めることで、この情報を &lt;code&gt;enum&lt;/code&gt; 追加できます。</target>
         </trans-unit>
         <trans-unit id="d430493784bb7c38b9bfd2132c640f18ef8a2cfc" translate="yes" xml:space="preserve">
           <source>As an example, let&amp;rsquo;s say we want to implement &lt;code&gt;Display&lt;/code&gt; on &lt;code&gt;Vec&amp;lt;T&amp;gt;&lt;/code&gt;, which the orphan rule prevents us from doing directly because the &lt;code&gt;Display&lt;/code&gt; trait and the &lt;code&gt;Vec&amp;lt;T&amp;gt;&lt;/code&gt; type are defined outside our crate. We can make a &lt;code&gt;Wrapper&lt;/code&gt; struct that holds an instance of &lt;code&gt;Vec&amp;lt;T&amp;gt;&lt;/code&gt;; then we can implement &lt;code&gt;Display&lt;/code&gt; on &lt;code&gt;Wrapper&lt;/code&gt; and use the &lt;code&gt;Vec&amp;lt;T&amp;gt;&lt;/code&gt; value, as shown in Listing 19-23.</source>
@@ -3069,7 +3069,7 @@
         </trans-unit>
         <trans-unit id="0a293358ddd19b42df03eeb78c691469d4c0e122" translate="yes" xml:space="preserve">
           <source>As an example, let&amp;rsquo;s write a library crate that provides the functionality of a restaurant. We&amp;rsquo;ll define the signatures of functions but leave their bodies empty to concentrate on the organization of the code, rather than actually implement a restaurant in code.</source>
-          <target state="translated">例として、レストランの機能を提供する図書館の箱を書いてみましょう。関数のシグネチャを定義しますが、実際にコードにレストランを実装するのではなく、コードの構成に集中するために、関数の本体を空のままにします。</target>
+          <target state="translated">例として、レストランの機能を提供する図書館の箱を書いてみましょう。関数のシグネチャを定義しますが、実際にコードにレストランを実装するのではなく、コードの構成に集中するために、それらの本体を空のままにします。</target>
         </trans-unit>
         <trans-unit id="5e1d4bdb076d3e495d340c82a90a7bc9edd4704c" translate="yes" xml:space="preserve">
           <source>As an example, rather than using a list whose items know only about the next item, we&amp;rsquo;ll create a tree whose items know about their children items &lt;em&gt;and&lt;/em&gt; their parent items.</source>
@@ -3077,19 +3077,19 @@
         </trans-unit>
         <trans-unit id="84057f7bc04baf2d73dfbd111ea89a20d0d17089" translate="yes" xml:space="preserve">
           <source>As an example, recall the &lt;code&gt;Sync&lt;/code&gt; and &lt;code&gt;Send&lt;/code&gt; marker traits we discussed in the &lt;a href=&quot;ch16-04-extensible-concurrency-sync-and-send#extensible-concurrency-with-the-sync-and-send-traits&quot;&gt;&amp;ldquo;Extensible Concurrency with the &lt;code&gt;Sync&lt;/code&gt; and &lt;code&gt;Send&lt;/code&gt; Traits&amp;rdquo;&lt;/a&gt; section in Chapter 16: the compiler implements these traits automatically if our types are composed entirely of &lt;code&gt;Send&lt;/code&gt; and &lt;code&gt;Sync&lt;/code&gt; types. If we implement a type that contains a type that is not &lt;code&gt;Send&lt;/code&gt; or &lt;code&gt;Sync&lt;/code&gt;, such as raw pointers, and we want to mark that type as &lt;code&gt;Send&lt;/code&gt; or &lt;code&gt;Sync&lt;/code&gt;, we must use &lt;code&gt;unsafe&lt;/code&gt;. Rust can&amp;rsquo;t verify that our type upholds the guarantees that it can be safely sent across threads or accessed from multiple threads; therefore, we need to do those checks manually and indicate as such with &lt;code&gt;unsafe&lt;/code&gt;.</source>
-          <target state="translated">例として、第16章の&lt;a href=&quot;ch16-04-extensible-concurrency-sync-and-send#extensible-concurrency-with-the-sync-and-send-traits&quot;&gt;「&lt;/a&gt; &lt;code&gt;Sync&lt;/code&gt; および &lt;code&gt;Send&lt;/code&gt; 特性による拡張可能な同時実行性」セクションで説明した &lt;code&gt;Sync&lt;/code&gt; および &lt;code&gt;Send&lt;/code&gt; マーカー特性を思い出してください。型が完全に &lt;code&gt;Send&lt;/code&gt; および &lt;code&gt;Sync&lt;/code&gt; 型で構成されている場合、コンパイラーはこれらの特性を自動的に実装します。rawポインターなど、 &lt;code&gt;Send&lt;/code&gt; または &lt;code&gt;Sync&lt;/code&gt; ではない型を含む型を実装し、その型を &lt;code&gt;Send&lt;/code&gt; または &lt;code&gt;Sync&lt;/code&gt; としてマークする場合は、 &lt;code&gt;unsafe&lt;/code&gt; ないものを使用する必要があります。 Rustは、私たちのタイプが、スレッド間で安全に送信できる、または複数のスレッドからアクセスできるという保証が守られていることを確認できません。したがって、これらのチェックを手動で実行し、そのように &lt;code&gt;unsafe&lt;/code&gt; で示す必要があります。</target>
+          <target state="translated">例として、リコール &lt;code&gt;Sync&lt;/code&gt; をし、 &lt;code&gt;Send&lt;/code&gt; 私たちが議論マーカー特徴&lt;a href=&quot;ch16-04-extensible-concurrency-sync-and-send#extensible-concurrency-with-the-sync-and-send-traits&quot;&gt;「で拡張可能な同時実行 &lt;code&gt;Sync&lt;/code&gt; と &lt;code&gt;Send&lt;/code&gt; 済みの特徴」&lt;/a&gt;第16章でセクション：私たちの種類が完全に構成されている場合、自動的にコンパイラの実装これらの特徴を &lt;code&gt;Send&lt;/code&gt; し、 &lt;code&gt;Sync&lt;/code&gt; タイプを。rawポインターなど、 &lt;code&gt;Send&lt;/code&gt; または &lt;code&gt;Sync&lt;/code&gt; ではない型を含む型を実装し、その型を &lt;code&gt;Send&lt;/code&gt; または &lt;code&gt;Sync&lt;/code&gt; としてマークする場合は、 &lt;code&gt;unsafe&lt;/code&gt; ないものを使用する必要があります。 Rustは、私たちのタイプが、スレッド間で安全に送信できる、または複数のスレッドからアクセスできるという保証が守られていることを確認できません。したがって、これらのチェックを手動で実行し、そのように &lt;code&gt;unsafe&lt;/code&gt; で示す必要があります。</target>
         </trans-unit>
         <trans-unit id="38a88a1bad47211ae1a10e5bfcee84726e1f325e" translate="yes" xml:space="preserve">
           <source>As an example, say we write a function called &lt;code&gt;add_two&lt;/code&gt; that adds 2 to whatever number is passed to it. This function&amp;rsquo;s signature accepts an integer as a parameter and returns an integer as a result. When we implement and compile that function, Rust does all the type checking and borrow checking that you&amp;rsquo;ve learned so far to ensure that, for instance, we aren&amp;rsquo;t passing a &lt;code&gt;String&lt;/code&gt; value or an invalid reference to this function. But Rust &lt;em&gt;can&amp;rsquo;t&lt;/em&gt; check that this function will do precisely what we intend, which is return the parameter plus 2 rather than, say, the parameter plus 10 or the parameter minus 50! That&amp;rsquo;s where tests come in.</source>
-          <target state="translated">例として、渡された数値に2を加算する &lt;code&gt;add_two&lt;/code&gt; という関数を作成するとします。この関数のシグネチャは、整数をパラメータとして受け入れ、整数を結果として返します。その関数を実装してコンパイルすると、Rustはこれまでに学んだすべての型チェックと借用チェックを実行して、たとえば、この関数に &lt;code&gt;String&lt;/code&gt; 値や無効な参照を渡していないことを確認します。しかし、Rust &lt;em&gt;は&lt;/em&gt;、この関数が意図したとおりに機能することを確認&lt;em&gt;できません&lt;/em&gt;。たとえば、パラメータープラス10またはパラメーターマイナス50ではなく、パラメータープラス2を返します。それがテストの出番です。</target>
+          <target state="translated">例として、渡された数値に2を加算する &lt;code&gt;add_two&lt;/code&gt; という関数を作成するとします。この関数のシグネチャは、整数をパラメータとして受け入れ、整数を結果として返します。この関数を実装してコンパイルするとき、Rustはこれまでに学んだすべての型チェックと借用チェックを実行して、たとえば、この関数に &lt;code&gt;String&lt;/code&gt; 値や無効な参照を渡していないことを確認します。しかし、Rust &lt;em&gt;は&lt;/em&gt;、この関数が意図したとおりに機能することを確認&lt;em&gt;できません&lt;/em&gt;。たとえば、パラメータープラス10またはパラメーターマイナス50ではなく、パラメータープラス2を返します。それがテストの出番です。</target>
         </trans-unit>
         <trans-unit id="0c46b40f3e5f774d5bd6d946904f04146f347849" translate="yes" xml:space="preserve">
           <source>As an example, the pattern &lt;code&gt;&quot;aaa&quot;&lt;/code&gt; and the haystack &lt;code&gt;&quot;cbaaaaab&quot;&lt;/code&gt; might produce the stream &lt;code&gt;[Reject(0, 1), Reject(1, 2), Match(2, 5), Reject(5, 8)]&lt;/code&gt;</source>
-          <target state="translated">例として、パターン &lt;code&gt;&quot;aaa&quot;&lt;/code&gt; と干し草の &lt;code&gt;&quot;cbaaaaab&quot;&lt;/code&gt; は、ストリーム &lt;code&gt;[Reject(0, 1), Reject(1, 2), Match(2, 5), Reject(5, 8)]&lt;/code&gt; 2、5 ）、Reject（5、8 ）]を生成します。</target>
+          <target state="translated">例として、パターン &lt;code&gt;&quot;aaa&quot;&lt;/code&gt; と干し草 &lt;code&gt;&quot;cbaaaaab&quot;&lt;/code&gt; は、ストリーム &lt;code&gt;[Reject(0, 1), Reject(1, 2), Match(2, 5), Reject(5, 8)]&lt;/code&gt; 2、5 ）、Reject（5、8）]を生成する可能性があります。</target>
         </trans-unit>
         <trans-unit id="f6b604f8510907ca9fe9178dfcf2a6874e95e6b5" translate="yes" xml:space="preserve">
           <source>As an example, the pattern &lt;code&gt;&quot;aaa&quot;&lt;/code&gt; and the haystack &lt;code&gt;&quot;cbaaaaab&quot;&lt;/code&gt; might produce the stream &lt;code&gt;[Reject(7, 8), Match(4, 7), Reject(1, 4), Reject(0, 1)]&lt;/code&gt;</source>
-          <target state="translated">例として、パターン &lt;code&gt;&quot;aaa&quot;&lt;/code&gt; と干し草 &lt;code&gt;&quot;cbaaaaab&quot;&lt;/code&gt; は、ストリーム &lt;code&gt;[Reject(7, 8), Match(4, 7), Reject(1, 4), Reject(0, 1)]&lt;/code&gt;</target>
+          <target state="translated">例として、パターン &lt;code&gt;&quot;aaa&quot;&lt;/code&gt; と干し草の &lt;code&gt;&quot;cbaaaaab&quot;&lt;/code&gt; は、ストリーム &lt;code&gt;[Reject(7, 8), Match(4, 7), Reject(1, 4), Reject(0, 1)]&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="877bff60769fbc36114e44fb0843def0fdaa302f" translate="yes" xml:space="preserve">
           <source>As an iterator:</source>
@@ -3097,11 +3097,11 @@
         </trans-unit>
         <trans-unit id="04b8526b20e002ad597cb978c8868c4ab1a90f67" translate="yes" xml:space="preserve">
           <source>As another example, suppose we have a &lt;code&gt;Maker&lt;/code&gt; trait and want to establish a type &lt;code&gt;FooMaker&lt;/code&gt; that makes &lt;code&gt;Foo&lt;/code&gt;s:</source>
-          <target state="translated">別の例として、 &lt;code&gt;Maker&lt;/code&gt; トレイトがあり、 &lt;code&gt;Foo&lt;/code&gt; を作成するタイプ &lt;code&gt;FooMaker&lt;/code&gt; を確立するとします。</target>
+          <target state="translated">別の例として、 &lt;code&gt;Maker&lt;/code&gt; トレイトがあり、 &lt;code&gt;Foo&lt;/code&gt; を sにするタイプ &lt;code&gt;FooMaker&lt;/code&gt; を確立するとします。</target>
         </trans-unit>
         <trans-unit id="5213c1c4f3b10c9c56042b19c8c0157b715adba7" translate="yes" xml:space="preserve">
           <source>As another example, the following code is taken from an audio decoder. The decoding algorithm uses the linear prediction mathematical operation to estimate future values based on a linear function of the previous samples. This code uses an iterator chain to do some math on three variables in scope: a &lt;code&gt;buffer&lt;/code&gt; slice of data, an array of 12 &lt;code&gt;coefficients&lt;/code&gt;, and an amount by which to shift data in &lt;code&gt;qlp_shift&lt;/code&gt;. We&amp;rsquo;ve declared the variables within this example but not given them any values; although this code doesn&amp;rsquo;t have much meaning outside of its context, it&amp;rsquo;s still a concise, real-world example of how Rust translates high-level ideas to low-level code.</source>
-          <target state="translated">別の例として、次のコードはオーディオデコーダーから取得されます。デコードアルゴリズムは、線形予測の数学演算を使用して、以前のサンプルの線形関数に基づいて将来の値を推定します。このコードは、反復子チェーンを使用して、スコープ内の3つの変数（データの &lt;code&gt;buffer&lt;/code&gt; スライス、12個の &lt;code&gt;coefficients&lt;/code&gt; 配列、および &lt;code&gt;qlp_shift&lt;/code&gt; でデータをシフトする量）について計算を行います。この例では変数を宣言していますが、値は指定していません。このコードはコンテキスト外ではあまり意味がありませんが、Rustが高レベルのアイデアを低レベルのコードに変換する方法の簡潔で現実的な例です。</target>
+          <target state="translated">別の例として、次のコードはオーディオデコーダーから取得されます。デコードアルゴリズムは、線形予測の数学演算を使用して、以前のサンプルの線形関数に基づいて将来の値を推定します。このコードは、反復子チェーンを使用して、スコープ内の3つの変数（データの &lt;code&gt;buffer&lt;/code&gt; スライス、12個の &lt;code&gt;coefficients&lt;/code&gt; 配列、および &lt;code&gt;qlp_shift&lt;/code&gt; でデータをシフトする量）についていくつかの計算を行います。この例では変数を宣言していますが、値は指定していません。このコードはコンテキスト外ではあまり意味がありませんが、Rustが高レベルのアイデアを低レベルのコードに変換する方法の簡潔で現実的な例です。</target>
         </trans-unit>
         <trans-unit id="ceca2c634722fa77d0d672657c5578a7251142a0" translate="yes" xml:space="preserve">
           <source>As described, &lt;a href=&quot;../i32/index&quot;&gt;&lt;code&gt;i32&lt;/code&gt;&lt;/a&gt; implements &lt;code&gt;TryFrom&amp;lt;i64&amp;gt;&lt;/code&gt;:</source>
@@ -3113,11 +3113,11 @@
         </trans-unit>
         <trans-unit id="d5f5ed3e00ea3332f0559aed11908528d1ba499a" translate="yes" xml:space="preserve">
           <source>As discussed in Chapter 17, the &lt;code&gt;take&lt;/code&gt; method on &lt;code&gt;Option&lt;/code&gt; takes the &lt;code&gt;Some&lt;/code&gt; variant out and leaves &lt;code&gt;None&lt;/code&gt; in its place. We&amp;rsquo;re using &lt;code&gt;if let&lt;/code&gt; to destructure the &lt;code&gt;Some&lt;/code&gt; and get the thread; then we call &lt;code&gt;join&lt;/code&gt; on the thread. If a worker&amp;rsquo;s thread is already &lt;code&gt;None&lt;/code&gt;, we know that worker has already had its thread cleaned up, so nothing happens in that case.</source>
-          <target state="translated">第17章で説明した &lt;code&gt;take&lt;/code&gt; 、 &lt;code&gt;Option&lt;/code&gt; のtakeメソッドは、 &lt;code&gt;Some&lt;/code&gt; バリアントを &lt;code&gt;None&lt;/code&gt; し、代わりにNoneを残します。私たちは、使用している &lt;code&gt;if let&lt;/code&gt; destructureする &lt;code&gt;Some&lt;/code&gt; スレッドを取得します。次に、スレッドで &lt;code&gt;join&lt;/code&gt; を呼び出します。ワーカーのスレッドが既に &lt;code&gt;None&lt;/code&gt; である場合、ワーカーは既にそのスレッドをクリーンアップしているため、その場合は何も起こりません。</target>
+          <target state="translated">第17章で説明した &lt;code&gt;take&lt;/code&gt; 、 &lt;code&gt;Option&lt;/code&gt; のtakeメソッドは、 &lt;code&gt;Some&lt;/code&gt; バリアントを &lt;code&gt;None&lt;/code&gt; し、代わりにNoneを残します。私たちは、使用している &lt;code&gt;if let&lt;/code&gt; destructureする &lt;code&gt;Some&lt;/code&gt; スレッドを取得します。次に、スレッドで &lt;code&gt;join&lt;/code&gt; を呼び出します。ワーカーのスレッドがすでに &lt;code&gt;None&lt;/code&gt; である場合、ワーカーは既にそのスレッドをクリーンアップしているため、その場合は何も起こりません。</target>
         </trans-unit>
         <trans-unit id="9fd5d9a215556134ab45028a161d57190ff678d3" translate="yes" xml:space="preserve">
           <source>As discussed in Chapter 6, we use patterns in the arms of &lt;code&gt;match&lt;/code&gt; expressions. Formally, &lt;code&gt;match&lt;/code&gt; expressions are defined as the keyword &lt;code&gt;match&lt;/code&gt;, a value to match on, and one or more match arms that consist of a pattern and an expression to run if the value matches that arm&amp;rsquo;s pattern, like this:</source>
-          <target state="translated">第6章で説明したように、 &lt;code&gt;match&lt;/code&gt; 式の腕の中でパターンを使用します。形式的に、 &lt;code&gt;match&lt;/code&gt; 式は、キーワード &lt;code&gt;match&lt;/code&gt; 、一致する値、およびパターンと、値がそのアームのパターンに一致する場合に実行される式で構成される1つ以上の一致アームとして定義されます。</target>
+          <target state="translated">第6章で説明したように、 &lt;code&gt;match&lt;/code&gt; 式のアームではパターンを使用します。正式には、 &lt;code&gt;match&lt;/code&gt; 式は、キーワード &lt;code&gt;match&lt;/code&gt; 、一致する値、およびパターンと、値がそのアームのパターンに一致する場合に実行される式で構成される1つ以上の一致アームとして定義されます。</target>
         </trans-unit>
         <trans-unit id="b597a68d9b285f7d308e42a0c9a8b37ad1bf7193" translate="yes" xml:space="preserve">
           <source>As for what happens behind the scenes, when optimizations are enabled the final generated machine code might look very different from the code:</source>
@@ -3133,7 +3133,7 @@
         </trans-unit>
         <trans-unit id="6d9f4910be4026effcf198634df42e1c4041dff1" translate="yes" xml:space="preserve">
           <source>As in most other programming languages, a Boolean type in Rust has two possible values: &lt;code&gt;true&lt;/code&gt; and &lt;code&gt;false&lt;/code&gt;. Booleans are one byte in size. The Boolean type in Rust is specified using &lt;code&gt;bool&lt;/code&gt;. For example:</source>
-          <target state="translated">他のほとんどのプログラミング言語と同様に、Rustのブール型には、 &lt;code&gt;true&lt;/code&gt; と &lt;code&gt;false&lt;/code&gt; の 2つの値があります。ブール値のサイズは1バイトです。Rustのブール型は &lt;code&gt;bool&lt;/code&gt; を使用して指定されます。例えば：</target>
+          <target state="translated">他のほとんどのプログラミング言語と同様に、Rustのブール型には &lt;code&gt;true&lt;/code&gt; と &lt;code&gt;false&lt;/code&gt; の 2つの値があります。ブール値のサイズは1バイトです。Rustのブール型は &lt;code&gt;bool&lt;/code&gt; を使用して指定されます。例えば：</target>
         </trans-unit>
         <trans-unit id="a025b290deb94845050bfa62909fd15fe5ae74be" translate="yes" xml:space="preserve">
           <source>As long as your command line parsing logic is small, it can remain in &lt;em&gt;main.rs&lt;/em&gt;.</source>
@@ -3141,7 +3141,7 @@
         </trans-unit>
         <trans-unit id="8323a3696731d93f0a84dafc08f2d32df5ef0903" translate="yes" xml:space="preserve">
           <source>As mentioned at the start of the chapter, testing is a complex discipline, and different people use different terminology and organization. The Rust community thinks about tests in terms of two main categories: &lt;em&gt;unit tests&lt;/em&gt; and &lt;em&gt;integration tests&lt;/em&gt;. Unit tests are small and more focused, testing one module in isolation at a time, and can test private interfaces. Integration tests are entirely external to your library and use your code in the same way any other external code would, using only the public interface and potentially exercising multiple modules per test.</source>
-          <target state="translated">この章の冒頭で述べたように、テストは複雑な分野であり、人によって使用する用語や構成は異なります。 Rustコミュニティは、テストを2つの主要なカテゴリ（&lt;em&gt;単体テスト&lt;/em&gt;と&lt;em&gt;統合テスト）の&lt;/em&gt;観点から考えてい&lt;em&gt;ます&lt;/em&gt;。単体テストは小規模で集中的で、一度に1つのモジュールを分離してテストし、プライベートインターフェイスをテストできます。統合テストは完全にライブラリの外部にあり、他の外部コードと同じようにコードを使用します。パブリックインターフェイスのみを使用し、テストごとに複数のモジュールを実行する可能性があります。</target>
+          <target state="translated">この章の冒頭で述べたように、テストは複雑な分野であり、人によって使用する用語や構成は異なります。 Rustコミュニティは、テストを2つの主要なカテゴリ（&lt;em&gt;ユニットテスト&lt;/em&gt;と&lt;em&gt;統合テスト）の&lt;/em&gt;観点から考えてい&lt;em&gt;ます&lt;/em&gt;。単体テストは小規模で集中的で、一度に1つのモジュールを分離してテストし、プライベートインターフェイスをテストできます。統合テストは完全にライブラリの外部にあり、他の外部コードと同じようにコードを使用します。パブリックインターフェイスのみを使用し、テストごとに複数のモジュールを実行する可能性があります。</target>
         </trans-unit>
         <trans-unit id="10eda87545057c2aa683c0bbfe8990122953ece6" translate="yes" xml:space="preserve">
           <source>As mentioned before, trait objects contain pointers to method tables. So, if we have:</source>
@@ -3149,7 +3149,7 @@
         </trans-unit>
         <trans-unit id="4761017ad6dee318134842b138bc05d35199a594" translate="yes" xml:space="preserve">
           <source>As mentioned earlier, &lt;code&gt;read_line&lt;/code&gt; puts what the user types into the string we&amp;rsquo;re passing it, but it also returns a value&amp;mdash;in this case, an &lt;a href=&quot;../std/io/type.result&quot;&gt;&lt;code&gt;io::Result&lt;/code&gt;&lt;/a&gt;. Rust has a number of types named &lt;code&gt;Result&lt;/code&gt; in its standard library: a generic &lt;a href=&quot;../std/result/enum.result&quot;&gt;&lt;code&gt;Result&lt;/code&gt;&lt;/a&gt; as well as specific versions for submodules, such as &lt;code&gt;io::Result&lt;/code&gt;.</source>
-          <target state="translated">前述のように、 &lt;code&gt;read_line&lt;/code&gt; は、ユーザーが入力した文字列を、渡す文字列に入れますが、値（この場合は&lt;a href=&quot;../std/io/type.result&quot;&gt; &lt;code&gt;io::Result&lt;/code&gt; &lt;/a&gt;も返します。Rustの標準ライブラリには、 &lt;code&gt;Result&lt;/code&gt; という名前のタイプがいくつかあります。一般的な&lt;a href=&quot;../std/result/enum.result&quot;&gt; &lt;code&gt;Result&lt;/code&gt; &lt;/a&gt;と、 &lt;code&gt;io::Result&lt;/code&gt; などのサブモジュールの特定のバージョンです。</target>
+          <target state="translated">前述のように、 &lt;code&gt;read_line&lt;/code&gt; は、ユーザーが入力した文字列を渡した文字列に入れますが、値（この場合は&lt;a href=&quot;../std/io/type.result&quot;&gt; &lt;code&gt;io::Result&lt;/code&gt; &lt;/a&gt;も返します。Rustの標準ライブラリには、 &lt;code&gt;Result&lt;/code&gt; という名前のタイプがいくつかあります。一般的な&lt;a href=&quot;../std/result/enum.result&quot;&gt; &lt;code&gt;Result&lt;/code&gt; &lt;/a&gt;と、 &lt;code&gt;io::Result&lt;/code&gt; などのサブモジュールの特定のバージョンです。</target>
         </trans-unit>
         <trans-unit id="3f7435a393907a8b1c4a2fc1b69a43772076a5c5" translate="yes" xml:space="preserve">
           <source>As mentioned earlier, because very little of how Rust handles concurrency is part of the language, many concurrency solutions are implemented as crates. These evolve more quickly than the standard library, so be sure to search online for the current, state-of-the-art crates to use in multithreaded situations.</source>
@@ -3157,7 +3157,7 @@
         </trans-unit>
         <trans-unit id="a6f8e14141b394aeafb54cb0af5563e56c04e70c" translate="yes" xml:space="preserve">
           <source>As mentioned in Chapter 2, by default variables are immutable. This is one of many nudges Rust gives you to write your code in a way that takes advantage of the safety and easy concurrency that Rust offers. However, you still have the option to make your variables mutable. Let&amp;rsquo;s explore how and why Rust encourages you to favor immutability and why sometimes you might want to opt out.</source>
-          <target state="translated">第2章で述べたように、デフォルトでは変数は不変です。これは、Rustが提供する安全性と同時実行性を活用した方法でコードを記述するためにRustが提供するナッジの1つです。ただし、変数を変更可能にするオプションはまだあります。Rustが不変性を支持するように勧める方法と理由、そしてなぜオプトアウトしたいのかを探ってみましょう。</target>
+          <target state="translated">第2章で述べたように、デフォルトでは変数は不変です。これは、Rustが提供する安全性と同時実行性を活用した方法でコードを記述するためにRustが提供する多くのナッジの1つです。ただし、変数を変更可能にするオプションはまだあります。どのようにそしてなぜRustが不変性を支持することを勧めるのか、なぜオプトアウトしたいのかを探りましょう。</target>
         </trans-unit>
         <trans-unit id="7641c8a38df92f9203220e805ba01b7f30732a0c" translate="yes" xml:space="preserve">
           <source>As mentioned in the module documentation, threads are usually made to communicate using &lt;a href=&quot;../sync/mpsc/index&quot;&gt;&lt;code&gt;channels&lt;/code&gt;&lt;/a&gt;, here is how it usually looks.</source>
@@ -3165,7 +3165,7 @@
         </trans-unit>
         <trans-unit id="fad7d9a9d62e3d2756844c471849a76502954355" translate="yes" xml:space="preserve">
           <source>As non-Rust calling conventions do not support unwinding, unwinding past the end of an extern function will cause the process to abort. In LLVM, this is implemented by executing an illegal instruction.</source>
-          <target state="translated">非Rustの呼び出し規約はアンワインドをサポートしていないため、外部関数の終わりを過ぎたアンワインドは、プロセスを中止させる原因となります。LLVMでは、これは不正な命令を実行することによって実装されています。</target>
+          <target state="translated">非Rustの呼び出し規約はアンワインドをサポートしていないため、外部関数の終わりを過ぎたアンワインドは、プロセスを中止させる原因となります。LLVMでは、これは不正な命令を実行することで実装されています。</target>
         </trans-unit>
         <trans-unit id="10482a83c62e485259adbe51b49060ecef064cde" translate="yes" xml:space="preserve">
           <source>As noted above, coercions mean that most code doesn't have to be concerned with this distinction. However, you can tell the difference when using &lt;strong&gt;transmute&lt;/strong&gt; to convert a fn item into a fn pointer.</source>
@@ -3181,11 +3181,11 @@
         </trans-unit>
         <trans-unit id="51aa8d67495f62b66ef894735fcf63e6606dac28" translate="yes" xml:space="preserve">
           <source>As shown in the example above, &lt;code&gt;for&lt;/code&gt; loops (along with all other loops) can be tagged, using similar syntax to lifetimes (only visually similar, entirely distinct in practice). Giving the same tag to &lt;code&gt;break&lt;/code&gt; breaks the tagged loop, which is useful for inner loops. It is definitely not a goto.</source>
-          <target state="translated">上記の例に示すように、 &lt;code&gt;for&lt;/code&gt; ループは（他のすべてのループとともに）ライフタイムと同様の構文を使用してタグ付けできます（実際には視覚的にのみ類似しており、完全に異なります）。同じタグを &lt;code&gt;break&lt;/code&gt; 与えると、タグ付きループが壊れます。これは、内部ループに役立ちます。後藤ではありません。</target>
+          <target state="translated">上記の例に示すように、 &lt;code&gt;for&lt;/code&gt; ループは（他のすべてのループと同様に）ライフタイムと同様の構文を使用してタグ付けできます（視覚的にのみ類似しており、実際には完全に異なります）。同じタグを &lt;code&gt;break&lt;/code&gt; 与えると、タグ付きループが壊れます。これは、内部ループに役立ちます。確かに後藤ではありません。</target>
         </trans-unit>
         <trans-unit id="c276f971f322ddf36b0d0a39caeff0e860e6ee88" translate="yes" xml:space="preserve">
           <source>As stated in the User Datagram Protocol's specification in &lt;a href=&quot;https://tools.ietf.org/html/rfc768&quot;&gt;IETF RFC 768&lt;/a&gt;, UDP is an unordered, unreliable protocol; refer to &lt;a href=&quot;struct.tcplistener&quot;&gt;&lt;code&gt;TcpListener&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;struct.tcpstream&quot;&gt;&lt;code&gt;TcpStream&lt;/code&gt;&lt;/a&gt; for TCP primitives.</source>
-          <target state="translated">&lt;a href=&quot;https://tools.ietf.org/html/rfc768&quot;&gt;IETF RFC 768&lt;/a&gt;のUser Datagram Protocolの仕様で述べられているように、UDPは順序付けされておらず、信頼性の低いプロトコルです。TCPプリミティブについては、&lt;a href=&quot;struct.tcplistener&quot;&gt; &lt;code&gt;TcpListener&lt;/code&gt; &lt;/a&gt;および&lt;a href=&quot;struct.tcpstream&quot;&gt; &lt;code&gt;TcpStream&lt;/code&gt; &lt;/a&gt;を参照してください。</target>
+          <target state="translated">&lt;a href=&quot;https://tools.ietf.org/html/rfc768&quot;&gt;IETF RFC 768&lt;/a&gt;のUser Datagram Protocolの仕様で述べられているように、UDPは順序付けされておらず、信頼性が低いプロトコルです。TCPプリミティブについては、&lt;a href=&quot;struct.tcplistener&quot;&gt; &lt;code&gt;TcpListener&lt;/code&gt; &lt;/a&gt;および&lt;a href=&quot;struct.tcpstream&quot;&gt; &lt;code&gt;TcpStream&lt;/code&gt; &lt;/a&gt;を参照してください。</target>
         </trans-unit>
         <trans-unit id="54d4fd727ce2657161522c6ae3a06633673c9cbd" translate="yes" xml:space="preserve">
           <source>As string slices are a slice of bytes, the raw pointer points to a &lt;a href=&quot;primitive.u8&quot;&gt;&lt;code&gt;u8&lt;/code&gt;&lt;/a&gt;. This pointer will be pointing to the first byte of the string slice.</source>
@@ -3193,7 +3193,7 @@
         </trans-unit>
         <trans-unit id="b757bf93c530db10fdab40d9aeca4c3f17d50ad1" translate="yes" xml:space="preserve">
           <source>As such, the &lt;code&gt;from_utf8&lt;/code&gt; family of functions and methods for both &lt;a href=&quot;../string/struct.string#method.from_utf8&quot;&gt;&lt;code&gt;String&lt;/code&gt;&lt;/a&gt;s and &lt;a href=&quot;fn.from_utf8&quot;&gt;&lt;code&gt;&amp;amp;str&lt;/code&gt;&lt;/a&gt;s make use of this error, for example.</source>
-          <target state="translated">そのため、 &lt;code&gt;from_utf8&lt;/code&gt; &lt;a href=&quot;../string/struct.string#method.from_utf8&quot;&gt; &lt;code&gt;String&lt;/code&gt; &lt;/a&gt;と&lt;a href=&quot;fn.from_utf8&quot;&gt; &lt;code&gt;&amp;amp;str&lt;/code&gt; &lt;/a&gt;の両方の関数とメソッドのfrom_utf8ファミリは、このエラーを利用します。</target>
+          <target state="translated">そのため、 &lt;code&gt;from_utf8&lt;/code&gt; &lt;a href=&quot;../string/struct.string#method.from_utf8&quot;&gt; &lt;code&gt;String&lt;/code&gt; &lt;/a&gt;と&lt;a href=&quot;fn.from_utf8&quot;&gt; &lt;code&gt;&amp;amp;str&lt;/code&gt; &lt;/a&gt;の両方のfrom_utf8ファミリの関数とメソッドは、このエラーを利用します。</target>
         </trans-unit>
         <trans-unit id="a7bae3aa148344b33c64086da16dba6a42474602" translate="yes" xml:space="preserve">
           <source>As the author of a data structure you get to decide for each field whether pinning &quot;propagates&quot; to this field or not. Pinning that propagates is also called &quot;structural&quot;, because it follows the structure of the type. In the following subsections, we describe the considerations that have to be made for either choice.</source>
@@ -3205,11 +3205,11 @@
         </trans-unit>
         <trans-unit id="6c037f01ab1e44c1b49068f96530e00f210988e8" translate="yes" xml:space="preserve">
           <source>As the target platform's native endianness is used, portable code likely wants to use &lt;a href=&quot;#method.from_be_bytes&quot;&gt;&lt;code&gt;from_be_bytes&lt;/code&gt;&lt;/a&gt; or &lt;a href=&quot;#method.from_le_bytes&quot;&gt;&lt;code&gt;from_le_bytes&lt;/code&gt;&lt;/a&gt;, as appropriate instead.</source>
-          <target state="translated">ターゲットプラットフォームのネイティブエンディアンが使用されているため、移植可能なコードでは、代わりに適切に&lt;a href=&quot;#method.from_be_bytes&quot;&gt; &lt;code&gt;from_be_bytes&lt;/code&gt; &lt;/a&gt;または&lt;a href=&quot;#method.from_le_bytes&quot;&gt; &lt;code&gt;from_le_bytes&lt;/code&gt; &lt;/a&gt;を使用する可能性があります。</target>
+          <target state="translated">ターゲットプラットフォームのネイティブエンディアンが使用されているため、ポータブルコードでは、代わりに適切に&lt;a href=&quot;#method.from_be_bytes&quot;&gt; &lt;code&gt;from_be_bytes&lt;/code&gt; &lt;/a&gt;または&lt;a href=&quot;#method.from_le_bytes&quot;&gt; &lt;code&gt;from_le_bytes&lt;/code&gt; &lt;/a&gt;を使用する可能性があります。</target>
         </trans-unit>
         <trans-unit id="1c8bfefec8dafcbb055c2ea433ad31a56feecccd" translate="yes" xml:space="preserve">
           <source>As the target platform's native endianness is used, portable code should use &lt;a href=&quot;#method.to_be_bytes&quot;&gt;&lt;code&gt;to_be_bytes&lt;/code&gt;&lt;/a&gt; or &lt;a href=&quot;#method.to_le_bytes&quot;&gt;&lt;code&gt;to_le_bytes&lt;/code&gt;&lt;/a&gt;, as appropriate, instead.</source>
-          <target state="translated">ターゲットプラットフォームのネイティブエンディアンが使用されるため、移植可能なコードでは、代わりに&lt;a href=&quot;#method.to_be_bytes&quot;&gt; &lt;code&gt;to_be_bytes&lt;/code&gt; &lt;/a&gt;または&lt;a href=&quot;#method.to_le_bytes&quot;&gt; &lt;code&gt;to_le_bytes&lt;/code&gt; &lt;/a&gt;を適切に使用する必要があります。</target>
+          <target state="translated">ターゲットプラットフォームのネイティブエンディアンが使用されているため、移植可能なコードでは、代わりに&lt;a href=&quot;#method.to_be_bytes&quot;&gt; &lt;code&gt;to_be_bytes&lt;/code&gt; &lt;/a&gt;または&lt;a href=&quot;#method.to_le_bytes&quot;&gt; &lt;code&gt;to_le_bytes&lt;/code&gt; &lt;/a&gt;を適切に使用する必要があります。</target>
         </trans-unit>
         <trans-unit id="c2aae14d23e6b4a7f032b38d8e95a4d1b336b019" translate="yes" xml:space="preserve">
           <source>As this is the only method for this trait, the &lt;a href=&quot;trait.extend&quot;&gt;trait-level&lt;/a&gt; docs contain more details.</source>
@@ -3225,7 +3225,7 @@
         </trans-unit>
         <trans-unit id="c9b62e53d822366f9040eaf9632aa096cd8d407c" translate="yes" xml:space="preserve">
           <source>As we saw when we printed the vector, the program&amp;rsquo;s name takes up the first value in the vector at &lt;code&gt;args[0]&lt;/code&gt;, so we&amp;rsquo;re starting at index &lt;code&gt;1&lt;/code&gt;. The first argument &lt;code&gt;minigrep&lt;/code&gt; takes is the string we&amp;rsquo;re searching for, so we put a reference to the first argument in the variable &lt;code&gt;query&lt;/code&gt;. The second argument will be the filename, so we put a reference to the second argument in the variable &lt;code&gt;filename&lt;/code&gt;.</source>
-          <target state="translated">ベクトルを出力したときに見たように、プログラムの名前は &lt;code&gt;args[0]&lt;/code&gt; にあるベクトルの最初の値を占めるため、インデックス &lt;code&gt;1&lt;/code&gt; から始めます。 &lt;code&gt;minigrep&lt;/code&gt; が取る最初の引数は検索する文字列なので、変数 &lt;code&gt;query&lt;/code&gt; に最初の引数への参照を置きます。2番目の引数はファイル名になるため、2番目の引数への参照を変数 &lt;code&gt;filename&lt;/code&gt; に入れます。</target>
+          <target state="translated">ベクトルを出力したときに見たように、プログラムの名前は &lt;code&gt;args[0]&lt;/code&gt; にあるベクトルの最初の値を占めるため、インデックス &lt;code&gt;1&lt;/code&gt; から始めます。 &lt;code&gt;minigrep&lt;/code&gt; が取る最初の引数は、検索する文字列なので、変数 &lt;code&gt;query&lt;/code&gt; に最初の引数への参照を置きます。2番目の引数はファイル名になるため、2番目の引数への参照を変数 &lt;code&gt;filename&lt;/code&gt; に入れます。</target>
         </trans-unit>
         <trans-unit id="387526bcd86a3d932ce8d276666fe3de9ea36fb2" translate="yes" xml:space="preserve">
           <source>As well as overloading the unary &lt;code&gt;*&lt;/code&gt; operator, &lt;a href=&quot;../std/ops/trait.deref&quot;&gt;&lt;code&gt;Deref&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;../std/ops/trait.derefmut&quot;&gt;&lt;code&gt;DerefMut&lt;/code&gt;&lt;/a&gt; are also used in &lt;a href=&quot;expressions/method-call-expr&quot;&gt;method resolution&lt;/a&gt; and &lt;a href=&quot;type-coercions#coercion-types&quot;&gt;deref coercions&lt;/a&gt;.</source>
@@ -3233,11 +3233,11 @@
         </trans-unit>
         <trans-unit id="00f0078e7027bdd5fb06a3cdb9f947f1a54e08c1" translate="yes" xml:space="preserve">
           <source>As with &lt;a href=&quot;#method.as_ref&quot;&gt;&lt;code&gt;as_ref&lt;/code&gt;&lt;/a&gt;, this is unsafe because it cannot verify the validity of the returned pointer, nor can it ensure that the lifetime &lt;code&gt;'a&lt;/code&gt; returned is indeed a valid lifetime for the contained data.</source>
-          <target state="translated">同じように&lt;a href=&quot;#method.as_ref&quot;&gt; &lt;code&gt;as_ref&lt;/code&gt; &lt;/a&gt;それが返されたポインタの有効性を検証することができない、またそれが生涯ことを確認することができるので、これは安全ではありません &lt;code&gt;'a&lt;/code&gt; が返さが実際に含まれているデータのための有効期間です。</target>
+          <target state="translated">&lt;a href=&quot;#method.as_ref&quot;&gt; &lt;code&gt;as_ref&lt;/code&gt; &lt;/a&gt;と同様に、返されたポインタの有効性を検証できず &lt;code&gt;'a&lt;/code&gt; 返された有効期間が実際に含まれているデータの有効な有効期間であることを保証できないため、これは安全ではありません。</target>
         </trans-unit>
         <trans-unit id="e824f1a2f05ba862631703f190681d4c2dd2b70b" translate="yes" xml:space="preserve">
           <source>As with &lt;a href=&quot;use-declarations#underscore-imports&quot;&gt;underscore imports&lt;/a&gt;, macros may safely emit the same unnamed constant in the same scope more than once. For example, the following should not produce an error:</source>
-          <target state="translated">&lt;a href=&quot;use-declarations#underscore-imports&quot;&gt;アンダースコアのインポート&lt;/a&gt;と同様に、マクロは同じスコープ内で同じ名前のない定数を2回以上安全に出力できます。たとえば、次の場合はエラーが発生しないはずです。</target>
+          <target state="translated">&lt;a href=&quot;use-declarations#underscore-imports&quot;&gt;アンダースコアのインポート&lt;/a&gt;と同様に、マクロは同じスコープ内で同じ名前のない定数を複数回安全に発行できます。たとえば、次の場合はエラーが発生しないはずです。</target>
         </trans-unit>
         <trans-unit id="4c083e9f314596dd1da24d21de9af221cdf99253" translate="yes" xml:space="preserve">
           <source>As with &lt;code&gt;let&lt;/code&gt; bindings, function arguments are irrefutable &lt;a href=&quot;../patterns&quot;&gt;patterns&lt;/a&gt;, so any pattern that is valid in a let binding is also valid as an argument:</source>
@@ -3253,11 +3253,11 @@
         </trans-unit>
         <trans-unit id="4275e8a23f25e311b7879f2ca06bcf06be2ae3c3" translate="yes" xml:space="preserve">
           <source>As with many types, we create a &lt;code&gt;Mutex&amp;lt;T&amp;gt;&lt;/code&gt; using the associated function &lt;code&gt;new&lt;/code&gt;. To access the data inside the mutex, we use the &lt;code&gt;lock&lt;/code&gt; method to acquire the lock. This call will block the current thread so it can&amp;rsquo;t do any work until it&amp;rsquo;s our turn to have the lock.</source>
-          <target state="translated">多くの型と同様に、関連する関数 &lt;code&gt;new&lt;/code&gt; を使用して &lt;code&gt;Mutex&amp;lt;T&amp;gt;&lt;/code&gt; を作成します。mutex内のデータにアクセスするには、 &lt;code&gt;lock&lt;/code&gt; メソッドを使用してロックを取得します。この呼び出しは現在のスレッドをブロックするので、ロックを取得する番になるまで、作業を実行できません。</target>
+          <target state="translated">多くの型と同様に、関連する関数 &lt;code&gt;new&lt;/code&gt; を使用して &lt;code&gt;Mutex&amp;lt;T&amp;gt;&lt;/code&gt; を作成します。mutex内のデータにアクセスするには、 &lt;code&gt;lock&lt;/code&gt; メソッドを使用してロックを取得します。この呼び出しは現在のスレッドをブロックするので、ロックを取得する番になるまで、スレッドは何もできません。</target>
         </trans-unit>
         <trans-unit id="35a5907e5dda02884b0d94275e42a50fca56e187" translate="yes" xml:space="preserve">
           <source>As with regular variables, we specify mutability using the &lt;code&gt;mut&lt;/code&gt; keyword. Any code that reads or writes from &lt;code&gt;COUNTER&lt;/code&gt; must be within an &lt;code&gt;unsafe&lt;/code&gt; block. This code compiles and prints &lt;code&gt;COUNTER: 3&lt;/code&gt; as we would expect because it&amp;rsquo;s single threaded. Having multiple threads access &lt;code&gt;COUNTER&lt;/code&gt; would likely result in data races.</source>
-          <target state="translated">通常の変数と同様に、 &lt;code&gt;mut&lt;/code&gt; キーワードを使用して可変性を指定します。 &lt;code&gt;COUNTER&lt;/code&gt; から読み取りまたは書き込みを行うコードは、 &lt;code&gt;unsafe&lt;/code&gt; ブロック内にある必要があります。このコードは、シングルスレッドなので、予想どおり &lt;code&gt;COUNTER: 3&lt;/code&gt; をコンパイルして出力します。複数のスレッドが &lt;code&gt;COUNTER&lt;/code&gt; にアクセスすると、データの競合が発生する可能性があります。</target>
+          <target state="translated">通常の変数と同様に、 &lt;code&gt;mut&lt;/code&gt; キーワードを使用して可変性を指定します。 &lt;code&gt;COUNTER&lt;/code&gt; から読み取りまたは書き込みを行うコードは、 &lt;code&gt;unsafe&lt;/code&gt; ブロック内にある必要があります。このコードは、シングルスレッドであるため、予想どおり &lt;code&gt;COUNTER: 3&lt;/code&gt; をコンパイルして出力します。複数のスレッドが &lt;code&gt;COUNTER&lt;/code&gt; にアクセスすると、データの競合が発生する可能性があります。</target>
         </trans-unit>
         <trans-unit id="1fb7b19ef9483e218deb8b0d1a3f5269874b86ed" translate="yes" xml:space="preserve">
           <source>As with the &lt;a href=&quot;struct.hashmap&quot;&gt;&lt;code&gt;HashMap&lt;/code&gt;&lt;/a&gt; type, a &lt;code&gt;HashSet&lt;/code&gt; requires that the elements implement the &lt;a href=&quot;../../cmp/trait.eq&quot;&gt;&lt;code&gt;Eq&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;../../hash/trait.hash&quot;&gt;&lt;code&gt;Hash&lt;/code&gt;&lt;/a&gt; traits. This can frequently be achieved by using &lt;code&gt;#[derive(PartialEq, Eq, Hash)]&lt;/code&gt;. If you implement these yourself, it is important that the following property holds:</source>
@@ -3273,7 +3273,7 @@
         </trans-unit>
         <trans-unit id="96c2069203f702eae6427926792a296cebb74618" translate="yes" xml:space="preserve">
           <source>As you add more integration tests, you might want to make more than one file in the &lt;em&gt;tests&lt;/em&gt; directory to help organize them; for example, you can group the test functions by the functionality they&amp;rsquo;re testing. As mentioned earlier, each file in the &lt;em&gt;tests&lt;/em&gt; directory is compiled as its own separate crate.</source>
-          <target state="translated">統合テストをさらに追加する場合、それらを整理するために、&lt;em&gt;tests&lt;/em&gt;ディレクトリに複数のファイルを作成することができます。たとえば、テストする機能ごとにテスト関数をグループ化できます。前述のように、&lt;em&gt;tests&lt;/em&gt;ディレクトリの各ファイルは、独自のクレートとしてコンパイルされます。</target>
+          <target state="translated">統合テストを追加する場合、それらを整理するために、&lt;em&gt;tests&lt;/em&gt;ディレクトリに複数のファイルを作成することができます。たとえば、テストする機能ごとにテスト関数をグループ化できます。前述のように、&lt;em&gt;tests&lt;/em&gt;ディレクトリの各ファイルは、独自のクレートとしてコンパイルされます。</target>
         </trans-unit>
         <trans-unit id="064638b9138d50bf7a76d4f1fb8907e6d00d4af4" translate="yes" xml:space="preserve">
           <source>As you also learned in Chapter 1, &lt;code&gt;println!&lt;/code&gt; is a macro that prints a string to the screen:</source>
@@ -3285,7 +3285,7 @@
         </trans-unit>
         <trans-unit id="0420fe0c9530d1e1d147961f14b139b3fe83e9e2" translate="yes" xml:space="preserve">
           <source>As you can see, the stable toolchain is the default. Most Rust users use stable most of the time. You might want to use stable most of the time, but use nightly on a specific project, because you care about a cutting-edge feature. To do so, you can use &lt;code&gt;rustup override&lt;/code&gt; in that project&amp;rsquo;s directory to set the nightly toolchain as the one &lt;code&gt;rustup&lt;/code&gt; should use when you&amp;rsquo;re in that directory:</source>
-          <target state="translated">ご覧のように、安定したツールチェーンがデフォルトです。ほとんどのRustユーザーはほとんどの場合、安定版を使用しています。ほとんどの場合は安定版を使用することをお勧めしますが、最先端の機能に関心があるため、特定のプロジェクトでは毎晩使用します。そのためには、そのプロジェクトのディレクトリで &lt;code&gt;rustup override&lt;/code&gt; を使用して、そのディレクトリにいるときに &lt;code&gt;rustup&lt;/code&gt; が使用する必要があるナイトリーツールチェーンを設定できます。</target>
+          <target state="translated">ご覧のとおり、安定したツールチェーンがデフォルトです。ほとんどのRustユーザーは、ほとんどの場合、安定版を使用しています。ほとんどの場合は安定版を使用することをお勧めしますが、最先端の機能に関心があるため、特定のプロジェクトでは毎晩使用します。これを行うには、そのプロジェクトのディレクトリで &lt;code&gt;rustup override&lt;/code&gt; を使用して、そのディレクトリにいるときに &lt;code&gt;rustup&lt;/code&gt; が使用する必要があるナイトリーツールチェーンを設定します。</target>
         </trans-unit>
         <trans-unit id="9d87736b18e618ced4be36c042766a61a7024b14" translate="yes" xml:space="preserve">
           <source>As you can see, this will return the expected, valid items.</source>
@@ -3301,7 +3301,7 @@
         </trans-unit>
         <trans-unit id="ac1ee84193bb1d8e87992969494a2311a45eebb9" translate="yes" xml:space="preserve">
           <source>As you can see, you can specify type parameters in curly braces for substitution with the actual types (using the regular format string syntax) in a given situation. Furthermore, &lt;code&gt;{Self}&lt;/code&gt; will substitute to the type (in this case, &lt;code&gt;bool&lt;/code&gt;) that we tried to use.</source>
-          <target state="translated">ご覧のとおり、特定の状況で実際の型（通常のフォーマット文字列構文を使用）に置き換えるために、中括弧で型パラメーターを指定できます。さらに、 &lt;code&gt;{Self}&lt;/code&gt; は、使用しようとしたタイプ（この場合は &lt;code&gt;bool&lt;/code&gt; ）に置き換えられます。</target>
+          <target state="translated">ご覧のとおり、特定の状況で（通常のフォーマット文字列構文を使用して）実際の型で置換するために、中括弧で型パラメーターを指定できます。さらに、 &lt;code&gt;{Self}&lt;/code&gt; は、使用しようとしたタイプ（この場合は &lt;code&gt;bool&lt;/code&gt; ）に置き換えられます。</target>
         </trans-unit>
         <trans-unit id="b2e9ae4479b0983efbf6a5f5ed8ba7b27ba6777d" translate="yes" xml:space="preserve">
           <source>As you could see, in many aspects (except for layouts, safety and ownership) unions behave exactly like structs, largely as a consequence of inheriting their syntactic shape from structs. This is also true for many unmentioned aspects of Rust language (such as privacy, name resolution, type inference, generics, trait implementations, inherent implementations, coherence, pattern checking, etc etc etc).</source>
@@ -3309,15 +3309,15 @@
         </trans-unit>
         <trans-unit id="b701fb6519447ef85d48d0e79a042ed086034a11" translate="yes" xml:space="preserve">
           <source>As you learned in Chapter 16, &lt;code&gt;thread::spawn&lt;/code&gt; will create a new thread and then run the code in the closure in the new thread. If you run this code and load &lt;em&gt;/sleep&lt;/em&gt; in your browser, then &lt;em&gt;/&lt;/em&gt; in two more browser tabs, you&amp;rsquo;ll indeed see that the requests to &lt;em&gt;/&lt;/em&gt; don&amp;rsquo;t have to wait for &lt;em&gt;/sleep&lt;/em&gt; to finish. But as we mentioned, this will eventually overwhelm the system because you&amp;rsquo;d be making new threads without any limit.</source>
-          <target state="translated">第16章で学習したように、 &lt;code&gt;thread::spawn&lt;/code&gt; は新しいスレッドを作成し、新しいスレッドのクロージャーでコードを実行します。あなたはこのコードとロード実行した場合&lt;em&gt;/睡眠を&lt;/em&gt;お使いのブラウザで、その後&lt;em&gt;/&lt;/em&gt; 2以上のブラウザのタブで、あなたは確かに要求することを確認できます&lt;em&gt;/&lt;/em&gt;を待つ必要はありません&lt;em&gt;/スリープ&lt;/em&gt;仕上げにします。しかし、前述したように、制限なしで新しいスレッドを作成するため、これは最終的にシステムを圧倒します。</target>
+          <target state="translated">第16章で学習したように、 &lt;code&gt;thread::spawn&lt;/code&gt; は新しいスレッドを作成し、その新しいスレッドのクロージャーでコードを実行します。あなたはこのコードとロード実行した場合&lt;em&gt;/睡眠を&lt;/em&gt;お使いのブラウザで、その後&lt;em&gt;/&lt;/em&gt; 2以上のブラウザのタブで、あなたは確かに要求することを確認できます&lt;em&gt;/&lt;/em&gt;を待つ必要はありません&lt;em&gt;/スリープ&lt;/em&gt;仕上げにします。しかし、前述したように、制限なく新しいスレッドを作成するため、これは最終的にシステムを圧倒します。</target>
         </trans-unit>
         <trans-unit id="f4d2e2ae7d1d7339cbe38cf89981448ff9804651" translate="yes" xml:space="preserve">
           <source>As you might have guessed, &lt;code&gt;continue&lt;/code&gt; has a &lt;code&gt;!&lt;/code&gt; value. That is, when Rust computes the type of &lt;code&gt;guess&lt;/code&gt;, it looks at both match arms, the former with a value of &lt;code&gt;u32&lt;/code&gt; and the latter with a &lt;code&gt;!&lt;/code&gt; value. Because &lt;code&gt;!&lt;/code&gt; can never have a value, Rust decides that the type of &lt;code&gt;guess&lt;/code&gt; is &lt;code&gt;u32&lt;/code&gt;.</source>
-          <target state="translated">ご想像のとおり、 &lt;code&gt;continue&lt;/code&gt; には &lt;code&gt;!&lt;/code&gt; 値。つまり、Rustが &lt;code&gt;guess&lt;/code&gt; のタイプを計算するとき、両方のマッチアームを調べます。前者は &lt;code&gt;u32&lt;/code&gt; の値を持ち、後者は &lt;code&gt;!&lt;/code&gt; 値。なぜなら &lt;code&gt;!&lt;/code&gt; Rustは値を持つことができないため、 &lt;code&gt;guess&lt;/code&gt; のタイプは &lt;code&gt;u32&lt;/code&gt; であると判断します。</target>
+          <target state="translated">ご想像のとおり、 &lt;code&gt;continue&lt;/code&gt; には &lt;code&gt;!&lt;/code&gt; 値。つまり、Rustが &lt;code&gt;guess&lt;/code&gt; のタイプを計算するときに、両方のマッチアームを調べます。前者は &lt;code&gt;u32&lt;/code&gt; の値で、後者は &lt;code&gt;!&lt;/code&gt; 値。なぜなら &lt;code&gt;!&lt;/code&gt; Rustは決して値を持つことができないため、 &lt;code&gt;guess&lt;/code&gt; のタイプは &lt;code&gt;u32&lt;/code&gt; であると判断します。</target>
         </trans-unit>
         <trans-unit id="467cfe4dd8e4d010791398ae5c6bd0fbee6d53ca" translate="yes" xml:space="preserve">
           <source>As you might suspect, &lt;code&gt;Mutex&amp;lt;T&amp;gt;&lt;/code&gt; is a smart pointer. More accurately, the call to &lt;code&gt;lock&lt;/code&gt;&lt;em&gt;returns&lt;/em&gt; a smart pointer called &lt;code&gt;MutexGuard&lt;/code&gt;, wrapped in a &lt;code&gt;LockResult&lt;/code&gt; that we handled with the call to &lt;code&gt;unwrap&lt;/code&gt;. The &lt;code&gt;MutexGuard&lt;/code&gt; smart pointer implements &lt;code&gt;Deref&lt;/code&gt; to point at our inner data; the smart pointer also has a &lt;code&gt;Drop&lt;/code&gt; implementation that releases the lock automatically when a &lt;code&gt;MutexGuard&lt;/code&gt; goes out of scope, which happens at the end of the inner scope in Listing 16-12. As a result, we don&amp;rsquo;t risk forgetting to release the lock and blocking the mutex from being used by other threads because the lock release happens automatically.</source>
-          <target state="translated">ご &lt;code&gt;Mutex&amp;lt;T&amp;gt;&lt;/code&gt; とおり、Mutex &amp;lt;T&amp;gt;はスマートポインターです。より正確には、への呼び出し &lt;code&gt;lock&lt;/code&gt; &lt;em&gt;返す&lt;/em&gt;と呼ばれるスマートポインタ &lt;code&gt;MutexGuard&lt;/code&gt; に包まれ、 &lt;code&gt;LockResult&lt;/code&gt; 我々はへの呼び出しで処理することを &lt;code&gt;unwrap&lt;/code&gt; 。 &lt;code&gt;MutexGuard&lt;/code&gt; スマートポインタを実装 &lt;code&gt;Deref&lt;/code&gt; 私たちの内部データを指すように。スマートポインターには、 &lt;code&gt;MutexGuard&lt;/code&gt; の実行時にロックを自動的に解放する &lt;code&gt;Drop&lt;/code&gt; 実装もあります。リスト16-12の内側のスコープの最後で発生するスコープ外。その結果、ロックの解放が自動的に行われるため、ロックの解放を忘れ、他のスレッドがミューテックスを使用するのをブロックするリスクがありません。</target>
+          <target state="translated">ご &lt;code&gt;Mutex&amp;lt;T&amp;gt;&lt;/code&gt; とおり、Mutex &amp;lt;T&amp;gt;はスマートポインターです。より正確には、への呼び出し &lt;code&gt;lock&lt;/code&gt; &lt;em&gt;返す&lt;/em&gt;と呼ばれるスマートポインタ &lt;code&gt;MutexGuard&lt;/code&gt; に包まれ、 &lt;code&gt;LockResult&lt;/code&gt; 我々はへの呼び出しで処理することを &lt;code&gt;unwrap&lt;/code&gt; 。 &lt;code&gt;MutexGuard&lt;/code&gt; スマートポインタを実装 &lt;code&gt;Deref&lt;/code&gt; 私たちの内部データを指すように。スマートポインターには、 &lt;code&gt;MutexGuard&lt;/code&gt; の実行時にロックを自動的に解放する &lt;code&gt;Drop&lt;/code&gt; 実装もあります。リスト16-12の内部スコープの最後で発生するスコープ外。その結果、ロックの解放が自動的に行われるため、ロックの解放を忘れて他のスレッドによるミューテックスの使用をブロックするリスクがありません。</target>
         </trans-unit>
         <trans-unit id="e4e495363e711b35cf1aef444d4c023b03ec561b" translate="yes" xml:space="preserve">
           <source>As you saw in Chapter 1, &lt;code&gt;cargo new&lt;/code&gt; generates a &amp;ldquo;Hello, world!&amp;rdquo; program for you. Check out the &lt;em&gt;src/main.rs&lt;/em&gt; file:</source>
@@ -3333,11 +3333,11 @@
         </trans-unit>
         <trans-unit id="fa0b472a10784179b99aa6fee609e3cfddb9cc55" translate="yes" xml:space="preserve">
           <source>As you saw in Listing 17-15, we can write methods that use the syntax &lt;code&gt;self: Box&amp;lt;Self&amp;gt;&lt;/code&gt;, which allows the method to take ownership of a &lt;code&gt;Self&lt;/code&gt; value stored in a &lt;code&gt;Box&amp;lt;T&amp;gt;&lt;/code&gt;. That&amp;rsquo;s exactly what we want to do here, but unfortunately Rust won&amp;rsquo;t let us: the part of Rust that implements behavior when a closure is called isn&amp;rsquo;t implemented using &lt;code&gt;self: Box&amp;lt;Self&amp;gt;&lt;/code&gt;. So Rust doesn&amp;rsquo;t yet understand that it could use &lt;code&gt;self: Box&amp;lt;Self&amp;gt;&lt;/code&gt; in this situation to take ownership of the closure and move the closure out of the &lt;code&gt;Box&amp;lt;T&amp;gt;&lt;/code&gt;.</source>
-          <target state="translated">リスト17-15で見たように、構文 &lt;code&gt;self: Box&amp;lt;Self&amp;gt;&lt;/code&gt; を使用するメソッドを書くことができます。これにより、メソッドは &lt;code&gt;Box&amp;lt;T&amp;gt;&lt;/code&gt; 格納されている &lt;code&gt;Self&lt;/code&gt; 値の所有権を取得できます。これがまさにここでしたいことですが、残念ながらRustは許可しません。Rustのクロージャーが呼び出されたときに動作を実装する部分は、 &lt;code&gt;self: Box&amp;lt;Self&amp;gt;&lt;/code&gt; を使用して実装されていません。したがって、Rustは、この状況でクロージャの所有権を取得してクロージャを &lt;code&gt;Box&amp;lt;T&amp;gt;&lt;/code&gt; から移動するために、 &lt;code&gt;self: Box&amp;lt;Self&amp;gt;&lt;/code&gt; を使用できることをまだ理解していません。</target>
+          <target state="translated">リスト17-15で見たように、構文 &lt;code&gt;self: Box&amp;lt;Self&amp;gt;&lt;/code&gt; を使用するメソッドを書くことができます。これにより、メソッドは &lt;code&gt;Box&amp;lt;T&amp;gt;&lt;/code&gt; 格納されている &lt;code&gt;Self&lt;/code&gt; 値の所有権を取得できます。これがまさにここでしたいことですが、残念ながらRustは許可しません。Rustのクロージャーが呼び出されたときに動作を実装する部分は、 &lt;code&gt;self: Box&amp;lt;Self&amp;gt;&lt;/code&gt; を使用して実装されていません。そのため、Rustは、この状況でクロージャの所有権を取得してクロージャを &lt;code&gt;Box&amp;lt;T&amp;gt;&lt;/code&gt; から移動するために &lt;code&gt;self: Box&amp;lt;Self&amp;gt;&lt;/code&gt; を使用できることをまだ理解していません。</target>
         </trans-unit>
         <trans-unit id="5d8ebbcc7fc2cf4e602d0e1985852befad2da85e" translate="yes" xml:space="preserve">
           <source>As you saw in the guessing game tutorial in the &lt;a href=&quot;ch02-00-guessing-game-tutorial#comparing-the-guess-to-the-secret-number&quot;&gt;&amp;ldquo;Comparing the Guess to the Secret Number&amp;rdquo;&lt;/a&gt; section in Chapter 2, you can declare a new variable with the same name as a previous variable, and the new variable shadows the previous variable. Rustaceans say that the first variable is &lt;em&gt;shadowed&lt;/em&gt; by the second, which means that the second variable&amp;rsquo;s value is what appears when the variable is used. We can shadow a variable by using the same variable&amp;rsquo;s name and repeating the use of the &lt;code&gt;let&lt;/code&gt; keyword as follows:</source>
-          <target state="translated">第2章の&lt;a href=&quot;ch02-00-guessing-game-tutorial#comparing-the-guess-to-the-secret-number&quot;&gt;「推測と秘密の番号の比較」&lt;/a&gt;セクションの推測ゲームチュートリアルで見たように、以前の変数と同じ名前で新しい変数を宣言でき、新しい変数は以前の変数をシャドウします。錆びついた人は、最初の変数は2番目の変数によって&lt;em&gt;隠さ&lt;/em&gt;れていると言います。つまり、2番目の変数の値は、変数が使用されたときに表示されるものです。同じ変数の名前を使用し、次のように &lt;code&gt;let&lt;/code&gt; キーワードの使用を繰り返すことで、変数をシャドウできます。</target>
+          <target state="translated">第2章の&lt;a href=&quot;ch02-00-guessing-game-tutorial#comparing-the-guess-to-the-secret-number&quot;&gt;「推測と秘密の番号の比較」&lt;/a&gt;セクションの推測ゲームチュートリアルで見たように、以前の変数と同じ名前で新しい変数を宣言でき、新しい変数は以前の変数をシャドウします。錆びた人は、最初の変数が2番目の変数によって&lt;em&gt;隠さ&lt;/em&gt;れていると言います。つまり、2番目の変数の値は、変数が使用されたときに表示されるものです。同じ変数の名前を使用し、次のように &lt;code&gt;let&lt;/code&gt; キーワードの使用を繰り返すことで、変数をシャドウできます。</target>
         </trans-unit>
         <trans-unit id="c47b398566173be1e06632198f7039025f10ae00" translate="yes" xml:space="preserve">
           <source>As you write large programs, organizing your code will be important because keeping track of your entire program in your head will become impossible. By grouping related functionality and separating code with distinct features, you&amp;rsquo;ll clarify where to find code that implements a particular feature and where to go to change how a feature works.</source>
@@ -3345,7 +3345,7 @@
         </trans-unit>
         <trans-unit id="a48835105e35976d30850d6478e3e8cb37ac0bc5" translate="yes" xml:space="preserve">
           <source>As your project grows, consider using a workspace: it&amp;rsquo;s easier to understand smaller, individual components than one big blob of code. Furthermore, keeping the crates in a workspace can make coordination between them easier if they are often changed at the same time.</source>
-          <target state="translated">プロジェクトが成長するにつれて、ワークスペースの使用を検討してください。1つの大きなコードの塊よりも小さな個々のコンポーネントを理解する方が簡単です。さらに、ワークスペースにクレートを保持すると、頻繁に同時に変更される場合に、クレート間の調整が容易になります。</target>
+          <target state="translated">プロジェクトが成長するにつれて、ワークスペースの使用を検討してください。1つの大きなコードの塊よりも小さな個々のコンポーネントを理解する方が簡単です。さらに、ワークスペースにクレートを保持すると、同時に頻繁に変更される場合に、クレート間の調整が容易になります。</target>
         </trans-unit>
         <trans-unit id="db2e27ecee3ef7df382d73da5185cf2c81a313eb" translate="yes" xml:space="preserve">
           <source>AsMut</source>
@@ -3409,7 +3409,7 @@
         </trans-unit>
         <trans-unit id="ccfa1ea33000ed1fdc5e32d6d85a1f23b351c53c" translate="yes" xml:space="preserve">
           <source>Asked how long the string is, you might say 12. However, Rust&amp;rsquo;s answer is 24: that&amp;rsquo;s the number of bytes it takes to encode &amp;ldquo;Здравствуйте&amp;rdquo; in UTF-8, because each Unicode scalar value in that string takes 2 bytes of storage. Therefore, an index into the string&amp;rsquo;s bytes will not always correlate to a valid Unicode scalar value. To demonstrate, consider this invalid Rust code:</source>
-          <target state="translated">文字列の長さを尋ねると、12と言うかもしれません。ただし、Rustの答えは24です。これは、「Здравствуйте」をUTF-8でエンコードするのに必要なバイト数です。これは、その文字列の各Unicodeスカラー値が2バイトのストレージを必要とするためです。したがって、文字列のバイトへのインデックスは、常に有効なUnicodeスカラー値と相関するとは限りません。実例として、次の無効なRustコードを検討してください。</target>
+          <target state="translated">文字列の長さを尋ねると、12と言うかもしれません。ただし、Rustの答えは24です。これは、UTF-8で「Здравствуйте」をエンコードするのにかかるバイト数です。その文字列の各Unicodeスカラー値は2バイトのストレージを必要とするためです。したがって、文字列のバイトへのインデックスは、常に有効なUnicodeスカラー値と相関するとは限りません。実例として、次の無効なRustコードを検討してください。</target>
         </trans-unit>
         <trans-unit id="e7689cb162bee3d282a7b39ef7b90263d73428fa" translate="yes" xml:space="preserve">
           <source>Assert the results are what you expect.</source>
@@ -3545,7 +3545,7 @@
         </trans-unit>
         <trans-unit id="ca7658fbd81144f975e114c63e67d2067128142d" translate="yes" xml:space="preserve">
           <source>Associated functions are often used for constructors that will return a new instance of the struct. For example, we could provide an associated function that would have one dimension parameter and use that as both width and height, thus making it easier to create a square &lt;code&gt;Rectangle&lt;/code&gt; rather than having to specify the same value twice:</source>
-          <target state="translated">関連する関数は、構造体の新しいインスタンスを返すコンストラクターによく使用されます。たとえば、1つの寸法パラメーターを持つ関連付けられた関数を提供し、それを幅と高さの両方として使用できるため、同じ値を2回指定する必要がなく、正方形の &lt;code&gt;Rectangle&lt;/code&gt; 簡単に作成できます。</target>
+          <target state="translated">関連する関数は、構造体の新しいインスタンスを返すコンストラクターによく使用されます。たとえば、1つの寸法パラメーターを持つ関連関数を提供し、それを幅と高さの両方として使用できるため、同じ値を2回指定する必要がなく、正方形の &lt;code&gt;Rectangle&lt;/code&gt; 簡単に作成できます。</target>
         </trans-unit>
         <trans-unit id="1d8027bfb0422adf6fa755c7366da969f12a3f99" translate="yes" xml:space="preserve">
           <source>Associated functions whose first parameter is named &lt;code&gt;self&lt;/code&gt; are called &lt;em&gt;methods&lt;/em&gt; and may be invoked using the &lt;a href=&quot;../expressions/method-call-expr&quot;&gt;method call operator&lt;/a&gt;, for example, &lt;code&gt;x.foo()&lt;/code&gt;, as well as the usual function call notation.</source>
@@ -3561,7 +3561,7 @@
         </trans-unit>
         <trans-unit id="f0dda5ab7ff2aba410ad872aa8c289173200dd02" translate="yes" xml:space="preserve">
           <source>Associated items are useful when the associated item logically is related to the associating item. For example, the &lt;code&gt;is_some&lt;/code&gt; method on &lt;code&gt;Option&lt;/code&gt; is intrinsically related to Options, so should be associated.</source>
-          <target state="translated">関連アイテムは、関連アイテムが関連アイテムに論理的に関連している場合に役立ちます。たとえば、 &lt;code&gt;Option&lt;/code&gt; の &lt;code&gt;is_some&lt;/code&gt; メソッドは本質的にOptionsに関連しているため、関連付ける必要があります。</target>
+          <target state="translated">関連アイテムは、関連アイテムが関連アイテムに論理的に関連付けられている場合に役立ちます。たとえば、 &lt;code&gt;Option&lt;/code&gt; の &lt;code&gt;is_some&lt;/code&gt; メソッドは本質的にOptionsに関連しているため、関連付ける必要があります。</target>
         </trans-unit>
         <trans-unit id="13ba4a748e2d8dab765ce941e0df6910e63030e1" translate="yes" xml:space="preserve">
           <source>Associated searcher for this pattern</source>
@@ -3625,7 +3625,7 @@
         </trans-unit>
         <trans-unit id="c68169e0fac1472856a75bc093cd4e904a65d3b5" translate="yes" xml:space="preserve">
           <source>At any given time, you can have &lt;em&gt;either&lt;/em&gt; (but not both of) one mutable reference or any number of immutable references.</source>
-          <target state="translated">いつでも、1つ（両方ではない）の可変参照または任意の数の不変参照の&lt;em&gt;いずれか&lt;/em&gt;を持つことができます。</target>
+          <target state="translated">任意の時点で、あなたが持つことができる&lt;em&gt;のいずれか&lt;/em&gt;（両方のではなく）1つの不定参照または不変参照の任意の数を。</target>
         </trans-unit>
         <trans-unit id="97c27bc0fbd95b57400fcf731e3e7a7d89c5cf2f" translate="yes" xml:space="preserve">
           <source>At any given time, you can have &lt;em&gt;either&lt;/em&gt; one mutable reference &lt;em&gt;or&lt;/em&gt; any number of immutable references.</source>
@@ -3637,7 +3637,7 @@
         </trans-unit>
         <trans-unit id="26e37b1b35b52ad10610ea1ef12403fe61f658c6" translate="yes" xml:space="preserve">
           <source>At compile time, Rust needs to know how much space a type takes up. One type whose size can&amp;rsquo;t be known at compile time is a &lt;em&gt;recursive type&lt;/em&gt;, where a value can have as part of itself another value of the same type. Because this nesting of values could theoretically continue infinitely, Rust doesn&amp;rsquo;t know how much space a value of a recursive type needs. However, boxes have a known size, so by inserting a box in a recursive type definition, you can have recursive types.</source>
-          <target state="translated">コンパイル時に、Rustは型が占めるスペースを知る必要があります。コンパイル時にサイズがわからない型の1つは&lt;em&gt;再帰型&lt;/em&gt;で、値はそれ自体の一部として同じ型の別の値を持つことができます。この値のネストは理論的には無限に続く可能性があるため、Rustは再帰型の値に必要なスペースの量を知りません。ただし、ボックスには既知のサイズがあるため、再帰型定義にボックスを挿入することで、再帰型を使用できます。</target>
+          <target state="translated">コンパイル時に、Rustは型が占めるスペースを知る必要があります。コンパイル時にサイズがわからない1つの型は、&lt;em&gt;再帰&lt;/em&gt;型です。値は、それ自体の一部として同じ型の別の値を持つことができます。この値のネストは理論的には無限に続く可能性があるため、Rustは再帰型の値に必要なスペースの量を知りません。ただし、ボックスには既知のサイズがあるため、再帰型定義にボックスを挿入することにより、再帰型を使用できます。</target>
         </trans-unit>
         <trans-unit id="b2f9b5afe99b75e0f39f01ec88be93443b074a9d" translate="yes" xml:space="preserve">
           <source>At each point in the program where the reference count changes, we print the reference count, which we can get by calling the &lt;code&gt;Rc::strong_count&lt;/code&gt; function. This function is named &lt;code&gt;strong_count&lt;/code&gt; rather than &lt;code&gt;count&lt;/code&gt; because the &lt;code&gt;Rc&amp;lt;T&amp;gt;&lt;/code&gt; type also has a &lt;code&gt;weak_count&lt;/code&gt;; we&amp;rsquo;ll see what &lt;code&gt;weak_count&lt;/code&gt; is used for in the &lt;a href=&quot;ch15-06-reference-cycles#preventing-reference-cycles-turning-an-rct-into-a-weakt&quot;&gt;&amp;ldquo;Preventing Reference Cycles: Turning an &lt;code&gt;Rc&amp;lt;T&amp;gt;&lt;/code&gt; into a &lt;code&gt;Weak&amp;lt;T&amp;gt;&lt;/code&gt;&amp;rdquo;&lt;/a&gt; section.</source>
@@ -3669,15 +3669,15 @@
         </trans-unit>
         <trans-unit id="b0f9f410d4d3f041a8bbac0598dae49519ac5a0f" translate="yes" xml:space="preserve">
           <source>At the moment the &lt;code&gt;if&lt;/code&gt; and &lt;code&gt;else&lt;/code&gt; blocks have a lot of repetition: they&amp;rsquo;re both reading files and writing the contents of the files to the stream. The only differences are the status line and the filename. Let&amp;rsquo;s make the code more concise by pulling out those differences into separate &lt;code&gt;if&lt;/code&gt; and &lt;code&gt;else&lt;/code&gt; lines that will assign the values of the status line and the filename to variables; we can then use those variables unconditionally in the code to read the file and write the response. Listing 20-9 shows the resulting code after replacing the large &lt;code&gt;if&lt;/code&gt; and &lt;code&gt;else&lt;/code&gt; blocks.</source>
-          <target state="translated">現時点では、 &lt;code&gt;if&lt;/code&gt; ブロックと &lt;code&gt;else&lt;/code&gt; ブロックには多くの繰り返しがあります。これらは両方とも、ファイルの読み取りとファイルのコンテンツのストリームへの書き込みを行っています。唯一の違いは、ステータス行とファイル名です。コード別々にそれらの違いを引き出すことにより、より簡潔にしてみましょう &lt;code&gt;if&lt;/code&gt; と &lt;code&gt;else&lt;/code&gt; ステータス行や変数にファイル名の値を代入します行を。次に、これらの変数を無条件にコードで使用して、ファイルを読み取り、応答を書き込みます。リスト20-9は、大きな &lt;code&gt;if&lt;/code&gt; ブロックと &lt;code&gt;else&lt;/code&gt; ブロックを置き換えた後のコードを示しています。</target>
+          <target state="translated">現時点では、 &lt;code&gt;if&lt;/code&gt; ブロックと &lt;code&gt;else&lt;/code&gt; ブロックには多くの繰り返しがあります。これらは両方とも、ファイルの読み取りとファイルのコンテンツのストリームへの書き込みを行っています。唯一の違いは、ステータス行とファイル名です。コード別々にそれらの違いを引き出すことにより、より簡潔にしてみましょう &lt;code&gt;if&lt;/code&gt; と &lt;code&gt;else&lt;/code&gt; ステータス行や変数にファイル名の値を代入します行を。次に、コード内でこれらの変数を無条件に使用して、ファイルを読み取り、応答を書き込みます。リスト20-9は、大きな &lt;code&gt;if&lt;/code&gt; ブロックと &lt;code&gt;else&lt;/code&gt; ブロックを置き換えた後の結果のコードを示しています。</target>
         </trans-unit>
         <trans-unit id="1f16df13b8f4c863b823dc86f56453377891952c" translate="yes" xml:space="preserve">
           <source>At the moment, we&amp;rsquo;re writing all of our output to the terminal using the &lt;code&gt;println!&lt;/code&gt; function. Most terminals provide two kinds of output: &lt;em&gt;standard output&lt;/em&gt; (&lt;code&gt;stdout&lt;/code&gt;) for general information and &lt;em&gt;standard error&lt;/em&gt; (&lt;code&gt;stderr&lt;/code&gt;) for error messages. This distinction enables users to choose to direct the successful output of a program to a file but still print error messages to the screen.</source>
-          <target state="translated">現在、すべての出力を &lt;code&gt;println!&lt;/code&gt; を使用してターミナルに書き込んでいます！関数。ほとんどの端末は2種類の出力を提供します。一般情報の&lt;em&gt;標準出力&lt;/em&gt;（ &lt;code&gt;stdout&lt;/code&gt; ）とエラーメッセージの&lt;em&gt;標準エラー&lt;/em&gt;（ &lt;code&gt;stderr&lt;/code&gt; ）です。この違いにより、ユーザーはプログラムの正常な出力をファイルに送信することを選択できますが、エラーメッセージは画面に表示されます。</target>
+          <target state="translated">現時点では、 &lt;code&gt;println!&lt;/code&gt; を使用してすべての出力をターミナルに書き込んでいます！関数。ほとんどの端末は2種類の出力を提供します。一般情報の&lt;em&gt;標準出力&lt;/em&gt;（ &lt;code&gt;stdout&lt;/code&gt; ）とエラーメッセージの&lt;em&gt;標準エラー&lt;/em&gt;（ &lt;code&gt;stderr&lt;/code&gt; ）です。この区別により、ユーザーはプログラムの正常な出力をファイルに送信することを選択しながら、エラーメッセージを画面に出力することができます。</target>
         </trans-unit>
         <trans-unit id="3818ff95eb637709816bb6cd777c917a43bae444" translate="yes" xml:space="preserve">
           <source>At the time of this writing, an automatic formatter tool called &lt;code&gt;rustfmt&lt;/code&gt; is under development. If you want to stick to a standard style across Rust projects, &lt;code&gt;rustfmt&lt;/code&gt; will format your code in a particular style. The Rust team plans to eventually include this tool with the standard Rust distribution, like &lt;code&gt;rustc&lt;/code&gt;. So depending on when you read this book, it might already be installed on your computer! Check the online documentation for more details.</source>
-          <target state="translated">この記事の執筆時点では、 &lt;code&gt;rustfmt&lt;/code&gt; と呼ばれる自動フォーマッターツールが開発中です。Rustプロジェクト全体で標準スタイルを使用したい場合、 &lt;code&gt;rustfmt&lt;/code&gt; は特定のスタイルでコードをフォーマットします。Rustチームは、このツールを &lt;code&gt;rustc&lt;/code&gt; のような標準のRustディストリビューションに含める予定です。したがって、この本をいつ読むかによっては、すでにコンピュータにインストールされている場合があります。詳細については、オンラインドキュメントを確認してください。</target>
+          <target state="translated">この記事の執筆時点では、 &lt;code&gt;rustfmt&lt;/code&gt; と呼ばれる自動フォーマッターツールが開発中です。Rustプロジェクト全体で標準スタイルに固執する場合、 &lt;code&gt;rustfmt&lt;/code&gt; は特定のスタイルでコードをフォーマットします。Rustチームは、このツールを &lt;code&gt;rustc&lt;/code&gt; のような標準のRustディストリビューションに含める予定です。したがって、この本をいつ読むかによっては、すでにコンピュータにインストールされている場合があります。詳細については、オンラインドキュメントを確認してください。</target>
         </trans-unit>
         <trans-unit id="1eca2e64861fbf60436be0df95a81ecf4dd4db51" translate="yes" xml:space="preserve">
           <source>At the time of this writing, two Rust editions are available: Rust 2015 and Rust 2018. This book is written using Rust 2018 edition idioms.</source>
@@ -3701,11 +3701,11 @@
         </trans-unit>
         <trans-unit id="bad906bb2d4d513518792ef63a17dbb628e284cd" translate="yes" xml:space="preserve">
           <source>At this point, the first part of the game is done: we&amp;rsquo;re getting input from the keyboard and then printing it.</source>
-          <target state="translated">この時点で、ゲームの最初の部分が完了しました。キーボードから入力を取得し、それを印刷しています。</target>
+          <target state="translated">この時点で、ゲームの最初の部分が完了しました。キーボードから入力を取得して、それを印刷しています。</target>
         </trans-unit>
         <trans-unit id="645fa0bc97b2e92b8b41b6c72b5e6804e2731419" translate="yes" xml:space="preserve">
           <source>At this point, the relationship between scopes and when variables are valid is similar to that in other programming languages. Now we&amp;rsquo;ll build on top of this understanding by introducing the &lt;code&gt;String&lt;/code&gt; type.</source>
-          <target state="translated">この時点で、スコープと変数が有効になるタイミングの関係は、他のプログラミング言語と同様です。次に、 &lt;code&gt;String&lt;/code&gt; 型を導入することにより、この理解に基づいて構築します。</target>
+          <target state="translated">この時点で、スコープと変数が有効なときの関係は、他のプログラミング言語と同様です。次に、 &lt;code&gt;String&lt;/code&gt; 型を導入することで、この理解に基づいて構築します。</target>
         </trans-unit>
         <trans-unit id="440b2812ba3e248d39262c445df6cb473f1a4cf8" translate="yes" xml:space="preserve">
           <source>At this point, we can build the workspace by running &lt;code&gt;cargo build&lt;/code&gt;. The files in your &lt;em&gt;add&lt;/em&gt; directory should look like this:</source>
@@ -3713,11 +3713,11 @@
         </trans-unit>
         <trans-unit id="7be13e6f2293ee19341faecbce38cbce6581638c" translate="yes" xml:space="preserve">
           <source>At this point, we could consider opportunities for refactoring the implementation of the search function while keeping the tests passing to maintain the same functionality. The code in the search function isn&amp;rsquo;t too bad, but it doesn&amp;rsquo;t take advantage of some useful features of iterators. We&amp;rsquo;ll return to this example in [Chapter 13][ch13], where we&amp;rsquo;ll explore iterators in detail, and look at how to improve it.</source>
-          <target state="translated">この時点で、同じ機能を維持するためにテストをパスし続けながら、検索機能の実装をリファクタリングする機会を検討できます。検索機能のコードはそれほど悪くはありませんが、反復子のいくつかの便利な機能を利用していません。[Chapter 13] [ch13]でこの例に戻り、イテレータを詳細に検討し、それを改善する方法を見ていきます。</target>
+          <target state="translated">この時点で、同じ機能を維持するためにテストに合格したまま、検索機能の実装をリファクタリングする機会を検討できます。検索機能のコードはそれほど悪くはありませんが、反復子のいくつかの便利な機能を利用していません。[Chapter 13] [ch13]でこの例に戻り、イテレータを詳細に検討し、それを改善する方法を見ていきます。</target>
         </trans-unit>
         <trans-unit id="12d2e7392939d54c75dd7be38b3f433458f57624" translate="yes" xml:space="preserve">
           <source>At this point, when we call &lt;code&gt;content&lt;/code&gt; on the &lt;code&gt;&amp;amp;Box&amp;lt;dyn State&amp;gt;&lt;/code&gt;, deref coercion will take effect on the &lt;code&gt;&amp;amp;&lt;/code&gt; and the &lt;code&gt;Box&lt;/code&gt; so the &lt;code&gt;content&lt;/code&gt; method will ultimately be called on the type that implements the &lt;code&gt;State&lt;/code&gt; trait. That means we need to add &lt;code&gt;content&lt;/code&gt; to the &lt;code&gt;State&lt;/code&gt; trait definition, and that is where we&amp;rsquo;ll put the logic for what content to return depending on which state we have, as shown in Listing 17-18:</source>
-          <target state="translated">この時点で、 &lt;code&gt;&amp;amp;Box&amp;lt;dyn State&amp;gt;&lt;/code&gt; で &lt;code&gt;content&lt;/code&gt; を呼び出すと、deref強制が &lt;code&gt;&amp;amp;&lt;/code&gt; と &lt;code&gt;Box&lt;/code&gt; で有効になるため、 &lt;code&gt;content&lt;/code&gt; メソッドは最終的に &lt;code&gt;State&lt;/code&gt; トレイトを実装する型で呼び出されます。これは、 &lt;code&gt;State&lt;/code&gt; トレイト定義に &lt;code&gt;content&lt;/code&gt; を追加する必要があることを意味します。リスト17-18に示すように、ここに、どの状態にあるかに応じてどのコンテンツを返すかというロジックを配置します。</target>
+          <target state="translated">この時点で、 &lt;code&gt;&amp;amp;Box&amp;lt;dyn State&amp;gt;&lt;/code&gt; で &lt;code&gt;content&lt;/code&gt; を呼び出すと、deref強制が &lt;code&gt;&amp;amp;&lt;/code&gt; と &lt;code&gt;Box&lt;/code&gt; で有効になるため、 &lt;code&gt;content&lt;/code&gt; メソッドは最終的に &lt;code&gt;State&lt;/code&gt; トレイトを実装する型で呼び出されます。つまり、リスト17-18に示すように、 &lt;code&gt;State&lt;/code&gt; トレイト定義に &lt;code&gt;content&lt;/code&gt; を追加する必要があることを意味します。ここに、どのステートに応じてどのコンテンツを返すかというロジックを配置します。</target>
         </trans-unit>
         <trans-unit id="41d03c60eead1f80179e902c1b4d9814280d6245" translate="yes" xml:space="preserve">
           <source>At this point, when we try to get a reference to the parent of &lt;code&gt;leaf&lt;/code&gt; by using the &lt;code&gt;upgrade&lt;/code&gt; method, we get a &lt;code&gt;None&lt;/code&gt; value. We see this in the output from the first &lt;code&gt;println!&lt;/code&gt; statement:</source>
@@ -3725,7 +3725,7 @@
         </trans-unit>
         <trans-unit id="3822c3ca41678f3e73f1513ee4103e0d10a48e3d" translate="yes" xml:space="preserve">
           <source>At this point, you would also notice a change in your &lt;em&gt;Cargo.lock&lt;/em&gt; file noting that the version of the &lt;code&gt;rand&lt;/code&gt; crate you are now using is &lt;code&gt;0.3.15&lt;/code&gt;.</source>
-          <target state="translated">この時点で、&lt;em&gt;Cargo.lock&lt;/em&gt;ファイルにも変更が加えられ、現在使用している &lt;code&gt;rand&lt;/code&gt; クレートのバージョンが &lt;code&gt;0.3.15&lt;/code&gt; であることがわかります。</target>
+          <target state="translated">この時点で、&lt;em&gt;Cargo.lock&lt;/em&gt;ファイルが変更されていることが &lt;code&gt;0.3.15&lt;/code&gt; ます。これは、現在使用している &lt;code&gt;rand&lt;/code&gt; クレートのバージョンが0.3.15であることを示しています。</target>
         </trans-unit>
         <trans-unit id="ace63d2aec4c0fa2eb5be485664adddc5d8c8911" translate="yes" xml:space="preserve">
           <source>At this point, you&amp;rsquo;ve seen several ways of using patterns, but patterns don&amp;rsquo;t work the same in every place we can use them. In some places, the patterns must be irrefutable; in other circumstances, they can be refutable. We&amp;rsquo;ll discuss these two concepts next.</source>
@@ -3745,7 +3745,7 @@
         </trans-unit>
         <trans-unit id="7d5338021e809e34d20a6b06646a458b5152b9dc" translate="yes" xml:space="preserve">
           <source>Atomic operations may be implemented at the instruction layer with larger-size atomics. For example some platforms use 4-byte atomic instructions to implement &lt;code&gt;AtomicI8&lt;/code&gt;. Note that this emulation should not have an impact on correctness of code, it's just something to be aware of.</source>
-          <target state="translated">アトミック操作は、より大きなサイズのアトミックを使用して命令層で実装できます。たとえば、一部のプラットフォームでは、4バイトのアトミック命令を使用して &lt;code&gt;AtomicI8&lt;/code&gt; を実装しています。このエミュレーションはコードの正確さに影響を与えるべきではないことに注意してください。これは注意すべきことです。</target>
+          <target state="translated">アトミック操作は、より大きなサイズのアトミックで命令層に実装できます。たとえば、一部のプラットフォームでは、4バイトのアトミック命令を使用して &lt;code&gt;AtomicI8&lt;/code&gt; を実装しています。このエミュレーションはコードの正確さに影響を与えるべきではないことに注意してください。これは注意すべきことです。</target>
         </trans-unit>
         <trans-unit id="8e24008909c0fc6f23ca4f4f874bb53512815caa" translate="yes" xml:space="preserve">
           <source>Atomic operations with &lt;a href=&quot;enum.ordering#variant.Release&quot;&gt;&lt;code&gt;Release&lt;/code&gt;&lt;/a&gt; or &lt;a href=&quot;enum.ordering#variant.Acquire&quot;&gt;&lt;code&gt;Acquire&lt;/code&gt;&lt;/a&gt; semantics can also synchronize with a fence.</source>
@@ -3765,7 +3765,7 @@
         </trans-unit>
         <trans-unit id="bdcc7b682e49710ce243d11d666d0605dd24412a" translate="yes" xml:space="preserve">
           <source>Atomic variables are safe to share between threads (they implement &lt;a href=&quot;../../marker/trait.sync&quot;&gt;&lt;code&gt;Sync&lt;/code&gt;&lt;/a&gt;) but they do not themselves provide the mechanism for sharing and follow the &lt;a href=&quot;../../thread/index#the-threading-model&quot;&gt;threading model&lt;/a&gt; of rust. The most common way to share an atomic variable is to put it into an &lt;a href=&quot;../struct.arc&quot;&gt;&lt;code&gt;Arc&lt;/code&gt;&lt;/a&gt; (an atomically-reference-counted shared pointer).</source>
-          <target state="translated">原子変数はスレッド間で安全に共有できます（それらは&lt;a href=&quot;../../marker/trait.sync&quot;&gt; &lt;code&gt;Sync&lt;/code&gt; &lt;/a&gt;を実装します）が、それ自体は共有のメカニズムを提供せず、錆の&lt;a href=&quot;../../thread/index#the-threading-model&quot;&gt;スレッドモデル&lt;/a&gt;に従います。アトミック変数を共有する最も一般的な方法は、それを&lt;a href=&quot;../struct.arc&quot;&gt; &lt;code&gt;Arc&lt;/code&gt; &lt;/a&gt;（アトミック参照でカウントされる共有ポインター）に配置することです。</target>
+          <target state="translated">原子変数はスレッド間で安全に共有できます（それらは&lt;a href=&quot;../../marker/trait.sync&quot;&gt; &lt;code&gt;Sync&lt;/code&gt; &lt;/a&gt;を実装します）が、それら自体は共有のメカニズムを提供せず、錆の&lt;a href=&quot;../../thread/index#the-threading-model&quot;&gt;スレッドモデル&lt;/a&gt;に従っています。アトミック変数を共有する最も一般的な方法は、それを&lt;a href=&quot;../struct.arc&quot;&gt; &lt;code&gt;Arc&lt;/code&gt; &lt;/a&gt;（アトミック参照でカウントされる共有ポインター）に配置することです。</target>
         </trans-unit>
         <trans-unit id="6674d00db7a2e69964175c1325e3eccae698e4d3" translate="yes" xml:space="preserve">
           <source>AtomicBool</source>
@@ -3825,7 +3825,7 @@
         </trans-unit>
         <trans-unit id="fe4c2e56ace1dd5cd16118bb6ad5e5256c61db83" translate="yes" xml:space="preserve">
           <source>Attempt to downcast the &lt;code&gt;Arc&amp;lt;dyn Any + Send + Sync&amp;gt;&lt;/code&gt; to a concrete type.</source>
-          <target state="translated">&lt;code&gt;Arc&amp;lt;dyn Any + Send + Sync&amp;gt;&lt;/code&gt; を具象型にダウンキャストしてみます。</target>
+          <target state="translated">&lt;code&gt;Arc&amp;lt;dyn Any + Send + Sync&amp;gt;&lt;/code&gt; を具象タイプにダウンキャストしてみます。</target>
         </trans-unit>
         <trans-unit id="92df3d44a91e7d67c064d6d725fec8b2e940cc64" translate="yes" xml:space="preserve">
           <source>Attempt to downcast the &lt;code&gt;Rc&amp;lt;dyn Any&amp;gt;&lt;/code&gt; to a concrete type.</source>
@@ -3893,7 +3893,7 @@
         </trans-unit>
         <trans-unit id="71aec9a6c07f86af18ab65ed514253e4a11e1117" translate="yes" xml:space="preserve">
           <source>Attempting to create a &lt;a href=&quot;enum.socketaddr&quot;&gt;&lt;code&gt;SocketAddr&lt;/code&gt;&lt;/a&gt; iterator from an improperly formatted socket address &lt;code&gt;&amp;amp;str&lt;/code&gt; (missing the port):</source>
-          <target state="translated">不適切な形式のソケットアドレス &lt;code&gt;&amp;amp;str&lt;/code&gt; （ポートがない）から&lt;a href=&quot;enum.socketaddr&quot;&gt; &lt;code&gt;SocketAddr&lt;/code&gt; &lt;/a&gt;イテレータを作成しようとしています：</target>
+          <target state="translated">不適切にフォーマットされたソケットアドレス &lt;code&gt;&amp;amp;str&lt;/code&gt; （ポートがない）から&lt;a href=&quot;enum.socketaddr&quot;&gt; &lt;code&gt;SocketAddr&lt;/code&gt; &lt;/a&gt;イテレータを作成しようとしています：</target>
         </trans-unit>
         <trans-unit id="baf8e0e513c1e7d75d1c56986d1f69437e36903e" translate="yes" xml:space="preserve">
           <source>Attempting to create a trait object for a non object-safe trait will trigger this error.</source>
@@ -3913,11 +3913,11 @@
         </trans-unit>
         <trans-unit id="2067ade47b4e19fcd748b5622bcd5a578000fa70" translate="yes" xml:space="preserve">
           <source>Attempts to extend the allocation referenced by &lt;code&gt;ptr&lt;/code&gt; to fit &lt;code&gt;new_size&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;new_size&lt;/code&gt; に適合するように、 &lt;code&gt;ptr&lt;/code&gt; によって参照される割り当てを拡張しようとします。</target>
+          <target state="translated">&lt;code&gt;new_size&lt;/code&gt; に合うように、 &lt;code&gt;ptr&lt;/code&gt; によって参照される割り当てを拡張しようとします。</target>
         </trans-unit>
         <trans-unit id="1f0524b8bf45261cb2e5192b808b5a4a85102e03" translate="yes" xml:space="preserve">
           <source>Attempts to extend the allocation referenced by &lt;code&gt;ptr&lt;/code&gt; to fit &lt;code&gt;new_size&lt;/code&gt;. &lt;a href=&quot;trait.alloc#method.grow_in_place&quot;&gt;Read more&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;new_size&lt;/code&gt; に適合するように、 &lt;code&gt;ptr&lt;/code&gt; によって参照される割り当てを拡張しようとします。&lt;a href=&quot;trait.alloc#method.grow_in_place&quot;&gt;続きを読む&lt;/a&gt;</target>
+          <target state="translated">&lt;code&gt;new_size&lt;/code&gt; に合うように、 &lt;code&gt;ptr&lt;/code&gt; によって参照される割り当てを拡張しようとします。&lt;a href=&quot;trait.alloc#method.grow_in_place&quot;&gt;続きを読む&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="14aa482507a26cdd1d3724ec04b0d14909b4ce76" translate="yes" xml:space="preserve">
           <source>Attempts to lock this rwlock with exclusive write access.</source>
@@ -3941,11 +3941,11 @@
         </trans-unit>
         <trans-unit id="6da3e262b2372fb386666634b5d39f9d3f7bb80a" translate="yes" xml:space="preserve">
           <source>Attempts to shrink the allocation referenced by &lt;code&gt;ptr&lt;/code&gt; to fit &lt;code&gt;new_size&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;new_size&lt;/code&gt; に適合するように、 &lt;code&gt;ptr&lt;/code&gt; によって参照される割り当てを縮小しようとします。</target>
+          <target state="translated">&lt;code&gt;new_size&lt;/code&gt; に合うように、 &lt;code&gt;ptr&lt;/code&gt; が参照する割り当てを縮小しようとします。</target>
         </trans-unit>
         <trans-unit id="d9dd72c543bd49d83f78f0fdf1367b07147238f9" translate="yes" xml:space="preserve">
           <source>Attempts to shrink the allocation referenced by &lt;code&gt;ptr&lt;/code&gt; to fit &lt;code&gt;new_size&lt;/code&gt;. &lt;a href=&quot;trait.alloc#method.shrink_in_place&quot;&gt;Read more&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;new_size&lt;/code&gt; に適合するように、 &lt;code&gt;ptr&lt;/code&gt; によって参照される割り当てを縮小しようとします。&lt;a href=&quot;trait.alloc#method.shrink_in_place&quot;&gt;続きを読む&lt;/a&gt;</target>
+          <target state="translated">&lt;code&gt;new_size&lt;/code&gt; に合うように、 &lt;code&gt;ptr&lt;/code&gt; が参照する割り当てを縮小しようとします。&lt;a href=&quot;trait.alloc#method.shrink_in_place&quot;&gt;続きを読む&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="d431ee47732f5fda5d822308d953fb6c4ab546af" translate="yes" xml:space="preserve">
           <source>Attempts to sync all OS-internal metadata to disk.</source>
@@ -3953,7 +3953,7 @@
         </trans-unit>
         <trans-unit id="e1a28bf0ca8943d3102fb17a5f930dbd42c32e93" translate="yes" xml:space="preserve">
           <source>Attempts to upgrade the &lt;code&gt;Weak&lt;/code&gt; pointer to an &lt;a href=&quot;struct.arc&quot;&gt;&lt;code&gt;Arc&lt;/code&gt;&lt;/a&gt;, extending the lifetime of the value if successful.</source>
-          <target state="translated">&lt;code&gt;Weak&lt;/code&gt; ポインタを&lt;a href=&quot;struct.arc&quot;&gt; &lt;code&gt;Arc&lt;/code&gt; &lt;/a&gt;にアップグレードし、成功した場合は値の有効期間を延長しようとします。</target>
+          <target state="translated">&lt;code&gt;Weak&lt;/code&gt; ポインターを&lt;a href=&quot;struct.arc&quot;&gt; &lt;code&gt;Arc&lt;/code&gt; &lt;/a&gt;にアップグレードし、成功した場合は値の存続期間を延長しようとします。</target>
         </trans-unit>
         <trans-unit id="c10f653d6058260dd8df6597f6fc625f0e90a7a2" translate="yes" xml:space="preserve">
           <source>Attempts to upgrade the &lt;code&gt;Weak&lt;/code&gt; pointer to an &lt;a href=&quot;struct.rc&quot;&gt;&lt;code&gt;Rc&lt;/code&gt;&lt;/a&gt;, extending the lifetime of the value if successful.</source>
@@ -3965,7 +3965,7 @@
         </trans-unit>
         <trans-unit id="eea7708f089d17a724b4fe150c8a5b22b7b7cd15" translate="yes" xml:space="preserve">
           <source>Attempts to wait for a value on this receiver, returning an error if the corresponding channel has hung up, or if it waits more than &lt;code&gt;timeout&lt;/code&gt;.</source>
-          <target state="translated">このレシーバーの値を待機しようとし、対応するチャネルがハングアップした場合、または &lt;code&gt;timeout&lt;/code&gt; を超えて待機した場合にエラーを返します。</target>
+          <target state="translated">このレシーバーの値を待機しようとし、対応するチャネルがハングアップした場合、または &lt;code&gt;timeout&lt;/code&gt; を超えて待機した場合はエラーを返します。</target>
         </trans-unit>
         <trans-unit id="c5624ed9b3f4c32e9214ed479d11bee18fe54f2a" translate="yes" xml:space="preserve">
           <source>Attempts to wait for a value on this receiver, returning an error if the corresponding channel has hung up.</source>

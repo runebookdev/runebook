@@ -129,11 +129,11 @@
         </trans-unit>
         <trans-unit id="585e372432dfe6f0fb6c193474b375e437143f90" translate="yes" xml:space="preserve">
           <source>Warning 1: If the result of &lt;code&gt;toUTFz&lt;/code&gt; equals &lt;code&gt;str.ptr&lt;/code&gt;, then if anything alters the character one past the end of &lt;code&gt;str&lt;/code&gt; (which is the &lt;code&gt;'\0'&lt;/code&gt; character terminating the string), then the string won't be zero-terminated anymore. The most likely scenarios for that are if you append to &lt;code&gt;str&lt;/code&gt; and no reallocation takes place or when &lt;code&gt;str&lt;/code&gt; is a slice of a larger array, and you alter the character in the larger array which is one character past the end of &lt;code&gt;str&lt;/code&gt;. Another case where it could occur would be if you had a mutable character array immediately after &lt;code&gt;str&lt;/code&gt; in memory (for example, if they're member variables in a user-defined type with one declared right after the other) and that character array happened to start with &lt;code&gt;'\0'&lt;/code&gt;. Such scenarios will never occur if you immediately use the zero-terminated string after calling &lt;code&gt;toUTFz&lt;/code&gt; and the C function using it doesn't keep a reference to it. Also, they are unlikely to occur even if you save the zero-terminated string (the cases above would be among the few examples of where it could happen). However, if you save the zero-terminate string and want to be absolutely certain that the string stays zero-terminated, then simply append a &lt;code&gt;'\0'&lt;/code&gt; to the string and use its &lt;code&gt;ptr&lt;/code&gt; property rather than calling &lt;code&gt;toUTFz&lt;/code&gt;.</source>
-          <target state="translated">結果場合：1警告 &lt;code&gt;toUTFz&lt;/code&gt; が等しい &lt;code&gt;str.ptr&lt;/code&gt; を、何の変更の終了過去文字1ならば、 &lt;code&gt;str&lt;/code&gt; （ある &lt;code&gt;'\0'&lt;/code&gt; の文字列を終了文字）、その文字列はもうゼロ終端されません。その最も可能性の高いシナリオは、 &lt;code&gt;str&lt;/code&gt; に追加して再割り当てが行われない場合、または &lt;code&gt;str&lt;/code&gt; がより大きな配列のスライスであり、 &lt;code&gt;str&lt;/code&gt; の終わりを1文字過ぎたより大きな配列の文字を変更する場合です。発生する可能性のあるもう1つのケースは、 &lt;code&gt;str&lt;/code&gt; の直後に変更可能な文字配列がある場合です。メモリ内（たとえば、これらがユーザー定義型のメンバー変数であり、一方が他方の直後に宣言されている場合）、その文字配列は偶然 &lt;code&gt;'\0'&lt;/code&gt; 始まります。 &lt;code&gt;toUTFz&lt;/code&gt; を呼び出した直後にゼロで終了する文字列を使用し、それを使用するC関数が参照を保持しない場合、このようなシナリオは発生しません。また、ゼロで終了する文字列を保存しても、発生する可能性はほとんどありません（上記のケースは、発生する可能性があるいくつかの例の1つです）。ただし、ゼロで終了する文字列を保存し、文字列がゼロで終了することを確実にしたい場合は、文字列に &lt;code&gt;'\0'&lt;/code&gt; を追加し、 &lt;code&gt;toUTFz&lt;/code&gt; を呼び出すのではなく、その &lt;code&gt;ptr&lt;/code&gt; プロパティを使用します。</target>
+          <target state="translated">結果場合：1警告 &lt;code&gt;toUTFz&lt;/code&gt; が等しい &lt;code&gt;str.ptr&lt;/code&gt; を、何の変更の終了過去文字1ならば、 &lt;code&gt;str&lt;/code&gt; （ある &lt;code&gt;'\0'&lt;/code&gt; の文字列を終了文字）、その文字列はもうゼロ終端されません。その最も可能性の高いシナリオは、 &lt;code&gt;str&lt;/code&gt; に追加して再割り当てが行われない場合、または &lt;code&gt;str&lt;/code&gt; がより大きな配列のスライスであり、 &lt;code&gt;str&lt;/code&gt; の終わりを1文字超えたより大きな配列の文字を変更する場合です。発生する可能性のあるもう1つのケースは、 &lt;code&gt;str&lt;/code&gt; の直後に変更可能な文字配列がある場合です。メモリ内（たとえば、それらがユーザー定義型のメンバー変数であり、一方が他方の直後に宣言されている場合）、その文字配列は偶然 &lt;code&gt;'\0'&lt;/code&gt; 始まります。 &lt;code&gt;toUTFz&lt;/code&gt; を呼び出した直後にゼロで終了する文字列を使用し、それを使用するC関数がそれへの参照を保持しない場合、このようなシナリオは発生しません。また、ゼロで終了する文字列を保存しても、発生する可能性は低いです（上記のケースは、発生する可能性があるいくつかの例の1つです）。ただし、ゼロで終了する文字列を保存し、文字列がゼロで終了することを確実にしたい場合は、文字列に &lt;code&gt;'\0'&lt;/code&gt; を追加して、 &lt;code&gt;toUTFz&lt;/code&gt; を呼び出すのではなく、 &lt;code&gt;ptr&lt;/code&gt; プロパティを使用します。</target>
         </trans-unit>
         <trans-unit id="6d5e6e458c5bbdf658e7836c9d3ff01a465d3f07" translate="yes" xml:space="preserve">
           <source>Warning 2: When passing a character pointer to a C function, and the C function keeps it around for any reason, make sure that you keep a reference to it in your D code. Otherwise, it may go away during a garbage collection cycle and cause a nasty bug when the C code tries to use it.</source>
-          <target state="translated">警告2:C関数に文字ポインタを渡したときに、C関数が何らかの理由でそれを保持している場合、Dコードの中でそれへの参照を保持していることを確認してください。そうしないと、ガベージコレクションサイクルの間にそれが消えてしまい、C コードがそれを使おうとしたときに厄介なバグが発生する可能性があります。</target>
+          <target state="translated">警告2:C関数に文字ポインタを渡したときに、C関数が何らかの理由でそれを保持している場合、Dコードの中でその参照を保持していることを確認してください。そうしないと、ガベージコレクションサイクルの間にそれが消えてしまい、C コードがそれを使おうとしたときに厄介なバグが発生する可能性があります。</target>
         </trans-unit>
         <trans-unit id="6223e4ea5d5725d8274391390c04b8667ffc6c34" translate="yes" xml:space="preserve">
           <source>Warning: All unmapped bits in the final word will be set to 0.</source>
@@ -153,11 +153,11 @@
         </trans-unit>
         <trans-unit id="e46400427309b3b37f40efb471c7ac358834f3c4" translate="yes" xml:space="preserve">
           <source>Warning: Previously, &lt;a href=&quot;#toISOString&quot;&gt;&lt;code&gt;toISOString&lt;/code&gt;&lt;/a&gt; did the same as &lt;a href=&quot;#toISOExtString&quot;&gt;&lt;code&gt;toISOExtString&lt;/code&gt;&lt;/a&gt; and generated +HH:MM or -HH:MM for the time zone when it was not &lt;a href=&quot;std_datetime_timezone#LocalTime&quot;&gt;&lt;code&gt;std.datetime.timezone.LocalTime&lt;/code&gt;&lt;/a&gt; or &lt;a href=&quot;std_datetime_timezone#UTC&quot;&gt;&lt;code&gt;std.datetime.timezone.UTC&lt;/code&gt;&lt;/a&gt;, which is not in conformance with ISO 8601 for the non-extended string format. This has now been fixed. However, for now, fromISOString will continue to accept the extended format for the time zone so that any code which has been writing out the result of toISOString to read in later will continue to work. The current behavior will be kept until July 2019 at which point, fromISOString will be fixed to be standards compliant.</source>
-          <target state="translated">警告：以前は、&lt;a href=&quot;#toISOString&quot;&gt; &lt;code&gt;toISOString&lt;/code&gt; は&lt;/a&gt;同じでし&lt;a href=&quot;#toISOExtString&quot;&gt; &lt;code&gt;toISOExtString&lt;/code&gt; を&lt;/a&gt;し、+ HH生成：それはなかったときのタイムゾーンのMM：MMまたは-HHを&lt;a href=&quot;std_datetime_timezone#LocalTime&quot;&gt; &lt;code&gt;std.datetime.timezone.LocalTime&lt;/code&gt; &lt;/a&gt;か&lt;a href=&quot;std_datetime_timezone#UTC&quot;&gt; &lt;code&gt;std.datetime.timezone.UTC&lt;/code&gt; &lt;/a&gt;適合していません、非拡張文字列形式のISO 8601を使用。これは修正されました。ただし、現時点では、fromISOStringは引き続きタイムゾーンの拡張形式を受け入れるため、後で読み取るためにtoISOStringの結果を書き込んでいるコードは引き続き機能します。現在の動作は2019年7月まで維持されます。その時点で、fromISOStringは標準に準拠するように修正されます。</target>
+          <target state="translated">警告：以前は、&lt;a href=&quot;#toISOString&quot;&gt; &lt;code&gt;toISOString&lt;/code&gt; &lt;/a&gt;は&lt;a href=&quot;#toISOExtString&quot;&gt; &lt;code&gt;toISOExtString&lt;/code&gt; &lt;/a&gt;と同じであり、準拠していない&lt;a href=&quot;std_datetime_timezone#LocalTime&quot;&gt; &lt;code&gt;std.datetime.timezone.LocalTime&lt;/code&gt; &lt;/a&gt;または&lt;a href=&quot;std_datetime_timezone#UTC&quot;&gt; &lt;code&gt;std.datetime.timezone.UTC&lt;/code&gt; &lt;/a&gt;でないタイムゾーンに対して+ HH：MMまたは-HH：MMを生成していました非拡張文字列形式のISO 8601を使用。これは修正されました。ただし、現時点では、fromISOStringはタイムゾーンの拡張形式を引き続き受け入れるため、後で読み取るためにtoISOStringの結果を書き込んでいるコードは引き続き機能します。現在の動作は2019年7月まで維持されます。その時点で、fromISOStringは標準に準拠するように修正されます。</target>
         </trans-unit>
         <trans-unit id="d2fc166d407d5b89388cb65f2fea3db607a53956" translate="yes" xml:space="preserve">
           <source>Warning: Previously, toISOString did the same as &lt;a href=&quot;#toISOExtString&quot;&gt;&lt;code&gt;toISOExtString&lt;/code&gt;&lt;/a&gt; and generated +HH:MM or -HH:MM for the time zone when it was not &lt;a href=&quot;std_datetime_timezone#LocalTime&quot;&gt;&lt;code&gt;std.datetime.timezone.LocalTime&lt;/code&gt;&lt;/a&gt; or &lt;a href=&quot;std_datetime_timezone#UTC&quot;&gt;&lt;code&gt;std.datetime.timezone.UTC&lt;/code&gt;&lt;/a&gt;, which is not in conformance with ISO 8601 for the non-extended string format. This has now been fixed. However, for now, fromISOString will continue to accept the extended format for the time zone so that any code which has been writing out the result of toISOString to read in later will continue to work. The current behavior will be kept until July 2019 at which point, fromISOString will be fixed to be standards compliant.</source>
-          <target state="translated">警告：以前は、toISOStringは同じでし&lt;a href=&quot;#toISOExtString&quot;&gt; &lt;code&gt;toISOExtString&lt;/code&gt; を&lt;/a&gt;し、+ HH生成：それはなかったときのタイムゾーンのMM：MMまたは-HHを&lt;a href=&quot;std_datetime_timezone#LocalTime&quot;&gt; &lt;code&gt;std.datetime.timezone.LocalTime&lt;/code&gt; &lt;/a&gt;か&lt;a href=&quot;std_datetime_timezone#UTC&quot;&gt; &lt;code&gt;std.datetime.timezone.UTC&lt;/code&gt; &lt;/a&gt;適合していません、非拡張文字列形式のISO 8601を使用。これは修正されました。ただし、現時点では、fromISOStringは引き続きタイムゾーンの拡張形式を受け入れるため、後で読み取るためにtoISOStringの結果を書き込んでいるコードは引き続き機能します。現在の動作は2019年7月まで維持されます。その時点で、fromISOStringは標準に準拠するように修正されます。</target>
+          <target state="translated">警告：以前は、toISOStringは同じでし&lt;a href=&quot;#toISOExtString&quot;&gt; &lt;code&gt;toISOExtString&lt;/code&gt; を&lt;/a&gt;し、+ HH生成：それはなかったときのタイムゾーンのMM：MMまたは-HHを&lt;a href=&quot;std_datetime_timezone#LocalTime&quot;&gt; &lt;code&gt;std.datetime.timezone.LocalTime&lt;/code&gt; &lt;/a&gt;か&lt;a href=&quot;std_datetime_timezone#UTC&quot;&gt; &lt;code&gt;std.datetime.timezone.UTC&lt;/code&gt; &lt;/a&gt;適合していません、非拡張文字列形式のISO 8601を使用。これは修正されました。ただし、現時点では、fromISOStringはタイムゾーンの拡張形式を引き続き受け入れるため、後で読み取るためにtoISOStringの結果を書き込んでいるコードは引き続き機能します。現在の動作は2019年7月まで維持されます。その時点で、fromISOStringは標準に準拠するように修正されます。</target>
         </trans-unit>
         <trans-unit id="fabcf756ccd01219ec37d730936c5b0173ea6da7" translate="yes" xml:space="preserve">
           <source>Warning: This field will be turned into a property in a future release.</source>
@@ -173,7 +173,7 @@
         </trans-unit>
         <trans-unit id="83b7f7c160db15d481480fd952b8bc681419f483" translate="yes" xml:space="preserve">
           <source>Warning: TickDuration will be deprecated in the near future (once all uses of it in Phobos have been deprecated). Please use &lt;a href=&quot;#MonoTime&quot;&gt;&lt;code&gt;MonoTime&lt;/code&gt;&lt;/a&gt; for the cases where a monotonic timestamp is needed and &lt;a href=&quot;#Duration&quot;&gt;&lt;code&gt;Duration&lt;/code&gt;&lt;/a&gt; when a duration is needed, rather than using TickDuration. It has been decided that TickDuration is too confusing (e.g. it conflates a monotonic timestamp and a duration in monotonic clock ticks) and that having multiple duration types is too awkward and confusing.</source>
-          <target state="translated">警告：TickDurationは近い将来廃止される予定です（Phobosでの使用はすべて廃止される予定です）。使用してください&lt;a href=&quot;#MonoTime&quot;&gt; &lt;code&gt;MonoTime&lt;/code&gt; を&lt;/a&gt;単調なタイムスタンプが必要とされる場合のために&lt;a href=&quot;#Duration&quot;&gt; &lt;code&gt;Duration&lt;/code&gt; &lt;/a&gt;期間は、むしろTickDurationを使用するよりも、必要なとき。TickDurationは混乱しすぎ（例：単調なタイムスタンプと継続時間を単調なクロックティックで圧縮する）、複数の継続時間タイプを使用するのは厄介で混乱しやすいと判断されました。</target>
+          <target state="translated">警告：TickDurationは近い将来廃止される予定です（Phobosでの使用はすべて廃止される予定です）。&lt;a href=&quot;#MonoTime&quot;&gt; &lt;code&gt;MonoTime&lt;/code&gt; &lt;/a&gt;を使用するのではなく、単調なタイムスタンプが必要な場合はMonoTimeを、期間が必要な場合は&lt;a href=&quot;#Duration&quot;&gt; &lt;code&gt;Duration&lt;/code&gt; &lt;/a&gt;を使用してください。 TickDurationは混乱しすぎ（例：単調なタイムスタンプと継続時間を単調なクロックティックで圧縮する）、複数の継続時間タイプを使用するのは厄介で混乱しやすいと判断されました。</target>
         </trans-unit>
         <trans-unit id="62b3979c53ffb9c47b3a7d545b258a9878ad87de" translate="yes" xml:space="preserve">
           <source>Warning: Using critical regions is extremely error-prone. For instance, using locks inside a critical region can easily result in a deadlock when another thread holding the lock already got suspended.</source>
@@ -217,7 +217,7 @@
         </trans-unit>
         <trans-unit id="3eac45872ea1813c0c59c59b8e57b1a3dfaff419" translate="yes" xml:space="preserve">
           <source>What mutex is used is determined by the &lt;a href=&quot;expression#Expression&quot;&gt;&lt;i&gt;Expression&lt;/i&gt;&lt;/a&gt;. If there is no &lt;a href=&quot;expression#Expression&quot;&gt;&lt;i&gt;Expression&lt;/i&gt;&lt;/a&gt;, then a global mutex is created, one per such synchronized statement. Different synchronized statements will have different global mutexes.</source>
-          <target state="translated">使用されるミューテックスは、&lt;a href=&quot;expression#Expression&quot;&gt;&lt;i&gt;式&lt;/i&gt;&lt;/a&gt;によって決まります。&lt;a href=&quot;expression#Expression&quot;&gt;&lt;i&gt;Expression&lt;/i&gt;&lt;/a&gt;がない場合、そのような同期されたステートメントごとに1つ、グローバルmutexが作成されます。同期されたステートメントごとに、グローバルmutexは異なります。</target>
+          <target state="translated">どのミューテックスが使用されるかは、&lt;a href=&quot;expression#Expression&quot;&gt;&lt;i&gt;式&lt;/i&gt;&lt;/a&gt;によって決まります。&lt;a href=&quot;expression#Expression&quot;&gt;&lt;i&gt;Expression&lt;/i&gt;&lt;/a&gt;がない場合、そのような同期されたステートメントごとに1つ、グローバルmutexが作成されます。同期されたステートメントが異なれば、グローバルmutexも異なります。</target>
         </trans-unit>
         <trans-unit id="3f00b0af3261ac469a497340912e30c3d784a1b3" translate="yes" xml:space="preserve">
           <source>What policy to use when closing connections when the cache is filled up</source>
@@ -233,7 +233,7 @@
         </trans-unit>
         <trans-unit id="6d65d283ddb2c53ef74d1eb3c0dd6bc21ff402bf" translate="yes" xml:space="preserve">
           <source>What type of clock to use with &lt;a href=&quot;#MonoTime&quot;&gt;&lt;code&gt;MonoTime&lt;/code&gt;&lt;/a&gt; / &lt;a href=&quot;#MonoTimeImpl&quot;&gt;&lt;code&gt;MonoTimeImpl&lt;/code&gt;&lt;/a&gt; or &lt;code&gt;std.datetime.Clock.currTime&lt;/code&gt;. They default to &lt;code&gt;ClockType.normal&lt;/code&gt;, and most programs do not need to ever deal with the others.</source>
-          <target state="translated">&lt;a href=&quot;#MonoTime&quot;&gt; &lt;code&gt;MonoTime&lt;/code&gt; &lt;/a&gt; / &lt;a href=&quot;#MonoTimeImpl&quot;&gt; &lt;code&gt;MonoTimeImpl&lt;/code&gt; &lt;/a&gt;または &lt;code&gt;std.datetime.Clock.currTime&lt;/code&gt; で使用するクロックのタイプ。それらはデフォルトで &lt;code&gt;ClockType.normal&lt;/code&gt; に設定されており、ほとんどのプログラムは他のものを扱う必要はありません。</target>
+          <target state="translated">&lt;a href=&quot;#MonoTime&quot;&gt; &lt;code&gt;MonoTime&lt;/code&gt; &lt;/a&gt; / &lt;a href=&quot;#MonoTimeImpl&quot;&gt; &lt;code&gt;MonoTimeImpl&lt;/code&gt; &lt;/a&gt;または &lt;code&gt;std.datetime.Clock.currTime&lt;/code&gt; で使用するクロックのタイプ。それらのデフォルトは &lt;code&gt;ClockType.normal&lt;/code&gt; であり、ほとんどのプログラムは他のものを処理する必要はありません。</target>
         </trans-unit>
         <trans-unit id="146794bc552470dd1d6678ea93d3425d7b4f29e6" translate="yes" xml:space="preserve">
           <source>What values do a and b end up with, what order are the initializations executed in, what are the values of a and b before the initializations are run, is this a compile error, or is this a runtime error? Additional confusion comes from it not being obvious if an initializer is static or dynamic.</source>
@@ -257,15 +257,15 @@
         </trans-unit>
         <trans-unit id="5a49d575ee1d6e7e4bcca9be6bbf7c0477c415fa" translate="yes" xml:space="preserve">
           <source>When &lt;code&gt;startingIndex&lt;/code&gt; is 0 the range will be fully iterated in order and in reverse order when &lt;code&gt;r.length&lt;/code&gt; is given.</source>
-          <target state="translated">&lt;code&gt;startingIndex&lt;/code&gt; が0の場合、範囲は順番に完全に反復され、 &lt;code&gt;r.length&lt;/code&gt; が指定された場合は逆の順序になります。</target>
+          <target state="translated">&lt;code&gt;startingIndex&lt;/code&gt; が0の場合、範囲は完全に順番に反復され、 &lt;code&gt;r.length&lt;/code&gt; が指定されると逆の順序になります。</target>
         </trans-unit>
         <trans-unit id="5faf3ff2b29b975f2e5f9514d9470cfbe9751be7" translate="yes" xml:space="preserve">
           <source>When AA access requires that there must be a value corresponding to the key, a value must be constructed and inserted if not present. The &lt;code&gt;require&lt;/code&gt; function provides a means to construct a new value via a lazy argument. The lazy argument is evaluated when the key is not present. The &lt;code&gt;require&lt;/code&gt; operation avoids the need to perform multiple key lookups.</source>
-          <target state="translated">AAアクセスでキーに対応する値が必要な場合、値が存在しない場合は、値を作成して挿入する必要があります。 &lt;code&gt;require&lt;/code&gt; 機能が怠惰な引数を経て、新たな価値を構築するための手段を提供します。遅延引数は、キーが存在しない場合に評価されます。 &lt;code&gt;require&lt;/code&gt; 操作は、複数のキールックアップを実行する必要がありません。</target>
+          <target state="translated">AAアクセスでキーに対応する値が必要な場合、値が存在しない場合は、値を作成して挿入する必要があります。 &lt;code&gt;require&lt;/code&gt; 機能が怠惰な引数を経て、新たな価値を構築するための手段を提供します。キーが存在しない場合、遅延引数が評価されます。 &lt;code&gt;require&lt;/code&gt; 操作は、複数のキールックアップを実行する必要がありません。</target>
         </trans-unit>
         <trans-unit id="58756d267efe5c990a7cc915f22119bb4ae5363b" translate="yes" xml:space="preserve">
           <source>When FTP over SSL/TLS is selected (with CURLOPT_USE_SSL), this option can be used to change libcurl's default action which is to first try &quot;AUTH SSL&quot; and then &quot;AUTH TLS&quot; in this order, and proceed when a OK response has been received.</source>
-          <target state="translated">FTP over SSLTLS が選択されている場合 (CURLOPT_USE_SSL と共に)、このオプションを使用して、最初に &quot;AUTH SSL&quot; と &quot;AUTH TLS&quot; をこの順番で試し、OK レスポンスを受信したときに続行するという libcurl のデフォルトのアクションを変更することができます。</target>
+          <target state="translated">FTP over SSL/TLS が選択されている場合 (CURLOPT_USE_SSL と共に)、このオプションを使用して、最初に &quot;AUTH SSL&quot; と &quot;AUTH TLS&quot; をこの順番で試し、OK レスポンスを受信したときに続行するという libcurl のデフォルトのアクションを変更することができます。</target>
         </trans-unit>
         <trans-unit id="d4a7db22a0550dc78b003dc93c9145ff60875535" translate="yes" xml:space="preserve">
           <source>When T is mutable,</source>
@@ -285,15 +285,15 @@
         </trans-unit>
         <trans-unit id="b00afb911afc0a5ca26386b2a18ae6be85c2975e" translate="yes" xml:space="preserve">
           <source>When a &lt;code&gt;Unique!T&lt;/code&gt; goes out of scope it will call &lt;code&gt;destroy&lt;/code&gt; on the resource &lt;code&gt;T&lt;/code&gt; that it manages, unless it is transferred. One important consequence of &lt;code&gt;destroy&lt;/code&gt; is that it will call the destructor of the resource &lt;code&gt;T&lt;/code&gt;. GC-managed references are not guaranteed to be valid during a destructor call, but other members of &lt;code&gt;T&lt;/code&gt;, such as file handles or pointers to &lt;code&gt;malloc&lt;/code&gt; memory, will still be valid during the destructor call. This allows the resource &lt;code&gt;T&lt;/code&gt; to deallocate or clean up any non-GC resources.</source>
-          <target state="translated">ときに &lt;code&gt;Unique!T&lt;/code&gt; スコープ外に出ることが呼ぶ &lt;code&gt;destroy&lt;/code&gt; リソースに &lt;code&gt;T&lt;/code&gt; それが転送されていない限り、それが管理しています。 &lt;code&gt;destroy&lt;/code&gt; の 1つの重要な結果は、リソース &lt;code&gt;T&lt;/code&gt; のデストラクタを呼び出すことです。 GCが管理する参照は、デストラクター呼び出し中は有効であるとは限りませんが、ファイルハンドルや &lt;code&gt;malloc&lt;/code&gt; メモリへのポインターなど、 &lt;code&gt;T&lt;/code&gt; の他のメンバーは、デストラクター呼び出し中も有効です。これにより、リソース &lt;code&gt;T&lt;/code&gt; が非GCリソースの割り当てを解除またはクリーンアップできるようになります。</target>
+          <target state="translated">ときに &lt;code&gt;Unique!T&lt;/code&gt; スコープ外に出ることが呼ぶ &lt;code&gt;destroy&lt;/code&gt; リソースに &lt;code&gt;T&lt;/code&gt; それが転送されていない限り、それが管理しています。 &lt;code&gt;destroy&lt;/code&gt; の重要な結果の1つは、リソース &lt;code&gt;T&lt;/code&gt; のデストラクタを呼び出すことです。 GCが管理する参照は、デストラクター呼び出し中は有効であることが保証されていませんが、ファイルハンドルや &lt;code&gt;malloc&lt;/code&gt; メモリへのポインターなど、 &lt;code&gt;T&lt;/code&gt; の他のメンバーは、デストラクター呼び出し中も引き続き有効です。これにより、リソース &lt;code&gt;T&lt;/code&gt; は非GCリソースの割り当てを解除またはクリーンアップできます。</target>
         </trans-unit>
         <trans-unit id="0b428ff9c922783f16405281044cf416efd51e62" translate="yes" xml:space="preserve">
           <source>When a chunk of memory is requested, the allocator finds a range of virtual pages that satisfy the requested size, changing their protection to read/write using OS primitives (&lt;code&gt;mprotect&lt;/code&gt; and &lt;code&gt;VirtualProtect&lt;/code&gt;, respectively). The physical memory is allocated on demand, when the pages are accessed.</source>
-          <target state="translated">メモリのチャンクが要求されると、アロケータは要求されたサイズを満たす仮想ページの範囲を見つけ、OSプリミティブ（それぞれ &lt;code&gt;mprotect&lt;/code&gt; および &lt;code&gt;VirtualProtect&lt;/code&gt; ）を使用して保護を読み取り/書き込みに変更します。物理メモリは、ページへのアクセス時にオンデマンドで割り当てられます。</target>
+          <target state="translated">メモリのチャンクが要求されると、アロケータは要求されたサイズを満たす仮想ページの範囲を見つけ、OSプリミティブ（それぞれ &lt;code&gt;mprotect&lt;/code&gt; と &lt;code&gt;VirtualProtect&lt;/code&gt; ）を使用して保護を読み取り/書き込みに変更します。物理メモリは、ページへのアクセス時にオンデマンドで割り当てられます。</target>
         </trans-unit>
         <trans-unit id="58597b4b6cb332bd69f504c1f00c607c0eb16bbc" translate="yes" xml:space="preserve">
           <source>When a copy constructor is defined for a &lt;code&gt;struct&lt;/code&gt;, all implicit blitting is disabled for that &lt;code&gt;struct&lt;/code&gt;:</source>
-          <target state="translated">&lt;code&gt;struct&lt;/code&gt; にコピーコンストラクターが定義されている場合、その &lt;code&gt;struct&lt;/code&gt; に対する暗黙的なブリットはすべて無効になります。</target>
+          <target state="translated">コピーコンストラクタが定義されている場合 &lt;code&gt;struct&lt;/code&gt; 、すべての暗黙のブリッティングはそのために無効になっている &lt;code&gt;struct&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="0a331d1a65f7b110b5273b5d7868371d3b08b9ac" translate="yes" xml:space="preserve">
           <source>When a header is provided but a matching column is not found</source>
@@ -321,11 +321,11 @@
         </trans-unit>
         <trans-unit id="b6bb469f2736e5b29050178fdbb45f42be341bd3" translate="yes" xml:space="preserve">
           <source>When a socket is blocking, calls to receive(), accept(), and send() will block and wait for data/action. A non-blocking socket will immediately return instead of blocking.</source>
-          <target state="translated">ソケットがブロッキングしている場合、receive(),accept(),send()の呼び出しはブロッキングしてデータアクションを待ちます。ブロッキングされていないソケットは、ブロッキングの代わりにすぐに戻ります。</target>
+          <target state="translated">ソケットがブロッキングしている場合、receive(),accept(),send()はブロッキングしてデータやアクションを待ちます。ブロッキングされていないソケットは、ブロッキングの代わりにすぐに戻ります。</target>
         </trans-unit>
         <trans-unit id="53589a36e302415933b16ff556ec6d4fa213d853" translate="yes" xml:space="preserve">
           <source>When a symbol name is used unqualified, a two-phase lookup will happen. First, the module scope will be searched, starting from the innermost scope. For example, in the previous example, while looking for &lt;code&gt;writeln&lt;/code&gt;, the order will be:</source>
-          <target state="translated">シンボル名を修飾なしで使用すると、2フェーズのルックアップが行われます。最初に、モジュールのスコープが最も内側のスコープから検索されます。たとえば、前の例では、 &lt;code&gt;writeln&lt;/code&gt; を探している間、順序は次のようになります。</target>
+          <target state="translated">シンボル名を修飾なしで使用すると、2フェーズのルックアップが行われます。まず、最も内側のスコープからモジュールのスコープが検索されます。たとえば、前の例では、 &lt;code&gt;writeln&lt;/code&gt; を探している間、順序は次のようになります。</target>
         </trans-unit>
         <trans-unit id="25a09fb47990dfe5a4bac049451c12fdc1522cc8" translate="yes" xml:space="preserve">
           <source>When a variable is explicitly initialized:</source>
@@ -345,11 +345,11 @@
         </trans-unit>
         <trans-unit id="f9b07f7bbc9886fac959cdee6dc7290b9a45d6c3" translate="yes" xml:space="preserve">
           <source>When an output range's &lt;code&gt;put&lt;/code&gt; method only accepts elements of type &lt;code&gt;T&lt;/code&gt;, use the global &lt;code&gt;put&lt;/code&gt; to handle outputting a &lt;code&gt;T[]&lt;/code&gt; to the range or vice-versa.</source>
-          <target state="translated">出力範囲の &lt;code&gt;put&lt;/code&gt; メソッドが &lt;code&gt;T&lt;/code&gt; 型の要素のみを受け入れる場合は、グローバル &lt;code&gt;put&lt;/code&gt; を使用して &lt;code&gt;T[]&lt;/code&gt; を範囲に出力するか、その逆を処理します。</target>
+          <target state="translated">出力範囲の &lt;code&gt;put&lt;/code&gt; メソッドがタイプ &lt;code&gt;T&lt;/code&gt; の要素のみを受け入れる場合は、グローバル &lt;code&gt;put&lt;/code&gt; を使用して &lt;code&gt;T[]&lt;/code&gt; を範囲に出力するか、その逆を処理します。</target>
         </trans-unit>
         <trans-unit id="b0d460e664066b93100c6efcc10898f6bcea3cee" translate="yes" xml:space="preserve">
           <source>When any &lt;a href=&quot;std_range&quot;&gt;range&lt;/a&gt; can be passed as an argument to a member function, the documention usually refers to the parameter's templated type as &lt;code&gt;Stuff&lt;/code&gt;.</source>
-          <target state="translated">メンバー関数に引数として任意の&lt;a href=&quot;std_range&quot;&gt;範囲&lt;/a&gt;を渡すことができる場合、ドキュメントでは通常、パラメーターのテンプレートタイプを &lt;code&gt;Stuff&lt;/code&gt; と呼びます。</target>
+          <target state="translated">任意の&lt;a href=&quot;std_range&quot;&gt;範囲&lt;/a&gt;を引数としてメンバー関数に渡すことができる場合、ドキュメントでは通常、パラメーターのテンプレート化された型を &lt;code&gt;Stuff&lt;/code&gt; と呼びます。</target>
         </trans-unit>
         <trans-unit id="0e035b70c43ed4b954c78ad9443d2b0b366cee1c" translate="yes" xml:space="preserve">
           <source>When array literals are cast to another array type, each element of the array is cast to the new element type. When arrays that are not literals are cast, the array is reinterpreted as the new type, and the length is recomputed:</source>
@@ -365,7 +365,7 @@
         </trans-unit>
         <trans-unit id="18b07986b7a6997aa1e86f263e6c86015fef29b1" translate="yes" xml:space="preserve">
           <source>When comparing with &lt;a href=&quot;function#nested&quot;&gt;nested functions&lt;/a&gt;, the &lt;code&gt;function&lt;/code&gt; form is analogous to static or non-nested functions, and the &lt;code&gt;delegate&lt;/code&gt; form is analogous to non-static nested functions. In other words, a delegate literal can access stack variables in its enclosing function, a function literal cannot.</source>
-          <target state="translated">&lt;a href=&quot;function#nested&quot;&gt;入れ子関数&lt;/a&gt;と比較すると、 &lt;code&gt;function&lt;/code&gt; 形式は静的関数または非入れ子関数に類似しており、 &lt;code&gt;delegate&lt;/code&gt; 形式は非静的入れ子関数に類似しています。つまり、デリゲートリテラルは、それを囲む関数のスタック変数にアクセスできますが、関数リテラルはアクセスできません。</target>
+          <target state="translated">&lt;a href=&quot;function#nested&quot;&gt;入れ子関数&lt;/a&gt;と比較すると、 &lt;code&gt;function&lt;/code&gt; 形式は静的関数または非入れ子関数に似ており、 &lt;code&gt;delegate&lt;/code&gt; 形式は非静的入れ子関数に似ています。つまり、デリゲートリテラルは、それを囲む関数のスタック変数にアクセスできますが、関数リテラルはアクセスできません。</target>
         </trans-unit>
         <trans-unit id="fd9f348ed0f84700657f1faa1882de97c9d5f215" translate="yes" xml:space="preserve">
           <source>When compiled and run, it will produce the message:</source>
@@ -393,7 +393,7 @@
         </trans-unit>
         <trans-unit id="f20f2f5dc05d757ab38fb9ae4891dd9fae63b55d" translate="yes" xml:space="preserve">
           <source>When creating a value of type &lt;code&gt;Flag!&quot;Name&quot;&lt;/code&gt;, use &lt;code&gt; Flag!&quot;Name&quot;.no&lt;/code&gt; for the negative option. When using a value of type &lt;code&gt;Flag!&quot;Name&quot;&lt;/code&gt;, compare it against &lt;code&gt; Flag!&quot;Name&quot;.no&lt;/code&gt; or just &lt;code&gt;false&lt;/code&gt; or &lt;code&gt;0&lt;/code&gt;.</source>
-          <target state="translated">タイプ &lt;code&gt;Flag!&quot;Name&quot;&lt;/code&gt; 値を作成する場合、否定のオプションには &lt;code&gt; Flag!&quot;Name&quot;.no&lt;/code&gt; を使用します。タイプ &lt;code&gt;Flag!&quot;Name&quot;&lt;/code&gt; 値を使用する場合は、 &lt;code&gt; Flag!&quot;Name&quot;.no&lt;/code&gt; または単に &lt;code&gt;false&lt;/code&gt; または &lt;code&gt;0&lt;/code&gt; と比較してください。</target>
+          <target state="translated">タイプ &lt;code&gt;Flag!&quot;Name&quot;&lt;/code&gt; 値を作成する場合、否定オプションには &lt;code&gt; Flag!&quot;Name&quot;.no&lt;/code&gt; を使用します。タイプ &lt;code&gt;Flag!&quot;Name&quot;&lt;/code&gt; 値を使用する場合は、 &lt;code&gt; Flag!&quot;Name&quot;.no&lt;/code&gt; または単に &lt;code&gt;false&lt;/code&gt; または &lt;code&gt;0&lt;/code&gt; と比較します。</target>
         </trans-unit>
         <trans-unit id="75b62a7e29426c0ff497e198ae5a3aa4814c266f" translate="yes" xml:space="preserve">
           <source>When creating a value of type &lt;code&gt;Flag!&quot;Name&quot;&lt;/code&gt;, use &lt;code&gt; Flag!&quot;Name&quot;.yes&lt;/code&gt; for the affirmative option. When using a value of type &lt;code&gt;Flag!&quot;Name&quot;&lt;/code&gt;, compare it against &lt;code&gt; Flag!&quot;Name&quot;.yes&lt;/code&gt;.</source>
@@ -465,7 +465,7 @@
         </trans-unit>
         <trans-unit id="28be91897a1b828d9ca3bf3d37a260c8b80f7f1c" translate="yes" xml:space="preserve">
           <source>When the app thinks there's data available for curl it calls this function to read/write whatever there is right now. This returns as soon as the reads and writes are done. This function does not require that there actually is data available for reading or that data can be written, it can be called just in case. It returns the number of handles that still transfer data in the second argument's integer-pointer.</source>
-          <target state="translated">アプリが curl で利用可能なデータがあると考えると、この関数を呼び出して今あるものを何でも読み書きします。これは、読み書きが完了するとすぐに返されます。この関数は、実際に読み込み可能なデータがある必要はありませんし、データを書き込める必要もありませんので、念のために呼び出すことができます。第2引数の整数ポインタにまだデータを転送しているハンドルの数を返します。</target>
+          <target state="translated">アプリが curl で利用可能なデータがあると考えると、この関数を呼び出して今あるものを読み書きします。これは、読み書きが完了するとすぐに戻ります。この関数は、実際に読み込み可能なデータがある必要はなく、データを書き込める必要もありません。第2引数の整数ポインタにまだデータを転送しているハンドルの数を返します。</target>
         </trans-unit>
         <trans-unit id="e0b14f32551259767f4a30407e0fff8e38d4bb8d" translate="yes" xml:space="preserve">
           <source>When the compiler sees a call to a method with Objective-C linkage it will generate a call similar to how an Objective-C compiler would call the method.</source>
@@ -561,7 +561,7 @@
         </trans-unit>
         <trans-unit id="62176441139d7d91c6f66f0b49fc197cb19d61fc" translate="yes" xml:space="preserve">
           <source>Whereas the other constructors take in the given date/time, assume that it's in the given time zone, and convert it to hnsecs in UTC since midnight, January 1st, 1 A.D. UTC - i.e. std time - this constructor takes a std time, which is specifically already in UTC, so no conversion takes place. Of course, the various getter properties and functions will use the given time zone's conversion function to convert the results to that time zone, but no conversion of the arguments to this constructor takes place.</source>
-          <target state="translated">他のコンストラクタが指定された datetime を受け取り、指定されたタイムゾーンにあると仮定し、それを UTC で 1 月 1 日午前 0 時以降の hnsecs (UTC)に変換します。もちろん、さまざまなゲッターのプロパティや関数は、与えられたタイムゾーンの変換関数を使用して結果をそのタイムゾーンに変換しますが、このコンストラクタへの引数の変換は行われません。</target>
+          <target state="translated">他のコンストラクタが指定された日付/時刻を受け取り、指定されたタイムゾーンにあると仮定し、それをUTCで1月1日午前0時以降の hnsecs (UTCの標準時間)に変換するのに対し、このコンストラクタは標準時間を受け取ります。もちろん、さまざまなゲッターのプロパティや関数は、与えられたタイムゾーンの変換関数を使用して結果をそのタイムゾーンに変換しますが、このコンストラクタへの引数の変換は行われません。</target>
         </trans-unit>
         <trans-unit id="5439ddebea3bcb8241b4a1b48a901c3a98dff5ec" translate="yes" xml:space="preserve">
           <source>Whether &lt;code&gt;c&lt;/code&gt; is a control character.</source>
@@ -597,7 +597,7 @@
         </trans-unit>
         <trans-unit id="7e4e8211288692290b0be6dedd54932002f12b6c" translate="yes" xml:space="preserve">
           <source>Whether &lt;code&gt;popFront&lt;/code&gt; should be called on the range before returning it.</source>
-          <target state="translated">範囲を返す前に範囲で &lt;code&gt;popFront&lt;/code&gt; を呼び出す必要があるかどうか。</target>
+          <target state="translated">範囲を返す前に &lt;code&gt;popFront&lt;/code&gt; を範囲で呼び出すかどうか。</target>
         </trans-unit>
         <trans-unit id="81f48dc00dd66c921120fd6bdac04fd2154ca8fc" translate="yes" xml:space="preserve">
           <source>Whether a particular function can be inlined or not is implementation defined.</source>
@@ -613,7 +613,7 @@
         </trans-unit>
         <trans-unit id="d4257757fa6c5a2c951b861ea5ebf39ab85d95e9" translate="yes" xml:space="preserve">
           <source>Whether a path starts at a root directory.  On POSIX, this function returns true if and only if the path starts with a slash (/).  On Windows, this function returns true if the path starts at the root directory of the current drive, of some other drive, or of a network drive.</source>
-          <target state="translated">パスがルートディレクトリから始まるかどうか。POSIX では、この関数は、パスがスラッシュ ()で始まる場合にのみ真を返します。Windows では、この関数は、パスがカレントドライブ、他のドライブ、またはネットワークドライブのルートディレクトリから始まる場合に真を返します。</target>
+          <target state="translated">パスがルートディレクトリから始まるかどうか。POSIX では、この関数は、パスがスラッシュ (/)で始まる場合にのみ真を返します。Windows では、この関数は、パスがカレントドライブ、他のドライブ、またはネットワークドライブのルートディレクトリから始まる場合に真を返します。</target>
         </trans-unit>
         <trans-unit id="c3ee264abbb44915ef26b042ef0ba91b59c33f3c" translate="yes" xml:space="preserve">
           <source>Whether a type exists or not can be tested at compile time with an &lt;a href=&quot;expression#IsExpression&quot;&gt;&lt;i&gt;IsExpression&lt;/i&gt;&lt;/a&gt;:</source>
@@ -693,15 +693,15 @@
         </trans-unit>
         <trans-unit id="e4d91a4b6609e830d213d95f93d157f35d7012ec" translate="yes" xml:space="preserve">
           <source>Whether the days should be allowed to overflow on &lt;code&gt;begin&lt;/code&gt; and &lt;code&gt;end&lt;/code&gt;, causing their month to increment.</source>
-          <target state="translated">&lt;code&gt;begin&lt;/code&gt; と &lt;code&gt;end&lt;/code&gt; で日をオーバーフローさせて、月を増分させるかどうか。</target>
+          <target state="translated">&lt;code&gt;begin&lt;/code&gt; と &lt;code&gt;end&lt;/code&gt; で日がオーバーフローして、月が増加するかどうか。</target>
         </trans-unit>
         <trans-unit id="f906c90dd95bf15e29eecd5d760671025012b178" translate="yes" xml:space="preserve">
           <source>Whether the days should be allowed to overflow on &lt;code&gt;begin&lt;/code&gt;, causing its month to increment.</source>
-          <target state="translated">&lt;code&gt;begin&lt;/code&gt; で日をオーバーフローさせて、月を増加させるかどうか。</target>
+          <target state="translated">&lt;code&gt;begin&lt;/code&gt; で日をオーバーフローさせて、月を増分させるかどうか。</target>
         </trans-unit>
         <trans-unit id="1cf8d3b77ba179bc4efd8d66d52696c2e6e3533e" translate="yes" xml:space="preserve">
           <source>Whether the days should be allowed to overflow on &lt;code&gt;end&lt;/code&gt;, causing its month to increment.</source>
-          <target state="translated">&lt;code&gt;end&lt;/code&gt; で日をオーバーフローさせて、月を増加させるかどうか。</target>
+          <target state="translated">&lt;code&gt;end&lt;/code&gt; で日をオーバーフローさせて、月を増やすかどうか。</target>
         </trans-unit>
         <trans-unit id="75b2be390650906e0d7fdcddcbc148b30188752c" translate="yes" xml:space="preserve">
           <source>Whether the days should be allowed to overflow on &lt;code&gt;end&lt;/code&gt;, causing their month to increment.</source>
@@ -713,7 +713,7 @@
         </trans-unit>
         <trans-unit id="5edf9636ede7af2a2961293554b8a7947f2de1da" translate="yes" xml:space="preserve">
           <source>Whether the directory's sub-directories should be iterated in depth-first post-order (&lt;a href=&quot;#depth&quot;&gt;&lt;code&gt;depth&lt;/code&gt;&lt;/a&gt;), depth-first pre-order (&lt;a href=&quot;#breadth&quot;&gt;&lt;code&gt;breadth&lt;/code&gt;&lt;/a&gt;), or not at all (&lt;a href=&quot;#shallow&quot;&gt;&lt;code&gt;shallow&lt;/code&gt;&lt;/a&gt;).</source>
-          <target state="translated">ディレクトリのサブディレクトリを、深さ優先のポストオーダー（&lt;a href=&quot;#depth&quot;&gt; &lt;code&gt;depth&lt;/code&gt; &lt;/a&gt;）、深さ優先のプレオーダー（&lt;a href=&quot;#breadth&quot;&gt; &lt;code&gt;breadth&lt;/code&gt; &lt;/a&gt;）で反復する必要があるか、まったくしない（&lt;a href=&quot;#shallow&quot;&gt; &lt;code&gt;shallow&lt;/code&gt; &lt;/a&gt;）か。</target>
+          <target state="translated">ディレクトリのサブディレクトリを深さ優先のポストオーダー（&lt;a href=&quot;#depth&quot;&gt; &lt;code&gt;depth&lt;/code&gt; &lt;/a&gt;）、深さ優先のプレオーダー（&lt;a href=&quot;#breadth&quot;&gt; &lt;code&gt;breadth&lt;/code&gt; &lt;/a&gt;）で反復するか、まったくしない（&lt;a href=&quot;#shallow&quot;&gt; &lt;code&gt;shallow&lt;/code&gt; &lt;/a&gt;）かを指定します。</target>
         </trans-unit>
         <trans-unit id="e52e8a91e4b8f750e345969fb48d6af719bcad92" translate="yes" xml:space="preserve">
           <source>Whether the elements copied should be in sorted order.</source>
@@ -721,7 +721,7 @@
         </trans-unit>
         <trans-unit id="c4ed695121f4b89d56651176a0692d94b2e93e86" translate="yes" xml:space="preserve">
           <source>Whether the elements copied should be in sorted order.  The function &lt;code&gt;largestPartialIntersection&lt;/code&gt; is useful for e.g. searching an &lt;a href=&quot;https://en.wikipedia.org/wiki/Inverted_index&quot;&gt;inverted index&lt;/a&gt; for the documents most likely to contain some terms of interest. The complexity of the search is &amp;Omicron;(&lt;code&gt;n * log(tgt.length)&lt;/code&gt;), where &lt;code&gt;n&lt;/code&gt; is the sum of lengths of all input ranges. This approach is faster than keeping an associative array of the occurrences and then selecting its top items, and also requires less memory (&lt;code&gt;largestPartialIntersection&lt;/code&gt; builds its result directly in &lt;code&gt;tgt&lt;/code&gt; and requires no extra memory).  If at least one of the ranges is a multiset, then all occurences of a duplicate element are taken into account. The result is equivalent to merging all ranges and picking the most frequent &lt;code&gt;tgt.length&lt;/code&gt; elements.</source>
-          <target state="translated">コピーされた要素がソートされた順序である必要があるかどうか。関数 &lt;code&gt;largestPartialIntersection&lt;/code&gt; は、たとえば、興味のある用語を含む可能性が最も高いドキュメントの&lt;a href=&quot;https://en.wikipedia.org/wiki/Inverted_index&quot;&gt;転置インデックス&lt;/a&gt;を検索する場合に役立ちます。検索の複雑さは&amp;Omicron;（ &lt;code&gt;n * log(tgt.length)&lt;/code&gt; ）です。ここで、 &lt;code&gt;n&lt;/code&gt; はすべての入力範囲の長さの合計です。このアプローチは、オカレンスの連想配列を保持してから最上位のアイテムを選択するよりも高速で、必要なメモリも少なくなります（ &lt;code&gt;largestPartialIntersection&lt;/code&gt; は結果を直接 &lt;code&gt;tgt&lt;/code&gt; に構築します追加のメモリは必要ありません）。範囲の少なくとも1つがマルチセットである場合、重複する要素のすべての発生が考慮されます。結果は、すべての範囲をマージし、最も頻度の高い &lt;code&gt;tgt.length&lt;/code&gt; 要素を選択するのと同じです。</target>
+          <target state="translated">コピーされた要素をソート順にするかどうか。関数 &lt;code&gt;largestPartialIntersection&lt;/code&gt; は、たとえば、興味のある用語を含む可能性が最も高いドキュメントの&lt;a href=&quot;https://en.wikipedia.org/wiki/Inverted_index&quot;&gt;転置インデックス&lt;/a&gt;を検索する場合に役立ちます。検索の複雑さは&amp;Omicron;（ &lt;code&gt;n * log(tgt.length)&lt;/code&gt; ）です。ここで、 &lt;code&gt;n&lt;/code&gt; はすべての入力範囲の長さの合計です。このアプローチは、オカレンスの連想配列を保持してから最上位のアイテムを選択するよりも高速で、必要なメモリも少なくなります（ &lt;code&gt;largestPartialIntersection&lt;/code&gt; は、結果を直接 &lt;code&gt;tgt&lt;/code&gt; に構築します追加のメモリは必要ありません）。範囲の少なくとも1つがマルチセットである場合、重複する要素のすべての出現が考慮されます。結果は、すべての範囲をマージし、最も頻度の高い &lt;code&gt;tgt.length&lt;/code&gt; 要素を選択するのと同じです。</target>
         </trans-unit>
         <trans-unit id="222aaf1e209a1d1950f86d3b862f71882791518e" translate="yes" xml:space="preserve">
           <source>Whether the given Gregorian Year is a leap year.</source>
@@ -841,7 +841,7 @@
         </trans-unit>
         <trans-unit id="7659a44594ab81434d082561cb3451e34e95259a" translate="yes" xml:space="preserve">
           <source>While Windows environment variable names are case insensitive, D's built-in associative arrays are not. This function will store all variable names in uppercase (e.g. &lt;code&gt;PATH&lt;/code&gt;).</source>
-          <target state="translated">Windows環境変数名では大文字と小文字が区別されませんが、Dの組み込みの連想配列では区別されません。この関数は、すべての変数名を大文字で保存します（例： &lt;code&gt;PATH&lt;/code&gt; ）。</target>
+          <target state="translated">Windows環境変数名では大文字と小文字が区別されませんが、Dの組み込みの連想配列では区別されません。この関数はすべての変数名を大文字で保存します（例： &lt;code&gt;PATH&lt;/code&gt; ）。</target>
         </trans-unit>
         <trans-unit id="e24dc8d5e3b7b9e5ec92f45cfd6c7a044e34e2f8" translate="yes" xml:space="preserve">
           <source>While copy construction takes care of initializing an object from another object of the same type, assignment is defined as copying the contents of a source object over those of a destination object, calling the destination object's destructor if it has one in the process:</source>
@@ -857,7 +857,7 @@
         </trans-unit>
         <trans-unit id="46639ab687f349e8b6021b4ed72b63fb5679e139" translate="yes" xml:space="preserve">
           <source>While some containers offer direct access to their elements e.g. via &lt;code&gt;opIndex&lt;/code&gt;, &lt;code&gt;c.front&lt;/code&gt; or &lt;code&gt;c.back&lt;/code&gt;, access and modification of a container's contents is generally done through its primary &lt;a href=&quot;std_range&quot;&gt;range&lt;/a&gt; type, which is aliased as &lt;code&gt;C.Range&lt;/code&gt;. For example, the primary range type of &lt;code&gt;Array!int&lt;/code&gt; is &lt;code&gt;Array!int.Range&lt;/code&gt;.</source>
-          <target state="translated">一部のコンテナは、たとえば &lt;code&gt;opIndex&lt;/code&gt; 、 &lt;code&gt;c.front&lt;/code&gt; 、または &lt;code&gt;c.back&lt;/code&gt; を介して要素への直接アクセスを提供しますが、コンテナのコンテンツへのアクセスおよび変更は、通常、 &lt;code&gt;C.Range&lt;/code&gt; としてエイリアスされるプライマリ&lt;a href=&quot;std_range&quot;&gt;範囲&lt;/a&gt;タイプを介して行われます。たとえば、 &lt;code&gt;Array!int&lt;/code&gt; の主な範囲タイプは &lt;code&gt;Array!int.Range&lt;/code&gt; です。</target>
+          <target state="translated">一部のコンテナは、たとえば &lt;code&gt;opIndex&lt;/code&gt; 、 &lt;code&gt;c.front&lt;/code&gt; 、または &lt;code&gt;c.back&lt;/code&gt; を介して要素への直接アクセスを提供しますが、コンテナのコンテンツへのアクセスおよび変更は、通常、 &lt;code&gt;C.Range&lt;/code&gt; としてエイリアスされるプライマリ&lt;a href=&quot;std_range&quot;&gt;範囲&lt;/a&gt;タイプを通じて行われます。たとえば、 &lt;code&gt;Array!int&lt;/code&gt; の主な範囲タイプは &lt;code&gt;Array!int.Range&lt;/code&gt; です。</target>
         </trans-unit>
         <trans-unit id="4f4f0535fe84b7df413259e8e5f2078595bb140b" translate="yes" xml:space="preserve">
           <source>While the</source>
@@ -877,7 +877,7 @@
         </trans-unit>
         <trans-unit id="ea3902c92ee74dcdfd72c59af08de3db3511067c" translate="yes" xml:space="preserve">
           <source>While this function takes the address of variables that may be on the stack, some overloads are marked as @trusted. &lt;code&gt;Task&lt;/code&gt; includes a destructor that waits for the task to complete before destroying the stack frame it is allocated on. Therefore, it is impossible for the stack frame to be destroyed before the task is complete and no longer referenced by a &lt;code&gt;TaskPool&lt;/code&gt;.</source>
-          <target state="translated">この関数はスタック上にある可能性のある変数のアドレスを取得しますが、一部のオーバーロードは@trustedとしてマークされています。 &lt;code&gt;Task&lt;/code&gt; は、タスクが完了するのを待ってから、割り当てられているスタックフレームを破棄するデストラクタが含まれています。したがって、タスクが完了して &lt;code&gt;TaskPool&lt;/code&gt; によって参照されなくなる前に、スタックフレームを破棄することは不可能です。</target>
+          <target state="translated">この関数はスタック上にある可能性のある変数のアドレスを取得しますが、一部のオーバーロードは@trustedとしてマークされています。 &lt;code&gt;Task&lt;/code&gt; は、タスクが完了するのを待ってから、割り当てられているスタックフレームを破棄するデストラクタが含まれています。したがって、タスクが完了して &lt;code&gt;TaskPool&lt;/code&gt; によって参照されなくなる前に、スタックフレームを破棄することはできません。</target>
         </trans-unit>
         <trans-unit id="f0b22e024cefbd662530ad4f62e3c1e20aab7ccd" translate="yes" xml:space="preserve">
           <source>While this might look unreasonable, in practice whenever this is done it either is a bug or at least looks like a bug.</source>
@@ -885,7 +885,7 @@
         </trans-unit>
         <trans-unit id="bac09e53981b38ee90df9f891d55bff60d1a7bab" translate="yes" xml:space="preserve">
           <source>While, testing can be done without the &lt;em&gt;-betterC&lt;/em&gt; flag, it is sometimes desirable to run the testsuite in &lt;code&gt;-betterC&lt;/code&gt; too. &lt;code&gt;unittest&lt;/code&gt; blocks can be listed with the &lt;a href=&quot;traits#getUnitTests&quot;&gt;&lt;code&gt;getUnitTests&lt;/code&gt;&lt;/a&gt; trait:</source>
-          <target state="translated">、テストをせずに行うことができますが&lt;em&gt;-betterCの&lt;/em&gt;フラグ、でテストスイートを実行することが望ましい場合がある &lt;code&gt;-betterC&lt;/code&gt; すぎ。 &lt;code&gt;unittest&lt;/code&gt; のブロックはしてリストすることができ&lt;a href=&quot;traits#getUnitTests&quot;&gt; &lt;code&gt;getUnitTests&lt;/code&gt; の&lt;/a&gt;特色：</target>
+          <target state="translated">テストは&lt;em&gt;-betterC&lt;/em&gt;フラグなしで実行できますが、テスト &lt;code&gt;-betterC&lt;/code&gt; でも実行することが望ましい場合があります。 &lt;code&gt;unittest&lt;/code&gt; のブロックはしてリストすることができ&lt;a href=&quot;traits#getUnitTests&quot;&gt; &lt;code&gt;getUnitTests&lt;/code&gt; の&lt;/a&gt;特色：</target>
         </trans-unit>
         <trans-unit id="ff0f36602d56ff20e347eedfcee547e7074e86d6" translate="yes" xml:space="preserve">
           <source>White Space</source>
@@ -941,7 +941,7 @@
         </trans-unit>
         <trans-unit id="20090ab63c8caad94d271d9d33cb7ecd2c964a55" translate="yes" xml:space="preserve">
           <source>Will take ownership of the buffer located inside &lt;code&gt;readResult&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;readResult&lt;/code&gt; 内にあるバッファーの所有権を取得します。</target>
+          <target state="translated">&lt;code&gt;readResult&lt;/code&gt; 内にあるバッファの所有権を取得します。</target>
         </trans-unit>
         <trans-unit id="0463d1ccc9613d5098c42774fc7e43131ce95d1e" translate="yes" xml:space="preserve">
           <source>Win32 Specific Interface</source>
@@ -969,7 +969,7 @@
         </trans-unit>
         <trans-unit id="a2a0337ee498510df7507386009893267714bb73" translate="yes" xml:space="preserve">
           <source>Windows uses a different set of time zone names than the IANA time zone database does, and how they correspond to one another changes over time (particularly when Microsoft updates Windows). &lt;a href=&quot;http://unicode.org/cldr/data/common/supplemental/windowsZones.xml&quot;&gt;windowsZones.xml&lt;/a&gt; provides the current conversions (which may or may not match up with what's on a particular Windows box depending on how up-to-date it is), and parseTZConversions reads in those conversions from windowsZones.xml so that a D program can use those conversions.</source>
-          <target state="translated">Windowsは、IANAタイムゾーンデータベースとは異なるタイムゾーン名のセットを使用し、それらが互いにどのように対応するかは、時間の経過とともに変化します（特にMicrosoftがWindowsを更新する場合）。&lt;a href=&quot;http://unicode.org/cldr/data/common/supplemental/windowsZones.xml&quot;&gt;windowsZones.xml&lt;/a&gt;は現在の変換を提供し（特定のWindowsボックスにあるものと一致する場合と一致しない場合があります）、parseTZConversionsはwindowsZones.xmlからこれらの変換を読み取り、Dプログラムができるようにします。それらの変換を使用します。</target>
+          <target state="translated">Windowsは、IANAタイムゾーンデータベースとは異なるタイムゾーン名のセットを使用し、それらが互いにどのように対応するかは、時間の経過とともに変化します（特にMicrosoftがWindowsを更新する場合）。&lt;a href=&quot;http://unicode.org/cldr/data/common/supplemental/windowsZones.xml&quot;&gt;windowsZones.xml&lt;/a&gt;は現在の変換（特定のWindowsボックスにあるものと一致する場合と一致しない場合があります）を提供し、parseTZConversionsはwindowsZones.xmlからそれらの変換を読み込んで、Dプログラムができるようにしますそれらの変換を使用します。</target>
         </trans-unit>
         <trans-unit id="94e945f65f1cc64663b7c91a745aabfe9ddd6074" translate="yes" xml:space="preserve">
           <source>Windows x86 note: A DMD compatible libcurl static library can be downloaded from the dlang.org &lt;a href=&quot;http://dlang.org/download.html&quot;&gt;download page&lt;/a&gt;.</source>
@@ -977,7 +977,7 @@
         </trans-unit>
         <trans-unit id="f4db909be5b20ef140227bb8c3e3b7e15ef517df" translate="yes" xml:space="preserve">
           <source>Windows x86 note: A DMD compatible libcurl static library can be downloaded from the dlang.org &lt;a href=&quot;http://downloads.dlang.org/other/index.html&quot;&gt;download archive page&lt;/a&gt;.  Compared to using libcurl directly this module allows simpler client code for common uses, requires no unsafe operations, and integrates better with the rest of the language. Futhermore it provides &lt;a href=&quot;std_range&quot;&gt;range&lt;/a&gt; access to protocols supported by libcurl both synchronously and asynchronously.  A high level and a low level API are available. The high level API is built entirely on top of the low level one.  The high level API is for commonly used functionality such as HTTP/FTP get. The &lt;a href=&quot;#byLineAsync&quot;&gt;&lt;code&gt;byLineAsync&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;#byChunkAsync&quot;&gt;&lt;code&gt;byChunkAsync&lt;/code&gt;&lt;/a&gt; provides asynchronous &lt;a href=&quot;std_range&quot;&gt;range&lt;/a&gt; that performs the request in another thread while handling a line/chunk in the current thread.  The low level API allows for streaming and other advanced features.</source>
-          <target state="translated">Windows x86注：DMD互換のlibcurl静的ライブラリは、dlang.org &lt;a href=&quot;http://downloads.dlang.org/other/index.html&quot;&gt;ダウンロードアーカイブページ&lt;/a&gt;からダウンロードできます。 libcurlを直接使用する場合と比較して、このモジュールは、一般的な使用のためのより単純なクライアントコードを可能にし、危険な操作を必要とせず、言語の他の部分とよりよく統合します。さらに、同期および非同期の両方でlibcurlによってサポートされるプロトコルへの&lt;a href=&quot;std_range&quot;&gt;範囲&lt;/a&gt;アクセスを提供します。高レベルAPIと低レベルAPIを使用できます。高レベルAPIは、低レベルAPIの上に完全に構​​築されます。高レベルAPIは、HTTP / FTP getなどの一般的に使用される機能用です。&lt;a href=&quot;#byLineAsync&quot;&gt; &lt;code&gt;byLineAsync&lt;/code&gt; &lt;/a&gt;と&lt;a href=&quot;#byChunkAsync&quot;&gt; &lt;code&gt;byChunkAsync&lt;/code&gt; は&lt;/a&gt;非同期の提供&lt;a href=&quot;std_range&quot;&gt;範囲を&lt;/a&gt;現在のスレッドで行/チャンクを処理しながら、別のスレッドで要求を実行します。低レベルAPIは、ストリーミングやその他の高度な機能を可能にします。</target>
+          <target state="translated">Windows x86注：DMD互換のlibcurl静的ライブラリは、dlang.org &lt;a href=&quot;http://downloads.dlang.org/other/index.html&quot;&gt;ダウンロードアーカイブページ&lt;/a&gt;からダウンロードできます。 libcurlを直接使用する場合と比較して、このモジュールは、一般的な使用のためのより単純なクライアントコードを可能にし、危険な操作を必要とせず、言語の他の部分とよりよく統合されます。さらに、同期および非同期の両方でlibcurlによってサポートされるプロトコルへの&lt;a href=&quot;std_range&quot;&gt;範囲&lt;/a&gt;アクセスを提供します。高レベルAPIと低レベルAPIを使用できます。高レベルAPIは、低レベルAPIの上に完全に構​​築されます。高レベルAPIは、HTTP / FTP getなどの一般的に使用される機能用です。&lt;a href=&quot;#byLineAsync&quot;&gt; &lt;code&gt;byLineAsync&lt;/code&gt; &lt;/a&gt;と&lt;a href=&quot;#byChunkAsync&quot;&gt; &lt;code&gt;byChunkAsync&lt;/code&gt; は&lt;/a&gt;非同期の提供&lt;a href=&quot;std_range&quot;&gt;範囲を&lt;/a&gt;現在のスレッドで行/チャンクを処理しながら、別のスレッドで要求を実行します。低レベルAPIは、ストリーミングやその他の高度な機能を可能にします。</target>
         </trans-unit>
         <trans-unit id="60be3f1caf4fea17050a14a88440a0b64f55ed06" translate="yes" xml:space="preserve">
           <source>With Statement</source>
@@ -985,7 +985,7 @@
         </trans-unit>
         <trans-unit id="4e955385152531f3736a983c851768114e7023a5" translate="yes" xml:space="preserve">
           <source>With a binary predicate, a range of ranges is returned in which all elements in a given subrange are equivalent under the given predicate. With a unary predicate, a range of tuples is returned, with the tuple consisting of the result of the unary predicate for each subrange, and the subrange itself.</source>
-          <target state="translated">二項述語を使用すると、与えられた述語の下で、与えられた小範囲のすべての要素が等価である範囲の範囲が返されます。単項述語を使用すると、タプルの範囲が返され、各サブレンジに対する単項述語の結果とサブレンジ自体からなるタプルが返されます。</target>
+          <target state="translated">二項述語を使用すると、与えられた述語の下で、与えられた小範囲のすべての要素が等価である範囲の範囲が返されます。単項述語を使用すると、タプルの範囲が返され、タプルは各サブレンジに対する単項述語の結果とサブレンジ自体から構成されます。</target>
         </trans-unit>
         <trans-unit id="b2936eb0281259dec571bd7da523aa2c0285dc45" translate="yes" xml:space="preserve">
           <source>With arguments of mixed signedness, the return type is the one that can store the lowest values.</source>
@@ -1013,7 +1013,7 @@
         </trans-unit>
         <trans-unit id="4e7ea4808c516dd2621097198b60332075e1b32a" translate="yes" xml:space="preserve">
           <source>With this definition, allocation requests for &lt;code&gt;n1&lt;/code&gt; bytes or less are directed to &lt;code&gt;A1&lt;/code&gt;; requests between &lt;code&gt;n1 + 1&lt;/code&gt; and &lt;code&gt;n2&lt;/code&gt; bytes (inclusive) are directed to &lt;code&gt;A2&lt;/code&gt;; requests between &lt;code&gt;n2 + 1&lt;/code&gt; and &lt;code&gt;n3&lt;/code&gt; bytes (inclusive) are directed to &lt;code&gt;A3&lt;/code&gt;; and requests for more than &lt;code&gt;n3&lt;/code&gt; bytes are directed to &lt;code&gt;A4&lt;/code&gt;. If some particular range should not be handled, &lt;code&gt;NullAllocator&lt;/code&gt; may be used appropriately.</source>
-          <target state="translated">この定義では、 &lt;code&gt;n1&lt;/code&gt; バイト以下の割り当て要求は &lt;code&gt;A1&lt;/code&gt; に送られます。 &lt;code&gt;n1 + 1&lt;/code&gt; から &lt;code&gt;n2&lt;/code&gt; バイト（両端を含む）までの要求は &lt;code&gt;A2&lt;/code&gt; に送信されます。 &lt;code&gt;n2 + 1&lt;/code&gt; から &lt;code&gt;n3&lt;/code&gt; バイト（両端を含む）までの要求は &lt;code&gt;A3&lt;/code&gt; に送信されます。 &lt;code&gt;n3&lt;/code&gt; バイトを超えるリクエストは &lt;code&gt;A4&lt;/code&gt; に送られます。特定の範囲を処理する必要がない場合は、 &lt;code&gt;NullAllocator&lt;/code&gt; を適切に使用できます。</target>
+          <target state="translated">この定義では、 &lt;code&gt;n1&lt;/code&gt; バイト以下の割り当て要求は &lt;code&gt;A1&lt;/code&gt; に送られます。 &lt;code&gt;n1 + 1&lt;/code&gt; と &lt;code&gt;n2&lt;/code&gt; バイト（両端を含む）の間の要求は &lt;code&gt;A2&lt;/code&gt; に送信されます。 &lt;code&gt;n2 + 1&lt;/code&gt; から &lt;code&gt;n3&lt;/code&gt; バイト（両端を含む）までの要求は &lt;code&gt;A3&lt;/code&gt; に送信されます。 &lt;code&gt;n3&lt;/code&gt; バイトを超えるリクエストは &lt;code&gt;A4&lt;/code&gt; に送られます。特定の範囲を処理する必要がない場合は、 &lt;code&gt;NullAllocator&lt;/code&gt; を適切に使用できます。</target>
         </trans-unit>
         <trans-unit id="eabd87c7367119a510e10aa1fc357af4be84da36" translate="yes" xml:space="preserve">
           <source>With this template any single entity can be aliased:</source>
@@ -1037,7 +1037,7 @@
         </trans-unit>
         <trans-unit id="c5a725a9aa204ef26605cfb88e094f3761a32a02" translate="yes" xml:space="preserve">
           <source>Within the [ ] of a static or a dynamic array, the symbol &lt;code&gt;$&lt;/code&gt; represents the length of the array.</source>
-          <target state="translated">静的配列または動的配列の[]内で、記号 &lt;code&gt;$&lt;/code&gt; は配列の長さを表します。</target>
+          <target state="translated">静的配列または動的配列の[]内では、記号 &lt;code&gt;$&lt;/code&gt; は配列の長さを表します。</target>
         </trans-unit>
         <trans-unit id="b865d9b6a0282f9882fe6fded1959a061a026851" translate="yes" xml:space="preserve">
           <source>Within the arguments to array index and slicing operators, &lt;code&gt;$&lt;/code&gt; gets translated to &lt;code&gt;opDollar!i&lt;/code&gt;, where &lt;code&gt;i&lt;/code&gt; is the position of the expression &lt;code&gt;$&lt;/code&gt; appears in. For example:</source>
@@ -1069,11 +1069,11 @@
         </trans-unit>
         <trans-unit id="38bb5af2736644721a17f24a5ee3d9864cb5ac14" translate="yes" xml:space="preserve">
           <source>Works like &lt;code&gt;finish&lt;/code&gt; but does not reset the internal state, so it's possible to continue putting data into this CRC after a call to peek.</source>
-          <target state="translated">&lt;code&gt;finish&lt;/code&gt; ように機能しますが、内部状態をリセットしません。そのため、ピークを呼び出した後も、このCRCにデータを入れ続けることが可能です。</target>
+          <target state="translated">&lt;code&gt;finish&lt;/code&gt; ように機能しますが、内部状態をリセットしません。そのため、ピークを呼び出した後も、このCRCにデータを入れ続けることができます。</target>
         </trans-unit>
         <trans-unit id="557f00a1de11ff690b55d85810dfb12357791c73" translate="yes" xml:space="preserve">
           <source>Works like &lt;code&gt;finish&lt;/code&gt; but does not reset the internal state, so it's possible to continue putting data into this WrapperDigest after a call to peek.</source>
-          <target state="translated">&lt;code&gt;finish&lt;/code&gt; ように機能しますが、内部状態をリセットしません。そのため、peekを呼び出した後も、このWrapperDigestにデータを入れ続けることが可能です。</target>
+          <target state="translated">&lt;code&gt;finish&lt;/code&gt; ように機能しますが、内部状態をリセットしません。そのため、peekを呼び出した後も、このWrapperDigestにデータを入れ続けることができます。</target>
         </trans-unit>
         <trans-unit id="f6c55023c3f48d83141afa6b39cf1a1f8e16bbec" translate="yes" xml:space="preserve">
           <source>Works like &lt;code&gt;isAbstractClass&lt;/code&gt;, except it's for final classes.</source>
@@ -1101,7 +1101,7 @@
         </trans-unit>
         <trans-unit id="a3a07b9159dee88ca3840794772f640bc3115b39" translate="yes" xml:space="preserve">
           <source>Works like &lt;code&gt;isArithmetic&lt;/code&gt;, except it's for unsigned types.</source>
-          <target state="translated">符号なし型を除き、 &lt;code&gt;isArithmetic&lt;/code&gt; と同様に機能します。</target>
+          <target state="translated">&lt;code&gt;isArithmetic&lt;/code&gt; と同様に機能しますが、符号なしの型の場合を除きます。</target>
         </trans-unit>
         <trans-unit id="f0a70fd23c7692a856ee0237be75ede52b20afd7" translate="yes" xml:space="preserve">
           <source>Wrap src in an anonymous class implementing Targets.</source>
@@ -1169,7 +1169,7 @@
         </trans-unit>
         <trans-unit id="8618b840b60543d75b11e0d88e3bf56a352299c0" translate="yes" xml:space="preserve">
           <source>Wraps a possibly-throwing expression in a &lt;code&gt;nothrow&lt;/code&gt; wrapper so that it can be called by a &lt;code&gt;nothrow&lt;/code&gt; function.</source>
-          <target state="translated">スローされる可能性のある式を &lt;code&gt;nothrow&lt;/code&gt; ラッパーでラップして、 &lt;code&gt;nothrow&lt;/code&gt; 関数から呼び出せるようにします。</target>
+          <target state="translated">スローされる可能性のある式を &lt;code&gt;nothrow&lt;/code&gt; ラッパーでラップして、 &lt;code&gt;nothrow&lt;/code&gt; 関数から呼び出すことができるようにします。</target>
         </trans-unit>
         <trans-unit id="4d17b811fb36d5c934b00c26b8e8c9b92a1e888d" translate="yes" xml:space="preserve">
           <source>Wraps a template API hash struct into a Digest interface. Modules providing digest implementations will usually provide an alias for this template (e.g. MD5Digest, SHA1Digest, ...).</source>
@@ -1261,7 +1261,7 @@
         </trans-unit>
         <trans-unit id="f545090236c52b4db845fdcaa9b14bff9fdd1e07" translate="yes" xml:space="preserve">
           <source>Writes a &lt;a href=&quot;#Code%20point&quot;&gt;code point&lt;/a&gt;&lt;code&gt;ch&lt;/code&gt; at given index in this cluster.</source>
-          <target state="translated">このクラスターの指定されたインデックスに&lt;a href=&quot;#Code%20point&quot;&gt;コードポイント&lt;/a&gt; &lt;code&gt;ch&lt;/code&gt; を書き込みます。</target>
+          <target state="translated">このクラスターの特定のインデックスに&lt;a href=&quot;#Code%20point&quot;&gt;コードポイント&lt;/a&gt; &lt;code&gt;ch&lt;/code&gt; を書き込みます。</target>
         </trans-unit>
         <trans-unit id="da65af1a504194bc282a562bcd49dbb2f1a648fd" translate="yes" xml:space="preserve">
           <source>Writes a file, terminate the program on error</source>
@@ -1273,7 +1273,7 @@
         </trans-unit>
         <trans-unit id="671cfcd86b743c33ffcbc7db930780c93330dcf9" translate="yes" xml:space="preserve">
           <source>Writes and returns value to I/O port at port_address.</source>
-          <target state="translated">port_addressのIOポートに値を書き込んで返します。</target>
+          <target state="translated">port_addressのI/Oポートに値を書き込んで返します。</target>
         </trans-unit>
         <trans-unit id="c98d5d7059935e8dfc263a9b5d85176d88130c5a" translate="yes" xml:space="preserve">
           <source>Writes formatted data to standard output (without a trailing newline).</source>
@@ -1405,7 +1405,7 @@
         </trans-unit>
         <trans-unit id="85f1172c42fb72f91fb5f94b48cd45b847b16691" translate="yes" xml:space="preserve">
           <source>Xorshift generator. Implemented according to &lt;a href=&quot;http://www.jstatsoft.org/v08/i14/paper&quot;&gt;Xorshift RNGs&lt;/a&gt; (Marsaglia, 2003) when the size is small. For larger sizes the generator uses Sebastino Vigna's optimization of using an index to avoid needing to rotate the internal array.</source>
-          <target state="translated">Xorshiftジェネレーター。サイズが小さい場合は、&lt;a href=&quot;http://www.jstatsoft.org/v08/i14/paper&quot;&gt;Xorshift RNG&lt;/a&gt;（Marsaglia、2003）に従って実装されます。サイズが大きい場合、ジェネレーターは、内部配列を回転する必要がないように、インデックスを使用するSebastino Vignaの最適化を使用します。</target>
+          <target state="translated">Xorshiftジェネレーター。サイズが小さい場合は、&lt;a href=&quot;http://www.jstatsoft.org/v08/i14/paper&quot;&gt;Xorshift RNG&lt;/a&gt;（Marsaglia、2003）に従って実装されています。より大きなサイズの場合、ジェネレータは、内部配列を回転する必要がないようにインデックスを使用するSebastino Vignaの最適化を使用します。</target>
         </trans-unit>
         <trans-unit id="c0f0cadca077341656948de09d8670971ee5641b" translate="yes" xml:space="preserve">
           <source>YEAR</source>
@@ -1437,7 +1437,7 @@
         </trans-unit>
         <trans-unit id="041fa90b252fda96d77375b360e6dda6c7588996" translate="yes" xml:space="preserve">
           <source>Year, month, and day are kept separately internally so that &lt;code&gt;Date&lt;/code&gt; is optimized for calendar-based operations.</source>
-          <target state="translated">年、月、日は内部で別々に保持されるため、 &lt;code&gt;Date&lt;/code&gt; はカレンダーベースの操作に最適化されます。</target>
+          <target state="translated">年、月、日は内部的に別々に保持されるため、 &lt;code&gt;Date&lt;/code&gt; はカレンダーベースの操作用に最適化されます。</target>
         </trans-unit>
         <trans-unit id="5397e0583f14f6c88de06b1ef28f460a1fb5b0ae" translate="yes" xml:space="preserve">
           <source>Yes</source>
@@ -1461,7 +1461,7 @@
         </trans-unit>
         <trans-unit id="4f2be812d0ba733c97bf4f338315cfec143db69a" translate="yes" xml:space="preserve">
           <source>Yields &lt;code&gt;true&lt;/code&gt; if &lt;code&gt;R&lt;/code&gt; has a &lt;code&gt;length&lt;/code&gt; member that returns a value of &lt;code&gt;size_t&lt;/code&gt; type. &lt;code&gt;R&lt;/code&gt; does not have to be a range. If &lt;code&gt;R&lt;/code&gt; is a range, algorithms in the standard library are only guaranteed to support &lt;code&gt;length&lt;/code&gt; with type &lt;code&gt;size_t&lt;/code&gt;.</source>
-          <target state="translated">収量 &lt;code&gt;true&lt;/code&gt; ならば &lt;code&gt;R&lt;/code&gt; は有する &lt;code&gt;length&lt;/code&gt; の値を返すメンバー &lt;code&gt;size_t&lt;/code&gt; のタイプ。 &lt;code&gt;R&lt;/code&gt; は範囲である必要はありません。 &lt;code&gt;R&lt;/code&gt; が範囲の場合、標準ライブラリのアルゴリズムは、 &lt;code&gt;size_t&lt;/code&gt; 型の &lt;code&gt;length&lt;/code&gt; のみをサポートすることが保証されています。</target>
+          <target state="translated">収量 &lt;code&gt;true&lt;/code&gt; ならば &lt;code&gt;R&lt;/code&gt; は有する &lt;code&gt;length&lt;/code&gt; の値を返すメンバー &lt;code&gt;size_t&lt;/code&gt; のタイプ。 &lt;code&gt;R&lt;/code&gt; は範囲である必要はありません。 &lt;code&gt;R&lt;/code&gt; が範囲である場合、標準ライブラリのアルゴリズムは、タイプ &lt;code&gt;size_t&lt;/code&gt; で &lt;code&gt;length&lt;/code&gt; さをサポートすることのみが保証されます。</target>
         </trans-unit>
         <trans-unit id="d63667905d7542aa573c76be73117be28084946c" translate="yes" xml:space="preserve">
           <source>Yields &lt;code&gt;true&lt;/code&gt; if and only if &lt;code&gt;T&lt;/code&gt; is an aggregate that defines a symbol called &lt;code&gt;name&lt;/code&gt;.</source>
@@ -1493,7 +1493,7 @@
         </trans-unit>
         <trans-unit id="155cb1da1f9e22e9d6f167f108238008a26d3e23" translate="yes" xml:space="preserve">
           <source>You can escape any ASCII punctuation symbol with a backslash &lt;code&gt;\&lt;/code&gt;. Doing so outputs the original character without the backslash, except for the following characters which output predefined macros instead:</source>
-          <target state="translated">バックスラッシュ &lt;code&gt;\&lt;/code&gt; を使用して、ASCII句読記号をエスケープできます。そうすることで、バックスラッシュなしで元の文字が出力されます。ただし、代わりに事前定義されたマクロを出力する次の文字は例外です。</target>
+          <target state="translated">バックスラッシュ &lt;code&gt;\&lt;/code&gt; を使用すると、ASCII句読記号をエスケープできます。そうすることで、バックスラッシュなしで元の文字が出力されますが、代わりに事前定義されたマクロを出力する次の文字は例外です。</target>
         </trans-unit>
         <trans-unit id="e3235c6feadfb13ad2c1d369dc6696e0b1bd716f" translate="yes" xml:space="preserve">
           <source>You can foreach either with or without an index. If an index is specified, it will be initialized at each iteration with the offset into the string at which the code point begins.</source>
@@ -1505,7 +1505,7 @@
         </trans-unit>
         <trans-unit id="281c7bf193a2238d33c24d116bbd109a49197245" translate="yes" xml:space="preserve">
           <source>You can pass them to &lt;code&gt;getopt&lt;/code&gt; in any position, except in between an option string and its bound pointer.</source>
-          <target state="translated">オプション文字列とそのバインドされたポインタの間を除いて、任意の位置で &lt;code&gt;getopt&lt;/code&gt; に渡すことができます。</target>
+          <target state="translated">オプション文字列とそのバインドされたポインターの間を除いて、任意の位置で &lt;code&gt;getopt&lt;/code&gt; に渡すことができます。</target>
         </trans-unit>
         <trans-unit id="9fee02d71c7ece7369ab291103ad7a7fb75ebd8e" translate="yes" xml:space="preserve">
           <source>You can use bitwise to implement an uniform bool generator</source>
@@ -1525,7 +1525,7 @@
         </trans-unit>
         <trans-unit id="edfa5374961a427324fc95b6cba01103b14831ce" translate="yes" xml:space="preserve">
           <source>You may opt to use, copy, modify, merge, publish, distribute and/or sell copies of the Software, and permit persons to whom the Software is furnished to do so, under the terms of the COPYING file.</source>
-          <target state="translated">お客様は、COPYINGファイルの条項に基づき、本ソフトウェアのコピーを使用、コピー、修正、結合、出版、配布、または販売することを選択することができ、また、本ソフトウェアが提供された人にそうすることを許可することができます。</target>
+          <target state="translated">お客様は、COPYINGファイルの条件に基づき、本ソフトウェアのコピーを使用、コピー、修正、結合、出版、配布および/または販売することを選択することができ、また、本ソフトウェアが提供された人にそうすることを許可することができます。</target>
         </trans-unit>
         <trans-unit id="50322cada6a0e21e214b6785e4891d438ace2a91" translate="yes" xml:space="preserve">
           <source>You may want to use &lt;code&gt;Rebindable&lt;/code&gt; when you want to have mutable storage referring to &lt;code&gt;const&lt;/code&gt; objects, for example an array of references that must be sorted in place. &lt;code&gt;Rebindable&lt;/code&gt; does not break the soundness of D's type system and does not incur any of the risks usually associated with &lt;code&gt;cast&lt;/code&gt;.</source>
@@ -1613,11 +1613,11 @@
         </trans-unit>
         <trans-unit id="dd25b63c4bd1a2436f18b05d857f1a5b388ed97c" translate="yes" xml:space="preserve">
           <source>Zero-width negative lookahead assertion. Matches at a point where the subexpression regex could &lt;em&gt;not&lt;/em&gt; be matched starting from the current position.</source>
-          <target state="translated">ゼロ幅の否定先読みアサーション。現在の位置から開始して部分式の正規表現が一致し&lt;em&gt;なかっ&lt;/em&gt;たポイントで一致します。</target>
+          <target state="translated">ゼロ幅の否定先読みアサーション。現在の位置から開始して部分式正規表現が一致し&lt;em&gt;なかっ&lt;/em&gt;た時点で一致します。</target>
         </trans-unit>
         <trans-unit id="c08ab8fc338dc8665d7647825312c8220d091cd8" translate="yes" xml:space="preserve">
           <source>Zero-width negative lookbehind assertion. Matches at a point where the subexpression regex could &lt;em&gt;not&lt;/em&gt; be matched ending at the current position (matching goes backwards).</source>
-          <target state="translated">ゼロ幅の否定後読みアサーション。部分式の正規表現が現在の位置で終了して一致でき&lt;em&gt;なかっ&lt;/em&gt;たポイントで一致します（一致は逆方向に進みます）。</target>
+          <target state="translated">ゼロ幅の否定後読みアサーション。部分式正規表現が現在の位置で終了して一致でき&lt;em&gt;なかっ&lt;/em&gt;たポイントで一致します（一致は逆方向に進みます）。</target>
         </trans-unit>
         <trans-unit id="6be404c28a20a755971361ab2d7b6240b4ee20e2" translate="yes" xml:space="preserve">
           <source>Zl</source>
@@ -1633,67 +1633,67 @@
         </trans-unit>
         <trans-unit id="ed4edf00c589794000c22c60e5896dd5563b98fa" translate="yes" xml:space="preserve">
           <source>[ e1, e2, e3, ... ]</source>
-          <target state="translated">[ e1, e2, e3, ... ]</target>
+          <target state="translated">[e1、e2、e3、...]</target>
         </trans-unit>
         <trans-unit id="8938fea170332eb44328d18b5e681dc858213e09" translate="yes" xml:space="preserve">
           <source>[ key0 : value0, key1 : value1, ... ]</source>
-          <target state="translated">[ key0 : value0, key1 : value1, ... ]</target>
+          <target state="translated">[key0：value0、key1：value1、...]</target>
         </trans-unit>
         <trans-unit id="a0c7153f1cc4aa831954a6788d4f2f9ef25f9bd4" translate="yes" xml:space="preserve">
           <source>[05:00:30 - 12:00:00)</source>
-          <target state="translated">[05:00:30 - 12:00:00)</target>
+          <target state="translated">[05:00:30-12:00:00）</target>
         </trans-unit>
         <trans-unit id="5cc780b611e649470fb813785a884d0781d82398" translate="yes" xml:space="preserve">
           <source>[0x00, 0x00, 0xFE, 0xFF]</source>
-          <target state="translated">[0x00, 0x00, 0xFE, 0xFF]</target>
+          <target state="translated">[0x00、0x00、0xFE、0xFF]</target>
         </trans-unit>
         <trans-unit id="3a82e1270f683dce0aafeb683ef13257aa7cd535" translate="yes" xml:space="preserve">
           <source>[0x0E, 0xFE, 0xFF]</source>
-          <target state="translated">[0x0E, 0xFE, 0xFF]</target>
+          <target state="translated">[0x0E、0xFE、0xFF]</target>
         </trans-unit>
         <trans-unit id="127241c46d6af9dae67045d409338b48cf7d851c" translate="yes" xml:space="preserve">
           <source>[0x84, 0x31, 0x95, 0x33]</source>
-          <target state="translated">[0x84, 0x31, 0x95, 0x33]</target>
+          <target state="translated">[0x84、0x31、0x95、0x33]</target>
         </trans-unit>
         <trans-unit id="25d3883361a4fae44aa127fb1db5f4de39632e42" translate="yes" xml:space="preserve">
           <source>[0xDD, 0x73, 0x66, 0x73]</source>
-          <target state="translated">[0xDD, 0x73, 0x66, 0x73]</target>
+          <target state="translated">[0xDD、0x73、0x66、0x73]</target>
         </trans-unit>
         <trans-unit id="f85c19245e651cc73bc05b92970a9810642dc5bd" translate="yes" xml:space="preserve">
           <source>[0xEF, 0xBB, 0xBF]</source>
-          <target state="translated">[0xEF, 0xBB, 0xBF]</target>
+          <target state="translated">[0xEF、0xBB、0xBF]</target>
         </trans-unit>
         <trans-unit id="8091720208bd9e06c11e2526dee2576869699591" translate="yes" xml:space="preserve">
           <source>[0xF7, 0x64, 0x4C]</source>
-          <target state="translated">[0xF7, 0x64, 0x4C]</target>
+          <target state="translated">[0xF7、0x64、0x4C]</target>
         </trans-unit>
         <trans-unit id="50948e8255cdbb4bffa669a403821268e817ff90" translate="yes" xml:space="preserve">
           <source>[0xFB, 0xEE, 0x28]</source>
-          <target state="translated">[0xFB, 0xEE, 0x28]</target>
+          <target state="translated">[0xFB、0xEE、0x28]</target>
         </trans-unit>
         <trans-unit id="37f1beff2dcd5309ee7e7c60e25143e26012959e" translate="yes" xml:space="preserve">
           <source>[0xFE, 0xFF]</source>
-          <target state="translated">[0xFE, 0xFF]</target>
+          <target state="translated">[0xFE、0xFF]</target>
         </trans-unit>
         <trans-unit id="88043d764331c8d0d96a29e08610589a55790021" translate="yes" xml:space="preserve">
           <source>[0xFF, 0xFE, 0x00, 0x00]</source>
-          <target state="translated">[0xFF, 0xFE, 0x00, 0x00]</target>
+          <target state="translated">[0xFF、0xFE、0x00、0x00]</target>
         </trans-unit>
         <trans-unit id="b0813d64143dd99bd80443c996704f63795593aa" translate="yes" xml:space="preserve">
           <source>[0xFF, 0xFE]</source>
-          <target state="translated">[0xFF, 0xFE]</target>
+          <target state="translated">[0xFF、0xFE]</target>
         </trans-unit>
         <trans-unit id="bb90d949090bdc87a5ffc85a1d4fc7c9359636ac" translate="yes" xml:space="preserve">
           <source>[1982-01-04T08:59:00 - 2010-07-04T12:00:00)</source>
-          <target state="translated">[1982-01-04T08:59:00 - 2010-07-04T12:00:00)</target>
+          <target state="translated">[1982-01-04T08：59：00-2010-07-04T12：00：00）</target>
         </trans-unit>
         <trans-unit id="12347dc7f7cdd583255745f9bf967b1b9d33a2bd" translate="yes" xml:space="preserve">
           <source>[EDX,EAX] = [EDX,EAX] / [ECX,EBX] [ECX,EBX] = [EDX,EAX] % [ECX,EBX]</source>
-          <target state="translated">[EDX,EAX] = [EDX,EAX] / [ECX,EBX] [ECX,EBX] = [EDX,EAX] % [ECX,EBX]</target>
+          <target state="translated">[EDX、EAX] = [EDX、EAX] / [ECX、EBX] [ECX、EBX] = [EDX、EAX]％[ECX、EBX]</target>
         </trans-unit>
         <trans-unit id="709899bf392f7ec43be5bb3439c0b80f3583eeb7" translate="yes" xml:space="preserve">
           <source>[EDX,EAX] = [EDX,EAX] / [ECX,EBX] [ECX,EBX] = [EDX,EAX] % [ECX,EBX] ESI,EDI destroyed</source>
-          <target state="translated">[EDX,EAX] = [EDX,EAX] / [ECX,EBX] [ECX,EBX] = [EDX,EAX] % [ECX,EBX] ESI,EDI destroyed</target>
+          <target state="translated">[EDX、EAX] = [EDX、EAX] / [ECX、EBX] [ECX、EBX] = [EDX、EAX]％[ECX、EBX] ESI、EDIが破壊されました</target>
         </trans-unit>
         <trans-unit id="455df00305aecd4738e1dab757f8f7993ca6aea1" translate="yes" xml:space="preserve">
           <source>[EDX,EAX],[ECX,EBX]</source>
@@ -1701,11 +1701,11 @@
         </trans-unit>
         <trans-unit id="ddaf8db003092aa758759000f6bb7ea6319f5293" translate="yes" xml:space="preserve">
           <source>[January 5th, 2010 - March 10th, 2010)</source>
-          <target state="translated">[January 5th, 2010 - March 10th, 2010)</target>
+          <target state="translated">[2010年1月5日〜2010年3月10日）</target>
         </trans-unit>
         <trans-unit id="5850d1834e46e1a5b7ad928ccc67bc19e466e16b" translate="yes" xml:space="preserve">
           <source>[The GC modules defining the interface (gc.interface) and registration (gc.registry) are currently not public and are subject to change from version to version. Add an import search path to the druntime/src path to compile the example.]</source>
-          <target state="translated">[The GC modules defining the interface (gc.interface) and registration (gc.registry) are currently not public and are subject to change from version to version. Add an import search path to the druntime/src path to compile the example.]</target>
+          <target state="translated">[インターフェース（gc.interface）と登録（gc.registry）を定義するGCモジュールは現在公開されておらず、バージョンごとに変更される可能性があります。例をコンパイルするには、druntime / srcパスにインポート検索パスを追加します。]</target>
         </trans-unit>
         <trans-unit id="4b954678c0799d6d81c056360b3a7adde81fe086" translate="yes" xml:space="preserve">
           <source>[^class]</source>
@@ -1713,7 +1713,7 @@
         </trans-unit>
         <trans-unit id="4c30f6694055256fdec9df696d7c787e9f238f82" translate="yes" xml:space="preserve">
           <source>[a||b], [a--b], [a~~b], [a&amp;amp;&amp;amp;b]</source>
-          <target state="translated">[a||b], [a--b], [a~~b], [a&amp;amp;&amp;amp;b]</target>
+          <target state="translated">[a || b]、[a--b]、[a ~~ b]、[a &amp;amp;&amp;amp; b]</target>
         </trans-unit>
         <trans-unit id="045361a9242bfbdf1bdd2d8c5cd510cfe86f0507" translate="yes" xml:space="preserve">
           <source>[class]</source>
@@ -1721,11 +1721,11 @@
         </trans-unit>
         <trans-unit id="a30e2891772edb4c8ba0ee9b73303175b2f0cd07" translate="yes" xml:space="preserve">
           <source>[mixin] template Identifier (parameters) [Constraint] &lt;a href=&quot;https://dlang.org/spec/template.html&quot;&gt;https://dlang.org/spec/template.html&lt;/a&gt;&lt;a href=&quot;https://dlang.org/spec/template-mixin.html&quot;&gt;https://dlang.org/spec/template-mixin.html&lt;/a&gt;</source>
-          <target state="translated">[mixin] template Identifier (parameters) [Constraint] &lt;a href=&quot;https://dlang.org/spec/template.html&quot;&gt;https://dlang.org/spec/template.html&lt;/a&gt;&lt;a href=&quot;https://dlang.org/spec/template-mixin.html&quot;&gt;https://dlang.org/spec/template-mixin.html&lt;/a&gt;</target>
+          <target state="translated">[mixin]テンプレート識別子（パラメーター）[制約] &lt;a href=&quot;https://dlang.org/spec/template.html&quot;&gt;https://dlang.org/spec/template.html &lt;/a&gt;&lt;a href=&quot;https://dlang.org/spec/template-mixin.html&quot;&gt;https://dlang.org/spec/template-mixin.html&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="1cbd929c7ee2a6fff2837e3fb05eb9e6b1989986" translate="yes" xml:space="preserve">
           <source>[special case]</source>
-          <target state="translated">[special case]</target>
+          <target state="translated">[特別なケース]</target>
         </trans-unit>
         <trans-unit id="95bc0dc370dc108367da33cf82301a753f2e319e" translate="yes" xml:space="preserve">
           <source>\B</source>
@@ -1769,11 +1769,11 @@
         </trans-unit>
         <trans-unit id="9d84dff8df5bc5872e07f8bc4fd5c30d118c579e" translate="yes" xml:space="preserve">
           <source>\c , where c is any character</source>
-          <target state="translated">\c , where c is any character</target>
+          <target state="translated">\ c、ここでcは任意の文字</target>
         </trans-unit>
         <trans-unit id="28bc53053f1b821cbb584b3e67bb0cf54eaaee23" translate="yes" xml:space="preserve">
           <source>\c where c is one of [|*+?()</source>
-          <target state="translated">\c where c is one of [|*+?()</target>
+          <target state="translated">\ cここで、cは[| * +？（）</target>
         </trans-unit>
         <trans-unit id="e99e482dfabaf62459df1d07f2b8b140105afe46" translate="yes" xml:space="preserve">
           <source>\cC</source>
@@ -1837,7 +1837,7 @@
         </trans-unit>
         <trans-unit id="2c1dc11960c9d5c8367226c4452cef60c46ae64b" translate="yes" xml:space="preserve">
           <source>], and sub-sequences are denoted by the slicing syntax.</source>
-          <target state="translated">], and sub-sequences are denoted by the slicing syntax.</target>
+          <target state="translated">]、サブシーケンスはスライス構文で表されます。</target>
         </trans-unit>
         <trans-unit id="5e6f80a34a9798cafc6a5db96cc57ba4c4db59c2" translate="yes" xml:space="preserve">
           <source>^</source>
@@ -1845,11 +1845,11 @@
         </trans-unit>
         <trans-unit id="980c4ab611293347dac0eddbf024ca3da40ebfb9" translate="yes" xml:space="preserve">
           <source>_N2 &lt;strong id=&quot;strings&quot;&gt;strings&lt;/strong&gt;;</source>
-          <target state="translated">_N2 &lt;strong id=&quot;strings&quot;&gt;strings&lt;/strong&gt;;</target>
+          <target state="translated">_N2 &lt;strong id=&quot;strings&quot;&gt;文字列&lt;/strong&gt; ;</target>
         </trans-unit>
         <trans-unit id="5a5dc3120fd3d083305057a37451ec087d1ec206" translate="yes" xml:space="preserve">
           <source>_N31 &lt;strong id=&quot;data&quot;&gt;data&lt;/strong&gt;;</source>
-          <target state="translated">_N31 &lt;strong id=&quot;data&quot;&gt;data&lt;/strong&gt;;</target>
+          <target state="translated">_N31 &lt;strong id=&quot;data&quot;&gt;データ&lt;/strong&gt; ;</target>
         </trans-unit>
         <trans-unit id="6b416a55cf8bb5b155da033be92758ef2f0fd324" translate="yes" xml:space="preserve">
           <source>_Unwind_Action &lt;code&gt;actions&lt;/code&gt;</source>
@@ -1857,15 +1857,15 @@
         </trans-unit>
         <trans-unit id="6120ca07385a9d02cca9d20e846a6c4107396652" translate="yes" xml:space="preserve">
           <source>_Unwind_Context* &lt;code&gt;context&lt;/code&gt;</source>
-          <target state="translated">_Unwind_Context* &lt;code&gt;context&lt;/code&gt;</target>
+          <target state="translated">_Unwind_Context * &lt;code&gt;context&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="602b6e0399b5d74ad3f9037cbe913543b4f9dd5f" translate="yes" xml:space="preserve">
           <source>_Unwind_Exception* &lt;code&gt;eo&lt;/code&gt;</source>
-          <target state="translated">_Unwind_Exception* &lt;code&gt;eo&lt;/code&gt;</target>
+          <target state="translated">_Unwind_Exception * &lt;code&gt;eo&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="554e3b632e56d6f1df6dfc8b8a2101dfa9a092b7" translate="yes" xml:space="preserve">
           <source>_Unwind_Exception* &lt;code&gt;exceptionObject&lt;/code&gt;</source>
-          <target state="translated">_Unwind_Exception* &lt;code&gt;exceptionObject&lt;/code&gt;</target>
+          <target state="translated">_Unwind_Exception * &lt;code&gt;exceptionObject&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="4210dabc2a56c810c242f98f93364e5a2ac2a25a" translate="yes" xml:space="preserve">
           <source>_Unwind_Exception_Class &lt;code&gt;exceptionClass&lt;/code&gt;</source>
@@ -1881,19 +1881,19 @@
         </trans-unit>
         <trans-unit id="c675061e0d8b288a6134cf2588857468b008450a" translate="yes" xml:space="preserve">
           <source>_Unwind_Reason_Code &lt;strong id=&quot;__dmd_personality_v0&quot;&gt;__dmd_personality_v0&lt;/strong&gt;(int ver, _Unwind_Action actions, _Unwind_Exception_Class exceptionClass, _Unwind_Exception* exceptionObject, _Unwind_Context* context);</source>
-          <target state="translated">_Unwind_Reason_Code &lt;strong id=&quot;__dmd_personality_v0&quot;&gt;__dmd_personality_v0&lt;/strong&gt;(int ver, _Unwind_Action actions, _Unwind_Exception_Class exceptionClass, _Unwind_Exception* exceptionObject, _Unwind_Context* context);</target>
+          <target state="translated">_Unwind_Reason_Code &lt;strong id=&quot;__dmd_personality_v0&quot;&gt;__dmd_personality_v0&lt;/strong&gt;（int ver、_Unwind_Action actions、_Unwind_Exception_Class exceptionClass、_Unwind_Exception * exceptionObject、_Unwind_Context * context）;</target>
         </trans-unit>
         <trans-unit id="9072ddffb62ae60ff34ae70b7030371d0c03ad0d" translate="yes" xml:space="preserve">
           <source>_sleb128_t &lt;strong id=&quot;sLEB128&quot;&gt;sLEB128&lt;/strong&gt;(const(ubyte)** p);</source>
-          <target state="translated">_sleb128_t &lt;strong id=&quot;sLEB128&quot;&gt;sLEB128&lt;/strong&gt;(const(ubyte)** p);</target>
+          <target state="translated">_sleb128_t &lt;strong id=&quot;sLEB128&quot;&gt;sLEB128&lt;/strong&gt;（const（ubyte）** p）;</target>
         </trans-unit>
         <trans-unit id="b7419a423f2fcfe5cd1de6e9080bcb6d2faec43e" translate="yes" xml:space="preserve">
           <source>_traits(identifier, args...)</source>
-          <target state="translated">_traits(identifier, args...)</target>
+          <target state="translated">_traits（識別子、引数...）</target>
         </trans-unit>
         <trans-unit id="2c3a07fac6fc35e6943846630c3e1cd773d7e32d" translate="yes" xml:space="preserve">
           <source>_uleb128_t &lt;strong id=&quot;uLEB128&quot;&gt;uLEB128&lt;/strong&gt;(const(ubyte)** p);</source>
-          <target state="translated">_uleb128_t &lt;strong id=&quot;uLEB128&quot;&gt;uLEB128&lt;/strong&gt;(const(ubyte)** p);</target>
+          <target state="translated">_uleb128_t &lt;strong id=&quot;uLEB128&quot;&gt;uLEB128&lt;/strong&gt;（const（ubyte）** p）;</target>
         </trans-unit>
         <trans-unit id="5259a4315957e9c1db2618c0f2d7fe150b69556c" translate="yes" xml:space="preserve">
           <source>`0`</source>
@@ -1937,15 +1937,15 @@
         </trans-unit>
         <trans-unit id="93b7aad5da37a53762dc7ee6a72c8493e2857ab7" translate="yes" xml:space="preserve">
           <source>`Ternary empty();`</source>
-          <target state="translated">`Ternary empty();`</target>
+          <target state="translated">`Ternary empty（）;`</target>
         </trans-unit>
         <trans-unit id="30e090b60af63e8d6bccaa51660ec51ef8cf21df" translate="yes" xml:space="preserve">
           <source>`Ternary owns(void[] b);`</source>
-          <target state="translated">`Ternary owns(void[] b);`</target>
+          <target state="translated">`Ternary owns（void [] b）;`</target>
         </trans-unit>
         <trans-unit id="11a952ce8951413a7965d2ef58f8668e085709d5" translate="yes" xml:space="preserve">
           <source>`Ternary resolveInternalPointer(void* p, ref void[] result);`</source>
-          <target state="translated">`Ternary resolveInternalPointer(void* p, ref void[] result);`</target>
+          <target state="translated">`Ternary resolveInternalPointer（void * p、ref void [] result）;`</target>
         </trans-unit>
         <trans-unit id="b293daf2b94fcecc6d941d7fd9a963fabb2f414a" translate="yes" xml:space="preserve">
           <source>`UUID.Variant`</source>
@@ -1957,47 +1957,47 @@
         </trans-unit>
         <trans-unit id="67cae93829c730c322b7fcf354b743041c305a6d" translate="yes" xml:space="preserve">
           <source>`bool alignedReallocate(ref void[] b,</source>
-          <target state="translated">`bool alignedReallocate(ref void[] b,</target>
+          <target state="translated">`bool alignedReallocate（ref void [] b、</target>
         </trans-unit>
         <trans-unit id="2eb1c73d19a8284e71ebbfe525c77ffa32126ed3" translate="yes" xml:space="preserve">
           <source>`bool deallocate(void[] b);`</source>
-          <target state="translated">`bool deallocate(void[] b);`</target>
+          <target state="translated">`bool deallocate（void [] b）;`</target>
         </trans-unit>
         <trans-unit id="4ba14ab4f841b3304bd9a4feb1e38bd47e64d895" translate="yes" xml:space="preserve">
           <source>`bool deallocateAll();`</source>
-          <target state="translated">`bool deallocateAll();`</target>
+          <target state="translated">`bool deallocateAll（）;`</target>
         </trans-unit>
         <trans-unit id="13a6aa7488cf2ff21c19c58f6d92c530fea1a259" translate="yes" xml:space="preserve">
           <source>`bool expand(ref void[] b, size_t delta);`</source>
-          <target state="translated">`bool expand(ref void[] b, size_t delta);`</target>
+          <target state="translated">`bool expand（ref void [] b、size_t delta）;`</target>
         </trans-unit>
         <trans-unit id="406b79125a607cf78944c45500dd31b422545453" translate="yes" xml:space="preserve">
           <source>`bool reallocate(ref void[] b, size_t s);`</source>
-          <target state="translated">`bool reallocate(ref void[] b, size_t s);`</target>
+          <target state="translated">`bool reallocate（ref void [] b、size_t s）;`</target>
         </trans-unit>
         <trans-unit id="cfdd2f2491b2c295432df1370b4c458ff823fef8" translate="yes" xml:space="preserve">
           <source>`size_t goodAllocSize(size_t n);`</source>
-          <target state="translated">`size_t goodAllocSize(size_t n);`</target>
+          <target state="translated">`size_t goodAllocSize（size_t n）;`</target>
         </trans-unit>
         <trans-unit id="801bd6813aa4c0330dcf2056e10b3533a1352a81" translate="yes" xml:space="preserve">
           <source>`static Allocator instance;`</source>
-          <target state="translated">`static Allocator instance;`</target>
+          <target state="translated">`静的アロケータインスタンス;`</target>
         </trans-unit>
         <trans-unit id="ad28a9b1fb797def73cae78fdd852227fd7d7573" translate="yes" xml:space="preserve">
           <source>`uint alignment;`</source>
-          <target state="translated">`uint alignment;`</target>
+          <target state="translated">`uint配置;`</target>
         </trans-unit>
         <trans-unit id="0c6332d76bec808ed786689c706ba08b1b302fbf" translate="yes" xml:space="preserve">
           <source>`void[] alignedAllocate(size_t s, uint a);`</source>
-          <target state="translated">`void[] alignedAllocate(size_t s, uint a);`</target>
+          <target state="translated">`void [] alignedAllocate（size_t s、uint a）;`</target>
         </trans-unit>
         <trans-unit id="f0b1271584aa3408a331061f5d648e112b7efce9" translate="yes" xml:space="preserve">
           <source>`void[] allocate(size_t s);`</source>
-          <target state="translated">`void[] allocate(size_t s);`</target>
+          <target state="translated">`void [] allocate（size_t s）;`</target>
         </trans-unit>
         <trans-unit id="75ef97c368705919d5757541da49a9d741b5cc8f" translate="yes" xml:space="preserve">
           <source>`void[] allocateAll();`</source>
-          <target state="translated">`void[] allocateAll();`</target>
+          <target state="translated">`void [] allocateAll（）;`</target>
         </trans-unit>
         <trans-unit id="86f7e437faa5a7fce15d1ddcb9eaeaea377667b8" translate="yes" xml:space="preserve">
           <source>a</source>
@@ -2013,7 +2013,7 @@
         </trans-unit>
         <trans-unit id="49e4ed45006b0ed737f3ead37d6f12ffe51e71c7" translate="yes" xml:space="preserve">
           <source>a .. z</source>
-          <target state="translated">z</target>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="ec2f0d57fb7ffa20b86457d77672259e646844d0" translate="yes" xml:space="preserve">
           <source>a &lt;a href=&quot;#FileAndLines&quot;&gt;&lt;code&gt;FileAndLines&lt;/code&gt;&lt;/a&gt; object containing a line-by-line representation of the requested file</source>
@@ -2029,7 +2029,7 @@
         </trans-unit>
         <trans-unit id="e805b2a3b236f9cd9bf9c0d39f55509179e3c3e0" translate="yes" xml:space="preserve">
           <source>a &lt;a href=&quot;std_range_primitives#isBidirectionalRange&quot;&gt;bidirectional range&lt;/a&gt; with either swappable elements, a random access range with a length member, or a narrow string</source>
-          <target state="translated">入れ替え可能な要素、長さメンバーのランダムアクセス範囲、または狭い文字列のいずれかによる&lt;a href=&quot;std_range_primitives#isBidirectionalRange&quot;&gt;双方向範囲&lt;/a&gt;</target>
+          <target state="translated">スワップ可能な要素、長さのメンバーを持つランダムアクセス範囲、または狭い文字列のいずれかによる&lt;a href=&quot;std_range_primitives#isBidirectionalRange&quot;&gt;双方向範囲&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="df8045e3f2cce8b905eed1d3c80cebe099149916" translate="yes" xml:space="preserve">
           <source>a &lt;a href=&quot;std_range_primitives#isForwardRange&quot;&gt;forward range&lt;/a&gt;</source>
@@ -2041,7 +2041,7 @@
         </trans-unit>
         <trans-unit id="49695019b9966fa00d02e848d13d2ef54c1e8a9d" translate="yes" xml:space="preserve">
           <source>a &lt;code&gt;RegexMatch&lt;/code&gt; object holding engine state after first match.</source>
-          <target state="translated">最初の一致後のエンジン状態を保持する &lt;code&gt;RegexMatch&lt;/code&gt; オブジェクト。</target>
+          <target state="translated">最初の一致後のエンジンの状態を保持する &lt;code&gt;RegexMatch&lt;/code&gt; オブジェクト。</target>
         </trans-unit>
         <trans-unit id="b757888337c73f1c546ccc04a483b659909fa89c" translate="yes" xml:space="preserve">
           <source>a &lt;code&gt;bool&lt;/code&gt; indicating if the hook is present.</source>
@@ -2085,7 +2085,7 @@
         </trans-unit>
         <trans-unit id="636382d53c33f221bc93820c5da3d45d8e582a11" translate="yes" xml:space="preserve">
           <source>a block with 512 to pagesize/2 bytes has a 16-bit length.</source>
-          <target state="translated">512 から pagesize2 バイトのブロックは 16 ビットの長さを持っています。</target>
+          <target state="translated">512 から pagesize/2 バイトのブロックは 16 ビットの長さを持っています。</target>
         </trans-unit>
         <trans-unit id="daf6a6b6706d9d1ca73d83fb14a03265f1cf1b22" translate="yes" xml:space="preserve">
           <source>a complete asm {} block</source>
@@ -2093,7 +2093,7 @@
         </trans-unit>
         <trans-unit id="b8f7f3e0729ccf7a3ebdd043ba13f0117f857481" translate="yes" xml:space="preserve">
           <source>a complex number of two float values</source>
-          <target state="translated">偶数</target>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="1ec824306b3c33dafba3a2181e71d12cbd804cc9" translate="yes" xml:space="preserve">
           <source>a consistent look and feel for the contracts</source>
@@ -2101,7 +2101,7 @@
         </trans-unit>
         <trans-unit id="e1eb7a00f854554d82c47e43291ee8679e31edcf" translate="yes" xml:space="preserve">
           <source>a copy</source>
-          <target state="translated">写し</target>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="922b5e213dee1219392e6ee5619bc4fdb3e0bc7a" translate="yes" xml:space="preserve">
           <source>a delegate that is not shared.</source>
@@ -2157,11 +2157,11 @@
         </trans-unit>
         <trans-unit id="f00a7a0ee8c70534bf8c96dc229c15d465e64551" translate="yes" xml:space="preserve">
           <source>a human readable representation of &lt;code&gt;mod&lt;/code&gt;, which is the token &lt;code&gt;mod&lt;/code&gt; corresponds to</source>
-          <target state="translated">&lt;code&gt;mod&lt;/code&gt; が対応するトークンである、人間が読める &lt;code&gt;mod&lt;/code&gt; の表現</target>
+          <target state="translated">人間が読める &lt;code&gt;mod&lt;/code&gt; の表現。これは &lt;code&gt;mod&lt;/code&gt; が対応するトークンです</target>
         </trans-unit>
         <trans-unit id="5e16d75f43a42130dbe18bac0e7c29b365988d9a" translate="yes" xml:space="preserve">
           <source>a human readable representation of &lt;code&gt;trust&lt;/code&gt;, which is the token &lt;code&gt;trust&lt;/code&gt; corresponds to</source>
-          <target state="translated">人間が読める &lt;code&gt;trust&lt;/code&gt; 表現。これは、 &lt;code&gt;trust&lt;/code&gt; 対応するトークン</target>
+          <target state="translated">人間が読める &lt;code&gt;trust&lt;/code&gt; 表現。これは、トークンの &lt;code&gt;trust&lt;/code&gt; 対応するトークンです</target>
         </trans-unit>
         <trans-unit id="8167707979440f9b27a1db55e9e9db99b20d954a" translate="yes" xml:space="preserve">
           <source>a lazy range of the center justified result</source>
@@ -2213,7 +2213,7 @@
         </trans-unit>
         <trans-unit id="3e8a8c89b9f7d485fe2d176f226a4dc30ac744e9" translate="yes" xml:space="preserve">
           <source>a path to a file or a directory</source>
-          <target state="translated">パス</target>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="c004984b0ff8689f0b2c64ba44ddb90f50f87467" translate="yes" xml:space="preserve">
           <source>a path to check (the name is stripped)</source>
@@ -2269,7 +2269,7 @@
         </trans-unit>
         <trans-unit id="ae375e46ec29a2f0eacc078d3bc2a801bdfc2fdd" translate="yes" xml:space="preserve">
           <source>a reference to a class or interface type &lt;code&gt;C&lt;/code&gt; and &lt;code&gt;C&lt;/code&gt; is not immutable.</source>
-          <target state="translated">クラスまたはインターフェースのタイプ &lt;code&gt;C&lt;/code&gt; および &lt;code&gt;C&lt;/code&gt; への参照は不変ではありません。</target>
+          <target state="translated">クラスまたはインターフェースタイプ &lt;code&gt;C&lt;/code&gt; および &lt;code&gt;C&lt;/code&gt; への参照は不変ではありません。</target>
         </trans-unit>
         <trans-unit id="f19bdd640ead3f29b9c19fdeac686f1cd2fc82cf" translate="yes" xml:space="preserve">
           <source>a reference to a class type &lt;code&gt;C&lt;/code&gt; and &lt;code&gt;C&lt;/code&gt; is not immutable or shared.</source>
@@ -2293,7 +2293,7 @@
         </trans-unit>
         <trans-unit id="900b6d61727bf38670543f302fa5afe93dc45e0f" translate="yes" xml:space="preserve">
           <source>a set of replacements/substitutions</source>
-          <target state="translated">置換集合</target>
+          <target state="translated">置換/置換セット</target>
         </trans-unit>
         <trans-unit id="95d89b650f29de7bd2964e529745e5a28ecd8f1c" translate="yes" xml:space="preserve">
           <source>a single value which can be substituted in &amp;Omicron;(&lt;code&gt;1&lt;/code&gt;)</source>
@@ -2309,7 +2309,7 @@
         </trans-unit>
         <trans-unit id="6b098a6de224f3afd1732001eeb4dcde43264d38" translate="yes" xml:space="preserve">
           <source>a super class</source>
-          <target state="translated">超級</target>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="8b2bf0cc0af6ff3e9a821f1c216a5dd0c740312c" translate="yes" xml:space="preserve">
           <source>a symbolic link, then this function returns the same result as getAttributes.</source>
@@ -2361,7 +2361,7 @@
         </trans-unit>
         <trans-unit id="ade5cf54af7f5b303ac4e754cc4c48f00b3f37df" translate="yes" xml:space="preserve">
           <source>aborting the program</source>
-          <target state="translated">中止</target>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="66206b19c16f55926390c56d098d8185332f4213" translate="yes" xml:space="preserve">
           <source>about harmonia</source>
@@ -2517,7 +2517,7 @@
         </trans-unit>
         <trans-unit id="b249614910dfe2f856313aa1019178dd9fe70cb9" translate="yes" xml:space="preserve">
           <source>abstract const pure nothrow @nogc @safe const(void)[] &lt;strong id=&quot;initializer&quot;&gt;initializer&lt;/strong&gt;();</source>
-          <target state="translated">abstract const pure nothrow @nogc @safe const（void）[] &lt;strong id=&quot;initializer&quot;&gt;初期化子&lt;/strong&gt;（）;</target>
+          <target state="translated">抽象const純粋なnothrow @nogc @safe const（void）[] &lt;strong id=&quot;initializer&quot;&gt;初期化子&lt;/strong&gt;（）;</target>
         </trans-unit>
         <trans-unit id="cb35c80415cb32c94c73a7756df440c1c0085656" translate="yes" xml:space="preserve">
           <source>abstract const scope @safe size_t &lt;strong id=&quot;toHash&quot;&gt;toHash&lt;/strong&gt;();</source>
@@ -2537,11 +2537,11 @@
         </trans-unit>
         <trans-unit id="83071325e73d53e5f586a7473d854a646dfa53f2" translate="yes" xml:space="preserve">
           <source>abstract const string &lt;strong id=&quot;toString&quot;&gt;toString&lt;/strong&gt;();</source>
-          <target state="translated">抽象定数文字列&lt;strong id=&quot;toString&quot;&gt;toString&lt;/strong&gt;（）;</target>
+          <target state="translated">抽象const文字列&lt;strong id=&quot;toString&quot;&gt;toString&lt;/strong&gt;（）;</target>
         </trans-unit>
         <trans-unit id="6a7f3249c54be78bd9aefd00c5134b6c22ed4229" translate="yes" xml:space="preserve">
           <source>abstract const string[] &lt;strong id=&quot;names&quot;&gt;names&lt;/strong&gt;();</source>
-          <target state="translated">抽象const string [] &lt;strong id=&quot;names&quot;&gt;names&lt;/strong&gt;（）;</target>
+          <target state="translated">抽象const string [] &lt;strong id=&quot;names&quot;&gt;名&lt;/strong&gt;（）;</target>
         </trans-unit>
         <trans-unit id="57f6f621bc4fda3d27a805f68650176d80cae595" translate="yes" xml:space="preserve">
           <source>abstract nothrow @property ref ThreadInfo &lt;strong id=&quot;thisInfo&quot;&gt;thisInfo&lt;/strong&gt;();</source>
@@ -2581,7 +2581,7 @@
         </trans-unit>
         <trans-unit id="2c4d08f3784605a480640ab968377af8ff0ce5fd" translate="yes" xml:space="preserve">
           <source>abstract nothrow bool &lt;strong id=&quot;alignedReallocate&quot;&gt;alignedReallocate&lt;/strong&gt;(ref void[] b, size_t size, uint alignment);</source>
-          <target state="translated">抽象nothrow &lt;strong id=&quot;alignedReallocate&quot;&gt;boolalignedReallocate&lt;/strong&gt;（ref void [] b、size_tサイズ、uint配置）;</target>
+          <target state="translated">抽象nothrow &lt;strong id=&quot;alignedReallocate&quot;&gt;boolalignedReallocate&lt;/strong&gt;（ref void [] b、size_t size、uint alignment）;</target>
         </trans-unit>
         <trans-unit id="9d69e75dc9bcb49d9905f73d8210657227458ffc" translate="yes" xml:space="preserve">
           <source>abstract nothrow bool &lt;strong id=&quot;deallocate&quot;&gt;deallocate&lt;/strong&gt;(void[] b);</source>
@@ -2629,7 +2629,7 @@
         </trans-unit>
         <trans-unit id="a8a2cb650960fcb355e62fee2551472cd09471c2" translate="yes" xml:space="preserve">
           <source>abstract nothrow void &lt;strong id=&quot;error&quot;&gt;error&lt;/strong&gt;(ref const Loc loc, const(char)* format, va_list args);</source>
-          <target state="translated">抽象nothrow void &lt;strong id=&quot;error&quot;&gt;エラー&lt;/strong&gt;（ref const Loc loc、const（char）* format、va_list args）;</target>
+          <target state="translated">抽象nothrow void &lt;strong id=&quot;error&quot;&gt;エラー&lt;/strong&gt;（ref const Loc loc、const（char）*形式、va_list args）;</target>
         </trans-unit>
         <trans-unit id="953fcfc258a1f2e17925c804f6c75c7e28f536c8" translate="yes" xml:space="preserve">
           <source>abstract nothrow void &lt;strong id=&quot;errorSupplemental&quot;&gt;errorSupplemental&lt;/strong&gt;(ref const Loc loc, const(char)* format, va_list);</source>
@@ -2649,7 +2649,7 @@
         </trans-unit>
         <trans-unit id="55c1baf7b210b0645d46ed7e9a31d914c3ac84b7" translate="yes" xml:space="preserve">
           <source>abstract nothrow void[] &lt;strong id=&quot;alignedAllocate&quot;&gt;alignedAllocate&lt;/strong&gt;(size_t n, uint a);</source>
-          <target state="translated">抽象nothrow void [] &lt;strong id=&quot;alignedAllocate&quot;&gt;alignedAllocate&lt;/strong&gt;（size_t n、uint a）;</target>
+          <target state="translated">抽象nothrow void [] &lt;strong id=&quot;alignedAllocate&quot;&gt;alignmentAllocate&lt;/strong&gt;（size_t n、uint a）;</target>
         </trans-unit>
         <trans-unit id="773db43da85e9e2a1509afb2788ee00a07791816" translate="yes" xml:space="preserve">
           <source>abstract nothrow void[] &lt;strong id=&quot;allocate&quot;&gt;allocate&lt;/strong&gt;(size_t, TypeInfo ti = null);</source>
@@ -2677,7 +2677,7 @@
         </trans-unit>
         <trans-unit id="7fa490cefc6fa349aff28acf40c78a50dc12b009" translate="yes" xml:space="preserve">
           <source>abstract shared nothrow Ternary &lt;strong id=&quot;empty&quot;&gt;empty&lt;/strong&gt;();</source>
-          <target state="translated">抽象共有notthrow Ternary &lt;strong id=&quot;empty&quot;&gt;空&lt;/strong&gt;（）;</target>
+          <target state="translated">抽象共有notthrow Ternary &lt;strong id=&quot;empty&quot;&gt;empty&lt;/strong&gt;（）;</target>
         </trans-unit>
         <trans-unit id="8c8d7fce3d4fdd74a8e8b1c48fa97adc3688230a" translate="yes" xml:space="preserve">
           <source>abstract shared nothrow Ternary &lt;strong id=&quot;owns&quot;&gt;owns&lt;/strong&gt;(void[] b);</source>
@@ -2713,7 +2713,7 @@
         </trans-unit>
         <trans-unit id="286a2c08b387f4af1005a7dc380c33c80d84d314" translate="yes" xml:space="preserve">
           <source>abstract shared nothrow void[] &lt;strong id=&quot;alignedAllocate&quot;&gt;alignedAllocate&lt;/strong&gt;(size_t n, uint a);</source>
-          <target state="translated">抽象共有nothrow void [] &lt;strong id=&quot;alignedAllocate&quot;&gt;alignmentAllocate&lt;/strong&gt;（size_t n、uint a）;</target>
+          <target state="translated">抽象共有nothrow void [] &lt;strong id=&quot;alignedAllocate&quot;&gt;alignedAllocate&lt;/strong&gt;（size_t n、uint a）;</target>
         </trans-unit>
         <trans-unit id="7d244b2f152c02faa70d2001505da7efe927e999" translate="yes" xml:space="preserve">
           <source>abstract shared nothrow void[] &lt;strong id=&quot;allocate&quot;&gt;allocate&lt;/strong&gt;(size_t, TypeInfo ti = null);</source>
@@ -2793,7 +2793,7 @@
         </trans-unit>
         <trans-unit id="3f869431e3796d025d9b5bf8d0180b0416cb9c74" translate="yes" xml:space="preserve">
           <source>added in 7.10, new in 7.19.4 default is to use CONNECT HTTP/1.1</source>
-          <target state="translated">7.10 で追加され、7.19.4 の新機能ではデフォルトで CONNECT HTTP1.1 を使用するようになりました。</target>
+          <target state="translated">7.10で追加され、7.19.4ではデフォルトでCONNECT HTTP/1.1を使用するようになりました。</target>
         </trans-unit>
         <trans-unit id="8379149f4a61f047d1ac288baf16003208ad98c7" translate="yes" xml:space="preserve">
           <source>added in 7.18.0</source>
@@ -2801,7 +2801,7 @@
         </trans-unit>
         <trans-unit id="ccde6fbd330c9dfc0f65870905bf0bc35a4fdd16" translate="yes" xml:space="preserve">
           <source>added in 7.19.4, force to use CONNECT HTTP/1.0</source>
-          <target state="translated">7.19.4 で追加された、CONNECT HTTP1.0 を強制的に使用するようになった</target>
+          <target state="translated">7.19.4 で追加された、CONNECT HTTP/1.0 を強制的に使用するようになった</target>
         </trans-unit>
         <trans-unit id="07bb8f2a1713eda2b64e7bc1c1eac81b5f0651ba" translate="yes" xml:space="preserve">
           <source>additional message prefix</source>
@@ -3153,7 +3153,7 @@
         </trans-unit>
         <trans-unit id="1782de53052c855df00f1dd5074c31e3fa2933a1" translate="yes" xml:space="preserve">
           <source>alias &lt;strong id=&quot;Mt19937&quot;&gt;Mt19937&lt;/strong&gt; = MersenneTwisterEngine!(uint, 32LU, 624LU, 397LU, 31LU, 2567483615u, 11LU, 4294967295u, 7LU, 2636928640u, 15LU, 4022730752u, 18LU, 1812433253u).MersenneTwisterEngine;</source>
-          <target state="translated">エイリアス&lt;strong id=&quot;Mt19937&quot;&gt;Mt19937&lt;/strong&gt; = MersenneTwisterEngine！（uint、32LU、624LU、397LU、31LU、2567483615u、11LU、4294967295u、7LU、2636928640u、15LU、4022730752u、18LU、1812433253u）。MersenneTwisterEngine;</target>
+          <target state="translated">エイリアス&lt;strong id=&quot;Mt19937&quot;&gt;Mt19937&lt;/strong&gt; = MersenneTwisterEngine！（uint、32LU、624LU、397LU、31LU、2567483615u、11LU、4294967295u、7LU、2636928640u、15LU、4022730752u、18LU、1812433253u）.MersenneTwisterEngine;</target>
         </trans-unit>
         <trans-unit id="33f9205f17b10c29115425ecc23a619d7b727500" translate="yes" xml:space="preserve">
           <source>alias &lt;strong id=&quot;Mt19937_64&quot;&gt;Mt19937_64&lt;/strong&gt; = MersenneTwisterEngine!(ulong, 64LU, 312LU, 156LU, 31LU, 13043109905998158313LU, 29LU, 6148914691236517205LU, 17LU, 8202884508482404352LU, 37LU, 18444473444759240704LU, 43LU, 6364136223846793005LU).MersenneTwisterEngine;</source>
@@ -3429,7 +3429,7 @@
         </trans-unit>
         <trans-unit id="87d13510f865687a84e4b5f58fb2b1d2ddb2661d" translate="yes" xml:space="preserve">
           <source>alias &lt;strong id=&quot;alignment&quot;&gt;alignment&lt;/strong&gt; = ParentAllocator.&lt;strong id=&quot;alignment&quot;&gt;alignment&lt;/strong&gt;;</source>
-          <target state="translated">エイリアスの&lt;strong id=&quot;alignment&quot;&gt;配置&lt;/strong&gt; = ParentAllocator。&lt;strong id=&quot;alignment&quot;&gt;アライメント&lt;/strong&gt; ;</target>
+          <target state="translated">エイリアス&lt;strong id=&quot;alignment&quot;&gt;アライメント&lt;/strong&gt; = ParentAllocator。&lt;strong id=&quot;alignment&quot;&gt;アライメント&lt;/strong&gt; ;</target>
         </trans-unit>
         <trans-unit id="d50d5567db97149d8a526a8e094a4aaf0bd1907e" translate="yes" xml:space="preserve">
           <source>alias &lt;strong id=&quot;alignment&quot;&gt;alignment&lt;/strong&gt; = minAlign;</source>

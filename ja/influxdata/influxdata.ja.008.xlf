@@ -45,7 +45,7 @@
         </trans-unit>
         <trans-unit id="7163d23fe3e423e89c56c0fb7c7a9311df719a15" translate="yes" xml:space="preserve">
           <source>When Kapacitor starts, it will spawn our UDF process and request the &lt;code&gt;info&lt;/code&gt; data and then shutdown the process. Kapacitor will remember this information for each UDF. This way, Kapacitor can understand the available options for a given UDF before its executed inside of a task.</source>
-          <target state="translated">Kapacitorが起動すると、UDFプロセスを生成して &lt;code&gt;info&lt;/code&gt; データを要求し、プロセスをシャットダウンします。Kapacitorは各UDFのこの情報を記憶します。このようにして、Kapacitorは、タスク内で実行される前に、特定のUDFで使用可能なオプションを理解できます。</target>
+          <target state="translated">Kapacitorが起動すると、UDFプロセスを生成して &lt;code&gt;info&lt;/code&gt; データを要求し、プロセスをシャットダウンします。Kapacitorは各UDFのこの情報を記憶します。このように、Kapacitorは、タスク内で実行される前に、特定のUDFで使用可能なオプションを理解できます。</target>
         </trans-unit>
         <trans-unit id="23064d342da18e363cd0d1187c37962fa56fd449" translate="yes" xml:space="preserve">
           <source>When Kapacitor successfully connects, Chronograf automatically opens the &lt;code&gt;Configure Alert Endpoints&lt;/code&gt; section. Kapacitor supports several &lt;a href=&quot;../../troubleshooting/frequently-asked-questions/index#what-kapacitor-event-handlers-are-supported-in-chronograf&quot;&gt;alert endpoints/event handlers&lt;/a&gt;. See the &lt;a href=&quot;../../guides/configure-kapacitor-event-handlers/index&quot;&gt;Configure Kapacitor Event Handlers&lt;/a&gt; guide for more information.</source>
@@ -61,11 +61,11 @@
         </trans-unit>
         <trans-unit id="ccf6a8eef469deedcd688299689045c83282b1af" translate="yes" xml:space="preserve">
           <source>When a task starts, Kapacitor spawns a new process for the UDF and calls &lt;code&gt;init&lt;/code&gt;, passing any specified options from the TICKscript. Once initialized, the process will remain running and Kapacitor will begin sending data as it arrives.</source>
-          <target state="translated">タスクが開始すると、KapacitorはUDFの新しいプロセスを生成し、 &lt;code&gt;init&lt;/code&gt; を呼び出して、TICKscriptから指定されたオプションを渡します。初期化されると、プロセスは実行を続け、Kapacitorは到着時にデータの送信を開始します。</target>
+          <target state="translated">タスクが開始されると、KapacitorはUDFの新しいプロセスを生成し、 &lt;code&gt;init&lt;/code&gt; を呼び出して、TICKscriptから指定されたオプションを渡します。初期化されると、プロセスは実行されたままで、Kapacitorは到着時にデータの送信を開始します。</target>
         </trans-unit>
         <trans-unit id="5b5f1e30ba8c1c0528986514338a708e058bdc93" translate="yes" xml:space="preserve">
           <source>When a write comes in the new points are serialized, compressed using Snappy, and written to a WAL file. The file is &lt;code&gt;fsync&lt;/code&gt;&amp;rsquo;d and the data is added to an in-memory index before a success is returned. This means that batching points together is required to achieve high throughput performance. (Optimal batch size seems to be 5,000-10,000 points per batch for many use cases.)</source>
-          <target state="translated">書き込みが発生すると、新しいポイントがシリアル化され、Snappyを使用して圧縮され、WALファイルに書き込まれます。ファイルは &lt;code&gt;fsync&lt;/code&gt; され、成功が返される前にデータがメモリ内インデックスに追加されます。つまり、高いスループットパフォーマンスを実現するには、ポイントをバッチ処理する必要があります。（多くのユースケースでは、最適なバッチサイズはバッチあたり5,000〜10,000ポイントのようです。）</target>
+          <target state="translated">書き込みが発生すると、新しいポイントがシリアル化され、Snappyを使用して圧縮され、WALファイルに書き込まれます。ファイルは &lt;code&gt;fsync&lt;/code&gt; され、成功が返される前にデータがメモリ内インデックスに追加されます。つまり、高スループットパフォーマンスを実現するには、ポイントをバッチ処理する必要があります。（多くのユースケースでは、バッチあたりの最適なバッチサイズは5,000〜10,000ポイントのようです。）</target>
         </trans-unit>
         <trans-unit id="0e9809b53b274474c0fabb632119d74ab21cbc97" translate="yes" xml:space="preserve">
           <source>When authentication is enabled, InfluxDB only executes HTTP requests that are sent with a valid username and password. See &lt;a href=&quot;../../query_language/authentication_and_authorization/index&quot;&gt;Authentication and Authorization&lt;/a&gt;.</source>
@@ -73,11 +73,11 @@
         </trans-unit>
         <trans-unit id="c70092b78e721b4ec3b2a29e64c418298b1bee07" translate="yes" xml:space="preserve">
           <source>When combined with an &lt;a href=&quot;../data_exploration/index#the-into-clause&quot;&gt;&lt;code&gt;INTO&lt;/code&gt; clause&lt;/a&gt; and no &lt;a href=&quot;../data_exploration/index#group-by-tags&quot;&gt;&lt;code&gt;GROUP BY tag&lt;/code&gt; clause&lt;/a&gt;, most InfluxQL functions &lt;a href=&quot;../../troubleshooting/frequently-asked-questions/index#why-are-my-into-queries-missing-data&quot;&gt;convert&lt;/a&gt; any tags in the initial data to fields in the newly written data. This behavior also applies to the &lt;code&gt;BOTTOM()&lt;/code&gt; function unless &lt;code&gt;BOTTOM()&lt;/code&gt; includes a tag key as an argument: &lt;code&gt;BOTTOM(field_key,tag_key(s),N)&lt;/code&gt;. In those cases, the system preserves the specified tag as a tag in the newly written data.</source>
-          <target state="translated">組み合わせると&lt;a href=&quot;../data_exploration/index#the-into-clause&quot;&gt; &lt;code&gt;INTO&lt;/code&gt; の句&lt;/a&gt;なし&lt;a href=&quot;../data_exploration/index#group-by-tags&quot;&gt; &lt;code&gt;GROUP BY tag&lt;/code&gt; 句&lt;/a&gt;、最もInfluxQL機能は&lt;a href=&quot;../../troubleshooting/frequently-asked-questions/index#why-are-my-into-queries-missing-data&quot;&gt;変換&lt;/a&gt;新しく書き込まれたデータのフィールドに初期データ内の任意のタグを。この現象は、に適用 &lt;code&gt;BOTTOM()&lt;/code&gt; しない限り、関数 &lt;code&gt;BOTTOM()&lt;/code&gt; 引数としてタグキー含む： &lt;code&gt;BOTTOM(field_key,tag_key(s),N)&lt;/code&gt; 。このような場合、システムは指定されたタグを新しく書き込まれたデータのタグとして保存します。</target>
+          <target state="translated">組み合わせると&lt;a href=&quot;../data_exploration/index#the-into-clause&quot;&gt; &lt;code&gt;INTO&lt;/code&gt; の句&lt;/a&gt;なし&lt;a href=&quot;../data_exploration/index#group-by-tags&quot;&gt; &lt;code&gt;GROUP BY tag&lt;/code&gt; 句&lt;/a&gt;、最もInfluxQL機能は&lt;a href=&quot;../../troubleshooting/frequently-asked-questions/index#why-are-my-into-queries-missing-data&quot;&gt;変換&lt;/a&gt;新しく書き込まれたデータのフィールドに初期データ内の任意のタグを。この現象は、に適用 &lt;code&gt;BOTTOM()&lt;/code&gt; しない限り、関数 &lt;code&gt;BOTTOM()&lt;/code&gt; 引数としてタグキー含む： &lt;code&gt;BOTTOM(field_key,tag_key(s),N)&lt;/code&gt; 。これらの場合、システムは指定されたタグを新しく書き込まれたデータのタグとして保存します。</target>
         </trans-unit>
         <trans-unit id="387c5c88e659457869375cd33373205f25d020e6" translate="yes" xml:space="preserve">
           <source>When combined with an &lt;a href=&quot;../data_exploration/index#the-into-clause&quot;&gt;&lt;code&gt;INTO&lt;/code&gt; clause&lt;/a&gt; and no &lt;a href=&quot;../data_exploration/index#group-by-tags&quot;&gt;&lt;code&gt;GROUP BY tag&lt;/code&gt; clause&lt;/a&gt;, most InfluxQL functions &lt;a href=&quot;../../troubleshooting/frequently-asked-questions/index#why-are-my-into-queries-missing-data&quot;&gt;convert&lt;/a&gt; any tags in the initial data to fields in the newly written data. This behavior also applies to the &lt;code&gt;TOP()&lt;/code&gt; function unless &lt;code&gt;TOP()&lt;/code&gt; includes a tag key as an argument: &lt;code&gt;TOP(field_key,tag_key(s),N)&lt;/code&gt;. In those cases, the system preserves the specified tag as a tag in the newly written data.</source>
-          <target state="translated">組み合わせると&lt;a href=&quot;../data_exploration/index#the-into-clause&quot;&gt; &lt;code&gt;INTO&lt;/code&gt; の句&lt;/a&gt;なし&lt;a href=&quot;../data_exploration/index#group-by-tags&quot;&gt; &lt;code&gt;GROUP BY tag&lt;/code&gt; 句&lt;/a&gt;、最もInfluxQL機能は&lt;a href=&quot;../../troubleshooting/frequently-asked-questions/index#why-are-my-into-queries-missing-data&quot;&gt;変換&lt;/a&gt;新しく書き込まれたデータのフィールドに初期データ内の任意のタグを。 &lt;code&gt;TOP()&lt;/code&gt; に引数として &lt;code&gt;TOP(field_key,tag_key(s),N)&lt;/code&gt; 含まれていない限り、この動作は &lt;code&gt;TOP()&lt;/code&gt; 関数にも適用されます：TOP（field_key、tag_key（s）、N）。このような場合、システムは指定されたタグを新しく書き込まれたデータのタグとして保存します。</target>
+          <target state="translated">組み合わせると&lt;a href=&quot;../data_exploration/index#the-into-clause&quot;&gt; &lt;code&gt;INTO&lt;/code&gt; の句&lt;/a&gt;なし&lt;a href=&quot;../data_exploration/index#group-by-tags&quot;&gt; &lt;code&gt;GROUP BY tag&lt;/code&gt; 句&lt;/a&gt;、最もInfluxQL機能は&lt;a href=&quot;../../troubleshooting/frequently-asked-questions/index#why-are-my-into-queries-missing-data&quot;&gt;変換&lt;/a&gt;新しく書き込まれたデータのフィールドに初期データ内の任意のタグを。 &lt;code&gt;TOP()&lt;/code&gt; に引数として &lt;code&gt;TOP(field_key,tag_key(s),N)&lt;/code&gt; 含まれていない限り、この動作は &lt;code&gt;TOP()&lt;/code&gt; 関数にも適用されます：TOP（field_key、tag_key（s）、N）。これらの場合、システムは指定されたタグを新しく書き込まれたデータのタグとして保存します。</target>
         </trans-unit>
         <trans-unit id="68241071380146ba731ca7c06611a128a9afd8c0" translate="yes" xml:space="preserve">
           <source>When connecting nodes the TICKscript language will not prevent you from connecting edges of the wrong type but rather the check will be performed at runtime. So just be aware that a syntactically correct script may define a pipeline that is invalid.</source>
@@ -137,11 +137,11 @@
         </trans-unit>
         <trans-unit id="6faff7c49023bcd13fafb68795dcbccf6069bcef" translate="yes" xml:space="preserve">
           <source>When the CQ executes, it runs a single query for the time range between &lt;a href=&quot;../../concepts/glossary/index#now&quot;&gt;&lt;code&gt;now()&lt;/code&gt;&lt;/a&gt; and &lt;code&gt;now()&lt;/code&gt; minus the &lt;code&gt;FOR&lt;/code&gt; interval in the &lt;code&gt;RESAMPLE&lt;/code&gt; clause. If the &lt;code&gt;FOR&lt;/code&gt; interval is two hours and the current time is 17:00, the query&amp;rsquo;s time range is between 15:00 and 16:59.999999999.</source>
-          <target state="translated">CQが実行されると、&lt;a href=&quot;../../concepts/glossary/index#now&quot;&gt; &lt;code&gt;now()&lt;/code&gt; &lt;/a&gt;から &lt;code&gt;now()&lt;/code&gt; を引いた時間範囲から &lt;code&gt;RESAMPLE&lt;/code&gt; 句の &lt;code&gt;FOR&lt;/code&gt; 間隔を引いたものに対して単一のクエリが実行されます。場合 &lt;code&gt;FOR&lt;/code&gt; の間隔は2時間ですと、現在の時刻17:00で、クエリの時間帯は、15時00分と16の間にある：59.999999999。</target>
+          <target state="translated">CQが実行されると、&lt;a href=&quot;../../concepts/glossary/index#now&quot;&gt; &lt;code&gt;now()&lt;/code&gt; &lt;/a&gt;と &lt;code&gt;now()&lt;/code&gt; から &lt;code&gt;RESAMPLE&lt;/code&gt; 句の &lt;code&gt;FOR&lt;/code&gt; インターバルを引いた時間の範囲に対して単一のクエリが実行されます。場合 &lt;code&gt;FOR&lt;/code&gt; の間隔は2時間ですと、現在の時刻17:00で、クエリの時間帯は、15時00分と16の間にある：59.999999999。</target>
         </trans-unit>
         <trans-unit id="74943598eee40e280d404a5ae3d37fbe16c9c48b" translate="yes" xml:space="preserve">
           <source>When the CQ executes, it runs a single query for the time range between &lt;a href=&quot;../../concepts/glossary/index#now&quot;&gt;&lt;code&gt;now()&lt;/code&gt;&lt;/a&gt; and &lt;code&gt;now()&lt;/code&gt; minus the &lt;code&gt;GROUP BY time()&lt;/code&gt; interval. If the &lt;code&gt;GROUP BY time()&lt;/code&gt; interval is one hour and the current time is 17:00, the query&amp;rsquo;s time range is between 16:00 and 16:59.999999999.</source>
-          <target state="translated">CQが実行されると、&lt;a href=&quot;../../concepts/glossary/index#now&quot;&gt; &lt;code&gt;now()&lt;/code&gt; &lt;/a&gt;と &lt;code&gt;now()&lt;/code&gt; から &lt;code&gt;GROUP BY time()&lt;/code&gt; インターバルを引いた時間範囲に対して単一のクエリが実行されます。場合は &lt;code&gt;GROUP BY time()&lt;/code&gt; 59.999999999：間隔は1時間で、現在の時刻17:00で、クエリの時間帯は、午後04時と16の間にあります。</target>
+          <target state="translated">CQが実行されると、&lt;a href=&quot;../../concepts/glossary/index#now&quot;&gt; &lt;code&gt;now()&lt;/code&gt; &lt;/a&gt;と &lt;code&gt;now()&lt;/code&gt; から &lt;code&gt;GROUP BY time()&lt;/code&gt; インターバルを差し引いた時間範囲に対して単一のクエリが実行されます。場合は &lt;code&gt;GROUP BY time()&lt;/code&gt; 59.999999999：間隔は1時間で、現在の時刻17:00で、クエリの時間帯は、午後04時と16の間にあります。</target>
         </trans-unit>
         <trans-unit id="dc97f1c79e75e086f9f77674cef63c0380995819" translate="yes" xml:space="preserve">
           <source>When the InfluxDB project began, we picked LevelDB as the storage engine because we had used it for time series data storage in the product that was the precursor to InfluxDB. We knew that it had great properties for write throughput and everything seemed to &amp;ldquo;just work&amp;rdquo;.</source>
@@ -157,7 +157,7 @@
         </trans-unit>
         <trans-unit id="4548d5596286b6707de3bef402fe0e52593b7d47" translate="yes" xml:space="preserve">
           <source>When using a numerical or null fill, the fields names are determined by copying the field names from another point. This doesn't work well when different sources have different field names. Use the &lt;a href=&quot;../default_node/index&quot;&gt;DefaultNode&lt;/a&gt; and &lt;a href=&quot;../delete_node/index&quot;&gt;DeleteNode&lt;/a&gt; to finalize the fill operation if necessary.</source>
-          <target state="translated">数値またはヌルの塗りつぶしを使用する場合、フィールド名は別のポイントからフィールド名をコピーすることによって決定されます。異なるソースに異なるフィールド名がある場合、これはうまく機能しません。必要に応じて、&lt;a href=&quot;../default_node/index&quot;&gt;DefaultNode&lt;/a&gt;および&lt;a href=&quot;../delete_node/index&quot;&gt;DeleteNode&lt;/a&gt;を使用して、塗りつぶし操作を終了します。</target>
+          <target state="translated">数値またはヌルの塗りつぶしを使用する場合、フィールド名は別のポイントからフィールド名をコピーすることによって決定されます。異なるソースに異なるフィールド名がある場合、これはうまく機能しません。必要に応じて、&lt;a href=&quot;../default_node/index&quot;&gt;DefaultNode&lt;/a&gt;および&lt;a href=&quot;../delete_node/index&quot;&gt;DeleteNode&lt;/a&gt;を使用して塗りつぶし操作を終了します。</target>
         </trans-unit>
         <trans-unit id="a4a5b51b36831a03cf310ce3d230b87eb6bb64d2" translate="yes" xml:space="preserve">
           <source>When using non-standard directories for InfluxDB data and configurations, also be sure to set filesystem permissions correctly:</source>
@@ -169,11 +169,11 @@
         </trans-unit>
         <trans-unit id="ba3547bd29e029c01ed1d10c9bf799bc27b3342d" translate="yes" xml:space="preserve">
           <source>When you create a database, InfluxDB automatically creates a retention policy called &lt;code&gt;autogen&lt;/code&gt; with an infinite duration, a replication factor set to one, and a shard group duration set to seven days. See &lt;a href=&quot;../../query_language/database_management/index#retention-policy-management&quot;&gt;Database Management&lt;/a&gt; for retention policy management.</source>
-          <target state="translated">データベースを作成すると、InfluxDBは &lt;code&gt;autogen&lt;/code&gt; と呼ばれる保持ポリシーを自動的に作成し、期間は無期限、レプリケーション係数は1に、シャードグループ期間は7日に設定されます。保存ポリシー管理については、&lt;a href=&quot;../../query_language/database_management/index#retention-policy-management&quot;&gt;データベース管理&lt;/a&gt;を参照してください。</target>
+          <target state="translated">データベースを作成すると、InfluxDBは &lt;code&gt;autogen&lt;/code&gt; と呼ばれる保持ポリシーを自動的に作成し、期間は無限、レプリケーション係数は1に、シャードグループ期間は7日に設定されます。保存ポリシー管理については、&lt;a href=&quot;../../query_language/database_management/index#retention-policy-management&quot;&gt;データベース管理&lt;/a&gt;を参照してください。</target>
         </trans-unit>
         <trans-unit id="11bf957635eedc92d7e206d60297222f3488980c" translate="yes" xml:space="preserve">
           <source>When you create a new &lt;code&gt;DEFAULT&lt;/code&gt; retention policy (RP) on a database, the data written to the old &lt;code&gt;DEFAULT&lt;/code&gt; RP remain in the old RP. Queries that do not specify an RP automatically query the new &lt;code&gt;DEFAULT&lt;/code&gt; RP so the old data may appear to be missing. To query the old data you must fully qualify the relevant data in the query.</source>
-          <target state="translated">データベースに新しい &lt;code&gt;DEFAULT&lt;/code&gt; 保持ポリシー（RP）を作成すると、古い &lt;code&gt;DEFAULT&lt;/code&gt; RPに書き込まれたデータは古いRPに残ります。RPを指定しないクエリは、新しい &lt;code&gt;DEFAULT&lt;/code&gt; RPを自動的にクエリするため、古いデータが欠落しているように見える場合があります。古いデータをクエリするには、クエリ内の関連データを完全に修飾する必要があります。</target>
+          <target state="translated">データベースに新しい &lt;code&gt;DEFAULT&lt;/code&gt; 保存ポリシー（RP）を作成すると、古い &lt;code&gt;DEFAULT&lt;/code&gt; RPに書き込まれたデータは古いRPに残ります。RPを指定しないクエリは、新しい &lt;code&gt;DEFAULT&lt;/code&gt; RPを自動的にクエリするため、古いデータが欠落しているように見える場合があります。古いデータをクエリするには、クエリ内の関連データを完全に修飾する必要があります。</target>
         </trans-unit>
         <trans-unit id="be7fec15df337d163f0eb5f8cba5c79fe8103c38" translate="yes" xml:space="preserve">
           <source>When you enable HTTP authentication, InfluxDB requires you to create at least one admin user before you can interact with the system.</source>
@@ -197,7 +197,7 @@
         </trans-unit>
         <trans-unit id="5a944dad1b247ccd211425e653aa6d2ddfdff99c" translate="yes" xml:space="preserve">
           <source>Where &lt;code&gt;mydatabase&lt;/code&gt; is the name of the database you would like to backup, and &lt;code&gt;path-to-backup&lt;/code&gt; is where the backup data should be stored. Optional flags also include:</source>
-          <target state="translated">どこ &lt;code&gt;mydatabase&lt;/code&gt; データベースの名前です、あなたはバックアップしたい、と &lt;code&gt;path-to-backup&lt;/code&gt; 、バックアップデータを格納する場所です。オプションのフラグには次のものも含まれます。</target>
+          <target state="translated">どこ &lt;code&gt;mydatabase&lt;/code&gt; データベースの名前です、あなたはバックアップしたい、と &lt;code&gt;path-to-backup&lt;/code&gt; 、バックアップデータを格納する場所です。オプションのフラグには、次のものも含まれます。</target>
         </trans-unit>
         <trans-unit id="d969fedb9d3389d1982c3a3634168d426f3b230b" translate="yes" xml:space="preserve">
           <source>Where &lt;code&gt;path-to-backup&lt;/code&gt; can be replaced with the directory where you would like the backup to be written to. Without any other arguments, the backup will only record the current state of the system metastore. For example, the command:</source>
@@ -233,7 +233,7 @@
         </trans-unit>
         <trans-unit id="8e449a3167fcc151d293fae69488075f8a0f0077" translate="yes" xml:space="preserve">
           <source>Which define the type of task that you are running (either &lt;a href=&quot;../introduction/getting_started/index#trigger-alert-from-stream-data&quot;&gt;stream&lt;/a&gt; or &lt;a href=&quot;../introduction/getting_started/index#trigger-alert-from-batch-data&quot;&gt;batch&lt;/a&gt;). The other available property methods are:</source>
-          <target state="translated">実行しているタスクのタイプを定義するもの（&lt;a href=&quot;../introduction/getting_started/index#trigger-alert-from-stream-data&quot;&gt;stream&lt;/a&gt;または&lt;a href=&quot;../introduction/getting_started/index#trigger-alert-from-batch-data&quot;&gt;batch&lt;/a&gt;）。その他の使用可能なプロパティメソッドは次のとおりです。</target>
+          <target state="translated">実行しているタスクのタイプ（&lt;a href=&quot;../introduction/getting_started/index#trigger-alert-from-stream-data&quot;&gt;ストリーム&lt;/a&gt;または&lt;a href=&quot;../introduction/getting_started/index#trigger-alert-from-batch-data&quot;&gt;バッチ&lt;/a&gt;）を定義するもの。その他の使用可能なプロパティメソッドは次のとおりです。</target>
         </trans-unit>
         <trans-unit id="1d327a8abe054e864dd597ca6d17e6917ef45366" translate="yes" xml:space="preserve">
           <source>Which means the following influx metric -&amp;gt; graphite conversion would happen:</source>
@@ -293,7 +293,7 @@
         </trans-unit>
         <trans-unit id="30f0f8ac0fb18300b680854587a392123111282b" translate="yes" xml:space="preserve">
           <source>Why can&amp;rsquo;t I query boolean field values?</source>
-          <target state="translated">ブールフィールド値をクエリできないのはなぜですか？</target>
+          <target state="translated">ブール値をクエリできないのはなぜですか？</target>
         </trans-unit>
         <trans-unit id="6339e1ba28a91d1a75856d196116d7214a18e0eb" translate="yes" xml:space="preserve">
           <source>Why do my queries return no data or partial data?</source>
@@ -389,7 +389,7 @@
         </trans-unit>
         <trans-unit id="a160e60c7c80db63a3562c242392cf55222306ca" translate="yes" xml:space="preserve">
           <source>With InfluxDB &lt;a href=&quot;../installation/index&quot;&gt;installed&lt;/a&gt;, you&amp;rsquo;re ready to start doing some awesome things. In this section we&amp;rsquo;ll use the &lt;code&gt;influx&lt;/code&gt;&lt;a href=&quot;../../tools/shell/index&quot;&gt;command line interface&lt;/a&gt; (CLI), which is included in all InfluxDB packages and is a lightweight and simple way to interact with the database. The CLI communicates with InfluxDB directly by making requests to the InfluxDB HTTP API over port &lt;code&gt;8086&lt;/code&gt; by default.</source>
-          <target state="translated">InfluxDBが&lt;a href=&quot;../installation/index&quot;&gt;インストールされ&lt;/a&gt;たら、すばらしいことを始める準備が整います。このセクションでは、 &lt;code&gt;influx&lt;/code&gt; &lt;a href=&quot;../../tools/shell/index&quot;&gt;コマンドラインインターフェイス&lt;/a&gt;（CLI）を使用します。CLIはすべてのInfluxDBパッケージに含まれており、データベースと対話するための軽量でシンプルな方法です。CLIは、デフォルトでポート &lt;code&gt;8086&lt;/code&gt; を介してInfluxDB HTTP APIにリクエストを送信することにより、InfluxDBと直接通信します。</target>
+          <target state="translated">InfluxDBが&lt;a href=&quot;../installation/index&quot;&gt;インストールされ&lt;/a&gt;たら、すばらしいことを始める準備が整います。このセクションでは、すべてのInfluxDBパッケージに含まれ、データベースと対話するための軽量でシンプルな方法である &lt;code&gt;influx&lt;/code&gt; &lt;a href=&quot;../../tools/shell/index&quot;&gt;コマンドラインインターフェイス&lt;/a&gt;（CLI）を使用します。CLIは、デフォルトでポート &lt;code&gt;8086&lt;/code&gt; を介してInfluxDB HTTP APIにリクエストを送信することにより、InfluxDBと直接通信します。</target>
         </trans-unit>
         <trans-unit id="c9586441e2059b0f84331c5ca1d3c2c2feec522f" translate="yes" xml:space="preserve">
           <source>With InfluxDB&amp;rsquo;s &lt;a href=&quot;../../tools/api/index&quot;&gt;HTTP API&lt;/a&gt;:</source>
@@ -397,11 +397,11 @@
         </trans-unit>
         <trans-unit id="64140b2fb22bb44d9ff4e4274ad4cb24dbddc1ac" translate="yes" xml:space="preserve">
           <source>With InfluxDB&amp;rsquo;s query management features, users are able to identify currently-running queries and have the ability to kill queries that are overloading their system. Additionally, users can prevent and halt the execution of inefficient queries with several configuration settings.</source>
-          <target state="translated">InfluxDBのクエリ管理機能を使用すると、ユーザーは現在実行中のクエリを識別し、システムに負荷をかけているクエリを強制終了することができます。さらに、ユーザーはいくつかの構成設定で非効率的なクエリの実行を防止および停止できます。</target>
+          <target state="translated">InfluxDBのクエリ管理機能を使用すると、ユーザーは現在実行中のクエリを識別し、システムに負荷をかけているクエリを強制終了することができます。さらに、ユーザーは、いくつかの構成設定で非効率的なクエリの実行を防止および停止できます。</target>
         </trans-unit>
         <trans-unit id="fb0c006daa3994531be001bfe722fcccefa22dd0" translate="yes" xml:space="preserve">
           <source>With InfluxDB&amp;rsquo;s query management features, users are able to identify currently-running queries, kill queries that are overloading their system, and prevent and halt the execution of inefficient queries with several configuration settings.</source>
-          <target state="translated">InfluxDBのクエリ管理機能を使用すると、ユーザーは現在実行中のクエリを識別し、システムに負荷をかけているクエリを強制終了し、いくつかの構成設定で非効率的なクエリの実行を防止および停止できます。</target>
+          <target state="translated">InfluxDBのクエリ管理機能により、ユーザーは現在実行中のクエリを識別し、システムに負荷をかけているクエリを強制終了し、いくつかの構成設定で非効率的なクエリの実行を防止および停止できます。</target>
         </trans-unit>
         <trans-unit id="57751f3fdfa8ed57210cbf95aeff6979eedec0f8" translate="yes" xml:space="preserve">
           <source>With our new storage engine we were able to achieve up to a 45x reduction in disk space usage from our B+Tree setup with even greater write throughput and compression than what we saw with LevelDB and its variants. This post will cover the details of that evolution and end with an in-depth look at our new storage engine and its inner workings.</source>
@@ -413,7 +413,7 @@
         </trans-unit>
         <trans-unit id="6c46ba3ddb569769a970a10eb8931040b455567e" translate="yes" xml:space="preserve">
           <source>With the 0.9.3 and 0.9.4 releases our plan was to put a write ahead log (WAL) in front of Bolt. That way we could reduce the number of random insertions into the keyspace. Instead, we&amp;rsquo;d buffer up multiple writes that were next to each other and then flush them at once. However, that only served to delay the problem. High IOPS still became an issue and it showed up very quickly for anyone operating at even moderate work loads.</source>
-          <target state="translated">0.9.3および0.9.4リリースでは、Boltの前に先読みログ（WAL）を配置することが計画されていました。そうすれば、キースペースへのランダムな挿入の数を減らすことができます。代わりに、隣接していた複数の書き込みをバッファーに入れ、一度にフラッシュします。しかし、それは問題を遅らせるのに役立ちました。高いIOPSは依然として問題となっており、中程度の作業負荷で動作している人にとっては非常に迅速に現れました。</target>
+          <target state="translated">0.9.3および0.9.4リリースでは、Boltの前に先読みログ（WAL）を配置することが計画されていました。そうすれば、キースペースへのランダム挿入の数を減らすことができます。代わりに、隣り合った複数の書き込みをバッファーに入れ、一度にフラッシュします。しかし、それは問題を遅らせるのに役立ちました。高いIOPSは依然として問題となっており、中程度の作業負荷で動作している人にとっては非常に迅速に現れました。</target>
         </trans-unit>
         <trans-unit id="a7347462c2733d1febe90f76c1a7f139248a9337" translate="yes" xml:space="preserve">
           <source>With the basic syntax, InfluxDB relies on the &lt;code&gt;GROUP BY time()&lt;/code&gt; interval and on the system&amp;rsquo;s preset time boundaries to determine the raw data included in each time interval and the timestamps returned by the query. In some cases, this can lead to unexpected results.</source>
@@ -433,7 +433,7 @@
         </trans-unit>
         <trans-unit id="b49f5c42581a87021ee74b1137d30dbddd239011" translate="yes" xml:space="preserve">
           <source>With the new CQ and two new RPs, &lt;code&gt;food_data&lt;/code&gt; is ready to start receiving data. After writing data to our database and letting things run for a bit, we see two measurements: &lt;code&gt;orders&lt;/code&gt; and &lt;code&gt;downsampled_orders&lt;/code&gt;.</source>
-          <target state="translated">新しいCQと2つの新しいRPで、 &lt;code&gt;food_data&lt;/code&gt; はデータの受信を開始する準備ができています。データベースにデータを書き込んで少し実行すると、2つの測定値、 &lt;code&gt;orders&lt;/code&gt; と &lt;code&gt;downsampled_orders&lt;/code&gt; が表示されます。</target>
+          <target state="translated">新しいCQと2つの新しいRPで、 &lt;code&gt;food_data&lt;/code&gt; はデータの受信を開始する準備ができています。データベースにデータを書き込んで少し実行した後、 &lt;code&gt;orders&lt;/code&gt; と &lt;code&gt;downsampled_orders&lt;/code&gt; の 2つの測定値が表示されます。</target>
         </trans-unit>
         <trans-unit id="e5bcff0bc917d73ba44049b164a895d1adbc1c0f" translate="yes" xml:space="preserve">
           <source>With this change alert nodes will have an anonymous topic created for them. This topic is managed like all other topics preserving state etc. across restarts. As a result existing alert nodes will now remember the state of alerts after restarts and disiabling/enabling a task.</source>
@@ -441,19 +441,19 @@
         </trans-unit>
         <trans-unit id="2c0400e4d288e94446977dc6b664b076eef0d234" translate="yes" xml:space="preserve">
           <source>With this release the systemd configuration files for InfluxDB will use the system configured default for logging and will no longer write files to &lt;code&gt;/var/log/influxdb&lt;/code&gt; by default. On most systems, the logs will be directed to the systemd journal and can be accessed by &lt;code&gt;journalctl -u influxdb.service&lt;/code&gt;. Consult the systemd journald documentation for configuring journald.</source>
-          <target state="translated">このリリースでは、InfluxDBのsystemd構成ファイルは、システム構成のデフォルトのロギングを使用し、デフォルトでは &lt;code&gt;/var/log/influxdb&lt;/code&gt; にファイルを書き込みません。ほとんどのシステムでは、ログはsystemdジャーナルに &lt;code&gt;journalctl -u influxdb.service&lt;/code&gt; され、journalctl -u influxdb.serviceでアクセスできます。ジャーナルの設定については、systemdのjournaldのドキュメントを参照してください。</target>
+          <target state="translated">このリリースでは、InfluxDBのsystemd構成ファイルはシステム構成のデフォルトのロギングを使用し、デフォルトでは &lt;code&gt;/var/log/influxdb&lt;/code&gt; にファイルを書き込みません。ほとんどのシステムでは、ログはsystemdジャーナルに &lt;code&gt;journalctl -u influxdb.service&lt;/code&gt; され、journalctl -u influxdb.serviceでアクセスできます。ジャーナルの設定については、systemdのジャーナルのドキュメントを参照してください。</target>
         </trans-unit>
         <trans-unit id="06075719b6bbc4e1e8c63dd8284d5cc713bf4538" translate="yes" xml:space="preserve">
           <source>Within a measurement, a field&amp;rsquo;s type cannot differ within a &lt;a href=&quot;../../concepts/glossary/index#shard&quot;&gt;shard&lt;/a&gt;, but it can differ across shards. For example, writing an integer to a field that previously accepted floats fails if InfluxDB attempts to store the integer in the same shard as the floats:</source>
-          <target state="translated">測定内では、フィールドのタイプは&lt;a href=&quot;../../concepts/glossary/index#shard&quot;&gt;シャード&lt;/a&gt;内で異なることはできませんが、シャード間で異なる場合があります。たとえば、InfluxDBが整数を浮動小数点数と同じシャードに保存しようとすると、以前に浮動小数点数を受け入れていたフィールドに整数を書き込むことができません。</target>
+          <target state="translated">測定内では、フィールドのタイプは&lt;a href=&quot;../../concepts/glossary/index#shard&quot;&gt;シャード&lt;/a&gt;内で異なることはできませんが、シャード間で異なる場合があります。たとえば、InfluxDBが整数を浮動小数点数と同じシャードに格納しようとすると、以前に浮動小数点数を受け入れていたフィールドに整数を書き込むことができません。</target>
         </trans-unit>
         <trans-unit id="f36c3a8be5559fba8d6b0c549bbab54a5837d9f5" translate="yes" xml:space="preserve">
           <source>Within a measurement, a field&amp;rsquo;s type cannot differ within a &lt;a href=&quot;../../concepts/glossary/index#shard&quot;&gt;shard&lt;/a&gt;, but it can differ across shards. See &lt;a href=&quot;../../troubleshooting/frequently-asked-questions/index#how-does-influxdb-handle-field-type-discrepancies-across-shards&quot;&gt;Frequently Asked Questions&lt;/a&gt; for how field value type discrepancies can affect &lt;code&gt;SELECT *&lt;/code&gt; queries.</source>
-          <target state="translated">測定内では、フィールドのタイプは&lt;a href=&quot;../../concepts/glossary/index#shard&quot;&gt;シャード&lt;/a&gt;内で異なることはできませんが、シャード間で異なる場合があります。フィールド値のタイプの不一致が &lt;code&gt;SELECT *&lt;/code&gt; クエリにどのように影響するかについては、&lt;a href=&quot;../../troubleshooting/frequently-asked-questions/index#how-does-influxdb-handle-field-type-discrepancies-across-shards&quot;&gt;よくある質問&lt;/a&gt;を参照してください。</target>
+          <target state="translated">測定内では、フィールドのタイプは&lt;a href=&quot;../../concepts/glossary/index#shard&quot;&gt;シャード&lt;/a&gt;内で異なることはできませんが、シャード間で異なる場合があります。フィールド値タイプの不一致が &lt;code&gt;SELECT *&lt;/code&gt; クエリにどのように影響するかについては、&lt;a href=&quot;../../troubleshooting/frequently-asked-questions/index#how-does-influxdb-handle-field-type-discrepancies-across-shards&quot;&gt;よくある質問&lt;/a&gt;を参照してください。</target>
         </trans-unit>
         <trans-unit id="deb606a67a0b07a850ac0ea95342738eec83449f" translate="yes" xml:space="preserve">
           <source>Within each expression the &lt;code&gt;time&lt;/code&gt; field contains the time of the current data point. The following functions can be used on the &lt;code&gt;time&lt;/code&gt; field. Each function returns an int64.</source>
-          <target state="translated">各式内の &lt;code&gt;time&lt;/code&gt; フィールドには、現在のデータポイントの時間が含まれます。 &lt;code&gt;time&lt;/code&gt; フィールドでは、次の関数を使用できます。各関数はint64を返します。</target>
+          <target state="translated">各式の &lt;code&gt;time&lt;/code&gt; フィールドには、現在のデータポイントの時間が含まれます。 &lt;code&gt;time&lt;/code&gt; フィールドでは、次の関数を使用できます。各関数はint64を返します。</target>
         </trans-unit>
         <trans-unit id="8b5b09b955a194b5f73d5af687c909c8a1945f9c" translate="yes" xml:space="preserve">
           <source>Without &lt;code&gt;OFFSET 2&lt;/code&gt;, the query would return the first two averages of the query results:</source>
@@ -525,7 +525,7 @@
         </trans-unit>
         <trans-unit id="d1407e67c1d792ad12cbe692b3e0aa30ae98091f" translate="yes" xml:space="preserve">
           <source>Write data to InfluxDB using the HTTP API. Send a &lt;code&gt;POST&lt;/code&gt; request to the &lt;code&gt;/write&lt;/code&gt; endpoint and provide your Line Protocol in the request body:</source>
-          <target state="translated">HTTP APIを使用してInfluxDBにデータを書き込みます。 &lt;code&gt;/write&lt;/code&gt; エンドポイントに &lt;code&gt;POST&lt;/code&gt; リクエストを送信し、リクエスト本文にラインプロトコルを指定します。</target>
+          <target state="translated">HTTP APIを使用してデータをInfluxDBに書き込みます。 &lt;code&gt;/write&lt;/code&gt; エンドポイントに &lt;code&gt;POST&lt;/code&gt; リクエストを送信し、リクエストの本文にラインプロトコルを指定します。</target>
         </trans-unit>
         <trans-unit id="cd78eb1230363ae91a0e86f0fab1038dbc6fe0bc" translate="yes" xml:space="preserve">
           <source>Write data to InfluxDB with &lt;code&gt;insert&lt;/code&gt;</source>
@@ -537,7 +537,7 @@
         </trans-unit>
         <trans-unit id="5011343abd0fa4b99255003aea775db1d254a736" translate="yes" xml:space="preserve">
           <source>Write data to a single field in the measurement &lt;code&gt;treasures&lt;/code&gt; with the tag &lt;code&gt;captain_id = pirate_king&lt;/code&gt;. &lt;code&gt;influx&lt;/code&gt; automatically writes the point to the database&amp;rsquo;s &lt;code&gt;DEFAULT&lt;/code&gt; retention policy.</source>
-          <target state="translated">タグ &lt;code&gt;captain_id = pirate_king&lt;/code&gt; して、測定の &lt;code&gt;treasures&lt;/code&gt; 単一フィールドにデータを書き込みます。 &lt;code&gt;influx&lt;/code&gt; は、ポイントをデータベースの &lt;code&gt;DEFAULT&lt;/code&gt; 保存ポリシーに自動的に書き込みます。</target>
+          <target state="translated">タグ &lt;code&gt;captain_id = pirate_king&lt;/code&gt; して、測定の &lt;code&gt;treasures&lt;/code&gt; 単一フィールドにデータを書き込みます。 &lt;code&gt;influx&lt;/code&gt; はデータベースの &lt;code&gt;DEFAULT&lt;/code&gt; 保持ポリシーにポイントを自動的に書き込みます。</target>
         </trans-unit>
         <trans-unit id="24458660315c3d60216312858bdc0d7f91f636d7" translate="yes" xml:space="preserve">
           <source>Write path stats.</source>
@@ -717,15 +717,15 @@
         </trans-unit>
         <trans-unit id="0cacc8b75c04ea49e2a03f578978295bd9f479bf" translate="yes" xml:space="preserve">
           <source>You are performing a significant number of CQs and want to isolate the work load. By using Kapacitor to perform the aggregations InfluxDB&amp;rsquo;s performance profile can remain more stable and isolated from Kapacitor&amp;rsquo;s.</source>
-          <target state="translated">多数のCQを実行しており、作業負荷を分離したい。Kapacitorを使用して集計を実行することにより、InfluxDBのパフォーマンスプロファイルをより安定した状態に保ち、Kapacitorから分離することができます。</target>
+          <target state="translated">多数のCQを実行しており、作業負荷を分離したい。Kapacitorを使用して集計を実行することで、InfluxDBのパフォーマンスプロファイルをより安定した状態に保ち、Kapacitorから分離できます。</target>
         </trans-unit>
         <trans-unit id="9d9bbb786673e3b27b41c1a4bc4f333ca19567a4" translate="yes" xml:space="preserve">
           <source>You can &amp;lsquo;ping&amp;rsquo; the Kapacitor server to validate you have a successful connection. A ping request does nothing but respond with a 204.</source>
-          <target state="translated">Kapacitorサーバーに「ping」して、接続が成功したことを確認できます。pingリクエストは、204で応答するだけです。</target>
+          <target state="translated">Kapacitorサーバーに「ping」して、接続が成功したことを確認できます。ping要求は、204で応答するだけです。</target>
         </trans-unit>
         <trans-unit id="da16d068657d99e10fe80ab3f52d65e96f715013" translate="yes" xml:space="preserve">
           <source>You can also change the path to the typesdb or add additional typesdb using &lt;code&gt;collectd_typesdb&lt;/code&gt;.</source>
-          <target state="translated">またtypesdbへのパスを変更したり、使用して、追加typesdbを追加することができ &lt;code&gt;collectd_typesdb&lt;/code&gt; を。</target>
+          <target state="translated">また、typesdbへのパスを変更したり、collectd_typesdbを使用して &lt;code&gt;collectd_typesdb&lt;/code&gt; 追加したりすることもできます。</target>
         </trans-unit>
         <trans-unit id="3fc9cdd4cb92d6171dc148bb5551a8250e6012f8" translate="yes" xml:space="preserve">
           <source>You can also define a task templates. A task template is defined by a template TICKscript, and a task type.</source>
@@ -749,7 +749,7 @@
         </trans-unit>
         <trans-unit id="5b097ad4d664c4407e61c39c70915797d11de04d" translate="yes" xml:space="preserve">
           <source>You can implement a bitwise-not operation by using the &lt;code&gt;^&lt;/code&gt; (bitwise xor) operator together with the number representing all-ones for your word-width:</source>
-          <target state="translated">&lt;code&gt;^&lt;/code&gt; （ビット単位のxor）演算子と単語幅のすべて1を表す数値を使用して、ビット単位のnot演算を実装できます。</target>
+          <target state="translated">&lt;code&gt;^&lt;/code&gt; （ビットごとのxor）演算子と単語幅のすべて1を表す数値を使用して、ビットごとのnot演算を実装できます。</target>
         </trans-unit>
         <trans-unit id="1823fb3a14f5c87b11f62adc252640764e5d43d3" translate="yes" xml:space="preserve">
           <source>You can list replays for a given recording by making a GET request to &lt;code&gt;/kapacitor/v1/replays&lt;/code&gt;.</source>
@@ -781,7 +781,7 @@
         </trans-unit>
         <trans-unit id="5f060fdaaa088a769a61496e8ec6b15a69c00cda" translate="yes" xml:space="preserve">
           <source>You can use &lt;a href=&quot;http://manpages.ubuntu.com/manpages/hardy/man8/logrotate.8.html&quot;&gt;logrotate&lt;/a&gt; to rotate the log files generated by InfluxDB on systems where logs are written to flat files. If using the package install on a sysvinit system, the config file for logrotate is installed in &lt;code&gt;/etc/logrotate.d&lt;/code&gt;. You can view the file &lt;a href=&quot;https://github.com/influxdb/influxdb/blob/master/scripts/logrotate&quot;&gt;here&lt;/a&gt;.</source>
-          <target state="translated">あなたは使用することができます&lt;a href=&quot;http://manpages.ubuntu.com/manpages/hardy/man8/logrotate.8.html&quot;&gt;logrotateのを&lt;/a&gt;ログはフラットファイルに書き込まれるシステムでInfluxDBによって生成されたログファイルを回転させます。sysvinitシステムでパッケージインストールを使用する場合、logrotateの構成ファイルは &lt;code&gt;/etc/logrotate.d&lt;/code&gt; にインストールされます。&lt;a href=&quot;https://github.com/influxdb/influxdb/blob/master/scripts/logrotate&quot;&gt;ここで&lt;/a&gt;ファイルを表示できます。</target>
+          <target state="translated">あなたは使用することができます&lt;a href=&quot;http://manpages.ubuntu.com/manpages/hardy/man8/logrotate.8.html&quot;&gt;logrotateのを&lt;/a&gt;ログはフラットファイルに書き込まれるシステムでInfluxDBによって生成されたログファイルを回転させます。sysvinitシステムでパッケージインストールを使用する場合、logrotateの設定ファイルは &lt;code&gt;/etc/logrotate.d&lt;/code&gt; にインストールされます。&lt;a href=&quot;https://github.com/influxdb/influxdb/blob/master/scripts/logrotate&quot;&gt;ここで&lt;/a&gt;ファイルを表示できます。</target>
         </trans-unit>
         <trans-unit id="e7de2d7d2f4c3761b4f9fc872f0064bc01f7f937" translate="yes" xml:space="preserve">
           <source>You can use this operator with any integers or booleans, whether they are fields or constants. It does not work with float or string datatypes, and you cannot mix integers and booleans.</source>
@@ -789,7 +789,7 @@
         </trans-unit>
         <trans-unit id="338e3be55269d0a55ecf7e6bb1eea79525f56b19" translate="yes" xml:space="preserve">
           <source>You cannot edit pre-existing tasks on Chronograf&amp;rsquo;s Alert Rules page. The &lt;code&gt;mytick&lt;/code&gt; task in the image below is a pre-existing task; its name appears on the Alert Rules page but you cannot click on it or edit its TICKscript in the interface. Currently, you must manually edit your existing tasks and TICKscripts on your machine.</source>
-          <target state="translated">Chronografのアラートルールページで既存のタスクを編集することはできません。下の画像の &lt;code&gt;mytick&lt;/code&gt; タスクは既存のタスクです。その名前は[アラートルール]ページに表示されますが、クリックしたり、インターフェイスでそのTICKスクリプトを編集したりすることはできません。現在、マシン上の既存のタスクとTICKスクリプトを手動で編集する必要があります。</target>
+          <target state="translated">Chronografのアラートルールページで既存のタスクを編集することはできません。下の画像の &lt;code&gt;mytick&lt;/code&gt; タスクは既存のタスクです。その名前は[アラートルール]ページに表示されますが、クリックしたり、インターフェイスでTICKスクリプトを編集したりすることはできません。現在、マシン上の既存のタスクとTICKスクリプトを手動で編集する必要があります。</target>
         </trans-unit>
         <trans-unit id="11a0a18bfc6c7f201aa38d0c5224ae60f8848a40" translate="yes" xml:space="preserve">
           <source>You cannot store more than one point with the same timestamp in the same series. Instead, when you write a new point to the same series with the same timestamp as an existing point in that series, the field set becomes the union of the old field set and the new field set, where any ties go to the new field set. For an example, see &lt;a href=&quot;../../troubleshooting/frequently-asked-questions/index#how-does-influxdb-handle-duplicate-points&quot;&gt;Frequently Asked Questions&lt;/a&gt;.</source>
@@ -801,7 +801,7 @@
         </trans-unit>
         <trans-unit id="5d128a652340b13e9ccbdd57b85ea909cdfb407a" translate="yes" xml:space="preserve">
           <source>You made it! You&amp;rsquo;ve covered the fundamental concepts and terminology in InfluxDB. If you&amp;rsquo;re just starting out, we recommend taking a look at &lt;a href=&quot;../../introduction/getting_started/index&quot;&gt;Getting Started&lt;/a&gt; and the &lt;a href=&quot;../../guides/writing_data/index&quot;&gt;Writing Data&lt;/a&gt; and &lt;a href=&quot;../../guides/querying_data/index&quot;&gt;Querying Data&lt;/a&gt; guides. May our time series database serve you well 🕔.</source>
-          <target state="translated">やった！InfluxDBの基本的な概念と用語について説明しました。あなただけ出始めている場合は、私たちは見てとることをお勧めします&lt;a href=&quot;../../introduction/getting_started/index&quot;&gt;はじめ&lt;/a&gt;と&lt;a href=&quot;../../guides/writing_data/index&quot;&gt;データの書き込み&lt;/a&gt;や&lt;a href=&quot;../../guides/querying_data/index&quot;&gt;データの問合せ&lt;/a&gt;ガイドを。私たちの時系列データベースがあなたに役立ちますようにMay。</target>
+          <target state="translated">やった！InfluxDBの基本的な概念と用語について説明しました。始めたばかりの場合は、&lt;a href=&quot;../../introduction/getting_started/index&quot;&gt;「はじめに」&lt;/a&gt;と&lt;a href=&quot;../../guides/writing_data/index&quot;&gt;「データ&lt;/a&gt;の書き込み」および「データの&lt;a href=&quot;../../guides/querying_data/index&quot;&gt;クエリ」の&lt;/a&gt;ガイドをご覧になることをお勧めします。私たちの時系列データベースがあなたに役立ちますMay</target>
         </trans-unit>
         <trans-unit id="31487d033a507344a8a8a8930bbeecccd8405c9c" translate="yes" xml:space="preserve">
           <source>You need to do more than just perform a query, for example maybe you only want to store only outliers from an aggregation instead of all of them. Kapacitor can do significantly more with the data than CQs so you have more flexibility in transforming your data.</source>
@@ -817,7 +817,7 @@
         </trans-unit>
         <trans-unit id="169d3e480100842c075f6d796b86399443515e82" translate="yes" xml:space="preserve">
           <source>You should see a list of &lt;code&gt;vars&lt;/code&gt; for the template like this:</source>
-          <target state="translated">次のようなテンプレートの &lt;code&gt;vars&lt;/code&gt; リストが表示されます。</target>
+          <target state="translated">次のように、テンプレートの &lt;code&gt;vars&lt;/code&gt; リストが表示されます。</target>
         </trans-unit>
         <trans-unit id="8a539641f95d4bc30bbeca9f7d490ef4b0fee2cb" translate="yes" xml:space="preserve">
           <source>You should see a welcome page:</source>
@@ -833,11 +833,11 @@
         </trans-unit>
         <trans-unit id="6ebc3875fbba3949498eca7ef8669ca9100ce0d3" translate="yes" xml:space="preserve">
           <source>You should see your machine&amp;rsquo;s hostname on the page along with information about its CPU usage and load. Assuming you&amp;rsquo;ve configured Telegraf&amp;rsquo;s system stats input plugin, &lt;code&gt;system&lt;/code&gt; should appear in the &lt;code&gt;Apps&lt;/code&gt; column. Go ahead and click on the hostname to see a series of system level graphs about your host:</source>
-          <target state="translated">ページにマシンのホスト名が表示され、CPUの使用状況と負荷に関する情報が表示されます。Telegrafのシステム統計入力プラグインを設定したとすると、 &lt;code&gt;system&lt;/code&gt; は[ &lt;code&gt;Apps&lt;/code&gt; ]列に表示されます。ホスト名をクリックして、ホストに関する一連のシステムレベルのグラフを表示します。</target>
+          <target state="translated">ページにマシンのホスト名と、CPUの使用状況および負荷に関する情報が表示されます。Telegrafのシステム統計入力プラグインを設定しているとすると、 &lt;code&gt;system&lt;/code&gt; は[ &lt;code&gt;Apps&lt;/code&gt; ]列に表示されます。ホスト名をクリックして、ホストに関する一連のシステムレベルのグラフを表示します。</target>
         </trans-unit>
         <trans-unit id="babb446788bd363249e9c5c360652443442219b4" translate="yes" xml:space="preserve">
           <source>You want to calculate the percentage of the total building power consumed by each floor. Since you only have one point per building you need it to join multiple times with the points from each floor. By defining the &lt;code&gt;on&lt;/code&gt; dimensions as &lt;code&gt;building&lt;/code&gt; we are saying that we want points that only have the building tag to be joined with more specifc points that more tags, in this case the &lt;code&gt;floor&lt;/code&gt; tag. In other words while we have points with tags building and floor we only want to join on the building tag.</source>
-          <target state="translated">各フロアで消費される建物の総電力のパーセンテージを計算します。建物ごとに1つのポイントしかないため、各フロアのポイントと複数回結合する必要があります。 &lt;code&gt;on&lt;/code&gt; ディメンションを &lt;code&gt;building&lt;/code&gt; として定義することで、建物タグのみを持つポイントを、より多くのタグよりも特定のポイント（この場合は、 &lt;code&gt;floor&lt;/code&gt; タグ）に結合したいとします。言い換えれば、buildingタグとfloorタグを持つポイントがある一方で、buildingタグで結合したいだけです。</target>
+          <target state="translated">各フロアで消費される建物の総電力のパーセンテージを計算します。建物ごとに1つのポイントしかないため、各フロアのポイントと複数回結合する必要があります。 &lt;code&gt;on&lt;/code&gt; ディメンションを &lt;code&gt;building&lt;/code&gt; として定義することで、建物タグのみを持つポイントを、より多くのタグよりも特定のポイント、この場合は &lt;code&gt;floor&lt;/code&gt; タグに結合する必要があることを示しています。言い換えれば、buildingタグとfloorタグを持つポイントがある一方で、buildingタグで結合したいだけです。</target>
         </trans-unit>
         <trans-unit id="892af859f308a77ff21a4594b42cebee33e6a835" translate="yes" xml:space="preserve">
           <source>You&amp;rsquo;ll have to update the config file appropriately for each InfluxDB instance you have.</source>
@@ -849,7 +849,7 @@
         </trans-unit>
         <trans-unit id="fbbb2919db8eedeab4fe789ea74fe9abf85f2823" translate="yes" xml:space="preserve">
           <source>You&amp;rsquo;re all set! Click the &lt;code&gt;Save Rule&lt;/code&gt; button in the top right corner and navigate to the Kapacitor Rule page to see your rule. Notice that you can easily enable and disable the rule by toggling the checkbox in the &lt;code&gt;Enabled&lt;/code&gt; column.</source>
-          <target state="translated">これで準備は完了です。右上隅にある[ &lt;code&gt;Save Rule&lt;/code&gt; を保存 ]ボタンをクリックし、[ Kapacitorルール]ページに移動してルールを確認します。[ &lt;code&gt;Enabled&lt;/code&gt; ]列のチェックボックスを切り替えることで、ルールを簡単に有効または無効にできることに注意してください。</target>
+          <target state="translated">これで準備は完了です。右上隅にある[ &lt;code&gt;Save Rule&lt;/code&gt; を保存 ]ボタンをクリックし、[ Kapacitorルール]ページに移動してルールを表示します。[ &lt;code&gt;Enabled&lt;/code&gt; ]列のチェックボックスを切り替えることで、ルールを簡単に有効または無効にできることに注意してください。</target>
         </trans-unit>
         <trans-unit id="076aa37740dbe26f14ddab85e59046df4fb44281" translate="yes" xml:space="preserve">
           <source>Your Slack WebHook URL appears next to &lt;code&gt;Webhook URL&lt;/code&gt;:</source>
@@ -893,7 +893,7 @@
         </trans-unit>
         <trans-unit id="86c6675aab684f297d724f719f1b34eadc33cf56" translate="yes" xml:space="preserve">
           <source>[CLI feature request] USE retention policy for queries.</source>
-          <target state="translated">[CLI feature request] USE retention policy for queries.</target>
+          <target state="translated">[CLI機能のリクエスト]クエリの保持ポリシーを使用します。</target>
         </trans-unit>
         <trans-unit id="9d272c27522142d433990fca951c902eead2d83d" translate="yes" xml:space="preserve">
           <source>[[collectd]]</source>
@@ -953,7 +953,7 @@
         </trans-unit>
         <trans-unit id="ff5bee422aa8a6f459f85e723731a5efb2736059" translate="yes" xml:space="preserve">
           <source>[{&amp;ldquo;type&amp;rdquo;: TYPE, &amp;ldquo;value&amp;rdquo;: VALUE}]</source>
-          <target state="translated">[{&amp;ldquo;type&amp;rdquo;: TYPE, &amp;ldquo;value&amp;rdquo;: VALUE}]</target>
+          <target state="translated">[{&amp;ldquo;タイプ&amp;rdquo;：TYPE、&amp;ldquo;値&amp;rdquo;：VALUE}]</target>
         </trans-unit>
         <trans-unit id="9df2acf55081adcc20064ff1f1c0a053736d6886" translate="yes" xml:space="preserve">
           <source>a HipChat API access token for sending notifications</source>
@@ -965,7 +965,7 @@
         </trans-unit>
         <trans-unit id="37bd0403ce6a68c37109214c4d62ce2da1022311" translate="yes" xml:space="preserve">
           <source>a Telegram bot</source>
-          <target state="translated">電報ボット</target>
+          <target state="translated">テレグラムボット</target>
         </trans-unit>
         <trans-unit id="0d59e604a54b92b3ae1214988bc2be3fdca7c2c7" translate="yes" xml:space="preserve">
           <source>abs(x float64) float64</source>
@@ -1013,7 +1013,7 @@
         </trans-unit>
         <trans-unit id="b2a28cb096753400c2276d7cc276c84c9ff69a16" translate="yes" xml:space="preserve">
           <source>all log data will be discarded. You can similarly direct output to &lt;code&gt;stdout&lt;/code&gt; by setting &lt;code&gt;STDOUT&lt;/code&gt; in the same file. Output to &lt;code&gt;stdout&lt;/code&gt; is sent to &lt;code&gt;/dev/null&lt;/code&gt; by default when InfluxDB is launched as a service.</source>
-          <target state="translated">すべてのログデータは破棄されます。同じファイルに &lt;code&gt;STDOUT&lt;/code&gt; を設定することで、出力を &lt;code&gt;stdout&lt;/code&gt; に送ることもできます。InfluxDBがサービスとして起動されると、 &lt;code&gt;stdout&lt;/code&gt; 出力への出力はデフォルトで &lt;code&gt;/dev/null&lt;/code&gt; に送信されます。</target>
+          <target state="translated">すべてのログデータは破棄されます。同じファイルで &lt;code&gt;STDOUT&lt;/code&gt; を設定することにより、出力を &lt;code&gt;stdout&lt;/code&gt; に送ることもできます。InfluxDBがサービスとして起動されると、 &lt;code&gt;stdout&lt;/code&gt; 出力への出力はデフォルトで &lt;code&gt;/dev/null&lt;/code&gt; に送信されます。</target>
         </trans-unit>
         <trans-unit id="3030e728f154bf51419109efb93b6b8aeec9a976" translate="yes" xml:space="preserve">
           <source>args</source>
@@ -1189,7 +1189,7 @@
         </trans-unit>
         <trans-unit id="bf292b97f6efcc9c2db094aa23c92ef915d1e519" translate="yes" xml:space="preserve">
           <source>buffer_size field value is negative number from &amp;ldquo;internal&amp;rdquo; plugin.</source>
-          <target state="translated">buffer_sizeフィールドの値は、「内部」プラグインからの負の数です。</target>
+          <target state="translated">buffer_sizeフィールド値は、「内部」プラグインからの負の数です。</target>
         </trans-unit>
         <trans-unit id="65f89b9121dd2c25039075db1576f144f983a377" translate="yes" xml:space="preserve">
           <source>building_power (a single value) &amp;ndash; tagged by building, value is the total power consumed by the building.</source>
@@ -1477,7 +1477,7 @@
         </trans-unit>
         <trans-unit id="230c000cd4c5498d94a9bd8f91dbef7c13f5379d" translate="yes" xml:space="preserve">
           <source>diskio input plugin: set &amp;lsquo;skip_serial_number = true&amp;rsquo; by default to avoid high cardinality.</source>
-          <target state="translated">diskio入力プラグイン：高いカーディナリティを回避するために、デフォルトで 'skip_serial_number = true'を設定します。</target>
+          <target state="translated">diskio入力プラグイン：高いカーディナリティを回避するために、デフォルトで「skip_serial_number = true」を設定します。</target>
         </trans-unit>
         <trans-unit id="abbc90e006c2d9b123e8a882a69855595d3a702a" translate="yes" xml:space="preserve">
           <source>dns</source>
@@ -1497,7 +1497,7 @@
         </trans-unit>
         <trans-unit id="1ef4679a130314dad730293e492049cbdfc12a5d" translate="yes" xml:space="preserve">
           <source>double quoted identifiers can contain InfluxQL &lt;a href=&quot;index#keywords&quot;&gt;keywords&lt;/a&gt;</source>
-          <target state="translated">二重引用符で囲まれた識別子にはInfluxQL &lt;a href=&quot;index#keywords&quot;&gt;キーワード&lt;/a&gt;を含めることができます</target>
+          <target state="translated">二重引用符で囲まれた識別子にInfluxQL &lt;a href=&quot;index#keywords&quot;&gt;キーワード&lt;/a&gt;を含めることができます</target>
         </trans-unit>
         <trans-unit id="6a346b13767364393caa23d789dd2c0a1194c7cd" translate="yes" xml:space="preserve">
           <source>double quoted identifiers can contain any unicode character other than a new line</source>
@@ -1597,7 +1597,7 @@
         </trans-unit>
         <trans-unit id="e416f7768b537651a72f1deeb468ecbe423a17d4" translate="yes" xml:space="preserve">
           <source>error parsing query: found &amp;lt; &amp;gt;, expected string at line &amp;lt; &amp;gt;, char &amp;lt; &amp;gt;</source>
-          <target state="translated">クエリの解析エラー：&amp;lt;&amp;gt;が見つかりました、行&amp;lt;&amp;gt;に期待される文字列、文字&amp;lt;&amp;gt;</target>
+          <target state="translated">クエリの解析エラー：&amp;lt;&amp;gt;が見つかりました、&amp;lt;&amp;gt;行に文字列が必要です、char &amp;lt;&amp;gt;</target>
         </trans-unit>
         <trans-unit id="fce814d38ed74512ed1bc896651d9a728b80f129" translate="yes" xml:space="preserve">
           <source>error parsing query: mixing aggregate and non-aggregate queries is not supported</source>
@@ -1629,7 +1629,7 @@
         </trans-unit>
         <trans-unit id="6c5dcadfbb3bc5ec287b8de08e2154dc52eb2e88" translate="yes" xml:space="preserve">
           <source>exec &amp;ndash; Execute a command passing alert data over STDIN.</source>
-          <target state="translated">exec &amp;ndash; STDINを介してアラートデータを渡すコマンドを実行します。</target>
+          <target state="translated">exec &amp;ndash;警告データをSTDIN経由で渡すコマンドを実行します。</target>
         </trans-unit>
         <trans-unit id="f5c3f683f579a8e4c2f0ca40363e2ac0e4b3a6d0" translate="yes" xml:space="preserve">
           <source>executing</source>
@@ -2341,7 +2341,7 @@
         </trans-unit>
         <trans-unit id="850be7a738be9dfd9d94d9a9b6f66ae45bde5a0c" translate="yes" xml:space="preserve">
           <source>name: h2o_feet -&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash; time level descriptionlocationwater_level  2015-08-18T00:00:00Z between 6 and 9 feet coyote_creek 8.12 2015-08-18T00:00:00Z below 3 feet santa_monica 2.064 2015-08-18T00:06:00Zbetween 6 and 9 feetcoyote_creek8.005 2015-08-18T00:06:00Z below 3 feet santa_monica 2.116 2015-08-18T00:12:00Z between 6 and 9 feet coyote_creek 7.887 2015-08-18T00:12:00Z below 3 feet santa_monica 2.028</source>
-          <target state="translated">名前：h2o_feet -&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;時間レベルの説明locationwater_level 2015-08-18T00：00：00Z 3フィート未満coyote_creek 8.12 2015-08-18T00：00：00Z 3フィート未満santa_monica 2.064 2015 -08-18T00：06：00Zbetween 6と9フィートcoyote_creek8.005 2015-08-18T00：06：00Z 3フィート未満santa_monica 2.116 2015-08-18T00：12：00Z 6と9フィートの間12：00Z 3フィート未満santa_monica 2.028</target>
+          <target state="translated">名前：h2o_feet -&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;時間レベルの説明locationwater_level 2015-08-18T00：00：00Z 3フィート未満coyote_creek 8.12 2015-08-18T00：00：00Z 3フィート未満santa_monica 2.064 2015 -08-18T00：06：00Zbetween 6〜9フィートcoyote_creek8.005 2015-08-18T00：06：00Z 3フィート未満santa_monica 2.116 2015-08-18T00：12：00Z 6〜9フィートcoyote_creek 7.887 2015-08-18T00： 12：00Z 3フィート未満santa_monica 2.028</target>
         </trans-unit>
         <trans-unit id="cc2fb9e43fa8375f6dcec9b8c30efe25d30e1351" translate="yes" xml:space="preserve">
           <source>nanoseconds</source>
@@ -2817,7 +2817,7 @@
         </trans-unit>
         <trans-unit id="399adc708553d62798bad99e6d5a966e2a4a9fb1" translate="yes" xml:space="preserve">
           <source>shared-secret = &amp;ldquo;&amp;rdquo;</source>
-          <target state="translated">shared-secret =&amp;ldquo;&amp;rdquo;</target>
+          <target state="translated">共有秘密=「」</target>
         </trans-unit>
         <trans-unit id="3d045d9a88d39143128e7a9d7aae48dc0f44f8ef" translate="yes" xml:space="preserve">
           <source>should now look like:</source>
@@ -3033,7 +3033,7 @@
         </trans-unit>
         <trans-unit id="c29f28daf73c4beaf407c336d75a7f14148c5806" translate="yes" xml:space="preserve">
           <source>tags_deleted &amp;ndash; number of tags that were deleted. Only counts if the tag already existed.</source>
-          <target state="translated">tags_deleted &amp;ndash;削除されたタグの数。タグがすでに存在する場合にのみカウントされます。</target>
+          <target state="translated">tags_deleted &amp;ndash;削除されたタグの数。タグが既に存在する場合にのみカウントされます。</target>
         </trans-unit>
         <trans-unit id="7e33cd323000fc1aa291a8f32207191085ad97ca" translate="yes" xml:space="preserve">
           <source>tan(x float64) float64</source>
@@ -3057,7 +3057,7 @@
         </trans-unit>
         <trans-unit id="ea185ea578137457c45bec9de58172c1a7cbfdb4" translate="yes" xml:space="preserve">
           <source>tcp &amp;ndash; Send data to a specified address via raw TCP.</source>
-          <target state="translated">tcp &amp;ndash; raw TCP経由で指定されたアドレスにデータを送信します。</target>
+          <target state="translated">tcp &amp;ndash; raw TCPを介して指定されたアドレスにデータを送信します。</target>
         </trans-unit>
         <trans-unit id="ef8222b816160e6c83d0cf4fd9b7a2d1c1073223" translate="yes" xml:space="preserve">
           <source>teams-list</source>
@@ -3069,7 +3069,7 @@
         </trans-unit>
         <trans-unit id="c48ec24906cf33aeaef58b85f7de7056276c79cd" translate="yes" xml:space="preserve">
           <source>the button text will be &lt;code&gt;Login with Hill Valley Preservation Society&lt;/code&gt;.</source>
-          <target state="translated">ボタンのテキストは、 &lt;code&gt;Login with Hill Valley Preservation Society&lt;/code&gt; ます。</target>
+          <target state="translated">ボタンのテキストは &lt;code&gt;Login with Hill Valley Preservation Society&lt;/code&gt; ます。</target>
         </trans-unit>
         <trans-unit id="24245418a645a4724e3e0f191ce286a0ec68b91d" translate="yes" xml:space="preserve">
           <source>the day within the month: range [1,31]</source>
@@ -3093,7 +3093,7 @@
         </trans-unit>
         <trans-unit id="f3915be61b910eaabf16a15ebcb267fb9ac38e05" translate="yes" xml:space="preserve">
           <source>the year</source>
-          <target state="translated">年</target>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="714eea0f4c980736bde0065fe73f573487f08e3a" translate="yes" xml:space="preserve">
           <source>time</source>
@@ -3217,7 +3217,7 @@
         </trans-unit>
         <trans-unit id="fa2b050ca8b9ac6dd82126bd856caf8319552fef" translate="yes" xml:space="preserve">
           <source>unable to parse &amp;lt; &amp;gt;: time outside range</source>
-          <target state="translated">&amp;lt;&amp;gt;を解析できません：時間は範囲外です</target>
+          <target state="translated">解析できません&amp;lt;&amp;gt;：範囲外の時間</target>
         </trans-unit>
         <trans-unit id="43a3cb715e18f7dcfc39417b6aae2c0808d47672" translate="yes" xml:space="preserve">
           <source>unix-socket-enabled</source>
@@ -3553,7 +3553,7 @@
         </trans-unit>
         <trans-unit id="df4692097eb2fcc7d0fa22c2ce4c13cdc26b4874" translate="yes" xml:space="preserve">
           <source>| Abbreviation | Datatype | | &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; | &amp;mdash;&amp;mdash;&amp;ndash; | | c | Counter | | i | Integer | | n | Null | | s | String | | t | Time ticks |</source>
-          <target state="translated">| Abbreviation | Datatype | | &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; | &amp;mdash;&amp;mdash;&amp;ndash; | | c | Counter | | i | Integer | | n | Null | | s | String | | t | Time ticks |</target>
+          <target state="translated">| 略語| データ型| | &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; | &amp;mdash;&amp;mdash;&amp;ndash; | | c | カウンター| | 私| 整数| | n | ヌル| | s | 文字列| | t | タイムティック|</target>
         </trans-unit>
         <trans-unit id="dc95ab9dd16ac244949c81edd56705b54e07f383" translate="yes" xml:space="preserve">
           <source>❌</source>

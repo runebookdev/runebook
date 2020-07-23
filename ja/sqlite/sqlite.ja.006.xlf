@@ -49,7 +49,7 @@
         </trans-unit>
         <trans-unit id="2b3ae0e3595ba9969a417594021c4332e3d08633" translate="yes" xml:space="preserve">
           <source>Bug fix: Do not optimize away an ORDER BY clause that has the same terms as a UNIQUE index unless those terms are also NOT NULL. Ticket &lt;a href=&quot;http://www.sqlite.org/src/info/2a5629202f&quot;&gt;2a5629202f&lt;/a&gt;.</source>
-          <target state="translated">バグ修正：UNIQUEインデックスと同じ用語を持つORDER BY句を、それらの用語もNOT NULLでない限り、最適化して削除しないでください。チケット&lt;a href=&quot;http://www.sqlite.org/src/info/2a5629202f&quot;&gt;2a5629202f&lt;/a&gt;。</target>
+          <target state="translated">バグ修正：UNIQUEインデックスと同じ用語を持つORDER BY句を最適化して、それらの用語もNOT NULLでない限り、削除しないでください。チケット&lt;a href=&quot;http://www.sqlite.org/src/info/2a5629202f&quot;&gt;2a5629202f&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="b6453e25436ce2c11dc1b6194ae2dc12f5ca5250" translate="yes" xml:space="preserve">
           <source>Bug fix: Do not suppress the ORDER BY clause on a virtual table query if an IN constraint is used. Ticket &lt;a href=&quot;http://www.sqlite.org/src/info/f69b96e3076e&quot;&gt;f69b96e3076e&lt;/a&gt;.</source>
@@ -61,7 +61,7 @@
         </trans-unit>
         <trans-unit id="ad5b813b289d7e750591bfb845e4ba940a74acee" translate="yes" xml:space="preserve">
           <source>Bug fix: Ensure the cached KeyInfo objects (an internal abstraction not visible to the application) do not go stale when operating in &lt;a href=&quot;sharedcache&quot;&gt;shared cache mode&lt;/a&gt; and frequently closing and reopening some database connections while leaving other database connections on the same shared cache open continuously. Ticket &lt;a href=&quot;https://www.sqlite.org/src/info/e4a18565a36884b00edf&quot;&gt;e4a18565a36884b00edf&lt;/a&gt;.</source>
-          <target state="translated">バグ修正：&lt;a href=&quot;sharedcache&quot;&gt;共有キャッシュモードで動作&lt;/a&gt;し、同じ共有キャッシュ上の他のデータベース接続を継続的に開いたまま、いくつかのデータベース接続を頻繁に閉じて再度開くときに、キャッシュされたKeyInfoオブジェクト（アプリケーションから見えない内部抽象化）が古くならないようにします。チケット&lt;a href=&quot;https://www.sqlite.org/src/info/e4a18565a36884b00edf&quot;&gt;e4a18565a36884b00edf&lt;/a&gt;。</target>
+          <target state="translated">バグ修正：&lt;a href=&quot;sharedcache&quot;&gt;共有キャッシュモードで動作&lt;/a&gt;し、同じ共有キャッシュ上の他のデータベース接続を継続的に開いたまま、一部のデータベース接続を頻繁に閉じて再度開くときに、キャッシュされたKeyInfoオブジェクト（アプリケーションから見えない内部抽象化）が古くならないようにします。チケット&lt;a href=&quot;https://www.sqlite.org/src/info/e4a18565a36884b00edf&quot;&gt;e4a18565a36884b00edf&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="1c94982c68fc72ac2f6ac980a3323226e84f8466" translate="yes" xml:space="preserve">
           <source>Bug fix: Fix a 32-bit overflow problem on CREATE INDEX for databases larger than 16GB.</source>
@@ -69,7 +69,7 @@
         </trans-unit>
         <trans-unit id="b6580b5e5232c84824bf613c858acbb24fc5f483" translate="yes" xml:space="preserve">
           <source>Bug fix: Fix a potential &lt;b&gt;database corruption bug&lt;/b&gt; in &lt;a href=&quot;sharedcache&quot;&gt;shared cache mode&lt;/a&gt; when one &lt;a href=&quot;c3ref/sqlite3&quot;&gt;database connection&lt;/a&gt; is closed while another is in the middle of a write transaction. Ticket &lt;a href=&quot;http://www.sqlite.org/src/info/e636a050b7&quot;&gt;e636a050b7&lt;/a&gt;</source>
-          <target state="translated">バグ修正：ある&lt;a href=&quot;c3ref/sqlite3&quot;&gt;データベース接続&lt;/a&gt;が閉じられ、別のデータベース接続が書き込みトランザクションの最中にある場合の、&lt;a href=&quot;sharedcache&quot;&gt;共有キャッシュモード&lt;/a&gt;での潜在的な&lt;b&gt;データベース破損のバグを修正&lt;/b&gt;しました。チケット&lt;a href=&quot;http://www.sqlite.org/src/info/e636a050b7&quot;&gt;e636a050b7&lt;/a&gt;</target>
+          <target state="translated">バグ修正：ある&lt;a href=&quot;c3ref/sqlite3&quot;&gt;データベース接続&lt;/a&gt;が書き込みトランザクションの最中にあるときに別のデータベース接続が閉じられた場合の、&lt;a href=&quot;sharedcache&quot;&gt;共有キャッシュモード&lt;/a&gt;での潜在的な&lt;b&gt;データベース破損のバグを修正&lt;/b&gt;しました。チケット&lt;a href=&quot;http://www.sqlite.org/src/info/e636a050b7&quot;&gt;e636a050b7&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="28f644aa67590d02891787c2b2d9de10e303faef" translate="yes" xml:space="preserve">
           <source>Bug fix: Fix an assertion failure that occurred when ROWID was a column in a SELECT statement on a view.</source>
@@ -109,15 +109,15 @@
         </trans-unit>
         <trans-unit id="796cd2d86e5fad8940076a58510533a97b2c56bf" translate="yes" xml:space="preserve">
           <source>Bug fix: Make sure &quot;rowid&quot; columns are correctly resolved in joins between normal tables and WITHOUT ROWID tables. &lt;a href=&quot;http://www.sqlite.org/src/info/c34d0557f7&quot;&gt;Ticket [c34d0557f7]&lt;/a&gt;</source>
-          <target state="translated">バグ修正：通常のテーブルとWITHOUT ROWIDテーブルの間の結合で、「rowid」列が正しく解決されることを確認してください。&lt;a href=&quot;http://www.sqlite.org/src/info/c34d0557f7&quot;&gt;チケット[c34d0557f7]&lt;/a&gt;</target>
+          <target state="translated">バグ修正：通常のテーブルとWITHOUT ROWIDテーブルの間の結合で、「rowid」列が正しく解決されていることを確認してください。&lt;a href=&quot;http://www.sqlite.org/src/info/c34d0557f7&quot;&gt;チケット[c34d0557f7]&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="adf0baa27394f8041aaae283cf02f3ee1bfa8b41" translate="yes" xml:space="preserve">
           <source>Bug fix: Make sure &lt;a href=&quot;pragma#syntax&quot;&gt;PRAGMA&lt;/a&gt; statements appear in &lt;a href=&quot;c3ref/profile&quot;&gt;sqlite3_trace()&lt;/a&gt; output.</source>
-          <target state="translated">バグ修正：&lt;a href=&quot;c3ref/profile&quot;&gt;sqlite3_trace（）&lt;/a&gt;出力に&lt;a href=&quot;pragma#syntax&quot;&gt;PRAGMA&lt;/a&gt;ステートメントが表示されることを確認してください。</target>
+          <target state="translated">バグ修正：&lt;a href=&quot;c3ref/profile&quot;&gt;sqlite3_trace（）の&lt;/a&gt;出力に&lt;a href=&quot;pragma#syntax&quot;&gt;PRAGMA&lt;/a&gt;ステートメントが表示されることを確認してください。</target>
         </trans-unit>
         <trans-unit id="2334a8bc658fa8a7b723fcf78436e06aa632b55a" translate="yes" xml:space="preserve">
           <source>Bug fix: Make sure an error is always reported when attempting to preform an operation that requires a &lt;a href=&quot;datatype3#collation&quot;&gt;collating sequence&lt;/a&gt; that is missing. Ticket &lt;a href=&quot;http://www.sqlite.org/src/info/0fc59f908b&quot;&gt;0fc59f908b&lt;/a&gt;</source>
-          <target state="translated">バグ修正：欠落している&lt;a href=&quot;datatype3#collation&quot;&gt;照合シーケンス&lt;/a&gt;を必要とする操作を実行しようとすると、必ずエラーが報告されるようにしてください。チケット&lt;a href=&quot;http://www.sqlite.org/src/info/0fc59f908b&quot;&gt;0fc59f908b&lt;/a&gt;</target>
+          <target state="translated">バグ修正：欠落している&lt;a href=&quot;datatype3#collation&quot;&gt;照合シーケンス&lt;/a&gt;を必要とする操作を実行しようとすると、常にエラーが報告されるようにしてください。チケット&lt;a href=&quot;http://www.sqlite.org/src/info/0fc59f908b&quot;&gt;0fc59f908b&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="7b7a3c06c81b08010533a335b71314ea1246750e" translate="yes" xml:space="preserve">
           <source>Bug fix: Make sure that NULL results from OP_Column are fully and completely NULL and do not have the MEM_Ephem bit set. Ticket &lt;a href=&quot;http://www.sqlite.org/src/info/094d39a4c95ee4&quot;&gt;094d39a4c95ee4&lt;/a&gt;.</source>
@@ -137,11 +137,11 @@
         </trans-unit>
         <trans-unit id="21876ec37a821c06e59ab2273c8a26e3a12144f2" translate="yes" xml:space="preserve">
           <source>Bug fix: Makes sure the &lt;a href=&quot;c3ref/set_authorizer&quot;&gt;authorizer&lt;/a&gt; callback gets a valid pointer to the string &quot;ROWID&quot; for the column-name parameter when doing an &lt;a href=&quot;lang_update&quot;&gt;UPDATE&lt;/a&gt; that changes the rowid. Ticket &lt;a href=&quot;http://www.sqlite.org/src/info/0eb70d77cb05bb2272&quot;&gt;0eb70d77cb05bb2272&lt;/a&gt;</source>
-          <target state="translated">バグ修正：ROWID を変更する&lt;a href=&quot;lang_update&quot;&gt;UPDATE&lt;/a&gt;を実行するときに、&lt;a href=&quot;c3ref/set_authorizer&quot;&gt;Authorizer&lt;/a&gt;コールバックがcolumn-nameパラメーターの文字列「ROWID」への有効なポインターを確実に取得するようになりました。チケット&lt;a href=&quot;http://www.sqlite.org/src/info/0eb70d77cb05bb2272&quot;&gt;0eb70d77cb05bb2272&lt;/a&gt;</target>
+          <target state="translated">バグ修正：ROWID を変更する&lt;a href=&quot;lang_update&quot;&gt;UPDATE&lt;/a&gt;を実行するときに、&lt;a href=&quot;c3ref/set_authorizer&quot;&gt;Authorizer&lt;/a&gt;コールバックがcolumn-nameパラメーターの文字列「ROWID」への有効なポインターを確実に取得するようにしました。チケット&lt;a href=&quot;http://www.sqlite.org/src/info/0eb70d77cb05bb2272&quot;&gt;0eb70d77cb05bb2272&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="fa2f91d43fa97f1a5999350e4addb5cbb3edaca1" translate="yes" xml:space="preserve">
           <source>Bug fix: Only consider AS names from the result set as candidates for resolving identifiers in the WHERE clause if there are no other matches. In the ORDER BY clause, AS names take priority over any column names. Ticket &lt;a href=&quot;http://www.sqlite.org/src/info/2500cdb9be05&quot;&gt;2500cdb9be05&lt;/a&gt;</source>
-          <target state="translated">バグ修正：他に一致するものがなければ、結果セットのAS名をWHERE句の識別子を解決する候補としてのみ考慮します。ORDER BY句では、AS名が列名よりも優先されます。チケット&lt;a href=&quot;http://www.sqlite.org/src/info/2500cdb9be05&quot;&gt;2500cdb9be05&lt;/a&gt;</target>
+          <target state="translated">バグ修正：他に一致するものがなければ、結果セットのAS名をWHERE句の識別子を解決する候補としてのみ検討します。ORDER BY句では、AS名が列名よりも優先されます。チケット&lt;a href=&quot;http://www.sqlite.org/src/info/2500cdb9be05&quot;&gt;2500cdb9be05&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="141fde2a748db5215be1ecb9d4a778d891f1cb31" translate="yes" xml:space="preserve">
           <source>Bug fix: Passing in a NULL as the 3rd parameter to &lt;b&gt;sqlite_open()&lt;/b&gt; would sometimes cause a coredump.</source>
@@ -153,7 +153,7 @@
         </trans-unit>
         <trans-unit id="03f2e3e890c570259cec0056bb1e5602f41a8fe5" translate="yes" xml:space="preserve">
           <source>Bug fix: Repair a name-resolution error that can occur in sub-select statements contained within a TRIGGER. &lt;a href=&quot;http://www.sqlite.org/src/info/4ef7e3cfca&quot;&gt;Ticket [4ef7e3cfca]&lt;/a&gt;</source>
-          <target state="translated">バグ修正：TRIGGER内に含まれる副選択ステートメントで発生する可能性がある名前解決エラーを修復します。&lt;a href=&quot;http://www.sqlite.org/src/info/4ef7e3cfca&quot;&gt;チケット[4ef7e3cfca]&lt;/a&gt;</target>
+          <target state="translated">バグ修正：TRIGGERに含まれる副選択ステートメントで発生する可能性がある名前解決エラーを修復します。&lt;a href=&quot;http://www.sqlite.org/src/info/4ef7e3cfca&quot;&gt;チケット[4ef7e3cfca]&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="179d04a255aba0b12c6e57bf1304a5f158b18e87" translate="yes" xml:space="preserve">
           <source>Bug fix: SQL functions created using the TCL interface honor the &quot;nullvalue&quot; setting.</source>
@@ -169,7 +169,7 @@
         </trans-unit>
         <trans-unit id="8545ae69eab7462c35ca27db0ca5feb48e882da0" translate="yes" xml:space="preserve">
           <source>Bug fix: The &lt;a href=&quot;cli&quot;&gt;command-line shell&lt;/a&gt; gives an exit code of 0 when terminated using the &quot;.quit&quot; command.</source>
-          <target state="translated">バグ修正：&lt;a href=&quot;cli&quot;&gt;コマンドラインシェル&lt;/a&gt;は、「。quit」コマンドを使用して終了すると、終了コード0を返します。</target>
+          <target state="translated">バグ修正：&lt;a href=&quot;cli&quot;&gt;コマンドラインシェル&lt;/a&gt;は、「。quit」コマンドを使用して終了すると、終了コード0を示します。</target>
         </trans-unit>
         <trans-unit id="3c4dbfc44f9dd05912067f94c3eb5f1e8372f6d5" translate="yes" xml:space="preserve">
           <source>Bug fix: There was an incorrect assert() in pager.c. The real code was all correct (as far as is known) so everything should work OK if you compile with -DNDEBUG=1. When asserts are not disabled, there could be a fault.</source>
@@ -185,7 +185,7 @@
         </trans-unit>
         <trans-unit id="332e05b490c4cb7238853c006e2e916e2a9e4dbc" translate="yes" xml:space="preserve">
           <source>Bug fix: When a &lt;a href=&quot;lang_select#compound&quot;&gt;compound query&lt;/a&gt; that uses an ORDER BY clause with a &lt;a href=&quot;lang_expr#collateop&quot;&gt;COLLATE operator&lt;/a&gt;, make sure that the sorting occurs according to the specified collation and that the comparisons associate with the compound query use the native collation. Ticket &lt;a href=&quot;http://www.sqlite.org/src/info/6709574d2a8d8&quot;&gt;6709574d2a8d8&lt;/a&gt;.</source>
-          <target state="translated">バグ修正：&lt;a href=&quot;lang_expr#collateop&quot;&gt;COLLATE演算子&lt;/a&gt;を使用したORDER BY句を使用する&lt;a href=&quot;lang_select#compound&quot;&gt;複合クエリ&lt;/a&gt;で、指定した照合順序に従って並べ替えが行われ、複合クエリに関連付けられている比較でネイティブ照合が使用されていることを確認します。チケット&lt;a href=&quot;http://www.sqlite.org/src/info/6709574d2a8d8&quot;&gt;6709574d2a8d8&lt;/a&gt;。</target>
+          <target state="translated">バグ修正：&lt;a href=&quot;lang_expr#collateop&quot;&gt;COLLATE演算子&lt;/a&gt;でORDER BY句を使用する&lt;a href=&quot;lang_select#compound&quot;&gt;複合クエリの&lt;/a&gt;場合、指定した照合に従ってソートが行われ、複合クエリに関連付けられている比較でネイティブ照合が使用されていることを確認してください。チケット&lt;a href=&quot;http://www.sqlite.org/src/info/6709574d2a8d8&quot;&gt;6709574d2a8d8&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="2cfdb97a345b3ce143f2abc5fd945ed42741b35a" translate="yes" xml:space="preserve">
           <source>Bug fix: allow a VACUUM (without segfaulting) on an empty database after setting the EMPTY_RESULT_CALLBACKS pragma.</source>
@@ -221,7 +221,7 @@
         </trans-unit>
         <trans-unit id="77f87bfdf4072c6e0867b3768c5f7d3818056770" translate="yes" xml:space="preserve">
           <source>Bug fix: repair a long-standing problem that could cause incorrect query results in a 3-way or larger join that compared INTEGER fields against TEXT fields in two or more places. Ticket &lt;a href=&quot;http://www.sqlite.org/src/info/fc7bd6358f&quot;&gt;fc7bd6358f&lt;/a&gt;</source>
-          <target state="translated">バグ修正：3ウェイ以上の結合でINTEGERフィールドと2か所以上のTEXTフィールドを比較する不正なクエリ結果を引き起こす可能性がある長年の問題を修正しました。チケット&lt;a href=&quot;http://www.sqlite.org/src/info/fc7bd6358f&quot;&gt;fc7bd6358f&lt;/a&gt;</target>
+          <target state="translated">バグ修正：3ウェイ以上の結合でINTEGERフィールドと2か所以上のTEXTフィールドを比較する不正なクエリ結果の原因となる長年の問題を修正しました。チケット&lt;a href=&quot;http://www.sqlite.org/src/info/fc7bd6358f&quot;&gt;fc7bd6358f&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="7c0e4c435db089ba66d14c6f426f1ca923c3e24a" translate="yes" xml:space="preserve">
           <source>Bug fix: the &lt;b&gt;sqlite_busy_timeout()&lt;/b&gt; function was delaying 1000 times too long before failing.</source>
@@ -285,7 +285,7 @@
         </trans-unit>
         <trans-unit id="00497bbc4dcbda4f80e1ffef6721bc5a34a86a97" translate="yes" xml:space="preserve">
           <source>Building SQLite directly from individual source code files is certainly possible, but it is not recommended. For some specialized applications, it might be necessary to modify the build process in ways that cannot be done using just the prebuilt amalgamation source file downloaded from the website. For those situations, it is recommended that a customized amalgamation be built (as described &lt;a href=&quot;howtocompile#amal&quot;&gt;below&lt;/a&gt;) and used. In other words, even if a project requires building SQLite beginning with individual source files, it is still recommended that an amalgamation source file be used as an intermediate step.</source>
-          <target state="translated">個別のソースコードファイルから直接SQLiteを構築することは確かに可能ですが、お勧めできません。一部の特殊なアプリケーションでは、Webサイトからダウンロードされたビルド済みの統合ソースファイルだけでは実行できない方法でビルドプロセスを変更する必要がある場合があります。これらの状況では、カスタマイズされた融合を構築して（&lt;a href=&quot;howtocompile#amal&quot;&gt;以下で&lt;/a&gt;説明するように）使用することをお勧めします。言い換えれば、プロジェクトが個々のソースファイルから始まるSQLiteのビルドを必要とする場合でも、統合ソースファイルを中間ステップとして使用することをお勧めします。</target>
+          <target state="translated">個別のソースコードファイルから直接SQLiteを構築することは確かに可能ですが、お勧めできません。一部の特殊なアプリケーションでは、Webサイトからダウンロードされたビルド済みの統合ソースファイルだけでは実行できない方法でビルドプロセスを変更する必要がある場合があります。これらの状況では、カスタマイズされた融合を構築し（&lt;a href=&quot;howtocompile#amal&quot;&gt;以下で&lt;/a&gt;説明）、使用することをお勧めします。言い換えれば、プロジェクトが個々のソースファイルからSQLiteをビルドする必要がある場合でも、中間ステップとして融合ソースファイルを使用することをお勧めします。</target>
         </trans-unit>
         <trans-unit id="0a71cb495d76b612c809648873b36b593c7393c1" translate="yes" xml:space="preserve">
           <source>Building a DLL</source>
@@ -325,7 +325,7 @@
         </trans-unit>
         <trans-unit id="c86307059b070b415312a3a5cc51007f6e153433" translate="yes" xml:space="preserve">
           <source>But SQLite does use the declared type of a column as a hint that you prefer values in that format. So, for example, if a column is of type INTEGER and you try to insert a string into that column, SQLite will attempt to convert the string into an integer. If it can, it inserts the integer instead. If not, it inserts the string. This feature is called &lt;a href=&quot;datatype3#affinity&quot;&gt;type affinity&lt;/a&gt;.</source>
-          <target state="translated">しかし、SQLiteは、宣言された列の型を、その形式の値を優先するヒントとして使用します。したがって、たとえば、列のタイプがINTEGERで、その列に文字列を挿入しようとすると、SQLiteは文字列を整数に変換しようとします。可能であれば、代わりに整数を挿入します。そうでない場合は、文字列を挿入します。この機能は&lt;a href=&quot;datatype3#affinity&quot;&gt;タイプアフィニティ&lt;/a&gt;と呼ばれます。</target>
+          <target state="translated">しかし、SQLiteは、宣言された列の型を、その形式の値を好むというヒントとして使用します。したがって、たとえば、列のタイプがINTEGERで、その列に文字列を挿入しようとすると、SQLiteは文字列を整数に変換しようとします。可能であれば、代わりに整数を挿入します。そうでない場合は、文字列を挿入します。この機能は、&lt;a href=&quot;datatype3#affinity&quot;&gt;タイプアフィニティ&lt;/a&gt;と呼ばれます。</target>
         </trans-unit>
         <trans-unit id="23199e0b44d24bd1ee4c96e22ea9bb3d1c2f67f4" translate="yes" xml:space="preserve">
           <source>But SQLite is built into the application. So if the data is on a separate device from the application, it is required that the higher bandwidth engine-to-disk link be across the network. This works, but it is suboptimal. Hence, it is usually better to select a client/server database engine when the data is on a separate device from the application.</source>
@@ -337,7 +337,7 @@
         </trans-unit>
         <trans-unit id="d929882a8a439200f669cf52bfce1643d73dfffb" translate="yes" xml:space="preserve">
           <source>But as with any query planner change, upgrading to the NGQP does carry a small risk of introducing performance regressions. The problem here is not that the NGQP is incorrect or buggy or inferior to the legacy query planner. Given reliable information about the selectivity of indexes, the NGQP should always pick a plan that is as good or better than before. The problem is that some applications may be using low-quality and low-selectivity indexes without having run &lt;a href=&quot;lang_analyze&quot;&gt;ANALYZE&lt;/a&gt;. The older query planners look at many fewer possible implementations for each query and so they may have stumbled over a good plan by stupid luck. The NGQP, on the other hand, looks at many more query plan possibilities, and it may choose a different query plan that works better in theory, assuming good indexes, but which gives a performance regression in practice, because of the shape of the data.</source>
-          <target state="translated">ただし、クエリプランナーの変更と同様に、NGQPへのアップグレードには、パフォーマンスの低下を招く小さなリスクがあります。ここでの問題は、NGQPが正しくない、バグがある、またはレガシークエリプランナーよりも劣ることではありません。インデックスの選択性に関する信頼できる情報が与えられると、NGQPは常に以前と同じかそれ以上の計画を選択する必要があります。問題は、一部のアプリケーションが&lt;a href=&quot;lang_analyze&quot;&gt;ANALYZE&lt;/a&gt;を実行せずに低品質で選択性の低いインデックスを使用している可能性があることです。。古いクエリプランナーは、クエリごとに考えられる実装の数がはるかに少ないため、愚かな運によって良いプランに出くわした可能性があります。一方、NGQPはより多くのクエリプランの可能性を検討し、適切なインデックスを想定して理論的にはより適切に機能する別のクエリプランを選択する可能性がありますが、実際にはデータの形状によりパフォーマンスが低下します。 。</target>
+          <target state="translated">ただし、クエリプランナーの変更と同様に、NGQPへのアップグレードには、パフォーマンスの低下を招く小さなリスクがあります。ここでの問題は、NGQPが正しくない、バグがある、またはレガシークエリプランナーよりも劣ることではありません。インデックスの選択性に関する信頼できる情報が与えられると、NGQPは常に以前と同じかそれ以上の計画を選択する必要があります。問題は、一部のアプリケーションが&lt;a href=&quot;lang_analyze&quot;&gt;ANALYZE&lt;/a&gt;を実行せずに低品質で選択性の低いインデックスを使用している可能性があることです。。古いクエリプランナーは、クエリごとに考えられる実装の数がはるかに少ないため、愚かな運によって良いプランに出くわした可能性があります。一方、NGQPはより多くのクエリプランの可能性を検討し、適切なインデックスを想定して理論的にはより適切に機能する別のクエリプランを選択しますが、実際にはデータの形状によりパフォーマンスが低下します。 。</target>
         </trans-unit>
         <trans-unit id="bcf6c11e8e6d47ec28df41f7ffce035dc6edbeac" translate="yes" xml:space="preserve">
           <source>But because the &lt;a href=&quot;../lang_select&quot;&gt;SELECT&lt;/a&gt; statement does not change the database file directly, sqlite3_stmt_readonly() would still return true.</source>
@@ -349,7 +349,7 @@
         </trans-unit>
         <trans-unit id="f3654dae88afc03c2b5b644ec401c70beb10ac13" translate="yes" xml:space="preserve">
           <source>But does this really save time? The number of steps in the &lt;a href=&quot;#fig16&quot;&gt;original indexless sort&lt;/a&gt; is proportional to NlogN since that is how much time it takes to sort N rows. But when we use Idx1 as shown here, we have to do N rowid lookups which take logN time each, so the total time of NlogN is the same!</source>
-          <target state="translated">しかし、これで本当に時間を節約できますか？&lt;a href=&quot;#fig16&quot;&gt;元のインデックスレスソート&lt;/a&gt;のステップ数はNlogNに比例します。これは、N行をソートするのにかかる時間だからです。しかし、ここに示すようにIdx1を使用する場合、それぞれlogN時間を要するN個のROWIDルックアップを実行する必要があるため、NlogNの合計時間は同じです！</target>
+          <target state="translated">しかし、これは本当に時間を節約するのでしょうか？&lt;a href=&quot;#fig16&quot;&gt;元のインデックスレスソート&lt;/a&gt;のステップ数はNlogNに比例します。これは、N行をソートするのにかかる時間だからです。ただし、ここに示すようにIdx1を使用する場合、それぞれlogN時間を必要とするN個のROWIDルックアップを実行する必要があるため、NlogNの合計時間は同じです。</target>
         </trans-unit>
         <trans-unit id="d6fc31d48c09d06ad4b37abcbcf5f0dce6a8ec76" translate="yes" xml:space="preserve">
           <source>But from the point of view of the VDBE, a CREATE works pretty much like an INSERT and a DROP works like a DELETE. When the SQLite library opens to an existing database, the first thing it does is a SELECT to read the &quot;sql&quot; columns from all entries of the sqlite_master table. The &quot;sql&quot; column contains the complete SQL text of the CREATE statement that originally generated the index or table. This text is fed back into the SQLite parser and used to reconstruct the internal data structures describing the index or table.</source>
@@ -385,7 +385,7 @@
         </trans-unit>
         <trans-unit id="b73aaf5e4e2de9f2adc91308c0011207fcb7df2b" translate="yes" xml:space="preserve">
           <source>But in a coverage measuring build, the &lt;code&gt;testcase()&lt;/code&gt; macro generates code that evaluates the conditional expression in its argument. Then during analysis, a check is made to ensure tests exist that evaluate the conditional to both true and false. &lt;code&gt;Testcase()&lt;/code&gt; macros are used, for example, to help verify that boundary values are tested. For example:</source>
-          <target state="translated">ただし、カバレッジ測定ビルドでは、 &lt;code&gt;testcase()&lt;/code&gt; マクロは引数の条件式を評価するコードを生成します。次に、分析中に、条件付きを真と偽の両方に評価するテストが存在することを確認するためのチェックが行われます。 &lt;code&gt;Testcase()&lt;/code&gt; マクロは、たとえば、境界値がテストされていることを確認するのに役立ちます。例えば：</target>
+          <target state="translated">ただし、カバレッジ測定ビルドでは、 &lt;code&gt;testcase()&lt;/code&gt; マクロは、引数の条件式を評価するコードを生成します。次に、分析中に、条件付きを真と偽の両方に評価するテストが存在することを確認するためのチェックが行われます。 &lt;code&gt;Testcase()&lt;/code&gt; マクロは、たとえば、境界値がテストされていることを確認するのに役立ちます。例えば：</target>
         </trans-unit>
         <trans-unit id="6cba989629259efaf3551fd795674dc99bb4d48d" translate="yes" xml:space="preserve">
           <source>But in the following logically equivalent formulation of the same query, the substitution of &quot;CROSS JOIN&quot; for the &quot;,&quot; means that the order of tables must be N1, E, N2.</source>
@@ -417,7 +417,7 @@
         </trans-unit>
         <trans-unit id="b843ee326d7f7cdf5b63dd9bf52bb27bf7756e78" translate="yes" xml:space="preserve">
           <source>But what value to choose for N? One might try N=K. This makes the algorithm O(K&lt;small&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/small&gt;) which is actually still quite efficient, since the maximum value of K is 64 and K rarely exceeds 10. But that is not enough for the TPC-H Q8 problem. With N=8 on TPC-H Q8 the N3 algorithm finds the solution R-N1-C-O-L-S-N2-P with a cost of 29.78. That is a big improvement over NN, but it is still not optimal. N3 finds the optimal solution for TPC-H Q8 when N is 10 or greater.</source>
-          <target state="translated">しかし、Nにはどのような値を選択すればよいでしょうか。N = Kを試すこともできます。K の最大値は64であり、Kはめったに10を超えないため、これはアルゴリズムO（K &lt;small&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/small&gt;）を実際には非常に効率的にしますが、TPC-H Q8問題には十分ではありません。TPC-H Q8のN = 8の場合、N3アルゴリズムは、R.N1-COLS-N2-Pのソリューションを29.78のコストで見つけます。これはNNに比べて大きな改善ですが、それでも最適ではありません。N3は、Nが10以上の場合にTPC-H Q8の最適解を見つけます。</target>
+          <target state="translated">しかし、Nにはどのような値を選択すればよいでしょうか。N = Kを試すかもしれません。K の最大値は64であり、Kはめったに10を超えないため、これはアルゴリズムO（K &lt;small&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/small&gt;）を実際には非常に効率的にしますが、TPC-H Q8問題には十分ではありません。TPC-H Q8でN = 8の場合、N3アルゴリズムは、29.78のコストでソリューションR-N1-COLS-N2-Pを見つけます。これはNNと比べて大きな改善ですが、それでも最適ではありません。N3は、Nが10以上の場合にTPC-H Q8の最適解を見つけます。</target>
         </trans-unit>
         <trans-unit id="65129801103eda08bf342c707b068d5b768e6daf" translate="yes" xml:space="preserve">
           <source>But with SQLite, 200 or more SQL statement per webpage is not a problem.</source>
@@ -445,7 +445,7 @@
         </trans-unit>
         <trans-unit id="06b847c7709546cccdb0e536dbda4965ee6a96e1" translate="yes" xml:space="preserve">
           <source>By contrast, if foreign key errors can be recognized simply by looking at the definition of the child table and without having to consult the parent table definition, then the &lt;a href=&quot;lang_createtable&quot;&gt;CREATE TABLE&lt;/a&gt; statement for the child table fails. Because the error occurs during a schema change, this is a DDL error. Foreign key DDL errors are reported regardless of whether or not foreign key constraints are enabled when the table is created.</source>
-          <target state="translated">対照的に、子テーブルの定義を調べるだけで、親テーブルの定義を調べなくても外部キーエラーを認識できる場合、子テーブルの&lt;a href=&quot;lang_createtable&quot;&gt;CREATE TABLE&lt;/a&gt;ステートメントは失敗します。エラーはスキーマの変更中に発生するため、これはDDLエラーです。テーブルの作成時に外部キー制約が有効かどうかに関係なく、外部キーDDLエラーが報告されます。</target>
+          <target state="translated">対照的に、子テーブルの定義を確認するだけで、親テーブルの定義を調べなくても外部キーエラーを認識できる場合、子テーブルの&lt;a href=&quot;lang_createtable&quot;&gt;CREATE TABLE&lt;/a&gt;ステートメントは失敗します。エラーはスキーマの変更中に発生するため、これはDDLエラーです。テーブルの作成時に外部キー制約が有効かどうかに関係なく、外部キーDDLエラーが報告されます。</target>
         </trans-unit>
         <trans-unit id="aedeaa844f352e8e17d5cb589064ea1e4109a539" translate="yes" xml:space="preserve">
           <source>By default a session object does not monitor changes on any database table. Before it does so it must be configured. There are three ways to configure the set of tables to monitor changes on:</source>
@@ -457,7 +457,7 @@
         </trans-unit>
         <trans-unit id="be3a7476bfd030e836d226174214b4408b10de5a" translate="yes" xml:space="preserve">
           <source>By default, &lt;a href=&quot;c3ref/create_function&quot;&gt;application-defined SQL functions&lt;/a&gt; are considered to be non-deterministic. However, if the 4th parameter to &lt;a href=&quot;c3ref/create_function&quot;&gt;sqlite3_create_function_v2()&lt;/a&gt; is OR-ed with &lt;a href=&quot;c3ref/c_deterministic&quot;&gt;SQLITE_DETERMINISTIC&lt;/a&gt;, then SQLite will treat that function as if it were deterministic.</source>
-          <target state="translated">デフォルトでは、&lt;a href=&quot;c3ref/create_function&quot;&gt;アプリケーション定義のSQL関数&lt;/a&gt;は非決定的であると見なされます。 4番目のパラメータただし、&lt;a href=&quot;c3ref/create_function&quot;&gt;sqlite3_create_function_v2は（）&lt;/a&gt;とOR結合されている&lt;a href=&quot;c3ref/c_deterministic&quot;&gt;SQLITE_DETERMINISTIC&lt;/a&gt;それは決定論的であるかのように、その後、SQLiteは、その関数を扱います。</target>
+          <target state="translated">デフォルトでは、&lt;a href=&quot;c3ref/create_function&quot;&gt;アプリケーション定義のSQL関数&lt;/a&gt;は非決定的であると見なされます。 4番目のパラメータただし、&lt;a href=&quot;c3ref/create_function&quot;&gt;sqlite3_create_function_v2は（）&lt;/a&gt;とOR結合されている&lt;a href=&quot;c3ref/c_deterministic&quot;&gt;SQLITE_DETERMINISTIC&lt;/a&gt;それは決定論的であるかのように、その後、SQLiteは、その関数を処理します。</target>
         </trans-unit>
         <trans-unit id="78cc7d781eb449f29366e3574bdcdf238af76b02" translate="yes" xml:space="preserve">
           <source>By default, FTS queries (those that use the MATCH operator) consider only those rows with the languageid column set to 0. To query for rows with other languageid values, a constraint of the form &quot;</source>
@@ -465,7 +465,7 @@
         </trans-unit>
         <trans-unit id="a4ce99b6ecd6b9193290236a519a16ace8c29ade" translate="yes" xml:space="preserve">
           <source>By default, FTS3/4 occasionally merges together two or more of the b-trees that make up its full-text index within an INSERT, UPDATE or DELETE statement executed by the user. This means that any operation on an FTS3/4 table may turn out to be surprisingly slow, as FTS3/4 may unpredictably choose to merge together two or more large b-trees within it. FTS5 uses incremental merging by default, which limits the amount of processing that may take place within any given INSERT, UPDATE or DELETE operation.</source>
-          <target state="translated">デフォルトでは、FTS3/4は、ユーザによって実行されたINSERT、UPDATEまたはDELETE文の中で、その全文インデックスを構成する2つ以上のb-木をマージすることがあります。これは、FTS3/4が予測不能に、その中で2つ以上の大きなb-木をマージすることを選択することがあるため、FTS3/4のテーブルに対する操作が驚くほど遅くなることを意味します。FTS5はデフォルトでインクリメンタルマージを使用しており、INSERT、UPDATE、DELETE操作の中で行われる処理量を制限しています。</target>
+          <target state="translated">デフォルトでは、FTS3/4は、ユーザによって実行されたINSERT、UPDATEまたはDELETE文の中で、その全文インデックスを構成する2つ以上のb-木をマージすることがあります。これは、FTS3/4が予測不能に、その中で2つ以上の大きなb-木をマージすることを選択する可能性があるため、FTS3/4テーブルに対する操作が驚くほど遅くなることを意味します。FTS5はデフォルトでインクリメンタルマージを使用しており、INSERT、UPDATE、DELETE操作の中で行われる処理量を制限しています。</target>
         </trans-unit>
         <trans-unit id="f6e0aaa9f2f3d9d7bf351208161c2a3a5ac7e955" translate="yes" xml:space="preserve">
           <source>By default, FTS5 full-text searches are case-independent. Like any other SQL query that does not contain an ORDER BY clause, the example above returns results in an arbitrary order. To sort results by relevance (most to least relevant), an ORDER BY may be added to a full-text query as follows:</source>
@@ -473,7 +473,7 @@
         </trans-unit>
         <trans-unit id="9bae9dce645a20ac5b291708dfb54aa225ce0774" translate="yes" xml:space="preserve">
           <source>By default, FTS5 maintains a single index recording the location of each token instance within the document set. This means that querying for complete tokens is fast, as it requires a single lookup, but querying for a prefix token can be slow, as it requires a range scan. For example, to query for the prefix token &quot;abc*&quot; requires a range scan of all tokens greater than or equal to &quot;abc&quot; and less than &quot;abd&quot;.</source>
-          <target state="translated">デフォルトでは、FTS5はドキュメントセット内の各トークンインスタンスの位置を記録した単一のインデックスを保持します。つまり、完全なトークンのクエリは1回のルックアップで済むので高速ですが、プレフィックストークンのクエリは範囲スキャンが必要なので、時間がかかることがあります。たとえば、プレフィックストークン &quot;abc*&quot;のクエリを実行するには、&quot;abc &quot;以上 &quot;abd &quot;未満のすべてのトークンを範囲スキャンする必要があります。</target>
+          <target state="translated">デフォルトでは、FTS5はドキュメントセット内の各トークンインスタンスの位置を記録した単一のインデックスを保持します。つまり、完全なトークンのクエリは1回のルックアップで済むので高速ですが、プレフィックストークンのクエリは範囲スキャンが必要なので、時間がかかることがあります。たとえば、プレフィックストークン &quot;abc*&quot;のクエリを行うには、&quot;abc &quot;以上 &quot;abd &quot;未満のすべてのトークンを範囲スキャンする必要があります。</target>
         </trans-unit>
         <trans-unit id="ff82a6b03b77139ee1bba47d5624340bd5b1daef" translate="yes" xml:space="preserve">
           <source>By default, SQLite assumes that all data uses a fixed-size 8-bit character (iso8859). But if you give the --enable-utf8 option to the configure script, then the library assumes UTF-8 variable sized characters. This makes a difference for the LIKE and GLOB operators and the LENGTH() and SUBSTR() functions. The static string &lt;b&gt;sqlite_encoding&lt;/b&gt; will be set to either &quot;UTF-8&quot; or &quot;iso8859&quot; to indicate how the library was compiled. In addition, the &lt;b&gt;sqlite.h&lt;/b&gt; header file will define one of the macros &lt;b&gt;SQLITE_UTF8&lt;/b&gt; or &lt;b&gt;SQLITE_ISO8859&lt;/b&gt;, as appropriate.</source>
@@ -481,11 +481,11 @@
         </trans-unit>
         <trans-unit id="cbc8ea1232230a6d65d66bdbfc39e47fe8c9edc5" translate="yes" xml:space="preserve">
           <source>By default, SQLite assumes that an operating system call to write a range of bytes will not damage or alter any bytes outside of that range even if a power loss or OS crash occurs during that write. We call this the &quot;&lt;a href=&quot;psow&quot;&gt;powersafe overwrite&lt;/a&gt;&quot; property. Prior to &lt;a href=&quot;https://sqlite.org/releaselog/3_7_9.html&quot;&gt;version 3.7.9&lt;/a&gt; (2011-11-01), SQLite did not assume powersafe overwrite. But with the standard sector size increasing from 512 to 4096 bytes on most disk drives, it has become necessary to assume powersafe overwrite in order to maintain historical performance levels and so powersafe overwrite is assumed by default in recent versions of SQLite. The assumption of powersafe overwrite property can be disabled at compile-time or a run-time if desired. See the &lt;a href=&quot;psow&quot;&gt;powersafe overwrite documentation&lt;/a&gt; for further details.</source>
-          <target state="translated">デフォルトでは、SQLiteは、ある範囲のバイトを書き込むオペレーティングシステムコールが、その書き込み中に停電やOSクラッシュが発生した場合でも、その範囲外のバイトを損傷または変更しないと想定しています。これを「&lt;a href=&quot;psow&quot;&gt;powersafe overwrite&lt;/a&gt;」プロパティと呼びます。&lt;a href=&quot;https://sqlite.org/releaselog/3_7_9.html&quot;&gt;バージョン3.7.9&lt;/a&gt;（2011-11-01）より前は、SQLiteはpowersafe overwriteを想定していませんでした。しかし、ほとんどのディスクドライブで標準セクターサイズが512から4096バイトに増加しているため、履歴パフォーマンスレベルを維持するためにパワーセーフ上書きを想定する必要があり、SQLiteの最近のバージョンではデフォルトでパワーセーフ上書きが想定されています。 powersafe overwriteプロパティの前提は、必要に応じてコンパイル時または実行時に無効にすることができます。詳細については、&lt;a href=&quot;psow&quot;&gt;powersafe overwriteのドキュメント&lt;/a&gt;を参照してください。</target>
+          <target state="translated">デフォルトでは、SQLiteは、ある範囲のバイトを書き込むためのオペレーティングシステムコールが、その書き込み中に停電やOSクラッシュが発生した場合でも、その範囲外のバイトを損傷または変更しないと想定しています。これを「&lt;a href=&quot;psow&quot;&gt;powersafe overwrite&lt;/a&gt;」プロパティと呼びます。&lt;a href=&quot;https://sqlite.org/releaselog/3_7_9.html&quot;&gt;バージョン3.7.9&lt;/a&gt;（2011-11-01）より前は、SQLiteはpowersafe overwriteを想定していませんでした。ただし、ほとんどのディスクドライブで標準セクターサイズが512から4096バイトに増加しているため、履歴パフォーマンスレベルを維持するためにパワーセーフ上書きを想定する必要があり、SQLiteの最近のバージョンではデフォルトでパワーセーフ上書きが想定されています。 powersafe overwriteプロパティの前提は、必要に応じてコンパイル時または実行時に無効にすることができます。詳細については、&lt;a href=&quot;psow&quot;&gt;powersafe overwriteのドキュメント&lt;/a&gt;を参照してください。</target>
         </trans-unit>
         <trans-unit id="f018eca355fa9ae5d020ba88bd8ea21f258703c5" translate="yes" xml:space="preserve">
           <source>By default, SQLite does a checkpoint automatically when the WAL file reaches a threshold size of 1000 pages. (The &lt;a href=&quot;compile#default_wal_autocheckpoint&quot;&gt;SQLITE_DEFAULT_WAL_AUTOCHECKPOINT&lt;/a&gt; compile-time option can be used to specify a different default.) Applications using WAL do not have to do anything in order to for these checkpoints to occur. But if they want to, applications can adjust the automatic checkpoint threshold. Or they can turn off the automatic checkpoints and run checkpoints during idle moments or in a separate thread or process.</source>
-          <target state="translated">デフォルトでは、WALファイルがしきい値サイズの1000ページに達すると、SQLiteは自動的にチェックポイントを実行します。 （&lt;a href=&quot;compile#default_wal_autocheckpoint&quot;&gt;SQLITE_DEFAULT_WAL_AUTOCHECKPOINT&lt;/a&gt;コンパイル時オプションを使用して、別のデフォルトを指定できます。）WALを使用するアプリケーションは、これらのチェックポイントが発生するために何もする必要はありません。ただし、必要に応じて、アプリケーションで自動チェックポイントしきい値を調整できます。または、自動チェックポイントをオフにして、アイドル時に、または別のスレッドやプロセスでチェックポイントを実行することもできます。</target>
+          <target state="translated">デフォルトでは、WALファイルがしきい値サイズの1000ページに達すると、SQLiteは自動的にチェックポイントを実行します。 （&lt;a href=&quot;compile#default_wal_autocheckpoint&quot;&gt;SQLITE_DEFAULT_WAL_AUTOCHECKPOINT&lt;/a&gt;コンパイル時オプションを使用して、別のデフォルトを指定できます。）WALを使用するアプリケーションは、これらのチェックポイントを発生させるために何もする必要はありません。ただし、必要に応じて、アプリケーションで自動チェックポイントしきい値を調整できます。または、自動チェックポイントをオフにして、アイドル時に、または別のスレッドやプロセスでチェックポイントを実行することもできます。</target>
         </trans-unit>
         <trans-unit id="c47d73038962ba3e0484234ad47892e41a6eccb3" translate="yes" xml:space="preserve">
           <source>By default, SQLite keeps statistics on its memory usage. These statistics are useful in helping to determine how much memory an application really needs. The statistics can also be used in high-reliability system to determine if the memory usage is coming close to or exceeding the limits of the &lt;a href=&quot;malloc#nofrag&quot;&gt;Robson proof&lt;/a&gt; and hence that the memory allocation subsystem is liable to breakdown.</source>
@@ -501,11 +501,11 @@
         </trans-unit>
         <trans-unit id="ac7bf7e7f400c7dac01c89761055dce039c96113" translate="yes" xml:space="preserve">
           <source>By default, SQLite will automatically checkpoint whenever a &lt;a href=&quot;lang_transaction&quot;&gt;COMMIT&lt;/a&gt; occurs that causes the WAL file to be 1000 pages or more in size, or when the last database connection on a database file closes. The default configuration is intended to work well for most applications. But programs that want more control can force a checkpoint using the &lt;a href=&quot;pragma#pragma_wal_checkpoint&quot;&gt;wal_checkpoint pragma&lt;/a&gt; or by calling the &lt;a href=&quot;c3ref/wal_checkpoint&quot;&gt;sqlite3_wal_checkpoint()&lt;/a&gt; C interface. The automatic checkpoint threshold can be changed or automatic checkpointing can be completely disabled using the &lt;a href=&quot;pragma#pragma_wal_autocheckpoint&quot;&gt;wal_autocheckpoint pragma&lt;/a&gt; or by calling the &lt;a href=&quot;c3ref/wal_autocheckpoint&quot;&gt;sqlite3_wal_autocheckpoint()&lt;/a&gt; C interface. A program can also use &lt;a href=&quot;c3ref/wal_hook&quot;&gt;sqlite3_wal_hook()&lt;/a&gt; to register a callback to be invoked whenever any transaction commits to the WAL. This callback can then invoke &lt;a href=&quot;c3ref/wal_checkpoint&quot;&gt;sqlite3_wal_checkpoint()&lt;/a&gt; or &lt;a href=&quot;c3ref/wal_checkpoint_v2&quot;&gt;sqlite3_wal_checkpoint_v2()&lt;/a&gt; based on whatever criteria it thinks is appropriate. (The automatic checkpoint mechanism is implemented as a simple wrapper around &lt;a href=&quot;c3ref/wal_hook&quot;&gt;sqlite3_wal_hook()&lt;/a&gt;.)</source>
-          <target state="translated">デフォルトでは、SQLiteは、WALファイルのサイズが1000ページ以上になる&lt;a href=&quot;lang_transaction&quot;&gt;COMMIT&lt;/a&gt;が発生したとき、またはデータベースファイルの最後のデータベース接続が閉じたときに、自動的にチェックポイントを設定します。デフォルトの構成は、ほとんどのアプリケーションで適切に機能することを目的としています。しかし、より多くの制御を必要とするプログラムは、&lt;a href=&quot;pragma#pragma_wal_checkpoint&quot;&gt;wal_checkpointプラグマ&lt;/a&gt;を使用するか、&lt;a href=&quot;c3ref/wal_checkpoint&quot;&gt;sqlite3_wal_checkpoint（）&lt;/a&gt; Cインターフェースを呼び出すことによって、チェックポイントを強制できます。&lt;a href=&quot;pragma#pragma_wal_autocheckpoint&quot;&gt;wal_autocheckpointプラグマ&lt;/a&gt;を使用するか、&lt;a href=&quot;c3ref/wal_autocheckpoint&quot;&gt;sqlite3_wal_autocheckpoint（）&lt;/a&gt; Cインターフェースを呼び出すことにより、自動チェックポイントしきい値を変更したり、自動チェックポイントを完全に無効にしたりできます。プログラムは&lt;a href=&quot;c3ref/wal_hook&quot;&gt;sqlite3_wal_hook（）&lt;/a&gt;も使用できますトランザクションがWALにコミットするたびに呼び出されるコールバックを登録します。このコールバックは、適切と思われる基準に基づいて、&lt;a href=&quot;c3ref/wal_checkpoint&quot;&gt;sqlite3_wal_checkpoint（）&lt;/a&gt;または&lt;a href=&quot;c3ref/wal_checkpoint_v2&quot;&gt;sqlite3_wal_checkpoint_v2（）&lt;/a&gt;を呼び出すことができます。 （自動チェックポイントメカニズムは、&lt;a href=&quot;c3ref/wal_hook&quot;&gt;sqlite3_wal_hook（）の&lt;/a&gt;単純なラッパーとして実装されています。）</target>
+          <target state="translated">デフォルトでは、SQLiteは、WALファイルのサイズが1000ページ以上になる&lt;a href=&quot;lang_transaction&quot;&gt;COMMIT&lt;/a&gt;が発生したとき、またはデータベースファイルの最後のデータベース接続が閉じたときに、自動的にチェックポイントを設定します。デフォルトの構成は、ほとんどのアプリケーションで適切に機能するように設計されています。しかし、より多くの制御を必要とするプログラムは、&lt;a href=&quot;pragma#pragma_wal_checkpoint&quot;&gt;wal_checkpointプラグマ&lt;/a&gt;を使用するか、&lt;a href=&quot;c3ref/wal_checkpoint&quot;&gt;sqlite3_wal_checkpoint（）&lt;/a&gt; Cインターフェースを呼び出すことにより、チェックポイントを強制できます。&lt;a href=&quot;pragma#pragma_wal_autocheckpoint&quot;&gt;wal_autocheckpointプラグマ&lt;/a&gt;を使用するか、&lt;a href=&quot;c3ref/wal_autocheckpoint&quot;&gt;sqlite3_wal_autocheckpoint（）&lt;/a&gt; Cインターフェースを呼び出すことにより、自動チェックポイントのしきい値を変更したり、自動チェックポイントを完全に無効にしたりできます。プログラムは&lt;a href=&quot;c3ref/wal_hook&quot;&gt;sqlite3_wal_hook（）&lt;/a&gt;も使用できますトランザクションがWALにコミットするたびに呼び出されるコールバックを登録します。このコールバックは、適切と思われる基準に基づいて、&lt;a href=&quot;c3ref/wal_checkpoint&quot;&gt;sqlite3_wal_checkpoint（）&lt;/a&gt;または&lt;a href=&quot;c3ref/wal_checkpoint_v2&quot;&gt;sqlite3_wal_checkpoint_v2（）&lt;/a&gt;を呼び出すことができます。（自動チェックポイントメカニズムは、&lt;a href=&quot;c3ref/wal_hook&quot;&gt;sqlite3_wal_hook（）の&lt;/a&gt;単純なラッパーとして実装されています。）</target>
         </trans-unit>
         <trans-unit id="dfe31588b0add6c729f8eab371bfea7925cb6297" translate="yes" xml:space="preserve">
           <source>By default, VACUUM only works only on the main database. &lt;a href=&quot;lang_attach&quot;&gt;Attached databases&lt;/a&gt; can be vacuumed by appending the appropriate schema-name to the VACUUM statement.</source>
-          <target state="translated">デフォルトでは、VACUUMはメインデータベースでのみ機能します。&lt;a href=&quot;lang_attach&quot;&gt;アタッチされたデータベース&lt;/a&gt;は、適切なschema-nameをVACUUMステートメントに追加することでバキュームできます。</target>
+          <target state="translated">デフォルトでは、VACUUMはメインデータベースでのみ機能します。&lt;a href=&quot;lang_attach&quot;&gt;アタッチされたデータベース&lt;/a&gt;は、適切なスキーマ名をVACUUMステートメントに追加することでバキュームできます。</target>
         </trans-unit>
         <trans-unit id="609f717a6d90d2816632d1db2908a5d9109c172f" translate="yes" xml:space="preserve">
           <source>By default, coordinates are stored in an R*Tree using 32-bit floating point values. When a coordinate cannot be exactly represented by a 32-bit floating point number, the lower-bound coordinates are rounded down and the upper-bound coordinates are rounded up. Thus, bounding boxes might be slightly larger than specified, but will never be any smaller. This is exactly what is desired for doing the more common &quot;overlapping&quot; queries where the application wants to find every entry in the R*Tree that overlaps a query bounding box. Rounding the entry bounding boxes outward might cause a few extra entries to appears in an overlapping query if the edge of the entry bounding box corresponds to an edge of the query bounding box. But the overlapping query will never miss a valid table entry.</source>
@@ -513,7 +513,7 @@
         </trans-unit>
         <trans-unit id="199efd35071a0aa576610e8f4fe7005becc87773" translate="yes" xml:space="preserve">
           <source>By default, diacritics are removed from all Latin script characters. This means, for example, that &quot;A&quot;, &quot;a&quot;, &quot;&amp;Agrave;&quot;, &quot;&amp;agrave;&quot;, &quot;&amp;Acirc;&quot; and &quot;&amp;acirc;&quot; are all considered to be equivalent.</source>
-          <target state="translated">デフォルトでは、発音区別符号はすべてのラテン文字から削除されます。これは、たとえば、「A」、「a」、「&amp;Agrave;」、「&amp;agrave;」、「&amp;Acirc;」、「&amp;acirc;」はすべて同等と見なされることを意味します。</target>
+          <target state="translated">デフォルトでは、すべてのラテン文字から発音区別符号が削除されます。これは、たとえば、「A」、「a」、「&amp;Agrave;」、「&amp;agrave;」、「&amp;Acirc;」、「&amp;acirc;」はすべて同等と見なされることを意味します。</target>
         </trans-unit>
         <trans-unit id="bb034dd2f0250c21e84e164917272d1dc5842d40" translate="yes" xml:space="preserve">
           <source>By default, differences in the schema or content of virtual tables are not reported on.</source>
@@ -521,7 +521,7 @@
         </trans-unit>
         <trans-unit id="b77f26d39d106302cf0e476c578f7ebf5e3ef7c7" translate="yes" xml:space="preserve">
           <source>By default, each INSERT statement is its own transaction. But if you surround multiple INSERT statements with &lt;a href=&quot;lang_transaction&quot;&gt;BEGIN&lt;/a&gt;...&lt;a href=&quot;lang_transaction&quot;&gt;COMMIT&lt;/a&gt; then all the inserts are grouped into a single transaction. The time needed to commit the transaction is amortized over all the enclosed insert statements and so the time per insert statement is greatly reduced.</source>
-          <target state="translated">デフォルトでは、各INSERTステートメントは独自のトランザクションです。ただし、&lt;a href=&quot;lang_transaction&quot;&gt;BEGIN&lt;/a&gt; ... &lt;a href=&quot;lang_transaction&quot;&gt;COMMIT&lt;/a&gt;で複数のINSERTステートメントを囲むと、すべての挿入が1つのトランザクションにグループ化されます。トランザクションをコミットするのに必要な時間は、含まれているすべての挿入ステートメントにわたって償却されるため、挿入ステートメントごとの時間は大幅に短縮されます。</target>
+          <target state="translated">デフォルトでは、各INSERTステートメントは独自のトランザクションです。ただし、&lt;a href=&quot;lang_transaction&quot;&gt;BEGIN&lt;/a&gt; ... &lt;a href=&quot;lang_transaction&quot;&gt;COMMIT&lt;/a&gt;で複数のINSERTステートメントを囲むと、すべての挿入が1つのトランザクションにグループ化されます。トランザクションをコミットするのに必要な時間は、含まれているすべての挿入ステートメントにわたって償却されるため、挿入ステートメントごとの時間が大幅に短縮されます。</target>
         </trans-unit>
         <trans-unit id="6a7a241c9fa980ec6fabd179e76034fe7898c1e2" translate="yes" xml:space="preserve">
           <source>By default, each column is between 1 and 10 characters wide, depending on the column header name and the width of the first column of data. Data that is too wide to fit in a column is truncated. Use the &quot;.width&quot; dot-command to adjust column widths, like this:</source>
@@ -529,7 +529,7 @@
         </trans-unit>
         <trans-unit id="5e4318cdb175f91c3caf7375a2080f232459374d" translate="yes" xml:space="preserve">
           <source>By default, every row in SQLite has a special column, usually called the &quot;&lt;a href=&quot;lang_createtable#rowid&quot;&gt;rowid&lt;/a&gt;&quot;, that uniquely identifies that row within the table. However if the phrase &quot;WITHOUT ROWID&quot; is added to the end of a &lt;a href=&quot;lang_createtable&quot;&gt;CREATE TABLE&lt;/a&gt; statement, then the special &quot;rowid&quot; column is omitted. There are sometimes space and performance advantages to omitting the rowid.</source>
-          <target state="translated">デフォルトでは、SQLiteのすべての行には、通常「&lt;a href=&quot;lang_createtable#rowid&quot;&gt;rowid&lt;/a&gt;」と呼ばれる特別な列があり、テーブル内のその行を一意に識別します。ただし、「WITHOUT ROWID」という句が&lt;a href=&quot;lang_createtable&quot;&gt;CREATE TABLE&lt;/a&gt;ステートメントの最後に追加された場合、特別な「rowid」列は省略されます。ROWIDを省略すると、スペースとパフォーマンスの面でメリットがある場合があります。</target>
+          <target state="translated">デフォルトでは、SQLiteのすべての行には、通常「&lt;a href=&quot;lang_createtable#rowid&quot;&gt;rowid&lt;/a&gt;」と呼ばれる特別な列があり、テーブル内のその行を一意に識別します。ただし、「WITHOUT ROWID」という句が&lt;a href=&quot;lang_createtable&quot;&gt;CREATE TABLE&lt;/a&gt;ステートメントの最後に追加される場合、特別な「rowid」列は省略されます。ROWIDを省略した方が、スペースとパフォーマンスの面で有利な場合があります。</target>
         </trans-unit>
         <trans-unit id="d6ef17af0abc70adef74ccbccb6e7ada9c1f618f" translate="yes" xml:space="preserve">
           <source>By default, kvtest runs the database I/O measurements all within a single transaction. Use the --multitrans option to run each blob read or write in a separate transaction. The --multitrans option makes SQLite much slower, and uncompetitive with direct disk I/O. This option proves, yet again, that to get the most performance out of SQLite, you should group as much database interaction as possible within a single transaction.</source>
@@ -561,7 +561,7 @@
         </trans-unit>
         <trans-unit id="fa0f172004db89e74c2b903c6ed15681a8554ce0" translate="yes" xml:space="preserve">
           <source>By default, the output of EXPLAIN QUERY PLAN commands does not include output for any operations performed by trigger programs. This option is used to set or clear (the default) a flag that governs this behavior. The first parameter passed to this operation is an integer - positive to enable output for trigger programs, or zero to disable it, or negative to leave the setting unchanged. The second parameter is a pointer to an integer into which is written 0 or 1 to indicate whether output-for-triggers has been disabled - 0 if it is not disabled, 1 if it is.</source>
-          <target state="translated">デフォルトでは、EXPLAIN QUERY PLANコマンドの出力には、トリガプログラムによって実行された操作の出力は含まれません。このオプションは、この動作を制御するフラグを設定またはクリア(デフォルト)するために使用されます。この操作に渡される最初のパラメータは整数で、正の場合はトリガプログラムの出力を有効にし、ゼロの場合は無効にし、負の場合は設定を変更しないままにします。2 番目のパラメータは整数へのポインタで、0 または 1 が書き込まれ、トリガ用出力が無効化されているかどうかを示します-無効化されていない場合は 0、無効化されている場合は 1 です。</target>
+          <target state="translated">デフォルトでは、EXPLAIN QUERY PLANコマンドの出力には、トリガプログラムによって実行された操作の出力は含まれません。このオプションは、この動作を制御するフラグを設定またはクリア(デフォルト)するために使用されます。この操作に渡される最初のパラメータは整数で、正の場合はトリガプログラムの出力を有効にし、ゼロの場合は無効にし、負の場合は設定を変更しないままにします。2 番目のパラメータは整数へのポインタで、0 または 1 が書き込まれ、トリガ用出力が無効化されているかどうかを示します-無効化されていない場合は 0、無効化されている場合は 1 となります。</target>
         </trans-unit>
         <trans-unit id="d45ac6e349cce0d243d17d663e9e87155d75add6" translate="yes" xml:space="preserve">
           <source>By default, the porter tokenizer operates as a wrapper around the default tokenizer (unicode61). Or, if one or more extra arguments are added to the &quot;tokenize&quot; option following &quot;porter&quot;, they are treated as a specification for the underlying tokenizer that the porter stemmer uses. For example:</source>
@@ -585,7 +585,7 @@
         </trans-unit>
         <trans-unit id="84617083eaab12542d0a6d482dc6332adeedf772" translate="yes" xml:space="preserve">
           <source>By explicitly specifying tables using one call to &lt;a href=&quot;session/sqlite3session_attach&quot;&gt;sqlite3session_attach()&lt;/a&gt; for each table, or</source>
-          <target state="translated">テーブルごとに&lt;a href=&quot;session/sqlite3session_attach&quot;&gt;sqlite3session_attach（）&lt;/a&gt;を1回呼び出してテーブルを明示的に指定するか、</target>
+          <target state="translated">テーブルごとに&lt;a href=&quot;session/sqlite3session_attach&quot;&gt;sqlite3session_attach（）&lt;/a&gt;への1回の呼び出しを使用してテーブルを明示的に指定する、または</target>
         </trans-unit>
         <trans-unit id="7ec7970e0cfef9d2d98bfdb89f93e1b8b4b4b117" translate="yes" xml:space="preserve">
           <source>By invoking the xCheckReservedLock() method of the file-handle opened on the database file, SQLite checks if some other connection holds a</source>
@@ -613,7 +613,7 @@
         </trans-unit>
         <trans-unit id="63f834f4a2da63acc54bc935f1fd1ad5ded1c97a" translate="yes" xml:space="preserve">
           <source>By the time &lt;a href=&quot;c3ref/unlock_notify&quot;&gt;sqlite3_unlock_notify()&lt;/a&gt; is invoked by wait_for_unlock_notify(), it is possible that the blocking connection that prevented the sqlite3_step() or sqlite3_prepare_v2() call from succeeding has already finished its transaction. In this case, the unlock-notify callback is invoked immediately, before &lt;a href=&quot;c3ref/unlock_notify&quot;&gt;sqlite3_unlock_notify()&lt;/a&gt; returns. Or, it is possible that the unlock-notify callback is invoked by a second thread after &lt;a href=&quot;c3ref/unlock_notify&quot;&gt;sqlite3_unlock_notify()&lt;/a&gt; is called but before the thread starts waiting to be asynchronously signaled.</source>
-          <target state="translated">&lt;a href=&quot;c3ref/unlock_notify&quot;&gt;sqlite3_unlock_notify（）&lt;/a&gt;がwait_for_unlock_notify（）によって呼び出されるときまでに、sqlite3_step（）またはsqlite3_prepare_v2（）呼び出しの成功を妨げていたブロッキング接続がすでにトランザクションを完了している可能性があります。この場合、&lt;a href=&quot;c3ref/unlock_notify&quot;&gt;sqlite3_unlock_notify（）&lt;/a&gt;が戻る前に、すぐにロック解除通知コールバックが呼び出されます。または、&lt;a href=&quot;c3ref/unlock_notify&quot;&gt;sqlite3_unlock_notify（）&lt;/a&gt;が呼び出された後で、スレッドが非同期に信号を送られるのを待機し始める前に、2番目のスレッドによってロック解除通知コールバックが呼び出される可能性があります。</target>
+          <target state="translated">&lt;a href=&quot;c3ref/unlock_notify&quot;&gt;sqlite3_unlock_notify（）&lt;/a&gt;がwait_for_unlock_notify（）によって呼び出されるときまでに、sqlite3_step（）またはsqlite3_prepare_v2（）呼び出しの成功を妨げていたブロッキング接続がすでにトランザクションを終了している可能性があります。この場合、&lt;a href=&quot;c3ref/unlock_notify&quot;&gt;sqlite3_unlock_notify（）&lt;/a&gt;が戻る前に、すぐにロック解除通知コールバックが呼び出されます。または、&lt;a href=&quot;c3ref/unlock_notify&quot;&gt;sqlite3_unlock_notify（）&lt;/a&gt;が呼び出された後で、スレッドが非同期にシグナルされるのを待機する前に、2番目のスレッドによってロック解除通知コールバックが呼び出される可能性があります。</target>
         </trans-unit>
         <trans-unit id="294016815718412ee0c20270b6745c8ced5712e1" translate="yes" xml:space="preserve">
           <source>By using its own built-in implementation, SQLite guarantees that the output will be the same on all platforms and in all LOCALEs. This is important for consistency and for testing. It would be problematic if one machine gave and answer of &quot;5.25e+08&quot; and another gave an answer of &quot;5.250e+008&quot;. Both answers are correct, but it is better when SQLite always gives the same answer.</source>
@@ -901,7 +901,7 @@
         </trans-unit>
         <trans-unit id="17e29dae877981f4c14c3c548258e66edf22daf5" translate="yes" xml:space="preserve">
           <source>CSV output from the &lt;a href=&quot;cli&quot;&gt;command-line shell&lt;/a&gt; now always uses CRNL for the row separator and avoids inserting CR in front of NLs contained in data.</source>
-          <target state="translated">&lt;a href=&quot;cli&quot;&gt;コマンドラインシェル&lt;/a&gt;からのCSV出力は、行セパレーターに常にCRNLを使用し、データに含まれるNLの前にCRを挿入することを回避します。</target>
+          <target state="translated">&lt;a href=&quot;cli&quot;&gt;コマンドラインシェル&lt;/a&gt;からのCSV出力は、行セパレーターに常にCRNLを使用し、データに含まれるNLの前にCRを挿入することを回避するようになりました。</target>
         </trans-unit>
         <trans-unit id="e6303ccf1ceff324ad3a408b48244faf8b681b0a" translate="yes" xml:space="preserve">
           <source>CURRENT</source>
@@ -929,7 +929,7 @@
         </trans-unit>
         <trans-unit id="243348169a35fc01acf2950edac2a8317e1d5705" translate="yes" xml:space="preserve">
           <source>Cache sharing is enabled and disabled for an entire process. This is a change as of SQLite &lt;a href=&quot;https://sqlite.org/releaselog/3_5_0.html&quot;&gt;version 3.5.0&lt;/a&gt; (2007-09-04). In prior versions of SQLite, sharing was enabled or disabled for each thread separately.</source>
-          <target state="translated">キャッシュ共有は、プロセス全体で有効または無効になります。これはSQLite &lt;a href=&quot;https://sqlite.org/releaselog/3_5_0.html&quot;&gt;バージョン3.5.0&lt;/a&gt;（2007-09-04）からの変更です。以前のバージョンのSQLiteでは、共有はスレッドごとに個別に有効または無効にされていました。</target>
+          <target state="translated">キャッシュ共有は、プロセス全体で有効または無効になります。これはSQLite &lt;a href=&quot;https://sqlite.org/releaselog/3_5_0.html&quot;&gt;バージョン3.5.0&lt;/a&gt;（2007-09-04）からの変更です。SQLiteの以前のバージョンでは、共有はスレッドごとに個別に有効または無効にされていました。</target>
         </trans-unit>
         <trans-unit id="dfad78f93ed55c3b8305d2de17eb36b19e276c8b" translate="yes" xml:space="preserve">
           <source>Call sqlite3_reset() on the statement handle. Since an SQLITE_LOCKED error may only occur on the first call to sqlite3_step() (it is not possible for one call to sqlite3_step() to return SQLITE_ROW and then the next SQLITE_LOCKED), the statement handle may be reset at this point without affecting the results of the query from the point of view of the caller. If sqlite3_reset() were not called at this point, the next call to sqlite3_step() would return SQLITE_MISUSE.</source>
@@ -945,7 +945,7 @@
         </trans-unit>
         <trans-unit id="f4cfaf571c0396d88e7a8a5942129605eebc5000" translate="yes" xml:space="preserve">
           <source>Call the table named by the &lt;a href=&quot;syntax/cte-table-name&quot;&gt;cte-table-name&lt;/a&gt; in a recursive common table expression the &quot;recursive table&quot;. In the &lt;a href=&quot;syntax/recursive-cte&quot;&gt;recursive-cte&lt;/a&gt; bubble diagram above, the recursive table must appear exactly once in the FROM clause of the recursive-select and must not appear anywhere else in either the initial-select or the recursive-select, including subqueries. The initial-select may be a &lt;a href=&quot;lang_select#compound&quot;&gt;compound select&lt;/a&gt;, but it may not include an ORDER BY, LIMIT, or OFFSET. The recursive-select must be a simple select, not a compound. The recursive-select is allowed to include an ORDER BY, LIMIT, and/or OFFSET.</source>
-          <target state="translated">再帰的共通テーブル式で&lt;a href=&quot;syntax/cte-table-name&quot;&gt;cte-table-name&lt;/a&gt;によって指定されたテーブルを「再帰的テーブル」と呼びます。で&lt;a href=&quot;syntax/recursive-cte&quot;&gt;再帰CTE&lt;/a&gt;上記バブル図、再帰テーブルは正確に選択し、再帰的および初期選択するか、再帰を選択し、サブクエリを含むいずれかのどこにも現れてはならないのFROM句で一度現れなければなりません。 initial-selectには&lt;a href=&quot;lang_select#compound&quot;&gt;複合selectを使用できます&lt;/a&gt;が、ORDER BY、LIMIT、OFFSETを含めることはできません。再帰選択は、複合ではなく単純な選択でなければなりません。再帰選択には、ORDER BY、LIMIT、OFFSETを含めることができます。</target>
+          <target state="translated">指定されたテーブル呼び出し&lt;a href=&quot;syntax/cte-table-name&quot;&gt;CTE-table-nameの&lt;/a&gt;再帰共通テーブル式「再帰テーブル」にします。上記の&lt;a href=&quot;syntax/recursive-cte&quot;&gt;recursive-cte&lt;/a&gt;バブル図では、再帰的テーブルは、再帰的選択のFROM句に1回だけ出現し、initial-selectまたはrecursive-selectのほかのサブクエリを含むどこにも出現してはなりません。 initial-selectには&lt;a href=&quot;lang_select#compound&quot;&gt;複合selectを使用できます&lt;/a&gt;が、ORDER BY、LIMIT、またはOFFSETを含めることはできません。再帰的選択は、複合ではなく単純な選択でなければなりません。再帰選択には、ORDER BY、LIMIT、OFFSETを含めることができます。</target>
         </trans-unit>
         <trans-unit id="42fb639b7313463881ed7d9bae34cc709237f03b" translate="yes" xml:space="preserve">
           <source>Callback</source>
@@ -961,11 +961,11 @@
         </trans-unit>
         <trans-unit id="3358427e1a8ed1bea8f5a2ad2f5555efabc90a34" translate="yes" xml:space="preserve">
           <source>Calling this function with an argument that is not a NULL pointer or an open blob handle results in undefined behaviour. Calling this routine with a null pointer (such as would be returned by a failed call to &lt;a href=&quot;#sqlite3_blob_open&quot;&gt;sqlite3_blob_open()&lt;/a&gt;) is a harmless no-op. Otherwise, if this function is passed a valid open blob handle, the values returned by the sqlite3_errcode() and sqlite3_errmsg() functions are set before returning.</source>
-          <target state="translated">NULLポインターまたは開いているblobハンドルではない引数を指定してこの関数を呼び出すと、動作が未定義になります。このルーチンをnullポインタ（&lt;a href=&quot;#sqlite3_blob_open&quot;&gt;sqlite3_blob_open（）の&lt;/a&gt;呼び出しの失敗によって返されるなど）で呼び出すことは、無害な何もしません。それ以外の場合、この関数に有効なオープンBLOBハンドルが渡されると、sqlite3_errcode（）およびsqlite3_errmsg（）関数によって返される値は、戻る前に設定されます。</target>
+          <target state="translated">NULLポインターまたは開いているblobハンドルではない引数を指定してこの関数を呼び出すと、動作が未定義になります。 nullポインターを使用してこのルーチンを呼び出す（&lt;a href=&quot;#sqlite3_blob_open&quot;&gt;sqlite3_blob_open（）の&lt;/a&gt;呼び出しが失敗した場合に返されるなど）と、無害な何もしません。それ以外の場合、この関数に有効なオープンBLOBハンドルが渡されると、sqlite3_errcode（）およびsqlite3_errmsg（）関数によって返される値は、戻る前に設定されます。</target>
         </trans-unit>
         <trans-unit id="508bbd8f844cc227cec9347e436cbdd9ffc04285" translate="yes" xml:space="preserve">
           <source>Calling this function with an argument that is not a NULL pointer or an open blob handle results in undefined behaviour. Calling this routine with a null pointer (such as would be returned by a failed call to &lt;a href=&quot;blob_open&quot;&gt;sqlite3_blob_open()&lt;/a&gt;) is a harmless no-op. Otherwise, if this function is passed a valid open blob handle, the values returned by the sqlite3_errcode() and sqlite3_errmsg() functions are set before returning.</source>
-          <target state="translated">NULLポインターまたは開いているblobハンドルではない引数を指定してこの関数を呼び出すと、動作が未定義になります。このルーチンをnullポインタ（&lt;a href=&quot;blob_open&quot;&gt;sqlite3_blob_open（）の&lt;/a&gt;呼び出しの失敗によって返されるなど）で呼び出すことは、無害な何もしません。それ以外の場合、この関数に有効なオープンBLOBハンドルが渡されると、sqlite3_errcode（）およびsqlite3_errmsg（）関数によって返される値は、戻る前に設定されます。</target>
+          <target state="translated">NULLポインターまたは開いているblobハンドルではない引数を指定してこの関数を呼び出すと、動作が未定義になります。 nullポインターを使用してこのルーチンを呼び出す（&lt;a href=&quot;blob_open&quot;&gt;sqlite3_blob_open（）の&lt;/a&gt;呼び出しが失敗した場合に返されるなど）と、無害な何もしません。それ以外の場合、この関数に有効なオープンBLOBハンドルが渡されると、sqlite3_errcode（）およびsqlite3_errmsg（）関数によって返される値は、戻る前に設定されます。</target>
         </trans-unit>
         <trans-unit id="64d7627e8fc4bb3206a4244a29e5baede1745ef4" translate="yes" xml:space="preserve">
           <source>Calling this routine with an argument less than or equal to zero turns off all busy handlers.</source>
@@ -973,11 +973,11 @@
         </trans-unit>
         <trans-unit id="f8f92cf7b8aea43c60bffe0c687691a21c0c3628" translate="yes" xml:space="preserve">
           <source>Calls of the form &lt;a href=&quot;#sqlite3_vtab_config&quot;&gt;sqlite3_vtab_config&lt;/a&gt;(db,SQLITE_VTAB_CONSTRAINT_SUPPORT,X) are supported, where X is an integer. If X is zero, then the &lt;a href=&quot;vtab&quot;&gt;virtual table&lt;/a&gt; whose &lt;a href=&quot;vtab#xcreate&quot;&gt;xCreate&lt;/a&gt; or &lt;a href=&quot;vtab#xconnect&quot;&gt;xConnect&lt;/a&gt; method invoked &lt;a href=&quot;#sqlite3_vtab_config&quot;&gt;sqlite3_vtab_config()&lt;/a&gt; does not support constraints. In this configuration (which is the default) if a call to the &lt;a href=&quot;vtab#xupdate&quot;&gt;xUpdate&lt;/a&gt; method returns &lt;a href=&quot;#SQLITE_ABORT&quot;&gt;SQLITE_CONSTRAINT&lt;/a&gt;, then the entire statement is rolled back as if &lt;a href=&quot;lang_conflict&quot;&gt;OR ABORT&lt;/a&gt; had been specified as part of the users SQL statement, regardless of the actual ON CONFLICT mode specified.</source>
-          <target state="translated">&lt;a href=&quot;#sqlite3_vtab_config&quot;&gt;sqlite3_vtab_config&lt;/a&gt;（db、SQLITE_VTAB_CONSTRAINT_SUPPORT、X）という形式の呼び出しがサポートされています。Xは整数です。 Xがゼロの場合、&lt;a href=&quot;vtab#xcreate&quot;&gt;xCreate&lt;/a&gt;または&lt;a href=&quot;vtab#xconnect&quot;&gt;xConnect&lt;/a&gt;メソッドが&lt;a href=&quot;#sqlite3_vtab_config&quot;&gt;sqlite3_vtab_config（）を&lt;/a&gt;呼び出した&lt;a href=&quot;vtab&quot;&gt;仮想テーブル&lt;/a&gt;は制約をサポートしません。この構成（デフォルト）では、&lt;a href=&quot;vtab#xupdate&quot;&gt;xUpdate&lt;/a&gt;メソッドの呼び出しがSQLITE_CONSTRAINTを返す&lt;a href=&quot;#SQLITE_ABORT&quot;&gt;場合&lt;/a&gt;、指定された実際のON CONFLICTモードに関係なく、ステートメント全体がユーザーのSQLステートメントの一部として&lt;a href=&quot;lang_conflict&quot;&gt;OR ABORT&lt;/a&gt;が指定されたかのようにロールバックされます。</target>
+          <target state="translated">&lt;a href=&quot;#sqlite3_vtab_config&quot;&gt;sqlite3_vtab_config&lt;/a&gt;（db、SQLITE_VTAB_CONSTRAINT_SUPPORT、X）という形式の呼び出しがサポートされています。Xは整数です。 Xがゼロの場合、&lt;a href=&quot;vtab#xcreate&quot;&gt;xCreate&lt;/a&gt;または&lt;a href=&quot;vtab#xconnect&quot;&gt;xConnect&lt;/a&gt;メソッドが&lt;a href=&quot;#sqlite3_vtab_config&quot;&gt;sqlite3_vtab_config（）を&lt;/a&gt;呼び出した&lt;a href=&quot;vtab&quot;&gt;仮想テーブル&lt;/a&gt;は制約をサポートしません。呼び出した場合（デフォルト）この構成で&lt;a href=&quot;vtab#xupdate&quot;&gt;のXUpdate&lt;/a&gt;メソッドが返す&lt;a href=&quot;#SQLITE_ABORT&quot;&gt;SQLITE_CONSTRAINTを&lt;/a&gt;、その後、文全体がロールバックかのように&lt;a href=&quot;lang_conflict&quot;&gt;OR ABORTは&lt;/a&gt;、ユーザーのSQL文の一部として指定されていたにかかわらず、実際のON CONFLICTモードの指定。</target>
         </trans-unit>
         <trans-unit id="9cd59c58ce5ea212cbfa095730fc7d7c0c018f0a" translate="yes" xml:space="preserve">
           <source>Calls of the form &lt;a href=&quot;vtab_config&quot;&gt;sqlite3_vtab_config&lt;/a&gt;(db,SQLITE_VTAB_CONSTRAINT_SUPPORT,X) are supported, where X is an integer. If X is zero, then the &lt;a href=&quot;../vtab&quot;&gt;virtual table&lt;/a&gt; whose &lt;a href=&quot;../vtab#xcreate&quot;&gt;xCreate&lt;/a&gt; or &lt;a href=&quot;../vtab#xconnect&quot;&gt;xConnect&lt;/a&gt; method invoked &lt;a href=&quot;vtab_config&quot;&gt;sqlite3_vtab_config()&lt;/a&gt; does not support constraints. In this configuration (which is the default) if a call to the &lt;a href=&quot;../vtab#xupdate&quot;&gt;xUpdate&lt;/a&gt; method returns &lt;a href=&quot;../rescode#constraint&quot;&gt;SQLITE_CONSTRAINT&lt;/a&gt;, then the entire statement is rolled back as if &lt;a href=&quot;../lang_conflict&quot;&gt;OR ABORT&lt;/a&gt; had been specified as part of the users SQL statement, regardless of the actual ON CONFLICT mode specified.</source>
-          <target state="translated">&lt;a href=&quot;vtab_config&quot;&gt;sqlite3_vtab_config&lt;/a&gt;（db、SQLITE_VTAB_CONSTRAINT_SUPPORT、X）という形式の呼び出しがサポートされています。Xは整数です。 Xがゼロの場合、&lt;a href=&quot;../vtab#xcreate&quot;&gt;xCreate&lt;/a&gt;または&lt;a href=&quot;../vtab#xconnect&quot;&gt;xConnect&lt;/a&gt;メソッドが&lt;a href=&quot;vtab_config&quot;&gt;sqlite3_vtab_config（）を&lt;/a&gt;呼び出した&lt;a href=&quot;../vtab&quot;&gt;仮想テーブル&lt;/a&gt;は制約をサポートしません。この構成（デフォルト）では、&lt;a href=&quot;../vtab#xupdate&quot;&gt;xUpdate&lt;/a&gt;メソッドの呼び出しがSQLITE_CONSTRAINTを返す&lt;a href=&quot;../rescode#constraint&quot;&gt;場合&lt;/a&gt;、指定された実際のON CONFLICTモードに関係なく、ステートメント全体がユーザーのSQLステートメントの一部として&lt;a href=&quot;../lang_conflict&quot;&gt;OR ABORT&lt;/a&gt;が指定されたかのようにロールバックされます。</target>
+          <target state="translated">&lt;a href=&quot;vtab_config&quot;&gt;sqlite3_vtab_config&lt;/a&gt;（db、SQLITE_VTAB_CONSTRAINT_SUPPORT、X）という形式の呼び出しがサポートされています。Xは整数です。 Xがゼロの場合、&lt;a href=&quot;../vtab#xcreate&quot;&gt;xCreate&lt;/a&gt;または&lt;a href=&quot;../vtab#xconnect&quot;&gt;xConnect&lt;/a&gt;メソッドが&lt;a href=&quot;vtab_config&quot;&gt;sqlite3_vtab_config（）を&lt;/a&gt;呼び出した&lt;a href=&quot;../vtab&quot;&gt;仮想テーブル&lt;/a&gt;は制約をサポートしません。呼び出した場合（デフォルト）この構成で&lt;a href=&quot;../vtab#xupdate&quot;&gt;のXUpdate&lt;/a&gt;メソッドが返す&lt;a href=&quot;../rescode#constraint&quot;&gt;SQLITE_CONSTRAINTを&lt;/a&gt;、その後、文全体がロールバックかのように&lt;a href=&quot;../lang_conflict&quot;&gt;OR ABORTは&lt;/a&gt;、ユーザーのSQL文の一部として指定されていたにかかわらず、実際のON CONFLICTモードの指定。</target>
         </trans-unit>
         <trans-unit id="86477778aa30209993df2ed08e9c32fc5e63a6fa" translate="yes" xml:space="preserve">
           <source>Calls to sqlite3_db_config() return SQLITE_OK if and only if the call is considered successful.</source>
@@ -1001,7 +1001,7 @@
         </trans-unit>
         <trans-unit id="8d319a418b8f56b5238017081c3f614d4e2d2c3a" translate="yes" xml:space="preserve">
           <source>Carray($PTR,$N) is a &lt;a href=&quot;vtab#tabfunc2&quot;&gt;table-valued function&lt;/a&gt; with a single column (named &quot;value&quot;) and zero or more rows. The &quot;value&quot; of each row in the carray() is taken from a C-language array that is $N elements long. $PTR is a pointer to the beginning of the array. In this way, the carray() function provides a convenient mechanism to bind C-language arrays to SQL queries.</source>
-          <target state="translated">Carray（$ PTR、$ N）は、単一の列（「値」という名前）と0個以上の行を持つ&lt;a href=&quot;vtab#tabfunc2&quot;&gt;テーブル値関数&lt;/a&gt;です。carray（）の各行の「値」は、$ N要素の長さのC言語配列から取得されます。$ PTRは、配列の先頭を指すポインターです。このように、carray（）関数は、C言語の配列をSQLクエリにバインドするための便利なメカニズムを提供します。</target>
+          <target state="translated">Carray（$ PTR、$ N）は、単一の列（「値」という名前）と0個以上の行を持つ&lt;a href=&quot;vtab#tabfunc2&quot;&gt;テーブル値関数&lt;/a&gt;です。carray（）の各行の「値」は、$ N要素の長さのC言語配列から取得されます。$ PTRは、配列の先頭へのポインターです。このように、carray（）関数は、C言語の配列をSQLクエリにバインドするための便利なメカニズムを提供します。</target>
         </trans-unit>
         <trans-unit id="8c3b32ddf313031d687668680d0df3a761eedc08" translate="yes" xml:space="preserve">
           <source>Case-folding is only performed for ASCII characters. So while &quot;A&quot; and &quot;a&quot; are considered to be equivalent, &quot;&amp;Atilde;&quot; and &quot;&amp;atilde;&quot; are distinct.</source>
@@ -1037,11 +1037,11 @@
         </trans-unit>
         <trans-unit id="6f9cada34f4e450b6e71343e035a2f6e0689a6ef" translate="yes" xml:space="preserve">
           <source>Casting a value to a type-name with no affinity causes the value to be converted into a BLOB. Casting to a BLOB consists of first casting the value to TEXT in the &lt;a href=&quot;pragma#pragma_encoding&quot;&gt;encoding&lt;/a&gt; of the database connection, then interpreting the resulting byte sequence as a BLOB instead of as TEXT.</source>
-          <target state="translated">アフィニティのないtype-nameに値をキャストすると、値がBLOBに変換されます。BLOBへのキャストは、最初にデータベース接続の&lt;a href=&quot;pragma#pragma_encoding&quot;&gt;エンコーディング&lt;/a&gt;で値をTEXTにキャストし、次に結果のバイトシーケンスをTEXTではなくBLOBとして解釈することで構成されます。</target>
+          <target state="translated">アフィニティのないtype-nameに値をキャストすると、値がBLOBに変換されます。BLOBへのキャストは、まずデータベース接続の&lt;a href=&quot;pragma#pragma_encoding&quot;&gt;エンコード&lt;/a&gt;で値をTEXTにキャストし、次に結果のバイトシーケンスをTEXTではなくBLOBとして解釈することで構成されます。</target>
         </trans-unit>
         <trans-unit id="6fddff049ee62a8963c9618826e1a03cc952e4f9" translate="yes" xml:space="preserve">
           <source>Casting an INTEGER or REAL value into TEXT renders the value as if via &lt;a href=&quot;c3ref/mprintf&quot;&gt;sqlite3_snprintf()&lt;/a&gt; except that the resulting TEXT uses the &lt;a href=&quot;pragma#pragma_encoding&quot;&gt;encoding&lt;/a&gt; of the database connection.</source>
-          <target state="translated">INTEGERまたはREAL値をTEXTにキャストすると、結果のTEXT がデータベース接続の&lt;a href=&quot;pragma#pragma_encoding&quot;&gt;エンコーディング&lt;/a&gt;を使用することを除いて、&lt;a href=&quot;c3ref/mprintf&quot;&gt;sqlite3_snprintf（）&lt;/a&gt;を介して値がレンダリングされます。</target>
+          <target state="translated">INTEGERまたはREAL値をTEXTにキャストすると、結果のTEXT がデータベース接続の&lt;a href=&quot;pragma#pragma_encoding&quot;&gt;エンコーディング&lt;/a&gt;を使用することを除いて、&lt;a href=&quot;c3ref/mprintf&quot;&gt;sqlite3_snprintf（）&lt;/a&gt;経由であるかのように値がレンダリングされます。</target>
         </trans-unit>
         <trans-unit id="250b5faac42b62665141b9500e3ff0cde556b9c8" translate="yes" xml:space="preserve">
           <source>Casual readers are not expected to understand all of these rules. A key take-away from this section is that the rules for determining when query flatting is safe and when it is unsafe are subtle and complex. There have been multiple bugs over the years caused by over-aggressive query flattening. On the other hand, performance of complex queries and/or queries involving views tends to suffer if query flattening is more conservative.</source>
@@ -1081,7 +1081,7 @@
         </trans-unit>
         <trans-unit id="4467e902ad5ceab8af5cb553065bb45a1d9e0f01" translate="yes" xml:space="preserve">
           <source>Change &lt;a href=&quot;cli#arinsup&quot;&gt;--update option&lt;/a&gt; in the &lt;a href=&quot;cli#sqlar&quot;&gt;.archive command&lt;/a&gt; so that it skips files that are already in the archive and are unchanged. Add the new --insert option that works like --update used to work.</source>
-          <target state="translated">&lt;a href=&quot;cli#sqlar&quot;&gt;.archiveコマンドの&lt;/a&gt;&lt;a href=&quot;cli#arinsup&quot;&gt;--updateオプション&lt;/a&gt;を変更して、アーカイブにすでに存在し、変更されていないファイルをスキップするようにします。以前使用されていた--updateのように機能する新しい--insertオプションを追加します。</target>
+          <target state="translated">&lt;a href=&quot;cli#sqlar&quot;&gt;.archiveコマンドの&lt;/a&gt;&lt;a href=&quot;cli#arinsup&quot;&gt;--updateオプション&lt;/a&gt;を変更して、アーカイブに既に存在し、変更されていないファイルをスキップするようにします。以前使用されていた--updateのように機能する新しい--insertオプションを追加します。</target>
         </trans-unit>
         <trans-unit id="f2cdcfee54f6e63221834526df456ae33f4748c1" translate="yes" xml:space="preserve">
           <source>Change &lt;a href=&quot;compile#default_pcache_initsz&quot;&gt;SQLITE_DEFAULT_PCACHE_INITSZ&lt;/a&gt; from 100 to 20, for improved performance.</source>
@@ -1109,11 +1109,11 @@
         </trans-unit>
         <trans-unit id="c9502e13b89a0e998e0002cc9dd2ac28edd6e8ea" translate="yes" xml:space="preserve">
           <source>Change the &lt;a href=&quot;lemon&quot;&gt;Lemon&lt;/a&gt; source code to avoid calling C-library functions that OpenBSD considers dangerous. (Ex: sprintf).</source>
-          <target state="translated">&lt;a href=&quot;lemon&quot;&gt;レモンの&lt;/a&gt;ソースコードを変更して、OpenBSDが危険と見なすCライブラリ関数を呼び出さないようにします。（例：sprintf）。</target>
+          <target state="translated">&lt;a href=&quot;lemon&quot;&gt;レモンの&lt;/a&gt;ソースコードを変更して、OpenBSDが危険だと見なしているCライブラリ関数を呼び出さないようにします。（例：sprintf）。</target>
         </trans-unit>
         <trans-unit id="5d77baa02e54aeb22b238c0441152b1e5304decd" translate="yes" xml:space="preserve">
           <source>Change the &lt;a href=&quot;tempfiles#tempdir&quot;&gt;temporary directory search algorithm&lt;/a&gt; on Unix to allow directories with write and execute permission, but without read permission, to serve as temporary directories. Apply this same standard to the &quot;.&quot; fallback directory.</source>
-          <target state="translated">Unix の&lt;a href=&quot;tempfiles#tempdir&quot;&gt;一時ディレクトリ検索アルゴリズム&lt;/a&gt;を変更して、書き込みと実行の権限はあるが読み取り権限のないディレクトリが一時ディレクトリとして機能できるようにします。この同じ標準を「。」に適用します。フォールバックディレクトリ。</target>
+          <target state="translated">Unix の&lt;a href=&quot;tempfiles#tempdir&quot;&gt;一時ディレクトリ検索アルゴリズム&lt;/a&gt;を変更して、書き込みと実行の権限を持つが、読み取り権限のないディレクトリが一時ディレクトリとして機能できるようにします。同じ基準を「。」に適用します。フォールバックディレクトリ。</target>
         </trans-unit>
         <trans-unit id="ddfd791371cc9a6cd54b126954447b1ad9112604" translate="yes" xml:space="preserve">
           <source>Change the &lt;b&gt;sqlite&lt;/b&gt; program so that it can read databases for which it lacks write permission. (It used to refuse all access if it could not write.)</source>
@@ -1137,7 +1137,7 @@
         </trans-unit>
         <trans-unit id="5c9b7b0951ce0a0f4a0c1e9e79102e0b6bc620be" translate="yes" xml:space="preserve">
           <source>Change the format of indices to correct a design flaw the originated with version 2.1.0. *** This is an incompatible file format change *** When version 2.6.0 or later of the library attempts to open a database file created by version 2.5.6 or earlier, it will automatically and irreversibly convert the file format. &lt;b&gt;Make backup copies of older database files before opening them with version 2.6.0 of the library.&lt;/b&gt;</source>
-          <target state="translated">インデックスの形式を変更して、バージョン2.1.0に起因する設計上の欠陥を修正します。***これは互換性のないファイル形式の変更です***ライブラリのバージョン2.6.0以降がバージョン2.5.6以前で作成されたデータベースファイルを開こうとすると、ファイル形式が自動的かつ不可逆的に変換されます。&lt;b&gt;ライブラリのバージョン2.6.0で開く前に、古いデータベースファイルのバックアップコピーを作成します。&lt;/b&gt;</target>
+          <target state="translated">インデックスの形式を変更して、バージョン2.1.0に起因する設計上の欠陥を修正します。 ***これは互換性のないファイル形式の変更です***ライブラリのバージョン2.6.0以降がバージョン2.5.6以前で作成されたデータベースファイルを開こうとすると、ファイル形式が自動的かつ不可逆的に変換されます。&lt;b&gt;ライブラリのバージョン2.6.0で開く前に、古いデータベースファイルのバックアップコピーを作成します。&lt;/b&gt;</target>
         </trans-unit>
         <trans-unit id="b18ff5a16f7817612045bc810baefbc9f406946f" translate="yes" xml:space="preserve">
           <source>Change the journal mode of database P1 to P3. P3 must be one of the PAGER_JOURNALMODE_XXX values. If changing between the various rollback modes (delete, truncate, persist, off and memory), this is a simple operation. No IO is required.</source>
@@ -1173,7 +1173,7 @@
         </trans-unit>
         <trans-unit id="17fc584f1b3f79a52638c936555356d72a9a526e" translate="yes" xml:space="preserve">
           <source>Change the unix &lt;a href=&quot;vfs&quot;&gt;VFS&lt;/a&gt; to be tolerant of read() system calls that return less then the full number of requested bytes.</source>
-          <target state="translated">unix &lt;a href=&quot;vfs&quot;&gt;VFS&lt;/a&gt;を変更して、要求されたバイトの総数より少ない値を返すread（）システムコールに対応できるようにします。</target>
+          <target state="translated">unix &lt;a href=&quot;vfs&quot;&gt;VFS&lt;/a&gt;を変更して、要求されたバイトの総数よりも少ない値を返すread（）システムコールに対応できるようにします。</target>
         </trans-unit>
         <trans-unit id="a542a095188ddcc6129238423271833568a2c07f" translate="yes" xml:space="preserve">
           <source>Change the way SUM() handles NULL values in order to comply with the SQL standard</source>
@@ -1197,7 +1197,7 @@
         </trans-unit>
         <trans-unit id="7e34599469a327d2e948bcc9862b0322f2e510f5" translate="yes" xml:space="preserve">
           <source>Changed the defined behavior for the &lt;a href=&quot;lang_expr#castexpr&quot;&gt;CAST expression&lt;/a&gt; when floating point values greater than +9223372036854775807 are cast into into integers so that the result is the largest possible integer, +9223372036854775807, instead of the smallest possible integer, -9223372036854775808. After this change, CAST(9223372036854775809.0 as INT) yields +9223372036854775807 instead of -9223372036854775808. &lt;b&gt;&lt;big&gt;&amp;larr;&lt;/big&gt; Potentially Incompatible Change!&lt;/b&gt;</source>
-          <target state="translated">+9223372036854775807より大きい浮動小数点値が整数にキャストされるときの&lt;a href=&quot;lang_expr#castexpr&quot;&gt;CAST式&lt;/a&gt;の定義された動作を変更し、結果が可能な最小の整数-9223372036854775808ではなく、最大の整数+9223372036854775807になるようにしました。この変更後、CAST（9223372036854775809.0 as INT）は-9223372036854775808ではなく+9223372036854775807になります。&lt;b&gt;&lt;big&gt;&amp;larr;&lt;/big&gt;互換性がない可能性のある変更！&lt;/b&gt;</target>
+          <target state="translated">+9223372036854775807より大きい浮動小数点値が整数にキャストされるときの&lt;a href=&quot;lang_expr#castexpr&quot;&gt;CAST式&lt;/a&gt;の定義済み動作を変更し、結果が可能な最小の整数-9223372036854775808ではなく、最大の整数+9223372036854775807になるようにしました。この変更後、CAST（9223372036854775809.0 as INT）は-9223372036854775808ではなく+9223372036854775807になります。&lt;b&gt;&lt;big&gt;&amp;larr;&lt;/big&gt;互換性がない可能性のある変更！&lt;/b&gt;</target>
         </trans-unit>
         <trans-unit id="8caa23815a1a8b1a9c4e9cdf79d42cbf41197489" translate="yes" xml:space="preserve">
           <source>Changed the print format for floating point values from &quot;%g&quot; to &quot;%.15g&quot;.</source>
@@ -1205,11 +1205,11 @@
         </trans-unit>
         <trans-unit id="24a6e547edd1d04eb53e9f5fe5f292726e669a13" translate="yes" xml:space="preserve">
           <source>Changed the prototype of the &lt;a href=&quot;c3ref/auto_extension&quot;&gt;sqlite3_auto_extension()&lt;/a&gt; interface in a way that is backwards compatible but which might cause warnings in new builds of applications that use that interface.</source>
-          <target state="translated">&lt;a href=&quot;c3ref/auto_extension&quot;&gt;sqlite3_auto_extension（）&lt;/a&gt;インターフェースのプロトタイプを後方互換性のある方法で変更しましたが、そのインターフェースを使用するアプリケーションの新しいビルドで警告が発生する可能性があります。</target>
+          <target state="translated">&lt;a href=&quot;c3ref/auto_extension&quot;&gt;sqlite3_auto_extension（）&lt;/a&gt;インターフェースのプロトタイプを下位互換性のある方法で変更しましたが、そのインターフェースを使用するアプリケーションの新しいビルドで警告が発生する可能性があります。</target>
         </trans-unit>
         <trans-unit id="f51c4a6bf59ab3184542658dacdac319c7bb7606" translate="yes" xml:space="preserve">
           <source>Changed the signature of the xDlSym method of the &lt;a href=&quot;c3ref/vfs&quot;&gt;sqlite3_vfs&lt;/a&gt; object in a way that is backwards compatible but which might cause compiler warnings.</source>
-          <target state="translated">下位互換性がある方法で&lt;a href=&quot;c3ref/vfs&quot;&gt;sqlite3_vfs&lt;/a&gt;オブジェクトのxDlSymメソッドのシグネチャを変更しましたが、コンパイラの警告が発生する可能性があります。</target>
+          <target state="translated">下位互換性がある方法で&lt;a href=&quot;c3ref/vfs&quot;&gt;sqlite3_vfs&lt;/a&gt;オブジェクトのxDlSymメソッドのシグネチャを変更しましたが、コンパイラ警告が発生する可能性があります。</target>
         </trans-unit>
         <trans-unit id="09eb09203ab84e8c2e6e475c70c299202b24c3d8" translate="yes" xml:space="preserve">
           <source>Changegroup Handle</source>
@@ -1329,11 +1329,11 @@
         </trans-unit>
         <trans-unit id="9851972ccfb6ddbbe4682022996c0b7f4c61ad78" translate="yes" xml:space="preserve">
           <source>Changing the data_store_directory setting is &lt;u&gt;not&lt;/u&gt; threadsafe. Never change the data_store_directory setting if another thread within the application is running any SQLite interface at the same time. Doing so results in undefined behavior. Changing the data_store_directory setting writes to the &lt;a href=&quot;c3ref/data_directory&quot;&gt;sqlite3_data_directory&lt;/a&gt; global variable and that global variable is not protected by a mutex.</source>
-          <target state="translated">data_store_directory設定の変更はスレッドセーフではあり&lt;u&gt;ません&lt;/u&gt;。アプリケーション内の別のスレッドがSQLiteインターフェイスを同時に実行している場合は、data_store_directory設定を変更しないでください。これを行うと、未定義の動作が発生します。data_store_directory設定を変更すると、&lt;a href=&quot;c3ref/data_directory&quot;&gt;sqlite3_data_directory&lt;/a&gt;グローバル変数に書き込まれ、そのグローバル変数はミューテックスによって保護されません。</target>
+          <target state="translated">data_store_directory設定の変更はスレッドセーフではあり&lt;u&gt;ません&lt;/u&gt;。アプリケーション内の別のスレッドが同時にSQLiteインターフェイスを実行している場合は、data_store_directory設定を変更しないでください。これを行うと、未定義の動作が発生します。data_store_directory設定を変更すると、&lt;a href=&quot;c3ref/data_directory&quot;&gt;sqlite3_data_directory&lt;/a&gt;グローバル変数に書き込まれ、そのグローバル変数はミューテックスによって保護されません。</target>
         </trans-unit>
         <trans-unit id="430a2be1381002d87b9b8ff73223fcbf66c5e87f" translate="yes" xml:space="preserve">
           <source>Changing the foreign_keys setting affects the execution of all statements prepared using the database connection, including those prepared before the setting was changed. Any existing statements prepared using the legacy &lt;a href=&quot;c3ref/prepare&quot;&gt;sqlite3_prepare()&lt;/a&gt; interface may fail with an &lt;a href=&quot;rescode#schema&quot;&gt;SQLITE_SCHEMA&lt;/a&gt; error after the foreign_keys setting is changed.</source>
-          <target state="translated">foreign_keys設定を変更すると、設定が変更される前に準備されたものを含め、データベース接続を使用して準備されたすべてのステートメントの実行に影響します。既存の文は、レガシー用いて調製&lt;a href=&quot;c3ref/prepare&quot;&gt;sqlite3_prepare（）&lt;/a&gt;で失敗することがインターフェイスを&lt;a href=&quot;rescode#schema&quot;&gt;SQLITE_SCHEMAの&lt;/a&gt; FOREIGN_KEYSの設定が変更された後、エラー。</target>
+          <target state="translated">foreign_keys設定を変更すると、設定が変更される前に準備されたステートメントを含め、データベース接続を使用して準備されたすべてのステートメントの実行に影響します。既存の文は、レガシー用いて調製&lt;a href=&quot;c3ref/prepare&quot;&gt;sqlite3_prepare（）&lt;/a&gt;で失敗することがインターフェイスを&lt;a href=&quot;rescode#schema&quot;&gt;SQLITE_SCHEMAの&lt;/a&gt; FOREIGN_KEYSの設定が変更された後、エラー。</target>
         </trans-unit>
         <trans-unit id="e64e5108f8dce99580f41bdd628fb1a43e13fc20" translate="yes" xml:space="preserve">
           <source>Changing the recursive_triggers setting affects the execution of all statements prepared using the database connection, including those prepared before the setting was changed. Any existing statements prepared using the legacy &lt;a href=&quot;c3ref/prepare&quot;&gt;sqlite3_prepare()&lt;/a&gt; interface may fail with an &lt;a href=&quot;rescode#schema&quot;&gt;SQLITE_SCHEMA&lt;/a&gt; error after the recursive_triggers setting is changed.</source>
@@ -1341,7 +1341,7 @@
         </trans-unit>
         <trans-unit id="859510e9fde4ba7098039dc9d57957c57590e8ad" translate="yes" xml:space="preserve">
           <source>Changing the temp_store_directory setting is &lt;u&gt;not&lt;/u&gt; threadsafe. Never change the temp_store_directory setting if another thread within the application is running any SQLite interface at the same time. Doing so results in undefined behavior. Changing the temp_store_directory setting writes to the &lt;a href=&quot;c3ref/temp_directory&quot;&gt;sqlite3_temp_directory&lt;/a&gt; global variable and that global variable is not protected by a mutex.</source>
-          <target state="translated">temp_store_directory設定の変更はスレッドセーフではあり&lt;u&gt;ません&lt;/u&gt;。アプリケーション内の別のスレッドがSQLiteインターフェイスを同時に実行している場合は、temp_store_directory設定を変更しないでください。これを行うと、未定義の動作が発生します。temp_store_directory設定を変更すると、&lt;a href=&quot;c3ref/temp_directory&quot;&gt;sqlite3_temp_directory&lt;/a&gt;グローバル変数に書き込まれ、そのグローバル変数はミューテックスによって保護されません。</target>
+          <target state="translated">temp_store_directory設定の変更はスレッドセーフではあり&lt;u&gt;ません&lt;/u&gt;。アプリケーション内の別のスレッドが同時にSQLiteインターフェイスを実行している場合は、temp_store_directory設定を変更しないでください。これを行うと、未定義の動作が発生します。temp_store_directory設定を変更すると、&lt;a href=&quot;c3ref/temp_directory&quot;&gt;sqlite3_temp_directory&lt;/a&gt;グローバル変数に書き込まれ、そのグローバル変数はミューテックスによって保護されません。</target>
         </trans-unit>
         <trans-unit id="4a3e8791cfca3d884c74337ea57def9c05ece108" translate="yes" xml:space="preserve">
           <source>Changing the value of this variable while a database connection is open can result in a corrupt database.</source>
@@ -1421,11 +1421,11 @@
         </trans-unit>
         <trans-unit id="37924a2fe97c6ebb27cab5b2e8b0b2d0894bd2b5" translate="yes" xml:space="preserve">
           <source>Checkpoint as many frames as possible without waiting for any database readers or writers to finish, then sync the database file if all frames in the log were checkpointed. The &lt;a href=&quot;#sqlite3_busy_handler&quot;&gt;busy-handler callback&lt;/a&gt; is never invoked in the SQLITE_CHECKPOINT_PASSIVE mode. On the other hand, passive mode might leave the checkpoint unfinished if there are concurrent readers or writers.</source>
-          <target state="translated">データベースリーダーまたはライターが完了するのを待たずに、できるだけ多くのフレームをチェックポイントし、ログ内のすべてのフレームがチェックポイントされている場合は、データベースファイルを同期します。&lt;a href=&quot;#sqlite3_busy_handler&quot;&gt;ビジーハンドラのコールバックは&lt;/a&gt; SQLITE_CHECKPOINT_PASSIVEモードで呼び出されることはありません。一方、パッシブモードでは、リーダーまたはライターが同時に存在する場合、チェックポイントが未完成のままになる可能性があります。</target>
+          <target state="translated">データベースリーダーまたはライターが完了するのを待たずに、できるだけ多くのフレームをチェックポイントし、ログ内のすべてのフレームにチェックポイントが設定されている場合は、データベースファイルを同期します。&lt;a href=&quot;#sqlite3_busy_handler&quot;&gt;ビジーハンドラのコールバックは&lt;/a&gt; SQLITE_CHECKPOINT_PASSIVEモードで呼び出されることはありません。一方、パッシブモードでは、リーダーまたはライターが同時に存在する場合、チェックポイントが未完成のままになる可能性があります。</target>
         </trans-unit>
         <trans-unit id="65bebe73feb47e6a7a12e61f091ce204dad0258a" translate="yes" xml:space="preserve">
           <source>Checkpoint as many frames as possible without waiting for any database readers or writers to finish, then sync the database file if all frames in the log were checkpointed. The &lt;a href=&quot;busy_handler&quot;&gt;busy-handler callback&lt;/a&gt; is never invoked in the SQLITE_CHECKPOINT_PASSIVE mode. On the other hand, passive mode might leave the checkpoint unfinished if there are concurrent readers or writers.</source>
-          <target state="translated">データベースリーダーまたはライターが完了するのを待たずに、できるだけ多くのフレームをチェックポイントし、ログ内のすべてのフレームがチェックポイントされている場合は、データベースファイルを同期します。&lt;a href=&quot;busy_handler&quot;&gt;ビジーハンドラのコールバックは&lt;/a&gt; SQLITE_CHECKPOINT_PASSIVEモードで呼び出されることはありません。一方、パッシブモードでは、リーダーまたはライターが同時に存在する場合、チェックポイントが未完成のままになる可能性があります。</target>
+          <target state="translated">データベースリーダーまたはライターが完了するのを待たずに、できるだけ多くのフレームをチェックポイントし、ログ内のすべてのフレームにチェックポイントが設定されている場合は、データベースファイルを同期します。&lt;a href=&quot;busy_handler&quot;&gt;ビジーハンドラのコールバックは&lt;/a&gt; SQLITE_CHECKPOINT_PASSIVEモードで呼び出されることはありません。一方、パッシブモードでは、リーダーまたはライターが同時に存在する場合、チェックポイントが未完成のままになる可能性があります。</target>
         </trans-unit>
         <trans-unit id="11999bbd94b14ea8ec845c4fcad50ea24f0a3d45" translate="yes" xml:space="preserve">
           <source>Checkpoint as many frames as possible without waiting for any database readers or writers to finish. Sync the db file if all frames in the log are checkpointed. This mode is the same as calling the &lt;a href=&quot;c3ref/wal_checkpoint&quot;&gt;sqlite3_wal_checkpoint()&lt;/a&gt; C interface. The &lt;a href=&quot;c3ref/busy_handler&quot;&gt;busy-handler callback&lt;/a&gt; is never invoked in this mode.</source>
@@ -1621,7 +1621,7 @@
         </trans-unit>
         <trans-unit id="d2925a5d74339b84bdd408d91b33688b6815af58" translate="yes" xml:space="preserve">
           <source>Colloquially, the Robson proof shows that in order to guarantee breakdown-free operation, any memory allocator must use a memory pool of size &lt;b&gt;N&lt;/b&gt; which exceeds the maximum amount of memory ever used &lt;b&gt;M&lt;/b&gt; by a multiplier that depends on &lt;b&gt;n&lt;/b&gt;, the ratio of the largest to the smallest allocation size. In other words, unless all memory allocations are of exactly the same size (&lt;b&gt;n&lt;/b&gt;=1) then the system needs access to more memory than it will ever use at one time. Furthermore, we see that the amount of surplus memory required grows rapidly as the ratio of largest to smallest allocations increases, and so there is strong incentive to keep all allocations as near to the same size as possible.</source>
-          <target state="translated">口語的に、Robsonの証明は、故障のない動作を保証するために、メモリアロケータはサイズ&lt;b&gt;Nの&lt;/b&gt;メモリプールを使用する必要があることを示しています。これは、これまでに使用されたメモリの最大量&lt;b&gt;M&lt;/b&gt;を、最大の比率&lt;b&gt;n&lt;/b&gt;最小割り当てサイズに。つまり、すべてのメモリ割り当てがまったく同じサイズ（&lt;b&gt;n&lt;/b&gt; = 1）でない限り、システムは、一度に使用するよりも多くのメモリにアクセスする必要があります。さらに、必要な余剰メモリの量は、最大の割り当てと最小の割り当ての比率が増加するにつれて急速に増加することがわかります。そのため、すべての割り当てをできるだけ同じサイズに保つという強い動機があります。</target>
+          <target state="translated">口語、保証絶縁破壊のない動作するために、任意のメモリアロケータサイズのメモリ・プールを使用する必要があるロブソンプルーフショー&lt;b&gt;N&lt;/b&gt;今まで使用されるメモリの最大量を超えた&lt;b&gt;M&lt;/b&gt;に依存する乗算器により&lt;b&gt;N&lt;/b&gt;、最大の比率を最小の割り当てサイズに。つまり、すべてのメモリ割り当てがまったく同じサイズ（&lt;b&gt;n&lt;/b&gt; = 1）でない限り、システムは、一度に使用するよりも多くのメモリにアクセスする必要があります。さらに、必要な余剰メモリの量は、最大の割り当てと最小の割り当ての比率が増加するにつれて急速に増加することがわかります。そのため、すべての割り当てをできるだけ同じサイズに近づけたいという強い動機があります。</target>
         </trans-unit>
         <trans-unit id="65ba00e95e60fb8971e699c771908e7c41d91624" translate="yes" xml:space="preserve">
           <source>Column</source>
@@ -1709,7 +1709,7 @@
         </trans-unit>
         <trans-unit id="0538dff4886a4148d161292cddf7f24f025bd278" translate="yes" xml:space="preserve">
           <source>Comments are not SQL commands, but can occur within the text of SQL queries passed to &lt;a href=&quot;c3ref/prepare&quot;&gt;sqlite3_prepare_v2()&lt;/a&gt; and related interfaces. Comments are treated as whitespace by the parser. Comments can begin anywhere whitespace can be found, including inside expressions that span multiple lines.</source>
-          <target state="translated">コメントはSQLコマンドではありませんが、&lt;a href=&quot;c3ref/prepare&quot;&gt;sqlite3_prepare_v2（）&lt;/a&gt;および関連するインターフェースに渡されるSQLクエリのテキスト内で発生する可能性があります。コメントはパーサーによって空白として扱われます。コメントは、複数行にまたがる式の中など、空白が見つかるところならどこからでも始めることができます。</target>
+          <target state="translated">コメントはSQLコマンドではありませんが、&lt;a href=&quot;c3ref/prepare&quot;&gt;sqlite3_prepare_v2（）&lt;/a&gt;および関連するインターフェースに渡されるSQLクエリのテキスト内で発生する可能性があります。コメントはパーサーによって空白として扱われます。コメントは、複数行にまたがる式の中など、空白が見つかる場所ならどこからでも開始できます。</target>
         </trans-unit>
         <trans-unit id="ce2337551468efeca0ed2bee143ae11b7529f35e" translate="yes" xml:space="preserve">
           <source>Comments can appear anywhere whitespace can occur, including inside expressions and in the middle of other SQL statements. Comments do not nest.</source>
@@ -1749,7 +1749,7 @@
         </trans-unit>
         <trans-unit id="3d0965b4050b33d43b6f8f1d0b90555ef5b6f358" translate="yes" xml:space="preserve">
           <source>Common Table Expressions or CTEs act like temporary &lt;a href=&quot;lang_createview&quot;&gt;views&lt;/a&gt; that exist only for the duration of a single SQL statement. There are two kinds of common table expressions: &quot;ordinary&quot; and &quot;recursive&quot;. Ordinary common table expressions are helpful for making queries easier to understand by factoring subqueries out of the main SQL statement. Recursive common table expressions provide the ability to do hierarchical or recursive queries of trees and graphs, a capability that is not otherwise available in the SQL language.</source>
-          <target state="translated">共通テーブル式またはCTE は、単一のSQLステートメントの期間のみ存在する一時&lt;a href=&quot;lang_createview&quot;&gt;ビューの&lt;/a&gt;ように機能します。一般的なテーブル式には、「通常」と「再帰的」の2種類があります。通常の共通テーブル式は、メインSQLステートメントからサブクエリを分解してクエリを理解しやすくするのに役立ちます。再帰的共通テーブル式は、ツリーおよびグラフの階層的または再帰的クエリを実行する機能を提供します。これは、SQL言語では利用できない機能です。</target>
+          <target state="translated">共通テーブル式またはCTE は、単一のSQLステートメントの間だけ存在する一時&lt;a href=&quot;lang_createview&quot;&gt;ビューの&lt;/a&gt;ように機能します。一般的なテーブル式には、「通常」と「再帰的」の2種類があります。通常の共通テーブル式は、メインSQLステートメントからサブクエリを分解してクエリを理解しやすくするのに役立ちます。再帰的共通テーブル式は、ツリーやグラフの階層的または再帰的クエリを実行する機能を提供します。これは、SQL言語では使用できない機能です。</target>
         </trans-unit>
         <trans-unit id="8d105cf44d3926289e65c1c83d8e37cb23fd049e" translate="yes" xml:space="preserve">
           <source>Compare</source>
@@ -1773,7 +1773,7 @@
         </trans-unit>
         <trans-unit id="716736d76052378cdb4fa2fb220c0af66c296429" translate="yes" xml:space="preserve">
           <source>Compare two vectors of registers in reg(P1)..reg(P1+P3-1) (call this vector &quot;A&quot;) and in reg(P2)..reg(P2+P3-1) (&quot;B&quot;). Save the result of the comparison for use by the next &lt;a href=&quot;opcode#Jump&quot;&gt;Jump&lt;/a&gt; instruct.</source>
-          <target state="translated">reg（P1）.. reg（P1 + P3-1）（このベクトルを &quot;A&quot;と呼びます）とreg（P2）.. reg（P2 + P3-1）（ &quot;B&quot;）のレジスタの2つのベクトルを比較します。比較の結果を保存して、次の&lt;a href=&quot;opcode#Jump&quot;&gt;Jump&lt;/a&gt;命令で使用します。</target>
+          <target state="translated">reg（P1）.. reg（P1 + P3-1）（このベクトルを &quot;A&quot;と呼ぶ）とreg（P2）.. reg（P2 + P3-1）（ &quot;B&quot;）の2つのレジスターのベクトルを比較します。比較の結果を保存して、次の&lt;a href=&quot;opcode#Jump&quot;&gt;Jump&lt;/a&gt;命令で使用します。</target>
         </trans-unit>
         <trans-unit id="83d5898be3634e470654cbd85b9deec85a9c9f73" translate="yes" xml:space="preserve">
           <source>Comparison affinity rules</source>
@@ -1805,7 +1805,7 @@
         </trans-unit>
         <trans-unit id="107e25274d1b787330bb17ec68cf503455bc4672" translate="yes" xml:space="preserve">
           <source>Compile the SQLite library with the either the compile-time options &lt;a href=&quot;compile#enable_8_3_names&quot;&gt;SQLITE_ENABLE_8_3_NAMES=1&lt;/a&gt; or &lt;a href=&quot;compile#enable_8_3_names&quot;&gt;SQLITE_ENABLE_8_3_NAMES=2&lt;/a&gt;. Support for 8+3 filenames is not included in SQLite by default because it does introduce some overhead. The overhead is tiny, but even so, we do not want to burden the billions of SQLite applications that do not need 8+3 filename support.</source>
-          <target state="translated">コンパイル時オプション&lt;a href=&quot;compile#enable_8_3_names&quot;&gt;SQLITE_ENABLE_8_3_NAMES = 1&lt;/a&gt;または&lt;a href=&quot;compile#enable_8_3_names&quot;&gt;SQLITE_ENABLE_8_3_NAMES = 2&lt;/a&gt;のいずれかでSQLiteライブラリをコンパイルします。8 + 3のファイル名のサポートは、オーバーヘッドを引き起こすため、デフォルトではSQLiteに含まれていません。オーバーヘッドはわずかですが、それでも、8 + 3のファイル名サポートを必要としない何十億ものSQLiteアプリケーションに負担をかけたくありません。</target>
+          <target state="translated">コンパイル時オプション&lt;a href=&quot;compile#enable_8_3_names&quot;&gt;SQLITE_ENABLE_8_3_NAMES = 1&lt;/a&gt;または&lt;a href=&quot;compile#enable_8_3_names&quot;&gt;SQLITE_ENABLE_8_3_NAMES = 2を&lt;/a&gt;使用して、SQLiteライブラリをコンパイルします。8 + 3のファイル名のサポートは、オーバーヘッドを引き起こすため、デフォルトではSQLiteに含まれていません。オーバーヘッドはわずかですが、それでも、8 + 3のファイル名サポートを必要としない何十億ものSQLiteアプリケーションに負担をかけたくありません。</target>
         </trans-unit>
         <trans-unit id="c8149cd52fe785ecf8f59126442a4f04b3761167" translate="yes" xml:space="preserve">
           <source>Compile-Time Authorization Callbacks</source>
@@ -1821,7 +1821,7 @@
         </trans-unit>
         <trans-unit id="1453f0519dea087605be7dc19703a1f478ff0ab3" translate="yes" xml:space="preserve">
           <source>Compile-time options OS_UNIX, OS_WIN, OS_OS2, OS_OTHER, and TEMP_STORE have been renamed to include an &quot;SQLITE_&quot; prefix in order to help avoid namespace collisions with application software. The new names of these options are respectively: SQLITE_OS_UNIX, SQLITE_OS_WIN, SQLITE_OS_OS2, SQLITE_OS_OTHER, and &lt;a href=&quot;compile#temp_store&quot;&gt;SQLITE_TEMP_STORE&lt;/a&gt;.</source>
-          <target state="translated">コンパイル時オプションOS_UNIX、OS_WIN、OS_OS2、OS_OTHER、およびTEMP_STOREは、アプリケーションソフトウェアとの名前空間の競合を回避するために、「SQLITE_」プレフィックスを含むように名前が変更されました。これらのオプションの新しい名前は、それぞれSQLITE_OS_UNIX、SQLITE_OS_WIN、SQLITE_OS_OS2、SQLITE_OS_OTHER、および&lt;a href=&quot;compile#temp_store&quot;&gt;SQLITE_TEMP_STORE&lt;/a&gt;です。</target>
+          <target state="translated">コンパイル時オプションOS_UNIX、OS_WIN、OS_OS2、OS_OTHER、およびTEMP_STOREの名前が変更され、アプリケーションソフトウェアとのネームスペースの競合を回避するために「SQLITE_」プレフィックスが含まれるようになりました。これらのオプションの新しい名前は、それぞれSQLITE_OS_UNIX、SQLITE_OS_WIN、SQLITE_OS_OS2、SQLITE_OS_OTHER、および&lt;a href=&quot;compile#temp_store&quot;&gt;SQLITE_TEMP_STORE&lt;/a&gt;です。</target>
         </trans-unit>
         <trans-unit id="b67395ae5988ac5f1079e7140abc23ed771501d4" translate="yes" xml:space="preserve">
           <source>Compile-time options to SQLite are controlled by C-preprocessor macros. SQLite version 3.6.0 changes the names of some of these macros so that all C-preprocessor macros that are specific to SQLite begin with the &quot;SQLITE_&quot; prefix. This is done to reduce the risk of name collisions with other software modules.</source>
@@ -1845,7 +1845,7 @@
         </trans-unit>
         <trans-unit id="f6b7336de511d34be1007604b55dc1686fbabd26" translate="yes" xml:space="preserve">
           <source>Compiling with GCC and -Os results in a binary that is slightly less than 500KB in size. (Update 2018-07-07: Due to the addition of new features such as &lt;a href=&quot;lang_upsert&quot;&gt;UPSERT&lt;/a&gt; and &lt;a href=&quot;windowfunctions&quot;&gt;window functions&lt;/a&gt;, the library footprint is now slightly larger than 500KB.)</source>
-          <target state="translated">GCCと-Osを使用してコンパイルすると、サイズが500KBをわずかに下回るバイナリになります。（2018-07-07の更新：&lt;a href=&quot;lang_upsert&quot;&gt;UPSERT&lt;/a&gt;や&lt;a href=&quot;windowfunctions&quot;&gt;ウィンドウ関数&lt;/a&gt;などの新機能の追加により、ライブラリのフットプリントは500KBよりわずかに大きくなりました。）</target>
+          <target state="translated">GCCおよび-Oを使用してコンパイルすると、サイズが500KBをわずかに下回るバイナリが生成されます。（2018-07-07の更新：&lt;a href=&quot;lang_upsert&quot;&gt;UPSERT&lt;/a&gt;や&lt;a href=&quot;windowfunctions&quot;&gt;ウィンドウ関数&lt;/a&gt;などの新機能の追加により、ライブラリのフットプリントは500KBよりわずかに大きくなりました。）</target>
         </trans-unit>
         <trans-unit id="016600cc08f9b09c5ede26e00051860d386d3258" translate="yes" xml:space="preserve">
           <source>Completely disable all mutexing for use in single-threaded applications.</source>
@@ -1857,7 +1857,7 @@
         </trans-unit>
         <trans-unit id="0e8198cb08e14211a17b2113a2bd05ad2475de6d" translate="yes" xml:space="preserve">
           <source>Complex SQL queries that compile down to large &lt;a href=&quot;c3ref/stmt&quot;&gt;prepared statements&lt;/a&gt;.</source>
-          <target state="translated">大規模な&lt;a href=&quot;c3ref/stmt&quot;&gt;準備済みステートメントに&lt;/a&gt;コンパイルされる複雑なSQLクエリ。</target>
+          <target state="translated">コンパイルして大きな&lt;a href=&quot;c3ref/stmt&quot;&gt;準備済みステートメントに&lt;/a&gt;変換する複雑なSQLクエリ。</target>
         </trans-unit>
         <trans-unit id="2a71a43f0af5e946760833a731194bc756332728" translate="yes" xml:space="preserve">
           <source>Component tables must not be declared WITHOUT ROWID, and must all have the same schema, but may have different names within their databases. In this context, &quot;the same schema&quot; means that:</source>
@@ -1949,7 +1949,7 @@
         </trans-unit>
         <trans-unit id="dbcb0f9023d09dcdfc6e54ecf5de70332ecf46a5" translate="yes" xml:space="preserve">
           <source>Conceptually, the wal-index is shared memory, though the current VFS implementations use a memory-mapped file for operating-system portability. The memory-mapped file is in the same directory as the database and has the same name as the database with a &quot;&lt;code&gt;-shm&lt;/code&gt;&quot; suffix appended. Because the wal-index is shared memory, SQLite does not support &lt;a href=&quot;pragma#pragma_journal_mode&quot;&gt;journal_mode=WAL&lt;/a&gt; on a network filesystem when clients are on different machines, as all clients of the database must be able to share the same memory.</source>
-          <target state="translated">概念的には、wal-indexは共有メモリですが、現在のVFS実装では、オペレーティングシステムの移植性のためにメモリマップファイルを使用しています。メモリマップファイルはデータベースと同じディレクトリにあり、データベースと同じ名前に「 &lt;code&gt;-shm&lt;/code&gt; 」サフィックスが追加されています。wal-indexは共有メモリであるため、データベースのすべてのクライアントが同じメモリを共有できる必要があるため、クライアントが異なるマシン上にある場合、SQLiteはネットワークファイルシステムでの&lt;a href=&quot;pragma#pragma_journal_mode&quot;&gt;journal_mode = WAL&lt;/a&gt;をサポートしません。</target>
+          <target state="translated">概念的には、wal-indexは共有メモリですが、現在のVFS実装では、オペレーティングシステムの移植性のためにメモリマップファイルを使用しています。メモリマップファイルはデータベースと同じディレクトリにあり、データベースと同じ名前に &quot; &lt;code&gt;-shm&lt;/code&gt; &quot;サフィックスが追加されています。 wal-indexは共有メモリであるため、クライアントが異なるマシン上にある場合、データベースのすべてのクライアントが同じメモリを共有できる必要があるため、SQLiteはネットワークファイルシステムでの&lt;a href=&quot;pragma#pragma_journal_mode&quot;&gt;journal_mode = WAL&lt;/a&gt;をサポートしません。</target>
         </trans-unit>
         <trans-unit id="49b7441ed47d615d68b5fa69e66989fb88012252" translate="yes" xml:space="preserve">
           <source>Conceptually, there is just a single DELETE-mode lock. The DELETE-mode lock for a single database connection can be in exactly one of the following states:</source>
@@ -2197,7 +2197,7 @@
         </trans-unit>
         <trans-unit id="466e0c80c6a0ee6d90e9a1cf84c5c7f81c6af7ec" translate="yes" xml:space="preserve">
           <source>Contentless FTS5 tables do not support UPDATE or DELETE statements, or INSERT statements that do not supply a non-NULL value for the rowid field. Contentless tables do not support REPLACE conflict handling. REPLACE and INSERT OR REPLACE statements are treated as regular INSERT statements. Rows may be deleted from a contentless table using an &lt;a href=&quot;fts5#the_delete_command&quot;&gt;FTS5 delete command&lt;/a&gt;.</source>
-          <target state="translated">コンテンツのないFTS5テーブルは、ROWIDフィールドにNULL以外の値を提供しないUPDATEまたはDELETEステートメント、またはINSERTステートメントをサポートしません。コンテンツのないテーブルは、REPLACE競合処理をサポートしていません。REPLACEおよびINSERT OR REPLACEステートメントは、通常のINSERTステートメントとして扱われます。&lt;a href=&quot;fts5#the_delete_command&quot;&gt;FTS5削除コマンド&lt;/a&gt;を使用して、コンテンツのないテーブルから行を削除できます。</target>
+          <target state="translated">コンテンツレスFTS5テーブルは、UPDATEまたはDELETEステートメント、またはROWIDフィールドにNULL以外の値を提供しないINSERTステートメントをサポートしません。コンテンツのないテーブルは、REPLACE競合処理をサポートしていません。REPLACEおよびINSERT OR REPLACEステートメントは、通常のINSERTステートメントとして扱われます。&lt;a href=&quot;fts5#the_delete_command&quot;&gt;FTS5削除コマンド&lt;/a&gt;を使用して、コンテンツのないテーブルから行を削除できます。</target>
         </trans-unit>
         <trans-unit id="450f660f2dc175257d82b71bd1a3662299271f61" translate="yes" xml:space="preserve">
           <source>Contentless fts4 tables</source>
@@ -2213,15 +2213,15 @@
         </trans-unit>
         <trans-unit id="2009f584db4b6762c01a87103a205a43fe3cb848" translate="yes" xml:space="preserve">
           <source>Continuing improvements to the test suite and fixes to obscure bugs and inconsistencies that the test suite improvements are uncovering.</source>
-          <target state="translated">テストスイートの継続的な改善と、テストスイートの改善が明らかにしている不明瞭なバグや不整合の修正。</target>
+          <target state="translated">テストスイートの継続的な改善と、テストスイートの改善が明らかにしている不明瞭なバグや矛盾を修正します。</target>
         </trans-unit>
         <trans-unit id="1ca7bf3d67fb3020228ac37bd4bc93280daba832" translate="yes" xml:space="preserve">
           <source>Contrary to the intuition of many, &lt;a href=&quot;#sqlite3_reset&quot;&gt;sqlite3_reset()&lt;/a&gt; does not reset the &lt;a href=&quot;#sqlite3_bind_blob&quot;&gt;bindings&lt;/a&gt; on a &lt;a href=&quot;#sqlite3_stmt&quot;&gt;prepared statement&lt;/a&gt;. Use this routine to reset all host parameters to NULL.</source>
-          <target state="translated">多くの直観に反して、&lt;a href=&quot;#sqlite3_reset&quot;&gt;sqlite3_reset（）&lt;/a&gt;は&lt;a href=&quot;#sqlite3_stmt&quot;&gt;準備済みステートメントの&lt;/a&gt;&lt;a href=&quot;#sqlite3_bind_blob&quot;&gt;バインディング&lt;/a&gt;をリセットしません。このルーチンを使用して、すべてのホストパラメータをNULLにリセットします。</target>
+          <target state="translated">多くの直感に反して、&lt;a href=&quot;#sqlite3_reset&quot;&gt;sqlite3_reset（）&lt;/a&gt;は&lt;a href=&quot;#sqlite3_stmt&quot;&gt;準備されたステートメントの&lt;/a&gt;&lt;a href=&quot;#sqlite3_bind_blob&quot;&gt;バインディング&lt;/a&gt;をリセットしません。このルーチンを使用して、すべてのホストパラメータをNULLにリセットします。</target>
         </trans-unit>
         <trans-unit id="cdcbd7d39f460823aca9b9fc7f28e86a6837fad5" translate="yes" xml:space="preserve">
           <source>Contrary to the intuition of many, &lt;a href=&quot;reset&quot;&gt;sqlite3_reset()&lt;/a&gt; does not reset the &lt;a href=&quot;bind_blob&quot;&gt;bindings&lt;/a&gt; on a &lt;a href=&quot;stmt&quot;&gt;prepared statement&lt;/a&gt;. Use this routine to reset all host parameters to NULL.</source>
-          <target state="translated">多くの直観に反して、&lt;a href=&quot;reset&quot;&gt;sqlite3_reset（）&lt;/a&gt;は&lt;a href=&quot;stmt&quot;&gt;準備済みステートメントの&lt;/a&gt;&lt;a href=&quot;bind_blob&quot;&gt;バインディング&lt;/a&gt;をリセットしません。このルーチンを使用して、すべてのホストパラメータをNULLにリセットします。</target>
+          <target state="translated">多くの直感に反して、&lt;a href=&quot;reset&quot;&gt;sqlite3_reset（）&lt;/a&gt;は&lt;a href=&quot;stmt&quot;&gt;準備されたステートメントの&lt;/a&gt;&lt;a href=&quot;bind_blob&quot;&gt;バインディング&lt;/a&gt;をリセットしません。このルーチンを使用して、すべてのホストパラメータをNULLにリセットします。</target>
         </trans-unit>
         <trans-unit id="56e3d51f494e6dd366ee62fae61ac03a93a7f2a3" translate="yes" xml:space="preserve">
           <source>Controlling Depth-First Versus Breadth-First Search Of a Tree Using ORDER BY</source>
@@ -2325,7 +2325,7 @@
         </trans-unit>
         <trans-unit id="27273ddb3178ccf762d7085c22704a1fb0549237" translate="yes" xml:space="preserve">
           <source>Correct handling of columns with redundant unique indexes when those columns are used on the LHS of an &lt;a href=&quot;lang_expr#in_op&quot;&gt;IN operator&lt;/a&gt;. Fix for ticket &lt;a href=&quot;https://www.sqlite.org/src/info/0eab1ac759&quot;&gt;0eab1ac759&lt;/a&gt;.</source>
-          <target state="translated">&lt;a href=&quot;lang_expr#in_op&quot;&gt;IN演算子の&lt;/a&gt; LHSで列が使用されている場合に、重複しない一意のインデックスを持つ列の処理を修正しました。チケット&lt;a href=&quot;https://www.sqlite.org/src/info/0eab1ac759&quot;&gt;0eab1ac759の&lt;/a&gt;修正。</target>
+          <target state="translated">&lt;a href=&quot;lang_expr#in_op&quot;&gt;IN演算子の&lt;/a&gt; LHSで列が使用されている場合に、重複しない一意のインデックスを持つ列の正しい処理。チケット&lt;a href=&quot;https://www.sqlite.org/src/info/0eab1ac759&quot;&gt;0eab1ac759の&lt;/a&gt;修正。</target>
         </trans-unit>
         <trans-unit id="cfd7a02e00c8b2f225f8799044d14f56f7302d29" translate="yes" xml:space="preserve">
           <source>Correct handling of integers in SQL expressions that are larger than what can be represented by the machine integer.</source>
@@ -2413,7 +2413,7 @@
         </trans-unit>
         <trans-unit id="d1e3f610852d10da5d8935701b8e1938e2ea49d4" translate="yes" xml:space="preserve">
           <source>Crash testing seeks to demonstrate that an SQLite database will not go corrupt if the application or operating system crashes or if there is a power failure in the middle of a database update. A separate white-paper titled &lt;a href=&quot;atomiccommit&quot;&gt;Atomic Commit in SQLite&lt;/a&gt; describes the defensive measure SQLite takes to prevent database corruption following a crash. Crash tests strive to verify that those defensive measures are working correctly.</source>
-          <target state="translated">クラッシュテストは、アプリケーションまたはオペレーティングシステムがクラッシュした場合、またはデータベースの更新中に電源障害が発生した場合に、SQLiteデータベースが破損しないことを実証することを目的としています。&lt;a href=&quot;atomiccommit&quot;&gt;SQLiteのAtomic Commit&lt;/a&gt;というタイトルの別のホワイトペーパーでは、クラッシュ後のデータベースの破損を防ぐためにSQLiteがとる防御策について説明しています。クラッシュテストでは、これらの防御策が正しく機能していることを確認するよう努めています。</target>
+          <target state="translated">クラッシュテストは、アプリケーションやオペレーティングシステムがクラッシュした場合、またはデータベースの更新中に電源障害が発生した場合に、SQLiteデータベースが破損しないことを実証することを目的としています。&lt;a href=&quot;atomiccommit&quot;&gt;SQLiteのAtomic Commit&lt;/a&gt;というタイトルの別のホワイトペーパーでは、クラッシュ後のデータベースの破損を防ぐためにSQLiteがとる防御策について説明しています。クラッシュテストでは、これらの防御策が正しく機能していることを確認するよう努めています。</target>
         </trans-unit>
         <trans-unit id="a6531b5d9a390a38e977f855630c550e6d918ac6" translate="yes" xml:space="preserve">
           <source>Crash tests in SQLite use a modified VFS that can simulate the kinds of filesystem damage that occur during a power loss or operating system crash. The crash-test VFS can simulate incomplete sector writes, pages filled with garbage data because a write has not completed, and out of order writes, all occurring at varying points during a test scenario. Crash tests execute transactions over and over, varying the time at which a simulated power loss occurs and the properties of the damage inflicted. Each test then reopens the database after the simulated crash and verifies that the transaction either occurred completely or not at all and that the database is in a completely consistent state.</source>
@@ -2553,7 +2553,7 @@
         </trans-unit>
         <trans-unit id="5527dcef9928e4b30b2e113bf906b6aad70626b4" translate="yes" xml:space="preserve">
           <source>Cursor P1 is on an index btree. If the record identified by P3 and P4 contains any NULL value, jump immediately to P2. If all terms of the record are not-NULL then a check is done to determine if any row in the P1 index btree has a matching key prefix. If there are no matches, jump immediately to P2. If there is a match, fall through and leave the P1 cursor pointing to the matching row.</source>
-          <target state="translated">カーソルP1はインデックスbtree上にある。P3とP4で識別されたレコードにNULL値が含まれている場合、すぐにP2にジャンプします。レコードの全ての項がNULLでない場合は、P1のインデックス・ツリーの中に一致するキー接頭辞を持つ行があるかどうかをチェックします。一致するものがなければ、すぐにP2にジャンプします。一致するものがあれば、P1カーソルは一致する行を指したままにしておきます。</target>
+          <target state="translated">カーソルP1はインデックスbtree上にある。P3とP4で識別されたレコードにNULL値が含まれている場合、直ちにP2にジャンプします。レコードの全ての項がNULLでない場合は、P1のインデックス・ツリーの中に一致するキー接頭辞を持つ行があるかどうかをチェックします。一致するものがなければ、すぐにP2にジャンプします。一致するものがあれば、P1カーソルは一致する行を指したままにしておきます。</target>
         </trans-unit>
         <trans-unit id="d32c868a8066f0bb0c8cbc2fdacd1dcc4df55aff" translate="yes" xml:space="preserve">
           <source>Cursor P1 is on an index btree. If the record identified by P3 and P4 is a prefix of any entry in P1 then a jump is made to P2 and P1 is left pointing at the matching entry.</source>
@@ -2601,7 +2601,7 @@
         </trans-unit>
         <trans-unit id="fd5aaa888331e7fdbb9873b0f3118383cbd0f6f2" translate="yes" xml:space="preserve">
           <source>Cut-over to the &lt;a href=&quot;queryplanner-ng&quot;&gt;next generation query planner&lt;/a&gt; for faster and better query plans.</source>
-          <target state="translated">より高速で優れたクエリプランを実現するために、&lt;a href=&quot;queryplanner-ng&quot;&gt;次世代のクエリプランナー&lt;/a&gt;に切り替えます。</target>
+          <target state="translated">より高速で優れたクエリプランを実現するために、&lt;a href=&quot;queryplanner-ng&quot;&gt;次世代クエリプランナー&lt;/a&gt;に切り替えます。</target>
         </trans-unit>
         <trans-unit id="50c9e8d5fc98727b4bbc93cf5d64a68db647f04f" translate="yes" xml:space="preserve">
           <source>D</source>
@@ -2753,7 +2753,7 @@
         </trans-unit>
         <trans-unit id="6a23d5fa27b31fab3e560233e685dfb52af23fcc" translate="yes" xml:space="preserve">
           <source>DROP VIEW</source>
-          <target state="translated">DROP ZOEKEN</target>
+          <target state="translated">ドロップビュー</target>
         </trans-unit>
         <trans-unit id="6a98041e1291d5c0fcb8031e8dc6b0f10dbdcd21" translate="yes" xml:space="preserve">
           <source>DWG - AutoCAD drawings</source>
@@ -2789,7 +2789,7 @@
         </trans-unit>
         <trans-unit id="c0b1a7d66556ee25336c34353c17486dba3e302f" translate="yes" xml:space="preserve">
           <source>Data-types specified as part of the &quot;CREATE VIRTUAL TABLE&quot; statement used to create an FTS table are ignored completely. Instead of the normal rules for applying type &lt;a href=&quot;datatype3#affinity&quot;&gt;affinity&lt;/a&gt; to inserted values, all values inserted into FTS table columns (except the special rowid column) are converted to type TEXT before being stored.</source>
-          <target state="translated">FTSテーブルの作成に使用される「CREATE VIRTUAL TABLE」ステートメントの一部として指定されたデータ型は完全に無視されます。挿入された値にタイプ&lt;a href=&quot;datatype3#affinity&quot;&gt;アフィニティ&lt;/a&gt;を適用する通常のルールの代わりに、FTSテーブルの列（特別なROWID列を除く）に挿入されたすべての値は、保存される前にタイプTEXTに変換されます。</target>
+          <target state="translated">FTSテーブルの作成に使用される「CREATE VIRTUAL TABLE」ステートメントの一部として指定されたデータ型は完全に無視されます。挿入された値にタイプ&lt;a href=&quot;datatype3#affinity&quot;&gt;アフィニティ&lt;/a&gt;を適用する通常のルールの代わりに、FTSテーブルの列（特別なROWID列を除く）に挿入されたすべての値は、格納される前にタイプTEXTに変換されます。</target>
         </trans-unit>
         <trans-unit id="5c196bb9b92e16036aa92c8d07d6256ad34cf47b" translate="yes" xml:space="preserve">
           <source>Database Connection Configuration Options</source>
@@ -2869,7 +2869,7 @@
         </trans-unit>
         <trans-unit id="73a52851158627ec8f4a087842d9a7bc471fcd2f" translate="yes" xml:space="preserve">
           <source>Database files that contain partial indices are not readable or writable by versions of SQLite prior to 3.8.0. However, a database file created by SQLite 3.8.0 is still readable and writable by prior versions as long as its schema contains no partial indexes. A database that is unreadable by legacy versions of SQLite can be made readable simply by running &lt;a href=&quot;lang_dropindex&quot;&gt;DROP INDEX&lt;/a&gt; on the partial indexes.</source>
-          <target state="translated">部分的なインデックスを含むデータベースファイルは、SQLite 3.8.0より前のバージョンでは読み取りまたは書き込みができません。ただし、SQLite 3.8.0で作成されたデータベースファイルは、スキーマに部分的なインデックスが含まれていない限り、以前のバージョンでも読み取りと書き込みが可能です。SQLiteのレガシーバージョンでは読み取れないデータベースは、部分インデックスで&lt;a href=&quot;lang_dropindex&quot;&gt;DROP INDEX&lt;/a&gt;を実行するだけで読み取り可能にすることができます。</target>
+          <target state="translated">部分的なインデックスを含むデータベースファイルは、SQLite 3.8.0より前のバージョンでは読み取りまたは書き込みができません。ただし、SQLite 3.8.0で作成されたデータベースファイルは、スキーマに部分的なインデックスが含まれていない限り、以前のバージョンでも読み取りと書き込みが可能です。SQLiteのレガシーバージョンで読み取れないデータベースは、部分インデックスで&lt;a href=&quot;lang_dropindex&quot;&gt;DROP INDEX&lt;/a&gt;を実行するだけで読み取り可能にすることができます。</target>
         </trans-unit>
         <trans-unit id="b78486fa6ae30389540b15aab7739d7ecbc3140a" translate="yes" xml:space="preserve">
           <source>Database header</source>
@@ -2893,11 +2893,11 @@
         </trans-unit>
         <trans-unit id="684ece0a836446078b844add11528674b80daff5" translate="yes" xml:space="preserve">
           <source>Databases are opened using &lt;a href=&quot;https://sqlite.org/src/file/ext/misc/appendvfs.c&quot;&gt;Append VFS&lt;/a&gt; when the --append flag is used on the command line or with the .open command.</source>
-          <target state="translated">--appendフラグがコマンドラインまたは.openコマンドで使用されている場合、データベースは&lt;a href=&quot;https://sqlite.org/src/file/ext/misc/appendvfs.c&quot;&gt;Append VFS&lt;/a&gt;を使用して開かれます。</target>
+          <target state="translated">--appendフラグがコマンドラインまたは.openコマンドで使用される場合、データベースは&lt;a href=&quot;https://sqlite.org/src/file/ext/misc/appendvfs.c&quot;&gt;Append VFS&lt;/a&gt;を使用して開かれます。</target>
         </trans-unit>
         <trans-unit id="537610cacac4e984aff9fc9a16523e33b6616036" translate="yes" xml:space="preserve">
           <source>Databases created by the &lt;a href=&quot;lang_attach&quot;&gt;ATTACH&lt;/a&gt; command always use the same encoding as the main database. An attempt to &lt;a href=&quot;lang_attach&quot;&gt;ATTACH&lt;/a&gt; a database with a different text encoding from the &quot;main&quot; database will fail.</source>
-          <target state="translated">&lt;a href=&quot;lang_attach&quot;&gt;ATTACH&lt;/a&gt;コマンドによって作成されたデータベースは、常にメインデータベースと同じエンコーディングを使用します。「メイン」データベースとは異なるテキストエンコーディングでデータベースを&lt;a href=&quot;lang_attach&quot;&gt;アタッチ&lt;/a&gt;しようとすると失敗します。</target>
+          <target state="translated">&lt;a href=&quot;lang_attach&quot;&gt;ATTACH&lt;/a&gt;コマンドで作成されたデータベースは、常にメインデータベースと同じエンコーディングを使用します。「メイン」データベースとは異なるテキストエンコーディングでデータベースを&lt;a href=&quot;lang_attach&quot;&gt;ATTACH&lt;/a&gt;しようとすると失敗します。</target>
         </trans-unit>
         <trans-unit id="3c4ce966e1af83816196cb8a675f0d67e707135b" translate="yes" xml:space="preserve">
           <source>Databases generated with this option enabled are not readable by SQLite version 3.1.6 (2005-03-17) and earlier. Also, databases generated with this option enabled are prone to triggering the &lt;a href=&quot;https://www.sqlite.org/src/info/e6e962d6b0f06f46e&quot;&gt;e6e962d6b0f06f46&lt;/a&gt; bug in the &lt;a href=&quot;c3ref/blob_reopen&quot;&gt;sqlite3_blob_reopen()&lt;/a&gt; interface. For those reasons, this optimization is disabled by default. However, this optimization may be enabled by default in a future release of SQLite.</source>
@@ -2989,7 +2989,7 @@
         </trans-unit>
         <trans-unit id="349c243fc47f07030e17a3729d694bcfe2dadb05" translate="yes" xml:space="preserve">
           <source>Default builds of SQLite contain appropriate &lt;a href=&quot;vfs&quot;&gt;VFS objects&lt;/a&gt; for talking to underlying operating system, and those VFS objects will contain operating system calls such as open(), read(), write(), fsync(), and so forth. All of these interfaces are readily available on most platforms, and custom VFSes can be designed to run SQLite on even the most austere embedded devices.</source>
-          <target state="translated">SQLiteのデフォルトのビルドには、基盤となるオペレーティングシステムと&lt;a href=&quot;vfs&quot;&gt;通信する&lt;/a&gt;ための適切なVFSオブジェクトが含まれ、これらのVFSオブジェクトには、open（）、read（）、write（）、fsync（）などのオペレーティングシステムコールが含まれます。これらのインターフェイスはすべて、ほとんどのプラットフォームですぐに利用でき、カスタムVFSは、最も厳しい組み込みデバイスでもSQLiteを実行するように設計できます。</target>
+          <target state="translated">SQLiteのデフォルトのビルドには、基盤となるオペレーティングシステムと&lt;a href=&quot;vfs&quot;&gt;通信する&lt;/a&gt;ための適切なVFSオブジェクトが含まれ、それらのVFSオブジェクトには、open（）、read（）、write（）、fsync（）などのオペレーティングシステムコールが含まれます。これらのインターフェースはすべて、ほとんどのプラットフォームですぐに利用でき、カスタムVFSは、最も厳しい組み込みデバイスでもSQLiteを実行するように設計できます。</target>
         </trans-unit>
         <trans-unit id="038803a5a725763be7d5665007510dd34ef1f8ce" translate="yes" xml:space="preserve">
           <source>Default memory allocator</source>
@@ -3061,11 +3061,11 @@
         </trans-unit>
         <trans-unit id="83f644802e49a1cbe2ffeee1f4e6042a39cd0de9" translate="yes" xml:space="preserve">
           <source>Definition: A &lt;b&gt;result table&lt;/b&gt; is memory data structure created by the &lt;a href=&quot;#sqlite3_free_table&quot;&gt;sqlite3_get_table()&lt;/a&gt; interface. A result table records the complete query results from one or more queries.</source>
-          <target state="translated">定義：&lt;b&gt;結果テーブル&lt;/b&gt;は、&lt;a href=&quot;#sqlite3_free_table&quot;&gt;sqlite3_get_table（）&lt;/a&gt;インターフェースによって作成されたメモリデータ構造です。結果テーブルには、1つ以上のクエリからの完全なクエリ結果が記録されます。</target>
+          <target state="translated">定義：&lt;b&gt;結果テーブル&lt;/b&gt;は、&lt;a href=&quot;#sqlite3_free_table&quot;&gt;sqlite3_get_table（）&lt;/a&gt;インターフェースによって作成されたメモリデータ構造です。結果テーブルは、1つ以上のクエリからの完全なクエリ結果を記録します。</target>
         </trans-unit>
         <trans-unit id="e259d1f20b6fd6c9ce46ea6e1dc31fde6f204fb8" translate="yes" xml:space="preserve">
           <source>Definition: A &lt;b&gt;result table&lt;/b&gt; is memory data structure created by the &lt;a href=&quot;free_table&quot;&gt;sqlite3_get_table()&lt;/a&gt; interface. A result table records the complete query results from one or more queries.</source>
-          <target state="translated">定義：&lt;b&gt;結果テーブル&lt;/b&gt;は、&lt;a href=&quot;free_table&quot;&gt;sqlite3_get_table（）&lt;/a&gt;インターフェースによって作成されたメモリデータ構造です。結果テーブルには、1つ以上のクエリからの完全なクエリ結果が記録されます。</target>
+          <target state="translated">定義：&lt;b&gt;結果テーブル&lt;/b&gt;は、&lt;a href=&quot;free_table&quot;&gt;sqlite3_get_table（）&lt;/a&gt;インターフェースによって作成されたメモリデータ構造です。結果テーブルは、1つ以上のクエリからの完全なクエリ結果を記録します。</target>
         </trans-unit>
         <trans-unit id="f6fdbe48dc54dd86f63097a03bd24094dedd713a" translate="yes" xml:space="preserve">
           <source>Delete</source>
@@ -3101,7 +3101,7 @@
         </trans-unit>
         <trans-unit id="aedb82abe0e510f8fa2d29632ac81d5268819e7f" translate="yes" xml:space="preserve">
           <source>Delete all contents of the database table or index whose root page in the database file is given by P1. But, unlike &lt;a href=&quot;opcode#Destroy&quot;&gt;Destroy&lt;/a&gt;, do not remove the table or index from the database file.</source>
-          <target state="translated">データベースファイルのルートページがP1で指定されているデータベーステーブルまたはインデックスのすべてのコンテンツを削除します。ただし、&lt;a href=&quot;opcode#Destroy&quot;&gt;Destroy&lt;/a&gt;とは異なり、データベースファイルからテーブルまたはインデックスを削除しないでください。</target>
+          <target state="translated">データベースファイルのルートページがP1によって指定されているデータベーステーブルまたはインデックスのすべてのコンテンツを削除します。ただし、&lt;a href=&quot;opcode#Destroy&quot;&gt;Destroy&lt;/a&gt;とは異なり、データベースファイルからテーブルまたはインデックスを削除しないでください。</target>
         </trans-unit>
         <trans-unit id="6f095a0ada2906d2012dfcefd96beaf7902bce51" translate="yes" xml:space="preserve">
           <source>Delete all individual journal files.</source>
@@ -3121,7 +3121,7 @@
         </trans-unit>
         <trans-unit id="424c686346d72ee424e3afead9478d41b73e0e95" translate="yes" xml:space="preserve">
           <source>Delete the journal file. (Or if the &lt;a href=&quot;pragma#pragma_journal_mode&quot;&gt;PRAGMA journal_mode&lt;/a&gt; is TRUNCATE or PERSIST, truncate the journal file or zero the header of the journal file, respectively.) This is the instant when the changes are committed. Prior to deleting the journal file, if a power failure or crash occurs, the next process to open the database will see that it has a hot journal and will roll the changes back. After the journal is deleted, there will no longer be a hot journal and the changes will persist.</source>
-          <target state="translated">ジャーナルファイルを削除します。（または、&lt;a href=&quot;pragma#pragma_journal_mode&quot;&gt;PRAGMA journal_mode&lt;/a&gt;がTRUNCATEまたはPERSISTの場合、それぞれジャーナルファイルを切り捨てるか、ジャーナルファイルのヘッダーをゼロにします。）これは、変更がコミットされる瞬間です。ジャーナルファイルを削除する前に、停電またはクラッシュが発生した場合、データベースを開く次のプロセスでは、データベースにホットジャーナルがあることがわかり、変更がロールバックされます。ジャーナルが削除されると、ホットジャーナルはなくなり、変更は保持されます。</target>
+          <target state="translated">ジャーナルファイルを削除します。（または、&lt;a href=&quot;pragma#pragma_journal_mode&quot;&gt;PRAGMA journal_mode&lt;/a&gt;がTRUNCATEまたはPERSISTの場合、それぞれジャーナルファイルを切り捨てるか、ジャーナルファイルのヘッダーをゼロにします。）これは、変更がコミットされる瞬間です。ジャーナルファイルを削除する前に、停電やクラッシュが発生した場合、データベースを開く次のプロセスでは、データベースにホットジャーナルがあることがわかり、変更がロールバックされます。ジャーナルが削除されると、ホットジャーナルはなくなり、変更は保持されます。</target>
         </trans-unit>
         <trans-unit id="aae017b3d4b04098148419004c202430e143c042" translate="yes" xml:space="preserve">
           <source>Delete the master journal file if it is safe to do so. This step is optional. It is here only to prevent stale master journals from cluttering up the disk drive. See the discussion below for details.</source>
@@ -3141,7 +3141,7 @@
         </trans-unit>
         <trans-unit id="f97f11b2a9d7f4d5cfcb9f5b6bc157b876524629" translate="yes" xml:space="preserve">
           <source>Deleting a file is an expensive operation on many systems. So as an optimization, SQLite can be configured to avoid the delete operation of &lt;a href=&quot;#section_3_11&quot;&gt;section 3.11&lt;/a&gt;. Instead of deleting the journal file in order to commit a transaction, the file is either truncated to zero bytes in length or its header is overwritten with zeros. Truncating the file to zero length saves having to make modifications to the directory containing the file since the file is not removed from the directory. Overwriting the header has the additional savings of not having to update the length of the file (in the &quot;inode&quot; on many systems) and not having to deal with newly freed disk sectors. Furthermore, at the next transaction the journal will be created by overwriting existing content rather than appending new content onto the end of a file, and overwriting is often much faster than appending.</source>
-          <target state="translated">ファイルの削除は、多くのシステムで負荷の高い操作です。したがって、最適化として、SQLiteは&lt;a href=&quot;#section_3_11&quot;&gt;セクション3.11の&lt;/a&gt;削除操作を回避するように構成できます。。トランザクションをコミットするためにジャーナルファイルを削除する代わりに、ファイルの長さがゼロバイトに切り捨てられるか、ヘッダーがゼロで上書きされます。ファイルを長さゼロに切り捨てると、ファイルがディレクトリから削除されないため、ファイルを含むディレクトリに変更を加える必要がなくなります。ヘッダーを上書きすると、ファイルの長さを更新する必要がなく（多くのシステムでは「inode」内）、新しく解放されたディスクセクターを処理する必要がなくなります。さらに、次のトランザクションでは、ファイルの最後に新しいコンテンツを追加するのではなく、既存のコンテンツを上書きすることによってジャーナルが作成され、多くの場合、上書きは追加よりもはるかに高速です。</target>
+          <target state="translated">ファイルの削除は、多くのシステムで負荷の高い操作です。したがって、最適化として、SQLiteは&lt;a href=&quot;#section_3_11&quot;&gt;セクション3.11の&lt;/a&gt;削除操作を回避するように構成できます。。トランザクションをコミットするためにジャーナルファイルを削除する代わりに、ファイルの長さがゼロバイトに切り捨てられるか、ヘッダーがゼロで上書きされます。ファイルを長さゼロに切り捨てると、ファイルがディレクトリから削除されないため、ファイルを含むディレクトリに変更を加える必要がなくなります。ヘッダーを上書きすると、ファイルの長さを更新する必要がなくなり（多くのシステムでは「iノード」で）、新しく解放されたディスクセクターを処理する必要がなくなります。さらに、次のトランザクションでは、ファイルの最後に新しいコンテンツを追加するのではなく、既存のコンテンツを上書きすることによってジャーナルが作成され、多くの場合、上書きは追加よりもはるかに高速です。</target>
         </trans-unit>
         <trans-unit id="2696b8d0813903709611732c9e8977b50fd62e40" translate="yes" xml:space="preserve">
           <source>Deleting a file is not really an atomic operation, but it appears to be from the point of view of a user process. A process is always able to ask the operating system &quot;does this file exist?&quot; and the process will get back a yes or no answer. After a power failure that occurs during a transaction commit, SQLite will ask the operating system whether or not the rollback journal file exists. If the answer is &quot;yes&quot; then the transaction is incomplete and is rolled back. If the answer is &quot;no&quot; then it means the transaction did commit.</source>
@@ -3357,11 +3357,11 @@
         </trans-unit>
         <trans-unit id="96de162ae9388387b4d27ffd24dfdaec4b72faef" translate="yes" xml:space="preserve">
           <source>Developers report that SQLite is often faster than a client/server SQL database engine in this scenario. Database requests are serialized by the server, so concurrency is not an issue. Concurrency is also improved by &quot;database sharding&quot;: using separate database files for different subdomains. For example, the server might have a separate SQLite database for each user, so that the server can handle hundreds or thousands of simultaneous connections, but each SQLite database is only used by one connection.</source>
-          <target state="translated">開発者の報告によると、このシナリオではクライアント/サーバ型のSQLデータベースエンジンよりもSQLiteの方が高速であることが多いとのことです。データベースのリクエストはサーバによってシリアライズされるため、同時実行性は問題になりません。並行処理は「データベースのシャーディング」によっても改善されます。例えば、サーバーはユーザーごとに別々の SQLite データベースを持っているかもしれません。これにより、サーバーは何百、何千もの同時接続を処理することができますが、各 SQLite データベースは 1 つの接続でしか使用されません。</target>
+          <target state="translated">開発者の報告によると、このシナリオではクライアント/サーバ型のSQLデータベースエンジンよりもSQLiteの方が高速であることが多いとのことです。データベースのリクエストはサーバーによってシリアライズされるため、同時実行性は問題になりません。並行処理は「データベースのシャーディング」によっても改善されます。例えば、サーバーはユーザーごとに別々の SQLite データベースを持っているかもしれません。これにより、サーバーは何百、何千もの同時接続を処理することができますが、各 SQLite データベースは 1 つの接続でしか使用されません。</target>
         </trans-unit>
         <trans-unit id="b17665b2663239e18f10a989ee4b32e6490c33f2" translate="yes" xml:space="preserve">
           <source>Developers sometimes experience trouble debugging the 185,000-line-long amalgamation source file because some debuggers are only able to handle source code line numbers less than 32,768. The amalgamation source code runs fine. One just cannot single-step through it in a debugger.</source>
-          <target state="translated">デバッガの中には 32,768 行以下のソースコードしか扱えないものがあるため、185,000 行の長さのアマルガムソースファイルをデバッグする際に開発者がトラブルに見舞われることがあります。アマルガムのソースコードは正常に動作します。ただ、デバッガではシングルステップでは動作しません。</target>
+          <target state="translated">一部のデバッガは 32,768 未満のソースコードの行数しか扱えないため、185,000 行に及ぶアマルガムのソースファイルのデバッグに問題が発生することがあります。アマルガムのソースコードは正常に動作します。ただ、デバッガではシングルステップでは動作しません。</target>
         </trans-unit>
         <trans-unit id="db23e94c152c3c70f28ce4fd2250cf8e7e90d0ef" translate="yes" xml:space="preserve">
           <source>Device Characteristics</source>
@@ -3385,7 +3385,7 @@
         </trans-unit>
         <trans-unit id="d741b71f5f87bb5b09855b9b7b964ab4719c4656" translate="yes" xml:space="preserve">
           <source>Disable the &lt;a href=&quot;c3ref/set_authorizer&quot;&gt;authorizer callback&lt;/a&gt; while reparsing the schema.</source>
-          <target state="translated">スキーマの再解析中は、&lt;a href=&quot;c3ref/set_authorizer&quot;&gt;Authorizerコールバック&lt;/a&gt;を無効にします。</target>
+          <target state="translated">スキーマの再解析中は、オーソライザー&lt;a href=&quot;c3ref/set_authorizer&quot;&gt;コールバック&lt;/a&gt;を無効にします。</target>
         </trans-unit>
         <trans-unit id="2b94299f848122e7aa2027a43aba54a8bdf1eb66" translate="yes" xml:space="preserve">
           <source>Disable the use of posix_fallocate() on all (unix) systems unless the HAVE_POSIX_FALLOCATE compile-time option is used.</source>
@@ -3489,7 +3489,7 @@
         </trans-unit>
         <trans-unit id="47f951dc04aa5e685ae032b56eb35642da21ee4e" translate="yes" xml:space="preserve">
           <source>Do not attempt to use terms from the WHERE clause to enable indexed lookup of the right-hand table of a LEFT JOIN. Ticket &lt;a href=&quot;https://sqlite.org/src/info/4ba5abf65c5b0f9a96a7a&quot;&gt;4ba5abf65c5b0f9a96a7a&lt;/a&gt;</source>
-          <target state="translated">WHERE句の用語を使用して、LEFT JOINの右側のテーブルのインデックス付きルックアップを有効にしないでください。チケット&lt;a href=&quot;https://sqlite.org/src/info/4ba5abf65c5b0f9a96a7a&quot;&gt;4ba5abf65c5b0f9a96a7a&lt;/a&gt;</target>
+          <target state="translated">LEFT JOINの右側のテーブルのインデックス付きルックアップを有効にするために、WHERE句の用語を使用しないでください。チケット&lt;a href=&quot;https://sqlite.org/src/info/4ba5abf65c5b0f9a96a7a&quot;&gt;4ba5abf65c5b0f9a96a7a&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="fb440372f32dec89b9398b09a9e6e2779b9db126" translate="yes" xml:space="preserve">
           <source>Do not attempt to use the strchrnul() function from the standard C library unless the HAVE_STRCHRNULL compile-time option is set.</source>
@@ -3521,15 +3521,15 @@
         </trans-unit>
         <trans-unit id="0527e2ce52914545d104d45569846431699a53a2" translate="yes" xml:space="preserve">
           <source>Do not confuse automatic indexes with the &lt;a href=&quot;fileformat2#intschema&quot;&gt;internal indexes&lt;/a&gt; (having names like &quot;sqlite_autoindex_</source>
-          <target state="translated">自動インデックスと&lt;a href=&quot;fileformat2#intschema&quot;&gt;内部&lt;/a&gt;インデックスを混同しないでください（ &quot;sqlite_autoindex_</target>
+          <target state="translated">自動インデックスを&lt;a href=&quot;fileformat2#intschema&quot;&gt;内部&lt;/a&gt;インデックスと混同しないでください（ &quot;sqlite_autoindex_</target>
         </trans-unit>
         <trans-unit id="5b87dbbc2f82f39fe5e094dea4061b8791b8238e" translate="yes" xml:space="preserve">
           <source>Do not confuse the SQLITE_SYNC_NORMAL and SQLITE_SYNC_FULL flags with the &lt;a href=&quot;../pragma#pragma_synchronous&quot;&gt;PRAGMA synchronous&lt;/a&gt;=NORMAL and &lt;a href=&quot;../pragma#pragma_synchronous&quot;&gt;PRAGMA synchronous&lt;/a&gt;=FULL settings. The &lt;a href=&quot;../pragma#pragma_synchronous&quot;&gt;synchronous pragma&lt;/a&gt; determines when calls to the xSync VFS method occur and applies uniformly across all platforms. The SQLITE_SYNC_NORMAL and SQLITE_SYNC_FULL flags determine how energetic or rigorous or forceful the sync operations are and only make a difference on Mac OSX for the default SQLite code. (Third-party VFS implementations might also make the distinction between SQLITE_SYNC_NORMAL and SQLITE_SYNC_FULL, but among the operating systems natively supported by SQLite, only Mac OSX cares about the difference.)</source>
-          <target state="translated">SQLITE_SYNC_NORMALおよびSQLITE_SYNC_FULLフラグと、&lt;a href=&quot;../pragma#pragma_synchronous&quot;&gt;PRAGMA同期&lt;/a&gt; = NORMALおよび&lt;a href=&quot;../pragma#pragma_synchronous&quot;&gt;PRAGMA同期&lt;/a&gt; = FULL設定を混同しないでください。&lt;a href=&quot;../pragma#pragma_synchronous&quot;&gt;同期プラグマは&lt;/a&gt; XSYNC VFSメソッドへの呼び出しが発生したときを判断し、すべてのプラットフォームにわたって一様に適用されます。SQLITE_SYNC_NORMALフラグとSQLITE_SYNC_FULLフラグは、同期操作がどの程度精力的、または厳密、または強力であるかを決定し、デフォルトのSQLiteコードに対してMac OSXでのみ違いを生じさせます。（サードパーティのVFS実装もSQLITE_SYNC_NORMALとSQLITE_SYNC_FULLを区別する場合がありますが、SQLiteでネイティブにサポートされているオペレーティングシステムのうち、Mac OSXのみが違いを考慮します。）</target>
+          <target state="translated">SQLITE_SYNC_NORMALフラグとSQLITE_SYNC_FULLフラグを&lt;a href=&quot;../pragma#pragma_synchronous&quot;&gt;PRAGMA同期&lt;/a&gt; = NORMALおよび&lt;a href=&quot;../pragma#pragma_synchronous&quot;&gt;PRAGMA同期&lt;/a&gt; = FULL設定と混同しないでください。&lt;a href=&quot;../pragma#pragma_synchronous&quot;&gt;同期プラグマは&lt;/a&gt; XSYNC VFSメソッドへの呼び出しが発生したときを判断し、すべてのプラットフォームにわたって一様に適用されます。 SQLITE_SYNC_NORMALフラグとSQLITE_SYNC_FULLフラグは、同期操作がどの程度精力的、または厳密、または強力であるかを決定し、デフォルトのSQLiteコードに対してMac OSXでのみ違いを生じさせます。 （サードパーティのVFS実装もSQLITE_SYNC_NORMALとSQLITE_SYNC_FULLを区別する場合がありますが、SQLiteでネイティブにサポートされているオペレーティングシステムの中で、Mac OSXのみが違いを考慮します。）</target>
         </trans-unit>
         <trans-unit id="002e1751e184528adf8c6f1d702e80e85446806a" translate="yes" xml:space="preserve">
           <source>Do not confuse the SQLITE_SYNC_NORMAL and SQLITE_SYNC_FULL flags with the &lt;a href=&quot;pragma#pragma_synchronous&quot;&gt;PRAGMA synchronous&lt;/a&gt;=NORMAL and &lt;a href=&quot;pragma#pragma_synchronous&quot;&gt;PRAGMA synchronous&lt;/a&gt;=FULL settings. The &lt;a href=&quot;pragma#pragma_synchronous&quot;&gt;synchronous pragma&lt;/a&gt; determines when calls to the xSync VFS method occur and applies uniformly across all platforms. The SQLITE_SYNC_NORMAL and SQLITE_SYNC_FULL flags determine how energetic or rigorous or forceful the sync operations are and only make a difference on Mac OSX for the default SQLite code. (Third-party VFS implementations might also make the distinction between SQLITE_SYNC_NORMAL and SQLITE_SYNC_FULL, but among the operating systems natively supported by SQLite, only Mac OSX cares about the difference.)</source>
-          <target state="translated">SQLITE_SYNC_NORMALおよびSQLITE_SYNC_FULLフラグと、&lt;a href=&quot;pragma#pragma_synchronous&quot;&gt;PRAGMA同期&lt;/a&gt; = NORMALおよび&lt;a href=&quot;pragma#pragma_synchronous&quot;&gt;PRAGMA同期&lt;/a&gt; = FULL設定を混同しないでください。&lt;a href=&quot;pragma#pragma_synchronous&quot;&gt;同期プラグマは&lt;/a&gt; XSYNC VFSメソッドへの呼び出しが発生したときを判断し、すべてのプラットフォームにわたって一様に適用されます。SQLITE_SYNC_NORMALフラグとSQLITE_SYNC_FULLフラグは、同期操作がどの程度精力的、または厳密、または強力であるかを決定し、デフォルトのSQLiteコードに対してMac OSXでのみ違いを生じさせます。（サードパーティのVFS実装もSQLITE_SYNC_NORMALとSQLITE_SYNC_FULLを区別する場合がありますが、SQLiteでネイティブにサポートされているオペレーティングシステムのうち、Mac OSXのみが違いを考慮します。）</target>
+          <target state="translated">SQLITE_SYNC_NORMALフラグとSQLITE_SYNC_FULLフラグを&lt;a href=&quot;pragma#pragma_synchronous&quot;&gt;PRAGMA同期&lt;/a&gt; = NORMALおよび&lt;a href=&quot;pragma#pragma_synchronous&quot;&gt;PRAGMA同期&lt;/a&gt; = FULL設定と混同しないでください。&lt;a href=&quot;pragma#pragma_synchronous&quot;&gt;同期プラグマは&lt;/a&gt; XSYNC VFSメソッドへの呼び出しが発生したときを判断し、すべてのプラットフォームにわたって一様に適用されます。 SQLITE_SYNC_NORMALフラグとSQLITE_SYNC_FULLフラグは、同期操作がどの程度精力的、または厳密、または強力であるかを決定し、デフォルトのSQLiteコードに対してMac OSXでのみ違いを生じさせます。 （サードパーティのVFS実装もSQLITE_SYNC_NORMALとSQLITE_SYNC_FULLを区別する場合がありますが、SQLiteでネイティブにサポートされているオペレーティングシステムの中で、Mac OSXのみが違いを考慮します。）</target>
         </trans-unit>
         <trans-unit id="ad2017a368e4acba6381b0a256f7226272260dc0" translate="yes" xml:space="preserve">
           <source>Do not count rows where the IGNORE conflict resolution occurs in the row count.</source>
@@ -3561,7 +3561,7 @@
         </trans-unit>
         <trans-unit id="c890cde5441c19e16767be21e8b596d667fd4a4d" translate="yes" xml:space="preserve">
           <source>Do not even call &lt;a href=&quot;c3ref/close&quot;&gt;sqlite3_close()&lt;/a&gt; on a database connection from a child process if the connection was opened in the parent. It is safe to close the underlying file descriptor, but the &lt;a href=&quot;c3ref/close&quot;&gt;sqlite3_close()&lt;/a&gt; interface might invoke cleanup activities that will delete content out from under the parent, leading to errors and perhaps even database corruption.</source>
-          <target state="translated">接続が親で開かれている場合は、子プロセスからのデータベース接続で&lt;a href=&quot;c3ref/close&quot;&gt;sqlite3_close（）&lt;/a&gt;を呼び出さないでください。基礎となるファイル記述子を閉じても安全ですが、&lt;a href=&quot;c3ref/close&quot;&gt;sqlite3_close（）&lt;/a&gt;インターフェースがクリーンアップアクティビティを呼び出し、親の下からコンテンツを削除して、エラーを引き起こし、場合によってはデータベースを破壊することもあります。</target>
+          <target state="translated">接続が親で開かれている場合は、子プロセスからのデータベース接続で&lt;a href=&quot;c3ref/close&quot;&gt;sqlite3_close（）&lt;/a&gt;を呼び出さないでください。基礎となるファイル記述子を閉じても安全ですが、&lt;a href=&quot;c3ref/close&quot;&gt;sqlite3_close（）&lt;/a&gt;インターフェースがクリーンアップアクティビティを呼び出し、親の下からコンテンツを削除して、エラーを引き起こし、場合によってはデータベースを破壊することさえあります。</target>
         </trans-unit>
         <trans-unit id="9842d9ca1b62003346b1050ca3868a78c6e6df5b" translate="yes" xml:space="preserve">
           <source>Do not flush the page cache (and thus avoiding a cache refill) unless another process changes the underlying database file.</source>
@@ -3641,11 +3641,11 @@
         </trans-unit>
         <trans-unit id="ec7cd9078e5c61634a562846d1cb709ab20d0358" translate="yes" xml:space="preserve">
           <source>Do not use a partial index to do a table scan on an IN operator. Ticket &lt;a href=&quot;https://www.sqlite.org/src/info/1d958d90596593a774&quot;&gt;1d958d90596593a774&lt;/a&gt;.</source>
-          <target state="translated">IN演算子でテーブルスキャンを行うために部分インデックスを使用しないでください。チケット&lt;a href=&quot;https://www.sqlite.org/src/info/1d958d90596593a774&quot;&gt;1d958d90596593a774&lt;/a&gt;。</target>
+          <target state="translated">IN演算子でテーブルスキャンを実行するために部分インデックスを使用しないでください。チケット&lt;a href=&quot;https://www.sqlite.org/src/info/1d958d90596593a774&quot;&gt;1d958d90596593a774&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="20680b9a624f1f557a55b0811ddc984091848e37" translate="yes" xml:space="preserve">
           <source>Do not use the &lt;a href=&quot;optoverview#flattening&quot;&gt;flattening optimization&lt;/a&gt; for a sub-query on the RHS of a LEFT JOIN if that subquery reads data from a &lt;a href=&quot;vtab&quot;&gt;virtual table&lt;/a&gt; as doing so prevents the query planner from creating &lt;a href=&quot;optoverview#autoindex&quot;&gt;automatic indexes&lt;/a&gt; on the results of the sub-query, which can slow down the query.</source>
-          <target state="translated">LEFT JOINのRHSでサブクエリに&lt;a href=&quot;vtab&quot;&gt;仮想化テーブル&lt;/a&gt;からデータを読み取ると、クエリプランナーがサブクエリの結果に&lt;a href=&quot;optoverview#autoindex&quot;&gt;自動インデックス&lt;/a&gt;を作成できなくなるため、サブクエリの&lt;a href=&quot;optoverview#flattening&quot;&gt;フラット化最適化&lt;/a&gt;を使用しないでください。クエリをダウンします。</target>
+          <target state="translated">LEFT JOINのRHSでサブクエリに&lt;a href=&quot;optoverview#flattening&quot;&gt;フラット化最適化&lt;/a&gt;を使用しないでください。サブクエリが&lt;a href=&quot;vtab&quot;&gt;仮想テーブル&lt;/a&gt;からデータを読み取ると、クエリプランナーがサブクエリの結果に&lt;a href=&quot;optoverview#autoindex&quot;&gt;自動インデックス&lt;/a&gt;を作成できなくなり、速度が低下する可能性があります。クエリをダウンします。</target>
         </trans-unit>
         <trans-unit id="f5a36cf13f2d75f5b1d063cbaf3e6dabed9e5e96" translate="yes" xml:space="preserve">
           <source>Do not wish to be called holy before one is holy; but first to be holy, that you may be truly so called.</source>
@@ -3693,7 +3693,7 @@
         </trans-unit>
         <trans-unit id="2014de1c64e4558d3e684536a5eead31d8646480" translate="yes" xml:space="preserve">
           <source>Documented support for the &lt;a href=&quot;fts3#*fts4content&quot;&gt;FTS4 content option&lt;/a&gt;. This feature has actually been in the code since &lt;a href=&quot;#version_3_7_9&quot;&gt;version 3.7.9&lt;/a&gt; but is only now considered to be officially supported.</source>
-          <target state="translated">&lt;a href=&quot;fts3#*fts4content&quot;&gt;FTS4コンテンツオプションの&lt;/a&gt;ドキュメント化されたサポート。この機能は実際には&lt;a href=&quot;#version_3_7_9&quot;&gt;バージョン3.7.9&lt;/a&gt;以降のコードに含まれていますが、正式にサポートされるようになったのは、現在のところです。</target>
+          <target state="translated">&lt;a href=&quot;fts3#*fts4content&quot;&gt;FTS4コンテンツオプションの&lt;/a&gt;サポートの文書化。この機能は実際には&lt;a href=&quot;#version_3_7_9&quot;&gt;バージョン3.7.9&lt;/a&gt;以降のコードに含まれていますが、正式にサポートされるようになったのは、現在のところです。</target>
         </trans-unit>
         <trans-unit id="1141953a3cac893e565c0cb7afc09130be28d815" translate="yes" xml:space="preserve">
           <source>Does SQLite support a BLOB type?</source>
@@ -3737,7 +3737,7 @@
         </trans-unit>
         <trans-unit id="2bf81ffb06a97ae87b64f9122c76cd7ce2c19062" translate="yes" xml:space="preserve">
           <source>Download the self-contained Fossil executable from &lt;a href=&quot;https://fossil-scm.org/fossil/uv/download.html&quot;&gt;https://fossil-scm.org/fossil/uv/download.html&lt;/a&gt; and put the executable somewhere on your $PATH.</source>
-          <target state="translated">自己完結型のFossil実行可能ファイルを&lt;a href=&quot;https://fossil-scm.org/fossil/uv/download.html&quot;&gt;https://fossil-scm.org/fossil/uv/download.html&lt;/a&gt;からダウンロードし、$ PATHのどこかに実行可能ファイルを置きます。</target>
+          <target state="translated">自己完結型のFossil実行可能ファイルを&lt;a href=&quot;https://fossil-scm.org/fossil/uv/download.html&quot;&gt;https://fossil-scm.org/fossil/uv/download.html&lt;/a&gt;からダウンロードし、実行可能ファイルを$ PATHのどこかに配置します。</target>
         </trans-unit>
         <trans-unit id="bf164a21eb062e18af9a991c052f3c70484a26df" translate="yes" xml:space="preserve">
           <source>Dozens of minor bug fixes</source>
@@ -3773,7 +3773,7 @@
         </trans-unit>
         <trans-unit id="daced6c943d50569fdbed0b8c852df4819f96d8b" translate="yes" xml:space="preserve">
           <source>Drop the old table X: &lt;a href=&quot;lang_droptable&quot;&gt;DROP TABLE X&lt;/a&gt;.</source>
-          <target state="translated">：古いテーブルXドロップ&lt;a href=&quot;lang_droptable&quot;&gt;DROP TABLE Xを&lt;/a&gt;。</target>
+          <target state="translated">古いテーブルX：&lt;a href=&quot;lang_droptable&quot;&gt;DROP TABLE Xを&lt;/a&gt;ドロップします。</target>
         </trans-unit>
         <trans-unit id="0e57de85bbf5c15a59892ff50c8f7c01032ec317" translate="yes" xml:space="preserve">
           <source>DropIndex</source>
@@ -3797,7 +3797,7 @@
         </trans-unit>
         <trans-unit id="22bb6bc640d9e76642a03f301228df50bc0c544a" translate="yes" xml:space="preserve">
           <source>Duplicate row returned on a query against a table with more than 16 indices, each on a separate column, and all used via OR-connected constraints. Ticket &lt;a href=&quot;http://www.sqlite.org/src/info/10fb063b11&quot;&gt;10fb063b11&lt;/a&gt;</source>
-          <target state="translated">16を超えるインデックスを持つテーブルに対するクエリで返される重複した行。それぞれが個別の列にあり、すべてORで接続された制約を介して使用されます。チケット&lt;a href=&quot;http://www.sqlite.org/src/info/10fb063b11&quot;&gt;10fb063b11&lt;/a&gt;</target>
+          <target state="translated">16を超えるインデックスを持つテーブルに対するクエリで返される重複した行で、それぞれが個別の列にあり、すべてOR接続制約を介して使用されます。チケット&lt;a href=&quot;http://www.sqlite.org/src/info/10fb063b11&quot;&gt;10fb063b11&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="93d7730f8826a2d54d04e212d85d32152f0ff3ce" translate="yes" xml:space="preserve">
           <source>During a transaction, SQLite stores additional information in a second file called the &quot;rollback journal&quot;, or if SQLite is in &lt;a href=&quot;wal&quot;&gt;WAL mode&lt;/a&gt;, a write-ahead log file.</source>
@@ -3825,7 +3825,7 @@
         </trans-unit>
         <trans-unit id="083eeb3cf3761acd0b9b1944cd026822ab96a1ec" translate="yes" xml:space="preserve">
           <source>During the 250 ms sleep in step 3 above, no read-lock is held on the database file and the mutex associated with pDb is not held. This allows other threads to use &lt;a href=&quot;c3ref/sqlite3&quot;&gt;database connection&lt;/a&gt; pDb and other connections to write to the underlying database file.</source>
-          <target state="translated">上記のステップ3の250ミリ秒のスリープ中、データベースファイルの読み取りロックは保持されず、pDbに関連付けられたミューテックスは保持されません。これにより、他のスレッドは&lt;a href=&quot;c3ref/sqlite3&quot;&gt;データベース接続&lt;/a&gt; pDb を使用し、他の接続は基礎となるデータベースファイルに書き込むことができます。</target>
+          <target state="translated">上記のステップ3の250ミリ秒のスリープ中、データベースファイルの読み取りロックは保持されず、pDbに関連付けられたミューテックスは保持されません。これにより、他のスレッドが&lt;a href=&quot;c3ref/sqlite3&quot;&gt;データベース接続&lt;/a&gt; pDbと他の接続を使用して、基になるデータベースファイルに書き込むことができます。</target>
         </trans-unit>
         <trans-unit id="5bc5d8e5dea4ffc98e00ec0c1ec074dd1e7d3ff2" translate="yes" xml:space="preserve">
           <source>During the conclusion of a</source>
@@ -3921,7 +3921,7 @@
         </trans-unit>
         <trans-unit id="18fd69d15aa01be81ef0e1d97815be761eb30270" translate="yes" xml:space="preserve">
           <source>EXTRA synchronous is like FULL with the addition that the directory containing a &lt;a href=&quot;lockingv3#rollback&quot;&gt;rollback journal&lt;/a&gt; is synced after that journal is unlinked to commit a transaction in DELETE mode. EXTRA provides additional durability if the commit is followed closely by a power loss.</source>
-          <target state="translated">EXTRA同期はFULLに似ていますが、&lt;a href=&quot;lockingv3#rollback&quot;&gt;ロールバックジャーナル&lt;/a&gt;を含むディレクトリは、DELETEモードでトランザクションをコミットするためにそのジャーナルがリンク解除された後に同期されます。EXTRAは、コミットの後に停電が続く場合に、耐久性を向上させます。</target>
+          <target state="translated">EXTRA同期はFULLに似ていますが、&lt;a href=&quot;lockingv3#rollback&quot;&gt;ロールバックジャーナル&lt;/a&gt;を含むディレクトリは、DELETEモードでトランザクションをコミットするためにそのジャーナルがリンク解除された後に同期されます。EXTRAは、コミットの後に電力損失が続く場合に、耐久性を向上させます。</target>
         </trans-unit>
         <trans-unit id="3633746b067241666bc462dcfe7a24ff23a8db68" translate="yes" xml:space="preserve">
           <source>Each</source>
@@ -3949,7 +3949,7 @@
         </trans-unit>
         <trans-unit id="90ec8a858058608d92c79ea2b4e9e7b9bbccd9eb" translate="yes" xml:space="preserve">
           <source>Each SQL index, whether explicitly declared via a &lt;a href=&quot;lang_createindex&quot;&gt;CREATE INDEX&lt;/a&gt; statement or implied by a UNIQUE or PRIMARY KEY constraint, corresponds to an index b-tree in the database file. Each entry in the index b-tree corresponds to a single row in the associated SQL table. The key to an index b-tree is a record composed of the columns that are being indexed followed by the key of the corresponding table row. For ordinary tables, the row key is the &lt;a href=&quot;lang_createtable#rowid&quot;&gt;rowid&lt;/a&gt;, and for &lt;a href=&quot;withoutrowid&quot;&gt;WITHOUT ROWID&lt;/a&gt; tables the row key is the PRIMARY KEY. Because every row in the table has a unique row key, all keys in an index are unique.</source>
-          <target state="translated">各SQLインデックスは、&lt;a href=&quot;lang_createindex&quot;&gt;CREATE INDEX&lt;/a&gt;ステートメントを介して明示的に宣言されているか、UNIQUEまたはPRIMARY KEY制約によって暗示されているかに関係なく、データベースファイルのインデックスBツリーに対応しています。インデックスBツリーの各エントリは、関連付けられたSQLテーブルの1つの行に対応しています。インデックスbツリーのキーは、インデックスが付けられている列とそれに対応するテーブル行のキーで構成されるレコードです。通常のテーブルの場合、行キーは&lt;a href=&quot;lang_createtable#rowid&quot;&gt;rowid&lt;/a&gt;であり、&lt;a href=&quot;withoutrowid&quot;&gt;WITHOUT ROWID&lt;/a&gt;テーブルの場合、行キーはPRIMARY KEYです。テーブルのすべての行には一意の行キーがあるため、インデックスのすべてのキーは一意です。</target>
+          <target state="translated">各SQLインデックスは、&lt;a href=&quot;lang_createindex&quot;&gt;CREATE INDEX&lt;/a&gt;ステートメントで明示的に宣言されているか、UNIQUEまたはPRIMARY KEY制約によって暗示されているかに関係なく、データベースファイル内のインデックスBツリーに対応しています。インデックスBツリーの各エントリは、関連付けられたSQLテーブルの1つの行に対応しています。インデックスBツリーのキーは、インデックスが付けられている列とそれに対応するテーブル行のキーで構成されるレコードです。通常のテーブルの場合、行キーは&lt;a href=&quot;lang_createtable#rowid&quot;&gt;rowid&lt;/a&gt;であり、&lt;a href=&quot;withoutrowid&quot;&gt;WITHOUT ROWID&lt;/a&gt;テーブルの場合、行キーはPRIMARY KEYです。テーブルのすべての行には一意の行キーがあるため、インデックスのすべてのキーは一意です。</target>
         </trans-unit>
         <trans-unit id="972d3bbdff7b7be08051158b4855057f49ea49cd" translate="yes" xml:space="preserve">
           <source>Each SQL statement in the statement list is an instance of the following:</source>
@@ -3957,11 +3957,11 @@
         </trans-unit>
         <trans-unit id="8780624428063f8d9d37cbf9ecae097671b04573" translate="yes" xml:space="preserve">
           <source>Each SQLite &lt;a href=&quot;c3ref/sqlite3&quot;&gt;database connection&lt;/a&gt; records cases when the query planner would benefit from having accurate results of ANALYZE at hand. These records are held in memory and accumulate over the life of a database connection. The &lt;a href=&quot;pragma#pragma_optimize&quot;&gt;PRAGMA optimize&lt;/a&gt; command looks at those records and runs ANALYZE on only those tables for which new or updated ANALYZE data seems likely to be useful. In most cases &lt;a href=&quot;pragma#pragma_optimize&quot;&gt;PRAGMA optimize&lt;/a&gt; will not run ANALYZE, but it will occasionally do so either for tables that have never before been analyzed, or for tables that have grown significantly since they were last analyzed.</source>
-          <target state="translated">各SQLite &lt;a href=&quot;c3ref/sqlite3&quot;&gt;データベース接続&lt;/a&gt;は、クエリプランナーがANALYZEの正確な結果を手に入れることから利益を得るケースを記録します。これらのレコードはメモリに保持され、データベース接続の存続期間にわたって蓄積されます。&lt;a href=&quot;pragma#pragma_optimize&quot;&gt;PRAGMA最適化&lt;/a&gt;それらの記録と実行のコマンドルックスは、新規またはANALYZE更新されたデータは有用であると思われるテーブルだけを上ANALYZE。ほとんどの場合、&lt;a href=&quot;pragma#pragma_optimize&quot;&gt;PRAGMA最適化&lt;/a&gt;はANALYZEを実行しませんが、これまで分析されたことのないテーブル、または最後に分析されてから大幅に増加したテーブルのいずれかで実行されることがあります。</target>
+          <target state="translated">各SQLite &lt;a href=&quot;c3ref/sqlite3&quot;&gt;データベース接続&lt;/a&gt;は、クエリプランナーがANALYZEの正確な結果を手に入れることで利益を得るケースを記録します。これらのレコードはメモリに保持され、データベース接続の存続期間にわたって蓄積されます。&lt;a href=&quot;pragma#pragma_optimize&quot;&gt;PRAGMA最適化&lt;/a&gt;それらの記録と実行のコマンドルックスは、新規またはANALYZE更新されたデータは有用であると思われるテーブルだけを上ANALYZE。ほとんどの場合、&lt;a href=&quot;pragma#pragma_optimize&quot;&gt;PRAGMA最適化&lt;/a&gt;はANALYZEを実行しませんが、これまで分析されたことがないテーブル、または最後に分析されてから大幅に増加したテーブルのいずれかで実行されることがあります。</target>
         </trans-unit>
         <trans-unit id="830748b5154094e00d6f1556c43a3fc63fc4833c" translate="yes" xml:space="preserve">
           <source>Each VFS implementation will subclass the &lt;a href=&quot;c3ref/file&quot;&gt;sqlite3_file&lt;/a&gt; by adding additional fields at the end to hold whatever information the VFS needs to know about an open file. It does not matter what information is stored as long as the total size of the structure does not exceed the szOsFile value recorded in the &lt;a href=&quot;c3ref/vfs&quot;&gt;sqlite3_vfs&lt;/a&gt; object.</source>
-          <target state="translated">各VFS実装は、最後にフィールドを追加して&lt;a href=&quot;c3ref/file&quot;&gt;sqlite3_file&lt;/a&gt;をサブクラス化し、VFSが開いているファイルについて知る必要のある情報を保持します。構造体の合計サイズが&lt;a href=&quot;c3ref/vfs&quot;&gt;sqlite3_vfs&lt;/a&gt;オブジェクトに記録されたszOsFile値を超えない限り、どの情報が保存されていても問題ありません。</target>
+          <target state="translated">各VFS実装は、VFSが開いているファイルについて知る必要のある情報を保持するために末尾に追加のフィールドを追加することにより、&lt;a href=&quot;c3ref/file&quot;&gt;sqlite3_file&lt;/a&gt;をサブクラス化します。構造体の合計サイズが&lt;a href=&quot;c3ref/vfs&quot;&gt;sqlite3_vfs&lt;/a&gt;オブジェクトに記録されたszOsFile値を超えない限り、どの情報が保存されていてもかまいません。</target>
         </trans-unit>
         <trans-unit id="096a69c85e04b646e0b565d9908edc0c892b7052" translate="yes" xml:space="preserve">
           <source>Each argument specified as part of a &quot;CREATE VIRTUAL TABLE ... USING fts5 ...&quot; statement is either a column declaration or a configuration option. A &lt;b&gt;column declaration&lt;/b&gt; consists of one or more whitespace separated FTS5 barewords or string literals quoted in any manner acceptable to SQLite.</source>
@@ -3993,11 +3993,11 @@
         </trans-unit>
         <trans-unit id="b225a6098d76a95e7290e27ffd041b5076929def" translate="yes" xml:space="preserve">
           <source>Each column name or expression can be followed by one of the &quot;ASC&quot; or &quot;DESC&quot; keywords to indicate sort order. The sort order may or may not be ignored depending on the database file format, and in particular the &lt;a href=&quot;fileformat2#schemaformat&quot;&gt;schema format number&lt;/a&gt;. The &quot;legacy&quot; schema format (1) ignores index sort order. The descending index schema format (4) takes index sort order into account. Only versions of SQLite 3.3.0 (2006-01-11) and later are able to understand the descending index format. For compatibility, version of SQLite between 3.3.0 and 3.7.9 use the legacy schema format by default. The newer schema format is used by default in version 3.7.10 (2012-01-16) and later. The &lt;a href=&quot;pragma#pragma_legacy_file_format&quot;&gt;legacy_file_format pragma&lt;/a&gt; can be used to change set the specific behavior for any version of SQLite.</source>
-          <target state="translated">各列名または式の後には、「ASC」または「DESC」キーワードのいずれかを続けて、ソート順を示すことができます。並べ替え順序は、データベースファイル形式、特に&lt;a href=&quot;fileformat2#schemaformat&quot;&gt;スキーマ形式番号に&lt;/a&gt;応じて、無視される場合とされない場合があります。 「レガシー」スキーマ形式（1）は、インデックスのソート順を無視します。降順の索引スキーマ形式（4）では、索引のソート順が考慮されます。 SQLite 3.3.0（2006-01-11）以降のバージョンのみが、降順のインデックス形式を理解できます。互換性のために、3.3.0と3.7.9の間のバージョンのSQLiteは、デフォルトでレガシースキーマ形式を使用します。バージョン3.7.10（2012-01-16）以降では、新しいスキーマ形式がデフォルトで使用されます。&lt;a href=&quot;pragma#pragma_legacy_file_format&quot;&gt;legacy_file_formatプラグマは、&lt;/a&gt; SQLiteのいずれかのバージョンのための具体的な動作を設定変更するために使用することができます。</target>
+          <target state="translated">各列名または式の後には、「ASC」または「DESC」キーワードのいずれかを続けて、ソート順を示すことができます。ソート順月またはデータベースファイル形式に応じて無視できない場合があり、特に&lt;a href=&quot;fileformat2#schemaformat&quot;&gt;スキーマフォーマット番号&lt;/a&gt;。 「レガシー」スキーマ形式（1）では、インデックスのソート順が無視されます。降順の索引スキーマ形式（4）では、索引のソート順が考慮されます。 SQLite 3.3.0（2006-01-11）以降のバージョンのみが降順のインデックス形式を理解できます。互換性のために、3.3.0と3.7.9の間のバージョンのSQLiteはデフォルトでレガシースキーマ形式を使用します。バージョン3.7.10（2012-01-16）以降では、新しいスキーマ形式がデフォルトで使用されます。&lt;a href=&quot;pragma#pragma_legacy_file_format&quot;&gt;legacy_file_formatプラグマは、&lt;/a&gt; SQLiteのいずれかのバージョンのための具体的な動作を設定変更するために使用することができます。</target>
         </trans-unit>
         <trans-unit id="49f9ccaac189604c31d61c6229cff4580f28bbe6" translate="yes" xml:space="preserve">
           <source>Each component query of a &lt;a href=&quot;lang_select#compound&quot;&gt;compound query&lt;/a&gt; (UNION, UNION ALL, EXCEPT or INTERSECT) is assigned computed separately and is given its own line in the EXPLAIN QUERY PLAN output.</source>
-          <target state="translated">&lt;a href=&quot;lang_select#compound&quot;&gt;複合クエリの&lt;/a&gt;各コンポーネントクエリ（UNION、UNION ALL、EXCEPTまたはINTERSECT）は、個別に計算されて割り当てられ、EXPLAIN QUERY PLAN出力で独自の行が与えられます。</target>
+          <target state="translated">&lt;a href=&quot;lang_select#compound&quot;&gt;複合クエリの&lt;/a&gt;各コンポーネントクエリ（UNION、UNION ALL、EXCEPT、またはINTERSECT）は個別に計算されて割り当てられ、EXPLAIN QUERY PLAN出力で独自の行が与えられます。</target>
         </trans-unit>
         <trans-unit id="a75cebae36bdcbe0495a4d634fceea0a434ea48a" translate="yes" xml:space="preserve">
           <source>Each condition in a decision is shown to independently affect the outcome of the decision.</source>

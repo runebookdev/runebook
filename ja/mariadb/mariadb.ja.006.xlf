@@ -77,7 +77,7 @@
         </trans-unit>
         <trans-unit id="972bdce579a2ccb46ffc89633f944a1036448e92" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;TRANSACTIONAL= 0 &lt;code&gt;|&lt;/code&gt; 1&lt;/code&gt; :&lt;/strong&gt; Not set by default, if set to &lt;code&gt;1&lt;/code&gt;, tables will be transactional, meaning all changes are logged to a transaction log, and synced at the end of the statement. This will marginally slow down writes and updates, but makes the table crash-proof, so that if the server dies before the statement ends, all changes will roll back to the state at the beginning of the statement. This also needs up to 6 bytes more for each row and key to store the transaction id (to allow concurrent insert's and selects). &lt;code&gt;TRANSACTIONAL=1&lt;/code&gt; is not supported for partitioned tables. If left unset, tables may still be transactional (see below).</source>
-          <target state="translated">&lt;strong&gt; &lt;code&gt;TRANSACTIONAL= 0 &lt;code&gt;|&lt;/code&gt; 1&lt;/code&gt; ：&lt;/strong&gt;デフォルトでは設定されていません &lt;code&gt;1&lt;/code&gt; に設定すると、テーブルはトランザクションになります。つまり、すべての変更がトランザクションログに記録され、ステートメントの最後に同期されます。これにより、書き込みと更新の速度がわずかに低下しますが、テーブルがクラッシュしないようになり、ステートメントが終了する前にサーバーが停止した場合、すべての変更がステートメントの最初の状態にロールバックされます。また、トランザクションIDを格納するために、行とキーごとに最大6バイトの追加が必要です（同時挿入と選択を可能にするため）。 &lt;code&gt;TRANSACTIONAL=1&lt;/code&gt; は、分割テーブルではサポートされていません。未設定のままにしても、テーブルはトランザクション対応である可能性があります（以下を参照）。</target>
+          <target state="translated">&lt;strong&gt; &lt;code&gt;TRANSACTIONAL= 0 &lt;code&gt;|&lt;/code&gt; 1&lt;/code&gt; ：&lt;/strong&gt;に設定されている場合、デフォルトで設定されていない &lt;code&gt;1&lt;/code&gt; 、表には、すべての変更は、トランザクション・ログに記録し、文の最後に同期されている意味、トランザクションになります。これにより、書き込みと更新はわずかに遅くなりますが、テーブルがクラッシュしないようになり、ステートメントが終了する前にサーバーが停止した場合、すべての変更がステートメントの最初の状態にロールバックされます。また、トランザクションIDを格納するために、各行とキーに最大6バイトの追加が必要です（挿入と選択を同時に実行できるようにするため）。 &lt;code&gt;TRANSACTIONAL=1&lt;/code&gt; は、分割テーブルではサポートされていません。未設定のままにしても、テーブルはトランザクション対応である可能性があります（以下を参照）。</target>
         </trans-unit>
         <trans-unit id="46cac82351e2f7fc0a6a069f75dfb3448a6279a7" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;Table&lt;/code&gt;&lt;/strong&gt;</source>
@@ -89,11 +89,11 @@
         </trans-unit>
         <trans-unit id="7966fd98e8d4f026ae27e76e946f7e3a8e8eb79f" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;as type&lt;/code&gt;&lt;/strong&gt; is optional. See &lt;a href=&quot;#datatypes&quot;&gt;#datatypes&lt;/a&gt; section for a discussion about types.</source>
-          <target state="translated">&lt;strong&gt; &lt;code&gt;as type&lt;/code&gt; &lt;/strong&gt;はオプションです。タイプの説明については、&lt;a href=&quot;#datatypes&quot;&gt;＃datatypes&lt;/a&gt;セクションをご覧ください。</target>
+          <target state="translated">&lt;strong&gt; &lt;code&gt;as type&lt;/code&gt; &lt;/strong&gt;はオプションです。型については、&lt;a href=&quot;#datatypes&quot;&gt;＃datatypes&lt;/a&gt;セクションをご覧ください。</target>
         </trans-unit>
         <trans-unit id="df5482336705ae8bc91fc8aff30de04a8a1f4789" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;block-nl-join&lt;/code&gt;&lt;/strong&gt; node has &lt;code&gt;r_loops&lt;/code&gt; field, which allows to tell whether &lt;code&gt;Using join buffer&lt;/code&gt; was efficient</source>
-          <target state="translated">&lt;strong&gt; &lt;code&gt;block-nl-join&lt;/code&gt; &lt;/strong&gt;ノードには &lt;code&gt;r_loops&lt;/code&gt; フィールドがあり、 &lt;code&gt;Using join buffer&lt;/code&gt; が効率的であったかどうかを確認できます</target>
+          <target state="translated">&lt;strong&gt; &lt;code&gt;block-nl-join&lt;/code&gt; &lt;/strong&gt;ノードには &lt;code&gt;r_loops&lt;/code&gt; フィールドがあり、 &lt;code&gt;Using join buffer&lt;/code&gt; が効率的かどうかを確認できます</target>
         </trans-unit>
         <trans-unit id="4bec87ccc80387852d9d28f4fb7a9884eee12fa7" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;column_name as type&lt;/code&gt;&lt;/strong&gt; requires that one specify the datatype of the dynamic column they are reading.</source>
@@ -101,11 +101,11 @@
         </trans-unit>
         <trans-unit id="5b032adb74aa2c59a4d467fac34365ec0ea2f735" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;column_name&lt;/code&gt;&lt;/strong&gt; specifies the name of the column to be added. If &lt;code&gt;dyncol_blob&lt;/code&gt; already has a column with this name, it will be overwritten.</source>
-          <target state="translated">&lt;strong&gt; &lt;code&gt;column_name&lt;/code&gt; &lt;/strong&gt;は、追加する列の名前を指定します。 &lt;code&gt;dyncol_blob&lt;/code&gt; にこの名前の列がすでにある場合、それは上書きされます。</target>
+          <target state="translated">&lt;strong&gt; &lt;code&gt;column_name&lt;/code&gt; &lt;/strong&gt;は、追加する列の名前を指定します。 &lt;code&gt;dyncol_blob&lt;/code&gt; にこの名前の列が既にある場合、それは上書きされます。</target>
         </trans-unit>
         <trans-unit id="5fecdead3f1e22ca5fc7d45c18aeeefe46c7e042" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;compress&lt;/code&gt;&lt;/strong&gt;: This directive configures it to compress the log files with &lt;code&gt;&lt;a href=&quot;https://linux.die.net/man/1/gzip&quot;&gt;gzip&lt;/a&gt;&lt;/code&gt;.</source>
-          <target state="translated">&lt;strong&gt; &lt;code&gt;compress&lt;/code&gt; &lt;/strong&gt;：このディレクティブは、ログファイルを &lt;code&gt;&lt;a href=&quot;https://linux.die.net/man/1/gzip&quot;&gt;gzip&lt;/a&gt;&lt;/code&gt; で圧縮するように設定します。</target>
+          <target state="translated">&lt;strong&gt; &lt;code&gt;compress&lt;/code&gt; &lt;/strong&gt;：このディレクティブは、ログファイルを &lt;code&gt;&lt;a href=&quot;https://linux.die.net/man/1/gzip&quot;&gt;gzip&lt;/a&gt;&lt;/code&gt; で圧縮するように構成します。</target>
         </trans-unit>
         <trans-unit id="f0c1ac17090d49176df050255a842be5cff76610" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;create 660 mysql mysql&lt;/code&gt;&lt;/strong&gt;: This directive configures it to recreate the log files after log rotation with the specified permissions and owner.</source>
@@ -117,11 +117,11 @@
         </trans-unit>
         <trans-unit id="29279d0a27837ab38555a1c3f6843537a80c6223" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;daily&lt;/code&gt;&lt;/strong&gt;: This directive configures it to rotate each log file once per day.</source>
-          <target state="translated">&lt;strong&gt; &lt;code&gt;daily&lt;/code&gt; &lt;/strong&gt;：このディレクティブは、各ログファイルを1日に1回ローテーションするように設定します。</target>
+          <target state="translated">&lt;strong&gt; &lt;code&gt;daily&lt;/code&gt; &lt;/strong&gt;：このディレクティブは、各ログファイルを1日1回ローテーションするように設定します。</target>
         </trans-unit>
         <trans-unit id="34f7797e3aef3fb24a6f24a292ce9c1241a7d871" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;dateext&lt;/code&gt;&lt;/strong&gt;: This directive configures it to use the date as an extension, rather than just a number. This directive is only available with &lt;code&gt;&lt;a href=&quot;https://linux.die.net/man/8/logrotate&quot;&gt;logrotate&lt;/a&gt;&lt;/code&gt; 3.7.6 and later.</source>
-          <target state="translated">&lt;strong&gt; &lt;code&gt;dateext&lt;/code&gt; &lt;/strong&gt;：このディレクティブは、日付を数字ではなく拡張子として使用するように設定します。このディレクティブは、 &lt;code&gt;&lt;a href=&quot;https://linux.die.net/man/8/logrotate&quot;&gt;logrotate&lt;/a&gt;&lt;/code&gt; 3.7.6以降でのみ使用できます。</target>
+          <target state="translated">&lt;strong&gt; &lt;code&gt;dateext&lt;/code&gt; &lt;/strong&gt;：このディレクティブは、日付を数字ではなく拡張子として使用するように構成します。このディレクティブは、 &lt;code&gt;&lt;a href=&quot;https://linux.die.net/man/8/logrotate&quot;&gt;logrotate&lt;/a&gt;&lt;/code&gt; 3.7.6以降でのみ使用できます。</target>
         </trans-unit>
         <trans-unit id="45e2f2de88413ae9be429ac71066b6e4f222537b" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;dateformat .%Y-%m-%d-%H-%M-%S&lt;/code&gt;&lt;/strong&gt;: This directive configures it to use this date format string (as defined by the format specification for &lt;code&gt;&lt;a href=&quot;https://linux.die.net/man/3/strftime&quot;&gt;strftime&lt;/a&gt;&lt;/code&gt;) for the date extension configured by the &lt;code&gt;dateext&lt;/code&gt; directive. This directive is only available with &lt;code&gt;&lt;a href=&quot;https://linux.die.net/man/8/logrotate&quot;&gt;logrotate&lt;/a&gt;&lt;/code&gt; 3.7.7 and later. Support for &lt;code&gt;%H&lt;/code&gt; is only available with &lt;code&gt;&lt;a href=&quot;https://linux.die.net/man/8/logrotate&quot;&gt;logrotate&lt;/a&gt;&lt;/code&gt; 3.9.0 and later. Support for &lt;code&gt;%M&lt;/code&gt; and &lt;code&gt;%S&lt;/code&gt; is only available with &lt;code&gt;&lt;a href=&quot;https://linux.die.net/man/8/logrotate&quot;&gt;logrotate&lt;/a&gt;&lt;/code&gt; 3.9.2 and later.</source>
@@ -133,7 +133,7 @@
         </trans-unit>
         <trans-unit id="32420629e08ed0f97ebab510e231875a03ccdc9f" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;dyncol_blob&lt;/code&gt;&lt;/strong&gt; must be either a valid dynamic columns blob (for example, &lt;code&gt;COLUMN_CREATE&lt;/code&gt; returns such blob), or an empty string.</source>
-          <target state="translated">&lt;strong&gt; &lt;code&gt;dyncol_blob&lt;/code&gt; &lt;/strong&gt;は、有効な動的列blob（たとえば、 &lt;code&gt;COLUMN_CREATE&lt;/code&gt; はそのようなblobを返す）または空の文字列のいずれかである必要があります。</target>
+          <target state="translated">&lt;strong&gt; &lt;code&gt;dyncol_blob&lt;/code&gt; &lt;/strong&gt;は、有効な動的列BLOB（たとえば、 &lt;code&gt;COLUMN_CREATE&lt;/code&gt; がそのようなBLOBを返す）か、空の文字列である必要があります。</target>
         </trans-unit>
         <trans-unit id="8d7d1d81af1539dd527588457647671832841a1e" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;expression-cache&lt;/code&gt;&lt;/strong&gt; is used for subqueries, and it reports how many times the cache was used, and what cache hit ratio was.</source>
@@ -149,7 +149,7 @@
         </trans-unit>
         <trans-unit id="ccb982db395cee8590316772dd30e1a8133288eb" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;minsize 1M&lt;/code&gt;&lt;/strong&gt;: This directive configures it to skip a log file during log rotation if it is smaller than 1 MB. This directive is only available with &lt;code&gt;&lt;a href=&quot;https://linux.die.net/man/8/logrotate&quot;&gt;logrotate&lt;/a&gt;&lt;/code&gt; 3.7.4 and later.</source>
-          <target state="translated">&lt;strong&gt; &lt;code&gt;minsize 1M&lt;/code&gt; &lt;/strong&gt;：このディレクティブは、1 MB未満の場合、ログローテーション中にログファイルをスキップするように設定します。このディレクティブは、 &lt;code&gt;&lt;a href=&quot;https://linux.die.net/man/8/logrotate&quot;&gt;logrotate&lt;/a&gt;&lt;/code&gt; 3.7.4以降でのみ使用できます。</target>
+          <target state="translated">&lt;strong&gt; &lt;code&gt;minsize 1M&lt;/code&gt; &lt;/strong&gt;：このディレクティブは、ログファイルが1 MB未満の場合、ログローテーション中にログファイルをスキップするように設定します。このディレクティブは、 &lt;code&gt;&lt;a href=&quot;https://linux.die.net/man/8/logrotate&quot;&gt;logrotate&lt;/a&gt;&lt;/code&gt; 3.7.4以降でのみ使用できます。</target>
         </trans-unit>
         <trans-unit id="466729ca6b2024e39df53886ea52ca0f4a4415ae" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;missingok&lt;/code&gt;&lt;/strong&gt;: This directive configures it to ignore missing files, rather than failing with an error.</source>
@@ -165,7 +165,7 @@
         </trans-unit>
         <trans-unit id="d780a9ff2150f48bda01eba195f592375d16b801" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;postrotate&lt;/code&gt;&lt;/strong&gt;: This directive configures it to execute a script after log rotation. This particular script executes the &lt;code&gt;&lt;a href=&quot;../mysqladmin/index&quot;&gt;mysqladmin&lt;/a&gt;&lt;/code&gt; utility, which executes the &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH&lt;/a&gt;&lt;/code&gt; statement, which tells the MariaDB server to flush its various log files. When MariaDB server flushes a log file, it closes its existing file handle and reopens a new one. This ensure that MariaDB server does not continue writing to a log file after it has been rotated. This is an important component of the log rotation process.</source>
-          <target state="translated">&lt;strong&gt; &lt;code&gt;postrotate&lt;/code&gt; &lt;/strong&gt;：このディレクティブは、ログのローテーション後にスクリプトを実行するように構成します。この特定のスクリプトは、MariaDBサーバーにさまざまなログファイルをフラッシュするように指示する &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH&lt;/a&gt;&lt;/code&gt; ステートメントを実行する &lt;code&gt;&lt;a href=&quot;../mysqladmin/index&quot;&gt;mysqladmin&lt;/a&gt;&lt;/code&gt; ユーティリティを実行します。MariaDBサーバーがログファイルをフラッシュすると、既存のファイルハンドルが閉じられ、新しいハンドルが再度開かれます。これにより、MariaDBサーバーは、ローテーション後にログファイルへの書き込みを続行しなくなります。これは、ログローテーションプロセスの重要なコンポーネントです。</target>
+          <target state="translated">&lt;strong&gt; &lt;code&gt;postrotate&lt;/code&gt; &lt;/strong&gt;：このディレクティブは、ログのローテーション後にスクリプトを実行するように構成します。この特定のスクリプトは &lt;code&gt;&lt;a href=&quot;../mysqladmin/index&quot;&gt;mysqladmin&lt;/a&gt;&lt;/code&gt; ユーティリティを実行します。これは、MariaDBサーバーにさまざまなログファイルをフラッシュするように指示する &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH&lt;/a&gt;&lt;/code&gt; ステートメントを実行します。MariaDBサーバーがログファイルをフラッシュすると、既存のファイルハンドルが閉じられ、新しいハンドルが再度開かれます。これにより、MariaDBサーバーは、ローテーション後にログファイルへの書き込みを続行しなくなります。これは、ログローテーションプロセスの重要なコンポーネントです。</target>
         </trans-unit>
         <trans-unit id="f28ce25195c9755d23be965c6f313211819b1d97" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;r_buffer_size&lt;/code&gt;&lt;/strong&gt; field. Query plan nodes that make use of buffers report the size of buffer that was was used.</source>
@@ -173,7 +173,7 @@
         </trans-unit>
         <trans-unit id="52ffb4db658476e4825dbeaeda00796537720a33" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;r_filtered&lt;/code&gt;&lt;/strong&gt; is an observation-based counterpart of the &lt;strong&gt;filtered&lt;/strong&gt; column. It shows which fraction of rows was left after applying the WHERE condition.</source>
-          <target state="translated">&lt;strong&gt; &lt;code&gt;r_filtered&lt;/code&gt; &lt;/strong&gt;は、&lt;strong&gt;フィルタリングされた&lt;/strong&gt;列の観測ベースの対応物です。WHERE条件を適用した後に残った行の割合を示します。</target>
+          <target state="translated">&lt;strong&gt; &lt;code&gt;r_filtered&lt;/code&gt; &lt;/strong&gt;は、&lt;strong&gt;フィルター処理された&lt;/strong&gt;列の観測ベースの対応物です。WHERE条件を適用した後に残った行の割合を示します。</target>
         </trans-unit>
         <trans-unit id="67dd83b97a9c6b1d0ff0c82fe0625e087ca6786d" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;r_filtered&lt;/code&gt;&lt;/strong&gt; is provided whenever there is a condition that is checked. It shows the percentage of rows left after checking the condition.</source>
@@ -205,7 +205,7 @@
         </trans-unit>
         <trans-unit id="12c446c3b0ae4fafa00fed4c4c051c12820173a6" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;sharedscripts&lt;/code&gt;&lt;/strong&gt;: This directive configures it to run the &lt;code&gt;postrotate&lt;/code&gt; script just once, rather than once for each rotated log file.</source>
-          <target state="translated">&lt;strong&gt; &lt;code&gt;sharedscripts&lt;/code&gt; &lt;/strong&gt;：このディレクティブは、ローテーションされたログファイルごとに1回ではなく、 &lt;code&gt;postrotate&lt;/code&gt; スクリプトを1回だけ実行するように設定します。</target>
+          <target state="translated">&lt;strong&gt; &lt;code&gt;sharedscripts&lt;/code&gt; &lt;/strong&gt;：このディレクティブは、ローテーションされた各ログファイルに対して一度ではなく、一度だけ &lt;code&gt;postrotate&lt;/code&gt; スクリプトを実行するように設定します。</target>
         </trans-unit>
         <trans-unit id="839872653240f0fcafc30ea70aeb3632d15efdca" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;union_result&lt;/code&gt;&lt;/strong&gt; node has &lt;code&gt;r_rows&lt;/code&gt; so one can see how many rows were produced after UNION operation</source>
@@ -233,7 +233,7 @@
         </trans-unit>
         <trans-unit id="8136d1cded588ecc29e393d99daf43cad9d5b13f" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Additional Single Column Filters&lt;/strong&gt; - Project additional column(s) for any rows found by a previous scan and apply additional single column predicates as needed. Access of blocks is based on row identifier, going directly to the block(s). See additional column read section of &lt;a href=&quot;../mariadb-columnstore-performance-related-configuration-settings/index&quot;&gt;performance configuration&lt;/a&gt; for additional details on tuning this.</source>
-          <target state="translated">&lt;strong&gt;追加の単一列フィルター&lt;/strong&gt; -以前のスキャンで見つかった行の追加列を予測し、必要に応じて追加の単一列述語を適用します。ブロックへのアクセスは、行識別子に基づいており、ブロックに直接移動します。これのチューニングの詳細については、&lt;a href=&quot;../mariadb-columnstore-performance-related-configuration-settings/index&quot;&gt;パフォーマンス構成の&lt;/a&gt;追加の列を参照してください。</target>
+          <target state="translated">&lt;strong&gt;追加の単一列フィルター&lt;/strong&gt; -以前のスキャンで検出された行の追加列を予測し、必要に応じて追加の単一列述語を適用します。ブロックへのアクセスは、行識別子に基づいており、ブロックに直接移動します。これのチューニングの詳細については、&lt;a href=&quot;../mariadb-columnstore-performance-related-configuration-settings/index&quot;&gt;パフォーマンス構成の&lt;/a&gt;追加の列を参照してください。</target>
         </trans-unit>
         <trans-unit id="a25046afd6e7b7a13345eff3a8ffc48c089ef21d" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Aggregation/Distinct Operation Part 1&lt;/strong&gt; - Apply any local group by, distinct, or aggregation operation against the set of joined rows assigned to a given Batch Primitive. Part 1 of This process is handled by Performance Modules</source>
@@ -269,7 +269,7 @@
         </trans-unit>
         <trans-unit id="05e1cb21862bfa6fdc6d9685c56de39340259311" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;BACKUP&lt;/strong&gt;: If the data file is changed while recovering, saves a backup of the .MYD data file. t.MYD will be saved as t.MYD-datetime.BAK.</source>
-          <target state="translated">&lt;strong&gt;BACKUP&lt;/strong&gt;：リカバリ中にデータファイルが変更された場合、.MYDデータファイルのバックアップを保存します。t.MYDはt.MYD-datetime.BAKとして保存されます。</target>
+          <target state="translated">&lt;strong&gt;BACKUP&lt;/strong&gt;：回復しながら、データ・ファイルが変更された場合は、.MYDデータファイルのバックアップを保存します。t.MYDはt.MYD-datetime.BAKとして保存されます。</target>
         </trans-unit>
         <trans-unit id="ca5da01355dc9ecd7947ce68829ba929d463077f" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;BACKUP_ALL&lt;/strong&gt;: Same as &lt;code&gt;BACKUP&lt;/code&gt; but also backs up the .MYI index file. t.MYI will be saved as t.MYI-datetime.BAK. Added in &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-5151-release-notes/&quot;&gt;MariaDB 5.1.51&lt;/a&gt;.</source>
@@ -277,7 +277,7 @@
         </trans-unit>
         <trans-unit id="6e4e769a84ecd9cc49de04ca59de9be0c6ba3f54" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;BLOB streaming:&lt;/strong&gt; In combination with the &lt;a href=&quot;http://www.blobstreaming.org&quot;&gt;BLOB Streaming engine&lt;/a&gt; PBXT can stream binary and media directly in and out of the database.</source>
-          <target state="translated">&lt;strong&gt;BLOBストリーミング：&lt;/strong&gt;&lt;a href=&quot;http://www.blobstreaming.org&quot;&gt;BLOBストリーミングエンジンと&lt;/a&gt;組み合わせることで、PBXTはバイナリとメディアをデータベース内外に直接ストリーミングできます。</target>
+          <target state="translated">&lt;strong&gt;BLOBストリーミング：&lt;/strong&gt;&lt;a href=&quot;http://www.blobstreaming.org&quot;&gt;BLOBストリーミングエンジンと&lt;/a&gt;組み合わせることで、PBXTはバイナリとメディアをデータベースの内外に直接ストリーミングできます。</target>
         </trans-unit>
         <trans-unit id="b3a3e476e0a595c6fd7f2e0fafcc4c42461fc6a1" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;BPS&lt;/strong&gt; - Batch Primitive Step : scanning or projecting the column blocks.</source>
@@ -297,11 +297,11 @@
         </trans-unit>
         <trans-unit id="2262b825bbe7ec00ce5372f15171424bd0baf3ea" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Blocks Touched (blocksTouched)&lt;/strong&gt; - The total number of blocks that the query accessed physically and from the cache. This should be equal or less than the sum of physical I/O and cache I/O. This statistic is only valid for queries that are processed by ExeMgr, i.e. SELECT, DML with WHERE clause, and INSERT SELECT.</source>
-          <target state="translated">&lt;strong&gt;タッチされたブロック（blocksTouched）&lt;/strong&gt; -クエリが物理的およびキャッシュからアクセスしたブロックの総数。これは、物理I / OとキャッシュI / Oの合計以下でなければなりません。この統計は、ExeMgr、つまりSELECT、WHERE句のあるDML、およびINSERT SELECTによって処理されるクエリに対してのみ有効です。</target>
+          <target state="translated">&lt;strong&gt;タッチされたブロック（blocksTouched）&lt;/strong&gt; -クエリが物理的およびキャッシュからアクセスしたブロックの総数。これは、物理I / OとキャッシュI / Oの合計以下でなければなりません。この統計は、ExeMgr、つまりSELECT、WHERE句を含むDML、およびINSERT SELECTによって処理されるクエリに対してのみ有効です。</target>
         </trans-unit>
         <trans-unit id="ab2e64e224f38fccc283b4f49d944ccd3dca127c" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;BlocksTouched&lt;/strong&gt; - Approximate number of 8k blocks processed in memory.</source>
-          <target state="translated">&lt;strong&gt;BlocksTouched-&lt;/strong&gt;メモリで処理された8kブロックのおよその数。</target>
+          <target state="translated">&lt;strong&gt;BlocksTouched-&lt;/strong&gt;メモリで処理された8kブロックのおおよその数。</target>
         </trans-unit>
         <trans-unit id="c69beadc43aaa8d8e6465f3a13d79f04111e087e" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Bulk Write SDK 1.1.X&lt;/strong&gt;</source>
@@ -353,11 +353,11 @@
         </trans-unit>
         <trans-unit id="43eb85a9e247e31b011e56de525e3981faa790af" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Cache I/O (cacheIO)&lt;/strong&gt; - The number of blocks that the query accessed from the cache. This statistic is only valid for queries that are processed by ExeMgr, i.e. SELECT, DML with WHERE clause, and INSERT SELECT.</source>
-          <target state="translated">&lt;strong&gt;キャッシュI / O（cacheIO）&lt;/strong&gt; -クエリがキャッシュからアクセスしたブロックの数。この統計は、ExeMgr、つまりSELECT、WHERE句のあるDML、およびINSERT SELECTによって処理されるクエリに対してのみ有効です。</target>
+          <target state="translated">&lt;strong&gt;キャッシュI / O（cacheIO）&lt;/strong&gt; -クエリがキャッシュからアクセスしたブロックの数。この統計は、ExeMgr、つまりSELECT、WHERE句を含むDML、およびINSERT SELECTによって処理されるクエリに対してのみ有効です。</target>
         </trans-unit>
         <trans-unit id="f8933ab9ade8b41b88ce944ca206a65ed93a38d0" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;CacheI/O&lt;/strong&gt; - Approximate number of 8k blocks processed in memory, adjusted down by the number of discrete PhyI/O calls required.</source>
-          <target state="translated">&lt;strong&gt;CacheI / O-&lt;/strong&gt;メモリで処理されたおよそ8kブロックの数。必要な個別のPhyI / O呼び出しの数によって調整されます。</target>
+          <target state="translated">&lt;strong&gt;CacheI / O-&lt;/strong&gt;メモリで処理される8kブロックのおおよその数。必要な個別のPhyI / O呼び出しの数によって調整されます。</target>
         </trans-unit>
         <trans-unit id="5b6dc497d4fe2e033ecbfec511f81731e8c44d98" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Caution:&lt;/strong&gt; Avoid accessing tables belonging to the currently running MariaDB server via the MySQL ODBC connector. This may not work and may cause the server to be restarted.</source>
@@ -393,7 +393,7 @@
         </trans-unit>
         <trans-unit id="a045d355cf26318ffa7cc7a42356e59fa528e5b3" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Commandline:&lt;/strong&gt; N/A</source>
-          <target state="translated">&lt;strong&gt;コマンドライン：&lt;/strong&gt; N / A</target>
+          <target state="translated">&lt;strong&gt;コマンドライン：&lt;/strong&gt;なし</target>
         </trans-unit>
         <trans-unit id="1edbfba77e9bb8f3bc15ce0659338ab8c3dc3197" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Commandline:&lt;/strong&gt; No</source>
@@ -405,7 +405,7 @@
         </trans-unit>
         <trans-unit id="89a81c00e54c237c410eead069f2f813ab9bb2b8" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Commandline:&lt;/strong&gt;&lt;code&gt; -V&lt;/code&gt;, &lt;code&gt;--version[=name]&lt;/code&gt; (&amp;gt;= &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1021-release-notes/&quot;&gt;MariaDB 10.2.1&lt;/a&gt;), &lt;code&gt;--version&lt;/code&gt; (&amp;lt;= &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1020-release-notes/&quot;&gt;MariaDB 10.2.0&lt;/a&gt;)</source>
-          <target state="translated">&lt;strong&gt;コマンドライン：&lt;/strong&gt; &lt;code&gt; -V&lt;/code&gt; 、 &lt;code&gt;--version[=name]&lt;/code&gt; （&amp;gt; = &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1021-release-notes/&quot;&gt;MariaDB 10.2.1&lt;/a&gt;）、- &lt;code&gt;--version&lt;/code&gt; （&amp;lt;= &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1020-release-notes/&quot;&gt;MariaDB 10.2.0&lt;/a&gt;）</target>
+          <target state="translated">&lt;strong&gt;コマンドライン：&lt;/strong&gt; &lt;code&gt; -V&lt;/code&gt; 、-- &lt;code&gt;--version[=name]&lt;/code&gt; （&amp;gt; = &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1021-release-notes/&quot;&gt;MariaDB 10.2.1&lt;/a&gt;）、- &lt;code&gt;--version&lt;/code&gt; （&amp;lt;= &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1020-release-notes/&quot;&gt;MariaDB 10.2.0&lt;/a&gt;）</target>
         </trans-unit>
         <trans-unit id="b98b30678b02b31bd75796a57db3568aaed1fed5" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Commandline:&lt;/strong&gt;&lt;code&gt;&amp;lt;&amp;lt;code&amp;gt;&amp;gt;&lt;/code&gt;--mroonga-lock-timeout=#&amp;lt;/code&amp;gt;&amp;gt;</source>

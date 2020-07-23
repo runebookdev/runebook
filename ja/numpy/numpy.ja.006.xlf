@@ -37,7 +37,7 @@
         </trans-unit>
         <trans-unit id="348cdf7ff3c8eec7d1cd1aa8880558948fba2435" translate="yes" xml:space="preserve">
           <source>Blocks can be of any dimension, but will not be broadcasted using the normal rules. Instead, leading axes of size 1 are inserted, to make &lt;code&gt;block.ndim&lt;/code&gt; the same for all blocks. This is primarily useful for working with scalars, and means that code like &lt;code&gt;np.block([v, 1])&lt;/code&gt; is valid, where &lt;code&gt;v.ndim == 1&lt;/code&gt;.</source>
-          <target state="translated">ブロックは任意の次元にすることができますが、通常のルールを使用してブロードキャストされません。代わりに、すべてのブロックで &lt;code&gt;block.ndim&lt;/code&gt; を同じにするために、サイズ1の先行軸が挿入されます。これは主にスカラーの操作に役立ち、 &lt;code&gt;np.block([v, 1])&lt;/code&gt; ようなコードが有効であることを意味します。ここで &lt;code&gt;v.ndim == 1&lt;/code&gt; です。</target>
+          <target state="translated">ブロックは任意の次元にすることができますが、通常のルールを使用してブロードキャストされません。代わりに、サイズ1の先行軸が挿入され、すべてのブロックで &lt;code&gt;block.ndim&lt;/code&gt; が同じになります。これは主にスカラーの操作に役立ち、 &lt;code&gt;v.ndim == 1&lt;/code&gt; であるnp.block &lt;code&gt;np.block([v, 1])&lt;/code&gt; ようなコードが有効であることを意味します。</target>
         </trans-unit>
         <trans-unit id="8994034796d9ec39a7933eb34371fad5f6ce9920" translate="yes" xml:space="preserve">
           <source>Blocks in the innermost lists are concatenated (see &lt;a href=&quot;numpy.concatenate#numpy.concatenate&quot;&gt;&lt;code&gt;concatenate&lt;/code&gt;&lt;/a&gt;) along the last dimension (-1), then these are concatenated along the second-last dimension (-2), and so on until the outermost list is reached.</source>
@@ -117,11 +117,11 @@
         </trans-unit>
         <trans-unit id="6a6c7de0b010d58cd0f9cb5716158db428b24bc0" translate="yes" xml:space="preserve">
           <source>Both &lt;code&gt;u&lt;/code&gt; and &lt;code&gt;v&lt;/code&gt; must be 0-d or 1-d (ndim = 0 or 1), but &lt;code&gt;u.ndim&lt;/code&gt; need not equal &lt;code&gt;v.ndim&lt;/code&gt;. In other words, all four possible combinations - &lt;code&gt;u.ndim = v.ndim = 0&lt;/code&gt;, &lt;code&gt;u.ndim = v.ndim = 1&lt;/code&gt;, &lt;code&gt;u.ndim = 1, v.ndim = 0&lt;/code&gt;, and &lt;code&gt;u.ndim = 0, v.ndim = 1&lt;/code&gt; - work.</source>
-          <target state="translated">両方の &lt;code&gt;u&lt;/code&gt; 及び &lt;code&gt;v&lt;/code&gt; 0-Dまたは1-D（ndim = 0又は1）が、でなければならない &lt;code&gt;u.ndim&lt;/code&gt; 必要等しくない &lt;code&gt;v.ndim&lt;/code&gt; 。つまり、 &lt;code&gt;u.ndim = v.ndim = 0&lt;/code&gt; 、 &lt;code&gt;u.ndim = v.ndim = 1&lt;/code&gt; 、 &lt;code&gt;u.ndim = 1, v.ndim = 0&lt;/code&gt; 、および &lt;code&gt;u.ndim = 0, v.ndim = 1&lt;/code&gt; 4つの可能な組み合わせすべてです。 ndim = 1-仕事。</target>
+          <target state="translated">両方の &lt;code&gt;u&lt;/code&gt; 及び &lt;code&gt;v&lt;/code&gt; 0-Dまたは1-D（ndim = 0又は1）が、でなければならない &lt;code&gt;u.ndim&lt;/code&gt; 必要等しくない &lt;code&gt;v.ndim&lt;/code&gt; 。つまり、4つの可能な組み合わせすべて、 &lt;code&gt;u.ndim = v.ndim = 0&lt;/code&gt; 、 &lt;code&gt;u.ndim = v.ndim = 1&lt;/code&gt; 、 &lt;code&gt;u.ndim = 1, v.ndim = 0&lt;/code&gt; 、 &lt;code&gt;u.ndim = 0, v.ndim = 1&lt;/code&gt; 仕事。</target>
         </trans-unit>
         <trans-unit id="88f65d9e2d112f1a7a284a45eccfdccc621dc60d" translate="yes" xml:space="preserve">
           <source>Both C-ordering (&amp;ldquo;last dimension fastest&amp;rdquo;) or Fortran-ordering (&amp;ldquo;first dimension fastest&amp;rdquo;) support for 2D, 3D and 4D arrays.</source>
-          <target state="translated">C順序（「最後の次元が最も速い」）またはFortran順序（「最初の次元が最も速い」）の両方が2D、3D、4D配列をサポートします。</target>
+          <target state="translated">C順序付け（「最後の次元が最も速い」）またはFortran順序付け（「最初の次元が最も速い」）は、2D、3D、4D配列をサポートしています。</target>
         </trans-unit>
         <trans-unit id="6876b038e6598420047feff6385d214f7a9456e4" translate="yes" xml:space="preserve">
           <source>Both CTypes and CFFI allow the more complicated distributions to be used directly in Numba after compiling the file distributions.c into a DLL or so. An example showing the use of a more complicated distribution is in the examples folder.</source>
@@ -169,7 +169,7 @@
         </trans-unit>
         <trans-unit id="98d4c99349e07c3606d8247f67b6a69bf991b037" translate="yes" xml:space="preserve">
           <source>Broadcast the input parameters against one another, and return an object that encapsulates the result. Amongst others, it has &lt;code&gt;shape&lt;/code&gt; and &lt;code&gt;nd&lt;/code&gt; properties, and may be used as an iterator.</source>
-          <target state="translated">入力パラメーターを相互にブロードキャストし、結果をカプセル化するオブジェクトを返します。特に、それは &lt;code&gt;shape&lt;/code&gt; と &lt;code&gt;nd&lt;/code&gt; プロパティを持ち、反復子として使用できます。</target>
+          <target state="translated">入力パラメータを相互にブロードキャストし、結果をカプセル化するオブジェクトを返します。とりわけ、それは &lt;code&gt;shape&lt;/code&gt; と &lt;code&gt;nd&lt;/code&gt; プロパティを持ち、反復子として使用できます。</target>
         </trans-unit>
         <trans-unit id="ba459229366746c447e3cdf752eb917433152cfe" translate="yes" xml:space="preserve">
           <source>Broadcasting</source>
@@ -209,7 +209,7 @@
         </trans-unit>
         <trans-unit id="90812c9e094ac5522eea3d57aa754d6964a1cdf2" translate="yes" xml:space="preserve">
           <source>Buffer (&lt;code&gt;buf&lt;/code&gt;) is interpreted according to these strides (strides define how many bytes each array element, row, column, etc. occupy in memory).</source>
-          <target state="translated">バッファ（ &lt;code&gt;buf&lt;/code&gt; ）はこれらのストライドに従って解釈されます（ストライドは、各配列要素、行、列などがメモリ内で占めるバイト数を定義します）。</target>
+          <target state="translated">バッファ（ &lt;code&gt;buf&lt;/code&gt; ）は、これらのストライドに従って解釈されます（ストライドは、各配列要素、行、列などがメモリで占有するバイト数を定義します）。</target>
         </trans-unit>
         <trans-unit id="27cb2ff0185bcfdbaec6ac70d0f611c9c03b02a8" translate="yes" xml:space="preserve">
           <source>Buffered Loop</source>
@@ -241,7 +241,7 @@
         </trans-unit>
         <trans-unit id="fe2db8e7c7c6c32ba1fc4b4a6634f60ac081da44" translate="yes" xml:space="preserve">
           <source>Builds a set of strides which are the same as the strides of an output array created using the &lt;a href=&quot;#c.NPY_ITER_ALLOCATE&quot;&gt;&lt;code&gt;NPY_ITER_ALLOCATE&lt;/code&gt;&lt;/a&gt; flag, where NULL was passed for op_axes. This is for data packed contiguously, but not necessarily in C or Fortran order. This should be used together with &lt;a href=&quot;#c.NpyIter_GetShape&quot;&gt;&lt;code&gt;NpyIter_GetShape&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;#c.NpyIter_GetNDim&quot;&gt;&lt;code&gt;NpyIter_GetNDim&lt;/code&gt;&lt;/a&gt; with the flag &lt;a href=&quot;#c.NPY_ITER_MULTI_INDEX&quot;&gt;&lt;code&gt;NPY_ITER_MULTI_INDEX&lt;/code&gt;&lt;/a&gt; passed into the constructor.</source>
-          <target state="translated">&lt;a href=&quot;#c.NPY_ITER_ALLOCATE&quot;&gt; &lt;code&gt;NPY_ITER_ALLOCATE&lt;/code&gt; &lt;/a&gt;にNULLが渡されたNPY_ITER_ALLOCATEフラグを使用して作成された出力配列のストライドと同じストライドのセットを作成します。これは、連続してパックされたデータ用ですが、必ずしもCまたはFortranの順序でパックされているわけではありません。これは、フラグ&lt;a href=&quot;#c.NPY_ITER_MULTI_INDEX&quot;&gt; &lt;code&gt;NPY_ITER_MULTI_INDEX&lt;/code&gt; をコンストラクターに&lt;/a&gt;渡して、&lt;a href=&quot;#c.NpyIter_GetShape&quot;&gt; &lt;code&gt;NpyIter_GetShape&lt;/code&gt; &lt;/a&gt;および&lt;a href=&quot;#c.NpyIter_GetNDim&quot;&gt; &lt;code&gt;NpyIter_GetNDim&lt;/code&gt; &lt;/a&gt;と一緒に使用する必要があります。</target>
+          <target state="translated">&lt;a href=&quot;#c.NPY_ITER_ALLOCATE&quot;&gt; &lt;code&gt;NPY_ITER_ALLOCATE&lt;/code&gt; &lt;/a&gt;にNULLが渡された、NPY_ITER_ALLOCATEフラグを使用して作成された出力配列のストライドと同じストライドのセットを作成します。これは、連続してパックされたデータ用ですが、必ずしもCまたはFortranの順序でパックされているわけではありません。これは、フラグ&lt;a href=&quot;#c.NPY_ITER_MULTI_INDEX&quot;&gt; &lt;code&gt;NPY_ITER_MULTI_INDEX&lt;/code&gt; をコンストラクターに&lt;/a&gt;渡して、&lt;a href=&quot;#c.NpyIter_GetShape&quot;&gt; &lt;code&gt;NpyIter_GetShape&lt;/code&gt; &lt;/a&gt;および&lt;a href=&quot;#c.NpyIter_GetNDim&quot;&gt; &lt;code&gt;NpyIter_GetNDim&lt;/code&gt; &lt;/a&gt;と一緒に使用する必要があります。</target>
         </trans-unit>
         <trans-unit id="8b40e55c8fd12c110479c1a8e453add933b9c6e8" translate="yes" xml:space="preserve">
           <source>Built-in Python types</source>
@@ -249,7 +249,7 @@
         </trans-unit>
         <trans-unit id="b858e075ef402953578da270159a51f6ad1575b6" translate="yes" xml:space="preserve">
           <source>Built-in scalar types</source>
-          <target state="translated">組み込みのスカラー型</target>
+          <target state="translated">組み込みのスカラ型</target>
         </trans-unit>
         <trans-unit id="f0300972b4a8f0b0074aec4f6903cf3e57d597c8" translate="yes" xml:space="preserve">
           <source>Business Day Functionality</source>
@@ -265,7 +265,7 @@
         </trans-unit>
         <trans-unit id="bd8c2ef60d42745d2cdc473c152c1f9687c4dcc2" translate="yes" xml:space="preserve">
           <source>But if &lt;code&gt;rowsum&lt;/code&gt; would have two dimensions as well:</source>
-          <target state="translated">ただし、 &lt;code&gt;rowsum&lt;/code&gt; が2つの次元を持つ場合：</target>
+          <target state="translated">ただし、 &lt;code&gt;rowsum&lt;/code&gt; にも2つの次元がある場合：</target>
         </trans-unit>
         <trans-unit id="b4df18df25d280603f202e60c13a7a8f66254798" translate="yes" xml:space="preserve">
           <source>But is also allowed to produce, for some &lt;code&gt;a, b, c, d&lt;/code&gt;:</source>
@@ -273,7 +273,7 @@
         </trans-unit>
         <trans-unit id="6646b6ecbc06bc26898d3bc8dfd20372b9b785ad" translate="yes" xml:space="preserve">
           <source>But that&amp;rsquo;s not the only way to look at it. Suppose one has large two-dimensional arrays (images or matrices) stored in data files. Suppose the data are stored by rows rather than by columns. If we are to preserve our index convention (whether matrix or image) that means that depending on the language we use, we may be forced to reorder the data if it is read into memory to preserve our indexing convention. For example if we read row-ordered data into memory without reordering, it will match the matrix indexing convention for C, but not for Fortran. Conversely, it will match the image indexing convention for Fortran, but not for C. For C, if one is using data stored in row order, and one wants to preserve the image index convention, the data must be reordered when reading into memory.</source>
-          <target state="translated">しかし、それはそれを見る唯一の方法ではありません。大きな2次元配列（画像または行列）がデータファイルに格納されているとします。データが列ではなく行で格納されているとします。インデックスの規則（行列または画像）を保持する場合、使用する言語によっては、データをメモリに読み込んでインデックスの規則を保持すると、データの順序を変更しなければならない場合があります。たとえば、行順データを並べ替えずにメモリに読み込んだ場合、Cの行列のインデックス付け規則と一致しますが、Fortranとは一致しません。逆に、それはFortranのイメージインデックス規則に一致しますが、Cには一致しません。Cの場合、行順に格納されたデータを使用していて、イメージインデックス規則を保持したい場合は、メモリに読み込むときにデータを並べ替える必要があります。</target>
+          <target state="translated">しかし、それはそれを見る唯一の方法ではありません。大きな2次元配列（画像または行列）がデータファイルに格納されているとします。データが列ではなく行で格納されているとします。インデックスの規則（行列または画像）を保持する場合、使用する言語によっては、データをメモリに読み込んでインデックスの規則を保持すると、データの順序を変更しなければならない場合があります。たとえば、行順データを並べ替えずにメモリに読み込んだ場合、Cの行列のインデックス付け規則と一致しますが、Fortranとは一致しません。逆に、それはFortranのイメージインデックス規則と一致しますが、Cとは一致しません。Cの場合、行順に格納されたデータを使用していて、イメージインデックス規則を保持したい場合は、メモリに読み込むときにデータを並べ替える必要があります。</target>
         </trans-unit>
         <trans-unit id="6e0bd4df436692919faeb191ed09cf810cb22035" translate="yes" xml:space="preserve">
           <source>But there are cross-platform considerations, such as library file extensions, plus the fact Windows will just load the first library it finds with that name. NumPy supplies the load_library function as a convenience.</source>
@@ -289,7 +289,7 @@
         </trans-unit>
         <trans-unit id="e13f0fd9c0e50a5064cf51cb50663812feb86a8e" translate="yes" xml:space="preserve">
           <source>Buzas, Martin A.; Culver, Stephen J., Understanding regional species diversity through the log series distribution of occurrences: BIODIVERSITY RESEARCH Diversity &amp;amp; Distributions, Volume 5, Number 5, September 1999 , pp. 187-195(9).</source>
-          <target state="translated">ブザス、マーティンA. カルバー、スティーブンJ.、発生の対数系列分布による地域の種の多様性の理解：生物多様性研究多様性と分布、第5巻、第5号、1999年9月、pp。187-195（9）。</target>
+          <target state="translated">ブザス、マーティンA .; カルバー、スティーブンJ.、発生の対数系列分布による地域種の多様性の理解：生物多様性研究多様性と分布、第5巻、第5号、1999年9月、187-195頁（9）。</target>
         </trans-unit>
         <trans-unit id="66360bf7fbf8657df2c1591ab899dd54476a182c" translate="yes" xml:space="preserve">
           <source>By choosing an offset of 8 bytes we can select the complex part of the array for our view:</source>
@@ -337,11 +337,11 @@
         </trans-unit>
         <trans-unit id="29592fecd779ff823d8494d78a32e4c6bef17a8b" translate="yes" xml:space="preserve">
           <source>By default, masked values are recognized as such. If &lt;code&gt;x&lt;/code&gt; and &lt;code&gt;y&lt;/code&gt; have the same shape, a common mask is allocated: if &lt;code&gt;x[i,j]&lt;/code&gt; is masked, then &lt;code&gt;y[i,j]&lt;/code&gt; will also be masked. Setting &lt;code&gt;allow_masked&lt;/code&gt; to False will raise an exception if values are missing in either of the input arrays.</source>
-          <target state="translated">デフォルトでは、マスクされた値はそのように認識されます。場合 &lt;code&gt;x&lt;/code&gt; と &lt;code&gt;y&lt;/code&gt; 、同じ形状を有し、共通のマスクが割り当てられている次の場合 &lt;code&gt;x[i,j]&lt;/code&gt; マスクされ、次に &lt;code&gt;y[i,j]&lt;/code&gt; また、マスクされます。いずれかの入力配列で値が欠落している場合、 &lt;code&gt;allow_masked&lt;/code&gt; をFalseに設定すると例外が発生します。</target>
+          <target state="translated">デフォルトでは、マスクされた値はそのように認識されます。場合 &lt;code&gt;x&lt;/code&gt; と &lt;code&gt;y&lt;/code&gt; 、同じ形状を有し、共通のマスクが割り当てられている次の場合 &lt;code&gt;x[i,j]&lt;/code&gt; マスクされ、次に &lt;code&gt;y[i,j]&lt;/code&gt; また、マスクされます。 &lt;code&gt;allow_masked&lt;/code&gt; をFalseに設定すると、いずれかの入力配列で値が欠落している場合に例外が発生します。</target>
         </trans-unit>
         <trans-unit id="72d47f0b8465ed8e3b2a5736c0d1dfec28a91237" translate="yes" xml:space="preserve">
           <source>By default, mode is &amp;lsquo;full&amp;rsquo;. This returns the convolution at each point of overlap, with an output shape of (N+M-1,). At the end-points of the convolution, the signals do not overlap completely, and boundary effects may be seen.</source>
-          <target state="translated">デフォルトでは、モードは「完全」です。これは、オーバーラップの各ポイントでのたたみ込みを返し、出力形状は（N + M-1）になります。たたみ込みの終点では、信号が完全にオーバーラップせず、境界効果が見られる場合があります。</target>
+          <target state="translated">デフォルトでは、モードは「フル」です。これは、オーバーラップの各ポイントでの畳み込みを（N + M-1）の出力形状で返します。たたみ込みの終点では、信号が完全にオーバーラップせず、境界効果が見られる場合があります。</target>
         </trans-unit>
         <trans-unit id="6971450c7aa549483b5389a69fedb16eaf066171" translate="yes" xml:space="preserve">
           <source>By default, reverse the dimensions, otherwise permute the axes according to the values given.</source>
@@ -365,11 +365,11 @@
         </trans-unit>
         <trans-unit id="e68b2ebbdaa7d8bde52807398926b542381f9c7b" translate="yes" xml:space="preserve">
           <source>By default, the iterator produces pointers into the arrays provided, which may be aligned or unaligned, and with any byte order. If copying or buffering is not enabled and the operand data doesn&amp;rsquo;t satisfy the constraints, an error will be raised.</source>
-          <target state="translated">デフォルトでは、イテレーターは、提供された配列へのポインターを生成します。これは、整列または非整列で、任意のバイト順序を使用できます。コピーまたはバッファリングが有効になっておらず、オペランドデータが制約を満たさない場合、エラーが発生します。</target>
+          <target state="translated">デフォルトでは、イテレータは提供された配列へのポインタを生成します。これは、任意のバイト順で、整列または非整列の場合があります。コピーまたはバッファリングが有効になっておらず、オペランドデータが制約を満たさない場合、エラーが発生します。</target>
         </trans-unit>
         <trans-unit id="a90e6d5076b3318d5438106f6aec8b51a30f2edc" translate="yes" xml:space="preserve">
           <source>By eliminating the inner loop in the description above, and using &lt;a href=&quot;numpy.s_#numpy.s_&quot;&gt;&lt;code&gt;s_&lt;/code&gt;&lt;/a&gt; to build simple slice objects, &lt;a href=&quot;#numpy.take&quot;&gt;&lt;code&gt;take&lt;/code&gt;&lt;/a&gt; can be expressed in terms of applying fancy indexing to each 1-d slice:</source>
-          <target state="translated">上記の説明で内部ループを削除し、&lt;a href=&quot;numpy.s_#numpy.s_&quot;&gt; &lt;code&gt;s_&lt;/code&gt; &lt;/a&gt;を使用して単純なスライスオブジェクトを作成すると、&lt;a href=&quot;#numpy.take&quot;&gt; &lt;code&gt;take&lt;/code&gt; &lt;/a&gt;は、各1次元スライスにファンシーインデックスを適用することで表現できます。</target>
+          <target state="translated">上記の説明で内部ループを排除し、&lt;a href=&quot;numpy.s_#numpy.s_&quot;&gt; &lt;code&gt;s_&lt;/code&gt; &lt;/a&gt;を使用して単純なスライスオブジェクトを作成&lt;a href=&quot;#numpy.take&quot;&gt; &lt;code&gt;take&lt;/code&gt; &lt;/a&gt;ことにより、takeは、各1次元スライスにファンシーインデックスを適用することで表現できます。</target>
         </trans-unit>
         <trans-unit id="f5e127dadff417279256627201011a26eddd8177" translate="yes" xml:space="preserve">
           <source>By enabling buffering mode, the chunks provided by the iterator to the inner loop can be made larger, significantly reducing the overhead of the Python interpreter. In the example forcing Fortran iteration order, the inner loop gets to see all the elements in one go when buffering is enabled.</source>
@@ -389,7 +389,7 @@
         </trans-unit>
         <trans-unit id="5cf0a6a61d5c04a9d920300ad8c8de64a060c650" translate="yes" xml:space="preserve">
           <source>By the above description, the casting rules are essentially implemented by the question of when a data type can be cast &amp;ldquo;safely&amp;rdquo; to another data type. The answer to this question can be determined in Python with a function call: &lt;a href=&quot;generated/numpy.can_cast#numpy.can_cast&quot;&gt;&lt;code&gt;can_cast(fromtype, totype)&lt;/code&gt;&lt;/a&gt;. The Figure below shows the results of this call for the 24 internally supported types on the author&amp;rsquo;s 64-bit system. You can generate this table for your system with the code given in the Figure.</source>
-          <target state="translated">上記の説明により、データ型を別のデータ型に「安全に」いつキャストできるかという問題によって、キャストルールが本質的に実装されます。この質問に対する答えは、Pythonで関数呼び出し&lt;a href=&quot;generated/numpy.can_cast#numpy.can_cast&quot;&gt; &lt;code&gt;can_cast(fromtype, totype)&lt;/code&gt; &lt;/a&gt;使用して決定できます。以下の図は、作成者の64ビットシステムで内部的にサポートされている24の型に対するこの呼び出しの結果を示しています。図に示すコードを使用して、システムのこのテーブルを生成できます。</target>
+          <target state="translated">上記の説明により、キャストルールは、データ型を別のデータ型に「安全に」キャストできるタイミングの問題によって本質的に実装されます。この質問に対する答えは、Pythonで関数呼び出し&lt;a href=&quot;generated/numpy.can_cast#numpy.can_cast&quot;&gt; &lt;code&gt;can_cast(fromtype, totype)&lt;/code&gt; &lt;/a&gt;使用して決定できます。下の図は、作成者の64ビットシステムで内部的にサポートされている24の型に対するこの呼び出しの結果を示しています。図に示すコードを使用して、システムにこのテーブルを生成できます。</target>
         </trans-unit>
         <trans-unit id="c3ee543ea3c911ca70be24ca50be4966bfc9d11e" translate="yes" xml:space="preserve">
           <source>Byte order of the data (&lt;a href=&quot;https://docs.scipy.org/doc/numpy-1.17.0/glossary.html#term-little-endian&quot;&gt;little-endian&lt;/a&gt; or &lt;a href=&quot;https://docs.scipy.org/doc/numpy-1.17.0/glossary.html#term-big-endian&quot;&gt;big-endian&lt;/a&gt;)</source>
@@ -397,7 +397,7 @@
         </trans-unit>
         <trans-unit id="4fa7dfbdbb33fd63c061542164ead10c6ea66cdb" translate="yes" xml:space="preserve">
           <source>Byte order to force; a value from the byte order specifications above. The default value (&amp;lsquo;S&amp;rsquo;) results in swapping the current byte order. The code does a case-insensitive check on the first letter of &lt;code&gt;new_order&lt;/code&gt; for the alternatives above. For example, any of &amp;lsquo;B&amp;rsquo; or &amp;lsquo;b&amp;rsquo; or &amp;lsquo;biggish&amp;rsquo; are valid to specify big-endian.</source>
-          <target state="translated">強制するバイト順。上記のバイトオーダー仕様からの値。デフォルト値（ 'S'）の場合、現在のバイト順が入れ替わります。コードは、上記の代替案の &lt;code&gt;new_order&lt;/code&gt; の最初の文字で大文字と小文字を区別しないチェックを行います。たとえば、「B」、「b」、「biggish」のいずれもビッグエンディアンを指定するのに有効です。</target>
+          <target state="translated">強制するバイト順。上記のバイトオーダー仕様からの値。デフォルト値（ 'S'）の場合、現在のバイト順が入れ替わります。コードは、上記の代替案の &lt;code&gt;new_order&lt;/code&gt; の最初の文字で大文字と小文字を区別しないチェックを行います。たとえば、ビッグエンディアンを指定するには、「B」、「b」、「biggish」のいずれも有効です。</target>
         </trans-unit>
         <trans-unit id="d891a9572e92fd87112849b433aa9d82773e6323" translate="yes" xml:space="preserve">
           <source>Byte order to force; a value from the byte order specifications below. &lt;code&gt;new_order&lt;/code&gt; codes can be any of:</source>
@@ -537,11 +537,11 @@
         </trans-unit>
         <trans-unit id="793634569b16ddadf09c84f21826d340c4bb186b" translate="yes" xml:space="preserve">
           <source>Calculates &lt;code&gt;log(exp(x1) + exp(x2))&lt;/code&gt;. This function is useful in statistics where the calculated probabilities of events may be so small as to exceed the range of normal floating point numbers. In such cases the logarithm of the calculated probability is stored. This function allows adding probabilities stored in such a fashion.</source>
-          <target state="translated">&lt;code&gt;log(exp(x1) + exp(x2))&lt;/code&gt; 計算します。この関数は、イベントの計算された確率が通常の浮動小数点数の範囲を超えるほど小さい可能性がある統計で役立ちます。そのような場合、計算された確率の対数が保存されます。この機能により、このような方法で格納された確率を追加できます。</target>
+          <target state="translated">&lt;code&gt;log(exp(x1) + exp(x2))&lt;/code&gt; 計算します。この関数は、イベントの計算された確率が通常の浮動小数点数の範囲を超えるほど小さい可能性がある統計で役立ちます。このような場合、計算された確率の対数が保存されます。この機能により、このような方法で格納された確率を追加できます。</target>
         </trans-unit>
         <trans-unit id="55306f441c10b288ef594152ca5bc10ba426774f" translate="yes" xml:space="preserve">
           <source>Calculates &lt;code&gt;log2(2**x1 + 2**x2)&lt;/code&gt;. This function is useful in machine learning when the calculated probabilities of events may be so small as to exceed the range of normal floating point numbers. In such cases the base-2 logarithm of the calculated probability can be used instead. This function allows adding probabilities stored in such a fashion.</source>
-          <target state="translated">&lt;code&gt;log2(2**x1 + 2**x2)&lt;/code&gt; 計算します。この関数は、イベントの計算された確率が非常に小さく、通常の浮動小数点数の範囲を超える可能性がある場合に、機械学習で役立ちます。そのような場合、代わりに、計算された確率の2を底とする対数を使用できます。この機能により、このような方法で格納された確率を追加できます。</target>
+          <target state="translated">&lt;code&gt;log2(2**x1 + 2**x2)&lt;/code&gt; 計算します。この関数は、計算されたイベントの確率が非常に小さく、通常の浮動小数点数の範囲を超える可能性がある場合に、機械学習で役立ちます。そのような場合、代わりに、計算された確率の2を底とする対数を使用できます。この機能により、このような方法で格納された確率を追加できます。</target>
         </trans-unit>
         <trans-unit id="79b6b61d48a464831755d05e96c5b24edef1de03" translate="yes" xml:space="preserve">
           <source>Calculates which of the given dates are valid days, and which are not.</source>
@@ -761,11 +761,11 @@
         </trans-unit>
         <trans-unit id="5da405e72e65e85b0a6ff9fb710530d444100461" translate="yes" xml:space="preserve">
           <source>Cast code: This checks for &amp;ldquo;true&amp;rdquo; alignment, as it does &lt;code&gt;*dst = CASTFUNC(*src)&lt;/code&gt; if aligned. Otherwise, it does &lt;code&gt;memmove(srcval, src); dstval = CASTFUNC(srcval); memmove(dst, dstval)&lt;/code&gt; where dstval/srcval are aligned.</source>
-          <target state="translated">キャストコード： &lt;code&gt;*dst = CASTFUNC(*src)&lt;/code&gt; が調整されている場合は、「真の」調整をチェックします。それ以外の場合は、 &lt;code&gt;memmove(srcval, src); dstval = CASTFUNC(srcval); memmove(dst, dstval)&lt;/code&gt; ここで、dstval / srcvalが整列されます。</target>
+          <target state="translated">キャストコード： &lt;code&gt;*dst = CASTFUNC(*src)&lt;/code&gt; が調整されている場合は、「真の」調整をチェックします。それ以外の場合は、 &lt;code&gt;memmove(srcval, src); dstval = CASTFUNC(srcval); memmove(dst, dstval)&lt;/code&gt; ここで、dstval / srcvalは整列されます。</target>
         </trans-unit>
         <trans-unit id="4dbf7f264927d9ee6c0c9230f88c1b227f370d7c" translate="yes" xml:space="preserve">
           <source>Cast the elements of the array &lt;em&gt;in&lt;/em&gt; into the array &lt;em&gt;out&lt;/em&gt;. The output array should be writeable, have an integer-multiple of the number of elements in the input array (more than one copy can be placed in out), and have a data type that is one of the builtin types. Returns 0 on success and -1 if an error occurs.</source>
-          <target state="translated">配列&lt;em&gt;inの&lt;/em&gt;要素を配列&lt;em&gt;outに&lt;/em&gt;キャスト&lt;em&gt;し&lt;/em&gt;ます。出力配列は書き込み可能で、入力配列の要素数の整数倍（複数のコピーをoutに配置できます）であり、組み込み型の1つであるデータ型を持つ必要があります。成功した場合は0を返し、エラーが発生した場合は-1を返します。</target>
+          <target state="translated">配列&lt;em&gt;inの&lt;/em&gt;要素を配列&lt;em&gt;outに&lt;/em&gt;キャスト&lt;em&gt;し&lt;/em&gt;ます。出力配列は書き込み可能であり、入力配列の要素数の整数倍（複数のコピーを配置できます）を持ち、組み込み型の1つであるデータ型を持っている必要があります。成功した場合は0を返し、エラーが発生した場合は-1を返します。</target>
         </trans-unit>
         <trans-unit id="e6a8277578137a1b27ee47f6d99dc6ac5a6c8df7" translate="yes" xml:space="preserve">
           <source>Cast to the desired type, even if it can&amp;rsquo;t be done without losing information.</source>
@@ -777,7 +777,7 @@
         </trans-unit>
         <trans-unit id="0e43fbb5b95b8e028055445bd4f061de51dc4a06" translate="yes" xml:space="preserve">
           <source>Casting must be done on one or more of the inputs whenever the ufunc does not have a core loop implementation for the input types provided. If an implementation for the input types cannot be found, then the algorithm searches for an implementation with a type signature to which all of the inputs can be cast &amp;ldquo;safely.&amp;rdquo; The first one it finds in its internal list of loops is selected and performed, after all necessary type casting. Recall that internal copies during ufuncs (even for casting) are limited to the size of an internal buffer (which is user settable).</source>
-          <target state="translated">ufuncに、提供された入力タイプのコアループ実装がない場合は常に、1つ以上の入力でキャストを実行する必要があります。入力タイプの実装が見つからない場合、アルゴリズムは、すべての入力を「安全に」キャストできる型シグネチャを持つ実装を検索します。必要なすべての型キャストの後で、ループの内部リストで最初に見つかったものが選択され、実行されます。ufunc中の内部コピー（キャストの場合でも）は、内部バッファー（ユーザー設定可能）のサイズに制限されることを思い出してください。</target>
+          <target state="translated">提供された入力タイプのコアループ実装がufuncにない場合は常に、1つ以上の入力でキャストを実行する必要があります。入力タイプの実装が見つからない場合、アルゴリズムは、すべての入力を「安全に」キャストできる型シグネチャを持つ実装を検索します。ループの内部リストで最初に見つかったものが選択され、必要な型キャストがすべて実行された後に実行されます。ufuncs中の内部コピー（キャストの場合でも）は、内部バッファー（ユーザー設定可能）のサイズに制限されることを思い出してください。</target>
         </trans-unit>
         <trans-unit id="8748cec5513dc9c01c715b723dcb4b372a11fea9" translate="yes" xml:space="preserve">
           <source>Casting scalars</source>
@@ -801,7 +801,7 @@
         </trans-unit>
         <trans-unit id="f6e47e97b987638e04e1741c9188448c0cda9575" translate="yes" xml:space="preserve">
           <source>Causes the iterator to provide data for &lt;code&gt;op[i]&lt;/code&gt; that is in native byte order, aligned according to the dtype requirements, contiguous, or any combination.</source>
-          <target state="translated">イテレーターが、dtypeの要件、連続、または任意の組み合わせに従ってアラインされたネイティブのバイト順の &lt;code&gt;op[i]&lt;/code&gt; データを提供します。</target>
+          <target state="translated">イテレーターが、dtypeの要件、連続、または任意の組み合わせに従ってアラインされたネイティブのバイト順のデータを &lt;code&gt;op[i]&lt;/code&gt; に提供します。</target>
         </trans-unit>
         <trans-unit id="78cd28e519e06a8be731a725d2ee50a3144a0620" translate="yes" xml:space="preserve">
           <source>Causes the iterator to skip iteration of the innermost loop, requiring the user of the iterator to handle it.</source>
@@ -809,7 +809,7 @@
         </trans-unit>
         <trans-unit id="d748728383297b4bba46340904d34590fd3f0e6c" translate="yes" xml:space="preserve">
           <source>Causes the iterator to store buffering data, and use buffering to satisfy data type, alignment, and byte-order requirements. To buffer an operand, do not specify the &lt;a href=&quot;#c.NPY_ITER_COPY&quot;&gt;&lt;code&gt;NPY_ITER_COPY&lt;/code&gt;&lt;/a&gt; or &lt;a href=&quot;#c.NPY_ITER_UPDATEIFCOPY&quot;&gt;&lt;code&gt;NPY_ITER_UPDATEIFCOPY&lt;/code&gt;&lt;/a&gt; flags, because they will override buffering. Buffering is especially useful for Python code using the iterator, allowing for larger chunks of data at once to amortize the Python interpreter overhead.</source>
-          <target state="translated">イテレータにバッファリングデータを格納させ、バッファリングを使用してデータ型、配置、およびバイト順の要件を満たします。オペランドをバッファリングするには、&lt;a href=&quot;#c.NPY_ITER_COPY&quot;&gt; &lt;code&gt;NPY_ITER_COPY&lt;/code&gt; &lt;/a&gt;または&lt;a href=&quot;#c.NPY_ITER_UPDATEIFCOPY&quot;&gt; &lt;code&gt;NPY_ITER_UPDATEIFCOPY&lt;/code&gt; &lt;/a&gt;フラグを指定しないでください。これらのフラグはバッファリングをオーバーライドするためです。バッファリングは、イテレータを使用するPythonコードで特に便利です。一度に大きなデータチャンクを使用すると、Pythonインタプリタのオーバーヘッドを償却できます。</target>
+          <target state="translated">イテレータにバッファリングデータを格納させ、バッファリングを使用してデータ型、配置、およびバイト順の要件を満たします。オペランドをバッファリングするには、&lt;a href=&quot;#c.NPY_ITER_COPY&quot;&gt; &lt;code&gt;NPY_ITER_COPY&lt;/code&gt; &lt;/a&gt;または&lt;a href=&quot;#c.NPY_ITER_UPDATEIFCOPY&quot;&gt; &lt;code&gt;NPY_ITER_UPDATEIFCOPY&lt;/code&gt; &lt;/a&gt;フラグを指定しないでください。これらのフラグはバッファリングをオーバーライドするためです。バッファリングは、イテレータを使用するPythonコードで特に便利です。一度に大きなデータチャンクを使用して、Pythonインタープリタのオーバーヘッドを償却できます。</target>
         </trans-unit>
         <trans-unit id="cbe86966ee1567b8621995982683f047543e592a" translate="yes" xml:space="preserve">
           <source>Causes the iterator to track a multi-index. This prevents the iterator from coalescing axes to produce bigger inner loops. If the loop is also not buffered and no index is being tracked (&lt;code&gt;NpyIter_RemoveAxis&lt;/code&gt; can be called), then the iterator size can be &lt;code&gt;-1&lt;/code&gt; to indicate that the iterator is too large. This can happen due to complex broadcasting and will result in errors being created when the setting the iterator range, removing the multi index, or getting the next function. However, it is possible to remove axes again and use the iterator normally if the size is small enough after removal.</source>
@@ -821,7 +821,7 @@
         </trans-unit>
         <trans-unit id="d09f5eb17dd94e9b8185491d29ffd82541173b9e" translate="yes" xml:space="preserve">
           <source>Causes the iterator to track a raveled flat index matching Fortran order. This option cannot be used with &lt;a href=&quot;#c.NPY_ITER_C_INDEX&quot;&gt;&lt;code&gt;NPY_ITER_C_INDEX&lt;/code&gt;&lt;/a&gt;.</source>
-          <target state="translated">イテレータに、Fortranの順序に一致する壊れたフラットインデックスを追跡させます。このオプションは&lt;a href=&quot;#c.NPY_ITER_C_INDEX&quot;&gt; &lt;code&gt;NPY_ITER_C_INDEX&lt;/code&gt; &lt;/a&gt;と一緒には使用できません。</target>
+          <target state="translated">イテレータに、Fortranの順序に一致する、解かれたフラットインデックスを追跡させます。このオプションは&lt;a href=&quot;#c.NPY_ITER_C_INDEX&quot;&gt; &lt;code&gt;NPY_ITER_C_INDEX&lt;/code&gt; &lt;/a&gt;と一緒には使用できません。</target>
         </trans-unit>
         <trans-unit id="c0df50e511723d6385d81becfe6c98c0ca2c5dad" translate="yes" xml:space="preserve">
           <source>Chained array operations, in efficient calculation order, &lt;a href=&quot;numpy.einsum_path#numpy.einsum_path&quot;&gt;&lt;code&gt;numpy.einsum_path&lt;/code&gt;&lt;/a&gt;.</source>
@@ -829,7 +829,7 @@
         </trans-unit>
         <trans-unit id="d9f53c2498e2f3ad3fca9000468a403dc1def6c7" translate="yes" xml:space="preserve">
           <source>Chained array operations. For more complicated contractions, speed ups might be achieved by repeatedly computing a &amp;lsquo;greedy&amp;rsquo; path or pre-computing the &amp;lsquo;optimal&amp;rsquo; path and repeatedly applying it, using an &lt;a href=&quot;numpy.einsum_path#numpy.einsum_path&quot;&gt;&lt;code&gt;einsum_path&lt;/code&gt;&lt;/a&gt; insertion (since version 1.12.0). Performance improvements can be particularly significant with larger arrays:</source>
-          <target state="translated">連鎖配列操作。より複雑な縮&lt;a href=&quot;numpy.einsum_path#numpy.einsum_path&quot;&gt; &lt;code&gt;einsum_path&lt;/code&gt; &lt;/a&gt;場合、「貪欲な」パスを繰り返し計算するか、「最適な」パスを事前に計算し、einsum_path挿入を使用して繰り返し適用することで、速度を上げることができます（バージョン1.12.0以降）。より大きなアレイでは、パフォーマンスの改善が特に重要になる可能性があります。</target>
+          <target state="translated">連鎖配列操作。より複雑な縮&lt;a href=&quot;numpy.einsum_path#numpy.einsum_path&quot;&gt; &lt;code&gt;einsum_path&lt;/code&gt; &lt;/a&gt;場合、「貪欲な」パスを繰り返し計算するか、「最適な」パスを事前計算し、einsum_path挿入を使用して繰り返し適用することで、スピードアップを実現できます（バージョン1.12.0以降）。より大きなアレイでは、パフォーマンスの向上が特に重要になる可能性があります。</target>
         </trans-unit>
         <trans-unit id="4b14b1641c23a3ee01fb58fe8633eb893f1634ef" translate="yes" xml:space="preserve">
           <source>Change elements of an array based on conditional and input values.</source>
@@ -853,7 +853,7 @@
         </trans-unit>
         <trans-unit id="0e76bac75a93f40062500cfe4d6d4594aea2a414" translate="yes" xml:space="preserve">
           <source>Changed in version 1.10.0: Earlier NumPy versions required dfnum &amp;gt; 1.</source>
-          <target state="translated">バージョン1.10.0で変更：以前のNumPyバージョンではdfnum&amp;gt; 1が必要でした</target>
+          <target state="translated">バージョン1.10.0で変更：以前のNumPyバージョンでは、dfnum&amp;gt; 1が必要でした。</target>
         </trans-unit>
         <trans-unit id="9e03441147d9c9bca84c6633efe853d678690f6f" translate="yes" xml:space="preserve">
           <source>Changed in version 1.11.0: When a single column has to be read it is possible to use an integer instead of a tuple. E.g &lt;code&gt;usecols = 3&lt;/code&gt; reads the fourth column the same way as &lt;code&gt;usecols = (3,)&lt;/code&gt; would.</source>
@@ -1017,7 +1017,7 @@
         </trans-unit>
         <trans-unit id="96032d11ffc294810d816c812b7d22b436c23b79" translate="yes" xml:space="preserve">
           <source>Chebyshev coefficients ordered from low to high. If &lt;code&gt;y&lt;/code&gt; was 2-D, the coefficients for the data in column k of &lt;code&gt;y&lt;/code&gt; are in column &lt;code&gt;k&lt;/code&gt;.</source>
-          <target state="translated">チェビシェフ係数は、低いものから高いものへと並べられています。場合 &lt;code&gt;y&lt;/code&gt; が 2-Dであった、の列kにおけるデータの係数 &lt;code&gt;y&lt;/code&gt; は、列にある &lt;code&gt;k&lt;/code&gt; 。</target>
+          <target state="translated">チェビシェフ係数は低いものから高いものへと並べられています。場合 &lt;code&gt;y&lt;/code&gt; が 2-Dであった、の列kにおけるデータの係数 &lt;code&gt;y&lt;/code&gt; は、列にある &lt;code&gt;k&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="1e63eba3c512c100441a580822bf3dee3fdc84ed" translate="yes" xml:space="preserve">
           <source>Chebyshev series</source>
@@ -1153,7 +1153,7 @@
         </trans-unit>
         <trans-unit id="7cda7e0160467a48240d75643f9aa9dd2aa8c3ec" translate="yes" xml:space="preserve">
           <source>Check if the array is Fortran contiguous but &lt;em&gt;not&lt;/em&gt; C contiguous.</source>
-          <target state="translated">配列がFortran隣接であるが&lt;em&gt;、&lt;/em&gt; C隣接で&lt;em&gt;はない&lt;/em&gt;かどうかを確認します。</target>
+          <target state="translated">配列がFortranに隣接しているが&lt;em&gt;、&lt;/em&gt; Cに隣接してい&lt;em&gt;ない&lt;/em&gt;かどうかを確認します。</target>
         </trans-unit>
         <trans-unit id="e7a996762c75a9633231bd44ab99dd3f19880ea7" translate="yes" xml:space="preserve">
           <source>Check if types match.</source>
@@ -1173,7 +1173,7 @@
         </trans-unit>
         <trans-unit id="abd3adad63a405998bb8027f9dd962bdd792cf51" translate="yes" xml:space="preserve">
           <source>Check to see if &lt;code&gt;ary&lt;/code&gt; is Fortran contiguous. If so, return the input pointer and flag it as not a new object. If it is not Fortran contiguous, create a new &lt;code&gt;PyArrayObject*&lt;/code&gt; using the original data, flag it as a new object and return the pointer.</source>
-          <target state="translated">&lt;code&gt;ary&lt;/code&gt; がFortranに隣接しているかどうかを確認します。その場合、入力ポインタを返し、新しいオブジェクトではないことを示すフラグを立てます。Fortranで隣接していない場合は、元のデータを使用して新しい &lt;code&gt;PyArrayObject*&lt;/code&gt; を作成し、新しいオブジェクトとしてフラグを立ててポインターを返します。</target>
+          <target state="translated">&lt;code&gt;ary&lt;/code&gt; がFortranに隣接しているかどうかを確認します。その場合、入力ポインタを返し、新しいオブジェクトではないことを示すフラグを立てます。Fortranで隣接していない場合は、元のデータを使用して新しい &lt;code&gt;PyArrayObject*&lt;/code&gt; を作成し、それを新しいオブジェクトとしてフラグを立てて、ポインターを返します。</target>
         </trans-unit>
         <trans-unit id="6deabec9ba29d971d99676bd19f94bb36aab8ebd" translate="yes" xml:space="preserve">
           <source>Check to see if &lt;code&gt;ary&lt;/code&gt; is contiguous. If so, return the input pointer and flag it as not a new object. If it is not contiguous, create a new &lt;code&gt;PyArrayObject*&lt;/code&gt; using the original data, flag it as a new object and return the pointer.</source>
@@ -1225,7 +1225,7 @@
         </trans-unit>
         <trans-unit id="2ca2864418456f81d23c002bcfa240f2d8fca295" translate="yes" xml:space="preserve">
           <source>Choose five random numbers from the set of five evenly-spaced numbers between 0 and 2.5, inclusive (&lt;em&gt;i.e.&lt;/em&gt;, from the set</source>
-          <target state="translated">0から2.5までの5つの等間隔の数字のセットから5つの乱数を選択します（&lt;em&gt;つまり&lt;/em&gt;、セットから）</target>
+          <target state="translated">0〜2.5の5つの等間隔の数字のセットから5つの乱数を選択します（&lt;em&gt;つまり&lt;/em&gt;、セットから）</target>
         </trans-unit>
         <trans-unit id="35c9a25e2ab923acd6164ad4d06282c1e090295d" translate="yes" xml:space="preserve">
           <source>Choose the type of path. If a tuple is provided, the second argument is assumed to be the maximum intermediate size created. If only a single argument is provided the largest input or output array size is used as a maximum intermediate size.</source>
@@ -1241,7 +1241,7 @@
         </trans-unit>
         <trans-unit id="141f83ee32f213c3c3e30b940039c0256ca45642" translate="yes" xml:space="preserve">
           <source>Class from which most (all?) numpy scalar types are derived. For consistency, exposes the same API as &lt;a href=&quot;numpy.ndarray#numpy.ndarray&quot;&gt;&lt;code&gt;ndarray&lt;/code&gt;&lt;/a&gt;, despite many consequent attributes being either &amp;ldquo;get-only,&amp;rdquo; or completely irrelevant. This is the class from which it is strongly suggested users should derive custom scalar types.</source>
-          <target state="translated">ほとんど（すべて？）のnumpyスカラー型の派生元のクラス。一貫性のために、多くの結果として生じる属性が「取得専用」であるか完全に無関係であるにもかかわらず、&lt;a href=&quot;numpy.ndarray#numpy.ndarray&quot;&gt; &lt;code&gt;ndarray&lt;/code&gt; &lt;/a&gt;と同じAPIを公開します。これは、ユーザーがカスタムスカラー型を派生することを強くお勧めするクラスです。</target>
+          <target state="translated">ほとんどの（すべて？）numpyスカラー型の派生元のクラス。一貫性のために、多くの結果として生じる属性が「取得専用」または完全に無関係であるにもかかわらず、&lt;a href=&quot;numpy.ndarray#numpy.ndarray&quot;&gt; &lt;code&gt;ndarray&lt;/code&gt; &lt;/a&gt;と同じAPIを公開します。これは、ユーザーがカスタムスカラー型を派生することを強くお勧めするクラスです。</target>
         </trans-unit>
         <trans-unit id="f3a9c0c7155c7f2627130b00e8664e0c47570c98" translate="yes" xml:space="preserve">
           <source>Class generic exists solely to derive numpy scalars from, and possesses, albeit unimplemented, all the attributes of the ndarray class so as to provide a uniform API.</source>
@@ -1341,7 +1341,7 @@
         </trans-unit>
         <trans-unit id="6db9979c1fe0813b3eb2ee3a9a6ae24f7e5faea6" translate="yes" xml:space="preserve">
           <source>Combining multiple Boolean indexing arrays or a Boolean with an integer indexing array can best be understood with the &lt;a href=&quot;generated/numpy.ndarray.nonzero#numpy.ndarray.nonzero&quot;&gt;&lt;code&gt;obj.nonzero()&lt;/code&gt;&lt;/a&gt; analogy. The function &lt;a href=&quot;generated/numpy.ix_#numpy.ix_&quot;&gt;&lt;code&gt;ix_&lt;/code&gt;&lt;/a&gt; also supports boolean arrays and will work without any surprises.</source>
-          <target state="translated">複数のブールインデックス配列またはブールと整数インデックス配列を&lt;a href=&quot;generated/numpy.ndarray.nonzero#numpy.ndarray.nonzero&quot;&gt; &lt;code&gt;obj.nonzero()&lt;/code&gt; &lt;/a&gt;と、obj.nonzero（）のアナロジーで最もよく理解できます。関数&lt;a href=&quot;generated/numpy.ix_#numpy.ix_&quot;&gt; &lt;code&gt;ix_&lt;/code&gt; &lt;/a&gt;はブール配列もサポートしており、驚くことなく機能します。</target>
+          <target state="translated">複数のブールインデックス配列またはブールと整数インデックス配列を組み合わせることは、&lt;a href=&quot;generated/numpy.ndarray.nonzero#numpy.ndarray.nonzero&quot;&gt; &lt;code&gt;obj.nonzero()&lt;/code&gt; の&lt;/a&gt;アナロジーで最もよく理解できます。関数&lt;a href=&quot;generated/numpy.ix_#numpy.ix_&quot;&gt; &lt;code&gt;ix_&lt;/code&gt; &lt;/a&gt;はブール配列もサポートしており、驚くことなく動作します。</target>
         </trans-unit>
         <trans-unit id="39a64d591310ffe84aa9b684771a7d278ba716a5" translate="yes" xml:space="preserve">
           <source>Comma delimited file with mixed dtype</source>
@@ -1389,15 +1389,15 @@
         </trans-unit>
         <trans-unit id="38460977eefc5ad076607c73457ab20f90eef5d2" translate="yes" xml:space="preserve">
           <source>Compared to indexing syntax, &lt;a href=&quot;#numpy.matrix.itemset&quot;&gt;&lt;code&gt;itemset&lt;/code&gt;&lt;/a&gt; provides some speed increase for placing a scalar into a particular location in an &lt;a href=&quot;numpy.ndarray#numpy.ndarray&quot;&gt;&lt;code&gt;ndarray&lt;/code&gt;&lt;/a&gt;, if you must do this. However, generally this is discouraged: among other problems, it complicates the appearance of the code. Also, when using &lt;a href=&quot;#numpy.matrix.itemset&quot;&gt;&lt;code&gt;itemset&lt;/code&gt;&lt;/a&gt; (and &lt;a href=&quot;numpy.matrix.item#numpy.matrix.item&quot;&gt;&lt;code&gt;item&lt;/code&gt;&lt;/a&gt;) inside a loop, be sure to assign the methods to a local variable to avoid the attribute look-up at each loop iteration.</source>
-          <target state="translated">索引付け構文と比較して、&lt;a href=&quot;numpy.ndarray#numpy.ndarray&quot;&gt; &lt;code&gt;ndarray&lt;/code&gt; &lt;/a&gt;&lt;a href=&quot;#numpy.matrix.itemset&quot;&gt; &lt;code&gt;itemset&lt;/code&gt; &lt;/a&gt;は、スカラーをndarrayの特定の場所に配置する必要がある場合に、これをいくらか高速化します。ただし、これは一般的にはお勧めできません。他の問題の中でも、コードの外観が複雑になります。また、ループ内で&lt;a href=&quot;#numpy.matrix.itemset&quot;&gt; &lt;code&gt;itemset&lt;/code&gt; &lt;/a&gt;（および&lt;a href=&quot;numpy.matrix.item#numpy.matrix.item&quot;&gt; &lt;code&gt;item&lt;/code&gt; &lt;/a&gt;）を使用する場合は、メソッドをローカル変数に割り当てて、ループの反復ごとに属性が検索されないようにしてください。</target>
+          <target state="translated">索引付け構文と比較して、&lt;a href=&quot;numpy.ndarray#numpy.ndarray&quot;&gt; &lt;code&gt;ndarray&lt;/code&gt; &lt;/a&gt;&lt;a href=&quot;#numpy.matrix.itemset&quot;&gt; &lt;code&gt;itemset&lt;/code&gt; &lt;/a&gt;は、スカラーをndarrayの特定の場所に配置する必要がある場合に、これを高速化します。ただし、これは一般的にはお勧めできません。他の問題の中でも、コードの外観が複雑になります。また、ループ内で&lt;a href=&quot;#numpy.matrix.itemset&quot;&gt; &lt;code&gt;itemset&lt;/code&gt; &lt;/a&gt;（および&lt;a href=&quot;numpy.matrix.item#numpy.matrix.item&quot;&gt; &lt;code&gt;item&lt;/code&gt; &lt;/a&gt;）を使用する場合は、メソッドをローカル変数に割り当てて、ループの反復ごとに属性が検索されないようにしてください。</target>
         </trans-unit>
         <trans-unit id="37a1ac805be872bfc7e003c20b71f2f1bbbc823c" translate="yes" xml:space="preserve">
           <source>Compared to indexing syntax, &lt;a href=&quot;#numpy.ndarray.itemset&quot;&gt;&lt;code&gt;itemset&lt;/code&gt;&lt;/a&gt; provides some speed increase for placing a scalar into a particular location in an &lt;a href=&quot;numpy.ndarray#numpy.ndarray&quot;&gt;&lt;code&gt;ndarray&lt;/code&gt;&lt;/a&gt;, if you must do this. However, generally this is discouraged: among other problems, it complicates the appearance of the code. Also, when using &lt;a href=&quot;#numpy.ndarray.itemset&quot;&gt;&lt;code&gt;itemset&lt;/code&gt;&lt;/a&gt; (and &lt;a href=&quot;numpy.ndarray.item#numpy.ndarray.item&quot;&gt;&lt;code&gt;item&lt;/code&gt;&lt;/a&gt;) inside a loop, be sure to assign the methods to a local variable to avoid the attribute look-up at each loop iteration.</source>
-          <target state="translated">索引付け構文と比較して、&lt;a href=&quot;numpy.ndarray#numpy.ndarray&quot;&gt; &lt;code&gt;ndarray&lt;/code&gt; &lt;/a&gt;&lt;a href=&quot;#numpy.ndarray.itemset&quot;&gt; &lt;code&gt;itemset&lt;/code&gt; &lt;/a&gt;は、スカラーをndarrayの特定の場所に配置する必要がある場合に、これをいくらか高速化します。ただし、これは一般的にはお勧めできません。他の問題の中でも、コードの外観が複雑になります。また、ループ内で&lt;a href=&quot;#numpy.ndarray.itemset&quot;&gt; &lt;code&gt;itemset&lt;/code&gt; &lt;/a&gt;（および&lt;a href=&quot;numpy.ndarray.item#numpy.ndarray.item&quot;&gt; &lt;code&gt;item&lt;/code&gt; &lt;/a&gt;）を使用する場合は、メソッドをローカル変数に割り当てて、ループの反復ごとに属性が検索されないようにしてください。</target>
+          <target state="translated">索引付け構文と比較して、&lt;a href=&quot;numpy.ndarray#numpy.ndarray&quot;&gt; &lt;code&gt;ndarray&lt;/code&gt; &lt;/a&gt;&lt;a href=&quot;#numpy.ndarray.itemset&quot;&gt; &lt;code&gt;itemset&lt;/code&gt; &lt;/a&gt;は、スカラーをndarrayの特定の場所に配置する必要がある場合に、これを高速化します。ただし、これは一般的にはお勧めできません。他の問題の中でも、コードの外観が複雑になります。また、ループ内で&lt;a href=&quot;#numpy.ndarray.itemset&quot;&gt; &lt;code&gt;itemset&lt;/code&gt; &lt;/a&gt;（および&lt;a href=&quot;numpy.ndarray.item#numpy.ndarray.item&quot;&gt; &lt;code&gt;item&lt;/code&gt; &lt;/a&gt;）を使用する場合は、メソッドをローカル変数に割り当てて、ループの反復ごとに属性が検索されないようにしてください。</target>
         </trans-unit>
         <trans-unit id="d83995123f5ea98603e646a9178fcfffebb1958a" translate="yes" xml:space="preserve">
           <source>Compared to indexing syntax, &lt;a href=&quot;#numpy.recarray.itemset&quot;&gt;&lt;code&gt;itemset&lt;/code&gt;&lt;/a&gt; provides some speed increase for placing a scalar into a particular location in an &lt;a href=&quot;numpy.ndarray#numpy.ndarray&quot;&gt;&lt;code&gt;ndarray&lt;/code&gt;&lt;/a&gt;, if you must do this. However, generally this is discouraged: among other problems, it complicates the appearance of the code. Also, when using &lt;a href=&quot;#numpy.recarray.itemset&quot;&gt;&lt;code&gt;itemset&lt;/code&gt;&lt;/a&gt; (and &lt;a href=&quot;numpy.recarray.item#numpy.recarray.item&quot;&gt;&lt;code&gt;item&lt;/code&gt;&lt;/a&gt;) inside a loop, be sure to assign the methods to a local variable to avoid the attribute look-up at each loop iteration.</source>
-          <target state="translated">索引付け構文と比較して、&lt;a href=&quot;numpy.ndarray#numpy.ndarray&quot;&gt; &lt;code&gt;ndarray&lt;/code&gt; &lt;/a&gt;&lt;a href=&quot;#numpy.recarray.itemset&quot;&gt; &lt;code&gt;itemset&lt;/code&gt; &lt;/a&gt;は、スカラーをndarrayの特定の場所に配置する必要がある場合に、これをいくらか高速化します。ただし、これは一般的にはお勧めできません。他の問題の中でも、コードの外観が複雑になります。また、ループ内で&lt;a href=&quot;#numpy.recarray.itemset&quot;&gt; &lt;code&gt;itemset&lt;/code&gt; &lt;/a&gt;（および&lt;a href=&quot;numpy.recarray.item#numpy.recarray.item&quot;&gt; &lt;code&gt;item&lt;/code&gt; &lt;/a&gt;）を使用する場合は、メソッドをローカル変数に割り当てて、ループの反復ごとに属性が検索されないようにしてください。</target>
+          <target state="translated">索引付け構文と比較して、&lt;a href=&quot;numpy.ndarray#numpy.ndarray&quot;&gt; &lt;code&gt;ndarray&lt;/code&gt; &lt;/a&gt;&lt;a href=&quot;#numpy.recarray.itemset&quot;&gt; &lt;code&gt;itemset&lt;/code&gt; &lt;/a&gt;は、スカラーをndarrayの特定の場所に配置する必要がある場合に、これを高速化します。ただし、これは一般的にはお勧めできません。他の問題の中でも、コードの外観が複雑になります。また、ループ内で&lt;a href=&quot;#numpy.recarray.itemset&quot;&gt; &lt;code&gt;itemset&lt;/code&gt; &lt;/a&gt;（および&lt;a href=&quot;numpy.recarray.item#numpy.recarray.item&quot;&gt; &lt;code&gt;item&lt;/code&gt; &lt;/a&gt;）を使用する場合は、メソッドをローカル変数に割り当てて、ループの反復ごとに属性が検索されないようにしてください。</target>
         </trans-unit>
         <trans-unit id="c659be692ea2a97bb2ad6d27d767ba11002c5a0f" translate="yes" xml:space="preserve">
           <source>Compares two half-precision floats (h1 != h2).</source>
@@ -1493,7 +1493,7 @@
         </trans-unit>
         <trans-unit id="a65b5b7a1200ae7ef93272975b6c56910310c564" translate="yes" xml:space="preserve">
           <source>Complex is of a different type, so it up-casts the float in the &lt;code&gt;array_types&lt;/code&gt; argument:</source>
-          <target state="translated">Complexはタイプが異なるため、 &lt;code&gt;array_types&lt;/code&gt; 引数の浮動小数点数をアップキャストします：</target>
+          <target state="translated">Complexは異なるタイプであるため、 &lt;code&gt;array_types&lt;/code&gt; 引数で浮動小数点数をアップキャストします。</target>
         </trans-unit>
         <trans-unit id="44fc04a3b7819c72bdc8be8966689f3ecd87dbfd" translate="yes" xml:space="preserve">
           <source>Complex-conjugate all elements.</source>
@@ -1505,11 +1505,11 @@
         </trans-unit>
         <trans-unit id="f14b349bf9b6f0598bc456bea6a626f511dd720b" translate="yes" xml:space="preserve">
           <source>Complex-valued matrix with real e-values (but complex-valued e-vectors); note that &lt;code&gt;a.conj().T == a&lt;/code&gt;, i.e., &lt;code&gt;a&lt;/code&gt; is Hermitian.</source>
-          <target state="translated">実際のe値を持つ複素数値行列（ただし、複素数値のeベクトル）。なお &lt;code&gt;a.conj().T == a&lt;/code&gt; 、すなわち、エルミートです。 &lt;code&gt;a&lt;/code&gt;</target>
+          <target state="translated">実数値のe値を含む複素数値行列（ただし複素数値のeベクトル）。なお &lt;code&gt;a.conj().T == a&lt;/code&gt; 、すなわち、エルミートです。 &lt;code&gt;a&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="4745229c055fca9c55de4f5e19158b64c4e46c7f" translate="yes" xml:space="preserve">
           <source>Complex: [R + Rj, R + nanj, nan + Rj, nan + nanj]</source>
-          <target state="translated">コンプレックス。R+Rj、R+nanj、nan+nan+nanj]。</target>
+          <target state="translated">複合体:[R+Rj、R+nanj、nan+Rj、nan+nanj</target>
         </trans-unit>
         <trans-unit id="07214e21bcf968861459229df35bdc3eb2301560" translate="yes" xml:space="preserve">
           <source>Components of the first vector(s).</source>
@@ -1573,7 +1573,7 @@
         </trans-unit>
         <trans-unit id="ce317ec0f3a7246ebde3c56c949a94474c644f2c" translate="yes" xml:space="preserve">
           <source>Compute the 1-d correlation of the 1-d arrays &lt;em&gt;op1&lt;/em&gt; and &lt;em&gt;op2&lt;/em&gt; . The correlation is computed at each output point by multiplying &lt;em&gt;op1&lt;/em&gt; by a shifted version of &lt;em&gt;op2&lt;/em&gt; and summing the result. As a result of the shift, needed values outside of the defined range of &lt;em&gt;op1&lt;/em&gt; and &lt;em&gt;op2&lt;/em&gt; are interpreted as zero. The mode determines how many shifts to return: 0 - return only shifts that did not need to assume zero- values; 1 - return an object that is the same size as &lt;em&gt;op1&lt;/em&gt;, 2 - return all possible shifts (any overlap at all is accepted).</source>
-          <target state="translated">1次元配列&lt;em&gt;op1&lt;/em&gt;および&lt;em&gt;op2の&lt;/em&gt; 1次元相関を計算します。相関は、&lt;em&gt;op1&lt;/em&gt;にシフトされたバージョンの&lt;em&gt;op2&lt;/em&gt;を乗算し、その結果を合計することにより、各出力ポイントで計算されます。シフトの結果、&lt;em&gt;op1&lt;/em&gt;と&lt;em&gt;op2の&lt;/em&gt;定義された範囲外の必要な値はゼロとして解釈されます。モードは、返すシフトの数を決定します。0-ゼロ値を想定する必要のないシフトのみを返します。 1- &lt;em&gt;op1&lt;/em&gt;と同じサイズのオブジェクトを返します&lt;em&gt;。2-&lt;/em&gt;可能なすべてのシフトを返します（オーバーラップはすべて受け入れられます）。</target>
+          <target state="translated">1次元配列&lt;em&gt;op1&lt;/em&gt;および&lt;em&gt;op2の&lt;/em&gt; 1次元相関を計算します。相関は、&lt;em&gt;op1&lt;/em&gt;にシフトされたバージョンの&lt;em&gt;op2&lt;/em&gt;を乗算し、その結果を合計することにより、各出力ポイントで計算されます。シフトの結果、&lt;em&gt;op1&lt;/em&gt;と&lt;em&gt;op2の&lt;/em&gt;定義された範囲外の必要な値はゼロとして解釈されます。モードは、返すシフトの数を決定します。0-ゼロ値を想定する必要のないシフトのみを返します。1- &lt;em&gt;op1&lt;/em&gt;と同じサイズのオブジェクトを返します&lt;em&gt;。2-&lt;/em&gt;可能なすべてのシフトを返します（オーバーラップはすべて受け入れられます）。</target>
         </trans-unit>
         <trans-unit id="c0d44872f577915a6980faf8dd21743d44adf9e2" translate="yes" xml:space="preserve">
           <source>Compute the 2-dimensional FFT of a real array.</source>
@@ -1885,15 +1885,15 @@
         </trans-unit>
         <trans-unit id="42722e323632d4f5d01bc926af28a1c22d5e0f95" translate="yes" xml:space="preserve">
           <source>Computes the bit-wise OR of the underlying binary representation of the integers in the input arrays. This ufunc implements the C/Python operator &lt;code&gt;|&lt;/code&gt;.</source>
-          <target state="translated">入力配列内の整数の基本的なバイナリ表現のビット単位のORを計算します。このufuncはC / Pythonオペレーターを実装します &lt;code&gt;|&lt;/code&gt; 。</target>
+          <target state="translated">入力配列内の整数の基になるバイナリ表現のビット単位のORを計算します。このufuncはC / Pythonオペレーターを実装します &lt;code&gt;|&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="67adfae8fffe1baa14f71537d861b7b2e85f7e48" translate="yes" xml:space="preserve">
           <source>Computes the bit-wise XOR of the underlying binary representation of the integers in the input arrays. This ufunc implements the C/Python operator &lt;code&gt;^&lt;/code&gt;.</source>
-          <target state="translated">入力配列内の整数の基になるバイナリ表現のビット単位のXORを計算します。このufuncはC / Python演算子 &lt;code&gt;^&lt;/code&gt; を実装しています。</target>
+          <target state="translated">入力配列内の整数の基礎となるバイナリ表現のビット単位のXORを計算します。このufuncはC / Python演算子 &lt;code&gt;^&lt;/code&gt; を実装しています。</target>
         </trans-unit>
         <trans-unit id="7810254747fb57737310252a83ed1ecfa7ac7de1" translate="yes" xml:space="preserve">
           <source>Computes the remainder complementary to the &lt;a href=&quot;numpy.floor_divide#numpy.floor_divide&quot;&gt;&lt;code&gt;floor_divide&lt;/code&gt;&lt;/a&gt; function. It is equivalent to the Python modulus operator``x1 % x2`` and has the same sign as the divisor &lt;code&gt;x2&lt;/code&gt;. The MATLAB function equivalent to &lt;code&gt;np.remainder&lt;/code&gt; is &lt;code&gt;mod&lt;/code&gt;.</source>
-          <target state="translated">&lt;a href=&quot;numpy.floor_divide#numpy.floor_divide&quot;&gt; &lt;code&gt;floor_divide&lt;/code&gt; &lt;/a&gt;関数を補完する剰余を計算します。Pythonのモジュラス演算子 `` x1％x2``と同等であり、除数 &lt;code&gt;x2&lt;/code&gt; と同じ符号を持ちます。 &lt;code&gt;np.remainder&lt;/code&gt; と同等のMATLAB関数は &lt;code&gt;mod&lt;/code&gt; です。</target>
+          <target state="translated">関数&lt;a href=&quot;numpy.floor_divide#numpy.floor_divide&quot;&gt; &lt;code&gt;floor_divide&lt;/code&gt; を&lt;/a&gt;補完する剰余を計算します。Pythonのモジュラス演算子 `` x1％x2``と同等で、除数 &lt;code&gt;x2&lt;/code&gt; と同じ符号を持ちます。 &lt;code&gt;np.remainder&lt;/code&gt; と同等のMATLAB関数は &lt;code&gt;mod&lt;/code&gt; です。</target>
         </trans-unit>
         <trans-unit id="531dbc47f0c42b16e91bc06f7934ffc0eee90d21" translate="yes" xml:space="preserve">
           <source>Computes the sample points and weights for Gauss-Chebyshev quadrature. These sample points and weights will correctly integrate polynomials of degree</source>
@@ -1957,7 +1957,7 @@
         </trans-unit>
         <trans-unit id="cdfd5c5d52fe64ca5fe219ac6749930b18bf023b" translate="yes" xml:space="preserve">
           <source>Consider an urn with black and white marbles in it, &lt;code&gt;ngood&lt;/code&gt; of them are black and &lt;code&gt;nbad&lt;/code&gt; are white. If you draw &lt;code&gt;nsample&lt;/code&gt; balls without replacement, then the hypergeometric distribution describes the distribution of black balls in the drawn sample.</source>
-          <target state="translated">黒と白の大理石が入ったつぼを考えてみてください &lt;code&gt;ngood&lt;/code&gt; は黒、 &lt;code&gt;nbad&lt;/code&gt; は白です。置換せずに &lt;code&gt;nsample&lt;/code&gt; の球を描画する場合、超幾何分布は、描画されたサンプル内の黒い球の分布を表します。</target>
+          <target state="translated">黒と白の大理石が入ったつぼを考えてみてください &lt;code&gt;ngood&lt;/code&gt; は黒、 &lt;code&gt;nbad&lt;/code&gt; は白です。置換せずに &lt;code&gt;nsample&lt;/code&gt; ボールを描画する場合、超幾何分布は、描画されたサンプル内の黒いボールの分布を表します。</target>
         </trans-unit>
         <trans-unit id="0d56e4e8e5205e5f0b9d856e7027774cced155ea" translate="yes" xml:space="preserve">
           <source>Consider four points in different quadrants:</source>
@@ -2005,7 +2005,7 @@
         </trans-unit>
         <trans-unit id="fec9966593ee1edd10cbcd21d0622b1f630d401d" translate="yes" xml:space="preserve">
           <source>Construct a new 1-dimensional array of data-type, &lt;em&gt;typenum&lt;/em&gt;, that ranges from &lt;em&gt;start&lt;/em&gt; to &lt;em&gt;stop&lt;/em&gt; (exclusive) in increments of &lt;em&gt;step&lt;/em&gt; . Equivalent to &lt;strong&gt;arange&lt;/strong&gt; (&lt;em&gt;start&lt;/em&gt;, &lt;em&gt;stop&lt;/em&gt;, &lt;em&gt;step&lt;/em&gt;, dtype).</source>
-          <target state="translated">データ型&lt;em&gt;typenumの&lt;/em&gt;新しい1次元配列を作成します。これは、&lt;em&gt;開始&lt;/em&gt;から&lt;em&gt;終了&lt;/em&gt;（排他的）までの範囲で、&lt;em&gt;step&lt;/em&gt;単位で増加します。相当&lt;strong&gt;arange&lt;/strong&gt;（&lt;em&gt;スタート&lt;/em&gt;、&lt;em&gt;ストップ&lt;/em&gt;、&lt;em&gt;ステップ&lt;/em&gt;、DTYPE）。</target>
+          <target state="translated">新たな1次元データ型の配列、構築&lt;em&gt;typenum&lt;/em&gt;、の範囲であることを&lt;em&gt;開始&lt;/em&gt;する&lt;em&gt;、停止&lt;/em&gt;の増分で（排他的）&lt;em&gt;ステップ&lt;/em&gt;。相当&lt;strong&gt;arange&lt;/strong&gt;（&lt;em&gt;スタート&lt;/em&gt;、&lt;em&gt;ストップ&lt;/em&gt;、&lt;em&gt;ステップ&lt;/em&gt;、DTYPE）。</target>
         </trans-unit>
         <trans-unit id="8a706c57cd0f57f685f10a9b48082253d3c7f348" translate="yes" xml:space="preserve">
           <source>Construct a new &lt;em&gt;nd&lt;/em&gt; -dimensional array with shape given by &lt;em&gt;dims&lt;/em&gt; and data type given by &lt;em&gt;dtype&lt;/em&gt;. If &lt;em&gt;fortran&lt;/em&gt; is non-zero, then a Fortran-order array is created, otherwise a C-order array is created. Fill the memory with zeros (or the 0 object if &lt;em&gt;dtype&lt;/em&gt; corresponds to &lt;a href=&quot;c-api.dtype#c.NPY_OBJECT&quot;&gt;&lt;code&gt;NPY_OBJECT&lt;/code&gt;&lt;/a&gt; ).</source>
@@ -2025,7 +2025,7 @@
         </trans-unit>
         <trans-unit id="5251a91820bd97dd4c2975d82383f312ad4f99bf" translate="yes" xml:space="preserve">
           <source>Construct a one-dimensional ndarray of a single type from a binary or text file. The open file pointer is &lt;code&gt;fp&lt;/code&gt;, the data-type of the array to be created is given by &lt;code&gt;dtype&lt;/code&gt;. This must match the data in the file. If &lt;code&gt;num&lt;/code&gt; is -1, then read until the end of the file and return an appropriately sized array, otherwise, &lt;code&gt;num&lt;/code&gt; is the number of items to read. If &lt;code&gt;sep&lt;/code&gt; is NULL (or &amp;ldquo;&amp;rdquo;), then read from the file in binary mode, otherwise read from the file in text mode with &lt;code&gt;sep&lt;/code&gt; providing the item separator. Some array types cannot be read in text mode in which case an error is raised.</source>
-          <target state="translated">バイナリファイルまたはテキストファイルから単一タイプの1次元ndarrayを作成します。開いているファイルのポインタは &lt;code&gt;fp&lt;/code&gt; で、作成される配列のデータ型は &lt;code&gt;dtype&lt;/code&gt; で指定されます。これは、ファイル内のデータと一致する必要があります。 &lt;code&gt;num&lt;/code&gt; が-1の場合、ファイルの最後まで読み取り、適切なサイズの配列を返します。それ以外の場合、 &lt;code&gt;num&lt;/code&gt; は読み取るアイテムの数です。場合 &lt;code&gt;sep&lt;/code&gt; NULL（または「an」）は、バイナリモードでファイルから読み取られ、そうでない場合とテキストモードでファイルから読み取ら &lt;code&gt;sep&lt;/code&gt; アイテムセパレータを提供します。一部の配列型はテキストモードで読み取ることができないため、エラーが発生します。</target>
+          <target state="translated">バイナリファイルまたはテキストファイルから単一タイプの1次元ndarrayを作成します。開いているファイルのポインタは &lt;code&gt;fp&lt;/code&gt; で、作成される配列のデータ型は &lt;code&gt;dtype&lt;/code&gt; で指定されます。これは、ファイル内のデータと一致する必要があります。 &lt;code&gt;num&lt;/code&gt; が-1の場合、ファイルの最後まで読み取り、適切なサイズの配列を返します。それ以外の場合、 &lt;code&gt;num&lt;/code&gt; は読み取るアイテムの数です。場合 &lt;code&gt;sep&lt;/code&gt; NULL（または「an」）は、バイナリモードでファイルから読み取られ、そうでない場合とテキストモードでファイルから読み取ら &lt;code&gt;sep&lt;/code&gt; アイテムセパレータを提供します。一部の配列タイプはテキストモードで読み取ることができません。その場合、エラーが発生します。</target>
         </trans-unit>
         <trans-unit id="5dade1b4bc430d7a08d1e500dc891669be329c17" translate="yes" xml:space="preserve">
           <source>Construct a one-dimensional ndarray of a single type from an object, &lt;code&gt;buf&lt;/code&gt;, that exports the (single-segment) buffer protocol (or has an attribute __buffer__ that returns an object that exports the buffer protocol). A writeable buffer will be tried first followed by a read- only buffer. The &lt;a href=&quot;#c.NPY_ARRAY_WRITEABLE&quot;&gt;&lt;code&gt;NPY_ARRAY_WRITEABLE&lt;/code&gt;&lt;/a&gt; flag of the returned array will reflect which one was successful. The data is assumed to start at &lt;code&gt;offset&lt;/code&gt; bytes from the start of the memory location for the object. The type of the data in the buffer will be interpreted depending on the data- type descriptor, &lt;code&gt;dtype.&lt;/code&gt; If &lt;code&gt;count&lt;/code&gt; is negative then it will be determined from the size of the buffer and the requested itemsize, otherwise, &lt;code&gt;count&lt;/code&gt; represents how many elements should be converted from the buffer.</source>
@@ -2145,7 +2145,7 @@
         </trans-unit>
         <trans-unit id="28ea8c81849521c495649532e08b0b593de2159c" translate="yes" xml:space="preserve">
           <source>Context manager and decorator doing much the same as &lt;code&gt;warnings.catch_warnings&lt;/code&gt;.</source>
-          <target state="translated">コンテキストマネージャとデコレータは、 &lt;code&gt;warnings.catch_warnings&lt;/code&gt; とほぼ同じです。</target>
+          <target state="translated">&lt;code&gt;warnings.catch_warnings&lt;/code&gt; とほとんど同じように動作するコンテキストマネージャとデコレータ。</target>
         </trans-unit>
         <trans-unit id="5df86c4c3ee2b6d151a9b289e9fec5a79fd29c69" translate="yes" xml:space="preserve">
           <source>Context manager for floating-point error handling.</source>
@@ -2157,7 +2157,7 @@
         </trans-unit>
         <trans-unit id="e74eade6a152d46f1eb9b2b5ababc0f77f6bb16e" translate="yes" xml:space="preserve">
           <source>Contiguous array of same shape and content as &lt;code&gt;a&lt;/code&gt;, with type &lt;a href=&quot;numpy.dtype#numpy.dtype&quot;&gt;&lt;code&gt;dtype&lt;/code&gt;&lt;/a&gt; if specified.</source>
-          <target state="translated">と同じ形状およびコンテンツの連続した配列。指定されている場合 &lt;code&gt;a&lt;/code&gt; 、&lt;a href=&quot;numpy.dtype#numpy.dtype&quot;&gt; &lt;code&gt;dtype&lt;/code&gt; &lt;/a&gt;型。</target>
+          <target state="translated">と同じ形状および内容の連続した配列。指定されている場合 &lt;code&gt;a&lt;/code&gt; 、&lt;a href=&quot;numpy.dtype#numpy.dtype&quot;&gt; &lt;code&gt;dtype&lt;/code&gt; &lt;/a&gt;タイプ。</target>
         </trans-unit>
         <trans-unit id="053873361447a3f60bca70c8480df2214f748216" translate="yes" xml:space="preserve">
           <source>Contrary to &lt;a href=&quot;numpy.asanyarray#numpy.asanyarray&quot;&gt;&lt;code&gt;asanyarray&lt;/code&gt;&lt;/a&gt;, ndarray subclasses are not passed through:</source>
@@ -2181,7 +2181,7 @@
         </trans-unit>
         <trans-unit id="7e4e4469d00d85c02bbeabd4c04ac5324f9efb77" translate="yes" xml:space="preserve">
           <source>Controls printing of the sign of floating-point types. If &amp;lsquo;+&amp;rsquo;, always print the sign of positive values. If &amp;lsquo; &amp;lsquo;, always prints a space (whitespace character) in the sign position of positive values. If &amp;lsquo;-&amp;lsquo;, omit the sign character of positive values. Defaults to &lt;code&gt;numpy.get_printoptions()['sign']&lt;/code&gt;.</source>
-          <target state="translated">浮動小数点型の符号の出力を制御します。「+」の場合、常に正の値の符号を出力します。''の場合、常に正の値の符号位置にスペース（空白文字）を出力します。「-」の場合、正の値の符号文字を省略します。デフォルトは &lt;code&gt;numpy.get_printoptions()['sign']&lt;/code&gt; です。</target>
+          <target state="translated">浮動小数点型の符号の印刷を制御します。「+」の場合、常に正の値の符号を出力します。''の場合、常に正の値の符号位置にスペース（空白文字）を出力します。「-」の場合、正の値の符号文字を省略します。デフォルトは &lt;code&gt;numpy.get_printoptions()['sign']&lt;/code&gt; です。</target>
         </trans-unit>
         <trans-unit id="841208ff2e453a067133b334501582310ba65939" translate="yes" xml:space="preserve">
           <source>Controls the interpretation of the &lt;code&gt;precision&lt;/code&gt; option for floating-point types. Can take the following values (default maxprec_equal):</source>
@@ -2193,11 +2193,11 @@
         </trans-unit>
         <trans-unit id="053fc22cde7115d581a6dae5bcdbdffe93e520ff" translate="yes" xml:space="preserve">
           <source>Controls the iteration order. &amp;lsquo;C&amp;rsquo; means C order, &amp;lsquo;F&amp;rsquo; means Fortran order, &amp;lsquo;A&amp;rsquo; means &amp;lsquo;F&amp;rsquo; order if all the arrays are Fortran contiguous, &amp;lsquo;C&amp;rsquo; order otherwise, and &amp;lsquo;K&amp;rsquo; means as close to the order the array elements appear in memory as possible. This also affects the element memory order of &lt;code&gt;allocate&lt;/code&gt; operands, as they are allocated to be compatible with iteration order. Default is &amp;lsquo;K&amp;rsquo;.</source>
-          <target state="translated">反復順序を制御します。「C」はC順序、「F」はFortran順序、「A」はすべての配列がFortran連続である場合は「F」順序、「C」順序はそれ以外の場合、「K」は配列要素が表示される順序に近いことを意味します可能な限りメモリに。繰り返し順序と互換性があるように &lt;code&gt;allocate&lt;/code&gt; ため、これは割り当てオペランドの要素のメモリ順序にも影響します。デフォルトは「K」です。</target>
+          <target state="translated">反復順序を制御します。「C」はC順序、「F」はFortran順序、「A」はすべての配列がFortran連続である場合は「F」順序、「C」順序はそれ以外の場合、「K」は配列要素が表示される順序に近いことを意味します可能な限りメモリに。繰り返し順序と互換性があるように &lt;code&gt;allocate&lt;/code&gt; ため、これは割り当てオペランドの要素メモリ順序にも影響します。デフォルトは「K」です。</target>
         </trans-unit>
         <trans-unit id="e9576b535389b3dbd06f435cca5164180f9065da" translate="yes" xml:space="preserve">
           <source>Controls the memory layout of the copy. &amp;lsquo;C&amp;rsquo; means C-order, &amp;lsquo;F&amp;rsquo; means F-order, &amp;lsquo;A&amp;rsquo; means &amp;lsquo;F&amp;rsquo; if &lt;code&gt;a&lt;/code&gt; is Fortran contiguous, &amp;lsquo;C&amp;rsquo; otherwise. &amp;lsquo;K&amp;rsquo; means match the layout of &lt;code&gt;a&lt;/code&gt; as closely as possible. (Note that this function and &lt;a href=&quot;numpy.copy#numpy.copy&quot;&gt;&lt;code&gt;numpy.copy&lt;/code&gt;&lt;/a&gt; are very similar, but have different default values for their order= arguments.)</source>
-          <target state="translated">コピーのメモリレイアウトを制御します。「C」はCオーダーを意味し、「F」はFオーダーを意味し、「A」は &lt;code&gt;a&lt;/code&gt; がFortran連続である場合は「F」を意味し、それ以外の場合は「C」を意味します。「K」は、 &lt;code&gt;a&lt;/code&gt; のレイアウトにできるだけ一致することを意味します。（この関数と&lt;a href=&quot;numpy.copy#numpy.copy&quot;&gt; &lt;code&gt;numpy.copy&lt;/code&gt; &lt;/a&gt;はよく似ていますが、order =引数のデフォルト値が異なります。）</target>
+          <target state="translated">コピーのメモリレイアウトを制御します。「C」はCオーダーを意味し、「F」はFオーダーを意味し、「A」は &lt;code&gt;a&lt;/code&gt; がFortran連続である場合は「F」を意味し、それ以外の場合は「C」を意味します。「K」は、 &lt;code&gt;a&lt;/code&gt; のレイアウトにできるだけ一致することを意味します。（この関数と&lt;a href=&quot;numpy.copy#numpy.copy&quot;&gt; &lt;code&gt;numpy.copy&lt;/code&gt; &lt;/a&gt;はよく似ていますが、order =引数のデフォルト値が異なることに注意してください。）</target>
         </trans-unit>
         <trans-unit id="0444f926d86651cc3dd5611e09e50dadc271143c" translate="yes" xml:space="preserve">
           <source>Controls the memory layout of the copy. &amp;lsquo;C&amp;rsquo; means C-order, &amp;lsquo;F&amp;rsquo; means F-order, &amp;lsquo;A&amp;rsquo; means &amp;lsquo;F&amp;rsquo; if &lt;code&gt;a&lt;/code&gt; is Fortran contiguous, &amp;lsquo;C&amp;rsquo; otherwise. &amp;lsquo;K&amp;rsquo; means match the layout of &lt;code&gt;a&lt;/code&gt; as closely as possible. (Note that this function and &lt;a href=&quot;numpy.ndarray.copy#numpy.ndarray.copy&quot;&gt;&lt;code&gt;ndarray.copy&lt;/code&gt;&lt;/a&gt; are very similar, but have different default values for their order= arguments.)</source>
@@ -2205,7 +2205,7 @@
         </trans-unit>
         <trans-unit id="87b34e8b0f8ba396e7a4855d6f683c663aa9e3a5" translate="yes" xml:space="preserve">
           <source>Controls the memory layout of the output. &amp;lsquo;C&amp;rsquo; means it should be C contiguous. &amp;lsquo;F&amp;rsquo; means it should be Fortran contiguous, &amp;lsquo;A&amp;rsquo; means it should be &amp;lsquo;F&amp;rsquo; if the inputs are all &amp;lsquo;F&amp;rsquo;, &amp;lsquo;C&amp;rsquo; otherwise. &amp;lsquo;K&amp;rsquo; means it should be as close to the layout as the inputs as is possible, including arbitrarily permuted axes. Default is &amp;lsquo;K&amp;rsquo;.</source>
-          <target state="translated">出力のメモリレイアウトを制御します。「C」は、C隣接でなければならないことを意味します。'F'はFortran隣接でなければならず、 'A'は入力がすべて 'F'の場合は 'F'、それ以外の場合は 'C'であることを意味します。'K'は、任意に置換された軸を含め、入力に可能な限り近いレイアウトにする必要があることを意味します。デフォルトは「K」です。</target>
+          <target state="translated">出力のメモリレイアウトを制御します。「C」は、C隣接でなければならないことを意味します。'F'はFortran隣接でなければならず、 'A'は入力がすべて 'F'の場合は 'F'、それ以外の場合は 'C'であることを意味します。'K'は、任意に置換された軸を含め、入力にできるだけ近いレイアウトにする必要があることを意味します。デフォルトは「K」です。</target>
         </trans-unit>
         <trans-unit id="914761ad3f3f74151dc575c678b27db7c8a59e79" translate="yes" xml:space="preserve">
           <source>Controls the memory layout order of the result. &amp;lsquo;C&amp;rsquo; means C order, &amp;lsquo;F&amp;rsquo; means Fortran order, &amp;lsquo;A&amp;rsquo; means &amp;lsquo;F&amp;rsquo; order if all the arrays are Fortran contiguous, &amp;lsquo;C&amp;rsquo; order otherwise, and &amp;lsquo;K&amp;rsquo; means as close to the order the array elements appear in memory as possible. Default is &amp;lsquo;K&amp;rsquo;.</source>
@@ -2217,7 +2217,7 @@
         </trans-unit>
         <trans-unit id="5ffcf55707605cdac52bac56460f15163fa86687" translate="yes" xml:space="preserve">
           <source>Controls what kind of data casting may occur when making a copy or buffering. Setting this to &amp;lsquo;unsafe&amp;rsquo; is not recommended, as it can adversely affect accumulations.</source>
-          <target state="translated">コピーまたはバッファリングを行うときに発生する可能性のあるデータキャストの種類を制御します。累積に悪影響を与える可能性があるため、これを「安全でない」に設定することはお勧めしません。</target>
+          <target state="translated">コピーまたはバッファリングを行うときに発生する可能性があるデータキャストの種類を制御します。累積に悪影響を与える可能性があるため、これを「安全でない」に設定することはお勧めしません。</target>
         </trans-unit>
         <trans-unit id="fdeee7c21c5f079b8cf1347957a464129f951cd7" translate="yes" xml:space="preserve">
           <source>Controls what kind of data casting may occur.</source>
@@ -2241,7 +2241,7 @@
         </trans-unit>
         <trans-unit id="a01257e80e28e1d2f9b1bc8f0a212e62ad583d28" translate="yes" xml:space="preserve">
           <source>Conventional C libraries (installed through &lt;code&gt;add_library&lt;/code&gt;) are not installed, and are just used during the build (they are statically linked). An installable C library is a pure C library, which does not depend on the python C runtime, and is installed such that it may be used by third-party packages. To build and install the C library, you just use the method &lt;code&gt;add_installed_library&lt;/code&gt; instead of &lt;code&gt;add_library&lt;/code&gt;, which takes the same arguments except for an additional &lt;code&gt;install_dir&lt;/code&gt; argument:</source>
-          <target state="translated">従来のCライブラリ（ &lt;code&gt;add_library&lt;/code&gt; を使用してインストールされたもの）はインストールされず、ビルド時に使用されるだけです（静的にリンクされています）。インストール可能なCライブラリは、Python Cランタイムに依存しない純粋なCライブラリであり、サードパーティのパッケージで使用できるようにインストールされます。Cライブラリをビルドしてインストールするには、 &lt;code&gt;add_library&lt;/code&gt; ではなく、 &lt;code&gt;add_installed_library&lt;/code&gt; メソッドを使用します。これは、追加の &lt;code&gt;install_dir&lt;/code&gt; 引数を除いて同じ引数を取ります。</target>
+          <target state="translated">従来のCライブラリ（ &lt;code&gt;add_library&lt;/code&gt; を介してインストールされる）はインストールされず、ビルド時に使用されるだけです（静的にリンクされます）。インストール可能なCライブラリは、Python Cランタイムに依存しない純粋なCライブラリであり、サードパーティのパッケージで使用できるようにインストールされます。Cライブラリをビルドしてインストールするには、 &lt;code&gt;add_library&lt;/code&gt; の代わりにメソッド &lt;code&gt;add_installed_library&lt;/code&gt; を使用するだけで、追加の &lt;code&gt;install_dir&lt;/code&gt; 引数を除いて同じ引数を取ります。</target>
         </trans-unit>
         <trans-unit id="9151f8433f795cb0f0b5b6743aeb7de77ec49f00" translate="yes" xml:space="preserve">
           <source>Conversion</source>
@@ -2273,11 +2273,11 @@
         </trans-unit>
         <trans-unit id="e5714517e2db28d492b0b79b54a5ada5c2a1521f" translate="yes" xml:space="preserve">
           <source>Conversions between types can be useful, but it is &lt;em&gt;not&lt;/em&gt; recommended for routine use. The loss of numerical precision in passing from a Chebyshev series of degree 50 to a Polynomial series of the same degree can make the results of numerical evaluation essentially random.</source>
-          <target state="translated">タイプ間の変換は便利ですが、日常的な使用に&lt;em&gt;は&lt;/em&gt;お勧め&lt;em&gt;できません&lt;/em&gt;。次数50のチェビシェフ級数から同じ次数の多項式級数に渡すときに数値の精度が失われると、数値評価の結果が本質的にランダムになる可能性があります。</target>
+          <target state="translated">型間の変換は便利ですが、日常的な使用に&lt;em&gt;は&lt;/em&gt;お勧め&lt;em&gt;できません&lt;/em&gt;。次数50のチェビシェフ級数から同じ次数の多項式級数に渡すときに数値の精度が失われると、数値評価の結果が本質的にランダムになる可能性があります。</target>
         </trans-unit>
         <trans-unit id="03825a0528753ecd6c491dd8eedf420a0d9f4294" translate="yes" xml:space="preserve">
           <source>Convert &lt;code&gt;bytes&lt;/code&gt; in the encoding used by a subprocess into a filesystem-appropriate &lt;code&gt;str&lt;/code&gt;.</source>
-          <target state="translated">サブプロセスで使用されるエンコーディングの &lt;code&gt;bytes&lt;/code&gt; をファイルシステムに適した &lt;code&gt;str&lt;/code&gt; に変換します。</target>
+          <target state="translated">サブプロセスが使用するエンコーディングの &lt;code&gt;bytes&lt;/code&gt; をファイルシステムに適した &lt;code&gt;str&lt;/code&gt; に変換します。</target>
         </trans-unit>
         <trans-unit id="6c7bd2e378946ee0f1c802ac20f6bf36a9ba9143" translate="yes" xml:space="preserve">
           <source>Convert &lt;code&gt;input&lt;/code&gt; to a Fortran contiguous &lt;code&gt;PyArrayObject*&lt;/code&gt; of the specified type. If the input object is not a Fortran contiguous &lt;code&gt;PyArrayObject*&lt;/code&gt;, a new one will be created and the new object flag will be set.</source>
@@ -2293,7 +2293,7 @@
         </trans-unit>
         <trans-unit id="23cf93d55636e18fb2785cd6878809bff7d65f4b" translate="yes" xml:space="preserve">
           <source>Convert &lt;code&gt;number&lt;/code&gt; to the &lt;code&gt;base&lt;/code&gt; number system. The valid range is 2-36, the default value is 2.</source>
-          <target state="translated">&lt;code&gt;number&lt;/code&gt; を &lt;code&gt;base&lt;/code&gt; 数値システムに変換します。有効な範囲は2〜36で、デフォルト値は2です。</target>
+          <target state="translated">&lt;code&gt;number&lt;/code&gt; を &lt;code&gt;base&lt;/code&gt; 系に変換します。有効な範囲は2〜36で、デフォルト値は2です。</target>
         </trans-unit>
         <trans-unit id="f55fe4032611ab151ac35085a484ba4bedcc1c10" translate="yes" xml:space="preserve">
           <source>Convert &lt;code&gt;obj&lt;/code&gt; to an ndarray. The argument can be any nested sequence or object that exports the array interface. This is a macro form of &lt;a href=&quot;#c.PyArray_FromAny&quot;&gt;&lt;code&gt;PyArray_FromAny&lt;/code&gt;&lt;/a&gt; using &lt;code&gt;NULL&lt;/code&gt;, 0, 0, 0 for the other arguments. Your code must be able to handle any data-type descriptor and any combination of data-flags to use this macro.</source>
@@ -2301,7 +2301,7 @@
         </trans-unit>
         <trans-unit id="e59da10540b8b045df108e94cbefc0a270a68b5c" translate="yes" xml:space="preserve">
           <source>Convert Python strings into one of &lt;code&gt;NPY_QUICKSORT&lt;/code&gt; (starts with &amp;lsquo;q&amp;rsquo; or &amp;lsquo;Q&amp;rsquo;), &lt;code&gt;NPY_HEAPSORT&lt;/code&gt; (starts with &amp;lsquo;h&amp;rsquo; or &amp;lsquo;H&amp;rsquo;), &lt;code&gt;NPY_MERGESORT&lt;/code&gt; (starts with &amp;lsquo;m&amp;rsquo; or &amp;lsquo;M&amp;rsquo;) or &lt;code&gt;NPY_STABLESORT&lt;/code&gt; (starts with &amp;lsquo;t&amp;rsquo; or &amp;lsquo;T&amp;rsquo;). &lt;code&gt;NPY_MERGESORT&lt;/code&gt; and &lt;code&gt;NPY_STABLESORT&lt;/code&gt; are aliased to each other for backwards compatibility and may refer to one of several stable sorting algorithms depending on the data type.</source>
-          <target state="translated">Python文字列を &lt;code&gt;NPY_QUICKSORT&lt;/code&gt; （ 'q'または 'Q'で始まる）、 &lt;code&gt;NPY_HEAPSORT&lt;/code&gt; （ 'h'または 'H'で始まる）、 &lt;code&gt;NPY_MERGESORT&lt;/code&gt; （ 'm'または 'M'で始まる）または &lt;code&gt;NPY_STABLESORT&lt;/code&gt; （ ' t 'または' T '）。 &lt;code&gt;NPY_MERGESORT&lt;/code&gt; と &lt;code&gt;NPY_STABLESORT&lt;/code&gt; は、下位互換性のために相互にエイリアスされ、データ型に応じていくつかの安定したソートアルゴリズムの1つを参照する場合があります。</target>
+          <target state="translated">Python文字列を &lt;code&gt;NPY_QUICKSORT&lt;/code&gt; （ 'q'または 'Q'で始まる）、 &lt;code&gt;NPY_HEAPSORT&lt;/code&gt; （ 'h'または 'H'で始まる）、 &lt;code&gt;NPY_MERGESORT&lt;/code&gt; （ 'm'または 'M'で始まる）または &lt;code&gt;NPY_STABLESORT&lt;/code&gt; （ 'で始まる）のいずれかに変換します。 t 'または' T '）。 &lt;code&gt;NPY_MERGESORT&lt;/code&gt; と &lt;code&gt;NPY_STABLESORT&lt;/code&gt; は、下位互換性のために相互にエイリアスされ、データ型に応じていくつかの安定したソートアルゴリズムの1つを参照する場合があります。</target>
         </trans-unit>
         <trans-unit id="3306f9c5860e043187dbc26b17cfa1986c3541ca" translate="yes" xml:space="preserve">
           <source>Convert Python strings into one of &lt;code&gt;NPY_SEARCHLEFT&lt;/code&gt; (starts with &amp;lsquo;l&amp;rsquo; or &amp;lsquo;L&amp;rsquo;), or &lt;code&gt;NPY_SEARCHRIGHT&lt;/code&gt; (starts with &amp;lsquo;r&amp;rsquo; or &amp;lsquo;R&amp;rsquo;).</source>
@@ -2333,7 +2333,7 @@
         </trans-unit>
         <trans-unit id="7303080b96152a0bf0712c8711af50deecda280f" translate="yes" xml:space="preserve">
           <source>Convert a Python object, &lt;em&gt;obj&lt;/em&gt;, representing an axis argument to the proper value for passing to the functions that take an integer axis. Specifically, if &lt;em&gt;obj&lt;/em&gt; is None, &lt;em&gt;axis&lt;/em&gt; is set to &lt;a href=&quot;#c.NPY_MAXDIMS&quot;&gt;&lt;code&gt;NPY_MAXDIMS&lt;/code&gt;&lt;/a&gt; which is interpreted correctly by the C-API functions that take axis arguments.</source>
-          <target state="translated">軸引数を表すPythonオブジェクト&lt;em&gt;obj&lt;/em&gt;を、整数軸を取る関数に渡すための適切な値に変換します。具体的には、&lt;em&gt;obj&lt;/em&gt;がNoneの場合、&lt;em&gt;axis&lt;/em&gt;は&lt;a href=&quot;#c.NPY_MAXDIMS&quot;&gt; &lt;code&gt;NPY_MAXDIMS&lt;/code&gt; に&lt;/a&gt;設定されます。これは、軸の引数を取るC-API関数によって正しく解釈されます。</target>
+          <target state="translated">軸引数を表すPythonオブジェクト&lt;em&gt;obj&lt;/em&gt;を、整数軸を取る関数に渡すための適切な値に変換します。具体的には、&lt;em&gt;obj&lt;/em&gt;がNoneの場合、&lt;em&gt;axis&lt;/em&gt;は&lt;a href=&quot;#c.NPY_MAXDIMS&quot;&gt; &lt;code&gt;NPY_MAXDIMS&lt;/code&gt; に&lt;/a&gt;設定されます。これは、軸引数を取るC-API関数によって正しく解釈されます。</target>
         </trans-unit>
         <trans-unit id="cb9724a7e14228c2698abcf68b1a251a0ae3b8f5" translate="yes" xml:space="preserve">
           <source>Convert a degree array to radians</source>
@@ -2377,7 +2377,7 @@
         </trans-unit>
         <trans-unit id="1fe8f7480d0d47cc60a5977befc1bf0fb1c97374" translate="yes" xml:space="preserve">
           <source>Convert a sequence of Python objects contained in &lt;em&gt;op&lt;/em&gt; to an array of ndarrays each having the same data type. The type is selected based on the typenumber (larger type number is chosen over a smaller one) ignoring objects that are only scalars. The length of the sequence is returned in &lt;em&gt;n&lt;/em&gt;, and an &lt;em&gt;n&lt;/em&gt; -length array of &lt;a href=&quot;c-api.types-and-structures#c.PyArrayObject&quot;&gt;&lt;code&gt;PyArrayObject&lt;/code&gt;&lt;/a&gt; pointers is the return value (or &lt;code&gt;NULL&lt;/code&gt; if an error occurs). The returned array must be freed by the caller of this routine (using &lt;a href=&quot;#c.PyDataMem_FREE&quot;&gt;&lt;code&gt;PyDataMem_FREE&lt;/code&gt;&lt;/a&gt; ) and all the array objects in it &lt;code&gt;DECREF&lt;/code&gt; &amp;lsquo;d or a memory-leak will occur. The example template-code below shows a typically usage:</source>
-          <target state="translated">&lt;em&gt;op&lt;/em&gt;に含まれるPythonオブジェクトのシーケンスを、それぞれが同じデータ型を持つndarrayの配列に変換します。タイプはtypenumberに基づいて選択されます（小さいタイプよりも大きいタイプ番号が選択されます）。スカラーのみのオブジェクトは無視されます。シーケンスの長さは&lt;em&gt;n&lt;/em&gt;で返され、&lt;a href=&quot;c-api.types-and-structures#c.PyArrayObject&quot;&gt; &lt;code&gt;PyArrayObject&lt;/code&gt; &lt;/a&gt;ポインターの&lt;em&gt;n&lt;/em&gt;長の配列が戻り値です（またはエラーが発生した場合は &lt;code&gt;NULL&lt;/code&gt; ）。返された配列は、このルーチンの呼び出し元によって（&lt;a href=&quot;#c.PyDataMem_FREE&quot;&gt; &lt;code&gt;PyDataMem_FREE&lt;/code&gt; &lt;/a&gt;を使用して）解放する必要があり、その中のすべての配列オブジェクトが &lt;code&gt;DECREF&lt;/code&gt; されているか、メモリリークが発生します。以下のサンプルテンプレートコードは、一般的な使用方法を示しています。</target>
+          <target state="translated">&lt;em&gt;op&lt;/em&gt;に含まれるPythonオブジェクトのシーケンスを、それぞれが同じデータ型を持つndarrayの配列に変換します。タイプはtypenumberに基づいて選択されます（小さいタイプよりも大きいタイプ番号が選択されます）。スカラーのみのオブジェクトは無視されます。シーケンスの長さは&lt;em&gt;n&lt;/em&gt;で返され、&lt;a href=&quot;c-api.types-and-structures#c.PyArrayObject&quot;&gt; &lt;code&gt;PyArrayObject&lt;/code&gt; &lt;/a&gt;ポインターの&lt;em&gt;n&lt;/em&gt;長の配列が戻り値です（またはエラーが発生した場合は &lt;code&gt;NULL&lt;/code&gt; ）。返された配列は、このルーチンの呼び出し元が（&lt;a href=&quot;#c.PyDataMem_FREE&quot;&gt; &lt;code&gt;PyDataMem_FREE&lt;/code&gt; &lt;/a&gt;を使用して）解放する必要があり、その中のすべての配列オブジェクトが &lt;code&gt;DECREF&lt;/code&gt; されているか、メモリリークが発生します。以下のテンプレートコードの例は、一般的な使用法を示しています。</target>
         </trans-unit>
         <trans-unit id="e101ec3d7ab1b665f48ac2d543089565c86aa54e" translate="yes" xml:space="preserve">
           <source>Convert all kinds of Python objects (including arrays and array scalars) to a (platform-pointer-sized) integer. On error, -1 is returned and an exception set.</source>
@@ -2397,11 +2397,11 @@
         </trans-unit>
         <trans-unit id="53df29e4ff05ae420cc48926e99a3b9e70512010" translate="yes" xml:space="preserve">
           <source>Convert an array representing the coefficients of a Chebyshev series, ordered from lowest degree to highest, to an array of the coefficients of the equivalent polynomial (relative to the &amp;ldquo;standard&amp;rdquo; basis) ordered from lowest to highest degree.</source>
-          <target state="translated">最下位から最上位の順に並べられたチェビシェフシリーズの係数を表す配列を、最低基準から最上位の順に並べられた（「標準」基準に対して）等価多項式の係数の配列に変換します。</target>
+          <target state="translated">チェビシェフシリーズの係数を表す配列を、最低次数から最高次数に並べ、等価多項式（「標準」基準を基準にして）から最低次数から最高数に並べられた係数の配列に変換します。</target>
         </trans-unit>
         <trans-unit id="6e39db716cf38d73c2e1474b5348e35ad5d45d64" translate="yes" xml:space="preserve">
           <source>Convert an array representing the coefficients of a Hermite series, ordered from lowest degree to highest, to an array of the coefficients of the equivalent polynomial (relative to the &amp;ldquo;standard&amp;rdquo; basis) ordered from lowest to highest degree.</source>
-          <target state="translated">エルミート系列の係数を表す配列を、最低次数から最高次数に並べ、最低次数から最高次数に並べられた（「標準」基準を基準にして）等価多項式の係数の配列に変換します。</target>
+          <target state="translated">エルミート系列の係数を表す配列を、最低次数から最高次数に並べ、最低から最高次数に並べられた（「標準」基準に対して）等価多項式の係数の配列に変換します。</target>
         </trans-unit>
         <trans-unit id="8d92a2c5d4792677ccffae0416bcb9beb6eb167c" translate="yes" xml:space="preserve">
           <source>Convert an array representing the coefficients of a Laguerre series, ordered from lowest degree to highest, to an array of the coefficients of the equivalent polynomial (relative to the &amp;ldquo;standard&amp;rdquo; basis) ordered from lowest to highest degree.</source>
@@ -2409,23 +2409,23 @@
         </trans-unit>
         <trans-unit id="a288bed0f35723755d6a37566e44ab92c6ecb769" translate="yes" xml:space="preserve">
           <source>Convert an array representing the coefficients of a Legendre series, ordered from lowest degree to highest, to an array of the coefficients of the equivalent polynomial (relative to the &amp;ldquo;standard&amp;rdquo; basis) ordered from lowest to highest degree.</source>
-          <target state="translated">ルジャンドル級数の係数を表す配列を、最低次数から最高次数に並べ、等価多項式（「標準」基準に対して）の順に並べたものに変換します。</target>
+          <target state="translated">ルジャンドル級数の係数を表す配列を、最低次数から最高次数に並べ、最低から最高次数に並べられた（「標準」基準に対して）等価多項式の係数の配列に変換します。</target>
         </trans-unit>
         <trans-unit id="8f863e3ceaa930790565bf1f263428f91f82dc05" translate="yes" xml:space="preserve">
           <source>Convert an array representing the coefficients of a polynomial (relative to the &amp;ldquo;standard&amp;rdquo; basis) ordered from lowest degree to highest, to an array of the coefficients of the equivalent Chebyshev series, ordered from lowest to highest degree.</source>
-          <target state="translated">（「標準」基準に関連する）多項式の係数を表す配列を最低次数から最高次数に変換し、等価チェビシェフ系列の係数の配列に変換します（最低次数から最高次数に並べます）。</target>
+          <target state="translated">最小次数から最高次数の順に並べられた多項式の係数（「標準」基準に対して）を表す配列を、最低次数から最高次数の順に並べられた同等のチェビシェフシリーズの係数の配列に変換します。</target>
         </trans-unit>
         <trans-unit id="77ebeb329b7c408d6e1a1754f29dec3917a76884" translate="yes" xml:space="preserve">
           <source>Convert an array representing the coefficients of a polynomial (relative to the &amp;ldquo;standard&amp;rdquo; basis) ordered from lowest degree to highest, to an array of the coefficients of the equivalent Hermite series, ordered from lowest to highest degree.</source>
-          <target state="translated">最低次数から最高次数の順に並べられた多項式の係数（「標準」基準に対して）を表す配列を、最低次数から最高次数の順に並べられた同等のエルミート系列の係数の配列に変換します。</target>
+          <target state="translated">最小次数から最高次数の順に並べられた多項式の係数（「標準」基準に対して）を表す配列を、最低次数から最高次数の順に並べられた同等のエルミート系列の係数の配列に変換します。</target>
         </trans-unit>
         <trans-unit id="5d3f4ebc3ae40ac476278051222e82a2168385fe" translate="yes" xml:space="preserve">
           <source>Convert an array representing the coefficients of a polynomial (relative to the &amp;ldquo;standard&amp;rdquo; basis) ordered from lowest degree to highest, to an array of the coefficients of the equivalent Laguerre series, ordered from lowest to highest degree.</source>
-          <target state="translated">（「標準」基準に関連する）多項式の係数を表す配列を、最低次数から最高次数の順に並べ、対応するラゲール級数の係数の配列に変換します（最小次数から最高次数の順に並べます）。</target>
+          <target state="translated">（「標準」基準に関連する）多項式の係数を表す配列を最低次数から最高次数に変換し、同等のラゲール級数の係数の配列に変換します。</target>
         </trans-unit>
         <trans-unit id="cec81c86dbe89e8d496cab1ec6207291b41341cd" translate="yes" xml:space="preserve">
           <source>Convert an array representing the coefficients of a polynomial (relative to the &amp;ldquo;standard&amp;rdquo; basis) ordered from lowest degree to highest, to an array of the coefficients of the equivalent Legendre series, ordered from lowest to highest degree.</source>
-          <target state="translated">（「標準」基準に関連する）多項式の係数を表す配列を、最低次数から最高次数に並べ、最低から最高次数に並べられた同等のルジャンドル級数の係数の配列に変換します。</target>
+          <target state="translated">多項式の係数を表す配列（「標準」基準に対して）を最低次数から最高次数に変換し、同等のルジャンドル級数の係数の配列に変換します。</target>
         </trans-unit>
         <trans-unit id="4b17b279b5dccfd644af2817f95777400cf1861d" translate="yes" xml:space="preserve">
           <source>Convert angles from degrees to radians.</source>
@@ -2437,7 +2437,7 @@
         </trans-unit>
         <trans-unit id="45815db69ac2df469f002b3c383b11df15d3fe0f" translate="yes" xml:space="preserve">
           <source>Convert any Python object to a &lt;a href=&quot;c-api.types-and-structures#c.PyArrayObject&quot;&gt;&lt;code&gt;PyArrayObject&lt;/code&gt;&lt;/a&gt;. If &lt;a href=&quot;#c.PyArray_Check&quot;&gt;&lt;code&gt;PyArray_Check&lt;/code&gt;&lt;/a&gt; (&lt;em&gt;obj&lt;/em&gt;) is TRUE then its reference count is incremented and a reference placed in &lt;em&gt;address&lt;/em&gt;. If &lt;em&gt;obj&lt;/em&gt; is not an array, then convert it to an array using &lt;a href=&quot;#c.PyArray_FromAny&quot;&gt;&lt;code&gt;PyArray_FromAny&lt;/code&gt;&lt;/a&gt; . No matter what is returned, you must DECREF the object returned by this routine in &lt;em&gt;address&lt;/em&gt; when you are done with it.</source>
-          <target state="translated">Pythonオブジェクトを&lt;a href=&quot;c-api.types-and-structures#c.PyArrayObject&quot;&gt; &lt;code&gt;PyArrayObject&lt;/code&gt; に&lt;/a&gt;変換します。場合&lt;a href=&quot;#c.PyArray_Check&quot;&gt; &lt;code&gt;PyArray_Check&lt;/code&gt; &lt;/a&gt;（&lt;em&gt;objが&lt;/em&gt;）が真であるその参照カウントがインクリメントされ、参照が中に入れ&lt;em&gt;アドレス&lt;/em&gt;。&lt;em&gt;obj&lt;/em&gt;が配列でない場合は、&lt;a href=&quot;#c.PyArray_FromAny&quot;&gt; &lt;code&gt;PyArray_FromAny&lt;/code&gt; &lt;/a&gt;を使用して配列に変換します。何が返されたとしても、それを使い終わったら、このルーチンによって返されたオブジェクトを&lt;em&gt;アドレスで&lt;/em&gt; DECREFする必要があります。</target>
+          <target state="translated">Pythonオブジェクトを&lt;a href=&quot;c-api.types-and-structures#c.PyArrayObject&quot;&gt; &lt;code&gt;PyArrayObject&lt;/code&gt; に&lt;/a&gt;変換します。場合&lt;a href=&quot;#c.PyArray_Check&quot;&gt; &lt;code&gt;PyArray_Check&lt;/code&gt; &lt;/a&gt;（&lt;em&gt;objが&lt;/em&gt;）が真であるその参照カウントがインクリメントされ、参照が中に入れ&lt;em&gt;アドレス&lt;/em&gt;。&lt;em&gt;obj&lt;/em&gt;が配列でない場合は、&lt;a href=&quot;#c.PyArray_FromAny&quot;&gt; &lt;code&gt;PyArray_FromAny&lt;/code&gt; &lt;/a&gt;を使用して配列に変換します。何が返されても、このルーチンを使い終わったら、このルーチンによって返されたオブジェクトを&lt;em&gt;アドレスで&lt;/em&gt; DECREFする必要があります。</target>
         </trans-unit>
         <trans-unit id="2c520cfad3eae214eac5cb30701aacd3d0256a7c" translate="yes" xml:space="preserve">
           <source>Convert any Python object, &lt;em&gt;obj&lt;/em&gt;, to &lt;a href=&quot;#c.NPY_TRUE&quot;&gt;&lt;code&gt;NPY_TRUE&lt;/code&gt;&lt;/a&gt; or &lt;a href=&quot;#c.NPY_FALSE&quot;&gt;&lt;code&gt;NPY_FALSE&lt;/code&gt;&lt;/a&gt;, and place the result in &lt;em&gt;value&lt;/em&gt;.</source>
@@ -2445,11 +2445,11 @@
         </trans-unit>
         <trans-unit id="1f11d66b7da05915fa0d0dcb369cc6d4a2e56d6e" translate="yes" xml:space="preserve">
           <source>Convert any Python object, &lt;em&gt;obj&lt;/em&gt;, with a (single-segment) buffer interface to a variable with members that detail the object&amp;rsquo;s use of its chunk of memory. The &lt;em&gt;buf&lt;/em&gt; variable is a pointer to a structure with base, ptr, len, and flags members. The &lt;a href=&quot;c-api.types-and-structures#c.PyArray_Chunk&quot;&gt;&lt;code&gt;PyArray_Chunk&lt;/code&gt;&lt;/a&gt; structure is binary compatible with the Python&amp;rsquo;s buffer object (through its len member on 32-bit platforms and its ptr member on 64-bit platforms or in Python 2.5). On return, the base member is set to &lt;em&gt;obj&lt;/em&gt; (or its base if &lt;em&gt;obj&lt;/em&gt; is already a buffer object pointing to another object). If you need to hold on to the memory be sure to INCREF the base member. The chunk of memory is pointed to by &lt;em&gt;buf&lt;/em&gt; -&amp;gt;ptr member and has length &lt;em&gt;buf&lt;/em&gt; -&amp;gt;len. The flags member of &lt;em&gt;buf&lt;/em&gt; is &lt;code&gt;NPY_BEHAVED_RO&lt;/code&gt; with the &lt;a href=&quot;#c.NPY_ARRAY_WRITEABLE&quot;&gt;&lt;code&gt;NPY_ARRAY_WRITEABLE&lt;/code&gt;&lt;/a&gt; flag set if &lt;em&gt;obj&lt;/em&gt; has a writeable buffer interface.</source>
-          <target state="translated">（単一セグメントの）バッファーインターフェイスを持つ任意のPythonオブジェクト&lt;em&gt;objを&lt;/em&gt;、オブジェクトによるメモリのチャンクの使用を詳述するメンバーを持つ変数に変換します。&lt;em&gt;BUFの&lt;/em&gt;変数は、ベース、PTR、LEN、およびフラグメンバーと構造体へのポインタです。&lt;a href=&quot;c-api.types-and-structures#c.PyArray_Chunk&quot;&gt; &lt;code&gt;PyArray_Chunk&lt;/code&gt; の&lt;/a&gt;構造は、（32ビットプラットフォームと64ビットプラットフォーム上やPython 2.5でのPTR部材上のLEN部材を介して）Pythonのバッファ・オブジェクトとバイナリ互換性があります。戻ったとき、ベースメンバーは&lt;em&gt;obj&lt;/em&gt;（&lt;em&gt;obj&lt;/em&gt;がすでに別のオブジェクトを指すバッファーオブジェクトの場合はそのベース）に設定される。メモリを保持する必要がある場合は、必ずベースメンバーをINCREFしてください。メモリのチャンクは&lt;em&gt;buf-&lt;/em&gt; &amp;gt; ptrメンバーによってポイントされ、長さを持っています&lt;em&gt;buf-&lt;/em&gt; &amp;gt; len。&lt;em&gt;buf&lt;/em&gt;のフラグメンバーは &lt;code&gt;NPY_BEHAVED_RO&lt;/code&gt; で、&lt;em&gt;obj&lt;/em&gt;に書き込み可能なバッファーインターフェイスがある場合は&lt;a href=&quot;#c.NPY_ARRAY_WRITEABLE&quot;&gt; &lt;code&gt;NPY_ARRAY_WRITEABLE&lt;/code&gt; &lt;/a&gt;フラグが設定されます。&lt;em&gt;&lt;/em&gt;</target>
+          <target state="translated">（単一セグメントの）バッファーインターフェイスを持つ任意のPythonオブジェクト&lt;em&gt;objを&lt;/em&gt;、オブジェクトによるメモリのチャンクの使用を詳述するメンバーを持つ変数に変換します。&lt;em&gt;BUFの&lt;/em&gt;変数は、ベース、PTR、LEN、およびフラグメンバーと構造体へのポインタです。&lt;a href=&quot;c-api.types-and-structures#c.PyArray_Chunk&quot;&gt; &lt;code&gt;PyArray_Chunk&lt;/code&gt; の&lt;/a&gt;構造は、（32ビットプラットフォームと64ビットプラットフォーム上やPython 2.5でのPTR部材上のLEN部材を介して）Pythonのバッファ・オブジェクトとバイナリ互換性があります。戻ったとき、ベースメンバーは&lt;em&gt;obj&lt;/em&gt;（または、&lt;em&gt;obj&lt;/em&gt;がすでに別のオブジェクトを指すバッファーオブジェクトの場合はそのベース）に設定される。メモリを保持する必要がある場合は、必ずベースメンバーをINCREFしてください。メモリのチャンクは&lt;em&gt;buf-&lt;/em&gt; &amp;gt; ptrメンバーによってポイントされ、長さを持っています&lt;em&gt;buf-&lt;/em&gt; &amp;gt; len。&lt;em&gt;buf&lt;/em&gt;のフラグメンバーは &lt;code&gt;NPY_BEHAVED_RO&lt;/code&gt; で、&lt;em&gt;obj&lt;/em&gt;に書き込み可能なバッファーインターフェイスがある場合は、&lt;a href=&quot;#c.NPY_ARRAY_WRITEABLE&quot;&gt; &lt;code&gt;NPY_ARRAY_WRITEABLE&lt;/code&gt; &lt;/a&gt;フラグが設定されます。&lt;em&gt;&lt;/em&gt;</target>
         </trans-unit>
         <trans-unit id="c75a292870c1a62f954752682b5e4d2572c8fb49" translate="yes" xml:space="preserve">
           <source>Convert any Python sequence (or single Python number) passed in as &lt;em&gt;seq&lt;/em&gt; to (up to) &lt;em&gt;maxvals&lt;/em&gt; pointer-sized integers and place them in the &lt;em&gt;vals&lt;/em&gt; array. The sequence can be smaller then &lt;em&gt;maxvals&lt;/em&gt; as the number of converted objects is returned.</source>
-          <target state="translated">&lt;em&gt;seq&lt;/em&gt;として渡された任意のPythonシーケンス（または単一のPython番号）を（最大で）&lt;em&gt;maxvals&lt;/em&gt;ポインターサイズの整数に&lt;em&gt;変換&lt;/em&gt;し、それらを&lt;em&gt;vals&lt;/em&gt;配列に配置します。変換されたオブジェクトの数が&lt;em&gt;返さ&lt;/em&gt;れるため、シーケンスは&lt;em&gt;maxvals&lt;/em&gt;よりも小さい場合があります。</target>
+          <target state="translated">&lt;em&gt;seq&lt;/em&gt;として渡されたすべてのPythonシーケンス（または単一のPython番号）を（最大で）&lt;em&gt;maxvals&lt;/em&gt;ポインターサイズの整数に&lt;em&gt;変換&lt;/em&gt;し、それらを&lt;em&gt;vals&lt;/em&gt;配列に配置します。変換されたオブジェクトの数が&lt;em&gt;返さ&lt;/em&gt;れるため、シーケンスは&lt;em&gt;maxvals&lt;/em&gt;よりも小さい場合があります。</target>
         </trans-unit>
         <trans-unit id="fa9c12af167e2e17ab265f1ff4c7ad781660a664" translate="yes" xml:space="preserve">
           <source>Convert any Python sequence, &lt;em&gt;obj&lt;/em&gt;, smaller than &lt;a href=&quot;#c.NPY_MAXDIMS&quot;&gt;&lt;code&gt;NPY_MAXDIMS&lt;/code&gt;&lt;/a&gt; to a C-array of &lt;a href=&quot;c-api.dtype#c.npy_intp&quot;&gt;&lt;code&gt;npy_intp&lt;/code&gt;&lt;/a&gt;. The Python object could also be a single number. The &lt;em&gt;seq&lt;/em&gt; variable is a pointer to a structure with members ptr and len. On successful return, &lt;em&gt;seq&lt;/em&gt; -&amp;gt;ptr contains a pointer to memory that must be freed, by calling &lt;a href=&quot;#c.PyDimMem_FREE&quot;&gt;&lt;code&gt;PyDimMem_FREE&lt;/code&gt;&lt;/a&gt;, to avoid a memory leak. The restriction on memory size allows this converter to be conveniently used for sequences intended to be interpreted as array shapes.</source>
@@ -2505,11 +2505,11 @@
         </trans-unit>
         <trans-unit id="11dd67ff4e76c78a832c4fe82ad1fa604de8aae0" translate="yes" xml:space="preserve">
           <source>Convert the Python strings &amp;lsquo;C&amp;rsquo;, &amp;lsquo;F&amp;rsquo;, &amp;lsquo;A&amp;rsquo;, and &amp;lsquo;K&amp;rsquo; into the &lt;a href=&quot;#c.NPY_ORDER&quot;&gt;&lt;code&gt;NPY_ORDER&lt;/code&gt;&lt;/a&gt; enumeration &lt;a href=&quot;#c.NPY_CORDER&quot;&gt;&lt;code&gt;NPY_CORDER&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;#c.NPY_FORTRANORDER&quot;&gt;&lt;code&gt;NPY_FORTRANORDER&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;#c.NPY_ANYORDER&quot;&gt;&lt;code&gt;NPY_ANYORDER&lt;/code&gt;&lt;/a&gt;, and &lt;a href=&quot;#c.NPY_KEEPORDER&quot;&gt;&lt;code&gt;NPY_KEEPORDER&lt;/code&gt;&lt;/a&gt;.</source>
-          <target state="translated">Python文字列「C」、「F」、「A」、および「K」を&lt;a href=&quot;#c.NPY_ORDER&quot;&gt; &lt;code&gt;NPY_ORDER&lt;/code&gt; &lt;/a&gt;列挙&lt;a href=&quot;#c.NPY_CORDER&quot;&gt; &lt;code&gt;NPY_CORDER&lt;/code&gt; &lt;/a&gt;、&lt;a href=&quot;#c.NPY_FORTRANORDER&quot;&gt; &lt;code&gt;NPY_FORTRANORDER&lt;/code&gt; &lt;/a&gt;、&lt;a href=&quot;#c.NPY_ANYORDER&quot;&gt; &lt;code&gt;NPY_ANYORDER&lt;/code&gt; &lt;/a&gt;、および&lt;a href=&quot;#c.NPY_KEEPORDER&quot;&gt; &lt;code&gt;NPY_KEEPORDER&lt;/code&gt; に変換し&lt;/a&gt;ます。</target>
+          <target state="translated">Python文字列 'C'、 'F'、 'A'、および 'K'を&lt;a href=&quot;#c.NPY_ORDER&quot;&gt; &lt;code&gt;NPY_ORDER&lt;/code&gt; &lt;/a&gt;列挙&lt;a href=&quot;#c.NPY_CORDER&quot;&gt; &lt;code&gt;NPY_CORDER&lt;/code&gt; &lt;/a&gt;、&lt;a href=&quot;#c.NPY_FORTRANORDER&quot;&gt; &lt;code&gt;NPY_FORTRANORDER&lt;/code&gt; &lt;/a&gt;、&lt;a href=&quot;#c.NPY_ANYORDER&quot;&gt; &lt;code&gt;NPY_ANYORDER&lt;/code&gt; &lt;/a&gt;、および&lt;a href=&quot;#c.NPY_KEEPORDER&quot;&gt; &lt;code&gt;NPY_KEEPORDER&lt;/code&gt; に変換し&lt;/a&gt;ます。</target>
         </trans-unit>
         <trans-unit id="e537ead60d0d43e6e588d78323ccc29eca3c8343" translate="yes" xml:space="preserve">
           <source>Convert the Python strings &amp;lsquo;clip&amp;rsquo;, &amp;lsquo;wrap&amp;rsquo;, and &amp;lsquo;raise&amp;rsquo; into the &lt;a href=&quot;#c.NPY_CLIPMODE&quot;&gt;&lt;code&gt;NPY_CLIPMODE&lt;/code&gt;&lt;/a&gt; enumeration &lt;a href=&quot;#c.NPY_CLIP&quot;&gt;&lt;code&gt;NPY_CLIP&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;#c.NPY_WRAP&quot;&gt;&lt;code&gt;NPY_WRAP&lt;/code&gt;&lt;/a&gt;, and &lt;a href=&quot;#c.NPY_RAISE&quot;&gt;&lt;code&gt;NPY_RAISE&lt;/code&gt;&lt;/a&gt;.</source>
-          <target state="translated">Python文字列「clip」、「wrap」、および「raise」を&lt;a href=&quot;#c.NPY_CLIPMODE&quot;&gt; &lt;code&gt;NPY_CLIPMODE&lt;/code&gt; &lt;/a&gt;列挙型&lt;a href=&quot;#c.NPY_CLIP&quot;&gt; &lt;code&gt;NPY_CLIP&lt;/code&gt; &lt;/a&gt;、&lt;a href=&quot;#c.NPY_WRAP&quot;&gt; &lt;code&gt;NPY_WRAP&lt;/code&gt; &lt;/a&gt;、および&lt;a href=&quot;#c.NPY_RAISE&quot;&gt; &lt;code&gt;NPY_RAISE&lt;/code&gt; に変換し&lt;/a&gt;ます。</target>
+          <target state="translated">Python文字列 'clip'、 'wrap'、および 'raise'を&lt;a href=&quot;#c.NPY_CLIPMODE&quot;&gt; &lt;code&gt;NPY_CLIPMODE&lt;/code&gt; &lt;/a&gt;列挙型&lt;a href=&quot;#c.NPY_CLIP&quot;&gt; &lt;code&gt;NPY_CLIP&lt;/code&gt; &lt;/a&gt;、&lt;a href=&quot;#c.NPY_WRAP&quot;&gt; &lt;code&gt;NPY_WRAP&lt;/code&gt; &lt;/a&gt;、および&lt;a href=&quot;#c.NPY_RAISE&quot;&gt; &lt;code&gt;NPY_RAISE&lt;/code&gt; に変換し&lt;/a&gt;ます。</target>
         </trans-unit>
         <trans-unit id="bc37cf0719273a042d912bf17405514329ce06ef" translate="yes" xml:space="preserve">
           <source>Convert the Python strings &amp;lsquo;no&amp;rsquo;, &amp;lsquo;equiv&amp;rsquo;, &amp;lsquo;safe&amp;rsquo;, &amp;lsquo;same_kind&amp;rsquo;, and &amp;lsquo;unsafe&amp;rsquo; into the &lt;a href=&quot;#c.NPY_CASTING&quot;&gt;&lt;code&gt;NPY_CASTING&lt;/code&gt;&lt;/a&gt; enumeration &lt;a href=&quot;#c.NPY_NO_CASTING&quot;&gt;&lt;code&gt;NPY_NO_CASTING&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;#c.NPY_EQUIV_CASTING&quot;&gt;&lt;code&gt;NPY_EQUIV_CASTING&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;#c.NPY_SAFE_CASTING&quot;&gt;&lt;code&gt;NPY_SAFE_CASTING&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;#c.NPY_SAME_KIND_CASTING&quot;&gt;&lt;code&gt;NPY_SAME_KIND_CASTING&lt;/code&gt;&lt;/a&gt;, and &lt;a href=&quot;#c.NPY_UNSAFE_CASTING&quot;&gt;&lt;code&gt;NPY_UNSAFE_CASTING&lt;/code&gt;&lt;/a&gt;.</source>
@@ -2605,7 +2605,7 @@
         </trans-unit>
         <trans-unit id="4d7fdb170c1f22bd4d4e265e352eb1cd10b68118" translate="yes" xml:space="preserve">
           <source>Converts either a sequence of clipmodes or a single clipmode into a C array of &lt;a href=&quot;#c.NPY_CLIPMODE&quot;&gt;&lt;code&gt;NPY_CLIPMODE&lt;/code&gt;&lt;/a&gt; values. The number of clipmodes &lt;em&gt;n&lt;/em&gt; must be known before calling this function. This function is provided to help functions allow a different clipmode for each dimension.</source>
-          <target state="translated">一連のクリップモードまたは単一のクリップモードを&lt;a href=&quot;#c.NPY_CLIPMODE&quot;&gt; &lt;code&gt;NPY_CLIPMODE&lt;/code&gt; &lt;/a&gt;値のC配列に変換します。この関数を呼び出す前に、クリップモードの数&lt;em&gt;n&lt;/em&gt;を知っておく必要があります。この関数は、関数が次元ごとに異なるクリップモードを使用できるようにするために提供されています。</target>
+          <target state="translated">クリップモードのシーケンスまたは単一のクリップモードを&lt;a href=&quot;#c.NPY_CLIPMODE&quot;&gt; &lt;code&gt;NPY_CLIPMODE&lt;/code&gt; &lt;/a&gt;値のC配列に変換します。この関数を呼び出す前に、クリップモードの数&lt;em&gt;n&lt;/em&gt;を知っておく必要があります。この関数は、関数が次元ごとに異なるクリップモードを使用できるようにするために提供されています。</target>
         </trans-unit>
         <trans-unit id="250dc78cc5a9ee71a58ec6ac7dd196d5163a36c3" translate="yes" xml:space="preserve">
           <source>Convolve two arrays using the Fast Fourier Transform.</source>
@@ -2661,7 +2661,7 @@
         </trans-unit>
         <trans-unit id="77d90b4a2e78538417c275f69722b0ac5a0a99f5" translate="yes" xml:space="preserve">
           <source>Core dimensions of each input or output array are represented by a list of dimension names in parentheses, &lt;code&gt;(i_1,...,i_N)&lt;/code&gt;; a scalar input/output is denoted by &lt;code&gt;()&lt;/code&gt;. Instead of &lt;code&gt;i_1&lt;/code&gt;, &lt;code&gt;i_2&lt;/code&gt;, etc, one can use any valid Python variable name.</source>
-          <target state="translated">各入力配列または出力配列のコアディメンションは、括弧内のディメンション名のリスト &lt;code&gt;(i_1,...,i_N)&lt;/code&gt; ます。スカラー入出力は &lt;code&gt;()&lt;/code&gt; で示されます。 &lt;code&gt;i_1&lt;/code&gt; 、 &lt;code&gt;i_2&lt;/code&gt; などの代わりに、任意の有効なPython変数名を使用できます。</target>
+          <target state="translated">各入力または出力配列のコアディメンションは、括弧内のディメンション名のリスト &lt;code&gt;(i_1,...,i_N)&lt;/code&gt; ます。スカラー入出力は &lt;code&gt;()&lt;/code&gt; で示されます。 &lt;code&gt;i_1&lt;/code&gt; 、 &lt;code&gt;i_2&lt;/code&gt; などの代わりに、有効な任意のPython変数名を使用できます。</target>
         </trans-unit>
         <trans-unit id="74fda43cf5b94de17f1701a1daa8838cd689d1ac" translate="yes" xml:space="preserve">
           <source>Core signature string</source>
@@ -2677,7 +2677,7 @@
         </trans-unit>
         <trans-unit id="c3ffb59304cd35f5989ecead23c1e787437b571d" translate="yes" xml:space="preserve">
           <source>Correspondingly, when the spectrum is purely real, the signal is Hermitian. The &lt;a href=&quot;generated/numpy.fft.hfft#numpy.fft.hfft&quot;&gt;&lt;code&gt;hfft&lt;/code&gt;&lt;/a&gt; family of functions exploits this symmetry by using &lt;code&gt;n/2+1&lt;/code&gt; complex points in the input (time) domain for &lt;code&gt;n&lt;/code&gt; real points in the frequency domain.</source>
-          <target state="translated">同様に、スペクトルが純粋に実数である場合、信号はエルミートです。&lt;a href=&quot;generated/numpy.fft.hfft#numpy.fft.hfft&quot;&gt; &lt;code&gt;hfft&lt;/code&gt; &lt;/a&gt;関数のファミリーは、使用して、この対称性を利用する &lt;code&gt;n/2+1&lt;/code&gt; の入力（時間）のドメイン内の複雑な点を &lt;code&gt;n&lt;/code&gt; 周波数領域における実際の点。</target>
+          <target state="translated">同様に、スペクトルが純粋に実数である場合、信号はエルミートです。&lt;a href=&quot;generated/numpy.fft.hfft#numpy.fft.hfft&quot;&gt; &lt;code&gt;hfft&lt;/code&gt; &lt;/a&gt;関数のファミリーは、使用して、この対称性を利用する &lt;code&gt;n/2+1&lt;/code&gt; の入力（時間）のドメイン内の複合点を &lt;code&gt;n&lt;/code&gt; の周波数領域における実際の点。</target>
         </trans-unit>
         <trans-unit id="ef15bde640af7d5282d372b3668304d3b57605b8" translate="yes" xml:space="preserve">
           <source>Cosine element-wise.</source>
@@ -2733,7 +2733,7 @@
         </trans-unit>
         <trans-unit id="a82b9a1216f695b2de1af812d1dbbca1ab80309a" translate="yes" xml:space="preserve">
           <source>Counts the number of valid days between &lt;code&gt;begindates&lt;/code&gt; and &lt;code&gt;enddates&lt;/code&gt;, not including the day of &lt;code&gt;enddates&lt;/code&gt;.</source>
-          <target state="translated">間の有効日数カウント &lt;code&gt;begindates&lt;/code&gt; と &lt;code&gt;enddates&lt;/code&gt; の日を含めていない、 &lt;code&gt;enddates&lt;/code&gt; を。</target>
+          <target state="translated">間の有効日数カウント &lt;code&gt;begindates&lt;/code&gt; と &lt;code&gt;enddates&lt;/code&gt; の日を含まず、 &lt;code&gt;enddates&lt;/code&gt; します。</target>
         </trans-unit>
         <trans-unit id="0acc19acc7d5ef1e19db778f62f9ff93707d13fa" translate="yes" xml:space="preserve">
           <source>Covariance indicates the level to which two variables vary together. From the multivariate normal distribution, we draw N-dimensional samples,</source>
@@ -2809,7 +2809,7 @@
         </trans-unit>
         <trans-unit id="da0150ead372af08b1b57e37f89fc0a11de82d56" translate="yes" xml:space="preserve">
           <source>Create a new array with the provided data-type descriptor, &lt;em&gt;descr&lt;/em&gt;, of the shape determined by &lt;em&gt;nd&lt;/em&gt; and &lt;em&gt;dims&lt;/em&gt;.</source>
-          <target state="translated">&lt;em&gt;nd&lt;/em&gt;と&lt;em&gt;dims&lt;/em&gt;によって決定される形状の提供されたデータ型記述子&lt;em&gt;descrを&lt;/em&gt;使用して新しい配列を作成します。&lt;em&gt;&lt;/em&gt;&lt;em&gt;&lt;/em&gt;</target>
+          <target state="translated">&lt;em&gt;nd&lt;/em&gt;および&lt;em&gt;dims&lt;/em&gt;によって決定される形状の、提供されたデータ型記述子&lt;em&gt;descrを&lt;/em&gt;使用して新しい配列を作成します。&lt;em&gt;&lt;/em&gt;&lt;em&gt;&lt;/em&gt;</target>
         </trans-unit>
         <trans-unit id="66aa9bc65510d6c47313fc8c574666e0fb6ecdf0" translate="yes" xml:space="preserve">
           <source>Create a new broadcasting universal function from required variables. Each ufunc builds around the notion of an element-by-element operation. Each ufunc object contains pointers to 1-d loops implementing the basic functionality for each supported type.</source>
@@ -2817,11 +2817,11 @@
         </trans-unit>
         <trans-unit id="4a2f526f17ce7c95e1ecc2546f61cdc127fd9387" translate="yes" xml:space="preserve">
           <source>Create a new data-type object from the built-in (or user-registered) data-type indicated by &lt;em&gt;typenum&lt;/em&gt;. All builtin types should not have any of their fields changed. This creates a new copy of the &lt;a href=&quot;c-api.types-and-structures#c.PyArray_Descr&quot;&gt;&lt;code&gt;PyArray_Descr&lt;/code&gt;&lt;/a&gt; structure so that you can fill it in as appropriate. This function is especially needed for flexible data-types which need to have a new elsize member in order to be meaningful in array construction.</source>
-          <target state="translated">&lt;em&gt;typenumで&lt;/em&gt;示される&lt;em&gt;組み込み&lt;/em&gt;（またはユーザー登録）データ型から新しいデータ型オブジェクトを作成します。すべての組み込み型では、フィールドを変更しないでください。これにより、&lt;a href=&quot;c-api.types-and-structures#c.PyArray_Descr&quot;&gt; &lt;code&gt;PyArray_Descr&lt;/code&gt; &lt;/a&gt;構造の新しいコピーが作成され、必要に応じてデータを入力できるようになります。この関数は、配列構築で意味を持つために新しいelsizeメンバーを必要とする柔軟なデータ型に特に必要です。</target>
+          <target state="translated">&lt;em&gt;typenumで&lt;/em&gt;示される&lt;em&gt;組み込み&lt;/em&gt;（またはユーザー登録）データ型から新しいデータ型オブジェクトを作成します。すべての組み込み型のフィールドは変更しないでください。これにより、&lt;a href=&quot;c-api.types-and-structures#c.PyArray_Descr&quot;&gt; &lt;code&gt;PyArray_Descr&lt;/code&gt; &lt;/a&gt;構造の新しいコピーが作成され、必要に応じて入力できるようになります。この関数は、配列構成で意味を持つために新しいelsizeメンバーを必要とする柔軟なデータ型に特に必要です。</target>
         </trans-unit>
         <trans-unit id="2566b193178a539463843e8aa80394649f42e4a2" translate="yes" xml:space="preserve">
           <source>Create a new data-type object with the byteorder set according to &lt;em&gt;newendian&lt;/em&gt;. All referenced data-type objects (in subdescr and fields members of the data-type object) are also changed (recursively). If a byteorder of &lt;code&gt;NPY_IGNORE&lt;/code&gt; is encountered it is left alone. If newendian is &lt;code&gt;NPY_SWAP&lt;/code&gt;, then all byte-orders are swapped. Other valid newendian values are &lt;code&gt;NPY_NATIVE&lt;/code&gt;, &lt;code&gt;NPY_LITTLE&lt;/code&gt;, and &lt;code&gt;NPY_BIG&lt;/code&gt; which all cause the returned data-typed descriptor (and all it&amp;rsquo;s referenced data-type descriptors) to have the corresponding byte- order.</source>
-          <target state="translated">&lt;em&gt;newendian&lt;/em&gt;に従って&lt;em&gt;バイトオーダーが&lt;/em&gt;設定された新しいデータ型オブジェクトを作成します。参照されるすべてのデータ型オブジェクト（データ型オブジェクトのsubdescrおよびfieldsメンバー内）も（再帰的に）変更されます。 &lt;code&gt;NPY_IGNORE&lt;/code&gt; のバイトオーダーが発生した場合、それはそのままになります。 newendianが &lt;code&gt;NPY_SWAP&lt;/code&gt; の場合、すべてのバイト順が入れ替えられます。他の有効なニューエンディアン値は、 &lt;code&gt;NPY_NATIVE&lt;/code&gt; 、 &lt;code&gt;NPY_LITTLE&lt;/code&gt; 、および &lt;code&gt;NPY_BIG&lt;/code&gt; であり、これらはすべて、返されるデータ型記述子（およびそれが参照するすべてのデータ型記述子）に対応するバイト順序を持たせます。</target>
+          <target state="translated">&lt;em&gt;newendian&lt;/em&gt;に従って&lt;em&gt;バイトオーダーが&lt;/em&gt;設定された新しいデータ型オブジェクトを作成します。参照されるすべてのデータ型オブジェクト（データ型オブジェクトのsubdescrおよびfieldsメンバー内）も（再帰的に）変更されます。 &lt;code&gt;NPY_IGNORE&lt;/code&gt; のバイトオーダーが発生した場合、それはそのままになります。 newendianが &lt;code&gt;NPY_SWAP&lt;/code&gt; の場合、すべてのバイト順が入れ替えられます。その他の有効なニューエンディアン値は &lt;code&gt;NPY_NATIVE&lt;/code&gt; 、 &lt;code&gt;NPY_LITTLE&lt;/code&gt; 、および &lt;code&gt;NPY_BIG&lt;/code&gt; であり、これらはすべて、返されたデータ型記述子（およびそれが参照するすべてのデータ型記述子）に対応するバイト順を持たせます。</target>
         </trans-unit>
         <trans-unit id="f6986303dc6f9f6f31cfc3c9b4f4566a4e6fb42d" translate="yes" xml:space="preserve">
           <source>Create a new masked array from scratch.</source>
@@ -2849,7 +2849,7 @@
         </trans-unit>
         <trans-unit id="c5cd4653ebf1e7a39dd1a7fde57d136d86e370ff" translate="yes" xml:space="preserve">
           <source>Create a tuple of &lt;a href=&quot;numpy.nditer#numpy.nditer&quot;&gt;&lt;code&gt;nditer&lt;/code&gt;&lt;/a&gt; objects which iterate in nested loops over different axes of the op argument. The first iterator is used in the outermost loop, the last in the innermost loop. Advancing one will change the subsequent iterators to point at its new element.</source>
-          <target state="translated">op引数の異なる軸上でネストされたループで反復する&lt;a href=&quot;numpy.nditer#numpy.nditer&quot;&gt; &lt;code&gt;nditer&lt;/code&gt; &lt;/a&gt;オブジェクトのタプルを作成します。最初の反復子は最も外側のループで使用され、最後の反復子は最も内側のループで使用されます。1つ進めると、後続の反復子がその新しい要素を指すように変更されます。</target>
+          <target state="translated">op引数の異なる軸でネストされたループで反復する&lt;a href=&quot;numpy.nditer#numpy.nditer&quot;&gt; &lt;code&gt;nditer&lt;/code&gt; &lt;/a&gt;オブジェクトのタプルを作成します。最初の反復子は最も外側のループで使用され、最後の反復子は最も内側のループで使用されます。1つ進めると、後続のイテレータが新しい要素を指すように変更されます。</target>
         </trans-unit>
         <trans-unit id="0fc61fbee0ed5e8baf16ecef1179e57ba0313e61" translate="yes" xml:space="preserve">
           <source>Create a two-dimensional array with the flattened input as a diagonal.</source>
@@ -2869,7 +2869,7 @@
         </trans-unit>
         <trans-unit id="d2e4e179d70e58136861749bef7d847f8a1e83ea" translate="yes" xml:space="preserve">
           <source>Create an array of the given shape and populate it with random samples from a uniform distribution over &lt;code&gt;[0, 1)&lt;/code&gt;.</source>
-          <target state="translated">与えられた形状の配列を作成し、 &lt;code&gt;[0, 1)&lt;/code&gt; 上の均一分布からのランダムなサンプルを入れます。</target>
+          <target state="translated">指定された形状の配列を作成し、 &lt;code&gt;[0, 1)&lt;/code&gt; 上の均一分布からのランダムサンプルをその配列に追加します。</target>
         </trans-unit>
         <trans-unit id="8ef83bcd085ae088871cf8b9cc78b6a1d61e3207" translate="yes" xml:space="preserve">
           <source>Create an array with two fields, &lt;code&gt;x&lt;/code&gt; and &lt;code&gt;y&lt;/code&gt;:</source>
@@ -2877,7 +2877,7 @@
         </trans-unit>
         <trans-unit id="1a31fd94f016f355d7832212f15cccc2bc9c1da3" translate="yes" xml:space="preserve">
           <source>Create an array wrapper around &lt;em&gt;data&lt;/em&gt; pointed to by the given pointer. The array flags will have a default that the data area is well-behaved and C-style contiguous. The shape of the array is given by the &lt;em&gt;dims&lt;/em&gt; c-array of length &lt;em&gt;nd&lt;/em&gt;. The data-type of the array is indicated by &lt;em&gt;typenum&lt;/em&gt;. If data comes from another reference-counted Python object, the reference count on this object should be increased after the pointer is passed in, and the base member of the returned ndarray should point to the Python object that owns the data. This will ensure that the provided memory is not freed while the returned array is in existence. To free memory as soon as the ndarray is deallocated, set the OWNDATA flag on the returned ndarray.</source>
-          <target state="translated">&lt;em&gt;指定&lt;/em&gt;されたポインターが指す&lt;em&gt;データの&lt;/em&gt;周りに配列ラッパーを作成します。配列フラグには、データ領域が適切に動作し、Cスタイルで隣接しているというデフォルトがあります。配列の形状は、長さ&lt;em&gt;ndの&lt;/em&gt;&lt;em&gt;dims&lt;/em&gt; c-array によって指定されます。配列のデータ型は&lt;em&gt;typenum&lt;/em&gt;で示され&lt;em&gt;ます&lt;/em&gt;。データが別の参照カウントされるPythonオブジェクトからのものである場合、このオブジェクトの参照カウントは、ポインターが渡された後に増加する必要があり、返されるndarrayのベースメンバーは、データを所有するPythonオブジェクトを指す必要があります。これにより、返された配列が存在する間、提供されたメモリが解放されなくなります。 ndarrayの割り当てが解除されるとすぐにメモリを解放するには、返されたndarrayにOWNDATAフラグを設定します。&lt;em&gt;&lt;/em&gt;&lt;em&gt;&lt;/em&gt;</target>
+          <target state="translated">&lt;em&gt;指定&lt;/em&gt;されたポインタが指す&lt;em&gt;データの&lt;/em&gt;周りに配列ラッパーを作成します。配列フラグには、データ領域が適切に動作し、Cスタイルで隣接しているというデフォルトがあります。配列の形状は、長さ&lt;em&gt;ndの&lt;/em&gt;&lt;em&gt;dims&lt;/em&gt; c-array によって指定されます。配列のデータ型は&lt;em&gt;typenum&lt;/em&gt;で示され&lt;em&gt;ます&lt;/em&gt;。データが別の参照カウントされるPythonオブジェクトからのものである場合、このオブジェクトの参照カウントは、ポインターが渡された後に増加する必要があり、返されるndarrayのベースメンバーは、データを所有するPythonオブジェクトを指す必要があります。これにより、返された配列が存在する間、提供されたメモリが解放されなくなります。 ndarrayの割り当てが解除されるとすぐにメモリを解放するには、返されたndarrayにOWNDATAフラグを設定します。&lt;em&gt;&lt;/em&gt;&lt;em&gt;&lt;/em&gt;</target>
         </trans-unit>
         <trans-unit id="47d4d6e775fe88f4b80d5ea4c370f0f98678742c" translate="yes" xml:space="preserve">
           <source>Create an array x, with a reference y and a copy z:</source>
@@ -2985,7 +2985,7 @@
         </trans-unit>
         <trans-unit id="3623ceac932f771e89eb47270eaee4ca0c39adaa" translate="yes" xml:space="preserve">
           <source>Creating iterators for nested iteration requires some care. All the iterator operands must match exactly, or the calls to &lt;a href=&quot;#c.NpyIter_ResetBasePointers&quot;&gt;&lt;code&gt;NpyIter_ResetBasePointers&lt;/code&gt;&lt;/a&gt; will be invalid. This means that automatic copies and output allocation should not be used haphazardly. It is possible to still use the automatic data conversion and casting features of the iterator by creating one of the iterators with all the conversion parameters enabled, then grabbing the allocated operands with the &lt;a href=&quot;#c.NpyIter_GetOperandArray&quot;&gt;&lt;code&gt;NpyIter_GetOperandArray&lt;/code&gt;&lt;/a&gt; function and passing them into the constructors for the rest of the iterators.</source>
-          <target state="translated">ネストされた反復のイテレータを作成するには、いくつかの注意が必要です。すべてのイテレータオペランドは正確に一致する&lt;a href=&quot;#c.NpyIter_ResetBasePointers&quot;&gt; &lt;code&gt;NpyIter_ResetBasePointers&lt;/code&gt; &lt;/a&gt;があります。そうでない場合、NpyIter_ResetBasePointersの呼び出しは無効になります。これは、自動コピーと出力割り当てを無計画に使用しないことを意味します。すべての変換パラメーターを有効にしてイテレーターの1つを作成し、&lt;a href=&quot;#c.NpyIter_GetOperandArray&quot;&gt; &lt;code&gt;NpyIter_GetOperandArray&lt;/code&gt; &lt;/a&gt;関数で割り当てられたオペランドを取得して、残りのイテレーターのコンストラクターに渡すことで、イテレーターの自動データ変換およびキャスト機能を引き続き使用できます。 。</target>
+          <target state="translated">ネストされた反復のイテレータを作成するには、いくつかの注意が必要です。すべてのイテレータオペランドは&lt;a href=&quot;#c.NpyIter_ResetBasePointers&quot;&gt; &lt;code&gt;NpyIter_ResetBasePointers&lt;/code&gt; &lt;/a&gt;する必要があります。そうでない場合、NpyIter_ResetBasePointersの呼び出しは無効になります。これは、自動コピーと出力割り当てを無計画に使用しないことを意味します。すべての変換パラメーターを有効にしてイテレーターの1つを作成し、&lt;a href=&quot;#c.NpyIter_GetOperandArray&quot;&gt; &lt;code&gt;NpyIter_GetOperandArray&lt;/code&gt; &lt;/a&gt;関数で割り当てられたオペランドを取得して、残りのイテレーターのコンストラクターに渡すことで、イテレーターの自動データ変換およびキャスト機能を引き続き使用できます。 。</target>
         </trans-unit>
         <trans-unit id="c5120a7c7085b0117ed81c3444ff1fdacef6c111" translate="yes" xml:space="preserve">
           <source>Creating many similar tests</source>
@@ -3065,7 +3065,7 @@
         </trans-unit>
         <trans-unit id="3b507900d710138d9fc14b9bf7ca033f1876815b" translate="yes" xml:space="preserve">
           <source>Cython can be used to unpack the &lt;code&gt;PyCapsule&lt;/code&gt; provided by a BitGenerator. This example uses &lt;a href=&quot;bit_generators/pcg64#numpy.random.pcg64.PCG64&quot;&gt;&lt;code&gt;PCG64&lt;/code&gt;&lt;/a&gt; and &lt;code&gt;random_gauss_zig&lt;/code&gt;, the Ziggurat-based generator for normals, to fill an array. The usual caveats for writing high-performance code using Cython &amp;ndash; removing bounds checks and wrap around, providing array alignment information &amp;ndash; still apply.</source>
-          <target state="translated">Cythonを使用して、 &lt;code&gt;PyCapsule&lt;/code&gt; によって提供されるPyCapsule を解凍できます。この例では、使用&lt;a href=&quot;bit_generators/pcg64#numpy.random.pcg64.PCG64&quot;&gt; &lt;code&gt;PCG64&lt;/code&gt; &lt;/a&gt;および &lt;code&gt;random_gauss_zig&lt;/code&gt; アレイを埋めるために、法線用ジグラットベースの発電機を、。Cythonを使用して高性能コードを作成するための通常の警告&amp;ndash;境界チェックを削除してラップアラウンドし、配列の位置合わせ情報を提供する&amp;ndash;は引き続き適用されます。</target>
+          <target state="translated">Cythonを使用して、 &lt;code&gt;PyCapsule&lt;/code&gt; によって提供されるPyCapsule を解凍できます。この例では、使用&lt;a href=&quot;bit_generators/pcg64#numpy.random.pcg64.PCG64&quot;&gt; &lt;code&gt;PCG64&lt;/code&gt; &lt;/a&gt;および &lt;code&gt;random_gauss_zig&lt;/code&gt; アレイを埋めるために、法線用ジグラットベースの発電機を、。Cythonを使用して高性能のコードを作成するための通常の警告&amp;ndash;境界チェックを削除してラップアラウンドし、配列の位置合わせ情報を提供する&amp;ndash;が引き続き適用されます。</target>
         </trans-unit>
         <trans-unit id="50c9e8d5fc98727b4bbc93cf5d64a68db647f04f" translate="yes" xml:space="preserve">
           <source>D</source>
@@ -3085,7 +3085,7 @@
         </trans-unit>
         <trans-unit id="5101f6a6ee46d3f6405ba78646fba174a0c2beec" translate="yes" xml:space="preserve">
           <source>Dalgaard, Peter, &amp;ldquo;Introductory Statistics with R&amp;rdquo;, Springer-Verlag, 2002.</source>
-          <target state="translated">Dalgaard、Peter、「Rの入門統計」、Springer-Verlag、2002年。</target>
+          <target state="translated">ダルガード、ピーター、「R入門統計」、Springer-Verlag、2002年。</target>
         </trans-unit>
         <trans-unit id="4553061944cf001ceb7836359a71ad75f6dced22" translate="yes" xml:space="preserve">
           <source>Daniel Lemire., &amp;ldquo;Fast Random Integer Generation in an Interval&amp;rdquo;, ACM Transactions on Modeling and Computer Simulation 29 (1), 2019, &lt;a href=&quot;http://arxiv.org/abs/1805.10941&quot;&gt;http://arxiv.org/abs/1805.10941&lt;/a&gt;.</source>
@@ -3121,15 +3121,15 @@
         </trans-unit>
         <trans-unit id="692287ce05c432ce06118a7f5a56e29867abb305" translate="yes" xml:space="preserve">
           <source>Data attribute listing the data-type &amp;ldquo;Domain-Range&amp;rdquo; groupings the ufunc can deliver. The data-types are given using the character codes.</source>
-          <target state="translated">ufuncが提供できるデータタイプ「ドメイン範囲」グループをリストするデータ属性。データ型は文字コードを使用して指定されます。</target>
+          <target state="translated">ufuncが提供できるデータタイプ「ドメイン範囲」グループをリストするデータ属性。データ型は文字コードを使用して与えられます。</target>
         </trans-unit>
         <trans-unit id="c0385a2191da01cdd85357b1f30dbba96a61452a" translate="yes" xml:space="preserve">
           <source>Data in new &lt;a href=&quot;generated/numpy.ndarray#numpy.ndarray&quot;&gt;&lt;code&gt;ndarrays&lt;/code&gt;&lt;/a&gt; is in the &lt;a href=&quot;https://docs.scipy.org/doc/numpy-1.17.0/glossary.html#term-row-major&quot;&gt;row-major&lt;/a&gt; (C) order, unless otherwise specified, but, for example, &lt;a href=&quot;arrays.indexing#arrays-indexing&quot;&gt;basic array slicing&lt;/a&gt; often produces &lt;a href=&quot;https://docs.scipy.org/doc/numpy-1.17.0/glossary.html#term-view&quot;&gt;views&lt;/a&gt; in a different scheme.</source>
-          <target state="translated">新しい&lt;a href=&quot;generated/numpy.ndarray#numpy.ndarray&quot;&gt; &lt;code&gt;ndarrays&lt;/code&gt; &lt;/a&gt;内のデータは、特に指定のない限り、&lt;a href=&quot;https://docs.scipy.org/doc/numpy-1.17.0/glossary.html#term-row-major&quot;&gt;行&lt;/a&gt;優先（C）順ですが、たとえば、&lt;a href=&quot;arrays.indexing#arrays-indexing&quot;&gt;基本的な配列のスライスでは、&lt;/a&gt;多くの場合、別のスキームで&lt;a href=&quot;https://docs.scipy.org/doc/numpy-1.17.0/glossary.html#term-view&quot;&gt;ビュー&lt;/a&gt;が生成されます。</target>
+          <target state="translated">新しい&lt;a href=&quot;generated/numpy.ndarray#numpy.ndarray&quot;&gt; &lt;code&gt;ndarrays&lt;/code&gt; &lt;/a&gt;内のデータは、特に指定されていない限り、&lt;a href=&quot;https://docs.scipy.org/doc/numpy-1.17.0/glossary.html#term-row-major&quot;&gt;行&lt;/a&gt;優先（C）順ですが、たとえば、&lt;a href=&quot;arrays.indexing#arrays-indexing&quot;&gt;基本的な配列のスライスでは、&lt;/a&gt;多くの場合、異なるスキームで&lt;a href=&quot;https://docs.scipy.org/doc/numpy-1.17.0/glossary.html#term-view&quot;&gt;ビュー&lt;/a&gt;が生成されます。</target>
         </trans-unit>
         <trans-unit id="2d84a810e9789b8179eb08002b6e519db8fa8ce7" translate="yes" xml:space="preserve">
           <source>Data is always written in &amp;lsquo;C&amp;rsquo; order, independent of the order of &lt;code&gt;a&lt;/code&gt;. The data produced by this method can be recovered using the function fromfile().</source>
-          <target state="translated">データは、の順序とは関係なく &lt;code&gt;a&lt;/code&gt; 常に「C」の順序で書き込まれます。このメソッドで生成されたデータは、fromfile（）関数を使用して復元できます。</target>
+          <target state="translated">データは常にのための独立した、「C」の順序で書かれています。このメソッドによって生成されたデータは、fromfile（）関数を使用して回復できます。 &lt;code&gt;a&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="9e53167df8cb2fa7234110a0a44d40ca2cbd6313" translate="yes" xml:space="preserve">
           <source>Data items are converted to the nearest compatible Python type. Masked values are converted to &lt;a href=&quot;../maskedarray.baseclass#numpy.ma.MaskedArray.fill_value&quot;&gt;&lt;code&gt;fill_value&lt;/code&gt;&lt;/a&gt;. If &lt;a href=&quot;../maskedarray.baseclass#numpy.ma.MaskedArray.fill_value&quot;&gt;&lt;code&gt;fill_value&lt;/code&gt;&lt;/a&gt; is None, the corresponding entries in the output list will be &lt;code&gt;None&lt;/code&gt;.</source>
@@ -3169,7 +3169,7 @@
         </trans-unit>
         <trans-unit id="5c6b1bdaee5cd22bebfa68fe22da8ae17ee32ebc" translate="yes" xml:space="preserve">
           <source>Data type containing field &lt;code&gt;col1&lt;/code&gt; (10-character string at byte position 0), &lt;code&gt;col2&lt;/code&gt; (32-bit float at byte position 10), and &lt;code&gt;col3&lt;/code&gt; (integers at byte position 14):</source>
-          <target state="translated">フィールド &lt;code&gt;col1&lt;/code&gt; （バイト位置0の10文字ストリング）、 &lt;code&gt;col2&lt;/code&gt; （バイト位置10の32ビット浮動小数点）、および &lt;code&gt;col3&lt;/code&gt; （バイト位置14の整数）を含むデータ型：</target>
+          <target state="translated">フィールド &lt;code&gt;col1&lt;/code&gt; （バイト位置0の10文字の文字列）、 &lt;code&gt;col2&lt;/code&gt; （バイト位置10の32ビットfloat）、および &lt;code&gt;col3&lt;/code&gt; （バイト位置14の整数）を含むデータ型：</target>
         </trans-unit>
         <trans-unit id="5323524ee17f1362827313c3d97940b4505408ab" translate="yes" xml:space="preserve">
           <source>Data type information</source>
@@ -3257,7 +3257,7 @@
         </trans-unit>
         <trans-unit id="2bc09131fee35a52a645be0fa4f4e07fdb68a652" translate="yes" xml:space="preserve">
           <source>Data-type descriptor of the returned view, e.g., float32 or int16. The default, None, results in the view having the same data-type as &lt;code&gt;a&lt;/code&gt;. This argument can also be specified as an ndarray sub-class, which then specifies the type of the returned object (this is equivalent to setting the &lt;code&gt;type&lt;/code&gt; parameter).</source>
-          <target state="translated">返されたビューのデータ型記述子（例：float32またはint16）。同じデータ型を有するビューにおけるデフォルト、なし、結果。この引数は、ndarrayサブクラスとして指定することもできます。このサブクラスは、返されるオブジェクトのタイプを指定します（これは、 &lt;code&gt;type&lt;/code&gt; パラメーターを設定することと同じです）。 &lt;code&gt;a&lt;/code&gt;</target>
+          <target state="translated">返されたビューのデータ型記述子（例：float32またはint16）。同じデータ型を有するビューにおけるデフォルト、なし、結果。この引数は、ndarrayサブクラスとして指定することもできます。これは、返されるオブジェクトのタイプを指定します（これは、 &lt;code&gt;type&lt;/code&gt; パラメーターを設定することと同じです）。 &lt;code&gt;a&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="22f7dd2234bee3f3f18b97392a6490d3ba873dee" translate="yes" xml:space="preserve">
           <source>Data-type descriptors</source>
@@ -3269,7 +3269,7 @@
         </trans-unit>
         <trans-unit id="2507f1a7f55fba205d86cdd75b7ab0cf6f6fbdd9" translate="yes" xml:space="preserve">
           <source>Data-type objects must be reference counted so be aware of the action on the data-type reference of different C-API calls. The standard rule is that when a data-type object is returned it is a new reference. Functions that take &lt;a href=&quot;c-api.types-and-structures#c.PyArray_Descr&quot;&gt;&lt;code&gt;PyArray_Descr *&lt;/code&gt;&lt;/a&gt; objects and return arrays steal references to the data-type their inputs unless otherwise noted. Therefore, you must own a reference to any data-type object used as input to such a function.</source>
-          <target state="translated">データ型オブジェクトは参照カウントされる必要があるため、さまざまなC-API呼び出しのデータ型参照に対するアクションに注意してください。標準的なルールは、データ型オブジェクトが返されるとき、それが新しい参照であることです。特に明記されていない限り、&lt;a href=&quot;c-api.types-and-structures#c.PyArray_Descr&quot;&gt; &lt;code&gt;PyArray_Descr *&lt;/code&gt; &lt;/a&gt;オブジェクトを受け取り、配列を返す関数は、入力のデータ型への参照を盗みます。したがって、そのような関数への入力として使用されるデータ型オブジェクトへの参照を所有している必要があります。</target>
+          <target state="translated">データ型オブジェクトは参照カウントされる必要があるため、さまざまなC-API呼び出しのデータ型参照に対するアクションに注意してください。標準的な規則は、データ型オブジェクトが返されるとき、それが新しい参照であることです。特に明記されていない限り、&lt;a href=&quot;c-api.types-and-structures#c.PyArray_Descr&quot;&gt; &lt;code&gt;PyArray_Descr *&lt;/code&gt; &lt;/a&gt;オブジェクトを受け取り、配列を返す関数は、入力のデータ型への参照を盗みます。したがって、そのような関数への入力として使用されるデータ型オブジェクトへの参照を所有している必要があります。</target>
         </trans-unit>
         <trans-unit id="b15d5f87e12104d07e12104f29fa0201983c667c" translate="yes" xml:space="preserve">
           <source>Data-type of returned array.</source>
@@ -3293,7 +3293,7 @@
         </trans-unit>
         <trans-unit id="39073b2fd3057c7b3b9a07d35e36e49c334d3ebb" translate="yes" xml:space="preserve">
           <source>Data-type of the output mask. By default, the output mask has a dtype of MaskType (bool). If the dtype is flexible, each field has a boolean dtype. This is ignored when &lt;code&gt;m&lt;/code&gt; is &lt;code&gt;nomask&lt;/code&gt;, in which case &lt;code&gt;nomask&lt;/code&gt; is always returned.</source>
-          <target state="translated">出力マスクのデータ型。デフォルトでは、出力マスクのdtypeはMaskType（bool）です。dtypeが柔軟な場合、各フィールドにはブール型のdtypeがあります。 &lt;code&gt;m&lt;/code&gt; が &lt;code&gt;nomask&lt;/code&gt; の場合、これは無視されます。その場合、常に &lt;code&gt;nomask&lt;/code&gt; が返されます。</target>
+          <target state="translated">出力マスクのデータ型。デフォルトでは、出力マスクのdtypeはMaskType（bool）です。dtypeが柔軟な場合、各フィールドにはブール型のdtypeがあります。 &lt;code&gt;m&lt;/code&gt; が &lt;code&gt;nomask&lt;/code&gt; の場合、これは無視されます。この場合、常に &lt;code&gt;nomask&lt;/code&gt; が返されます。</target>
         </trans-unit>
         <trans-unit id="51e15f46df8957d190b0e9a32edbef5e443c1138" translate="yes" xml:space="preserve">
           <source>Data-type of the output matrix.</source>
@@ -3389,11 +3389,11 @@
         </trans-unit>
         <trans-unit id="51531cc702406b6c9763cc42d8bdd8ad26a43c0f" translate="yes" xml:space="preserve">
           <source>Datetimes are always stored based on POSIX time (though having a TAI mode which allows for accounting of leap-seconds is proposed), with an epoch of 1970-01-01T00:00Z. This means the supported dates are always a symmetric interval around the epoch, called &amp;ldquo;time span&amp;rdquo; in the table below.</source>
-          <target state="translated">日時は常にPOSIX時間に基づいて格納されます（うるう秒の計算を可能にするTAIモードを提案しています）、1970-01-01T00：00Zのエポック。これは、サポートされる日付が常にエポックを中心とする対称的な間隔であることを意味し、以下の表では「期間」と呼ばれます。</target>
+          <target state="translated">日時は常にPOSIX時間に基づいて格納されます（うるう秒の計算を可能にするTAIモードを提案しています）、エポックは1970-01-01T00：00Zです。つまり、サポートされる日付は常に、エポックを中心とした対称的な間隔であり、以下の表では「期間」と呼ばれます。</target>
         </trans-unit>
         <trans-unit id="122763cb7427afdd4c15e276fdc1c80b3815094a" translate="yes" xml:space="preserve">
           <source>David McKay, &amp;ldquo;Information Theory, Inference and Learning Algorithms,&amp;rdquo; chapter 23, &lt;a href=&quot;http://www.inference.org.uk/mackay/itila/&quot;&gt;http://www.inference.org.uk/mackay/itila/&lt;/a&gt;</source>
-          <target state="translated">David McKay、「Information Theory、Inference and Learning Algorithms」の第23章、&lt;a href=&quot;http://www.inference.org.uk/mackay/itila/&quot;&gt;http：//www.inference.org.uk/mackay/itila/&lt;/a&gt;</target>
+          <target state="translated">デビッドマッケイ、「情報理論、推論および学習アルゴリズム」、第23章、&lt;a href=&quot;http://www.inference.org.uk/mackay/itila/&quot;&gt;http：//www.inference.org.uk/mackay/itila/&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="812d36d79a90e882bd2e8eae368ea14f78ae3b09" translate="yes" xml:space="preserve">
           <source>Dealing with types</source>
@@ -3409,7 +3409,7 @@
         </trans-unit>
         <trans-unit id="1111acbc77e1b6bc2fd9153a83aaaa3e388ca65d" translate="yes" xml:space="preserve">
           <source>Deciding what case applies, checking broadcasting, and determining the kind of transposition needed are all done in &lt;code&gt;PyArray_MapIterNew&lt;/code&gt;. After setting up, there are two cases. If there is no subarray or it only has one element, no subarray iteration is necessary and an iterator is prepared which iterates all indexing arrays &lt;em&gt;as well as&lt;/em&gt; the result or value array. If there is a subarray, there are three iterators prepared. One for the indexing arrays, one for the result or value array (minus its subarray), and one for the subarrays of the original and the result/assignment array. The first two iterators give (or allow calculation) of the pointers into the start of the subarray, which then allows to restart the subarray iteration.</source>
-          <target state="translated">適用するケースの決定、ブロードキャストのチェック、必要な転置の種類の決定はすべて &lt;code&gt;PyArray_MapIterNew&lt;/code&gt; で行われます。セットアップ後、2つのケースがあります。サブ配列がないか、要素が1つしかない場合、サブ配列の反復は不要であり、すべてのインデックス配列&lt;em&gt;と&lt;/em&gt;結果または値の配列を反復する反復子が準備されます。サブアレイがある場合は、3つの反復子が用意されています。 1つはインデックス配列、もう1つは結果配列または値配列（サブ配列を除く）、および1つは元の配列と結果/割り当て配列のサブ配列です。最初の2つの反復子は、サブアレイの先頭へのポインターを提供（または計算を許可）し、サブアレイの反復を再開できるようにします。</target>
+          <target state="translated">適用されるケースの決定、ブロードキャストのチェック、必要な転置の種類の決定はすべて &lt;code&gt;PyArray_MapIterNew&lt;/code&gt; で行われます。セットアップ後、2つのケースがあります。サブ配列がないか、要素が1つしかない場合、サブ配列の反復は不要であり、すべてのインデックス配列&lt;em&gt;と&lt;/em&gt;結果または値の配列を反復する反復子が準備されます。サブアレイがある場合は、3つの反復子が用意されています。 1つはインデックス配列、もう1つは結果配列または値配列（そのサブ配列を除く）、および1つは元の配列と結果/割り当て配列のサブ配列です。最初の2つの反復子は、サブアレイの先頭へのポインターを提供（または計算を許可）して、サブアレイの反復を再開できるようにします。</target>
         </trans-unit>
         <trans-unit id="d9516fdc9c7eef205e499da4e7ec3cede5ceb388" translate="yes" xml:space="preserve">
           <source>Decimal characters include digit characters, and all characters that that can be used to form decimal-radix numbers, e.g. &lt;code&gt;U+0660, ARABIC-INDIC DIGIT ZERO&lt;/code&gt;.</source>
@@ -3429,7 +3429,7 @@
         </trans-unit>
         <trans-unit id="e07b2c2e1e25e79a86c68698117e4cba4b32238d" translate="yes" xml:space="preserve">
           <source>Decorator which, when applied to a function, causes SkipTest to be raised when &lt;code&gt;skip_condition&lt;/code&gt; is True, and the function to be called normally otherwise.</source>
-          <target state="translated">関数に適用されると、 &lt;code&gt;skip_condition&lt;/code&gt; がTrueの場合にSkipTestが発生し、それ以外の場合は関数が通常どおり呼び出されるデコレーター。</target>
+          <target state="translated">関数に適用すると、 &lt;code&gt;skip_condition&lt;/code&gt; がTrueの場合にSkipTestが発生し、それ以外の場合は関数が通常どおり呼び出されるデコレーター。</target>
         </trans-unit>
         <trans-unit id="adc746be3b00936c8c3a3472b3e3078c3a4656a5" translate="yes" xml:space="preserve">
           <source>Decorator, which, when applied to a function, causes KnownFailureException to be raised when &lt;code&gt;fail_condition&lt;/code&gt; is True, and the function to be called normally otherwise.</source>
@@ -3461,7 +3461,7 @@
         </trans-unit>
         <trans-unit id="b9ce70b65cf5b4dc82412d7768f94d53c38cac38" translate="yes" xml:space="preserve">
           <source>Default is &lt;code&gt;False&lt;/code&gt;. If &lt;code&gt;True&lt;/code&gt;, the tuple (&lt;a href=&quot;#numpy.average&quot;&gt;&lt;code&gt;average&lt;/code&gt;&lt;/a&gt;, &lt;code&gt;sum_of_weights&lt;/code&gt;) is returned, otherwise only the average is returned. If &lt;code&gt;weights=None&lt;/code&gt;, &lt;code&gt;sum_of_weights&lt;/code&gt; is equivalent to the number of elements over which the average is taken.</source>
-          <target state="translated">デフォルトは &lt;code&gt;False&lt;/code&gt; です。場合は &lt;code&gt;True&lt;/code&gt; 、タプル（&lt;a href=&quot;#numpy.average&quot;&gt; &lt;code&gt;average&lt;/code&gt; &lt;/a&gt;、 &lt;code&gt;sum_of_weights&lt;/code&gt; は）そうでない場合のみ、平均値が返され、返されます。 &lt;code&gt;weights=None&lt;/code&gt; の場合、 &lt;code&gt;sum_of_weights&lt;/code&gt; は、平均がとられる要素の数に相当します。</target>
+          <target state="translated">デフォルトは &lt;code&gt;False&lt;/code&gt; です。場合は &lt;code&gt;True&lt;/code&gt; 、タプル（&lt;a href=&quot;#numpy.average&quot;&gt; &lt;code&gt;average&lt;/code&gt; &lt;/a&gt;、 &lt;code&gt;sum_of_weights&lt;/code&gt; は）そうでない場合のみ、平均値が返され、返されます。 &lt;code&gt;weights=None&lt;/code&gt; の場合、 &lt;code&gt;sum_of_weights&lt;/code&gt; は、平均がとられる要素の数と同じです。</target>
         </trans-unit>
         <trans-unit id="6fafe55b73fa98b695385282c370b435d27e1633" translate="yes" xml:space="preserve">
           <source>Default is &lt;code&gt;None&lt;/code&gt;, to use the entire axis.</source>
@@ -3473,7 +3473,7 @@
         </trans-unit>
         <trans-unit id="966299221cc27c9aaada9018f864b33036434b1d" translate="yes" xml:space="preserve">
           <source>Default normalization (False) is by &lt;code&gt;(N - 1)&lt;/code&gt;, where &lt;code&gt;N&lt;/code&gt; is the number of observations given (unbiased estimate). If &lt;code&gt;bias&lt;/code&gt; is True, then normalization is by &lt;code&gt;N&lt;/code&gt;. These values can be overridden by using the keyword &lt;code&gt;ddof&lt;/code&gt; in numpy versions &amp;gt;= 1.5.</source>
-          <target state="translated">デフォルトの正規化（False）は &lt;code&gt;(N - 1)&lt;/code&gt; 。ここで、 &lt;code&gt;N&lt;/code&gt; は指定された観測値（バイアスのない推定値）の数です。場合は &lt;code&gt;bias&lt;/code&gt; Trueの場合、正規化はである &lt;code&gt;N&lt;/code&gt; 。これらの値は、numpyバージョン&amp;gt; = 1.5でキーワード &lt;code&gt;ddof&lt;/code&gt; を使用して上書きできます。</target>
+          <target state="translated">デフォルトの正規化（False）は &lt;code&gt;(N - 1)&lt;/code&gt; 。ここで、 &lt;code&gt;N&lt;/code&gt; は指定された観測値（偏りのない推定）の数です。場合は &lt;code&gt;bias&lt;/code&gt; Trueの場合、正規化はである &lt;code&gt;N&lt;/code&gt; 。これらの値は、numpyバージョン&amp;gt; = 1.5でキーワード &lt;code&gt;ddof&lt;/code&gt; を使用して上書きできます。</target>
         </trans-unit>
         <trans-unit id="90d359fa1c07cc7df5b917d7e3f5d34c57ec0aae" translate="yes" xml:space="preserve">
           <source>Default normalization (False) is by &lt;code&gt;(N-1)&lt;/code&gt;, where &lt;code&gt;N&lt;/code&gt; is the number of observations given (unbiased estimate). If &lt;code&gt;bias&lt;/code&gt; is True, then normalization is by &lt;code&gt;N&lt;/code&gt;. This keyword can be overridden by the keyword &lt;code&gt;ddof&lt;/code&gt; in numpy versions &amp;gt;= 1.5.</source>
@@ -3501,7 +3501,7 @@
         </trans-unit>
         <trans-unit id="2b3e0f5011c5a7820f042e8646d3807526feef63" translate="yes" xml:space="preserve">
           <source>Define a vectorized function which takes a nested sequence of objects or numpy arrays as inputs and returns a single numpy array or a tuple of numpy arrays. The vectorized function evaluates &lt;code&gt;pyfunc&lt;/code&gt; over successive tuples of the input arrays like the python map function, except it uses the broadcasting rules of numpy.</source>
-          <target state="translated">入れ子になったオブジェクトのシーケンスまたはnumpy配列を入力として受け取り、単一のnumpy配列またはnumpy配列のタプルを返すベクトル化された関数を定義します。ベクトル化された関数は、numpyのブロードキャストルールを使用することを除いて、python map関数と同様に、入力配列の連続するタプルに対して &lt;code&gt;pyfunc&lt;/code&gt; を評価します。</target>
+          <target state="translated">オブジェクトのネストされたシーケンスまたはnumpy配列を入力として受け取り、単一のnumpy配列またはnumpy配列のタプルを返すベクトル化された関数を定義します。ベクトル化された関数は、numpyのブロードキャストルールを使用することを除いて、python map関数と同様に、入力配列の連続するタプルに対して &lt;code&gt;pyfunc&lt;/code&gt; を評価します。</target>
         </trans-unit>
         <trans-unit id="61505cbdb5cf52ffbc6a8bf8b8f8af1217631a20" translate="yes" xml:space="preserve">
           <source>Define the absolute value, which is &lt;code&gt;-x&lt;/code&gt; for &lt;code&gt;x &amp;lt;0&lt;/code&gt; and &lt;code&gt;x&lt;/code&gt; for &lt;code&gt;x &amp;gt;= 0&lt;/code&gt;.</source>
@@ -3533,7 +3533,7 @@
         </trans-unit>
         <trans-unit id="ba198b982dcf4bd0cea8ecc26bd1efeae5fde285" translate="yes" xml:space="preserve">
           <source>Defined to be the number of sorts. It is fixed at three by the need for backwards compatibility, and consequently &lt;code&gt;NPY_MERGESORT&lt;/code&gt; and &lt;code&gt;NPY_STABLESORT&lt;/code&gt; are aliased to each other and may refer to one of several stable sorting algorithms depending on the data type.</source>
-          <target state="translated">ソート数として定義されます。後方互換性の必要性により3に固定されているため、 &lt;code&gt;NPY_MERGESORT&lt;/code&gt; と &lt;code&gt;NPY_STABLESORT&lt;/code&gt; は相互にエイリアスされ、データ型に応じていくつかの安定したソートアルゴリズムの1つを参照する場合があります。</target>
+          <target state="translated">ソート数として定義されます。これは、下位互換性の必要性により3に固定されているため、 &lt;code&gt;NPY_MERGESORT&lt;/code&gt; と &lt;code&gt;NPY_STABLESORT&lt;/code&gt; は相互にエイリアスされ、データ型に応じていくつかの安定したソートアルゴリズムの1つを参照する場合があります。</target>
         </trans-unit>
         <trans-unit id="0c2126c80b6518c66a9593fe462e64cc5a15f601" translate="yes" xml:space="preserve">
           <source>Defines</source>
@@ -3545,7 +3545,7 @@
         </trans-unit>
         <trans-unit id="45bcbf15eef8b7f89c50a8bf22d703e07ba3a825" translate="yes" xml:space="preserve">
           <source>Defining an &lt;a href=&quot;#c.NpyAuxData&quot;&gt;&lt;code&gt;NpyAuxData&lt;/code&gt;&lt;/a&gt; is similar to defining a class in C++, but the object semantics have to be tracked manually since the API is in C. Here&amp;rsquo;s an example for a function which doubles up an element using an element copier function as a primitive.:</source>
-          <target state="translated">&lt;a href=&quot;#c.NpyAuxData&quot;&gt; &lt;code&gt;NpyAuxData&lt;/code&gt; の&lt;/a&gt;定義はC ++でのクラスの定義に似ていますが、APIがCであるため、オブジェクトのセマンティクスを手動で追跡する必要があります。要素のコピー機能をプリミティブとして使用して要素を2倍にする関数の例を次に示します。</target>
+          <target state="translated">定義&lt;a href=&quot;#c.NpyAuxData&quot;&gt; &lt;code&gt;NpyAuxData&lt;/code&gt; は&lt;/a&gt; C ++でクラスを定義することに似ているが、APIがCであるので、オブジェクトのセマンティクスを手動で追跡しなければならない。ここでプリミティブとして素子コピー機能を使用して要素を倍増機能のための例です：</target>
         </trans-unit>
         <trans-unit id="8834c54a1246a67dbc0ecb790c071b10a7e3b66b" translate="yes" xml:space="preserve">
           <source>Defining new types</source>
@@ -3565,7 +3565,7 @@
         </trans-unit>
         <trans-unit id="9184d3e4687563972d72b163e489c6c843a31654" translate="yes" xml:space="preserve">
           <source>Degree of the basis polynomial for the series. Must be &amp;gt;= 0.</source>
-          <target state="translated">系列の基底多項式の次数。0以上でなければなりません。</target>
+          <target state="translated">シリーズの基底多項式の次数。0以上でなければなりません。</target>
         </trans-unit>
         <trans-unit id="16c78a8e8f95308316ca05a4c6f57586f7f58e4d" translate="yes" xml:space="preserve">
           <source>Degree of the fitting polynomial</source>
@@ -3585,11 +3585,11 @@
         </trans-unit>
         <trans-unit id="a6aec0c27c1647ddafe05683c8d4b8074b12d8ab" translate="yes" xml:space="preserve">
           <source>Degree(s) of the fitting polynomials. If &lt;code&gt;deg&lt;/code&gt; is a single integer all terms up to and including the &lt;code&gt;deg&lt;/code&gt;&amp;rsquo;th term are included in the fit. For NumPy versions &amp;gt;= 1.11.0 a list of integers specifying the degrees of the terms to include may be used instead.</source>
-          <target state="translated">フィッティング多項式の次数。場合 &lt;code&gt;deg&lt;/code&gt; 、単一の整数までを含むすべての用語 &lt;code&gt;deg&lt;/code&gt; 番目の用語は、フィット感に含まれています。NumPyバージョン1.11.0以上の場合、代わりに、含める用語の次数を指定する整数のリストを使用できます。</target>
+          <target state="translated">近似多項式の次数。場合 &lt;code&gt;deg&lt;/code&gt; 、単一の整数までを含むすべての用語 &lt;code&gt;deg&lt;/code&gt; 番目の用語は、フィット感に含まれています。NumPyバージョン&amp;gt; = 1.11.0の場合、含める用語の次数を指定する整数のリストを代わりに使用できます。</target>
         </trans-unit>
         <trans-unit id="4678dad6fdcb23005370fe1fca044a896edcd5e9" translate="yes" xml:space="preserve">
           <source>Degree(s) of the fitting polynomials. If &lt;code&gt;deg&lt;/code&gt; is a single integer, all terms up to and including the &lt;code&gt;deg&lt;/code&gt;&amp;rsquo;th term are included in the fit. For NumPy versions &amp;gt;= 1.11.0 a list of integers specifying the degrees of the terms to include may be used instead.</source>
-          <target state="translated">フィッティング多項式の次数。場合 &lt;code&gt;deg&lt;/code&gt; 、単一の整数である、までを含むすべての用語 &lt;code&gt;deg&lt;/code&gt; 番目の用語は、フィット感に含まれています。NumPyバージョン1.11.0以上の場合、代わりに、含める用語の次数を指定する整数のリストを使用できます。</target>
+          <target state="translated">近似多項式の次数。 &lt;code&gt;deg&lt;/code&gt; が単一の整数の場合、 &lt;code&gt;deg&lt;/code&gt; 番目の項までのすべての項が近似に含まれます。NumPyバージョン&amp;gt; = 1.11.0の場合、含める用語の次数を指定する整数のリストを代わりに使用できます。</target>
         </trans-unit>
         <trans-unit id="2de0696584be15bbb43013a1abc8390fb59e0b4c" translate="yes" xml:space="preserve">
           <source>Degrees of freedom in denominator, must be &amp;gt; 0.</source>
@@ -3661,11 +3661,11 @@
         </trans-unit>
         <trans-unit id="229727d5d807915b35e3a79a88f55c01627e95f0" translate="yes" xml:space="preserve">
           <source>Deprecated since version 1.14: Passing &lt;code&gt;sep=''&lt;/code&gt;, the default, is deprecated since it will trigger the deprecated binary mode of this function. This mode interprets &lt;a href=&quot;https://docs.python.org/dev/library/string.html#module-string&quot;&gt;&lt;code&gt;string&lt;/code&gt;&lt;/a&gt; as binary bytes, rather than ASCII text with decimal numbers, an operation which is better spelt &lt;code&gt;frombuffer(string, dtype, count)&lt;/code&gt;. If &lt;a href=&quot;https://docs.python.org/dev/library/string.html#module-string&quot;&gt;&lt;code&gt;string&lt;/code&gt;&lt;/a&gt; contains unicode text, the binary mode of &lt;a href=&quot;#numpy.fromstring&quot;&gt;&lt;code&gt;fromstring&lt;/code&gt;&lt;/a&gt; will first encode it into bytes using either utf-8 (python 3) or the default encoding (python 2), neither of which produce sane results.</source>
-          <target state="translated">バージョン1.14以降非推奨：デフォルトの &lt;code&gt;sep=''&lt;/code&gt; を渡すと、この関数の非推奨のバイナリモードがトリガーされるため、非推奨です。このモードは、&lt;a href=&quot;https://docs.python.org/dev/library/string.html#module-string&quot;&gt; &lt;code&gt;string&lt;/code&gt; &lt;/a&gt;を10進数のASCIIテキストではなく、バイナリバイトとして解釈します。この操作は、 &lt;code&gt;frombuffer(string, dtype, count)&lt;/code&gt; より適切に記述されています。&lt;a href=&quot;https://docs.python.org/dev/library/string.html#module-string&quot;&gt; &lt;code&gt;string&lt;/code&gt; &lt;/a&gt;にUnicodeテキストが含まれている場合、&lt;a href=&quot;#numpy.fromstring&quot;&gt; &lt;code&gt;fromstring&lt;/code&gt; &lt;/a&gt;のバイナリモードは、最初にutf-8（python 3）またはデフォルトのエンコーディング（python 2）のいずれかを使用してそれをバイトにエンコードします。</target>
+          <target state="translated">バージョン1.14以降非推奨：デフォルトの &lt;code&gt;sep=''&lt;/code&gt; を渡すと、この関数の非推奨のバイナリモードがトリガーされるため、非推奨です。このモードは、&lt;a href=&quot;https://docs.python.org/dev/library/string.html#module-string&quot;&gt; &lt;code&gt;string&lt;/code&gt; &lt;/a&gt;を10進数のASCIIテキストではなく、バイナリバイトとして解釈します。この操作は、 &lt;code&gt;frombuffer(string, dtype, count)&lt;/code&gt; 方が適切です。&lt;a href=&quot;https://docs.python.org/dev/library/string.html#module-string&quot;&gt; &lt;code&gt;string&lt;/code&gt; &lt;/a&gt;にUnicodeテキストが含まれている場合、&lt;a href=&quot;#numpy.fromstring&quot;&gt; &lt;code&gt;fromstring&lt;/code&gt; &lt;/a&gt;のバイナリモードは、最初にutf-8（python 3）またはデフォルトのエンコーディング（python 2）のいずれかを使用してそれをバイトにエンコードします。</target>
         </trans-unit>
         <trans-unit id="dca5b7419ce0c6a33ee759ad9e3594c329bce938" translate="yes" xml:space="preserve">
           <source>Deprecated since version 1.15.0: In order to remain backward compatible with a common usage in Numeric, basic slicing is also initiated if the selection object is any non-ndarray and non-tuple sequence (such as a &lt;a href=&quot;https://docs.python.org/dev/library/stdtypes.html#list&quot;&gt;&lt;code&gt;list&lt;/code&gt;&lt;/a&gt;) containing &lt;a href=&quot;https://docs.python.org/dev/library/functions.html#slice&quot;&gt;&lt;code&gt;slice&lt;/code&gt;&lt;/a&gt; objects, the &lt;code&gt;Ellipsis&lt;/code&gt; object, or the &lt;a href=&quot;constants#numpy.newaxis&quot;&gt;&lt;code&gt;newaxis&lt;/code&gt;&lt;/a&gt; object, but not for integer arrays or other embedded sequences.</source>
-          <target state="translated">バージョン1.15.0以降非推奨：Numericの一般的な使用法との下位互換性を保つために、選択オブジェクトが&lt;a href=&quot;https://docs.python.org/dev/library/functions.html#slice&quot;&gt; &lt;code&gt;slice&lt;/code&gt; &lt;/a&gt;オブジェクトを含む非ndarrayおよび非タプルシーケンス（&lt;a href=&quot;https://docs.python.org/dev/library/stdtypes.html#list&quot;&gt; &lt;code&gt;list&lt;/code&gt; &lt;/a&gt;など）である場合も、基本的なスライスが開始されます。 &lt;code&gt;Ellipsis&lt;/code&gt; オブジェクト、または&lt;a href=&quot;constants#numpy.newaxis&quot;&gt; &lt;code&gt;newaxis&lt;/code&gt; の&lt;/a&gt;オブジェクトではなく、整数配列または他の埋め込まれた配列について。</target>
+          <target state="translated">バージョン1.15.0以降非推奨：Numericの一般的な使用法との下位互換性を維持するために、選択オブジェクトが&lt;a href=&quot;https://docs.python.org/dev/library/functions.html#slice&quot;&gt; &lt;code&gt;slice&lt;/code&gt; &lt;/a&gt;オブジェクトを含む非ndarrayおよび非タプルシーケンス（&lt;a href=&quot;https://docs.python.org/dev/library/stdtypes.html#list&quot;&gt; &lt;code&gt;list&lt;/code&gt; &lt;/a&gt;など）の場合、基本的なスライスも開始されます。 &lt;code&gt;Ellipsis&lt;/code&gt; オブジェクト、または&lt;a href=&quot;constants#numpy.newaxis&quot;&gt; &lt;code&gt;newaxis&lt;/code&gt; の&lt;/a&gt;オブジェクトではなく、整数配列または他の埋め込まれた配列について。</target>
         </trans-unit>
         <trans-unit id="c18d46be05f158f4a9f48a23fcafd55bc8ee7952" translate="yes" xml:space="preserve">
           <source>Deprecated since version 1.16.</source>
@@ -3677,7 +3677,7 @@
         </trans-unit>
         <trans-unit id="f3fc485c4dc97b2ed8df47cb88214775178f80c1" translate="yes" xml:space="preserve">
           <source>Deprecated since version 1.17: The output is currently marked so that if written to, a deprecation warning will be emitted. A future version will set the &lt;code&gt;writable&lt;/code&gt; flag False so writing to it will raise an error.</source>
-          <target state="translated">バージョン1.17以降非推奨：出力は現在マークされているため、書き込まれると非推奨警告が出力されます。将来のバージョンでは &lt;code&gt;writable&lt;/code&gt; フラグをFalseに設定するため、それに書き込むとエラーが発生します。</target>
+          <target state="translated">バージョン1.17以降非推奨：出力は現在マークされているため、書き込まれると非推奨の警告が発行されます。将来のバージョンでは &lt;code&gt;writable&lt;/code&gt; フラグをFalseに設定するため、書き込みを行うとエラーが発生します。</target>
         </trans-unit>
         <trans-unit id="26689b58bf759fcfedfe480ee292230f1eae7e85" translate="yes" xml:space="preserve">
           <source>Deprecated since version 1.6.0.</source>
@@ -3725,7 +3725,7 @@
         </trans-unit>
         <trans-unit id="f21ac6e26595def622d7f71a3b4db5b0d1d28b7c" translate="yes" xml:space="preserve">
           <source>Desired dtype of the result. All dtypes are determined by their name, i.e., &amp;lsquo;int64&amp;rsquo;, &amp;lsquo;int&amp;rsquo;, etc, so byteorder is not available and a specific precision may have different C types depending on the platform. The default value is &amp;lsquo;np.int&amp;rsquo;.</source>
-          <target state="translated">結果の望ましいdtype。すべてのdtypeはそれらの名前、つまり「int64」、「int」などによって決定されるため、バイトオーダーは使用できず、特定の精度はプラットフォームに応じて異なるC型を持っている可能性があります。デフォルト値は「np.int」です。</target>
+          <target state="translated">結果の望ましいdtype。すべてのdtypeは、それらの名前、つまり「int64」、「int」などによって決定されるため、バイトオーダーは使用できず、特定の精度は、プラットフォームによって異なるC型を持つ場合があります。デフォルト値は「np.int」です。</target>
         </trans-unit>
         <trans-unit id="d121e78f3074bde690535b07325dfb836a0267ba" translate="yes" xml:space="preserve">
           <source>Desired output data-type for the array, e.g, &lt;code&gt;numpy.int8&lt;/code&gt;. Default is &lt;code&gt;numpy.float64&lt;/code&gt;.</source>
@@ -3797,11 +3797,11 @@
         </trans-unit>
         <trans-unit id="6da721475fcf2ac096aa56aec4327be0c131e55d" translate="yes" xml:space="preserve">
           <source>Determines the data-type of the returned array and of the accumulator where the elements are summed. If dtype has the value None and &lt;code&gt;a&lt;/code&gt; is of integer type of precision less than the default integer precision, then the default integer precision is used. Otherwise, the precision is the same as that of &lt;code&gt;a&lt;/code&gt;.</source>
-          <target state="translated">返された配列と、要素が合計されるアキュムレータのデータ型を決定します。dtypeの値がNoneで、 &lt;code&gt;a&lt;/code&gt; がデフォルトの整数精度よりも小さい精度の整数型である場合、デフォルトの整数精度が使用されます。そうでなければ、精度はと同じです。 &lt;code&gt;a&lt;/code&gt;</target>
+          <target state="translated">返される配列と、要素が合計されるアキュムレータのデータ型を決定します。dtypeの値がNoneで、 &lt;code&gt;a&lt;/code&gt; がデフォルトの整数精度よりも小さい精度の整数型である場合、デフォルトの整数精度が使用されます。そうでなければ、精度はと同じです。 &lt;code&gt;a&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="4f0165b0ce28795b6a5c6c8a8e2bfad91d293d9b" translate="yes" xml:space="preserve">
           <source>Determines whether the array data should be viewed as in C (row-major) or FORTRAN (column-major) order.</source>
-          <target state="translated">配列データを C (行・メジャー)と FORTRAN (列・メジャー)のどちらの順序で表示するかを決定します。</target>
+          <target state="translated">配列データを C (行-メジャー)と FORTRAN (列-メジャー)のどちらの順序で表示するかを決定します。</target>
         </trans-unit>
         <trans-unit id="62fef4817f86a662507fdd128bbc1b9cb8b3cd5a" translate="yes" xml:space="preserve">
           <source>Determines whether the given object represents a scalar data-type.</source>
@@ -3849,7 +3849,7 @@
         </trans-unit>
         <trans-unit id="2272a7d3ef4499c2fba3286512459f06b9b8c4bb" translate="yes" xml:space="preserve">
           <source>Diagonal offset (see &lt;a href=&quot;numpy.tril#numpy.tril&quot;&gt;&lt;code&gt;tril&lt;/code&gt;&lt;/a&gt; for details).</source>
-          <target state="translated">対角オフセット（詳細については、&lt;a href=&quot;numpy.tril#numpy.tril&quot;&gt; &lt;code&gt;tril&lt;/code&gt; l&lt;/a&gt;を参照）。</target>
+          <target state="translated">対角オフセット（詳細については、&lt;a href=&quot;numpy.tril#numpy.tril&quot;&gt; &lt;code&gt;tril&lt;/code&gt; &lt;/a&gt;を参照）。</target>
         </trans-unit>
         <trans-unit id="bdb7019564c135f875fc4c3e6f917c80e9b077c0" translate="yes" xml:space="preserve">
           <source>Diagonal offset (see &lt;a href=&quot;numpy.triu#numpy.triu&quot;&gt;&lt;code&gt;triu&lt;/code&gt;&lt;/a&gt; for details).</source>
@@ -3873,7 +3873,7 @@
         </trans-unit>
         <trans-unit id="9e2413069148ff06bfc90db576c632870eaad55e" translate="yes" xml:space="preserve">
           <source>Dictionary of named fields defined for this data type, or &lt;code&gt;None&lt;/code&gt;.</source>
-          <target state="translated">このデータ型に定義されている名前付きフィールドの辞書、または &lt;code&gt;None&lt;/code&gt; 。</target>
+          <target state="translated">このデータ型に定義された名前付きフィールドの辞書、または &lt;code&gt;None&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="b18fcf6662ee91bcc267021a433a9c47b4716fe9" translate="yes" xml:space="preserve">
           <source>Difference (subtraction) of two polynomials.</source>
@@ -3893,7 +3893,7 @@
         </trans-unit>
         <trans-unit id="4300cd91f693489c6a5674ec8ec61a6dee25b189" translate="yes" xml:space="preserve">
           <source>Different &lt;a href=&quot;generated/numpy.ndarray#numpy.ndarray&quot;&gt;&lt;code&gt;ndarrays&lt;/code&gt;&lt;/a&gt; can share the same data, so that changes made in one &lt;a href=&quot;generated/numpy.ndarray#numpy.ndarray&quot;&gt;&lt;code&gt;ndarray&lt;/code&gt;&lt;/a&gt; may be visible in another. That is, an ndarray can be a &lt;em&gt;&amp;ldquo;view&amp;rdquo;&lt;/em&gt; to another ndarray, and the data it is referring to is taken care of by the &lt;em&gt;&amp;ldquo;base&amp;rdquo;&lt;/em&gt; ndarray. ndarrays can also be views to memory owned by Python &lt;a href=&quot;https://docs.python.org/dev/library/stdtypes.html#str&quot;&gt;&lt;code&gt;strings&lt;/code&gt;&lt;/a&gt; or objects implementing the &lt;code&gt;buffer&lt;/code&gt; or &lt;a href=&quot;arrays.interface#arrays-interface&quot;&gt;array&lt;/a&gt; interfaces.</source>
-          <target state="translated">異なる&lt;a href=&quot;generated/numpy.ndarray#numpy.ndarray&quot;&gt; &lt;code&gt;ndarrays&lt;/code&gt; &lt;/a&gt;が同じデータを共有できるため、ある&lt;a href=&quot;generated/numpy.ndarray#numpy.ndarray&quot;&gt; &lt;code&gt;ndarray&lt;/code&gt; で&lt;/a&gt;行われた変更が別のndarrayで表示される場合があります。つまり、ndarrayは別のndarrayの&lt;em&gt;「ビュー」&lt;/em&gt;になることができ、それが参照しているデータは&lt;em&gt;「ベース」の&lt;/em&gt; ndarray によって処理されます。ndarraysは、 &lt;code&gt;buffer&lt;/code&gt; または&lt;a href=&quot;arrays.interface#arrays-interface&quot;&gt;配列&lt;/a&gt;インターフェースを実装するPython &lt;a href=&quot;https://docs.python.org/dev/library/stdtypes.html#str&quot;&gt; &lt;code&gt;strings&lt;/code&gt; &lt;/a&gt;またはオブジェクトが所有するメモリのビューにすることもできます。</target>
+          <target state="translated">異なる&lt;a href=&quot;generated/numpy.ndarray#numpy.ndarray&quot;&gt; &lt;code&gt;ndarrays&lt;/code&gt; &lt;/a&gt;が同じデータを共有できるため、ある&lt;a href=&quot;generated/numpy.ndarray#numpy.ndarray&quot;&gt; &lt;code&gt;ndarray&lt;/code&gt; で&lt;/a&gt;行われた変更が別のndarrayで表示される場合があります。つまり、ndarrayは別のndarrayの&lt;em&gt;「ビュー」&lt;/em&gt;になることができ、それが参照しているデータは&lt;em&gt;「ベース」の&lt;/em&gt; ndarray によって処理されます。ndarraysは、Pythonの&lt;a href=&quot;https://docs.python.org/dev/library/stdtypes.html#str&quot;&gt; &lt;code&gt;strings&lt;/code&gt; &lt;/a&gt;が所有するメモリのビューや、 &lt;code&gt;buffer&lt;/code&gt; または&lt;a href=&quot;arrays.interface#arrays-interface&quot;&gt;配列の&lt;/a&gt;インターフェースを実装するオブジェクトにすることもできます。</target>
         </trans-unit>
         <trans-unit id="2d1293c185e75af6d69f6c98a33e894acc7589c9" translate="yes" xml:space="preserve">
           <source>Differentiate a Chebyshev series.</source>
@@ -3934,7 +3934,7 @@
         <trans-unit id="16b40f0ccd35ed9bc1f597c1b6ca359ab12da9c4" translate="yes" xml:space="preserve">
           <source>Dimension indices in a flattened form; indices of argument &lt;code&gt;k&lt;/code&gt; are stored in &lt;code&gt;core_dim_ixs[core_offsets[k] : core_offsets[k] +
 core_numdims[k]]&lt;/code&gt;</source>
-          <target state="translated">平坦化されたフォームのディメンションインデックス。引数 &lt;code&gt;k&lt;/code&gt; のインデックスは、 &lt;code&gt;core_dim_ixs[core_offsets[k] : core_offsets[k] + core_numdims[k]]&lt;/code&gt; 格納されます</target>
+          <target state="translated">平坦化された形式の次元インデックス。引数 &lt;code&gt;k&lt;/code&gt; のインデックスは、 &lt;code&gt;core_dim_ixs[core_offsets[k] : core_offsets[k] + core_numdims[k]]&lt;/code&gt; 格納されます</target>
         </trans-unit>
         <trans-unit id="4720f96f0dc9b13a80d3150f6ee99efe7a2bf618" translate="yes" xml:space="preserve">
           <source>Dimension lists for different arguments are separated by &lt;code&gt;&quot;,&quot;&lt;/code&gt;. Input/output arguments are separated by &lt;code&gt;&quot;-&amp;gt;&quot;&lt;/code&gt;.</source>
@@ -3966,7 +3966,7 @@ core_numdims[k]]&lt;/code&gt;</source>
         </trans-unit>
         <trans-unit id="e9cbd8c39929bc0b483e8db9cb22ad66356f9dd1" translate="yes" xml:space="preserve">
           <source>Discrete, linear convolution of &lt;code&gt;a&lt;/code&gt; and &lt;code&gt;v&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;a&lt;/code&gt; と &lt;code&gt;v&lt;/code&gt; の離散線形コンボリューション。</target>
+          <target state="translated">&lt;code&gt;a&lt;/code&gt; と &lt;code&gt;v&lt;/code&gt; の離散線形たたみ込み。</target>
         </trans-unit>
         <trans-unit id="2f1bd27e525549ac4c15b3721fa99d1b05468878" translate="yes" xml:space="preserve">
           <source>Discrete, linear convolution of two one-dimensional sequences.</source>

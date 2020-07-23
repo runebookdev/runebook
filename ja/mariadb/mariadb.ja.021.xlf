@@ -17,7 +17,7 @@
         </trans-unit>
         <trans-unit id="9993debce60ec227d1a771070d79989ad0b6974d" translate="yes" xml:space="preserve">
           <source>For each referenced sequence, DROP SEQUENCE drops a temporary sequence with that name, if it exists. If it does not exist, and the &lt;code&gt;TEMPORARY&lt;/code&gt; keyword is not used, it drops a non-temporary sequence with the same name, if it exists. The &lt;code&gt;TEMPORARY&lt;/code&gt; keyword ensures that a non-temporary sequence will not accidentally be dropped.</source>
-          <target state="translated">参照されるシーケンスごとに、DROP SEQUENCEはその名前の一時シーケンスが存在する場合、それを削除します。それが存在せず、 &lt;code&gt;TEMPORARY&lt;/code&gt; キーワードが使用されていない場合、同じ名前の非一時シーケンスが存在する場合はそれをドロップします。 &lt;code&gt;TEMPORARY&lt;/code&gt; 非一時的なシーケンスを誤って落とされないことキーワードを保証します。</target>
+          <target state="translated">参照されるシーケンスごとに、DROP SEQUENCEは、その名前の一時シーケンスが存在する場合、それを削除します。存在せず、 &lt;code&gt;TEMPORARY&lt;/code&gt; キーワードが使用されていない場合は、同じ名前の非一時シーケンスが存在する場合、それが削除されます。 &lt;code&gt;TEMPORARY&lt;/code&gt; 非一時的なシーケンスを誤って落とされないことキーワードを保証します。</target>
         </trans-unit>
         <trans-unit id="7378ec5ef2b3495f5f852835ddb9cdd04dee4b37" translate="yes" xml:space="preserve">
           <source>For each referenced table, &lt;code&gt;DROP TABLE&lt;/code&gt; drops a temporary table with that name, if it exists. If it does not exist, and the &lt;code&gt;TEMPORARY&lt;/code&gt; keyword is not used, it drops a non-temporary table with the same name, if it exists. The &lt;code&gt;TEMPORARY&lt;/code&gt; keyword ensures that a non-temporary table will not accidentally be dropped.</source>
@@ -25,7 +25,7 @@
         </trans-unit>
         <trans-unit id="fefb422397fca64d7ebff3859082e27ecaebae2b" translate="yes" xml:space="preserve">
           <source>For each refill of the join buffer and each record r1 from it the algorithm builds a hash table with the keys constructed over the values e1(r1),...en(r1). Then the records of t2 are looked through. For each record r2 from t2 that the condition pushed to the table t2 a hash key over the fields r2.f1,..., r2.fn is calculated to probe into the hash table. The probing returns those records from the buffer to which r2 matches. As for BNL join algorithm this algorithm scans the second operand as many time as many refills of the buffer occur. Yet it has to look only through the records of one bucket in the hash table when looking for the records to which a record from t2 matches, not through all records in the join buffer as BNL join algorithm does. The implementation of this algorithm in MariaDB builds the hash table with hash keys at the very end of the join buffer. That's why the number of records written into the buffer at one refill is less then for BNL join algorithms. However a much shorter list of possible matching candidates makes this the block hash join algorithm usually much faster then BNL join.</source>
-          <target state="translated">結合バッファの各リフィルとそこからの各レコードr1に対して、アルゴリズムは、値e1(r1),...en(r1)の上に構築されたキーを持つハッシュテーブルを構築します。その後、t2のレコードを調べます。条件がテーブルt2にプッシュされたt2の各レコードr2に対して、フィールドr2.f1,...,r2.fnのハッシュキーが計算され、ハッシュテーブルにプローブされます。プロービングは、r2がマッチするバッファからこれらのレコードを返します。BNL結合アルゴリズムと同様に、このアルゴリズムはバッファのリフィルの数だけ第二オペランドをスキャンします。しかし、BNL結合アルゴリズムのように結合バッファ内のすべてのレコードを検索するのではなく、t2からのレコードがマッチするレコードを探すときには、ハッシュテーブル内の1つのバケットのレコードのみを検索しなければなりません。MariaDBでのこのアルゴリズムの実装では、結合バッファの最後にハッシュキーを使ってハッシュテーブルを構築します。そのため、1回のリフィルでバッファに書き込まれるレコードの数は、BNL結合アルゴリズムよりも少なくなります。しかし、マッチする可能性のある候補のリストがはるかに短いため、ブロックハッシュ結合アルゴリズムは通常、BNL結合よりもはるかに速くなります。</target>
+          <target state="translated">結合バッファの各リフィルとそこからの各レコードr1に対して、アルゴリズムは、値e1(r1),...en(r1)の上に構築されたキーを持つハッシュテーブルを構築します。その後、t2のレコードを調べます。条件がテーブルt2にプッシュされたt2の各レコードr2に対して、フィールドr2.f1,...,r2.fnのハッシュキーが計算され、ハッシュテーブルにプローブされます。プロービングは、r2がマッチするバッファからこれらのレコードを返します。BNL結合アルゴリズムと同様に、このアルゴリズムは、バッファのリフィルの数だけ第二オペランドをスキャンします。しかし、BNL結合アルゴリズムのように結合バッファ内のすべてのレコードを検索するのではなく、t2からのレコードがマッチするレコードを探すときには、ハッシュテーブル内の1つのバケットのレコードのみを検索しなければなりません。MariaDBでのこのアルゴリズムの実装では、結合バッファの最後にハッシュキーを使ってハッシュテーブルを構築します。そのため、1回のリフィルでバッファに書き込まれるレコードの数は、BNL結合アルゴリズムよりも少なくなります。しかし、マッチする可能性のある候補のリストがはるかに短いため、ブロックハッシュ結合アルゴリズムは通常、BNL結合よりもはるかに速くなります。</target>
         </trans-unit>
         <trans-unit id="5b2eb091f59f96d56d819a92622b82740eb7279d" translate="yes" xml:space="preserve">
           <source>For each remaining incremental backup, repeat the last step to bring the base full backup into sync with the changes contained in that incremental backup.</source>
@@ -33,15 +33,15 @@
         </trans-unit>
         <trans-unit id="940dd5f5819c4bb2feeceb670060de99e1827ad2" translate="yes" xml:space="preserve">
           <source>For each replication domain, if the &lt;code&gt;&lt;a href=&quot;../replication-and-binary-log-system-variables/index#server_id&quot;&gt;server_id&lt;/a&gt;&lt;/code&gt; of the corresponding GTID in &lt;code&gt;&lt;a href=&quot;#gtid_binlog_pos&quot;&gt;gtid_binlog_pos&lt;/a&gt;&lt;/code&gt; is equal to the servers own &lt;code&gt;&lt;a href=&quot;../replication-and-binary-log-system-variables/index#server_id&quot;&gt;server_id&lt;/a&gt;&lt;/code&gt;, &lt;em&gt;and&lt;/em&gt; the sequence number is higher than the corresponding GTID in &lt;code&gt;&lt;a href=&quot;#gtid_slave_pos&quot;&gt;gtid_slave_pos&lt;/a&gt;&lt;/code&gt;, then the GTID from &lt;code&gt;&lt;a href=&quot;#gtid_binlog_pos&quot;&gt;gtid_binlog_pos&lt;/a&gt;&lt;/code&gt; will be used. Otherwise the GTID from &lt;code&gt;&lt;a href=&quot;#gtid_slave_pos&quot;&gt;gtid_slave_pos&lt;/a&gt;&lt;/code&gt; will be used for that domain.</source>
-          <target state="translated">場合、各複製ドメインについて、 &lt;code&gt;&lt;a href=&quot;../replication-and-binary-log-system-variables/index#server_id&quot;&gt;server_id&lt;/a&gt;&lt;/code&gt; に対応GTIDの &lt;code&gt;&lt;a href=&quot;#gtid_binlog_pos&quot;&gt;gtid_binlog_pos&lt;/a&gt;&lt;/code&gt; はサーバ自身に等しく &lt;code&gt;&lt;a href=&quot;../replication-and-binary-log-system-variables/index#server_id&quot;&gt;server_id&lt;/a&gt;&lt;/code&gt; 、&lt;em&gt;及び&lt;/em&gt;配列番号の対応するGTIDより高い &lt;code&gt;&lt;a href=&quot;#gtid_slave_pos&quot;&gt;gtid_slave_pos&lt;/a&gt;&lt;/code&gt; 、次いでからGTID &lt;code&gt;&lt;a href=&quot;#gtid_binlog_pos&quot;&gt;gtid_binlog_pos&lt;/a&gt;&lt;/code&gt; が使用されます。それ以外の場合、gtid_slave_posの &lt;code&gt;&lt;a href=&quot;#gtid_slave_pos&quot;&gt;gtid_slave_pos&lt;/a&gt;&lt;/code&gt; がそのドメインに使用されます。</target>
+          <target state="translated">場合、各複製ドメインについて、 &lt;code&gt;&lt;a href=&quot;../replication-and-binary-log-system-variables/index#server_id&quot;&gt;server_id&lt;/a&gt;&lt;/code&gt; に対応GTIDの &lt;code&gt;&lt;a href=&quot;#gtid_binlog_pos&quot;&gt;gtid_binlog_pos&lt;/a&gt;&lt;/code&gt; はサーバ自身に等しく &lt;code&gt;&lt;a href=&quot;../replication-and-binary-log-system-variables/index#server_id&quot;&gt;server_id&lt;/a&gt;&lt;/code&gt; 、&lt;em&gt;及び&lt;/em&gt;配列番号の対応するGTIDより高い &lt;code&gt;&lt;a href=&quot;#gtid_slave_pos&quot;&gt;gtid_slave_pos&lt;/a&gt;&lt;/code&gt; 、次いでからGTID &lt;code&gt;&lt;a href=&quot;#gtid_binlog_pos&quot;&gt;gtid_binlog_pos&lt;/a&gt;&lt;/code&gt; が使用されます。それ以外の場合、gtid_slave_posからの &lt;code&gt;&lt;a href=&quot;#gtid_slave_pos&quot;&gt;gtid_slave_pos&lt;/a&gt;&lt;/code&gt; がそのドメインに使用されます。</target>
         </trans-unit>
         <trans-unit id="1467618a5135648c8a450e9051aa0df9fafa1afa" translate="yes" xml:space="preserve">
           <source>For each table in the result-set, issue an &lt;code&gt;&lt;a href=&quot;../alter-table/index&quot;&gt;ALTER TABLE&lt;/a&gt;&lt;/code&gt; statement to rebuild the table.</source>
-          <target state="translated">結果セットのテーブルごとに、 &lt;code&gt;&lt;a href=&quot;../alter-table/index&quot;&gt;ALTER TABLE&lt;/a&gt;&lt;/code&gt; ステートメントを発行してテーブルを再構築します。</target>
+          <target state="translated">結果セット内の各テーブルについて、 &lt;code&gt;&lt;a href=&quot;../alter-table/index&quot;&gt;ALTER TABLE&lt;/a&gt;&lt;/code&gt; ステートメントを発行してテーブルを再構築します。</target>
         </trans-unit>
         <trans-unit id="22be9791ec23c12aee9c8cd60fa14ed6c6b9aae9" translate="yes" xml:space="preserve">
           <source>For each table in the result-set, issue an &lt;code&gt;&lt;a href=&quot;../alter-table/index&quot;&gt;ALTER TABLE&lt;/a&gt;&lt;/code&gt; statement, setting the &lt;code&gt;&lt;a href=&quot;../create-table/index#encrypted&quot;&gt;ENCRYPTED&lt;/a&gt;&lt;/code&gt; table option to &lt;code&gt;NO&lt;/code&gt;.</source>
-          <target state="translated">結果セットのテーブルごとに、 &lt;code&gt;&lt;a href=&quot;../alter-table/index&quot;&gt;ALTER TABLE&lt;/a&gt;&lt;/code&gt; ステートメントを発行し、 &lt;code&gt;&lt;a href=&quot;../create-table/index#encrypted&quot;&gt;ENCRYPTED&lt;/a&gt;&lt;/code&gt; テーブルオプションを &lt;code&gt;NO&lt;/code&gt; に設定します。</target>
+          <target state="translated">結果セット内の各テーブルについて、 &lt;code&gt;&lt;a href=&quot;../alter-table/index&quot;&gt;ALTER TABLE&lt;/a&gt;&lt;/code&gt; ステートメントを発行し、 &lt;code&gt;&lt;a href=&quot;../create-table/index#encrypted&quot;&gt;ENCRYPTED&lt;/a&gt;&lt;/code&gt; テーブルオプションを &lt;code&gt;NO&lt;/code&gt; に設定します。</target>
         </trans-unit>
         <trans-unit id="cc65a2f156211651778fd97316a94e383ee643ff" translate="yes" xml:space="preserve">
           <source>For each table level we remove expressions that have already been tested when we read the previous row. Example: When joining tables &lt;code&gt;t1&lt;/code&gt; with &lt;code&gt;t2&lt;/code&gt; using the following &lt;code&gt;WHERE 't1.a=1 and t1.a=t2.b'&lt;/code&gt;, we don't have to test &lt;code&gt;'t1.a=1'&lt;/code&gt; when checking rows in &lt;code&gt;t2&lt;/code&gt; as we already know that this expression is true.</source>
@@ -65,7 +65,7 @@
         </trans-unit>
         <trans-unit id="cf869762c7c79d99291d6eeff4ab6c3ae6cdadc0" translate="yes" xml:space="preserve">
           <source>For encryption with the InnoDB and XtraDB storage engines, see &lt;a href=&quot;../encrypting-data-for-innodb-xtradb/index&quot;&gt;Encrypting Data for InnoDB/XtraDB&lt;/a&gt;.</source>
-          <target state="translated">InnoDBおよびXtraDBストレージエンジンを使用した&lt;a href=&quot;../encrypting-data-for-innodb-xtradb/index&quot;&gt;暗号化&lt;/a&gt;については、「InnoDB / XtraDBのデータの暗号化」を参照してください。</target>
+          <target state="translated">InnoDBおよびXtraDBストレージエンジンを使用した&lt;a href=&quot;../encrypting-data-for-innodb-xtradb/index&quot;&gt;暗号化については、InnoDB / XtraDBのデータの暗号化を&lt;/a&gt;ご覧ください。</target>
         </trans-unit>
         <trans-unit id="a1b895cdaf1231d04c5260cba77ddff0d0c84e41" translate="yes" xml:space="preserve">
           <source>For end of block: Ditto. The record containing this will be 'adjacent' to the other record.</source>
@@ -97,7 +97,7 @@
         </trans-unit>
         <trans-unit id="133cb4c77fe1f90393515893ede5634a3809b81a" translate="yes" xml:space="preserve">
           <source>For every test or include file &lt;code&gt;somefile.test&lt;/code&gt; or &lt;code&gt;somefile.inc&lt;/code&gt;, mtr will look for &lt;code&gt;somefile.opt&lt;/code&gt;, &lt;code&gt;somefile-master.opt&lt;/code&gt; and &lt;code&gt;somefile-slave.opt&lt;/code&gt;. These files have exactly the same syntax as the &lt;code&gt;suite.opt&lt;/code&gt; above. Options from these files will also be added to the server command line (all servers started for this test, only master, or only slave respectively) for all affected tests, for example, for all tests that include &lt;code&gt;somefile.inc&lt;/code&gt; directly or indirectly.</source>
-          <target state="translated">すべてのテストまたはインクルードファイル &lt;code&gt;somefile.test&lt;/code&gt; または &lt;code&gt;somefile.inc&lt;/code&gt; について、mtrは &lt;code&gt;somefile.opt&lt;/code&gt; 、 &lt;code&gt;somefile-master.opt&lt;/code&gt; および &lt;code&gt;somefile-slave.opt&lt;/code&gt; を探します。これらのファイルの構文は、上記の &lt;code&gt;suite.opt&lt;/code&gt; とまったく同じです。これらのファイルのオプションは、影響を受けるすべてのテスト（たとえば、 &lt;code&gt;somefile.inc&lt;/code&gt; を直接または間接的に含むすべてのテスト）のサーバーコマンドライン（このテストで開始されたすべてのサーバー、それぞれマスターのみ、またはスレーブのみ）にも追加されます。</target>
+          <target state="translated">すべてのテストまたはインクルードファイル &lt;code&gt;somefile.test&lt;/code&gt; または &lt;code&gt;somefile.inc&lt;/code&gt; について、mtrは &lt;code&gt;somefile.opt&lt;/code&gt; 、 &lt;code&gt;somefile-master.opt&lt;/code&gt; 、 &lt;code&gt;somefile-slave.opt&lt;/code&gt; を探します。これらのファイルの構文は、上記の &lt;code&gt;suite.opt&lt;/code&gt; とまったく同じです。これらのファイルのオプションは、影響を受けるすべてのテスト（たとえば、 &lt;code&gt;somefile.inc&lt;/code&gt; を直接または間接的に含むすべてのテスト）のサーバーコマンドライン（このテストで起動したすべてのサーバー、それぞれマスターのみ、またはスレーブのみ）にも追加されます。</target>
         </trans-unit>
         <trans-unit id="cb22f5f5985187719e7526ab997d4362f8f40e63" translate="yes" xml:space="preserve">
           <source>For example if you define a table as:</source>
@@ -117,7 +117,7 @@
         </trans-unit>
         <trans-unit id="968f8e94d1ca7e393a5188cd52806401b9a5ca2d" translate="yes" xml:space="preserve">
           <source>For example, &lt;a href=&quot;https://jira.mariadb.org/browse/MDEV-16509&quot;&gt;MDEV-16509&lt;/a&gt; describes performance problems where &lt;a href=&quot;../galera-cluster/index&quot;&gt;MariaDB Galera Cluster&lt;/a&gt; actually performs better when the &lt;a href=&quot;../binary-log/index&quot;&gt;binary log&lt;/a&gt; is enabled. It is possible that this is caused by the fact that MariaDB is forced to use the memory-mapped file-based transaction coordinator log in this case, which may not perform as well.</source>
-          <target state="translated">たとえば、&lt;a href=&quot;https://jira.mariadb.org/browse/MDEV-16509&quot;&gt;MDEV-16509&lt;/a&gt;は、&lt;a href=&quot;../binary-log/index&quot;&gt;バイナリログ&lt;/a&gt;が有効になっている場合、&lt;a href=&quot;../galera-cluster/index&quot;&gt;MariaDB Galera Clusterが&lt;/a&gt;実際にパフォーマンスを向上させるパフォーマンスの問題を説明しています。これは、この場合、MariaDBがメモリマップされたファイルベースのトランザクションコーディネーターログを使用するように強制されているために発生する可能性があり、パフォーマンスも低下する可能性があります。</target>
+          <target state="translated">たとえば、&lt;a href=&quot;https://jira.mariadb.org/browse/MDEV-16509&quot;&gt;MDEV-16509&lt;/a&gt;は、&lt;a href=&quot;../binary-log/index&quot;&gt;バイナリログ&lt;/a&gt;が有効になっている場合、&lt;a href=&quot;../galera-cluster/index&quot;&gt;MariaDB Galera Clusterが&lt;/a&gt;実際にパフォーマンスを向上させるパフォーマンスの問題を説明しています。これは、MariaDBがメモリマップされたファイルベースのトランザクションコーディネーターログを使用するように強制されているために発生する可能性があります。</target>
         </trans-unit>
         <trans-unit id="566f77624c8f5d5d9de3034d97779277fc5079f6" translate="yes" xml:space="preserve">
           <source>For example, &lt;code&gt;(?im)&lt;/code&gt; sets case insensitive multiline matching.</source>
@@ -169,7 +169,7 @@
         </trans-unit>
         <trans-unit id="1d6dce84029195fc6202f14be656aab9d0fcf687" translate="yes" xml:space="preserve">
           <source>For example, for the &lt;code&gt;&lt;a href=&quot;../authentication-plugin-mysql_native_password/index&quot;&gt;mysql_native_password&lt;/a&gt;&lt;/code&gt; authentication plugin, the authentication string should be a password hash:</source>
-          <target state="translated">たとえば、 &lt;code&gt;&lt;a href=&quot;../authentication-plugin-mysql_native_password/index&quot;&gt;mysql_native_password&lt;/a&gt;&lt;/code&gt; 認証プラグインの場合、認証文字列はパスワードハッシュである必要があります。</target>
+          <target state="translated">たとえば、 &lt;code&gt;&lt;a href=&quot;../authentication-plugin-mysql_native_password/index&quot;&gt;mysql_native_password&lt;/a&gt;&lt;/code&gt; 認証プラグインの場合、認証文字列はパスワードハッシュにする必要があります。</target>
         </trans-unit>
         <trans-unit id="73d94768f48306f6629255ba404dddb873c7620c" translate="yes" xml:space="preserve">
           <source>For example, given the following data:</source>
@@ -185,7 +185,7 @@
         </trans-unit>
         <trans-unit id="b53112493e26005ee314ec8ce0834fa21a660165" translate="yes" xml:space="preserve">
           <source>For example, here is a minimal PAM service configuration file that performs simple password authentication with UNIX passwords:</source>
-          <target state="translated">例えば、ここでは、UNIX パスワードで簡単なパスワード認証を行う最小限の PAM サービス設定ファイルを紹介します。</target>
+          <target state="translated">例えば、ここでは、UNIX パスワードで簡単なパスワード認証を行う最小限の PAM サービス設定ファイルを示します。</target>
         </trans-unit>
         <trans-unit id="e4ff1c96c4184a5c733e3e3f74b48b1205798423" translate="yes" xml:space="preserve">
           <source>For example, here is an example &lt;code&gt;/etc/security/user_map.conf&lt;/code&gt;:</source>
@@ -209,7 +209,7 @@
         </trans-unit>
         <trans-unit id="235a5ce821acc177b2f9ed049509e700446f5659" translate="yes" xml:space="preserve">
           <source>For example, if a user wanted to add a column to a table, but only if the operation used an algorithm that is at least as efficient as the &lt;code&gt;INPLACE&lt;/code&gt;, then they could execute the following:</source>
-          <target state="translated">たとえば、ユーザーが列をテーブルに追加したいが、操作が少なくとも &lt;code&gt;INPLACE&lt;/code&gt; と同じくらい効率的なアルゴリズムを使用した場合のみ、次を実行できます。</target>
+          <target state="translated">たとえば、ユーザーが列をテーブルに追加したいが、操作が少なくとも &lt;code&gt;INPLACE&lt;/code&gt; と同じくらい効率的なアルゴリズムを使用した場合のみ、次のように実行できます。</target>
         </trans-unit>
         <trans-unit id="5a038dff2c3d0dba27a2ca3204bdfac7d81d4113" translate="yes" xml:space="preserve">
           <source>For example, if a user wanted to add a column to a table, but they wanted to use the &lt;code&gt;COPY&lt;/code&gt; algorithm instead of the default algorithm for the operation, then they could execute the following:</source>
@@ -269,7 +269,7 @@
         </trans-unit>
         <trans-unit id="61388f9c91fc132c7e7d0f8432a5bcc9058fc946" translate="yes" xml:space="preserve">
           <source>For example, if you try to &lt;a href=&quot;../select/index&quot;&gt;SELECT&lt;/a&gt; from a table which does not exist, a 1109 error is produced, with a '42S02' SQLSTATE. '42' is the class and 'S02' is the subclass. This value matches to the SQLEXCEPTION keyword. When FETCH is called for a &lt;a href=&quot;../programmatic-and-compound-statements-cursors/index&quot;&gt;cursor&lt;/a&gt; which has already reached the end, a 1329 error is produced, with a '02000' SQLSTATE. The class is '02' and there is no subclass (because '000' means 'no subclass'). It can be handled by a NOT FOUND handlers.</source>
-          <target state="translated">たとえば、存在しないテーブルから&lt;a href=&quot;../select/index&quot;&gt;SELECT&lt;/a&gt;しようとすると、1109エラーが発生し、SQLSTATEは '42S02'になります。「42」はクラスで、「S02」はサブクラスです。この値は、SQLEXCEPTIONキーワードと一致します。すでに最後に達している&lt;a href=&quot;../programmatic-and-compound-statements-cursors/index&quot;&gt;カーソル&lt;/a&gt;に対してFETCHが呼び出されると、1329エラーが生成され、SQLSTATEは「02000」になります。クラスは '02'であり、サブクラスはありません（ '000'は 'サブクラスなし'を意味するため）。NOT FOUNDハンドラーで処理できます。</target>
+          <target state="translated">たとえば、存在しないテーブルから&lt;a href=&quot;../select/index&quot;&gt;SELECT&lt;/a&gt;を実行しようとすると、 '42S02' SQLSTATEとともに1109エラーが生成されます。「42」はクラスで、「S02」はサブクラスです。この値は、SQLEXCEPTIONキーワードと一致します。すでに最後に達している&lt;a href=&quot;../programmatic-and-compound-statements-cursors/index&quot;&gt;カーソル&lt;/a&gt;に対してFETCHが呼び出されると、1329エラーが生成され、SQLSTATEは「02000」になります。クラスは '02'であり、サブクラスはありません（ '000'は 'サブクラスなし'を意味するため）。NOT FOUNDハンドラーで処理できます。</target>
         </trans-unit>
         <trans-unit id="e37e6745f5b44ee2db170a71506d0e426c1f539b" translate="yes" xml:space="preserve">
           <source>For example, if you want to embed some code that should only execute on MySQL or MariaDB starting from 5.1.0, you would do the following:</source>
@@ -285,15 +285,15 @@
         </trans-unit>
         <trans-unit id="a619532f88786849e15b3f059bde9347490fdf7d" translate="yes" xml:space="preserve">
           <source>For example, if you wanted to pin your repository to &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-10314-release-notes/&quot;&gt;MariaDB 10.3.14&lt;/a&gt; on SLES 15, then you could use the following commands to add the MariaDB &lt;code&gt;zypper&lt;/code&gt; repository:</source>
-          <target state="translated">たとえば、リポジトリをSLES 15の&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-10314-release-notes/&quot;&gt;MariaDB 10.3.14に固定&lt;/a&gt;する場合、次のコマンドを使用してMariaDB &lt;code&gt;zypper&lt;/code&gt; リポジトリを追加できます。</target>
+          <target state="translated">たとえば、リポジトリをSLES 15の&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-10314-release-notes/&quot;&gt;MariaDB 10.3.14に固定&lt;/a&gt;したい場合は、次のコマンドを使用してMariaDB &lt;code&gt;zypper&lt;/code&gt; リポジトリを追加できます。</target>
         </trans-unit>
         <trans-unit id="c76c79cce967e8828badb0c05b9af0108d01ad34" translate="yes" xml:space="preserve">
           <source>For example, if you wanted to pin your repository to &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-10314-release-notes/&quot;&gt;MariaDB 10.3.14&lt;/a&gt; on Ubuntu 18.04 LTS (Bionic), then you would have to first remove any existing MariaDB repository source list file from &lt;code&gt;/etc/apt/sources.list.d/&lt;/code&gt;. And then you could use the following commands to add the MariaDB &lt;code&gt;apt-get&lt;/code&gt; repository:</source>
-          <target state="translated">たとえば、Ubuntu 18.04 LTS（Bionic）で&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-10314-release-notes/&quot;&gt;MariaDB 10.3.14&lt;/a&gt;にリポジトリを固定したい場合は、まず既存のMariaDBリポジトリソースリストファイルを &lt;code&gt;/etc/apt/sources.list.d/&lt;/code&gt; から削除する必要があります。そして、次のコマンドを使用して、MariaDB &lt;code&gt;apt-get&lt;/code&gt; リポジトリを追加できます。</target>
+          <target state="translated">たとえば、Ubuntu 18.04 LTS（Bionic）で&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-10314-release-notes/&quot;&gt;MariaDB 10.3.14&lt;/a&gt;にリポジトリを固定したい場合、まず既存のMariaDBリポジトリソースリストファイルを &lt;code&gt;/etc/apt/sources.list.d/&lt;/code&gt; から削除する必要があります。そして、次のコマンドを使用して、MariaDB &lt;code&gt;apt-get&lt;/code&gt; リポジトリを追加できます。</target>
         </trans-unit>
         <trans-unit id="2e98669a0e7164759a2efbcad6f138c08d90dc83" translate="yes" xml:space="preserve">
           <source>For example, if you wanted to use the repository to install &lt;a href=&quot;../what-is-mariadb-103/index&quot;&gt;MariaDB 10.3&lt;/a&gt; on CentOS 7, then you could use the following &lt;code&gt;yum&lt;/code&gt; repository configuration in &lt;code&gt;/etc/yum.repos.d/MariaDB.repo&lt;/code&gt;:</source>
-          <target state="translated">たとえば、リポジトリを使用して&lt;a href=&quot;../what-is-mariadb-103/index&quot;&gt;MariaDB 10.3&lt;/a&gt;をCentOS 7 にインストールする場合は、/ &lt;code&gt;/etc/yum.repos.d/MariaDB.repo&lt;/code&gt; / yum.repos.d / MariaDB.repoで次の &lt;code&gt;yum&lt;/code&gt; リポジトリ設定を使用できます。</target>
+          <target state="translated">たとえば、リポジトリを使用して&lt;a href=&quot;../what-is-mariadb-103/index&quot;&gt;MariaDB 10.3&lt;/a&gt;をCentOS 7 にインストールする場合、/ &lt;code&gt;/etc/yum.repos.d/MariaDB.repo&lt;/code&gt; / yum.repos.d / MariaDB.repoで次の &lt;code&gt;yum&lt;/code&gt; リポジトリ設定を使用できます。</target>
         </trans-unit>
         <trans-unit id="cdb8b0f349c56435a57c2ce42d7423b183f50fe3" translate="yes" xml:space="preserve">
           <source>For example, if you wanted to use the repository to install &lt;a href=&quot;../what-is-mariadb-103/index&quot;&gt;MariaDB 10.3&lt;/a&gt; on SLES 15, then you could use the following commands to add the MariaDB &lt;code&gt;zypper&lt;/code&gt; repository:</source>
@@ -313,7 +313,7 @@
         </trans-unit>
         <trans-unit id="cffa3f6814a4e681905e035a338450a999d75bae" translate="yes" xml:space="preserve">
           <source>For example, in case-insensitive collations capital and regular letters are considered identical, i.e. 'c' ='C'. For some datatypes, MyRocks stores some extra data which allows it to restore the original value back. (For the &lt;code&gt;latin1_general_ci&lt;/code&gt;&lt;a href=&quot;../character-sets/index&quot;&gt;collation&lt;/a&gt; and character 'c', for example, it will store one bit which says whether the original value was a small 'c' or a capital letter 'C'). This doesn't work for all datatypes, though.</source>
-          <target state="translated">たとえば、大文字と小文字を区別しない照合では、大文字と通常の文字は同一と見なされます（つまり、「c」=「C」）。一部のデータ型では、MyRocksはいくつかの追加データを保存し、元の値に戻すことができます。（たとえば、 &lt;code&gt;latin1_general_ci&lt;/code&gt; &lt;a href=&quot;../character-sets/index&quot;&gt;照合&lt;/a&gt;と文字「c」の場合、元の値が小文字の「c」か大文字の「C」かを示す1ビットが格納されます）。ただし、これはすべてのデータ型に対して機能するわけではありません。</target>
+          <target state="translated">たとえば、大文字と小文字を区別しない照合では、大文字と通常の文字は同一と見なされます（つまり、「c」=「C」）。一部のデータ型では、MyRocksは元の値を復元できるようにいくつかの追加データを保存します。（たとえば、 &lt;code&gt;latin1_general_ci&lt;/code&gt; &lt;a href=&quot;../character-sets/index&quot;&gt;照合&lt;/a&gt;と文字「c」の場合、元の値が小文字の「c」か大文字の「C」かを示す1ビットが格納されます）。ただし、これはすべてのデータ型に対して機能するわけではありません。</target>
         </trans-unit>
         <trans-unit id="00a7c7e8bf9dc82a9dbc03a7da8c3d896e98f6b6" translate="yes" xml:space="preserve">
           <source>For example, let us suppose we have a web log source file containing records such as:</source>
@@ -321,7 +321,7 @@
         </trans-unit>
         <trans-unit id="1516ffd22bfa7d542fb8db5c11f34ecfdf4cc2e0" translate="yes" xml:space="preserve">
           <source>For example, let us suppose you have the following &amp;ldquo;Expenses&amp;rdquo; table:</source>
-          <target state="translated">たとえば、次の「経費」テーブルがあるとします。</target>
+          <target state="translated">たとえば、次の「費用」テーブルがあるとします。</target>
         </trans-unit>
         <trans-unit id="fd0ed0fc74c38ac485856525f7bc59e1e36bbd67" translate="yes" xml:space="preserve">
           <source>For example, let's find cities that have the biggest population on their continent:</source>
@@ -393,7 +393,7 @@
         </trans-unit>
         <trans-unit id="eed1fd9e32ca5e6cfbee77f7fffabdb53e269e45" translate="yes" xml:space="preserve">
           <source>For example, the following statements would create a table with the &lt;code&gt;COMPACT&lt;/code&gt; row format:</source>
-          <target state="translated">たとえば、次のステートメントは &lt;code&gt;COMPACT&lt;/code&gt; 行形式のテーブルを作成します。</target>
+          <target state="translated">たとえば、次のステートメントは &lt;code&gt;COMPACT&lt;/code&gt; 行形式でテーブルを作成します。</target>
         </trans-unit>
         <trans-unit id="c19133d4f1a39d355be66a9950a7549dc8f23fb9" translate="yes" xml:space="preserve">
           <source>For example, the following statements would create a table with the &lt;code&gt;DYNAMIC&lt;/code&gt; row format:</source>
@@ -401,7 +401,7 @@
         </trans-unit>
         <trans-unit id="e1b4cb01788733caeb32c20c6b77578b69b76a0a" translate="yes" xml:space="preserve">
           <source>For example, the following table exists on a remote server (in this example, the remote node was created with the &lt;a href=&quot;../mysql-sandbox/index&quot;&gt;MySQL Sandbox&lt;/a&gt; tool, an easy way to test with multiple installations)::</source>
-          <target state="translated">たとえば、次の表はリモートサーバーに存在します（この例では、リモートノードは&lt;a href=&quot;../mysql-sandbox/index&quot;&gt;MySQLサンドボックス&lt;/a&gt;ツールで作成され、複数のインストールで簡単にテストできます）。</target>
+          <target state="translated">たとえば、次の表はリモートサーバーにあります（この例では、リモートノードは&lt;a href=&quot;../mysql-sandbox/index&quot;&gt;MySQLサンドボックス&lt;/a&gt;ツールで作成され、複数のインストールで簡単にテストできます）。</target>
         </trans-unit>
         <trans-unit id="f90f92ae4ee1d5b749b33ed227a3d36f08c08758" translate="yes" xml:space="preserve">
           <source>For example, the following works:</source>
@@ -477,11 +477,11 @@
         </trans-unit>
         <trans-unit id="e5e829586f72cc01ab2b8e28b36f2189567e65f6" translate="yes" xml:space="preserve">
           <source>For example, to enable two-way TLS with &lt;a href=&quot;../secure-connections-overview/index#server-certificate-verification&quot;&gt;server certificate verification&lt;/a&gt;, then you could specify the following options in a a relevant client &lt;a href=&quot;../configuring-mariadb-with-option-files/index#option-groups&quot;&gt;option group&lt;/a&gt; in an &lt;a href=&quot;../configuring-mariadb-with-option-files/index&quot;&gt;option file&lt;/a&gt;:</source>
-          <target state="translated">たとえば、&lt;a href=&quot;../secure-connections-overview/index#server-certificate-verification&quot;&gt;サーバー証明書の検証を行う&lt;/a&gt;双方向TLSを有効にするには、&lt;a href=&quot;../configuring-mariadb-with-option-files/index&quot;&gt;オプションファイルの&lt;/a&gt;関連するクライアント&lt;a href=&quot;../configuring-mariadb-with-option-files/index#option-groups&quot;&gt;オプショングループ&lt;/a&gt;で次のオプションを指定できます。</target>
+          <target state="translated">たとえば、&lt;a href=&quot;../secure-connections-overview/index#server-certificate-verification&quot;&gt;サーバー証明書の検証&lt;/a&gt;で双方向TLSを有効にするには、&lt;a href=&quot;../configuring-mariadb-with-option-files/index&quot;&gt;オプションファイルの&lt;/a&gt;関連するクライアント&lt;a href=&quot;../configuring-mariadb-with-option-files/index#option-groups&quot;&gt;オプショングループ&lt;/a&gt;で次のオプションを指定できます。</target>
         </trans-unit>
         <trans-unit id="790509366f9febe00cbbcb3d7a195981e6eb4822" translate="yes" xml:space="preserve">
           <source>For example, to find all reachable nodes from &lt;code&gt;origid&lt;/code&gt; that only have incoming edges:</source>
-          <target state="translated">たとえば、入力エッジのみを持つ &lt;code&gt;origid&lt;/code&gt; から到達可能なすべてのノードを検索するには、次のようにします。</target>
+          <target state="translated">たとえば、入ってくるエッジのみを持つ &lt;code&gt;origid&lt;/code&gt; から到達可能なすべてのノードを見つけるには：</target>
         </trans-unit>
         <trans-unit id="0543439a423b93106650d4814d6666b62bda9662" translate="yes" xml:space="preserve">
           <source>For example, to grant the &lt;code&gt;PROXY&lt;/code&gt; privilege to an &lt;a href=&quot;../create-user/index#anonymous-accounts&quot;&gt;anonymous account&lt;/a&gt; that authenticates with the &lt;code&gt;&lt;a href=&quot;../authentication-plugin-pam/index&quot;&gt;pam&lt;/a&gt;&lt;/code&gt; authentication plugin, you could execute the following:</source>
@@ -497,7 +497,7 @@
         </trans-unit>
         <trans-unit id="ebc02e3b24cb537592564a43bb73795e8c1a5ccf" translate="yes" xml:space="preserve">
           <source>For example, to install all plugins in the &lt;code&gt;server_audit&lt;/code&gt; plugin library (which is currently only the &lt;code&gt;&lt;a href=&quot;../mariadb-audit-plugin/index&quot;&gt;server_audit&lt;/a&gt;&lt;/code&gt; audit plugin) and also the &lt;code&gt;&lt;a href=&quot;../authentication-plugin-ed25519/index&quot;&gt;ed25519&lt;/a&gt;&lt;/code&gt; authentication plugin from the &lt;code&gt;auth_ed25519&lt;/code&gt; plugin library, you could set the option to the following values on the command-line:</source>
-          <target state="translated">たとえば、 &lt;code&gt;server_audit&lt;/code&gt; プラグインライブラリ（現在は &lt;code&gt;&lt;a href=&quot;../mariadb-audit-plugin/index&quot;&gt;server_audit&lt;/a&gt;&lt;/code&gt; 監査プラグインのみ）のすべてのプラグインとauth_ed25519プラグインライブラリの &lt;code&gt;&lt;a href=&quot;../authentication-plugin-ed25519/index&quot;&gt;ed25519&lt;/a&gt;&lt;/code&gt; 認証プラグインを &lt;code&gt;auth_ed25519&lt;/code&gt; するには、コマンドラインでオプションを次の値に設定します。</target>
+          <target state="translated">たとえば、 &lt;code&gt;server_audit&lt;/code&gt; プラグインライブラリ（現在は &lt;code&gt;&lt;a href=&quot;../mariadb-audit-plugin/index&quot;&gt;server_audit&lt;/a&gt;&lt;/code&gt; 監査プラグインのみ）のすべてのプラグインと、auth_ed25519プラグインライブラリの &lt;code&gt;&lt;a href=&quot;../authentication-plugin-ed25519/index&quot;&gt;ed25519&lt;/a&gt;&lt;/code&gt; 認証プラグインを &lt;code&gt;auth_ed25519&lt;/code&gt; するには、コマンドラインでオプションを次の値に設定します。</target>
         </trans-unit>
         <trans-unit id="a24c98a2555dfa47980029adeea6fe9a0c33403a" translate="yes" xml:space="preserve">
           <source>For example, to install all plugins in the &lt;code&gt;server_audit&lt;/code&gt; plugin library (which is currently only the &lt;code&gt;&lt;a href=&quot;../mariadb-audit-plugin/index&quot;&gt;server_audit&lt;/a&gt;&lt;/code&gt; audit plugin), you could execute the following:</source>
@@ -541,7 +541,7 @@
         </trans-unit>
         <trans-unit id="ec1ebc643eadd94c9ddbeb10e864b0e6e82a81d6" translate="yes" xml:space="preserve">
           <source>For example, to set the TLS system variables for each server, add them to a relevant server &lt;a href=&quot;../configuring-mariadb-with-option-files/index#option-groups&quot;&gt;option group&lt;/a&gt; in an &lt;a href=&quot;../configuring-mariadb-with-option-files/index&quot;&gt;option file&lt;/a&gt; on each server:</source>
-          <target state="translated">たとえば、各サーバーのTLSシステム変数を設定するには、各サーバーの&lt;a href=&quot;../configuring-mariadb-with-option-files/index&quot;&gt;オプションファイルの&lt;/a&gt;関連するサーバー&lt;a href=&quot;../configuring-mariadb-with-option-files/index#option-groups&quot;&gt;オプショングループ&lt;/a&gt;にそれらを追加します。</target>
+          <target state="translated">たとえば、各サーバーのTLSシステム変数を設定するには、各サーバーの&lt;a href=&quot;../configuring-mariadb-with-option-files/index&quot;&gt;オプションファイル&lt;/a&gt;で関連するサーバー&lt;a href=&quot;../configuring-mariadb-with-option-files/index#option-groups&quot;&gt;オプショングループ&lt;/a&gt;にそれらを追加します。</target>
         </trans-unit>
         <trans-unit id="ef49902590adb40b2741767c5603897562fa6575" translate="yes" xml:space="preserve">
           <source>For example, to set these variables for the server, add the system variables to a relevant server &lt;a href=&quot;../configuring-mariadb-with-option-files/index#option-groups&quot;&gt;option group&lt;/a&gt; in an &lt;a href=&quot;../configuring-mariadb-with-option-files/index&quot;&gt;option file&lt;/a&gt;:</source>
@@ -569,7 +569,7 @@
         </trans-unit>
         <trans-unit id="d47fc2935c2d904343cd25039b6aaa6053763a5c" translate="yes" xml:space="preserve">
           <source>For example, when using InnoDB's &lt;code&gt;&lt;a href=&quot;../innodb-dynamic-row-format/index&quot;&gt;DYNAMIC&lt;/a&gt;&lt;/code&gt; row format and a default character set of &lt;code&gt;&lt;a href=&quot;../supported-character-sets-and-collations/index&quot;&gt;latin1&lt;/a&gt;&lt;/code&gt; (which requires up to 1 byte per character), the 256 byte limit means that a &lt;code&gt;&lt;a href=&quot;../varchar/index&quot;&gt;VARCHAR&lt;/a&gt;&lt;/code&gt; column will only be stored on overflow pages if it is at least as large as a &lt;code&gt;varchar(256)&lt;/code&gt;:</source>
-          <target state="translated">たとえば、InnoDBの &lt;code&gt;&lt;a href=&quot;../innodb-dynamic-row-format/index&quot;&gt;DYNAMIC&lt;/a&gt;&lt;/code&gt; 行フォーマットとデフォルトの文字セット &lt;code&gt;&lt;a href=&quot;../supported-character-sets-and-collations/index&quot;&gt;latin1&lt;/a&gt;&lt;/code&gt; （1文字あたり最大1バイトが必要）を使用する場合、256バイトの制限は、 &lt;code&gt;&lt;a href=&quot;../varchar/index&quot;&gt;VARCHAR&lt;/a&gt;&lt;/code&gt; 列がオーバーフローページにのみ格納されることを意味します。 &lt;code&gt;varchar(256)&lt;/code&gt; ：</target>
+          <target state="translated">たとえば、InnoDBの &lt;code&gt;&lt;a href=&quot;../innodb-dynamic-row-format/index&quot;&gt;DYNAMIC&lt;/a&gt;&lt;/code&gt; 行形式とデフォルトの文字セット &lt;code&gt;&lt;a href=&quot;../supported-character-sets-and-collations/index&quot;&gt;latin1&lt;/a&gt;&lt;/code&gt; （1文字あたり最大1バイトが必要）を使用する場合、256バイトの制限は、 &lt;code&gt;&lt;a href=&quot;../varchar/index&quot;&gt;VARCHAR&lt;/a&gt;&lt;/code&gt; 列が少なくとも同じ大きさの場合にのみオーバーフローページに格納されることを意味します &lt;code&gt;varchar(256)&lt;/code&gt; ：</target>
         </trans-unit>
         <trans-unit id="13b484111bdbfb4e695a005057d7cc9e3dc22663" translate="yes" xml:space="preserve">
           <source>For example, with the example values from the last two steps, we could do:</source>
@@ -589,7 +589,7 @@
         </trans-unit>
         <trans-unit id="17e13e754d3a4b6d1acfaf76e364b071c5bee8eb" translate="yes" xml:space="preserve">
           <source>For example, you can reconfigure the MariaDB &lt;code&gt;systemd&lt;/code&gt; service to have an infinite timeout by executing one of the following commands:</source>
-          <target state="translated">たとえば、次のいずれかのコマンドを実行して、MariaDB &lt;code&gt;systemd&lt;/code&gt; サービスを再構成して、タイムアウトを無限にすることができます。</target>
+          <target state="translated">たとえば、次のいずれかのコマンドを実行することで、MariaDB &lt;code&gt;systemd&lt;/code&gt; サービスを再構成して、タイムアウトを無限にすることができます。</target>
         </trans-unit>
         <trans-unit id="1a49de18208853f08e8088d30d425d72102f7414" translate="yes" xml:space="preserve">
           <source>For example, you could execute the following to create the user account in MariaDB:</source>
@@ -617,11 +617,11 @@
         </trans-unit>
         <trans-unit id="8f037011ac658ac354930fa06d8361fa2e79ebd8" translate="yes" xml:space="preserve">
           <source>For file-based tables of reasonable size, processing time can be greatly enhanced under Windows(TM) and some flavors of UNIX or Linux by using the technique of &amp;ldquo;file mapping&amp;rdquo;, in which a file is processed as if it were entirely in memory. Mapping is specified when creating the table by the use of the &lt;code&gt;MAPPED=YES&lt;/code&gt; option. This does not apply to tables not handled by system I/O functions (&lt;code&gt;&lt;a href=&quot;%5b%5bconnect-xml-table-type&quot;&gt;XML&lt;/a&gt;&lt;/code&gt; and &lt;code&gt; &lt;a href=&quot;../connect-ini-table-type/index&quot;&gt;INI&lt;/a&gt;&lt;/code&gt;).</source>
-          <target state="translated">適切なサイズのファイルベースのテーブルの場合、Windows（TM）およびUNIXまたはLinuxの一部のフレーバーでは、「ファイルマッピング」の手法を使用して処理時間を大幅に向上できます。 。マッピングは、 &lt;code&gt;MAPPED=YES&lt;/code&gt; オプションを使用してテーブルを作成するときに指定されます。これは、システムI / O関数（ &lt;code&gt;&lt;a href=&quot;%5b%5bconnect-xml-table-type&quot;&gt;XML&lt;/a&gt;&lt;/code&gt; および &lt;code&gt; &lt;a href=&quot;../connect-ini-table-type/index&quot;&gt;INI&lt;/a&gt;&lt;/code&gt; ）で処理されないテーブルには適用されません。</target>
+          <target state="translated">妥当なサイズのファイルベースのテーブルの場合、Windows（TM）およびUNIXまたはLinuxの一部のフレーバーでは、「ファイルマッピング」の手法を使用して処理時間を大幅に向上させることができます。 。マッピングは、 &lt;code&gt;MAPPED=YES&lt;/code&gt; オプションを使用してテーブルを作成するときに指定されます。これは、システムI / O関数（ &lt;code&gt;&lt;a href=&quot;%5b%5bconnect-xml-table-type&quot;&gt;XML&lt;/a&gt;&lt;/code&gt; および &lt;code&gt; &lt;a href=&quot;../connect-ini-table-type/index&quot;&gt;INI&lt;/a&gt;&lt;/code&gt; ）で処理されないテーブルには適用されません。</target>
         </trans-unit>
         <trans-unit id="f9b8288d3988534b85e6338bde234b052dfed1ef" translate="yes" xml:space="preserve">
           <source>For float(M,D, double(M,D or decimal(M,D, M must be &amp;gt;= D (column '%s').</source>
-          <target state="translated">float（M、D、double（M、Dまたはdecimal（M、D、M）の場合、MはD以上でなければなりません（列 '％s'）。</target>
+          <target state="translated">float（M、D、double（M、Dまたはdecimal（M、D、M）の場合、Mは&amp;gt; = Dでなければなりません（列 '％s'）。</target>
         </trans-unit>
         <trans-unit id="1f31987f90f0a1911974faea9f611e3183496f3d" translate="yes" xml:space="preserve">
           <source>For foreign keys, the referenced column name.</source>
@@ -661,7 +661,7 @@
         </trans-unit>
         <trans-unit id="53a48d80503510cc6c969d02bb77749ed26ab3dd" translate="yes" xml:space="preserve">
           <source>For information about invoking &lt;a href=&quot;../stored-procedures/index&quot;&gt;stored procedures&lt;/a&gt; from within programs written in a language that has a MariaDB/MySQL interface, see &lt;a href=&quot;../call/index&quot;&gt;CALL&lt;/a&gt;.</source>
-          <target state="translated">MariaDB / MySQLインターフェイスを持つ言語で記述されたプログラム内からの&lt;a href=&quot;../stored-procedures/index&quot;&gt;ストアドプロシージャの&lt;/a&gt;呼び出しについては、&lt;a href=&quot;../call/index&quot;&gt;CALLを&lt;/a&gt;参照してください。</target>
+          <target state="translated">MariaDB / MySQLインターフェースを持つ言語で記述されたプログラム内から&lt;a href=&quot;../stored-procedures/index&quot;&gt;ストアドプロシージャ&lt;/a&gt;を呼び出す方法については、&lt;a href=&quot;../call/index&quot;&gt;CALLを&lt;/a&gt;参照してください。</target>
         </trans-unit>
         <trans-unit id="183b0369eb13ba6d245794dad6115794f64f37a8" translate="yes" xml:space="preserve">
           <source>For information about the &lt;code&gt;KEY_BLOCK_SIZE&lt;/code&gt; index option, see the &lt;code&gt;&lt;a href=&quot;#key_block_size&quot;&gt;KEY_BLOCK_SIZE&lt;/a&gt;&lt;/code&gt; table option below.</source>
@@ -689,7 +689,7 @@
         </trans-unit>
         <trans-unit id="b7d60a36ce1b43764c7b2f4f3fcd99e9bf43dd92" translate="yes" xml:space="preserve">
           <source>For information on how to start MariaDB automatically with this service manager, see &lt;a href=&quot;../sysvinit/index#starting-the-mariadb-server-process-on-boot&quot;&gt;sysVinit: Starting the MariaDB Server Process on Boot&lt;/a&gt;.</source>
-          <target state="translated">このサービスマネージャーでMariaDBを自動的に起動する方法については、「&lt;a href=&quot;../sysvinit/index#starting-the-mariadb-server-process-on-boot&quot;&gt;sysVinit：起動時にMariaDBサーバープロセスを起動する&lt;/a&gt;」を参照してください。</target>
+          <target state="translated">このサービスマネージャーでMariaDBを自動的に起動する方法については、「&lt;a href=&quot;../sysvinit/index#starting-the-mariadb-server-process-on-boot&quot;&gt;sysVinit：起動時にMariaDBサーバープロセスを開始する&lt;/a&gt;」を参照してください。</target>
         </trans-unit>
         <trans-unit id="068c20e29007ae72c5598a310e0ba3d25a478fc3" translate="yes" xml:space="preserve">
           <source>For information on how to start and stop MariaDB with this service manager, see &lt;a href=&quot;../systemd/index#interacting-with-the-mariadb-server-process&quot;&gt;systemd: Interacting with the MariaDB Server Process&lt;/a&gt;.</source>
@@ -697,15 +697,15 @@
         </trans-unit>
         <trans-unit id="fcd5edf6d99931e5dc376133642318df7122323d" translate="yes" xml:space="preserve">
           <source>For information on how to start and stop MariaDB with this service manager, see &lt;a href=&quot;../sysvinit/index#interacting-with-the-mariadb-server-process&quot;&gt;sysVinit: Interacting with the MariaDB Server Process&lt;/a&gt;.</source>
-          <target state="translated">このサービスマネージャーでMariaDBを起動および停止する方法については、「&lt;a href=&quot;../sysvinit/index#interacting-with-the-mariadb-server-process&quot;&gt;sysVinit：MariaDBサーバープロセスとの対話」を&lt;/a&gt;参照してください。</target>
+          <target state="translated">このサービスマネージャーでMariaDBを開始および停止する方法については、「&lt;a href=&quot;../sysvinit/index#interacting-with-the-mariadb-server-process&quot;&gt;sysVinit：MariaDBサーバープロセスとの対話」を&lt;/a&gt;参照してください。</target>
         </trans-unit>
         <trans-unit id="66b5faa4f0d1d5c15f7a5b8ed7d8a168efcebce7" translate="yes" xml:space="preserve">
           <source>For information on how to start and stop multiple MariaDB Server processes on the same server with this service manager, see &lt;a href=&quot;../systemd/index#interacting-with-multiple-mariadb-server-processes&quot;&gt;systemd: Interacting with Multiple MariaDB Server Processes&lt;/a&gt;.</source>
-          <target state="translated">このサービスマネージャーを使用して同じサーバーで複数のMariaDBサーバープロセスを開始および停止する方法については、「&lt;a href=&quot;../systemd/index#interacting-with-multiple-mariadb-server-processes&quot;&gt;systemd：複数のMariaDBサーバープロセスとの相互作用」を&lt;/a&gt;参照してください。</target>
+          <target state="translated">このサービスマネージャーを使用して同じサーバー上で複数のMariaDBサーバープロセスを開始および停止する方法については、「&lt;a href=&quot;../systemd/index#interacting-with-multiple-mariadb-server-processes&quot;&gt;systemd：複数のMariaDBサーバープロセスとの相互作用」を&lt;/a&gt;参照してください。</target>
         </trans-unit>
         <trans-unit id="3f0f885e3a9cc828d4a6b9c495da071925ca4cf6" translate="yes" xml:space="preserve">
           <source>For information on setting &lt;code&gt;&lt;a href=&quot;../replication-and-binary-log-system-variables/index#server_id&quot;&gt;server_id&lt;/a&gt;&lt;/code&gt;, see &lt;a href=&quot;../using-mariadb-replication-with-mariadb-galera-cluster-using-mariadb-replica/index#setting-server_id-on-cluster-nodes&quot;&gt;Using MariaDB Replication with MariaDB Galera Cluster: Setting server_id on Cluster Nodes&lt;/a&gt;.</source>
-          <target state="translated">&lt;code&gt;&lt;a href=&quot;../replication-and-binary-log-system-variables/index#server_id&quot;&gt;server_id&lt;/a&gt;&lt;/code&gt; の設定については、「&lt;a href=&quot;../using-mariadb-replication-with-mariadb-galera-cluster-using-mariadb-replica/index#setting-server_id-on-cluster-nodes&quot;&gt;MariaDBレプリケーションをMariaDB Galeraクラスターで使用する：クラスターノードでのserver_idの&lt;/a&gt;設定」を参照してください。</target>
+          <target state="translated">&lt;code&gt;&lt;a href=&quot;../replication-and-binary-log-system-variables/index#server_id&quot;&gt;server_id&lt;/a&gt;&lt;/code&gt; の設定については、「&lt;a href=&quot;../using-mariadb-replication-with-mariadb-galera-cluster-using-mariadb-replica/index#setting-server_id-on-cluster-nodes&quot;&gt;MariaDBレプリケーションをMariaDB Galeraクラスタで使用する：クラスタノードでのserver_idの&lt;/a&gt;設定」を参照してください。</target>
         </trans-unit>
         <trans-unit id="b1c01695067431da085ac5f5096e5f068ed4de84" translate="yes" xml:space="preserve">
           <source>For installing H2O.ai through CRAN, execute:</source>
@@ -857,7 +857,7 @@
         </trans-unit>
         <trans-unit id="4b7ac7bf735f8a29ecee677e4ed2447ce8ec5cb3" translate="yes" xml:space="preserve">
           <source>For locking reads (&lt;code&gt;SELECT&lt;/code&gt; with &lt;code&gt;FOR UPDATE&lt;/code&gt; or &lt;code&gt;LOCK IN SHARE MODE&lt;/code&gt;), InnoDB locks only index records, not the gaps before them, and thus allows the free insertion of new records next to locked records. For &lt;code&gt;UPDATE&lt;/code&gt; and &lt;code&gt;DELETE&lt;/code&gt; statements, locking depends on whether the statement uses a unique index with a unique search condition (such as &lt;code&gt;WHERE id = 100&lt;/code&gt;), or a range-type search condition (such as &lt;code&gt;WHERE id &amp;gt; 100&lt;/code&gt;). For a unique index with a unique search condition, InnoDB locks only the index record found, not the gap before it. For range-type searches, InnoDB locks the index range scanned, using gap locks or next-key (gap plus index-record) locks to block insertions by other sessions into the gaps covered by the range. This is necessary because &quot;phantom rows&quot; must be blocked for MySQL replication and recovery to work.</source>
-          <target state="translated">ロック読み取り（ &lt;code&gt;FOR UPDATE&lt;/code&gt; を伴う &lt;code&gt;SELECT&lt;/code&gt; または &lt;code&gt;LOCK IN SHARE MODE&lt;/code&gt; ）の場合、InnoDBはインデックスレコードのみをロックし、その前のギャップはロックしないため、ロックされたレコードの隣に新しいレコードを自由に挿入できます。ための &lt;code&gt;UPDATE&lt;/code&gt; と &lt;code&gt;DELETE&lt;/code&gt; ステートメント、ロックステートメントは（例えば、固有の検索条件に一意なインデックスを使用するかどうかに依存 &lt;code&gt;WHERE id = 100&lt;/code&gt; ）、または範囲型検索条件（例えば、 &lt;code&gt;WHERE id &amp;gt; 100&lt;/code&gt; ）。一意の検索条件を持つ一意のインデックスの場合、InnoDBは、検出されたインデックスレコードのみをロックし、その前のギャップはロックしません。範囲タイプの検索の場合、InnoDBはギャップロックまたは次のキー（ギャップとインデックスレコード）ロックを使用して、スキャンされたインデックス範囲をロックし、他のセッションによる範囲のギャップへの挿入をブロックします。MySQLのレプリケーションとリカバリを機能させるには、「ファントム行」をブロックする必要があるため、これが必要です。</target>
+          <target state="translated">ロック読み取り（ &lt;code&gt;FOR UPDATE&lt;/code&gt; を伴う &lt;code&gt;SELECT&lt;/code&gt; または &lt;code&gt;LOCK IN SHARE MODE&lt;/code&gt; ）の場合、InnoDBはインデックスレコードのみをロックし、その前のギャップはロックしないため、ロックされたレコードの隣に新しいレコードを自由に挿入できます。ための &lt;code&gt;UPDATE&lt;/code&gt; と &lt;code&gt;DELETE&lt;/code&gt; ステートメント、ロックステートメントは（例えば、固有の検索条件に一意なインデックスを使用するかどうかに依存 &lt;code&gt;WHERE id = 100&lt;/code&gt; ）、または範囲型検索条件（例えば、 &lt;code&gt;WHERE id &amp;gt; 100&lt;/code&gt; ）。一意の検索条件を持つ一意のインデックスの場合、InnoDBは、その前のギャップではなく、見つかったインデックスレコードのみをロックします。範囲タイプの検索の場合、InnoDBは、ギャップロックまたはネクストキー（ギャップとインデックスレコード）ロックを使用して、スキャンされたインデックス範囲をロックし、範囲でカバーされるギャップへの他のセッションによる挿入をブロックします。MySQLのレプリケーションとリカバリを機能させるには、「ファントム行」をブロックする必要があるため、これが必要です。</target>
         </trans-unit>
         <trans-unit id="ad05f36ff4cfcff6dfab1abfdf6756a71adb3071" translate="yes" xml:space="preserve">
           <source>For locking reads (SELECT with FOR UPDATE or LOCK IN SHARE MODE), UPDATE, and DELETE statements, locking depends on whether the statement uses a unique index with a unique search condition, or a range-type search condition. For a unique index with a unique search condition, InnoDB locks only the index record found, not the gap before it. For other search conditions, InnoDB locks the index range scanned, using gap locks or next-key (gap plus index-record) locks to block insertions by other sessions into the gaps covered by the range.</source>
@@ -869,11 +869,11 @@
         </trans-unit>
         <trans-unit id="65df0c60cb4a0a19655d91bc6d06aad13ddcbfb4" translate="yes" xml:space="preserve">
           <source>For logical SST methods like &lt;code&gt;mysqldump&lt;/code&gt;, each node should be able to have different &lt;a href=&quot;../data-at-rest-encryption/index#encryption-key-management&quot;&gt;encryption keys&lt;/a&gt;. For physical SST methods, all nodes need to have the same &lt;a href=&quot;../data-at-rest-encryption/index#encryption-key-management&quot;&gt;encryption keys&lt;/a&gt;, since the donor node will copy encrypted data files to the joiner node, and the joiner node will need to be able to decrypt them.</source>
-          <target state="translated">&lt;code&gt;mysqldump&lt;/code&gt; のような論理SSTメソッドの場合、各ノードは異なる&lt;a href=&quot;../data-at-rest-encryption/index#encryption-key-management&quot;&gt;暗号化キー&lt;/a&gt;を持つことができる必要があります。物理SSTメソッドの場合、ドナーノードは暗号化されたデータファイルをジョイナーノードにコピーし、ジョイナーノードはそれらを復号化できる必要があるため、すべてのノードが同じ&lt;a href=&quot;../data-at-rest-encryption/index#encryption-key-management&quot;&gt;暗号化キー&lt;/a&gt;を持つ必要があります。</target>
+          <target state="translated">&lt;code&gt;mysqldump&lt;/code&gt; のような論理SSTメソッドの場合、各ノードは異なる&lt;a href=&quot;../data-at-rest-encryption/index#encryption-key-management&quot;&gt;暗号化キー&lt;/a&gt;を持つことができる必要があります。物理SSTメソッドの場合、ドナーノードは暗号化されたデータファイルをジョイナーノードにコピーし、ジョイナーノードはそれらを復号化できる必要があるため、すべてのノードが同じ&lt;a href=&quot;../data-at-rest-encryption/index#encryption-key-management&quot;&gt;暗号化キー&lt;/a&gt;を持っている必要があります。</target>
         </trans-unit>
         <trans-unit id="97765222d2229156dac58a2d1994e78718b53e5e" translate="yes" xml:space="preserve">
           <source>For many of the standard &lt;a href=&quot;../clients-utilities/index&quot;&gt;clients and utilities&lt;/a&gt; that come bundled with MariaDB, you can enable two-way TLS by adding the same options that were set for the server to a relevant client &lt;a href=&quot;../configuring-mariadb-with-option-files/index#option-groups&quot;&gt;option group&lt;/a&gt; in an &lt;a href=&quot;../configuring-mariadb-with-option-files/index&quot;&gt;option file&lt;/a&gt;. For example:</source>
-          <target state="translated">MariaDBにバンドルされている標準の&lt;a href=&quot;../clients-utilities/index&quot;&gt;クライアントとユーティリティの&lt;/a&gt;多くでは、サーバーに設定されたものと同じオプションを&lt;a href=&quot;../configuring-mariadb-with-option-files/index&quot;&gt;オプションファイルの&lt;/a&gt;関連するクライアント&lt;a href=&quot;../configuring-mariadb-with-option-files/index#option-groups&quot;&gt;オプショングループ&lt;/a&gt;に追加することで、双方向TLSを有効にできます。例えば：</target>
+          <target state="translated">MariaDBにバンドルされている多くの標準&lt;a href=&quot;../clients-utilities/index&quot;&gt;クライアントとユーティリティ&lt;/a&gt;では、サーバーに設定されたものと同じオプションを&lt;a href=&quot;../configuring-mariadb-with-option-files/index&quot;&gt;オプションファイルの&lt;/a&gt;関連するクライアント&lt;a href=&quot;../configuring-mariadb-with-option-files/index#option-groups&quot;&gt;オプショングループ&lt;/a&gt;に追加することで、双方向TLSを有効にできます。例えば：</target>
         </trans-unit>
         <trans-unit id="3dec3f4e652ec2069514ea0c48469372ff3ba756" translate="yes" xml:space="preserve">
           <source>For maximum compatibility with external tools MariaDB ColumnStore will accept the following table attributes, however these are not implemented within MariaDB ColumnStore:</source>
@@ -921,7 +921,7 @@
         </trans-unit>
         <trans-unit id="364f43eb07edbe1fb432328430b7e61fb5173086" translate="yes" xml:space="preserve">
           <source>For more details see the &lt;a href=&quot;../mariadb-audit-plugin-installation/index&quot;&gt;audit plugin installation guide&lt;/a&gt;</source>
-          <target state="translated">詳細については、&lt;a href=&quot;../mariadb-audit-plugin-installation/index&quot;&gt;監査プラグインのインストールガイドを&lt;/a&gt;参照してください</target>
+          <target state="translated">詳細については、&lt;a href=&quot;../mariadb-audit-plugin-installation/index&quot;&gt;監査プラグインのインストールガイドを&lt;/a&gt;参照してください。</target>
         </trans-unit>
         <trans-unit id="e4c64c7664410ca86f727d6a43869d384780aeeb" translate="yes" xml:space="preserve">
           <source>For more details, see &lt;a href=&quot;http://mroonga.org/docs/reference/limitations.html&quot;&gt;http://mroonga.org/docs/reference/limitations.html&lt;/a&gt;.</source>
@@ -965,7 +965,7 @@
         </trans-unit>
         <trans-unit id="34e8edbe81f8bdd06726b84dfeb6e4ee6c23a534" translate="yes" xml:space="preserve">
           <source>For more information on general types of indexes, such as primary keys, unique indexes etc, go to &lt;a href=&quot;../getting-started-with-indexes/index&quot;&gt;Getting Started with Indexes&lt;/a&gt;.</source>
-          <target state="translated">こうした主キー、ユニークインデックスなどとしてインデックスの一般的なタイプ、の詳細については、に行く&lt;a href=&quot;../getting-started-with-indexes/index&quot;&gt;インデックス入門&lt;/a&gt;。</target>
+          <target state="translated">主キー、一意のインデックスなどの一般的なタイプのインデックスの詳細については、&lt;a href=&quot;../getting-started-with-indexes/index&quot;&gt;「インデックスの概要」を参照してください&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="2be8e46a72cd80745b9a5ee851379fa66098605b" translate="yes" xml:space="preserve">
           <source>For more information on how the analysis works within InnoDB, see &lt;a href=&quot;../innodb-limitations/index#table-analysis&quot;&gt;InnoDB Limitations&lt;/a&gt;.</source>
@@ -997,7 +997,7 @@
         </trans-unit>
         <trans-unit id="538f0963663d8596a19e1841e7f8af98db0fd4d3" translate="yes" xml:space="preserve">
           <source>For more information on these server system variables and others, see &lt;a href=&quot;../server-system-variables/index&quot;&gt;Server System Variables&lt;/a&gt;.</source>
-          <target state="translated">これらのサーバーシステム変数などの詳細については、「&lt;a href=&quot;../server-system-variables/index&quot;&gt;サーバーシステム変数&lt;/a&gt;」を参照してください。</target>
+          <target state="translated">これらのサーバーシステム変数などの詳細については、&lt;a href=&quot;../server-system-variables/index&quot;&gt;サーバーシステム変数を&lt;/a&gt;参照してください。</target>
         </trans-unit>
         <trans-unit id="7d74d7b403531130354e5a66b3ef97276b6664b8" translate="yes" xml:space="preserve">
           <source>For more information, see &lt;a href=&quot;#internal-format&quot;&gt;Internal Format&lt;/a&gt;.</source>
@@ -1005,7 +1005,7 @@
         </trans-unit>
         <trans-unit id="7b7bafafc15c423a21a33140229b3550189ef45e" translate="yes" xml:space="preserve">
           <source>For more information, see &lt;a href=&quot;../aws-key-management-encryption-plugin/index&quot;&gt;AWS Key Management Plugin&lt;/a&gt;.</source>
-          <target state="translated">詳細については、「&lt;a href=&quot;../aws-key-management-encryption-plugin/index&quot;&gt;AWS Key Management Plugin&lt;/a&gt;」を参照してください。</target>
+          <target state="translated">詳細については、「&lt;a href=&quot;../aws-key-management-encryption-plugin/index&quot;&gt;AWSキー管理プラグイン&lt;/a&gt;」を参照してください。</target>
         </trans-unit>
         <trans-unit id="d77db0f44089af6f292763082fad996acc00eeb7" translate="yes" xml:space="preserve">
           <source>For more information, see &lt;a href=&quot;../columnstore-performance-module/index&quot;&gt;ColumnStore Performance Module&lt;/a&gt;.</source>
@@ -1077,7 +1077,7 @@
         </trans-unit>
         <trans-unit id="ab88a3e2dd420586b32942a5db438757cc8b44a3" translate="yes" xml:space="preserve">
           <source>For most statistics, &lt;code&gt;xtstat&lt;/code&gt; will display the difference in values between the current and previous polls. For example, if bytes written current value is 1000, and on the previous call it was 800, then &lt;code&gt;xtstat&lt;/code&gt; will display 200. This means that 200 bytes were written to disk in the intervening period.</source>
-          <target state="translated">ほとんどの統計では、 &lt;code&gt;xtstat&lt;/code&gt; は現在のポーリングと以前のポーリングの値の違いを表示します。たとえば、現在の &lt;code&gt;xtstat&lt;/code&gt; バイト数が1000で、前回の呼び出しで800だった場合、xtstatは200を表示します。これは、その間に200バイトがディスクに書き込まれたことを意味します。</target>
+          <target state="translated">ほとんどの統計では、 &lt;code&gt;xtstat&lt;/code&gt; は現在のポーリングと以前のポーリングの値の違いを表示します。たとえば、現在の &lt;code&gt;xtstat&lt;/code&gt; バイト数が1000で、前の呼び出しで800だった場合、xtstatは200を表示します。これは、その間に200バイトがディスクに書き込まれたことを意味します。</target>
         </trans-unit>
         <trans-unit id="5400d9bf4bbb0bfdd549297f9b6bd9863c09c04d" translate="yes" xml:space="preserve">
           <source>For multiple Inserters into a single Staging table, InnoDB may be faster. (MEMORY does table-level locking.)</source>
@@ -1121,7 +1121,7 @@
         </trans-unit>
         <trans-unit id="398f003fc6ea761f836dad89f56b4b621abac6f9" translate="yes" xml:space="preserve">
           <source>For numeric variables &amp;mdash; a valid value must be a multiple of the &quot;block size&quot;.</source>
-          <target state="translated">数値変数の場合&amp;mdash;有効な値は、「ブロックサイズ」の倍数でなければなりません。</target>
+          <target state="translated">数値変数の場合&amp;mdash;有効な値は「ブロックサイズ」の倍数でなければなりません。</target>
         </trans-unit>
         <trans-unit id="d7250c4419f20badd832895c1e7553cd51f60e21" translate="yes" xml:space="preserve">
           <source>For numeric variables &amp;mdash; maximal allowed value.</source>
@@ -1129,7 +1129,7 @@
         </trans-unit>
         <trans-unit id="a14bbdb126d7a836be378c151cb205083de546f7" translate="yes" xml:space="preserve">
           <source>For numeric variables &amp;mdash; minimal allowed value.</source>
-          <target state="translated">数値変数の場合&amp;mdash;最小許容値。</target>
+          <target state="translated">数値変数の場合&amp;mdash;許容される最小値。</target>
         </trans-unit>
         <trans-unit id="96f3d9009d0ab407ae91545bcf76a6644e298c6f" translate="yes" xml:space="preserve">
           <source>For objects which are contained in a database (like tables, views, functions, etc) the database identifier can be specified. If no database is specified, the current database is assumed (see &lt;a href=&quot;../use/index&quot;&gt;USE&lt;/a&gt; and &lt;a href=&quot;../database/index&quot;&gt;DATABASE()&lt;/a&gt; for more details). If there is no default database and no database is specified, an error is issued.</source>
@@ -1141,7 +1141,7 @@
         </trans-unit>
         <trans-unit id="62283387c679da46e870d3e75184aaf5cc12fb74" translate="yes" xml:space="preserve">
           <source>For older MariaDB releases, you can follow the instructions in &lt;a href=&quot;http://dev.mysql.com/doc/refman/5.5/en/windows-install-archive.html&quot;&gt;MySQL documentation on ZIP distributions&lt;/a&gt; - this describes the manual process for registering a service and securing the database.</source>
-          <target state="translated">古いMariaDBリリースの場合は&lt;a href=&quot;http://dev.mysql.com/doc/refman/5.5/en/windows-install-archive.html&quot;&gt;、ZIP配布に関するMySQLのドキュメント&lt;/a&gt;の指示に従うことができます。これは、サービスを登録してデータベースを保護するための手動プロセスについて説明しています。</target>
+          <target state="translated">古いMariaDBリリースの場合は&lt;a href=&quot;http://dev.mysql.com/doc/refman/5.5/en/windows-install-archive.html&quot;&gt;、ZIP配布に関するMySQLドキュメント&lt;/a&gt;の指示に従うことができます。これは、サービスを登録してデータベースを保護するための手動プロセスについて説明しています。</target>
         </trans-unit>
         <trans-unit id="675c56cf83726baad3c3b3cd3e8df55fe3cac7b4" translate="yes" xml:space="preserve">
           <source>For one-row statements, the &lt;code&gt;SET&lt;/code&gt; clause may be more simple, because you don't need to remember the columns order. All values are specified in the form &lt;code&gt;col&lt;/code&gt; = &lt;code&gt;expr&lt;/code&gt;.</source>
@@ -1149,7 +1149,7 @@
         </trans-unit>
         <trans-unit id="bbfdafab2ff11867b0a2acc6ff8b5386b020f2ac" translate="yes" xml:space="preserve">
           <source>For optimal IO performance running a database we are using the &lt;em&gt;noop&lt;/em&gt; scheduler. Recommended schedulers are &lt;em&gt;noop&lt;/em&gt; and &lt;em&gt;deadline&lt;/em&gt;. You can check your scheduler setting with:</source>
-          <target state="translated">データベースを実行する最適なIOパフォーマンスのために、私たちは&lt;em&gt;noop&lt;/em&gt;スケジューラーを使用しています。推奨されるスケジューラは&lt;em&gt;noop&lt;/em&gt;と&lt;em&gt;deadline&lt;/em&gt;です。スケジューラの設定は次の方法で確認できます。</target>
+          <target state="translated">データベースを実行する最適なIOパフォーマンスのために、&lt;em&gt;noop&lt;/em&gt;スケジューラーを使用しています。推奨されるスケジューラは&lt;em&gt;noop&lt;/em&gt;と&lt;em&gt;deadline&lt;/em&gt;です。スケジューラ設定は次の方法で確認できます。</target>
         </trans-unit>
         <trans-unit id="90cf0407864a26f284857653b2377ac14e831041" translate="yes" xml:space="preserve">
           <source>For other file tables, the issue is to define what a null value is. In a numeric column, 0 can sometimes be a valid value but, in some other cases, it can make no sense. The same for character columns; is a blank field a valid value or not?</source>
@@ -1185,7 +1185,7 @@
         </trans-unit>
         <trans-unit id="3f8142d5c55c9d18811703161f0163c4dd703d28" translate="yes" xml:space="preserve">
           <source>For point-in-time recovery (also known as &amp;ldquo;roll-forward,&amp;rdquo; when you need to restore an old backup and replay the changes that happened since that backup), it is often useful to rotate the &lt;a href=&quot;../binary-log/index&quot;&gt;binary log&lt;/a&gt; or at least know the binary log coordinates to which the dump corresponds:</source>
-          <target state="translated">ポイントインタイムリカバリ（「ロールフォワード」とも呼ばれます。古いバックアップを復元し、そのバックアップ以降に発生した変更を再生する必要がある場合）では、&lt;a href=&quot;../binary-log/index&quot;&gt;バイナリログ&lt;/a&gt;をローテーションするか、少なくともダンプが対応するバイナリログ座標：</target>
+          <target state="translated">ポイントインタイムリカバリ（「ロールフォワード」とも呼ばれます。古いバックアップを復元し、そのバックアップ以降に発生した変更を再生する必要がある場合）の場合、&lt;a href=&quot;../binary-log/index&quot;&gt;バイナリログ&lt;/a&gt;をローテーションするか、少なくともダンプが対応するバイナリログ座標：</target>
         </trans-unit>
         <trans-unit id="8a740cc74a070989edf7ea2c42d903950127599c" translate="yes" xml:space="preserve">
           <source>For problems with the InnoDB Data Dictionary, see &lt;a href=&quot;../innodb-data-dictionary-troubleshooting/index&quot;&gt;InnoDB Data Dictionary Troubleshooting&lt;/a&gt;.</source>
@@ -1237,7 +1237,7 @@
         </trans-unit>
         <trans-unit id="d87ea948b5539ae805b4d17d74b53f5d0ebd644f" translate="yes" xml:space="preserve">
           <source>For setting variables on a per-query basis (from &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1012-release-notes/&quot;&gt;MariaDB 10.1.2&lt;/a&gt;), see &lt;code&gt;&lt;a href=&quot;../set-statement/index&quot;&gt;SET STATEMENT&lt;/a&gt;&lt;/code&gt;.</source>
-          <target state="translated">クエリごとに（&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1012-release-notes/&quot;&gt;MariaDB 10.1.2&lt;/a&gt;から）変数を設定する方法については、 &lt;code&gt;&lt;a href=&quot;../set-statement/index&quot;&gt;SET STATEMENT&lt;/a&gt;&lt;/code&gt; を参照してください。</target>
+          <target state="translated">（&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1012-release-notes/&quot;&gt;MariaDB 10.1.2&lt;/a&gt;からの）クエリごとの変数の設定については、「 &lt;code&gt;&lt;a href=&quot;../set-statement/index&quot;&gt;SET STATEMENT&lt;/a&gt;&lt;/code&gt; 」を参照してください。</target>
         </trans-unit>
         <trans-unit id="bf27f32e9bb7b76df440926f66d5b262022798ce" translate="yes" xml:space="preserve">
           <source>For simpler searches of a substring in text columns, see the &lt;a href=&quot;../like/index&quot;&gt;LIKE&lt;/a&gt; operator.</source>
@@ -1257,11 +1257,11 @@
         </trans-unit>
         <trans-unit id="5ebfbc2d43647346b044d126a800b7703f6fc670" translate="yes" xml:space="preserve">
           <source>For some applications &amp;mdash; for example, when doing data analytics on one-year-old data &amp;mdash; this distinction does not matter much. For others &amp;mdash; forensic analysis &amp;mdash; it might be crucial.</source>
-          <target state="translated">1年前のデータでデータ分析を行う場合など、一部のアプリケーションでは、この区別はあまり重要ではありません。他の人にとって-法医学分析-それは重要かもしれません。</target>
+          <target state="translated">1年前のデータに対してデータ分析を行う場合など、一部のアプリケーションでは、この区別はあまり重要ではありません。他の人にとって-法医学分析-それは重要かもしれません。</target>
         </trans-unit>
         <trans-unit id="9c7f9c718384282171adaba023b966ebb24379ab" translate="yes" xml:space="preserve">
           <source>For some distributions you can build MariaDB from a source RPM. (See also &lt;a href=&quot;../why-source-rpms-srpms-arent-packaged-for-some-platforms/index&quot;&gt;Why Source RPMs (SRPMs) Aren't Packaged For Some Platforms&lt;/a&gt;).</source>
-          <target state="translated">一部のディストリビューションでは、ソースRPMからMariaDBを構築できます。（&lt;a href=&quot;../why-source-rpms-srpms-arent-packaged-for-some-platforms/index&quot;&gt;一部のプラットフォーム用にパッケージ化されていないソースRPM（SRPM）の理由&lt;/a&gt;も参照してください）。</target>
+          <target state="translated">一部のディストリビューションでは、ソースRPMからMariaDBを構築できます。（「&lt;a href=&quot;../why-source-rpms-srpms-arent-packaged-for-some-platforms/index&quot;&gt;ソースRPM（SRPM）が一部のプラットフォーム用にパッケージ化されていない理由&lt;/a&gt;」も参照）。</target>
         </trans-unit>
         <trans-unit id="999a274048e6a4e2918840011388315db8f3199c" translate="yes" xml:space="preserve">
           <source>For some libraries or applications, this problem can be fixed by copying &lt;code&gt;dialog.so&lt;/code&gt; or &lt;code&gt;dialog.dll&lt;/code&gt; from a MariaDB client installation that is compatible with the system into the system's MySQL client authentication plugin directory. However, not all clients are compatible with the &lt;code&gt;dialog&lt;/code&gt; client authentication plugin, so this may not work for every client.</source>
@@ -1277,7 +1277,7 @@
         </trans-unit>
         <trans-unit id="ad2199e4957b5628aa150753efcc4e91e6cc5615" translate="yes" xml:space="preserve">
           <source>For specific information about storage engines (a particular type of plugin), see the &lt;code&gt;&lt;a href=&quot;../information-schema-engines-table/index&quot;&gt;information_schema.ENGINES&lt;/a&gt;&lt;/code&gt; table and the &lt;code&gt;&lt;a href=&quot;../show-engines/index&quot;&gt;SHOW ENGINES&lt;/a&gt;&lt;/code&gt; statement.</source>
-          <target state="translated">ストレージエンジン（特定のタイプのプラグイン）に関する特定の情報については、 &lt;code&gt;&lt;a href=&quot;../information-schema-engines-table/index&quot;&gt;information_schema.ENGINES&lt;/a&gt;&lt;/code&gt; テーブルと &lt;code&gt;&lt;a href=&quot;../show-engines/index&quot;&gt;SHOW ENGINES&lt;/a&gt;&lt;/code&gt; ステートメントを参照してください。</target>
+          <target state="translated">ストレージエンジン（特定の種類のプラグイン）の詳細については、 &lt;code&gt;&lt;a href=&quot;../information-schema-engines-table/index&quot;&gt;information_schema.ENGINES&lt;/a&gt;&lt;/code&gt; テーブルと &lt;code&gt;&lt;a href=&quot;../show-engines/index&quot;&gt;SHOW ENGINES&lt;/a&gt;&lt;/code&gt; ステートメントを参照してください。</target>
         </trans-unit>
         <trans-unit id="ac3d0d479afa4b340a9eff7e9c4a57552fcb7798" translate="yes" xml:space="preserve">
           <source>For start of block: One single-row fetch using the PRIMARY KEY</source>
@@ -1285,7 +1285,7 @@
         </trans-unit>
         <trans-unit id="e2c46b3c25c75f9788ff6003bded018c811645dd" translate="yes" xml:space="preserve">
           <source>For statement-based logging, the server will only log statement where the &lt;em&gt;default database&lt;/em&gt; is database_name. The default database is set with the &lt;a href=&quot;../use/index&quot;&gt;USE&lt;/a&gt; statement.</source>
-          <target state="translated">ステートメントベースのロギングの場合、サーバーは、&lt;em&gt;デフォルトのデータベース&lt;/em&gt;がdatabase_name であるステートメントのみをログに記録します。デフォルトのデータベースは&lt;a href=&quot;../use/index&quot;&gt;USE&lt;/a&gt;ステートメントで設定されます。</target>
+          <target state="translated">ステートメントベースのロギングの場合、サーバーは&lt;em&gt;デフォルトのデータベース&lt;/em&gt;がdatabase_name であるステートメントのみをログに記録します。デフォルトのデータベースは&lt;a href=&quot;../use/index&quot;&gt;USE&lt;/a&gt;ステートメントで設定されます。</target>
         </trans-unit>
         <trans-unit id="1b94ea1c73c3f867de73cc27c2cb8cfe03fae6dd" translate="yes" xml:space="preserve">
           <source>For statements which return a result set (such as &lt;a href=&quot;../select/index&quot;&gt;SELECT&lt;/a&gt;, &lt;a href=&quot;../show/index&quot;&gt;SHOW&lt;/a&gt;, &lt;a href=&quot;../describe/index&quot;&gt;DESC&lt;/a&gt; or &lt;a href=&quot;../help-command/index&quot;&gt;HELP&lt;/a&gt;), returns -1, even when the result set is empty. This is also true for administrative statements, such as &lt;a href=&quot;../optimize-table/index&quot;&gt;OPTIMIZE&lt;/a&gt;.</source>
@@ -1297,7 +1297,7 @@
         </trans-unit>
         <trans-unit id="d4582173c7b7f8ce14986698b4f776053bf32573" translate="yes" xml:space="preserve">
           <source>For stored procedures to be really useful, you want to have cursors. MySQL doesn't yet have &quot;real&quot; cursor support (with API and ODBC support, allowing updating, arbitrary scrolling, etc), but a simple asensitive, non-scrolling, read-only cursor can be implemented in SPs using the class Protocol_cursor. This class intecepts the creation and sending of results sets and instead stores it in-memory, as MYSQL_FIELDS and MYSQL_ROWS (as in the client API).</source>
-          <target state="translated">ストアドプロシージャが本当に役に立つためには、カーソルが必要です。MySQLはまだ &quot;本当の &quot;カーソルをサポートしていませんが(APIとODBCをサポートし、更新、任意のスクロールなどを可能にしています)、シンプルな非センシティブ、非スクロール、読み取り専用のカーソルはProtocol_cursorクラスを使用してSPに実装することができます。このクラスは、結果セットの作成と送信をインターセプトし、代わりにMYSQL_FIELDSとMYSQL_ROWSとして(クライアントAPIのように)メモリ内に格納します。</target>
+          <target state="translated">ストアドプロシージャが本当に役に立つためには、カーソルが必要です。MySQLはまだ &quot;本当の &quot;カーソルをサポートしていませんが(APIとODBCをサポートし、更新、任意のスクロールなどを可能にします)、シンプルな非センシティブ、非スクロール、読み取り専用のカーソルは、Protocol_cursorクラスを使用してSPに実装することができます。このクラスは、結果セットの作成と送信をインターセプトし、代わりにMYSQL_FIELDSとMYSQL_ROWSとして(クライアントAPIのように)メモリ内に格納します。</target>
         </trans-unit>
         <trans-unit id="1de7aa1b4d66d324fbf296c278ec72dfcee2904d" translate="yes" xml:space="preserve">
           <source>For stored routines parameters and return values, a character set and a collation can be specified via the CHARACTER SET and COLLATE clauses. Before 5.5, specifying a collation was not supported.</source>
@@ -1313,7 +1313,7 @@
         </trans-unit>
         <trans-unit id="660f9ad831ff71e5b9fcaea0d0c5fb77139aaf61" translate="yes" xml:space="preserve">
           <source>For such tables &amp;ndash; as well as for &lt;em&gt;pretty=1&lt;/em&gt; ones &amp;ndash; the record size must be specified using the LRECL option. Be sure you don&amp;rsquo;t specify it too small as it is used to allocate the read/write buffers and the memory used for parsing the rows. If in doubt, be generous as it does not cost much in memory allocation.</source>
-          <target state="translated">そのようなテーブル（&lt;em&gt;pretty = 1の&lt;/em&gt;テーブルと同様）の場合、LRECLオプションを使用してレコードサイズを指定する必要があります。読み取り/書き込みバッファと行の解析に使用されるメモリの割り当てに使用されるため、小さすぎないように指定してください。疑わしい場合は、メモリ割り当てにそれほどコストがかからないため、寛大にしてください。</target>
+          <target state="translated">そのようなテーブルの場合、および&lt;em&gt;pretty = 1の&lt;/em&gt;テーブルの場合と同様に、LRECLオプションを使用してレコードサイズを指定する必要があります。読み取り/書き込みバッファと行の解析に使用されるメモリの割り当てに使用されるため、小さすぎないように指定してください。疑わしい場合は、メモリ割り当てにそれほどコストがかからないため、寛大にしてください。</target>
         </trans-unit>
         <trans-unit id="1ff45c1c47723065b4190aaf4ee83121384b150f" translate="yes" xml:space="preserve">
           <source>For systemd installation the mariadb.service file will need to be copied from the support-files/systemd folder to the /usr/lib/systemd/system/ folder.</source>
@@ -1325,7 +1325,7 @@
         </trans-unit>
         <trans-unit id="1b27d61d5cdcaaafa3d764cac487ac3420592653" translate="yes" xml:space="preserve">
           <source>For table orders, &lt;strong&gt;orders.rows=7, orders.r_rows=10&lt;/strong&gt;. This means that on average, there are 7 orders for a given c_custkey, but in our case there were 10, which is close to the expectation (when this number is consistently far from the expectation, it may be time to run ANALYZE TABLE, or even edit the table statistics manually to get better query plans).</source>
-          <target state="translated">テーブル注文の場合、&lt;strong&gt;orders.rows = 7、orders.r_rows = 10&lt;/strong&gt;です。つまり、特定のc_custkeyには平均で7つの注文がありますが、この場合は10でした。これは期待値に近いものです（この数値が常に期待値から離れている場合は、ANALYZE TABLEを実行するか、テーブルの統計を手動で編集して、クエリプランを改善することもできます）。</target>
+          <target state="translated">テーブルの注文の場合、&lt;strong&gt;orders.rows = 7、orders.r_rows = 10&lt;/strong&gt;です。つまり、特定のc_custkeyには平均で7つの注文がありますが、この場合は10でした。これは期待に近いものです（この数値が常に期待から離れている場合、ANALYZE TABLEを実行するときかもしれません。またはテーブルの統計を手動で編集して、クエリプランを改善することもできます）。</target>
         </trans-unit>
         <trans-unit id="9f9ec6d8510f782228c0a7e6893c941154f1d5e7" translate="yes" xml:space="preserve">
           <source>For tables too large to be stored in memory another possibility is to make your table to use a scrollable cursor. In this case each randomly accessed row can be retrieved from the data source specifying its cursor position, which is reasonably fast. However, scrollable cursors are not supported by all data sources.</source>
@@ -1341,7 +1341,7 @@
         </trans-unit>
         <trans-unit id="da44727447703f3cc7a41cf51f6607ead4ec1fa6" translate="yes" xml:space="preserve">
           <source>For tabular output, the &amp;ldquo;boxing&amp;rdquo; around columns enables one column value to be distinguished from another. For nontabular output (such as is produced in batch mode or when the &lt;code&gt;--batch&lt;/code&gt; or &lt;code&gt;--silent&lt;/code&gt; option is given), special characters are escaped in the output so they can be identified easily. Newline, tab, NUL, and backslash are written as &lt;code&gt;\n&lt;/code&gt;, &lt;code&gt;\t&lt;/code&gt;, &lt;code&gt;\0&lt;/code&gt;, and . The &lt;code&gt;--raw&lt;/code&gt; option disables this character escaping.</source>
-          <target state="translated">表形式の出力の場合、列を囲む「ボックス化」により、1つの列の値を別の列の値と区別できます。非表形式の出力（バッチモードで生成される場合、または &lt;code&gt;--batch&lt;/code&gt; または &lt;code&gt;--silent&lt;/code&gt; オプションが指定された場合など）では、出力で特殊文字がエスケープされ、簡単に識別できます。改行、タブ、NUL、およびバックスラッシュは、 &lt;code&gt;\n&lt;/code&gt; 、 &lt;code&gt;\t&lt;/code&gt; 、 &lt;code&gt;\0&lt;/code&gt; 、およびとして記述されます。 &lt;code&gt;--raw&lt;/code&gt; オプションは、この文字のエスケープを無効にします。</target>
+          <target state="translated">表形式の出力の場合、列を囲む「ボックス化」により、1つの列の値を別の列の値と区別できます。非表形式の出力（バッチモードで生成される場合、または &lt;code&gt;--batch&lt;/code&gt; または &lt;code&gt;--silent&lt;/code&gt; オプションが指定された場合など）では、簡単に識別できるように出力で特殊文字がエスケープされます。改行、タブ、NUL、およびバックスラッシュは、 &lt;code&gt;\n&lt;/code&gt; 、 &lt;code&gt;\t&lt;/code&gt; 、 &lt;code&gt;\0&lt;/code&gt; 、およびとして記述されます。 &lt;code&gt;--raw&lt;/code&gt; オプションは、この文字のエスケープを無効にします。</target>
         </trans-unit>
         <trans-unit id="7cb2f4e9f8229676b5b9a51216dd2bd0dda9b2da" translate="yes" xml:space="preserve">
           <source>For testing of the facility itself you can execute a sync point just as if it had been hit:</source>
@@ -1369,7 +1369,7 @@
         </trans-unit>
         <trans-unit id="4ca74d6090ee015af01b66e3b4b869eca59d0bc8" translate="yes" xml:space="preserve">
           <source>For the definition of the &lt;em&gt;agehired&lt;/em&gt; virtual column, no CONNECT options can be specified as it has no offset or length, not being stored in the file.</source>
-          <target state="translated">&lt;em&gt;agehired&lt;/em&gt;仮想列の定義では、ファイルに格納されていないオフセットまたは長さがないため、CONNECTオプションは指定できません。</target>
+          <target state="translated">&lt;em&gt;agehired&lt;/em&gt;仮想列の定義では、CONNECTオプションはオフセットまたは長さを持たず、ファイルに格納されていないため、指定できません。</target>
         </trans-unit>
         <trans-unit id="cd833c8ffc1d9abe12ed380040c64f8af1aceb6a" translate="yes" xml:space="preserve">
           <source>For the examples on this page, we'll create a second OQGRAPH table and backing table, this time with &lt;code&gt;weight&lt;/code&gt; as well.</source>
@@ -1389,11 +1389,11 @@
         </trans-unit>
         <trans-unit id="a665a1cdeb7100cfdd31bde6f85e37b2eda3ab64" translate="yes" xml:space="preserve">
           <source>For the multiple-table syntax, &lt;code&gt;DELETE&lt;/code&gt; deletes from each &lt;code&gt;tbl_name&lt;/code&gt; the rows that satisfy the conditions. In this case, &lt;a href=&quot;../order-by/index&quot;&gt;ORDER BY&lt;/a&gt; and &lt;a href=&quot;../limit/index&quot;&gt;LIMIT&lt;/a&gt;&amp;gt; cannot be used. A &lt;code&gt;DELETE&lt;/code&gt; can also reference tables which are located in different databases; see &lt;a href=&quot;../identifier-qualifiers/index&quot;&gt;Identifier Qualifiers&lt;/a&gt; for the syntax.</source>
-          <target state="translated">複数テーブル構文の場合、 &lt;code&gt;DELETE&lt;/code&gt; は各 &lt;code&gt;tbl_name&lt;/code&gt; から条件を満たす行を削除します。この場合、&lt;a href=&quot;../order-by/index&quot;&gt;ORDER BY&lt;/a&gt;および&lt;a href=&quot;../limit/index&quot;&gt;LIMIT&lt;/a&gt; &amp;gt;は使用できません。 &lt;code&gt;DELETE&lt;/code&gt; 異なるデータベースに配置されることもでき、参照テーブル。構文については、&lt;a href=&quot;../identifier-qualifiers/index&quot;&gt;識別子修飾子&lt;/a&gt;を参照してください。</target>
+          <target state="translated">複数テーブル構文の場合、 &lt;code&gt;DELETE&lt;/code&gt; は、各 &lt;code&gt;tbl_name&lt;/code&gt; から条件を満たす行を削除します。この場合、&lt;a href=&quot;../order-by/index&quot;&gt;ORDER BY&lt;/a&gt;および&lt;a href=&quot;../limit/index&quot;&gt;LIMIT&lt;/a&gt; &amp;gt;は使用できません。 &lt;code&gt;DELETE&lt;/code&gt; 異なるデータベースに配置されることもでき、参照テーブル。構文については、&lt;a href=&quot;../identifier-qualifiers/index&quot;&gt;識別子修飾子&lt;/a&gt;を参照してください。</target>
         </trans-unit>
         <trans-unit id="e5a7925e1047b15af5588daf2cb8afe81f7f1cc3" translate="yes" xml:space="preserve">
           <source>For the option groups read by &lt;code&gt;&lt;a href=&quot;../mysql_install_db/index&quot;&gt;mysql_install_db&lt;/a&gt;&lt;/code&gt;, see &lt;a href=&quot;../mysql_install_db/index#option-groups&quot;&gt;mysql_install_db: Option Groups&lt;/a&gt;.</source>
-          <target state="translated">&lt;code&gt;&lt;a href=&quot;../mysql_install_db/index&quot;&gt;mysql_install_db&lt;/a&gt;&lt;/code&gt; が読み取るオプショングループについては、&lt;a href=&quot;../mysql_install_db/index#option-groups&quot;&gt;mysql_install_db：Option Groupsを&lt;/a&gt;参照してください。</target>
+          <target state="translated">&lt;code&gt;&lt;a href=&quot;../mysql_install_db/index&quot;&gt;mysql_install_db&lt;/a&gt;&lt;/code&gt; によって読み取られるオプショングループについては、&lt;a href=&quot;../mysql_install_db/index#option-groups&quot;&gt;mysql_install_db：Option Groupsを&lt;/a&gt;参照してください。</target>
         </trans-unit>
         <trans-unit id="4ecfb4dd22b62eeba765a11c05d1003829de7879" translate="yes" xml:space="preserve">
           <source>For the options supported by &lt;code&gt;&lt;a href=&quot;../mysql_install_db/index&quot;&gt;mysql_install_db&lt;/a&gt;&lt;/code&gt;, see &lt;a href=&quot;../mysql_install_db/index#options&quot;&gt;mysql_install_db: Options&lt;/a&gt;.</source>
@@ -1417,15 +1417,15 @@
         </trans-unit>
         <trans-unit id="6db3768e8d757705ed39e3b84c25fc30f67b5b28" translate="yes" xml:space="preserve">
           <source>For the reason given in the paragraph above, you would not generally set variables related to the auditing plugin using the &lt;a href=&quot;../set/index&quot;&gt;&lt;code&gt;SET&lt;/code&gt;&lt;/a&gt; statement. However, you might do so to test settings before making them more permanent. Since one cannot always restart the server, you would use the &lt;a href=&quot;../set/index&quot;&gt;&lt;code&gt;SET&lt;/code&gt;&lt;/a&gt; statement to change immediately the variables and then include the same settings in the configuration file so that the variables are set again as you prefer when the server is restarted.</source>
-          <target state="translated">上記の段落で説明した理由により、通常、&lt;a href=&quot;../set/index&quot;&gt; &lt;code&gt;SET&lt;/code&gt; &lt;/a&gt;ステートメントを使用して監査プラグインに関連する変数を設定しません。ただし、永続的にする前に設定をテストするためにそうするかもしれません。サーバーを常に再起動できるとは限らないので、&lt;a href=&quot;../set/index&quot;&gt; &lt;code&gt;SET&lt;/code&gt; &lt;/a&gt;ステートメントを使用して変数をすぐに変更し、同じ設定を構成ファイルに含めて、サーバーの再起動時に希望どおりに変数が再設定されるようにします。</target>
+          <target state="translated">上記の段落で説明した理由により、通常、&lt;a href=&quot;../set/index&quot;&gt; &lt;code&gt;SET&lt;/code&gt; &lt;/a&gt;ステートメントを使用して監査プラグインに関連する変数を設定しません。ただし、より永続的な設定にする前に、設定をテストするためにこれを行う場合があります。サーバーを常に再起動できるとは限らないため、&lt;a href=&quot;../set/index&quot;&gt; &lt;code&gt;SET&lt;/code&gt; &lt;/a&gt;ステートメントを使用して変数をすぐに変更し、同じ設定を構成ファイルに含めて、サーバーを再起動したときに変数が希望どおりに再設定されるようにします。</target>
         </trans-unit>
         <trans-unit id="f4e1687c45ff42dc608bdd11bb237d2428b45496" translate="yes" xml:space="preserve">
           <source>For the root user, ColumnStore comes with full privileges. In order to set/restrict user accounts, privileges must be given/restricted. ColumnStore uses a dedicated schema called &lt;em&gt;infinidb_vtable&lt;/em&gt; for creation of all temporary tables used for ColumnStore query processing. The root user account has been given permission to this account by default, but full permission MUST be given for all user accounts to this schema:</source>
-          <target state="translated">rootユーザーの場合、ColumnStoreには完全な特権が付属しています。ユーザーアカウントを設定/制限するには、権限を付与/制限する必要があります。ColumnStoreと呼ばれる専用のスキーマ使用&lt;em&gt;infinidb_vtable&lt;/em&gt; ColumnStoreのクエリ処理のために使用されるすべての一時テーブルを作成するために。rootユーザーアカウントには、デフォルトでこのアカウントへのアクセス許可が付与されていますが、このスキーマに対するすべてのユーザーアカウントに完全なアクセス許可を付与する必要があります。</target>
+          <target state="translated">rootユーザーの場合、ColumnStoreには完全な特権が付属しています。ユーザーアカウントを設定/制限するには、権限を付与/制限する必要があります。ColumnStoreは、ColumnStoreクエリ処理に使用されるすべての一時テーブルの作成に、&lt;em&gt;infinidb_vtable&lt;/em&gt;と呼ばれる専用スキーマを使用します。rootユーザーアカウントには、デフォルトでこのアカウントへのアクセス許可が与えられていますが、このスキーマに対するすべてのユーザーアカウントに完全なアクセス許可を与える必要があります。</target>
         </trans-unit>
         <trans-unit id="11c30835327b809e40043f7de8537b18a3d766b5" translate="yes" xml:space="preserve">
           <source>For the sake of simplicity, we can count each BTree lookup as 1 unit of work, and ignore scans for consecutive items. This approximates the number of disk hits for a large table in a busy system.</source>
-          <target state="translated">シンプルにするために、BTreeの各ルックアップを1単位の作業としてカウントし、連続した項目のスキャンは無視します。これは、忙しいシステムにおける大規模なテーブルのディスクヒット数に近似しています。</target>
+          <target state="translated">単純化のために、BTreeの各ルックアップを1単位の作業としてカウントし、連続した項目のスキャンは無視します。これは、忙しいシステムの大きなテーブルのディスクヒット数に近似しています。</target>
         </trans-unit>
         <trans-unit id="c02eafeba7117241e4ec26126eac153d929bc6b2" translate="yes" xml:space="preserve">
           <source>For the same reason it's also good to execute the following commands on the old master (same as for other slaves, but with some extra security). The &lt;code&gt;read_only&lt;/code&gt; option below is there to ensure that old applications doesn't by accident try to update the old master by mistake. It only affects normal connections to the slave, not changes from the new master.</source>
@@ -1505,11 +1505,11 @@
         </trans-unit>
         <trans-unit id="badecca466206ba73b10fc4b6718f0865383480d" translate="yes" xml:space="preserve">
           <source>For type mapping between Cassandra and MariaDB, see &lt;a href=&quot;../cassandra-storage-engine/index#datatypes&quot;&gt;Cassandra storage engine&lt;/a&gt;.</source>
-          <target state="translated">CassandraとMariaDBの間の型マッピングについては、&lt;a href=&quot;../cassandra-storage-engine/index#datatypes&quot;&gt;Cassandraストレージエンジンを&lt;/a&gt;ご覧ください。</target>
+          <target state="translated">CassandraとMariaDB間の型マッピングについては、&lt;a href=&quot;../cassandra-storage-engine/index#datatypes&quot;&gt;Cassandraストレージエンジンを&lt;/a&gt;ご覧ください。</target>
         </trans-unit>
         <trans-unit id="43cb9fb5d2aa9a42c9ef53254b448495b036ef9d" translate="yes" xml:space="preserve">
           <source>For types like &quot;&lt;code&gt;VARBINARY(n)&lt;/code&gt;&quot;, &lt;code&gt;n&lt;/code&gt; should be chosen sufficiently large to accommodate all the data that is encountered in the table.</source>
-          <target state="translated">「 &lt;code&gt;VARBINARY(n)&lt;/code&gt; 」などのタイプの場合、 &lt;code&gt;n&lt;/code&gt; は、テーブルで検出されるすべてのデータに対応するのに十分な大きさに選択する必要があります。</target>
+          <target state="translated">「 &lt;code&gt;VARBINARY(n)&lt;/code&gt; 」のようなタイプの場合、 &lt;code&gt;n&lt;/code&gt; は、テーブルで検出されるすべてのデータに対応するのに十分な大きさに選択する必要があります。</target>
         </trans-unit>
         <trans-unit id="2532e151a47a55d89595a0b4a6d0cb197508da51" translate="yes" xml:space="preserve">
           <source>For upgrading from very old MySQL versions, see &lt;a href=&quot;../upgrading-to-mariadb-from-mysql-50-or-older-version/index&quot;&gt;Upgrading to MariaDB from MySQL 5.0 (or older version)&lt;/a&gt;.</source>
@@ -1533,7 +1533,7 @@
         </trans-unit>
         <trans-unit id="813c405f8a513dd2784f6e8d4e274a733840b523" translate="yes" xml:space="preserve">
           <source>For valid identifiers to use as function names, see &lt;a href=&quot;../identifier-names/index&quot;&gt;Identifier Names&lt;/a&gt;.</source>
-          <target state="translated">関数名として使用する有効な識別子については、&lt;a href=&quot;../identifier-names/index&quot;&gt;識別子&lt;/a&gt;名を参照してください。</target>
+          <target state="translated">関数名として使用する有効な識別子については、「&lt;a href=&quot;../identifier-names/index&quot;&gt;識別子&lt;/a&gt;名」を参照してください。</target>
         </trans-unit>
         <trans-unit id="17c463d737bf98c8497a395cdad59e30dba15c17" translate="yes" xml:space="preserve">
           <source>For valid identifiers to use as index names, see &lt;a href=&quot;../identifier-names/index&quot;&gt;Identifier Names&lt;/a&gt;.</source>
@@ -1569,7 +1569,7 @@
         </trans-unit>
         <trans-unit id="b9be28eb6cd103675b7004ac2da3a8c05e714fbb" translate="yes" xml:space="preserve">
           <source>For vector tables, the option &lt;em&gt;block_size=n&lt;/em&gt; is used for block reading and writing; however, to have a file made of blocks of equal size, the internal value of the &lt;em&gt;max_rows=m&lt;/em&gt; option is eventually increased to become a multiple of n.</source>
-          <target state="translated">ベクトルテーブルの場合、オプション&lt;em&gt;block_size = n&lt;/em&gt;はブロックの読み取りと書き込みに使用されます。ただし、同じサイズのブロックでファイルを作成するには、&lt;em&gt;max_rows = m&lt;/em&gt;オプションの内部値を最終的に増やしてnの倍数にします。</target>
+          <target state="translated">ベクトルテーブルの場合、オプション&lt;em&gt;block_size = n&lt;/em&gt;はブロックの読み取りと書き込みに使用されます。ただし、ファイルを同じサイズのブロックで構成するには、&lt;em&gt;max_rows = m&lt;/em&gt;オプションの内部値を最終的に増やしてnの倍数にします。</target>
         </trans-unit>
         <trans-unit id="f17fd8aaf17db67d3968ff5c5e4403db1d4aca88" translate="yes" xml:space="preserve">
           <source>For version 1.2.0 onwards the additional options in the &amp;lt;CrossEngineSupport&amp;gt; section are supported to add SSL/TLS encryption to the connections:</source>
@@ -1577,7 +1577,7 @@
         </trans-unit>
         <trans-unit id="0051ad1d56cd89fc041ea5892ca6b14b748dbf2f" translate="yes" xml:space="preserve">
           <source>For view locking, &lt;code&gt;LOCK TABLES&lt;/code&gt; adds all base tables used in the view to the set of tables to be locked and locks them automatically. If you lock a table explicitly with &lt;code&gt;LOCK TABLES&lt;/code&gt;, any tables used in triggers are also locked implicitly, as described in &lt;a href=&quot;../triggers-and-implicit-locks/index&quot;&gt;Triggers and Implicit Locks&lt;/a&gt;.</source>
-          <target state="translated">ビューのロックの場合、 &lt;code&gt;LOCK TABLES&lt;/code&gt; は、ビューで使用されるすべてのベーステーブルをロックされるテーブルのセットに追加し、それらを自動的にロックします。 &lt;code&gt;LOCK TABLES&lt;/code&gt; を使用してテーブルを明示的にロックすると、&lt;a href=&quot;../triggers-and-implicit-locks/index&quot;&gt;トリガーと暗黙的なロックで&lt;/a&gt;説明されているように、トリガーで使用されるすべてのテーブルも暗黙的にロックされます。</target>
+          <target state="translated">ビューのロックの場合、 &lt;code&gt;LOCK TABLES&lt;/code&gt; は、ビューで使用されるすべての基本テーブルをロックされるテーブルのセットに追加し、それらを自動的にロックします。 &lt;code&gt;LOCK TABLES&lt;/code&gt; を使用してテーブルを明示的にロックすると、&lt;a href=&quot;../triggers-and-implicit-locks/index&quot;&gt;トリガーと暗黙的なロックで&lt;/a&gt;説明されているように、トリガーで使用されるすべてのテーブルも暗黙的にロックされます。</target>
         </trans-unit>
         <trans-unit id="d3a921d67fcd62bf4122a4b2f08edea9fe344988" translate="yes" xml:space="preserve">
           <source>For whatever reason, g++ / ld on Linux are both extremely picky about what they will and won't consider a *&quot;library&quot;* for linking purposes. In order to get them to recognize and therefore find `ha_connect.so` as a &quot;valid&quot; linkable library, `ha_connect.so` must exist in a directory whose path is in `/etc/ld.so.conf` or `/etc/ld.so.conf.d/ha_connect.conf` *AND* its filename must begin with &quot;lib&quot;.</source>
@@ -1629,7 +1629,7 @@
         </trans-unit>
         <trans-unit id="baa124cf6b7a9b0dabe30091520c84db1e184cf7" translate="yes" xml:space="preserve">
           <source>Forces recovering with sorting even if the temporary file would be very big.</source>
-          <target state="translated">一時的なファイルが非常に大きくなっても、ソートで強制的に回復させます。</target>
+          <target state="translated">一時的なファイルが非常に大きくなっても、ソートで強制的に復旧させます。</target>
         </trans-unit>
         <trans-unit id="b509ceca64691b984d5c77dc9ecd216063395d01" translate="yes" xml:space="preserve">
           <source>Forces recovering with sorting even if the temporary file would be very large.</source>
@@ -1669,7 +1669,7 @@
         </trans-unit>
         <trans-unit id="2bb1f654dfbb79ff69da832aaa66315f62785edc" translate="yes" xml:space="preserve">
           <source>Foreground thread user, or &lt;code&gt;NULL&lt;/code&gt; for a background thread.</source>
-          <target state="translated">フォアグラウンドスレッドユーザー、またはバックグラウンドスレッドの場合は &lt;code&gt;NULL&lt;/code&gt; 。</target>
+          <target state="translated">フォアグラウンドスレッドのユーザー、またはバックグラウンドスレッドの場合は &lt;code&gt;NULL&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="c3788028d350f50070224e2ffa767d1574a8ab2d" translate="yes" xml:space="preserve">
           <source>Foreign Key Constraints</source>
@@ -1701,7 +1701,7 @@
         </trans-unit>
         <trans-unit id="0bc0edc43359a22fbdba637cd9029d7a9e77cf69" translate="yes" xml:space="preserve">
           <source>Foreign key constraints can be disabled by setting the &lt;a href=&quot;../server-system-variables/index#foreign_key_checks&quot;&gt;foreign_key_checks&lt;/a&gt; server system variable to 0. This speeds up the insertion of large quantities of data.</source>
-          <target state="translated">&lt;a href=&quot;../server-system-variables/index#foreign_key_checks&quot;&gt;foreign_key_checks&lt;/a&gt;サーバーシステム変数を0に設定することにより、外部キー制約を無効にできます。これにより、大量のデータの挿入が高速化されます。</target>
+          <target state="translated">&lt;a href=&quot;../server-system-variables/index#foreign_key_checks&quot;&gt;foreign_key_checks&lt;/a&gt;サーバーシステム変数を0に設定すると、外部キー制約を無効にできます。これにより、大量のデータの挿入が高速化されます。</target>
         </trans-unit>
         <trans-unit id="61c2422c3419b379cd927b631fcb221570460a6f" translate="yes" xml:space="preserve">
           <source>Foreign key index associated with this column, matching the &lt;a href=&quot;../information-schema-innodb_sys_foreign-table/index&quot;&gt;INNODB_SYS_FOREIGN.ID&lt;/a&gt; field.</source>
@@ -1745,7 +1745,7 @@
         </trans-unit>
         <trans-unit id="8b85833fcd02e266555ebe1b2f6305353333810f" translate="yes" xml:space="preserve">
           <source>Forensic analysis &amp;amp; legal requirements to store data for N years.</source>
-          <target state="translated">N年間データを保存するための法医学分析と法的要件。</target>
+          <target state="translated">データをN年間保存するための法医学分析と法的要件。</target>
         </trans-unit>
         <trans-unit id="83d6f0b3cef0c7c39242804c651419c5f5bf5e77" translate="yes" xml:space="preserve">
           <source>Forget slave connection information and start a new relay log file.</source>
@@ -1929,7 +1929,7 @@
         </trans-unit>
         <trans-unit id="f41e76353d7b4e17e747e65f3dc97c924fb95d45" translate="yes" xml:space="preserve">
           <source>From &lt;a href=&quot;../what-is-mariadb-101/index&quot;&gt;MariaDB 10.1&lt;/a&gt;, the wsrep API for Galera Cluster is included by default. You can use Git to download the source code, as MariaDB source code is available through GitHub. Clone the repository:</source>
-          <target state="translated">&lt;a href=&quot;../what-is-mariadb-101/index&quot;&gt;MariaDB 10.1&lt;/a&gt;、ガレラクラスタ用wsrepのAPIはデフォルトで含まれています。MariaDBのソースコードはGitHubから入手できるため、Gitを使用してソースコードをダウンロードできます。リポジトリのクローンを作成します。</target>
+          <target state="translated">&lt;a href=&quot;../what-is-mariadb-101/index&quot;&gt;MariaDB 10.1&lt;/a&gt;、ガレラクラスタ用wsrepのAPIはデフォルトで含まれています。MariaDBソースコードはGitHubから入手できるため、Gitを使用してソースコードをダウンロードできます。リポジトリのクローンを作成します。</target>
         </trans-unit>
         <trans-unit id="b1f3d75c085ac87024a0637db8ae08f203ff5604" translate="yes" xml:space="preserve">
           <source>From &lt;a href=&quot;../what-is-mariadb-102/index&quot;&gt;MariaDB 10.2&lt;/a&gt;, MariaDB uses InnoDB as the default storage engine. Before &lt;a href=&quot;../what-is-mariadb-102/index&quot;&gt;MariaDB 10.2&lt;/a&gt;, MariaDB came by default with &lt;a href=&quot;../xtradb/index&quot;&gt;XtraDB&lt;/a&gt;, an enhanced version of the InnoDB plugin that comes from Oracle.</source>
@@ -2045,7 +2045,7 @@
         </trans-unit>
         <trans-unit id="b52725658fc915f4784e57065b78b1d3b574bab7" translate="yes" xml:space="preserve">
           <source>From &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1021-release-notes/&quot;&gt;MariaDB 10.2.1&lt;/a&gt; you can use most functions in &lt;code&gt;DEFAULT&lt;/code&gt;. Expressions should have parentheses around them. If you use a non deterministic function in &lt;code&gt;DEFAULT&lt;/code&gt; then all inserts to the table will be &lt;a href=&quot;../replication/index&quot;&gt;replicated&lt;/a&gt; in &lt;a href=&quot;../binary-log-formats/index#row-based&quot;&gt;row mode&lt;/a&gt;. You can even refer to earlier columns in the &lt;code&gt;DEFAULT&lt;/code&gt; expression:</source>
-          <target state="translated">&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1021-release-notes/&quot;&gt;MariaDB 10.2.1&lt;/a&gt;以降、 &lt;code&gt;DEFAULT&lt;/code&gt; でほとんどの関数を使用できます。式は括弧で囲む必要があります。 &lt;code&gt;DEFAULT&lt;/code&gt; で非決定的関数を使用すると、テーブルへのすべての挿入が&lt;a href=&quot;../binary-log-formats/index#row-based&quot;&gt;行モード&lt;/a&gt;で&lt;a href=&quot;../replication/index&quot;&gt;複製さ&lt;/a&gt;れます。 &lt;code&gt;DEFAULT&lt;/code&gt; 式で以前の列を参照することもできます。</target>
+          <target state="translated">&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1021-release-notes/&quot;&gt;MariaDB 10.2.1&lt;/a&gt;以降、 &lt;code&gt;DEFAULT&lt;/code&gt; でほとんどの関数を使用できます。式の前後には括弧が必要です。 &lt;code&gt;DEFAULT&lt;/code&gt; で非決定的関数を使用すると、テーブルへのすべての挿入が&lt;a href=&quot;../binary-log-formats/index#row-based&quot;&gt;行モード&lt;/a&gt;で&lt;a href=&quot;../replication/index&quot;&gt;複製さ&lt;/a&gt;れます。 &lt;code&gt;DEFAULT&lt;/code&gt; 式で以前の列を参照することもできます。</target>
         </trans-unit>
         <trans-unit id="848cace800ffb02074e753eff33625a385897925" translate="yes" xml:space="preserve">
           <source>From &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1021-release-notes/&quot;&gt;MariaDB 10.2.1&lt;/a&gt;, constraints are enforced. Before &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1021-release-notes/&quot;&gt;MariaDB 10.2.1&lt;/a&gt; constraint expressions were accepted in the syntax but ignored.</source>
@@ -2057,7 +2057,7 @@
         </trans-unit>
         <trans-unit id="27756bf474398c2a97527dd9b1e7bc537f2c9962" translate="yes" xml:space="preserve">
           <source>From &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1022-release-notes/&quot;&gt;MariaDB 10.2.2&lt;/a&gt;, MIN() can be used as a &lt;a href=&quot;../window-functions/index&quot;&gt;window function&lt;/a&gt;.</source>
-          <target state="translated">&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1022-release-notes/&quot;&gt;MariaDB 10.2.2&lt;/a&gt;、MIN（）として使用することができる&lt;a href=&quot;../window-functions/index&quot;&gt;窓関数&lt;/a&gt;。</target>
+          <target state="translated">&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1022-release-notes/&quot;&gt;MariaDB 10.2.2&lt;/a&gt;から、MIN（）は&lt;a href=&quot;../window-functions/index&quot;&gt;ウィンドウ関数&lt;/a&gt;として使用できます。</target>
         </trans-unit>
         <trans-unit id="f0464afc2c19cf737bd428f3f2f6c5855aac4e0d" translate="yes" xml:space="preserve">
           <source>From &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1022-release-notes/&quot;&gt;MariaDB 10.2.2&lt;/a&gt;, STD() can be used as a &lt;a href=&quot;../window-functions/index&quot;&gt;window function&lt;/a&gt;.</source>
@@ -2113,11 +2113,11 @@
         </trans-unit>
         <trans-unit id="9bd61b179fe6c9897c72b425e2bd21146be25529" translate="yes" xml:space="preserve">
           <source>From &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1026-release-notes/&quot;&gt;MariaDB 10.2.6&lt;/a&gt;, &lt;a href=&quot;../auto_increment/index&quot;&gt;auto_increment&lt;/a&gt; columns are no longer permitted in check constraints. Previously they were permitted, but would not work correctly. See &lt;a href=&quot;https://jira.mariadb.org/browse/MDEV-11117&quot;&gt;MDEV-11117&lt;/a&gt;.</source>
-          <target state="translated">&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1026-release-notes/&quot;&gt;MariaDB 10.2.6&lt;/a&gt;、&lt;a href=&quot;../auto_increment/index&quot;&gt;AUTO_INCREMENT&lt;/a&gt;カラムは、もはやチェック制約では許可されません。以前は許可されていましたが、正しく機能しませんでした。&lt;a href=&quot;https://jira.mariadb.org/browse/MDEV-11117&quot;&gt;MDEV-11117を&lt;/a&gt;参照してください。</target>
+          <target state="translated">&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1026-release-notes/&quot;&gt;MariaDB 10.2.6&lt;/a&gt;から、&lt;a href=&quot;../auto_increment/index&quot;&gt;auto_increment&lt;/a&gt;列はチェック制約で許可されなくなりました。以前は許可されていましたが、正しく機能しませんでした。&lt;a href=&quot;https://jira.mariadb.org/browse/MDEV-11117&quot;&gt;MDEV-11117を&lt;/a&gt;参照してください。</target>
         </trans-unit>
         <trans-unit id="fe612695a783247e45430bb5a0573a4837277540" translate="yes" xml:space="preserve">
           <source>From &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1027-release-notes/&quot;&gt;MariaDB 10.2.7&lt;/a&gt;, JSON is an alias for LONGTEXT. See &lt;a href=&quot;../json-data-type/index&quot;&gt;JSON Data Type&lt;/a&gt; for details.</source>
-          <target state="translated">&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1027-release-notes/&quot;&gt;MariaDB 10.2.7&lt;/a&gt;、JSONはLONGTEXTの別名です。詳細については、&lt;a href=&quot;../json-data-type/index&quot;&gt;JSONデータ型&lt;/a&gt;を参照してください。</target>
+          <target state="translated">&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1027-release-notes/&quot;&gt;MariaDB 10.2.7&lt;/a&gt;、JSONはLONGTEXTの別名です。詳細については、&lt;a href=&quot;../json-data-type/index&quot;&gt;JSONデータ型&lt;/a&gt;をご覧ください。</target>
         </trans-unit>
         <trans-unit id="268fbf23402455af1745cdfaaaf4893355907f71" translate="yes" xml:space="preserve">
           <source>From &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1027-release-notes/&quot;&gt;MariaDB 10.2.7&lt;/a&gt;:</source>
@@ -2137,7 +2137,7 @@
         </trans-unit>
         <trans-unit id="55b1f730f21fcd97d810a65f1de0b2b3d24d11b7" translate="yes" xml:space="preserve">
           <source>From &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1031-release-notes/&quot;&gt;MariaDB 10.3.1&lt;/a&gt;, displaying a stack trace:</source>
-          <target state="translated">&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1031-release-notes/&quot;&gt;MariaDB 10.3.1&lt;/a&gt;から、スタックトレースを表示します。</target>
+          <target state="translated">&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1031-release-notes/&quot;&gt;MariaDB 10.3.1&lt;/a&gt;、スタックトレースを表示します：</target>
         </trans-unit>
         <trans-unit id="f9b20a27f027eccc6471e6dc621c8912427b253c" translate="yes" xml:space="preserve">
           <source>From &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1031-release-notes/&quot;&gt;MariaDB 10.3.1&lt;/a&gt;, some status variables are available to monitor the use of the different &lt;code&gt;gtid_slave_pos&lt;/code&gt; table versions:</source>
@@ -2181,7 +2181,7 @@
         </trans-unit>
         <trans-unit id="62a209a6389d2aeb20b2090310f73950968495e4" translate="yes" xml:space="preserve">
           <source>From &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1033-release-notes/&quot;&gt;MariaDB 10.3.3&lt;/a&gt;, it is also possible to create &lt;a href=&quot;../stored-aggregate-functions/index&quot;&gt;stored aggregate functions&lt;/a&gt;.</source>
-          <target state="translated">&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1033-release-notes/&quot;&gt;MariaDB 10.3.3&lt;/a&gt;、作成することも可能である&lt;a href=&quot;../stored-aggregate-functions/index&quot;&gt;保存された集計関数&lt;/a&gt;。</target>
+          <target state="translated">&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1033-release-notes/&quot;&gt;MariaDB 10.3.3&lt;/a&gt;から、&lt;a href=&quot;../stored-aggregate-functions/index&quot;&gt;格納された集計関数&lt;/a&gt;を作成することもできます。</target>
         </trans-unit>
         <trans-unit id="538a5e93ea9385ef0d651524d353380d5628074e" translate="yes" xml:space="preserve">
           <source>From &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1033-release-notes/&quot;&gt;MariaDB 10.3.3&lt;/a&gt;, it is possible to create stored aggregate functions as well. See &lt;a href=&quot;../stored-aggregate-functions/index&quot;&gt;Stored Aggregate Functions&lt;/a&gt; for details.</source>
@@ -2417,11 +2417,11 @@
         </trans-unit>
         <trans-unit id="7408f21fc02d5a3fc8425c038232f689a9a3b6d5" translate="yes" xml:space="preserve">
           <source>From Connect 1.6, It is the description of the path to follow to reach the required item. Each step is the key name (case sensitive) of the pair when crossing an object, and the position number of the value when crossing an array. Key specifications are separated by a &amp;lsquo;.&amp;rsquo; character.</source>
-          <target state="translated">Connect 1.6以降、必要なアイテムに到達するためにたどるパスの説明です。各ステップは、オブジェクトを交差するときのペアのキー名（大文字と小文字を区別）、および配列を交差するときの値の位置番号です。主要な仕様は「。」で区切られます。キャラクター。</target>
+          <target state="translated">Connect 1.6以降、必要なアイテムに到達するためにたどるパスの説明です。各ステップは、オブジェクトを横切るときのペアのキー名（大文字と小文字を区別）、および配列を横切るときの値の位置番号です。主な仕様は「。」で区切られています。キャラクター。</target>
         </trans-unit>
         <trans-unit id="cbfd89c0c81846ef8f73c63b0ebe4e555fe67b61" translate="yes" xml:space="preserve">
           <source>From Connect 1.6, the Jpath specification has changed to be the one of the native JSON functions and more compatible with what is generally used. It is close to the standard definition and compatible to what MongoDB and other products do. The &amp;lsquo;:&amp;rsquo; separator is replaced by &amp;lsquo;.&amp;rsquo;. Position in array is accepted MongoDB style with no square brackets. Array specification specific to CONNECT are still accepted but [*] is used for expanding and [x] for multiply. However, tables created with the previous syntax can still be used by adding SEP_CHAR=&amp;rsquo;:&amp;rsquo; (can be done with alter table).</source>
-          <target state="translated">Connect 1.6から、Jpath仕様はネイティブJSON関数の1つに変更され、一般的に使用されるものとの互換性が高まりました。これは標準の定義に近く、MongoDBや他の製品の機能と互換性があります。「：」区切り文字は「。」に置き換えられます。配列内の位置は、角括弧のないMongoDBスタイルで受け入れられます。CONNECT固有の配列指定は引き続き受け入れられますが、[*]は拡張に、[x]は乗算に使用されます。ただし、前述の構文で作成されたテーブルは、SEP_CHAR = '：'を追加することで引き続き使用できます（alter tableで実行できます）。</target>
+          <target state="translated">Connect 1.6から、Jpath仕様がネイティブJSON関数の1つに変更され、一般的に使用されるものとの互換性が高まりました。これは標準の定義に近く、MongoDBや他の製品の機能と互換性があります。 「：」区切り文字は「。」に置き換えられます。配列内の位置は、角括弧のないMongoDBスタイルで受け入れられます。 CONNECTに固有の配列指定は引き続き受け入れられますが、[*]は拡張に、[x]は乗算に使用されます。ただし、前の構文で作成されたテーブルは、SEP_CHAR = '：'を追加することで引き続き使用できます（alter tableで実行できます）。</target>
         </trans-unit>
         <trans-unit id="4866660cc9cb950232ab481d308b13a63f77dc8c" translate="yes" xml:space="preserve">
           <source>From Connect 1.6:</source>
@@ -2453,11 +2453,11 @@
         </trans-unit>
         <trans-unit id="debad3d322986cc9a14c834bfe440596f2851a8e" translate="yes" xml:space="preserve">
           <source>From a user's perspective, the &lt;code&gt;&lt;a href=&quot;../authentication-plugin-ed25519/index&quot;&gt;ed25519&lt;/a&gt;&lt;/code&gt; authentication plugin still provides conventional password-based authentication.</source>
-          <target state="translated">ユーザーの観点から見ると、 &lt;code&gt;&lt;a href=&quot;../authentication-plugin-ed25519/index&quot;&gt;ed25519&lt;/a&gt;&lt;/code&gt; 認証プラグインは従来のパスワードベースの認証を提供します。</target>
+          <target state="translated">ユーザーの観点から見ると、 &lt;code&gt;&lt;a href=&quot;../authentication-plugin-ed25519/index&quot;&gt;ed25519&lt;/a&gt;&lt;/code&gt; 認証プラグインは、従来のパスワードベースの認証を提供します。</target>
         </trans-unit>
         <trans-unit id="799b11ae27a622575b8d085434a022db1649f51a" translate="yes" xml:space="preserve">
           <source>From a user's perspective, the &lt;code&gt;ed25519&lt;/code&gt; authentication plugin still provides conventional password-based authentication.</source>
-          <target state="translated">ユーザーの観点から見ると、 &lt;code&gt;ed25519&lt;/code&gt; 認証プラグインは従来のパスワードベースの認証を提供します。</target>
+          <target state="translated">ユーザーの観点から見ると、 &lt;code&gt;ed25519&lt;/code&gt; 認証プラグインは、従来のパスワードベースの認証を提供します。</target>
         </trans-unit>
         <trans-unit id="a63040abda901313ec15e805a548ae5d47777f94" translate="yes" xml:space="preserve">
           <source>From countries in Europe to the materialized table</source>
@@ -2469,7 +2469,7 @@
         </trans-unit>
         <trans-unit id="6d46f5987be9c5b0573fe1263a13edb3461d23a4" translate="yes" xml:space="preserve">
           <source>From here, you can use the Setx command to set the variable. For instance,</source>
-          <target state="translated">ここからは、Setxコマンドを使って変数を設定します。例えば</target>
+          <target state="translated">ここからは、Setxコマンドを使って変数を設定します。例えば、以下のようにします。</target>
         </trans-unit>
         <trans-unit id="cdb242320f943e20ca3fbab24132182648d0baa2" translate="yes" xml:space="preserve">
           <source>From left to right:</source>
@@ -2493,7 +2493,7 @@
         </trans-unit>
         <trans-unit id="06b98f37944f33cd883f39190dc82a4f5cccc957" translate="yes" xml:space="preserve">
           <source>From the MariaDB ColumnStore Console, type restartSystem</source>
-          <target state="translated">MariaDB ColumnStore コンソールから、restartSystem と入力します。</target>
+          <target state="translated">MariaDB ColumnStoreコンソールから、restartSystemと入力します。</target>
         </trans-unit>
         <trans-unit id="cb6c5dd2005dd75f80a928c392d5a5eb113c99bd" translate="yes" xml:space="preserve">
           <source>From the MariaDB ColumnStore Console, type shutdownSystem</source>
@@ -2601,7 +2601,7 @@
         </trans-unit>
         <trans-unit id="32dca6d20bd841b754327b20ea4735023c5c0edc" translate="yes" xml:space="preserve">
           <source>Full table scans are performed in a memory-efficient way. Cassandra SE performs a full table scan as a series of batches, each of which reads not more than &lt;a href=&quot;../cassandra-system-variables/index#cassandra_rnd_batch_size&quot;&gt;cassandra_rnd_batch_size&lt;/a&gt; records.</source>
-          <target state="translated">全表スキャンは、メモリ効率の良い方法で実行されます。Cassandra SEは、一連のバッチとしてテーブル全体のスキャンを実行します。各バッチは、&lt;a href=&quot;../cassandra-system-variables/index#cassandra_rnd_batch_size&quot;&gt;cassandra_rnd_batch_size&lt;/a&gt;レコード以下を読み取ります。</target>
+          <target state="translated">全表スキャンは、メモリ効率の良い方法で実行されます。Cassandra SEは一連のバッチとして全テーブルスキャンを実行し、各バッチは&lt;a href=&quot;../cassandra-system-variables/index#cassandra_rnd_batch_size&quot;&gt;cassandra_rnd_batch_size&lt;/a&gt;レコード以下を読み取ります。</target>
         </trans-unit>
         <trans-unit id="cbaa49b3fda6d53b5bf131cee24997dad24f201e" translate="yes" xml:space="preserve">
           <source>Full weekday name in current locale (Variable &lt;a href=&quot;../server-system-variables/index#lc_time_names&quot;&gt;lc_time_names&lt;/a&gt;).</source>
@@ -2645,7 +2645,7 @@
         </trans-unit>
         <trans-unit id="e9854aee34fecd929d470cad0dd00b865273d1ea" translate="yes" xml:space="preserve">
           <source>Full-text searching is performed using &lt;a href=&quot;../match-against/index&quot;&gt;MATCH() ... AGAINST&lt;/a&gt; syntax. MATCH() takes a comma-separated list that names the columns to be searched. AGAINST takes a string to search for, and an optional modifier that indicates what type of search to perform. The search string must be a literal string, not a variable or a column name.</source>
-          <target state="translated">全文検索は、&lt;a href=&quot;../match-against/index&quot;&gt;MATCH（）... AGAINST&lt;/a&gt;構文を使用して実行されます。MATCH（）は、検索する列の名前をコンマで区切ったリストを取ります。AGAINSTは、検索する文字列と、実行する検索のタイプ​​を示すオプションの修飾子を受け取ります。検索文字列は、変数や列名ではなく、リテラル文字列である必要があります。</target>
+          <target state="translated">全文検索は、&lt;a href=&quot;../match-against/index&quot;&gt;MATCH（）... AGAINST&lt;/a&gt;構文を使用して実行されます。MATCH（）は、検索する列に名前を付けるコンマ区切りのリストを取ります。AGAINSTは、検索する文字列と、実行する検索のタイプ​​を示すオプションの修飾子を受け取ります。検索文字列は、変数や列名ではなく、リテラル文字列である必要があります。</target>
         </trans-unit>
         <trans-unit id="93519dbe0d44fcfac436f3b4bd9d26d6b036fbc4" translate="yes" xml:space="preserve">
           <source>Fullarray</source>
@@ -2717,7 +2717,7 @@
         </trans-unit>
         <trans-unit id="1483e8cc434445dc3a4c4b4788cce5a6f0abd891" translate="yes" xml:space="preserve">
           <source>Function return types can be declared to use any valid &lt;a href=&quot;../character-sets/index&quot;&gt;character set and collation&lt;/a&gt;. If used, the COLLATE attribute needs to be preceded by a CHARACTER SET attribute.</source>
-          <target state="translated">関数の戻り値の型は、有効な&lt;a href=&quot;../character-sets/index&quot;&gt;文字セットと照合順序&lt;/a&gt;を使用するように宣言できます。使用する場合、COLLATE属性の前にCHARACTER SET属性を付ける必要があります。</target>
+          <target state="translated">関数の戻り値の型は、任意の有効な&lt;a href=&quot;../character-sets/index&quot;&gt;文字セットと照合&lt;/a&gt;を使用するように宣言できます。使用する場合、COLLATE属性の前にCHARACTER SET属性を付ける必要があります。</target>
         </trans-unit>
         <trans-unit id="79fde2ac8490ff2b99ac9c9890e046fdff6e3659" translate="yes" xml:space="preserve">
           <source>Functionality</source>
@@ -2761,7 +2761,7 @@
         </trans-unit>
         <trans-unit id="f3038e61734ea076f701ac45d70f92322c47d0bf" translate="yes" xml:space="preserve">
           <source>Functions don't have an explicit call keyword like procedures. Instead, they appear in expressions with the conventional syntax &quot;fun(arg, ...)&quot;. The problem is that we already have &lt;a href=&quot;../user-defined-functions/index&quot;&gt;User Defined Functions&lt;/a&gt; (UDFs) which are called the same way. A UDF is detected by the lexical analyzer (not the parser!), in the &lt;code&gt;find_keyword()&lt;/code&gt; function, and returns a &lt;code&gt;UDF_*_FUNC&lt;/code&gt; or &lt;code&gt;UDA_*_SUM&lt;/code&gt; token with the &lt;code&gt;udf_func&lt;/code&gt; object as the yylval.</source>
-          <target state="translated">関数には、プロシージャのような明示的な呼び出しキーワードはありません。代わりに、従来の構文「fun（arg、...）」を使用した式に表示されます。問題は、同じ方法で呼び出される&lt;a href=&quot;../user-defined-functions/index&quot;&gt;ユーザー定義関数&lt;/a&gt;（UDF）が既にあることです。UDFは（パーサーではなく）字句解析 &lt;code&gt;find_keyword()&lt;/code&gt; 関数で検出され、 &lt;code&gt;udf_func&lt;/code&gt; オブジェクトをyylvalとして &lt;code&gt;UDF_*_FUNC&lt;/code&gt; または &lt;code&gt;UDA_*_SUM&lt;/code&gt; トークンを返します。</target>
+          <target state="translated">関数には、プロシージャのような明示的な呼び出しキーワードはありません。代わりに、従来の構文「fun（arg、...）」を使用して式に表示されます。問題は、同じ方法で呼び出される&lt;a href=&quot;../user-defined-functions/index&quot;&gt;ユーザー定義関数&lt;/a&gt;（UDF）が既にあることです。UDFは（パーサーではなく）字句解析 &lt;code&gt;find_keyword()&lt;/code&gt; 関数で検出され、 &lt;code&gt;udf_func&lt;/code&gt; オブジェクトをyylvalとして &lt;code&gt;UDF_*_FUNC&lt;/code&gt; または &lt;code&gt;UDA_*_SUM&lt;/code&gt; トークンを返します。</target>
         </trans-unit>
         <trans-unit id="70dcb6cc9bbbdf6a7107411c436599d42a4ea6f1" translate="yes" xml:space="preserve">
           <source>Functions for dealing with regular expressions</source>
@@ -2837,11 +2837,11 @@
         </trans-unit>
         <trans-unit id="f7f29918eef6e80338f4dcd70a8d8500c8c50148" translate="yes" xml:space="preserve">
           <source>Further documentation for PBXT can be found here: &lt;a href=&quot;http://www.primebase.org/documentation&quot;&gt;http://www.primebase.org/documentation&lt;/a&gt;</source>
-          <target state="translated">PBXTの詳細なドキュメントは、次の場所にあり&lt;a href=&quot;http://www.primebase.org/documentation&quot;&gt;ます。http&lt;/a&gt;：//www.primebase.org/documentation</target>
+          <target state="translated">PBXTの詳細なドキュメントは、&lt;a href=&quot;http://www.primebase.org/documentation&quot;&gt;http&lt;/a&gt;：//www.primebase.org/documentationにあります。</target>
         </trans-unit>
         <trans-unit id="dc287a06b76c2d367c68e4b4ecd51cf8577ccc46" translate="yes" xml:space="preserve">
           <source>Further permissions/restrictions can now be placed on any existing objects (tables, functions, procedures, views) for any access/limitations wanting to be placed on users: Example to give a user that has a password full access to all tables for a database (after the above grant has been given):</source>
-          <target state="translated">既存のオブジェクト(テーブル、関数、プロシージャ、ビュー)に対して、ユーザーに配置したいアクセス/制限のために、さらなる権限/制限を配置することができるようになりました。例:パスワードを持っているユーザーにデータベースのすべてのテーブルへのフルアクセスを与えるために(上記のグラントが与えられた後)。</target>
+          <target state="translated">既存のオブジェクト(テーブル、関数、プロシージャ、ビュー)にアクセス/制限を加えることができるようになりました。例:パスワードを持っているユーザーにデータベースのすべてのテーブルへのフルアクセスを与えるために(上記のグラントが与えられた後)。</target>
         </trans-unit>
         <trans-unit id="0e44c8b638baa470dbb5f127964c092cc77ea465" translate="yes" xml:space="preserve">
           <source>Further reading</source>
@@ -2873,7 +2873,7 @@
         </trans-unit>
         <trans-unit id="32d3193adad9e56c169b59ebf81c7a989d3670d6" translate="yes" xml:space="preserve">
           <source>Fusion-io memory can be formatted with different sector size of either 512 or 4096 bytes. Bigger sectors are expected to be faster, but only if I/O is done in blocks of 4KB or multiples of that. Speaking of MariaDB: if only InnoDB data files are stored in Fusion-io memory, all I/O is done in blocks of 16K and thus 4K sector size can be used. If the InnoDB redo log (I/O block size: 512 bytes) goes to the same Fusion-io memory, then short sectors should be used.</source>
-          <target state="translated">Fusion-ioメモリは、512バイトまたは4096バイトの異なるセクタサイズでフォーマットすることができます。セクタサイズが大きい方が高速化が期待できますが、I/Oが4KBまたはその倍数のブロックで行われる場合に限ります。MariaDBといえば:InnoDBのデータファイルだけをFusion-ioのメモリに保存する場合、すべてのI/Oは16Kのブロックで行われるため、4Kのセクタサイズを使用することができます。InnoDBのREDOログ(I/Oブロックサイズ:512バイト)が同じFusion-ioメモリに行く場合は、短いセクタを使用する必要があります。</target>
+          <target state="translated">Fusion-ioメモリは、512バイトまたは4096バイトの異なるセクタサイズでフォーマットすることができます。セクタサイズが大きい方が高速化が期待できますが、I/Oが4KBまたはその倍数のブロックで行われる場合に限ります。MariaDBといえば:InnoDBのデータファイルだけをFusion-ioのメモリに保存する場合、すべてのI/Oは16Kのブロックで行われるため、4Kのセクタサイズを使用することができます。InnoDBのREDOログ(I/Oブロックサイズ:512バイト)が同じFusion-ioメモリに行く場合は、短いセクタを使うべきです。</target>
         </trans-unit>
         <trans-unit id="5a95aa6bdda44217ef47e6ef714ad7521097970c" translate="yes" xml:space="preserve">
           <source>FusionIO atomic-series devices</source>
@@ -2957,7 +2957,7 @@
         </trans-unit>
         <trans-unit id="c50a831ea5209509ab5fd97de18813948bad899b" translate="yes" xml:space="preserve">
           <source>GET DIAGNOSTICS</source>
-          <target state="translated">診断結果を得る</target>
+          <target state="translated">ゲットダイアグノスティックス</target>
         </trans-unit>
         <trans-unit id="ee5121ff8de00dae5188afab22e4cf6c2ec838e9" translate="yes" xml:space="preserve">
           <source>GET_FORMAT</source>
@@ -3109,7 +3109,7 @@
         </trans-unit>
         <trans-unit id="93386084ad183d219ccc9d9ccb60ccdc0ec914ba" translate="yes" xml:space="preserve">
           <source>GROUP BY groups data based on values in one or more specific columns. A maximum of 10 columns will be supported in the GROUP BY clause.The following statement returns rows from the &lt;em&gt;lineitem&lt;/em&gt; table where /orderkey&lt;em&gt; is less than 1 000 000 and groups them by the quantity.&lt;/em&gt;</source>
-          <target state="translated">GROUP BYは、1つ以上の特定の列の値に基づいてデータをグループ化します。GROUP BY句では最大10列がサポートされます。次のステートメントは、/ orderkey &lt;em&gt;が1 000 000未満&lt;/em&gt;である&lt;em&gt;lineitem&lt;/em&gt;テーブルから行を返し&lt;em&gt;、数量でグループ化します。&lt;/em&gt;</target>
+          <target state="translated">GROUP BYは、1つ以上の特定の列の値に基づいてデータをグループ化します。GROUP BY句では最大10列がサポートされます。次のステートメントは、/ orderkey &lt;em&gt;が1 000 000未満の&lt;/em&gt;&lt;em&gt;lineitem&lt;/em&gt;テーブルから行を返し&lt;em&gt;、数量でグループ化します。&lt;/em&gt;</target>
         </trans-unit>
         <trans-unit id="37e47a5c071d49193071312a23cda331d42fcae7" translate="yes" xml:space="preserve">
           <source>GROUP BY trick has been optimized away</source>
@@ -3133,7 +3133,7 @@
         </trans-unit>
         <trans-unit id="f6f3866d52ce626efe8f9bb8f993b932e9bf2657" translate="yes" xml:space="preserve">
           <source>GTID 0-1-42 is marked as being DDL. GTID 0-1-47 is marked as being non-transactional DML, while GTID 0-1-49 is transactional DML (seen on the &quot;trans&quot; keyword). GTID 0-1-49 was additionally run with &lt;a href=&quot;../replication-and-binary-log-server-system-variables/index#skip_parallel_replication&quot;&gt;@@skip_parallel_replication&lt;/a&gt; set on the master. GTID 0-1-59 is transactional DML that had a row lock wait when run on the master (the &quot;waited&quot; keyword).</source>
-          <target state="translated">GTID 0-1-42はDDLとしてマークされています。GTID 0-1-47は非トランザクションDMLであるとマークされていますが、GTID 0-1-49はトランザクションDMLです（「trans」キーワードで確認できます）。GTID 0-1-49は、マスターに&lt;a href=&quot;../replication-and-binary-log-server-system-variables/index#skip_parallel_replication&quot;&gt;@@ skip_parallel_replication&lt;/a&gt;セットを追加して実行されました。GTID 0-1-59は、トランザクションDMLであり、マスターで実行されたときに行ロック待機がありました（「待機」キーワード）。</target>
+          <target state="translated">GTID 0-1-42はDDLとしてマークされています。GTID 0-1-47は非トランザクションDMLとしてマークされていますが、GTID 0-1-49はトランザクションDMLです（「trans」キーワードで確認できます）。GTID 0-1-49は、マスターに&lt;a href=&quot;../replication-and-binary-log-server-system-variables/index#skip_parallel_replication&quot;&gt;@@ skip_parallel_replication&lt;/a&gt;セットを追加して実行されました。GTID 0-1-59は、マスターで実行されるときに行ロック待機（「待機」キーワード）があったトランザクションDMLです。</target>
         </trans-unit>
         <trans-unit id="73b700a5f4cb76aedaefc5445d791e9e810ef6cf" translate="yes" xml:space="preserve">
           <source>GTID Options</source>
@@ -3241,11 +3241,11 @@
         </trans-unit>
         <trans-unit id="31622e4edb8d92e1830be80814f760e1ca2f92c7" translate="yes" xml:space="preserve">
           <source>Galera Cluster documentation: STATE SNAPSHOT TRANSFERS</source>
-          <target state="translated">Galera Cluster ドキュメント:STATE SNAPSHOT TRANSFERS</target>
+          <target state="translated">Galera Clusterのドキュメント。STATE SNAPSHOT TRANSFERS</target>
         </trans-unit>
         <trans-unit id="20b4816f5eabbe8729955a43f60249e4be745f85" translate="yes" xml:space="preserve">
           <source>Galera Cluster has its own &lt;a href=&quot;../about-galera-replication/index&quot;&gt;certification-based replication method&lt;/a&gt; that is substantially different from &lt;a href=&quot;../high-availability-performance-tuning-mariadb-replication/index&quot;&gt;MariaDB replication&lt;/a&gt;. However, it would still be beneficial if &lt;a href=&quot;../galera-cluster/index&quot;&gt;MariaDB Galera Cluster&lt;/a&gt; was able to associate a Galera Cluster write set with a &lt;a href=&quot;../gtid/index&quot;&gt;GTID&lt;/a&gt; that is globally unique, but that is also consistent for that write set on each cluster node.</source>
-          <target state="translated">Galera Clusterには、&lt;a href=&quot;../high-availability-performance-tuning-mariadb-replication/index&quot;&gt;MariaDBレプリケーション&lt;/a&gt;とは大幅に異なる独自の&lt;a href=&quot;../about-galera-replication/index&quot;&gt;証明書ベースのレプリケーション方式&lt;/a&gt;があります。ただし、&lt;a href=&quot;../galera-cluster/index&quot;&gt;MariaDB Galera Cluster&lt;/a&gt;がGalera Cluster書き込みセットをグローバルに一意である&lt;a href=&quot;../gtid/index&quot;&gt;GTIDに関連付ける&lt;/a&gt;ことができれば、それでもメリットがありますが、これは各クラスターノードのその書き込みセットでも一貫しています。</target>
+          <target state="translated">Galera Clusterには、&lt;a href=&quot;../high-availability-performance-tuning-mariadb-replication/index&quot;&gt;MariaDBレプリケーション&lt;/a&gt;とは大幅に異なる独自の&lt;a href=&quot;../about-galera-replication/index&quot;&gt;証明書ベースのレプリケーション方式&lt;/a&gt;があります。ただし、&lt;a href=&quot;../galera-cluster/index&quot;&gt;MariaDB Galera Cluster&lt;/a&gt;がGalera Cluster書き込みセットをグローバルに一意である&lt;a href=&quot;../gtid/index&quot;&gt;GTIDに関連付ける&lt;/a&gt;ことができれば、それでもメリットがありますが、これは各クラスターノード上のその書き込みセットでも一貫しています。</target>
         </trans-unit>
         <trans-unit id="18a61c122df0cf9978fac92c612dca4bd368933f" translate="yes" xml:space="preserve">
           <source>Galera Cluster needs access to the following ports:</source>
@@ -3261,11 +3261,11 @@
         </trans-unit>
         <trans-unit id="0fb0e8bc204ace69b11c3145e56b2f4c97497268" translate="yes" xml:space="preserve">
           <source>Galera Load Balancer is a simple Load Balancer specifically designed for &lt;a href=&quot;../galera/index&quot;&gt;Galera Cluster&lt;/a&gt;. Like Galera, it only runs on Linux. Galera Load Balancer is developed and mantained by Codership. Documentation is available &lt;a href=&quot;http://www.fromdual.com/galera-load-balancer-documentation&quot;&gt;on fromdual.com&lt;/a&gt;.</source>
-          <target state="translated">Galeraロードバランサーは、&lt;a href=&quot;../galera/index&quot;&gt;Galeraクラスター&lt;/a&gt;専用に設計されたシンプルなロードバランサーです。Galeraと同様に、Linuxでのみ実行されます。Galera Load Balancerは、Codershipによって開発および管理されています。ドキュメントは&lt;a href=&quot;http://www.fromdual.com/galera-load-balancer-documentation&quot;&gt;fromdual.comから&lt;/a&gt;入手できます。</target>
+          <target state="translated">Galeraロードバランサーは、&lt;a href=&quot;../galera/index&quot;&gt;Galeraクラスター&lt;/a&gt;専用に設計されたシンプルなロードバランサーです。Galeraと同様に、Linuxでのみ動作します。Galera Load Balancerは、Codershipによって開発および管理されています。ドキュメントは&lt;a href=&quot;http://www.fromdual.com/galera-load-balancer-documentation&quot;&gt;fromdual.comから&lt;/a&gt;入手できます。</target>
         </trans-unit>
         <trans-unit id="aa5c773d09d431fc0012aad9cf363b7a8c8990d7" translate="yes" xml:space="preserve">
           <source>Galera Load Balancer is inspired by pen, which is a generic TCP load balancer. However, since pen is a generic TCP connections load balancer, the techniques it uses are not well-suited to the particular use case of database servers. Galera Load Balancer is optimized for this type of workload.</source>
-          <target state="translated">Galera Load Balancer は、汎用 TCP ロードバランサーである pen にインスパイアされています。しかし、pen は汎用 TCP 接続のロードバランサであるため、使用する技術はデータベースサーバの特定のユースケースにはあまり適していません。Galera Load Balancerは、この種のワークロードに最適化されています。</target>
+          <target state="translated">Galera Load Balancer は、汎用 TCP ロードバランサーである pen にインスパイアされています。しかし、pen は汎用 TCP 接続のロードバランサであるため、使用する技術はデータベースサーバの特定のユースケースにはあまり適していません。Galera Load Balancer は、この種のワークロードに最適化されています。</target>
         </trans-unit>
         <trans-unit id="8806965083aba9132999926c58af5cb45314b931" translate="yes" xml:space="preserve">
           <source>Galera Replication Plugin</source>
@@ -3469,23 +3469,23 @@
         </trans-unit>
         <trans-unit id="068a9c8113baf0e5eee0552f758f8c81299e5b38" translate="yes" xml:space="preserve">
           <source>Generally, all SELECT statements work like one expects SQL to work. Conditions in the form &lt;code&gt;primary_key=...&lt;/code&gt; allow the server to construct query plans which access Cassandra's rows with key lookups.</source>
-          <target state="translated">一般に、すべてのSELECTステートメントは、SQLが機能することを期待するように機能します。 &lt;code&gt;primary_key=...&lt;/code&gt; の形式の条件により、サーバーはキールックアップでCassandraの行にアクセスするクエリプランを構築できます。</target>
+          <target state="translated">一般に、すべてのSELECTステートメントは、SQLが機能することを期待するように機能します。 &lt;code&gt;primary_key=...&lt;/code&gt; の形式の条件により、サーバーは、キールックアップでCassandraの行にアクセスするクエリプランを構築できます。</target>
         </trans-unit>
         <trans-unit id="e9d0dcd79b08467aaa9636eb5b3361292b4d8f7a" translate="yes" xml:space="preserve">
           <source>Generally, it is best to start with a recovery mode of 1, and increase in single increments if needs be. With a recovery mode &amp;lt; 4, only corrupted pages should be lost. With 4, secondary indexes could be corrupted. With 5, results could be inconsistent and secondary indexes could be corrupted (even if they were not with 4). A value of 6 leaves pages in an obsolete state, which might cause more corruption.</source>
-          <target state="translated">一般に、回復モードを1から始めて、必要に応じて単一の増分で増やすのが最善です。リカバリモードが4未満の場合、破損したページのみが失われます。4では、セカンダリインデックスが破損する可能性があります。5を指定すると、結果に一貫性がなくなり、セカンダリインデックスが破損する可能性があります（4を使用していなくても）。値が6の場合、ページは古い状態のままになり、破損が増える可能性があります。</target>
+          <target state="translated">一般に、回復モードを1から始めて、必要に応じて単一の増分で増やすのが最善です。リカバリモードが4未満の場合、破損したページのみが失われるはずです。4では、セカンダリインデックスが破損する可能性があります。5を使用すると、結果に一貫性がなくなり、セカンダリインデックスが破損する可能性があります（4を使用していなくても）。値が6の場合、ページは古い状態のままになり、破損が増える可能性があります。</target>
         </trans-unit>
         <trans-unit id="d9ec8173ccd7a2e513eeb9d4e39cbe4a36e2dd4e" translate="yes" xml:space="preserve">
           <source>Generally, it is recommended to use one of the above methods to enable the TokuDB storage engine, but it is also possible to enable it manually as with other plugins. To do so, launch the mysql command-line client and connect to MariaDB as a user with the &lt;code&gt;SUPER&lt;/code&gt; privilege and execute the following command:</source>
-          <target state="translated">通常、上記の方法のいずれかを使用してTokuDBストレージエンジンを有効にすることをお勧めしますが、他のプラグインと同様に手動で有効にすることもできます。これを行うには、mysqlコマンドラインクライアントを起動し、 &lt;code&gt;SUPER&lt;/code&gt; 権限を持つユーザーとしてMariaDBに接続し、次のコマンドを実行します。</target>
+          <target state="translated">通常、上記の方法のいずれかを使用してTokuDBストレージエンジンを有効にすることをお勧めしますが、他のプラグインと同様に手動で有効にすることもできます。これを行うには、mysqlコマンドラインクライアントを起動し、 &lt;code&gt;SUPER&lt;/code&gt; 権限を持つユーザーとしてMariaDBに接続して、次のコマンドを実行します。</target>
         </trans-unit>
         <trans-unit id="36fad9d636501dd0fcec6bd81b686d3c7ecf3575" translate="yes" xml:space="preserve">
           <source>Generally, it is still possible to recover most of the corrupted data. To do so, restart the server in &lt;a href=&quot;../xtradbinnodb-recovery-modes/index&quot;&gt;InnoDB recovery mode&lt;/a&gt; and try to extract the data that you want to backup. You can save them in a CSV file or in a non-InnoDB table. Then, restart the server in normal mode and restore the data.</source>
-          <target state="translated">一般に、破損したデータのほとんどを回復することは可能です。これを行うには、サーバーを&lt;a href=&quot;../xtradbinnodb-recovery-modes/index&quot;&gt;InnoDBリカバリモード&lt;/a&gt;で再起動し、バックアップするデータを抽出してみます。それらをCSVファイルまたはInnoDB以外のテーブルに保存できます。次に、サーバーを通常モードで再起動し、データを復元します。</target>
+          <target state="translated">一般に、破損したデータのほとんどを回復することは可能です。これを行うには、サーバーを&lt;a href=&quot;../xtradbinnodb-recovery-modes/index&quot;&gt;InnoDBリカバリモード&lt;/a&gt;で再起動し、バックアップするデータを抽出してみます。それらをCSVファイルまたは非InnoDBテーブルに保存できます。次に、サーバーを通常モードで再起動し、データを復元します。</target>
         </trans-unit>
         <trans-unit id="b94132d5bc00fd0526858265eefa0a02294f0ddc" translate="yes" xml:space="preserve">
           <source>Generally, the precision can be specified for any &lt;code&gt;TIME&lt;/code&gt;, &lt;code&gt;DATETIME&lt;/code&gt;, or &lt;code&gt;TIMESTAMP&lt;/code&gt; column, in parentheses, after the type name. The datetime precision specifies number of digits after the decimal dot and can be any integer number from 0 to 6. If no precision is specified it is assumed to be 0, for backward compatibility reasons.</source>
-          <target state="translated">通常、精度は、 &lt;code&gt;TIME&lt;/code&gt; 、 &lt;code&gt;DATETIME&lt;/code&gt; 、または &lt;code&gt;TIMESTAMP&lt;/code&gt; カラムの括弧内で、型名の後に指定できます。日時精度は、小数点の後の桁数を指定し、0から6までの任意の整数を指定できます。精度が指定されていない場合は、下位互換性のために0と見なされます。</target>
+          <target state="translated">一般に、精度は、型名の後に括弧で囲まれた、 &lt;code&gt;TIME&lt;/code&gt; 、 &lt;code&gt;DATETIME&lt;/code&gt; 、または &lt;code&gt;TIMESTAMP&lt;/code&gt; 列に対して指定できます。日時精度は、小数点の後の桁数を指定し、0から6までの任意の整数を指定できます。精度が指定されていない場合、下位互換性のために0と見なされます。</target>
         </trans-unit>
         <trans-unit id="d069ac86fb8c3989baa71ef64387986e2b348683" translate="yes" xml:space="preserve">
           <source>Generally, there is no need to tweak many of these system variables. The goal of the thread pool was to provide good performance out-of-the box. However, the system variable values can be changed, and we intended to expose as many knobs from the underlying implementation as we could. Feel free to tweak them as you see fit.</source>

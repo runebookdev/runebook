@@ -9,7 +9,7 @@
         </trans-unit>
         <trans-unit id="d95ba2bd5d873b20be72b2a526e2a30e1117d3ee" translate="yes" xml:space="preserve">
           <source>The UID is a positive integer that is unique to the name of the UID object and it's type. Within the storage system there is a counter that is incremented for each &lt;code&gt;metric&lt;/code&gt;, &lt;code&gt;tagk&lt;/code&gt; and &lt;code&gt;tagv&lt;/code&gt;. When you create a new &lt;code&gt;tsdb-uid&lt;/code&gt; table, this counter is set to 0 for each type. So if you put a new data point with a metric of &lt;code&gt;sys.cpu.0&lt;/code&gt; and a tag pair of &lt;code&gt;host=web01&lt;/code&gt; you will have 3 new UID objects, each with a UID of 1.</source>
-          <target state="translated">UIDは、UIDオブジェクトの名前とタイプに固有の正の整数です。ストレージシステム内には、各 &lt;code&gt;metric&lt;/code&gt; 、 &lt;code&gt;tagk&lt;/code&gt; 、および &lt;code&gt;tagv&lt;/code&gt; ごとに増分されるカウンターがあります。新しい &lt;code&gt;tsdb-uid&lt;/code&gt; テーブルを作成すると、このカウンタはタイプごとに0に設定されます。したがって、 &lt;code&gt;sys.cpu.0&lt;/code&gt; のメトリックと &lt;code&gt;host=web01&lt;/code&gt; のタグペアを持つ新しいデータポイントを配置すると、それぞれ1のUIDを持つ3つの新しいUIDオブジェクトができます。</target>
+          <target state="translated">UIDは、UIDオブジェクトの名前とタイプに固有の正の整数です。ストレージシステム内には、各 &lt;code&gt;metric&lt;/code&gt; 、 &lt;code&gt;tagk&lt;/code&gt; 、および &lt;code&gt;tagv&lt;/code&gt; ごとに増分されるカウンターがあります。新しい &lt;code&gt;tsdb-uid&lt;/code&gt; テーブルを作成すると、このカウンタはタイプごとに0に設定されます。したがって、 &lt;code&gt;sys.cpu.0&lt;/code&gt; のメトリックと &lt;code&gt;host=web01&lt;/code&gt; のタグペアで新しいデータポイントを配置すると、それぞれ1のUIDを持つ3つの新しいUIDオブジェクトができます。</target>
         </trans-unit>
         <trans-unit id="e7e1e3a6d9ff79ec6731a69970e3e5cc61bc6622" translate="yes" xml:space="preserve">
           <source>The UID limit is usually not an issue, however. A tag value is assigned a UID that is completely disassociated from its tag name. If you use numeric identifiers for tag values, the number is assigned a UID once and can be used with many tag names. For example, if we assign a UID to the number &lt;code&gt;2&lt;/code&gt;, we could store timeseries with the tag pairs &lt;code&gt;cpu=2&lt;/code&gt;, &lt;code&gt;interface=2&lt;/code&gt;, &lt;code&gt;hdd=2&lt;/code&gt; and &lt;code&gt;fan=2&lt;/code&gt; while consuming only 1 tag value UID (&lt;code&gt;2&lt;/code&gt;) and 4 tag name UIDs (&lt;code&gt;cpu&lt;/code&gt;, &lt;code&gt;interface&lt;/code&gt;, &lt;code&gt;hdd&lt;/code&gt; and &lt;code&gt;fan&lt;/code&gt;).</source>
@@ -17,7 +17,7 @@
         </trans-unit>
         <trans-unit id="eb1650b024a45f4e97f5f6fd59780ee0a5115163" translate="yes" xml:space="preserve">
           <source>The UID utility provides various functions to search or modify information in the &lt;code&gt;tsdb-uid&lt;/code&gt; table. This includes UID assignments for metrics, tag names and tag values as well as UID meta data, timeseries meta data and tree definitions or data.</source>
-          <target state="translated">UIDユーティリティは、 &lt;code&gt;tsdb-uid&lt;/code&gt; テーブルの情報を検索または変更するためのさまざまな機能を提供します。これには、メトリック、タグ名、タグ値のUID割り当て、UIDメタデータ、時系列メタデータ、ツリー定義またはデータが含まれます。</target>
+          <target state="translated">UIDユーティリティは、 &lt;code&gt;tsdb-uid&lt;/code&gt; テーブル内の情報を検索または変更するためのさまざまな機能を提供します。これには、メトリック、タグ名、タグ値のUID割り当て、UIDメタデータ、時系列メタデータ、ツリー定義またはデータが含まれます。</target>
         </trans-unit>
         <trans-unit id="8e08bed21feaf3e99b75b4edf4aa04f9f1051b0d" translate="yes" xml:space="preserve">
           <source>The UIDMeta endpoint returns a list of UIDMeta objects that match the query.</source>
@@ -53,7 +53,7 @@
         </trans-unit>
         <trans-unit id="e267991298a37837615e4e72157ba4d9e30432e6" translate="yes" xml:space="preserve">
           <source>The benefits of this schema are that you have very deep granularity in your data, e.g., storing usage metrics on a per-core basis. You can also easily craft a query to get the average usage across all cores an all hosts: &lt;code&gt;start=1d-ago&amp;amp;m=avg:sys.cpu.user&lt;/code&gt;. However queries against that particular metric will take longer as there are more rows to sift through.</source>
-          <target state="translated">このスキーマの利点は、コアごとに使用状況のメトリックを格納するなど、データに非常に細かい粒度があることです。すべてのコアとすべてのホストの平均使用量を取得するクエリを簡単に作成することもできます： &lt;code&gt;start=1d-ago&amp;amp;m=avg:sys.cpu.user&lt;/code&gt; 。ただし、その特定のメトリックに対するクエリは、ふるいにかける行が多いほど時間がかかります。</target>
+          <target state="translated">このスキーマの利点は、コアごとに使用状況のメトリックを保存するなど、データに非常に細かい粒度があることです。すべてのコアとすべてのホストの平均使用量を取得するクエリを簡単に作成することもできます： &lt;code&gt;start=1d-ago&amp;amp;m=avg:sys.cpu.user&lt;/code&gt; 。ただし、その特定のメトリックに対するクエリは、ふるいにかける行が多いほど時間がかかります。</target>
         </trans-unit>
         <trans-unit id="bed1a5b3684d300fe09cb4e822d78aebd51db9b7" translate="yes" xml:space="preserve">
           <source>The best way to contribute code is to fork the main repo and &lt;a href=&quot;https://help.github.com/articles/using-pull-requests&quot;&gt;send a pull request&lt;/a&gt; on GitHub.</source>
@@ -153,7 +153,7 @@
         </trans-unit>
         <trans-unit id="4d0608e7ddc139367bd4dd93c9e54b570b70503e" translate="yes" xml:space="preserve">
           <source>The default &lt;code&gt;/annotation&lt;/code&gt; endpoint deals with one notation at a time. The &lt;code&gt;/annotation/bulk&lt;/code&gt; endpoint allows for adding or updating multiple annotations at a time.</source>
-          <target state="translated">デフォルトの &lt;code&gt;/annotation&lt;/code&gt; エンドポイントは、一度に1つの表記を扱います。 &lt;code&gt;/annotation/bulk&lt;/code&gt; エンドポイントは、一度に複数の注釈を追加または更新することができます。</target>
+          <target state="translated">デフォルトの &lt;code&gt;/annotation&lt;/code&gt; エンドポイントは、一度に1つの表記法を扱います。 &lt;code&gt;/annotation/bulk&lt;/code&gt; エンドポイントは、一度に複数の注釈を追加または更新することができます。</target>
         </trans-unit>
         <trans-unit id="0e3f92cf92e007b1a65a3368774fdbb20337fd33" translate="yes" xml:space="preserve">
           <source>The default OpenTSDB serializer parses and returns JSON formatted data. Below you'll find details about the serializer and request parameters that affect only the the JSON serializer. If the serializer has extra parameters for a specific endpoint, they'll be listed below.</source>
@@ -177,7 +177,7 @@
         </trans-unit>
         <trans-unit id="489d7dad3ad92f6c176eada509f15bb5a1140a27" translate="yes" xml:space="preserve">
           <source>The easiest way to get started with OpenTSDB is to open up a terminal or telnet client, connect to your TSD and issue a &lt;code&gt;put&lt;/code&gt; command and hit 'enter'. If you are writing a program, simply open a socket, print the string command with a new line and send the packet. The telnet command format is:</source>
-          <target state="translated">OpenTSDBを使い始める最も簡単な方法は、ターミナルまたはtelnetクライアントを開いてTSDに接続し、 &lt;code&gt;put&lt;/code&gt; コマンドを発行してEnterキーを押すことです。プログラムを作成している場合は、ソケットを開き、文字列コマンドを新しい行で出力して、パケットを送信します。telnetコマンドの形式は次のとおりです。</target>
+          <target state="translated">OpenTSDBを開始する最も簡単な方法は、ターミナルまたはtelnetクライアントを開いてTSDに接続し、 &lt;code&gt;put&lt;/code&gt; コマンドを発行してEnterキーを押すことです。プログラムを作成している場合は、ソケットを開き、文字列コマンドを新しい行で出力して、パケットを送信します。telnetコマンドの形式は次のとおりです。</target>
         </trans-unit>
         <trans-unit id="67dea75abaa4aadbf40544a29fd55f78fb7a47c0" translate="yes" xml:space="preserve">
           <source>The end time for the query. If left out, the end is &lt;em&gt;now&lt;/em&gt;</source>
@@ -185,7 +185,7 @@
         </trans-unit>
         <trans-unit id="1421c0901110c8ca97d08883a6a667427626a477" translate="yes" xml:space="preserve">
           <source>The exception so far has been the introduction of salted rows in 2.2.0. Disabled by default, using this feature requires creating a new HBase table with a new set of pre-splits and modifying the configuration of every TSD to use the new table with salting enabled. The schema for salted and unsalted tables is incompatible so if users have a lot of data in a previous table, it may be best to leave a few TSDs running to query against the old table and new TSDs to write to and read from the new salted table. For smaller amounts of data, the &lt;a href=&quot;user_guide/cli/scan&quot;&gt;&lt;em&gt;scan&lt;/em&gt;&lt;/a&gt; tool can be used to export and re-import your data.</source>
-          <target state="translated">これまでの例外は、2.2.0でのソルトされた行の導入です。この機能を使用するには、デフォルトで無効になっています。新しいプリスプリットのセットで新しいHBaseテーブルを作成し、ソルティングを有効にして新しいテーブルを使用するようにすべてのTSDの構成を変更する必要があります。ソルト化されたテーブルとソルト化されていないテーブルのスキーマには互換性がないため、ユーザーが前のテーブルに大量のデータを持っている場合は、少数のTSDを実行したまま、古いテーブルと新しいTSDに対してクエリを実行して、新しいソルト化されたテーブルに読み書きするのが最善の方法です。テーブル。データ量が少ない場合は、&lt;a href=&quot;user_guide/cli/scan&quot;&gt;&lt;em&gt;スキャン&lt;/em&gt;&lt;/a&gt;ツールを使用してデータをエクスポートおよび再インポートできます。</target>
+          <target state="translated">これまでの例外は、2.2.0でのソルトされた行の導入です。この機能を使用するには、デフォルトで無効になっています。新しいプリスプリットのセットで新しいHBaseテーブルを作成し、ソルティングを有効にして新しいテーブルを使用するようにすべてのTSDの構成を変更する必要があります。ソルト化されたテーブルとソルト化されていないテーブルのスキーマには互換性がないため、ユーザーが前のテーブルに大量のデータを持っている場合は、少数のTSDを実行したまま、古いテーブルと新しいTSDに対してクエリを実行して、新しいソルト化されたテーブルに書き込みと読み取りを行うのが最適です。テーブル。データ量が少ない場合は、&lt;a href=&quot;user_guide/cli/scan&quot;&gt;&lt;em&gt;スキャン&lt;/em&gt;&lt;/a&gt;ツールを使用してデータをエクスポートおよび再インポートできます。</target>
         </trans-unit>
         <trans-unit id="f8f1f82119554290d1086f80c8f289712fc2e7e7" translate="yes" xml:space="preserve">
           <source>The existing UID name</source>
@@ -217,7 +217,7 @@
         </trans-unit>
         <trans-unit id="c1d51c08dde0f40971599ecc76a1bea5bec1d5cc" translate="yes" xml:space="preserve">
           <source>The first sticking point folks run into is ''uid assignment''. Every string for a metric, tag key and tag value must be assigned a UID before the data point can be stored. For example, the metric &lt;code&gt;sys.cpu.user&lt;/code&gt; may be assigned a UID of &lt;code&gt;000001&lt;/code&gt; the first time it is encountered by a TSD. This assignment takes a fair amount of time as it must fetch an available UID, write a UID to name mapping and a name to UID mapping, then use the UID to write the data point's row key. The UID will be stored in the TSD's cache so that the next time the same metric comes through, it can find the UID very quickly.</source>
-          <target state="translated">人々が最初に遭遇する問題は、「uid割り当て」です。データポイントを保存する前に、メトリック、タグキー、タグ値のすべての文字列にUIDを割り当てる必要があります。たとえば、メトリック &lt;code&gt;sys.cpu.user&lt;/code&gt; には、TSDが初めて遭遇したときに &lt;code&gt;000001&lt;/code&gt; のUIDが割り当てられます。この割り当てでは、使用可能なUIDをフェッチし、UIDから名前へのマッピングと名前からUIDへのマッピングを書き込み、次にUIDを使用してデータポイントの行キーを書き込む必要があるため、かなりの時間がかかります。 UIDはTSDのキャッシュに保存されるため、次回同じメトリックが送信されたときに、UIDを非常にすばやく見つけることができます。</target>
+          <target state="translated">人々が最初に遭遇する問題は '' uid割り当て ''です。データポイントを保存する前に、メトリック、タグキー、およびタグ値のすべての文字列にUIDを割り当てる必要があります。たとえば、メトリック &lt;code&gt;sys.cpu.user&lt;/code&gt; には、TSDが最初に遭遇したときに &lt;code&gt;000001&lt;/code&gt; のUIDが割り当てられます。この割り当てでは、使用可能なUIDをフェッチし、UIDから名前へのマッピングと名前からUIDへのマッピングを書き込み、次にUIDを使用してデータポイントの行キーを書き込む必要があるため、かなりの時間がかかります。 UIDはTSDのキャッシュに保存されるため、次回同じメトリックが送信されたときに、UIDを非常にすばやく見つけることができます。</target>
         </trans-unit>
         <trans-unit id="5bda1276e1087b43dceacf7ef436f70ff364207f" translate="yes" xml:space="preserve">
           <source>The fix is to delete the forward maps for all names that map to the same UID. Then the UID is given a new name that is a dot seperated concatenation of the previous names with an &quot;fsck&quot; prefix. E.g. in the example above we would have a new name of &quot;fsck.bar.foo&quot;. This name may be used to access data from the corrupt time series. The next time data is written for the errant names, new UIDs will be assigned to each and new time series created.</source>
@@ -257,7 +257,7 @@
         </trans-unit>
         <trans-unit id="f3640dec83901a77bacdb01cd6696e4aad98c809" translate="yes" xml:space="preserve">
           <source>The following is a list of example queries using an example data set. We'll illustrate a number of common query types that may be encountered so you can get an understanding of how the query system works. Each time series in the example set has only a single data point stored and the UIDs have been truncated to a single byte to make it easier to read. The example queries are all &lt;em&gt;Metric&lt;/em&gt; queries from the HTTP API and only show the &lt;code&gt;m=&lt;/code&gt; component. See &lt;a href=&quot;../../api_http/query/index&quot;&gt;&lt;em&gt;/api/query&lt;/em&gt;&lt;/a&gt; for details. If you are using a CLI tool, the query format will differ slightly so read the documentation for the particular command.</source>
-          <target state="translated">以下は、サンプルデータセットを使用したサンプルクエリのリストです。クエリシステムがどのように機能するかを理解できるように、遭遇する可能性のある一般的なクエリタイプをいくつか示します。サンプルセットの各時系列には1つのデータポイントのみが保存されており、読みやすくするためにUIDは1バイトに切り捨てられています。サンプルクエリはすべてHTTP APIからの&lt;em&gt;メトリック&lt;/em&gt;クエリであり、 &lt;code&gt;m=&lt;/code&gt; コンポーネントのみを示しています。詳細については、&lt;a href=&quot;../../api_http/query/index&quot;&gt;&lt;em&gt;/ api / query&lt;/em&gt;&lt;/a&gt;をご覧ください。 CLIツールを使用している場合、クエリの形式は少し異なるため、特定のコマンドのドキュメントをお読みください。</target>
+          <target state="translated">以下は、サンプルデータセットを使用したサンプルクエリのリストです。クエリシステムのしくみを理解できるように、遭遇する可能性のある一般的なクエリの種類をいくつか示します。サンプルセットの各時系列には1つのデータポイントのみが保存されており、読みやすくするためにUIDは1バイトに切り捨てられています。サンプルクエリはすべてHTTP APIからの&lt;em&gt;メトリック&lt;/em&gt;クエリであり、 &lt;code&gt;m=&lt;/code&gt; コンポーネントのみを示しています。詳細については、&lt;a href=&quot;../../api_http/query/index&quot;&gt;&lt;em&gt;/ api / query&lt;/em&gt;&lt;/a&gt;をご覧ください。 CLIツールを使用している場合、クエリの形式は少し異なるため、特定のコマンドのドキュメントをお読みください。</target>
         </trans-unit>
         <trans-unit id="2fe0337727548d1bffb65cfa2a3e693e34df1285" translate="yes" xml:space="preserve">
           <source>The following is a list of query string parameters that are used by OpenTSDB across the entire API. Don't try to overload their use please:</source>
@@ -349,7 +349,7 @@
         </trans-unit>
         <trans-unit id="7031078bbb9a1a9bf3b44a19ca648f0328f00cb3" translate="yes" xml:space="preserve">
           <source>The import command enables bulk loading of time series data into OpenTSDB. You provide one or more files and OpenTSDB will parse and load the data. Data must be formatted in the Telnet &lt;code&gt;put&lt;/code&gt; style with one data point per line in a text file. Each file may optionally be compressed with GZip and if so, must end with the &lt;code&gt;.gz&lt;/code&gt; extension.</source>
-          <target state="translated">importコマンドは、OpenTSDBへの時系列データの一括読み込みを有効にします。1つ以上のファイルを指定すると、OpenTSDBがデータを解析してロードします。データは、テキストファイルの行ごとに1つのデータポイントを使用して、Telnet &lt;code&gt;put&lt;/code&gt; スタイルでフォーマットする必要があります。各ファイルは、オプションでGZipで圧縮できます。圧縮する場合は、拡張子を &lt;code&gt;.gz&lt;/code&gt; にする必要があります。</target>
+          <target state="translated">importコマンドは、OpenTSDBへの時系列データの一括読み込みを有効にします。1つ以上のファイルを指定すると、OpenTSDBがデータを解析してロードします。データは、テキストファイルの行ごとに1つのデータポイントを使用して、Telnet &lt;code&gt;put&lt;/code&gt; スタイルでフォーマットする必要があります。各ファイルは、オプションでGZipで圧縮できます。圧縮する場合は、 &lt;code&gt;.gz&lt;/code&gt; 拡張子で終了する必要があります。</target>
         </trans-unit>
         <trans-unit id="8213f17f3af6cc9c5a3bf467164339e89f731295" translate="yes" xml:space="preserve">
           <source>The import format is the same as a Telnet style &lt;code&gt;put&lt;/code&gt; command.</source>
@@ -369,7 +369,7 @@
         </trans-unit>
         <trans-unit id="a0c3ab992cb930f99e0b5d8b697c5fbba8984186" translate="yes" xml:space="preserve">
           <source>The inverse of &lt;code&gt;min&lt;/code&gt;, it returns the largest data point from all of the time series or within a time span. This function will perform linear interpolation across time series. It's useful for looking at the upper bounds of gauge metrics.</source>
-          <target state="translated">&lt;code&gt;min&lt;/code&gt; の逆で、すべての時系列から、またはタイムスパン内の最大のデータポイントを返します。この関数は、時系列全体で線形補間を実行します。ゲージメトリックの上限を確認するのに役立ちます。</target>
+          <target state="translated">&lt;code&gt;min&lt;/code&gt; の逆で、すべての時系列またはタイムスパン内の最大のデータポイントを返します。この関数は、時系列全体で線形補間を実行します。ゲージメトリックの上限を確認するのに役立ちます。</target>
         </trans-unit>
         <trans-unit id="d26c769e2c822b35c01c88768f58bc1dbcb75baf" translate="yes" xml:space="preserve">
           <source>The join object controls how the various time series for a given metric are merged within an expression. The two basic operations supported at this time are the union and intersection operators. Additional flags control join behavior.</source>
@@ -381,11 +381,11 @@
         </trans-unit>
         <trans-unit id="c870f06ddc45ae975a4dab298cf2f95624cc5c3d" translate="yes" xml:space="preserve">
           <source>The last 4 bits of either column type describe the data stored. The first bit is a flag that indicates whether or not the value is an integer or floating point. A value of 0 indicates an integer, 1 indicates a float. The last 3 bits indicate the length of the data, offset by 1. A value of &lt;code&gt;000&lt;/code&gt; indicates a 1 byte value while &lt;code&gt;010&lt;/code&gt; indicates a 2 byte value. The length must reflect a value of 1, 2, 4 or 8. Anything else indicates an error.</source>
-          <target state="translated">いずれかの列タイプの最後の4ビットは、格納されているデータを示します。最初のビットは、値が整数か浮動小数点かを示すフラグです。値0は整数を示し、1は浮動小数点数を示します。最後の3ビットはデータの長さを示し、1でオフセットされます &lt;code&gt;000&lt;/code&gt; の値は1バイトの値を示し、 &lt;code&gt;010&lt;/code&gt; は2バイトの値を示します。長さは、1、2、4、または8の値を反映する必要があります。それ以外のものはすべてエラーを示します。</target>
+          <target state="translated">いずれかの列タイプの最後の4ビットは、格納されているデータを示します。最初のビットは、値が整数か浮動小数点かを示すフラグです。値0は整数を示し、1は浮動小数点を示します。最後の3ビットは、データの長さを1だけオフセットして示します &lt;code&gt;000&lt;/code&gt; の値は1バイトの値を示し、 &lt;code&gt;010&lt;/code&gt; は2バイトの値を示します。長さは、1、2、4、または8の値を反映する必要があります。それ以外のものはすべてエラーを示します。</target>
         </trans-unit>
         <trans-unit id="ff7cca3f1d147ed538ed4e121c61283152e22c0f" translate="yes" xml:space="preserve">
           <source>The last byte of a compacted value is for storing meta data. It will usually be &lt;code&gt;0&lt;/code&gt; if all of the data points are encoded in seconds or milliseconds. If there is a mixture of seconds and milliseconds will be set to &lt;code&gt;1&lt;/code&gt;. If the value is something else then it may be from a future version of OpenTSDB or the column may be invalid.</source>
-          <target state="translated">圧縮された値の最後のバイトは、メタデータを格納するためのものです。すべてのデータポイントが秒またはミリ秒でエンコードされている場合、通常は &lt;code&gt;0&lt;/code&gt; になります。秒とミリ秒が混在している場合は &lt;code&gt;1&lt;/code&gt; に設定されます。値が何か別の場合は、OpenTSDBの将来のバージョンのものであるか、列が無効である可能性があります。</target>
+          <target state="translated">圧縮された値の最後のバイトは、メタデータを格納するためのものです。すべてのデータポイントが秒またはミリ秒でエンコードされている場合、通常は &lt;code&gt;0&lt;/code&gt; になります。秒とミリ秒が混在している場合は &lt;code&gt;1&lt;/code&gt; に設定されます。値が他の値である場合、OpenTSDBの将来のバージョンのものであるか、列が無効である可能性があります。</target>
         </trans-unit>
         <trans-unit id="301934179c5fc6daaf00f7d5e08f485f36b5d21b" translate="yes" xml:space="preserve">
           <source>The level in the rule heirarchy where the rule resides. Must be 0 or greater.</source>
@@ -409,7 +409,7 @@
         </trans-unit>
         <trans-unit id="fe0e398c498a55222470992a4f8b53936a057819" translate="yes" xml:space="preserve">
           <source>The lookup command is the default for &lt;code&gt;uid&lt;/code&gt; used to lookup the UID assigned to a name or the name assinged to a UID for a given type.</source>
-          <target state="translated">lookupコマンドは、名前に割り当てられたUID、または特定のタイプのUIDに割り当てられた名前を検索するために使用される &lt;code&gt;uid&lt;/code&gt; のデフォルトです。</target>
+          <target state="translated">lookupコマンドは、名前に割り当てられたUIDまたは特定のタイプのUIDに割り当てられた名前を検索するために使用される &lt;code&gt;uid&lt;/code&gt; のデフォルトです。</target>
         </trans-unit>
         <trans-unit id="b4ebef67ed7a2f73114e936f42125088e2ab671a" translate="yes" xml:space="preserve">
           <source>The maximum number of compaction calls inflight to HBase at any given time</source>
@@ -437,7 +437,7 @@
         </trans-unit>
         <trans-unit id="95ecad35cea9de4aa2587448eeee4f37440434e5" translate="yes" xml:space="preserve">
           <source>The maximum number of tags allowed per data point. &lt;strong&gt;NOTE&lt;/strong&gt; Please be aware of the performance tradeoffs of overusing tags &lt;code&gt;writing&lt;/code&gt;</source>
-          <target state="translated">データポイントごとに許可されるタグの最大数。&lt;strong&gt;NOTE&lt;/strong&gt;乱用タグのパフォーマンスのトレードオフを認識してください &lt;code&gt;writing&lt;/code&gt;</target>
+          <target state="translated">データポイントごとに許可されるタグの最大数。&lt;strong&gt;注&lt;/strong&gt;タグの &lt;code&gt;writing&lt;/code&gt; を多用することによるパフォーマンスのトレードオフに&lt;strong&gt;注意して&lt;/strong&gt;ください。</target>
         </trans-unit>
         <trans-unit id="b7d7129af3c7c98986f0449813a701882ab2801c" translate="yes" xml:space="preserve">
           <source>The maximum request body size to support for incoming HTTP requests when chunking is enabled.</source>
@@ -449,7 +449,7 @@
         </trans-unit>
         <trans-unit id="e4534fce9cbba9e1f6bb5e382011540ca8c0c905" translate="yes" xml:space="preserve">
           <source>The meta section contains ordered information about each time series in the output arrays. The first element in the array will always have a &lt;code&gt;metrics&lt;/code&gt; value of &lt;code&gt;timestamp&lt;/code&gt; and no other data.</source>
-          <target state="translated">メタセクションには、出力配列の各時系列に関する順序付けられた情報が含まれています。配列の最初の要素には、常に &lt;code&gt;timestamp&lt;/code&gt; &lt;code&gt;metrics&lt;/code&gt; 値があり、他のデータはありません。</target>
+          <target state="translated">メタセクションには、出力配列の各時系列に関する順序付けされた情報が含まれています。配列の最初の要素には、常に &lt;code&gt;timestamp&lt;/code&gt; &lt;code&gt;metrics&lt;/code&gt; 値があり、他のデータはありません。</target>
         </trans-unit>
         <trans-unit id="fcb3e4a1d25a1275d034d4a978feaeef6b49e851" translate="yes" xml:space="preserve">
           <source>The metric should be a specific thing, like &quot;Ethernet packets&quot; but not be broken out into a particular instance of a thing. Generally you don't want to collect a metric like net.bytes.eth0, net.bytes.eth1, etc. Collect net.bytes and tag eth0 datapoints with iface=eth0, etc. Don't bother creating separate &quot;in&quot; and &quot;out&quot; metrics, either. Add the tag direction=in or direction=out. This way you can easily see the total network activity for a given box without having to plot a bunch of metrics. This still gives you the flexibility to drill down and just show activity for a particular interface, or just a particular direction.</source>
@@ -469,7 +469,7 @@
         </trans-unit>
         <trans-unit id="7f5126c5f2e36e2ac9523a48cd2cd8511fa9f555" translate="yes" xml:space="preserve">
           <source>The name of a &lt;code&gt;TSMeta&lt;/code&gt; custom field for the rule to operate on. Note that the &lt;code&gt;field&lt;/code&gt; value must also be configured or an exception will be raised.</source>
-          <target state="translated">ルールが操作する &lt;code&gt;TSMeta&lt;/code&gt; カスタムフィールドの名前。 &lt;code&gt;field&lt;/code&gt; 値も設定する必要があることに注意してください。そうしないと、例外が発生します。</target>
+          <target state="translated">ルールを操作する &lt;code&gt;TSMeta&lt;/code&gt; カスタムフィールドの名前。 &lt;code&gt;field&lt;/code&gt; 値も構成する必要があることに注意してください。そうしないと、例外が発生します。</target>
         </trans-unit>
         <trans-unit id="7f4161e82690ef9abdac3c461920adaec29c8742" translate="yes" xml:space="preserve">
           <source>The name of a field for the rule to operate on</source>
@@ -573,7 +573,7 @@
         </trans-unit>
         <trans-unit id="d2ebaf6f797f2ac60a316c118f4f484c3aaf1e8d" translate="yes" xml:space="preserve">
           <source>The number of days of data points to retain for the given timeseries. &lt;strong&gt;Not Implemented&lt;/strong&gt;. When set to 0, the default, data is retained indefinitely.</source>
-          <target state="translated">特定の時系列で保持するデータポイントの日数。&lt;strong&gt;実装されていません&lt;/strong&gt;。デフォルトの0に設定すると、データは無期限に保持されます。</target>
+          <target state="translated">特定の時系列に保持するデータポイントの日数。&lt;strong&gt;実装されていません&lt;/strong&gt;。デフォルトの0に設定すると、データは無期限に保持されます。</target>
         </trans-unit>
         <trans-unit id="078be455f49f4f44728254c8acc4782a4e75f2e3" translate="yes" xml:space="preserve">
           <source>The number of raw data points in the set</source>
@@ -625,7 +625,7 @@
         </trans-unit>
         <trans-unit id="31229ed69fdd674c054b7f05817e197642455f90" translate="yes" xml:space="preserve">
           <source>The original way of interacting with OpenTSDB was through a Telnet style API. A user or application simply had to open a socket to the TSD and start sending ASCII string commands and expect a response. This documentation lists the various commands provided by OpenTSDB.</source>
-          <target state="translated">OpenTSDB との対話の元々の方法は Telnet スタイルの API を通して行われていた。ユーザーやアプリケーションは、単に TSD にソケットを開き、ASCII 文字列コマンドの送信を開始し、応答を期待する必要がありました。このドキュメントでは、OpenTSDBが提供する様々なコマンドをリストアップしています。</target>
+          <target state="translated">OpenTSDB との対話の元々の方法は Telnet スタイルの API を通して行われていた。ユーザーやアプリケーションは、単に TSD にソケットを開き、ASCII 文字列コマンドの送信を開始し、応答を期待しなければなりませんでした。このドキュメントでは、OpenTSDBが提供する様々なコマンドをリストアップしています。</target>
         </trans-unit>
         <trans-unit id="410dd2ba63c71e7590d28107510c57040e02aa1c" translate="yes" xml:space="preserve">
           <source>The output for log files and the stats page include other fields with single values as listed below:</source>
@@ -641,7 +641,7 @@
         </trans-unit>
         <trans-unit id="56bad0de9c1293d4eca9b76b82af02b1c7548e4c" translate="yes" xml:space="preserve">
           <source>The output will be an array of 0 or more data points depending on the data that was found. If a data point for a particular time series was not located within the time specified, it will not appear in the output. Output fields depend on whether or not the &lt;code&gt;resolve&lt;/code&gt; flag was set.</source>
-          <target state="translated">出力は、見つかったデータに応じて、0以上のデータポイントの配列になります。特定の時系列のデータポイントが指定された時間内に見つからなかった場合、そのデータポイントは出力に表示されません。出力フィールドは、 &lt;code&gt;resolve&lt;/code&gt; フラグが設定されているかどうかによって異なります。</target>
+          <target state="translated">出力は、検出されたデータに応じて、0個以上のデータポイントの配列になります。特定の時系列のデータポイントが指定された時間内に見つからなかった場合、そのデータポイントは出力に表示されません。出力フィールドは、 &lt;code&gt;resolve&lt;/code&gt; フラグが設定されているかどうかによって異なります。</target>
         </trans-unit>
         <trans-unit id="bc47d9c90013b3e94343e18039d8fff6454a8feb" translate="yes" xml:space="preserve">
           <source>The output will contain a list of objects in the &lt;code&gt;outputs&lt;/code&gt; array with the results in an array of arrays representing each time series followed by meta data for each series and the query overall. Also included is the original query and some summary statistics. The fields include:</source>
@@ -693,7 +693,7 @@
         </trans-unit>
         <trans-unit id="f009d9456dc63cade32093a4bcb0423b4ac8e8dc" translate="yes" xml:space="preserve">
           <source>The remaining rows are branch and leaf rows containing information about the hierarchy. The rows are keyed on &lt;code&gt;&amp;lt;tree ID&amp;gt;&amp;lt;branch ID&amp;gt;&lt;/code&gt; where the &lt;code&gt;branch ID&lt;/code&gt; is a concatenation of hashes of the branch display names. For example, if we have a flattened branch &lt;code&gt;dal.web01.myapp.bytes_sent&lt;/code&gt; where each branch name is separated by a period, we would have 3 levels of branching. &lt;code&gt;dal&lt;/code&gt;, &lt;code&gt;web01&lt;/code&gt; and &lt;code&gt;myapp&lt;/code&gt;. The leaf would be named &lt;code&gt;bytes_sent&lt;/code&gt; and links to a TSUID. Hashing each branch name in Java returns a 4 byte integer and converting to hex for readability yields:</source>
-          <target state="translated">残りの行は、階層に関する情報を含むブランチおよびリーフ行です。行は &lt;code&gt;&amp;lt;tree ID&amp;gt;&amp;lt;branch ID&amp;gt;&lt;/code&gt; をキーとしており、 &lt;code&gt;branch ID&lt;/code&gt; はブランチの表示名のハッシュの連結です。たとえば、各ブランチ名がピリオドで区切られているフラット化されたブランチ &lt;code&gt;dal.web01.myapp.bytes_sent&lt;/code&gt; がある場合、3つのレベルのブランチがあります。 &lt;code&gt;dal&lt;/code&gt; 、 &lt;code&gt;web01&lt;/code&gt; および &lt;code&gt;myapp&lt;/code&gt; 。リーフは &lt;code&gt;bytes_sent&lt;/code&gt; という名前で、TSUIDにリンクします。 Javaで各ブランチ名をハッシュすると、4バイトの整数が返され、読みやすくするために16進数に変換されます。</target>
+          <target state="translated">残りの行は、階層に関する情報を含むブランチおよびリーフ行です。行は &lt;code&gt;&amp;lt;tree ID&amp;gt;&amp;lt;branch ID&amp;gt;&lt;/code&gt; をキーとしており、 &lt;code&gt;branch ID&lt;/code&gt; はブランチの表示名のハッシュの連結です。たとえば、各ブランチ名がピリオドで区切られているフラット化されたブランチ &lt;code&gt;dal.web01.myapp.bytes_sent&lt;/code&gt; がある場合、3レベルのブランチがあります。 &lt;code&gt;dal&lt;/code&gt; 、 &lt;code&gt;web01&lt;/code&gt; および &lt;code&gt;myapp&lt;/code&gt; 。リーフの名前は &lt;code&gt;bytes_sent&lt;/code&gt; で、TSUIDにリンクしています。 Javaで各ブランチ名をハッシュすると、4バイトの整数が返され、読みやすいように16進数に変換されます。</target>
         </trans-unit>
         <trans-unit id="e057841fb19b18d8555055157dc697db684072d7" translate="yes" xml:space="preserve">
           <source>The request completed successfully</source>
@@ -721,7 +721,7 @@
         </trans-unit>
         <trans-unit id="4558d8aa0b487055f3f30b8830e8c9addd185c32" translate="yes" xml:space="preserve">
           <source>The response includes two arrays. &lt;code&gt;completed&lt;/code&gt; lists the 256 most recent queries that have finished execution, whether successfully or with an error. The &lt;code&gt;running&lt;/code&gt; array contains a list of queries currently executing. If this list is growing, the TSD is under heavy load. Note that the running list will not contain an exception, response code or timing details.</source>
-          <target state="translated">応答には2つの配列が含まれます。 &lt;code&gt;completed&lt;/code&gt; は、正常に完了したか、エラーが発生したかに関係なく、実行が完了した最新の256個のクエリを一覧表示します。 &lt;code&gt;running&lt;/code&gt; 配列は、現在実行中のクエリのリストが含まれています。このリストが増加している場合、TSDに大きな負荷がかかっています。実行中のリストには、例外、応答コード、タイミングの詳細は含まれないことに注意してください。</target>
+          <target state="translated">応答には2つの配列が含まれます。 &lt;code&gt;completed&lt;/code&gt; は、成功したか、エラーが発生したかに関係なく、実行を終了した最新の256個のクエリをリストします。 &lt;code&gt;running&lt;/code&gt; 配列は、現在実行中のクエリのリストが含まれています。このリストが増加している場合、TSDに大きな負荷がかかっています。実行中のリストには、例外、応答コード、タイミングの詳細は含まれないことに注意してください。</target>
         </trans-unit>
         <trans-unit id="2e93df8c21ccd1a6d8fa7cf69b9eddb61805c137" translate="yes" xml:space="preserve">
           <source>The response is a hash map of configuration properties and values.</source>
@@ -769,7 +769,7 @@
         </trans-unit>
         <trans-unit id="580115e289fecdcf6ac8cd4d9693407cb57e37d2" translate="yes" xml:space="preserve">
           <source>The response will contain a map of successful assignments along with the hex encoded UID value. If one or more values were not assigned, a separate map will contain a list of the values and the reason why they were not assigned. Maps with the type name and &lt;code&gt;&amp;lt;type&amp;gt;_errors&lt;/code&gt; will be generated only if one or more values for that type were provided.</source>
-          <target state="translated">応答には、16進数でエンコードされたUID値とともに、成功した割り当てのマップが含まれます。1つ以上の値が割り当てられなかった場合は、別のマップに値のリストとそれらが割り当てられなかった理由が含まれます。タイプ名と &lt;code&gt;&amp;lt;type&amp;gt;_errors&lt;/code&gt; を持つマップは、そのタイプの1つ以上の値が提供された場合にのみ生成されます。</target>
+          <target state="translated">応答には、16進数でエンコードされたUID値とともに、成功した割り当てのマップが含まれます。1つ以上の値が割り当てられなかった場合、別のマップには、値のリストとそれらが割り当てられなかった理由が含まれます。タイプ名と &lt;code&gt;&amp;lt;type&amp;gt;_errors&lt;/code&gt; を持つマップは、そのタイプの1つ以上の値が提供された場合にのみ生成されます。</target>
         </trans-unit>
         <trans-unit id="e888f859bcc4a020940fcab98a80a43e4af880a7" translate="yes" xml:space="preserve">
           <source>The result set with the TSUID, metric and tags for each series.</source>
@@ -793,7 +793,7 @@
         </trans-unit>
         <trans-unit id="03e2f5949cc33008bb4ed0df9163659c72104486" translate="yes" xml:space="preserve">
           <source>The results will be logged with settings in the &lt;code&gt;logback.xml&lt;/code&gt; file. For long fscks, it's recommended to run in the background and configure LogBack to have plenty of space for writing data. On completion, statistics about the run will be printed. An example looks like:</source>
-          <target state="translated">結果は &lt;code&gt;logback.xml&lt;/code&gt; ファイルの設定で記録されます。fscksが長い場合は、バックグラウンドで実行し、LogBackを構成してデータを書き込むための十分なスペースを確保することをお勧めします。完了すると、実行に関する統計が出力されます。例は次のようになります。</target>
+          <target state="translated">結果は、 &lt;code&gt;logback.xml&lt;/code&gt; ファイルの設定で記録されます。fscksが長い場合は、バックグラウンドで実行し、LogBackを構成してデータを書き込むための十分なスペースを確保することをお勧めします。完了すると、実行に関する統計が出力されます。例は次のようになります。</target>
         </trans-unit>
         <trans-unit id="0926190af8ecef763121a2190af951f3d338844b" translate="yes" xml:space="preserve">
           <source>The results will be the data points that you requested.</source>
@@ -813,7 +813,7 @@
         </trans-unit>
         <trans-unit id="dc3bd0d3a0635f68c39659954f885bbf1ed5de60" translate="yes" xml:space="preserve">
           <source>The rules endpoint is used for bulk merging, replacing or deleting the entire ruleset of a tree. Instead of calling the &lt;code&gt;tree/rule&lt;/code&gt; endpoint multiple times for a single rule, you can supply a list of rules that will be merged into, or replace, the current rule set. Note that the &lt;code&gt;GET&lt;/code&gt; verb is not supported for this endpoint. To fetch the ruleset, load the tree via the &lt;code&gt;/tree&lt;/code&gt; endpoint. Also, all data must be provided in request content, query strings are not supported.</source>
-          <target state="translated">ルールエンドポイントは、ツリーのルールセット全体の一括マージ、置換、または削除に使用されます。単一のルールに対して &lt;code&gt;tree/rule&lt;/code&gt; エンドポイントを複数回呼び出す代わりに、現在のルールセットにマージまたは置換されるルールのリストを提供できます。このエンドポイントでは &lt;code&gt;GET&lt;/code&gt; 動詞がサポートされていないことに注意してください。ルールセットを取得するには、 &lt;code&gt;/tree&lt;/code&gt; エンドポイントを介してツリーをロードします。また、すべてのデータはリクエストコンテンツで提供する必要があります。クエリ文字列はサポートされていません。</target>
+          <target state="translated">ルールエンドポイントは、ツリーのルールセット全体の一括マージ、置換、または削除に使用されます。1つのルールに対して &lt;code&gt;tree/rule&lt;/code&gt; エンドポイントを複数回呼び出す代わりに、現在のルールセットにマージまたは置換されるルールのリストを指定できます。このエンドポイントでは &lt;code&gt;GET&lt;/code&gt; 動詞がサポートされていないことに注意してください。ルールセットを取得するには、 &lt;code&gt;/tree&lt;/code&gt; エンドポイントを介してツリーをロードします。また、すべてのデータはリクエストコンテンツで提供する必要があります。クエリ文字列はサポートされていません。</target>
         </trans-unit>
         <trans-unit id="8207a79775a9822d7026ff28655cd29b0bf39267" translate="yes" xml:space="preserve">
           <source>The same as &lt;code&gt;wildcard&lt;/code&gt; but case insensitive.</source>
@@ -821,11 +821,11 @@
         </trans-unit>
         <trans-unit id="3b29a47bf30edf4593879faec37eb7f684f3af0c" translate="yes" xml:space="preserve">
           <source>The same as a &lt;code&gt;literal_or&lt;/code&gt; but is case insensitive. Note that this is not efficient like the literal or as it must post-process all rows from storage.</source>
-          <target state="translated">&lt;code&gt;literal_or&lt;/code&gt; と同じですが、大文字と小文字は区別されません。これはリテラルのように効率的ではなく、ストレージからすべての行を後処理する必要があるので注意してください。</target>
+          <target state="translated">&lt;code&gt;literal_or&lt;/code&gt; と同じですが、大文字と小文字は区別されません。これは、リテラルのように、またはストレージからすべての行を後処理する必要があるため、効率的でないことに注意してください。</target>
         </trans-unit>
         <trans-unit id="1172c35f5ed7f8d775d731d36396dba763dbb111" translate="yes" xml:space="preserve">
           <source>The scan command is useful for debugging and exporting data points. Provide a start time, optional end time and one or more queries and the response will be raw byte data from storage or data points in a text format acceptable for use with the &lt;strong&gt;import&lt;/strong&gt; command. Scan also provides a rudimentary means of deleting data. The scan command accepts common CLI arguments. Data is emitted to standard out.</source>
-          <target state="translated">scanコマンドは、データポイントのデバッグとエクスポートに役立ちます。開始時刻、オプションの終了時刻、および1つ以上のクエリを入力すると、&lt;strong&gt;インポート&lt;/strong&gt;コマンドで使用できるテキスト形式のストレージまたはデータポイントからの生のバイトデータが応答になります。Scanは、データを削除する基本的な手段も提供します。scanコマンドは、一般的なCLI引数を受け入れます。データは標準出力に出力されます。</target>
+          <target state="translated">scanコマンドは、データポイントのデバッグとエクスポートに役立ちます。開始時間、オプションの終了時間、および1つ以上のクエリを指定すると、&lt;strong&gt;インポート&lt;/strong&gt;コマンドで使用できるテキスト形式のストレージまたはデータポイントからの生のバイトデータが応答になります。Scanは、データを削除する基本的な手段も提供します。scanコマンドは、一般的なCLI引数を受け入れます。データは標準出力に出力されます。</target>
         </trans-unit>
         <trans-unit id="cb41a38ecc595b6685d3d1487f2377a8ae92c048" translate="yes" xml:space="preserve">
           <source>The scan command returns data on row boundaries (1 hour) so results may include data previous to and after the specified start and end times.</source>
@@ -837,7 +837,7 @@
         </trans-unit>
         <trans-unit id="05d268d5cbe7b936fce86df9f0dd8eed0f712ac1" translate="yes" xml:space="preserve">
           <source>The second method of operation for aggregation functions is &lt;code&gt;downsampling&lt;/code&gt;. Since OpenTSDB stores data at the original resolution indefinitely, requesting data for a long time span can return millions of points. This can cause a burden on bandwidth or graphing libraries so it's common to request data at a lower resolution for longer spans. Downsampling breaks the long span of data into smaller spans and merges the data for the smaller span into a single data point. Aggregation functions will perform the same calculation as for an aggregation process but instead of working across data points for multiple time series at a single time stamp, downsampling works across multiple data points within a single time series over a given time span.</source>
-          <target state="translated">集約関数の2番目の操作方法は、 &lt;code&gt;downsampling&lt;/code&gt; です。 OpenTSDBはデータを元の解像度で無期限に保存するので、長期間にわたってデータを要求すると、数百万のポイントが返される可能性があります。これは、帯域幅またはグラフ作成ライブラリに負担をかける可能性があるため、長いスパンの場合は、より低い解像度でデータを要求するのが一般的です。ダウンサンプリングは、データの長いスパンを小さなスパンに分割し、小さなスパンのデータを単一のデータポイントにマージします。集計関数は、集計プロセスの場合と同じ計算を実行しますが、ダウンサンプリングは、単一のタイムスタンプで複数の時系列のデータポイントを処理する代わりに、特定のタイムスパンで単一の時系列内の複数のデータポイントを処理します。</target>
+          <target state="translated">集約関数の2番目の操作方法は、 &lt;code&gt;downsampling&lt;/code&gt; です。 OpenTSDBはデータを元の解像度で無期限に保存するため、長期間にわたってデータを要求すると、数百万のポイントが返される場合があります。これは、帯域幅またはグラフ作成ライブラリに負担をかける可能性があるため、長いスパンの場合は低い解像度でデータを要求するのが一般的です。ダウンサンプリングは、データの長いスパンをより小さなスパンに分割し、より小さなスパンのデータを単一のデータポイントにマージします。集計関数は、集計プロセスの場合と同じ計算を実行しますが、ダウンサンプリングは、単一のタイムスタンプで複数の時系列のデータポイントを処理する代わりに、特定のタイムスパンで単一の時系列内の複数のデータポイントを処理します。</target>
         </trans-unit>
         <trans-unit id="3c5af2c577a918fc1ea28eba04af791f5d57efc4" translate="yes" xml:space="preserve">
           <source>The server has completed the request successfully but is not returning content in the body. This is primarily used for storing data points as it is not necessary to return data to caller</source>
@@ -849,11 +849,11 @@
         </trans-unit>
         <trans-unit id="a44d20b8251aaa40f1728ae8514d24651fe0212d" translate="yes" xml:space="preserve">
           <source>The simple split method above assumes that you have roughly an equal number of time series per metric (i.e. a fairly consistent cardinality). E.g. the metric with a UID of &lt;code&gt;000001&lt;/code&gt; may have 200 time series and &lt;code&gt;000FA0&lt;/code&gt; has about 150. If you have a wide range of time series per metric, e.g. &lt;code&gt;000001&lt;/code&gt; has 10,000 time series while &lt;code&gt;000FA0&lt;/code&gt; only has 2, you may need to develop a more complex splitting algorithm.</source>
-          <target state="translated">上記の単純な分割方法では、メトリックごとにほぼ等しい数の時系列があることを前提としています（つまり、かなり一貫したカーディナリティ）。たとえば、UIDが &lt;code&gt;000001&lt;/code&gt; のメトリクスには200の時系列があり、 &lt;code&gt;000FA0&lt;/code&gt; には約150があります。たとえば、メトリクスごとに時系列の範囲が広い場合、たとえば &lt;code&gt;000001&lt;/code&gt; には10,000の時系列があり、 &lt;code&gt;000FA0&lt;/code&gt; には2しかない場合、さらに多くの時系列を開発する必要があります。複雑な分割アルゴリズム。</target>
+          <target state="translated">上記の単純な分割方法では、メトリックごとにほぼ同じ数の時系列があることを前提としています（つまり、かなり一貫したカーディナリティ）。たとえば、UIDが &lt;code&gt;000001&lt;/code&gt; のメトリックには200の時系列があり、 &lt;code&gt;000FA0&lt;/code&gt; には約150があります。たとえば、メトリックごとに時系列の範囲が広い場合、たとえば &lt;code&gt;000001&lt;/code&gt; には10,000の時系列があり、 &lt;code&gt;000FA0&lt;/code&gt; には2しかない場合、より多くを開発する必要があるかもしれません。複雑な分割アルゴリズム。</target>
         </trans-unit>
         <trans-unit id="d29df3f8f422b6091009eea5d0f1c0278c1a3084" translate="yes" xml:space="preserve">
           <source>The simplest way to pre-split your &lt;code&gt;tsdb&lt;/code&gt; table regions is to estimate the number of unique metric names you'll be recording. If you have designed a naming schema, you should have a pretty good idea. Let's say that we will track 4,000 metrics in our system. That's not to say 4,000 time series, as we're not counting the tags yet, just the metric names such as &quot;sys.cpu.user&quot;. Data points are written in row keys where the metric's UID comprises the first bytes, 3 bytes by default. The first metric will be assigned a UID of &lt;code&gt;000001&lt;/code&gt; as a hex encoded value. The 4,000th metric will have a UID of &lt;code&gt;000FA0&lt;/code&gt; in hex. You can use these as the start and end keys in the script from the &lt;a href=&quot;http://hbase.apache.org/book/perf.writing.html&quot;&gt;HBase Book&lt;/a&gt; to split your table into any number of regions. 256 regions may be a good place to start depending on how many time series share each metric.</source>
-          <target state="translated">&lt;code&gt;tsdb&lt;/code&gt; テーブルリージョンを事前分割する最も簡単な方法は、記録する一意のメトリック名の数を見積もることです。命名スキーマを設計した場合は、かなり良いアイデアが必要です。システムで4,000のメトリックを追跡するとします。タグの数はまだカウントされていないため、4,000時系列とは言えません。「sys.cpu.user」などのメトリック名のみです。データポイントは行キーに書き込まれ、メトリックのUIDは最初のバイト（デフォルトでは3バイト）で構成されます。最初のメトリックには、16進エンコードされた値として &lt;code&gt;000001&lt;/code&gt; の UIDが割り当てられます。 4,000 &lt;code&gt;000FA0&lt;/code&gt; メトリックは、16進数で000FA0の UIDを持ちます。これらを&lt;a href=&quot;http://hbase.apache.org/book/perf.writing.html&quot;&gt;HBase Bookの&lt;/a&gt;スクリプトの開始キーと終了キーとして使用できますテーブルを任意の数のリージョンに分割します。各メトリックスを共有する時系列の数によっては、256のリージョンから始めるのがよいでしょう。</target>
+          <target state="translated">&lt;code&gt;tsdb&lt;/code&gt; テーブル領域を事前分割する最も簡単な方法は、記録する一意のメトリック名の数を見積もることです。命名スキーマを設計した場合は、かなり良いアイデアが必要です。システムで4,000のメトリックを追跡するとします。タグの数はまだカウントされていないため、4,000時系列とは言えません。「sys.cpu.user」などのメトリック名のみです。データポイントは行キーに書き込まれます。ここで、メトリックのUIDは最初のバイト、デフォルトでは3バイトで構成されます。最初のメトリックには、16進エンコードされた値として &lt;code&gt;000001&lt;/code&gt; の UIDが割り当てられます。 4,000 &lt;code&gt;000FA0&lt;/code&gt; メトリックは、16進数で000FA0の UIDを持ちます。これらを&lt;a href=&quot;http://hbase.apache.org/book/perf.writing.html&quot;&gt;HBase Bookの&lt;/a&gt;スクリプトの開始キーと終了キーとして使用できますテーブルを任意の数のリージョンに分割します。各メトリックスを共有する時系列の数によっては、256のリージョンから始めるのがよいでしょう。</target>
         </trans-unit>
         <trans-unit id="c600707ebcabc7e4cbee4ee824f59fa6f8b189fd" translate="yes" xml:space="preserve">
           <source>The start time for the query. This can be a relative or absolute timestamp. See &lt;a href=&quot;../../user_guide/query/index&quot;&gt;&lt;em&gt;Querying or Reading Data&lt;/em&gt;&lt;/a&gt; for details.</source>
@@ -877,7 +877,7 @@
         </trans-unit>
         <trans-unit id="4387e95fdd2160045011cfbcfa06b9127ecc200a" translate="yes" xml:space="preserve">
           <source>The tag key name such as &lt;em&gt;host&lt;/em&gt; or &lt;em&gt;colo&lt;/em&gt; that we filter on</source>
-          <target state="translated">フィルタリングする&lt;em&gt;ホスト&lt;/em&gt;や&lt;em&gt;カラー&lt;/em&gt;などの&lt;em&gt;タグキー&lt;/em&gt;名</target>
+          <target state="translated">フィルタリングする&lt;em&gt;ホスト&lt;/em&gt;や&lt;em&gt;コロ&lt;/em&gt;などの&lt;em&gt;タグキー&lt;/em&gt;名</target>
         </trans-unit>
         <trans-unit id="66cd7ecbbe08c3d60b68074706d64f836de66d38" translate="yes" xml:space="preserve">
           <source>The tag key to invoke the filter on</source>
@@ -885,11 +885,11 @@
         </trans-unit>
         <trans-unit id="6f8503fb7c4f0122fa4e5fe2768573df962094b5" translate="yes" xml:space="preserve">
           <source>The tag value box can use grouping operators such as the &lt;code&gt;*&lt;/code&gt; and the &lt;code&gt;|&lt;/code&gt;. See &lt;a href=&quot;../query/index&quot;&gt;&lt;em&gt;Querying or Reading Data&lt;/em&gt;&lt;/a&gt; for details. Tag value boxes can also use filters as of version 2.2. E.g. you can enter &quot;wildcard(webserver*)&quot; as a tag value and it will match all hosts starting with &quot;webserver&quot;.</source>
-          <target state="translated">タグ値ボックスでは、 &lt;code&gt;*&lt;/code&gt; や &lt;code&gt;|&lt;/code&gt; などのグループ化演算子を使用できます。。詳細については、&lt;a href=&quot;../query/index&quot;&gt;&lt;em&gt;データのクエリまたは読み取り&lt;/em&gt;&lt;/a&gt;をご覧ください。タグ値ボックスは、バージョン2.2以降のフィルターも使用できます。たとえば、「wildcard（webserver *）」をタグ値として入力すると、「webserver」で始まるすべてのホストに一致します。</target>
+          <target state="translated">タグ値ボックスでは、 &lt;code&gt;*&lt;/code&gt; や &lt;code&gt;|&lt;/code&gt; などのグループ化演算子を使用できます。。詳細については、&lt;a href=&quot;../query/index&quot;&gt;&lt;em&gt;データのクエリまたは読み取り&lt;/em&gt;&lt;/a&gt;をご覧ください。タグ値ボックスでは、バージョン2.2以降のフィルターも使用できます。たとえば、「wildcard（webserver *）」をタグ値として入力すると、「webserver」で始まるすべてのホストに一致します。</target>
         </trans-unit>
         <trans-unit id="417530952e075c2348105d9e01119f6144a23903" translate="yes" xml:space="preserve">
           <source>The thick blue line with triangles is the an aggregation with the &lt;code&gt;avg&lt;/code&gt; function of multiple time series as per the query &lt;code&gt;start=1h-ago&amp;amp;m=avg:duration_seconds&lt;/code&gt;. As we can see, the resulting time series has one data point at each timestamp of all the underlying time series it aggregates, and that data point is computed by taking the average of the values of all the time series at that timestamp. This is also true for the lonely data point of the squared-purple time series, that temporarily boosted the average until the next data point.</source>
-          <target state="translated">三角形の付いた太い青い線は、クエリ &lt;code&gt;start=1h-ago&amp;amp;m=avg:duration_seconds&lt;/code&gt; のように、複数の時系列の &lt;code&gt;avg&lt;/code&gt; 関数を使用した集計です。見てわかるように、結果の時系列は、基礎となるすべての時系列の各タイムスタンプに1つのデータポイントを持ち、そのデータポイントは、そのタイムスタンプのすべての時系列の値の平均をとることによって計算されます。これは、次のデータポイントまで平均を一時的に引き上げた、二乗した紫の時系列の孤独なデータポイントにも当てはまります。</target>
+          <target state="translated">三角形の付いた太い青い線は、クエリ &lt;code&gt;start=1h-ago&amp;amp;m=avg:duration_seconds&lt;/code&gt; のように、複数の時系列の &lt;code&gt;avg&lt;/code&gt; 関数を使用した集計です。見てわかるように、結果の時系列は、集計されるすべての基礎となる時系列の各タイムスタンプに1つのデータポイントを持ち、そのデータポイントは、そのタイムスタンプにおけるすべての時系列の値の平均をとることによって計算されます。これは、次のデータポイントまで一時的に平均を押し上げた、二乗した紫の時系列の孤独なデータポイントにも当てはまります。</target>
         </trans-unit>
         <trans-unit id="58dc3df0680582b1389888fef9672b89ad6f85de" translate="yes" xml:space="preserve">
           <source>The threads endpoint is used for debugging the TSD and providing insight into the state and execution of various threads without having to resort to a JStack trace. (v2.2)</source>
@@ -997,19 +997,19 @@
         </trans-unit>
         <trans-unit id="fc6e57f863d5f2fbb7b65243aa10fb4084a94f3c" translate="yes" xml:space="preserve">
           <source>The timestamp is a Unix epoch value in seconds encoded on 4 bytes. Rows are broken up into hour increments, reflected by the timestamp in each row. Thus each timestamp will be normalized to an hour value, e.g. &lt;em&gt;2013-01-01 08:00:00&lt;/em&gt;. This is to avoid stuffing too many data points in a single row as that would affect region distribution. Also, since HBase sorts on the row key, data for the same metric and time bucket, but with different tags, will be grouped together for efficient queries.</source>
-          <target state="translated">タイムスタンプは、4バイトでエンコードされた秒単位のUnixエポック値です。行は時間の増分に分割され、各行のタイムスタンプによって反映されます。したがって、各タイムスタンプは時間の値に正規化されます（例：&lt;em&gt;2013-01-01 08:00:00）&lt;/em&gt;。これは、1つの行にデータポイントを詰め込みすぎないようにするためです。これは、リージョンの分布に影響するためです。また、HBaseは行キーでソートするため、同じメトリックとタイムバケットのデータがタグが異なるため、効率的なクエリのためにグループ化されます。</target>
+          <target state="translated">タイムスタンプは、4バイトでエンコードされた秒単位のUnixエポック値です。行は時間の増分に分割され、各行のタイムスタンプによって反映されます。したがって、各タイムスタンプは時間の値に正規化されます（例：&lt;em&gt;2013-01-01 08:00:00）&lt;/em&gt;。これは、1つの行にデータポイントを詰め込みすぎないようにするためです。リージョンの分布に影響を与える可能性があります。また、HBaseは行キーでソートするため、同じメトリックとタイムバケットのデータがタグが異なるため、効率的なクエリのためにグループ化されます。</target>
         </trans-unit>
         <trans-unit id="958c23f05930b1d234248d1bd33838113224936c" translate="yes" xml:space="preserve">
           <source>The timestamp must be a positive Unix epoch timestamp. E.g. &lt;code&gt;1479496100&lt;/code&gt; to represent &lt;code&gt;Fri, 18 Nov 2016 19:08:20 GMT&lt;/code&gt;</source>
-          <target state="translated">タイムスタンプは、正のUnixエポックタイムスタンプでなければなりません。例えば &lt;code&gt;1479496100&lt;/code&gt; 表現する &lt;code&gt;Fri, 18 Nov 2016 19:08:20 GMT&lt;/code&gt;</target>
+          <target state="translated">タイムスタンプは、正のUnixエポックタイムスタンプでなければなりません。例： &lt;code&gt;1479496100&lt;/code&gt; は &lt;code&gt;Fri, 18 Nov 2016 19:08:20 GMT&lt;/code&gt; を表し、2016年11月18日19:08:20 GMT</target>
         </trans-unit>
         <trans-unit id="30835a029357c57a199c514e89a8f262da9d1d99" translate="yes" xml:space="preserve">
           <source>The timestamp of a rolled-up data point should snap to the top of the rollup interval. E.g. if the rollup interval is &lt;code&gt;1h&lt;/code&gt; then it contains 1 hour of data and should snap to the top of the hour. (As all timestamps are written in Unix Epoch format, defined as the UTC timezone, this would be the start of an hour UTC time).</source>
-          <target state="translated">ロールアップされたデータポイントのタイムスタンプは、ロールアップ間隔の先頭にスナップする必要があります。ロールアップ間隔がある場合などは、 &lt;code&gt;1h&lt;/code&gt; 、それはデータの1時間が含まれており、時間の上にスナップする必要があります。（すべてのタイムスタンプはUTCタイムゾーンとして定義されたUnixエポック形式で書き込まれるため、これは1時間のUTC時刻の開始になります）。</target>
+          <target state="translated">ロールアップされたデータポイントのタイムスタンプは、ロールアップ間隔の先頭にスナップする必要があります。ロールアップ間隔がある場合などは、 &lt;code&gt;1h&lt;/code&gt; 、それはデータの1時間が含まれており、時間の上にスナップする必要があります。（すべてのタイムスタンプはUTCタイムゾーンとして定義されたUnixエポック形式で記述されているため、これは1時間のUTC時間の開始になります）。</target>
         </trans-unit>
         <trans-unit id="830f869009a936b7a1c40ee6b80a1d61598f62b4" translate="yes" xml:space="preserve">
           <source>The timestamps for count and sum values must match. However, if the expected count value for a sum is missing, the sum will be kicked out of the results. Take the following example set from above where we're now missing a count data point in &lt;code&gt;ts2&lt;/code&gt;.</source>
-          <target state="translated">カウント値と合計値のタイムスタンプは一致している必要があります。ただし、合計の予想カウント値が欠落している場合、合計は結果から除外されます。 &lt;code&gt;ts2&lt;/code&gt; のカウントデータポイントが欠落している上記の次の例を見てみましょう。</target>
+          <target state="translated">カウント値と合計値のタイムスタンプは一致している必要があります。ただし、合計の予想カウント値が欠落している場合、合計は結果から除外されます。 &lt;code&gt;ts2&lt;/code&gt; でカウントデータポイントが欠落している上記の次の例を見てみましょう。</target>
         </trans-unit>
         <trans-unit id="655a7653a1ea8f1bff3104c0aeaf7dfff8be030c" translate="yes" xml:space="preserve">
           <source>The top half of the key tab's section deals with the location of the graph key. This is a series of buttons layed out to show you where the key will appear. A box surrounds some of the buttons indicating that the key will appear inside of the graph's box, overlaying the data. The default location is the top right inside of the graph box. Simply select a button to move the key box.</source>
@@ -1317,7 +1317,7 @@
         </trans-unit>
         <trans-unit id="b8f64926c04e10167fad7484c5f019616a6e977d" translate="yes" xml:space="preserve">
           <source>The value to record for this data point. It may be quoted or not quoted and must conform to the OpenTSDB value rules: &lt;code&gt;../../user_guide/writing&lt;/code&gt;</source>
-          <target state="translated">このデータポイントに記録する値。これは、引用されたか引用されていないとOpenTSDB値規則に適合しなければならないことがあります。 &lt;code&gt;../../user_guide/writing&lt;/code&gt;</target>
+          <target state="translated">このデータポイントに記録する値。引用符で囲まれている場合とされていない場合があり、OpenTSDB値の規則に準拠している必要があります： &lt;code&gt;../../user_guide/writing&lt;/code&gt; / writing</target>
         </trans-unit>
         <trans-unit id="42c48be25424005988158a77356f56aedd628103" translate="yes" xml:space="preserve">
           <source>The various formats are listed below. The &lt;code&gt;\t&lt;/code&gt; expression represents a tab. &lt;code&gt;space&lt;/code&gt; indicates a space character.</source>
@@ -1349,7 +1349,7 @@
         </trans-unit>
         <trans-unit id="0df5c661a026c9e8d851885023819c18a0370354" translate="yes" xml:space="preserve">
           <source>Then click the &lt;code&gt;From&lt;/code&gt; box at the top and a date-picker pop-up should appear. Select any time from yesterday and click on another box. At this point you should see &quot;Loading graph..&quot; very briefly followed by the actual graph. If the graph is empty, it may not have found the most recent data points so click the &lt;code&gt;(now)&lt;/code&gt; link and the page should refresh.</source>
-          <target state="translated">次に、上部にある[ &lt;code&gt;From&lt;/code&gt; ] ボックスをクリックすると、日付ピッカーのポップアップが表示されます。昨日からいつでも選択して、別のボックスをクリックします。この時点で、「Loading graph ..」の後に、実際のグラフがすぐに表示されるはずです。グラフが空の場合、最新のデータポイントが見つからなかった可能性があるため、 &lt;code&gt;(now)&lt;/code&gt; リンクをクリックするとページが更新されます。</target>
+          <target state="translated">次に、上部にある[ &lt;code&gt;From&lt;/code&gt; ] ボックスをクリックすると、日付ピッカーのポップアップが表示されます。昨日からいつでも選択して、別のボックスをクリックします。この時点で、「Loading graph ..」が実際のグラフに続いて非常に短時間表示されるはずです。グラフが空の場合、最新のデータポイントが検出されていない可能性があるため、 &lt;code&gt;(now)&lt;/code&gt; リンクをクリックするとページが更新されます。</target>
         </trans-unit>
         <trans-unit id="d3b7ebbaff2c841d9837d162e41d90bbd44acf27" translate="yes" xml:space="preserve">
           <source>Then define a host in nagios for your TSD server(s). You can give it a check_command that is guaranteed to always return something if the backend is healthy.</source>
@@ -1377,7 +1377,7 @@
         </trans-unit>
         <trans-unit id="ba96c9a8aba116571fb0c92d1a45ab13d7347a4d" translate="yes" xml:space="preserve">
           <source>There are almost as many build systems as there are developers so it's impossible to satisfy everyone no matter which system or layout is chosen. Autotools and GNU Make were chosen early on for OpenTSDB because of their flexibility, portability, and especially speed and popular usage. It's not the easiest to configure but for our needs, it's really not too difficult. We'll spell out what you need to change below and give tips for IDE users who want to setup an environment. Note that the build script can now compile a &lt;code&gt;pom.xml&lt;/code&gt; file for compiling with Maven and work is underway to provide better Maven support. However you still have to modify &lt;code&gt;Makefile.am&lt;/code&gt; if you add or remove classes or dependencies and such.</source>
-          <target state="translated">ビルドシステムは開発者の数とほぼ同じであるため、どのシステムやレイアウトを選択しても、全員を満足させることは不可能です。 AutotoolsとGNU Makeは、柔軟性、移植性、特に速度と一般的な使用法により、OpenTSDBの早い段階で選択されました。設定は簡単ではありませんが、私たちのニーズにとっては、それほど難しくありません。以下に、変更する必要のある事項を詳しく説明し、環境をセットアップするIDEユーザー向けのヒントを示します。ビルドスクリプトは、 &lt;code&gt;pom.xml&lt;/code&gt; コンパイルするためにpom.xmlファイルをコンパイルできるようになり、Mavenサポートを改善する作業が進行中であることに注意してください。ただし、クラスや依存関係などを追加または削除する場合は、 &lt;code&gt;Makefile.am&lt;/code&gt; を変更する必要があります。</target>
+          <target state="translated">ビルドシステムは開発者の数とほぼ同じであるため、どのシステムまたはレイアウトを選択しても、全員を満足させることは不可能です。 AutotoolsとGNU Makeは、柔軟性、移植性、特に速度と一般的な使用法により、OpenTSDBの早い段階で選択されました。設定は簡単ではありませんが、私たちのニーズにとっては、それほど難しくありません。以下に、変更する必要のある事項を詳しく説明し、環境をセットアップするIDEユーザー向けのヒントを示します。ビルドスクリプトが &lt;code&gt;pom.xml&lt;/code&gt; コンパイルするためにpom.xmlファイルをコンパイルできるようになり、Mavenサポートを改善する作業が進行中であることに注意してください。ただし、クラスや依存関係などを追加または削除する場合は、 &lt;code&gt;Makefile.am&lt;/code&gt; を変更する必要があります。</target>
         </trans-unit>
         <trans-unit id="d057ae687c726f63028fec43b1e21c2e1540fe97" translate="yes" xml:space="preserve">
           <source>There are currently three main methods to get data into OpenTSDB: Telnet API, HTTP API and batch import from a file. Alternatively you can use a tool that provides OpenTSDB support, or if you're extremely adventurous, use the Java library.</source>
@@ -1401,11 +1401,11 @@
         </trans-unit>
         <trans-unit id="8b949991b3b4f7ffcd63402708e365b3ae0d78b1" translate="yes" xml:space="preserve">
           <source>There is a limited number of unique IDs to assign for each metric, tag name and tag value. By default there are just over 16 million possible IDs per type. If, for example, you ran a very popular web service and tried to track the IP address of clients as a tag, e.g. &lt;code&gt;web.app.hits clientip=38.26.34.10&lt;/code&gt;, you may quickly run into the UID assignment limit as there are over 4 billion possible IP version 4 addresses. Additionally, this approach would lead to creating a very sparse time series as the user at address &lt;code&gt;38.26.34.10&lt;/code&gt; may only use your app sporadically, or perhaps never again from that specific address.</source>
-          <target state="translated">各指標、タグ名、タグ値に割り当てる一意のIDの数には制限があります。デフォルトでは、タイプごとに1600万を超える可能なIDがあります。たとえば、非常に人気のあるWebサービスを実行していて、クライアントのIPアドレスをタグとして追跡しようとした場合（例： &lt;code&gt;web.app.hits clientip=38.26.34.10&lt;/code&gt; ）、UID割り当ての制限にすぐに達する可能性があります。 40億の可能なIPバージョン4アドレス。さらに、このアプローチでは、アドレス &lt;code&gt;38.26.34.10&lt;/code&gt; のユーザーがアプリを散発的に使用するか、その特定のアドレスからアプリを使用しない可能性があるため、非常にまばらな時系列が作成されます。</target>
+          <target state="translated">各指標、タグ名、タグ値に割り当てる一意のIDの数には制限があります。デフォルトでは、タイプごとに1600万を超えるIDが可能です。たとえば、非常に人気のあるWebサービスを実行していて、クライアントのIPアドレスをタグとして追跡しようとした場合（例： &lt;code&gt;web.app.hits clientip=38.26.34.10&lt;/code&gt; )、次のようになるとすぐにUID割り当て制限に遭遇する可能性があります40億の可能なIPバージョン4アドレス。さらに、このアプローチでは、アドレス &lt;code&gt;38.26.34.10&lt;/code&gt; のユーザーがアプリを散発的に使用するか、特定のアドレスからは決して使用しないため、非常にまばらな時系列が作成されます。</target>
         </trans-unit>
         <trans-unit id="eea61e713dc01c14e1334538087794d65b1d234e" translate="yes" xml:space="preserve">
           <source>There's a bunch of things in here that we've introduced so far. To help you understand how things work, I'll start with a typical example. Let's say you have a bunch of web servers and you want to track two things: hits to the web server and load average of the system. Let's make up metric names to express this. For load average, let's call it &lt;code&gt;proc.loadavg.1min&lt;/code&gt; (since on Linux you can easily get this data by reading &lt;code&gt;/proc/loadavg&lt;/code&gt;). For many web servers, there is a way to ask the web server for a counter expressing the number of hits to the server since it started. This is a convenient counter upon which to use for a metric we'll call &lt;code&gt;http.hits&lt;/code&gt;. I chose these two examples for two reasons. One, we'll get to see how OpenTSDB easily handles both counters (values that increase over time, except when they get reset by a restart/reboot or overflow) and how it handles normal values that go up and down, like load average. A great advantage of OpenTSDB is that you don't need to do any rate calculation of your counters. It will do it all for you. The second reason is that we can also show you how you can plot two different metrics with different scales on the same graph, which is a great way to correlate different metrics.</source>
-          <target state="translated">ここには、これまでに紹介したことがたくさんあります。物事がどのように機能するかを理解するのを助けるために、典型的な例から始めましょう。たくさんのWebサーバーがあり、Webサーバーへのヒットとシステムの平均負荷の2つを追跡したいとします。これを表すメトリック名を作成してみましょう。負荷平均については、それを &lt;code&gt;proc.loadavg.1min&lt;/code&gt; と呼びましょう（Linuxでは &lt;code&gt;/proc/loadavg&lt;/code&gt; を読み取ることでこのデータを簡単に取得できるため）。多くのWebサーバーでは、Webサーバーが起動してからのヒット数を表すカウンターをWebサーバーに要求する方法があります。これは、 &lt;code&gt;http.hits&lt;/code&gt; と呼ぶメトリックに使用する便利なカウンターです。。これら2つの例を選択した理由は2つあります。 1つは、OpenTSDBが両方のカウンター（再起動/再起動またはオーバーフローによってリセットされる場合を除いて、時間の経過とともに増加する値）を簡単に処理する方法と、負荷平均のように上下する通常の値を処理する方法を確認することです。 OpenTSDBの大きな利点は、カウンターのレート計算を行う必要がないことです。それはあなたのためにそれをすべて行います。 2番目の理由は、同じグラフ上に異なるスケールで2つの異なるメトリックをプロットする方法も示すことができるためです。これは、異なるメトリックを相関させる優れた方法です。</target>
+          <target state="translated">ここには、これまでに紹介したことがたくさんあります。物事がどのように機能するかを理解するために、典型的な例から始めましょう。 Webサーバーの束があり、Webサーバーへのヒットとシステムの平均負荷の2つを追跡するとします。これを表すメトリック名を作成してみましょう。負荷平均については、これを &lt;code&gt;proc.loadavg.1min&lt;/code&gt; と呼びましょう（Linuxでは &lt;code&gt;/proc/loadavg&lt;/code&gt; を読み取ることでこのデータを簡単に取得できるため）。多くのWebサーバーでは、Webサーバーが起動してからのヒット数を表すカウンターをWebサーバーに要求する方法があります。これは、 &lt;code&gt;http.hits&lt;/code&gt; と呼ぶメトリックに使用する便利なカウンターです。。これら2つの例を選択した理由は2つあります。 1つは、OpenTSDBが両方のカウンター（再起動/再起動またはオーバーフローによってリセットされる場合を除いて、時間の経過とともに増加する値）を簡単に処理する方法と、負荷平均のように上下する通常の値を処理する方法を確認することです。 OpenTSDBの大きな利点は、カウンターのレート計算を行う必要がないことです。それはあなたのためにそれをすべて行います。 2番目の理由は、同じグラフに異なるスケールで2つの異なるメトリックをプロットする方法も示すことができるためです。これは、異なるメトリックを相関させる優れた方法です。</target>
         </trans-unit>
         <trans-unit id="550725a0970e6ee14cb0ffa04d6e278d186206e7" translate="yes" xml:space="preserve">
           <source>Therefore, we recommend that you 'pre-assign' UID to as many metrics, tag keys and tag values as you can. If you have designed a naming schema as recommended above, you'll know most of the values to assign. You can use the CLI tools &lt;code&gt;cli/mkmetric&lt;/code&gt;, &lt;code&gt;cli/uid&lt;/code&gt; or the HTTP API &lt;code&gt;../api_http/uid/index&lt;/code&gt; to perform pre-assignments. Any time you are about to send a bunch of new metrics or tags to a running OpenTSDB cluster, try to pre-assign or the TSDs will bog down a bit when they get the new data.</source>
@@ -1441,11 +1441,11 @@
         </trans-unit>
         <trans-unit id="cb73c5dc28f46181357ee65d6b0d4373e968f7e5" translate="yes" xml:space="preserve">
           <source>These errors occur when compacted column is found that cannot be parsed into individual data points. This can happen if the qualifier appears correct but the number of bytes in the value array do not match the lengths encoded in the qualifier. Compacted columns with their data points out of order are not considered bad columns. Instead, the column will be sorted properly and re-written if the &lt;code&gt;--fix&lt;/code&gt; or &lt;code&gt;--fix-all&lt;/code&gt; flags are present.</source>
-          <target state="translated">これらのエラーは、個別のデータポイントに解析できない圧縮された列が見つかった場合に発生します。これは、修飾子が正しいように見えても、値配列のバイト数が修飾子でエンコードされた長さと一致しない場合に発生する可能性があります。データポイントが順不同である圧縮列は、不良列とは見なされません。代わりに、 &lt;code&gt;--fix&lt;/code&gt; または &lt;code&gt;--fix-all&lt;/code&gt; フラグが存在する場合、列は適切にソートされ、再書き込みされます。</target>
+          <target state="translated">これらのエラーは、個別のデータポイントに解析できない圧縮された列が見つかった場合に発生します。これは、修飾子が正しいように見えても、値配列のバイト数が修飾子でエンコードされた長さと一致しない場合に発生する可能性があります。データポイントが順不同である圧縮された列は、不良列とは見なされません。代わりに、 &lt;code&gt;--fix&lt;/code&gt; または &lt;code&gt;--fix-all&lt;/code&gt; フラグが存在する場合、列は適切にソートされ、再書き込みされます。</target>
         </trans-unit>
         <trans-unit id="bfb03d0720df4a6ebeb50b7185fe55e0b33f5989" translate="yes" xml:space="preserve">
           <source>These pages serve as a user and administration guide. We highly recommend that you start with the &lt;code&gt;writing&lt;/code&gt; and &lt;a href=&quot;query/index&quot;&gt;&lt;em&gt;Querying or Reading Data&lt;/em&gt;&lt;/a&gt; sections to understand how OpenTSDB handles its core purpose of storing and serving time series information. Then follow up with the &lt;a href=&quot;quickstart&quot;&gt;&lt;em&gt;Quick Start&lt;/em&gt;&lt;/a&gt; section to play around with getting some data into your OpenTSDB instance. Finally follow up with the other pages for details on the other features of OpenTSDB.</source>
-          <target state="translated">これらのページは、ユーザーおよび管理ガイドとして機能します。OpenTSDBが時系列情報の保存と提供という中心的な目的をどのように処理するかを理解するために、&lt;a href=&quot;query/index&quot;&gt;&lt;em&gt;データの&lt;/em&gt;&lt;/a&gt; &lt;code&gt;writing&lt;/code&gt; と&lt;em&gt;クエリまたは読み取りの&lt;/em&gt;セクションから始めることを強くお勧めします。次に、「&lt;a href=&quot;quickstart&quot;&gt;&lt;em&gt;クイックスタート」&lt;/em&gt;&lt;/a&gt;セクションをフォローして、OpenTSDBインスタンスにデータを取り込むことを試してください。最後に、OpenTSDBの他の機能の詳細について他のページをフォローアップします。</target>
+          <target state="translated">これらのページは、ユーザーおよび管理ガイドとして機能します。OpenTSDBが時系列情報を格納および提供するという中心的な目的をどのように処理するかを理解するには、&lt;a href=&quot;query/index&quot;&gt;&lt;em&gt;データの&lt;/em&gt;&lt;/a&gt; &lt;code&gt;writing&lt;/code&gt; および&lt;em&gt;クエリまたは読み取りの&lt;/em&gt;セクションから始めることを強くお勧めします。次に、「&lt;a href=&quot;quickstart&quot;&gt;&lt;em&gt;クイックスタート」&lt;/em&gt;&lt;/a&gt;セクションをフォローして、OpenTSDBインスタンスにデータを取り込むことを試してください。最後に、OpenTSDBの他の機能の詳細について他のページをフォローアップします。</target>
         </trans-unit>
         <trans-unit id="2aa9dec9d9c25d2d72d60e2d7ac0b9a2165aeaad" translate="yes" xml:space="preserve">
           <source>Think about how you may want to drill down when querying</source>
@@ -1457,19 +1457,19 @@
         </trans-unit>
         <trans-unit id="b310868a344407f4ec06d2ebc2f54b39d4441c99" translate="yes" xml:space="preserve">
           <source>This appender will write to a log file called &lt;code&gt;/var/log/opentsdb/opentsdb.log&lt;/code&gt;. When the file reaches 128MB in size, it will rotate the log to &lt;code&gt;opentsdb.log.1&lt;/code&gt; and start a new &lt;code&gt;opentsdb.log&lt;/code&gt; file. Once the new log fills up, it bumps &lt;code&gt;.1&lt;/code&gt; to &lt;code&gt;.2&lt;/code&gt;, &lt;code&gt;.log&lt;/code&gt; to &lt;code&gt;.1&lt;/code&gt; and creates a new one. It repeats this until there are four log files in total. The next time the log fills up, the last log is deleted. This way you are gauranteed to only use up to 512MB of disk space. Many other appenders are available so see what fits your needs the best.</source>
-          <target state="translated">このアペンダと呼ばれるログファイルに書き込みます &lt;code&gt;/var/log/opentsdb/opentsdb.log&lt;/code&gt; 。ファイルのサイズが128MBに達すると、ログが &lt;code&gt;opentsdb.log.1&lt;/code&gt; にローテーションされ、新しい &lt;code&gt;opentsdb.log&lt;/code&gt; ファイルが開始されます。新しいログがいっぱいになると、 &lt;code&gt;.1&lt;/code&gt; から &lt;code&gt;.2&lt;/code&gt; に、 &lt;code&gt;.log&lt;/code&gt; から &lt;code&gt;.1&lt;/code&gt; にバンプされ、新しいログが作成されます。合計で4つのログファイルが存在するまで、これを繰り返します。次回ログがいっぱいになると、最後のログが削除されます。このようにして、最大512MBのディスク領域のみを使用することが保証されます。他の多くのアペンダーが利用可能ですので、ニーズに最も適合するものを確認してください。</target>
+          <target state="translated">このアペンダと呼ばれるログファイルに書き込みます &lt;code&gt;/var/log/opentsdb/opentsdb.log&lt;/code&gt; 。ファイルのサイズが128MBに達すると、ログが &lt;code&gt;opentsdb.log.1&lt;/code&gt; にローテーションされ、新しい &lt;code&gt;opentsdb.log&lt;/code&gt; ファイルが開始されます。新しいログがいっぱいになると、 &lt;code&gt;.1&lt;/code&gt; から &lt;code&gt;.2&lt;/code&gt; に、 &lt;code&gt;.log&lt;/code&gt; から &lt;code&gt;.1&lt;/code&gt; にバンプされ、新しいログが作成されます。合計4つのログファイルがあるまで、これを繰り返します。次回ログがいっぱいになると、最後のログが削除されます。このようにして、最大512MBのディスク領域のみを使用することが保証されます。他の多くのアペンダーが利用可能ですので、ニーズに最も適合するものを確認してください。</target>
         </trans-unit>
         <trans-unit id="d013260cc758c7bfd073fbe30d6769daff20b6dd" translate="yes" xml:space="preserve">
           <source>This area deals with altering the Y axes of the graph. &lt;strong&gt;Y&lt;/strong&gt; settings affect the axis on the left and &lt;strong&gt;Y2&lt;/strong&gt; settings affect the axis on the right. Y2 settings are only enabled if at least one of the metrics has had the &lt;strong&gt;Right Axis&lt;/strong&gt; check box checked.</source>
-          <target state="translated">この領域では、グラフのY軸を変更します。&lt;strong&gt;Y&lt;/strong&gt;設定は左側の軸に影響し、&lt;strong&gt;Y2&lt;/strong&gt;設定は右側の軸に影響します。 Y2設定は、少なくとも1つのメトリックで[ &lt;strong&gt;右軸]&lt;/strong&gt;チェックボックスがオンになっている場合のみ有効になります。</target>
+          <target state="translated">この領域では、グラフのY軸を変更します。&lt;strong&gt;Y&lt;/strong&gt;設定は左側の軸に影響し、&lt;strong&gt;Y2&lt;/strong&gt;設定は右側の軸に影響します。 Y2設定は、少なくとも1つのメトリックで[ &lt;strong&gt;右軸]&lt;/strong&gt;チェックボックスがオンになっている場合にのみ有効になります。</target>
         </trans-unit>
         <trans-unit id="4b2519ae99de8eee80fc3bcced8090ff25676a02" translate="yes" xml:space="preserve">
           <source>This area is where you choose the metrics, optional tags, aggregation function and a possible down sampler for your graph. Along the top are a pair of blue tabs. Each graph can display multiple metrics and the tabs organize the different sub queries. Each graph requires at least one metric so you'll choose that metric in the first tab. To add another metric to your graph, click the &lt;code&gt;+&lt;/code&gt; tab and you'll be able to setup another sub query. If you have configured multiple metrics, simply click on the tab that corresponds to the metric you want to modify. The tab will display a subset of the metric name it is associated with.</source>
-          <target state="translated">この領域では、グラフのメトリック、オプションのタグ、集計関数、および可能なダウンサンプラーを選択します。上部には青いタブが2つあります。各グラフは複数のメトリックを表示でき、タブはさまざまなサブクエリを整理します。各グラフには少なくとも1つのメトリックが必要なので、最初のタブでそのメトリックを選択します。グラフに別の指標を追加するには、[ &lt;code&gt;+&lt;/code&gt; ]タブをクリックすると、別のサブクエリを設定できます。複数のメトリックを設定している場合は、変更するメトリックに対応するタブをクリックするだけです。タブには、関連付けられているメトリック名のサブセットが表示されます。</target>
+          <target state="translated">この領域では、メトリック、オプションのタグ、集約関数、およびグラフのダウンサンプラーを選択できます。上部には青いタブが2つあります。各グラフは複数のメトリックを表示でき、タブはさまざまなサブクエリを整理します。各グラフには少なくとも1つのメトリックが必要なので、最初のタブでそのメトリックを選択します。グラフに別の指標を追加するには、[ &lt;code&gt;+&lt;/code&gt; ]タブをクリックすると、別のサブクエリを設定できます。複数のメトリックを設定している場合は、変更するメトリックに対応するタブをクリックするだけです。タブには、関連付けられているメトリック名のサブセットが表示されます。</target>
         </trans-unit>
         <trans-unit id="9cc76e3fd3579aa98deae76a2b67da0a13b0238c" translate="yes" xml:space="preserve">
           <source>This can be caused if you use millisecond timestamps and write thousands of data points for a single metric in a single hour. In this case, the column qualifier and row key can grow larger than the configured &lt;code&gt;hfile.index.block.max.size&lt;/code&gt;. In this situation we recommend that you disable TSD compaction code. In the future we will support appends which will allow for compacted columns with small qualifiers.</source>
-          <target state="translated">これは、ミリ秒のタイムスタンプを使用し、1時間に1つのメトリックに対して数千のデータポイントを書き込む場合に発生する可能性があります。この場合、列修飾子と行キーは、構成された &lt;code&gt;hfile.index.block.max.size&lt;/code&gt; より大きくなる可能性があります。この状況では、TSD圧縮コードを無効にすることをお勧めします。将来的には、小さな修飾子を持つコンパクト化された列を可能にする追加をサポートする予定です。</target>
+          <target state="translated">これは、ミリ秒のタイムスタンプを使用し、1時間に1つのメトリックの何千ものデータポイントを書き込む場合に発生する可能性があります。この場合、列修飾子と行キーは、構成された &lt;code&gt;hfile.index.block.max.size&lt;/code&gt; より大きくなる可能性があります。この状況では、TSD圧縮コードを無効にすることをお勧めします。将来的には、小さい修飾子で圧縮された列を可能にする追加をサポートする予定です。</target>
         </trans-unit>
         <trans-unit id="f9c3b039b471d6f5ffde625a623e33adf5dc8592" translate="yes" xml:space="preserve">
           <source>This command is similar to the HTTP &lt;a href=&quot;../api_http/stats/index&quot;&gt;&lt;em&gt;/api/stats&lt;/em&gt;&lt;/a&gt; endpoint in that it will return a list of the TSD stats, one per line, in the &lt;code&gt;put&lt;/code&gt; format. This command does not modify TSD in any way.</source>
@@ -1501,7 +1501,7 @@
         </trans-unit>
         <trans-unit id="5be5e10393b5cbf435de0aa48ffdeb0be667517e" translate="yes" xml:space="preserve">
           <source>This endpoint allows for storing rolled up and/or pre-aggregated data in OpenTSDB over HTTP. For details on rollups and pre-aggs, please see the user guide: &lt;a href=&quot;../user_guide/rollups&quot;&gt;&lt;em&gt;Rollup And Pre-Aggregates&lt;/em&gt;&lt;/a&gt;.</source>
-          <target state="translated">このエンドポイントは、HTTPを介してOpenTSDBにロールアップされたデータや事前に集計されたデータを格納できるようにします。&lt;a href=&quot;../user_guide/rollups&quot;&gt;&lt;em&gt;ロールアップと事前集計の&lt;/em&gt;&lt;/a&gt;詳細については、ユーザーガイドを参照してください：&lt;em&gt;ロールアップと事前集計&lt;/em&gt;。</target>
+          <target state="translated">このエンドポイントは、HTTP経由でOpenTSDBにロールアップされたデータおよび/または事前に集計されたデータを格納することを可能にします。&lt;a href=&quot;../user_guide/rollups&quot;&gt;&lt;em&gt;ロールアップと事前集計の&lt;/em&gt;&lt;/a&gt;詳細については、ユーザーガイド：&lt;em&gt;ロールアップと事前集計&lt;/em&gt;を参照してください。</target>
         </trans-unit>
         <trans-unit id="a3d08780148baef0e976164f83ab4fb7a5fa31c9" translate="yes" xml:space="preserve">
           <source>This endpoint can also change the logging level of ______ at runtime. The query string parameter to use is &lt;code&gt;level=&amp;lt;logging_level&amp;gt;&lt;/code&gt;. For example, you can call &lt;code&gt;http://localhost:4242/logs?level=INFO&lt;/code&gt; to set the log level to &lt;code&gt;INFO&lt;/code&gt;. Valid parameter values are (from the most verbose to the least): &lt;code&gt;ALL&lt;/code&gt;&lt;code&gt;TRACE&lt;/code&gt;&lt;code&gt;DEBUG&lt;/code&gt;&lt;code&gt;INFO&lt;/code&gt;&lt;code&gt;WARN&lt;/code&gt;&lt;code&gt;ERROR&lt;/code&gt;&lt;code&gt;OFF&lt;/code&gt; (names are case insensitive). Note that this method does not change the &lt;code&gt;logback.xml&lt;/code&gt; configuration file and restarting the TSD will reload from that file.</source>
@@ -1525,11 +1525,11 @@
         </trans-unit>
         <trans-unit id="5a546dda6ed71f39a1cd3ce043775ca2d7ac16b9" translate="yes" xml:space="preserve">
           <source>This endpoint enables editing or deleting UID meta data information, that is meta data associated with &lt;em&gt;metrics&lt;/em&gt;, &lt;em&gt;tag names&lt;/em&gt; and &lt;em&gt;tag values&lt;/em&gt;. Some fields are set by the TSD but others can be set by the user. When using the &lt;code&gt;POST&lt;/code&gt; method, only the fields supplied with the request will be stored. Existing fields that are not included will be left alone. Using the &lt;code&gt;PUT&lt;/code&gt; method will overwrite all user mutable fields with given values or defaults if a given field is not provided.</source>
-          <target state="translated">このエンドポイントにより、UIDメタデータ情報（&lt;em&gt;メトリック&lt;/em&gt;、&lt;em&gt;タグ名&lt;/em&gt;、&lt;em&gt;タグ値に&lt;/em&gt;関連付けられたメタデータ）を編集または削除でき&lt;em&gt;ます&lt;/em&gt;。一部のフィールドはTSDによって設定されますが、その他のフィールドはユーザーが設定できます。 &lt;code&gt;POST&lt;/code&gt; メソッドを使用する場合、リクエストで提供されたフィールドのみが保存されます。含まれていない既存のフィールドはそのまま残されます。 &lt;code&gt;PUT&lt;/code&gt; メソッドを使用すると、すべてのユーザー変更可能フィールドが指定された値またはデフォルトで上書きされます（指定されたフィールドが指定されていない場合）。</target>
+          <target state="translated">このエンドポイントにより、UIDメタデータ情報（&lt;em&gt;メトリック&lt;/em&gt;、&lt;em&gt;タグ名&lt;/em&gt;、&lt;em&gt;タグ値に&lt;/em&gt;関連付けられたメタデータ）を編集または削除でき&lt;em&gt;ます&lt;/em&gt;。一部のフィールドはTSDによって設定されますが、他のフィールドはユーザーが設定できます。 &lt;code&gt;POST&lt;/code&gt; メソッドを使用する場合、リクエストで提供されたフィールドのみが保存されます。含まれていない既存のフィールドはそのまま残されます。 &lt;code&gt;PUT&lt;/code&gt; メソッドを使用すると、特定のフィールドが指定されていない場合、すべてのユーザー変更可能フィールドが特定の値またはデフォルトで上書きされます。</target>
         </trans-unit>
         <trans-unit id="5f008c5fb0114a12aec4b9f01601d721048b196d" translate="yes" xml:space="preserve">
           <source>This endpoint enables searching, editing or deleting timeseries meta data information, that is meta data associated with a specific timeseries associated with a &lt;em&gt;metric&lt;/em&gt; and one or more &lt;em&gt;tag name/value&lt;/em&gt; pairs. Some fields are set by the TSD but others can be set by the user. When using the &lt;code&gt;POST&lt;/code&gt; method, only the fields supplied with the request will be stored. Existing fields that are not included will be left alone. Using the &lt;code&gt;PUT&lt;/code&gt; method will overwrite all user mutable fields with given values or defaults if a given field is not provided.</source>
-          <target state="translated">このエンドポイントを使用すると、timeseriesメタデータ情報、つまり、&lt;em&gt;メトリック&lt;/em&gt;と1つ以上の&lt;em&gt;タグ名/値&lt;/em&gt;ペアに関連付けられた特定のtimeseriesに関連付けられたメタデータを検索、編集、または削除できます。一部のフィールドはTSDによって設定されますが、その他のフィールドはユーザーが設定できます。 &lt;code&gt;POST&lt;/code&gt; メソッドを使用する場合、リクエストで提供されたフィールドのみが保存されます。含まれていない既存のフィールドはそのまま残されます。 &lt;code&gt;PUT&lt;/code&gt; メソッドを使用すると、すべてのユーザー変更可能フィールドが指定された値またはデフォルトで上書きされます（指定されたフィールドが指定されていない場合）。</target>
+          <target state="translated">このエンドポイントを使用すると、timeseriesメタデータ情報、つまり、&lt;em&gt;メトリック&lt;/em&gt;と1つ以上の&lt;em&gt;タグ名/値&lt;/em&gt;ペアに関連付けられた特定のtimeseriesに関連付けられたメタデータを検索、編集、または削除できます。一部のフィールドはTSDによって設定されますが、他のフィールドはユーザーが設定できます。 &lt;code&gt;POST&lt;/code&gt; メソッドを使用する場合、リクエストで提供されたフィールドのみが保存されます。含まれていない既存のフィールドはそのまま残されます。 &lt;code&gt;PUT&lt;/code&gt; メソッドを使用すると、特定のフィールドが指定されていない場合、すべてのユーザー変更可能フィールドが特定の値またはデフォルトで上書きされます。</target>
         </trans-unit>
         <trans-unit id="b32afc8b883821954a2771b093ad7eae2cd9ca4f" translate="yes" xml:space="preserve">
           <source>This endpoint lists the serializer plugins loaded by the running TSD. Information given includes the name, implemented methods, content types and methods.</source>
@@ -1537,7 +1537,7 @@
         </trans-unit>
         <trans-unit id="af366f361c8d1bd9e146c06ed78cc3a31fe69d79" translate="yes" xml:space="preserve">
           <source>This endpoint provides a basic means of searching OpenTSDB meta data. Lookups can be performed against the &lt;code&gt;tsdb-meta&lt;/code&gt; table when enabled. Optionally, a search plugin can be installed to send and retreive information from an external search indexing service such as Elastic Search. It is up to each search plugin to implement various parts of this endpoint and return data in a consistent format. The type of object searched and returned depends on the endpoint chosen.</source>
-          <target state="translated">このエンドポイントは、OpenTSDBメタデータを検索する基本的な手段を提供します。有効にすると、 &lt;code&gt;tsdb-meta&lt;/code&gt; テーブルに対してルックアップを実行できます。オプションで、Elastic Searchなどの外部検索インデックスサービスから情報を送信および取得するための検索プラグインをインストールできます。このエンドポイントのさまざまな部分を実装し、一貫した形式でデータを返すのは、各検索プラグイン次第です。検索して返されるオブジェクトのタイプは、選択したエンドポイントによって異なります。</target>
+          <target state="translated">このエンドポイントは、OpenTSDBメタデータを検索する基本的な手段を提供します。有効にすると、 &lt;code&gt;tsdb-meta&lt;/code&gt; テーブルに対してルックアップを実行できます。オプションで、Elastic Searchなどの外部検索インデックスサービスから情報を送信および取得するための検索プラグインをインストールできます。このエンドポイントのさまざまな部分を実装し、一貫した形式でデータを返すのは、各検索プラグイン次第です。検索されて返されるオブジェクトのタイプは、選択したエンドポイントによって異なります。</target>
         </trans-unit>
         <trans-unit id="d2db88164678a1141454effd7e09b73a11e68744" translate="yes" xml:space="preserve">
           <source>This endpoint provides a list of statistics for the running TSD. Sub endpoints return details about other TSD components such as the JVM, thread states or storage client. All statistics are read only.</source>
@@ -1545,7 +1545,7 @@
         </trans-unit>
         <trans-unit id="5e15c71f2016f88d4133c556633cb5116f346762" translate="yes" xml:space="preserve">
           <source>This endpoint provides a means of implementing an &quot;auto-complete&quot; call that can be accessed repeatedly as a user types a request in a GUI. It does not offer full text searching or wildcards, rather it simply matches the entire string passed in the query on the first characters of the stored data. For example, passing a query of &lt;code&gt;type=metrics&amp;amp;q=sys&lt;/code&gt; will return the top 25 metrics in the system that start with &lt;code&gt;sys&lt;/code&gt;. Matching is case sensitive, so &lt;code&gt;sys&lt;/code&gt; will not match &lt;code&gt;System.CPU&lt;/code&gt;. Results are sorted alphabetically.</source>
-          <target state="translated">このエンドポイントは、ユーザーがGUIで要求を入力するときに繰り返しアクセスできる「オートコンプリート」呼び出しを実装する手段を提供します。全文検索やワイルドカードは提供されず、クエリに渡された文字列全体と、格納されているデータの最初の文字が一致するだけです。たとえば、 &lt;code&gt;type=metrics&amp;amp;q=sys&lt;/code&gt; のクエリを渡すと、システムで &lt;code&gt;sys&lt;/code&gt; で始まる上位25のメトリックが返されます。一致では大文字と小文字が区別されるため、 &lt;code&gt;sys&lt;/code&gt; は &lt;code&gt;System.CPU&lt;/code&gt; と一致しません。結果はアルファベット順にソートされます。</target>
+          <target state="translated">このエンドポイントは、ユーザーがGUIで要求を入力するときに繰り返しアクセスできる「オートコンプリート」呼び出しを実装する手段を提供します。全文検索やワイルドカードは提供されず、保存されたデータの最初の文字でクエリで渡された文字列全体と一致するだけです。たとえば、 &lt;code&gt;type=metrics&amp;amp;q=sys&lt;/code&gt; のクエリを渡すと、システムで &lt;code&gt;sys&lt;/code&gt; で始まる上位25のメトリックが返されます。一致では大文字と小文字が区別されるため、 &lt;code&gt;sys&lt;/code&gt; は &lt;code&gt;System.CPU&lt;/code&gt; と一致しません。結果はアルファベット順にソートされます。</target>
         </trans-unit>
         <trans-unit id="a09d5b94ec3a413ae983f81250ed77a8523cbc9e" translate="yes" xml:space="preserve">
           <source>This endpoint purges the in-memory data cached in OpenTSDB. This includes all UID to name and name to UID maps for metrics, tag names and tag values.</source>
@@ -1577,7 +1577,7 @@
         </trans-unit>
         <trans-unit id="b3dd96be71602f0d90499c76832706003b1ef079" translate="yes" xml:space="preserve">
           <source>This endpoint will almost always return a &lt;code&gt;200&lt;/code&gt; with content body. If the query doesn't match any results, the &lt;code&gt;results&lt;/code&gt; field will be an empty array and &lt;code&gt;totalResults&lt;/code&gt; will be 0. If an error occurs, such as the plugin being disabled or not configured, an exception will be returned.</source>
-          <target state="translated">このエンドポイントは、ほとんどの場合、コンテンツ本文を含む &lt;code&gt;200&lt;/code&gt; を返します。クエリがどの結果とも一致しない場合、 &lt;code&gt;results&lt;/code&gt; フィールドは空の配列になり、 &lt;code&gt;totalResults&lt;/code&gt; は0になります。プラグインが無効化されている、または構成されていないなどのエラーが発生した場合、例外が返されます。</target>
+          <target state="translated">このエンドポイントは、ほとんどの場合、コンテンツ本文を含む &lt;code&gt;200&lt;/code&gt; を返します。クエリがどの結果とも一致しない場合、 &lt;code&gt;results&lt;/code&gt; フィールドは空の配列になり、 &lt;code&gt;totalResults&lt;/code&gt; は0になります。プラグインが無効にされている、または構成されていないなどのエラーが発生した場合、例外が返されます。</target>
         </trans-unit>
         <trans-unit id="86a453f5b99cf8e227780904f75d83c8e7670d59" translate="yes" xml:space="preserve">
           <source>This field contains the numeric HTTP response code and a textual representation of that code.</source>
@@ -1601,15 +1601,15 @@
         </trans-unit>
         <trans-unit id="9bc680d085ae0e88d3ce7388744023732da91126" translate="yes" xml:space="preserve">
           <source>This initial graph will aggregate all of the time series for the metric you selected. Try limiting your query to a specific host by adding &lt;code&gt;host&lt;/code&gt; as a value in the left-hand box next to the &lt;code&gt;Tags&lt;/code&gt; label (if it isn't already there) and add the specific host name (e.g. &lt;code&gt;foo&lt;/code&gt;) in the right-hand box. After clicking in another box you should see the graph re-draw with different information.</source>
-          <target state="translated">この初期グラフは、選択した指標のすべての時系列を集計します。追加することにより、特定のホストへのクエリを制限してみ &lt;code&gt;host&lt;/code&gt; 次の左側のボックス内の値として、 &lt;code&gt;Tags&lt;/code&gt; （例えばラベル（がいない場合）と、特定のホスト名を追加 &lt;code&gt;foo&lt;/code&gt; 右側のボックスにあります） 。別のボックスをクリックした後、さまざまな情報でグラフが再描画されます。</target>
+          <target state="translated">この初期グラフは、選択した指標のすべての時系列を集計します。追加することにより、特定のホストへのクエリを制限してみ &lt;code&gt;host&lt;/code&gt; 次の左側のボックス内の値として、 &lt;code&gt;Tags&lt;/code&gt; （例えばラベル（がいない場合）と、特定のホスト名を追加 &lt;code&gt;foo&lt;/code&gt; 右側のボックスにあります） 。別のボックスをクリックすると、グラフが異なる情報で再描画されます。</target>
         </trans-unit>
         <trans-unit id="b7b2b609b28de0e5e9f0b3b5223da6403cab3cec" translate="yes" xml:space="preserve">
           <source>This is a map of the headers sent with the HTTP request. In a mediocre effort at security, the &lt;code&gt;Cookie&lt;/code&gt; header field is obfuscated with asterisks in the case that it contains user identifiable or secure information. Each request is different so lookup the headers in the HTTP RFCs or your web browser or clients documentation.</source>
-          <target state="translated">これは、HTTPリクエストで送信されるヘッダーのマップです。平凡なセキュリティ対策として、 &lt;code&gt;Cookie&lt;/code&gt; ヘッダーフィールドには、ユーザーを特定できる情報や安全な情報が含まれている場合、アスタリスクで難読化されています。各リクエストは異なるため、HTTP RFCまたはWebブラウザーやクライアントのドキュメントでヘッダーを検索します。</target>
+          <target state="translated">これは、HTTPリクエストで送信されたヘッダーのマップです。平凡なセキュリティ対策として、 &lt;code&gt;Cookie&lt;/code&gt; ヘッダーフィールドには、ユーザーを識別できる情報や安全な情報が含まれている場合、アスタリスクが付けられています。各リクエストは異なるため、HTTP RFCまたはWebブラウザーやクライアントのドキュメントでヘッダーを検索します。</target>
         </trans-unit>
         <trans-unit id="015a2b7323ff6165f90564be33cda3d8670e6c4d" translate="yes" xml:space="preserve">
           <source>This is a simple utility for consuming data points from collectors while a TSD, HBase or HDFS is underoing maintenance. The script should be run on the same port as a TSD and accepts data in the &lt;code&gt;put&lt;/code&gt; Telnet style. Data points are then written directly to disk in a format that can be used with the &lt;a href=&quot;../cli/import&quot;&gt;&lt;em&gt;import&lt;/em&gt;&lt;/a&gt; command once HBase is back up.</source>
-          <target state="translated">これは、TSD、HBase、またはHDFSのメンテナンス中にコレクターからデータポイントを消費するためのシンプルなユーティリティです。スクリプトは、TSDと同じポート上で実行すると、データを受け入れるべきである &lt;code&gt;put&lt;/code&gt; のTelnetスタイル。次に、データポイントは、HBaseがバックアップされたときに&lt;a href=&quot;../cli/import&quot;&gt;&lt;em&gt;インポート&lt;/em&gt;&lt;/a&gt;コマンドで使用できる形式でディスクに直接書き込まれます。</target>
+          <target state="translated">これは、TSD、HBase、またはHDFSのメンテナンス中にコレクターからデータポイントを消費するためのシンプルなユーティリティです。スクリプトは、TSDと同じポート上で実行すると、データを受け入れるべきである &lt;code&gt;put&lt;/code&gt; のTelnetスタイル。その後、データポイントは、HBaseがバックアップされたときに&lt;a href=&quot;../cli/import&quot;&gt;&lt;em&gt;インポート&lt;/em&gt;&lt;/a&gt;コマンドで使用できる形式でディスクに直接書き込まれます。</target>
         </trans-unit>
         <trans-unit id="ddad3041f947e1b4165040525621f1ffc833e679" translate="yes" xml:space="preserve">
           <source>This is an interface used to implement additional HTTP API endpoints for OpenTSDB. (v2.2)</source>
@@ -1617,7 +1617,7 @@
         </trans-unit>
         <trans-unit id="e888767d78bd77862d02d07d6f827e85615814b0" translate="yes" xml:space="preserve">
           <source>This is much easier than dealing with a dependency. You only need to modify &lt;code&gt;Makefile.am&lt;/code&gt; and edit the &lt;code&gt;tsdb_SRC := \&lt;/code&gt; or the &lt;code&gt;test_SRC := \&lt;/code&gt; lists. If you're adding a class, put it in the proper alphabetical position and account for the proper directory and class name. It is case sensitive so make sure to get that right. If removing a class, just delete the line. If moving a class, add the new line and delete the old one. Be careful to handle the line continuation &lt;code&gt;\&lt;/code&gt; backslashes. The last class in each list should NOT end with a backslash, the rest need it.</source>
-          <target state="translated">これは、依存関係を処理するよりもはるかに簡単です。 &lt;code&gt;Makefile.am&lt;/code&gt; を変更して &lt;code&gt;tsdb_SRC := \&lt;/code&gt; または &lt;code&gt;test_SRC := \&lt;/code&gt; リストを編集するだけです。クラスを追加する場合は、適切なアルファベット位置に配置し、適切なディレクトリとクラス名を考慮してください。大文字と小文字が区別されるため、正しく入力してください。クラスを削除する場合は、行を削除してください。クラスを移動する場合は、新しい行を追加して古い行を削除します。行の継続 &lt;code&gt;\&lt;/code&gt; バックスラッシュの扱いに注意してください。各リストの最後のクラスはバックスラッシュで終わってはならず、残りは必要です。</target>
+          <target state="translated">これは、依存関係を処理するよりもはるかに簡単です。 &lt;code&gt;Makefile.am&lt;/code&gt; を変更して &lt;code&gt;tsdb_SRC := \&lt;/code&gt; または &lt;code&gt;test_SRC := \&lt;/code&gt; リストを編集するだけです。クラスを追加する場合は、適切なアルファベット位置に配置し、適切なディレクトリとクラス名を考慮してください。大文字と小文字が区別されるので、正しく入力してください。クラスを削除する場合は、行を削除してください。クラスを移動する場合は、新しい行を追加して古い行を削除します。行の継続 &lt;code&gt;\&lt;/code&gt; バックスラッシュの扱いに注意してください。各リストの最後のクラスはバックスラッシュで終わってはならず、残りはバックスラッシュが必要です。</target>
         </trans-unit>
         <trans-unit id="f493fa749ec34b3ab40005594d6b1386d149aae2" translate="yes" xml:space="preserve">
           <source>This is the same as a data point table row key without the timestamp. E.g. &lt;code&gt;&amp;lt;metric_uid&amp;gt;&amp;lt;tagk1&amp;gt;&amp;lt;tagv1&amp;gt;[...&amp;lt;tagkN&amp;gt;&amp;lt;tagvN&amp;gt;]&lt;/code&gt;. It is shared for all column types.</source>
@@ -1633,11 +1633,11 @@
         </trans-unit>
         <trans-unit id="8353208005c79e2131dacc3b1ab066dbd7443e8d" translate="yes" xml:space="preserve">
           <source>This is where a tagging scheme will stand or fall. Let's say you want to get just the data from timeseries #4. With the current system, you are unable to. You would send in query #2 &lt;code&gt;m=sum:cpu.system{host=web01}&lt;/code&gt; thinking that it will return just the data from #4, but as we saw, you'll get the aggregate results for #1, #4, #5 and #6. To prevent such an occurance, you would need to add another tag to #4 that differentiates it from other timeseries in the group. Or if you've already commited, you can use TSUID queries.</source>
-          <target state="translated">これは、タグ付けスキームが有効または無効になる場所です。timeseries＃4からデータのみを取得するとします。現在のシステムではできません。クエリ＃2 &lt;code&gt;m=sum:cpu.system{host=web01}&lt;/code&gt; 送信して、＃4からのデータのみが返されると考えますが、見てきたように、＃1、＃4、 ＃5と＃6。このような発生を防ぐには、グループ内の他の時系列と区別するために、＃4に別のタグを追加する必要があります。または、すでにコミットしている場合は、TSUIDクエリを使用できます。</target>
+          <target state="translated">これは、タグ付けスキームが有効または無効になる場所です。timeseries＃4からデータのみを取得するとします。現在のシステムではできません。クエリ＃2 &lt;code&gt;m=sum:cpu.system{host=web01}&lt;/code&gt; を送信して、それが＃4からのデータのみを返すと考えますが、見てきたように、＃1、＃4、 ＃5と＃6。このような発生を防ぐには、グループ内の他の時系列と区別するために、＃4に別のタグを追加する必要があります。または、すでにコミットしている場合は、TSUIDクエリを使用できます。</target>
         </trans-unit>
         <trans-unit id="7be9ac81acff15dbc749a1b53fba73ca5ccdc310" translate="yes" xml:space="preserve">
           <source>This isn't necesarily the best way to setup your metrics and tags, rather it's meant to be illustrative of how the query system works. In particular, TS #4 and 5, while legitimate timeseries, may screw up your queries unless you know how they work. In general, try to maintain the same number and type of tags for each timeseries.</source>
-          <target state="translated">これは必ずしもメトリクスやタグを設定するための最良の方法ではありませんが、クエリシステムがどのように動作するかを説明するためのものです。特に、TS#4と#5は、合法的な時系列ではありますが、それらがどのように動作するかを知らない限り、あなたのクエリを台無しにする可能性があります。一般的には、それぞれの時系列に対して同じ数とタイプのタグを維持するようにしてください。</target>
+          <target state="translated">これは必ずしもメトリクスやタグを設定するための最良の方法ではありませんが、クエリシステムがどのように動作するかを説明するためのものです。特に、TS#4と#5は、合法的な時系列ではありますが、それらがどのように動作するかを知らない限り、クエリを台無しにしてしまうかもしれません。一般的には、それぞれの時系列に対して同じ数とタイプのタグを維持するようにしてください。</target>
         </trans-unit>
         <trans-unit id="3b26a1055602062320232887d91061404659b1f7" translate="yes" xml:space="preserve">
           <source>This may be used in the event that an API call has migrated or should be forwarded to another server</source>
@@ -1665,11 +1665,11 @@
         </trans-unit>
         <trans-unit id="d2db495251b3552764e3e02414803326a940a924" translate="yes" xml:space="preserve">
           <source>This page lists common issues encountered by users of OpenTSDB along with various troubleshooting steps. If you run into an issue, please check the &lt;a href=&quot;https://groups.google.com/forum/#!forum/opentsdb&quot;&gt;OpenTSDB Google Group&lt;/a&gt; or the &lt;a href=&quot;https://github.com/OpenTSDB/opentsdb/issues&quot;&gt;Github Issues&lt;/a&gt;. If you can't find an answer, please include your operating system, TSD version and HBase version in your question.</source>
-          <target state="translated">このページには、OpenTSDBのユーザーが遭遇する一般的な問題と、さまざまなトラブルシューティング手順がリストされています。問題が発生した場合は、&lt;a href=&quot;https://groups.google.com/forum/#!forum/opentsdb&quot;&gt;OpenTSDBのGoogleグループ&lt;/a&gt;または&lt;a href=&quot;https://github.com/OpenTSDB/opentsdb/issues&quot;&gt;Githubの問題&lt;/a&gt;を確認してください。回答が見つからない場合は、オペレーティングシステム、TSDバージョン、HBaseバージョンを質問に含めてください。</target>
+          <target state="translated">このページでは、OpenTSDBのユーザーが遭遇する一般的な問題と、さまざまなトラブルシューティングの手順を示します。問題が発生した場合は、&lt;a href=&quot;https://groups.google.com/forum/#!forum/opentsdb&quot;&gt;OpenTSDBのGoogleグループ&lt;/a&gt;または&lt;a href=&quot;https://github.com/OpenTSDB/opentsdb/issues&quot;&gt;Githubの問題&lt;/a&gt;を確認してください。回答が見つからない場合は、オペレーティングシステム、TSDバージョン、HBaseバージョンを質問に含めてください。</target>
         </trans-unit>
         <trans-unit id="926d5d665c45a5917ed630c6f3319dbb2799673e" translate="yes" xml:space="preserve">
           <source>This page lists some of the utilities or projects included with OpenTSDB or maintained by the OpenTSDB group. Additional utilities, such as front-ends, clients and publishers can be found on the &lt;a href=&quot;../../resources&quot;&gt;&lt;em&gt;Additional Resources&lt;/em&gt;&lt;/a&gt; page or via a simple Google search.</source>
-          <target state="translated">このページには、OpenTSDBに含まれている、またはOpenTSDBグループによって保守されているユーティリティまたはプロジェクトの一部がリストされています。フロントエンド、クライアント、パブリッシャーなどの追加ユーティリティは、[ &lt;a href=&quot;../../resources&quot;&gt;&lt;em&gt;Additional Resources]&lt;/em&gt;&lt;/a&gt;ページまたは簡単なGoogle検索で見つけることができます。</target>
+          <target state="translated">このページには、OpenTSDBに含まれている、またはOpenTSDBグループによって保守されているユーティリティまたはプロジェクトの一部がリストされています。フロントエンド、クライアント、パブリッシャーなどの追加ユーティリティは、[ &lt;a href=&quot;../../resources&quot;&gt;&lt;em&gt;Additional Resources]&lt;/em&gt;&lt;/a&gt;ページまたは単純なGoogle検索で見つけることができます。</target>
         </trans-unit>
         <trans-unit id="ad91c59b836f74855823446b2409a8179a92c97f" translate="yes" xml:space="preserve">
           <source>This question is asked often enough it's worth laying out the reasons here. Looking up or assigning a UID takes up precious cycles in the TSD so folks wonder if it wouldn't be faster to use the raw name of the metric or computer a hash. Indeed, from a write perspective it would be slightly faster, but there are a number of drawbacks that become apparent.</source>
@@ -1701,7 +1701,7 @@
         </trans-unit>
         <trans-unit id="cce588c613745b801fd6ad90920e887bdda2798a" translate="yes" xml:space="preserve">
           <source>This sub command will mark all TSMeta and UIDMeta objects for deletion in the UID table. This is useful for downgrading from 2.0 to a 1.x version or simply flushing all meta data and starting over with a &lt;code&gt;metasync&lt;/code&gt;.</source>
-          <target state="translated">このサブコマンドは、すべてのTSMetaおよびUIDMetaオブジェクトをUIDテーブル内の削除対象としてマークします。これは、2.0から1.xバージョンにダウングレードする場合、または単にすべてのメタデータをフラッシュして &lt;code&gt;metasync&lt;/code&gt; でやり直す場合に便利です。</target>
+          <target state="translated">このサブコマンドは、すべてのTSMetaオブジェクトとUIDMetaオブジェクトをUIDテーブル内の削除対象としてマークします。これは、2.0から1.xバージョンにダウングレードする場合、または単にすべてのメタデータをフラッシュして &lt;code&gt;metasync&lt;/code&gt; でやり直す場合に便利です。</target>
         </trans-unit>
         <trans-unit id="942a2678bea6be3b4d6775c3e5979711cbc95a09" translate="yes" xml:space="preserve">
           <source>This table behaves as an index, organizing time series into a hierarchical structure similar to a file system for use with tools such as Graphite or other dashboards. A tree is defined by a set of rules that process a TSMeta object to determine where in the hierarchy, if at all, a time series should appear.</source>
@@ -1709,7 +1709,7 @@
         </trans-unit>
         <trans-unit id="b8b1a6fda56c16d277fa9c4ac750e2117fb66b0c" translate="yes" xml:space="preserve">
           <source>This table is an index of the different time series stored in OpenTSDB and can contain meta-data for each series as well as the number of data points stored for each series. Note that data will only be written to this table if OpenTSDB has been configured to track meta-data or the user creates a TSMeta object via the API. Only one column family is used, the &lt;code&gt;name&lt;/code&gt; family and currently there are two types of columns, the meta column and the counter column.</source>
-          <target state="translated">このテーブルは、OpenTSDBに格納されているさまざまな時系列のインデックスであり、各系列のメタデータと各系列に格納されているデータポイントの数を含めることができます。OpenTSDBがメタデータを追跡するように構成されているか、ユーザーがAPIを介してTSMetaオブジェクトを作成した場合にのみ、データがこのテーブルに書き込まれることに注意してください。使用される列ファミリーは1つだけで、 &lt;code&gt;name&lt;/code&gt; ファミリーであり、現在、メタ列とカウンター列の2種類の列があります。</target>
+          <target state="translated">このテーブルは、OpenTSDBに格納されているさまざまな時系列のインデックスであり、各系列のメタデータと各系列に格納されているデータポイントの数を含めることができます。OpenTSDBがメタデータを追跡するように構成されている場合、またはユーザーがAPIを介してTSMetaオブジェクトを作成した場合にのみ、データがこのテーブルに書き込まれることに注意してください。使用される列ファミリーは1つだけで、 &lt;code&gt;name&lt;/code&gt; ファミリーであり、現在、メタ列とカウンター列の2種類の列があります。</target>
         </trans-unit>
         <trans-unit id="67c524512b16bd8e1aefdf3d9db4d16ca9e470d4" translate="yes" xml:space="preserve">
           <source>This way you will collect and store stats from the TSD every 15 seconds.</source>
@@ -1721,11 +1721,11 @@
         </trans-unit>
         <trans-unit id="fdccbc8057607c1804602198f96157b485765a57" translate="yes" xml:space="preserve">
           <source>This will find all of the timeseries that include &quot;host&quot; values for &quot;web01&quot; OR &quot;web02&quot;, then group them by value, similar to the &lt;code&gt;*&lt;/code&gt; operator. Our groups, this time, will look like this:</source>
-          <target state="translated">これにより、「web01」または「web02」の「ホスト」値を含むすべての時系列が検索され、 &lt;code&gt;*&lt;/code&gt; 演算子と同様に値でグループ化されます。今回のグループは次のようになります。</target>
+          <target state="translated">これにより、「web01」または「web02」の「ホスト」値を含むすべての時系列が検索され、 &lt;code&gt;*&lt;/code&gt; 演算子と同様に、値によってグループ化されます。今回のグループは次のようになります。</target>
         </trans-unit>
         <trans-unit id="654f8bc2509d4ebf03859dd5d4f821e6e290b188" translate="yes" xml:space="preserve">
           <source>This will return an aggregate of time series #1, #4, #5 and #6 since they're the only series that include &lt;code&gt;host=web01&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;host=web01&lt;/code&gt; を含む唯一の系列であるため、これは時系列＃1、＃4、＃5、および＃6の集計を返します。</target>
+          <target state="translated">&lt;code&gt;host=web01&lt;/code&gt; を含む唯一のシリーズであるため、これは時系列＃1、＃4、＃5、および＃6の集計を返します。</target>
         </trans-unit>
         <trans-unit id="9f2c0df9fea30d675d23e6bc773d61b1d8c6ee0f" translate="yes" xml:space="preserve">
           <source>This will return the data from timeseries #6 only.</source>
@@ -1793,7 +1793,7 @@
         </trans-unit>
         <trans-unit id="60359f1b6b7026f69889540ac74c9fdac4b36942" translate="yes" xml:space="preserve">
           <source>To avoid having to run &lt;code&gt;mkmetric&lt;/code&gt; for every metric that tcollector tracks you can to start TSD with the &lt;code&gt;--auto-metric&lt;/code&gt; flag. This is useful to get started quickly, but it's not recommended to keep this flag in the long term, to avoid accidental metric creation.</source>
-          <target state="translated">tcollectorが追跡するすべてのメトリックに対してmkmetric を実行する必要がないようにするには、 &lt;code&gt;mkmetric&lt;/code&gt; &lt;code&gt;--auto-metric&lt;/code&gt; フラグを使用してTSDを開始します。これはすぐに開始するのに役立ちますが、誤ってメトリックが作成されるのを防ぐために、このフラグを長期間保持することはお勧めしません。</target>
+          <target state="translated">tcollectorが追跡するすべてのメトリックに対してmkmetric を実行する必要がないようにするには、 &lt;code&gt;mkmetric&lt;/code&gt; &lt;code&gt;--auto-metric&lt;/code&gt; フラグを使用してTSDを開始します。これはすぐに開始するのに便利ですが、誤ってメトリックが作成されるのを防ぐために、このフラグを長期間保持することはお勧めしません。</target>
         </trans-unit>
         <trans-unit id="6e07e592b71efeb2f1e2ed46b2e03ae11cfb2df8" translate="yes" xml:space="preserve">
           <source>To create a plugin, all you have to do is extend one of the &lt;em&gt;abstract&lt;/em&gt; plugin classes, write a service description/manifest, compile, drop your JAR (along with any dependencies needed) into the OpenTSDB plugin folder, edit the TSD config and restart. That's all there is to it. No fancy frameworks, no worrying about loading and unloading at strange times, etc.</source>
@@ -1805,11 +1805,11 @@
         </trans-unit>
         <trans-unit id="eb46c7d21ad8320d4fcce025edb6319d46e93c2d" translate="yes" xml:space="preserve">
           <source>To drill down to specific timeseries or group results by tag, supply one or more map values in the same format as the query string. Tags are converted to filters in 2.2. See the notes below about conversions. Note that if no tags are specified, all metrics in the system will be aggregated into the results. &lt;em&gt;Deprecated in 2.2&lt;/em&gt;</source>
-          <target state="translated">特定の時系列にドリルダウンするか、タグで結果をグループ化するには、クエリ文字列と同じ形式で1つ以上のマップ値を指定します。タグは2.2でフィルターに変換されます。変換については、以下の注を参照してください。タグが指定されていない場合、システム内のすべてのメトリックが結果に集約されることに注意してください。&lt;em&gt;2.2で非推奨&lt;/em&gt;</target>
+          <target state="translated">特定の時系列またはタグでグループ化した結果にドリルダウンするには、クエリ文字列と同じ形式で1つ以上のマップ値を指定します。タグは2.2でフィルターに変換されます。変換については、以下の注を参照してください。タグが指定されていない場合、システム内のすべてのメトリックが結果に集計されることに注意してください。&lt;em&gt;2.2で非推奨&lt;/em&gt;</target>
         </trans-unit>
         <trans-unit id="f7a2b367bd5bb346ca7de35c2c9b87f0df2c8259" translate="yes" xml:space="preserve">
           <source>To enable salting you must modify the config file parameter &lt;code&gt;tsd.storage.salt.width&lt;/code&gt; and optionally &lt;code&gt;tsd.storage.salt.buckets&lt;/code&gt;. We recommend setting the salt width to &lt;code&gt;1&lt;/code&gt; and determine the number of buckets based on a factor of the number of region servers in your cluster. Note that at query time, the TSD will fire &lt;code&gt;tsd.storage.salt.buckets&lt;/code&gt; number of scanners to fetch data. The proper number of salt buckets must be determined through experimentation as at some point query performance may suffer due to having too many scanners open and collating the results. In the future the salt width and buckets may be configurable but we didn't want folks changing settings on accident and losing data.</source>
-          <target state="translated">&lt;code&gt;tsd.storage.salt.width&lt;/code&gt; を有効にするには、設定ファイルのパラメータtsd.storage.salt.widthを変更し、オプションで &lt;code&gt;tsd.storage.salt.buckets&lt;/code&gt; を変更する必要があります。ソルト幅を &lt;code&gt;1&lt;/code&gt; に設定し、クラスター内のリージョンサーバー数の要素に基づいてバケット数を決定することをお勧めします。 TSDはクエリ時に、 &lt;code&gt;tsd.storage.salt.buckets&lt;/code&gt; の数のスキャナーを起動してデータをフェッチすることに注意してください。スキャナーの数が多すぎて結果が照合されるため、クエリのパフォーマンスが低下する場合があるため、ソルトバケットの適切な数を実験で決定する必要があります。将来、ソルト幅とバケットは構成可能になる可能性がありますが、偶然に設定を変更してデータを失うことを望まないでしょう。</target>
+          <target state="translated">&lt;code&gt;tsd.storage.salt.width&lt;/code&gt; を有効にするには、構成ファイルのパラメーターtsd.storage.salt.widthを変更し、オプションで &lt;code&gt;tsd.storage.salt.buckets&lt;/code&gt; を変更する必要があります。ソルト幅を &lt;code&gt;1&lt;/code&gt; に設定し、クラスター内のリージョンサーバー数の係数に基づいてバケット数を決定することをお勧めします。 TSDはクエリ時に、 &lt;code&gt;tsd.storage.salt.buckets&lt;/code&gt; の数のスキャナーを起動してデータをフェッチすることに注意してください。スキャナーの数が多すぎて結果が照合されないため、クエリのパフォーマンスが低下する可能性があるため、適切なソルトバケット数を実験で決定する必要があります。将来、ソルトの幅とバケットは構成可能になる可能性がありますが、偶然に設定を変更してデータを失うことを望まないでしょう。</target>
         </trans-unit>
         <trans-unit id="e89381af42351d3225bfe932a7ba6493d1b4f2fa" translate="yes" xml:space="preserve">
           <source>To extract data with millisecond resolution, use the &lt;code&gt;/api/query&lt;/code&gt; endpoint and specify the &lt;code&gt;msResolution&lt;/code&gt; (</source>
@@ -1821,11 +1821,11 @@
         </trans-unit>
         <trans-unit id="04bb0ce2063725f6800f6e9adaea2ecac40bcb94" translate="yes" xml:space="preserve">
           <source>To help describe the lower resolution data, lets look at some full resolution (also known as &lt;em&gt;raw&lt;/em&gt; data) example data. The first table defines the time series with a short-cut identifier.</source>
-          <target state="translated">低解像度のデータを説明するために、フル解像度（&lt;em&gt;生&lt;/em&gt;データとも呼ばれます）のサンプルデータを見てみましょう。最初の表は、ショートカットIDを使用して時系列を定義しています。</target>
+          <target state="translated">より低い解像度のデータを説明するために、フル解像度（&lt;em&gt;生&lt;/em&gt;データとも呼ばれます）のサンプルデータを見てみましょう。最初の表は、ショートカットIDを使用して時系列を定義しています。</target>
         </trans-unit>
         <trans-unit id="0289a01433a99be32878ebc034f5f7cc75a214ca" translate="yes" xml:space="preserve">
           <source>To plot HTTP hits, you just go to the UI and enter &lt;code&gt;http.hits&lt;/code&gt; as your metric name, and enter the time range. Check the &quot;Rate&quot; button since this particular metric is a rate counter, and voil?, you have a plot of the rate of HTTP hits to your web servers over time.</source>
-          <target state="translated">HTTPヒットをプロットするには、UIに &lt;code&gt;http.hits&lt;/code&gt; し、メトリック名としてhttp.hitsを入力し、時間範囲を入力します。この特定のメトリックはレートカウンターであるため、[レート]ボタンをチェックして、失敗しましたか？時間の経過に伴う、WebサーバーへのHTTPヒットのレートのプロットがあります。</target>
+          <target state="translated">HTTPヒットをプロットするには、UIに &lt;code&gt;http.hits&lt;/code&gt; し、メトリック名としてhttp.hitsを入力し、時間範囲を入力します。この特定のメトリックはレートカウンターであるため、[レート]ボタンをチェックして、失敗しましたか？時間の経過に伴うWebサーバーへのHTTPヒットのレートのプロットがあります。</target>
         </trans-unit>
         <trans-unit id="1f2f1d0961ccf579d8319c865282051b5dcc1682" translate="yes" xml:space="preserve">
           <source>To reduce the number of datapoints returned, you can specify a downsampling interval and method, such as 1h-avg or 1d-sum. This is also useful (such as when using the max and min) to find best and worst-case datapoints over a given period. Downsampling is most useful to make the graphing phase less intensive and more readable, especially when graphing more datapoints than screen pixels.</source>
@@ -1841,7 +1841,7 @@
         </trans-unit>
         <trans-unit id="cb26e03bf6caa382462bbb080b416f004afb7dfd" translate="yes" xml:space="preserve">
           <source>To see the values retreived, and potentially ignored (due to duration), use the &lt;code&gt;--verbose&lt;/code&gt; option.</source>
-          <target state="translated">（期間が原因で）取得され、無視される可能性のある値を表示するには、 &lt;code&gt;--verbose&lt;/code&gt; オプションを使用します。</target>
+          <target state="translated">取得され、（期間が原因で）潜在的に無視される値を表示するには、 &lt;code&gt;--verbose&lt;/code&gt; オプションを使用します。</target>
         </trans-unit>
         <trans-unit id="a1141eb96836ed960ae0be11b9889597388b5df0" translate="yes" xml:space="preserve">
           <source>Token</source>
@@ -2005,11 +2005,11 @@
         </trans-unit>
         <trans-unit id="6c1f9e85962ff3151f54f7c8ea05b7a45c5f8f09" translate="yes" xml:space="preserve">
           <source>UIDs are assigned automatically for new &lt;code&gt;tagk&lt;/code&gt; and &lt;code&gt;tagv&lt;/code&gt; objects when data points are written to a TSD. &lt;code&gt;metric&lt;/code&gt; objects also receive new UIDs but only if the &lt;em&gt;auto metric&lt;/em&gt; setting has been configured to &lt;code&gt;true&lt;/code&gt;. Otherwise data points with new metrics are rejected. The UIDs are looked up in a cached map for every incoming data point. If the lookup fails, then the TSD will attempt to assign a new UID.</source>
-          <target state="translated">データポイントがTSDに書き込まれると、新しい &lt;code&gt;tagk&lt;/code&gt; および &lt;code&gt;tagv&lt;/code&gt; オブジェクトにUIDが自動的に割り当てられます。 &lt;code&gt;metric&lt;/code&gt; オブジェクトも新しいUIDを受け取りますが、&lt;em&gt;自動メトリック&lt;/em&gt;設定が &lt;code&gt;true&lt;/code&gt; に設定されている場合のみです。そうでない場合、新しいメトリックを持つデータポイントは拒否されます。 UIDは、すべての着信データポイントのキャッシュマップで検索されます。検索が失敗した場合、TSDは新しいUIDを割り当てようとします。</target>
+          <target state="translated">データポイントがTSDに書き込まれると、新しい &lt;code&gt;tagk&lt;/code&gt; および &lt;code&gt;tagv&lt;/code&gt; オブジェクトにUIDが自動的に割り当てられます。 &lt;code&gt;metric&lt;/code&gt; オブジェクトも新しいUIDを受け取りますが、&lt;em&gt;自動メトリック&lt;/em&gt;設定が &lt;code&gt;true&lt;/code&gt; に設定されている場合のみです。それ以外の場合、新しいメトリックのデータポイントは拒否されます。 UIDは、すべての着信データポイントのキャッシュマップで検索されます。検索が失敗した場合、TSDは新しいUIDを割り当てようとします。</target>
         </trans-unit>
         <trans-unit id="8ae22773b0650a5a7f4513a10651c639d8523b6d" translate="yes" xml:space="preserve">
           <source>UIDs can be displayed in a few ways. The most common method is via the HTTP API where the 3 bytes of UID data are encoded as a hexadecimal string. For example, the UID of &lt;code&gt;1&lt;/code&gt; would be written in binary as &lt;code&gt;000000000000000000000001&lt;/code&gt;. As an array of unsigned byte values, you could imagine it as &lt;code&gt;[0, 0, 1]&lt;/code&gt;. Encoded as a hex string, the value would be &lt;code&gt;000001&lt;/code&gt; where the string is padded with 0s for each byte. The UID of 255 would result in a hex value of &lt;code&gt;0000FF&lt;/code&gt; (or as a byte array, &lt;code&gt;[0, 0, 255]&lt;/code&gt;. To convert between a decimal UID to a hex, use any kind of hex conversion tool you prefer and put 0s in front of the resulting value until you have a total of 6 characters. To convert from a hex UID to decimal, simply drop any 0s from the front, then use a tool to convert the hex string to a decimal.</source>
-          <target state="translated">UIDはいくつかの方法で表示できます。最も一般的な方法は、3バイトのUIDデータが16進数の文字列としてエンコードされるHTTP APIを使用する方法です。たとえば、 &lt;code&gt;1&lt;/code&gt; のUIDは &lt;code&gt;000000000000000000000001&lt;/code&gt; のようにバイナリで書き込まれます。符号なしバイト値の配列として、それを &lt;code&gt;[0, 0, 1]&lt;/code&gt; 想像できます。 16進文字列としてエンコードされ、値は &lt;code&gt;000001&lt;/code&gt; になります。この場合、文字列にはバイトごとに0が埋め込まれます。 UIDが255の場合、16進値は &lt;code&gt;0000FF&lt;/code&gt; （またはバイト配列 &lt;code&gt;[0, 0, 255]&lt;/code&gt; 。 10進数のUIDを16進数に変換するには、任意の種類の16進数変換ツールを使用し、合計6文字になるまで、結果の値の前に0を付けます。 16進数のUIDから10進数に変換するには、先頭から0を削除してから、ツールを使用して16進数の文字列を10進数に変換します。</target>
+          <target state="translated">UIDはいくつかの方法で表示できます。最も一般的な方法は、HTTP APIを使用する方法で、3バイトのUIDデータが16進数の文字列としてエンコードされます。たとえば、UIDが &lt;code&gt;1&lt;/code&gt; の場合、バイナリで &lt;code&gt;000000000000000000000001&lt;/code&gt; のように記述されます。符号なしバイト値の配列として、それを &lt;code&gt;[0, 0, 1]&lt;/code&gt; 想像できます。 16進文字列としてエンコードされ、値は &lt;code&gt;000001&lt;/code&gt; になります。この場合、文字列には各バイトの0が埋め込まれます。 UIDが255の場合、16進値は &lt;code&gt;0000FF&lt;/code&gt; （またはバイト配列 &lt;code&gt;[0, 0, 255]&lt;/code&gt; 。 10進数のUIDを16進数に変換するには、任意の種類の16進数変換ツールを使用し、合計6文字になるまで、結果の値の前に0を付けます。 16進数のUIDから10進数に変換するには、先頭から0を削除してから、ツールを使用して16進数の文字列を10進数に変換します。</target>
         </trans-unit>
         <trans-unit id="275fba4d52934eeeeaea4a6e1704ebdc91c91c93" translate="yes" xml:space="preserve">
           <source>UIDs can be renamed or deleted. Renaming can be accomplished via the CLI and is generally safe but will affect EVERY time series that includes the renamed ID. E.g. if we have a series &lt;code&gt;sys.cpu.user host=web01&lt;/code&gt; and another &lt;code&gt;apache.requests host=web01&lt;/code&gt; and rename the &lt;code&gt;web01&lt;/code&gt; tag value to &lt;code&gt;web01.mysite.org&lt;/code&gt;, then both series will now reflect the new host name and all queries referring to the old name must be updated.. If a data point comes in that has the previous string, a new UID will be assigned.</source>
@@ -2065,7 +2065,7 @@
         </trans-unit>
         <trans-unit id="b439a28e7a28b340333b5212b063a2eef57c7e97" translate="yes" xml:space="preserve">
           <source>Unix timestamps are not supported directly in the boxes. You can click in a box to display the calendar, then paste a Unix timestamp (in seconds) in the &lt;em&gt;UNIX Timestamp&lt;/em&gt; box, then press the &lt;em&gt;TAB&lt;/em&gt; key to convert to a human readable time stamp.</source>
-          <target state="translated">Unixタイムスタンプは、ボックスで直接サポートされていません。ボックスをクリックしてカレンダーを表示し、&lt;em&gt;UNIXタイムスタンプ&lt;/em&gt;ボックスにUnixタイムスタンプ（秒単位）を貼り付け、&lt;em&gt;Tab&lt;/em&gt;キーを押して人間が読めるタイムスタンプに変換できます。</target>
+          <target state="translated">Unixタイムスタンプは、ボックスで直接サポートされていません。ボックスをクリックしてカレンダーを表示し、&lt;em&gt;UNIXタイムスタンプ&lt;/em&gt;ボックスにUnixタイムスタンプ（秒単位）を貼り付け、&lt;em&gt;Tab&lt;/em&gt;キーを押して、人間が読めるタイムスタンプに変換できます。</target>
         </trans-unit>
         <trans-unit id="62769f032e81de985972e84a3c510109f83d37ca" translate="yes" xml:space="preserve">
           <source>Unknown Object</source>
@@ -2073,7 +2073,7 @@
         </trans-unit>
         <trans-unit id="da44612554286f7b344d56ffdbb816c4c5a27e73" translate="yes" xml:space="preserve">
           <source>Unless there was an error with the query, you will generally receive a &lt;code&gt;200&lt;/code&gt; status with content. However if your query couldn't find any data, it will return an empty result set. In the case of the JSON serializer, the result will be an empty array:</source>
-          <target state="translated">クエリにエラーがなかった場合を除き、通常はコンテンツのステータスが &lt;code&gt;200&lt;/code&gt; になります。ただし、クエリでデータが見つからなかった場合は、空の結果セットが返されます。JSONシリアライザーの場合、結果は空の配列になります。</target>
+          <target state="translated">クエリでエラーが発生しなかった場合を除き、通常はコンテンツのステータスが &lt;code&gt;200&lt;/code&gt; になります。ただし、クエリでデータが見つからなかった場合は、空の結果セットが返されます。JSONシリアライザーの場合、結果は空の配列になります。</target>
         </trans-unit>
         <trans-unit id="887725b9b2d9de5942f6fd25be6171e1707834a8" translate="yes" xml:space="preserve">
           <source>Unlike other solutions, OpenTSDB allows for writing data for a given time series in any order you want. This enables significant flexibility in writing data to a TSD, allowing for populating current data from your systems, then importing historical data at a later time.</source>
@@ -2085,7 +2085,7 @@
         </trans-unit>
         <trans-unit id="268e1b3bfe651b314080183be7d9af48bbefa66a" translate="yes" xml:space="preserve">
           <source>Unlike, say, the Apache Software Foundation, we do not require every single code change to be attached to an issue. Feel free to send as many small fixes as you want.</source>
-          <target state="translated">Apache Software Foundation のようなものとは異なり、私たちはすべてのコード変更を問題に添付することを要求しません。あなたが望むだけの小さな修正を自由に送ってください。</target>
+          <target state="translated">Apache Software Foundation のようなものとは異なり、私たちはコードの変更をすべて問題に添付することを要求していません。あなたが望むだけの小さな修正を自由に送ってください。</target>
         </trans-unit>
         <trans-unit id="723bf1f1b206c7d57fb30b939691510cc908d91f" translate="yes" xml:space="preserve">
           <source>Upgrading from 1.x</source>
@@ -2117,7 +2117,7 @@
         </trans-unit>
         <trans-unit id="7caa59a04649df7ca329cc939d0163d6e2ab43f1" translate="yes" xml:space="preserve">
           <source>Used only when &lt;code&gt;DELETE&lt;/code&gt; ing a tree, if this flag is set to true, then the entire tree definition will be deleted along with all branches, collisions and not matched entries</source>
-          <target state="translated">ツリーを &lt;code&gt;DELETE&lt;/code&gt; するときにのみ使用されます。このフラグがtrueに設定されている場合、ツリー定義全体がすべてのブランチ、衝突、および一致しないエントリとともに削除されます。</target>
+          <target state="translated">ツリーを &lt;code&gt;DELETE&lt;/code&gt; するときにのみ使用されます。このフラグがtrueに設定されている場合、ツリー定義全体がすべてのブランチ、衝突、一致しないエントリとともに削除されます。</target>
         </trans-unit>
         <trans-unit id="e4ec32471cc339eb0bbad07fecfae799469fe69b" translate="yes" xml:space="preserve">
           <source>Used to delete data from the system</source>
@@ -2125,7 +2125,7 @@
         </trans-unit>
         <trans-unit id="f01497acb828100c6704a58798225da6666dd614" translate="yes" xml:space="preserve">
           <source>Used to fetch or modify a specific tree. &lt;a href=&quot;#id1&quot;&gt;&lt;span id=&quot;id2&quot;&gt;*&lt;/span&gt;&lt;/a&gt;When creating a new tree, the &lt;code&gt;tree&lt;/code&gt; value must not be present.</source>
-          <target state="translated">特定のツリーをフェッチまたは変更するために使用されます。&lt;a href=&quot;#id1&quot;&gt;&lt;span id=&quot;id2&quot;&gt;*&lt;/span&gt;&lt;/a&gt;新しいツリーを作成するとき、 &lt;code&gt;tree&lt;/code&gt; 値が存在してはなりません。</target>
+          <target state="translated">特定のツリーをフェッチまたは変更するために使用されます。&lt;a href=&quot;#id1&quot;&gt;&lt;span id=&quot;id2&quot;&gt;*&lt;/span&gt;&lt;/a&gt;新しいツリーを作成するときは、 &lt;code&gt;tree&lt;/code&gt; 値が存在していてはなりません。</target>
         </trans-unit>
         <trans-unit id="fcf7c7b636b7ef81cedeaaa54cc8a16bfb376544" translate="yes" xml:space="preserve">
           <source>Used to fetch the root branch of the tree. If used in combination with a branchId, the tree ID will be ignored.</source>
@@ -2185,7 +2185,7 @@
         </trans-unit>
         <trans-unit id="9e84e40800d75197197a3cc68e6dfce2260cbaeb" translate="yes" xml:space="preserve">
           <source>Using the &lt;code&gt;--full-scan&lt;/code&gt; flag, the entire OpenTSDB &lt;code&gt;tsdb&lt;/code&gt; data table will be scanned. By default the utility will launch &lt;code&gt;2 x CPU core&lt;/code&gt; threads for optimal performance. Data is stored with the metric UID as the start of each row key so the utility will determine the maximum metric UID and split up the main data table equally among threads. If your data is distributed among metrics fairly evenly, then each thread should complete in roughly the same amount of time. However some metrics usually have more data or time series than others so these threads may be running much longer than others. Future updates to OpenTSDB will be able to divy up the workload in a more efficient manner.</source>
-          <target state="translated">&lt;code&gt;--full-scan&lt;/code&gt; フラグを使用すると、OpenTSDB &lt;code&gt;tsdb&lt;/code&gt; データテーブル全体がスキャンされます。デフォルトでは、ユーティリティは最適なパフォーマンスのために &lt;code&gt;2 x CPU core&lt;/code&gt; スレッドを起動します。データは各行キーの先頭としてメトリックUIDを使用して格納されるため、ユーティリティは最大メトリックUIDを決定し、メインデータテーブルをスレッド間で均等に分割します。データがメトリック間でかなり均等に分散されている場合、各スレッドはほぼ同じ時間で完了するはずです。ただし、一部のメトリックは通常、他のメトリックよりも多くのデータまたは時系列を持つため、これらのスレッドは他のスレッドよりもはるかに長く実行される可能性があります。 OpenTSDBの将来のアップデートでは、より効率的な方法でワークロードを分割することができます。</target>
+          <target state="translated">&lt;code&gt;--full-scan&lt;/code&gt; フラグを使用すると、OpenTSDB &lt;code&gt;tsdb&lt;/code&gt; データテーブル全体がスキャンされます。デフォルトでは、ユーティリティは最適なパフォーマンスのために &lt;code&gt;2 x CPU core&lt;/code&gt; スレッドを起動します。データは各行キーの開始点としてメトリックUIDを使用して格納されるため、ユーティリティは最大メトリックUIDを決定し、メインデータテーブルをスレッド間で均等に分割します。データがメトリック間でかなり均等に分散されている場合、各スレッドはほぼ同じ時間で完了するはずです。ただし、一部のメトリックは通常、他のメトリックよりも多くのデータまたは時系列を持っているため、これらのスレッドは他のスレッドよりもはるかに長く実行される可能性があります。 OpenTSDBの将来のアップデートでは、より効率的な方法でワークロードを分割することができます。</target>
         </trans-unit>
         <trans-unit id="70c02e9f523f3e75838914c64307790f5b450bce" translate="yes" xml:space="preserve">
           <source>Using the &lt;code&gt;DELETE&lt;/code&gt; method will remove a rule from a tree. A successful deletion will respond with a &lt;code&gt;204&lt;/code&gt; status code and no content body. If the rule did not exist, a &lt;code&gt;404&lt;/code&gt; error will be returned.</source>
@@ -2197,11 +2197,11 @@
         </trans-unit>
         <trans-unit id="b26af793f872504a81d53e941fc79c1ec865a0ee" translate="yes" xml:space="preserve">
           <source>Using the &lt;code&gt;DELETE&lt;/code&gt; method will remove only collisions, not matched entries and branches for the given tree from storage. This endpoint starts a delete. Because the delete can take some time, the endpoint will return a successful 204 response without data if the delete completed. If the tree was not found, it will return a 404. If you want to delete the tree definition itself, you can supply the &lt;code&gt;defintion&lt;/code&gt; flag in the query string with a value of &lt;code&gt;true&lt;/code&gt; and the tree and rule definitions will be removed as well.</source>
-          <target state="translated">&lt;code&gt;DELETE&lt;/code&gt; メソッドを使用すると、指定したツリーの一致しないエントリとブランチではなく、衝突のみがストレージから削除されます。このエンドポイントは削除を開始します。削除には時間がかかる場合があるため、削除が完了すると、エンドポイントはデータなしで成功した204応答を返します。ツリーが見つからなかった場合は、404が返されます。ツリー定義自体を削除する場合は、クエリ文字列の &lt;code&gt;defintion&lt;/code&gt; フラグに値 &lt;code&gt;true&lt;/code&gt; を指定すると、ツリーとルールの定義も削除されます。</target>
+          <target state="translated">&lt;code&gt;DELETE&lt;/code&gt; メソッドを使用すると、指定されたツリーの一致しないエントリとブランチではなく、衝突のみがストレージから削除されます。このエンドポイントは削除を開始します。削除には時間がかかる場合があるため、削除が完了した場合、エンドポイントはデータなしで成功した204応答を返します。ツリーが見つからなかった場合は、404が返されます。ツリー定義自体を削除する場合は、クエリ文字列の &lt;code&gt;defintion&lt;/code&gt; フラグに値 &lt;code&gt;true&lt;/code&gt; を指定すると、ツリーとルールの定義も削除されます。</target>
         </trans-unit>
         <trans-unit id="e060c6a169bbd5cc7d8f67f11885eea850a73cc4" translate="yes" xml:space="preserve">
           <source>Using the &lt;code&gt;POST&lt;/code&gt; or &lt;code&gt;PUT&lt;/code&gt; methods, you can create a new rule or edit an existing rule. New rules require a &lt;code&gt;type&lt;/code&gt; value. Existing trees require a valid &lt;code&gt;treeId&lt;/code&gt; ID and any fields that require modification. A successful request will return the modified rule object. Note that if a rule exists at the given level and order, any changes will be merged with or overwrite the existing rule.</source>
-          <target state="translated">&lt;code&gt;POST&lt;/code&gt; または &lt;code&gt;PUT&lt;/code&gt; メソッドを使用して、新しいルールを作成したり、既存のルールを編集したりできます。新しいルールには &lt;code&gt;type&lt;/code&gt; 値が必要です。既存のツリーには、有効な &lt;code&gt;treeId&lt;/code&gt; IDと、変更が必要なフィールドが必要です。リクエストが成功すると、変更されたルールオブジェクトが返されます。特定のレベルと順序でルールが存在する場合、変更は既存のルールとマージされるか、既存のルールを上書きすることに注意してください。</target>
+          <target state="translated">&lt;code&gt;POST&lt;/code&gt; または &lt;code&gt;PUT&lt;/code&gt; メソッドを使用して、新しいルールを作成したり、既存のルールを編集したりできます。新しいルールには &lt;code&gt;type&lt;/code&gt; 値が必要です。既存のツリーには、有効な &lt;code&gt;treeId&lt;/code&gt; IDと、変更が必要なフィールドが必要です。リクエストが成功すると、変更されたルールオブジェクトが返されます。指定したレベルと順序でルールが存在する場合、変更は既存のルールとマージされるか、既存のルールを上書きすることに注意してください。</target>
         </trans-unit>
         <trans-unit id="a5d62ecf5accd6b4f56e139e4bd5594c2887feb2" translate="yes" xml:space="preserve">
           <source>Using the &lt;code&gt;POST&lt;/code&gt; or &lt;code&gt;PUT&lt;/code&gt; methods, you can create a new tree or edit most of the fields for an existing tree. New trees require a &lt;code&gt;name&lt;/code&gt; value and for the &lt;code&gt;treeId' value to be empty. Existing trees require a valid ``treeId&lt;/code&gt; ID and any fields that require modification. A successful request will return the modified tree object.</source>
@@ -2225,7 +2225,7 @@
         </trans-unit>
         <trans-unit id="225bed68259ba651e2d6c1d327a5491b646a2a9a" translate="yes" xml:space="preserve">
           <source>Values in the POST query &lt;code&gt;tags&lt;/code&gt; map and the &lt;em&gt;group by&lt;/em&gt; curly brace of URI queries are automatically converted to filters to provide backwards compatibility with existing systems. The auto conversions include:</source>
-          <target state="translated">POSTクエリ &lt;code&gt;tags&lt;/code&gt; マップの値とURIクエリの波括弧&lt;em&gt;によるグループ&lt;/em&gt;は、既存のシステムとの下位互換性を提供するために自動的にフィルターに変換されます。自動変換には次のものが含まれます。</target>
+          <target state="translated">POSTクエリ &lt;code&gt;tags&lt;/code&gt; マップの値と、URIクエリの波括弧&lt;em&gt;によるグループ&lt;/em&gt;は、既存のシステムとの下位互換性を提供するために自動的にフィルターに変換されます。自動変換には次のものが含まれます。</target>
         </trans-unit>
         <trans-unit id="9704bafa7ca1f65bf78a2d7c4af65d12ed352bb9" translate="yes" xml:space="preserve">
           <source>Variable Length Encoding - Use less storage space for smaller integer values</source>
@@ -2285,11 +2285,11 @@
         </trans-unit>
         <trans-unit id="c345da795a9556bc36b310cd688ccc41bccbd52e" translate="yes" xml:space="preserve">
           <source>Webservers usually have many files so we could have a &lt;code&gt;tagk&lt;/code&gt; of &lt;code&gt;file&lt;/code&gt; to arrive at &lt;code&gt;file=logo.jpg&lt;/code&gt; or &lt;code&gt;file=index.php&lt;/code&gt;</source>
-          <target state="translated">Web &lt;code&gt;tagk&lt;/code&gt; は通常多くのファイルがあるため、 &lt;code&gt;file=logo.jpg&lt;/code&gt; または &lt;code&gt;file=index.php&lt;/code&gt; に到達するために &lt;code&gt;file&lt;/code&gt; タグを付けることができます</target>
+          <target state="translated">通常、Web &lt;code&gt;tagk&lt;/code&gt; には多くのファイルがあるため、 &lt;code&gt;file=logo.jpg&lt;/code&gt; または &lt;code&gt;file=index.php&lt;/code&gt; に到達する &lt;code&gt;file&lt;/code&gt; タグを付けることができます。</target>
         </trans-unit>
         <trans-unit id="92c1691245ecf75a0486528560dc971aba0c7613" translate="yes" xml:space="preserve">
           <source>Welcome to OpenTSDB 2.3, the scalable, distributed time series database. We recommend that you start with the &lt;a href=&quot;user_guide/index&quot;&gt;&lt;em&gt;User Guide&lt;/em&gt;&lt;/a&gt; then test your understanding with an &lt;a href=&quot;installation&quot;&gt;&lt;em&gt;Installation&lt;/em&gt;&lt;/a&gt; and read on the &lt;a href=&quot;api_http/index&quot;&gt;&lt;em&gt;HTTP API&lt;/em&gt;&lt;/a&gt; if you need to develop against it.</source>
-          <target state="translated">OpenTSDB 2.3へようこそ。これは、スケーラブルな分散型時系列データベースです。&lt;a href=&quot;user_guide/index&quot;&gt;&lt;em&gt;ユーザーガイド&lt;/em&gt;&lt;/a&gt;から始めて、&lt;a href=&quot;installation&quot;&gt;&lt;em&gt;インストール&lt;/em&gt;&lt;/a&gt;について理解をテストし、それに対して開発する必要がある場合は&lt;a href=&quot;api_http/index&quot;&gt;&lt;em&gt;HTTP API&lt;/em&gt;&lt;/a&gt;を読むことをお勧めします。</target>
+          <target state="translated">OpenTSDB 2.3へようこそ。これは、スケーラブルな分散型時系列データベースです。&lt;a href=&quot;user_guide/index&quot;&gt;&lt;em&gt;ユーザーガイド&lt;/em&gt;&lt;/a&gt;から始めて、&lt;a href=&quot;installation&quot;&gt;&lt;em&gt;インストール&lt;/em&gt;&lt;/a&gt;について理解をテストし、&lt;a href=&quot;api_http/index&quot;&gt;&lt;em&gt;HTTP APIを使用&lt;/em&gt;&lt;/a&gt;して開発する必要がある場合は、&lt;em&gt;HTTP API&lt;/em&gt;を読むことをお勧めします。</target>
         </trans-unit>
         <trans-unit id="9f707dd631007e6f00674e6df653a50cb3b80c8e" translate="yes" xml:space="preserve">
           <source>What does the script do? If you're not a big fan of shell and awk scripting, it may not be obvious how this works. But it's simple. The &lt;code&gt;set -e&lt;/code&gt; command simply instructs bash to exit with an error if any of the commands fail. This simplifies error handling. The script then enters an infinite loop. In this loop, we query MySQL to retrieve 2 of its status variables:</source>
@@ -2321,11 +2321,11 @@
         </trans-unit>
         <trans-unit id="c90483ecb75f33c66504aec57044b74b4ddb9446" translate="yes" xml:space="preserve">
           <source>When a data point is written to OpenTSDB, the row key is formatted as &lt;code&gt;&amp;lt;metric_UID&amp;gt;&amp;lt;timestamp&amp;gt;&amp;lt;tagk1_UID&amp;gt;&amp;lt;tagv1_UID&amp;gt;[...&amp;lt;tagkN_UID&amp;gt;&amp;lt;tagvN_UID&amp;gt;]&lt;/code&gt;. By simply dropping the timestamp from the row key, we have a long array of UIDs that combined, form a unique timeseries ID. Encoding the bytes as a hex string will give us a useful TSUID that can be passed around various API calls. Thus from our UID example above where each metric, tag name and value has a UID of 1, our TSUID, encoded as a hexadecimal string, would be &lt;code&gt;000001000001000001&lt;/code&gt;.</source>
-          <target state="translated">データポイントがOpenTSDBに書き込まれると、行キーは &lt;code&gt;&amp;lt;metric_UID&amp;gt;&amp;lt;timestamp&amp;gt;&amp;lt;tagk1_UID&amp;gt;&amp;lt;tagv1_UID&amp;gt;[...&amp;lt;tagkN_UID&amp;gt;&amp;lt;tagvN_UID&amp;gt;]&lt;/code&gt; の形式になります。行キーからタイムスタンプを削除するだけで、一意の時系列IDを形成するUIDの長い配列ができます。バイトを16進文字列としてエンコードすると、さまざまなAPI呼び出しで渡すことができる便利なTSUIDが得られます。したがって、各メトリック、タグ名、および値のUIDが1である上記のUIDの例から、16進文字列としてエンコードされた &lt;code&gt;000001000001000001&lt;/code&gt; ます。</target>
+          <target state="translated">データポイントがOpenTSDBに書き込まれると、行キーは &lt;code&gt;&amp;lt;metric_UID&amp;gt;&amp;lt;timestamp&amp;gt;&amp;lt;tagk1_UID&amp;gt;&amp;lt;tagv1_UID&amp;gt;[...&amp;lt;tagkN_UID&amp;gt;&amp;lt;tagvN_UID&amp;gt;]&lt;/code&gt; の形式になります。行キーからタイムスタンプを削除するだけで、一意の時系列IDを形成するUIDの長い配列ができます。バイトを16進文字列としてエンコードすると、さまざまなAPI呼び出しで渡すことができる便利なTSUIDが得られます。したがって、各メトリック、タグ名、値のUIDが1である上記のUIDの例から、16進数の文字列としてエンコードされた &lt;code&gt;000001000001000001&lt;/code&gt; ます。</target>
         </trans-unit>
         <trans-unit id="d3fab944abf51c879bc1b01b659f566bb9c864d1" translate="yes" xml:space="preserve">
           <source>When a request for &lt;code&gt;GET /s/queryui.nocache.js&lt;/code&gt; comes in, for instance, the file &lt;code&gt;${staticroot}/queryui.nocache.js&lt;/code&gt; is sent to the browser.</source>
-          <target state="translated">たとえば、 &lt;code&gt;GET /s/queryui.nocache.js&lt;/code&gt; に対するリクエストが受信されると、ファイル &lt;code&gt;${staticroot}/queryui.nocache.js&lt;/code&gt; がブラウザーに送信されます。</target>
+          <target state="translated">たとえば、 &lt;code&gt;GET /s/queryui.nocache.js&lt;/code&gt; のリクエストが受信されると、ファイル &lt;code&gt;${staticroot}/queryui.nocache.js&lt;/code&gt; がブラウザーに送信されます。</target>
         </trans-unit>
         <trans-unit id="3eb795a0996434169e7936c08d9e37cf097ed440" translate="yes" xml:space="preserve">
           <source>When aggregating multiple series OpenTSDB generally performs linear interpolation when a series is missing a value at a timestamp present in one or more other series. Some aggregators substitute specific values such as zero, min or max values. With fill policies you can modify aggregation behavior by flagging a missing value as a NaN or a scalar such as zero. When a NaN is emitted for a series, it is skipped for all calculations. For example, if a query asks for the average of a metric and one or more series are missing values, substituting a 0 would drive down the average and lerping introduces non-extant values. However with NaNs we can flag the value as missing and skip it in the calculation.</source>
@@ -2349,7 +2349,7 @@
         </trans-unit>
         <trans-unit id="edf539127020f4b17e6954b4a5f7859e3b6d89e6" translate="yes" xml:space="preserve">
           <source>When creating a tree it will have the &lt;code&gt;enabled&lt;/code&gt; field set to &lt;code&gt;false&lt;/code&gt; by default. After creating a tree you should add rules then use the &lt;code&gt;tree/test&lt;/code&gt; endpoint with a few TSUIDs to make sure the resulting tree will be what you expected. After you have verified the results, you can set the &lt;code&gt;enabled&lt;/code&gt; field to &lt;code&gt;true&lt;/code&gt; and new TSMeta objects or a tree synchronization will start to populate branches.</source>
-          <target state="translated">ツリーを作成すると、デフォルトで &lt;code&gt;enabled&lt;/code&gt; フィールドが &lt;code&gt;false&lt;/code&gt; に設定されます。ツリーを作成したら、ルールを追加してから、 &lt;code&gt;tree/test&lt;/code&gt; エンドポイントをいくつかのTSUIDで使用して、結果のツリーが期待どおりであることを確認します。結果を確認した後、 &lt;code&gt;enabled&lt;/code&gt; フィールドを &lt;code&gt;true&lt;/code&gt; に設定すると、新しいTSMetaオブジェクトまたはツリーの同期が開始され、ブランチにデータが入力されます。</target>
+          <target state="translated">ツリーを作成するとき、デフォルトでは &lt;code&gt;enabled&lt;/code&gt; フィールドが &lt;code&gt;false&lt;/code&gt; に設定されています。ツリーを作成した後、ルールを追加し、 &lt;code&gt;tree/test&lt;/code&gt; エンドポイントをいくつかのTSUIDで使用して、結果のツリーが期待どおりであることを確認します。結果を確認したら、 &lt;code&gt;enabled&lt;/code&gt; フィールドを &lt;code&gt;true&lt;/code&gt; に設定して、新しいTSMetaオブジェクトを作成するか、ツリーの同期を開始してブランチにデータを追加します。</target>
         </trans-unit>
         <trans-unit id="00ad345ce54d744e0d4346875a589bbcf877ecd3" translate="yes" xml:space="preserve">
           <source>When creating, modifying or deleting annotations, all changes will be propagated to the search plugin if configured.</source>
@@ -2369,11 +2369,11 @@
         </trans-unit>
         <trans-unit id="589290daaeac9fa4a537718e78a27d42e565c382" translate="yes" xml:space="preserve">
           <source>When making a query string request, multiple names for a given type can be supplied in a comma separated fashion. E.g. &lt;code&gt;metric=sys.cpu.0,sys.cpu.1,sys.cpu.2,sys.cpu.3&lt;/code&gt;. Naming conventions apply: see _______.</source>
-          <target state="translated">クエリ文字列リクエストを行う場合、特定のタイプの複数の名前をカンマ区切りで指定できます。例： &lt;code&gt;metric=sys.cpu.0,sys.cpu.1,sys.cpu.2,sys.cpu.3&lt;/code&gt; 。命名規則が適用されます。_______を参照してください。</target>
+          <target state="translated">クエリ文字列リクエストを行う場合、特定のタイプの複数の名前をカンマ区切りで指定できます。例： &lt;code&gt;metric=sys.cpu.0,sys.cpu.1,sys.cpu.2,sys.cpu.3&lt;/code&gt; 。命名規則が適用されます：_______を参照してください。</target>
         </trans-unit>
         <trans-unit id="db46ecc896bc829a3ede30c6a67d1a838ab0ecce" translate="yes" xml:space="preserve">
           <source>When passing rate options in a query string, the options must be enclosed in curly braces. For example: &lt;code&gt;m=sum:rate{counter,,1000}:if.octets.in&lt;/code&gt;. If you wish to use the default &lt;code&gt;counterMax&lt;/code&gt; but do want to supply a &lt;code&gt;resetValue&lt;/code&gt;, you must add two commas as in the previous example. Additional fields in the &lt;code&gt;rateOptions&lt;/code&gt; object include the following:</source>
-          <target state="translated">クエリ文字列でレートオプションを渡す場合、オプションは中括弧で囲む必要があります。例： &lt;code&gt;m=sum:rate{counter,,1000}:if.octets.in&lt;/code&gt; 。デフォルトの &lt;code&gt;counterMax&lt;/code&gt; を使用したいが、 &lt;code&gt;resetValue&lt;/code&gt; を提供したい場合は、前の例のように2つのコンマを追加する必要があります。 &lt;code&gt;rateOptions&lt;/code&gt; オブジェクトの追加フィールドには、次のものがあります。</target>
+          <target state="translated">クエリ文字列でレートオプションを渡すときは、オプションを中括弧で囲む必要があります。例： &lt;code&gt;m=sum:rate{counter,,1000}:if.octets.in&lt;/code&gt; 。デフォルトの &lt;code&gt;counterMax&lt;/code&gt; を使用したいが、 &lt;code&gt;resetValue&lt;/code&gt; を提供したい場合は、前の例のように2つのコンマを追加する必要があります。 &lt;code&gt;rateOptions&lt;/code&gt; オブジェクトの追加フィールドには、次のものがあります。</target>
         </trans-unit>
         <trans-unit id="d5fba73f279100bd3a481913b14403bacac26b84" translate="yes" xml:space="preserve">
           <source>When performing an aggregation, what happens if the time stamps of the data points for each time series fail to line up? Say we record the temperature every 5 minutes in different regions around the world. A sensor in Paris may send a temperature of &lt;code&gt;27c&lt;/code&gt; at &lt;code&gt;1356998400&lt;/code&gt;. Then a sensor in San Francisco may send a value of &lt;code&gt;18c&lt;/code&gt; at &lt;code&gt;1356998430&lt;/code&gt;, 30 seconds later. Antarctica may report &lt;code&gt;-29c&lt;/code&gt; at &lt;code&gt;1356998529&lt;/code&gt;. If we run a query requesting the average temperature, we want all of the data points averaged together into a single point. This is where &lt;strong&gt;interpolation&lt;/strong&gt; comes into play. See &lt;a href=&quot;aggregators&quot;&gt;&lt;em&gt;Aggregators&lt;/em&gt;&lt;/a&gt; for details.</source>
@@ -2381,15 +2381,15 @@
         </trans-unit>
         <trans-unit id="397054dbf8d59aec11d0f6f634cc9306b25819e0" translate="yes" xml:space="preserve">
           <source>When processing a TSMeta, if the resulting leaf would overwrite an existing leaf with a different TSUID, a collision will be recorded. This endpoint allows retreiving a list of the TSUIDs that were not included in a tree due to collisions. It is useful for debugging in that if you find a TSUID in this list, you can pass it through the &lt;code&gt;/tree/test&lt;/code&gt; endpoint to get details on why the collision occurred.</source>
-          <target state="translated">TSMetaを処理するときに、結果のリーフが既存のリーフを別のTSUIDで上書きする場合、衝突が記録されます。このエンドポイントを使用すると、衝突が原因でツリーに含まれていなかったTSUIDのリストを取得できます。このリストでTSUIDが見つかった場合は、それを &lt;code&gt;/tree/test&lt;/code&gt; エンドポイントに渡して、衝突が発生した理由の詳細を取得できるため、デバッグに役立ちます。</target>
+          <target state="translated">TSMetaを処理するときに、結果のリーフが既存のリーフを別のTSUIDで上書きする場合、衝突が記録されます。このエンドポイントでは、衝突が原因でツリーに含まれていなかったTSUIDのリストを取得できます。このリストでTSUIDが見つかった場合は、それを &lt;code&gt;/tree/test&lt;/code&gt; エンドポイントに渡して、衝突が発生した理由の詳細を取得できるため、デバッグに役立ちます。</target>
         </trans-unit>
         <trans-unit id="43f7e3102f2d64532ed98f3f277346a42abfa591" translate="yes" xml:space="preserve">
           <source>When processing a TSMeta, if the tree has &lt;code&gt;strictMatch&lt;/code&gt; enabled and the meta fails to match on a rule in any level of the set, a &lt;em&gt;not matched&lt;/em&gt; entry will be recorded. This endpoint allows for retrieving the list of TSUIDs that failed to match a rule set. It is useful for debugging in that if you find a TSUID in this list, you can pass it through the &lt;code&gt;/tree/test&lt;/code&gt; endpoint to get details on why the meta failed to match.</source>
-          <target state="translated">TSMetaを処理するときに、ツリーで &lt;code&gt;strictMatch&lt;/code&gt; が有効になっていて、メタがセットの任意のレベルのルールで一致しない場合、一致し&lt;em&gt;ない&lt;/em&gt;エントリが記録されます。このエンドポイントにより、ルールセットの照合に失敗したTSUIDのリストを取得できます。このリストでTSUIDが見つかった場合は、それを &lt;code&gt;/tree/test&lt;/code&gt; エンドポイントに渡して、メタが一致しなかった理由の詳細を取得できるため、デバッグに役立ちます。</target>
+          <target state="translated">TSMetaを処理するときに、ツリーで &lt;code&gt;strictMatch&lt;/code&gt; が有効になっていて、メタがセットの任意のレベルのルールで一致しない場合、一致し&lt;em&gt;ない&lt;/em&gt;エントリが記録されます。このエンドポイントにより、ルールセットとの一致に失敗したTSUIDのリストを取得できます。このリストでTSUIDが見つかった場合は、それを &lt;code&gt;/tree/test&lt;/code&gt; エンドポイントに渡して、メタが一致しなかった理由の詳細を取得できるため、デバッグに役立ちます。</target>
         </trans-unit>
         <trans-unit id="eb36a57fc88a67adf5ad26a06aec101b87e6899c" translate="yes" xml:space="preserve">
           <source>When rollups are enabled and you request a downsampler with the &lt;code&gt;avg&lt;/code&gt; function from OpenTSDB, the TSD will scan storage for &lt;code&gt;SUM&lt;/code&gt; and &lt;code&gt;COUNT&lt;/code&gt; values. Then while iterating over the data it will accurately compute the average.</source>
-          <target state="translated">ロールアップが有効になっているときに、OpenTSDB から &lt;code&gt;avg&lt;/code&gt; 関数を使用してダウンサンプラーを要求すると、TSDは &lt;code&gt;SUM&lt;/code&gt; と &lt;code&gt;COUNT&lt;/code&gt; の値についてストレージをスキャンします。次に、データを繰り返し処理しながら、平均を正確に計算します。</target>
+          <target state="translated">ロールアップが有効になっているときに、OpenTSDBの &lt;code&gt;avg&lt;/code&gt; 関数を使用してダウンサンプラーを要求すると、TSDは &lt;code&gt;SUM&lt;/code&gt; と &lt;code&gt;COUNT&lt;/code&gt; の値についてストレージをスキャンします。次に、データを繰り返し処理しながら、平均を正確に計算します。</target>
         </trans-unit>
         <trans-unit id="37ede39a087efd7518931b086a9dab4a33170282" translate="yes" xml:space="preserve">
           <source>When set, deletes all but the most recently written data point when resolving duplicates. If the config value &lt;code&gt;tsd.storage.fix_duplicates&lt;/code&gt; is set to true, then the latest data point will be kept regardless of this value.</source>
@@ -2401,7 +2401,7 @@
         </trans-unit>
         <trans-unit id="fca9aca34575fa85650c8b6b24cb0c1cbb36090c" translate="yes" xml:space="preserve">
           <source>When storing rollups, it's best to avoid functions such as &lt;strong&gt;average&lt;/strong&gt;, &lt;strong&gt;median&lt;/strong&gt; or &lt;strong&gt;deviation&lt;/strong&gt;. When performing further downsampling or grouping aggregations, such values become meaningless. Instead it's much better to always store the &lt;strong&gt;sum&lt;/strong&gt; and &lt;strong&gt;count&lt;/strong&gt; from which, at least, the &lt;strong&gt;average&lt;/strong&gt; can be computed at query time. For more information, see the section below.</source>
-          <target state="translated">ロールアップを保存するときは、&lt;strong&gt;平均&lt;/strong&gt;、&lt;strong&gt;中央値&lt;/strong&gt;、&lt;strong&gt;偏差&lt;/strong&gt;などの関数を使用しないことをお勧めします。さらにダウンサンプリングまたはグループ化集計を実行すると、そのような値は無意味になります。代わりに、少なくとも&lt;strong&gt;平均&lt;/strong&gt;をクエリ時に計算できる&lt;strong&gt;合計&lt;/strong&gt;と&lt;strong&gt;カウント&lt;/strong&gt;を常に保存する方がはるかに優れています。詳細については、以下のセクションを参照してください。&lt;strong&gt;&lt;/strong&gt;</target>
+          <target state="translated">ロールアップを保存するときは、&lt;strong&gt;平均&lt;/strong&gt;、&lt;strong&gt;中央値&lt;/strong&gt;、&lt;strong&gt;偏差&lt;/strong&gt;などの関数を使用しないことをお勧めします。集約をさらにダウンサンプリングまたはグループ化すると、そのような値は無意味になります。代わりに、少なくとも&lt;strong&gt;平均&lt;/strong&gt;をクエリ時に計算できる&lt;strong&gt;合計&lt;/strong&gt;と&lt;strong&gt;カウント&lt;/strong&gt;を常に保存する方がはるかに優れています。詳細については、以下のセクションを参照してください。&lt;strong&gt;&lt;/strong&gt;</target>
         </trans-unit>
         <trans-unit id="4af2402471f4ef066b11aaa2c4169a62abd87658" translate="yes" xml:space="preserve">
           <source>When submitting a JSON query to OpenTSDB 2.2 or later, use either &lt;code&gt;tags&lt;/code&gt; OR &lt;code&gt;filters&lt;/code&gt;. Only one will take effect and the order is indeterminate as the JSON parser may deserialize one before the other. We recommend using filters for all future queries.</source>
@@ -2409,11 +2409,11 @@
         </trans-unit>
         <trans-unit id="6043e0afa414523f13d52ceb29591765986e78b4" translate="yes" xml:space="preserve">
           <source>When supplying a &lt;code&gt;separator&lt;/code&gt; or a &lt;code&gt;regex&lt;/code&gt; value, you must supply a valid regular expression. For separators, the most common use is to split dotted metrics into branches. E.g. you may want &quot;sys.cpu.0.user&quot; to be split into &quot;sys&quot;, &quot;cpu&quot;, &quot;0&quot; and &quot;user&quot; branches. You cannot supply just a &quot;.&quot; for the separator value as that will not match properly. Instead, escape the period via &quot;.&quot;. Note that if you are supplying JSON via a POST request, you must escape the backslash as well and supply &quot;\.&quot;. GET request responses will escape all backslashes.</source>
-          <target state="translated">供給する場合 &lt;code&gt;separator&lt;/code&gt; や &lt;code&gt;regex&lt;/code&gt; 値を、あなたは有効な正規表現を指定する必要があります。セパレータの最も一般的な使用法は、ドット付きメトリックをブランチに分割することです。たとえば、「sys.cpu.0.user」を「sys」、「cpu」、「0」、「user」のブランチに分割したい場合があります。 「。」だけを指定することはできません。セパレータ値が正しく一致しないため。代わりに、ピリオドを「。」でエスケープします。 POSTリクエストを介してJSONを提供する場合は、バックスラッシュもエスケープして「\。」を提供する必要があることに注意してください。 GETリクエストの応答は、すべてのバックスラッシュをエスケープします。</target>
+          <target state="translated">供給する場合 &lt;code&gt;separator&lt;/code&gt; や &lt;code&gt;regex&lt;/code&gt; 値を、あなたは有効な正規表現を指定する必要があります。セパレーターの最も一般的な使用法は、ドット付きメトリックをブランチに分割することです。たとえば、「sys.cpu.0.user」を「sys」、「cpu」、「0」、「user」のブランチに分割したい場合があります。 「。」だけを指定することはできません。セパレータ値が正しく一致しないため。代わりに、ピリオドを「。」でエスケープします。 POSTリクエストを介してJSONを提供する場合は、バックスラッシュもエスケープして「\。」を提供する必要があることに注意してください。 GETリクエストの応答は、すべてのバックスラッシュをエスケープします。</target>
         </trans-unit>
         <trans-unit id="77b516fb80a54d0ce36c259cedbe5128a56b9e78" translate="yes" xml:space="preserve">
           <source>When using HTTP for puts, you may need to enable support for chunks if your HTTP client automatically breaks large requests into smaller packets. For example, CURL will break up messages larger than 2 or 3 data points and by default, OpenTSDB disables chunk support. Enable it by setting &lt;code&gt;tsd.http.request.enable_chunked&lt;/code&gt; to true in the config file.</source>
-          <target state="translated">プットにHTTPを使用する場合、HTTPクライアントが大きなリクエストを自動的に小さなパケットに分割する場合は、チャンクのサポートを有効にする必要がある場合があります。たとえば、CURLは2つまたは3つのデータポイントより大きいメッセージを分割し、デフォルトでOpenTSDBはチャンクサポートを無効にします。設定ファイルで &lt;code&gt;tsd.http.request.enable_chunked&lt;/code&gt; をtrueに設定することで有効にします。</target>
+          <target state="translated">プットにHTTPを使用する場合、HTTPクライアントが自動的に大きなリクエストを小さなパケットに分割する場合は、チャンクのサポートを有効にする必要がある場合があります。たとえば、CURLは2つまたは3つのデータポイントより大きいメッセージを分割し、デフォルトでOpenTSDBはチャンクサポートを無効にします。設定ファイルで &lt;code&gt;tsd.http.request.enable_chunked&lt;/code&gt; をtrueに設定して有効にします。</target>
         </trans-unit>
         <trans-unit id="16edde5b640ab67d81700527469fa623a2baec01" translate="yes" xml:space="preserve">
           <source>When using the CliQuery tool, you must use the format that separates the date from the time with a dash. This is because the command line is split on spaces, so if you put a space in the timestamp, it will fail to parse execute properly.</source>
@@ -2421,11 +2421,11 @@
         </trans-unit>
         <trans-unit id="31611eb440a6bdaa3e0dfeba7d497e00b321d461" translate="yes" xml:space="preserve">
           <source>When using the built-in UI, graphs are cached on disk for 60 seconds. If auto-refresh is enabled and the default of 15s is used, the cached graph will be displayed until the 60 seconds have elapsed. If you have higher resolution data coming in and want to bypass the cache, simply append &lt;code&gt;&amp;amp;nocache&lt;/code&gt; to the GUI URL.</source>
-          <target state="translated">組み込みのUIを使用する場合、グラフは60秒間ディスクにキャッシュされます。自動更新が有効で、デフォルトの15秒が使用されている場合、キャッシュされたグラフは60秒が経過するまで表示されます。より高解像度のデータがあり、キャッシュをバイパスしたい場合は、GUI URLに &lt;code&gt;&amp;amp;nocache&lt;/code&gt; を追加するだけです。</target>
+          <target state="translated">組み込みUIを使用する場合、グラフは60秒間ディスクにキャッシュされます。自動更新が有効で、デフォルトの15秒が使用されている場合、キャッシュされたグラフは60秒が経過するまで表示されます。より高解像度のデータがあり、キャッシュをバイパスしたい場合は、GUI URLに &lt;code&gt;&amp;amp;nocache&lt;/code&gt; を追加するだけです。</target>
         </trans-unit>
         <trans-unit id="e1ab6ba7bb84ba6584c2480a222d126dbf0c85ed" translate="yes" xml:space="preserve">
           <source>When writing to the telnet interface, timestamps may optionally be written in the form &lt;code&gt;1364410924.250&lt;/code&gt;, where three digits representing the milliseconds are placed after a period. Timestamps sent to the &lt;code&gt;/api/put&lt;/code&gt; endpoint over HTTP &lt;em&gt;must&lt;/em&gt; be integers and may not have periods. Data with millisecond resolution can only be extracted via the &lt;code&gt;/api/query&lt;/code&gt; endpoint or CLI command at this time. See &lt;code&gt;query/index&lt;/code&gt; for details.</source>
-          <target state="translated">Telnetインターフェースに書き込むとき、タイムスタンプはオプションで &lt;code&gt;1364410924.250&lt;/code&gt; の形式で書き込むことができます。ミリ秒を表す3桁がピリオドの後に配置されます。HTTP経由で &lt;code&gt;/api/put&lt;/code&gt; エンドポイントに送信されるタイムスタンプは整数である&lt;em&gt;必要&lt;/em&gt;があり、ピリオドがない場合があります。現時点では、ミリ秒の解像度のデータは、 &lt;code&gt;/api/query&lt;/code&gt; エンドポイントまたはCLIコマンドを介してのみ抽出できます。詳細については、 &lt;code&gt;query/index&lt;/code&gt; をご覧ください。</target>
+          <target state="translated">Telnetインターフェースに書き込む場合、タイムスタンプはオプションで &lt;code&gt;1364410924.250&lt;/code&gt; の形式で書き込むことができます。ミリ秒を表す3桁がピリオドの後に配置されます。HTTP経由で &lt;code&gt;/api/put&lt;/code&gt; エンドポイントに送信されるタイムスタンプは整数である&lt;em&gt;必要&lt;/em&gt;があり、ピリオドがない場合があります。現時点では、ミリ秒の解像度のデータは、 &lt;code&gt;/api/query&lt;/code&gt; エンドポイントまたはCLIコマンドを介してのみ抽出できます。詳細については、 &lt;code&gt;query/index&lt;/code&gt; をご覧ください。</target>
         </trans-unit>
         <trans-unit id="a6dfed8adaf8fe61a9a599411f87a9d33b813a69" translate="yes" xml:space="preserve">
           <source>When you create a new tree, it will be disabled by default so TSMeta objects will not be processed through the rule set. This is so you have time to configure the rule set and test it to verify that the tree would be built as you expect it to.</source>
@@ -2461,7 +2461,7 @@
         </trans-unit>
         <trans-unit id="2b843fc9afdf09ccda360b4d66a3051b0b5d180a" translate="yes" xml:space="preserve">
           <source>Whether or not TSMeta should be processed through the tree. By default this is set to &lt;code&gt;false&lt;/code&gt; so that you can setup rules and test some objects before building branches.</source>
-          <target state="translated">TSMetaをツリーで処理する必要があるかどうか。デフォルトでは &lt;code&gt;false&lt;/code&gt; に設定されているため、ブランチを構築する前にルールを設定して一部のオブジェクトをテストできます。</target>
+          <target state="translated">TSMetaをツリーで処理する必要があるかどうか。デフォルトでは、これは &lt;code&gt;false&lt;/code&gt; に設定されているため、ブランチを構築する前にルールを設定して一部のオブジェクトをテストできます。</target>
         </trans-unit>
         <trans-unit id="92fb82f13005f01b45888694358987792184c447" translate="yes" xml:space="preserve">
           <source>Whether or not a data point with a new metric will assign a UID to the metric. When false, a data point with a metric that is not in the database will be rejected and an exception will be thrown.</source>
@@ -2485,7 +2485,7 @@
         </trans-unit>
         <trans-unit id="229c50b46a62cd66fb2d49e3cb01e191f0992fcb" translate="yes" xml:space="preserve">
           <source>Whether or not the FQDN should be returned with statistics requests. The default stats are returned with &lt;code&gt;host=&amp;lt;hostname&amp;gt;&lt;/code&gt; which is not guaranteed to perform a lookup and return the FQDN. Setting this to true will perform a name lookup and return the FQDN if found, otherwise it may return the IP. The stats output should be &lt;code&gt;fqdn=&amp;lt;hostname&amp;gt;&lt;/code&gt;</source>
-          <target state="translated">FQDNを統計要求とともに返すかどうか。デフォルトの統計情報は &lt;code&gt;host=&amp;lt;hostname&amp;gt;&lt;/code&gt; で返されますが、これはルックアップを実行してFQDNを返すことが保証されていません。これをtrueに設定すると、名前のルックアップが実行され、見つかった場合はFQDNが返されます。それ以外の場合はIPが返される可能性があります。統計情報の出力は &lt;code&gt;fqdn=&amp;lt;hostname&amp;gt;&lt;/code&gt; である必要があります</target>
+          <target state="translated">FQDNを統計要求とともに返すかどうか。デフォルトの統計情報は &lt;code&gt;host=&amp;lt;hostname&amp;gt;&lt;/code&gt; で返されますが、これはルックアップを実行してFQDNを返すことが保証されていません。これをtrueに設定すると、名前の検索が実行され、見つかった場合はFQDNが返されます。見つからない場合はIPが返される可能性があります。統計出力は &lt;code&gt;fqdn=&amp;lt;hostname&amp;gt;&lt;/code&gt; である必要があります</target>
         </trans-unit>
         <trans-unit id="f2928ab81f443be9b1b71644ec4608e9c573c27d" translate="yes" xml:space="preserve">
           <source>Whether or not the TSD will allow writing data points. Must be either &lt;code&gt;rw&lt;/code&gt; to allow writing data or &lt;code&gt;ro&lt;/code&gt; to block data point writes. Note that meta data such as UIDs can still be written/modified.</source>
@@ -2557,7 +2557,7 @@
         </trans-unit>
         <trans-unit id="f9eb649157c779d2f1be59a4b5e9d01fe3bd5610" translate="yes" xml:space="preserve">
           <source>Whether or not to block storing derived aggregations such as &lt;code&gt;AVG&lt;/code&gt; and &lt;code&gt;DEV&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;AVG&lt;/code&gt; や &lt;code&gt;DEV&lt;/code&gt; などの派生集計の保存をブロックするかどうか。</target>
+          <target state="translated">&lt;code&gt;AVG&lt;/code&gt; や &lt;code&gt;DEV&lt;/code&gt; などの派生集約の保存をブロックするかどうか。</target>
         </trans-unit>
         <trans-unit id="28505634d988f522cda1f2ed1ad967e5bec3a6ef" translate="yes" xml:space="preserve">
           <source>Whether or not to calculate all metrics as rates, i.e. value per second. This is computed before expressions.</source>
@@ -2673,7 +2673,7 @@
         </trans-unit>
         <trans-unit id="f423af18230c493ddbf1d8030b9f7671921abe18" translate="yes" xml:space="preserve">
           <source>Whether or not to return the original sub query with the query results. If the request contains many sub queries then this is a good way to determine which results belong to which sub query. Note that in the case of a &lt;code&gt;*&lt;/code&gt; or wildcard query, this can produce a lot of duplicate output.</source>
-          <target state="translated">クエリ結果とともに元のサブクエリを返すかどうか。リクエストに多くのサブクエリが含まれている場合、これは、どの結果がどのサブクエリに属する​​かを判断するための良い方法です。 &lt;code&gt;*&lt;/code&gt; またはワイルドカードクエリの場合、これは多くの重複出力を生成する可能性があることに注意してください。</target>
+          <target state="translated">クエリ結果とともに元のサブクエリを返すかどうか。リクエストに多くのサブクエリが含まれている場合、これは、どの結果がどのサブクエリに属する​​かを判断するための良い方法です。 &lt;code&gt;*&lt;/code&gt; またはワイルドカードクエリの場合、これにより多くの重複出力が生成される可能性があることに注意してください。</target>
         </trans-unit>
         <trans-unit id="005924bdd11a48040101cd50d8b7adc3aca9363c" translate="yes" xml:space="preserve">
           <source>Whether or not to return the stack trace with an API query response when an exception occurs.</source>
@@ -2729,7 +2729,7 @@
         </trans-unit>
         <trans-unit id="718d9b6c2ad7a30de4003fe0108a891c8d098cd2" translate="yes" xml:space="preserve">
           <source>While rollups help with wide time span queries, you can still run into query performance issues with small ranges if the metric has high cardinality (i.e. the unique number of time series for the given metric). In the example above, we have 4 web servers. But lets say that we have 10,000 servers. Fetching the sum or average of interface traffic may be fairly slow. If users are often fetching the group by (or some think of it as the spatial aggregate) of large sets like this then it makes sense to store the aggregate and query that instead, fetching &lt;em&gt;much&lt;/em&gt; less data.</source>
-          <target state="translated">ロールアップは幅広いタイムスパンクエリに役立ちますが、メトリックの基数（特定のメトリックの一意の時系列の数）が高い場合は、範囲が狭いクエリのパフォーマンスの問題が発生する可能性があります。上記の例では、4つのWebサーバーがあります。しかし、10,000台のサーバーがあるとします。インターフェーストラフィックの合計または平均の取得は、かなり遅い場合があります。ユーザーが頻繁にして、グループを取得している（またはいくつかは、空間集計と考える）、このような大規模なセットの場合、それはフェッチ、その代わりに集計し、クエリを保存することは理にかなって&lt;em&gt;ずっと&lt;/em&gt;少ないデータを。</target>
+          <target state="translated">ロールアップは幅広い期間のクエリに役立ちますが、メトリックの基数（特定のメトリックの一意の時系列の数）が高い場合は、範囲が狭いクエリのパフォーマンスの問題が発生する可能性があります。上記の例では、4つのWebサーバーがあります。しかし、10,000台のサーバーがあるとします。インターフェーストラフィックの合計または平均の取得は、かなり遅い場合があります。ユーザーがこのように大きなセットのグループ（または空間集合と考える人）を頻繁にフェッチする場合は、集合を保存してクエリを実行する方が、&lt;em&gt;はるかに&lt;/em&gt;少ないデータをフェッチするのに意味があります。</target>
         </trans-unit>
         <trans-unit id="37ddfa18dd5d13220375399a26cf79d75d8f65b2" translate="yes" xml:space="preserve">
           <source>While stream processing is better you still have problems to deal with such as:</source>
@@ -2745,7 +2745,7 @@
         </trans-unit>
         <trans-unit id="47574020ba368affa36deadb89be0ec866451049" translate="yes" xml:space="preserve">
           <source>While the tagging system is flexible, some problems can arise if you don't understand the querying side of OpenTSDB, hence the need for some forethought. Take the example query above: &lt;code&gt;sum:sys.cpu.user{host=webserver01}&lt;/code&gt;. We recorded 64 unique time series for &lt;code&gt;webserver01&lt;/code&gt;, one time series for each of the CPU cores. When we issued that query, all of the time series for metric &lt;code&gt;sys.cpu.user&lt;/code&gt; with the tag &lt;code&gt;host=webserver01&lt;/code&gt; were retrieved, averaged, and returned as one series of numbers. Let's say the resulting average was &lt;code&gt;50&lt;/code&gt; for timestamp &lt;code&gt;1356998400&lt;/code&gt;. Now we were migrating from another system to OpenTSDB and had a process that pre-aggregated all 64 cores so that we could quickly get the average value and simply wrote a new time series &lt;code&gt;sys.cpu.user host=webserver01&lt;/code&gt;. If we run the same query, we'll get a value of &lt;code&gt;100&lt;/code&gt; at &lt;code&gt;1356998400&lt;/code&gt;. What happened? OpenTSDB aggregated all 64 time series &lt;em&gt;and&lt;/em&gt; the pre-aggregated time series to get to that 100. In storage, we would have something like this:</source>
-          <target state="translated">タグ付けシステムは柔軟ですが、OpenTSDBのクエリ側を理解していない場合、いくつかの問題が発生する可能性があるため、いくつかの事前の検討が必要です。上記のクエリ例： &lt;code&gt;sum:sys.cpu.user{host=webserver01}&lt;/code&gt; 。 &lt;code&gt;webserver01&lt;/code&gt; の 64の一意の時系列を記録しました。各CPUコアに1つの時系列です。このクエリを発行すると、タグが &lt;code&gt;host=webserver01&lt;/code&gt; であるメトリック &lt;code&gt;sys.cpu.user&lt;/code&gt; のすべての時系列が取得され、平均化され、一連の数値として返されました。タイムスタンプ &lt;code&gt;1356998400&lt;/code&gt; の結果の平均が &lt;code&gt;50&lt;/code&gt; だったとします。。現在、別のシステムからOpenTSDBに移行しており、64個のコアすべてを事前に集約するプロセスがあったため、平均値をすばやく取得し、新しい時系列 &lt;code&gt;sys.cpu.user host=webserver01&lt;/code&gt; を書き込むだけで済みました。同じクエリを実行すると、 &lt;code&gt;1356998400&lt;/code&gt; の値が &lt;code&gt;100&lt;/code&gt; になります。どうした？ OpenTSDBは、すべての64の時系列&lt;em&gt;と&lt;/em&gt;事前に集計された時系列を集計して100にしました。ストレージでは、次のようになります。</target>
+          <target state="translated">タグ付けシステムは柔軟性がありますが、OpenTSDBのクエリ側を理解していない場合、いくつかの問題が発生する可能性があるため、いくつかの先見性が必要です。上記のクエリの例を見てみましょう： &lt;code&gt;sum:sys.cpu.user{host=webserver01}&lt;/code&gt; 。 &lt;code&gt;webserver01&lt;/code&gt; の 64の一意の時系列を記録しました。各CPUコアに1つの時系列です。このクエリを発行すると、タグが &lt;code&gt;host=webserver01&lt;/code&gt; であるメトリック &lt;code&gt;sys.cpu.user&lt;/code&gt; のすべての時系列が取得され、平均化され、一連の数値として返されました。タイムスタンプ &lt;code&gt;1356998400&lt;/code&gt; の結果の平均が &lt;code&gt;50&lt;/code&gt; だったとしましょう。現在、別のシステムからOpenTSDBに移行しており、64コアすべてを事前に集約するプロセスがあったため、平均値をすばやく取得して、新しい時系列 &lt;code&gt;sys.cpu.user host=webserver01&lt;/code&gt; を書き込むだけで済みました。同じクエリを実行すると、 &lt;code&gt;1356998400&lt;/code&gt; の値が &lt;code&gt;100&lt;/code&gt; になります。どうした？ OpenTSDBは、すべての64の時系列&lt;em&gt;と&lt;/em&gt;事前に集計された時系列を集計して100にしました。ストレージでは、次のようになります。</target>
         </trans-unit>
         <trans-unit id="d249938ceaef496a889ce10e60cbd877db410ee3" translate="yes" xml:space="preserve">
           <source>While this TSUID format may be long and ugly, particularly with all of the 0s for early UIDs, there are a few reasons why this is useful:</source>
@@ -2753,7 +2753,7 @@
         </trans-unit>
         <trans-unit id="e87a2f2ff276e3bf5b63a6eafc384f15bc2def2b" translate="yes" xml:space="preserve">
           <source>While you can start a 2.3 TSD with the same command line options as a 1.0 TSD, we highly recommend that you create a configuration file based on the config included at &lt;code&gt;./src/opentsdb.conf&lt;/code&gt;. Or if you install from a package, you'll want to edit the included default config. The config file includes many more options than are accessible via command line and the file is shared with CLI tools. See &lt;a href=&quot;user_guide/configuration&quot;&gt;&lt;em&gt;Configuration&lt;/em&gt;&lt;/a&gt; for details.</source>
-          <target state="translated">1.0 TSDと同じコマンドラインオプションで2.3 TSDを起動できますが、. &lt;code&gt;./src/opentsdb.conf&lt;/code&gt; 含まれている構成に基づいて構成ファイルを作成することを強くお勧めします。または、パッケージからインストールする場合は、含まれているデフォルト設定を編集する必要があります。構成ファイルには、コマンドラインからアクセスできるよりも多くのオプションが含まれており、ファイルはCLIツールと共有されます。詳細については、&lt;a href=&quot;user_guide/configuration&quot;&gt;&lt;em&gt;設定&lt;/em&gt;&lt;/a&gt;を参照してください。</target>
+          <target state="translated">1.0 TSDと同じコマンドラインオプションで2.3 TSDを開始できますが、. &lt;code&gt;./src/opentsdb.conf&lt;/code&gt; 含まれている構成に基づいて構成ファイルを作成することを強くお勧めします。または、パッケージからインストールする場合は、含まれているデフォルトの設定を編集する必要があります。構成ファイルには、コマンドラインからアクセスできるオプションよりも多くのオプションが含まれており、ファイルはCLIツールと共有されます。詳細については、&lt;a href=&quot;user_guide/configuration&quot;&gt;&lt;em&gt;設定&lt;/em&gt;&lt;/a&gt;を参照してください。</target>
         </trans-unit>
         <trans-unit id="4cc94a04e3a2538b6d0a9fdef7b1ad136c720128" translate="yes" xml:space="preserve">
           <source>Why UIDs?</source>
@@ -2789,7 +2789,7 @@
         </trans-unit>
         <trans-unit id="e318cf17acebae19ff4970ab4d4e46dc0314d224" translate="yes" xml:space="preserve">
           <source>With rollups enabled, if you plan to use pre-aggregates, you may want to help differentiate raw data from pre-aggregates by having TSDB automatically inject &lt;code&gt;_aggregate=RAW&lt;/code&gt;. Just configure the &lt;code&gt;tsd.rollups.tag_raw&lt;/code&gt; setting to true.</source>
-          <target state="translated">ロールアップを有効にして、事前集計を使用する予定がある場合は、 &lt;code&gt;_aggregate=RAW&lt;/code&gt; 自動的に挿入させることで、生データを事前集計と区別することができます。ただ、設定 &lt;code&gt;tsd.rollups.tag_raw&lt;/code&gt; の trueに設定します。</target>
+          <target state="translated">ロールアップを有効にして、事前集計を使用する場合は、 &lt;code&gt;_aggregate=RAW&lt;/code&gt; 自動的に挿入させることで、生データと事前集計を区別することができます。ただ、設定 &lt;code&gt;tsd.rollups.tag_raw&lt;/code&gt; の trueに設定します。</target>
         </trans-unit>
         <trans-unit id="90eedcfc697b3778decfae88e385efd2b06b8863" translate="yes" xml:space="preserve">
           <source>With salting enabled (as of OpenTSDB 2.2) the first byte (or bytes) are a hashed salt ID to better distribute data across multiple regions and/or region servers.</source>
@@ -2805,11 +2805,11 @@
         </trans-unit>
         <trans-unit id="2ebd0430bc98cecc73400fb01b504ac62bb5b0a6" translate="yes" xml:space="preserve">
           <source>With the union operator the expression will add the &lt;code&gt;web01&lt;/code&gt; and &lt;code&gt;web02&lt;/code&gt; series but for metric &quot;b&quot;, it will substitute the metric's fill policy value for the results.</source>
-          <target state="translated">結合演算子を使用すると、式は &lt;code&gt;web01&lt;/code&gt; および &lt;code&gt;web02&lt;/code&gt; シリーズを追加しますが、メトリック「b」の場合、結果のメトリックのフィルポリシー値を置き換えます。</target>
+          <target state="translated">結合演算子を使用すると、式は &lt;code&gt;web01&lt;/code&gt; および &lt;code&gt;web02&lt;/code&gt; シリーズを追加しますが、メトリック「b」の場合は、結果のメトリックのフィルポリシー値を置き換えます。</target>
         </trans-unit>
         <trans-unit id="9c8346b62154dfe300e2d43246c28cafd072a8a2" translate="yes" xml:space="preserve">
           <source>With version 2.2 a downsampling query can emit a &lt;code&gt;NaN&lt;/code&gt; or &lt;code&gt;null&lt;/code&gt; when a downsample bucket is missing a value for all of the series involved. Because OpenTSDB does not allow for storing literal NaNs at this time, nor does it impose specific intervals on storage, this can be used to mimic systems that do such as RRDs.</source>
-          <target state="translated">バージョン2.2では、ダウンサンプルバケットに関連するすべての系列の値がない場合、ダウンサンプリングクエリは &lt;code&gt;NaN&lt;/code&gt; または &lt;code&gt;null&lt;/code&gt; を生成できます。OpenTSDBは現時点ではリテラルNaNの保存を許可しておらず、ストレージに特定の間隔を課すこともないため、これを使用してRRDなどを実行するシステムを模倣できます。</target>
+          <target state="translated">バージョン2.2では、ダウンサンプルバケットに関連するすべての系列の値が欠落している場合、ダウンサンプリングクエリは &lt;code&gt;NaN&lt;/code&gt; または &lt;code&gt;null&lt;/code&gt; を生成できます。OpenTSDBは現時点ではリテラルNaNの保存を許可しておらず、特定の間隔をストレージに課すこともないため、これを使用してRRDなどのシステムを模倣できます。</target>
         </trans-unit>
         <trans-unit id="038a325537f7eb1e3aeda1b73f395c496d495cc4" translate="yes" xml:space="preserve">
           <source>With version 2.2 of OpenTSDB a number of details are now available around queries as we focus on improving flexibility and performance. Query details include who made the request (via headers and socket), what the response was (HTTP status codes and/or exceptions) and timing around the various processes the TSD takes.</source>
@@ -2821,7 +2821,7 @@
         </trans-unit>
         <trans-unit id="8de545dec559f7f886f3804870f7b22fa9755080" translate="yes" xml:space="preserve">
           <source>With version 2.2 you can specify a fill policy when downsampling to substitute values for use in cross-series aggregations when data points are &quot;missing&quot;. Because OpenTSDB does not impose constraints on time alignment or when values are supposed to exist, such constraints must be specified at query time. At serialization time, if all series are missing values for an expected timestamp, nothing is emitted. For example, if a series is writing data every minute from T0 to T4, but for some reason the source fails to write data at T3, only 4 values will be serialized when the user may expect 5. With fill policies you can now choose what value is emitted for T3.</source>
-          <target state="translated">バージョン2.2では、データ・ポイントが &quot;欠落 &quot;している場合に、クロス・シリーズ集計で使用する値を代用するためにダウンサンプリングを行う際に、フィル・ポリシーを指定することができます。OpenTSDBは、時間的な整合性や値が存在すると想定されるときに制約を課さないので、そのような制約は問い合わせ時に指定しなければなりません。シリアライズ時に、すべての系列が期待されるタイムスタンプの値が欠落している場合、何も出力されません。例えば、ある系列がT0からT4まで毎分ごとにデータを書き込んでいるが、何らかの理由でソースがT3でデータの書き込みに失敗した場合、ユーザが5を期待しているのに4つの値だけがシリアライズされます。塗りつぶしポリシーでは、T3でどの値をエミットするかを選択できるようになりました。</target>
+          <target state="translated">バージョン2.2では、データ・ポイントが &quot;欠落 &quot;している場合に、クロス・シリーズ集計で使用する値を代用するためにダウンサンプリングを行う際に、フィル・ポリシーを指定することができます。OpenTSDBは、時間的な整合性や値が存在すると想定されるときに制約を課さないので、そのような制約は問い合わせ時に指定しなければなりません。シリアライズ時に、すべての系列が期待されるタイムスタンプの値が欠落している場合、何も出力されません。例えば、ある系列がT0からT4まで毎分ごとにデータを書き込んでいるが、何らかの理由でソースがT3でデータの書き込みに失敗した場合、ユーザが5を期待しているのに4つの値だけがシリアライズされます。fillポリシーを使用すると、T3でどの値をエミットするかを選択できるようになりました。</target>
         </trans-unit>
         <trans-unit id="8d32239ddee6f91af4ef59471d1f00eb8a41b814" translate="yes" xml:space="preserve">
           <source>With version 2.2, a checkbox to the right of each pair of check boxes is used to determine if the results should be grouped by the tag filter (checked) or aggregated (unchecked). The boxes are checked by default to exhibit the behavior of TSD prior to 2.2.</source>
@@ -2865,7 +2865,7 @@
         </trans-unit>
         <trans-unit id="8f02859565ff731f647fdc8f9ed8924ec5f29579" translate="yes" xml:space="preserve">
           <source>Writing data points in OpenTSDB is generally idempotent within an hour of the original write. This means you can write the value &lt;code&gt;42&lt;/code&gt; at timestamp &lt;code&gt;1356998400&lt;/code&gt; and then write &lt;code&gt;42&lt;/code&gt; again for the same time and nothing bad will happen. However if you have compactions enabled to reduce storage consumption and write the same data point after the row of data has been compacted, an exception may be returned when you query over that row. If you attempt to write two different values with the same timestamp, a duplicate data point exception may be thrown during query time. This is due to a difference in encoding integers on 1, 2, 4 or 8 bytes and floating point numbers. If the first value was an integer and the second a floating point, the duplicate error will always be thrown. However if both values were floats or they were both integers that could be encoded on the same length, then the original value may be overwritten if a compaction has not occurred on the row.</source>
-          <target state="translated">OpenTSDBでのデータポイントの書き込みは、通常、元の書き込みから1時間以内にべき等です。この手段あなたは価値書くことができる &lt;code&gt;42&lt;/code&gt; のタイムスタンプで &lt;code&gt;1356998400&lt;/code&gt; 、その後、書き込み &lt;code&gt;42&lt;/code&gt; 再び同じ時間のために、悪いことは何も起こりません。ただし、圧縮を有効にしてストレージの消費を減らし、データの行が圧縮された後に同じデータポイントを書き込むと、その行に対してクエリを実行すると例外が返される場合があります。同じタイムスタンプで2つの異なる値を書き込もうとすると、クエリ中に重複データポイント例外がスローされることがあります。これは、1、2、4、または8バイトの整数のエンコードと浮動小数点数の違いによるものです。最初の値が整数で、2番目の値が浮動小数点の場合、重複エラーは常にスローされます。ただし、両方の値が浮動小数点数であるか、両方とも同じ長さでエンコードできる整数である場合、行で圧縮が行われていないと元の値が上書きされる可能性があります。</target>
+          <target state="translated">OpenTSDBでのデータポイントの書き込みは、通常、元の書き込みから1時間以内にべき等です。この手段あなたは価値書くことができる &lt;code&gt;42&lt;/code&gt; のタイムスタンプで &lt;code&gt;1356998400&lt;/code&gt; 、その後、書き込み &lt;code&gt;42&lt;/code&gt; 再び同じ時間のために、何も悪いことが起こりません。ただし、圧縮を有効にしてストレージの消費を減らし、データの行が圧縮された後に同じデータポイントを書き込むと、その行に対してクエリを実行すると例外が返される場合があります。同じタイムスタンプで2つの異なる値を書き込もうとすると、クエリ中に重複データポイント例外がスローされる場合があります。これは、1、2、4、または8バイトの整数のエンコードと浮動小数点数の違いによるものです。最初の値が整数で、2番目の値が浮動小数点の場合、重複エラーは常にスローされます。ただし、両方の値が浮動小数点数であるか、両方とも同じ長さでエンコードできる整数である場合、行で圧縮が行われていないと元の値が上書きされる可能性があります。</target>
         </trans-unit>
         <trans-unit id="c032adc1ff629c9b66f22749ad667e6beadf144b" translate="yes" xml:space="preserve">
           <source>X</source>
@@ -2889,7 +2889,7 @@
         </trans-unit>
         <trans-unit id="191d8640c33bf1180997cdddc16068c5b686a8dd" translate="yes" xml:space="preserve">
           <source>You can generate a Debian package by calling &lt;code&gt;sh build.sh debian&lt;/code&gt;. The package will be located at &lt;code&gt;./build/opentsdb-2.x.x/opentsdb-2.x.x_all.deb&lt;/code&gt;. Then simply distribute the package and install it as you regularly would. For example &lt;code&gt;dpkg -i opentsdb-2.0.0_all.deb&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;sh build.sh debian&lt;/code&gt; を呼び出すことにより、Debianパッケージを生成できます。パッケージは &lt;code&gt;./build/opentsdb-2.x.x/opentsdb-2.x.x_all.deb&lt;/code&gt; ます。次に、パッケージを配布して、通常どおりにインストールします。たとえば、 &lt;code&gt;dpkg -i opentsdb-2.0.0_all.deb&lt;/code&gt; です。</target>
+          <target state="translated">&lt;code&gt;sh build.sh debian&lt;/code&gt; を呼び出すことにより、Debianパッケージを生成できます。パッケージは &lt;code&gt;./build/opentsdb-2.x.x/opentsdb-2.x.x_all.deb&lt;/code&gt; ます。次に、通常どおりパッケージを配布してインストールします。たとえば、 &lt;code&gt;dpkg -i opentsdb-2.0.0_all.deb&lt;/code&gt; です。</target>
         </trans-unit>
         <trans-unit id="5814ba67dfcc6e44a26311a01e14487c47c9db2b" translate="yes" xml:space="preserve">
           <source>You can have more than one implementation of the same abstract class in one JAR and in this file. NOTE: If you have widely different implementations, start a different project and JAR. E.g. if you implement a search plugin for ElasticSearch and another for Solr, put Solr in a different project. However if you have two implementations that are very similar but slightly different, you can create one project. For example you could write an ElasticSearch plugin that uses HTTP for a protocol and another that uses Thrift. In that case, you could have a file like:</source>
@@ -2909,7 +2909,7 @@
         </trans-unit>
         <trans-unit id="3c57b11eea5e4730f4f4c23765201429fc61deee" translate="yes" xml:space="preserve">
           <source>You do not have to upgrade all of your TSDs to 2.3 at the same time. Some users upgrade their read-only TSDs first to gain access to the full HTTP API and test the new features. Later on you can upgrade the write-only TSDs at leisure. You can also perform a rolling upgrade without issues. Simply stop traffic to one TSD, upgrade it, restore traffic, and continue on until you have upgraded all of your TSDs.</source>
-          <target state="translated">すべての TSD を同時に 2.3 にアップグレードする必要はありません。一部のユーザーは、完全な HTTP API へのアクセスを得て新機能をテストするために、最初に読み取り専用の TSD をアップグレードします。その後、書き込み専用の TSD を自由にアップグレードすることができます。また、問題なくローリングアップグレードを実行することもできます。1つのTSDへのトラフィックを停止し、それをアップグレードしてトラフィックを復元し、すべてのTSDをアップグレードするまで続けるだけです。</target>
+          <target state="translated">すべての TSD を同時に 2.3 にアップグレードする必要はありません。一部のユーザーは、完全な HTTP API にアクセスして新機能をテストするために、最初に読み取り専用の TSD をアップグレードします。その後、書き込み専用の TSD を自由にアップグレードすることができます。また、問題なくローリングアップグレードを実行することもできます。1つのTSDへのトラフィックを停止し、それをアップグレードしてトラフィックを復元し、すべてのTSDをアップグレードするまで続けるだけです。</target>
         </trans-unit>
         <trans-unit id="0ef56348bf8327f3e140ddb8c003ee282b7d9138" translate="yes" xml:space="preserve">
           <source>You don't have to embed all of this code in every collector you write</source>
@@ -2945,7 +2945,7 @@
         </trans-unit>
         <trans-unit id="19c3ada727198ca05a3eb567b57355809f064c18" translate="yes" xml:space="preserve">
           <source>You will want to make sure you set the status to PENDING or some other non-ready state in your service discovery system when this is called. TSDB has not been initialized yet at this point.</source>
-          <target state="translated">これが呼び出されたときには、サービス・ディスカバリー・システムのステータスを PENDING またはその他の非レディ状態に設定しておく必要があります。この時点では、TSDB はまだ初期化されていません。</target>
+          <target state="translated">これが呼び出されたときに、サービス・ディスカバリー・システムのステータスを PENDING またはその他の非レディ状態に設定することを確認する必要があります。この時点では、TSDB はまだ初期化されていません。</target>
         </trans-unit>
         <trans-unit id="26553997c4ead536b7bf0c4987caca36fc51a4a2" translate="yes" xml:space="preserve">
           <source>You'll likely spend a lot of time in this area since there are a number of options to play with. You'll likely want to start by choosing one or more metrics and tags to graph.</source>
@@ -2977,7 +2977,7 @@
         </trans-unit>
         <trans-unit id="cdcd5c9a3a475f2298b5ee3f4258f8207ba10879" translate="yes" xml:space="preserve">
           <source>[ ]</source>
-          <target state="translated">[ ]</target>
+          <target state="translated">[]</target>
         </trans-unit>
         <trans-unit id="c9257f8fd31ea852baf734ef06d37348bf6e8cb2" translate="yes" xml:space="preserve">
           <source>\.</source>
@@ -3705,7 +3705,7 @@
         </trans-unit>
         <trans-unit id="356f93e02f0fb61e3f15b3d83c11f15ee0ee22ed" translate="yes" xml:space="preserve">
           <source>if you're using Varnish 2.x (which is not recommended as we would strongly encourage you to migrate to 3.x) you have to replace each function call &lt;code&gt;hash_data(foo);&lt;/code&gt; to set &lt;code&gt;req.hash += foo;&lt;/code&gt; in the VCL configuration above.</source>
-          <target state="translated">Varnish 2.xを使用している場合（3.xに移行することを強くお勧めするためお勧めしません &lt;code&gt;hash_data(foo);&lt;/code&gt; 呼び出す各関数を置き換える必要があります。 &lt;code&gt;req.hash += foo;&lt;/code&gt; を設定します。上記のVCL構成で。</target>
+          <target state="translated">Varnish 2.xを使用している場合（3.xへの移行を強くお勧めしますのでお勧めしません）、各関数呼び出し &lt;code&gt;hash_data(foo);&lt;/code&gt; を置き換える必要があります。 &lt;code&gt;req.hash += foo;&lt;/code&gt; を設定します。上記のVCL構成で。</target>
         </trans-unit>
         <trans-unit id="e96f1994da3bd2b91b5d51333f4de7ae8bdcae2f" translate="yes" xml:space="preserve">
           <source>ilteral_or</source>
@@ -3821,7 +3821,7 @@
         </trans-unit>
         <trans-unit id="0b60224608c449f1f90ee4a4a046395ed573e4db" translate="yes" xml:space="preserve">
           <source>m or tsuids</source>
-          <target state="translated">mまたはtsuids</target>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="688b30bc8e5317bcb6b8ecc957e2a49a0d5d09ba" translate="yes" xml:space="preserve">
           <source>making sure to end with a blank line. You can add more manifest information if you like. This is the bare minimum to satisfy plugin requirements.</source>
@@ -3889,7 +3889,7 @@
         </trans-unit>
         <trans-unit id="3c70a6e31e734ee672eb72958df26f0b333ec349" translate="yes" xml:space="preserve">
           <source>metric - A generic name for the time series such as &lt;code&gt;sys.cpu.user&lt;/code&gt;, &lt;code&gt;stock.quote&lt;/code&gt; or &lt;code&gt;env.probe.temp&lt;/code&gt;.</source>
-          <target state="translated">metric- &lt;code&gt;sys.cpu.user&lt;/code&gt; 、 &lt;code&gt;stock.quote&lt;/code&gt; または &lt;code&gt;env.probe.temp&lt;/code&gt; などの時系列の総称名。</target>
+          <target state="translated">metric- &lt;code&gt;sys.cpu.user&lt;/code&gt; 、 &lt;code&gt;stock.quote&lt;/code&gt; 、または &lt;code&gt;env.probe.temp&lt;/code&gt; などの時系列の総称名。</target>
         </trans-unit>
         <trans-unit id="966b9734015a6d617d09dae170c907a100bded72" translate="yes" xml:space="preserve">
           <source>metrics</source>
@@ -3913,7 +3913,7 @@
         </trans-unit>
         <trans-unit id="efb18431a18389a54ddf17a8d29ca0791f70a869" translate="yes" xml:space="preserve">
           <source>mkmetric is a shortcut to the &lt;code&gt;uid assign metrics &amp;lt;metric&amp;gt;&lt;/code&gt; command where you can provide multiple metric names in a single call and UIDs will be assigned or retrieved. If any of the metrics already exist, the assigned UID will be returned.</source>
-          <target state="translated">mkmetricは、 &lt;code&gt;uid assign metrics &amp;lt;metric&amp;gt;&lt;/code&gt; コマンドへのショートカットであり、1回の呼び出しで複数のメトリック名を指定でき、UIDが割り当てられるか取得されます。いずれかのメトリックがすでに存在する場合、割り当てられたUIDが返されます。</target>
+          <target state="translated">mkmetricは &lt;code&gt;uid assign metrics &amp;lt;metric&amp;gt;&lt;/code&gt; コマンドへのショートカットであり、1回の呼び出しで複数のメトリック名を指定でき、UIDが割り当てまたは取得されます。いずれかのメトリックがすでに存在する場合、割り当てられたUIDが返されます。</target>
         </trans-unit>
         <trans-unit id="550a7fbb732ca9ce1311fcfed266ec219b3a5522" translate="yes" xml:space="preserve">
           <source>movingAverage(&amp;lt;metric&amp;gt;,&amp;lt;window&amp;gt;)</source>

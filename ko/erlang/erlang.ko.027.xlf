@@ -21,7 +21,7 @@
         </trans-unit>
         <trans-unit id="49be17db74793f1d077ffb7705e384f45c7aefa2" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;NULL&lt;/code&gt; on failure. The driver creating the condition variable is responsible for destroying it before the driver is unloaded.</source>
-          <target state="translated">실패시 &lt;code&gt;NULL&lt;/code&gt; 을 반환 합니다 . 조건 변수를 작성하는 드라이버는 드라이버를 언로드하기 전에 해당 변수를 파기합니다.</target>
+          <target state="translated">실패시 &lt;code&gt;NULL&lt;/code&gt; 을 반환 합니다 . 조건 변수를 작성하는 드라이버는 드라이버가 언로드되기 전에이를 삭제해야합니다.</target>
         </trans-unit>
         <trans-unit id="937b4794e9be59fe2f147650d05de628193f942d" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;NULL&lt;/code&gt; on failure. The driver creating the mutex is responsible for destroying it before the driver is unloaded.</source>
@@ -29,7 +29,7 @@
         </trans-unit>
         <trans-unit id="cec702d09808b85ca08cf2b39664374ef0969b8a" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;NULL&lt;/code&gt; on failure. The driver creating the rwlock is responsible for destroying it before the driver is unloaded.</source>
-          <target state="translated">실패시 &lt;code&gt;NULL&lt;/code&gt; 을 반환 합니다 . rwlock을 작성하는 드라이버는 드라이버를 언로드하기 전에이를 제거해야합니다.</target>
+          <target state="translated">실패시 &lt;code&gt;NULL&lt;/code&gt; 을 반환 합니다 . rwlock을 작성하는 드라이버는 드라이버가 언로드되기 전에이를 제거해야합니다.</target>
         </trans-unit>
         <trans-unit id="0626500e7d2a0eb8476d43e16b322a5cb66fadf1" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;Ordset1&lt;/code&gt;, but with &lt;code&gt;Element&lt;/code&gt; removed.</source>
@@ -61,7 +61,7 @@
         </trans-unit>
         <trans-unit id="bb3dd123747a0645f03c4de32a039d3112fcda94" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;error&lt;/code&gt; if no value is associated with &lt;code&gt;Flag&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;Flag&lt;/code&gt; 와 관련된 값이 없으면 &lt;code&gt;error&lt;/code&gt; 반환 합니다 .</target>
+          <target state="translated">&lt;code&gt;Flag&lt;/code&gt; 와 연관된 값이 없으면 &lt;code&gt;error&lt;/code&gt; 반환 합니다 .</target>
         </trans-unit>
         <trans-unit id="411d4f907069d8528c128c3cd767fafa24214c79" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;false&lt;/code&gt; if the &lt;code&gt;NameDb&lt;/code&gt; argument is incorrectly specified, &lt;code&gt;true&lt;/code&gt; otherwise.</source>
@@ -193,7 +193,7 @@
         </trans-unit>
         <trans-unit id="e68f0cec59ffbda9b9db2dbb06457ab5986ed71b" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;true&lt;/code&gt; if &lt;code&gt;Module&lt;/code&gt; is the name of a module that has been loaded from a sticky directory (in other words: an attempt to reload the module will fail), or &lt;code&gt;false&lt;/code&gt; if &lt;code&gt;Module&lt;/code&gt; is not a loaded module or is not sticky.</source>
-          <target state="translated">&lt;code&gt;Module&lt;/code&gt; 이 고정 디렉토리에서로드 된 모듈의 이름 인 경우 &lt;code&gt;true&lt;/code&gt; 를 리턴 하고 (즉, 모듈을 다시로드하려는 시도가 실패 함) &lt;code&gt;Module&lt;/code&gt; 이로 드 된 모듈이 아니거나 sticky가 아닌 경우 &lt;code&gt;false&lt;/code&gt; 를 리턴 합니다 .</target>
+          <target state="translated">반환 &lt;code&gt;true&lt;/code&gt; 경우 &lt;code&gt;Module&lt;/code&gt; (즉 : 실패합니다 모듈 다시 시도) 끈적 디렉토리에서로드 된 모듈의 이름, 또는 &lt;code&gt;false&lt;/code&gt; 경우 &lt;code&gt;Module&lt;/code&gt; 로드 된 모듈이 아니거나 끈적하지가.</target>
         </trans-unit>
         <trans-unit id="2e1c4acf2c3a75e93880e515b45e3ccdd37267e9" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;true&lt;/code&gt; if &lt;code&gt;Name/Arity&lt;/code&gt; is a valid Erlang type test, otherwise &lt;code&gt;false&lt;/code&gt;.</source>
@@ -245,7 +245,7 @@
         </trans-unit>
         <trans-unit id="62601fd5548cdaeb0b7711f3bd66399330201fec" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;true&lt;/code&gt; if &lt;code&gt;Node&lt;/code&gt; is a syntax tree representing a so-called &quot;source code form&quot;, otherwise &lt;code&gt;false&lt;/code&gt;. Forms are the Erlang source code units which, placed in sequence, constitute an Erlang program. Current form types are:</source>
-          <target state="translated">&lt;code&gt;Node&lt;/code&gt; 가 소위 &quot;소스 코드 형식&quot;을 나타내는 구문 트리 인 경우 &lt;code&gt;true&lt;/code&gt; 를 리턴 하고 , 그렇지 않으면 &lt;code&gt;false&lt;/code&gt; 를 리턴 합니다 . 형식은 순서대로 배치 된 Erlang 프로그램을 구성하는 Erlang 소스 코드 단위입니다. 현재 양식 유형은 다음과 같습니다.</target>
+          <target state="translated">반환 &lt;code&gt;true&lt;/code&gt; 경우 &lt;code&gt;Node&lt;/code&gt; 소위 &quot;소스 코드 형태&quot;를 나타내는 구문 트리, 그렇지 않으면입니다 &lt;code&gt;false&lt;/code&gt; . 폼은 순서대로 배치 된 Erlang 프로그램을 구성하는 Erlang 소스 코드 단위입니다. 현재 양식 유형은 다음과 같습니다.</target>
         </trans-unit>
         <trans-unit id="ccef43656005918320a2c2bdb3afafde49f0b615" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;true&lt;/code&gt; if &lt;code&gt;Node&lt;/code&gt; represents a literal term, otherwise &lt;code&gt;false&lt;/code&gt;. This function returns &lt;code&gt;true&lt;/code&gt; if and only if the value of &lt;code&gt;concrete(Node)&lt;/code&gt; is defined.</source>
@@ -305,7 +305,7 @@
         </trans-unit>
         <trans-unit id="e25745d5f902181635eea33218893a7e8f99b775" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;true&lt;/code&gt; if &lt;code&gt;Set1&lt;/code&gt; and &lt;code&gt;Set2&lt;/code&gt; are disjoint (have no elements in common), otherwise &lt;code&gt;false&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;Set1&lt;/code&gt; 과 &lt;code&gt;Set2&lt;/code&gt; 가 분리되어 있으면 (공통 요소가 없음) &lt;code&gt;true&lt;/code&gt; 를 반환 하고 , 그렇지 않으면 &lt;code&gt;false&lt;/code&gt; 를 반환 합니다.</target>
+          <target state="translated">&lt;code&gt;Set1&lt;/code&gt; 과 &lt;code&gt;Set2&lt;/code&gt; 가 분리되어 있으면 (공통 요소가없는 경우) &lt;code&gt;true&lt;/code&gt; 를 반환 하고 , 그렇지 않으면 &lt;code&gt;false&lt;/code&gt; 를 반환 합니다.</target>
         </trans-unit>
         <trans-unit id="80ddd66b34cce3545670a29d307e9b78c7ba414d" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;true&lt;/code&gt; if &lt;code&gt;Set1&lt;/code&gt; is a &lt;code&gt;&lt;a href=&quot;#subset&quot;&gt;subset&lt;/a&gt;&lt;/code&gt; of &lt;code&gt;Set2&lt;/code&gt;, otherwise &lt;code&gt;false&lt;/code&gt;.</source>
@@ -425,7 +425,7 @@
         </trans-unit>
         <trans-unit id="6299d291293abd2a3887c9bc8071223e7ac78b69" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;true&lt;/code&gt; if &lt;code&gt;Term&lt;/code&gt; is the atom &lt;code&gt;true&lt;/code&gt; or the atom &lt;code&gt;false&lt;/code&gt; (that is, a boolean). Otherwise returns &lt;code&gt;false&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;Term&lt;/code&gt; 이 원자 &lt;code&gt;true&lt;/code&gt; 또는 원자 &lt;code&gt;false&lt;/code&gt; 인 경우 &lt;code&gt;true&lt;/code&gt; 를 리턴 합니다 (즉, 부울). 그렇지 않으면 &lt;code&gt;false&lt;/code&gt; 를 반환합니다 .</target>
+          <target state="translated">반환 &lt;code&gt;true&lt;/code&gt; 경우 &lt;code&gt;Term&lt;/code&gt; 원자 인 &lt;code&gt;true&lt;/code&gt; 또는 원자 &lt;code&gt;false&lt;/code&gt; 입니다 (부울)가. 그렇지 않으면 &lt;code&gt;false&lt;/code&gt; 를 반환합니다 .</target>
         </trans-unit>
         <trans-unit id="9ff32e0745b2e55908fc88e8b35ae7730f647ea1" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;true&lt;/code&gt; if &lt;code&gt;Tree&lt;/code&gt; is an empty tree, othwewise &lt;code&gt;false&lt;/code&gt;.</source>
@@ -497,7 +497,7 @@
         </trans-unit>
         <trans-unit id="f524f7a3284bec6bbe8ac59c2cbfa42df9bbafd8" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;true&lt;/code&gt; if a pending exception is associated with the environment &lt;code&gt;env&lt;/code&gt;. If &lt;code&gt;reason&lt;/code&gt; is a &lt;code&gt;NULL&lt;/code&gt; pointer, ignore it. Otherwise, if a pending exception associated with &lt;code&gt;env&lt;/code&gt; exists, set &lt;code&gt;*reason&lt;/code&gt; to the value of the exception term. For example, if &lt;code&gt;&lt;a href=&quot;#enif_make_badarg&quot;&gt;enif_make_badarg&lt;/a&gt;&lt;/code&gt; is called to set a pending &lt;code&gt;badarg&lt;/code&gt; exception, a later call to &lt;code&gt;enif_has_pending_exception(env, &amp;amp;reason)&lt;/code&gt; sets &lt;code&gt;*reason&lt;/code&gt; to the atom &lt;code&gt;badarg&lt;/code&gt;, then return &lt;code&gt;true&lt;/code&gt;.</source>
-          <target state="translated">보류중인 예외가 환경 &lt;code&gt;env&lt;/code&gt; 와 연관된 경우 &lt;code&gt;true&lt;/code&gt; 를 리턴 합니다 . 경우 &lt;code&gt;reason&lt;/code&gt; A는 &lt;code&gt;NULL&lt;/code&gt; 포인터가, 그것을 무시합니다. 그렇지 않으면, &lt;code&gt;env&lt;/code&gt; 와 연관된 보류중인 예외 가 존재하면 &lt;code&gt;*reason&lt;/code&gt; 을 예외 조건의 값으로 설정하십시오. 예를 들어, 보류중인 &lt;code&gt;badarg&lt;/code&gt; 예외 를 설정하기 위해 &lt;code&gt;&lt;a href=&quot;#enif_make_badarg&quot;&gt;enif_make_badarg&lt;/a&gt;&lt;/code&gt; 가 호출 되면 나중에 &lt;code&gt;enif_has_pending_exception(env, &amp;amp;reason)&lt;/code&gt; 대한 호출 은 &lt;code&gt;*reason&lt;/code&gt; 을 atom &lt;code&gt;badarg&lt;/code&gt; 로 설정 한 다음 &lt;code&gt;true&lt;/code&gt; 를 리턴 합니다 .</target>
+          <target state="translated">보류중인 예외가 환경 &lt;code&gt;env&lt;/code&gt; 와 연관된 경우 &lt;code&gt;true&lt;/code&gt; 를 리턴 합니다 . 경우 &lt;code&gt;reason&lt;/code&gt; A는 &lt;code&gt;NULL&lt;/code&gt; 포인터가, 그것을 무시합니다. 그렇지 않으면, &lt;code&gt;env&lt;/code&gt; 와 연관된 보류중인 예외 가 존재하면 &lt;code&gt;*reason&lt;/code&gt; 을 예외 용어의 값으로 설정하십시오. 예를 들어, 보류중인 &lt;code&gt;badarg&lt;/code&gt; 예외 를 설정하기 위해 &lt;code&gt;&lt;a href=&quot;#enif_make_badarg&quot;&gt;enif_make_badarg&lt;/a&gt;&lt;/code&gt; 가 호출 되면 나중에 &lt;code&gt;enif_has_pending_exception(env, &amp;amp;reason)&lt;/code&gt; 대한 호출 은 &lt;code&gt;*reason&lt;/code&gt; 을 atom &lt;code&gt;badarg&lt;/code&gt; 로 설정 한 다음 &lt;code&gt;true&lt;/code&gt; 를 리턴 합니다 .</target>
         </trans-unit>
         <trans-unit id="4adb2af57a423f657c16c1e5e3386789a64ac4b8" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;true&lt;/code&gt; if a sequential trace token is set for the current process, otherwise &lt;code&gt;false&lt;/code&gt;.</source>
@@ -569,7 +569,7 @@
         </trans-unit>
         <trans-unit id="cdebcfc3efe21b160fa6918abbd7bf23dce050ae" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;true&lt;/code&gt; if successful, or &lt;code&gt;false&lt;/code&gt; if there is old code for &lt;code&gt;Module&lt;/code&gt; that must be purged first, or if &lt;code&gt;Module&lt;/code&gt; is not a (loaded) module.</source>
-          <target state="translated">성공한 경우 &lt;code&gt;true&lt;/code&gt; 를 , 먼저 제거해야하는 &lt;code&gt;Module&lt;/code&gt; 에 대한 이전 코드가 있거나 &lt;code&gt;Module&lt;/code&gt; 이 (로드 된) 모듈이 아닌 경우 &lt;code&gt;false&lt;/code&gt; 를 리턴 합니다 .</target>
+          <target state="translated">성공한 경우 &lt;code&gt;true&lt;/code&gt; 를 반환 하고 , 먼저 제거해야하는 &lt;code&gt;Module&lt;/code&gt; 에 대한 이전 코드가 있거나 &lt;code&gt;Module&lt;/code&gt; 이 (로드 된) 모듈이 아닌 경우 &lt;code&gt;false&lt;/code&gt; 를 반환 합니다 .</target>
         </trans-unit>
         <trans-unit id="0572bc092a167640466d31c3359149f46443af08" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;true&lt;/code&gt; if successful, or &lt;code&gt;{error, bad_directory}&lt;/code&gt; if &lt;code&gt;Dir&lt;/code&gt; is not the name of a directory.</source>
@@ -585,7 +585,7 @@
         </trans-unit>
         <trans-unit id="f6342bf32678cb2c64cd38d8e07dd6a2b2dfe8b7" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;true&lt;/code&gt; if the command is successfully sent. Returns &lt;code&gt;false&lt;/code&gt; if the command fails, for example:</source>
-          <target state="translated">명령이 성공적으로 전송되면 &lt;code&gt;true&lt;/code&gt; 를 리턴 합니다 . 명령이 실패하면 다음과 같이 &lt;code&gt;false&lt;/code&gt; 를 리턴 합니다.</target>
+          <target state="translated">명령이 성공적으로 전송되면 &lt;code&gt;true&lt;/code&gt; 를 리턴 합니다 . 명령이 실패하면 &lt;code&gt;false&lt;/code&gt; 를 리턴 합니다. 예를 들면 다음과 같습니다.</target>
         </trans-unit>
         <trans-unit id="220c2e851c0b3fd14620b8e1dcda51e08e19d82b" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;true&lt;/code&gt; if the currently executing process is currently alive, otherwise &lt;code&gt;false&lt;/code&gt;.</source>
@@ -653,7 +653,7 @@
         </trans-unit>
         <trans-unit id="1a49e2c312bfd297ed7ee94aa673637f429d9003" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;true&lt;/code&gt; on success, or &lt;code&gt;false&lt;/code&gt; if &lt;code&gt;iolist&lt;/code&gt; is not an iolist.</source>
-          <target state="translated">성공하면 &lt;code&gt;true&lt;/code&gt; 를, &lt;code&gt;iolist&lt;/code&gt; 가 iolist 가 아닌 경우 &lt;code&gt;false&lt;/code&gt; 를 반환 합니다 .</target>
+          <target state="translated">성공하면 &lt;code&gt;true&lt;/code&gt; 를, &lt;code&gt;iolist&lt;/code&gt; 가 iolist 가 아닌 경우 &lt;code&gt;false&lt;/code&gt; 를 리턴 합니다 .</target>
         </trans-unit>
         <trans-unit id="5c212fa02d51be234a67b9d0c062850d25485d96" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;true&lt;/code&gt; on success, or &lt;code&gt;false&lt;/code&gt; if &lt;code&gt;iovec_term&lt;/code&gt; not an iovec.</source>
@@ -717,7 +717,7 @@
         </trans-unit>
         <trans-unit id="ebdc24ba5578cd605bf5abafb13309dbdb85f5e8" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;true&lt;/code&gt; on success, or &lt;code&gt;false&lt;/code&gt; if &lt;code&gt;term&lt;/code&gt; is not an unsigned integer or is outside the bounds of type &lt;code&gt;unsigned int&lt;/code&gt;.</source>
-          <target state="translated">성공하면 &lt;code&gt;true&lt;/code&gt; 를 반환 하고 , &lt;code&gt;term&lt;/code&gt; 이 부호없는 정수가 아니거나 &lt;code&gt;unsigned int&lt;/code&gt; 유형의 범위를 벗어나 면 &lt;code&gt;false&lt;/code&gt; 를 반환 합니다 .</target>
+          <target state="translated">성공하면 &lt;code&gt;true&lt;/code&gt; 를 반환 하고 , &lt;code&gt;term&lt;/code&gt; 이 부호없는 정수가 아니거나 &lt;code&gt;unsigned int&lt;/code&gt; 유형의 경계를 벗어나 면 &lt;code&gt;false&lt;/code&gt; 를 반환 합니다 .</target>
         </trans-unit>
         <trans-unit id="ad16fe9435f50ea2161b3f9229e301fc160ace24" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;true&lt;/code&gt; on success, or &lt;code&gt;false&lt;/code&gt; if &lt;code&gt;term&lt;/code&gt; is not an unsigned integer or is outside the bounds of type &lt;code&gt;unsigned long&lt;/code&gt;.</source>
@@ -797,7 +797,7 @@
         </trans-unit>
         <trans-unit id="efc56f026af628e903a47db2fc6244058b8806dc" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;{Element, Iter2}&lt;/code&gt;, where &lt;code&gt;Element&lt;/code&gt; is the smallest element referred to by iterator &lt;code&gt;Iter1&lt;/code&gt;, and &lt;code&gt;Iter2&lt;/code&gt; is the new iterator to be used for traversing the remaining elements, or the atom &lt;code&gt;none&lt;/code&gt; if no elements remain.</source>
-          <target state="translated">&lt;code&gt;{Element, Iter2}&lt;/code&gt; 리턴합니다 . 여기서 &lt;code&gt;Element&lt;/code&gt; 는 반복자 &lt;code&gt;Iter1&lt;/code&gt; 이 참조하는 가장 작은 요소 이고, &lt;code&gt;Iter2&lt;/code&gt; 는 나머지 요소를 순회하는 데 사용할 새 반복자이거나, 요소가 &lt;code&gt;none&lt;/code&gt; 경우 atom none 입니다.</target>
+          <target state="translated">&lt;code&gt;{Element, Iter2}&lt;/code&gt; 리턴합니다 . 여기서 &lt;code&gt;Element&lt;/code&gt; 는 반복자 &lt;code&gt;Iter1&lt;/code&gt; 이 참조하는 가장 작은 요소 이고, &lt;code&gt;Iter2&lt;/code&gt; 는 나머지 요소를 순회하는 데 사용할 새 반복자이거나 요소가 &lt;code&gt;none&lt;/code&gt; 경우 atom none 입니다.</target>
         </trans-unit>
         <trans-unit id="393d32dc102733bc6ee1d537437533c14cd4c072" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;{Element, Set2}&lt;/code&gt;, where &lt;code&gt;Element&lt;/code&gt; is the largest element in &lt;code&gt;Set1&lt;/code&gt;, and &lt;code&gt;Set2&lt;/code&gt; is this set with &lt;code&gt;Element&lt;/code&gt; deleted. Assumes that &lt;code&gt;Set1&lt;/code&gt; is not empty.</source>
@@ -809,7 +809,7 @@
         </trans-unit>
         <trans-unit id="55661fa3ce23aa28a56bb35fd85a1158d7146be6" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;{GoodNodes, BadNodes}&lt;/code&gt;, where &lt;code&gt;GoodNodes&lt;/code&gt; is the list of nodes that have &lt;code&gt;Name&lt;/code&gt; as a registered process.</source>
-          <target state="translated">&lt;code&gt;{GoodNodes, BadNodes}&lt;/code&gt; 리턴합니다 . 여기서 &lt;code&gt;GoodNodes&lt;/code&gt; 는 등록 된 프로세스로 &lt;code&gt;Name&lt;/code&gt; 이있는 노드 목록입니다 .</target>
+          <target state="translated">&lt;code&gt;{GoodNodes, BadNodes}&lt;/code&gt; 리턴합니다 . 여기서 &lt;code&gt;GoodNodes&lt;/code&gt; 는 &lt;code&gt;Name&lt;/code&gt; 이 등록 된 프로세스 인 노드 목록입니다 .</target>
         </trans-unit>
         <trans-unit id="a48003f5247a06d5277793d1f9fa8845a8f3ac94" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;{Key, Value, Iter2}&lt;/code&gt;, where &lt;code&gt;Key&lt;/code&gt; is the smallest key referred to by iterator &lt;code&gt;Iter1&lt;/code&gt;, and &lt;code&gt;Iter2&lt;/code&gt; is the new iterator to be used for traversing the remaining nodes, or the atom &lt;code&gt;none&lt;/code&gt; if no nodes remain.</source>
@@ -817,23 +817,23 @@
         </trans-unit>
         <trans-unit id="fe0692890a96736c1f9a5989a0656786fa01679b" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;{Key, Value, Tree2}&lt;/code&gt;, where &lt;code&gt;Key&lt;/code&gt; is the largest key in &lt;code&gt;Tree1&lt;/code&gt;, &lt;code&gt;Value&lt;/code&gt; is the value associated with this key, and &lt;code&gt;Tree2&lt;/code&gt; is this tree with the corresponding node deleted. Assumes that the tree is not empty.</source>
-          <target state="translated">&lt;code&gt;{Key, Value, Tree2}&lt;/code&gt; 리턴합니다 . 여기서 &lt;code&gt;Key&lt;/code&gt; 는 &lt;code&gt;Tree1&lt;/code&gt; 에서 가장 큰 키 , &lt;code&gt;Value&lt;/code&gt; 는이 키와 연관된 값, &lt;code&gt;Tree2&lt;/code&gt; 는 해당 노드가 삭제 된이 트리입니다. 나무가 비어 있지 않다고 가정합니다.</target>
+          <target state="translated">&lt;code&gt;{Key, Value, Tree2}&lt;/code&gt; 리턴합니다 . 여기서 &lt;code&gt;Key&lt;/code&gt; 는 &lt;code&gt;Tree1&lt;/code&gt; 에서 가장 큰 키 , &lt;code&gt;Value&lt;/code&gt; 는이 키와 연관된 값, &lt;code&gt;Tree2&lt;/code&gt; 는 해당 노드가 삭제 된이 트리입니다. 나무가 비어 있지 않은 것으로 가정합니다.</target>
         </trans-unit>
         <trans-unit id="8e1ea4bc482a37ad1fa45fe6b4361e60424e31a7" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;{Key, Value, Tree2}&lt;/code&gt;, where &lt;code&gt;Key&lt;/code&gt; is the smallest key in &lt;code&gt;Tree1&lt;/code&gt;, &lt;code&gt;Value&lt;/code&gt; is the value associated with this key, and &lt;code&gt;Tree2&lt;/code&gt; is this tree with the corresponding node deleted. Assumes that the tree is not empty.</source>
-          <target state="translated">&lt;code&gt;{Key, Value, Tree2}&lt;/code&gt; 리턴합니다 . 여기서 &lt;code&gt;Key&lt;/code&gt; 는 &lt;code&gt;Tree1&lt;/code&gt; 에서 가장 작은 키 , &lt;code&gt;Value&lt;/code&gt; 는이 키와 연관된 값, &lt;code&gt;Tree2&lt;/code&gt; 는 해당 노드가 삭제 된이 트리입니다. 나무가 비어 있지 않다고 가정합니다.</target>
+          <target state="translated">&lt;code&gt;{Key, Value, Tree2}&lt;/code&gt; 리턴합니다 . 여기서 &lt;code&gt;Key&lt;/code&gt; 는 &lt;code&gt;Tree1&lt;/code&gt; 에서 가장 작은 키 , &lt;code&gt;Value&lt;/code&gt; 는이 키와 연관된 값, &lt;code&gt;Tree2&lt;/code&gt; 는 해당 노드가 삭제 된이 트리입니다. 나무가 비어 있지 않은 것으로 가정합니다.</target>
         </trans-unit>
         <trans-unit id="89f276e5e399472c1bd9f5f932089656cedbf6bf" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;{Key, Value}&lt;/code&gt;, where &lt;code&gt;Key&lt;/code&gt; is the largest key in &lt;code&gt;Tree&lt;/code&gt;, and &lt;code&gt;Value&lt;/code&gt; is the value associated with this key. Assumes that the tree is not empty.</source>
-          <target state="translated">&lt;code&gt;{Key, Value}&lt;/code&gt; 리턴합니다 . 여기서 &lt;code&gt;Key&lt;/code&gt; 는 &lt;code&gt;Tree&lt;/code&gt; 에서 가장 큰 키 이고 &lt;code&gt;Value&lt;/code&gt; 는이 키와 연관된 값 입니다. 나무가 비어 있지 않다고 가정합니다.</target>
+          <target state="translated">&lt;code&gt;{Key, Value}&lt;/code&gt; 리턴합니다 . 여기서 &lt;code&gt;Key&lt;/code&gt; 는 &lt;code&gt;Tree&lt;/code&gt; 에서 가장 큰 키 이고 &lt;code&gt;Value&lt;/code&gt; 는이 키와 연관된 값 입니다. 나무가 비어 있지 않은 것으로 가정합니다.</target>
         </trans-unit>
         <trans-unit id="f7b3f6f07b4bb6247cb280d2ba6e0cddd533b4ee" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;{Key, Value}&lt;/code&gt;, where &lt;code&gt;Key&lt;/code&gt; is the smallest key in &lt;code&gt;Tree&lt;/code&gt;, and &lt;code&gt;Value&lt;/code&gt; is the value associated with this key. Assumes that the tree is not empty.</source>
-          <target state="translated">&lt;code&gt;{Key, Value}&lt;/code&gt; 리턴합니다 . 여기서 &lt;code&gt;Key&lt;/code&gt; 는 &lt;code&gt;Tree&lt;/code&gt; 에서 가장 작은 키 이고 &lt;code&gt;Value&lt;/code&gt; 는이 키와 연관된 값 입니다. 나무가 비어 있지 않다고 가정합니다.</target>
+          <target state="translated">&lt;code&gt;{Key, Value}&lt;/code&gt; 리턴합니다 . 여기서 &lt;code&gt;Key&lt;/code&gt; 는 &lt;code&gt;Tree&lt;/code&gt; 에서 가장 작은 키 이고 &lt;code&gt;Value&lt;/code&gt; 는이 키와 연관된 값 입니다. 나무가 비어 있지 않은 것으로 가정합니다.</target>
         </trans-unit>
         <trans-unit id="b87bc425abe887b256f0bffb48b0d712c6f26190" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;{Time, Value}&lt;/code&gt;, where &lt;code&gt;Time&lt;/code&gt; is the elapsed real time in &lt;strong&gt;microseconds&lt;/strong&gt;, and &lt;code&gt;Value&lt;/code&gt; is what is returned from the apply.</source>
-          <target state="translated">&lt;code&gt;{Time, Value}&lt;/code&gt; 리턴합니다 . 여기서 &lt;code&gt;Time&lt;/code&gt; 은 경과 된 실시간 시간 ( &lt;strong&gt;마이크로 초&lt;/strong&gt; )이고 &lt;code&gt;Value&lt;/code&gt; 는 적용에서 리턴되는 값 입니다.</target>
+          <target state="translated">&lt;code&gt;{Time, Value}&lt;/code&gt; 리턴합니다 . 여기서 &lt;code&gt;Time&lt;/code&gt; 은 경과 된 실시간 시간 ( &lt;strong&gt;마이크로 초&lt;/strong&gt; )이고 &lt;code&gt;Value&lt;/code&gt; 는 apply에서 리턴되는 값 입니다.</target>
         </trans-unit>
         <trans-unit id="3b83d15e05599f5726b5ba13192f1c2cbf143449" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;{V,&amp;nbsp;Label}&lt;/code&gt;, where &lt;code&gt;Label&lt;/code&gt; is the &lt;code&gt;&lt;a href=&quot;#label&quot;&gt;label&lt;/a&gt;&lt;/code&gt; of the vertex &lt;code&gt;V&lt;/code&gt; of digraph &lt;code&gt;G&lt;/code&gt;, or &lt;code&gt;false&lt;/code&gt; if no vertex &lt;code&gt;V&lt;/code&gt; of digraph &lt;code&gt;G&lt;/code&gt; exists.</source>
@@ -869,7 +869,7 @@
         </trans-unit>
         <trans-unit id="08331cd302f70b32cfdb9f28877b7ced295e81f3" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;{file,File}&lt;/code&gt; if the module &lt;code&gt;Module&lt;/code&gt; is Cover compiled, or &lt;code&gt;false&lt;/code&gt; otherwise. &lt;code&gt;File&lt;/code&gt; is the &lt;code&gt;.erl&lt;/code&gt; file used by &lt;code&gt;cover:compile_module/1,2&lt;/code&gt; or the &lt;code&gt;.beam&lt;/code&gt; file used by &lt;code&gt;compile_beam/1&lt;/code&gt;.</source>
-          <target state="translated">모듈 &lt;code&gt;Module&lt;/code&gt; 이 Cover 컴파일 된 경우 &lt;code&gt;{file,File}&lt;/code&gt; 을 리턴 &lt;code&gt;false&lt;/code&gt; 그렇지 않으면 false를 리턴 합니다 . &lt;code&gt;File&lt;/code&gt; 은 IS &lt;code&gt;.erl&lt;/code&gt; 에 의해 사용되는 파일 &lt;code&gt;cover:compile_module/1,2&lt;/code&gt; 또는 &lt;code&gt;.beam&lt;/code&gt; 에 의해 사용되는 파일 &lt;code&gt;compile_beam/1&lt;/code&gt; .</target>
+          <target state="translated">반환 &lt;code&gt;{file,File}&lt;/code&gt; 모듈이있는 경우 &lt;code&gt;Module&lt;/code&gt; 커버 컴파일, 또는 &lt;code&gt;false&lt;/code&gt; 그렇지. &lt;code&gt;File&lt;/code&gt; 은 IS &lt;code&gt;.erl&lt;/code&gt; 에 의해 사용되는 파일 &lt;code&gt;cover:compile_module/1,2&lt;/code&gt; 또는 &lt;code&gt;.beam&lt;/code&gt; 에 의해 사용되는 파일 &lt;code&gt;compile_beam/1&lt;/code&gt; .</target>
         </trans-unit>
         <trans-unit id="bc6cd949b74ac18e91b63a0611e94c6601753003" translate="yes" xml:space="preserve">
           <source>Returns &lt;code&gt;{fullsweep_after, integer() &amp;gt;= 0}&lt;/code&gt;, which is the &lt;code&gt;fullsweep_after&lt;/code&gt; garbage collection setting used by default. For more information, see &lt;code&gt;garbage_collection&lt;/code&gt; described below.</source>
@@ -1021,7 +1021,7 @@
         </trans-unit>
         <trans-unit id="3d75e30374093fa44b81d82bd285b20deb2f8f4d" translate="yes" xml:space="preserve">
           <source>Returns a Query List Comprehension (QLC) query handle. The &lt;code&gt;&lt;a href=&quot;qlc&quot;&gt;qlc(3)&lt;/a&gt;&lt;/code&gt; module provides a query language aimed mainly for Mnesia, but ETS tables, Dets tables, and lists are also recognized by &lt;code&gt;qlc&lt;/code&gt; as sources of data. Calling &lt;code&gt;&lt;a href=&quot;dets#table-1&quot;&gt;dets:table/1,2&lt;/a&gt;&lt;/code&gt; is the means to make Dets table &lt;code&gt;Name&lt;/code&gt; usable to &lt;code&gt;qlc&lt;/code&gt;.</source>
-          <target state="translated">QLC (Query List Comprehension) 쿼리 핸들을 리턴합니다. &lt;code&gt;&lt;a href=&quot;qlc&quot;&gt;qlc(3)&lt;/a&gt;&lt;/code&gt; 모듈은 Mnesia 주로 목표로 쿼리 언어를 제공하지만, 테이블, Dets 테이블을 ETS 및 목록도 인식하는 &lt;code&gt;qlc&lt;/code&gt; 데이터 소스로. &lt;code&gt;&lt;a href=&quot;dets#table-1&quot;&gt;dets:table/1,2&lt;/a&gt;&lt;/code&gt; 호출 은 Dets 테이블 &lt;code&gt;Name&lt;/code&gt; 을 &lt;code&gt;qlc&lt;/code&gt; 에 사용 가능 하게하는 수단 입니다.</target>
+          <target state="translated">QLC (Query List Comprehension) 쿼리 핸들을 리턴합니다. &lt;code&gt;&lt;a href=&quot;qlc&quot;&gt;qlc(3)&lt;/a&gt;&lt;/code&gt; 모듈은 Mnesia 주로 목표로 쿼리 언어를 제공하지만, 테이블, Dets 테이블을 ETS 및 목록도 인식하는 &lt;code&gt;qlc&lt;/code&gt; 데이터 소스로. &lt;code&gt;&lt;a href=&quot;dets#table-1&quot;&gt;dets:table/1,2&lt;/a&gt;&lt;/code&gt; 를 호출 하면 Dets 테이블 &lt;code&gt;Name&lt;/code&gt; 을 &lt;code&gt;qlc&lt;/code&gt; 에 사용할 수있게됩니다 .</target>
         </trans-unit>
         <trans-unit id="4152f2ffd3a419df70ff7a88ee269a4601950fdc" translate="yes" xml:space="preserve">
           <source>Returns a Query List Comprehension (QLC) query handle. The &lt;code&gt;&lt;a href=&quot;qlc&quot;&gt;qlc&lt;/a&gt;&lt;/code&gt; module provides a query language aimed mainly at Mnesia, but ETS tables, Dets tables, and lists are also recognized by QLC as sources of data. Calling &lt;code&gt;table/1,2&lt;/code&gt; is the means to make the ETS table &lt;code&gt;Tab&lt;/code&gt; usable to QLC.</source>
@@ -1029,11 +1029,11 @@
         </trans-unit>
         <trans-unit id="10758fe7a9d4e24aace34272476abcc894626692" translate="yes" xml:space="preserve">
           <source>Returns a binary containing a string of distribution information formatted as in Erlang crash dumps. For more information, see section &lt;code&gt;How to interpret the Erlang crash dumps&lt;/code&gt; in the User's Guide.</source>
-          <target state="translated">Erlang 크래시 덤프에서 형식화 된 배포 정보 문자열이 포함 된 이진을 반환합니다. 자세한 내용 은 사용 설명서의 &lt;code&gt;How to interpret the Erlang crash dumps&lt;/code&gt; 섹션을 참조하십시오 .</target>
+          <target state="translated">Erlang 크래시 덤프와 같이 형식화 된 배포 정보 문자열이 포함 된 이진을 반환합니다. 자세한 내용 은 사용 설명서의 &lt;code&gt;How to interpret the Erlang crash dumps&lt;/code&gt; 섹션을 참조하십시오 .</target>
         </trans-unit>
         <trans-unit id="7f03832e5911f4a8b2b0ede1115a6ec7cec8f20b" translate="yes" xml:space="preserve">
           <source>Returns a binary containing a string of loaded module information formatted as in Erlang crash dumps. For more information, see section &lt;code&gt;How to interpret the Erlang crash dumps&lt;/code&gt; in the User's Guide.</source>
-          <target state="translated">Erlang 크래시 덤프에서 형식화 된로드 된 모듈 정보 문자열을 포함하는 이진을 반환합니다. 자세한 내용 은 사용 설명서의 &lt;code&gt;How to interpret the Erlang crash dumps&lt;/code&gt; 섹션을 참조하십시오 .</target>
+          <target state="translated">Erlang 크래시 덤프에서 형식화 된로드 된 모듈 정보 문자열이 포함 된 이진을 반환합니다. 자세한 내용 은 사용 설명서의 &lt;code&gt;How to interpret the Erlang crash dumps&lt;/code&gt; 섹션을 참조하십시오 .</target>
         </trans-unit>
         <trans-unit id="701e0a42ef7e9ed9122ebe8cd8de1066e1f02f93" translate="yes" xml:space="preserve">
           <source>Returns a binary containing a string of miscellaneous system information formatted as in Erlang crash dumps. For more information, see section &lt;code&gt;How to interpret the Erlang crash dumps&lt;/code&gt; in the User's Guide.</source>
@@ -1045,7 +1045,7 @@
         </trans-unit>
         <trans-unit id="a1dad94a5ecf5eca59593c02af3bf2b091eec361" translate="yes" xml:space="preserve">
           <source>Returns a binary corresponding to the text representation of &lt;code&gt;Atom&lt;/code&gt;. If &lt;code&gt;Encoding&lt;/code&gt; is &lt;code&gt;latin1&lt;/code&gt;, one byte exists for each character in the text representation. If &lt;code&gt;Encoding&lt;/code&gt; is &lt;code&gt;utf8&lt;/code&gt; or &lt;code&gt;unicode&lt;/code&gt;, the characters are encoded using UTF-8 where characters may require multiple bytes.</source>
-          <target state="translated">&lt;code&gt;Atom&lt;/code&gt; 의 텍스트 표현에 해당하는 2 진을 리턴합니다 . &lt;code&gt;Encoding&lt;/code&gt; 이 &lt;code&gt;latin1&lt;/code&gt; 인 경우 텍스트 표현의 각 문자에 대해 1 바이트가 존재합니다. 경우 &lt;code&gt;Encoding&lt;/code&gt; 입니다 &lt;code&gt;utf8&lt;/code&gt; 또는 &lt;code&gt;unicode&lt;/code&gt; , 문자는 UTF-8 문자가 여러 바이트를 요구할 수 있습니다 사용하여 인코딩됩니다.</target>
+          <target state="translated">&lt;code&gt;Atom&lt;/code&gt; 의 텍스트 표현에 해당하는 2 진을 리턴합니다 . &lt;code&gt;Encoding&lt;/code&gt; 이 &lt;code&gt;latin1&lt;/code&gt; 인 경우 텍스트 표현의 각 문자마다 1 바이트가 존재합니다. 경우 &lt;code&gt;Encoding&lt;/code&gt; 입니다 &lt;code&gt;utf8&lt;/code&gt; 또는 &lt;code&gt;unicode&lt;/code&gt; , 문자는 UTF-8 문자가 여러 바이트를 요구할 수 있습니다 사용하여 인코딩됩니다.</target>
         </trans-unit>
         <trans-unit id="c200cdc2f9141d5effe910e8d58a6e4ec440e692" translate="yes" xml:space="preserve">
           <source>Returns a binary corresponding to the text representation of &lt;code&gt;Float&lt;/code&gt; using fixed decimal point formatting. &lt;code&gt;Options&lt;/code&gt; behaves in the same way as &lt;code&gt;&lt;a href=&quot;#float_to_list-2&quot;&gt;float_to_list/2&lt;/a&gt;&lt;/code&gt;. Examples:</source>
@@ -1077,11 +1077,11 @@
         </trans-unit>
         <trans-unit id="7dda80173828f0945e6862ada4fc4c763759686d" translate="yes" xml:space="preserve">
           <source>Returns a binary that is made from the integers and binaries in &lt;code&gt;IoListOrBinary&lt;/code&gt;, for example:</source>
-          <target state="translated">&lt;code&gt;IoListOrBinary&lt;/code&gt; 의 정수와 이진으로 만든 이진을 반환합니다 ( 예 :</target>
+          <target state="translated">&lt;code&gt;IoListOrBinary&lt;/code&gt; 의 정수와 이진으로 만든 이진을 반환합니다 . 예를 들면 다음과 같습니다.</target>
         </trans-unit>
         <trans-unit id="02ce40de9366f7d68b862c64ceaaff27b0ca567d" translate="yes" xml:space="preserve">
           <source>Returns a bitstring that is made from the integers and bitstrings in &lt;code&gt;BitstringList&lt;/code&gt;. (The last tail in &lt;code&gt;BitstringList&lt;/code&gt; is allowed to be a bitstring.) Example:</source>
-          <target state="translated">&lt;code&gt;BitstringList&lt;/code&gt; 의 정수와 비트 열로 만들어진 비트 열을 반환합니다 . &lt;code&gt;BitstringList&lt;/code&gt; 의 마지막 꼬리 는 비트 열 이 될 수 있습니다. 예 :</target>
+          <target state="translated">&lt;code&gt;BitstringList&lt;/code&gt; 의 정수와 비트 열로 만든 비트 열을 반환합니다 . &lt;code&gt;BitstringList&lt;/code&gt; 의 마지막 꼬리 는 비트 열 이 될 수 있습니다. 예 :</target>
         </trans-unit>
         <trans-unit id="f5adc61340a580263953283d1fa8186d7bed61f6" translate="yes" xml:space="preserve">
           <source>Returns a boolean value indicating whether &lt;code&gt;&lt;a href=&quot;time_correction#Time_Correction&quot;&gt;time correction&lt;/a&gt;&lt;/code&gt; is enabled or not.</source>
@@ -1097,7 +1097,7 @@
         </trans-unit>
         <trans-unit id="3acd8ddbcc99cb042f913dc83212b95ed1cb771d" translate="yes" xml:space="preserve">
           <source>Returns a character list that represents &lt;code&gt;Term&lt;/code&gt;. Option &lt;code&gt;Depth&lt;/code&gt; controls the depth of the structures written. When the specified depth is reached, everything below this level is replaced by &quot;&lt;code&gt;...&lt;/code&gt;&quot;. &lt;code&gt;Depth&lt;/code&gt; defaults to -1, which means no limitation. Option &lt;code&gt;CharsLimit&lt;/code&gt; puts a soft limit on the number of characters returned. When the number of characters is reached, remaining structures are replaced by &quot;&lt;code&gt;...&lt;/code&gt;&quot;. &lt;code&gt;CharsLimit&lt;/code&gt; defaults to -1, which means no limit on the number of characters returned.</source>
-          <target state="translated">&lt;code&gt;Term&lt;/code&gt; 을 나타내는 문자 목록을 리턴합니다 . Option &lt;code&gt;Depth&lt;/code&gt; 는 작성된 구조의 깊이를 제어합니다. 지정된 깊이에 도달하면이 수준 아래의 모든 항목이 &quot; &lt;code&gt;...&lt;/code&gt; &quot; 로 바뀝니다 . &lt;code&gt;Depth&lt;/code&gt; 기본값은 -1이며 제한이 없습니다. 옵션 &lt;code&gt;CharsLimit&lt;/code&gt; 는 반환되는 문자 수에 대한 소프트 제한을 설정합니다. 문자 수에 도달하면 나머지 구조는 &quot; &lt;code&gt;...&lt;/code&gt; &quot; 로 바뀝니다 . &lt;code&gt;CharsLimit&lt;/code&gt; 의 기본값은 -1이며 반환되는 문자 수에 제한이 없습니다.</target>
+          <target state="translated">&lt;code&gt;Term&lt;/code&gt; 을 나타내는 문자 목록을 리턴합니다 . Option &lt;code&gt;Depth&lt;/code&gt; 는 작성된 구조의 깊이를 제어합니다. 지정된 깊이에 도달하면이 수준 아래의 모든 항목이 &quot; &lt;code&gt;...&lt;/code&gt; &quot; 로 바뀝니다 . &lt;code&gt;Depth&lt;/code&gt; 기본값은 -1이며 제한이 없습니다. 옵션 &lt;code&gt;CharsLimit&lt;/code&gt; 는 반환되는 문자 수에 대한 소프트 제한을 설정합니다. 문자 수에 도달하면 나머지 구조는 &quot; &lt;code&gt;...&lt;/code&gt; &quot; 로 바뀝니다 . &lt;code&gt;CharsLimit&lt;/code&gt; 의 기본값은 -1이며 반환되는 문자 수에 제한이 없음을 의미합니다.</target>
         </trans-unit>
         <trans-unit id="7515af71865382538c9b621bc97880e10cea729c" translate="yes" xml:space="preserve">
           <source>Returns a character list that represents a new line character.</source>
@@ -1129,11 +1129,11 @@
         </trans-unit>
         <trans-unit id="380d9bbd8030f3784e9e84eeac3cf89d2d38cc45" translate="yes" xml:space="preserve">
           <source>Returns a descriptive string in English of an error tuple returned by &lt;code&gt;yecc:file/1,2&lt;/code&gt;. This function is mainly used by the compiler invoking Yecc.</source>
-          <target state="translated">&lt;code&gt;yecc:file/1,2&lt;/code&gt; 에서 반환 한 오류 튜플의 설명 문자열을 영어로 반환합니다 . 이 함수는 주로 Yecc를 호출하는 컴파일러에서 사용합니다.</target>
+          <target state="translated">&lt;code&gt;yecc:file/1,2&lt;/code&gt; 에서 반환 된 오류 튜플의 설명 문자열을 영어로 반환합니다 . 이 함수는 주로 Yecc를 호출하는 컴파일러에서 사용합니다.</target>
         </trans-unit>
         <trans-unit id="ea47de793fe37ea3966e30287cdccc9610f6a216" translate="yes" xml:space="preserve">
           <source>Returns a descriptive string in English of an error tuple returned by some of the functions of the &lt;code&gt;qlc&lt;/code&gt; module or the parse transform. This function is mainly used by the compiler invoking the parse transform.</source>
-          <target state="translated">&lt;code&gt;qlc&lt;/code&gt; 모듈 의 일부 함수 또는 구문 분석 변환에서 리턴 된 오류 튜플의 설명 문자열을 영어로 리턴합니다 . 이 함수는 주로 구문 분석 변환을 호출하는 컴파일러에서 사용합니다.</target>
+          <target state="translated">&lt;code&gt;qlc&lt;/code&gt; 모듈 의 일부 함수 또는 구문 분석 변환에 의해 리턴 된 오류 튜플의 설명 문자열을 영어로 리턴합니다 . 이 함수는 주로 구문 분석 변환을 호출하는 컴파일러에서 사용합니다.</target>
         </trans-unit>
         <trans-unit id="e93141b18c3c27b104fa1cc5138d9897a358d8fc" translate="yes" xml:space="preserve">
           <source>Returns a diagnostic error string. For possible POSIX values and corresponding strings, see section &lt;code&gt;&lt;a href=&quot;#error_codes&quot;&gt;POSIX Error Codes&lt;/a&gt;&lt;/code&gt;.</source>
@@ -1173,7 +1173,7 @@
         </trans-unit>
         <trans-unit id="cbfbf6b40ded09b3040d10ffc70b9e38cad6903e" translate="yes" xml:space="preserve">
           <source>Returns a list containing &lt;code&gt;InfoTuple&lt;/code&gt;s with miscellaneous information about the process identified by &lt;code&gt;Pid&lt;/code&gt;, or &lt;code&gt;undefined&lt;/code&gt; if the process is not alive.</source>
-          <target state="translated">&lt;code&gt;Pid&lt;/code&gt; 로 식별 된 프로세스에 대한 기타 정보 또는 프로세스가 아직 &lt;code&gt;InfoTuple&lt;/code&gt; &lt;code&gt;undefined&lt;/code&gt; 경우 정의되지 않은 InfoTuple을 포함하는 목록을 리턴합니다 .</target>
+          <target state="translated">&lt;code&gt;Pid&lt;/code&gt; 로 식별 된 프로세스에 대한 기타 정보가 있거나 프로세스가 아직 &lt;code&gt;InfoTuple&lt;/code&gt; &lt;code&gt;undefined&lt;/code&gt; 경우 정의되지 않은 InfoTuple을 포함하는 목록을 리턴합니다 .</target>
         </trans-unit>
         <trans-unit id="3563a46b724960f3efe2b2af847c70a7a360a7dc" translate="yes" xml:space="preserve">
           <source>Returns a list containing &lt;code&gt;N&lt;/code&gt; copies of term &lt;code&gt;Elem&lt;/code&gt;.</source>
@@ -1237,7 +1237,7 @@
         </trans-unit>
         <trans-unit id="5e85c7d8f3efd3892bf025810675bca230ae96c2" translate="yes" xml:space="preserve">
           <source>Returns a list corresponding to the specified format string, where control sequences have been replaced with corresponding tuples. This list can be passed to:</source>
-          <target state="translated">제어 시퀀스가 ​​해당 튜플로 대체 된 지정된 형식 문자열에 해당하는 목록을 반환합니다. 이 목록은 다음으로 전달 될 수 있습니다.</target>
+          <target state="translated">제어 시퀀스가 ​​해당 튜플로 대체 된 지정된 형식 문자열에 해당하는 목록을 리턴합니다. 이 목록은 다음으로 전달 될 수 있습니다.</target>
         </trans-unit>
         <trans-unit id="d433f5cf2ede44b50d5e4bfea7a196ae3ff826ba" translate="yes" xml:space="preserve">
           <source>Returns a list describing the default garbage collection settings. A process spawned on the local node by a &lt;code&gt;spawn&lt;/code&gt; or &lt;code&gt;spawn_link&lt;/code&gt; uses these garbage collection settings. The default settings can be changed by using &lt;code&gt;&lt;a href=&quot;#system_flag-2&quot;&gt;erlang:system_flag/2&lt;/a&gt;&lt;/code&gt;. &lt;code&gt;&lt;a href=&quot;#spawn_opt-4&quot;&gt;spawn_opt/2,3,4&lt;/a&gt;&lt;/code&gt; can spawn a process that does not use the default settings.</source>
@@ -1309,7 +1309,7 @@
         </trans-unit>
         <trans-unit id="043c23901cc97ae91b903f980aa30af0b56c3809" translate="yes" xml:space="preserve">
           <source>Returns a list of all &lt;code&gt;&lt;a href=&quot;#out_neighbour&quot;&gt;out-neighbors&lt;/a&gt;&lt;/code&gt; of &lt;code&gt;V&lt;/code&gt; of digraph &lt;code&gt;G&lt;/code&gt;, in some unspecified order.</source>
-          <target state="translated">그래프 &lt;code&gt;G&lt;/code&gt; 의 &lt;code&gt;V&lt;/code&gt; 의 모든 &lt;code&gt;&lt;a href=&quot;#out_neighbour&quot;&gt;out-neighbors&lt;/a&gt;&lt;/code&gt; 에 대한 목록을 지정되지 않은 순서로 반환합니다 .</target>
+          <target state="translated">di 그래프 &lt;code&gt;G&lt;/code&gt; 의 &lt;code&gt;V&lt;/code&gt; 의 모든 &lt;code&gt;&lt;a href=&quot;#out_neighbour&quot;&gt;out-neighbors&lt;/a&gt;&lt;/code&gt; 에 대한 목록을 지정되지 않은 순서로 반환합니다 .</target>
         </trans-unit>
         <trans-unit id="3df935727cfbfaa9dbe4fe6d8b3b3167c3639cce" translate="yes" xml:space="preserve">
           <source>Returns a list of all IP addresses for &lt;code&gt;Host&lt;/code&gt;. &lt;code&gt;Host&lt;/code&gt; can be an IP address, a single hostname, or a fully qualified hostname.</source>
@@ -1437,7 +1437,7 @@
         </trans-unit>
         <trans-unit id="04759c11fd73a2efcf88a70d3422834e9b011fc0" translate="yes" xml:space="preserve">
           <source>Returns a list of all vertices of &lt;code&gt;Digraph&lt;/code&gt; that are included in some &lt;code&gt;&lt;a href=&quot;#loop&quot;&gt;loop&lt;/a&gt;&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;&lt;a href=&quot;#loop&quot;&gt;loop&lt;/a&gt;&lt;/code&gt; 포함 된 &lt;code&gt;Digraph&lt;/code&gt; 의 모든 정점 목록을 반환합니다 .</target>
+          <target state="translated">일부 &lt;code&gt;&lt;a href=&quot;#loop&quot;&gt;loop&lt;/a&gt;&lt;/code&gt; 포함 된 &lt;code&gt;Digraph&lt;/code&gt; 의 모든 정점 목록을 반환합니다 .</target>
         </trans-unit>
         <trans-unit id="a19d9681e5c717524ff61fdfef23656f87179012" translate="yes" xml:space="preserve">
           <source>Returns a list of all vertices of digraph &lt;code&gt;G&lt;/code&gt;, in some unspecified order.</source>
@@ -1581,7 +1581,7 @@
         </trans-unit>
         <trans-unit id="f9bffce89f7109e7d59ff0c80cad70c7dbe48b7e" translate="yes" xml:space="preserve">
           <source>Returns a list of pairs representing the key-value associations of &lt;code&gt;Map&lt;/code&gt;, where the pairs &lt;code&gt;[{K1,V1}, ..., {Kn,Vn}]&lt;/code&gt; are returned in arbitrary order.</source>
-          <target state="translated">&lt;code&gt;Map&lt;/code&gt; 의 키-값 연관을 나타내는 쌍의 목록을 리턴합니다 . 여기서 쌍 &lt;code&gt;[{K1,V1}, ..., {Kn,Vn}]&lt;/code&gt; 은 임의의 순서로 리턴됩니다.</target>
+          <target state="translated">&lt;code&gt;Map&lt;/code&gt; 의 키-값 연관을 나타내는 쌍의 목록을 리턴합니다 . 여기서 &lt;code&gt;[{K1,V1}, ..., {Kn,Vn}]&lt;/code&gt; 쌍 은 임의의 순서로 리턴됩니다.</target>
         </trans-unit>
         <trans-unit id="4d1b4659cd8c9b4ba5ca06938e6a33a2961246ee" translate="yes" xml:space="preserve">
           <source>Returns a list of port identifiers corresponding to all the ports existing on the local node.</source>
@@ -1673,7 +1673,7 @@
         </trans-unit>
         <trans-unit id="fa56aa1fb0f06d1e02b293ee9314f572354d0ea1" translate="yes" xml:space="preserve">
           <source>Returns a list of tuples with information about miscellaneous allocated memory areas.</source>
-          <target state="translated">기타 할당 된 메모리 영역에 대한 정보가있는 튜플 목록을 반환합니다.</target>
+          <target state="translated">기타 할당 된 메모리 영역에 대한 정보가 포함 된 튜플 목록을 반환합니다.</target>
         </trans-unit>
         <trans-unit id="f7b16e4394cb94a84d5b5f2836ea7de7ccbbcfec" translate="yes" xml:space="preserve">
           <source>Returns a list where each element represents the amount of active processes and ports on each run queue and its associated schedulers. That is, the number of processes and ports that are ready to run, or are currently running. Values for normal run queues and their associated schedulers are located first in the resulting list. The first element corresponds to scheduler number 1 and so on. If support for dirty schedulers exist, an element with the value for the dirty CPU run queue and its associated dirty CPU schedulers follow and then as last element the value for the the dirty IO run queue and its associated dirty IO schedulers follow. The information is &lt;strong&gt;not&lt;/strong&gt; gathered atomically. That is, the result is not necessarily a consistent snapshot of the state, but instead quite efficiently gathered.</source>
@@ -1681,7 +1681,7 @@
         </trans-unit>
         <trans-unit id="51b7aac5180aaaa66bcf990dbf7675324e29f8c7" translate="yes" xml:space="preserve">
           <source>Returns a list where each element represents the amount of processes and ports ready to run for each run queue. Values for normal run queues are located first in the resulting list. The first element corresponds to the normal run queue of scheduler number 1 and so on. If support for dirty schedulers exist, values for the dirty CPU run queue and the dirty IO run queue follow (in that order) at the end. The information is &lt;strong&gt;not&lt;/strong&gt; gathered atomically. That is, the result is not necessarily a consistent snapshot of the state, but instead quite efficiently gathered.</source>
-          <target state="translated">각 요소가 각 실행 큐에 대해 실행할 준비가 된 프로세스 및 포트 수를 나타내는 목록을 리턴합니다. 정상 실행 큐의 값은 결과 목록의 첫 번째 위치에 있습니다. 첫 번째 요소는 스케줄러 번호 1 등의 정상 실행 큐에 해당합니다. 더티 스케줄러에 대한 지원이 존재하면 더티 CPU 실행 큐 및 더티 IO 실행 큐의 값은 끝에서 (순서대로) 이어집니다. 정보는 원자 적으로 수집 &lt;strong&gt;되지 않습니다&lt;/strong&gt; . 즉, 결과는 반드시 일관된 상태의 스냅 샷일 필요는 없지만, 상당히 효율적으로 수집됩니다.</target>
+          <target state="translated">각 요소가 각 실행 큐에 대해 실행할 준비가 된 프로세스 및 포트 수를 나타내는 목록을 리턴합니다. 정상 실행 큐의 값은 결과 목록의 첫 번째 위치에 있습니다. 첫 번째 요소는 스케줄러 번호 1 등의 정상 실행 큐에 해당합니다. 더티 스케줄러에 대한 지원이 존재하면 더티 CPU 실행 큐 및 더티 IO 실행 큐의 값이 끝에 순서대로 따릅니다. 정보는 원자 적으로 수집 &lt;strong&gt;되지 않습니다&lt;/strong&gt; . 즉, 결과는 반드시 일관된 상태의 스냅 샷일 필요는 없지만 대신 상당히 효율적으로 수집됩니다.</target>
         </trans-unit>
         <trans-unit id="b941d4e04084edb236c9a8bc253eef2e0e08e909" translate="yes" xml:space="preserve">
           <source>Returns a list whose elements are the path components of &lt;code&gt;Filename&lt;/code&gt;.</source>
@@ -1737,11 +1737,11 @@
         </trans-unit>
         <trans-unit id="b991dac7a17f515ad11ab8a2b69b9dfa6585c04e" translate="yes" xml:space="preserve">
           <source>Returns a map &lt;code&gt;Map&lt;/code&gt; for which predicate &lt;code&gt;Pred&lt;/code&gt; holds true in &lt;code&gt;MapOrIter&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;Pred&lt;/code&gt; 가 &lt;code&gt;MapOrIter&lt;/code&gt; 에서 true를 유지 하는 맵 &lt;code&gt;Map&lt;/code&gt; 을 리턴합니다 .</target>
+          <target state="translated">&lt;code&gt;Pred&lt;/code&gt; 가 &lt;code&gt;MapOrIter&lt;/code&gt; 에서 참인 맵 &lt;code&gt;Map&lt;/code&gt; 을 리턴합니다 .</target>
         </trans-unit>
         <trans-unit id="9d731f70bc552bebc033484d0448ae22ca88ea46" translate="yes" xml:space="preserve">
           <source>Returns a map iterator &lt;code&gt;Iterator&lt;/code&gt; that can be used by &lt;code&gt;&lt;a href=&quot;#next-1&quot;&gt;maps:next/1&lt;/a&gt;&lt;/code&gt; to traverse the key-value associations in a map. When iterating over a map, the memory usage is guaranteed to be bounded no matter the size of the map.</source>
-          <target state="translated">&lt;code&gt;&lt;a href=&quot;#next-1&quot;&gt;maps:next/1&lt;/a&gt;&lt;/code&gt; 에서 맵 의 키-값 연관을 탐색하는 데 사용할 수 있는 맵 반복자 &lt;code&gt;Iterator&lt;/code&gt; 를 리턴합니다 . 맵을 반복 할 때 맵의 크기에 관계없이 메모리 사용량이 제한됩니다.</target>
+          <target state="translated">&lt;code&gt;&lt;a href=&quot;#next-1&quot;&gt;maps:next/1&lt;/a&gt;&lt;/code&gt; 에서 맵 의 키-값 연관을 탐색하는 데 사용할 수 있는 맵 반복자 &lt;code&gt;Iterator&lt;/code&gt; 를 리턴합니다 . 맵을 반복 할 때 맵 크기에 상관없이 메모리 사용량이 제한됩니다.</target>
         </trans-unit>
         <trans-unit id="889c13f526ea5af22f09d7bee74de5ffbd9e20aa" translate="yes" xml:space="preserve">
           <source>Returns a negative value if the call failed where the following bits can be set:</source>
@@ -1757,7 +1757,7 @@
         </trans-unit>
         <trans-unit id="456254db671e7211f8cf975ebc7a01fd2d4e0998" translate="yes" xml:space="preserve">
           <source>Returns a new empty map.</source>
-          <target state="new"/>
+          <target state="translated">새로운 빈 맵을 돌려줍니다.</target>
         </trans-unit>
         <trans-unit id="8e4eb51649304c2bec63792cfa85aa4863b22406" translate="yes" xml:space="preserve">
           <source>Returns a new empty ordered set.</source>
@@ -1821,11 +1821,11 @@
         </trans-unit>
         <trans-unit id="541fb2fe1465f22b99417c012a85d115f1b4a3e6" translate="yes" xml:space="preserve">
           <source>Returns a new tuple with element at &lt;code&gt;Index&lt;/code&gt; removed from tuple &lt;code&gt;Tuple1&lt;/code&gt;, for example:</source>
-          <target state="translated">Tuple &lt;code&gt;Tuple1&lt;/code&gt; 에서 &lt;code&gt;Index&lt;/code&gt; 에 요소가 제거 된 새 튜플을 반환합니다 . 예를 들면 다음과 같습니다.</target>
+          <target state="translated">예를 들어, Tuple &lt;code&gt;Tuple1&lt;/code&gt; 에서 &lt;code&gt;Index&lt;/code&gt; 의 요소가 제거 된 새 튜플을 반환합니다 .</target>
         </trans-unit>
         <trans-unit id="308fbca02547a432a27bb42f69b457aa760415cc" translate="yes" xml:space="preserve">
           <source>Returns a newly created list with information about all child specifications and child processes belonging to supervisor &lt;code&gt;SupRef&lt;/code&gt;.</source>
-          <target state="translated">감독자 &lt;code&gt;SupRef&lt;/code&gt; 에 속하는 모든 하위 스펙 및 하위 프로세스에 대한 정보가있는 새로 작성된 목록을 리턴합니다 .</target>
+          <target state="translated">수퍼바이저 &lt;code&gt;SupRef&lt;/code&gt; 에 속하는 모든 하위 스펙 및 하위 프로세스에 대한 정보가있는 새로 작성된 목록을 리턴합니다 .</target>
         </trans-unit>
         <trans-unit id="988718b7da23cf5e7319125e8929491ce6761321" translate="yes" xml:space="preserve">
           <source>Returns a newly created port data lock on success, otherwise &lt;code&gt;NULL&lt;/code&gt;. The function fails if &lt;code&gt;port&lt;/code&gt; is invalid or if a port data lock already has been associated with the &lt;code&gt;port&lt;/code&gt;.</source>
@@ -1905,11 +1905,11 @@
         </trans-unit>
         <trans-unit id="c53e20ed0d00e49d31e0aa5aa4f54ac6264c5c5e" translate="yes" xml:space="preserve">
           <source>Returns a query handle for a QLC table. In Erlang/OTP there is support for ETS, Dets, and Mnesia tables, but many other data structures can be turned into QLC tables. This is accomplished by letting function(s) in the module implementing the data structure create a query handle by calling &lt;code&gt;qlc:table/2&lt;/code&gt;. The different ways to traverse the table and properties of the table are handled by callback functions provided as options to &lt;code&gt;qlc:table/2&lt;/code&gt;.</source>
-          <target state="translated">QLC 테이블에 대한 쿼리 핸들을 리턴합니다. Erlang / OTP에는 ETS, Dets 및 Mnesia 테이블이 지원되지만 다른 많은 데이터 구조는 QLC 테이블로 전환 될 수 있습니다. 이것은 데이터 구조를 구현하는 모듈의 함수가 &lt;code&gt;qlc:table/2&lt;/code&gt; 를 호출하여 쿼리 핸들을 작성하게함으로써 달성됩니다 . 테이블을 순회하는 다양한 방법과 테이블의 속성은 &lt;code&gt;qlc:table/2&lt;/code&gt; 에 대한 옵션으로 제공된 콜백 함수에 의해 처리됩니다 .</target>
+          <target state="translated">QLC 테이블에 대한 쿼리 핸들을 리턴합니다. Erlang / OTP에는 ETS, Dets 및 Mnesia 테이블이 지원되지만 다른 많은 데이터 구조는 QLC 테이블로 전환 될 수 있습니다. 이것은 데이터 구조를 구현하는 모듈의 함수가 &lt;code&gt;qlc:table/2&lt;/code&gt; 를 호출하여 쿼리 핸들을 작성하게함으로써 달성됩니다 . 테이블을 순회하는 다른 방법과 테이블의 속성은 &lt;code&gt;qlc:table/2&lt;/code&gt; 에 대한 옵션으로 제공된 콜백 함수에 의해 처리됩니다 .</target>
         </trans-unit>
         <trans-unit id="bc6fefdf356fea365a23c8acde6c866a605532d9" translate="yes" xml:space="preserve">
           <source>Returns a query handle for a QLC. The QLC must be the first argument to this function, otherwise it is evaluated as an ordinary list comprehension. It is also necessary to add the following line to the source code:</source>
-          <target state="translated">QLC에 대한 쿼리 핸들을 리턴합니다. QLC는이 함수의 첫 번째 인수 여야합니다. 그렇지 않으면 일반적인 목록 이해로 평가됩니다. 소스 코드에 다음 줄을 추가해야합니다.</target>
+          <target state="translated">QLC에 대한 쿼리 핸들을 리턴합니다. QLC는이 함수의 첫 번째 인수 여야합니다. 그렇지 않으면 일반 목록 이해로 평가됩니다. 소스 코드에 다음 줄을 추가해야합니다.</target>
         </trans-unit>
         <trans-unit id="13597ae114db01f956de1e90cbe62d0d265a9c96" translate="yes" xml:space="preserve">
           <source>Returns a query handle. When evaluating query handle &lt;code&gt;QH2&lt;/code&gt;, the answers to query handle &lt;code&gt;QH1&lt;/code&gt; are sorted by &lt;code&gt;&lt;a href=&quot;file_sorter#keysort-4&quot;&gt;file_sorter:keysort/4&lt;/a&gt;&lt;/code&gt; according to the options.</source>
@@ -1933,7 +1933,7 @@
         </trans-unit>
         <trans-unit id="e196ff3d55fb6fa7fcb6519db49f306184136ab7" translate="yes" xml:space="preserve">
           <source>Returns a queue &lt;code&gt;Q2&lt;/code&gt; that is the result of calling &lt;code&gt;Fun(Item)&lt;/code&gt; on all items in &lt;code&gt;Q1&lt;/code&gt;, in order from front to rear.</source>
-          <target state="translated">&lt;code&gt;Q1&lt;/code&gt; 의 모든 항목에 대해 &lt;code&gt;Fun(Item)&lt;/code&gt; 을 앞뒤로 순서대로 호출 한 결과 큐 &lt;code&gt;Q2&lt;/code&gt; 를 리턴합니다 .</target>
+          <target state="translated">&lt;code&gt;Q1&lt;/code&gt; 의 모든 항목에서 &lt;code&gt;Fun(Item)&lt;/code&gt; 을 호출 한 결과 인 큐 &lt;code&gt;Q2&lt;/code&gt; 를 앞뒤로 순서대로 리턴합니다 .</target>
         </trans-unit>
         <trans-unit id="fc688776bc490270c0f81180569b41a72371fe8a" translate="yes" xml:space="preserve">
           <source>Returns a queue &lt;code&gt;Q2&lt;/code&gt; that is the result of removing the front item from &lt;code&gt;Q1&lt;/code&gt;.</source>
@@ -2193,7 +2193,7 @@
         </trans-unit>
         <trans-unit id="92166f03715e25e6472246acbbedab43f98787f8" translate="yes" xml:space="preserve">
           <source>Returns a user-named atom which is not already in the set &lt;code&gt;Used&lt;/code&gt;. The atom is generated by applying the given &lt;code&gt;Function&lt;/code&gt; to a generated integer. Integers are generated using an algorithm which tries to keep the names randomly distributed within a reasonably small range relative to the number of elements in the set.</source>
-          <target state="translated">&lt;code&gt;Used&lt;/code&gt; 세트에 아직없는 사용자 이름의 원자를 반환합니다 . 원자는 주어진 &lt;code&gt;Function&lt;/code&gt; 를 생성 된 정수 에 적용하여 생성됩니다 . 정수는 세트의 요소 수에 비해 합리적으로 작은 범위 내에서 이름을 무작위로 분배하려고 시도하는 알고리즘을 사용하여 생성됩니다.</target>
+          <target state="translated">&lt;code&gt;Used&lt;/code&gt; 세트에 아직없는 사용자 이름의 원자를 반환합니다 . 원자는 주어진 &lt;code&gt;Function&lt;/code&gt; 를 생성 된 정수 에 적용하여 생성됩니다 . 정수는 세트의 요소 수에 비해 합리적으로 작은 범위 내에서 이름을 무작위로 분산시키는 알고리즘을 사용하여 생성됩니다.</target>
         </trans-unit>
         <trans-unit id="4327f3d264bcd8b0ae95ab1f5ed7bdf5e84393b8" translate="yes" xml:space="preserve">
           <source>Returns a value &lt;code&gt;Value&lt;/code&gt; from node with key &lt;code&gt;Key&lt;/code&gt; and new &lt;code&gt;Tree2&lt;/code&gt; without the node with this value. Assumes that the node with key is present in the tree, crashes otherwise.</source>
@@ -2297,7 +2297,7 @@
         </trans-unit>
         <trans-unit id="b3193ba7e758d6b8057578ba99e0142b88f45810" translate="yes" xml:space="preserve">
           <source>Returns an Erlang list corresponding to the original list minus the first element, or &lt;code&gt;NULL&lt;/code&gt; pointer if &lt;code&gt;list&lt;/code&gt; was not a list.</source>
-          <target state="translated">원래 목록에서 첫 번째 요소를 뺀 해당 Erlang 목록을 반환하거나 &lt;code&gt;list&lt;/code&gt; 가 목록 이 아닌 경우 &lt;code&gt;NULL&lt;/code&gt; 포인터를 반환 합니다.</target>
+          <target state="translated">원래 목록에서 첫 번째 요소를 뺀 해당 목록을 반환하거나, &lt;code&gt;list&lt;/code&gt; 이 목록 이 아닌 경우 &lt;code&gt;NULL&lt;/code&gt; 포인터를 반환 합니다.</target>
         </trans-unit>
         <trans-unit id="51e2d39adb2a9582d19f8d4bb2040aea7b343702" translate="yes" xml:space="preserve">
           <source>Returns an Erlang list object corresponding to the character sequence in &lt;code&gt;string&lt;/code&gt;.</source>
@@ -2421,7 +2421,7 @@
         </trans-unit>
         <trans-unit id="ad0adf24553b9086dfd682de31eca972d4b7c381" translate="yes" xml:space="preserve">
           <source>Returns an integer that is the size in bits of &lt;code&gt;Bitstring&lt;/code&gt;, for example:</source>
-          <target state="translated">&lt;code&gt;Bitstring&lt;/code&gt; 비트 단위의 정수를 리턴합니다 . 예를 들면 다음과 같습니다.</target>
+          <target state="translated">&lt;code&gt;Bitstring&lt;/code&gt; 의 비트 단위 크기의 정수를 리턴합니다 . 예를 들면 다음과 같습니다.</target>
         </trans-unit>
         <trans-unit id="762aa9ecbb62d3c742e303f6ee84a4d568033d71" translate="yes" xml:space="preserve">
           <source>Returns an integer whose text representation in base &lt;code&gt;Base&lt;/code&gt; is &lt;code&gt;Binary&lt;/code&gt;, for example:</source>
@@ -2441,7 +2441,7 @@
         </trans-unit>
         <trans-unit id="f94153a9b60ae8655262dd32603d003b4560fdb5" translate="yes" xml:space="preserve">
           <source>Returns an integer, that is the size in bytes, of the binary that would be the result of &lt;code&gt;iolist_to_binary(Item)&lt;/code&gt;, for example:</source>
-          <target state="translated">&lt;code&gt;iolist_to_binary(Item)&lt;/code&gt; 의 결과 인 이진의 정수 (바이트 단위)를 반환합니다 . 예를 들면 다음과 같습니다.</target>
+          <target state="translated">&lt;code&gt;iolist_to_binary(Item)&lt;/code&gt; 의 결과 인 이진의 정수 (바이트 크기)를 반환합니다 . 예를 들면 다음과 같습니다.</target>
         </trans-unit>
         <trans-unit id="0c93d5fc3d93036110d84e23d9645cf1ef2f6b11" translate="yes" xml:space="preserve">
           <source>Returns an integer, which is the number of key-value pairs in &lt;code&gt;Map&lt;/code&gt;, for example:</source>
@@ -2497,7 +2497,7 @@
         </trans-unit>
         <trans-unit id="518449232fbe1ed623aaeb282017025b66e1fc06" translate="yes" xml:space="preserve">
           <source>Returns and purges the list of text strings buffered during the latest session of capturing printouts to &lt;code&gt;stdout&lt;/code&gt;. Log categories that are to be ignored in &lt;code&gt;ListOfStrings&lt;/code&gt; can be specified with &lt;code&gt;ExclCategories&lt;/code&gt;. If &lt;code&gt;ExclCategories = []&lt;/code&gt;, no filtering takes place.</source>
-          <target state="translated">인쇄 출력을 &lt;code&gt;stdout&lt;/code&gt; 에 캡처하는 최신 세션 중에 버퍼링 된 텍스트 문자열 목록을 반환하고 제거합니다 . 무시 될 수 있습니다 로그 범주 &lt;code&gt;ListOfStrings&lt;/code&gt; 을 지정할 수 있습니다 &lt;code&gt;ExclCategories&lt;/code&gt; . 만약 &lt;code&gt;ExclCategories = []&lt;/code&gt; , 아무런 필터링은 일어나지 않는다.</target>
+          <target state="translated">인쇄물을 캡처하는 최신 세션 중에 버퍼링 된 텍스트 문자열 목록을 &lt;code&gt;stdout&lt;/code&gt; 으로 반환하고 제거합니다 . 무시 될 수 있습니다 로그 범주 &lt;code&gt;ListOfStrings&lt;/code&gt; 을 지정할 수 있습니다 &lt;code&gt;ExclCategories&lt;/code&gt; . 만약 &lt;code&gt;ExclCategories = []&lt;/code&gt; , 아무런 필터링은 일어나지 않는다.</target>
         </trans-unit>
         <trans-unit id="0a94e185cbeae786ecd84f1870ec12764f587327" translate="yes" xml:space="preserve">
           <source>Returns and removes a list of all objects with key &lt;code&gt;Key&lt;/code&gt; in table &lt;code&gt;Tab&lt;/code&gt;.</source>
@@ -2521,7 +2521,7 @@
         </trans-unit>
         <trans-unit id="fd4cba92cb758d0327a7e88229536ba937439243" translate="yes" xml:space="preserve">
           <source>Returns captured substrings as pairs of byte indexes into the subject string and length of the matching string in the subject (as if the subject string was flattened with &lt;code&gt;erlang:iolist_to_binary/1&lt;/code&gt; or &lt;code&gt;&lt;a href=&quot;unicode#characters_to_binary-2&quot;&gt;unicode:characters_to_binary/2&lt;/a&gt;&lt;/code&gt; before matching). Notice that option &lt;code&gt;unicode&lt;/code&gt; results in &lt;strong&gt;byte-oriented&lt;/strong&gt; indexes in a (possibly virtual) &lt;strong&gt;UTF-8 encoded&lt;/strong&gt; binary. A byte index tuple &lt;code&gt;{0,2}&lt;/code&gt; can therefore represent one or two characters when &lt;code&gt;unicode&lt;/code&gt; is in effect. This can seem counter-intuitive, but has been deemed the most effective and useful way to do it. To return lists instead can result in simpler code if that is desired. This return type is the default.</source>
-          <target state="translated">캡처 된 &lt;code&gt;erlang:iolist_to_binary/1&lt;/code&gt; 스트링을 주제 문자열에 바이트 색인 쌍으로 주제와 일치하는 문자열의 길이로 리턴합니다 (주제 문자열이 일치하기 전에 erlang : iolist_to_binary / 1 또는 &lt;code&gt;&lt;a href=&quot;unicode#characters_to_binary-2&quot;&gt;unicode:characters_to_binary/2&lt;/a&gt;&lt;/code&gt; 로 전개 된 것처럼 ). &lt;code&gt;unicode&lt;/code&gt; 옵션 은 (가상 가상의) &lt;strong&gt;UTF-8 인코딩&lt;/strong&gt; 바이너리 에서 &lt;strong&gt;바이트 지향&lt;/strong&gt; 인덱스를 생성 합니다. 따라서 &lt;code&gt;unicode&lt;/code&gt; 가 유효한 경우 바이트 인덱스 튜플 &lt;code&gt;{0,2}&lt;/code&gt; 는 하나 또는 두 개의 문자를 나타낼 수 있습니다 . 이것은 직관적이지 않은 것처럼 보일 수 있지만 가장 효과적이고 유용한 방법으로 간주됩니다. 원하는 경우 목록을 반환하면 코드가 더 단순해질 수 있습니다. 이 반환 유형이 기본값입니다.&lt;strong&gt;&lt;/strong&gt;</target>
+          <target state="translated">캡처 된 &lt;code&gt;erlang:iolist_to_binary/1&lt;/code&gt; 스트링을 주제 문자열에 바이트 색인 쌍으로 주제와 일치하는 문자열의 길이로 리턴합니다 (주제 문자열이 일치하기 전에 erlang : iolist_to_binary / 1 또는 &lt;code&gt;&lt;a href=&quot;unicode#characters_to_binary-2&quot;&gt;unicode:characters_to_binary/2&lt;/a&gt;&lt;/code&gt; 로 전개 된 것처럼 ). &lt;code&gt;unicode&lt;/code&gt; 옵션 은 (가상 가상의) &lt;strong&gt;UTF-8 인코딩&lt;/strong&gt; 바이너리 에서 &lt;strong&gt;바이트 지향&lt;/strong&gt; 인덱스를 생성 합니다. 따라서 &lt;code&gt;unicode&lt;/code&gt; 가 적용되는 경우 바이트 인덱스 튜플 &lt;code&gt;{0,2}&lt;/code&gt; 는 하나 또는 두 개의 문자를 나타낼 수 있습니다 . 이것은 직관적이지 않은 것처럼 보일 수 있지만 가장 효과적이고 유용한 방법으로 간주됩니다. 원하는 경우 목록을 반환하면 더 간단한 코드가 생성 될 수 있습니다. 이 반환 유형이 기본값입니다.&lt;strong&gt;&lt;/strong&gt;</target>
         </trans-unit>
         <trans-unit id="997359c09668c7069c3575aa744eed8df1d53049" translate="yes" xml:space="preserve">
           <source>Returns current &lt;code&gt;&lt;a href=&quot;time_correction#Erlang_System_Time&quot;&gt;Erlang system time&lt;/a&gt;&lt;/code&gt; converted into the &lt;code&gt;Unit&lt;/code&gt; passed as argument.</source>
@@ -2569,7 +2569,7 @@
         </trans-unit>
         <trans-unit id="6323eed878e360580ee27b0c7c7fcd513bdc13b3" translate="yes" xml:space="preserve">
           <source>Returns for each object of table &lt;code&gt;Name&lt;/code&gt; that matches &lt;code&gt;Pattern&lt;/code&gt; a list of bindings in some unspecified order. For a description of patterns, see &lt;code&gt;&lt;a href=&quot;ets#match-2&quot;&gt;ets:match/2&lt;/a&gt;&lt;/code&gt;. If the keypos'th element of &lt;code&gt;Pattern&lt;/code&gt; is unbound, all table objects are matched. If the keypos'th element is bound, only the objects with the correct key are matched.</source>
-          <target state="translated">일치 하는 테이블 &lt;code&gt;Name&lt;/code&gt; 의 각 개체에 대해 반환 값 바인딩 목록을 지정되지 않은 순서로 &lt;code&gt;Pattern&lt;/code&gt; 합니다. 패턴에 대한 설명은 &lt;code&gt;&lt;a href=&quot;ets#match-2&quot;&gt;ets:match/2&lt;/a&gt;&lt;/code&gt; 를 참조하십시오 . &lt;code&gt;Pattern&lt;/code&gt; 의 keypos'th 요소 가 바인드되지 않은 경우 모든 테이블 오브젝트가 일치합니다. keypos'th 요소가 바인딩 된 경우 올바른 키를 가진 개체 만 일치합니다.</target>
+          <target state="translated">일치 하는 테이블 &lt;code&gt;Name&lt;/code&gt; 의 각 오브젝트에 대해 리턴합니다 . 바인딩 목록을 지정되지 않은 순서로 &lt;code&gt;Pattern&lt;/code&gt; 하십시오. 패턴에 대한 설명은 &lt;code&gt;&lt;a href=&quot;ets#match-2&quot;&gt;ets:match/2&lt;/a&gt;&lt;/code&gt; 를 참조하십시오 . &lt;code&gt;Pattern&lt;/code&gt; 의 keypos'th 요소 가 바인드되지 않으면 모든 테이블 오브젝트가 일치합니다. keypos'th 요소가 바인딩 된 경우 올바른 키를 가진 개체 만 일치합니다.</target>
         </trans-unit>
         <trans-unit id="918c4edfa410fe0325d57cd8b0922f70f40f5c41" translate="yes" xml:space="preserve">
           <source>Returns fractions of real-time or run-time spent in the various threads from the given microstate statistics values.</source>
@@ -2577,7 +2577,7 @@
         </trans-unit>
         <trans-unit id="f67e767c1786e9a6e8c8f714e5c031353ef2065b" translate="yes" xml:space="preserve">
           <source>Returns information about &lt;code&gt;Fun&lt;/code&gt; as specified by &lt;code&gt;Item&lt;/code&gt;, in the form &lt;code&gt;{Item,Info}&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;Item&lt;/code&gt; 에 의해 지정된 &lt;code&gt;Fun&lt;/code&gt; 에 대한 정보를 &lt;code&gt;{Item,Info}&lt;/code&gt; 형식 으로 리턴합니다 .</target>
+          <target state="translated">&lt;code&gt;Item&lt;/code&gt; 에 지정된대로 &lt;code&gt;Fun&lt;/code&gt; 에 대한 정보를 &lt;code&gt;{Item,Info}&lt;/code&gt; 형식 으로 리턴합니다 .</target>
         </trans-unit>
         <trans-unit id="29427c069c86e73d452e6c2cf589458f1b031710" translate="yes" xml:space="preserve">
           <source>Returns information about Erlang Distribution in the current system as specified by &lt;code&gt;Item&lt;/code&gt;:</source>
@@ -2709,7 +2709,7 @@
         </trans-unit>
         <trans-unit id="df6fb542ac6298148c4628d7b50d50effc0823c9" translate="yes" xml:space="preserve">
           <source>Returns matching substrings as lists of characters (Erlang &lt;code&gt;string()&lt;/code&gt;s). It option &lt;code&gt;unicode&lt;/code&gt; is used in combination with the \C sequence in the regular expression, a captured subpattern can contain bytes that are not valid UTF-8 (\C matches bytes regardless of character encoding). In that case the &lt;code&gt;list&lt;/code&gt; capturing can result in the same types of tuples that &lt;code&gt;&lt;a href=&quot;unicode#characters_to_list-2&quot;&gt;unicode:characters_to_list/2&lt;/a&gt;&lt;/code&gt; can return, namely three-tuples with tag &lt;code&gt;incomplete&lt;/code&gt; or &lt;code&gt;error&lt;/code&gt;, the successfully converted characters and the invalid UTF-8 tail of the conversion as a binary. The best strategy is to avoid using the \C sequence when capturing lists.</source>
-          <target state="translated">일치하는 부분 문자열을 문자 목록 (Erlang &lt;code&gt;string()&lt;/code&gt; s) 으로 반환 합니다. 옵션 &lt;code&gt;unicode&lt;/code&gt; 는 정규식에서 \ C 시퀀스와 함께 사용되며, 캡처 된 서브 패턴은 UTF-8이 아닌 바이트를 포함 할 수 있습니다 (\ C는 문자 인코딩에 관계없이 바이트와 일치 함). 이 경우 &lt;code&gt;list&lt;/code&gt; 캡처로 인해 &lt;code&gt;&lt;a href=&quot;unicode#characters_to_list-2&quot;&gt;unicode:characters_to_list/2&lt;/a&gt;&lt;/code&gt; 가 반환 할 수 있는 동일한 유형의 튜플 , 즉 태그가 &lt;code&gt;incomplete&lt;/code&gt; 하거나 &lt;code&gt;error&lt;/code&gt; 3 개의 튜플 , 성공적으로 변환 된 문자 및 변환의 잘못된 UTF-8 테일이 2 진으로 표시 될 수 있습니다. . 가장 좋은 전략은 목록을 캡처 할 때 \ C 시퀀스를 사용하지 않는 것입니다.</target>
+          <target state="translated">일치하는 부분 문자열을 문자 목록 (Erlang &lt;code&gt;string()&lt;/code&gt; s) 으로 반환 합니다. 옵션 &lt;code&gt;unicode&lt;/code&gt; 는 정규식에서 \ C 시퀀스와 함께 사용되며, 캡처 된 서브 패턴은 UTF-8이 아닌 바이트를 포함 할 수 있습니다 (\ C는 문자 인코딩에 관계없이 바이트와 일치 함). 이 경우 &lt;code&gt;list&lt;/code&gt; 캡처로 인해 &lt;code&gt;&lt;a href=&quot;unicode#characters_to_list-2&quot;&gt;unicode:characters_to_list/2&lt;/a&gt;&lt;/code&gt; 가 리턴 할 수 있는 동일한 유형의 튜플 , 즉 태그가 &lt;code&gt;incomplete&lt;/code&gt; 하거나 &lt;code&gt;error&lt;/code&gt; 3 개의 튜플 , 성공적으로 변환 된 문자 및 변환의 유효하지 않은 UTF-8 꼬리가 2 진으로 표시 될 수 있습니다. . 가장 좋은 전략은 목록을 캡처 할 때 \ C 시퀀스를 사용하지 않는 것입니다.</target>
         </trans-unit>
         <trans-unit id="28ca01a6f5eb6005db2633f2649168fb78905dc4" translate="yes" xml:space="preserve">
           <source>Returns no matching subpatterns, gives the single atom &lt;code&gt;match&lt;/code&gt; as the return value of the function when matching successfully instead of the &lt;code&gt;{match, list()}&lt;/code&gt; return. Specifying an empty list gives the same behavior.</source>
@@ -2765,7 +2765,7 @@
         </trans-unit>
         <trans-unit id="cf6c140fa3d3f04c65f2a9ce387184abff140810" translate="yes" xml:space="preserve">
           <source>Returns the &lt;code&gt;&lt;a href=&quot;#Cartesian_product_tuple&quot;&gt;Cartesian product&lt;/a&gt;&lt;/code&gt; of the non-empty tuple of sets &lt;code&gt;TupleOfSets&lt;/code&gt;. If (x[1], ..., x[n]) is an element of the n-ary relation &lt;code&gt;Relation&lt;/code&gt;, then x[i] is drawn from element i of &lt;code&gt;TupleOfSets&lt;/code&gt;.</source>
-          <target state="translated">비어 있지 않은 튜플 세트 &lt;code&gt;TupleOfSets&lt;/code&gt; 의 &lt;code&gt;&lt;a href=&quot;#Cartesian_product_tuple&quot;&gt;Cartesian product&lt;/a&gt;&lt;/code&gt; 리턴합니다 . (x [1], ..., x [n])이 n 차 관계 &lt;code&gt;Relation&lt;/code&gt; 의 요소 &lt;code&gt;TupleOfSets&lt;/code&gt; i 요소에서 x [i]가 그려집니다 .</target>
+          <target state="translated">비어 있지 않은 튜플 세트 &lt;code&gt;TupleOfSets&lt;/code&gt; 의 &lt;code&gt;&lt;a href=&quot;#Cartesian_product_tuple&quot;&gt;Cartesian product&lt;/a&gt;&lt;/code&gt; 리턴합니다 . (x [1], ..., x [n])이 n 차 관계 &lt;code&gt;Relation&lt;/code&gt; 의 요소 인 경우 &lt;code&gt;TupleOfSets&lt;/code&gt; 의 i 요소에서 x [i]가 그려집니다 .</target>
         </trans-unit>
         <trans-unit id="1dbabd9cacc3eb998bb13a8811a3fb3de99e786f" translate="yes" xml:space="preserve">
           <source>Returns the &lt;code&gt;&lt;a href=&quot;#composite&quot;&gt;composite&lt;/a&gt;&lt;/code&gt; of the functions &lt;code&gt;Function1&lt;/code&gt; and &lt;code&gt;Function2&lt;/code&gt;.</source>
@@ -2797,11 +2797,11 @@
         </trans-unit>
         <trans-unit id="87dd833acacf73c63d010c62d8b953739dffbe91" translate="yes" xml:space="preserve">
           <source>Returns the &lt;code&gt;&lt;a href=&quot;#image&quot;&gt;image&lt;/a&gt;&lt;/code&gt; of set &lt;code&gt;Set1&lt;/code&gt; under the binary relation &lt;code&gt;BinRel&lt;/code&gt;.</source>
-          <target state="translated">이진 관계 &lt;code&gt;BinRel&lt;/code&gt; 아래에서 &lt;code&gt;Set1&lt;/code&gt; 세트 의 &lt;code&gt;&lt;a href=&quot;#image&quot;&gt;image&lt;/a&gt;&lt;/code&gt; 를 반환합니다 .</target>
+          <target state="translated">이진 관계 &lt;code&gt;BinRel&lt;/code&gt; 아래에서 &lt;code&gt;Set1&lt;/code&gt; 세트 의 &lt;code&gt;&lt;a href=&quot;#image&quot;&gt;image&lt;/a&gt;&lt;/code&gt; 를 리턴합니다 .</target>
         </trans-unit>
         <trans-unit id="051d4e152d74f5d8ec5ed39ecb2040038c544630" translate="yes" xml:space="preserve">
           <source>Returns the &lt;code&gt;&lt;a href=&quot;#in_degree&quot;&gt;in-degree&lt;/a&gt;&lt;/code&gt; of vertex &lt;code&gt;V&lt;/code&gt; of digraph &lt;code&gt;G&lt;/code&gt;.</source>
-          <target state="translated">digraph &lt;code&gt;G&lt;/code&gt; 의 꼭짓점 &lt;code&gt;V&lt;/code&gt; 를 &lt;code&gt;&lt;a href=&quot;#in_degree&quot;&gt;in-degree&lt;/a&gt;&lt;/code&gt; 로 반환합니다 .</target>
+          <target state="translated">digraph &lt;code&gt;G&lt;/code&gt; 의 정점 &lt;code&gt;V&lt;/code&gt; 의 &lt;code&gt;&lt;a href=&quot;#in_degree&quot;&gt;in-degree&lt;/a&gt;&lt;/code&gt; 를 반환합니다 .</target>
         </trans-unit>
         <trans-unit id="6a561681ac701c8a4d56dc954055ad10a0f0de57" translate="yes" xml:space="preserve">
           <source>Returns the &lt;code&gt;&lt;a href=&quot;#intersection&quot;&gt;intersection&lt;/a&gt;&lt;/code&gt; of &lt;code&gt;Set1&lt;/code&gt; and &lt;code&gt;Set2&lt;/code&gt;.</source>
@@ -2837,7 +2837,7 @@
         </trans-unit>
         <trans-unit id="89307605ace8536ca4e601f9c65b035dae9b7ea3" translate="yes" xml:space="preserve">
           <source>Returns the &lt;code&gt;&lt;a href=&quot;#partition&quot;&gt;partition&lt;/a&gt;&lt;/code&gt; of the union of the set of sets &lt;code&gt;SetOfSets&lt;/code&gt; such that two elements are considered equal if they belong to the same elements of &lt;code&gt;SetOfSets&lt;/code&gt;.</source>
-          <target state="translated">두 세트의 요소가 동일한 &lt;code&gt;SetOfSets&lt;/code&gt; 요소에 속하는 경우 동일한 것으로 간주되도록 &lt;code&gt;SetOfSets&lt;/code&gt; 세트 세트의 통합 &lt;code&gt;&lt;a href=&quot;#partition&quot;&gt;partition&lt;/a&gt;&lt;/code&gt; 을 리턴합니다 .</target>
+          <target state="translated">반환 값은 &lt;code&gt;&lt;a href=&quot;#partition&quot;&gt;partition&lt;/a&gt;&lt;/code&gt; 세트의 세트의 조합의 &lt;code&gt;SetOfSets&lt;/code&gt; 가 동일한 요소에 속하는 경우와 같은 두 개의 요소는 동일한 것으로 간주됩니다 &lt;code&gt;SetOfSets&lt;/code&gt; .</target>
         </trans-unit>
         <trans-unit id="5087c356d885226125e2154f7079502de4aed969" translate="yes" xml:space="preserve">
           <source>Returns the &lt;code&gt;&lt;a href=&quot;#range&quot;&gt;range&lt;/a&gt;&lt;/code&gt; of the binary relation &lt;code&gt;BinRel&lt;/code&gt;.</source>
@@ -2925,7 +2925,7 @@
         </trans-unit>
         <trans-unit id="8eddf39c08022d4015ebc25735765019cb49319b" translate="yes" xml:space="preserve">
           <source>Returns the CPU time in the same format as &lt;code&gt;&lt;a href=&quot;erlang#timestamp-0&quot;&gt;erlang:timestamp()&lt;/a&gt;&lt;/code&gt;. The CPU time is the time the current logical CPU has spent executing since some arbitrary point in the past. If the OS does not support fetching this value, &lt;code&gt;enif_cpu_time&lt;/code&gt; invokes &lt;code&gt;&lt;a href=&quot;#enif_make_badarg&quot;&gt;enif_make_badarg&lt;/a&gt;&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;&lt;a href=&quot;erlang#timestamp-0&quot;&gt;erlang:timestamp()&lt;/a&gt;&lt;/code&gt; 와 같은 형식으로 CPU 시간을 반환합니다 . CPU 시간은 과거의 임의의 시점부터 현재 논리 CPU가 실행하는 데 소요 된 시간입니다. OS가이 값 가져 오기를 지원하지 않으면 &lt;code&gt;enif_cpu_time&lt;/code&gt; 은 &lt;code&gt;&lt;a href=&quot;#enif_make_badarg&quot;&gt;enif_make_badarg&lt;/a&gt;&lt;/code&gt; 를 호출합니다 .</target>
+          <target state="translated">&lt;code&gt;&lt;a href=&quot;erlang#timestamp-0&quot;&gt;erlang:timestamp()&lt;/a&gt;&lt;/code&gt; 와 같은 형식으로 CPU 시간을 반환합니다 . CPU 시간은 과거의 임의의 지점 이후로 현재 논리 CPU가 실행에 소비 한 시간입니다. OS가이 값 가져 오기를 지원하지 않으면 &lt;code&gt;enif_cpu_time&lt;/code&gt; 은 &lt;code&gt;&lt;a href=&quot;#enif_make_badarg&quot;&gt;enif_make_badarg&lt;/a&gt;&lt;/code&gt; 를 호출합니다 .</target>
         </trans-unit>
         <trans-unit id="51d8383e4c6f3976cb80fe1ea98ebbf2e3ec74c0" translate="yes" xml:space="preserve">
           <source>Returns the Erlang object corresponding to the value of &lt;code&gt;name&lt;/code&gt; in &lt;code&gt;term&lt;/code&gt;. If no variable with the name &lt;code&gt;name&lt;/code&gt; is found in &lt;code&gt;term&lt;/code&gt;, or if &lt;code&gt;term&lt;/code&gt; is not a valid Erlang term, &lt;code&gt;NULL&lt;/code&gt; is returned.</source>
@@ -2949,7 +2949,7 @@
         </trans-unit>
         <trans-unit id="8ae9cfad0e8e863f8c66a9dcb1247f56cbc89ebe" translate="yes" xml:space="preserve">
           <source>Returns the OS version. On most systems, this function returns a tuple, but a string is returned instead if the system has versions that cannot be expressed as three numbers.</source>
-          <target state="translated">OS 버전을 반환합니다. 대부분의 시스템에서이 함수는 튜플을 반환하지만 시스템에 세 개의 숫자로 표현할 수없는 버전이 있으면 문자열이 반환됩니다.</target>
+          <target state="translated">OS 버전을 반환합니다. 대부분의 시스템에서이 함수는 튜플을 반환하지만 시스템에 세 개의 숫자로 표현할 수없는 버전이있는 경우 대신 문자열이 반환됩니다.</target>
         </trans-unit>
         <trans-unit id="181b9edd95af5ec5601442b00a2522062f3d54de" translate="yes" xml:space="preserve">
           <source>Returns the Universal Coordinated Time (UTC) reported by the underlying operating system. Returns local time if universal time is unavailable.</source>
@@ -3173,7 +3173,7 @@
         </trans-unit>
         <trans-unit id="8b6e176a6f35ea4563e4440ef3eab5546e4ae7ee" translate="yes" xml:space="preserve">
           <source>Returns the configuration parameters and their values for &lt;code&gt;Application&lt;/code&gt;. If the argument is omitted, it defaults to the application of the calling process.</source>
-          <target state="translated">&lt;code&gt;Application&lt;/code&gt; 의 구성 매개 변수 및 해당 값을 리턴합니다 . 인수가 생략되면 기본값은 호출 프로세스의 응용 프로그램입니다.</target>
+          <target state="translated">&lt;code&gt;Application&lt;/code&gt; 의 구성 매개 변수 및 해당 값을 리턴합니다 . 인수가 생략되면 기본값은 호출 프로세스의 적용입니다.</target>
         </trans-unit>
         <trans-unit id="cad5d8239e2b47ab5ade33b4f4080c89475049b8" translate="yes" xml:space="preserve">
           <source>Returns the contents of the specified variable in an Erlang term.</source>
@@ -3185,7 +3185,7 @@
         </trans-unit>
         <trans-unit id="608ad012f81e226a19e0c07f218a243a0aa81c53" translate="yes" xml:space="preserve">
           <source>Returns the creation of the local node as an integer. The creation is changed when a node is restarted. The creation of a node is stored in process identifiers, port identifiers, and references. This makes it (to some extent) possible to distinguish between identifiers from different incarnations of a node. The valid creations are integers in the range 1..3, but this will probably change in a future release. If the node is not alive, &lt;code&gt;0&lt;/code&gt; is returned.</source>
-          <target state="translated">로컬 노드 작성을 정수로 리턴합니다. 노드가 다시 시작되면 작성이 변경됩니다. 노드 작성은 프로세스 ID, 포트 ID 및 참조에 저장됩니다. 이것은 (어느 정도까지) 노드의 다른 화신의 식별자를 구별하는 것을 가능하게합니다. 유효한 생성은 1..3 범위의 정수이지만 향후 릴리스에서 변경 될 수 있습니다. 노드가 활성 상태가 아닌 경우 &lt;code&gt;0&lt;/code&gt; 이 리턴됩니다.</target>
+          <target state="translated">로컬 노드 작성을 정수로 리턴합니다. 노드가 다시 시작되면 작성이 변경됩니다. 노드 작성은 프로세스 ID, 포트 ID 및 참조에 저장됩니다. 이것은 노드의 다른 화신과 식별자를 구별하는 것을 가능하게한다. 유효한 생성은 1..3 범위의 정수이지만 향후 릴리스에서 변경 될 수 있습니다. 노드가 활성 상태가 아닌 경우 &lt;code&gt;0&lt;/code&gt; 이 리턴됩니다.</target>
         </trans-unit>
         <trans-unit id="fdfae5e16d780ddc3ea92abf68d35634a70d13d0" translate="yes" xml:space="preserve">
           <source>Returns the current &lt;code&gt;&lt;a href=&quot;time_correction#Erlang_Monotonic_Time&quot;&gt;Erlang monotonic time&lt;/a&gt;&lt;/code&gt; converted into the &lt;code&gt;Unit&lt;/code&gt; passed as argument.</source>
@@ -3253,11 +3253,11 @@
         </trans-unit>
         <trans-unit id="e4f55dab96f26c8ba082de5de479eb29ebf575b4" translate="yes" xml:space="preserve">
           <source>Returns the current system monitoring settings set by &lt;code&gt;&lt;a href=&quot;#system_monitor-2&quot;&gt;erlang:system_monitor/2&lt;/a&gt;&lt;/code&gt; as &lt;code&gt;{MonitorPid, Options}&lt;/code&gt;, or &lt;code&gt;undefined&lt;/code&gt; if no settings exist. The order of the options can be different from the one that was set.</source>
-          <target state="translated">&lt;code&gt;&lt;a href=&quot;#system_monitor-2&quot;&gt;erlang:system_monitor/2&lt;/a&gt;&lt;/code&gt; 에 의해 설정된 현재 시스템 모니터링 설정 을 &lt;code&gt;{MonitorPid, Options}&lt;/code&gt; 하거나 설정이없는 경우 &lt;code&gt;undefined&lt;/code&gt; 값을 리턴 합니다. 옵션 순서는 설정 한 순서와 다를 수 있습니다.</target>
+          <target state="translated">&lt;code&gt;&lt;a href=&quot;#system_monitor-2&quot;&gt;erlang:system_monitor/2&lt;/a&gt;&lt;/code&gt; 에서 설정 한 현재 시스템 모니터링 설정 을 &lt;code&gt;{MonitorPid, Options}&lt;/code&gt; 반환 하거나 설정이없는 경우 &lt;code&gt;undefined&lt;/code&gt; 반환합니다. 옵션 순서는 설정 한 순서와 다를 수 있습니다.</target>
         </trans-unit>
         <trans-unit id="e94f1c1a87e3b71f88ffad8e78f930a5a919fccd" translate="yes" xml:space="preserve">
           <source>Returns the current system profiling settings set by &lt;code&gt;&lt;a href=&quot;#system_profile-2&quot;&gt;erlang:system_profile/2&lt;/a&gt;&lt;/code&gt; as &lt;code&gt;{ProfilerPid, Options}&lt;/code&gt;, or &lt;code&gt;undefined&lt;/code&gt; if there are no settings. The order of the options can be different from the one that was set.</source>
-          <target state="translated">&lt;code&gt;&lt;a href=&quot;#system_profile-2&quot;&gt;erlang:system_profile/2&lt;/a&gt;&lt;/code&gt; 에 의해 설정된 현재 시스템 프로파일 링 설정 을 &lt;code&gt;{ProfilerPid, Options}&lt;/code&gt; 로 설정하거나 설정이없는 경우 &lt;code&gt;undefined&lt;/code&gt; 반환합니다. 옵션 순서는 설정 한 순서와 다를 수 있습니다.</target>
+          <target state="translated">&lt;code&gt;&lt;a href=&quot;#system_profile-2&quot;&gt;erlang:system_profile/2&lt;/a&gt;&lt;/code&gt; 에 의해 설정된 현재 시스템 프로파일 링 설정 을 &lt;code&gt;{ProfilerPid, Options}&lt;/code&gt; 로 설정하거나 설정이없는 경우 &lt;code&gt;undefined&lt;/code&gt; 를 반환합니다. 옵션 순서는 설정 한 순서와 다를 수 있습니다.</target>
         </trans-unit>
         <trans-unit id="76329b1b04a56512687c837f540694b0cca5bdfb" translate="yes" xml:space="preserve">
           <source>Returns the current time as &lt;code&gt;{Hour, Minute, Second}&lt;/code&gt;.</source>
@@ -3353,7 +3353,7 @@
         </trans-unit>
         <trans-unit id="845464c74c7576d61ca8fdb3dbfbe2c70002a6f0" translate="yes" xml:space="preserve">
           <source>Returns the elements of the ordered set &lt;code&gt;ASet&lt;/code&gt; as a tuple of sets, and the elements of the unordered set &lt;code&gt;ASet&lt;/code&gt; as a sorted list of sets without duplicates.</source>
-          <target state="translated">정렬 된 집합 &lt;code&gt;ASet&lt;/code&gt; 의 요소를 집합 의 튜플로 반환하고 정렬되지 않은 집합 &lt;code&gt;ASet&lt;/code&gt; 의 요소를 중복없는 집합의 정렬 된 목록으로 반환합니다 .</target>
+          <target state="translated">정렬 된 집합 &lt;code&gt;ASet&lt;/code&gt; 의 요소를 집합 의 튜플로 반환하고 정렬되지 않은 집합 &lt;code&gt;ASet&lt;/code&gt; 의 요소를 중복 되지 않은 정렬 된 집합의 목록으로 반환합니다 .</target>
         </trans-unit>
         <trans-unit id="4313cdc6c13f459bec7e45b2099a14c30408d080" translate="yes" xml:space="preserve">
           <source>Returns the empty list [] if &lt;code&gt;memsup&lt;/code&gt; is not available, or if the memory check times out.</source>
@@ -3465,7 +3465,7 @@
         </trans-unit>
         <trans-unit id="5de20b75df90cdf1cc80195b73620ec6c4870aa4" translate="yes" xml:space="preserve">
           <source>Returns the grouped list of all subtrees of a syntax tree. If &lt;code&gt;Node&lt;/code&gt; is a leaf node (see &lt;code&gt;&lt;a href=&quot;#is_leaf-1&quot;&gt;is_leaf/1&lt;/a&gt;&lt;/code&gt;), this is the empty list, otherwise the result is always a nonempty list, containing the lists of subtrees of &lt;code&gt;Node&lt;/code&gt;, in left-to-right order as they occur in the printed program text, and grouped by category. Often, each group contains only a single subtree.</source>
-          <target state="translated">구문 트리의 모든 하위 트리 그룹화 된 목록을 반환합니다. 경우 &lt;code&gt;Node&lt;/code&gt; 리프 노드이다 (참조 &lt;code&gt;&lt;a href=&quot;#is_leaf-1&quot;&gt;is_leaf/1&lt;/a&gt;&lt;/code&gt; 의 하위 트리의 목록을 포함, 그렇지 않으면 결과는 비어 있지 않은 목록은 항상,이 빈 목록) &lt;code&gt;Node&lt;/code&gt; 에서 왼쪽에서 오른쪽 순서가 인쇄 된 프로그램에서 발생하는 텍스트별로 분류되어 있습니다. 종종 각 그룹에는 단일 하위 트리 만 포함됩니다.</target>
+          <target state="translated">구문 트리의 모든 하위 트리 그룹화 된 목록을 반환합니다. 경우 &lt;code&gt;Node&lt;/code&gt; 리프 노드이다 (참조 &lt;code&gt;&lt;a href=&quot;#is_leaf-1&quot;&gt;is_leaf/1&lt;/a&gt;&lt;/code&gt; 의 하위 트리의 목록을 포함, 그렇지 않으면 결과는 비어 있지 않은 목록은 항상,이 빈 목록) &lt;code&gt;Node&lt;/code&gt; 에서 왼쪽에서 오른쪽 순서가 인쇄 된 프로그램에서 발생하는 텍스트로 분류되고 카테고리별로 그룹화됩니다. 종종 각 그룹에는 단일 하위 트리 만 포함됩니다.</target>
         </trans-unit>
         <trans-unit id="81cadbe4c10aee223963aee8b501ed86dafc88a3" translate="yes" xml:space="preserve">
           <source>Returns the guard subtree of a &lt;code&gt;clause&lt;/code&gt; node, if any. If &lt;code&gt;Node&lt;/code&gt; represents &quot;&lt;code&gt;(P1, ..., Pn) when Guard -&amp;gt; B1, ..., Bm&lt;/code&gt;&quot;, &lt;code&gt;Guard&lt;/code&gt; is returned. Otherwise, the result is &lt;code&gt;none&lt;/code&gt;.</source>
@@ -3665,7 +3665,7 @@
         </trans-unit>
         <trans-unit id="4b90db412db69843fc9c55da35c6d6e35fc21fcc" translate="yes" xml:space="preserve">
           <source>Returns the list of all test cases and test case groups in the test suite module to be executed. This list also specifies the order the cases and groups are executed by &lt;code&gt;Common Test&lt;/code&gt;. A test case is represented by an atom, the name of the test case function. A test case group is represented by a &lt;code&gt;group&lt;/code&gt; tuple, where &lt;code&gt;GroupName&lt;/code&gt;, an atom, is the name of the group (defined in &lt;code&gt;&lt;a href=&quot;#Module:groups-0&quot;&gt;groups/0&lt;/a&gt;&lt;/code&gt;). Execution properties for groups can also be specified, both for a top-level group and for any of its subgroups. Group execution properties specified here override properties in the group definition (see &lt;code&gt;&lt;a href=&quot;#Module:groups-0&quot;&gt;groups/0&lt;/a&gt;&lt;/code&gt;). (With value &lt;code&gt;default&lt;/code&gt;, the group definition properties are used).</source>
-          <target state="translated">실행할 테스트 스위트 모듈의 모든 테스트 케이스 및 테스트 케이스 그룹 목록을 리턴합니다. 이 목록은 또한 케이스 및 그룹이 &lt;code&gt;Common Test&lt;/code&gt; 의해 실행되는 순서를 지정합니다 . 테스트 케이스는 테스트 케이스 함수의 이름 인 원자로 표시됩니다. 테스트 케이스 그룹은 &lt;code&gt;group&lt;/code&gt; 튜플로 표시됩니다. 여기서 원자 인 &lt;code&gt;GroupName&lt;/code&gt; 은 그룹의 이름입니다 ( &lt;code&gt;&lt;a href=&quot;#Module:groups-0&quot;&gt;groups/0&lt;/a&gt;&lt;/code&gt; 에 정의 됨 ). 최상위 그룹과 하위 그룹 모두에 대해 그룹의 실행 속성을 지정할 수도 있습니다. 여기에 지정된 그룹 실행 특성은 그룹 정의의 특성을 대체합니다 ( &lt;code&gt;&lt;a href=&quot;#Module:groups-0&quot;&gt;groups/0&lt;/a&gt;&lt;/code&gt; 참조 ). ( &lt;code&gt;default&lt;/code&gt; 값 으로 그룹 정의 특성이 사용됩니다).</target>
+          <target state="translated">실행할 테스트 스위트 모듈의 모든 테스트 케이스 및 테스트 케이스 그룹 목록을 리턴합니다. 이 목록은 또한 케이스 및 그룹이 &lt;code&gt;Common Test&lt;/code&gt; 의해 실행되는 순서를 지정합니다 . 테스트 케이스는 테스트 케이스 함수의 이름 인 원자로 표시됩니다. 테스트 케이스 그룹은 &lt;code&gt;group&lt;/code&gt; 튜플로 표시되며 , 여기서 원자 인 &lt;code&gt;GroupName&lt;/code&gt; 은 그룹의 이름입니다 ( &lt;code&gt;&lt;a href=&quot;#Module:groups-0&quot;&gt;groups/0&lt;/a&gt;&lt;/code&gt; 에 정의 됨 ). 최상위 그룹과 하위 그룹 모두에 대해 그룹의 실행 속성을 지정할 수도 있습니다. 여기에 지정된 그룹 실행 특성은 그룹 정의의 특성을 대체합니다 ( &lt;code&gt;&lt;a href=&quot;#Module:groups-0&quot;&gt;groups/0&lt;/a&gt;&lt;/code&gt; 참조 ). ( &lt;code&gt;default&lt;/code&gt; 값 으로 그룹 정의 특성이 사용됩니다).</target>
         </trans-unit>
         <trans-unit id="9f7bc040a55769c2d560efbbc9bfd9aeb11b35dd" translate="yes" xml:space="preserve">
           <source>Returns the list of argument subtrees of a &lt;code&gt;macro&lt;/code&gt; node, if any. If &lt;code&gt;Node&lt;/code&gt; represents &quot;&lt;code&gt;?Name&lt;/code&gt;&quot;, &lt;code&gt;none&lt;/code&gt; is returned. Otherwise, if &lt;code&gt;Node&lt;/code&gt; represents &quot;&lt;code&gt;?Name(A1, ..., An)&lt;/code&gt;&quot;, &lt;code&gt;[A1, ..., An]&lt;/code&gt; is returned.</source>
@@ -3833,7 +3833,7 @@
         </trans-unit>
         <trans-unit id="0d81c5c279a5eda522a6b5badccf42435ca7d3d2" translate="yes" xml:space="preserve">
           <source>Returns the literal string represented by a &lt;code&gt;char&lt;/code&gt; node. This includes the leading &quot;&lt;code&gt;$&lt;/code&gt;&quot; character. Depending on the encoding a character beyond 255 will be escaped (&lt;code&gt;latin1&lt;/code&gt;) or copied as is (&lt;code&gt;utf8&lt;/code&gt;).</source>
-          <target state="translated">&lt;code&gt;char&lt;/code&gt; 노드가 나타내는 리터럴 문자열을 리턴 합니다. 여기에는 선행 &quot; &lt;code&gt;$&lt;/code&gt; &quot;문자가 포함됩니다. 인코딩에 따라 255를 초과하는 문자는 이스케이프 되거나 ( &lt;code&gt;latin1&lt;/code&gt; ) 그대로 ( &lt;code&gt;utf8&lt;/code&gt; ) 복사됩니다 .</target>
+          <target state="translated">&lt;code&gt;char&lt;/code&gt; 노드가 나타내는 리터럴 문자열을 리턴 합니다. 여기에는 선행 &quot; &lt;code&gt;$&lt;/code&gt; &quot;문자가 포함됩니다. 인코딩에 따라 255 이상의 문자는 이스케이프 되거나 ( &lt;code&gt;latin1&lt;/code&gt; ) 그대로 ( &lt;code&gt;utf8&lt;/code&gt; ) 복사됩니다 .</target>
         </trans-unit>
         <trans-unit id="1b891959bf59e8ca2fffbccba3879fbf60620309" translate="yes" xml:space="preserve">
           <source>Returns the literal string represented by a &lt;code&gt;string&lt;/code&gt; node. This includes surrounding double-quote characters. Characters beyond 255 will be escaped.</source>
@@ -3897,7 +3897,7 @@
         </trans-unit>
         <trans-unit id="b5f5f3d5339b0ae05f73b408853fe635dfc27a09" translate="yes" xml:space="preserve">
           <source>Returns the magic cookie of the local node if the node is alive, otherwise the atom &lt;code&gt;nocookie&lt;/code&gt;.</source>
-          <target state="translated">노드가 &lt;code&gt;nocookie&lt;/code&gt; 경우 로컬 노드의 매직 쿠키를 리턴하고 그렇지 않으면 atom nocookie를 리턴 합니다.</target>
+          <target state="translated">노드가 &lt;code&gt;nocookie&lt;/code&gt; 경우 로컬 노드의 매직 쿠키를 리턴하고, 그렇지 않으면 atom nocookie를 리턴 합니다.</target>
         </trans-unit>
         <trans-unit id="af40012a87462ebdc7d7eb5c438abdea2903d250" translate="yes" xml:space="preserve">
           <source>Returns the match specification for this event, if it has one, or &lt;code&gt;true&lt;/code&gt; if no match specification has been set.</source>

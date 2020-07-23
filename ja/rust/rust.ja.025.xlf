@@ -25,7 +25,7 @@
         </trans-unit>
         <trans-unit id="1fa85583181bde0bf3cf500699554c0e1c383e48" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;File&lt;/code&gt; will be converted to &lt;code&gt;Stdio&lt;/code&gt; using &lt;code&gt;Stdio::from&lt;/code&gt; under the hood.</source>
-          <target state="translated">&lt;code&gt;File&lt;/code&gt; に変換されます &lt;code&gt;Stdio&lt;/code&gt; 使用して &lt;code&gt;Stdio::from&lt;/code&gt; フードの下。</target>
+          <target state="translated">&lt;code&gt;File&lt;/code&gt; は、 &lt;code&gt;Stdio&lt;/code&gt; &lt;code&gt;Stdio::from&lt;/code&gt; を使用してStdioに変換されます。</target>
         </trans-unit>
         <trans-unit id="e343104a7dd587d988d170bbd65468574b149f58" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;Fn&lt;/code&gt; borrows values from the environment immutably.</source>
@@ -33,7 +33,7 @@
         </trans-unit>
         <trans-unit id="ab03fe793e9caead41d64f21baf551347ae2bf93" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;Fn&lt;/code&gt; is implemented automatically by closures which only take immutable references to captured variables or don't capture anything at all, as well as (safe) &lt;a href=&quot;../primitive.fn&quot;&gt;function pointers&lt;/a&gt; (with some caveats, see their documentation for more details). Additionally, for any type &lt;code&gt;F&lt;/code&gt; that implements &lt;code&gt;Fn&lt;/code&gt;, &lt;code&gt;&amp;amp;F&lt;/code&gt; implements &lt;code&gt;Fn&lt;/code&gt;, too.</source>
-          <target state="translated">&lt;code&gt;Fn&lt;/code&gt; は、キャプチャされた変数への不変の参照のみを取得するか、何も取得しないクロージャー、および（安全な）&lt;a href=&quot;../primitive.fn&quot;&gt;関数ポインター&lt;/a&gt;によって自動的に実装されます（いくつかの注意点があります。詳細については、ドキュメントを参照してください）。さらに、 &lt;code&gt;Fn&lt;/code&gt; を実装するタイプ &lt;code&gt;F&lt;/code&gt; の場合、 &lt;code&gt;&amp;amp;F&lt;/code&gt; も &lt;code&gt;Fn&lt;/code&gt; を実装します。</target>
+          <target state="translated">&lt;code&gt;Fn&lt;/code&gt; は、キャプチャされた変数への不変の参照のみを取得するか、何もキャプチャしないクロージャ、および（安全な）&lt;a href=&quot;../primitive.fn&quot;&gt;関数ポインタ&lt;/a&gt;によって自動的に実装されます（注意点がいくつかありますが、詳細はドキュメントを参照してください）。さらに、 &lt;code&gt;Fn&lt;/code&gt; を実装するタイプ &lt;code&gt;F&lt;/code&gt; の場合、 &lt;code&gt;&amp;amp;F&lt;/code&gt; も &lt;code&gt;Fn&lt;/code&gt; を実装します。</target>
         </trans-unit>
         <trans-unit id="17b9ef6427d46f1dc1986b48a964061a03c5df5d" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;FnMut&lt;/code&gt; can change the environment because it mutably borrows values.</source>
@@ -45,7 +45,7 @@
         </trans-unit>
         <trans-unit id="c000f4207e0d7915b5876998e9f4fb9b80cc61ce" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;FnOnce&lt;/code&gt; consumes the variables it captures from its enclosing scope, known as the closure&amp;rsquo;s &lt;em&gt;environment&lt;/em&gt;. To consume the captured variables, the closure must take ownership of these variables and move them into the closure when it is defined. The &lt;code&gt;Once&lt;/code&gt; part of the name represents the fact that the closure can&amp;rsquo;t take ownership of the same variables more than once, so it can be called only once.</source>
-          <target state="translated">&lt;code&gt;FnOnce&lt;/code&gt; は、クロージャーの&lt;em&gt;環境&lt;/em&gt;と呼ばれる、それを包含するスコープからキャプチャした変数を使用します。キャプチャーされた変数を使用するには、クロージャーがこれらの変数の所有権を取得し、定義時にクロージャーに移動する必要があります。名前の「 &lt;code&gt;Once&lt;/code&gt; 部分は、クロージャーが同じ変数の所有権を2回以上取得できないため、1回しか呼び出せないという事実を表しています。</target>
+          <target state="translated">&lt;code&gt;FnOnce&lt;/code&gt; は、クロージャーの&lt;em&gt;環境&lt;/em&gt;と呼ばれる、それを包含するスコープから取得した変数を使用します。キャプチャーされた変数を使用するには、クロージャーがこれらの変数の所有権を取得し、定義時にクロージャーに移動する必要があります。名前の &lt;code&gt;Once&lt;/code&gt; 部分は、クロージャーが同じ変数の所有権を2回以上取得できないため、1回しか呼び出せないという事実を表しています。</target>
         </trans-unit>
         <trans-unit id="cd9ddc6fdbd0ced3f264442be06b3b6029a50311" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;FnOnce&lt;/code&gt; is implemented automatically by closure that might consume captured variables, as well as all types that implement &lt;a href=&quot;trait.fnmut&quot;&gt;&lt;code&gt;FnMut&lt;/code&gt;&lt;/a&gt;, e.g., (safe) &lt;a href=&quot;../primitive.fn&quot;&gt;function pointers&lt;/a&gt; (since &lt;code&gt;FnOnce&lt;/code&gt; is a supertrait of &lt;a href=&quot;trait.fnmut&quot;&gt;&lt;code&gt;FnMut&lt;/code&gt;&lt;/a&gt;).</source>
@@ -109,7 +109,7 @@
         </trans-unit>
         <trans-unit id="ae7f415c5a109455a86645cb6ea78d4911189621" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;Ipv4Addr&lt;/code&gt; provides a &lt;a href=&quot;../str/trait.fromstr&quot;&gt;&lt;code&gt;FromStr&lt;/code&gt;&lt;/a&gt; implementation. The four octets are in decimal notation, divided by &lt;code&gt;.&lt;/code&gt; (this is called &quot;dot-decimal notation&quot;).</source>
-          <target state="translated">&lt;code&gt;Ipv4Addr&lt;/code&gt; は&lt;a href=&quot;../str/trait.fromstr&quot;&gt; &lt;code&gt;FromStr&lt;/code&gt; &lt;/a&gt;実装を提供します。4つのオクテットは10進表記で、で除算され &lt;code&gt;.&lt;/code&gt; （これは「ドット10進表記」と呼ばれます）。</target>
+          <target state="translated">&lt;code&gt;Ipv4Addr&lt;/code&gt; は&lt;a href=&quot;../str/trait.fromstr&quot;&gt; &lt;code&gt;FromStr&lt;/code&gt; &lt;/a&gt;実装を提供します。4つのオクテットは、10進表記で除算され &lt;code&gt;.&lt;/code&gt; （これは「ドット10進表記」と呼ばれます）。</target>
         </trans-unit>
         <trans-unit id="25d3a7db8b0872ae22dd1527ee4728bd11774d7b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;Ipv6Addr&lt;/code&gt; provides a &lt;a href=&quot;../str/trait.fromstr&quot;&gt;&lt;code&gt;FromStr&lt;/code&gt;&lt;/a&gt; implementation. There are many ways to represent an IPv6 address in text, but in general, each segments is written in hexadecimal notation, and segments are separated by &lt;code&gt;:&lt;/code&gt;. For more information, see &lt;a href=&quot;https://tools.ietf.org/html/rfc5952&quot;&gt;IETF RFC 5952&lt;/a&gt;.</source>
@@ -117,7 +117,7 @@
         </trans-unit>
         <trans-unit id="5dc39b9ce26cf3dd51514d0ac255e7e6d7f67fd2" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;Layout&lt;/code&gt; queries and calculations in general must be correct. Callers of this trait are allowed to rely on the contracts defined on each method, and implementors must ensure such contracts remain true.</source>
-          <target state="translated">&lt;code&gt;Layout&lt;/code&gt; クエリと計算は、一般的に正しい必要があります。このトレイトの呼び出し元は、各メソッドで定義されたコントラクトに依存することが許可されており、実装者はそのようなコントラクトがtrueのままであることを確認する必要があります。</target>
+          <target state="translated">&lt;code&gt;Layout&lt;/code&gt; クエリと計算は、一般的に正しい必要があります。このトレイトの呼び出し元は、各メソッドで定義されたコントラクトに依存することが許可されており、実装者は、そのようなコントラクトが真のままであることを確認する必要があります。</target>
         </trans-unit>
         <trans-unit id="83555e7cbe36ad60ad279ac0629e9090346e6073" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;Less&lt;/code&gt; becomes &lt;code&gt;Greater&lt;/code&gt;.</source>
@@ -133,7 +133,7 @@
         </trans-unit>
         <trans-unit id="ac7be5255721703bf2a7217d3b0692596360f6da" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;MaybeUninit&amp;lt;T&amp;gt;&lt;/code&gt; can be used to initialize a large array element-by-element:</source>
-          <target state="translated">&lt;code&gt;MaybeUninit&amp;lt;T&amp;gt;&lt;/code&gt; を使用して、要素ごとの大きな配列を初期化できます。</target>
+          <target state="translated">&lt;code&gt;MaybeUninit&amp;lt;T&amp;gt;&lt;/code&gt; を使用して、要素ごとに大きな配列を初期化できます。</target>
         </trans-unit>
         <trans-unit id="31daa1c8e82b9004085b19cefd5259e1e13e6df4" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;MaybeUninit&amp;lt;T&amp;gt;&lt;/code&gt; is guaranteed to have the same size, alignment, and ABI as &lt;code&gt;T&lt;/code&gt;:</source>
@@ -157,15 +157,15 @@
         </trans-unit>
         <trans-unit id="7db30cc3f5c77b82d9c32d074801cc91e5a3c601" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;NT&lt;/code&gt;: non-terminal, the various &quot;meta-variables&quot; or repetition matchers that can appear in a matcher, specified in MBE syntax with a leading &lt;code&gt;$&lt;/code&gt; character.</source>
-          <target state="translated">&lt;code&gt;NT&lt;/code&gt; ：非終端、さまざまな「メタ変数」またはマッチャーに出現できる繰り返しマッチャー。MBE構文で先頭に &lt;code&gt;$&lt;/code&gt; 文字を付けて指定します。</target>
+          <target state="translated">&lt;code&gt;NT&lt;/code&gt; ：非終端、さまざまな「メタ変数」またはマッチャーに出現できる繰り返しマッチャー。先頭に &lt;code&gt;$&lt;/code&gt; 文字を付けてMBE構文で指定します。</target>
         </trans-unit>
         <trans-unit id="8af4fad001f4ddd0b0dc1936058a444336074665" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;NonNull&lt;/code&gt; pointers are not &lt;code&gt;Send&lt;/code&gt; because the data they reference may be aliased.</source>
-          <target state="translated">&lt;code&gt;NonNull&lt;/code&gt; ポインタは、参照するデータにエイリアスが付けられる可能性があるため、 &lt;code&gt;Send&lt;/code&gt; ではありません。</target>
+          <target state="translated">&lt;code&gt;NonNull&lt;/code&gt; ポインタは、参照するデータにエイリアスが付けられる可能性があるため、 &lt;code&gt;Send&lt;/code&gt; れません。</target>
         </trans-unit>
         <trans-unit id="783f4012f263c6d38d1e6e5902a75bd66d94c784" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;NonNull&lt;/code&gt; pointers are not &lt;code&gt;Sync&lt;/code&gt; because the data they reference may be aliased.</source>
-          <target state="translated">&lt;code&gt;NonNull&lt;/code&gt; ポインターは、参照するデータにエイリアスが設定されている可能性があるため、 &lt;code&gt;Sync&lt;/code&gt; れません。</target>
+          <target state="translated">&lt;code&gt;NonNull&lt;/code&gt; ポインタは、参照するデータにエイリアスが付けられる可能性があるため、 &lt;code&gt;Sync&lt;/code&gt; れません。</target>
         </trans-unit>
         <trans-unit id="11aafbb7d832b9c7331aeec723b4939e40d973e5" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;None&lt;/code&gt; if &lt;code&gt;predicate&lt;/code&gt; returns &lt;code&gt;false&lt;/code&gt;.</source>
@@ -177,7 +177,7 @@
         </trans-unit>
         <trans-unit id="915fe41279fa519186a0735c633ac7fe9d481748" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;None&lt;/code&gt;: the end of the input was reached unexpectedly. &lt;code&gt;self.valid_up_to()&lt;/code&gt; is 1 to 3 bytes from the end of the input. If a byte stream (such as a file or a network socket) is being decoded incrementally, this could be a valid &lt;code&gt;char&lt;/code&gt; whose UTF-8 byte sequence is spanning multiple chunks.</source>
-          <target state="translated">&lt;code&gt;None&lt;/code&gt; ：予期せず入力の終わりに達しました。 &lt;code&gt;self.valid_up_to()&lt;/code&gt; は、入力の最後から1〜3バイトです。バイトストリーム（ファイルやネットワークソケットなど）が段階的にデコードされている場合、これは、UTF-8バイトシーケンスが複数のチャンクにまたがっている有効な &lt;code&gt;char&lt;/code&gt; である可能性があります。</target>
+          <target state="translated">&lt;code&gt;None&lt;/code&gt; ：入力の終わりに予期せず到達しました。 &lt;code&gt;self.valid_up_to()&lt;/code&gt; は、入力の最後から1〜3バイトです。バイトストリーム（ファイルやネットワークソケットなど）が段階的にデコードされる場合、これはUTF-8バイトシーケンスが複数のチャンクにまたがる有効な &lt;code&gt;char&lt;/code&gt; である可能性があります。</target>
         </trans-unit>
         <trans-unit id="10b8d9eda27eb8d4bd5f3d04ac9401f4b91750c9" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;Ok(None)&lt;/code&gt; will be mapped to &lt;code&gt;None&lt;/code&gt;. &lt;code&gt;Ok(Some(_))&lt;/code&gt; and &lt;code&gt;Err(_)&lt;/code&gt; will be mapped to &lt;code&gt;Some(Ok(_))&lt;/code&gt; and &lt;code&gt;Some(Err(_))&lt;/code&gt;.</source>
@@ -193,7 +193,7 @@
         </trans-unit>
         <trans-unit id="dab6ecc524aeedeb6977fa8e601878b3f968350c" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;OsString&lt;/code&gt; is to &lt;a href=&quot;struct.osstr&quot;&gt;&lt;code&gt;&amp;amp;OsStr&lt;/code&gt;&lt;/a&gt; as &lt;a href=&quot;../string/struct.string&quot;&gt;&lt;code&gt;String&lt;/code&gt;&lt;/a&gt; is to &lt;a href=&quot;../primitive.str&quot;&gt;&lt;code&gt;&amp;amp;str&lt;/code&gt;&lt;/a&gt;: the former in each pair are owned strings; the latter are borrowed references.</source>
-          <target state="translated">&lt;code&gt;OsString&lt;/code&gt; は&lt;a href=&quot;struct.osstr&quot;&gt; &lt;code&gt;&amp;amp;OsStr&lt;/code&gt; にあり&lt;/a&gt;、&lt;a href=&quot;../string/struct.string&quot;&gt; &lt;code&gt;String&lt;/code&gt; &lt;/a&gt;は&lt;a href=&quot;../primitive.str&quot;&gt; &lt;code&gt;&amp;amp;str&lt;/code&gt; にあります&lt;/a&gt;。各ペアの前者は所有される文字列です。後者は借りた参考文献です。</target>
+          <target state="translated">&lt;code&gt;OsString&lt;/code&gt; は&lt;a href=&quot;struct.osstr&quot;&gt; &lt;code&gt;&amp;amp;OsStr&lt;/code&gt; にあり&lt;/a&gt;、&lt;a href=&quot;../string/struct.string&quot;&gt; &lt;code&gt;String&lt;/code&gt; &lt;/a&gt;は&lt;a href=&quot;../primitive.str&quot;&gt; &lt;code&gt;&amp;amp;str&lt;/code&gt; にあります&lt;/a&gt;。各ペアの前者は所有されている文字列です。後者は借りた参考文献です。</target>
         </trans-unit>
         <trans-unit id="71d78c5d1c02d65262ec97b4d65b29498f3d873b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;OsStringExt&lt;/code&gt; and &lt;code&gt;OsStrExt&lt;/code&gt;</source>
@@ -213,7 +213,7 @@
         </trans-unit>
         <trans-unit id="0000dadfbd8d07c0837fb6341b4995596c3f66f4" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;Quit&lt;/code&gt; has no data associated with it at all.</source>
-          <target state="translated">&lt;code&gt;Quit&lt;/code&gt; は、関連付けられたデータはまったくありません。</target>
+          <target state="translated">&lt;code&gt;Quit&lt;/code&gt; は、関連付けられたデータがまったくありません。</target>
         </trans-unit>
         <trans-unit id="477368f614c73c4be43d992ee9d7a086ded6132f" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;RandomState&lt;/code&gt; is the default state for &lt;a href=&quot;struct.hashmap&quot;&gt;&lt;code&gt;HashMap&lt;/code&gt;&lt;/a&gt; types.</source>
@@ -229,7 +229,7 @@
         </trans-unit>
         <trans-unit id="4a42f09004e96cf6202905726dbe7dcd6ccc932c" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;Rc&amp;lt;T&amp;gt;&lt;/code&gt; automatically dereferences to &lt;code&gt;T&lt;/code&gt; (via the &lt;a href=&quot;../ops/trait.deref&quot;&gt;&lt;code&gt;Deref&lt;/code&gt;&lt;/a&gt; trait), so you can call &lt;code&gt;T&lt;/code&gt;'s methods on a value of type &lt;a href=&quot;struct.rc&quot;&gt;&lt;code&gt;Rc&amp;lt;T&amp;gt;&lt;/code&gt;&lt;/a&gt;. To avoid name clashes with &lt;code&gt;T&lt;/code&gt;'s methods, the methods of &lt;a href=&quot;struct.rc&quot;&gt;&lt;code&gt;Rc&amp;lt;T&amp;gt;&lt;/code&gt;&lt;/a&gt; itself are associated functions, called using function-like syntax:</source>
-          <target state="translated">&lt;code&gt;Rc&amp;lt;T&amp;gt;&lt;/code&gt; 自動的に（&lt;a href=&quot;../ops/trait.deref&quot;&gt; &lt;code&gt;Deref&lt;/code&gt; &lt;/a&gt;トレイトを介して） &lt;code&gt;T&lt;/code&gt; を逆参照するため、&lt;a href=&quot;struct.rc&quot;&gt; &lt;code&gt;Rc&amp;lt;T&amp;gt;&lt;/code&gt; &lt;/a&gt;型の値で &lt;code&gt;T&lt;/code&gt; のメソッドを呼び出すことができます。 &lt;code&gt;T&lt;/code&gt; のメソッドとの名前の衝突を回避するために、&lt;a href=&quot;struct.rc&quot;&gt; &lt;code&gt;Rc&amp;lt;T&amp;gt;&lt;/code&gt; &lt;/a&gt;自体のメソッドは関連付けられた関数であり、関数のような構文を使用して呼び出されます。</target>
+          <target state="translated">&lt;code&gt;Rc&amp;lt;T&amp;gt;&lt;/code&gt; （&lt;a href=&quot;../ops/trait.deref&quot;&gt; &lt;code&gt;Deref&lt;/code&gt; &lt;/a&gt;トレイトを介して） &lt;code&gt;T&lt;/code&gt; を自動的に逆参照するため、&lt;a href=&quot;struct.rc&quot;&gt; &lt;code&gt;Rc&amp;lt;T&amp;gt;&lt;/code&gt; &lt;/a&gt;型の値で &lt;code&gt;T&lt;/code&gt; のメソッドを呼び出すことができます。 &lt;code&gt;T&lt;/code&gt; のメソッドとの名前の衝突を回避するために、&lt;a href=&quot;struct.rc&quot;&gt; &lt;code&gt;Rc&amp;lt;T&amp;gt;&lt;/code&gt; &lt;/a&gt;自体のメソッドは関連付けられた関数であり、関数のような構文を使用して呼び出されます。</target>
         </trans-unit>
         <trans-unit id="35f7a75054dc4c36a2bc2db0dffdcdd788f598ad" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;Rc&amp;lt;T&amp;gt;&lt;/code&gt; enables multiple owners of the same data; &lt;code&gt;Box&amp;lt;T&amp;gt;&lt;/code&gt; and &lt;code&gt;RefCell&amp;lt;T&amp;gt;&lt;/code&gt; have single owners.</source>
@@ -269,7 +269,7 @@
         </trans-unit>
         <trans-unit id="38b74787cd7ab814efe04b896e2616124e83aff5" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;Some(len)&lt;/code&gt;: an unexpected byte was encountered. The length provided is that of the invalid byte sequence that starts at the index given by &lt;code&gt;valid_up_to()&lt;/code&gt;. Decoding should resume after that sequence (after inserting a &lt;a href=&quot;../char/constant.replacement_character&quot;&gt;&lt;code&gt;U+FFFD REPLACEMENT CHARACTER&lt;/code&gt;&lt;/a&gt;) in case of lossy decoding.</source>
-          <target state="translated">&lt;code&gt;Some(len)&lt;/code&gt; ：予期しないバイトが発生しました。指定された長さは、 &lt;code&gt;valid_up_to()&lt;/code&gt; によって指定されたインデックスで始まる無効なバイトシーケンスの長さです。損失のあるデコードの場合は、そのシーケンスの後で（&lt;a href=&quot;../char/constant.replacement_character&quot;&gt; &lt;code&gt;U+FFFD REPLACEMENT CHARACTER&lt;/code&gt; を&lt;/a&gt;挿入した後）デコードを再開する必要があります。</target>
+          <target state="translated">&lt;code&gt;Some(len)&lt;/code&gt; ：予期しないバイトが発生しました。提供される長さは、 &lt;code&gt;valid_up_to()&lt;/code&gt; によって指定されたインデックスで始まる無効なバイトシーケンスの長さです。損失のあるデコードの場合は、そのシーケンスの後で（&lt;a href=&quot;../char/constant.replacement_character&quot;&gt; &lt;code&gt;U+FFFD REPLACEMENT CHARACTER&lt;/code&gt; を&lt;/a&gt;挿入した後）デコードを再開する必要があります。</target>
         </trans-unit>
         <trans-unit id="04f4ec3935609d0a1340a6fe98f067507f55e64b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;Some(t)&lt;/code&gt; if &lt;code&gt;predicate&lt;/code&gt; returns &lt;code&gt;true&lt;/code&gt; (where &lt;code&gt;t&lt;/code&gt; is the wrapped value), and</source>
@@ -277,7 +277,7 @@
         </trans-unit>
         <trans-unit id="eb371bcb42db156cc20c9b2539c5bd112f770f6d" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;String&lt;/code&gt;s are always valid UTF-8. This has a few implications, the first of which is that if you need a non-UTF-8 string, consider &lt;a href=&quot;../ffi/struct.osstring&quot;&gt;&lt;code&gt;OsString&lt;/code&gt;&lt;/a&gt;. It is similar, but without the UTF-8 constraint. The second implication is that you cannot index into a &lt;code&gt;String&lt;/code&gt;:</source>
-          <target state="translated">&lt;code&gt;String&lt;/code&gt; は常に有効なUTF-8です。これにはいくつかの影響があります。その1つは、UTF-8以外の文字列が必要な場合は&lt;a href=&quot;../ffi/struct.osstring&quot;&gt; &lt;code&gt;OsString&lt;/code&gt; を&lt;/a&gt;検討することです。似ていますが、UTF-8の制約はありません。2番目の意味は、 &lt;code&gt;String&lt;/code&gt; インデックスを付けることができないことです。</target>
+          <target state="translated">&lt;code&gt;String&lt;/code&gt; は常に有効なUTF-8です。これにはいくつかの影響があります。その1つは、UTF-8以外の文字列が必要な場合は&lt;a href=&quot;../ffi/struct.osstring&quot;&gt; &lt;code&gt;OsString&lt;/code&gt; を&lt;/a&gt;検討することです。これは似ていますが、UTF-8制約がありません。2番目の意味は、 &lt;code&gt;String&lt;/code&gt; インデックスを付けることができないことです。</target>
         </trans-unit>
         <trans-unit id="90ca11bc923ad94c1f81ca12133091fdf7fb3e9e" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;String&lt;/code&gt;s have an internal buffer to hold their data. The capacity is the length of that buffer, and can be queried with the &lt;a href=&quot;#method.capacity&quot;&gt;&lt;code&gt;capacity&lt;/code&gt;&lt;/a&gt; method. This method creates an empty &lt;code&gt;String&lt;/code&gt;, but one with an initial buffer that can hold &lt;code&gt;capacity&lt;/code&gt; bytes. This is useful when you may be appending a bunch of data to the &lt;code&gt;String&lt;/code&gt;, reducing the number of reallocations it needs to do.</source>
@@ -285,7 +285,7 @@
         </trans-unit>
         <trans-unit id="4d31a0f49bc10c2c8b7f59ea2435dec22c6da899" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;String&lt;/code&gt;s implement &lt;a href=&quot;../ops/trait.deref&quot;&gt;&lt;code&gt;Deref&lt;/code&gt;&lt;/a&gt;&lt;code&gt;&amp;lt;Target=str&amp;gt;&lt;/code&gt;, and so inherit all of &lt;a href=&quot;../primitive.str&quot;&gt;&lt;code&gt;str&lt;/code&gt;&lt;/a&gt;'s methods. In addition, this means that you can pass a &lt;code&gt;String&lt;/code&gt; to a function which takes a &lt;a href=&quot;../primitive.str&quot;&gt;&lt;code&gt;&amp;amp;str&lt;/code&gt;&lt;/a&gt; by using an ampersand (&lt;code&gt;&amp;amp;&lt;/code&gt;):</source>
-          <target state="translated">&lt;code&gt;String&lt;/code&gt; は&lt;a href=&quot;../ops/trait.deref&quot;&gt; &lt;code&gt;Deref&lt;/code&gt; &lt;/a&gt; &lt;code&gt;&amp;lt;Target=str&amp;gt;&lt;/code&gt; を実装しているため、&lt;a href=&quot;../primitive.str&quot;&gt; &lt;code&gt;str&lt;/code&gt; &lt;/a&gt;のすべてのメソッドを継承します。さらに、これは、アンパサンド（ &lt;code&gt;&amp;amp;&lt;/code&gt; ）を使用して、&lt;a href=&quot;../primitive.str&quot;&gt; &lt;code&gt;&amp;amp;str&lt;/code&gt; &lt;/a&gt;を取る関数に &lt;code&gt;String&lt;/code&gt; を渡すことができることを意味します。</target>
+          <target state="translated">&lt;code&gt;String&lt;/code&gt; は&lt;a href=&quot;../ops/trait.deref&quot;&gt; &lt;code&gt;Deref&lt;/code&gt; &lt;/a&gt; &lt;code&gt;&amp;lt;Target=str&amp;gt;&lt;/code&gt; を実装するため、&lt;a href=&quot;../primitive.str&quot;&gt; &lt;code&gt;str&lt;/code&gt; &lt;/a&gt;のすべてのメソッドを継承します。さらに、これは、アンパサンド（ &lt;code&gt;&amp;amp;&lt;/code&gt; ）を使用して、&lt;a href=&quot;../primitive.str&quot;&gt; &lt;code&gt;&amp;amp;str&lt;/code&gt; &lt;/a&gt;を取る関数に &lt;code&gt;String&lt;/code&gt; を渡すことができることを意味します。</target>
         </trans-unit>
         <trans-unit id="616f59747afb4096178feec1378bc12c2c0ee16f" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;Sub&lt;/code&gt;tractable points</source>
@@ -293,7 +293,7 @@
         </trans-unit>
         <trans-unit id="12a9778b6f44e77e521ded615fc1882560f44a91" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;T: 'a&lt;/code&gt; means that all lifetime parameters of &lt;code&gt;T&lt;/code&gt; outlive &lt;code&gt;'a&lt;/code&gt;. For example if &lt;code&gt;'a&lt;/code&gt; is an unconstrained lifetime parameter then &lt;code&gt;i32: 'static&lt;/code&gt; and &lt;code&gt;&amp;amp;'static str: 'a&lt;/code&gt; are satisfied but &lt;code&gt;Vec&amp;lt;&amp;amp;'a ()&amp;gt;: 'static&lt;/code&gt; is not.</source>
-          <target state="translated">&lt;code&gt;T: 'a&lt;/code&gt; は &lt;code&gt;T&lt;/code&gt; outlive &lt;code&gt;'a&lt;/code&gt; すべてのライフタイムパラメータを意味します。たとえば、 &lt;code&gt;'a&lt;/code&gt; が制約のない有効期間パラメーターの場合、 &lt;code&gt;i32: 'static&lt;/code&gt; および &lt;code&gt;&amp;amp;'static str: 'a&lt;/code&gt; は満たされますが、 &lt;code&gt;Vec&amp;lt;&amp;amp;'a ()&amp;gt;: 'static&lt;/code&gt; は満たされません。</target>
+          <target state="translated">&lt;code&gt;T: 'a&lt;/code&gt; は、 &lt;code&gt;T&lt;/code&gt; outlive &lt;code&gt;'a&lt;/code&gt; すべてのライフタイムパラメータを意味します。たとえば、 &lt;code&gt;'a&lt;/code&gt; が制約のない有効期間パラメーターの場合、 &lt;code&gt;i32: 'static&lt;/code&gt; および &lt;code&gt;&amp;amp;'static str: 'a&lt;/code&gt; は満たされますが、 &lt;code&gt;Vec&amp;lt;&amp;amp;'a ()&amp;gt;: 'static&lt;/code&gt; は満たされません。</target>
         </trans-unit>
         <trans-unit id="459321b2a9a0d46f2b93aa237d46d7fa1575a399" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;T&lt;/code&gt; implements &lt;code&gt;Unsize&amp;lt;U&amp;gt;&lt;/code&gt;.</source>
@@ -301,11 +301,11 @@
         </trans-unit>
         <trans-unit id="3df70334b96e838c208442527493940829a7f1e7" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;T&lt;/code&gt; implicitly implements all the (immutable) methods of the type &lt;code&gt;U&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;T&lt;/code&gt; は、 &lt;code&gt;U&lt;/code&gt; 型のすべての（不変の）メソッドを暗黙的に実装します。</target>
+          <target state="translated">&lt;code&gt;T&lt;/code&gt; は &lt;code&gt;U&lt;/code&gt; 型のすべての（不変の）メソッドを暗黙的に実装します。</target>
         </trans-unit>
         <trans-unit id="a8d4eb013434bfef79667e4806b748592289401e" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;T&lt;/code&gt; implicitly implements all the (mutable) methods of the type &lt;code&gt;U&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;T&lt;/code&gt; は &lt;code&gt;U&lt;/code&gt; 型のすべての（可変）メソッドを暗黙的に実装します。</target>
+          <target state="translated">&lt;code&gt;T&lt;/code&gt; は、 &lt;code&gt;U&lt;/code&gt; 型のすべての（可変）メソッドを暗黙的に実装します。</target>
         </trans-unit>
         <trans-unit id="8d8a68b56cb5c034ba3c86ed6d0f7016d3a97d31" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;T&lt;/code&gt; is &lt;code&gt;Unsize&amp;lt;dyn Trait&amp;gt;&lt;/code&gt; when &lt;code&gt;T: Trait&lt;/code&gt;</source>
@@ -349,7 +349,7 @@
         </trans-unit>
         <trans-unit id="0eee371b065164c50fc78edf6a91510999663db3" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;U+000A&lt;/code&gt; (line feed, &lt;code&gt;'\n'&lt;/code&gt;)</source>
-          <target state="translated">&lt;code&gt;U+000A&lt;/code&gt; （ラインフィード、 &lt;code&gt;'\n'&lt;/code&gt; ）</target>
+          <target state="translated">&lt;code&gt;U+000A&lt;/code&gt; （改行、 &lt;code&gt;'\n'&lt;/code&gt; ）</target>
         </trans-unit>
         <trans-unit id="e254e5f09bc8e41e5fff183f48730d4887bab90d" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;U+000B&lt;/code&gt; (vertical tab)</source>
@@ -393,7 +393,7 @@
         </trans-unit>
         <trans-unit id="6195c16a97daf5384a4b9aed4a907cef021630de" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;Unpin&lt;/code&gt; has no consequence at all for non-pinned data. In particular, &lt;a href=&quot;../mem/fn.replace&quot;&gt;&lt;code&gt;mem::replace&lt;/code&gt;&lt;/a&gt; happily moves &lt;code&gt;!Unpin&lt;/code&gt; data (it works for any &lt;code&gt;&amp;amp;mut T&lt;/code&gt;, not just when &lt;code&gt;T: Unpin&lt;/code&gt;). However, you cannot use &lt;a href=&quot;../mem/fn.replace&quot;&gt;&lt;code&gt;mem::replace&lt;/code&gt;&lt;/a&gt; on data wrapped inside a &lt;a href=&quot;../pin/struct.pin&quot;&gt;&lt;code&gt;Pin&amp;lt;P&amp;gt;&lt;/code&gt;&lt;/a&gt; because you cannot get the &lt;code&gt;&amp;amp;mut T&lt;/code&gt; you need for that, and &lt;em&gt;that&lt;/em&gt; is what makes this system work.</source>
-          <target state="translated">&lt;code&gt;Unpin&lt;/code&gt; ても、固定されていないデータにはまったく影響がありません。特に、&lt;a href=&quot;../mem/fn.replace&quot;&gt; &lt;code&gt;mem::replace&lt;/code&gt; &lt;/a&gt;は &lt;code&gt;!Unpin&lt;/code&gt; データを楽しく移動します（ &lt;code&gt;T: Unpin&lt;/code&gt; だけでなく、すべての &lt;code&gt;&amp;amp;mut T&lt;/code&gt; で機能します）。ただし、使用することはできません&lt;a href=&quot;../mem/fn.replace&quot;&gt; &lt;code&gt;mem::replace&lt;/code&gt; &lt;/a&gt;内側に包まれたデータに&lt;a href=&quot;../pin/struct.pin&quot;&gt; &lt;code&gt;Pin&amp;lt;P&amp;gt;&lt;/code&gt; &lt;/a&gt;あなたが得ることができないので &lt;code&gt;&amp;amp;mut T&lt;/code&gt; あなたはそのために必要な、そして&lt;em&gt;それは&lt;/em&gt;、このシステムを機能させるものです。</target>
+          <target state="translated">&lt;code&gt;Unpin&lt;/code&gt; ても、固定されていないデータにはまったく影響がありません。特に、&lt;a href=&quot;../mem/fn.replace&quot;&gt; &lt;code&gt;mem::replace&lt;/code&gt; &lt;/a&gt;は &lt;code&gt;!Unpin&lt;/code&gt; データを楽しく移動します（ &lt;code&gt;T: Unpin&lt;/code&gt; だけでなく、すべての &lt;code&gt;&amp;amp;mut T&lt;/code&gt; で機能します）。ただし、&lt;a href=&quot;../pin/struct.pin&quot;&gt; &lt;code&gt;Pin&amp;lt;P&amp;gt;&lt;/code&gt; &lt;/a&gt;内にラップされたデータに対して&lt;a href=&quot;../mem/fn.replace&quot;&gt; &lt;code&gt;mem::replace&lt;/code&gt; &lt;/a&gt;を使用することはできません。これは、&lt;em&gt;その&lt;/em&gt;ために必要な &lt;code&gt;&amp;amp;mut T&lt;/code&gt; を取得できないため、このシステムが機能するためです。&lt;em&gt;&lt;/em&gt;</target>
         </trans-unit>
         <trans-unit id="efff079b40f2baf685ae584c91dd28f267624b15" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;UnsafeCell&amp;lt;T&amp;gt;&lt;/code&gt; is a type that wraps some &lt;code&gt;T&lt;/code&gt; and indicates unsafe interior operations on the wrapped type. Types with an &lt;code&gt;UnsafeCell&amp;lt;T&amp;gt;&lt;/code&gt; field are considered to have an 'unsafe interior'. The &lt;code&gt;UnsafeCell&amp;lt;T&amp;gt;&lt;/code&gt; type is the only legal way to obtain aliasable data that is considered mutable. In general, transmuting an &lt;code&gt;&amp;amp;T&lt;/code&gt; type into an &lt;code&gt;&amp;amp;mut T&lt;/code&gt; is considered undefined behavior.</source>
@@ -409,7 +409,7 @@
         </trans-unit>
         <trans-unit id="2c038f2912a5d6313a3fd98da687fed06b926624" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;Vec&lt;/code&gt; does not currently guarantee the order in which elements are dropped. The order has changed in the past and may change again.</source>
-          <target state="translated">&lt;code&gt;Vec&lt;/code&gt; は現在、要素が削除される順序を保証していません。注文は過去に変更されており、再度変更される場合があります。</target>
+          <target state="translated">&lt;code&gt;Vec&lt;/code&gt; は現在、要素が削除される順序を保証していません。注文は過去に変更されており、再度変更される可能性があります。</target>
         </trans-unit>
         <trans-unit id="0842430b9dc722bdd51043a8a8a1dedc6cfbc53f" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;Vec&lt;/code&gt; does not guarantee any particular growth strategy when reallocating when full, nor when &lt;a href=&quot;struct.vec#method.reserve&quot;&gt;&lt;code&gt;reserve&lt;/code&gt;&lt;/a&gt; is called. The current strategy is basic and it may prove desirable to use a non-constant growth factor. Whatever strategy is used will of course guarantee &lt;code&gt;O(1)&lt;/code&gt; amortized &lt;a href=&quot;struct.vec#method.push&quot;&gt;&lt;code&gt;push&lt;/code&gt;&lt;/a&gt;.</source>
@@ -417,7 +417,7 @@
         </trans-unit>
         <trans-unit id="b2045d6d707efc5c8342c60437b1aef36bf90f02" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;Vec&lt;/code&gt; will never automatically shrink itself, even if completely empty. This ensures no unnecessary allocations or deallocations occur. Emptying a &lt;code&gt;Vec&lt;/code&gt; and then filling it back up to the same &lt;a href=&quot;struct.vec#method.len&quot;&gt;&lt;code&gt;len&lt;/code&gt;&lt;/a&gt; should incur no calls to the allocator. If you wish to free up unused memory, use &lt;a href=&quot;struct.vec#method.shrink_to_fit&quot;&gt;&lt;code&gt;shrink_to_fit&lt;/code&gt;&lt;/a&gt;.</source>
-          <target state="translated">&lt;code&gt;Vec&lt;/code&gt; は、完全に空になっても、自動的に縮小することはありません。これにより、不必要な割り当てや割り当て解除が発生しなくなります。 &lt;code&gt;Vec&lt;/code&gt; を空にしてから同じ&lt;a href=&quot;struct.vec#method.len&quot;&gt; &lt;code&gt;len&lt;/code&gt; に&lt;/a&gt;戻すと、アロケータの呼び出しは発生しません。未使用のメモリを解放するには、&lt;a href=&quot;struct.vec#method.shrink_to_fit&quot;&gt; &lt;code&gt;shrink_to_fit&lt;/code&gt; を&lt;/a&gt;使用します。</target>
+          <target state="translated">&lt;code&gt;Vec&lt;/code&gt; は完全に空であっても、自動的に縮小することはありません。これにより、不必要な割り当てや割り当て解除が発生しなくなります。 &lt;code&gt;Vec&lt;/code&gt; を空にしてから同じ&lt;a href=&quot;struct.vec#method.len&quot;&gt; &lt;code&gt;len&lt;/code&gt; に&lt;/a&gt;戻すと、アロケータの呼び出しは発生しません。未使用のメモリを解放するには、&lt;a href=&quot;struct.vec#method.shrink_to_fit&quot;&gt; &lt;code&gt;shrink_to_fit&lt;/code&gt; を&lt;/a&gt;使用します。</target>
         </trans-unit>
         <trans-unit id="2c138e62037a41259d18bb337a8b3813b4503afb" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;Vec&lt;/code&gt; will never perform a &quot;small optimization&quot; where elements are actually stored on the stack for two reasons:</source>
@@ -425,7 +425,7 @@
         </trans-unit>
         <trans-unit id="aa1995a9cd88dc9bc07c96596b6994906d449977" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;Vec&lt;/code&gt; will not specifically overwrite any data that is removed from it, but also won't specifically preserve it. Its uninitialized memory is scratch space that it may use however it wants. It will generally just do whatever is most efficient or otherwise easy to implement. Do not rely on removed data to be erased for security purposes. Even if you drop a &lt;code&gt;Vec&lt;/code&gt;, its buffer may simply be reused by another &lt;code&gt;Vec&lt;/code&gt;. Even if you zero a &lt;code&gt;Vec&lt;/code&gt;'s memory first, that may not actually happen because the optimizer does not consider this a side-effect that must be preserved. There is one case which we will not break, however: using &lt;code&gt;unsafe&lt;/code&gt; code to write to the excess capacity, and then increasing the length to match, is always valid.</source>
-          <target state="translated">&lt;code&gt;Vec&lt;/code&gt; は、削除されたデータを特に上書きすることはありませんが、特に保持することはありません。初期化されていないメモリは、必要に応じて使用できるスクラッチ領域です。一般的には、最も効率的であるか、そうでなければ実装が簡単なことを何でもします。セキュリティ上の理由から、削除されたデータの消去に依存しないでください。 &lt;code&gt;Vec&lt;/code&gt; をドロップした場合でも、そのバッファーは別の &lt;code&gt;Vec&lt;/code&gt; によって単純に再利用される可能性があります。 &lt;code&gt;Vec&lt;/code&gt; のメモリを最初にゼロに設定しても、オプティマイザはこれを保持する必要のある副作用と見なさないため、実際にはそれが発生しない場合があります。ただし、破損しないケースが1つあります。 &lt;code&gt;unsafe&lt;/code&gt; コードを使用して過剰な容量に書き込み、長さを増やして一致させることは、常に有効です。</target>
+          <target state="translated">&lt;code&gt;Vec&lt;/code&gt; は、そこから削除されたデータを明確に上書きすることはありませんが、具体的には保持しません。初期化されていないメモリは、必要に応じて使用できるスクラッチ領域です。それは一般に、最も効率的であるか、そうでなければ実装が簡単なことを何でもします。セキュリティ上の理由から、削除されたデータの消去に依存しないでください。 &lt;code&gt;Vec&lt;/code&gt; をドロップした場合でも、そのバッファーは別の &lt;code&gt;Vec&lt;/code&gt; によって単純に再利用される可能性があります。最初に &lt;code&gt;Vec&lt;/code&gt; のメモリをゼロに設定しても、オプティマイザはこれを保持する必要のある副作用と見なさないため、実際にはそれが発生しない場合があります。ただし、破損しないケースが1つあります。 &lt;code&gt;unsafe&lt;/code&gt; コードを使用して過剰な容量に書き込み、長さを増やして一致させることは、常に有効です。</target>
         </trans-unit>
         <trans-unit id="4bb3b0e05d73114df2df4ae4191f2651cf500746" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;Weak&lt;/code&gt; is a version of &lt;a href=&quot;struct.arc&quot;&gt;&lt;code&gt;Arc&lt;/code&gt;&lt;/a&gt; that holds a non-owning reference to the managed value. The value is accessed by calling &lt;a href=&quot;struct.weak#method.upgrade&quot;&gt;&lt;code&gt;upgrade&lt;/code&gt;&lt;/a&gt; on the &lt;code&gt;Weak&lt;/code&gt; pointer, which returns an &lt;a href=&quot;../option/enum.option&quot;&gt;&lt;code&gt;Option&lt;/code&gt;&lt;/a&gt;&lt;code&gt;&amp;lt;&lt;/code&gt;&lt;a href=&quot;struct.arc&quot;&gt;&lt;code&gt;Arc&lt;/code&gt;&lt;/a&gt;&lt;code&gt;&amp;lt;T&amp;gt;&amp;gt;&lt;/code&gt;.</source>
@@ -433,7 +433,7 @@
         </trans-unit>
         <trans-unit id="c854167f674817e7e2de19bb245e924fdad956f7" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;Weak&lt;/code&gt; is a version of &lt;a href=&quot;struct.rc&quot;&gt;&lt;code&gt;Rc&lt;/code&gt;&lt;/a&gt; that holds a non-owning reference to the managed value. The value is accessed by calling &lt;a href=&quot;struct.weak#method.upgrade&quot;&gt;&lt;code&gt;upgrade&lt;/code&gt;&lt;/a&gt; on the &lt;code&gt;Weak&lt;/code&gt; pointer, which returns an &lt;a href=&quot;../option/enum.option&quot;&gt;&lt;code&gt;Option&lt;/code&gt;&lt;/a&gt;&lt;code&gt;&amp;lt;&lt;/code&gt;&lt;a href=&quot;struct.rc&quot;&gt;&lt;code&gt;Rc&lt;/code&gt;&lt;/a&gt;&lt;code&gt;&amp;lt;T&amp;gt;&amp;gt;&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;Weak&lt;/code&gt; は、管理された値への非所有参照を保持する&lt;a href=&quot;struct.rc&quot;&gt; &lt;code&gt;Rc&lt;/code&gt; の&lt;/a&gt;バージョンです。値は、 &lt;code&gt;Weak&lt;/code&gt; ポインターで&lt;a href=&quot;struct.weak#method.upgrade&quot;&gt; &lt;code&gt;upgrade&lt;/code&gt; &lt;/a&gt;を呼び出すことによってアクセスされ、&lt;a href=&quot;../option/enum.option&quot;&gt; &lt;code&gt;Option&lt;/code&gt; &lt;/a&gt; &lt;code&gt;&amp;lt;&lt;/code&gt; &lt;a href=&quot;struct.rc&quot;&gt; &lt;code&gt;Rc&lt;/code&gt; &lt;/a&gt; &lt;code&gt;&amp;lt;T&amp;gt;&amp;gt;&lt;/code&gt; を返します。</target>
+          <target state="translated">&lt;code&gt;Weak&lt;/code&gt; は、管理された値への非所有参照を保持する&lt;a href=&quot;struct.rc&quot;&gt; &lt;code&gt;Rc&lt;/code&gt; の&lt;/a&gt;バージョンです。値は、&lt;a href=&quot;../option/enum.option&quot;&gt; &lt;code&gt;Option&lt;/code&gt; &lt;/a&gt; &lt;code&gt;&amp;lt;&lt;/code&gt; &lt;a href=&quot;struct.rc&quot;&gt; &lt;code&gt;Rc&lt;/code&gt; &lt;/a&gt; &lt;code&gt;&amp;lt;T&amp;gt;&amp;gt;&lt;/code&gt; を返す &lt;code&gt;Weak&lt;/code&gt; ポインターで&lt;a href=&quot;struct.weak#method.upgrade&quot;&gt; &lt;code&gt;upgrade&lt;/code&gt; &lt;/a&gt;を呼び出すことによってアクセスされます。</target>
         </trans-unit>
         <trans-unit id="cb59f191736e86bda790823d721bf254904d63c5" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;Write&lt;/code&gt; includes a single &lt;code&gt;String&lt;/code&gt;.</source>
@@ -449,7 +449,7 @@
         </trans-unit>
         <trans-unit id="0ff29fd323ba01b60e1508eddcf6f34256380d29" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;X?&lt;/code&gt; &amp;rArr; &lt;a href=&quot;trait.debug&quot;&gt;&lt;code&gt;Debug&lt;/code&gt;&lt;/a&gt; with upper-case hexadecimal integers</source>
-          <target state="translated">&lt;code&gt;X?&lt;/code&gt; &amp;rArr; 大文字の16進整数で&lt;a href=&quot;trait.debug&quot;&gt; &lt;code&gt;Debug&lt;/code&gt; &lt;/a&gt;する</target>
+          <target state="translated">&lt;code&gt;X?&lt;/code&gt; &amp;rArr; 大文字の16進整数を使用して&lt;a href=&quot;trait.debug&quot;&gt; &lt;code&gt;Debug&lt;/code&gt; &lt;/a&gt;する</target>
         </trans-unit>
         <trans-unit id="bbc583d8cf6721f3d3948d82304abe45ae3702d3" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;[&lt;/code&gt;&lt;a href=&quot;../attributes&quot;&gt;&lt;em&gt;InnerAttribute&lt;/em&gt;&lt;/a&gt;&lt;sup&gt;*&lt;/sup&gt;&lt;em&gt;ArrayElements&lt;/em&gt;&lt;sup&gt;?&lt;/sup&gt;&lt;code&gt;]&lt;/code&gt;</source>
@@ -465,7 +465,7 @@
         </trans-unit>
         <trans-unit id="65c13c020f3ab6f9ac3bfc9026ccfce808c33adb" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;[&lt;/code&gt;&lt;a href=&quot;patterns#patterns&quot;&gt;&lt;em&gt;Pattern&lt;/em&gt;&lt;/a&gt; (&lt;code&gt;,&lt;/code&gt;&lt;a href=&quot;patterns#patterns&quot;&gt;&lt;em&gt;Pattern&lt;/em&gt;&lt;/a&gt;)&lt;sup&gt;*&lt;/sup&gt;&lt;code&gt;,&lt;/code&gt;&lt;sup&gt;?&lt;/sup&gt;&lt;code&gt;]&lt;/code&gt;</source>
-          <target state="translated">&lt;code&gt;[&lt;/code&gt;&lt;a href=&quot;patterns#patterns&quot;&gt;&lt;em&gt;Pattern&lt;/em&gt;&lt;/a&gt; (&lt;code&gt;,&lt;/code&gt;&lt;a href=&quot;patterns#patterns&quot;&gt;&lt;em&gt;Pattern&lt;/em&gt;&lt;/a&gt;)&lt;sup&gt;*&lt;/sup&gt;&lt;code&gt;,&lt;/code&gt;&lt;sup&gt;?&lt;/sup&gt;&lt;code&gt;]&lt;/code&gt;</target>
+          <target state="translated">&lt;code&gt;[&lt;/code&gt; &lt;a href=&quot;patterns#patterns&quot;&gt;&lt;em&gt;パターン&lt;/em&gt;&lt;/a&gt;（ &lt;code&gt;,&lt;/code&gt; &lt;a href=&quot;patterns#patterns&quot;&gt;&lt;em&gt;パターン&lt;/em&gt;&lt;/a&gt;）&lt;sup&gt;* &lt;/sup&gt; &lt;code&gt;,&lt;/code&gt; &lt;sup&gt;？&lt;/sup&gt; &lt;code&gt;]&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="0e6133de9165856bec31a963923494e952b07a34" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;[&lt;/code&gt;&lt;code&gt;]&lt;/code&gt;</source>
@@ -473,15 +473,15 @@
         </trans-unit>
         <trans-unit id="f98369e91ab28104a3ef6d5c09ad0caf7644282c" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;[T; N]&lt;/code&gt; is &lt;code&gt;Unsize&amp;lt;[T]&amp;gt;&lt;/code&gt;</source>
-          <target state="translated">&lt;code&gt;[T; N]&lt;/code&gt; is &lt;code&gt;Unsize&amp;lt;[T]&amp;gt;&lt;/code&gt;</target>
+          <target state="translated">&lt;code&gt;[T; N]&lt;/code&gt; は &lt;code&gt;Unsize&amp;lt;[T]&amp;gt;&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="850e65c4e16490294eac7e4adabff47857d4f401" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;[T; n]&lt;/code&gt; to &lt;code&gt;[T]&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;[T; n]&lt;/code&gt; to &lt;code&gt;[T]&lt;/code&gt;.</target>
+          <target state="translated">&lt;code&gt;[T; n]&lt;/code&gt; から &lt;code&gt;[T]&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="20de50777f1e5c511744c9e88dd1c983a0dfc8f2" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;[T]&lt;/code&gt; and &lt;code&gt;[T; n]&lt;/code&gt;</source>
-          <target state="translated">&lt;code&gt;[T]&lt;/code&gt; and &lt;code&gt;[T; n]&lt;/code&gt;</target>
+          <target state="translated">&lt;code&gt;[T]&lt;/code&gt; と &lt;code&gt;[T; n]&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="846683b8124bfad974b84f7fc9e39451ea401d22" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;\'&lt;/code&gt; | &lt;code&gt;\&quot;&lt;/code&gt;</source>
@@ -489,11 +489,11 @@
         </trans-unit>
         <trans-unit id="c0188d46c969099ec650ba736f85a9eff66c95ed" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;\&lt;/code&gt;&lt;em&gt;followed by&lt;/em&gt; \n</source>
-          <target state="translated">&lt;code&gt;\&lt;/code&gt;&lt;em&gt;followed by&lt;/em&gt; \n</target>
+          <target state="translated">&lt;code&gt;\&lt;/code&gt; の&lt;em&gt;後に&lt;/em&gt; \ n</target>
         </trans-unit>
         <trans-unit id="e1e0c067924632f3f30abfaccf8c2bbb3ddf0077" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;\u{&lt;/code&gt; ( HEX_DIGIT &lt;code&gt;_&lt;/code&gt;&lt;sup&gt;*&lt;/sup&gt; )&lt;sup&gt;1..6&lt;/sup&gt;&lt;code&gt;}&lt;/code&gt;</source>
-          <target state="translated">&lt;code&gt;\u{&lt;/code&gt; ( HEX_DIGIT &lt;code&gt;_&lt;/code&gt;&lt;sup&gt;*&lt;/sup&gt; )&lt;sup&gt;1..6&lt;/sup&gt;&lt;code&gt;}&lt;/code&gt;</target>
+          <target state="translated">&lt;code&gt;\u{&lt;/code&gt; （HEX_DIGIT &lt;code&gt;_&lt;/code&gt; &lt;sup&gt;*&lt;/sup&gt;）&lt;sup&gt;1..6 &lt;/sup&gt; &lt;code&gt;}&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="c7bfa60964b39253167d48d4743520e2dbebadd6" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;\x&lt;/code&gt; HEX_DIGIT HEX_DIGIT</source>
@@ -505,11 +505,11 @@
         </trans-unit>
         <trans-unit id="00300a7210e800449737f4642ef57d12724ef0ee" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;^&lt;/code&gt; - the argument is center-aligned in &lt;code&gt;width&lt;/code&gt; columns</source>
-          <target state="translated">&lt;code&gt;^&lt;/code&gt; - the argument is center-aligned in &lt;code&gt;width&lt;/code&gt; columns</target>
+          <target state="translated">&lt;code&gt;^&lt;/code&gt; -引数は &lt;code&gt;width&lt;/code&gt; 列で中央揃えされます</target>
         </trans-unit>
         <trans-unit id="01c21f9f1ecd54e3162bbf94eb10f3ea34601934" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;_first&lt;/code&gt; is declared first and &lt;code&gt;_second&lt;/code&gt; is declared second, so &lt;code&gt;main&lt;/code&gt; will print &lt;code&gt;Declared second!&lt;/code&gt; and then &lt;code&gt;Declared first!&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;_first&lt;/code&gt; is declared first and &lt;code&gt;_second&lt;/code&gt; is declared second, so &lt;code&gt;main&lt;/code&gt; will print &lt;code&gt;Declared second!&lt;/code&gt; and then &lt;code&gt;Declared first!&lt;/code&gt;.</target>
+          <target state="translated">&lt;code&gt;_first&lt;/code&gt; が最初に宣言され、 &lt;code&gt;_second&lt;/code&gt; が2番目に &lt;code&gt;Declared second!&lt;/code&gt; れるため、 &lt;code&gt;main&lt;/code&gt; はDeclared secondを出力します！そして &lt;code&gt;Declared first!&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="ead7d5541adaf8ebdf41a6d508ba49b3657a05af" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;a.clone_from(&amp;amp;b)&lt;/code&gt; is equivalent to &lt;code&gt;a = b.clone()&lt;/code&gt; in functionality, but can be overridden to reuse the resources of &lt;code&gt;a&lt;/code&gt; to avoid unnecessary allocations.</source>
@@ -517,7 +517,7 @@
         </trans-unit>
         <trans-unit id="bffa81ddece0c699f61e73446e0e7a7aa7574e23" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;addr&lt;/code&gt; is an address of the remote host. Anything which implements &lt;a href=&quot;trait.tosocketaddrs&quot;&gt;&lt;code&gt;ToSocketAddrs&lt;/code&gt;&lt;/a&gt; trait can be supplied for the address; see this trait documentation for concrete examples.</source>
-          <target state="translated">&lt;code&gt;addr&lt;/code&gt; はリモートホストのアドレスです。&lt;a href=&quot;trait.tosocketaddrs&quot;&gt; &lt;code&gt;ToSocketAddrs&lt;/code&gt; &lt;/a&gt;トレイトを実装するものはすべてアドレスに提供できます。具体的な例については、この特性のドキュメントをご覧ください。</target>
+          <target state="translated">&lt;code&gt;addr&lt;/code&gt; は、リモートホストのアドレスです。&lt;a href=&quot;trait.tosocketaddrs&quot;&gt; &lt;code&gt;ToSocketAddrs&lt;/code&gt; &lt;/a&gt;トレイトを実装するものはすべてアドレスに指定できます。具体的な例については、この特性のドキュメントをご覧ください。</target>
         </trans-unit>
         <trans-unit id="dc47904170ab5b0947d6455163b2615103c6272c" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;advance_n_and_return_first&lt;/code&gt; is the equivalent of:</source>
@@ -557,7 +557,7 @@
         </trans-unit>
         <trans-unit id="45232bdd9c1061a33a2956e0f63f7a3b670af6e5" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;any()&lt;/code&gt; takes a closure that returns &lt;code&gt;true&lt;/code&gt; or &lt;code&gt;false&lt;/code&gt;. It applies this closure to each element of the iterator, and if any of them return &lt;code&gt;true&lt;/code&gt;, then so does &lt;code&gt;any()&lt;/code&gt;. If they all return &lt;code&gt;false&lt;/code&gt;, it returns &lt;code&gt;false&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;any()&lt;/code&gt; は、 &lt;code&gt;true&lt;/code&gt; または &lt;code&gt;false&lt;/code&gt; を返すクロージャーを受け取ります。イテレータの各要素にこのクロージャを適用し、それらのいずれかが &lt;code&gt;true&lt;/code&gt; を返す場合、 &lt;code&gt;any()&lt;/code&gt; も返します。それらがすべて &lt;code&gt;false&lt;/code&gt; を返す場合、falseを返し &lt;code&gt;false&lt;/code&gt; 。</target>
+          <target state="translated">&lt;code&gt;any()&lt;/code&gt; は、 &lt;code&gt;true&lt;/code&gt; または &lt;code&gt;false&lt;/code&gt; を返すクロージャーを受け取ります。イテレータの各要素にこのクロージャを適用し、それらのいずれかが &lt;code&gt;true&lt;/code&gt; を返す場合は、 &lt;code&gt;any()&lt;/code&gt; も返します。それらがすべて &lt;code&gt;false&lt;/code&gt; を返す場合、falseを返し &lt;code&gt;false&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="8003eeaf86431d6298a4799cddebf1b8310bb6fb" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;any()&lt;/code&gt; with a comma separated list of configuration predicates. It is true if at least one predicate is true. If there are no predicates, it is false.</source>
@@ -577,7 +577,7 @@
         </trans-unit>
         <trans-unit id="aeaa965c6322de30e3e4c0f88de200e922739361" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;as&lt;/code&gt; can be used to explicitly perform &lt;a href=&quot;../type-coercions&quot;&gt;coercions&lt;/a&gt;, as well as the following additional casts. Here &lt;code&gt;*T&lt;/code&gt; means either &lt;code&gt;*const T&lt;/code&gt; or &lt;code&gt;*mut T&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;as&lt;/code&gt; &lt;a href=&quot;../type-coercions&quot;&gt;強制&lt;/a&gt;的に明示的に実行したり、次の追加のキャストに使用したりできます。ここで &lt;code&gt;*T&lt;/code&gt; は &lt;code&gt;*const T&lt;/code&gt; または &lt;code&gt;*mut T&lt;/code&gt; Tを意味します。</target>
+          <target state="translated">&lt;code&gt;as&lt;/code&gt; 明示的に使用することができます実行&lt;a href=&quot;../type-coercions&quot;&gt;型変換&lt;/a&gt;だけでなく、次の追加キャストを。ここで &lt;code&gt;*T&lt;/code&gt; は &lt;code&gt;*const T&lt;/code&gt; または &lt;code&gt;*mut T&lt;/code&gt; Tを意味します。</target>
         </trans-unit>
         <trans-unit id="6fd35a3eaa74331985536515255fb948db60d6b1" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;as&lt;/code&gt; is most commonly used to turn primitive types into other primitive types, but it has other uses that include turning pointers into addresses, addresses into pointers, and pointers into other pointers.</source>
@@ -605,7 +605,7 @@
         </trans-unit>
         <trans-unit id="4a2c09c340ed2826d14ffd0dbef2f7454022fbb1" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;begin&lt;/code&gt; and &lt;code&gt;end&lt;/code&gt; must lie on UTF-8 sequence boundaries.</source>
-          <target state="translated">&lt;code&gt;begin&lt;/code&gt; と &lt;code&gt;end&lt;/code&gt; はUTF-8シーケンス境界上になければなりません。</target>
+          <target state="translated">&lt;code&gt;begin&lt;/code&gt; と &lt;code&gt;end&lt;/code&gt; はUTF-8シーケンスの境界になければなりません。</target>
         </trans-unit>
         <trans-unit id="3a3e233163d179b69b52a9ca206e309212607ec8" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;begin&lt;/code&gt; must come before &lt;code&gt;end&lt;/code&gt;.</source>
@@ -709,7 +709,7 @@
         </trans-unit>
         <trans-unit id="b719e31245d824b02c35e8d26f7746c620db22a3" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;char&lt;/code&gt; is always four bytes in size. This is a different representation than a given character would have as part of a &lt;a href=&quot;string/struct.string&quot;&gt;&lt;code&gt;String&lt;/code&gt;&lt;/a&gt;. For example:</source>
-          <target state="translated">&lt;code&gt;char&lt;/code&gt; のサイズは常に4バイトです。これは、指定された文字が&lt;a href=&quot;string/struct.string&quot;&gt; &lt;code&gt;String&lt;/code&gt; の&lt;/a&gt;一部として持つのとは異なる表現です。例えば：</target>
+          <target state="translated">&lt;code&gt;char&lt;/code&gt; のサイズは常に4バイトです。これは、特定の文字が&lt;a href=&quot;string/struct.string&quot;&gt; &lt;code&gt;String&lt;/code&gt; の&lt;/a&gt;一部として持つのとは異なる表現です。例えば：</target>
         </trans-unit>
         <trans-unit id="8d274791f61f08274ced2ead9795968e9729f1af" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;char&lt;/code&gt;, &lt;code&gt;bool&lt;/code&gt; and &lt;a href=&quot;types/never&quot;&gt;&lt;code&gt;!&lt;/code&gt;&lt;/a&gt;</source>
@@ -721,23 +721,23 @@
         </trans-unit>
         <trans-unit id="5c2669bb73e6b1d612983f6cd72c4c2b94cc9b68" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;compare_and_swap&lt;/code&gt; also takes an &lt;a href=&quot;enum.ordering&quot;&gt;&lt;code&gt;Ordering&lt;/code&gt;&lt;/a&gt; argument which describes the memory ordering of this operation. Notice that even when using &lt;a href=&quot;enum.ordering#variant.AcqRel&quot;&gt;&lt;code&gt;AcqRel&lt;/code&gt;&lt;/a&gt;, the operation might fail and hence just perform an &lt;code&gt;Acquire&lt;/code&gt; load, but not have &lt;code&gt;Release&lt;/code&gt; semantics. Using &lt;a href=&quot;enum.ordering#variant.Acquire&quot;&gt;&lt;code&gt;Acquire&lt;/code&gt;&lt;/a&gt; makes the store part of this operation &lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt;&lt;code&gt;Relaxed&lt;/code&gt;&lt;/a&gt; if it happens, and using &lt;a href=&quot;enum.ordering#variant.Release&quot;&gt;&lt;code&gt;Release&lt;/code&gt;&lt;/a&gt; makes the load part &lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt;&lt;code&gt;Relaxed&lt;/code&gt;&lt;/a&gt;.</source>
-          <target state="translated">&lt;code&gt;compare_and_swap&lt;/code&gt; は、この操作のメモリの順序を説明する&lt;a href=&quot;enum.ordering&quot;&gt; &lt;code&gt;Ordering&lt;/code&gt; &lt;/a&gt;引数も受け取ります。&lt;a href=&quot;enum.ordering#variant.AcqRel&quot;&gt; &lt;code&gt;AcqRel&lt;/code&gt; &lt;/a&gt;を使用している場合でも、操作が失敗して &lt;code&gt;Acquire&lt;/code&gt; ロードを実行するだけで、 &lt;code&gt;Release&lt;/code&gt; セマンティクスがない場合があることに注意してください。&lt;a href=&quot;enum.ordering#variant.Acquire&quot;&gt; &lt;code&gt;Acquire&lt;/code&gt; &lt;/a&gt;を使用すると、この操作のストア部分が発生した場合は&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; &lt;/a&gt;になり、&lt;a href=&quot;enum.ordering#variant.Release&quot;&gt; &lt;code&gt;Release&lt;/code&gt; &lt;/a&gt;を使用するとロード部分が&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; になり&lt;/a&gt;ます。</target>
+          <target state="translated">&lt;code&gt;compare_and_swap&lt;/code&gt; は、この操作のメモリの順序を記述する&lt;a href=&quot;enum.ordering&quot;&gt; &lt;code&gt;Ordering&lt;/code&gt; &lt;/a&gt;引数も受け取ります。&lt;a href=&quot;enum.ordering#variant.AcqRel&quot;&gt; &lt;code&gt;AcqRel&lt;/code&gt; &lt;/a&gt;を使用している場合でも、操作が失敗して &lt;code&gt;Acquire&lt;/code&gt; ロードを実行するだけで、 &lt;code&gt;Release&lt;/code&gt; セマンティクスがない場合があることに注意してください。&lt;a href=&quot;enum.ordering#variant.Acquire&quot;&gt; &lt;code&gt;Acquire&lt;/code&gt; &lt;/a&gt;を使用すると、この操作のストア部分が発生した場合は&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; &lt;/a&gt;になり、&lt;a href=&quot;enum.ordering#variant.Release&quot;&gt; &lt;code&gt;Release&lt;/code&gt; &lt;/a&gt;を使用するとロード部分が&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; になり&lt;/a&gt;ます。</target>
         </trans-unit>
         <trans-unit id="8cb78629997fe1d57ec115a672b2032c050ad20c" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;compare_exchange&lt;/code&gt; takes two &lt;a href=&quot;enum.ordering&quot;&gt;&lt;code&gt;Ordering&lt;/code&gt;&lt;/a&gt; arguments to describe the memory ordering of this operation. The first describes the required ordering if the operation succeeds while the second describes the required ordering when the operation fails. Using &lt;a href=&quot;enum.ordering#variant.Acquire&quot;&gt;&lt;code&gt;Acquire&lt;/code&gt;&lt;/a&gt; as success ordering makes the store part of this operation &lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt;&lt;code&gt;Relaxed&lt;/code&gt;&lt;/a&gt;, and using &lt;a href=&quot;enum.ordering#variant.Release&quot;&gt;&lt;code&gt;Release&lt;/code&gt;&lt;/a&gt; makes the successful load &lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt;&lt;code&gt;Relaxed&lt;/code&gt;&lt;/a&gt;. The failure ordering can only be &lt;a href=&quot;enum.ordering#variant.SeqCst&quot;&gt;&lt;code&gt;SeqCst&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;enum.ordering#variant.Acquire&quot;&gt;&lt;code&gt;Acquire&lt;/code&gt;&lt;/a&gt; or &lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt;&lt;code&gt;Relaxed&lt;/code&gt;&lt;/a&gt; and must be equivalent to or weaker than the success ordering.</source>
-          <target state="translated">&lt;code&gt;compare_exchange&lt;/code&gt; は2つの&lt;a href=&quot;enum.ordering&quot;&gt; &lt;code&gt;Ordering&lt;/code&gt; &lt;/a&gt;引数を取り、この操作のメモリの順序を記述します。 1つ目は操作が成功した場合に必要な順序を示し、2つ目は操作が失敗した場合に必要な順序を示します。&lt;a href=&quot;enum.ordering#variant.Acquire&quot;&gt; &lt;code&gt;Acquire&lt;/code&gt; &lt;/a&gt;を成功の順序付けとして使用すると、ストアはこの操作の一部を&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; にし&lt;/a&gt;、&lt;a href=&quot;enum.ordering#variant.Release&quot;&gt; &lt;code&gt;Release&lt;/code&gt; &lt;/a&gt;を使用すると正常にロードを&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; にし&lt;/a&gt;ます。失敗の順序は&lt;a href=&quot;enum.ordering#variant.SeqCst&quot;&gt; &lt;code&gt;SeqCst&lt;/code&gt; &lt;/a&gt;、&lt;a href=&quot;enum.ordering#variant.Acquire&quot;&gt; &lt;code&gt;Acquire&lt;/code&gt; &lt;/a&gt;または&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; &lt;/a&gt;のみで、成功の順序と同等かそれよりも弱い必要があります。</target>
+          <target state="translated">&lt;code&gt;compare_exchange&lt;/code&gt; は2つの&lt;a href=&quot;enum.ordering&quot;&gt; &lt;code&gt;Ordering&lt;/code&gt; &lt;/a&gt;引数を取り、この操作のメモリの順序を記述します。 1つ目は操作が成功した場合に必要な順序を示し、2つ目は操作が失敗した場合に必要な順序を示します。&lt;a href=&quot;enum.ordering#variant.Acquire&quot;&gt; &lt;code&gt;Acquire&lt;/code&gt; &lt;/a&gt;を成功の順序付けとして使用すると、ストアはこの操作の一部を&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; にし&lt;/a&gt;、&lt;a href=&quot;enum.ordering#variant.Release&quot;&gt; &lt;code&gt;Release&lt;/code&gt; &lt;/a&gt;を使用すると正常にロードを&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; にし&lt;/a&gt;ます。失敗の順序は&lt;a href=&quot;enum.ordering#variant.SeqCst&quot;&gt; &lt;code&gt;SeqCst&lt;/code&gt; &lt;/a&gt;、&lt;a href=&quot;enum.ordering#variant.Acquire&quot;&gt; &lt;code&gt;Acquire&lt;/code&gt; &lt;/a&gt;、&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; の&lt;/a&gt;いずれかであり、成功の順序と同等かそれより弱い必要があります。</target>
         </trans-unit>
         <trans-unit id="a45f64040fa6d1dde8548ee9d2d6b5ff234606cc" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;compare_exchange_weak&lt;/code&gt; takes two &lt;a href=&quot;enum.ordering&quot;&gt;&lt;code&gt;Ordering&lt;/code&gt;&lt;/a&gt; arguments to describe the memory ordering of this operation. The first describes the required ordering if the operation succeeds while the second describes the required ordering when the operation fails. Using &lt;a href=&quot;enum.ordering#variant.Acquire&quot;&gt;&lt;code&gt;Acquire&lt;/code&gt;&lt;/a&gt; as success ordering makes the store part of this operation &lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt;&lt;code&gt;Relaxed&lt;/code&gt;&lt;/a&gt;, and using &lt;a href=&quot;enum.ordering#variant.Release&quot;&gt;&lt;code&gt;Release&lt;/code&gt;&lt;/a&gt; makes the successful load &lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt;&lt;code&gt;Relaxed&lt;/code&gt;&lt;/a&gt;. The failure ordering can only be &lt;a href=&quot;enum.ordering#variant.SeqCst&quot;&gt;&lt;code&gt;SeqCst&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;enum.ordering#variant.Acquire&quot;&gt;&lt;code&gt;Acquire&lt;/code&gt;&lt;/a&gt; or &lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt;&lt;code&gt;Relaxed&lt;/code&gt;&lt;/a&gt; and must be equivalent to or weaker than the success ordering.</source>
-          <target state="translated">&lt;code&gt;compare_exchange_weak&lt;/code&gt; は2つの&lt;a href=&quot;enum.ordering&quot;&gt; &lt;code&gt;Ordering&lt;/code&gt; &lt;/a&gt;引数を取り、この操作のメモリの順序を記述します。 1つ目は操作が成功した場合に必要な順序を示し、2つ目は操作が失敗した場合に必要な順序を示します。&lt;a href=&quot;enum.ordering#variant.Acquire&quot;&gt; &lt;code&gt;Acquire&lt;/code&gt; &lt;/a&gt;を成功の順序付けとして使用すると、ストアはこの操作の一部を&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; にし&lt;/a&gt;、&lt;a href=&quot;enum.ordering#variant.Release&quot;&gt; &lt;code&gt;Release&lt;/code&gt; &lt;/a&gt;を使用すると正常にロードを&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; にし&lt;/a&gt;ます。失敗の順序は&lt;a href=&quot;enum.ordering#variant.SeqCst&quot;&gt; &lt;code&gt;SeqCst&lt;/code&gt; &lt;/a&gt;、&lt;a href=&quot;enum.ordering#variant.Acquire&quot;&gt; &lt;code&gt;Acquire&lt;/code&gt; &lt;/a&gt;または&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; &lt;/a&gt;のみで、成功の順序と同等かそれよりも弱い必要があります。</target>
+          <target state="translated">&lt;code&gt;compare_exchange_weak&lt;/code&gt; は2つの&lt;a href=&quot;enum.ordering&quot;&gt; &lt;code&gt;Ordering&lt;/code&gt; &lt;/a&gt;引数を取り、この操作のメモリの順序を記述します。 1つ目は操作が成功した場合に必要な順序を示し、2つ目は操作が失敗した場合に必要な順序を示します。&lt;a href=&quot;enum.ordering#variant.Acquire&quot;&gt; &lt;code&gt;Acquire&lt;/code&gt; &lt;/a&gt;を成功の順序付けとして使用すると、ストアはこの操作の一部を&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; にし&lt;/a&gt;、&lt;a href=&quot;enum.ordering#variant.Release&quot;&gt; &lt;code&gt;Release&lt;/code&gt; &lt;/a&gt;を使用すると正常にロードを&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; にし&lt;/a&gt;ます。失敗の順序は&lt;a href=&quot;enum.ordering#variant.SeqCst&quot;&gt; &lt;code&gt;SeqCst&lt;/code&gt; &lt;/a&gt;、&lt;a href=&quot;enum.ordering#variant.Acquire&quot;&gt; &lt;code&gt;Acquire&lt;/code&gt; &lt;/a&gt;、&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; の&lt;/a&gt;いずれかであり、成功の順序と同等かそれより弱い必要があります。</target>
         </trans-unit>
         <trans-unit id="86e1cf70d1ca30178a0d573e5ad551798d54df2d" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;compiler_fence&lt;/code&gt; does not emit any machine code, but restricts the kinds of memory re-ordering the compiler is allowed to do. Specifically, depending on the given &lt;a href=&quot;enum.ordering&quot;&gt;&lt;code&gt;Ordering&lt;/code&gt;&lt;/a&gt; semantics, the compiler may be disallowed from moving reads or writes from before or after the call to the other side of the call to &lt;code&gt;compiler_fence&lt;/code&gt;. Note that it does &lt;strong&gt;not&lt;/strong&gt; prevent the &lt;em&gt;hardware&lt;/em&gt; from doing such re-ordering. This is not a problem in a single-threaded, execution context, but when other threads may modify memory at the same time, stronger synchronization primitives such as &lt;a href=&quot;fn.fence&quot;&gt;&lt;code&gt;fence&lt;/code&gt;&lt;/a&gt; are required.</source>
-          <target state="translated">&lt;code&gt;compiler_fence&lt;/code&gt; は、マシンコードを出力しませんが、コンパイラが実行できるメモリの並べ替えの種類を制限します。具体的には、与えられたに応じて&lt;a href=&quot;enum.ordering&quot;&gt; &lt;code&gt;Ordering&lt;/code&gt; &lt;/a&gt;セマンティクス、コンパイラが読み取るかへの呼び出しの反対側への呼び出しの前か後から書き込みを移動するから禁止することができる &lt;code&gt;compiler_fence&lt;/code&gt; 。&lt;em&gt;ハードウェア&lt;/em&gt;がそのような再配列を行うことを妨げ&lt;strong&gt;ない&lt;/strong&gt;ことに注意してください。これはシングルスレッドの実行コンテキストでは問題ではありませんが、他のスレッドが同時にメモリを変更する可能性がある場合は、&lt;a href=&quot;fn.fence&quot;&gt; &lt;code&gt;fence&lt;/code&gt; &lt;/a&gt;などのより強力な同期プリミティブが必要です。&lt;em&gt;&lt;/em&gt;</target>
+          <target state="translated">&lt;code&gt;compiler_fence&lt;/code&gt; は、マシンコードを発行しませんが、コンパイラが実行できるメモリの並べ替えの種類を制限します。具体的には、与えられたに応じて&lt;a href=&quot;enum.ordering&quot;&gt; &lt;code&gt;Ordering&lt;/code&gt; &lt;/a&gt;セマンティクス、コンパイラが読み取るかへの呼び出しの反対側への呼び出しの前か後から書き込みを移動するから禁止することができる &lt;code&gt;compiler_fence&lt;/code&gt; 。&lt;em&gt;ハードウェア&lt;/em&gt;がそのような再配列を行うことを妨げ&lt;strong&gt;ない&lt;/strong&gt;ことに注意してください。これはシングルスレッドの実行コンテキストでは問題ではありませんが、他のスレッドが同時にメモリを変更する可能性がある場合は、&lt;a href=&quot;fn.fence&quot;&gt; &lt;code&gt;fence&lt;/code&gt; &lt;/a&gt;などのより強力な同期プリミティブが必要です。&lt;em&gt;&lt;/em&gt;</target>
         </trans-unit>
         <trans-unit id="cad798660616379b0e659fc9aea1fbd6cc6514d3" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;compiler_fence&lt;/code&gt; is generally only useful for preventing a thread from racing &lt;em&gt;with itself&lt;/em&gt;. That is, if a given thread is executing one piece of code, and is then interrupted, and starts executing code elsewhere (while still in the same thread, and conceptually still on the same core). In traditional programs, this can only occur when a signal handler is registered. In more low-level code, such situations can also arise when handling interrupts, when implementing green threads with pre-emption, etc. Curious readers are encouraged to read the Linux kernel's discussion of &lt;a href=&quot;https://www.kernel.org/doc/Documentation/memory-barriers.txt&quot;&gt;memory barriers&lt;/a&gt;.</source>
-          <target state="translated">&lt;code&gt;compiler_fence&lt;/code&gt; は通常、スレッド&lt;em&gt;がそれ自体と&lt;/em&gt;競合しないようにする場合にのみ役立ち&lt;em&gt;ます&lt;/em&gt;。つまり、特定のスレッドが1つのコードを実行し、その後中断され、別の場所でコードの実行を開始した場合（同じスレッド内、概念的には同じコア上）。従来のプログラムでは、これはシグナルハンドラーが登録されている場合にのみ発生します。より低レベルのコードでは、割り込みを処理するとき、プリエンプション付きのグリーンスレッドを実装するときなどに、このような状況が発生する可能性があります。好奇心のある読者は、Linuxカーネルの&lt;a href=&quot;https://www.kernel.org/doc/Documentation/memory-barriers.txt&quot;&gt;メモリバリア&lt;/a&gt;に関する説明を読むことをお勧めします。</target>
+          <target state="translated">&lt;code&gt;compiler_fence&lt;/code&gt; は通常、スレッド&lt;em&gt;がそれ自体と&lt;/em&gt;競合しないようにする場合にのみ役立ち&lt;em&gt;ます&lt;/em&gt;。つまり、特定のスレッドが1つのコードを実行し、その後中断されて、別の場所でコードの実行を開始した場合（同じスレッド内、概念的には同じコア上）。従来のプログラムでは、これはシグナルハンドラーが登録されている場合にのみ発生します。より低レベルのコードでは、割り込みを処理するとき、プリエンプション付きのグリーンスレッドを実装するときなどに、このような状況が発生することもあります。好奇心のある読者は、Linuxカーネルの&lt;a href=&quot;https://www.kernel.org/doc/Documentation/memory-barriers.txt&quot;&gt;メモリバリア&lt;/a&gt;に関する説明を読むことをお勧めします。</target>
         </trans-unit>
         <trans-unit id="c02e4bab50b4f981a1c7e7e32d74e516ea367f47" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;complex NT&lt;/code&gt;: a repetition matching non-terminal, specified via repetition operators (&lt;code&gt;\*&lt;/code&gt;, &lt;code&gt;+&lt;/code&gt;, &lt;code&gt;?&lt;/code&gt;).</source>
@@ -749,7 +749,7 @@
         </trans-unit>
         <trans-unit id="6e1549ff374b5ebdcea81375e3f343804f5b3c5e" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;const&lt;/code&gt; - define constant items or constant raw pointers</source>
-          <target state="translated">&lt;code&gt;const&lt;/code&gt; -定数項目または定数生ポインターを定義します</target>
+          <target state="translated">&lt;code&gt;const&lt;/code&gt; -定数アイテムまたは定数生ポインターを定義する</target>
         </trans-unit>
         <trans-unit id="340758aa22cfd73950ac0e13e516bd1cec191c38" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;const&lt;/code&gt; and &lt;code&gt;static&lt;/code&gt; mean different things. A &lt;code&gt;const&lt;/code&gt; is a compile-time constant, an alias for a literal value. This property means you can match it directly within a pattern.</source>
@@ -757,7 +757,7 @@
         </trans-unit>
         <trans-unit id="e61e289f776ced5df93e5b0a37771110bf9fc3d7" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;const&lt;/code&gt; items looks remarkably similar to &lt;code&gt;static&lt;/code&gt; items, which introduces some confusion as to which one should be used at which times. To put it simply, constants are inlined wherever they're used, making using them identical to simply replacing the name of the const with its value. Static variables on the other hand point to a single location in memory, which all accesses share. This means that, unlike with constants, they can't have destructors, and act as a single value across the entire codebase.</source>
-          <target state="translated">&lt;code&gt;const&lt;/code&gt; の項目は、 &lt;code&gt;static&lt;/code&gt; 項目と非常によく似ており、どの場合にどの項目を使用する必要があるかについて混乱が生じます。簡単に言うと、定数は使用される場所にインライン化されるため、定数を使用すると、constの名前をその値に置き換えるだけです。一方、静的変数は、メモリ内の1つの場所を指し、すべてのアクセスで共有されます。これは、定数とは異なり、定数にデストラクタを含めることはできず、コードベース全体で単一の値として機能することを意味します。</target>
+          <target state="translated">&lt;code&gt;const&lt;/code&gt; アイテムは、 &lt;code&gt;static&lt;/code&gt; アイテムと非常によく似ており、どのアイテムをいつ使用するかについて混乱が生じます。簡単に言うと、定数は使用される場所にインライン化されるため、定数を使用すると、constの名前をその値に置き換えるだけです。一方、静的変数は、メモリ内の1つの場所を指し、すべてのアクセスで共有されます。これは、定数の場合とは異なり、デストラクタを持つことができず、コードベース全体で単一の値として機能することを意味します。</target>
         </trans-unit>
         <trans-unit id="27f67751d6c2a0da9be462a3eb2622352c2bd588" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;const&lt;/code&gt;&lt;a href=&quot;../identifiers&quot;&gt;IDENTIFIER&lt;/a&gt;&lt;code&gt;:&lt;/code&gt;&lt;a href=&quot;../types#type-expressions&quot;&gt;&lt;em&gt;Type&lt;/em&gt;&lt;/a&gt; ( &lt;code&gt;=&lt;/code&gt;&lt;a href=&quot;../expressions&quot;&gt;&lt;em&gt;Expression&lt;/em&gt;&lt;/a&gt; )&lt;sup&gt;?&lt;/sup&gt;&lt;code&gt;;&lt;/code&gt;</source>
@@ -773,7 +773,7 @@
         </trans-unit>
         <trans-unit id="7922f6af9504dc9e782af79c29fcec29f07a47bd" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;container[index]&lt;/code&gt; is actually syntactic sugar for &lt;code&gt;*container.index_mut(index)&lt;/code&gt;, but only when used as a mutable value. If an immutable value is requested, the &lt;a href=&quot;trait.index&quot;&gt;&lt;code&gt;Index&lt;/code&gt;&lt;/a&gt; trait is used instead. This allows nice things such as &lt;code&gt;v[index] = value&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;container[index]&lt;/code&gt; は実際には &lt;code&gt;*container.index_mut(index)&lt;/code&gt; のシンタックスシュガーですが、変更可能な値として使用する場合のみです。不変の値が要求された場合は、代わりに&lt;a href=&quot;trait.index&quot;&gt; &lt;code&gt;Index&lt;/code&gt; &lt;/a&gt;特性が使用されます。これにより、 &lt;code&gt;v[index] = value&lt;/code&gt; などの優れた機能が可能になります。</target>
+          <target state="translated">&lt;code&gt;container[index]&lt;/code&gt; は実際には &lt;code&gt;*container.index_mut(index)&lt;/code&gt; の構文シュガーですが、変更可能な値として使用される場合のみです。不変の値が要求された場合は、代わりに&lt;a href=&quot;trait.index&quot;&gt; &lt;code&gt;Index&lt;/code&gt; &lt;/a&gt;特性が使用されます。これにより、 &lt;code&gt;v[index] = value&lt;/code&gt; などの優れた機能が可能になります。</target>
         </trans-unit>
         <trans-unit id="1ffabd242f9d8704e26604953ecba9b24de0815e" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;continue&lt;/code&gt; - continue to the next loop iteration</source>
@@ -805,7 +805,7 @@
         </trans-unit>
         <trans-unit id="4e1b1a11c74c128aef1900df332f0bcea17de4bb" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;crate&lt;/code&gt; is also used as in conjunction with &lt;code&gt;pub&lt;/code&gt; to signify that the item it's attached to is public only to other members of the same crate it's in.</source>
-          <target state="translated">&lt;code&gt;crate&lt;/code&gt; は &lt;code&gt;pub&lt;/code&gt; と組み合わせて使用​​され、それが添付されているアイテムが、同じクレートの他のメンバーにのみ公開されていることを示します。</target>
+          <target state="translated">&lt;code&gt;crate&lt;/code&gt; は、 &lt;code&gt;pub&lt;/code&gt; と組み合わせて使用​​され、それが添付されているアイテムが、同じクレートの他のメンバーにのみ公開されていることを示します。</target>
         </trans-unit>
         <trans-unit id="9ffb90a99ca4ad20d943dc5f20252cb967816477" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;crate&lt;/code&gt; resolves the path relative to the current crate. &lt;code&gt;crate&lt;/code&gt; can only be used as the first segment, without a preceding &lt;code&gt;::&lt;/code&gt;.</source>
@@ -813,11 +813,11 @@
         </trans-unit>
         <trans-unit id="d894a77e0c2b3d3320a6b0b693417d5746924d01" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;data&lt;/code&gt; must be non-null and aligned, even for zero-length slices. One reason for this is that enum layout optimizations may rely on references (including slices of any length) being aligned and non-null to distinguish them from other data. You can obtain a pointer that is usable as &lt;code&gt;data&lt;/code&gt; for zero-length slices using &lt;a href=&quot;../ptr/struct.nonnull#method.dangling&quot;&gt;&lt;code&gt;NonNull::dangling()&lt;/code&gt;&lt;/a&gt;.</source>
-          <target state="translated">&lt;code&gt;data&lt;/code&gt; は、長さがゼロのスライスであっても、null以外で整列されている必要があります。これの1つの理由は、列挙型レイアウトの最適化では、他のデータと区別するために、参照（任意の長さのスライスを含む）が整列され、nullでないことに依存する可能性があるためです。&lt;a href=&quot;../ptr/struct.nonnull#method.dangling&quot;&gt; &lt;code&gt;NonNull::dangling()&lt;/code&gt; &lt;/a&gt;を使用して、長さゼロのスライスの &lt;code&gt;data&lt;/code&gt; として使用できるポインターを取得できます。</target>
+          <target state="translated">&lt;code&gt;data&lt;/code&gt; は、長さがゼロのスライスであっても、nullでなく整列されている必要があります。これの1つの理由は、列挙型レイアウトの最適化では、他のデータと区別するために、参照（任意の長さのスライスを含む）が整列され、nullでないことに依存する可能性があるためです。&lt;a href=&quot;../ptr/struct.nonnull#method.dangling&quot;&gt; &lt;code&gt;NonNull::dangling()&lt;/code&gt; &lt;/a&gt;を使用して、長さ0のスライスの &lt;code&gt;data&lt;/code&gt; として使用できるポインターを取得できます。</target>
         </trans-unit>
         <trans-unit id="52d4673a84f7b28e406f0fc9af95309afee4bdc6" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;delimited sequence&lt;/code&gt;: a sequence of token trees with appropriate open- and close-delimiters at the start and end of the sequence.</source>
-          <target state="translated">&lt;code&gt;delimited sequence&lt;/code&gt; ：シーケンスの開始と終了に適切な開始区切り文字と終了区切り文字があるトークンツリーのシーケンス。</target>
+          <target state="translated">&lt;code&gt;delimited sequence&lt;/code&gt; ：シーケンスの開始と終了に適切な開始区切り記号と終了区切り文字があるトークンツリーのシーケンス。</target>
         </trans-unit>
         <trans-unit id="7a79f15887cb90c07b9ee24e25d320935f6738e5" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;delimiter token&lt;/code&gt;: a token that is meant to divide the end of one fragment and the start of the next fragment.</source>
@@ -825,7 +825,7 @@
         </trans-unit>
         <trans-unit id="f73c7ab087b23c5e5dec3f19d99f0f663fa6e00d" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;deny(C)&lt;/code&gt; signals an error after encountering a violation of &lt;code&gt;C&lt;/code&gt;,</source>
-          <target state="translated">&lt;code&gt;deny(C)&lt;/code&gt; は、 &lt;code&gt;C&lt;/code&gt; の違反に遭遇した後にエラーを通知します。</target>
+          <target state="translated">&lt;code&gt;deny(C)&lt;/code&gt; は、 &lt;code&gt;C&lt;/code&gt; の違反に遭遇した後、エラーを通知します。</target>
         </trans-unit>
         <trans-unit id="9b817753a2a3c36dba0b52cb148a1d21d3330091" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;deprecated = &quot;message&quot;&lt;/code&gt; &amp;mdash; Includes the given string in the deprecation message.</source>
@@ -893,7 +893,7 @@
         </trans-unit>
         <trans-unit id="94b8fd749dd504215bb0cdf1bb6624abc4dc8440" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;empty fragment&lt;/code&gt;: The class of invisible Rust syntax that separates tokens, i.e. whitespace, or (in some lexical contexts), the empty token sequence.</source>
-          <target state="translated">&lt;code&gt;empty fragment&lt;/code&gt; ：トークン、つまり空白、または（一部の字句コンテキストでは）空のトークンシーケンスを分離する非表示のRust構文のクラス。</target>
+          <target state="translated">&lt;code&gt;empty fragment&lt;/code&gt; ：トークンを分離する非表示のRust構文のクラス、つまり空白、または（一部の字句コンテキストでは）空のトークンシーケンス。</target>
         </trans-unit>
         <trans-unit id="4355176137b0192fb3f628dd27ea1caed4fe3f93" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;enum&lt;/code&gt; - define an enumeration</source>
@@ -905,11 +905,11 @@
         </trans-unit>
         <trans-unit id="ea3e56fd591be6044f03d9bd0d61079d7ba5b448" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;enumerate()&lt;/code&gt; keeps its count as a &lt;a href=&quot;../primitive.usize&quot;&gt;&lt;code&gt;usize&lt;/code&gt;&lt;/a&gt;. If you want to count by a different sized integer, the &lt;a href=&quot;#method.zip&quot;&gt;&lt;code&gt;zip&lt;/code&gt;&lt;/a&gt; function provides similar functionality.</source>
-          <target state="translated">&lt;code&gt;enumerate()&lt;/code&gt; は、その数を&lt;a href=&quot;../primitive.usize&quot;&gt; &lt;code&gt;usize&lt;/code&gt; &lt;/a&gt;として保持します。異なるサイズの整数でカウントする場合、&lt;a href=&quot;#method.zip&quot;&gt; &lt;code&gt;zip&lt;/code&gt; &lt;/a&gt;関数は同様の機能を提供します。</target>
+          <target state="translated">&lt;code&gt;enumerate()&lt;/code&gt; は、その使用を&lt;a href=&quot;../primitive.usize&quot;&gt; &lt;code&gt;usize&lt;/code&gt; &lt;/a&gt;として保持します。異なるサイズの整数でカウントする場合は、&lt;a href=&quot;#method.zip&quot;&gt; &lt;code&gt;zip&lt;/code&gt; &lt;/a&gt;関数が同様の機能を提供します。</target>
         </trans-unit>
         <trans-unit id="6bd2e5af21d049a4452c5fb8ab4704b5f8208c2a" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;exec&lt;/code&gt; not returning has the same implications as calling &lt;a href=&quot;../../../process/fn.exit&quot;&gt;&lt;code&gt;process::exit&lt;/code&gt;&lt;/a&gt; &amp;ndash; no destructors on the current stack or any other thread&amp;rsquo;s stack will be run. Therefore, it is recommended to only call &lt;code&gt;exec&lt;/code&gt; at a point where it is fine to not run any destructors. Note, that the &lt;code&gt;execvp&lt;/code&gt; syscall independently guarantees that all memory is freed and all file descriptors with the &lt;code&gt;CLOEXEC&lt;/code&gt; option (set by default on all file descriptors opened by the standard library) are closed.</source>
-          <target state="translated">&lt;code&gt;exec&lt;/code&gt; が返らない場合、calling &lt;a href=&quot;../../../process/fn.exit&quot;&gt; &lt;code&gt;process::exit&lt;/code&gt; &lt;/a&gt;と同じ影響があります。現在のスタックまたは他のスレッドのスタックでデストラクタは実行されません。したがって、デストラクタを実行しないことが適切な時点でのみ &lt;code&gt;exec&lt;/code&gt; を呼び出すことをお勧めします。 &lt;code&gt;execvp&lt;/code&gt; syscallは、すべてのメモリが解放され、 &lt;code&gt;CLOEXEC&lt;/code&gt; オプション付きのすべてのファイル記述子（標準ライブラリによって開かれたすべてのファイル記述子にデフォルトで設定されている）が閉じられることを個別に保証することに注意してください。</target>
+          <target state="translated">&lt;code&gt;exec&lt;/code&gt; が返らないのは、&lt;a href=&quot;../../../process/fn.exit&quot;&gt; &lt;code&gt;process::exit&lt;/code&gt; &lt;/a&gt;呼び出しと同じです。現在のスタックまたは他のスレッドのスタックでデストラクタは実行されません。したがって、デストラクタを実行しないことが問題のない場所でのみ &lt;code&gt;exec&lt;/code&gt; を呼び出すことをお勧めします。 &lt;code&gt;execvp&lt;/code&gt; syscallは、すべてのメモリが解放され、 &lt;code&gt;CLOEXEC&lt;/code&gt; オプション（標準ライブラリによって開かれたすべてのファイル記述子にデフォルトで設定されている）を持つすべてのファイル記述子が閉じられることを個別に保証することに注意してください。</target>
         </trans-unit>
         <trans-unit id="ab28125fd037c386267b67a9a34848916b30f004" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;export_name&lt;/code&gt; attributes may not contain null characters (&lt;code&gt;\0&lt;/code&gt;).</source>
@@ -921,7 +921,7 @@
         </trans-unit>
         <trans-unit id="a1abeb015eeec94ebb32cf39bdbed03229503438" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;expr&lt;/code&gt; and &lt;code&gt;stmt&lt;/code&gt; may only be followed by one of: &lt;code&gt;=&amp;gt;&lt;/code&gt;, &lt;code&gt;,&lt;/code&gt;, or &lt;code&gt;;&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;expr&lt;/code&gt; と &lt;code&gt;stmt&lt;/code&gt; の後に &lt;code&gt;,&lt;/code&gt; 、 &lt;code&gt;=&amp;gt;&lt;/code&gt; 、、、またはのいずれかのみを続けることができます &lt;code&gt;;&lt;/code&gt; 。</target>
+          <target state="translated">&lt;code&gt;expr&lt;/code&gt; および &lt;code&gt;stmt&lt;/code&gt; の後に &lt;code&gt;,&lt;/code&gt; 、 &lt;code&gt;=&amp;gt;&lt;/code&gt; 、、、またはのいずれかのみを続けることができます &lt;code&gt;;&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="a909b8761907098afd07f60822603767fd676c6d" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;expr&lt;/code&gt;: an &lt;a href=&quot;expressions&quot;&gt;&lt;em&gt;Expression&lt;/em&gt;&lt;/a&gt;</source>
@@ -953,7 +953,7 @@
         </trans-unit>
         <trans-unit id="f3f0cebe929c94d3119bff41cd45a3d2c03bccd1" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;extern &quot;platform-intrinsic&quot;&lt;/code&gt; -- Specific platform intrinsics -- like, for example, &lt;code&gt;sqrt&lt;/code&gt; -- have this ABI. You should never have to deal with it.</source>
-          <target state="translated">&lt;code&gt;extern &quot;platform-intrinsic&quot;&lt;/code&gt; -特定のプラットフォーム組み込み関数 &lt;code&gt;sqrt&lt;/code&gt; -には、このABIがあります。あなたはそれに対処する必要はありません。</target>
+          <target state="translated">&lt;code&gt;extern &quot;platform-intrinsic&quot;&lt;/code&gt; -特定のプラットフォーム組み込み関数-たとえば、 &lt;code&gt;sqrt&lt;/code&gt; -には、このABIがあります。あなたはそれに対処する必要はありません。</target>
         </trans-unit>
         <trans-unit id="428786e953acb8b96029b0dccd4c593f0d095153" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;extern &quot;rust-call&quot;&lt;/code&gt; -- The ABI of the Fn::call trait functions.</source>
@@ -969,7 +969,7 @@
         </trans-unit>
         <trans-unit id="582098149272d3e61d4dbad6f8da32061f8d22d2" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;extern &quot;system&quot;&lt;/code&gt; -- Usually the same as &lt;code&gt;extern &quot;C&quot;&lt;/code&gt;, except on Win32, in which case it's &lt;code&gt;&quot;stdcall&quot;&lt;/code&gt;, or what you should use to link to the Windows API itself</source>
-          <target state="translated">&lt;code&gt;extern &quot;system&quot;&lt;/code&gt; -通常は &lt;code&gt;extern &quot;C&quot;&lt;/code&gt; と同じですが、Win32の場合は &lt;code&gt;&quot;stdcall&quot;&lt;/code&gt; であり、Windows API自体へのリンクに何を使用する必要があるかを除きます。</target>
+          <target state="translated">&lt;code&gt;extern &quot;system&quot;&lt;/code&gt; -通常は &lt;code&gt;extern &quot;C&quot;&lt;/code&gt; と同じですが、Win32の場合は &lt;code&gt;&quot;stdcall&quot;&lt;/code&gt; 、またはWindows API自体へのリンクに使用するものを除きます</target>
         </trans-unit>
         <trans-unit id="569db8c0e4f6efa7eb6a5332cb6d307342fdd23c" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;extern &quot;sysv64&quot;&lt;/code&gt; -- The default for C code on non-Windows x86_64.</source>
@@ -981,7 +981,7 @@
         </trans-unit>
         <trans-unit id="a787bb78fff68ce38f6681f8b3b78c7d578cf9c6" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;extern &quot;win64&quot;&lt;/code&gt; -- The default for C code on x86_64 Windows.</source>
-          <target state="translated">&lt;code&gt;extern &quot;win64&quot;&lt;/code&gt; -x86_64 WindowsでのCコードのデフォルト。</target>
+          <target state="translated">&lt;code&gt;extern &quot;win64&quot;&lt;/code&gt; -x86_64 WindowsのCコードのデフォルト。</target>
         </trans-unit>
         <trans-unit id="153d6d8fe757226499396ffcefb6e51783cd0ffc" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;extern crate&lt;/code&gt; declarations</source>
@@ -1037,7 +1037,7 @@
         </trans-unit>
         <trans-unit id="a1d9ace641701080aaea3228bb93bb99a39b32d9" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;fetch_max&lt;/code&gt; takes an &lt;a href=&quot;enum.ordering&quot;&gt;&lt;code&gt;Ordering&lt;/code&gt;&lt;/a&gt; argument which describes the memory ordering of this operation. All ordering modes are possible. Note that using &lt;a href=&quot;enum.ordering#variant.Acquire&quot;&gt;&lt;code&gt;Acquire&lt;/code&gt;&lt;/a&gt; makes the store part of this operation &lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt;&lt;code&gt;Relaxed&lt;/code&gt;&lt;/a&gt;, and using &lt;a href=&quot;enum.ordering#variant.Release&quot;&gt;&lt;code&gt;Release&lt;/code&gt;&lt;/a&gt; makes the load part &lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt;&lt;code&gt;Relaxed&lt;/code&gt;&lt;/a&gt;.</source>
-          <target state="translated">&lt;code&gt;fetch_max&lt;/code&gt; は、この操作のメモリの順序を説明する&lt;a href=&quot;enum.ordering&quot;&gt; &lt;code&gt;Ordering&lt;/code&gt; &lt;/a&gt;引数を取ります。すべての注文モードが可能です。&lt;a href=&quot;enum.ordering#variant.Acquire&quot;&gt; &lt;code&gt;Acquire&lt;/code&gt; &lt;/a&gt;を使用すると、この操作のストア部分が&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; &lt;/a&gt;になり、&lt;a href=&quot;enum.ordering#variant.Release&quot;&gt; &lt;code&gt;Release&lt;/code&gt; &lt;/a&gt;を使用すると、ロード部分が&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; になり&lt;/a&gt;ます。</target>
+          <target state="translated">&lt;code&gt;fetch_max&lt;/code&gt; は、この操作のメモリの順序を表す&lt;a href=&quot;enum.ordering&quot;&gt; &lt;code&gt;Ordering&lt;/code&gt; &lt;/a&gt;引数を取ります。すべての注文モードが可能です。&lt;a href=&quot;enum.ordering#variant.Acquire&quot;&gt; &lt;code&gt;Acquire&lt;/code&gt; &lt;/a&gt;を使用すると、この操作のストア部分が&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; &lt;/a&gt;になり、&lt;a href=&quot;enum.ordering#variant.Release&quot;&gt; &lt;code&gt;Release&lt;/code&gt; &lt;/a&gt;を使用すると、ロード部分が&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; になり&lt;/a&gt;ます。</target>
         </trans-unit>
         <trans-unit id="5cd82f562fc0ea950b7943c47003a6708273f1d0" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;fetch_min&lt;/code&gt; takes an &lt;a href=&quot;enum.ordering&quot;&gt;&lt;code&gt;Ordering&lt;/code&gt;&lt;/a&gt; argument which describes the memory ordering of this operation. All ordering modes are possible. Note that using &lt;a href=&quot;enum.ordering#variant.Acquire&quot;&gt;&lt;code&gt;Acquire&lt;/code&gt;&lt;/a&gt; makes the store part of this operation &lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt;&lt;code&gt;Relaxed&lt;/code&gt;&lt;/a&gt;, and using &lt;a href=&quot;enum.ordering#variant.Release&quot;&gt;&lt;code&gt;Release&lt;/code&gt;&lt;/a&gt; makes the load part &lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt;&lt;code&gt;Relaxed&lt;/code&gt;&lt;/a&gt;.</source>
@@ -1053,15 +1053,15 @@
         </trans-unit>
         <trans-unit id="831e311e7133bfc96d832f51d13479a90fa5f6ae" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;fetch_sub&lt;/code&gt; takes an &lt;a href=&quot;enum.ordering&quot;&gt;&lt;code&gt;Ordering&lt;/code&gt;&lt;/a&gt; argument which describes the memory ordering of this operation. All ordering modes are possible. Note that using &lt;a href=&quot;enum.ordering#variant.Acquire&quot;&gt;&lt;code&gt;Acquire&lt;/code&gt;&lt;/a&gt; makes the store part of this operation &lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt;&lt;code&gt;Relaxed&lt;/code&gt;&lt;/a&gt;, and using &lt;a href=&quot;enum.ordering#variant.Release&quot;&gt;&lt;code&gt;Release&lt;/code&gt;&lt;/a&gt; makes the load part &lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt;&lt;code&gt;Relaxed&lt;/code&gt;&lt;/a&gt;.</source>
-          <target state="translated">&lt;code&gt;fetch_sub&lt;/code&gt; は、この操作のメモリの順序を表す&lt;a href=&quot;enum.ordering&quot;&gt; &lt;code&gt;Ordering&lt;/code&gt; &lt;/a&gt;引数を取ります。すべての注文モードが可能です。&lt;a href=&quot;enum.ordering#variant.Acquire&quot;&gt; &lt;code&gt;Acquire&lt;/code&gt; &lt;/a&gt;を使用すると、この操作のストア部分が&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; &lt;/a&gt;になり、&lt;a href=&quot;enum.ordering#variant.Release&quot;&gt; &lt;code&gt;Release&lt;/code&gt; &lt;/a&gt;を使用すると、ロード部分が&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; になり&lt;/a&gt;ます。</target>
+          <target state="translated">&lt;code&gt;fetch_sub&lt;/code&gt; は、この操作のメモリの順序を記述する&lt;a href=&quot;enum.ordering&quot;&gt; &lt;code&gt;Ordering&lt;/code&gt; &lt;/a&gt;引数を取ります。すべての注文モードが可能です。&lt;a href=&quot;enum.ordering#variant.Acquire&quot;&gt; &lt;code&gt;Acquire&lt;/code&gt; &lt;/a&gt;を使用すると、この操作のストア部分が&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; &lt;/a&gt;になり、&lt;a href=&quot;enum.ordering#variant.Release&quot;&gt; &lt;code&gt;Release&lt;/code&gt; &lt;/a&gt;を使用すると、ロード部分が&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; になり&lt;/a&gt;ます。</target>
         </trans-unit>
         <trans-unit id="678e4e22af7936d0f120f5f8f5890cfe9fe36c3b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;fetch_update&lt;/code&gt; takes two &lt;a href=&quot;enum.ordering&quot;&gt;&lt;code&gt;Ordering&lt;/code&gt;&lt;/a&gt; arguments to describe the memory ordering of this operation. The first describes the required ordering for loads and failed updates while the second describes the required ordering when the operation finally succeeds. Beware that this is different from the two modes in &lt;a href=&quot;#method.compare_exchange&quot;&gt;&lt;code&gt;compare_exchange&lt;/code&gt;&lt;/a&gt;!</source>
-          <target state="translated">&lt;code&gt;fetch_update&lt;/code&gt; は2つの&lt;a href=&quot;enum.ordering&quot;&gt; &lt;code&gt;Ordering&lt;/code&gt; &lt;/a&gt;引数を取り、この操作のメモリの順序を記述します。1つ目はロードと更新の失敗に必要な順序を示し、2つ目は操作が最終的に成功したときの必要な順序を示しています。これは、&lt;a href=&quot;#method.compare_exchange&quot;&gt; &lt;code&gt;compare_exchange&lt;/code&gt; の&lt;/a&gt; 2つのモードとは異なることに注意してください。</target>
+          <target state="translated">&lt;code&gt;fetch_update&lt;/code&gt; は2つの&lt;a href=&quot;enum.ordering&quot;&gt; &lt;code&gt;Ordering&lt;/code&gt; &lt;/a&gt;引数を取り、この操作のメモリの順序を記述します。1つ目はロードと失敗した更新に必要な順序を示し、2つ目は操作が最終的に成功したときの必要な順序を示しています。これは、&lt;a href=&quot;#method.compare_exchange&quot;&gt; &lt;code&gt;compare_exchange&lt;/code&gt; の&lt;/a&gt; 2つのモードとは異なることに注意してください。</target>
         </trans-unit>
         <trans-unit id="0a93055d2678cf2b8c8cb6f50fb72a30b7ce3724" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;fetch_xor&lt;/code&gt; takes an &lt;a href=&quot;enum.ordering&quot;&gt;&lt;code&gt;Ordering&lt;/code&gt;&lt;/a&gt; argument which describes the memory ordering of this operation. All ordering modes are possible. Note that using &lt;a href=&quot;enum.ordering#variant.Acquire&quot;&gt;&lt;code&gt;Acquire&lt;/code&gt;&lt;/a&gt; makes the store part of this operation &lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt;&lt;code&gt;Relaxed&lt;/code&gt;&lt;/a&gt;, and using &lt;a href=&quot;enum.ordering#variant.Release&quot;&gt;&lt;code&gt;Release&lt;/code&gt;&lt;/a&gt; makes the load part &lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt;&lt;code&gt;Relaxed&lt;/code&gt;&lt;/a&gt;.</source>
-          <target state="translated">&lt;code&gt;fetch_xor&lt;/code&gt; は、この操作のメモリの順序を説明する&lt;a href=&quot;enum.ordering&quot;&gt; &lt;code&gt;Ordering&lt;/code&gt; &lt;/a&gt;引数を取ります。すべての注文モードが可能です。&lt;a href=&quot;enum.ordering#variant.Acquire&quot;&gt; &lt;code&gt;Acquire&lt;/code&gt; &lt;/a&gt;を使用すると、この操作のストア部分が&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; &lt;/a&gt;になり、&lt;a href=&quot;enum.ordering#variant.Release&quot;&gt; &lt;code&gt;Release&lt;/code&gt; &lt;/a&gt;を使用すると、ロード部分が&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; になり&lt;/a&gt;ます。</target>
+          <target state="translated">&lt;code&gt;fetch_xor&lt;/code&gt; は、この操作のメモリ順序を説明する&lt;a href=&quot;enum.ordering&quot;&gt; &lt;code&gt;Ordering&lt;/code&gt; &lt;/a&gt;引数を取ります。すべての注文モードが可能です。&lt;a href=&quot;enum.ordering#variant.Acquire&quot;&gt; &lt;code&gt;Acquire&lt;/code&gt; &lt;/a&gt;を使用すると、この操作のストア部分が&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; &lt;/a&gt;になり、&lt;a href=&quot;enum.ordering#variant.Release&quot;&gt; &lt;code&gt;Release&lt;/code&gt; &lt;/a&gt;を使用すると、ロード部分が&lt;a href=&quot;enum.ordering#variant.Relaxed&quot;&gt; &lt;code&gt;Relaxed&lt;/code&gt; になり&lt;/a&gt;ます。</target>
         </trans-unit>
         <trans-unit id="76488373fdd9cdeeb3a1412d0e027eed75bc39dd" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;find()&lt;/code&gt; is short-circuiting; in other words, it will stop processing as soon as the closure returns &lt;code&gt;true&lt;/code&gt;.</source>
@@ -1089,7 +1089,7 @@
         </trans-unit>
         <trans-unit id="7ffaa6b1c889e903c48abe62352e52d307445710" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;fold()&lt;/code&gt; takes two arguments: an initial value, and a closure with two arguments: an 'accumulator', and an element. The closure returns the value that the accumulator should have for the next iteration.</source>
-          <target state="translated">&lt;code&gt;fold()&lt;/code&gt; は、2つの引数：初期値と、「アキュムレータ」と要素の2つの引数を持つクロージャを取ります。クロージャは、次の反復でアキュムレータが持つべき値を返します。</target>
+          <target state="translated">&lt;code&gt;fold()&lt;/code&gt; は2つの引数を取ります：初期値と2つの引数を持つクロージャ： 'アキュムレータ'と要素です。クロージャは、次の反復でアキュムレータが持つべき値を返します。</target>
         </trans-unit>
         <trans-unit id="022a68ed9d31802db057a2092973b729ee2fe1c6" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;for&lt;/code&gt; - loop over items from an iterator, implement a trait, or specify a higher-ranked lifetime</source>
@@ -1101,7 +1101,7 @@
         </trans-unit>
         <trans-unit id="8568ff1d56fd8eb306fd830fe0d12c11f9da5698" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;for&lt;/code&gt; is also used for &lt;a href=&quot;../reference/trait-bounds#higher-ranked-trait-bounds&quot;&gt;higher-ranked trait bounds&lt;/a&gt; as in &lt;code&gt;for&amp;lt;'a&amp;gt; &amp;amp;'a T: PartialEq&amp;lt;i32&amp;gt;&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;for&lt;/code&gt; は、 &lt;code&gt;for&amp;lt;'a&amp;gt; &amp;amp;'a T: PartialEq&amp;lt;i32&amp;gt;&lt;/code&gt; ように、&lt;a href=&quot;../reference/trait-bounds#higher-ranked-trait-bounds&quot;&gt;ランクの高いトレイト境界に&lt;/a&gt;も使用されます。</target>
+          <target state="translated">&lt;code&gt;for&lt;/code&gt; は、 &lt;code&gt;for&amp;lt;'a&amp;gt; &amp;amp;'a T: PartialEq&amp;lt;i32&amp;gt;&lt;/code&gt; ように、&lt;a href=&quot;../reference/trait-bounds#higher-ranked-trait-bounds&quot;&gt;ランクの高い特性境界に&lt;/a&gt;も使用されます。</target>
         </trans-unit>
         <trans-unit id="5c702989909708dc6cee5ad288ab508b974366e7" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;for&lt;/code&gt; is used in for-in-loops (see below).</source>
@@ -1109,7 +1109,7 @@
         </trans-unit>
         <trans-unit id="768eec21a68716e5a2354141f8333755e0d897c0" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;for&lt;/code&gt; is used when implementing traits as in &lt;code&gt;impl Trait for Type&lt;/code&gt; (see &lt;a href=&quot;keyword.impl&quot;&gt;&lt;code&gt;impl&lt;/code&gt;&lt;/a&gt; for more info on that).</source>
-          <target state="translated">&lt;code&gt;for&lt;/code&gt; は、 &lt;code&gt;impl Trait for Type&lt;/code&gt; のように特性を実装するときに使用されます（詳細については、&lt;a href=&quot;keyword.impl&quot;&gt; &lt;code&gt;impl&lt;/code&gt; &lt;/a&gt;を参照してください）。</target>
+          <target state="translated">&lt;code&gt;for&lt;/code&gt; は &lt;code&gt;impl Trait for Type&lt;/code&gt; （詳細については&lt;a href=&quot;keyword.impl&quot;&gt; &lt;code&gt;impl&lt;/code&gt; &lt;/a&gt;を参照）のようにトレイトを実装するときに使用されます。</target>
         </trans-unit>
         <trans-unit id="fdfafbe21537ea9306eabdfc8aeb928f0c389278" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;for&lt;/code&gt;&lt;a href=&quot;../patterns&quot;&gt;&lt;em&gt;Pattern&lt;/em&gt;&lt;/a&gt;&lt;code&gt;in&lt;/code&gt;&lt;a href=&quot;../expressions&quot;&gt;&lt;em&gt;Expression&lt;/em&gt;&lt;/a&gt;&lt;sub&gt;except struct expression&lt;/sub&gt;&lt;a href=&quot;block-expr&quot;&gt;&lt;em&gt;BlockExpression&lt;/em&gt;&lt;/a&gt;</source>
@@ -1125,7 +1125,7 @@
         </trans-unit>
         <trans-unit id="237f8cf19332ae629c0a08e3243717bfd455722f" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;forget&lt;/code&gt; is not marked as &lt;code&gt;unsafe&lt;/code&gt;, because Rust's safety guarantees do not include a guarantee that destructors will always run. For example, a program can create a reference cycle using &lt;a href=&quot;../rc/struct.rc&quot;&gt;&lt;code&gt;Rc&lt;/code&gt;&lt;/a&gt;, or call &lt;a href=&quot;../process/fn.exit&quot;&gt;&lt;code&gt;process::exit&lt;/code&gt;&lt;/a&gt; to exit without running destructors. Thus, allowing &lt;code&gt;mem::forget&lt;/code&gt; from safe code does not fundamentally change Rust's safety guarantees.</source>
-          <target state="translated">&lt;code&gt;forget&lt;/code&gt; Rustの安全性の保証には、デストラクタが常に実行されるという保証が含まれていないため、forgetは &lt;code&gt;unsafe&lt;/code&gt; とマークされていません。たとえば、プログラムは&lt;a href=&quot;../rc/struct.rc&quot;&gt; &lt;code&gt;Rc&lt;/code&gt; &lt;/a&gt;を使用して参照サイクルを作成したり、デストラクタを実行せずに&lt;a href=&quot;../process/fn.exit&quot;&gt; &lt;code&gt;process::exit&lt;/code&gt; &lt;/a&gt;するためにprocess :: exitを呼び出したりできます。したがって、 &lt;code&gt;mem::forget&lt;/code&gt; を安全なコードから許可しても、Rustの安全性が根本的に変わるわけではありません。</target>
+          <target state="translated">&lt;code&gt;forget&lt;/code&gt; Rustの安全性の保証には、デストラクタが常に実行されるという保証が含まれていないため、forgetは &lt;code&gt;unsafe&lt;/code&gt; としてマークされていません。たとえば、プログラムは&lt;a href=&quot;../rc/struct.rc&quot;&gt; &lt;code&gt;Rc&lt;/code&gt; &lt;/a&gt;を使用して参照サイクルを作成したり、デストラクタを実行せずに&lt;a href=&quot;../process/fn.exit&quot;&gt; &lt;code&gt;process::exit&lt;/code&gt; &lt;/a&gt;するためにprocess :: exitを呼び出したりできます。したがって、安全なコードから &lt;code&gt;mem::forget&lt;/code&gt; を許可しても、Rustの安全性が根本的に変わるわけではありません。</target>
         </trans-unit>
         <trans-unit id="0d8755472424c76ce823afb53390730d2a9fd8c8" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;format!&lt;/code&gt; panics if a formatting trait implementation returns an error. This indicates an incorrect implementation since &lt;code&gt;fmt::Write for String&lt;/code&gt; never returns an error itself.</source>
@@ -1141,7 +1141,7 @@
         </trans-unit>
         <trans-unit id="969192426651697d2828cdfe63c88ba78e988bca" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;framework&lt;/code&gt; &amp;mdash; Indicates a macOS framework. This is only valid for macOS targets.</source>
-          <target state="translated">&lt;code&gt;framework&lt;/code&gt; &amp;mdash; macOSフレームワークを示します。これはmacOSターゲットでのみ有効です。</target>
+          <target state="translated">&lt;code&gt;framework&lt;/code&gt; &amp;mdash; macOSフレームワークを示します。これはmacOSターゲットにのみ有効です。</target>
         </trans-unit>
         <trans-unit id="70dabdfd19dab475c5b8adad5d5ca3efe76bc670" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;from&lt;/code&gt; and &lt;code&gt;to&lt;/code&gt; are on separate filesystems.</source>
@@ -1177,7 +1177,7 @@
         </trans-unit>
         <trans-unit id="9533afd44b842fb73c41aa28ed7365c496c5897a" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;if&lt;/code&gt; always demands a &lt;code&gt;bool&lt;/code&gt; value. &lt;a href=&quot;macro.assert&quot;&gt;&lt;code&gt;assert!&lt;/code&gt;&lt;/a&gt;, being an important macro in testing, checks whether an expression returns &lt;code&gt;true&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;if&lt;/code&gt; 常に要求 &lt;code&gt;bool&lt;/code&gt; 値を。&lt;a href=&quot;macro.assert&quot;&gt; &lt;code&gt;assert!&lt;/code&gt; &lt;/a&gt;は、テストにおいて重要なマクロであり、式が &lt;code&gt;true&lt;/code&gt; を返すかどうかを確認します。</target>
+          <target state="translated">&lt;code&gt;if&lt;/code&gt; 常に要求 &lt;code&gt;bool&lt;/code&gt; 値を。&lt;a href=&quot;macro.assert&quot;&gt; &lt;code&gt;assert!&lt;/code&gt; &lt;/a&gt;はテストで重要なマクロであり、式が &lt;code&gt;true&lt;/code&gt; を返すかどうかを確認します。</target>
         </trans-unit>
         <trans-unit id="299583c0c857881502d26a8558031acb94df8401" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;if&lt;/code&gt; and &lt;code&gt;if let&lt;/code&gt; expressions</source>
@@ -1193,7 +1193,7 @@
         </trans-unit>
         <trans-unit id="8f5995a7b5ef25db3fd33921ae5aebea75e31d9c" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;if&lt;/code&gt; is a familiar construct to most programmers, and is the main way you'll often do logic in your code. However, unlike in most languages, &lt;code&gt;if&lt;/code&gt; blocks can also act as expressions.</source>
-          <target state="translated">&lt;code&gt;if&lt;/code&gt; は、ほとんどのプログラマにとっておなじみの構造であり、コードでロジックを実行する主な方法です。ただし、ほとんどの言語とは異なり、 &lt;code&gt;if&lt;/code&gt; ブロックは式としても機能します。</target>
+          <target state="translated">&lt;code&gt;if&lt;/code&gt; は、ほとんどのプログラマにとっておなじみの構造であり、コードでロジックを実行する主な方法です。しかし、ほとんどの言語とは異なり、 &lt;code&gt;if&lt;/code&gt; ブロックも表現として機能することができます。</target>
         </trans-unit>
         <trans-unit id="1b3af4031810a4b15a2e0c243465be4ecf2097a2" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;if&lt;/code&gt;&lt;a href=&quot;../expressions&quot;&gt;&lt;em&gt;Expression&lt;/em&gt;&lt;/a&gt;</source>
@@ -1241,7 +1241,7 @@
         </trans-unit>
         <trans-unit id="5c16002e8b16b8b400a51264137fd89f2dc6e065" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl !Sync for &lt;a href=&quot;../env/struct.argsos&quot;&gt;ArgsOs&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/env.rs.html#779&quot;&gt;[src]&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;impl !Sync for &lt;a href=&quot;../env/struct.argsos&quot;&gt;ArgsOs&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/env.rs.html#779&quot;&gt; [ &lt;/a&gt;ソース ]</target>
+          <target state="translated">&lt;code&gt;impl !Sync for &lt;a href=&quot;../env/struct.argsos&quot;&gt;ArgsOs&lt;/a&gt;&lt;/code&gt; 同期&lt;a href=&quot;https://doc.rust-lang.org/src/std/env.rs.html#779&quot;&gt;[ &lt;/a&gt;ソース ]</target>
         </trans-unit>
         <trans-unit id="4e7c6cc70caecefc9dc66e7794d5e36bf7889b16" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl !Unpin for &lt;a href=&quot;struct.phantompinned&quot;&gt;PhantomPinned&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/core/marker.rs.html#650&quot;&gt;[src]&lt;/a&gt;</source>
@@ -1389,7 +1389,7 @@
         </trans-unit>
         <trans-unit id="aebdb392ac8d16851d694db6ad107f2947c135d5" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;../../primitive.usize&quot;&gt;usize&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.atomicusize&quot;&gt;AtomicUsize&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/core/sync/atomic.rs.html#1185-1192&quot;&gt;[src]&lt;/a&gt;1.23.0</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;../../primitive.usize&quot;&gt;usize&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.atomicusize&quot;&gt;AtomicUsize&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/core/sync/atomic.rs.html#1185-1192&quot;&gt; [ソース]&lt;/a&gt; 1.23.0</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;../../primitive.usize&quot;&gt;usize&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.atomicusize&quot;&gt;AtomicUsize&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/core/sync/atomic.rs.html#1185-1192&quot;&gt; [&lt;/a&gt;ソース] 1.23.0の&amp;lt; usize &amp;gt; からの impl</target>
         </trans-unit>
         <trans-unit id="9bb37bb593303b28845558a4876ea6712239dda6" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.recverror&quot;&gt;RecvError&lt;/a&gt;&amp;gt; for &lt;a href=&quot;enum.recvtimeouterror&quot;&gt;RecvTimeoutError&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/sync/mpsc/mod.rs.html#1736-1742&quot;&gt;[src]&lt;/a&gt;1.24.0</source>
@@ -2445,7 +2445,7 @@
         </trans-unit>
         <trans-unit id="0f2a3a60f23da4005618e7ef264770dabbfe4c3f" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialeq&quot;&gt;PartialEq&lt;/a&gt;&amp;lt;&lt;a href=&quot;enum.errorkind&quot;&gt;ErrorKind&lt;/a&gt;&amp;gt; for &lt;a href=&quot;enum.errorkind&quot;&gt;ErrorKind&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/io/error.rs.html#87&quot;&gt;[src]&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialeq&quot;&gt;PartialEq&lt;/a&gt;&amp;lt;&lt;a href=&quot;enum.errorkind&quot;&gt;ErrorKind&lt;/a&gt;&amp;gt; for &lt;a href=&quot;enum.errorkind&quot;&gt;ErrorKind&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/io/error.rs.html#87&quot;&gt; [ &lt;/a&gt;ソース ]</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialeq&quot;&gt;PartialEq&lt;/a&gt;&amp;lt;&lt;a href=&quot;enum.errorkind&quot;&gt;ErrorKind&lt;/a&gt;&amp;gt; for &lt;a href=&quot;enum.errorkind&quot;&gt;ErrorKind&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/io/error.rs.html#87&quot;&gt; [src]&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="0d3ae83b357bd81966a7b54de8f4d11a8bffc3f6" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialeq&quot;&gt;PartialEq&lt;/a&gt;&amp;lt;&lt;a href=&quot;enum.fpcategory&quot;&gt;FpCategory&lt;/a&gt;&amp;gt; for &lt;a href=&quot;enum.fpcategory&quot;&gt;FpCategory&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/core/num/mod.rs.html#4633&quot;&gt;[src]&lt;/a&gt;</source>
@@ -2521,11 +2521,11 @@
         </trans-unit>
         <trans-unit id="64cbec813c9460a4dc9cfdaf7eada878a08032cd" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialeq&quot;&gt;PartialEq&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.duration&quot;&gt;Duration&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.duration&quot;&gt;Duration&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/core/time.rs.html#54&quot;&gt;[src]&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialeq&quot;&gt;PartialEq&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.duration&quot;&gt;Duration&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.duration&quot;&gt;Duration&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/core/time.rs.html#54&quot;&gt; [ &lt;/a&gt;ソース ]</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialeq&quot;&gt;PartialEq&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.duration&quot;&gt;Duration&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.duration&quot;&gt;Duration&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/core/time.rs.html#54&quot;&gt; [src]&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="e39840112ab30cc1be86e68fa5903ead363f023f" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialeq&quot;&gt;PartialEq&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.error&quot;&gt;Error&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.error&quot;&gt;Error&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/core/fmt/mod.rs.html#94&quot;&gt;[src]&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialeq&quot;&gt;PartialEq&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.error&quot;&gt;Error&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.error&quot;&gt;Error&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/core/fmt/mod.rs.html#94&quot;&gt; [ソース]&lt;/a&gt;</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialeq&quot;&gt;PartialEq&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.error&quot;&gt;Error&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.error&quot;&gt;Error&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/core/fmt/mod.rs.html#94&quot;&gt; [src]の&lt;/a&gt;impl PartialEq &amp;lt; Error &amp;gt;</target>
         </trans-unit>
         <trans-unit id="361d00bdabcfbcb2fdb31a92121563a92a9755ad" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialeq&quot;&gt;PartialEq&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.exitstatus&quot;&gt;ExitStatus&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.exitstatus&quot;&gt;ExitStatus&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/process.rs.html#1163&quot;&gt;[src]&lt;/a&gt;</source>
@@ -2557,7 +2557,7 @@
         </trans-unit>
         <trans-unit id="d6966fe371630f36cad54d8e40a9b9857fb533d7" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialeq&quot;&gt;PartialEq&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.ipv6addr&quot;&gt;Ipv6Addr&lt;/a&gt;&amp;gt; for &lt;a href=&quot;enum.ipaddr&quot;&gt;IpAddr&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/net/ip.rs.html#1623-1630&quot;&gt;[src]&lt;/a&gt;1.16.0</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialeq&quot;&gt;PartialEq&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.ipv6addr&quot;&gt;Ipv6Addr&lt;/a&gt;&amp;gt; for &lt;a href=&quot;enum.ipaddr&quot;&gt;IpAddr&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/net/ip.rs.html#1623-1630&quot;&gt; [src]&lt;/a&gt; 1.16.0</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialeq&quot;&gt;PartialEq&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.ipv6addr&quot;&gt;Ipv6Addr&lt;/a&gt;&amp;gt; for &lt;a href=&quot;enum.ipaddr&quot;&gt;IpAddr&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/net/ip.rs.html#1623-1630&quot;&gt; [&lt;/a&gt;ソース] 1.16.0</target>
         </trans-unit>
         <trans-unit id="d30ad24da4bcb63610e38a01ed83af09c1bc969a" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialeq&quot;&gt;PartialEq&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.ipv6addr&quot;&gt;Ipv6Addr&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.ipv6addr&quot;&gt;Ipv6Addr&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/net/ip.rs.html#1606-1610&quot;&gt;[src]&lt;/a&gt;</source>
@@ -2673,7 +2673,7 @@
         </trans-unit>
         <trans-unit id="fd85551b6480dd8ec6708b9b2c4c1407c18b4657" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialeq&quot;&gt;PartialEq&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.permissions&quot;&gt;Permissions&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.permissions&quot;&gt;Permissions&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/fs.rs.html#197&quot;&gt;[src]&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialeq&quot;&gt;PartialEq&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.permissions&quot;&gt;Permissions&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.permissions&quot;&gt;Permissions&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/fs.rs.html#197&quot;&gt; [ソース]&lt;/a&gt;</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialeq&quot;&gt;PartialEq&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.permissions&quot;&gt;Permissions&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.permissions&quot;&gt;Permissions&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/fs.rs.html#197&quot;&gt; [ &lt;/a&gt;ソース ]</target>
         </trans-unit>
         <trans-unit id="288a46867e41a736a842b5077850a95706bf2272" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialeq&quot;&gt;PartialEq&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.phantompinned&quot;&gt;PhantomPinned&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.phantompinned&quot;&gt;PhantomPinned&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/core/marker.rs.html#646&quot;&gt;[src]&lt;/a&gt;</source>
@@ -2745,7 +2745,7 @@
         </trans-unit>
         <trans-unit id="d0b6463939741144b66f10b5975d1fd2644fb3a7" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialord&quot;&gt;PartialOrd&lt;/a&gt;&amp;lt;&lt;a href=&quot;enum.errorkind&quot;&gt;ErrorKind&lt;/a&gt;&amp;gt; for &lt;a href=&quot;enum.errorkind&quot;&gt;ErrorKind&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/io/error.rs.html#87&quot;&gt;[src]&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialord&quot;&gt;PartialOrd&lt;/a&gt;&amp;lt;&lt;a href=&quot;enum.errorkind&quot;&gt;ErrorKind&lt;/a&gt;&amp;gt; for &lt;a href=&quot;enum.errorkind&quot;&gt;ErrorKind&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/io/error.rs.html#87&quot;&gt; [src]&lt;/a&gt;</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialord&quot;&gt;PartialOrd&lt;/a&gt;&amp;lt;&lt;a href=&quot;enum.errorkind&quot;&gt;ErrorKind&lt;/a&gt;&amp;gt; for &lt;a href=&quot;enum.errorkind&quot;&gt;ErrorKind&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/io/error.rs.html#87&quot;&gt; [ &lt;/a&gt;ソース ]</target>
         </trans-unit>
         <trans-unit id="d89e9afcb63f63b42d99a3b9dc30faace8744f97" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialord&quot;&gt;PartialOrd&lt;/a&gt;&amp;lt;&lt;a href=&quot;enum.infallible&quot;&gt;Infallible&lt;/a&gt;&amp;gt; for &lt;a href=&quot;enum.infallible&quot;&gt;Infallible&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/core/convert.rs.html#691-695&quot;&gt;[src]&lt;/a&gt;</source>
@@ -2769,7 +2769,7 @@
         </trans-unit>
         <trans-unit id="fc655076d877c63bdf8770af360a9a22f18c96b6" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialord&quot;&gt;PartialOrd&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.cstring&quot;&gt;CString&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.cstring&quot;&gt;CString&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/ffi/c_str.rs.html#116&quot;&gt;[src]&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialord&quot;&gt;PartialOrd&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.cstring&quot;&gt;CString&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.cstring&quot;&gt;CString&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/ffi/c_str.rs.html#116&quot;&gt; [ &lt;/a&gt;ソース ]</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialord&quot;&gt;PartialOrd&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.cstring&quot;&gt;CString&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.cstring&quot;&gt;CString&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/ffi/c_str.rs.html#116&quot;&gt; [src]の&lt;/a&gt;impl PartialOrd &amp;lt; CString &amp;gt;</target>
         </trans-unit>
         <trans-unit id="9b9903d12853876c373ab9eb9758094459a9d457" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialord&quot;&gt;PartialOrd&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.duration&quot;&gt;Duration&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.duration&quot;&gt;Duration&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/core/time.rs.html#54&quot;&gt;[src]&lt;/a&gt;</source>
@@ -2873,7 +2873,7 @@
         </trans-unit>
         <trans-unit id="627b62b5d3a03ee0aebde14d381a64022e361353" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialord&quot;&gt;PartialOrd&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.string&quot;&gt;String&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.string&quot;&gt;String&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/alloc/string.rs.html#281&quot;&gt;[src]&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialord&quot;&gt;PartialOrd&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.string&quot;&gt;String&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.string&quot;&gt;String&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/alloc/string.rs.html#281&quot;&gt; [src]&lt;/a&gt;</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialord&quot;&gt;PartialOrd&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.string&quot;&gt;String&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.string&quot;&gt;String&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/alloc/string.rs.html#281&quot;&gt; [ソース]&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="3d5ff83f9ece12d2fdd87826743f7c072b950c0d" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../cmp/trait.partialord&quot;&gt;PartialOrd&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.systemtime&quot;&gt;SystemTime&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.systemtime&quot;&gt;SystemTime&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/time.rs.html#117&quot;&gt;[src]&lt;/a&gt;</source>
@@ -2889,7 +2889,7 @@
         </trans-unit>
         <trans-unit id="e5066301b4c70fec39551e687840e975b0e842f1" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.asref&quot;&gt;AsRef&lt;/a&gt;&amp;lt;&lt;a href=&quot;../ffi/struct.osstr&quot;&gt;OsStr&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.path&quot;&gt;Path&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#2573-2577&quot;&gt;[src]&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.asref&quot;&gt;AsRef&lt;/a&gt;&amp;lt;&lt;a href=&quot;../ffi/struct.osstr&quot;&gt;OsStr&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.path&quot;&gt;Path&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#2573-2577&quot;&gt; [ &lt;/a&gt;ソース ]</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.asref&quot;&gt;AsRef&lt;/a&gt;&amp;lt;&lt;a href=&quot;../ffi/struct.osstr&quot;&gt;OsStr&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.path&quot;&gt;Path&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#2573-2577&quot;&gt; [ソース]&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="364ea1bb167787a5bcc749cb34f9734dae36aba6" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.asref&quot;&gt;AsRef&lt;/a&gt;&amp;lt;&lt;a href=&quot;../ffi/struct.osstr&quot;&gt;OsStr&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.pathbuf&quot;&gt;PathBuf&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#1705-1709&quot;&gt;[src]&lt;/a&gt;</source>
@@ -2897,7 +2897,7 @@
         </trans-unit>
         <trans-unit id="b1e90172893d891dc7075e474c887a085f934f58" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.asref&quot;&gt;AsRef&lt;/a&gt;&amp;lt;&lt;a href=&quot;../ffi/struct.osstr&quot;&gt;OsStr&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.string&quot;&gt;String&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/ffi/os_str.rs.html#946-950&quot;&gt;[src]&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.asref&quot;&gt;AsRef&lt;/a&gt;&amp;lt;&lt;a href=&quot;../ffi/struct.osstr&quot;&gt;OsStr&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.string&quot;&gt;String&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/ffi/os_str.rs.html#946-950&quot;&gt;[ &lt;/a&gt;ソース ]</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.asref&quot;&gt;AsRef&lt;/a&gt;&amp;lt;&lt;a href=&quot;../ffi/struct.osstr&quot;&gt;OsStr&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.string&quot;&gt;String&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/ffi/os_str.rs.html#946-950&quot;&gt; [src]&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="fd5a9ee587ac040d8614b26e4f23a8e14bdeaa62" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.asref&quot;&gt;AsRef&lt;/a&gt;&amp;lt;&lt;a href=&quot;../path/struct.path&quot;&gt;Path&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.osstr&quot;&gt;OsStr&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#2666-2670&quot;&gt;[src]&lt;/a&gt;</source>
@@ -2905,7 +2905,7 @@
         </trans-unit>
         <trans-unit id="fe43d4f6158debb15c01207272c50b153cca0893" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.asref&quot;&gt;AsRef&lt;/a&gt;&amp;lt;&lt;a href=&quot;../path/struct.path&quot;&gt;Path&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.osstring&quot;&gt;OsString&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#2680-2684&quot;&gt;[src]&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.asref&quot;&gt;AsRef&lt;/a&gt;&amp;lt;&lt;a href=&quot;../path/struct.path&quot;&gt;Path&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.osstring&quot;&gt;OsString&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#2680-2684&quot;&gt; [ソース]&lt;/a&gt;</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.asref&quot;&gt;AsRef&lt;/a&gt;&amp;lt;&lt;a href=&quot;../path/struct.path&quot;&gt;Path&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.osstring&quot;&gt;OsString&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#2680-2684&quot;&gt; [ &lt;/a&gt;ソース ]</target>
         </trans-unit>
         <trans-unit id="c8fa96812b12cfeba25ee5ced6ba08bf4d5f8907" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.asref&quot;&gt;AsRef&lt;/a&gt;&amp;lt;&lt;a href=&quot;../path/struct.path&quot;&gt;Path&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.string&quot;&gt;String&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#2694-2698&quot;&gt;[src]&lt;/a&gt;</source>
@@ -2929,7 +2929,7 @@
         </trans-unit>
         <trans-unit id="fc6729e3eced4eb64f3f25c83a1903c13cd494f5" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.asref&quot;&gt;AsRef&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.osstr&quot;&gt;OsStr&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../path/struct.path&quot;&gt;Path&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#2573-2577&quot;&gt;[src]&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.asref&quot;&gt;AsRef&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.osstr&quot;&gt;OsStr&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../path/struct.path&quot;&gt;Path&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#2573-2577&quot;&gt; [ &lt;/a&gt;ソース ]</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.asref&quot;&gt;AsRef&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.osstr&quot;&gt;OsStr&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../path/struct.path&quot;&gt;Path&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#2573-2577&quot;&gt; [ソース]&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="8f55d7d2355530cbd870378076b646162d081faa" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.asref&quot;&gt;AsRef&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.osstr&quot;&gt;OsStr&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../path/struct.pathbuf&quot;&gt;PathBuf&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#1705-1709&quot;&gt;[src]&lt;/a&gt;</source>
@@ -2941,7 +2941,7 @@
         </trans-unit>
         <trans-unit id="54e6f5c3d16cbd455fef92bbdaa89d0147a5609a" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.asref&quot;&gt;AsRef&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.osstr&quot;&gt;OsStr&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../string/struct.string&quot;&gt;String&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/ffi/os_str.rs.html#946-950&quot;&gt;[src]&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.asref&quot;&gt;AsRef&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.osstr&quot;&gt;OsStr&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../string/struct.string&quot;&gt;String&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/ffi/os_str.rs.html#946-950&quot;&gt;[ &lt;/a&gt;ソース ]</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.asref&quot;&gt;AsRef&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.osstr&quot;&gt;OsStr&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../string/struct.string&quot;&gt;String&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/ffi/os_str.rs.html#946-950&quot;&gt; [src]&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="151dbe8f22f76f3ad476afc78aa93d99c2845381" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.asref&quot;&gt;AsRef&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.osstr&quot;&gt;OsStr&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.osstr&quot;&gt;OsStr&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/ffi/os_str.rs.html#925-929&quot;&gt;[src]&lt;/a&gt;</source>
@@ -2957,7 +2957,7 @@
         </trans-unit>
         <trans-unit id="f21d6f26e998b4f0ae080baf39dc5a89bf8cf9b9" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.asref&quot;&gt;AsRef&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.path&quot;&gt;Path&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../ffi/struct.osstring&quot;&gt;OsString&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#2680-2684&quot;&gt;[src]&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.asref&quot;&gt;AsRef&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.path&quot;&gt;Path&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../ffi/struct.osstring&quot;&gt;OsString&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#2680-2684&quot;&gt; [ソース]&lt;/a&gt;</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.asref&quot;&gt;AsRef&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.path&quot;&gt;Path&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../ffi/struct.osstring&quot;&gt;OsString&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#2680-2684&quot;&gt; [ &lt;/a&gt;ソース ]</target>
         </trans-unit>
         <trans-unit id="3121c67d6ad4dd229d04adaf9c32c02db2314e52" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.asref&quot;&gt;AsRef&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.path&quot;&gt;Path&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../primitive.str&quot;&gt;str&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#2687-2691&quot;&gt;[src]&lt;/a&gt;</source>
@@ -2977,7 +2977,7 @@
         </trans-unit>
         <trans-unit id="6d1566be99ee4f97aa7f073c01958a72b0c20615" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;../alloc/struct.allocerr&quot;&gt;AllocErr&lt;/a&gt;&amp;gt; for &lt;a href=&quot;enum.collectionallocerr&quot;&gt;CollectionAllocErr&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/alloc/collections/mod.rs.html#58-63&quot;&gt;[src]&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;../alloc/struct.allocerr&quot;&gt;AllocErr&lt;/a&gt;&amp;gt; for &lt;a href=&quot;enum.collectionallocerr&quot;&gt;CollectionAllocErr&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/alloc/collections/mod.rs.html#58-63&quot;&gt; ]の&lt;/a&gt;impl From &amp;lt; AllocErr &amp;gt;</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;../alloc/struct.allocerr&quot;&gt;AllocErr&lt;/a&gt;&amp;gt; for &lt;a href=&quot;enum.collectionallocerr&quot;&gt;CollectionAllocErr&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/alloc/collections/mod.rs.html#58-63&quot;&gt; [src]の&lt;/a&gt;impl From &amp;lt; AllocErr &amp;gt;</target>
         </trans-unit>
         <trans-unit id="ad536dbc664db95ecf7710fd7a5cd0fbb4d1d6d7" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;../alloc/struct.layouterr&quot;&gt;LayoutErr&lt;/a&gt;&amp;gt; for &lt;a href=&quot;enum.collectionallocerr&quot;&gt;CollectionAllocErr&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/alloc/collections/mod.rs.html#66-71&quot;&gt;[src]&lt;/a&gt;</source>
@@ -3025,7 +3025,7 @@
         </trans-unit>
         <trans-unit id="e60844f9a39cc940dfb4cfbd6373aa0b96dc2fd6" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;../ffi/struct.nulerror&quot;&gt;NulError&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.error&quot;&gt;Error&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/ffi/c_str.rs.html#858-867&quot;&gt;[src]&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;../ffi/struct.nulerror&quot;&gt;NulError&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.error&quot;&gt;Error&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/ffi/c_str.rs.html#858-867&quot;&gt;[ &lt;/a&gt;ソース ]</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;../ffi/struct.nulerror&quot;&gt;NulError&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.error&quot;&gt;Error&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/ffi/c_str.rs.html#858-867&quot;&gt; [src]の&lt;/a&gt;&amp;lt; NulError &amp;gt; からの impl</target>
         </trans-unit>
         <trans-unit id="64538571ecfa3d555d12f6ba8e2c6fa4a6730bc2" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;../ffi/struct.osstring&quot;&gt;OsString&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.arc&quot;&gt;Arc&lt;/a&gt;&amp;lt;&lt;a href=&quot;../ffi/struct.osstr&quot;&gt;OsStr&lt;/a&gt;&amp;gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/ffi/os_str.rs.html#699-709&quot;&gt;[src]&lt;/a&gt;1.24.0</source>
@@ -3049,7 +3049,7 @@
         </trans-unit>
         <trans-unit id="6d30e111e28060a97f6b27c2d1297bc11ca000b0" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;../path/struct.pathbuf&quot;&gt;PathBuf&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.arc&quot;&gt;Arc&lt;/a&gt;&amp;lt;&lt;a href=&quot;../path/struct.path&quot;&gt;Path&lt;/a&gt;&amp;gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#1623-1630&quot;&gt;[src]&lt;/a&gt;1.24.0</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;../path/struct.pathbuf&quot;&gt;PathBuf&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.arc&quot;&gt;Arc&lt;/a&gt;&amp;lt;&lt;a href=&quot;../path/struct.path&quot;&gt;Path&lt;/a&gt;&amp;gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#1623-1630&quot;&gt;[ソース]&lt;/a&gt; 1.24.0</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;../path/struct.pathbuf&quot;&gt;PathBuf&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.arc&quot;&gt;Arc&lt;/a&gt;&amp;lt;&lt;a href=&quot;../path/struct.path&quot;&gt;Path&lt;/a&gt;&amp;gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#1623-1630&quot;&gt;[src]&lt;/a&gt; 1.24.0</target>
         </trans-unit>
         <trans-unit id="7c93775e8e34821a1ca7481adf503fc255c22e0b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;../path/struct.pathbuf&quot;&gt;PathBuf&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.box&quot;&gt;Box&lt;/a&gt;&amp;lt;&lt;a href=&quot;../path/struct.path&quot;&gt;Path&lt;/a&gt;&amp;gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#1480-1488&quot;&gt;[src]&lt;/a&gt;1.20.0</source>
@@ -3093,7 +3093,7 @@
         </trans-unit>
         <trans-unit id="56cdcefda73c821c11fc5851ec502b1ad202b4eb" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;../primitive.u128&quot;&gt;u128&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.ipv6addr&quot;&gt;Ipv6Addr&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/net/ip.rs.html#1706-1725&quot;&gt;[src]&lt;/a&gt;1.26.0</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;../primitive.u128&quot;&gt;u128&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.ipv6addr&quot;&gt;Ipv6Addr&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/net/ip.rs.html#1706-1725&quot;&gt; [src]&lt;/a&gt; 1.26.0</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;../primitive.u128&quot;&gt;u128&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.ipv6addr&quot;&gt;Ipv6Addr&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/net/ip.rs.html#1706-1725&quot;&gt; [&lt;/a&gt;ソース] 1.26.0のimpl From &amp;lt; u128 &amp;gt;</target>
         </trans-unit>
         <trans-unit id="94fb80f7cfc5cd09fb09a43e5260d49a3fc6c749" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;../primitive.u32&quot;&gt;u32&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.ipv4addr&quot;&gt;Ipv4Addr&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/net/ip.rs.html#975-989&quot;&gt;[src]&lt;/a&gt;1.1.0</source>
@@ -3121,7 +3121,7 @@
         </trans-unit>
         <trans-unit id="b46b4c0578bca15ac8ba31f3234e9331f4b1b813" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;../string/struct.string&quot;&gt;String&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.pathbuf&quot;&gt;PathBuf&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#1526-1533&quot;&gt;[src]&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;../string/struct.string&quot;&gt;String&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.pathbuf&quot;&gt;PathBuf&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#1526-1533&quot;&gt; [ &lt;/a&gt;ソース ]のimpl From &amp;lt; 文字列 &amp;gt;</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;../string/struct.string&quot;&gt;String&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.pathbuf&quot;&gt;PathBuf&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#1526-1533&quot;&gt;[ &lt;/a&gt;ソース ]</target>
         </trans-unit>
         <trans-unit id="99824658f942b09fa6ce8f05fca32b072babdaf7" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;../string/struct.string&quot;&gt;String&lt;/a&gt;&amp;gt; for &lt;a href=&quot;struct.rc&quot;&gt;Rc&lt;/a&gt;&amp;lt;&lt;a href=&quot;../primitive.str&quot;&gt;str&lt;/a&gt;&amp;gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/alloc/rc.rs.html#1186-1191&quot;&gt;[src]&lt;/a&gt;1.21.0</source>
@@ -3137,7 +3137,7 @@
         </trans-unit>
         <trans-unit id="706d5de413193800e9748cc18f46360cc4e09587" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.allocerr&quot;&gt;AllocErr&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../collections/enum.collectionallocerr&quot;&gt;CollectionAllocErr&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/alloc/collections/mod.rs.html#58-63&quot;&gt;[src]&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.allocerr&quot;&gt;AllocErr&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../collections/enum.collectionallocerr&quot;&gt;CollectionAllocErr&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/alloc/collections/mod.rs.html#58-63&quot;&gt; ]の&lt;/a&gt;impl From &amp;lt; AllocErr &amp;gt;</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.allocerr&quot;&gt;AllocErr&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../collections/enum.collectionallocerr&quot;&gt;CollectionAllocErr&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/alloc/collections/mod.rs.html#58-63&quot;&gt; [src]の&lt;/a&gt;impl From &amp;lt; AllocErr &amp;gt;</target>
         </trans-unit>
         <trans-unit id="2a324de5b481b18790da089a8a1f41977bcfbc1b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.box&quot;&gt;Box&lt;/a&gt;&amp;lt;&lt;a href=&quot;../ffi/struct.cstr&quot;&gt;CStr&lt;/a&gt;&amp;gt;&amp;gt; for &lt;a href=&quot;../ffi/struct.cstring&quot;&gt;CString&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/ffi/c_str.rs.html#703-712&quot;&gt;[src]&lt;/a&gt;1.18.0</source>
@@ -3217,7 +3217,7 @@
         </trans-unit>
         <trans-unit id="45deeaa5284fe526e683e2df5cd56e3d14856f40" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.nonzeroi16&quot;&gt;NonZeroI16&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../primitive.i16&quot;&gt;i16&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/core/num/mod.rs.html#90-94&quot;&gt;[src]&lt;/a&gt;1.31.0</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.nonzeroi16&quot;&gt;NonZeroI16&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../primitive.i16&quot;&gt;i16&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/core/num/mod.rs.html#90-94&quot;&gt; [ソース]&lt;/a&gt; 1.31.0</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.nonzeroi16&quot;&gt;NonZeroI16&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../primitive.i16&quot;&gt;i16&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/core/num/mod.rs.html#90-94&quot;&gt; [ &lt;/a&gt;ソース ] 1.31.0</target>
         </trans-unit>
         <trans-unit id="3e4e28f2f74d2c622a8bccbdcc480496b190c1e6" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.nonzeroi32&quot;&gt;NonZeroI32&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../primitive.i32&quot;&gt;i32&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/core/num/mod.rs.html#90-94&quot;&gt;[src]&lt;/a&gt;1.31.0</source>
@@ -3233,7 +3233,7 @@
         </trans-unit>
         <trans-unit id="54d06e6377b67d8a47591e7e249529f2d7e22a2d" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.nonzeroisize&quot;&gt;NonZeroIsize&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../primitive.isize&quot;&gt;isize&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/core/num/mod.rs.html#90-94&quot;&gt;[src]&lt;/a&gt;1.31.0</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.nonzeroisize&quot;&gt;NonZeroIsize&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../primitive.isize&quot;&gt;isize&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/core/num/mod.rs.html#90-94&quot;&gt; [src]&lt;/a&gt; 1.31.0</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.nonzeroisize&quot;&gt;NonZeroIsize&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../primitive.isize&quot;&gt;isize&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/core/num/mod.rs.html#90-94&quot;&gt;[ &lt;/a&gt;ソース ] 1.31.0</target>
         </trans-unit>
         <trans-unit id="0a15d25d558a4e666c73f139688536283a3c0940" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.nonzerou128&quot;&gt;NonZeroU128&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../primitive.u128&quot;&gt;u128&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/core/num/mod.rs.html#90-94&quot;&gt;[src]&lt;/a&gt;1.31.0</source>
@@ -3257,11 +3257,11 @@
         </trans-unit>
         <trans-unit id="ca767cd6179f32748c3dac26d278dcd17676161b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.nonzerousize&quot;&gt;NonZeroUsize&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../primitive.usize&quot;&gt;usize&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/core/num/mod.rs.html#90-94&quot;&gt;[src]&lt;/a&gt;1.31.0</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.nonzerousize&quot;&gt;NonZeroUsize&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../primitive.usize&quot;&gt;usize&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/core/num/mod.rs.html#90-94&quot;&gt; [ソース]&lt;/a&gt; 1.31.0</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.nonzerousize&quot;&gt;NonZeroUsize&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../primitive.usize&quot;&gt;usize&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/core/num/mod.rs.html#90-94&quot;&gt; [ &lt;/a&gt;ソース ] 1.31.0</target>
         </trans-unit>
         <trans-unit id="fac6ef40d1cacba408d22622ebdc74842ead9ed8" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.nulerror&quot;&gt;NulError&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../io/struct.error&quot;&gt;Error&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/ffi/c_str.rs.html#858-867&quot;&gt;[src]&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.nulerror&quot;&gt;NulError&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../io/struct.error&quot;&gt;Error&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/ffi/c_str.rs.html#858-867&quot;&gt;[ &lt;/a&gt;ソース ]</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.nulerror&quot;&gt;NulError&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../io/struct.error&quot;&gt;Error&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/ffi/c_str.rs.html#858-867&quot;&gt; [src]の&lt;/a&gt;&amp;lt; NulError &amp;gt; からの impl</target>
         </trans-unit>
         <trans-unit id="777cc78cc8c911823a50ea16eb0314d8e0707a2a" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.osstring&quot;&gt;OsString&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../boxed/struct.box&quot;&gt;Box&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.osstr&quot;&gt;OsStr&lt;/a&gt;&amp;gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/ffi/os_str.rs.html#680-688&quot;&gt;[src]&lt;/a&gt;1.20.0</source>
@@ -3293,7 +3293,7 @@
         </trans-unit>
         <trans-unit id="8f0c9559e42dbb6fe41913daca424dd6f0cbfcf1" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.pathbuf&quot;&gt;PathBuf&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../sync/struct.arc&quot;&gt;Arc&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.path&quot;&gt;Path&lt;/a&gt;&amp;gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#1623-1630&quot;&gt;[src]&lt;/a&gt;1.24.0</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.pathbuf&quot;&gt;PathBuf&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../sync/struct.arc&quot;&gt;Arc&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.path&quot;&gt;Path&lt;/a&gt;&amp;gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#1623-1630&quot;&gt;[ソース]&lt;/a&gt; 1.24.0</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.pathbuf&quot;&gt;PathBuf&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../sync/struct.arc&quot;&gt;Arc&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.path&quot;&gt;Path&lt;/a&gt;&amp;gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#1623-1630&quot;&gt;[src]&lt;/a&gt; 1.24.0</target>
         </trans-unit>
         <trans-unit id="a84c82fb9ffe0ec7dfe8cf5cbd5da759014c9840" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.socketaddrv4&quot;&gt;SocketAddrV4&lt;/a&gt;&amp;gt; for &lt;a href=&quot;enum.socketaddr&quot;&gt;SocketAddr&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/net/addr.rs.html#547-555&quot;&gt;[src]&lt;/a&gt;1.16.0</source>
@@ -3321,7 +3321,7 @@
         </trans-unit>
         <trans-unit id="388c7dca650014c603c5b600675045a5a950a363" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.string&quot;&gt;String&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../path/struct.pathbuf&quot;&gt;PathBuf&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#1526-1533&quot;&gt;[src]&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.string&quot;&gt;String&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../path/struct.pathbuf&quot;&gt;PathBuf&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#1526-1533&quot;&gt; [ &lt;/a&gt;ソース ]のimpl From &amp;lt; 文字列 &amp;gt;</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.string&quot;&gt;String&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../path/struct.pathbuf&quot;&gt;PathBuf&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/path.rs.html#1526-1533&quot;&gt;[ &lt;/a&gt;ソース ]</target>
         </trans-unit>
         <trans-unit id="b8d4743a2b583eeb7f58aa6ba176900c066f57d6" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../convert/trait.from&quot;&gt;From&lt;/a&gt;&amp;lt;&lt;a href=&quot;struct.string&quot;&gt;String&lt;/a&gt;&amp;gt; for &lt;a href=&quot;../rc/struct.rc&quot;&gt;Rc&lt;/a&gt;&amp;lt;&lt;a href=&quot;../primitive.str&quot;&gt;str&lt;/a&gt;&amp;gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/alloc/rc.rs.html#1186-1191&quot;&gt;[src]&lt;/a&gt;1.21.0</source>
@@ -3545,7 +3545,7 @@
         </trans-unit>
         <trans-unit id="650d1086e0c328fcee71a15040f46ab06385562c" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../fmt/trait.debug&quot;&gt;Debug&lt;/a&gt; for &lt;a href=&quot;enum.c_void&quot;&gt;c_void&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/core/ffi.rs.html#43-47&quot;&gt;[src]&lt;/a&gt;1.16.0</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../fmt/trait.debug&quot;&gt;Debug&lt;/a&gt; for &lt;a href=&quot;enum.c_void&quot;&gt;c_void&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/core/ffi.rs.html#43-47&quot;&gt; [src]&lt;/a&gt; 1.16.0</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../fmt/trait.debug&quot;&gt;Debug&lt;/a&gt; for &lt;a href=&quot;enum.c_void&quot;&gt;c_void&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/core/ffi.rs.html#43-47&quot;&gt; [ソース]&lt;/a&gt; 1.16.0</target>
         </trans-unit>
         <trans-unit id="db77a964745a3ef1010767ef81d1878fa65eadcb" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../fmt/trait.debug&quot;&gt;Debug&lt;/a&gt; for &lt;a href=&quot;enum.collectionallocerr&quot;&gt;CollectionAllocErr&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/alloc/collections/mod.rs.html#47&quot;&gt;[src]&lt;/a&gt;</source>
@@ -3917,7 +3917,7 @@
         </trans-unit>
         <trans-unit id="abd42b7225f8351ca49e702b67f28d1732f6498f" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../fmt/trait.debug&quot;&gt;Debug&lt;/a&gt; for &lt;a href=&quot;struct.repeat&quot;&gt;Repeat&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/io/util.rs.html#171-175&quot;&gt;[src]&lt;/a&gt;1.16.0</source>
-          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../fmt/trait.debug&quot;&gt;Debug&lt;/a&gt; for &lt;a href=&quot;struct.repeat&quot;&gt;Repeat&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/io/util.rs.html#171-175&quot;&gt; [ソース]&lt;/a&gt; 1.16.0</target>
+          <target state="translated">&lt;code&gt;impl &lt;a href=&quot;../fmt/trait.debug&quot;&gt;Debug&lt;/a&gt; for &lt;a href=&quot;struct.repeat&quot;&gt;Repeat&lt;/a&gt;&lt;/code&gt; &lt;a href=&quot;https://doc.rust-lang.org/src/std/io/util.rs.html#171-175&quot;&gt; [src]&lt;/a&gt; 1.16.0</target>
         </trans-unit>
         <trans-unit id="94d86c35d3d1ba68d7f9b4198491de9a9771c3ad" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;impl &lt;a href=&quot;../fmt/trait.debug&quot;&gt;Debug&lt;/a&gt; for &lt;a href=&quot;struct.sink&quot;&gt;Sink&lt;/a&gt;&lt;/code&gt;&lt;a href=&quot;https://doc.rust-lang.org/src/std/io/util.rs.html#219-223&quot;&gt;[src]&lt;/a&gt;1.16.0</source>

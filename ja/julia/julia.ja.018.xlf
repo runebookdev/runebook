@@ -29,11 +29,11 @@
         </trans-unit>
         <trans-unit id="643f9be452aad16c5d4b635ba25e01524af427f5" translate="yes" xml:space="preserve">
           <source>Wrap a &lt;code&gt;Vector&lt;/code&gt; of exceptions thrown by a &lt;a href=&quot;../parallel/index#Core.Task&quot;&gt;&lt;code&gt;Task&lt;/code&gt;&lt;/a&gt; (e.g. generated from a remote worker over a channel or an asynchronously executing local I/O write or a remote worker under &lt;code&gt;pmap&lt;/code&gt;) with information about the series of exceptions. For example, if a group of workers are executing several tasks, and multiple workers fail, the resulting &lt;code&gt;CompositeException&lt;/code&gt; will contain a &quot;bundle&quot; of information from each worker indicating where and why the exception(s) occurred.</source>
-          <target state="translated">一連の例外に関する情報を使用して、&lt;a href=&quot;../parallel/index#Core.Task&quot;&gt; &lt;code&gt;Task&lt;/code&gt; &lt;/a&gt;によってスローされた例外の &lt;code&gt;Vector&lt;/code&gt; をラップします（たとえば、チャネルを介してリモートワーカーから生成されるか、非同期に実行されるローカルI / O書き込みまたは &lt;code&gt;pmap&lt;/code&gt; の下のリモートワーカー）。たとえば、ワーカーのグループがいくつかのタスクを実行していて、複数のワーカーが失敗した場合、結果の &lt;code&gt;CompositeException&lt;/code&gt; には、例外が発生した場所と理由を示す各ワーカーからの情報の「バンドル」が含まれます。</target>
+          <target state="translated">一連の例外に関する情報を使用して、&lt;a href=&quot;../parallel/index#Core.Task&quot;&gt; &lt;code&gt;Task&lt;/code&gt; &lt;/a&gt;によってスローされた例外の &lt;code&gt;Vector&lt;/code&gt; をラップします（たとえば、チャネルを介してリモートワーカーから生成されるか、非同期に実行されるローカルI / O書き込みまたは &lt;code&gt;pmap&lt;/code&gt; の下でリモートワーカー）たとえば、ワーカーのグループがいくつかのタスクを実行していて、複数のワーカーが失敗した場合、結果の &lt;code&gt;CompositeException&lt;/code&gt; には、例外が発生した場所と理由を示す各ワーカーからの情報の「バンドル」が含まれます。</target>
         </trans-unit>
         <trans-unit id="ec473d4d05e151c4b0eb94d5d4eceaf44cd4f086" translate="yes" xml:space="preserve">
           <source>Wrap a Julia &lt;code&gt;Array&lt;/code&gt; object around the data at the address given by &lt;code&gt;pointer&lt;/code&gt;, without making a copy. The pointer element type &lt;code&gt;T&lt;/code&gt; determines the array element type. &lt;code&gt;dims&lt;/code&gt; is either an integer (for a 1d array) or a tuple of the array dimensions. &lt;code&gt;own&lt;/code&gt; optionally specifies whether Julia should take ownership of the memory, calling &lt;code&gt;free&lt;/code&gt; on the pointer when the array is no longer referenced.</source>
-          <target state="translated">コピーを作成せずに、 &lt;code&gt;pointer&lt;/code&gt; で指定されたアドレスのデータをJulia &lt;code&gt;Array&lt;/code&gt; オブジェクトでラップします。ポインター要素タイプ &lt;code&gt;T&lt;/code&gt; は、配列要素タイプを決定します。 &lt;code&gt;dims&lt;/code&gt; は整数（1d配列の場合）または配列次元のタプルです。 &lt;code&gt;own&lt;/code&gt; はオプションで、Juliaがメモリの所有権を取得するかどうかを指定し、配列が参照されなくなったときにポインタを &lt;code&gt;free&lt;/code&gt; で呼び出す</target>
+          <target state="translated">コピーを作成せずに、 &lt;code&gt;pointer&lt;/code&gt; で指定されたアドレスのデータをJulia &lt;code&gt;Array&lt;/code&gt; オブジェクトでラップします。ポインター要素タイプ &lt;code&gt;T&lt;/code&gt; は、配列要素タイプを決定します。 &lt;code&gt;dims&lt;/code&gt; は、整数（1d配列の場合）または配列次元のタプルです。 &lt;code&gt;own&lt;/code&gt; はオプションで、Juliaがメモリの所有権を取得するかどうかを指定し、配列が参照されなくなったときにポインタで &lt;code&gt;free&lt;/code&gt; を呼び出します。</target>
         </trans-unit>
         <trans-unit id="bb11cd0bd69cc50df511cf85ddf1cd4d48d9cd04" translate="yes" xml:space="preserve">
           <source>Wrap an expression in a &lt;a href=&quot;#Core.Task&quot;&gt;&lt;code&gt;Task&lt;/code&gt;&lt;/a&gt; and add it to the local machine's scheduler queue.</source>
@@ -73,11 +73,11 @@
         </trans-unit>
         <trans-unit id="108ebb82b60e8c92a8619b85402ca125571054b0" translate="yes" xml:space="preserve">
           <source>Write &lt;a href=&quot;../../base/base/index#Base.SimdLoop.@simd&quot;&gt;&lt;code&gt;@simd&lt;/code&gt;&lt;/a&gt; in front of &lt;code&gt;for&lt;/code&gt; loops to promise that the iterations are independent and may be reordered. Note that in many cases, Julia can automatically vectorize code without the &lt;code&gt;@simd&lt;/code&gt; macro; it is only beneficial in cases where such a transformation would otherwise be illegal, including cases like allowing floating-point re-associativity and ignoring dependent memory accesses (&lt;code&gt;@simd ivdep&lt;/code&gt;). Again, be very careful when asserting &lt;code&gt;@simd&lt;/code&gt; as erroneously annotating a loop with dependent iterations may result in unexpected results. In particular, note that &lt;code&gt;setindex!&lt;/code&gt; on some &lt;code&gt;AbstractArray&lt;/code&gt; subtypes is inherently dependent upon iteration order. &lt;strong&gt;This feature is experimental&lt;/strong&gt; and could change or disappear in future versions of Julia.</source>
-          <target state="translated">&lt;code&gt;for&lt;/code&gt; ループの前に&lt;a href=&quot;../../base/base/index#Base.SimdLoop.@simd&quot;&gt; &lt;code&gt;@simd&lt;/code&gt; &lt;/a&gt;を記述して、反復が独立していて順序を変更できることを約束します。多くの場合、Juliaは &lt;code&gt;@simd&lt;/code&gt; マクロがなくてもコードを自動的にベクトル化できます。これは、浮動小数点の再関連付けを許可したり、依存するメモリアクセスを無視したり（ &lt;code&gt;@simd ivdep&lt;/code&gt; ）する場合を含め、このような変換が違法となる場合にのみ有効です。繰り返しますが、依存する反復でループに誤って注釈を付けると予期しない結果が生じる可能性があるため、 &lt;code&gt;@simd&lt;/code&gt; をアサートするときは十分に注意してください。特に、 &lt;code&gt;setindex!&lt;/code&gt; 一部の &lt;code&gt;AbstractArray&lt;/code&gt; サブタイプでは、本質的に反復順序に依存しています。&lt;strong&gt;この機能は実験的なもので&lt;/strong&gt;あり、Juliaの将来のバージョンでは変更または削除される可能性があります。</target>
+          <target state="translated">&lt;code&gt;for&lt;/code&gt; ループの前に&lt;a href=&quot;../../base/base/index#Base.SimdLoop.@simd&quot;&gt; &lt;code&gt;@simd&lt;/code&gt; &lt;/a&gt;を記述して、反復が独立していて順序を変更できることを約束します。多くの場合、Juliaは &lt;code&gt;@simd&lt;/code&gt; マクロがなくてもコードを自動的にベクトル化できることに注意してください。これは、浮動小数点の再関連付けを許可したり、依存するメモリアクセスを無視したり（ &lt;code&gt;@simd ivdep&lt;/code&gt; ）する場合を含め、このような変換が違法となる場合にのみ有効です。繰り返しますが、依存する反復でループに誤って注釈を付けると予期しない結果が生じる可能性があるため、 &lt;code&gt;@simd&lt;/code&gt; をアサートするときは十分に注意してください。特に、 &lt;code&gt;setindex!&lt;/code&gt; 一部の &lt;code&gt;AbstractArray&lt;/code&gt; サブタイプでは、本質的に反復順序に依存しています。&lt;strong&gt;この機能は実験的なもので&lt;/strong&gt;あり、Juliaの将来のバージョンでは変更または削除される可能性があります。</target>
         </trans-unit>
         <trans-unit id="feda5417424a49ab311d7ff404b0540a63818aab" translate="yes" xml:space="preserve">
           <source>Write &lt;code&gt;A&lt;/code&gt; (a vector, matrix, or an iterable collection of iterable rows) as text to &lt;code&gt;f&lt;/code&gt; (either a filename string or an &lt;code&gt;IO&lt;/code&gt; stream) using the given delimiter &lt;code&gt;delim&lt;/code&gt; (which defaults to tab, but can be any printable Julia object, typically a &lt;code&gt;Char&lt;/code&gt; or &lt;code&gt;AbstractString&lt;/code&gt;).</source>
-          <target state="translated">ライト &lt;code&gt;A&lt;/code&gt; にテキストとして（ベクトル、行列、または反復可能な行の反復可能なコレクション） &lt;code&gt;f&lt;/code&gt; （ファイル名の文字列、またはいずれか &lt;code&gt;IO&lt;/code&gt; デリミタ所与用いストリーム） &lt;code&gt;delim&lt;/code&gt; タブに（デフォルトは、典型的には、任意の印刷可能なジュリア・オブジェクトとすることができるが &lt;code&gt;Char&lt;/code&gt; または &lt;code&gt;AbstractString&lt;/code&gt; ）。</target>
+          <target state="translated">指定された区切り記号 &lt;code&gt;delim&lt;/code&gt; （デフォルトはタブですが、通常は印刷可能なJuliaオブジェクト、通常はタブ）を使用して、 &lt;code&gt;A&lt;/code&gt; （ベクトル、行列、または反復可能な行の反復可能なコレクション）をテキストとして &lt;code&gt;f&lt;/code&gt; （ファイル名文字列または &lt;code&gt;IO&lt;/code&gt; ストリーム）に書き込みます &lt;code&gt;Char&lt;/code&gt; または &lt;code&gt;AbstractString&lt;/code&gt; ）。</target>
         </trans-unit>
         <trans-unit id="775f113932a5efeffdda634c47beb3eed1ff2fe8" translate="yes" xml:space="preserve">
           <source>Write Permission</source>
@@ -93,7 +93,7 @@
         </trans-unit>
         <trans-unit id="873f569b5d6881c314f347be4557cdf37101715d" translate="yes" xml:space="preserve">
           <source>Write an arbitrary value to a stream in an opaque format, such that it can be read back by &lt;a href=&quot;#Serialization.deserialize&quot;&gt;&lt;code&gt;deserialize&lt;/code&gt;&lt;/a&gt;. The read-back value will be as identical as possible to the original. In general, this process will not work if the reading and writing are done by different versions of Julia, or an instance of Julia with a different system image. &lt;code&gt;Ptr&lt;/code&gt; values are serialized as all-zero bit patterns (&lt;code&gt;NULL&lt;/code&gt;).</source>
-          <target state="translated">それによってリードバックすることができるように、不透明なフォーマットでストリームに任意の値を書き込む&lt;a href=&quot;#Serialization.deserialize&quot;&gt; &lt;code&gt;deserialize&lt;/code&gt; &lt;/a&gt;。リードバック値は、元の値と可能な限り同じになります。一般的に、このプロセスは、異なるバージョンのJulia、または別のシステムイメージを持つJuliaのインスタンスによって読み取りと書き込みが行われる場合は機能しません。 &lt;code&gt;Ptr&lt;/code&gt; 値は、すべてゼロのビットパターン（ &lt;code&gt;NULL&lt;/code&gt; ）としてシリアル化されます。</target>
+          <target state="translated">それによってリードバックすることができるように、不透明なフォーマットでストリームに任意の値を書き込む&lt;a href=&quot;#Serialization.deserialize&quot;&gt; &lt;code&gt;deserialize&lt;/code&gt; &lt;/a&gt;。リードバック値は、元の値と可能な限り同じになります。一般に、このプロセスは、異なるバージョンのJulia、または別のシステムイメージを持つJuliaのインスタンスによって読み取りと書き込みが行われる場合は機能しません。 &lt;code&gt;Ptr&lt;/code&gt; 値は、すべてゼロのビットパターン（ &lt;code&gt;NULL&lt;/code&gt; ）としてシリアル化されます。</target>
         </trans-unit>
         <trans-unit id="2cc631af387b0b65068ed32b69656c5387524ad1" translate="yes" xml:space="preserve">
           <source>Write an identifying header to the specified serializer. The header consists of 8 bytes as follows:</source>
@@ -113,7 +113,7 @@
         </trans-unit>
         <trans-unit id="8434f9d9d28666de4a462912e8e0e307e3e65b92" translate="yes" xml:space="preserve">
           <source>Write the canonical binary representation of a value to the given I/O stream or file. Return the number of bytes written into the stream. See also &lt;a href=&quot;#Base.print&quot;&gt;&lt;code&gt;print&lt;/code&gt;&lt;/a&gt; to write a text representation (with an encoding that may depend upon &lt;code&gt;io&lt;/code&gt;).</source>
-          <target state="translated">指定されたI / Oストリームまたはファイルに値の正規のバイナリ表現を書き込みます。ストリームに書き込まれたバイト数を返します。（ &lt;code&gt;io&lt;/code&gt; に依存する可能性のあるエンコードを使用して）テキスト表現を書き込むには、&lt;a href=&quot;#Base.print&quot;&gt; &lt;code&gt;print&lt;/code&gt; &lt;/a&gt;も参照してください。</target>
+          <target state="translated">指定されたI / Oストリームまたはファイルに値の正規バイナリ表現を書き込みます。ストリームに書き込まれたバイト数を返します。（ &lt;code&gt;io&lt;/code&gt; に依存する可能性のあるエンコードを使用して）テキスト表現を書き込むには、&lt;a href=&quot;#Base.print&quot;&gt; &lt;code&gt;print&lt;/code&gt; &lt;/a&gt;も参照してください。</target>
         </trans-unit>
         <trans-unit id="f504d192f85e8f747b7e397b2f6ba281860922fa" translate="yes" xml:space="preserve">
           <source>Write to &lt;code&gt;io&lt;/code&gt; (or to the default output stream &lt;a href=&quot;#Base.stdout&quot;&gt;&lt;code&gt;stdout&lt;/code&gt;&lt;/a&gt; if &lt;code&gt;io&lt;/code&gt; is not given) a canonical (un-decorated) text representation. The representation used by &lt;code&gt;print&lt;/code&gt; includes minimal formatting and tries to avoid Julia-specific details.</source>
@@ -149,7 +149,7 @@
         </trans-unit>
         <trans-unit id="2f53cab7d3c0dbe4951a04ff57f49550638bd4c8" translate="yes" xml:space="preserve">
           <source>You annotate the function declaration with the &lt;code&gt;@generated&lt;/code&gt; macro. This adds some information to the AST that lets the compiler know that this is a generated function.</source>
-          <target state="translated">&lt;code&gt;@generated&lt;/code&gt; マクロを使用して関数宣言に注釈を付けます。これにより、ASTに情報が追加され、生成された関数であることをコンパイラに知らせることができます。</target>
+          <target state="translated">&lt;code&gt;@generated&lt;/code&gt; マクロを使用して関数宣言に注釈を付けます。これにより、ASTに情報が追加されます。これにより、コンパイラーはこれが生成された関数であることを認識できます。</target>
         </trans-unit>
         <trans-unit id="2fa58379787fb3328d4b2c9b156cc9d4992b0523" translate="yes" xml:space="preserve">
           <source>You can access the field values of a composite object using the traditional &lt;code&gt;foo.bar&lt;/code&gt; notation:</source>
@@ -161,15 +161,15 @@
         </trans-unit>
         <trans-unit id="059c37e831f26b52c6dfe5728025ecfe92438e23" translate="yes" xml:space="preserve">
           <source>You can also change the colors for the help and shell prompts and input and answer text by setting the appropriate field of &lt;code&gt;repl&lt;/code&gt; in the &lt;code&gt;customize_colors&lt;/code&gt; function above (respectively, &lt;code&gt;help_color&lt;/code&gt;, &lt;code&gt;shell_color&lt;/code&gt;, &lt;code&gt;input_color&lt;/code&gt;, and &lt;code&gt;answer_color&lt;/code&gt;). For the latter two, be sure that the &lt;code&gt;envcolors&lt;/code&gt; field is also set to false.</source>
-          <target state="translated">上記の &lt;code&gt;customize_colors&lt;/code&gt; 関数で &lt;code&gt;repl&lt;/code&gt; の適切なフィールドを設定することにより、ヘルプとシェルプロンプト、および入力と応答のテキストの色を変更することもできます（それぞれ、 &lt;code&gt;help_color&lt;/code&gt; 、 &lt;code&gt;shell_color&lt;/code&gt; 、 &lt;code&gt;input_color&lt;/code&gt; 、および &lt;code&gt;answer_color&lt;/code&gt; ）。後者の2つについては、 &lt;code&gt;envcolors&lt;/code&gt; フィールドもfalseに設定されていることを確認してください。</target>
+          <target state="translated">上記の &lt;code&gt;customize_colors&lt;/code&gt; 関数で &lt;code&gt;repl&lt;/code&gt; の適切なフィールドを設定することにより、ヘルプとシェルプロンプト、入力テキストと応答テキストの色を変更することもできます（それぞれ、 &lt;code&gt;help_color&lt;/code&gt; 、 &lt;code&gt;shell_color&lt;/code&gt; 、 &lt;code&gt;input_color&lt;/code&gt; 、および &lt;code&gt;answer_color&lt;/code&gt; ）。後者の2つについては、 &lt;code&gt;envcolors&lt;/code&gt; フィールドもfalseに設定されていることを確認してください。</target>
         </trans-unit>
         <trans-unit id="1638c4f5d9428b7a66ce134be7d9554e824e2b6d" translate="yes" xml:space="preserve">
           <source>You can also combine dot operations with function chaining using &lt;code&gt;|&amp;gt;&lt;/code&gt;, as in this example:</source>
-          <target state="translated">次の例のように、 &lt;code&gt;|&amp;gt;&lt;/code&gt; を使用して、ドット演算と関数チェーンを組み合わせることもできます。</target>
+          <target state="translated">次の例のように、 &lt;code&gt;|&amp;gt;&lt;/code&gt; を使用して、ドット演算と関数チェーンを組み合わせることができます。</target>
         </trans-unit>
         <trans-unit id="28db7f89bc085e06b706e35f0b6ac4581558f0a0" translate="yes" xml:space="preserve">
           <source>You can also customize the color used to render warning and informational messages by setting the appropriate environment variables. For instance, to render error, warning, and informational messages respectively in magenta, yellow, and cyan you can add the following to your &lt;code&gt;~/.julia/config/startup.jl&lt;/code&gt; file:</source>
-          <target state="translated">また、適切な環境変数を設定することにより、警告メッセージと情報メッセージのレンダリングに使用する色をカスタマイズすることもできます。たとえば、エラー、警告、および情報メッセージをそれぞれマゼンタ、イエロー、シアンでレンダリングするには、以下を &lt;code&gt;~/.julia/config/startup.jl&lt;/code&gt; ファイルに追加できます。</target>
+          <target state="translated">また、適切な環境変数を設定することにより、警告メッセージと情報メッセージのレンダリングに使用する色をカスタマイズできます。たとえば、エラー、警告、および情報メッセージをそれぞれマゼンタ、イエロー、シアンでレンダリングするには、以下を &lt;code&gt;~/.julia/config/startup.jl&lt;/code&gt; ファイルに追加します。</target>
         </trans-unit>
         <trans-unit id="48369480265e913602939792e933438854e1fd21" translate="yes" xml:space="preserve">
           <source>You can also extract a substring using range indexing:</source>
@@ -193,7 +193,7 @@
         </trans-unit>
         <trans-unit id="54416a772feee0c2a6abe4feb994c4ff0911f0e5" translate="yes" xml:space="preserve">
           <source>You can create your own custom types that take values as parameters, and use them to control dispatch of custom types. By way of illustration of this idea, let's introduce a parametric type, &lt;code&gt;Val{x}&lt;/code&gt;, and a constructor &lt;code&gt;Val(x) = Val{x}()&lt;/code&gt;, which serves as a customary way to exploit this technique for cases where you don't need a more elaborate hierarchy.</source>
-          <target state="translated">値をパラメーターとして受け取る独自のカスタムタイプを作成し、それらを使用してカスタムタイプのディスパッチを制御できます。このアイデアの例示のために、のパラメトリックタイプを導入せ、 &lt;code&gt;Val{x}&lt;/code&gt; 、及びコンストラクタ &lt;code&gt;Val(x) = Val{x}()&lt;/code&gt; あなたは「ドン場合にこの手法を利用する通常の方法として機能します、より複雑な階層が必要です。</target>
+          <target state="translated">パラメータとして値を受け取る独自のカスタムタイプを作成し、それらを使用してカスタムタイプのディスパッチを制御できます。このアイデアを説明するために、パラメトリックタイプ &lt;code&gt;Val{x}&lt;/code&gt; とコンストラクター &lt;code&gt;Val(x) = Val{x}()&lt;/code&gt; 紹介しましょう。これは、この手法を使用しない場合にこの手法を活用する慣例的な方法として機能します。より複雑な階層が必要です。</target>
         </trans-unit>
         <trans-unit id="67ebafe0bb709b3a3bcb8a53db51ff716e9c8b39" translate="yes" xml:space="preserve">
           <source>You can do better by declaring the type of &lt;code&gt;a&lt;/code&gt;. Here, we are focused on the case where &lt;code&gt;a&lt;/code&gt; might be any one of several types, in which case the natural solution is to use parameters. For example:</source>
@@ -201,7 +201,7 @@
         </trans-unit>
         <trans-unit id="e4caa428e60cf326fe234bff9118f30463ecc984" translate="yes" xml:space="preserve">
           <source>You can do comparisons and a limited amount of arithmetic with &lt;code&gt;Char&lt;/code&gt; values:</source>
-          <target state="translated">&lt;code&gt;Char&lt;/code&gt; 値を使用して、比較と限られた量の演算を行うことができます。</target>
+          <target state="translated">&lt;code&gt;Char&lt;/code&gt; 値を使用して、比較と限られた量の演算を実行できます。</target>
         </trans-unit>
         <trans-unit id="213f6d383b8d704a68bbc7048875f6a46e354817" translate="yes" xml:space="preserve">
           <source>You can easily convert a &lt;code&gt;Char&lt;/code&gt; to its integer value, i.e. code point:</source>
@@ -233,11 +233,11 @@
         </trans-unit>
         <trans-unit id="d3ef6d04d5b1e72dbe8e2e762201178f4553d19d" translate="yes" xml:space="preserve">
           <source>You can input any Unicode character in single quotes using &lt;code&gt;\u&lt;/code&gt; followed by up to four hexadecimal digits or &lt;code&gt;\U&lt;/code&gt; followed by up to eight hexadecimal digits (the longest valid value only requires six):</source>
-          <target state="translated">&lt;code&gt;\u&lt;/code&gt; 続く最大4桁の16進数、または &lt;code&gt;\U&lt;/code&gt; 続く最大8桁の16進数を使用して、任意のUnicode文字を一重引用符で入力できます（最長の有効な値は6桁で十分です）。</target>
+          <target state="translated">&lt;code&gt;\u&lt;/code&gt; 後に最大4桁の16進数字、または &lt;code&gt;\U&lt;/code&gt; 後に最大8桁の16進数字を使用して、任意のUnicode文字を一重引用符で入力できます（最長の有効な値は6桁で十分です）。</target>
         </trans-unit>
         <trans-unit id="a1c3136389e599fc278301c384c96c386084d25f" translate="yes" xml:space="preserve">
           <source>You can iteratively modify the code in MyPkg in your editor and re-run the tests with &lt;code&gt;include(&quot;runtests.jl&quot;)&lt;/code&gt;. You generally should not need to restart your Julia session to see the changes take effect (subject to a few limitations, see https://timholy.github.io/Revise.jl/stable/limitations/).</source>
-          <target state="translated">エディターでMyPkgのコードを繰り返し変更し、 &lt;code&gt;include(&quot;runtests.jl&quot;)&lt;/code&gt; を使用してテストを再実行できます。通常、Juliaセッションを再起動して変更を有効にする必要はありません（いくつかの制限があります。https：//timholy.github.io/Revise.jl/stable/limitations/を参照してください）。</target>
+          <target state="translated">エディターでMyPkgのコードを繰り返し変更し、 &lt;code&gt;include(&quot;runtests.jl&quot;)&lt;/code&gt; を使用してテストを再実行できます。通常、変更が有効になるのを確認するためにJuliaセッションを再起動する必要はありません（いくつかの制限があります。https：//timholy.github.io/Revise.jl/stable/limitations/を参照してください）。</target>
         </trans-unit>
         <trans-unit id="01f1a9e77e1dab9c53cf6e54b009fbdd40624504" translate="yes" xml:space="preserve">
           <source>You can lexicographically compare strings using the standard comparison operators:</source>
@@ -249,7 +249,7 @@
         </trans-unit>
         <trans-unit id="02da3de9b76002a19afdbabf9d38695160c6abb0" translate="yes" xml:space="preserve">
           <source>You can modify the behavior of regular expressions by some combination of the flags &lt;code&gt;i&lt;/code&gt;, &lt;code&gt;m&lt;/code&gt;, &lt;code&gt;s&lt;/code&gt;, and &lt;code&gt;x&lt;/code&gt; after the closing double quote mark. These flags have the same meaning as they do in Perl, as explained in this excerpt from the &lt;a href=&quot;http://perldoc.perl.org/perlre.html#Modifiers&quot;&gt;perlre manpage&lt;/a&gt;:</source>
-          <target state="translated">二重引用符を閉じた後 &lt;code&gt;s&lt;/code&gt; フラグ &lt;code&gt;i&lt;/code&gt; 、 &lt;code&gt;m&lt;/code&gt; 、s、および &lt;code&gt;x&lt;/code&gt; の組み合わせによって、正規表現の動作を変更できます。これらのフラグは、&lt;a href=&quot;http://perldoc.perl.org/perlre.html#Modifiers&quot;&gt;perlreマンページ&lt;/a&gt;からのこの抜粋で説明されているように、Perlと同じ意味を持っています。</target>
+          <target state="translated">二重引用符を閉じた後 &lt;code&gt;s&lt;/code&gt; フラグ &lt;code&gt;i&lt;/code&gt; 、 &lt;code&gt;m&lt;/code&gt; 、s、および &lt;code&gt;x&lt;/code&gt; の組み合わせによって、正規表現の動作を変更できます。これらのフラグは、&lt;a href=&quot;http://perldoc.perl.org/perlre.html#Modifiers&quot;&gt;perlreマンページ&lt;/a&gt;からのこの抜粋で説明されているように、Perlでのフラグと同じ意味を持っています。</target>
         </trans-unit>
         <trans-unit id="d563bb2419fe2e35302ac639bca513eb737c8ce0" translate="yes" xml:space="preserve">
           <source>You can obtain and configure the relevant parameters this way:</source>
@@ -305,7 +305,7 @@
         </trans-unit>
         <trans-unit id="98dd2765494f1835f8de8c7c9befa3251d03285e" translate="yes" xml:space="preserve">
           <source>You generally want to use &lt;a href=&quot;../../base/base/index#Core.isa&quot;&gt;&lt;code&gt;isa&lt;/code&gt;&lt;/a&gt; and &lt;code&gt;&amp;lt;:&lt;/code&gt; for testing types, not &lt;code&gt;==&lt;/code&gt;. Checking types for exact equality typically only makes sense when comparing to a known concrete type (e.g. &lt;code&gt;T == Float64&lt;/code&gt;), or if you &lt;em&gt;really, really&lt;/em&gt; know what you're doing.</source>
-          <target state="translated">通常、 &lt;code&gt;==&lt;/code&gt; ではなく型のテストに&lt;a href=&quot;../../base/base/index#Core.isa&quot;&gt; &lt;code&gt;isa&lt;/code&gt; &lt;/a&gt;および &lt;code&gt;&amp;lt;:&lt;/code&gt; を使用します。型が完全に等しいかどうかをチェックすることは、通常、既知の具象型（ &lt;code&gt;T == Float64&lt;/code&gt; ）と比較する場合にのみ意味があります。または、&lt;em&gt;本当に、本当に&lt;/em&gt;何をしているのかを知っている場合に限ります。&lt;em&gt;&lt;/em&gt;</target>
+          <target state="translated">通常、&lt;a href=&quot;../../base/base/index#Core.isa&quot;&gt; &lt;code&gt;isa&lt;/code&gt; &lt;/a&gt;と &lt;code&gt;&amp;lt;:&lt;/code&gt; を使用して、 &lt;code&gt;==&lt;/code&gt; ではなく型をテストします。型が完全に等しいかどうかのチェックは、通常、既知の具象型（ &lt;code&gt;T == Float64&lt;/code&gt; ）と比較する場合にのみ意味があります。または、&lt;em&gt;本当に、本当に&lt;/em&gt;何をしているのかを知っている場合に限ります。</target>
         </trans-unit>
         <trans-unit id="14812b00d271b7b5f0ec10d0a35574667eaad1aa" translate="yes" xml:space="preserve">
           <source>You have homogenous lists of the same type of &lt;code&gt;Car&lt;/code&gt; to process, so that you can store them all in an &lt;code&gt;Array{Car{:Honda,:Accord},N}&lt;/code&gt;.</source>
@@ -333,11 +333,11 @@
         </trans-unit>
         <trans-unit id="4229325c98965b7733293cd84ce7238967b6b57b" translate="yes" xml:space="preserve">
           <source>You may need to be aware of certain behaviors inherent in the creation of incremental shared libraries which may require care when writing your module. For example, external state is not preserved. To accommodate this, explicitly separate any initialization steps that must occur at &lt;em&gt;runtime&lt;/em&gt; from steps that can occur at &lt;em&gt;compile time&lt;/em&gt;. For this purpose, Julia allows you to define an &lt;code&gt;__init__()&lt;/code&gt; function in your module that executes any initialization steps that must occur at runtime. This function will not be called during compilation (&lt;code&gt;--output-*&lt;/code&gt;). Effectively, you can assume it will be run exactly once in the lifetime of the code. You may, of course, call it manually if necessary, but the default is to assume this function deals with computing state for the local machine, which does not need to be &amp;ndash; or even should not be &amp;ndash; captured in the compiled image. It will be called after the module is loaded into a process, including if it is being loaded into an incremental compile (&lt;code&gt;--output-incremental=yes&lt;/code&gt;), but not if it is being loaded into a full-compilation process.</source>
-          <target state="translated">モジュールを作成するときに注意が必要な、増分共有ライブラリの作成に固有の特定の動作に注意する必要がある場合があります。たとえば、外部状態は保存されません。これに対応するには、&lt;em&gt;実行時に&lt;/em&gt;発生する必要のある初期化ステップを、&lt;em&gt;コンパイル時に&lt;/em&gt;発生する可能性のあるステップから明示的に分離し&lt;em&gt;ます&lt;/em&gt;。この目的のために、Juliaでは、実行時に発生する必要のある初期化手順を実行する &lt;code&gt;__init__()&lt;/code&gt; 関数をモジュールに定義できます。この関数はコンパイル中に呼び出されません（ &lt;code&gt;--output-*&lt;/code&gt; ）。事実上、コードの有効期間中に1回だけ実行されると想定できます。もちろん、必要に応じて手動で呼び出すこともできますが、デフォルトでは、この関数がローカルマシンのコンピューティング状態を処理すると想定します。これは、コンパイルされたイメージでキャプチャする必要がない、またはキャプチャする必要がない場合もあります。これは、モジュールがプロセスにロードされた後に呼び出されます。これは、インクリメンタルコンパイルにロードされる場合（ &lt;code&gt;--output-incremental=yes&lt;/code&gt; ）を含みますが、フルコンパイルプロセスにロードされる場合は呼び出されません。</target>
+          <target state="translated">モジュールを作成するときに注意が必要な、増分共有ライブラリの作成に固有の動作に注意する必要がある場合があります。たとえば、外部状態は保存されません。これに対応するには、&lt;em&gt;実行時に&lt;/em&gt;発生する必要のある初期化ステップを、&lt;em&gt;コンパイル時に&lt;/em&gt;発生する可能性のあるステップから明示的に分離し&lt;em&gt;ます&lt;/em&gt;。この目的のために、Juliaでは、実行時に発生する必要のある初期化手順を実行する &lt;code&gt;__init__()&lt;/code&gt; 関数をモジュールに定義できます。この関数はコンパイル中に呼び出されません（ &lt;code&gt;--output-*&lt;/code&gt; ）。事実上、コードの有効期間中に1回だけ実行されると想定できます。もちろん、必要に応じて手動で呼び出すこともできますが、デフォルトでは、この関数はローカルマシンの計算状態を処理すると想定しています。これは、コンパイルされたイメージでキャプチャする必要がない、またはキャプチャする必要がない場合もあります。これは、モジュールがプロセスにロードされた後に呼び出されます。これは、インクリメンタルコンパイル（ &lt;code&gt;--output-incremental=yes&lt;/code&gt; ）にロードされているかどうかを含みますが、フルコンパイルプロセスにロードされている場合は呼び出されません。</target>
         </trans-unit>
         <trans-unit id="d19cfc137102f94cf8a3e39329b48533e78155c7" translate="yes" xml:space="preserve">
           <source>You may notice that in the example above the first stack frame points points at line 4, where &lt;a href=&quot;../../base/stacktraces/index#Base.StackTraces.stacktrace&quot;&gt;&lt;code&gt;stacktrace&lt;/code&gt;&lt;/a&gt; is called, rather than line 2, where &lt;em&gt;bad_function&lt;/em&gt; is called, and &lt;code&gt;bad_function&lt;/code&gt;'s frame is missing entirely. This is understandable, given that &lt;a href=&quot;../../base/stacktraces/index#Base.StackTraces.stacktrace&quot;&gt;&lt;code&gt;stacktrace&lt;/code&gt;&lt;/a&gt; is called from the context of the &lt;em&gt;catch&lt;/em&gt;. While in this example it's fairly easy to find the actual source of the error, in complex cases tracking down the source of the error becomes nontrivial.</source>
-          <target state="translated">上記の例では、最初のスタックフレームがポイント4をポイントしていることが&lt;a href=&quot;../../base/stacktraces/index#Base.StackTraces.stacktrace&quot;&gt; &lt;code&gt;stacktrace&lt;/code&gt; &lt;/a&gt;ます。ここでは、&lt;em&gt;bad_function&lt;/em&gt;が呼び出され、 &lt;code&gt;bad_function&lt;/code&gt; のフレームが完全に欠落している2行目ではなく、&lt;em&gt;stacktrace&lt;/em&gt;が呼び出されています。&lt;a href=&quot;../../base/stacktraces/index#Base.StackTraces.stacktrace&quot;&gt; &lt;code&gt;stacktrace&lt;/code&gt; &lt;/a&gt;が&lt;em&gt;catchの&lt;/em&gt;コンテキストから呼び出されていることを考えると、これは理解できます。この例では、実際のエラーの原因を見つけるのはかなり簡単ですが、複雑なケースでは、エラーの原因を追跡することは簡単ではありません。</target>
+          <target state="translated">上記の例では、最初のスタックフレームが、&lt;em&gt;bad_function&lt;/em&gt;が呼び出され、 &lt;code&gt;bad_function&lt;/code&gt; のフレームが完全に欠落している2行目ではなく、&lt;a href=&quot;../../base/stacktraces/index#Base.StackTraces.stacktrace&quot;&gt; &lt;code&gt;stacktrace&lt;/code&gt; &lt;/a&gt;が呼び出されている4行目を指しています。&lt;a href=&quot;../../base/stacktraces/index#Base.StackTraces.stacktrace&quot;&gt; &lt;code&gt;stacktrace&lt;/code&gt; &lt;/a&gt;が&lt;em&gt;catchの&lt;/em&gt;コンテキストから呼び出されることを考えると、これは理解できます。この例では、エラーの実際の原因を見つけるのはかなり簡単ですが、複雑なケースでは、エラーの原因を追跡することは簡単ではありません。&lt;em&gt;&lt;/em&gt;&lt;em&gt;&lt;/em&gt;</target>
         </trans-unit>
         <trans-unit id="b76981634f75e5c11344317b4a4c06f7a789abab" translate="yes" xml:space="preserve">
           <source>You may prefer the beta version of Julia if you don't mind being slightly behind the latest bugfixes and changes, but find the slightly faster rate of changes more appealing. Additionally, these binaries are tested before they are published to ensure they are fully functional.</source>
@@ -345,7 +345,7 @@
         </trans-unit>
         <trans-unit id="0460fd971f5acf59556e02a1302869132f958a11" translate="yes" xml:space="preserve">
           <source>You may prefer the nightly version of Julia if you want to take advantage of the latest updates to the language, and don't mind if the version available today occasionally doesn't actually work.</source>
-          <target state="translated">あなたは、言語への最新の更新を活用したい場合は、ジュリアの毎晩バージョンを好むかもしれませんし、今日利用可能なバージョンが時々実際に動作しない場合は気にしないでください。</target>
+          <target state="translated">あなたは言語への最新の更新を活用したい場合は、ジュリアの毎晩バージョンを好むかもしれませんし、今日利用可能なバージョンが時々実際に動作しない場合は気にしないでください。</target>
         </trans-unit>
         <trans-unit id="3b13c20826345514f072a53cfc2e614b5a875ac2" translate="yes" xml:space="preserve">
           <source>You may prefer the release version of Julia if you are looking for a stable code base. Releases generally occur every 6 months, giving you a stable platform for writing code.</source>
@@ -357,11 +357,11 @@
         </trans-unit>
         <trans-unit id="71eb424f61bc73bf2ac2a0d6b8ff2e2e2a212793" translate="yes" xml:space="preserve">
           <source>You might expect the second example to behave the same way, but in fact the &lt;code&gt;return&lt;/code&gt; there only breaks out of the &lt;em&gt;inner&lt;/em&gt; function (inside the &lt;code&gt;do&lt;/code&gt; block) and gives a value back to &lt;code&gt;map&lt;/code&gt;. &lt;code&gt;test2([5,6,7])&lt;/code&gt; then returns &lt;code&gt;[5,12,7]&lt;/code&gt;.</source>
-          <target state="translated">2番目の例も同じように動作することが期待できますが、実際には、そこに &lt;code&gt;return&lt;/code&gt; と、&lt;em&gt;内部&lt;/em&gt;関数（ &lt;code&gt;do&lt;/code&gt; ブロック内）から抜け出し、 &lt;code&gt;map&lt;/code&gt; に値を返します。次に &lt;code&gt;test2([5,6,7])&lt;/code&gt; は &lt;code&gt;[5,12,7]&lt;/code&gt; を返します。</target>
+          <target state="translated">あなたは同じように動作する第二の例を期待するかもしれないが、実際には &lt;code&gt;return&lt;/code&gt; そこが唯一の勃発&lt;em&gt;インナー&lt;/em&gt;（内部機能 &lt;code&gt;do&lt;/code&gt; ブロック）とする値の背中を与える &lt;code&gt;map&lt;/code&gt; 。次に &lt;code&gt;test2([5,6,7])&lt;/code&gt; は &lt;code&gt;[5,12,7]&lt;/code&gt; を返します。</target>
         </trans-unit>
         <trans-unit id="8eed329d4cf528497edb705ccaa35a89edfb626e" translate="yes" xml:space="preserve">
           <source>You might want broadcasting to preserve the &lt;code&gt;char&lt;/code&gt; &quot;metadata.&quot; First we define</source>
-          <target state="translated">&lt;code&gt;char&lt;/code&gt; 「メタデータ」を保持するためにブロードキャストすることをお勧めします。最初に定義します</target>
+          <target state="translated">&lt;code&gt;char&lt;/code&gt; 「メタデータ」を保持するためにブロードキャストする必要がある場合があります。最初に定義します</target>
         </trans-unit>
         <trans-unit id="01b172c9b8083a729ce8b5e678095c5e53087128" translate="yes" xml:space="preserve">
           <source>You require CPU-intensive processing on each &lt;code&gt;Car&lt;/code&gt;, and it becomes vastly more efficient if you know the &lt;code&gt;Make&lt;/code&gt; and &lt;code&gt;Model&lt;/code&gt; at compile time and the total number of different &lt;code&gt;Make&lt;/code&gt; or &lt;code&gt;Model&lt;/code&gt; that will be used is not too large.</source>
@@ -381,7 +381,7 @@
         </trans-unit>
         <trans-unit id="561efdcba775fe560525de0b80ee246bac982519" translate="yes" xml:space="preserve">
           <source>Zero-dimensional arrays are arrays of the form &lt;code&gt;Array{T,0}&lt;/code&gt;. They behave similar to scalars, but there are important differences. They deserve a special mention because they are a special case which makes logical sense given the generic definition of arrays, but might be a bit unintuitive at first. The following line defines a zero-dimensional array:</source>
-          <target state="translated">ゼロ次元配列は、 &lt;code&gt;Array{T,0}&lt;/code&gt; 形式の配列です。それらはスカラーと同様に動作しますが、重要な違いがあります。それらは、配列の一般的な定義を考えると論理的に意味のある特別なケースであるため、特別な言及に値しますが、最初は少し直感的でないかもしれません。次の行は、ゼロ次元配列を定義しています。</target>
+          <target state="translated">ゼロ次元配列は、 &lt;code&gt;Array{T,0}&lt;/code&gt; 形式の配列です。それらはスカラーと同様に動作しますが、重要な違いがあります。それらは、配列の一般的な定義を考えると論理的に意味のある特別なケースであるため、特別な言及に値しますが、最初は少し直感的ではないかもしれません。次の行は、ゼロ次元配列を定義しています。</target>
         </trans-unit>
         <trans-unit id="59e8673a8540d0e191f3f9440981811c0b28178f" translate="yes" xml:space="preserve">
           <source>Zero-dimensional arrays are the &quot;point&quot; to vector's &quot;line&quot; and matrix's &quot;plane&quot;. Just as a line has no area (but still represents a set of things), a point has no length or any dimensions at all (but still represents a thing).</source>
@@ -3797,7 +3797,7 @@
         </trans-unit>
         <trans-unit id="875e07e2e6176331bc093abc012cbfc57c4f581b" translate="yes" xml:space="preserve">
           <source>\Join, \join</source>
-          <target state="translated">\Join, \join</target>
+          <target state="translated">\参加、\参加</target>
         </trans-unit>
         <trans-unit id="47a19acd82ad71cf30db043a61ed3173fef81f87" translate="yes" xml:space="preserve">
           <source>\Kappa</source>
@@ -3877,7 +3877,7 @@
         </trans-unit>
         <trans-unit id="5564da469cddab7d3dce2d02cd40d7a0c21ffd50" translate="yes" xml:space="preserve">
           <source>\Longleftrightarrow, \iff</source>
-          <target state="translated">\Longleftrightarrow, \iff</target>
+          <target state="translated">\ Longleftrightarrow、\ iff</target>
         </trans-unit>
         <trans-unit id="e687fc8270d703361dff6b5cadaf0fa3874d5920" translate="yes" xml:space="preserve">
           <source>\Longmapsfrom</source>

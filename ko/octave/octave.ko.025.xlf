@@ -101,7 +101,7 @@
         </trans-unit>
         <trans-unit id="6eeeada83c24beb37ed3beb970873df68027bc3b" translate="yes" xml:space="preserve">
           <source>returns a structure containing all the properties of the root figure. As with all functions in Octave, the structure is returned by value, so modifying it will not modify the internal root figure plot object. To do that, you must use the &lt;code&gt;set&lt;/code&gt; function. Also, note that in this case, the &lt;code&gt;currentfigure&lt;/code&gt; property is empty, which indicates that there is no current figure window.</source>
-          <target state="translated">루트 도형의 모든 속성을 포함하는 구조를 반환합니다. Octave의 모든 함수와 마찬가지로 구조는 값으로 반환되므로 수정하면 내부 루트 그림 플롯 개체가 수정되지 않습니다. 그렇게하려면 &lt;code&gt;set&lt;/code&gt; 기능을 사용해야합니다 . 또한이 경우 &lt;code&gt;currentfigure&lt;/code&gt; 속성이 비어 있으며 이는 현재 Figure 창이 없음을 나타냅니다.</target>
+          <target state="translated">루트 도형의 모든 속성을 포함하는 구조를 반환합니다. Octave의 모든 함수와 마찬가지로 구조는 값으로 반환되므로 수정하면 내부 루트 그림 플롯 객체가 수정되지 않습니다. 그렇게하려면 &lt;code&gt;set&lt;/code&gt; 기능을 사용해야합니다 . 또한이 경우 &lt;code&gt;currentfigure&lt;/code&gt; 속성이 비어 있으며 이는 현재 Figure 창이 없음을 나타냅니다.</target>
         </trans-unit>
         <trans-unit id="8c1c2aeba9387d79cec5a1969077f9894c103d46" translate="yes" xml:space="preserve">
           <source>returns a structure containing the default property values for axes objects. If &lt;code&gt;set&lt;/code&gt; is called with two arguments (a graphic handle and a property name) then only the defaults for the requested property are returned.</source>
@@ -113,7 +113,7 @@
         </trans-unit>
         <trans-unit id="01351594f6ce382d36296fac61771e26cb802a88" translate="yes" xml:space="preserve">
           <source>returns the actual number of nonzero elements stored in the matrix in &lt;code&gt;nz&lt;/code&gt;. As the arrays returned by &lt;code&gt;mxGetPr&lt;/code&gt; and &lt;code&gt;mxGetPi&lt;/code&gt; only contain the nonzero values of the matrix, we also need a pointer to the rows of the nonzero elements, and this is given by &lt;code&gt;mxGetIr&lt;/code&gt;. A complete example of the use of sparse matrices in mex-files is given by the file</source>
-          <target state="translated">&lt;code&gt;nz&lt;/code&gt; 의 행렬에 저장된 0이 아닌 요소의 실제 개수를 반환합니다 . &lt;code&gt;mxGetPr&lt;/code&gt; 및 &lt;code&gt;mxGetPi&lt;/code&gt; 에 의해 반환 된 배열 에는 행렬의 0이 아닌 값만 포함되므로 0이 아닌 요소의 행에 대한 포인터도 필요하며 이는 &lt;code&gt;mxGetIr&lt;/code&gt; 에 의해 제공됩니다 . mex 파일에서 희소 행렬을 사용하는 완전한 예는 파일에서 제공됩니다.</target>
+          <target state="translated">&lt;code&gt;nz&lt;/code&gt; 의 행렬에 저장된 0이 아닌 요소의 실제 개수를 반환합니다 . &lt;code&gt;mxGetPr&lt;/code&gt; 및 &lt;code&gt;mxGetPi&lt;/code&gt; 에 의해 반환 된 배열 에는 행렬의 0이 아닌 값만 포함되므로 0이 아닌 요소의 행에 대한 포인터도 필요하며 이는 &lt;code&gt;mxGetIr&lt;/code&gt; 에 의해 제공됩니다 . 멕시코 파일에서 희소 행렬을 사용하는 완전한 예는 파일에 의해 제공됩니다.</target>
         </trans-unit>
         <trans-unit id="83b328f98f76e5716115a16477fc8106a340f876" translate="yes" xml:space="preserve">
           <source>returns the largest element of the 2-D matrix &lt;var&gt;x&lt;/var&gt;, and</source>
@@ -121,7 +121,7 @@
         </trans-unit>
         <trans-unit id="56d6a0793c6279389820b7f801ddebddaa2e6fed" translate="yes" xml:space="preserve">
           <source>returns the number of nonzero elements (like the interpreter function &lt;code&gt;nnz&lt;/code&gt;). If the user really requires the number of elements in the matrix, including the nonzero elements, they should use &lt;code&gt;numel&lt;/code&gt; rather than &lt;code&gt;nelem&lt;/code&gt;. Note that for very large matrices, where the product of the two dimensions is larger than the representation of an unsigned int, &lt;code&gt;numel&lt;/code&gt; can overflow. An example is &lt;code&gt;speye (1e6)&lt;/code&gt; which will create a matrix with a million rows and columns, but only a million nonzero elements. In this case, the number of rows multiplied by the number of columns is more than two hundred times the maximum value that can be represented by an unsigned 32-bit int. The use of &lt;code&gt;numel&lt;/code&gt; should, therefore, be avoided unless it is known that it will not overflow.</source>
-          <target state="translated">0이 아닌 요소의 수를 반환합니다 (예 : 해석기 함수 &lt;code&gt;nnz&lt;/code&gt; ). 사용자가 0이 아닌 요소를 포함하여 행렬의 요소 수를 실제로 요구하는 경우 &lt;code&gt;numel&lt;/code&gt; 대신 &lt;code&gt;nelem&lt;/code&gt; 합니다. 2 차원의 &lt;code&gt;numel&lt;/code&gt; 부호없는 int의 표현보다 큰 매우 큰 행렬의 경우 numel 이 오버플로 될 수 있습니다. 예를 들어 &lt;code&gt;speye (1e6)&lt;/code&gt; 는 백만 개의 행과 열이 있지만 백만이 아닌 백만 개의 요소 만있는 행렬을 만듭니다. 이 경우 행 수에 열 수를 곱한 값은 부호없는 32 비트 정수로 나타낼 수있는 최대 값의 200 배 이상입니다. &lt;code&gt;numel&lt;/code&gt; 사용 따라서 오버플로되지 않는 것으로 알려진 경우가 아니면 피해야합니다.</target>
+          <target state="translated">0이 아닌 요소의 수를 반환합니다 (예 : 해석기 함수 &lt;code&gt;nnz&lt;/code&gt; ). 사용자가 0이 아닌 요소를 포함하여 행렬의 요소 수를 실제로 요구하는 경우 &lt;code&gt;numel&lt;/code&gt; 대신 &lt;code&gt;nelem&lt;/code&gt; 합니다. 2 차원의 &lt;code&gt;numel&lt;/code&gt; 부호없는 정수의 표현보다 큰 매우 큰 행렬의 경우 numel 이 오버플로 될 수 있습니다. 예를 들어 &lt;code&gt;speye (1e6)&lt;/code&gt; 는 백만 개의 행과 열이 있지만 백만이 아닌 백만 개의 요소 만있는 행렬을 만듭니다. 이 경우 행 수에 열 수를 곱한 값은 부호없는 32 비트 int로 표시 될 수있는 최대 값의 200 배 이상입니다. 사용 &lt;code&gt;numel&lt;/code&gt; 따라서 오버플로되지 않는 것으로 알려진 경우가 아니면 피해야합니다.</target>
         </trans-unit>
         <trans-unit id="04538b97c00b24aa67fa3c9f967bf09acc70c3d7" translate="yes" xml:space="preserve">
           <source>returns the original array &lt;var&gt;A&lt;/var&gt;.</source>
@@ -1173,7 +1173,7 @@
         </trans-unit>
         <trans-unit id="a035ee53aab5881f4050e3187d15adc7964c8550" translate="yes" xml:space="preserve">
           <source>should return a sparse matrix. To ensure this actually happens, the &lt;em&gt;sparse&lt;/em&gt; function, and other functions based on it like &lt;em&gt;speye&lt;/em&gt;, always returns a sparse matrix, even if the memory used will be larger than its full representation.</source>
-          <target state="translated">희소 행렬을 반환해야합니다. 실제로 이러한 일이 발생하도록하기 위해 &lt;em&gt;스파 스&lt;/em&gt; 함수 및 &lt;em&gt;speye&lt;/em&gt; 와 같은 함수를 기반으로하는 다른 함수 는 사용 된 메모리가 전체 표현보다 클지라도 항상 희소 행렬을 반환합니다.</target>
+          <target state="translated">희소 행렬을 반환해야합니다. 실제로 이런 일이 발생하도록하기 위해 &lt;em&gt;스파 스&lt;/em&gt; 함수 및 &lt;em&gt;speye&lt;/em&gt; 와 같은 함수를 기반으로하는 다른 함수 는 사용 된 메모리가 전체 표현보다 클지라도 항상 희소 행렬을 반환합니다.</target>
         </trans-unit>
         <trans-unit id="a890779d6f06de3dafa4b7facbb01f0abcbd06ad" translate="yes" xml:space="preserve">
           <source>showCode</source>
@@ -1305,7 +1305,7 @@
         </trans-unit>
         <trans-unit id="6ac6e41b7aeed970ab0cf5182b72e1857a169e52" translate="yes" xml:space="preserve">
           <source>since a character-to-character comparison between &lt;code&gt;X&lt;/code&gt; and the string will be made instead of evaluating if the strings are equal. This special-case is handled by the &lt;code&gt;switch&lt;/code&gt; statement, and it is possible to write programs that look like this</source>
-          <target state="translated">&lt;code&gt;X&lt;/code&gt; 와 문자열 사이의 문자 대 문자 비교 는 문자열이 동일한 지 평가하는 대신 이루어지기 때문입니다. 이 특별한 경우는 &lt;code&gt;switch&lt;/code&gt; 문으로 처리되며 다음과 같은 프로그램을 작성할 수 있습니다</target>
+          <target state="translated">문자열이 같은지 평가하는 대신 &lt;code&gt;X&lt;/code&gt; 와 문자열 사이의 문자 대 문자 비교 가 수행되기 때문입니다. 이 특별한 경우는 &lt;code&gt;switch&lt;/code&gt; 문으로 처리되며 다음과 같은 프로그램을 작성할 수 있습니다</target>
         </trans-unit>
         <trans-unit id="f0d4e2547b2da7315999683227267dabd25645ee" translate="yes" xml:space="preserve">
           <source>since such statements are not common, and it is likely that the intent was to write</source>
@@ -1709,7 +1709,7 @@
         </trans-unit>
         <trans-unit id="904750ed9ae7c8ec60ee1ac39efc3b446e305acd" translate="yes" xml:space="preserve">
           <source>specular (sx, sy, sz, lv, vv)</source>
-          <target state="translated">반사광 (sx, sy, sz, lv, vv)</target>
+          <target state="translated">스펙 큘러 (sx, sy, sz, lv, vv)</target>
         </trans-unit>
         <trans-unit id="7ce9982e6200aa49661e625bef59156595b5973c" translate="yes" xml:space="preserve">
           <source>specular (sx, sy, sz, lv, vv, se)</source>
@@ -1717,7 +1717,7 @@
         </trans-unit>
         <trans-unit id="11ba4eea0418e41cbdad8aead655cc87fda8e247" translate="yes" xml:space="preserve">
           <source>specular- color- reflectance</source>
-          <target state="translated">반 사색 반사율</target>
+          <target state="translated">거울 색 반사율</target>
         </trans-unit>
         <trans-unit id="548adf92a30717210558e7184ec11734b2ee1d27" translate="yes" xml:space="preserve">
           <source>specular- exponent</source>
@@ -2153,7 +2153,7 @@
         </trans-unit>
         <trans-unit id="d270ae2f81a38bb0f014531bc040185e82887f08" translate="yes" xml:space="preserve">
           <source>stem3 (&amp;hellip;, prop, val, &amp;hellip;)</source>
-          <target state="translated">stem3 (&amp;hellip;, 소품, 발, ...)</target>
+          <target state="translated">stem3 (&amp;hellip;, prop, val,&amp;hellip;)</target>
         </trans-unit>
         <trans-unit id="763a6679922e7b27ffcb21c6dfcc0def31214a15" translate="yes" xml:space="preserve">
           <source>stem3 (hax, &amp;hellip;)</source>
@@ -2589,7 +2589,7 @@
         </trans-unit>
         <trans-unit id="fdca81ff0033bd52e01e0c38528c9264aeefc4ea" translate="yes" xml:space="preserve">
           <source>such that</source>
-          <target state="new"/>
+          <target state="translated">그런</target>
         </trans-unit>
         <trans-unit id="e9dff3557ded7414ae530834de7011f1388d202a" translate="yes" xml:space="preserve">
           <source>sum</source>
@@ -3029,7 +3029,7 @@
         </trans-unit>
         <trans-unit id="4062b7fd0ca4c7d0c8631a8dffd3a45b4a1c8bc7" translate="yes" xml:space="preserve">
           <source>texi_macros_file (new_val, &quot;local&quot;)</source>
-          <target state="translated">texi_macros_file (new_val, &quot;local&quot;)</target>
+          <target state="translated">texi_macros_file (new_val, &quot;로컬&quot;)</target>
         </trans-unit>
         <trans-unit id="372ea08cab33e71c02c651dbc83a474d32c676ea" translate="yes" xml:space="preserve">
           <source>text</source>
@@ -3101,7 +3101,7 @@
         </trans-unit>
         <trans-unit id="0885c5581a148ea6c8f5351522e127dc14c6bb1c" translate="yes" xml:space="preserve">
           <source>that interpolates from a random scattering of points, to a uniform grid. The output of the above can be seen in &lt;a href=&quot;#fig_003agriddata&quot;&gt;Figure 30.6&lt;/a&gt;.</source>
-          <target state="translated">점의 임의 산란에서 균일 한 격자로 보간됩니다. 위의 출력은 &lt;a href=&quot;#fig_003agriddata&quot;&gt;그림 30.6&lt;/a&gt; 에서 볼 수 있습니다 .</target>
+          <target state="translated">점의 임의 산란에서 균일 한 그리드로 보간됩니다. 위의 출력은 &lt;a href=&quot;#fig_003agriddata&quot;&gt;그림 30.6&lt;/a&gt; 에서 볼 수 있습니다 .</target>
         </trans-unit>
         <trans-unit id="1210016fe1e63593429363892e7ca9426ce82b74" translate="yes" xml:space="preserve">
           <source>that is exactly equivalent to</source>
@@ -3117,7 +3117,7 @@
         </trans-unit>
         <trans-unit id="160632217d68f1d6c26683cf1e7698d3b890477a" translate="yes" xml:space="preserve">
           <source>that mixes an object of the class &lt;code&gt;&quot;double&quot;&lt;/code&gt; with an object of the class &lt;code&gt;&quot;polynomial&quot;&lt;/code&gt;. In this case the return type should be &lt;code&gt;&quot;polynomial&quot;&lt;/code&gt; and so the &lt;code&gt;superiorto&lt;/code&gt; function is used in the class constructor. In particular the polynomial class constructor would be modified to</source>
-          <target state="translated">&lt;code&gt;&quot;double&quot;&lt;/code&gt; 클래스 의 객체와 &lt;code&gt;&quot;polynomial&quot;&lt;/code&gt; 클래스 의 객체를 혼합합니다 . 이 경우 반환 유형은 &lt;code&gt;&quot;polynomial&quot;&lt;/code&gt; 이어야 하므로 클래스 생성자에 &lt;code&gt;superiorto&lt;/code&gt; 함수가 사용됩니다. 특히 다항식 클래스 생성자는 다음과 같이 수정됩니다.</target>
+          <target state="translated">&lt;code&gt;&quot;double&quot;&lt;/code&gt; 클래스 의 객체와 &lt;code&gt;&quot;polynomial&quot;&lt;/code&gt; 클래스 의 객체를 혼합합니다 . 이 경우 반환 형식은 &lt;code&gt;&quot;polynomial&quot;&lt;/code&gt; 이어야 하므로 클래스 생성자에 &lt;code&gt;superiorto&lt;/code&gt; 함수가 사용됩니다. 특히 다항식 클래스 생성자는 다음과 같이 수정됩니다.</target>
         </trans-unit>
         <trans-unit id="2928f2cc2a642818bea54228dab3bfd93b580bf4" translate="yes" xml:space="preserve">
           <source>that returns a pointer &lt;code&gt;tmp&lt;/code&gt; of type &lt;code&gt;double *&lt;/code&gt; of length &lt;code&gt;len&lt;/code&gt;.</source>
@@ -3169,7 +3169,7 @@
         </trans-unit>
         <trans-unit id="699693eaadb4ddcba70eb58f00afe6fc53c807e2" translate="yes" xml:space="preserve">
           <source>the last two are only used with &lt;var&gt;class&lt;/var&gt;; they indicate that a complex-valued result is requested. Complex arrays are stored in memory as consecutive pairs of real numbers. The sizes of integer types are given by their bit counts. Both logical and char are typically one byte wide; however, this is not guaranteed by C++. If your system is IEEE conformant, single and double will be 4 bytes and 8 bytes wide, respectively. &lt;code&gt;&quot;logical&quot;&lt;/code&gt; is not allowed for &lt;var&gt;class&lt;/var&gt;.</source>
-          <target state="translated">마지막 두 개는 &lt;var&gt;class&lt;/var&gt; 에만 사용됩니다 . 복소수 결과가 요청되었음을 나타냅니다. 복잡한 배열은 연속적인 실수 쌍으로 메모리에 저장됩니다. 정수 유형의 크기는 비트 수로 제공됩니다. 논리 및 문자는 모두 일반적으로 1 바이트 폭입니다. 그러나 이것은 C ++에서 보장하지 않습니다. 시스템이 IEEE 호환 인 경우 단일 및 이중 너비는 각각 4 바이트와 8 바이트입니다. &lt;code&gt;&quot;logical&quot;&lt;/code&gt; 은 &lt;var&gt;class&lt;/var&gt; 허용되지 않습니다 .</target>
+          <target state="translated">마지막 두 개는 &lt;var&gt;class&lt;/var&gt; 에만 사용됩니다 . 복소수 결과가 요청되었음을 나타냅니다. 복잡한 배열은 연속적인 실수 쌍으로 메모리에 저장됩니다. 정수 유형의 크기는 비트 수로 제공됩니다. 논리 및 문자는 모두 일반적으로 1 바이트 폭입니다. 그러나 이것은 C ++에서 보장하지 않습니다. 시스템이 IEEE 호환 인 경우 단일 및 이중 너비는 각각 4 바이트 및 8 바이트입니다. &lt;code&gt;&quot;logical&quot;&lt;/code&gt; 은 &lt;var&gt;class&lt;/var&gt; 허용되지 않습니다 .</target>
         </trans-unit>
         <trans-unit id="abcf876177ac251dc1f0d2977c0e5cab821090b5" translate="yes" xml:space="preserve">
           <source>the mercurial ID of the sources used to build Octave.</source>
@@ -3217,15 +3217,15 @@
         </trans-unit>
         <trans-unit id="8d6f40cd1f612ec7d677cb8fe88c1a01e4936fae" translate="yes" xml:space="preserve">
           <source>the value of the persistent variable &lt;code&gt;pvar&lt;/code&gt; is 1, not 2.</source>
-          <target state="translated">지속적 변수 &lt;code&gt;pvar&lt;/code&gt; 의 값은 2가 아니라 1입니다.</target>
+          <target state="translated">영속 변수의 값 &lt;code&gt;pvar&lt;/code&gt; 2가 아니라 1입니다.</target>
         </trans-unit>
         <trans-unit id="b7091ba8e7707dd33ca020c4f1d51a22e0e856a7" translate="yes" xml:space="preserve">
           <source>the value of the variable &lt;var&gt;b&lt;/var&gt; is incremented even if the variable &lt;var&gt;a&lt;/var&gt; is zero.</source>
-          <target state="translated">변수의 값 &lt;var&gt;b&lt;/var&gt; 가변 되더라도 증가 &lt;var&gt;a&lt;/var&gt; 제로이다.</target>
+          <target state="translated">변수 &lt;var&gt;b&lt;/var&gt; 의 값은 변수 가 있더라도 증가합니다. &lt;var&gt;a&lt;/var&gt; 제로이다.</target>
         </trans-unit>
         <trans-unit id="cfc05ed8c4d81b19d924f19ebf78dd40a630ac98" translate="yes" xml:space="preserve">
           <source>the value of the variable &lt;var&gt;b&lt;/var&gt; is only incremented if the variable &lt;var&gt;a&lt;/var&gt; is nonzero.</source>
-          <target state="translated">변수 &lt;var&gt;b&lt;/var&gt; 의 값은 변수 &lt;var&gt;a&lt;/var&gt; 가 0이 아닌 경우에만 증가합니다 .</target>
+          <target state="translated">변수 &lt;var&gt;b&lt;/var&gt; 의 값은 변수 가 다음과 같은 경우에만 증가합니다. &lt;var&gt;a&lt;/var&gt; 가 0이 아닌 .</target>
         </trans-unit>
         <trans-unit id="10cb547b760b2cbf84dd03f072ae3034d1ec012f" translate="yes" xml:space="preserve">
           <source>then a breakpoint can be set at the start of the subfunction directly with</source>
@@ -3233,7 +3233,7 @@
         </trans-unit>
         <trans-unit id="898ffac5216b6ea8bfbd753a7150867b0eb43a6e" translate="yes" xml:space="preserve">
           <source>then a factorization of &lt;code&gt;&lt;var&gt;A&lt;/var&gt;+&lt;var&gt;x&lt;/var&gt;*&lt;var&gt;y&lt;/var&gt;.'&lt;/code&gt; can be obtained either as</source>
-          <target state="translated">&lt;code&gt;&lt;var&gt;A&lt;/var&gt;+&lt;var&gt;x&lt;/var&gt;*&lt;var&gt;y&lt;/var&gt;.'&lt;/code&gt; 의 인수 분해입니다 . ' 로 얻을 수 있습니다</target>
+          <target state="translated">&lt;code&gt;&lt;var&gt;A&lt;/var&gt;+&lt;var&gt;x&lt;/var&gt;*&lt;var&gt;y&lt;/var&gt;.'&lt;/code&gt; + &lt;var&gt;x&lt;/var&gt; * &lt;var&gt;y&lt;/var&gt; 의 인수 분해입니다 . '로 얻을 수 있습니다</target>
         </trans-unit>
         <trans-unit id="06260ddd8a0c1bb652fbeee2e05913da254aaece" translate="yes" xml:space="preserve">
           <source>then as can be seen by</source>
@@ -3241,11 +3241,11 @@
         </trans-unit>
         <trans-unit id="a8b06b41763346c863e8426229d9c6ce03e206c3" translate="yes" xml:space="preserve">
           <source>then the &lt;code&gt;subsindex&lt;/code&gt; function</source>
-          <target state="translated">다음 &lt;code&gt;subsindex&lt;/code&gt; 의 함수</target>
+          <target state="translated">그런 다음 &lt;code&gt;subsindex&lt;/code&gt; 함수</target>
         </trans-unit>
         <trans-unit id="27c8a5ced2ee3c48e9cab57e025bfca008b3332f" translate="yes" xml:space="preserve">
           <source>then the &lt;var&gt;options&lt;/var&gt;, &lt;var&gt;file&lt;/var&gt;, and variable name arguments (&lt;var&gt;v1&lt;/var&gt;, &amp;hellip;) must be specified as character strings.</source>
-          <target state="translated">그런 다음 &lt;var&gt;options&lt;/var&gt; , &lt;var&gt;file&lt;/var&gt; 및 변수 이름 인수 ( &lt;var&gt;v1&lt;/var&gt; ,&amp;hellip;)를 문자열로 지정해야합니다.</target>
+          <target state="translated">다음 &lt;var&gt;options&lt;/var&gt; , &lt;var&gt;file&lt;/var&gt; 및 변수 이름 인수 ( &lt;var&gt;v1&lt;/var&gt; ,&amp;hellip;)를 문자열로 지정해야합니다.</target>
         </trans-unit>
         <trans-unit id="d4e95db04e5d41c88b4680ba4d37db670ae162ce" translate="yes" xml:space="preserve">
           <source>this should be coded as</source>
@@ -3653,7 +3653,7 @@
         </trans-unit>
         <trans-unit id="ed935de422c09e2169943de926bd601002770192" translate="yes" xml:space="preserve">
           <source>type the following which will evaluate to &lt;code&gt;-1&lt;/code&gt; within the tolerance of the calculation.</source>
-          <target state="translated">계산 공차 내에서 &lt;code&gt;-1&lt;/code&gt; 로 평가되는 다음을 입력하십시오 .</target>
+          <target state="translated">계산 허용 오차 내에서 &lt;code&gt;-1&lt;/code&gt; 로 평가되는 다음을 입력하십시오 .</target>
         </trans-unit>
         <trans-unit id="f79cf983963da259ca356af4bc3e1ce65d31fc71" translate="yes" xml:space="preserve">
           <source>typecast</source>

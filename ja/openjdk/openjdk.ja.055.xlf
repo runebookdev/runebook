@@ -21,7 +21,7 @@
         </trans-unit>
         <trans-unit id="b313420718671df8322c2e12d5d5adbaf2c88a48" translate="yes" xml:space="preserve">
           <source>Providers are located and instantiated lazily, that is, on demand. A service loader maintains a cache of the providers that have been loaded so far. Each invocation of the &lt;a href=&quot;serviceloader#iterator--&quot;&gt;&lt;code&gt;iterator&lt;/code&gt;&lt;/a&gt; method returns an iterator that first yields all of the elements of the cache, in instantiation order, and then lazily locates and instantiates any remaining providers, adding each one to the cache in turn. The cache can be cleared via the &lt;a href=&quot;serviceloader#reload--&quot;&gt;&lt;code&gt;reload&lt;/code&gt;&lt;/a&gt; method.</source>
-          <target state="translated">プロバイダーは、遅延して、つまりオンデマンドで配置およびインスタンス化されます。サービスローダーは、これまでにロードされたプロバイダーのキャッシュを維持します。&lt;a href=&quot;serviceloader#iterator--&quot;&gt; &lt;code&gt;iterator&lt;/code&gt; &lt;/a&gt;メソッドを呼び出すたびに、インスタンス化の順序で最初にキャッシュのすべての要素を生成するイテレータが返されます。次に、残りのプロバイダを遅延検索してインスタンス化し、それぞれを順番にキャッシュに追加します。キャッシュは&lt;a href=&quot;serviceloader#reload--&quot;&gt; &lt;code&gt;reload&lt;/code&gt; &lt;/a&gt;メソッドでクリアできます。</target>
+          <target state="translated">プロバイダーは遅延して、つまりオンデマンドで配置およびインスタンス化されます。サービスローダーは、これまでにロードされたプロバイダーのキャッシュを維持します。&lt;a href=&quot;serviceloader#iterator--&quot;&gt; &lt;code&gt;iterator&lt;/code&gt; &lt;/a&gt;メソッドを呼び出すたびに、インスタンス化の順序で最初にキャッシュのすべての要素を生成するイテレータが返されます。次に、残りのプロバイダを遅延検索してインスタンス化し、それぞれを順番にキャッシュに追加します。キャッシュは&lt;a href=&quot;serviceloader#reload--&quot;&gt; &lt;code&gt;reload&lt;/code&gt; &lt;/a&gt;メソッドでクリアできます。</target>
         </trans-unit>
         <trans-unit id="b7ce2e5d96a8fcc5252622a7a7daf935f07fa327" translate="yes" xml:space="preserve">
           <source>Providers must ensure that once a rule has been seen by the application, the rule must continue to be available.</source>
@@ -29,7 +29,7 @@
         </trans-unit>
         <trans-unit id="c17cc043d42e321838509770dc060fc4d598738c" translate="yes" xml:space="preserve">
           <source>Providers of names (but not providers of other objects) are allowed to return null for some name requests even for locales that they claim to support by including them in their return value for &lt;code&gt;getAvailableLocales&lt;/code&gt;. Similarly, the Java runtime environment itself may not have all names for all locales that it supports. This is because the sets of objects for which names are requested can be large and vary over time, so that it's not always feasible to cover them completely. If the Java runtime environment or a provider returns null instead of a name, the lookup will proceed as described above as if the locale was not supported.</source>
-          <target state="translated">名前のプロバイダー（他のオブジェクトのプロバイダーではない）は、 &lt;code&gt;getAvailableLocales&lt;/code&gt; の戻り値にそれらを含めることでサポートすると主張しているロケールであっても、一部の名前要求に対してnullを返すことができます。同様に、Javaランタイム環境自体には、サポートするすべてのロケールの名前が含まれていない場合があります。これは、名前が要求されるオブジェクトのセットが大きく、時間とともに変化する可能性があるため、それらを完全にカバーすることが常に可能であるとは限らないためです。Javaランタイム環境またはプロバイダーが名前ではなくnullを返す場合、ルックアップは上記のように、ロケールがサポートされていないかのように進行します。</target>
+          <target state="translated">名前のプロバイダー（他のオブジェクトのプロバイダーではない）は、 &lt;code&gt;getAvailableLocales&lt;/code&gt; の戻り値にそれらを含めることでサポートすると主張しているロケールであっても、一部の名前要求に対してnullを返すことができます。同様に、Javaランタイム環境自体が、サポートするすべてのロケールの名前を持っているとは限りません。これは、名前が要求されるオブジェクトのセットが大きく、時間とともに変化する可能性があるため、それらを完全にカバーすることが常に可能であるとは限らないためです。Javaランタイム環境またはプロバイダーが名前ではなくnullを返す場合、ルックアップは上記のように、ロケールがサポートされていないかのように進行します。</target>
         </trans-unit>
         <trans-unit id="93395bc55c0af6d49d3e021fa8b9f1812ab1d4be" translate="yes" xml:space="preserve">
           <source>Provides MBean server references.</source>
@@ -61,7 +61,7 @@
         </trans-unit>
         <trans-unit id="585f0278c7568578232433242a9dc9a6500215d0" translate="yes" xml:space="preserve">
           <source>Provides a framework for implementing blocking locks and related synchronizers (semaphores, events, etc) that rely on first-in-first-out (FIFO) wait queues. This class is designed to be a useful basis for most kinds of synchronizers that rely on a single atomic &lt;code&gt;int&lt;/code&gt; value to represent state. Subclasses must define the protected methods that change this state, and which define what that state means in terms of this object being acquired or released. Given these, the other methods in this class carry out all queuing and blocking mechanics. Subclasses can maintain other state fields, but only the atomically updated &lt;code&gt;int&lt;/code&gt; value manipulated using methods &lt;a href=&quot;abstractqueuedsynchronizer#getState--&quot;&gt;&lt;code&gt;getState()&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;abstractqueuedsynchronizer#setState-int-&quot;&gt;&lt;code&gt;setState(int)&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;abstractqueuedsynchronizer#compareAndSetState-int-int-&quot;&gt;&lt;code&gt;compareAndSetState(int, int)&lt;/code&gt;&lt;/a&gt; is tracked with respect to synchronization.</source>
-          <target state="translated">先入れ先出し（FIFO）待機キューに依存するブロッキングロックと関連するシンクロナイザー（セマフォ、イベントなど）を実装するためのフレームワークを提供します。このクラスは、単一のアトミック &lt;code&gt;int&lt;/code&gt; 値に依存して状態を表すほとんどの種類のシンクロナイザーの有用な基礎になるように設計されています。サブクラスは、この状態を変更する保護されたメソッドを定義する必要があり、このオブジェクトは、取得または解放されるこのオブジェクトに関してその状態が何を意味するかを定義します。これらを前提として、このクラスの他のメソッドは、すべてのキューイングとブロッキングのメカニズムを実行します。サブクラスは他の状態フィールドを維持できますが、&lt;a href=&quot;abstractqueuedsynchronizer#getState--&quot;&gt; &lt;code&gt;getState()&lt;/code&gt; &lt;/a&gt;、&lt;a href=&quot;abstractqueuedsynchronizer#setState-int-&quot;&gt; &lt;code&gt;setState(int)&lt;/code&gt; &lt;/a&gt;、&lt;a href=&quot;abstractqueuedsynchronizer#compareAndSetState-int-int-&quot;&gt; &lt;code&gt;compareAndSetState(int, int)&lt;/code&gt; &lt;/a&gt;メソッドを使用して操作されるアトミックに更新された &lt;code&gt;int&lt;/code&gt; 値のみ 同期に関して追跡されます。</target>
+          <target state="translated">先入れ先出し（FIFO）待機キューに依存するブロッキングロックと関連するシンクロナイザー（セマフォ、イベントなど）を実装するためのフレームワークを提供します。このクラスは、単一のアトミック &lt;code&gt;int&lt;/code&gt; 値に依存して状態を表すほとんどの種類のシンクロナイザーの有用な基礎になるように設計されています。サブクラスは、この状態を変更する保護されたメソッドを定義する必要があり、このオブジェクトは、取得または解放されるこのオブジェクトに関してその状態が何を意味するかを定義します。これらを前提として、このクラスの他のメソッドは、すべてのキューイングとブロッキングのメカニズムを実行します。サブクラスは他の状態フィールドを維持できますが、アトミックに更新された &lt;code&gt;int&lt;/code&gt; 値のみがメソッド&lt;a href=&quot;abstractqueuedsynchronizer#getState--&quot;&gt; &lt;code&gt;getState()&lt;/code&gt; &lt;/a&gt;、&lt;a href=&quot;abstractqueuedsynchronizer#setState-int-&quot;&gt; &lt;code&gt;setState(int)&lt;/code&gt; &lt;/a&gt;、および&lt;a href=&quot;abstractqueuedsynchronizer#compareAndSetState-int-int-&quot;&gt; &lt;code&gt;compareAndSetState(int, int)&lt;/code&gt; &lt;/a&gt;を使用して操作されます 同期に関して追跡されます。</target>
         </trans-unit>
         <trans-unit id="87f1c88616e97bc1da7a96d1bcd0ebbc13304caa" translate="yes" xml:space="preserve">
           <source>Provides a hint about the access level of the class represented by this file object. If the access level is not known or if this file object does not represent a class file this method returns &lt;code&gt;null&lt;/code&gt;.</source>
@@ -141,7 +141,7 @@
         </trans-unit>
         <trans-unit id="ee388064c13bb7497ab7186ed42ef60ca1813f62" translate="yes" xml:space="preserve">
           <source>Provides classes and interfaces for obtaining reflective information about classes and objects. Reflection allows programmatic access to information about the fields, methods and constructors of loaded classes, and the use of reflected fields, methods, and constructors to operate on their underlying counterparts, within security restrictions.</source>
-          <target state="translated">クラスとオブジェクトに関する反射情報を取得するためのクラスとインタフェースを提供します。Reflection は、ロードされたクラスのフィールド、メソッド、コンストラクタに関する情報にプログラムからアクセスすることを可能にし、セキュリティ上の制限の範囲内で、反映されたフィールド、メソッド、コンストラクタを使用して、基本的な対応部分で動作させることを可能にします。</target>
+          <target state="translated">クラスとオブジェクトに関する反射情報を取得するためのクラスとインタフェースを提供します。Reflection は、ロードされたクラスのフィールド、メソッド、およびコンストラクタに関する情報にプログラム上でアクセスし、セキュリティ上の制限の範囲内で、反映されたフィールド、メソッド、およびコンストラクタを使用して、基本的な対応部分で動作させることを可能にします。</target>
         </trans-unit>
         <trans-unit id="b09313748a0146a59aa172c93bcc61af3e4659b7" translate="yes" xml:space="preserve">
           <source>Provides classes and interfaces for parsing and managing certificates, certificate revocation lists (CRLs), and certification paths.</source>
@@ -177,7 +177,7 @@
         </trans-unit>
         <trans-unit id="70866bc851c563848ee2ef0c0a07a87d5e447b7f" translate="yes" xml:space="preserve">
           <source>Provides classes for performing arbitrary-precision integer arithmetic (&lt;code&gt;BigInteger&lt;/code&gt;) and arbitrary-precision decimal arithmetic (&lt;code&gt;BigDecimal&lt;/code&gt;). &lt;code&gt;BigInteger&lt;/code&gt; is analogous to the primitive integer types except that it provides arbitrary precision, hence operations on &lt;code&gt;BigInteger&lt;/code&gt;s do not overflow or lose precision. In addition to standard arithmetic operations, &lt;code&gt;BigInteger&lt;/code&gt; provides modular arithmetic, GCD calculation, primality testing, prime generation, bit manipulation, and a few other miscellaneous operations. &lt;code&gt;BigDecimal&lt;/code&gt; provides arbitrary-precision signed decimal numbers suitable for currency calculations and the like. &lt;code&gt;BigDecimal&lt;/code&gt; gives the user complete control over rounding behavior, allowing the user to choose from a comprehensive set of eight rounding modes.</source>
-          <target state="translated">任意精度の整数演算（ &lt;code&gt;BigInteger&lt;/code&gt; ）および任意精度の10進数演算（ &lt;code&gt;BigDecimal&lt;/code&gt; ）を実行するためのクラスを提供します。 &lt;code&gt;BigInteger&lt;/code&gt; は、任意の精度を提供することを除いて、プリミティブ整数型に類似しています。したがって、 &lt;code&gt;BigInteger&lt;/code&gt; での操作は、オーバーフローしたり、精度を失ったりしません。 &lt;code&gt;BigInteger&lt;/code&gt; は、標準の算術演算に加えて、モジュラー演算、GCD計算、素数性テスト、素数生成、ビット操作、およびその他のいくつかのその他の演算を提供します。 &lt;code&gt;BigDecimal&lt;/code&gt; は、通貨計算などに適した任意精度の符号付き10進数を提供します。 &lt;code&gt;BigDecimal&lt;/code&gt; ユーザーは丸め動作を完全に制御できるため、ユーザーは8つの丸めモードの包括的なセットから選択できます。</target>
+          <target state="translated">任意精度の整数演算（ &lt;code&gt;BigInteger&lt;/code&gt; ）および任意精度の10進数演算（ &lt;code&gt;BigDecimal&lt;/code&gt; ）を実行するためのクラスを提供します。 &lt;code&gt;BigInteger&lt;/code&gt; は、任意の精度を提供することを除いて、プリミティブ整数型に似ています。したがって、 &lt;code&gt;BigInteger&lt;/code&gt; での操作は、オーバーフローしたり、精度を失ったりしません。 &lt;code&gt;BigInteger&lt;/code&gt; は、標準の算術演算に加えて、モジュラー算術、GCD計算、素数性テスト、素数生成、ビット操作、およびその他のいくつかのその他の演算を提供します。 &lt;code&gt;BigDecimal&lt;/code&gt; は、通貨計算などに適した任意精度の符号付き10進数を提供します。 &lt;code&gt;BigDecimal&lt;/code&gt; ユーザーは丸め動作を完全に制御できるため、ユーザーは8つの丸めモードの包括的なセットから選択できます。</target>
         </trans-unit>
         <trans-unit id="4f62869dad1a2372029c4eabd855ef087ea25df9" translate="yes" xml:space="preserve">
           <source>Provides classes for public key certificates.</source>
@@ -245,7 +245,7 @@
         </trans-unit>
         <trans-unit id="cc12fe30e62caa5753fbe0d937ef0fba9841b5e3" translate="yes" xml:space="preserve">
           <source>Provides for system input and output through data streams, serialization and the file system. Unless otherwise noted, passing a null argument to a constructor or method in any class or interface in this package will cause a &lt;code&gt;NullPointerException&lt;/code&gt; to be thrown.</source>
-          <target state="translated">データストリーム、シリアル化、ファイルシステムを介したシステム入出力を提供します。特に明記されていない限り、このパッケージのクラスまたはインターフェイスのコンストラクターまたはメソッドにnull引数を渡すと、 &lt;code&gt;NullPointerException&lt;/code&gt; がスローされます。</target>
+          <target state="translated">データストリーム、シリアル化、およびファイルシステムを介したシステム入出力を提供します。特に明記されていない限り、このパッケージのクラスまたはインターフェイスのコンストラクターまたはメソッドにnull引数を渡すと、 &lt;code&gt;NullPointerException&lt;/code&gt; がスローされます。</target>
         </trans-unit>
         <trans-unit id="e739c9f6ac3b042b912fc01af2fac71ed89b39d4" translate="yes" xml:space="preserve">
           <source>Provides general information for an MBean descriptor object.</source>
@@ -297,7 +297,7 @@
         </trans-unit>
         <trans-unit id="5041aee89220cf080ad743c308b853d6dcd934cd" translate="yes" xml:space="preserve">
           <source>Provides programmatic access to the stack trace information printed by &lt;a href=&quot;throwable#printStackTrace--&quot;&gt;&lt;code&gt;printStackTrace()&lt;/code&gt;&lt;/a&gt;. Returns an array of stack trace elements, each representing one stack frame. The zeroth element of the array (assuming the array's length is non-zero) represents the top of the stack, which is the last method invocation in the sequence. Typically, this is the point at which this throwable was created and thrown. The last element of the array (assuming the array's length is non-zero) represents the bottom of the stack, which is the first method invocation in the sequence.</source>
-          <target state="translated">&lt;a href=&quot;throwable#printStackTrace--&quot;&gt; &lt;code&gt;printStackTrace()&lt;/code&gt; &lt;/a&gt;によって出力されるスタックトレース情報へのプログラムによるアクセスを提供します。それぞれが1つのスタックフレームを表すスタックトレース要素の配列を返します。配列の0番目の要素（配列の長さが0でない場合）は、スタックの最上位を表します。これは、シーケンスの最後のメソッド呼び出しです。通常、これは、このスロー可能オブジェクトが作成およびスローされたポイントです。配列の最後の要素（配列の長さがゼロでない場合）は、スタックの一番下を表します。これは、シーケンスの最初のメソッド呼び出しです。</target>
+          <target state="translated">&lt;a href=&quot;throwable#printStackTrace--&quot;&gt; &lt;code&gt;printStackTrace()&lt;/code&gt; &lt;/a&gt;によって出力されたスタックトレース情報へのプログラムによるアクセスを提供します。それぞれが1つのスタックフレームを表すスタックトレース要素の配列を返します。配列の0番目の要素（配列の長さが0でない場合）は、スタックの最上位を表します。これは、シーケンスの最後のメソッド呼び出しです。通常、これは、このスロー可能オブジェクトが作成およびスローされたポイントです。配列の最後の要素（配列の長さがゼロでない場合）は、スタックの一番下を表します。これは、シーケンスの最初のメソッド呼び出しです。</target>
         </trans-unit>
         <trans-unit id="c656a6551c929169d438837c99a5114636d8c8b0" translate="yes" xml:space="preserve">
           <source>Provides reference-object classes, which support a limited degree of interaction with the garbage collector.</source>
@@ -413,7 +413,7 @@
         </trans-unit>
         <trans-unit id="e8ef5efcc68cb22a5762a96240a1127ae21b7b7d" translate="yes" xml:space="preserve">
           <source>Provides the definition of the Timer MBean. A Timer MBean maintains a list of scheduled notifications and, because it is a &lt;a href=&quot;../notificationbroadcaster&quot;&gt;&lt;code&gt;NotificationBroadcaster&lt;/code&gt;&lt;/a&gt;, a list of listeners for those notifications. Whenever the time for one of the scheduled notifications is reached, each listener receives the notification. Notifications can be repeated at a fixed interval, and the number of repetitions can be bounded.</source>
-          <target state="translated">Timer MBeanの定義を提供します。タイマーMBeanは、スケジュールされた通知のリストを維持します。これは&lt;a href=&quot;../notificationbroadcaster&quot;&gt; &lt;code&gt;NotificationBroadcaster&lt;/code&gt; &lt;/a&gt;であるため、これらの通知のリスナーのリストを維持します。スケジュールされた通知のいずれかの時間に達すると、各リスナーが通知を受け取ります。通知は一定の間隔で繰り返すことができ、繰り返し回数には制限があります。</target>
+          <target state="translated">Timer MBeanの定義を提供します。タイマーMBeanは、スケジュールされた通知のリストを維持します。これは&lt;a href=&quot;../notificationbroadcaster&quot;&gt; &lt;code&gt;NotificationBroadcaster&lt;/code&gt; &lt;/a&gt;であるため、これらの通知のリスナーのリストを維持します。スケジュールされた通知のいずれかの時間になると、各リスナーが通知を受け取ります。通知は一定の間隔で繰り返すことができ、繰り返しの回数には制限があります。</target>
         </trans-unit>
         <trans-unit id="d3b827aa886264c3d86d091200074fe1baadd83c" translate="yes" xml:space="preserve">
           <source>Provides the definition of the monitor classes.</source>
@@ -429,7 +429,7 @@
         </trans-unit>
         <trans-unit id="9a90756e2cf95be979ec6d6e89acb34aeb8d8288" translate="yes" xml:space="preserve">
           <source>Provides the file type's name as the &lt;code&gt;String&lt;/code&gt; representation of the file type.</source>
-          <target state="translated">ファイルタイプの名前をファイルタイプの &lt;code&gt;String&lt;/code&gt; 表現として提供します。</target>
+          <target state="translated">ファイルタイプの名前を、ファイルタイプの &lt;code&gt;String&lt;/code&gt; 表現として提供します。</target>
         </trans-unit>
         <trans-unit id="db88237095111c823aae3f401789edc87178d5a7" translate="yes" xml:space="preserve">
           <source>Provides the implementation of the timer MBean.</source>
@@ -453,7 +453,7 @@
         </trans-unit>
         <trans-unit id="01fead21704377436aa3b77d2866cfccc6582828" translate="yes" xml:space="preserve">
           <source>Provides the open data types and Open MBean descriptor classes. An &lt;em&gt;Open MBean&lt;/em&gt; is an MBean where the types of attributes and of operation parameters and return values are built using a small set of predefined Java classes. Open MBeans facilitate operation with remote management programs that do not necessarily have access to application-specific types, including non-Java programs.</source>
-          <target state="translated">オープンデータ型とオープンMBean記述子クラスを提供します。アン&lt;em&gt;オープンMBeanは&lt;/em&gt;、属性の操作パラメータと戻り値の型は、事前定義のJavaクラスの小さなセットを使用して構築されているMBeanです。オープンMBeanは、非Javaプログラムを含む、アプリケーション固有のタイプに必ずしもアクセスする必要がないリモート管理プログラムでの操作を容易にします。</target>
+          <target state="translated">オープンデータ型とオープンMBean記述子クラスを提供します。アン&lt;em&gt;オープンMBeanは&lt;/em&gt;、属性の操作パラメータと戻り値の型は、事前定義のJavaクラスの小さなセットを使用して構築されているMBeanです。オープンMBeanは、非Javaプログラムを含む、アプリケーション固有のタイプに必ずしもアクセスする必要のないリモート管理プログラムでの操作を容易にします。</target>
         </trans-unit>
         <trans-unit id="334268d147d263f2ee2903b8bd2cf19f99e932c4" translate="yes" xml:space="preserve">
           <source>Provides the principal classes and interfaces for the Java&lt;sup&gt;TM&lt;/sup&gt; Print Service API.</source>
@@ -461,7 +461,7 @@
         </trans-unit>
         <trans-unit id="3a6a7db0c38136a18d95c9c6c6e2ea1ca21ef725" translate="yes" xml:space="preserve">
           <source>Provides the principal classes and interfaces for the Java&lt;sup&gt;TM&lt;/sup&gt; Print Service API. The Java Print Service API enables client and server applications to:</source>
-          <target state="translated">Java &lt;sup&gt;TM&lt;/sup&gt; Print Service API の主要なクラスとインタフェースを提供します。Java Print Service APIを使用すると、クライアントアプリケーションとサーバーアプリケーションで次のことが可能になります。</target>
+          <target state="translated">Java &lt;sup&gt;TM&lt;/sup&gt; Print Service API の主要なクラスとインタフェースを提供します。Java Print Service APIを使用すると、クライアントアプリケーションとサーバーアプリケーションで次のことができます。</target>
         </trans-unit>
         <trans-unit id="89a1c5b4a5388a2bea34d1fd61f5e87280acae05" translate="yes" xml:space="preserve">
           <source>Provides this synchronization mode's name as the string representation of the mode.</source>
@@ -473,11 +473,11 @@
         </trans-unit>
         <trans-unit id="c5bc3e309a432711a49c22c51984a86043a2a60e" translate="yes" xml:space="preserve">
           <source>Proxy classes are &lt;em&gt;non-public, final, and not abstract&lt;/em&gt; if any of the proxy interfaces is non-public.</source>
-          <target state="translated">プロキシクラスのいずれかが非公開である場合&lt;em&gt;、&lt;/em&gt;プロキシクラスは&lt;em&gt;非公開、最終であり、抽象ではありません&lt;/em&gt;。</target>
+          <target state="translated">プロキシクラスのいずれかが非公開である場合&lt;em&gt;、&lt;/em&gt;プロキシクラスは&lt;em&gt;非公開で最終的なものであり、抽象&lt;/em&gt;クラスでは&lt;em&gt;ありません&lt;/em&gt;。</target>
         </trans-unit>
         <trans-unit id="353f38a6f5d1b45d85a0496d1a895df043116076" translate="yes" xml:space="preserve">
           <source>Proxy classes are &lt;em&gt;public, final, and not abstract&lt;/em&gt; if all proxy interfaces are public.</source>
-          <target state="translated">プロキシクラスは&lt;em&gt;パブリック、ファイナルであり&lt;/em&gt;、すべてのプロキシインターフェイスがパブリックである場合、&lt;em&gt;抽象&lt;/em&gt;クラスでは&lt;em&gt;ありません&lt;/em&gt;。</target>
+          <target state="translated">プロキシクラスは&lt;em&gt;パブリック、最終であり&lt;/em&gt;、すべてのプロキシインターフェイスがパブリックである場合、&lt;em&gt;抽象&lt;/em&gt;クラスでは&lt;em&gt;ありません&lt;/em&gt;。</target>
         </trans-unit>
         <trans-unit id="654d7e0049438720a8636c31900f67a7a5c049dc" translate="yes" xml:space="preserve">
           <source>Proxy.Type</source>
@@ -677,7 +677,7 @@
         </trans-unit>
         <trans-unit id="c78c3415533010100614697d8eae99d11b5db7be" translate="yes" xml:space="preserve">
           <source>Pushes back a portion of an array of characters by copying it to the front of the pushback buffer. After this method returns, the next character to be read will have the value &lt;code&gt;cbuf[off]&lt;/code&gt;, the character after that will have the value &lt;code&gt;cbuf[off+1]&lt;/code&gt;, and so forth.</source>
-          <target state="translated">文字の配列の一部をプッシュバックバッファーの前にコピーすることにより、それをプッシュバックします。このメソッドが戻ると、次に読み取られる文字の値は &lt;code&gt;cbuf[off]&lt;/code&gt; になり、その後の文字の値は &lt;code&gt;cbuf[off+1]&lt;/code&gt; になります。</target>
+          <target state="translated">文字の配列の一部をプッシュバックバッファーの前面にコピーすることにより、それをプッシュバックします。このメソッドが戻った後、次に読み取られる文字の値は &lt;code&gt;cbuf[off]&lt;/code&gt; になり、その後の文字の値は &lt;code&gt;cbuf[off+1]&lt;/code&gt; になる、というようになります。</target>
         </trans-unit>
         <trans-unit id="8e6e949dc1e69fd67a864db19bdbe9dc7bda0969" translate="yes" xml:space="preserve">
           <source>Pushes back a single character by copying it to the front of the pushback buffer. After this method returns, the next character to be read will have the value &lt;code&gt;(char)c&lt;/code&gt;.</source>
@@ -685,11 +685,11 @@
         </trans-unit>
         <trans-unit id="7416b3ae56d0f159b38c8f5731f34ccb0083215b" translate="yes" xml:space="preserve">
           <source>Pushes back an array of bytes by copying it to the front of the pushback buffer. After this method returns, the next byte to be read will have the value &lt;code&gt;b[0]&lt;/code&gt;, the byte after that will have the value &lt;code&gt;b[1]&lt;/code&gt;, and so forth.</source>
-          <target state="translated">バイトの配列をプッシュバックバッファーの前にコピーすることにより、その配列をプッシュバックします。このメソッドが返されると、次に読み取られるバイトの値は &lt;code&gt;b[0]&lt;/code&gt; になり、その後のバイトの値は &lt;code&gt;b[1]&lt;/code&gt; になる、というようになります。</target>
+          <target state="translated">バイトの配列をプッシュバックバッファーの前にコピーすることにより、その配列をプッシュバックします。このメソッドが戻ると、次に読み取られるバイトの値は &lt;code&gt;b[0]&lt;/code&gt; になり、その次のバイトの値は &lt;code&gt;b[1]&lt;/code&gt; になる、というようになります。</target>
         </trans-unit>
         <trans-unit id="6c292bfd0309835f165073b8e69183beecd15e49" translate="yes" xml:space="preserve">
           <source>Pushes back an array of characters by copying it to the front of the pushback buffer. After this method returns, the next character to be read will have the value &lt;code&gt;cbuf[0]&lt;/code&gt;, the character after that will have the value &lt;code&gt;cbuf[1]&lt;/code&gt;, and so forth.</source>
-          <target state="translated">文字の配列をプッシュバックバッファーの前にコピーすることにより、文字の配列をプッシュバックします。このメソッドが戻ると、次に読み取られる文字の値は &lt;code&gt;cbuf[0]&lt;/code&gt; 、それ以降の文字の値は &lt;code&gt;cbuf[1]&lt;/code&gt; になる、というようになります。</target>
+          <target state="translated">文字の配列をプッシュバックバッファーの前にコピーすることにより、文字の配列をプッシュバックします。このメソッドが戻った後、次に読み取られる文字の値は &lt;code&gt;cbuf[0]&lt;/code&gt; になり、その後の文字の値は &lt;code&gt;cbuf[1]&lt;/code&gt; になる、というようになります。</target>
         </trans-unit>
         <trans-unit id="d5c87932540427e1355998c8d79a889c99132b65" translate="yes" xml:space="preserve">
           <source>Pushes the current stream position onto a stack of marked positions.</source>
@@ -697,7 +697,7 @@
         </trans-unit>
         <trans-unit id="0e10bb7ac0c5c09af112299396f5e8f46cb303d5" translate="yes" xml:space="preserve">
           <source>Put the given key-value association into this preference node. It is guaranteed that &lt;code&gt;key&lt;/code&gt; and &lt;code&gt;value&lt;/code&gt; are non-null and of legal length. Also, it is guaranteed that this node has not been removed. (The implementor needn't check for any of these things.)</source>
-          <target state="translated">指定されたキーと値の関連付けをこの設定ノードに配置します。 &lt;code&gt;key&lt;/code&gt; と &lt;code&gt;value&lt;/code&gt; がnullでなく、正当な長さであることが保証されています。また、このノードが削除されていないことが保証されています。（実装者はこれらのことを確認する必要はありません。）</target>
+          <target state="translated">指定されたキーと値の関連付けをこの設定ノードに入れます。 &lt;code&gt;key&lt;/code&gt; と &lt;code&gt;value&lt;/code&gt; がnullでなく、正当な長さであることが保証されています。また、このノードが削除されていないことが保証されています。（実装者はこれらのことを確認する必要はありません。）</target>
         </trans-unit>
         <trans-unit id="a1bd5fecb7b4b11feb61b5d00c81d710adec7d6e" translate="yes" xml:space="preserve">
           <source>Put the value of the named Object field into the persistent field.</source>
@@ -917,7 +917,7 @@
         </trans-unit>
         <trans-unit id="e4d4e3b9500d18574174ce981415819b8f905d73" translate="yes" xml:space="preserve">
           <source>Queries whether any threads are waiting on the given condition associated with the write lock. Note that because timeouts and interrupts may occur at any time, a &lt;code&gt;true&lt;/code&gt; return does not guarantee that a future &lt;code&gt;signal&lt;/code&gt; will awaken any threads. This method is designed primarily for use in monitoring of the system state.</source>
-          <target state="translated">書き込みロックに関連付けられた特定の条件で待機しているスレッドがあるかどうかを照会します。タイムアウトと割り込みはいつでも発生する可能性があるため、 &lt;code&gt;true&lt;/code&gt; が返されても、将来の &lt;code&gt;signal&lt;/code&gt; がスレッドを呼び起こすとは限りません。この方法は、主にシステム状態の監視に使用するために設計されています。</target>
+          <target state="translated">書き込みロックに関連する特定の条件で待機しているスレッドがあるかどうかを照会します。タイムアウトと割り込みはいつでも発生する可能性があるため、 &lt;code&gt;true&lt;/code&gt; が返されても、将来の &lt;code&gt;signal&lt;/code&gt; がスレッドを呼び起こすとは限りません。この方法は、主にシステム状態の監視に使用するために設計されています。</target>
         </trans-unit>
         <trans-unit id="5c8e0031ca128836be969b9be3e99ff9c8e7864a" translate="yes" xml:space="preserve">
           <source>Queries whether any threads are waiting on the given condition associated with this lock. Note that because timeouts and interrupts may occur at any time, a &lt;code&gt;true&lt;/code&gt; return does not guarantee that a future &lt;code&gt;signal&lt;/code&gt; will awaken any threads. This method is designed primarily for use in monitoring of the system state.</source>
@@ -1525,7 +1525,7 @@
         </trans-unit>
         <trans-unit id="4acd35c706da1f821cd2857eeab375b99dcfd65e" translate="yes" xml:space="preserve">
           <source>RFC 3530 allows for special user identities to be used on platforms that support the POSIX defined access permissions. The special user identities are &quot;&lt;code&gt;OWNER@&lt;/code&gt;&quot;, &quot;&lt;code&gt;GROUP@&lt;/code&gt;&quot;, and &quot;&lt;code&gt;EVERYONE@&lt;/code&gt;&quot;. When both the &lt;code&gt;AclFileAttributeView&lt;/code&gt; and the &lt;a href=&quot;posixfileattributeview&quot;&gt;&lt;code&gt;PosixFileAttributeView&lt;/code&gt;&lt;/a&gt; are supported then these special user identities may be included in ACL &lt;a href=&quot;aclentry&quot;&gt;&lt;code&gt;entries&lt;/code&gt;&lt;/a&gt; that are read or written. The file system's &lt;a href=&quot;userprincipallookupservice&quot;&gt;&lt;code&gt;UserPrincipalLookupService&lt;/code&gt;&lt;/a&gt; may be used to obtain a &lt;a href=&quot;userprincipal&quot;&gt;&lt;code&gt;UserPrincipal&lt;/code&gt;&lt;/a&gt; to represent these special identities by invoking the &lt;a href=&quot;userprincipallookupservice#lookupPrincipalByName-java.lang.String-&quot;&gt;&lt;code&gt;lookupPrincipalByName&lt;/code&gt;&lt;/a&gt; method.</source>
-          <target state="translated">RFC 3530では、POSIXで定義されたアクセス許可をサポートするプラットフォームで、特別なユーザーIDを使用できます。特別なユーザーIDは、「 &lt;code&gt;OWNER@&lt;/code&gt; 」、「 &lt;code&gt;GROUP@&lt;/code&gt; 」、および「 &lt;code&gt;EVERYONE@&lt;/code&gt; 」です。両方の場合は &lt;code&gt;AclFileAttributeView&lt;/code&gt; と&lt;a href=&quot;posixfileattributeview&quot;&gt; &lt;code&gt;PosixFileAttributeView&lt;/code&gt; は&lt;/a&gt;その後、サポートされているこれらの特別なユーザーIDは、ACLの中に含めることができる&lt;a href=&quot;aclentry&quot;&gt; &lt;code&gt;entries&lt;/code&gt; &lt;/a&gt;読み出しまたは書き込みされています。ファイルシステムの&lt;a href=&quot;userprincipallookupservice&quot;&gt; &lt;code&gt;UserPrincipalLookupService&lt;/code&gt; &lt;/a&gt;を使用して、&lt;a href=&quot;userprincipallookupservice#lookupPrincipalByName-java.lang.String-&quot;&gt; &lt;code&gt;lookupPrincipalByName&lt;/code&gt; &lt;/a&gt;メソッドを呼び出すことにより、これらの特別なIDを表す&lt;a href=&quot;userprincipal&quot;&gt; &lt;code&gt;UserPrincipal&lt;/code&gt; &lt;/a&gt;を取得できます。</target>
+          <target state="translated">RFC 3530では、POSIXで定義されたアクセス許可をサポートするプラットフォームで特別なユーザーIDを使用できます。特別なユーザーIDは、「 &lt;code&gt;OWNER@&lt;/code&gt; 」、「 &lt;code&gt;GROUP@&lt;/code&gt; 」、および「 &lt;code&gt;EVERYONE@&lt;/code&gt; 」です。両方の場合は &lt;code&gt;AclFileAttributeView&lt;/code&gt; と&lt;a href=&quot;posixfileattributeview&quot;&gt; &lt;code&gt;PosixFileAttributeView&lt;/code&gt; は&lt;/a&gt;その後、サポートされているこれらの特別なユーザーIDは、ACLの中に含めることができる&lt;a href=&quot;aclentry&quot;&gt; &lt;code&gt;entries&lt;/code&gt; &lt;/a&gt;読み出しまたは書き込みされています。ファイルシステムの&lt;a href=&quot;userprincipallookupservice&quot;&gt; &lt;code&gt;UserPrincipalLookupService&lt;/code&gt; &lt;/a&gt;を使用して、&lt;a href=&quot;userprincipallookupservice#lookupPrincipalByName-java.lang.String-&quot;&gt; &lt;code&gt;lookupPrincipalByName&lt;/code&gt; &lt;/a&gt;メソッドを呼び出すことにより、これらの特別なIDを表す&lt;a href=&quot;userprincipal&quot;&gt; &lt;code&gt;UserPrincipal&lt;/code&gt; &lt;/a&gt;を取得できます。</target>
         </trans-unit>
         <trans-unit id="378c918627321ac79f74fb6acf489060bdde7202" translate="yes" xml:space="preserve">
           <source>RFC 822 time zone</source>
@@ -2649,11 +2649,11 @@
         </trans-unit>
         <trans-unit id="9f62ae4db29b7d92612dca220fc8020b0e030fa7" translate="yes" xml:space="preserve">
           <source>Reacts to a change in the specified controller's value. A controller is some control other than a keyboard key, such as a switch, slider, pedal, wheel, or breath-pressure sensor. The MIDI 1.0 Specification provides standard numbers for typical controllers on MIDI devices, and describes the intended effect for some of the controllers. The way in which an &lt;code&gt;Instrument&lt;/code&gt; reacts to a controller change may be specific to the &lt;code&gt;Instrument&lt;/code&gt;.</source>
-          <target state="translated">指定されたコントローラーの値の変更に反応します。コントローラは、スイッチ、スライダー、ペダル、ホイール、呼吸圧センサーなど、キーボードのキー以外のコントロールです。 MIDI 1.0仕様は、MIDIデバイス上の一般的なコントローラーの標準番号を提供し、一部のコントローラーの意図された効果を説明しています。する方法 &lt;code&gt;Instrument&lt;/code&gt; コントローラ変化に反応してに対して特異的であってもよい &lt;code&gt;Instrument&lt;/code&gt; 。</target>
+          <target state="translated">指定されたコントローラーの値の変更に反応します。コントローラーは、スイッチ、スライダー、ペダル、ホイール、呼吸圧センサーなど、キーボードのキー以外のコントロールです。 MIDI 1.0仕様は、MIDIデバイスの一般的なコントローラーの標準番号を提供し、一部のコントローラーの意図された効果を説明しています。 &lt;code&gt;Instrument&lt;/code&gt; がコントローラーの変更に反応する方法は、インストゥルメントによって &lt;code&gt;Instrument&lt;/code&gt; ます。</target>
         </trans-unit>
         <trans-unit id="e537c312ddf8bfc210f75144eb7df46ebebcacb5" translate="yes" xml:space="preserve">
           <source>Reacts to a change in the specified note's key pressure. Polyphonic key pressure allows a keyboard player to press multiple keys simultaneously, each with a different amount of pressure. The pressure, if not ignored, is typically used to vary such features as the volume, brightness, or vibrato of the note. It is possible that the underlying synthesizer does not support this MIDI message. In order to verify that &lt;code&gt;setPolyPressure&lt;/code&gt; was successful, use &lt;code&gt;getPolyPressure&lt;/code&gt;.</source>
-          <target state="translated">指定されたノートのキープレッシャーの変化に反応します。ポリフォニックキープレッシャーにより、キーボードプレーヤーは複数のキーを同時に押すことができます。圧力は、無視されない場合でも、通常、ノートの音量、明るさ、ビブラートなどの機能を変化させるために使用されます。基になるシンセサイザがこのMIDIメッセージをサポートしていない可能性があります。 &lt;code&gt;setPolyPressure&lt;/code&gt; が成功したことを確認するには、getPolyPressureを使用し &lt;code&gt;getPolyPressure&lt;/code&gt; 。</target>
+          <target state="translated">指定されたノートのキープレッシャーの変化に反応します。ポリフォニックキープレッシャーにより、キーボードプレーヤーは複数のキーを同時に押すことができます。圧力は、無視されない場合、通常、ノートの音量、明るさ、ビブラートなどの機能を変化させるために使用されます。基になるシンセサイザがこのMIDIメッセージをサポートしていない可能性があります。 &lt;code&gt;setPolyPressure&lt;/code&gt; が成功したことを確認するには、getPolyPressureを使用し &lt;code&gt;getPolyPressure&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="aaeb47964ce79a0a88b278cbd35628f5b3f75b75" translate="yes" xml:space="preserve">
           <source>Read a Pack200 archive, and write the encoded JAR to a JarOutputStream.</source>
@@ -2665,7 +2665,7 @@
         </trans-unit>
         <trans-unit id="bf8b4501ab31016f324fccee98f617c0cbf5011e" translate="yes" xml:space="preserve">
           <source>Read a class descriptor from the serialization stream. This method is called when the ObjectInputStream expects a class descriptor as the next item in the serialization stream. Subclasses of ObjectInputStream may override this method to read in class descriptors that have been written in non-standard formats (by subclasses of ObjectOutputStream which have overridden the &lt;code&gt;writeClassDescriptor&lt;/code&gt; method). By default, this method reads class descriptors according to the format defined in the Object Serialization specification.</source>
-          <target state="translated">直列化ストリームからクラス記述子を読み取ります。このメソッドは、ObjectInputStreamがシリアル化ストリームの次のアイテムとしてクラス記述子を期待しているときに呼び出されます。ObjectInputStreamのサブクラスは、このメソッドをオーバーライドして、（ &lt;code&gt;writeClassDescriptor&lt;/code&gt; メソッドをオーバーライドしたObjectOutputStreamのサブクラスによって）非標準形式で記述されたクラス記述子を読み込むことができます。デフォルトでは、このメソッドはオブジェクト直列化仕様で定義された形式に従ってクラス記述子を読み取ります。</target>
+          <target state="translated">直列化ストリームからクラス記述子を読み取ります。このメソッドは、ObjectInputStreamがシリアル化ストリームの次のアイテムとしてクラス記述子を期待しているときに呼び出されます。ObjectInputStreamのサブクラスは、このメソッドをオーバーライドして、（ &lt;code&gt;writeClassDescriptor&lt;/code&gt; メソッドをオーバーライドしたObjectOutputStreamのサブクラスによって）非標準形式で記述されたクラス記述子を読み込むことができます。デフォルトでは、このメソッドはObject Serialization仕様で定義された形式に従ってクラス記述子を読み取ります。</target>
         </trans-unit>
         <trans-unit id="c981edde37026b8a27f71995acfdf7ac2614a6a2" translate="yes" xml:space="preserve">
           <source>Read a line of text. Whenever a &lt;a href=&quot;#lt&quot;&gt;line terminator&lt;/a&gt; is read the current line number is incremented.</source>
@@ -2685,7 +2685,7 @@
         </trans-unit>
         <trans-unit id="0cfa17b045156c8e503c768b3621f624452cafef" translate="yes" xml:space="preserve">
           <source>Read all lines from a file as a &lt;code&gt;Stream&lt;/code&gt;. Bytes from the file are decoded into characters using the &lt;a href=&quot;../charset/standardcharsets#UTF_8&quot;&gt;&lt;code&gt;UTF-8&lt;/code&gt;&lt;/a&gt;&lt;a href=&quot;../charset/charset&quot;&gt;&lt;code&gt;charset&lt;/code&gt;&lt;/a&gt;.</source>
-          <target state="translated">ファイルからすべての行を &lt;code&gt;Stream&lt;/code&gt; として読み取ります。ファイルからのバイトは、&lt;a href=&quot;../charset/standardcharsets#UTF_8&quot;&gt; &lt;code&gt;UTF-8&lt;/code&gt; &lt;/a&gt;&lt;a href=&quot;../charset/charset&quot;&gt; &lt;code&gt;charset&lt;/code&gt; &lt;/a&gt;を使用して文字にデコードされます。</target>
+          <target state="translated">ファイルからすべての行を &lt;code&gt;Stream&lt;/code&gt; として読み取ります。ファイルのバイトは、&lt;a href=&quot;../charset/standardcharsets#UTF_8&quot;&gt; &lt;code&gt;UTF-8&lt;/code&gt; &lt;/a&gt;&lt;a href=&quot;../charset/charset&quot;&gt; &lt;code&gt;charset&lt;/code&gt; &lt;/a&gt;を使用して文字にデコードされます。</target>
         </trans-unit>
         <trans-unit id="0674b837c10fc0a5ef7831481b2cab5c848b1677" translate="yes" xml:space="preserve">
           <source>Read all lines from a file as a &lt;code&gt;Stream&lt;/code&gt;. Unlike &lt;a href=&quot;files#readAllLines-java.nio.file.Path-java.nio.charset.Charset-&quot;&gt;&lt;code&gt;readAllLines&lt;/code&gt;&lt;/a&gt;, this method does not read all lines into a &lt;code&gt;List&lt;/code&gt;, but instead populates lazily as the stream is consumed.</source>
@@ -2693,7 +2693,7 @@
         </trans-unit>
         <trans-unit id="ad2b8642d561b5ed6e6d56117dd9ef66996a9e7d" translate="yes" xml:space="preserve">
           <source>Read all lines from a file. Bytes from the file are decoded into characters using the &lt;a href=&quot;../charset/standardcharsets#UTF_8&quot;&gt;&lt;code&gt;UTF-8&lt;/code&gt;&lt;/a&gt;&lt;a href=&quot;../charset/charset&quot;&gt;&lt;code&gt;charset&lt;/code&gt;&lt;/a&gt;.</source>
-          <target state="translated">ファイルからすべての行を読み取ります。ファイルからのバイトは、&lt;a href=&quot;../charset/standardcharsets#UTF_8&quot;&gt; &lt;code&gt;UTF-8&lt;/code&gt; &lt;/a&gt;&lt;a href=&quot;../charset/charset&quot;&gt; &lt;code&gt;charset&lt;/code&gt; &lt;/a&gt;を使用して文字にデコードされます。</target>
+          <target state="translated">ファイルからすべての行を読み取ります。ファイルのバイトは、&lt;a href=&quot;../charset/standardcharsets#UTF_8&quot;&gt; &lt;code&gt;UTF-8&lt;/code&gt; &lt;/a&gt;&lt;a href=&quot;../charset/charset&quot;&gt; &lt;code&gt;charset&lt;/code&gt; &lt;/a&gt;を使用して文字にデコードされます。</target>
         </trans-unit>
         <trans-unit id="98f721c40a57bdf100c4555ce6422ee778a1d565" translate="yes" xml:space="preserve">
           <source>Read all lines from a file. This method ensures that the file is closed when all bytes have been read or an I/O error, or other runtime exception, is thrown. Bytes from the file are decoded into characters using the specified charset.</source>
@@ -2709,7 +2709,7 @@
         </trans-unit>
         <trans-unit id="5ff8cf58852a2e4d09d71e66e7b041f9cec09145" translate="yes" xml:space="preserve">
           <source>Read and write operations are synchronized to guarantee the atomic completion of critical operations; therefore invoking methods &lt;a href=&quot;console#readLine--&quot;&gt;&lt;code&gt;readLine()&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;console#readPassword--&quot;&gt;&lt;code&gt;readPassword()&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;console#format-java.lang.String-java.lang.Object...-&quot;&gt;&lt;code&gt;format()&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;console#printf-java.lang.String-java.lang.Object...-&quot;&gt;&lt;code&gt;printf()&lt;/code&gt;&lt;/a&gt; as well as the read, format and write operations on the objects returned by &lt;a href=&quot;console#reader--&quot;&gt;&lt;code&gt;reader()&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;console#writer--&quot;&gt;&lt;code&gt;writer()&lt;/code&gt;&lt;/a&gt; may block in multithreaded scenarios.</source>
-          <target state="translated">読み取り操作と書き込み操作は同期され、重要な操作のアトミックな完了を保証します。したがって、メソッド&lt;a href=&quot;console#readLine--&quot;&gt; &lt;code&gt;readLine()&lt;/code&gt; &lt;/a&gt;、&lt;a href=&quot;console#readPassword--&quot;&gt; &lt;code&gt;readPassword()&lt;/code&gt; &lt;/a&gt;、&lt;a href=&quot;console#format-java.lang.String-java.lang.Object...-&quot;&gt; &lt;code&gt;format()&lt;/code&gt; &lt;/a&gt;、&lt;a href=&quot;console#printf-java.lang.String-java.lang.Object...-&quot;&gt; &lt;code&gt;printf()&lt;/code&gt; &lt;/a&gt;を呼び出すだけでなく、&lt;a href=&quot;console#reader--&quot;&gt; &lt;code&gt;reader()&lt;/code&gt; &lt;/a&gt;および&lt;a href=&quot;console#writer--&quot;&gt; &lt;code&gt;writer()&lt;/code&gt; &lt;/a&gt;によって返されたオブジェクトの読み取り、フォーマット、および書き込み操作は、マルチスレッドシナリオでブロックされる場合があります。</target>
+          <target state="translated">読み取りおよび書き込み操作は同期され、重要な操作のアトミックな完了を保証します。したがって、メソッド&lt;a href=&quot;console#readLine--&quot;&gt; &lt;code&gt;readLine()&lt;/code&gt; &lt;/a&gt;、&lt;a href=&quot;console#readPassword--&quot;&gt; &lt;code&gt;readPassword()&lt;/code&gt; &lt;/a&gt;、&lt;a href=&quot;console#format-java.lang.String-java.lang.Object...-&quot;&gt; &lt;code&gt;format()&lt;/code&gt; &lt;/a&gt;、&lt;a href=&quot;console#printf-java.lang.String-java.lang.Object...-&quot;&gt; &lt;code&gt;printf()&lt;/code&gt; &lt;/a&gt;を呼び出すだけでなく、&lt;a href=&quot;console#reader--&quot;&gt; &lt;code&gt;reader()&lt;/code&gt; &lt;/a&gt;および&lt;a href=&quot;console#writer--&quot;&gt; &lt;code&gt;writer()&lt;/code&gt; &lt;/a&gt;によって返されたオブジェクトの読み取り、フォーマット、および書き込み操作は、マルチスレッドシナリオでブロックされる場合があります。</target>
         </trans-unit>
         <trans-unit id="34eb5daedd31de1cbdca6a898545a7612ceb3ab9" translate="yes" xml:space="preserve">
           <source>Read characters into a portion of an array. Whenever a &lt;a href=&quot;#lt&quot;&gt;line terminator&lt;/a&gt; is read the current line number is incremented.</source>
@@ -2833,7 +2833,7 @@
         </trans-unit>
         <trans-unit id="650116d7dbbc5193d2048025c663d7bc7a32360f" translate="yes" xml:space="preserve">
           <source>Readers should call &lt;code&gt;clearAbortRequest&lt;/code&gt; at the beginning of each read operation, and poll the value of &lt;code&gt;abortRequested&lt;/code&gt; regularly during the read.</source>
-          <target state="translated">リーダーは、各読み取り操作の最初に &lt;code&gt;clearAbortRequest&lt;/code&gt; を呼び出し、読み取り中に &lt;code&gt;abortRequested&lt;/code&gt; の値を定期的にポーリングする必要があります。</target>
+          <target state="translated">リーダーは、各読み取り操作の開始時に &lt;code&gt;clearAbortRequest&lt;/code&gt; を呼び出し、読み取り中に &lt;code&gt;abortRequested&lt;/code&gt; の値を定期的にポーリングする必要があります。</target>
         </trans-unit>
         <trans-unit id="cffa2af0a3a67cf2123e3411d020161abc01fc05" translate="yes" xml:space="preserve">
           <source>Reading</source>
@@ -2853,7 +2853,7 @@
         </trans-unit>
         <trans-unit id="4c727aacbfff45d3995d501ad02a0f47d666e8d4" translate="yes" xml:space="preserve">
           <source>Reads 4 bytes from the stream, and (conceptually) concatenates them according to the current byte order and returns the result as a &lt;code&gt;float&lt;/code&gt;.</source>
-          <target state="translated">ストリームから4バイトを読み取り、（概念的には）現在のバイト順序に従ってそれらを連結し、結果を &lt;code&gt;float&lt;/code&gt; として返します。</target>
+          <target state="translated">ストリームから4バイトを読み取り、現在のバイト順に従って概念上それらを連結し、結果を &lt;code&gt;float&lt;/code&gt; として返します。</target>
         </trans-unit>
         <trans-unit id="25c6012ed340159431284025f65c313a160b00f0" translate="yes" xml:space="preserve">
           <source>Reads 4 bytes from the stream, and (conceptually) concatenates them according to the current byte order and returns the result as an &lt;code&gt;int&lt;/code&gt;.</source>
@@ -2861,7 +2861,7 @@
         </trans-unit>
         <trans-unit id="64f3fc8fd8ee6f41ed97dc8b9626e29514d2bd49" translate="yes" xml:space="preserve">
           <source>Reads 4 bytes from the stream, and (conceptually) concatenates them according to the current byte order, converts the result to a long, masks it with &lt;code&gt;0xffffffffL&lt;/code&gt; in order to strip off any sign-extension bits, and returns the result as an unsigned &lt;code&gt;long&lt;/code&gt; value.</source>
-          <target state="translated">ストリームから4バイトを読み取り、現在のバイト順序に従ってそれらを（概念的に）連結し、結果をlongに変換し、符号拡張ビットを取り除くために &lt;code&gt;0xffffffffL&lt;/code&gt; でマスクし、結果をunsigned &lt;code&gt;long&lt;/code&gt; として返します値。</target>
+          <target state="translated">ストリームから4バイトを読み取り、（概念的には）現在のバイト順序に従ってそれらを連結し、結果をlongに変換し、符号拡張ビットを取り除くために &lt;code&gt;0xffffffffL&lt;/code&gt; でマスクし、結果をunsigned &lt;code&gt;long&lt;/code&gt; として返します値。</target>
         </trans-unit>
         <trans-unit id="b9afe8ae3cd2aef9facdc180e94cf8df8a6e4994" translate="yes" xml:space="preserve">
           <source>Reads 8 bytes from the stream, and (conceptually) concatenates them according to the current byte order and returns the result as a &lt;code&gt;double&lt;/code&gt;.</source>
@@ -2885,11 +2885,11 @@
         </trans-unit>
         <trans-unit id="b962ffd77b12e720d9f4a74b530e11663204f8b4" translate="yes" xml:space="preserve">
           <source>Reads &lt;code&gt;len&lt;/code&gt; bytes from the stream, and stores them into &lt;code&gt;b&lt;/code&gt; starting at index &lt;code&gt;off&lt;/code&gt;. If the end of the stream is reached, an &lt;code&gt;java.io.EOFException&lt;/code&gt; will be thrown.</source>
-          <target state="translated">ストリームから &lt;code&gt;len&lt;/code&gt; バイトを読み取り、インデックス &lt;code&gt;off&lt;/code&gt; から &lt;code&gt;b&lt;/code&gt; に格納します。ストリームの終わりに達すると、 &lt;code&gt;java.io.EOFException&lt;/code&gt; がスローされます。</target>
+          <target state="translated">ストリームから &lt;code&gt;len&lt;/code&gt; バイトを読み込み、インデックス &lt;code&gt;off&lt;/code&gt; から &lt;code&gt;b&lt;/code&gt; に格納します。ストリームの終わりに達すると、 &lt;code&gt;java.io.EOFException&lt;/code&gt; がスローされます。</target>
         </trans-unit>
         <trans-unit id="a2543c2a63ee9b728ebcbedbbc0cbd591da74c72" translate="yes" xml:space="preserve">
           <source>Reads &lt;code&gt;len&lt;/code&gt; chars (unsigned 16-bit integers) from the stream according to the current byte order, and stores them into &lt;code&gt;c&lt;/code&gt; starting at index &lt;code&gt;off&lt;/code&gt;. If the end of the stream is reached, an &lt;code&gt;java.io.EOFException&lt;/code&gt; will be thrown.</source>
-          <target state="translated">現在のバイト順序に従ってストリームから &lt;code&gt;len&lt;/code&gt; 文字（符号なし16ビット整数）を読み取り、インデックス &lt;code&gt;off&lt;/code&gt; から始まる &lt;code&gt;c&lt;/code&gt; に格納します。ストリームの終わりに達すると、 &lt;code&gt;java.io.EOFException&lt;/code&gt; がスローされます。</target>
+          <target state="translated">現在のバイト順に従ってストリームから &lt;code&gt;len&lt;/code&gt; 文字（符号なし16ビット整数）を読み取り、 &lt;code&gt;c&lt;/code&gt; にインデックス &lt;code&gt;off&lt;/code&gt; から格納します。ストリームの終わりに達すると、 &lt;code&gt;java.io.EOFException&lt;/code&gt; がスローされます。</target>
         </trans-unit>
         <trans-unit id="b368a12240bb30a7b260e809b7fa1722f32a4407" translate="yes" xml:space="preserve">
           <source>Reads &lt;code&gt;len&lt;/code&gt; doubles (64-bit IEEE double-precision floats) from the stream according to the current byte order, and stores them into &lt;code&gt;d&lt;/code&gt; starting at index &lt;code&gt;off&lt;/code&gt;. If the end of the stream is reached, an &lt;code&gt;java.io.EOFException&lt;/code&gt; will be thrown.</source>
@@ -2901,15 +2901,15 @@
         </trans-unit>
         <trans-unit id="706f2e827050c494ad7708911045b135a6f461ef" translate="yes" xml:space="preserve">
           <source>Reads &lt;code&gt;len&lt;/code&gt; ints (signed 32-bit integers) from the stream according to the current byte order, and stores them into &lt;code&gt;i&lt;/code&gt; starting at index &lt;code&gt;off&lt;/code&gt;. If the end of the stream is reached, an &lt;code&gt;java.io.EOFException&lt;/code&gt; will be thrown.</source>
-          <target state="translated">現在のバイト順に従ってストリームから &lt;code&gt;len&lt;/code&gt; int（符号付き32ビット整数）を読み取り、それらを &lt;code&gt;i&lt;/code&gt; にインデックス &lt;code&gt;off&lt;/code&gt; から格納します。ストリームの終わりに達すると、 &lt;code&gt;java.io.EOFException&lt;/code&gt; がスローされます。</target>
+          <target state="translated">現在のバイト順序に従って &lt;code&gt;len&lt;/code&gt; int（符号付き32ビット整数）をストリームから読み取り、それらを &lt;code&gt;i&lt;/code&gt; にインデックス &lt;code&gt;off&lt;/code&gt; から格納します。ストリームの終わりに達すると、 &lt;code&gt;java.io.EOFException&lt;/code&gt; がスローされます。</target>
         </trans-unit>
         <trans-unit id="095b38c7d3991703159cbec34f9fe060877fbe2a" translate="yes" xml:space="preserve">
           <source>Reads &lt;code&gt;len&lt;/code&gt; longs (signed 64-bit integers) from the stream according to the current byte order, and stores them into &lt;code&gt;l&lt;/code&gt; starting at index &lt;code&gt;off&lt;/code&gt;. If the end of the stream is reached, an &lt;code&gt;java.io.EOFException&lt;/code&gt; will be thrown.</source>
-          <target state="translated">現在のバイト順序に従って &lt;code&gt;len&lt;/code&gt; long（符号付き64ビット整数）をストリームから読み取り、それらを &lt;code&gt;l&lt;/code&gt; にインデックス &lt;code&gt;off&lt;/code&gt; から格納します。ストリームの終わりに達すると、 &lt;code&gt;java.io.EOFException&lt;/code&gt; がスローされます。</target>
+          <target state="translated">現在のバイト順に従って &lt;code&gt;len&lt;/code&gt; long（符号付き64ビット整数）をストリームから読み取り、それらを &lt;code&gt;l&lt;/code&gt; にインデックス &lt;code&gt;off&lt;/code&gt; から格納します。ストリームの終わりに達すると、 &lt;code&gt;java.io.EOFException&lt;/code&gt; がスローされます。</target>
         </trans-unit>
         <trans-unit id="c1ea8a946f035fd09719d69a45c62781a6893538" translate="yes" xml:space="preserve">
           <source>Reads &lt;code&gt;len&lt;/code&gt; shorts (signed 16-bit integers) from the stream according to the current byte order, and stores them into &lt;code&gt;s&lt;/code&gt; starting at index &lt;code&gt;off&lt;/code&gt;. If the end of the stream is reached, an &lt;code&gt;java.io.EOFException&lt;/code&gt; will be thrown.</source>
-          <target state="translated">現在のバイト順に従ってストリームから &lt;code&gt;len&lt;/code&gt; short（符号付き16ビット整数）を読み取り、インデックス &lt;code&gt;off&lt;/code&gt; から始まる &lt;code&gt;s&lt;/code&gt; に格納します。ストリームの終わりに達すると、 &lt;code&gt;java.io.EOFException&lt;/code&gt; がスローされます。</target>
+          <target state="translated">現在のバイト順に従ってストリームから &lt;code&gt;len&lt;/code&gt; ショート（符号付き16ビット整数）を読み取り、インデックス &lt;code&gt;off&lt;/code&gt; から始まる &lt;code&gt;s&lt;/code&gt; に格納します。ストリームの終わりに達すると、 &lt;code&gt;java.io.EOFException&lt;/code&gt; がスローされます。</target>
         </trans-unit>
         <trans-unit id="17c0e15d229b1c695565d276d5d35781dd0cfe52" translate="yes" xml:space="preserve">
           <source>Reads a 16 bit char.</source>
@@ -2937,7 +2937,7 @@
         </trans-unit>
         <trans-unit id="b3ad597eb94386dc0a5094d1f0e58738406a8403" translate="yes" xml:space="preserve">
           <source>Reads a &lt;code&gt;boolean&lt;/code&gt; from this file. This method reads a single byte from the file, starting at the current file pointer. A value of &lt;code&gt;0&lt;/code&gt; represents &lt;code&gt;false&lt;/code&gt;. Any other value represents &lt;code&gt;true&lt;/code&gt;. This method blocks until the byte is read, the end of the stream is detected, or an exception is thrown.</source>
-          <target state="translated">このファイルから &lt;code&gt;boolean&lt;/code&gt; を読み取ります。このメソッドは、現在のファイルポインターからファイルから1バイトを読み取ります。値 &lt;code&gt;0&lt;/code&gt; は &lt;code&gt;false&lt;/code&gt; を表します。その他の値は &lt;code&gt;true&lt;/code&gt; を表します。このメソッドは、バイトが読み取られるか、ストリームの終わりが検出されるか、または例外がスローされるまでブロックします。</target>
+          <target state="translated">このファイルから &lt;code&gt;boolean&lt;/code&gt; を読み取ります。このメソッドは、現在のファイルポインターから始めて、ファイルから1バイトを読み取ります。値 &lt;code&gt;0&lt;/code&gt; は &lt;code&gt;false&lt;/code&gt; を表します。その他の値は &lt;code&gt;true&lt;/code&gt; を表します。このメソッドは、バイトが読み取られるか、ストリームの終わりが検出されるか、または例外がスローされるまでブロックします。</target>
         </trans-unit>
         <trans-unit id="49492422b3f1efcee5e75993672c51039d65abeb" translate="yes" xml:space="preserve">
           <source>Reads a &lt;code&gt;double&lt;/code&gt; from this file. This method reads a &lt;code&gt;long&lt;/code&gt; value, starting at the current file pointer, as if by the &lt;code&gt;readLong&lt;/code&gt; method and then converts that &lt;code&gt;long&lt;/code&gt; to a &lt;code&gt;double&lt;/code&gt; using the &lt;code&gt;longBitsToDouble&lt;/code&gt; method in class &lt;code&gt;Double&lt;/code&gt;.</source>
@@ -2953,7 +2953,7 @@
         </trans-unit>
         <trans-unit id="b3b668ef6eaf52f812f2139d05c12a89aa81bc06" translate="yes" xml:space="preserve">
           <source>Reads a bitstring from the stream and returns it as a &lt;code&gt;long&lt;/code&gt;, with the first bit read becoming the most significant bit of the output. The read starts within the byte indicated by &lt;code&gt;getStreamPosition&lt;/code&gt;, at the bit given by &lt;code&gt;getBitOffset&lt;/code&gt;. The bit offset is advanced by &lt;code&gt;numBits&lt;/code&gt; and reduced modulo 8.</source>
-          <target state="translated">ストリームからビット文字列を読み取り、それを &lt;code&gt;long&lt;/code&gt; として返します。最初に読み取られたビットが出力の最上位ビットになります。読み取りは、 &lt;code&gt;getStreamPosition&lt;/code&gt; で示されるバイト内で、 &lt;code&gt;getBitOffset&lt;/code&gt; で指定されたビットから始まります。ビットオフセットは &lt;code&gt;numBits&lt;/code&gt; だけ進められ、8を法として削減されます。</target>
+          <target state="translated">ストリームからビット文字列を読み取り、それを &lt;code&gt;long&lt;/code&gt; として返します。最初に読み取ったビットが出力の最上位ビットになります。読み取りは、 &lt;code&gt;getStreamPosition&lt;/code&gt; で示されるバイト内で、 &lt;code&gt;getBitOffset&lt;/code&gt; で指定されたビットから始まります。ビットオフセットは &lt;code&gt;numBits&lt;/code&gt; だけ進められ、8を法として削減されます。</target>
         </trans-unit>
         <trans-unit id="f6807b1b43b0bc98ce5ef102de76663106a5ffbf" translate="yes" xml:space="preserve">
           <source>Reads a byte from the stream and returns a &lt;code&gt;boolean&lt;/code&gt; value of &lt;code&gt;true&lt;/code&gt; if it is nonzero, &lt;code&gt;false&lt;/code&gt; if it is zero.</source>
@@ -2965,7 +2965,7 @@
         </trans-unit>
         <trans-unit id="4578b4e1a987022a001e6d3aeb4799aed472a4a2" translate="yes" xml:space="preserve">
           <source>Reads a byte from the stream, and (conceptually) converts it to an int, masks it with &lt;code&gt;0xff&lt;/code&gt; in order to strip off any sign-extension bits, and returns it as a &lt;code&gt;byte&lt;/code&gt; value.</source>
-          <target state="translated">ストリームからバイトを読み取り、それを（概念的には）intに変換し、符号拡張ビットを取り除くために &lt;code&gt;0xff&lt;/code&gt; でマスクし、それを &lt;code&gt;byte&lt;/code&gt; 値として返します。</target>
+          <target state="translated">ストリームからバイトを読み取り、（概念的には）intに変換し、符号拡張ビットを取り除くために &lt;code&gt;0xff&lt;/code&gt; でマスクし、 &lt;code&gt;byte&lt;/code&gt; 値として返します。</target>
         </trans-unit>
         <trans-unit id="cd8033a2e674410e509e2be9148384b2795c18e6" translate="yes" xml:space="preserve">
           <source>Reads a byte of data from this file. The byte is returned as an integer in the range 0 to 255 (&lt;code&gt;0x00-0x0ff&lt;/code&gt;). This method blocks if no input is yet available.</source>
@@ -3005,7 +3005,7 @@
         </trans-unit>
         <trans-unit id="b932b78bb5c6b0d6280bc26384d5a58efafe41b5" translate="yes" xml:space="preserve">
           <source>Reads a file's attributes as a bulk operation. This method works in exactly the manner specified by the &lt;a href=&quot;../files#readAttributes-java.nio.file.Path-java.lang.Class-java.nio.file.LinkOption...-&quot;&gt;&lt;code&gt;Files.readAttributes(Path,Class,LinkOption[])&lt;/code&gt;&lt;/a&gt; method.</source>
-          <target state="translated">ファイルの属性を一括操作として読み取ります。このメソッドは、&lt;a href=&quot;../files#readAttributes-java.nio.file.Path-java.lang.Class-java.nio.file.LinkOption...-&quot;&gt; &lt;code&gt;Files.readAttributes(Path,Class,LinkOption[])&lt;/code&gt; &lt;/a&gt;メソッドで指定された方法とまったく同じように機能します。</target>
+          <target state="translated">ファイルの属性を一括操作として読み取ります。このメソッドは、&lt;a href=&quot;../files#readAttributes-java.nio.file.Path-java.lang.Class-java.nio.file.LinkOption...-&quot;&gt; &lt;code&gt;Files.readAttributes(Path,Class,LinkOption[])&lt;/code&gt; &lt;/a&gt;メソッドで指定されたとおりに機能します。</target>
         </trans-unit>
         <trans-unit id="1592d677500d47a7496fbf7cf7c24e60a0f64626" translate="yes" xml:space="preserve">
           <source>Reads a line of text. A line is considered to be terminated by any one of a line feed ('\n'), a carriage return ('\r'), or a carriage return followed immediately by a linefeed.</source>
@@ -3017,7 +3017,7 @@
         </trans-unit>
         <trans-unit id="926c4e28cf7f2fd89f82a819bd4ae4cfb1f01daa" translate="yes" xml:space="preserve">
           <source>Reads a property list (key and element pairs) from the input byte stream. The input stream is in a simple line-oriented format as specified in &lt;a href=&quot;properties#load-java.io.Reader-&quot;&gt;&lt;code&gt;load(Reader)&lt;/code&gt;&lt;/a&gt; and is assumed to use the ISO 8859-1 character encoding; that is each byte is one Latin1 character. Characters not in Latin1, and certain special characters, are represented in keys and elements using Unicode escapes as defined in section 3.3 of</source>
-          <target state="translated">入力バイトストリームからプロパティリスト（キーと要素のペア）を読み取ります。入力ストリームは、&lt;a href=&quot;properties#load-java.io.Reader-&quot;&gt; &lt;code&gt;load(Reader)&lt;/code&gt; で&lt;/a&gt;指定されている単純な行指向の形式で、ISO 8859-1文字エンコードを使用すると想定されています。つまり、各バイトは1つのLatin1文字です。 Latin1にない文字と特定の特殊文字は、セクション3.3で定義されているように、Unicodeエスケープを使用してキーと要素で表されます。</target>
+          <target state="translated">入力バイトストリームからプロパティリスト（キーと要素のペア）を読み取ります。入力ストリームは、&lt;a href=&quot;properties#load-java.io.Reader-&quot;&gt; &lt;code&gt;load(Reader)&lt;/code&gt; で&lt;/a&gt;指定されている単純な行指向の形式であり、ISO 8859-1文字エンコードを使用すると想定されています。つまり、各バイトは1つのLatin1文字です。 Latin1にない文字と特定の特殊文字は、セクション3.3で定義されているように、Unicodeエスケープを使用してキーと要素で表されます。</target>
         </trans-unit>
         <trans-unit id="d68cec262d01b6cd1b936438c2bea7c596fc1b57" translate="yes" xml:space="preserve">
           <source>Reads a property list (key and element pairs) from the input character stream in a simple line-oriented format.</source>
@@ -3033,7 +3033,7 @@
         </trans-unit>
         <trans-unit id="35e549682eb9ed09dae05d6f2af9490f7b5c555a" translate="yes" xml:space="preserve">
           <source>Reads a sequence of bytes from this channel into a subsequence of the given buffers. This operation, sometimes called a &lt;em&gt;scattering read&lt;/em&gt;, is often useful when implementing network protocols that group data into segments consisting of one or more fixed-length headers followed by a variable-length body. The &lt;code&gt;handler&lt;/code&gt; parameter is a completion handler that is invoked when the read operation completes (or fails). The result passed to the completion handler is the number of bytes read or &lt;code&gt;-1&lt;/code&gt; if no bytes could be read because the channel has reached end-of-stream.</source>
-          <target state="translated">このチャネルから一連のバイトを読み取り、指定されたバッファーのサブシーケンスに入れます。この操作は、&lt;em&gt;分散読み取り&lt;/em&gt;と呼ばれることもあり、データを1つ以上の固定長ヘッダーとそれに続く可変長ボディで構成されるセグメントにグループ化するネットワークプロトコルを実装する場合に役立ちます。 &lt;code&gt;handler&lt;/code&gt; パラメータは、読み出し動作が完了（または失敗）が呼び出された終了ハンドラです。完了ハンドラに渡される結果は、読み取られたバイト数、またはチャネルがストリームの終わりに達したためにバイトを読み取ることができなかった場合は &lt;code&gt;-1&lt;/code&gt; です。</target>
+          <target state="translated">このチャネルから指定されたバッファーのサブシーケンスにバイトのシーケンスを読み取ります。この操作は &quot; &lt;em&gt;スキャッター読み取り&quot;&lt;/em&gt;と呼ばれることもあり、データを1つ以上の固定長ヘッダーとそれに続く可変長ボディで構成されるセグメントにグループ化するネットワークプロトコルを実装する場合に役立ちます。 &lt;code&gt;handler&lt;/code&gt; パラメータは、読み出し動作が完了（または失敗）が呼び出された終了ハンドラです。完了ハンドラに渡される結果は、読み取られたバイト数、またはチャネルがストリームの終わりに達したためにバイトを読み取ることができなかった場合は &lt;code&gt;-1&lt;/code&gt; です。</target>
         </trans-unit>
         <trans-unit id="64c2b25f339b9db872fe5791a87f7b4bed65fb09" translate="yes" xml:space="preserve">
           <source>Reads a sequence of bytes from this channel into the given buffer, starting at the given file position.</source>
@@ -3053,11 +3053,11 @@
         </trans-unit>
         <trans-unit id="0748639ddd38978000d3a04df46b481908d8526e" translate="yes" xml:space="preserve">
           <source>Reads a set of file attributes as a bulk operation. This method works in exactly the manner specified by the &lt;a href=&quot;../files#readAttributes-java.nio.file.Path-java.lang.String-java.nio.file.LinkOption...-&quot;&gt;&lt;code&gt;Files.readAttributes(Path,String,LinkOption[])&lt;/code&gt;&lt;/a&gt; method.</source>
-          <target state="translated">ファイル属性のセットを一括操作として読み取ります。このメソッドは、&lt;a href=&quot;../files#readAttributes-java.nio.file.Path-java.lang.String-java.nio.file.LinkOption...-&quot;&gt; &lt;code&gt;Files.readAttributes(Path,String,LinkOption[])&lt;/code&gt; &lt;/a&gt;メソッドで指定されたとおりに機能します。</target>
+          <target state="translated">一連のファイル属性を一括操作として読み取ります。このメソッドは、&lt;a href=&quot;../files#readAttributes-java.nio.file.Path-java.lang.String-java.nio.file.LinkOption...-&quot;&gt; &lt;code&gt;Files.readAttributes(Path,String,LinkOption[])&lt;/code&gt; &lt;/a&gt;メソッドで指定されたとおりに機能します。</target>
         </trans-unit>
         <trans-unit id="0af92705938a248911d8fbc02e3a160e7bbc416e" translate="yes" xml:space="preserve">
           <source>Reads a signed 16-bit number from this file. The method reads two bytes from this file, starting at the current file pointer. If the two bytes read, in order, are &lt;code&gt;b1&lt;/code&gt; and &lt;code&gt;b2&lt;/code&gt;, where each of the two values is between &lt;code&gt;0&lt;/code&gt; and &lt;code&gt;255&lt;/code&gt;, inclusive, then the result is equal to:</source>
-          <target state="translated">このファイルから符号付き16ビット数値を読み取ります。このメソッドは、現在のファイルポインターから始めて、このファイルから2バイトを読み取ります。2つのバイトが読み取られた場合は、順番に、であり &lt;code&gt;b1&lt;/code&gt; 及び &lt;code&gt;b2&lt;/code&gt; 2つの値のそれぞれの間で、 &lt;code&gt;0&lt;/code&gt; と &lt;code&gt;255&lt;/code&gt; は、包括的、結果はに等しいです。</target>
+          <target state="translated">このファイルから署名付き16ビット数値を読み取ります。このメソッドは、現在のファイルポインタから始めて、このファイルから2バイトを読み取ります。読み取られた2バイトが順番に &lt;code&gt;b1&lt;/code&gt; と &lt;code&gt;b2&lt;/code&gt; であり、2つの値のそれぞれが &lt;code&gt;0&lt;/code&gt; から &lt;code&gt;255&lt;/code&gt; までの場合、結果は次のようになります。</target>
         </trans-unit>
         <trans-unit id="f3e7ee25d065ca136ed5701c6374c6b5813b68bc" translate="yes" xml:space="preserve">
           <source>Reads a signed 32-bit integer from this file. This method reads 4 bytes from the file, starting at the current file pointer. If the bytes read, in order, are &lt;code&gt;b1&lt;/code&gt;, &lt;code&gt;b2&lt;/code&gt;, &lt;code&gt;b3&lt;/code&gt;, and &lt;code&gt;b4&lt;/code&gt;, where &lt;code&gt;0&amp;nbsp;&amp;lt;=&amp;nbsp;b1, b2, b3, b4&amp;nbsp;&amp;lt;=&amp;nbsp;255&lt;/code&gt;, then the result is equal to:</source>
@@ -3065,11 +3065,11 @@
         </trans-unit>
         <trans-unit id="b82a2c96fdfdc05ac67f078445401c2afbcb8d13" translate="yes" xml:space="preserve">
           <source>Reads a signed 64-bit integer from this file. This method reads eight bytes from the file, starting at the current file pointer. If the bytes read, in order, are &lt;code&gt;b1&lt;/code&gt;, &lt;code&gt;b2&lt;/code&gt;, &lt;code&gt;b3&lt;/code&gt;, &lt;code&gt;b4&lt;/code&gt;, &lt;code&gt;b5&lt;/code&gt;, &lt;code&gt;b6&lt;/code&gt;, &lt;code&gt;b7&lt;/code&gt;, and &lt;code&gt;b8,&lt;/code&gt; where:</source>
-          <target state="translated">このファイルから符号付き64ビット整数を読み取ります。このメソッドは、現在のファイルポインターから始めて、ファイルから8バイトを読み取ります。読み取られたバイトが順番に、 &lt;code&gt;b1&lt;/code&gt; 、 &lt;code&gt;b2&lt;/code&gt; 、 &lt;code&gt;b3&lt;/code&gt; 、 &lt;code&gt;b4&lt;/code&gt; 、 &lt;code&gt;b5&lt;/code&gt; 、 &lt;code&gt;b6&lt;/code&gt; 、 &lt;code&gt;b7&lt;/code&gt; 、および &lt;code&gt;b8,&lt;/code&gt; 場合、</target>
+          <target state="translated">このファイルから符号付き64ビット整数を読み取ります。このメソッドは、現在のファイルポインターから始めて、ファイルから8バイトを読み取ります。読み取られたバイトが順番に &lt;code&gt;b1&lt;/code&gt; 、 &lt;code&gt;b2&lt;/code&gt; 、 &lt;code&gt;b3&lt;/code&gt; 、 &lt;code&gt;b4&lt;/code&gt; 、 &lt;code&gt;b5&lt;/code&gt; 、 &lt;code&gt;b6&lt;/code&gt; 、 &lt;code&gt;b7&lt;/code&gt; 、および &lt;code&gt;b8,&lt;/code&gt; 場合：</target>
         </trans-unit>
         <trans-unit id="c9ecca12f72d8870ff2fda2c5f3a43b8c2e6e244" translate="yes" xml:space="preserve">
           <source>Reads a signed eight-bit value from this file. This method reads a byte from the file, starting from the current file pointer. If the byte read is &lt;code&gt;b&lt;/code&gt;, where &lt;code&gt;0&amp;nbsp;&amp;lt;=&amp;nbsp;b&amp;nbsp;&amp;lt;=&amp;nbsp;255&lt;/code&gt;, then the result is:</source>
-          <target state="translated">このファイルから符号付き8ビット値を読み取ります。このメソッドは、現在のファイルポインターから始めて、ファイルからバイトを読み取ります。読み取られたバイトが &lt;code&gt;b&lt;/code&gt; であり、 &lt;code&gt;0&amp;nbsp;&amp;lt;=&amp;nbsp;b&amp;nbsp;&amp;lt;=&amp;nbsp;255&lt;/code&gt; 場合、結果は次のようになります。</target>
+          <target state="translated">このファイルから符号付き8ビット値を読み取ります。このメソッドは、現在のファイルポインターから始めて、ファイルから1バイトを読み取ります。読み取られたバイトが &lt;code&gt;b&lt;/code&gt; であり、 &lt;code&gt;0&amp;nbsp;&amp;lt;=&amp;nbsp;b&amp;nbsp;&amp;lt;=&amp;nbsp;255&lt;/code&gt; 場合、結果は次のようになります。</target>
         </trans-unit>
         <trans-unit id="002c6dff52a27798b2c36d6581de42e602b8372a" translate="yes" xml:space="preserve">
           <source>Reads a single bit from the stream and returns it as an &lt;code&gt;int&lt;/code&gt; with the value &lt;code&gt;0&lt;/code&gt; or &lt;code&gt;1&lt;/code&gt;. The bit offset is advanced by one and reduced modulo 8.</source>
@@ -3169,7 +3169,7 @@
         </trans-unit>
         <trans-unit id="05a197c65cb958ac2bbbd62164ac62e5cba1de01" translate="yes" xml:space="preserve">
           <source>Reads eight input bytes and returns a &lt;code&gt;double&lt;/code&gt; value. It does this by first constructing a &lt;code&gt;long&lt;/code&gt; value in exactly the manner of the &lt;code&gt;readLong&lt;/code&gt; method, then converting this &lt;code&gt;long&lt;/code&gt; value to a &lt;code&gt;double&lt;/code&gt; in exactly the manner of the method &lt;code&gt;Double.longBitsToDouble&lt;/code&gt;. This method is suitable for reading bytes written by the &lt;code&gt;writeDouble&lt;/code&gt; method of interface &lt;code&gt;DataOutput&lt;/code&gt;.</source>
-          <target state="translated">8つの入力バイトを読み取り、 &lt;code&gt;double&lt;/code&gt; 値を返します。これは、最初に &lt;code&gt;readLong&lt;/code&gt; メソッドとまったく同じ方法で &lt;code&gt;long&lt;/code&gt; 値を構築し、次にこの &lt;code&gt;long&lt;/code&gt; 値を &lt;code&gt;Double.longBitsToDouble&lt;/code&gt; メソッドとまったく同じ方法で &lt;code&gt;double&lt;/code&gt; に変換することによって行われます。このメソッドは、インターフェース &lt;code&gt;DataOutput&lt;/code&gt; の &lt;code&gt;writeDouble&lt;/code&gt; メソッドによって書き込まれたバイトを読み取るのに適しています。</target>
+          <target state="translated">8つの入力バイトを読み取り、 &lt;code&gt;double&lt;/code&gt; 値を返します。これは、最初の構築によりこれを行い &lt;code&gt;long&lt;/code&gt; とまったく同じ方法で値 &lt;code&gt;readLong&lt;/code&gt; この変換は、方法 &lt;code&gt;long&lt;/code&gt; に値を &lt;code&gt;double&lt;/code&gt; 方法とまったく同じ方法で &lt;code&gt;Double.longBitsToDouble&lt;/code&gt; 。このメソッドは、インターフェース &lt;code&gt;DataOutput&lt;/code&gt; の &lt;code&gt;writeDouble&lt;/code&gt; メソッドによって書き込まれたバイトを読み取るのに適しています。</target>
         </trans-unit>
         <trans-unit id="df246b0631c9173a65a63c421aebf7c13d7e5d77" translate="yes" xml:space="preserve">
           <source>Reads eight input bytes and returns a &lt;code&gt;long&lt;/code&gt; value. Let &lt;code&gt;a-h&lt;/code&gt; be the first through eighth bytes read. The value returned is:</source>
@@ -3197,11 +3197,11 @@
         </trans-unit>
         <trans-unit id="b45881cafb2e8fece58827d9083c556c3c370bf9" translate="yes" xml:space="preserve">
           <source>Reads from the current JAR file entry into an array of bytes. If &lt;code&gt;len&lt;/code&gt; is not zero, the method blocks until some input is available; otherwise, no bytes are read and &lt;code&gt;0&lt;/code&gt; is returned. If verification has been enabled, any invalid signature on the current entry will be reported at some point before the end of the entry is reached.</source>
-          <target state="translated">現在のJARファイルエントリからバイトの配列に読み込みます。場合 &lt;code&gt;len&lt;/code&gt; がゼロではない、方法ブロックいくつかの入力が可能になるまで。それ以外の場合、バイトは読み込まれず、 &lt;code&gt;0&lt;/code&gt; が返されます。検証が有効になっている場合、現在のエントリの無効な署名は、エントリの最後に到達する前のある時点で報告されます。</target>
+          <target state="translated">現在のJARファイルエントリからバイトの配列に読み込みます。場合 &lt;code&gt;len&lt;/code&gt; がゼロではない、方法ブロックいくつかの入力が可能になるまで。それ以外の場合、バイトは読み取られず、 &lt;code&gt;0&lt;/code&gt; が返されます。検証が有効になっている場合、現在のエントリの無効な署名は、エントリの最後に到達する前のある時点で報告されます。</target>
         </trans-unit>
         <trans-unit id="fada9b26f4d6b563eede6334856be6794690ccdd" translate="yes" xml:space="preserve">
           <source>Reads from the current ZIP entry into an array of bytes. If &lt;code&gt;len&lt;/code&gt; is not zero, the method blocks until some input is available; otherwise, no bytes are read and &lt;code&gt;0&lt;/code&gt; is returned.</source>
-          <target state="translated">現在のZIPエントリからバイトの配列に読み込みます。場合 &lt;code&gt;len&lt;/code&gt; がゼロではない、方法ブロックいくつかの入力が可能になるまで。それ以外の場合、バイトは読み込まれず、 &lt;code&gt;0&lt;/code&gt; が返されます。</target>
+          <target state="translated">現在のZIPエントリからバイトの配列に読み込みます。場合 &lt;code&gt;len&lt;/code&gt; がゼロではない、方法ブロックいくつかの入力が可能になるまで。それ以外の場合、バイトは読み取られず、 &lt;code&gt;0&lt;/code&gt; が返されます。</target>
         </trans-unit>
         <trans-unit id="55723c6114a9f586a8b497a514484f84f0165b54" translate="yes" xml:space="preserve">
           <source>Reads from the stream &lt;code&gt;in&lt;/code&gt; a representation of a Unicode character string encoded in &lt;a href=&quot;datainput#modified-utf-8&quot;&gt;modified UTF-8&lt;/a&gt; format; this string of characters is then returned as a &lt;code&gt;String&lt;/code&gt;. The details of the modified UTF-8 representation are exactly the same as for the &lt;code&gt;readUTF&lt;/code&gt; method of &lt;code&gt;DataInput&lt;/code&gt;.</source>
@@ -3213,7 +3213,7 @@
         </trans-unit>
         <trans-unit id="9b18fe8257da21ade6ed6bae8590de03ed6fe7b4" translate="yes" xml:space="preserve">
           <source>Reads in a line that has been terminated by a \n, \r, \r\n or EOF.</source>
-          <target state="translated">\ n、\ r、\ r \ n、またはEOFで終了した行を読み取ります。</target>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="65be48bfb2ef8bf93750816e35b3a5208a30319b" translate="yes" xml:space="preserve">
           <source>Reads in a string from this file. The string has been encoded using a &lt;a href=&quot;datainput#modified-utf-8&quot;&gt;modified UTF-8&lt;/a&gt; format.</source>
@@ -3233,7 +3233,7 @@
         </trans-unit>
         <trans-unit id="e9010392c24b0830c015274d41d5a24d39389a2e" translate="yes" xml:space="preserve">
           <source>Reads into an array of bytes. If &lt;code&gt;len&lt;/code&gt; is not zero, the method blocks until some input is available; otherwise, no bytes are read and &lt;code&gt;0&lt;/code&gt; is returned.</source>
-          <target state="translated">バイトの配列に読み込みます。場合 &lt;code&gt;len&lt;/code&gt; がゼロではない、方法ブロックいくつかの入力が可能になるまで。それ以外の場合、バイトは読み込まれず、 &lt;code&gt;0&lt;/code&gt; が返されます。</target>
+          <target state="translated">バイトの配列に読み込みます。場合 &lt;code&gt;len&lt;/code&gt; がゼロではない、方法ブロックいくつかの入力が可能になるまで。それ以外の場合、バイトは読み取られず、 &lt;code&gt;0&lt;/code&gt; が返されます。</target>
         </trans-unit>
         <trans-unit id="87cf728fa2503106a0f6c82fa87731c172d3b3ae" translate="yes" xml:space="preserve">
           <source>Reads into an array of bytes. This method will block until some input is available.</source>
@@ -3253,7 +3253,7 @@
         </trans-unit>
         <trans-unit id="886b0906c76cc862269e0b27484adf80c381152f" translate="yes" xml:space="preserve">
           <source>Reads some bytes from an input stream and stores them into the buffer array &lt;code&gt;b&lt;/code&gt;. The number of bytes read is equal to the length of &lt;code&gt;b&lt;/code&gt;.</source>
-          <target state="translated">入力ストリームからいくつかのバイトを読み取り、それらをバッファー配列 &lt;code&gt;b&lt;/code&gt; に格納します。読み込まれるバイト数は、 &lt;code&gt;b&lt;/code&gt; の長さと同じです。</target>
+          <target state="translated">入力ストリームからいくつかのバイトを読み込み、それらをバッファ配列 &lt;code&gt;b&lt;/code&gt; に格納します。読み込まれるバイト数は &lt;code&gt;b&lt;/code&gt; の長さに等しい。</target>
         </trans-unit>
         <trans-unit id="05212946d41dd8a8cd5a956fb6fe04e61c9eb49e" translate="yes" xml:space="preserve">
           <source>Reads some number of bytes from the audio input stream and stores them into the buffer array &lt;code&gt;b&lt;/code&gt;. The number of bytes actually read is returned as an integer. This method blocks until input data is available, the end of the stream is detected, or an exception is thrown.</source>
@@ -3265,7 +3265,7 @@
         </trans-unit>
         <trans-unit id="a3675ce4f8d65316e7199fbb90a696b6a86e398b" translate="yes" xml:space="preserve">
           <source>Reads some number of bytes from the input stream and stores them into the buffer array &lt;code&gt;b&lt;/code&gt;. The number of bytes actually read is returned as an integer. This method blocks until input data is available, end of file is detected, or an exception is thrown.</source>
-          <target state="translated">入力ストリームからいくつかのバイトを読み取り、それらをバッファー配列 &lt;code&gt;b&lt;/code&gt; に格納します。実際に読み取られたバイト数は整数として返されます。このメソッドは、入力データが利用可能になるか、ファイルの終わりが検出されるか、または例外がスローされるまでブロックします。</target>
+          <target state="translated">入力ストリームからいくつかのバイトを読み取り、それらをバッファ配列 &lt;code&gt;b&lt;/code&gt; に格納します。実際に読み取られたバイト数は整数として返されます。このメソッドは、入力データが利用可能になるか、ファイルの終わりが検出されるか、または例外がスローされるまでブロックします。</target>
         </trans-unit>
         <trans-unit id="8dc7e390a75af2b74e41801d22d0deecc23ab148" translate="yes" xml:space="preserve">
           <source>Reads text from a character-input stream, buffering characters so as to provide for the efficient reading of characters, arrays, and lines.</source>
@@ -3297,7 +3297,7 @@
         </trans-unit>
         <trans-unit id="02127a2c73172c2d7c7c034b3a7b55b9f41e729f" translate="yes" xml:space="preserve">
           <source>Reads the image indexed by &lt;code&gt;imageIndex&lt;/code&gt; and returns an &lt;code&gt;IIOImage&lt;/code&gt; containing the image, thumbnails, and associated image metadata, using a supplied &lt;code&gt;ImageReadParam&lt;/code&gt;.</source>
-          <target state="translated">指定された &lt;code&gt;ImageReadParam&lt;/code&gt; を使用して、 &lt;code&gt;IIOImage&lt;/code&gt; によってインデックスが付けられた画像を読み取り、画像、サムネイル、および関連する画像メタデータを含む &lt;code&gt;imageIndex&lt;/code&gt; を返します。</target>
+          <target state="translated">提供された &lt;code&gt;ImageReadParam&lt;/code&gt; を使用して、 &lt;code&gt;IIOImage&lt;/code&gt; によってインデックスが付けられた画像を読み取り、画像、サムネイル、および関連する画像メタデータを含む &lt;code&gt;imageIndex&lt;/code&gt; を返します。</target>
         </trans-unit>
         <trans-unit id="8d0aaa87ec026dfee6095a605ca0111febc87adf" translate="yes" xml:space="preserve">
           <source>Reads the image indexed by &lt;code&gt;imageIndex&lt;/code&gt; and returns it as a complete &lt;code&gt;BufferedImage&lt;/code&gt;, using a default &lt;code&gt;ImageReadParam&lt;/code&gt;. This is a convenience method that calls &lt;code&gt;read(imageIndex, null)&lt;/code&gt;.</source>
@@ -3345,7 +3345,7 @@
         </trans-unit>
         <trans-unit id="e9725716a0540587b83747a4ab433d513f287d7a" translate="yes" xml:space="preserve">
           <source>Reads the next character of data from this piped stream. If no character is available because the end of the stream has been reached, the value &lt;code&gt;-1&lt;/code&gt; is returned. This method blocks until input data is available, the end of the stream is detected, or an exception is thrown.</source>
-          <target state="translated">このパイプで連結されたストリームからデータの次の文字を読み取ります。ストリームの終わりに達したために使用できる文字がない場合は、値 &lt;code&gt;-1&lt;/code&gt; が返されます。このメソッドは、入力データが利用可能になるか、ストリームの終わりが検出されるか、または例外がスローされるまでブロックします。</target>
+          <target state="translated">このパイプで連結されたストリームからデータの次の文字を読み取ります。ストリームの終わりに達したために使用できる文字がない場合、値 &lt;code&gt;-1&lt;/code&gt; が返されます。このメソッドは、入力データが利用可能になるか、ストリームの終わりが検出されるか、または例外がスローされるまでブロックします。</target>
         </trans-unit>
         <trans-unit id="65ef7ce4b2e127fda2a96c0cfd87fbeb84237de6" translate="yes" xml:space="preserve">
           <source>Reads the next eight bytes at this buffer's current position, composing them into a double value according to the current byte order, and then increments the position by eight.</source>
@@ -3365,7 +3365,7 @@
         </trans-unit>
         <trans-unit id="bf84e47f12a6db2ccb0e648a3ddae73dc6f3a8c5" translate="yes" xml:space="preserve">
           <source>Reads the next line of text from the input stream. It reads successive bytes, converting each byte separately into a character, until it encounters a line terminator or end of file; the characters read are then returned as a &lt;code&gt;String&lt;/code&gt;. Note that because this method processes bytes, it does not support input of the full Unicode character set.</source>
-          <target state="translated">入力ストリームから次のテキスト行を読み取ります。行末記号またはファイルの終わりに到達するまで、連続するバイトを読み取り、各バイトを個別に文字に変換します。読み込まれた &lt;code&gt;String&lt;/code&gt; は、文字列として返されます。このメソッドはバイトを処理するため、完全なUnicode文字セットの入力をサポートしないことに注意してください。</target>
+          <target state="translated">入力ストリームからテキストの次の行を読み取ります。行末記号またはファイルの終わりに到達するまで、連続するバイトを読み取り、各バイトを個別に文字に変換します。読み込まれた &lt;code&gt;String&lt;/code&gt; はStringとして返されます。このメソッドはバイトを処理するため、完全なUnicode文字セットの入力をサポートしないことに注意してください。</target>
         </trans-unit>
         <trans-unit id="e46a7201004756eacd6ba9ef8246bac6ed58122d" translate="yes" xml:space="preserve">
           <source>Reads the next line of text from this file. This method successively reads bytes from the file, starting at the current file pointer, until it reaches a line terminator or the end of the file. Each byte is converted into a character by taking the byte's value for the lower eight bits of the character and setting the high eight bits of the character to zero. This method does not, therefore, support the full Unicode character set.</source>
@@ -3437,7 +3437,7 @@
         </trans-unit>
         <trans-unit id="55d92149b2db4fd4eb66ca182c59ab7d1fa1f719" translate="yes" xml:space="preserve">
           <source>Reads uncompressed data into an array of bytes. If &lt;code&gt;len&lt;/code&gt; is not zero, the method will block until some input can be decompressed; otherwise, no bytes are read and &lt;code&gt;0&lt;/code&gt; is returned.</source>
-          <target state="translated">圧縮されていないデータをバイトの配列に読み取ります。場合 &lt;code&gt;len&lt;/code&gt; がゼロではない、いくつかの入力を解凍できるまで、方法はブロックされます。それ以外の場合、バイトは読み込まれず、 &lt;code&gt;0&lt;/code&gt; が返されます。</target>
+          <target state="translated">非圧縮データをバイトの配列に読み取ります。場合 &lt;code&gt;len&lt;/code&gt; がゼロではない、いくつかの入力を解凍できるまで、方法はブロックされます。それ以外の場合、バイトは読み取られず、 &lt;code&gt;0&lt;/code&gt; が返されます。</target>
         </trans-unit>
         <trans-unit id="f904e06006d73d851a28c0dfd9e0beba436b46ee" translate="yes" xml:space="preserve">
           <source>Reads up to &lt;code&gt;b.length&lt;/code&gt; bytes from the stream, and stores them into &lt;code&gt;b&lt;/code&gt; starting at index 0. The number of bytes read is returned. If no bytes can be read because the end of the stream has been reached, -1 is returned.</source>
@@ -3445,7 +3445,7 @@
         </trans-unit>
         <trans-unit id="24443f9b609e8648a306c472a6245731f6cb7c54" translate="yes" xml:space="preserve">
           <source>Reads up to &lt;code&gt;b.length&lt;/code&gt; bytes of data from this file into an array of bytes. This method blocks until at least one byte of input is available.</source>
-          <target state="translated">このファイルからバイトの配列に最大 &lt;code&gt;b.length&lt;/code&gt; バイトのデータを読み取ります。このメソッドは、少なくとも1バイトの入力が利用可能になるまでブロックします。</target>
+          <target state="translated">このファイルから最大 &lt;code&gt;b.length&lt;/code&gt; バイトのデータをバイトの配列に読み取ります。このメソッドは、少なくとも1バイトの入力が使用可能になるまでブロックします。</target>
         </trans-unit>
         <trans-unit id="3db2879b22d02234c05211d4868ce392acbd951b" translate="yes" xml:space="preserve">
           <source>Reads up to &lt;code&gt;b.length&lt;/code&gt; bytes of data from this input stream into an array of bytes.</source>
@@ -3461,7 +3461,7 @@
         </trans-unit>
         <trans-unit id="2e5fed502ba7b69e703a568dcd22488760781f93" translate="yes" xml:space="preserve">
           <source>Reads up to &lt;code&gt;len&lt;/code&gt; bytes from the stream, and modifies the supplied &lt;code&gt;IIOByteBuffer&lt;/code&gt; to indicate the byte array, offset, and length where the data may be found. The caller should not attempt to modify the data found in the &lt;code&gt;IIOByteBuffer&lt;/code&gt;.</source>
-          <target state="translated">ストリームから最大 &lt;code&gt;len&lt;/code&gt; バイトを読み取り、指定された &lt;code&gt;IIOByteBuffer&lt;/code&gt; を変更して、データが見つかるバイト配列、オフセット、および長さを示します。呼び出し元は、 &lt;code&gt;IIOByteBuffer&lt;/code&gt; にあるデータを変更しようとしないでください。</target>
+          <target state="translated">ストリームから最大 &lt;code&gt;len&lt;/code&gt; バイトを読み取り、提供された &lt;code&gt;IIOByteBuffer&lt;/code&gt; を変更して、データが見つかるバイト配列、オフセット、および長さを示します。呼び出し元は、 &lt;code&gt;IIOByteBuffer&lt;/code&gt; にあるデータを変更しようとしないでください。</target>
         </trans-unit>
         <trans-unit id="a67f451b5888e75711eb4dcc93d201af6fbb04c4" translate="yes" xml:space="preserve">
           <source>Reads up to &lt;code&gt;len&lt;/code&gt; bytes from the stream, and stores them into &lt;code&gt;b&lt;/code&gt; starting at index &lt;code&gt;off&lt;/code&gt;. If no bytes can be read because the end of the stream has been reached, &lt;code&gt;-1&lt;/code&gt; is returned.</source>
@@ -3473,7 +3473,7 @@
         </trans-unit>
         <trans-unit id="5e9fa843e5ef48d58c0bd72e2ffeb9843df9004e" translate="yes" xml:space="preserve">
           <source>Reads up to &lt;code&gt;len&lt;/code&gt; bytes of data from the contained input stream into an array of bytes. An attempt is made to read as many as &lt;code&gt;len&lt;/code&gt; bytes, but a smaller number may be read, possibly zero. The number of bytes actually read is returned as an integer.</source>
-          <target state="translated">含まれている入力ストリームから最大 &lt;code&gt;len&lt;/code&gt; バイトのデータをバイトの配列に読み取ります。 &lt;code&gt;len&lt;/code&gt; バイトもの読み取りが試行されますが、読み取られる可能性のある数値はそれよりも小さい（ゼロの場合もある）場合があります。実際に読み取られたバイト数は整数として返されます。</target>
+          <target state="translated">含まれている入力ストリームから最大 &lt;code&gt;len&lt;/code&gt; バイトのデータをバイトの配列に読み取ります。 &lt;code&gt;len&lt;/code&gt; バイトの読み取りが試行されますが、読み取られる可能性のある数値はそれよりも小さい（ゼロの場合もある）場合があります。実際に読み取られたバイト数は整数として返されます。</target>
         </trans-unit>
         <trans-unit id="cbc8525d616240c977b9e1204216cd5be39f3900" translate="yes" xml:space="preserve">
           <source>Reads up to &lt;code&gt;len&lt;/code&gt; bytes of data from the input stream into an array of bytes. An attempt is made to read as many as &lt;code&gt;len&lt;/code&gt; bytes, but a smaller number may be read. The number of bytes actually read is returned as an integer.</source>
@@ -3481,7 +3481,7 @@
         </trans-unit>
         <trans-unit id="ece8e9e131fd20a4ddee788b66ffe5cb3e2b4bf5" translate="yes" xml:space="preserve">
           <source>Reads up to &lt;code&gt;len&lt;/code&gt; bytes of data from this file into an array of bytes. This method blocks until at least one byte of input is available.</source>
-          <target state="translated">このファイルから最大 &lt;code&gt;len&lt;/code&gt; バイトのデータをバイトの配列に読み取ります。このメソッドは、少なくとも1バイトの入力が利用可能になるまでブロックします。</target>
+          <target state="translated">このファイルから最大 &lt;code&gt;len&lt;/code&gt; バイトのデータをバイトの配列に読み取ります。このメソッドは、少なくとも1バイトの入力が使用可能になるまでブロックします。</target>
         </trans-unit>
         <trans-unit id="31999687bbc22b419a94a32cc7e8eb8e8d890768" translate="yes" xml:space="preserve">
           <source>Reads up to &lt;code&gt;len&lt;/code&gt; bytes of data from this input stream into an array of bytes.</source>
@@ -3489,11 +3489,11 @@
         </trans-unit>
         <trans-unit id="33d8ae95d39bfecaf687e6d092b99bec731be078" translate="yes" xml:space="preserve">
           <source>Reads up to &lt;code&gt;len&lt;/code&gt; bytes of data from this input stream into an array of bytes. If &lt;code&gt;len&lt;/code&gt; is not zero, the method blocks until at least 1 byte of input is available; otherwise, no bytes are read and &lt;code&gt;0&lt;/code&gt; is returned.</source>
-          <target state="translated">この入力ストリームから最大 &lt;code&gt;len&lt;/code&gt; バイトのデータをバイトの配列に読み取ります。場合 &lt;code&gt;len&lt;/code&gt; がゼロではない、方法ブロック入力の少なくとも1つのバイトが利用可能になるまで。それ以外の場合、バイトは読み込まれず、 &lt;code&gt;0&lt;/code&gt; が返されます。</target>
+          <target state="translated">この入力ストリームから最大 &lt;code&gt;len&lt;/code&gt; バイトのデータをバイトの配列に読み取ります。場合 &lt;code&gt;len&lt;/code&gt; がゼロではない、方法ブロック入力の少なくとも1つのバイトが利用可能になるまで。それ以外の場合、バイトは読み取られず、 &lt;code&gt;0&lt;/code&gt; が返されます。</target>
         </trans-unit>
         <trans-unit id="8908063f28e7b57bfecc074f645b5431feb0b969" translate="yes" xml:space="preserve">
           <source>Reads up to &lt;code&gt;len&lt;/code&gt; bytes of data from this input stream into an array of bytes. If &lt;code&gt;len&lt;/code&gt; is not zero, the method blocks until some input is available; otherwise, no bytes are read and &lt;code&gt;0&lt;/code&gt; is returned.</source>
-          <target state="translated">この入力ストリームから最大 &lt;code&gt;len&lt;/code&gt; バイトのデータをバイトの配列に読み取ります。場合 &lt;code&gt;len&lt;/code&gt; がゼロではない、方法ブロックいくつかの入力が可能になるまで。それ以外の場合、バイトは読み込まれず、 &lt;code&gt;0&lt;/code&gt; が返されます。</target>
+          <target state="translated">この入力ストリームから最大 &lt;code&gt;len&lt;/code&gt; バイトのデータをバイトの配列に読み取ります。場合 &lt;code&gt;len&lt;/code&gt; がゼロではない、方法ブロックいくつかの入力が可能になるまで。それ以外の場合、バイトは読み取られず、 &lt;code&gt;0&lt;/code&gt; が返されます。</target>
         </trans-unit>
         <trans-unit id="1cae76c4ee7102e95a73382aae3ab8016b51a0cf" translate="yes" xml:space="preserve">
           <source>Reads up to &lt;code&gt;len&lt;/code&gt; bytes of data from this input stream into an array of bytes. This method blocks until some input is available.</source>
@@ -3505,11 +3505,11 @@
         </trans-unit>
         <trans-unit id="0b2d07645bd2c10c63a853cf9571b12e1dc88f5d" translate="yes" xml:space="preserve">
           <source>Reads up to &lt;code&gt;len&lt;/code&gt; bytes of data from this input stream into an array of bytes. This method first reads any pushed-back bytes; after that, if fewer than &lt;code&gt;len&lt;/code&gt; bytes have been read then it reads from the underlying input stream. If &lt;code&gt;len&lt;/code&gt; is not zero, the method blocks until at least 1 byte of input is available; otherwise, no bytes are read and &lt;code&gt;0&lt;/code&gt; is returned.</source>
-          <target state="translated">この入力ストリームから最大 &lt;code&gt;len&lt;/code&gt; バイトのデータをバイトの配列に読み取ります。このメソッドは最初に、プッシュバックされたバイトを読み取ります。その後、読み取られたバイト数が &lt;code&gt;len&lt;/code&gt; バイトより少ない場合は、基礎となる入力ストリームから読み取ります。場合 &lt;code&gt;len&lt;/code&gt; がゼロではない、方法ブロック入力の少なくとも1つのバイトが利用可能になるまで。それ以外の場合、バイトは読み込まれず、 &lt;code&gt;0&lt;/code&gt; が返されます。</target>
+          <target state="translated">この入力ストリームから最大 &lt;code&gt;len&lt;/code&gt; バイトのデータをバイトの配列に読み取ります。このメソッドは最初にプッシュバックされたバイトを読み取ります。その後、読み取られたバイト数が &lt;code&gt;len&lt;/code&gt; バイト未満の場合は、基礎となる入力ストリームから読み取ります。場合 &lt;code&gt;len&lt;/code&gt; がゼロではない、方法ブロック入力の少なくとも1つのバイトが利用可能になるまで。それ以外の場合、バイトは読み取られず、 &lt;code&gt;0&lt;/code&gt; が返されます。</target>
         </trans-unit>
         <trans-unit id="6f0cb0c480d296825dccbd2398134d477519500a" translate="yes" xml:space="preserve">
           <source>Reads up to &lt;code&gt;len&lt;/code&gt; bytes of data from this piped input stream into an array of bytes. Less than &lt;code&gt;len&lt;/code&gt; bytes will be read if the end of the data stream is reached or if &lt;code&gt;len&lt;/code&gt; exceeds the pipe's buffer size. If &lt;code&gt;len &lt;/code&gt; is zero, then no bytes are read and 0 is returned; otherwise, the method blocks until at least 1 byte of input is available, end of the stream has been detected, or an exception is thrown.</source>
-          <target state="translated">このパイプ入力ストリームから最大 &lt;code&gt;len&lt;/code&gt; バイトのデータをバイトの配列に読み取ります。データストリームの最後に到達した場合、または &lt;code&gt;len&lt;/code&gt; がパイプのバッファサイズを超えた場合は、 &lt;code&gt;len&lt;/code&gt; バイト未満が読み取られます。場合 &lt;code&gt;len &lt;/code&gt; がゼロであり、その後、何バイトが読み取られず、0が返されます。それ以外の場合、メソッドは、少なくとも1バイトの入力が利用可能になるか、ストリームの終わりが検出されるか、または例外がスローされるまでブロックします。</target>
+          <target state="translated">このパイプされた入力ストリームから最大 &lt;code&gt;len&lt;/code&gt; バイトのデータをバイトの配列に読み取ります。データストリームの最後に到達した場合、または &lt;code&gt;len&lt;/code&gt; がパイプのバッファサイズを超えた場合は、 &lt;code&gt;len&lt;/code&gt; バイト未満が読み取られます。場合 &lt;code&gt;len &lt;/code&gt; がゼロであり、その後、何バイトが読み取られず、0が返されます。それ以外の場合、メソッドは、少なくとも1バイトの入力が利用可能になるか、ストリームの終わりが検出されるか、または例外がスローされるまでブロックします。</target>
         </trans-unit>
         <trans-unit id="f47c19f939a1ce234b686c7f8031b494d0b90003" translate="yes" xml:space="preserve">
           <source>Reads up to &lt;code&gt;len&lt;/code&gt; bytes of data into an array of bytes from this input stream. If &lt;code&gt;pos&lt;/code&gt; equals &lt;code&gt;count&lt;/code&gt;, then &lt;code&gt;-1&lt;/code&gt; is returned to indicate end of file. Otherwise, the number &lt;code&gt;k&lt;/code&gt; of bytes read is equal to the smaller of &lt;code&gt;len&lt;/code&gt; and &lt;code&gt;count-pos&lt;/code&gt;. If &lt;code&gt;k&lt;/code&gt; is positive, then bytes &lt;code&gt;buf[pos]&lt;/code&gt; through &lt;code&gt;buf[pos+k-1]&lt;/code&gt; are copied into &lt;code&gt;b[off]&lt;/code&gt; through &lt;code&gt;b[off+k-1]&lt;/code&gt; in the manner performed by &lt;code&gt;System.arraycopy&lt;/code&gt;. The value &lt;code&gt;k&lt;/code&gt; is added into &lt;code&gt;pos&lt;/code&gt; and &lt;code&gt;k&lt;/code&gt; is returned.</source>
@@ -3517,7 +3517,7 @@
         </trans-unit>
         <trans-unit id="4e43eb513586a0a94d0f968a0bf875e4609863c7" translate="yes" xml:space="preserve">
           <source>Reads up to &lt;code&gt;len&lt;/code&gt; characters of data from this piped stream into an array of characters. Less than &lt;code&gt;len&lt;/code&gt; characters will be read if the end of the data stream is reached or if &lt;code&gt;len&lt;/code&gt; exceeds the pipe's buffer size. This method blocks until at least one character of input is available.</source>
-          <target state="translated">このパイプされたストリームから最大 &lt;code&gt;len&lt;/code&gt; 文字のデータを文字の配列に読み取ります。データストリームの最後に到達した場合、または &lt;code&gt;len&lt;/code&gt; がパイプのバッファサイズを超えた場合は、 &lt;code&gt;len&lt;/code&gt; 未満の文字が読み取られます。このメソッドは、少なくとも1文字の入力が利用可能になるまでブロックします。</target>
+          <target state="translated">このパイプされたストリームから最大 &lt;code&gt;len&lt;/code&gt; 文字のデータを文字の配列に読み取ります。データストリームの終わりに達した場合、または &lt;code&gt;len&lt;/code&gt; がパイプのバッファサイズを超えた場合は、 &lt;code&gt;len&lt;/code&gt; 未満の文字が読み取られます。このメソッドは、少なくとも1文字の入力が利用可能になるまでブロックします。</target>
         </trans-unit>
         <trans-unit id="a85c3df939cdd41dacc07de90d273b21409a9f65" translate="yes" xml:space="preserve">
           <source>Reads up to a specified maximum number of bytes of data from the audio stream, putting them into the given byte array.</source>
@@ -3677,7 +3677,7 @@
         </trans-unit>
         <trans-unit id="ed1b3d5271ce5dcd5871fe43802d224753b0a11a" translate="yes" xml:space="preserve">
           <source>Reduction parallellizes well because the implementation can operate on subsets of the data in parallel, and then combine the intermediate results to get the final correct answer. (Even if the language had a &quot;parallel for-each&quot; construct, the mutative accumulation approach would still required the developer to provide thread-safe updates to the shared accumulating variable &lt;code&gt;sum&lt;/code&gt;, and the required synchronization would then likely eliminate any performance gain from parallelism.) Using &lt;code&gt;reduce()&lt;/code&gt; instead removes all of the burden of parallelizing the reduction operation, and the library can provide an efficient parallel implementation with no additional synchronization required.</source>
-          <target state="translated">実装はデータのサブセットを並列に操作し、中間結果を組み合わせて最終的な正しい答えを得ることができるため、削減は並列化に適しています。 （言語に「並列for-each」構成があったとしても、変更累積累積アプローチでは、開発者が共有累積変数 &lt;code&gt;sum&lt;/code&gt; にスレッドセーフな更新を提供する必要があり、必要な同期によって並列処理によるパフォーマンスの向上が排除される可能性があります。 。）代わりに &lt;code&gt;reduce()&lt;/code&gt; ）を使用すると、縮小操作を並列化する負担がすべて取り除かれ、ライブラリは追加の同期を必要とせずに効率的な並列実装を提供できます。</target>
+          <target state="translated">実装はデータのサブセットを並列に操作し、中間結果を組み合わせて最終的な正しい答えを得ることができるため、削減は並列化に適しています。 （言語に「並列for-each」構造があったとしても、変更累積累積アプローチでは、開発者が共有累積変数 &lt;code&gt;sum&lt;/code&gt; にスレッドセーフな更新を提供する必要があり、必要な同期により、並列処理によるパフォーマンスの向上がほとんどなくなるでしょう。 。）代わりに &lt;code&gt;reduce()&lt;/code&gt; ）を使用すると、削減操作の並列化の負担がすべて取り除かれ、ライブラリは追加の同期を必要とせずに効率的な並列実装を提供できます。</target>
         </trans-unit>
         <trans-unit id="13a80d792c9afc33ac47fb6d4bbdf21dca245266" translate="yes" xml:space="preserve">
           <source>Reduction, concurrency, and ordering</source>
@@ -3689,7 +3689,7 @@
         </trans-unit>
         <trans-unit id="c335311391f219922a3903e7d3c36018030862d8" translate="yes" xml:space="preserve">
           <source>Reentrancy also allows downgrading from the write lock to a read lock, by acquiring the write lock, then the read lock and then releasing the write lock. However, upgrading from a read lock to the write lock is &lt;b&gt;not&lt;/b&gt; possible.</source>
-          <target state="translated">再入可能では、書き込みロックを取得してから読み取りロックを取得してから書き込みロックを解放することにより、書き込みロックから読み取りロックにダウングレードすることもできます。ただし、読み取りロックから書き込みロックにアップグレードすることは&lt;b&gt;できません&lt;/b&gt;。</target>
+          <target state="translated">再入可能では、書き込みロックを取得してから読み取りロックを取得してから書き込みロックを解放することにより、書き込みロックから読み取りロックにダウングレードすることもできます。ただし、読み取りロックから書き込みロックへのアップグレードは&lt;b&gt;できません&lt;/b&gt;。</target>
         </trans-unit>
         <trans-unit id="ee713e02a318f2e10b8332ea62dfcdb8d7f8f898" translate="yes" xml:space="preserve">
           <source>ReentrantLock</source>

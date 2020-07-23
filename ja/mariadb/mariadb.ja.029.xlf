@@ -105,7 +105,7 @@
         </trans-unit>
         <trans-unit id="caaf80c862cc5f250b2b8eff7b79924b96eb28e4" translate="yes" xml:space="preserve">
           <source>Maturity is specified as &amp;ldquo;gamma&amp;rdquo; but this does not mean much because no precise definition of maturity exists. Because CONNECT handles many table types, each type has a different maturity depending on whether it is old and well-tested, less well-tested or newly implemented. This will be indicated for all data types.</source>
-          <target state="translated">成熟度は「ガンマ」として指定されますが、成熟度の正確な定義が存在しないため、これはあまり意味がありません。CONNECTは多くのテーブルタイプを処理するため、古く、十分にテストされているか、十分にテストされていないか、新しく実装されたかによって、それぞれのタイプの成熟度が異なります。これは、すべてのデータ型で示されます。</target>
+          <target state="translated">成熟度は「ガンマ」として指定されますが、成熟度の正確な定義が存在しないため、これはあまり意味がありません。CONNECTは多くのテーブルタイプを処理するため、古く、十分にテストされているか、十分にテストされていないか、新しく実装されたかによって、各タイプの成熟度が異なります。これは、すべてのデータ型で示されます。</target>
         </trans-unit>
         <trans-unit id="0c87784f3cf65a6322ed9610cfc679044fb74c23" translate="yes" xml:space="preserve">
           <source>Max &lt;a href=&quot;../relay-log/index&quot;&gt;relay log&lt;/a&gt; size for this connection. Returned with &lt;code&gt;SHOW ALL SLAVES STATUS&lt;/code&gt; only.</source>
@@ -285,7 +285,7 @@
         </trans-unit>
         <trans-unit id="cc8d98cbdaa52422dfa81e73f254dca91fb811e0" translate="yes" xml:space="preserve">
           <source>Maximum length of the result. For integers, the default is 21. For strings, the length of the longest argument. For reals, the default is 13 plus the number of decimals indicated by &lt;em&gt;initid-&amp;gt;decimals&lt;/em&gt;. The length includes any signs or decimal points. Can also be set to 65KB or 16MB in order to return a BLOB. The memory remains unallocated, but this is used to decide on the data type to use if the data needs to be temporarily stored.</source>
-          <target state="translated">結果の最大長。整数の場合、デフォルトは21です。文字列の場合、最も長い引数の長さ。実数の場合、デフォルトは13 + &lt;em&gt;initid-&amp;gt; decimalsで&lt;/em&gt;示される小数点以下の桁数です。長さには、符号または小数点が含まれます。BLOBを返すために65KBまたは16MBに設定することもできます。メモリは未割り当てのままですが、これは、データを一時的に格納する必要がある場合に使用するデータタイプを決定するために使用されます。</target>
+          <target state="translated">結果の最大長。整数の場合、デフォルトは21です。文字列の場合、最も長い引数の長さです。実数の場合、デフォルトは13 + &lt;em&gt;initid-&amp;gt; decimalsで&lt;/em&gt;示される小数点以下の桁数です。長さには、符号または小数点が含まれます。BLOBを返すために65KBまたは16MBに設定することもできます。メモリは未割り当てのままですが、これは、データを一時的に保存する必要がある場合に使用するデータ型を決定するために使用されます。</target>
         </trans-unit>
         <trans-unit id="e9dc16b6f7bad29970d5e5473e9443deb8bfb033" translate="yes" xml:space="preserve">
           <source>Maximum length, in bytes, that the data file could become.</source>
@@ -541,7 +541,7 @@
         </trans-unit>
         <trans-unit id="72fc53d1fac6bf1becc46d676027e706d00b3a9d" translate="yes" xml:space="preserve">
           <source>Memo (string)</source>
-          <target state="translated">メモ（文字列）</target>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="89c8a2851d1755cf87365b4a7c55e5551cf878c6" translate="yes" xml:space="preserve">
           <source>Memory</source>
@@ -569,7 +569,7 @@
         </trans-unit>
         <trans-unit id="6c84f2ee6a0f892e4f0aba17cf0d0e212335b946" translate="yes" xml:space="preserve">
           <source>Memory is the most important factor as it allows you to adjust the &lt;a href=&quot;../server-system-variables/index&quot;&gt;Server System Variables&lt;/a&gt;. More memory means larger key and table caches can be stored in memory so that disk access, an order of magnitude slower, is reduced.</source>
-          <target state="translated">メモリは、&lt;a href=&quot;../server-system-variables/index&quot;&gt;サーバーシステム変数&lt;/a&gt;を調整できるため、最も重要な要素です。より多くのメモリは、より大きなキーとテーブルキャッシュをメモリに格納できることを意味します。これにより、ディスクアクセスが大幅に遅くなります。</target>
+          <target state="translated">メモリは、&lt;a href=&quot;../server-system-variables/index&quot;&gt;サーバーシステム変数&lt;/a&gt;を調整できるため、最も重要な要素です。より多くのメモリは、より大きなキーとテーブルキャッシュをメモリに格納できることを意味します。これにより、ディスクアクセス（桁違いに遅い）が削減されます。</target>
         </trans-unit>
         <trans-unit id="8f8bd2363554ba3a286222cae82fd222bd3b194d" translate="yes" xml:space="preserve">
           <source>Memory management - &lt;em&gt;NumBlocksPct&lt;/em&gt; and &lt;em&gt;TotalUmMemory&lt;/em&gt;</source>
@@ -713,7 +713,7 @@
         </trans-unit>
         <trans-unit id="64f5ba9c4b6f09d535e56ecbe02648bd55bc7cb8" translate="yes" xml:space="preserve">
           <source>Metadata locking has been supported since &lt;a href=&quot;../what-is-mariadb-55/index&quot;&gt;MariaDB 5.5&lt;/a&gt;. This means that when a transaction (including &lt;a href=&quot;../xa-transactions/index&quot;&gt;XA transactions&lt;/a&gt;) uses a table, it locks its metadata until the end of transaction. Non-transactional tables are also locked, as well as views and objects which are related to locked tables/views (stored functions, triggers, etc). When a connection tries to use a DDL statement (like an &lt;code&gt;&lt;a href=&quot;../alter-table/index&quot;&gt;ALTER TABLE&lt;/a&gt;&lt;/code&gt;) which modifies a table that is locked, that connection is queued, and has to wait until it's unlocked. Using savepoints and performing a partial rollback does not release metadata locks.</source>
-          <target state="translated">&lt;a href=&quot;../what-is-mariadb-55/index&quot;&gt;MariaDB 5.5&lt;/a&gt;以降、メタデータのロックがサポートされています。つまり、トランザクション（&lt;a href=&quot;../xa-transactions/index&quot;&gt;XAトランザクション&lt;/a&gt;を含む）がテーブルを使用する場合、トランザクションが終了するまでメタデータがロックされます。非トランザクションテーブル、およびロックされたテーブル/ビュー（ストアドファンクション、トリガーなど）に関連するビューとオブジェクトもロックされます。ロックされているテーブルを変更するDDLステートメント（ &lt;code&gt;&lt;a href=&quot;../alter-table/index&quot;&gt;ALTER TABLE&lt;/a&gt;&lt;/code&gt; など）を接続が使用しようとすると、その接続はキューに入れられ、ロックが解除されるまで待機する必要があります。セーブポイントを使用して部分的なロールバックを実行しても、メタデータのロックは解除されません。</target>
+          <target state="translated">&lt;a href=&quot;../what-is-mariadb-55/index&quot;&gt;MariaDB 5.5&lt;/a&gt;以降、メタデータのロックがサポートされています。これは、トランザクション（&lt;a href=&quot;../xa-transactions/index&quot;&gt;XAトランザクション&lt;/a&gt;を含む）がテーブルを使用する場合、トランザクションが終了するまでメタデータをロックすることを意味します。非トランザクションテーブル、およびロックされたテーブル/ビュー（ストアドファンクション、トリガーなど）に関連するビューとオブジェクトもロックされます。ロックされているテーブルを変更するDDLステートメント（ &lt;code&gt;&lt;a href=&quot;../alter-table/index&quot;&gt;ALTER TABLE&lt;/a&gt;&lt;/code&gt; など）を接続が使用しようとすると、その接続はキューに入れられ、ロックが解除されるまで待機する必要があります。セーブポイントを使用して部分的なロールバックを実行しても、メタデータのロックは解除されません。</target>
         </trans-unit>
         <trans-unit id="aa23ba323c11de2437b737ae399da090864345e1" translate="yes" xml:space="preserve">
           <source>Method calls</source>
@@ -869,11 +869,11 @@
         </trans-unit>
         <trans-unit id="49e12be04bc8f338488ade369ef29160f82ded51" translate="yes" xml:space="preserve">
           <source>Minimal mode of in-order parallel replication can be configured by setting the &lt;code&gt;&lt;a href=&quot;../replication-and-binary-log-server-system-variables/index#slave_parallel_mode&quot;&gt;slave_parallel_mode&lt;/a&gt;&lt;/code&gt; system variable to &lt;code&gt;minimal&lt;/code&gt; on the slave.</source>
-          <target state="translated">スレーブ上で &lt;code&gt;&lt;a href=&quot;../replication-and-binary-log-server-system-variables/index#slave_parallel_mode&quot;&gt;slave_parallel_mode&lt;/a&gt;&lt;/code&gt; システム変数を &lt;code&gt;minimal&lt;/code&gt; に設定することにより、順序付き並列レプリケーションの最小モードを構成できます。</target>
+          <target state="translated">スレーブ上で &lt;code&gt;&lt;a href=&quot;../replication-and-binary-log-server-system-variables/index#slave_parallel_mode&quot;&gt;slave_parallel_mode&lt;/a&gt;&lt;/code&gt; システム変数を &lt;code&gt;minimal&lt;/code&gt; に設定することにより、順序並列レプリケーションの最小モードを構成できます。</target>
         </trans-unit>
         <trans-unit id="703d6a85f2fc688284c32a47ede5838e2623b77b" translate="yes" xml:space="preserve">
           <source>Minimal mode of in-order parallel replication was introduced in &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1013-release-notes/&quot;&gt;MariaDB 10.1.3&lt;/a&gt;.</source>
-          <target state="translated">最小順序モードの並列レプリケーションは、&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1013-release-notes/&quot;&gt;MariaDB 10.1.3で&lt;/a&gt;導入されました。</target>
+          <target state="translated">順序付け並列レプリケーションの最小モードは、&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1013-release-notes/&quot;&gt;MariaDB 10.1.3で&lt;/a&gt;導入されました。</target>
         </trans-unit>
         <trans-unit id="c7591b91d4fc1c61dc10384cd658f12ef3bf9a2f" translate="yes" xml:space="preserve">
           <source>Minimize the amount of overhead that is required to maintain the thread pool itself.</source>
@@ -1305,7 +1305,7 @@
         </trans-unit>
         <trans-unit id="d8b97b9426f3f4fe929e4e95058ad48ee82a7fa7" translate="yes" xml:space="preserve">
           <source>Modules in the system are identified by the &quot;um&quot; or &quot;pm&quot; followed by a unique number - such as um1, pm1, pm2, pm3 etc.</source>
-          <target state="translated">システム内のモジュールは、&quot;um &quot;または &quot;pm &quot;の後に固有の番号が付けられています-um1,pm1,pm2,pm3 など。</target>
+          <target state="translated">システム内のモジュールは、&quot;um &quot;または &quot;pm &quot;の後に固有の番号(um1,pm1,pm2,pm3など)が付いていることで識別されます。</target>
         </trans-unit>
         <trans-unit id="1ed61d3244ec20a0c5182e52c2fac5b1aa34719d" translate="yes" xml:space="preserve">
           <source>Modulo Operator (%)</source>
@@ -1425,7 +1425,7 @@
         </trans-unit>
         <trans-unit id="552a865a1e0d077378f093aab779806a5b997439" translate="yes" xml:space="preserve">
           <source>Monty's first suggestion was to name it &lt;em&gt;Lucy&lt;/em&gt;, after his dog, but few who heard it liked that idea. So the decision was made that the next best thing was for the community to suggest and vote on names.</source>
-          <target state="translated">モンティの最初の提案は、犬にちなんで&lt;em&gt;ルーシー&lt;/em&gt;と名付けることでしたが、そのアイデアを気に入った人はほとんどいませんでした。したがって、次善の策はコミュニティが名前を提案して投票することであるという決定がなされました。</target>
+          <target state="translated">モンティの最初の提案は、犬にちなんで&lt;em&gt;ルーシー&lt;/em&gt;と名付けることでしたが、その考えを気に入った人はほとんどいません。したがって、次善の策はコミュニティが名前を提案して投票することであるという決定がなされました。</target>
         </trans-unit>
         <trans-unit id="90dcd7b8b8cbbd853bdebee51d652e1f6173c315" translate="yes" xml:space="preserve">
           <source>Moon Modeler</source>
@@ -1633,11 +1633,11 @@
         </trans-unit>
         <trans-unit id="a8483341117a8427320511497ed52a787fb46725" translate="yes" xml:space="preserve">
           <source>Most MariaDB images, including the official one, have external TCP connections disabled using the &lt;code&gt;bind-address&lt;/code&gt; option in their #my.cnf# file. The docker image used in this guide is based on Ubuntu, so the file is located at &lt;code&gt;/etc/mysql/my.cnf&lt;/code&gt;.</source>
-          <target state="translated">公式イメージを含むほとんどのMariaDBイメージでは、＃my.cnf＃ファイルの &lt;code&gt;bind-address&lt;/code&gt; オプションを使用して外部TCP接続が無効になっています。このガイドで使用するDockerイメージはUbuntuに基づいているため、ファイルは &lt;code&gt;/etc/mysql/my.cnf&lt;/code&gt; にあります。</target>
+          <target state="translated">公式のものを含むほとんどのMariaDBイメージでは、＃my.cnf＃ファイルの &lt;code&gt;bind-address&lt;/code&gt; オプションを使用して外部TCP接続が無効になっています。このガイドで使用されている &lt;code&gt;/etc/mysql/my.cnf&lt;/code&gt; はUbuntuに基づいているため、ファイルは/etc/mysql/my.cnfにあります。</target>
         </trans-unit>
         <trans-unit id="95ec2ffc3f8f635efe83d63cd522bfca5068cd7b" translate="yes" xml:space="preserve">
           <source>Most MariaDB installations include a sample MariaDB option file called &lt;code&gt;my-default.cnf&lt;/code&gt;. On older releases, you would have also found the following option files:</source>
-          <target state="translated">ほとんどのMariaDBインストールには、 &lt;code&gt;my-default.cnf&lt;/code&gt; というサンプルのMariaDBオプションファイルが含まれています。以前のリリースでは、次のオプションファイルも見つかりました。</target>
+          <target state="translated">ほとんどのMariaDBインストールには、 &lt;code&gt;my-default.cnf&lt;/code&gt; というサンプルのMariaDBオプションファイルが含まれています。古いリリースでは、次のオプションファイルも見つかりました。</target>
         </trans-unit>
         <trans-unit id="a37d2137f2d891677757f737fc5b154dc0cb6a3a" translate="yes" xml:space="preserve">
           <source>Most commonly, the whole directory is passed:</source>
@@ -1645,7 +1645,7 @@
         </trans-unit>
         <trans-unit id="5fc6bddbdd0aacad6cb11a817ce0df0595d3eca2" translate="yes" xml:space="preserve">
           <source>Most database products support a subset of the standard, they implement some functions defined as late as in SQL:2011, and at the same time leave some parts of SQL:2008 unimplemented.</source>
-          <target state="translated">ほとんどのデータベース製品は標準のサブセットをサポートしており、SQL:2011のように後期に定義されたいくつかの関数を実装し、同時にSQL:2008のいくつかの部分を未実装のままにしています。</target>
+          <target state="translated">ほとんどのデータベース製品は標準のサブセットをサポートしており、SQL:2011のように後期に定義されたいくつかの機能を実装していますが、同時にSQL:2008のいくつかの部分が未実装のままになっています。</target>
         </trans-unit>
         <trans-unit id="ef6a061e9f9f027e5c44c8725c0f9ad6a65360fe" translate="yes" xml:space="preserve">
           <source>Most emailed (keep the count)</source>
@@ -1693,7 +1693,7 @@
         </trans-unit>
         <trans-unit id="b6b5ff41ff7d97927b94b26043039ed4f627fd38" translate="yes" xml:space="preserve">
           <source>Most of the tables processed by CONNECT are just plain DOS or UNIX data files, logically regarded as tables thanks to the description given when creating the table. This description comes from the &lt;code&gt;&lt;a href=&quot;../create-table/index&quot;&gt;CREATE TABLE&lt;/a&gt;&lt;/code&gt; statement. Depending on the application, these tables can already exist as data files, used as is by CONNECT, or can have been physically made by CONNECT as the result of a &lt;code&gt;CREATE TABLE ... SELECT ...&lt;/code&gt; and/or INSERT statement(s).</source>
-          <target state="translated">CONNECTによって処理されるテーブルのほとんどは、単純なDOSまたはUNIXデータファイルであり、テーブルの作成時に与えられた説明により、論理的にテーブルと見なされます。この説明は &lt;code&gt;&lt;a href=&quot;../create-table/index&quot;&gt;CREATE TABLE&lt;/a&gt;&lt;/code&gt; ステートメントからのものです。アプリケーションに応じて、これらのテーブルは、データファイルとしてすでに存在しているか、そのままCONNECTによって使用されているか、または &lt;code&gt;CREATE TABLE ... SELECT ...&lt;/code&gt; やINSERTステートメントの結果としてCONNECTによって物理的に作成されている場合があります。。</target>
+          <target state="translated">CONNECTによって処理されるほとんどのテーブルは、単純なDOSまたはUNIXデータファイルであり、テーブルの作成時に指定された説明により、論理的にテーブルと見なされます。この説明は、 &lt;code&gt;&lt;a href=&quot;../create-table/index&quot;&gt;CREATE TABLE&lt;/a&gt;&lt;/code&gt; ステートメントからのものです。アプリケーションに応じて、これらのテーブルはデータファイルとしてすでに存在しているか、そのままCONNECTによって使用されているか、または &lt;code&gt;CREATE TABLE ... SELECT ...&lt;/code&gt; やINSERTステートメントの結果としてCONNECTによって物理的に作成されている可能性があります。。</target>
         </trans-unit>
         <trans-unit id="73f6de80be40c9200aa81487bb2a8a7fb6190e54" translate="yes" xml:space="preserve">
           <source>Most of the things in the &lt;a href=&quot;http://dev.mysql.com/doc/refman/5.1/en/upgrading.html&quot;&gt;MySQL 5.1 manual&lt;/a&gt; section also applies to MariaDB.</source>
@@ -1761,7 +1761,7 @@
         </trans-unit>
         <trans-unit id="54fb6d1ad1a3db6f3877e151715bb32304310382" translate="yes" xml:space="preserve">
           <source>Most statements that are not permitted in prepared statements are not permitted in stored programs. See &lt;a href=&quot;../prepare-statement/index#permitted-statements&quot;&gt;Prepare Statement:Permitted statements&lt;/a&gt; for a list of statements that can be used. &lt;a href=&quot;../signal/index&quot;&gt;SIGNAL&lt;/a&gt;, &lt;a href=&quot;../resignal/index&quot;&gt;RESIGNAL&lt;/a&gt; and &lt;a href=&quot;../get-diagnostics/index&quot;&gt;GET DIAGNOSTICS&lt;/a&gt; are exceptions, and may be used in stored routines.</source>
-          <target state="translated">準備済みステートメントで許可されていないほとんどのステートメントは、ストアドプログラムでは許可されていません。使用できるステートメントのリスト&lt;a href=&quot;../prepare-statement/index#permitted-statements&quot;&gt;について&lt;/a&gt;は、ステートメントの準備：許可されたステートメントを参照してください。&lt;a href=&quot;../signal/index&quot;&gt;SIGNAL&lt;/a&gt;、&lt;a href=&quot;../resignal/index&quot;&gt;RESIGNAL&lt;/a&gt;および&lt;a href=&quot;../get-diagnostics/index&quot;&gt;GET DIAGNOSTICS&lt;/a&gt;は例外であり、ストアドルーチンで使用できます。</target>
+          <target state="translated">準備済みステートメントで許可されていないほとんどのステートメントは、ストアドプログラムでは許可されません。使用できるステートメントのリスト&lt;a href=&quot;../prepare-statement/index#permitted-statements&quot;&gt;について&lt;/a&gt;は、ステートメントの準備：許可されたステートメントを参照してください。&lt;a href=&quot;../signal/index&quot;&gt;SIGNAL&lt;/a&gt;、&lt;a href=&quot;../resignal/index&quot;&gt;RESIGNAL&lt;/a&gt;および&lt;a href=&quot;../get-diagnostics/index&quot;&gt;GET DIAGNOSTICS&lt;/a&gt;は例外であり、ストアドルーチンで使用できます。</target>
         </trans-unit>
         <trans-unit id="ae96988e52fe24471efa83d59f1e5eae00a548a2" translate="yes" xml:space="preserve">
           <source>Most tables in the &lt;a href=&quot;../the-mysql-database-tables/index&quot;&gt;mysql&lt;/a&gt; database are MyISAM tables. These tables are necessary for MariaDB to properly work, or even start.</source>
@@ -1857,11 +1857,11 @@
         </trans-unit>
         <trans-unit id="eba515ef01994c2e2a10d3b35ea37f73581d5460" translate="yes" xml:space="preserve">
           <source>Mroonga is a full text search storage engine based on Groonga, which is an open-source CJK-ready fulltext search engine using column base. See &lt;a href=&quot;http://groonga.org&quot;&gt;http://groonga.org&lt;/a&gt; for more.</source>
-          <target state="translated">Mroongaは、Groongaをベースにした全文検索ストレージエンジンです。Groongaは、列ベースを使用したオープンソースのCJK対応全文検索エンジンです。詳細については、&lt;a href=&quot;http://groonga.org&quot;&gt;http：//groonga.org&lt;/a&gt;を参照してください。</target>
+          <target state="translated">Mroongaは、Groongaをベースにした全文検索ストレージエンジンです。Groongaは、カラムベースを使用したオープンソースのCJK対応全文検索エンジンです。詳細は&lt;a href=&quot;http://groonga.org&quot;&gt;http://groonga.org&lt;/a&gt;をご覧ください。</target>
         </trans-unit>
         <trans-unit id="6a191c857ab5ec87ddff984378a458ae1c036a4c" translate="yes" xml:space="preserve">
           <source>Mroonga permits you to set a different parser for searching by specifying the parser in the &lt;code&gt;CREATE TABLE&lt;/code&gt; statement as a comment or, in older versions, changing the value of the &lt;a href=&quot;../mroonga-system-variables/index#mroonga_default_parser&quot;&gt;mroonga_default_parser&lt;/a&gt; system variable.</source>
-          <target state="translated">Mroongaでは、 &lt;code&gt;CREATE TABLE&lt;/code&gt; ステートメントでコメントとしてパーサーを指定するか、古いバージョンでは&lt;a href=&quot;../mroonga-system-variables/index#mroonga_default_parser&quot;&gt;mroonga_default_parser&lt;/a&gt;システム変数の値を変更することで、検索用に別のパーサーを設定できます。</target>
+          <target state="translated">Mroongaでは、 &lt;code&gt;CREATE TABLE&lt;/code&gt; ステートメントでコメントとしてパーサーを指定するか、古いバージョンでは、&lt;a href=&quot;../mroonga-system-variables/index#mroonga_default_parser&quot;&gt;mroonga_default_parser&lt;/a&gt;システム変数の値を変更することで、検索用に別のパーサーを設定できます。</target>
         </trans-unit>
         <trans-unit id="1b2dfb6c4dc70a64bb49756ef6fab8485c2a5ae3" translate="yes" xml:space="preserve">
           <source>Mroonga provides a number of User-defined functions (UDFs)</source>
@@ -1881,7 +1881,7 @@
         </trans-unit>
         <trans-unit id="e39d2316cca4df8106036791ac61e256ac148871" translate="yes" xml:space="preserve">
           <source>Mroonga, formerly named Groonga storage engine, was included in the &lt;a href=&quot;../what-is-mariadb-53/index&quot;&gt;MariaDB 5.3&lt;/a&gt; release, and is available by default from &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-10015-release-notes/&quot;&gt;MariaDB 10.0.15&lt;/a&gt;.</source>
-          <target state="translated">Mroonga（以前はGroongaストレージエンジンと呼ばれていました）は&lt;a href=&quot;../what-is-mariadb-53/index&quot;&gt;MariaDB 5.3&lt;/a&gt;リリースに含まれており、&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-10015-release-notes/&quot;&gt;MariaDB 10.0.15&lt;/a&gt;からデフォルトで利用可能です。</target>
+          <target state="translated">Mroonga（以前の名前はGroongaストレージエンジン）は&lt;a href=&quot;../what-is-mariadb-53/index&quot;&gt;MariaDB 5.3&lt;/a&gt;リリースに含まれており、&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-10015-release-notes/&quot;&gt;MariaDB 10.0.15&lt;/a&gt;からデフォルトで利用できます。</target>
         </trans-unit>
         <trans-unit id="c1cdb584663daff7ffbd9162b1d32cf30e3f19b6" translate="yes" xml:space="preserve">
           <source>Mroonga-related status variables.</source>
@@ -1949,7 +1949,7 @@
         </trans-unit>
         <trans-unit id="707603952069bade45f931c5578711d6289235bf" translate="yes" xml:space="preserve">
           <source>Multi Range Read will make separate calls for steps #1 and #2, causing TWO increments to &lt;code&gt;Handler_read_XXX&lt;/code&gt; counters and TWO increments to &lt;code&gt;Innodb_rows_read&lt;/code&gt; counter. To the uninformed, this looks as if Multi Range Read was making things worse. Actually, it doesn't - the query will still read the same index/table records, and actually Multi Range Read may give speedups because it reads data in disk order.</source>
-          <target state="translated">マルチレンジリードは、ステップ＃1と＃2に対して別々の呼び出しを行うため、 &lt;code&gt;Handler_read_XXX&lt;/code&gt; カウンターに2つの増分が、Innodb_rows_readカウンターに2つの増分が &lt;code&gt;Innodb_rows_read&lt;/code&gt; ます。知らない人にとっては、マルチレンジリードが事態を悪化させているように見えます。実際にはそうではありません。クエリは同じインデックス/テーブルレコードを読み取ります。実際、Multi Range Readはディスク順にデータを読み取るため、速度が向上する可能性があります。</target>
+          <target state="translated">マルチレンジリードは、ステップ＃1と＃2に対して別々の呼び出しを行うため、 &lt;code&gt;Handler_read_XXX&lt;/code&gt; カウンターに2つの増分が、Innodb_rows_readカウンターに2つの増分が &lt;code&gt;Innodb_rows_read&lt;/code&gt; ます。知らない人にとっては、これはまるでマルチレンジリードが事態を悪化させているように見えます。実際にはそうではありません。クエリは同じインデックス/テーブルレコードを読み取りますが、実際にはマルチレンジ読み取りはディスク順にデータを読み取るため、速度が向上する可能性があります。</target>
         </trans-unit>
         <trans-unit id="44d1967b39afaba6fe481fb4d83a9c3cfaafbc6d" translate="yes" xml:space="preserve">
           <source>Multi Server Install - Combined UM/PM</source>
@@ -2057,7 +2057,7 @@
         </trans-unit>
         <trans-unit id="5b6023d09f8391e90cbd8a17f28475b4a22eab8a" translate="yes" xml:space="preserve">
           <source>Multi-source replication means that one server has many masters from which it replicates. This feature was added in &lt;a href=&quot;../what-is-mariadb-100/index&quot;&gt;MariaDB 10.0&lt;/a&gt;.</source>
-          <target state="translated">マルチソース複製とは、1つのサーバーが複製元のマスターを多数持つことを意味します。この機能は&lt;a href=&quot;../what-is-mariadb-100/index&quot;&gt;MariaDB 10.0で&lt;/a&gt;追加されました。</target>
+          <target state="translated">マルチソース複製とは、1つのサーバーが複製元のマスターを多数持つことを意味します。この機能は、&lt;a href=&quot;../what-is-mariadb-100/index&quot;&gt;MariaDB 10.0で&lt;/a&gt;追加されました。</target>
         </trans-unit>
         <trans-unit id="f84084a38d5f9db550a30f78d17ea55fd0736218" translate="yes" xml:space="preserve">
           <source>Multi-source replication:</source>
@@ -2121,7 +2121,7 @@
         </trans-unit>
         <trans-unit id="ffa82ad95a6d4f01a482404738df9d21738c6a19" translate="yes" xml:space="preserve">
           <source>Multiline matching changes the meaning of &lt;code&gt;^&lt;/code&gt; and &lt;code&gt;$&lt;/code&gt; from &quot;the beginning of the subject string&quot; and &quot;the end of the subject string&quot; to &quot;the beginning of any line in the subject string&quot; and &quot;the end of any line in the subject string&quot; respectively.</source>
-          <target state="translated">複数行一致により、 &lt;code&gt;^&lt;/code&gt; と &lt;code&gt;$&lt;/code&gt; の意味が「件名文字列の先頭」と「件名文字列の末尾」から「件名文字列の任意の行の先頭」と「件名文字列の任意の行の末尾」に変更されます&quot;それぞれ。</target>
+          <target state="translated">複数行一致では、 &lt;code&gt;^&lt;/code&gt; と &lt;code&gt;$&lt;/code&gt; の意味が「件名文字列の先頭」と「件名文字列の末尾」から「件名文字列の任意の行の先頭」と「件名文字列の任意の行の末尾」に変更されます&quot;それぞれ。</target>
         </trans-unit>
         <trans-unit id="740922ac20ba9136af0a0a62b3c2c734d9f20fc6" translate="yes" xml:space="preserve">
           <source>Multiple</source>
@@ -2209,11 +2209,11 @@
         </trans-unit>
         <trans-unit id="0beceed8cd8ce9f7d5bf28d4d0956eb024d81699" translate="yes" xml:space="preserve">
           <source>Multiple tables are specified by the option MULTIPLE=&lt;em&gt;n&lt;/em&gt;, which can take four values:</source>
-          <target state="translated">複数のテーブルは、オプションMULTIPLE = &lt;em&gt;n&lt;/em&gt;で指定されます。これには、4つの値を指定できます。</target>
+          <target state="translated">複数のテーブルは、オプションMULTIPLE = &lt;em&gt;n&lt;/em&gt;で指定されます。これには、次の4つの値を指定できます。</target>
         </trans-unit>
         <trans-unit id="f73a8a32f951a53e8efec887f56ce327b13bff30" translate="yes" xml:space="preserve">
           <source>Multiple tables are specified by the option MULTIPLE=&lt;em&gt;n&lt;/em&gt;, which can take three values:</source>
-          <target state="translated">複数のテーブルは、オプションMULTIPLE = &lt;em&gt;n&lt;/em&gt;で指定されます。これには、3つの値を指定できます。</target>
+          <target state="translated">複数のテーブルは、オプションMULTIPLE = &lt;em&gt;n&lt;/em&gt;によって指定されます。これには、3つの値を指定できます。</target>
         </trans-unit>
         <trans-unit id="609ca5ba19db31dfef074085b8e05e62afb0c62b" translate="yes" xml:space="preserve">
           <source>Multiple words:</source>
@@ -2285,15 +2285,15 @@
         </trans-unit>
         <trans-unit id="5d376e0e3cf69a654fa17996935d89d88a07fbf8" translate="yes" xml:space="preserve">
           <source>My 5.7.4</source>
-          <target state="translated">我々 5.7.4</target>
+          <target state="translated">私の5.7.4</target>
         </trans-unit>
         <trans-unit id="816a7881c796fa738f66737de140d7e70660f544" translate="yes" xml:space="preserve">
           <source>My 5.7.5</source>
-          <target state="translated">私たち 5.7.5</target>
+          <target state="translated">私の5.</target>
         </trans-unit>
         <trans-unit id="e221d572e447e8211b53aaf67b934bc63524ed7e" translate="yes" xml:space="preserve">
           <source>My 5.7.6</source>
-          <target state="translated">我々 5.7.6</target>
+          <target state="translated">私の5.7.6</target>
         </trans-unit>
         <trans-unit id="b3f287a7d48006ee06c8eeb4ec1eee948bed8b32" translate="yes" xml:space="preserve">
           <source>My CS Version is 1.1.2 install/10.2.10-MariaDB-log and my standard mariadb is 10.2.12-MariaDB</source>
@@ -2377,7 +2377,7 @@
         </trans-unit>
         <trans-unit id="87b72d2cbf8fb9f569ca2576df01f37179d97a62" translate="yes" xml:space="preserve">
           <source>MyISAM only: &lt;a href=&quot;../myisam-system-variables/index#key_buffer_size&quot;&gt;key_buffer_size&lt;/a&gt;: Use about 20% of RAM. Set (in my.cnf / my.ini) &lt;a href=&quot;../xtradbinnodb-server-system-variables/index#innodb_buffer_pool_size&quot;&gt;innodb_buffer_pool_size=0&lt;/a&gt; = 0.</source>
-          <target state="translated">MyISAMのみ：&lt;a href=&quot;../myisam-system-variables/index#key_buffer_size&quot;&gt;key_buffer_size&lt;/a&gt;：RAMの約20％を使用します。（my.cnf / my.iniで）&lt;a href=&quot;../xtradbinnodb-server-system-variables/index#innodb_buffer_pool_size&quot;&gt;innodb_buffer_pool_size = 0&lt;/a&gt; = 0に設定します。</target>
+          <target state="translated">MyISAMのみ：&lt;a href=&quot;../myisam-system-variables/index#key_buffer_size&quot;&gt;key_buffer_size&lt;/a&gt;：RAMの約20％を使用します。（my.cnf / my.iniに）&lt;a href=&quot;../xtradbinnodb-server-system-variables/index#innodb_buffer_pool_size&quot;&gt;innodb_buffer_pool_size = 0&lt;/a&gt; = 0を設定します。</target>
         </trans-unit>
         <trans-unit id="df87a60812a9363a1beb7928a791ded2179e65d0" translate="yes" xml:space="preserve">
           <source>MyISAM system variables.</source>
@@ -2393,7 +2393,7 @@
         </trans-unit>
         <trans-unit id="68093d0582035858395e753f099d0eb37db79b6b" translate="yes" xml:space="preserve">
           <source>MyISAM's PK as second column</source>
-          <target state="translated">2列目としてのMyISAMのPK</target>
+          <target state="translated">MyISAMのPKを2列目に</target>
         </trans-unit>
         <trans-unit id="f35f7c741f1a0afdccd15750d49f2a4137ca5a3d" translate="yes" xml:space="preserve">
           <source>MyISAM's key_buffer</source>
@@ -2509,7 +2509,7 @@
         </trans-unit>
         <trans-unit id="65df38b09ea6e7b44d8120ca2986b66cfb028ada" translate="yes" xml:space="preserve">
           <source>MyRocks has been extended by the MariaDB engineering team to be a pluggable storage engine that you use in your MariaDB solutions. It works seamlessly with MariaDB features. This openness in the storage layer allows you to use the right storage engine to optimize your usage requirements, which provides optimum performance. Community contributions are one of MariaDB&amp;rsquo;s greatest advantages over other databases. Under the lead of our developer Sergey Petrunia, MyRocks in MariaDB is constantly being merged with upstream MyRocks from Facebook.</source>
-          <target state="translated">MyRocksは、MariaDBエンジニアリングチームによって拡張され、MariaDBソリューションで使用できるプラグイン可能なストレージエンジンになりました。MariaDBの機能とシームレスに連携します。ストレージレイヤーのこの開放性により、適切なストレージエンジンを使用して使用要件を最適化し、最適なパフォーマンスを提供できます。コミュニティの貢献は、他のデータベースに勝るMariaDBの最大の利点の1つです。開発者のSergey Petruniaの指揮の下、MariaDBのMyRocksはFacebookのアップストリームのMyRocksと常に統合されています。</target>
+          <target state="translated">MyRocksはMariaDBエンジニアリングチームによって拡張され、MariaDBソリューションで使用できるプラグイン可能なストレージエンジンになりました。MariaDBの機能とシームレスに連携します。ストレージレイヤーのこの開放性により、適切なストレージエンジンを使用して使用要件を最適化し、最適なパフォーマンスを提供できます。コミュニティの貢献は、他のデータベースに比べてMariaDBの最大の利点の1つです。開発者のSergey Petruniaの指揮のもと、MariaDBのMyRocksはFacebookのアップストリームのMyRocksと常に統合されています。</target>
         </trans-unit>
         <trans-unit id="e07cf590cb5bba19477f4db632b1e741ed123651" translate="yes" xml:space="preserve">
           <source>MyRocks has ways to load data much faster than normal INSERTs</source>
@@ -2521,7 +2521,7 @@
         </trans-unit>
         <trans-unit id="cb843023d112670698d7df65f5e8280d25fcacb5" translate="yes" xml:space="preserve">
           <source>MyRocks indexes store &quot;mem-comparable keys&quot; (that is, the key values are compared with &lt;code&gt;memcmp&lt;/code&gt;). For some datatypes, it is easily possible to convert between the column value and its mem-comparable form, while for others the conversion is one-way.</source>
-          <target state="translated">MyRocksのインデックスには、「memで比較可能なキー」が格納されます（つまり、キーの値が &lt;code&gt;memcmp&lt;/code&gt; と比較されます）。一部のデータ型では、列の値とそのメモリ比較可能な形式の間で簡単に変換できますが、他のデータ型では一方向です。</target>
+          <target state="translated">MyRocksのインデックスには、「memで比較可能なキー」が格納されます（つまり、キーの値が &lt;code&gt;memcmp&lt;/code&gt; と比較されます）。一部のデータ型では、列値とメモリ比較可能な形式の間で簡単に変換できますが、他のデータ型では一方向です。</target>
         </trans-unit>
         <trans-unit id="192e9e9de7b5ade82cbfe074fca446c72a702f73" translate="yes" xml:space="preserve">
           <source>MyRocks is a storage engine that adds the RocksDB database to MariaDB. RocksDB is an LSM database with a great compression ratio that is optimized for flash storage.</source>
@@ -2661,7 +2661,7 @@
         </trans-unit>
         <trans-unit id="bbcab58ba27a2df4b40ceca641ca04904c107523" translate="yes" xml:space="preserve">
           <source>MySQL 5.6 introduced microseconds using a slightly different implementation to &lt;a href=&quot;../what-is-mariadb-53/index&quot;&gt;MariaDB 5.3&lt;/a&gt;. Since &lt;a href=&quot;../what-is-mariadb-101/index&quot;&gt;MariaDB 10.1&lt;/a&gt;, MariaDB has defaulted to the MySQL format, by means of the &lt;a href=&quot;../server-system-variables/index#mysql56_temporal_format&quot;&gt;--mysql56-temporal-format&lt;/a&gt; variable. The MySQL version requires slightly &lt;a href=&quot;../data-type-storage-requirements/index&quot;&gt;more storage&lt;/a&gt; but has some advantages in permitting the eventual support of negative dates, and in replication.</source>
-          <target state="translated">MySQL 5.6は、&lt;a href=&quot;../what-is-mariadb-53/index&quot;&gt;MariaDB 5.3&lt;/a&gt;とは少し異なる実装を使用してマイクロ秒を導入しました。&lt;a href=&quot;../what-is-mariadb-101/index&quot;&gt;MariaDB 10.1&lt;/a&gt;以降、MariaDBは&lt;a href=&quot;../server-system-variables/index#mysql56_temporal_format&quot;&gt;--mysql56-temporal-format&lt;/a&gt;変数により、デフォルトでMySQL形式になっています。MySQLバージョンは少し&lt;a href=&quot;../data-type-storage-requirements/index&quot;&gt;多くのストレージを&lt;/a&gt;必要としますが、負の日付の最終的なサポートを許可すること、およびレプリケーションにおいていくつかの利点があります。</target>
+          <target state="translated">MySQL 5.6は、&lt;a href=&quot;../what-is-mariadb-53/index&quot;&gt;MariaDB 5.3&lt;/a&gt;とは少し異なる実装を使用してマイクロ秒を導入しました。&lt;a href=&quot;../what-is-mariadb-101/index&quot;&gt;MariaDB 10.1&lt;/a&gt;以降、MariaDBは&lt;a href=&quot;../server-system-variables/index#mysql56_temporal_format&quot;&gt;--mysql56-temporal-format&lt;/a&gt;変数により、デフォルトでMySQL形式になっています。MySQLバージョンは少し&lt;a href=&quot;../data-type-storage-requirements/index&quot;&gt;多くのストレージを&lt;/a&gt;必要としますが、負の日付の最終的なサポートを許可する上で、およびレプリケーションにおいていくつかの利点があります。</target>
         </trans-unit>
         <trans-unit id="ab37c378087137d971fdb1fe929f60f3790ab7bf" translate="yes" xml:space="preserve">
           <source>MySQL 5.6+ and &lt;a href=&quot;../what-is-mariadb-101/index&quot;&gt;MariaDB 10.1&lt;/a&gt;+</source>
@@ -2757,7 +2757,7 @@
         </trans-unit>
         <trans-unit id="69870b9ed6e4ebbcd700371c691be4f06855e9ad" translate="yes" xml:space="preserve">
           <source>MySQL has used SHA-1 based authentication since version 4.1. Since &lt;a href=&quot;../what-is-mariadb-52/index&quot;&gt;MariaDB 5.2&lt;/a&gt; this authentication plugin has been called &lt;code&gt;&lt;a href=&quot;../authentication-plugin-mysql_native_password/index&quot;&gt;mysql_native_password&lt;/a&gt;&lt;/code&gt;. Over the years as computers became faster, new attacks on SHA-1 were being developed. Nowadays SHA-1 is no longer considered as secure as it was in 2001. That's why the &lt;code&gt;ed25519&lt;/code&gt; authentication plugin was created.</source>
-          <target state="translated">MySQLはバージョン4.1以降、SHA-1ベースの認証を使用しています。&lt;a href=&quot;../what-is-mariadb-52/index&quot;&gt;MariaDB 5.2&lt;/a&gt;以降、この認証プラグインは &lt;code&gt;&lt;a href=&quot;../authentication-plugin-mysql_native_password/index&quot;&gt;mysql_native_password&lt;/a&gt;&lt;/code&gt; と呼ばれています。コンピュータが高速化するにつれて、SHA-1に対する新しい攻撃が開発されました。現在、SHA-1は2001年ほど安全ではありません。そのため、 &lt;code&gt;ed25519&lt;/code&gt; 認証プラグインが作成されました。</target>
+          <target state="translated">MySQLはバージョン4.1以降、SHA-1ベースの認証を使用しています。&lt;a href=&quot;../what-is-mariadb-52/index&quot;&gt;MariaDB 5.2&lt;/a&gt;以降、この認証プラグインは &lt;code&gt;&lt;a href=&quot;../authentication-plugin-mysql_native_password/index&quot;&gt;mysql_native_password&lt;/a&gt;&lt;/code&gt; と呼ばれています。コンピュータが高速化するにつれて、SHA-1に対する新しい攻撃が開発されてきました。現在、SHA-1は2001年ほど安全ではありません。そのため、 &lt;code&gt;ed25519&lt;/code&gt; 認証プラグインが作成されました。</target>
         </trans-unit>
         <trans-unit id="c883a3438d250e137ec9f90596a31e4ab685a992" translate="yes" xml:space="preserve">
           <source>MySQL manual gives 3 solutions; only the &quot;Uncorrelated&quot; one is &quot;good&quot;, the other two are &quot;bad&quot;.</source>
@@ -2813,7 +2813,7 @@
         </trans-unit>
         <trans-unit id="315cfe74777a1d5647c6815d4e5d78f00693de48" translate="yes" xml:space="preserve">
           <source>MySQL's output has deficiencies. Some are listed here: &lt;code&gt;&lt;a href=&quot;../explain-formatjson-in-mysql/index&quot;&gt;EXPLAIN FORMAT=JSON in MySQL&lt;/a&gt;&lt;/code&gt;)</source>
-          <target state="translated">MySQLの出力に欠陥があります。一部はここにリストされています： &lt;code&gt;&lt;a href=&quot;../explain-formatjson-in-mysql/index&quot;&gt;EXPLAIN FORMAT=JSON in MySQL&lt;/a&gt;&lt;/code&gt; ）</target>
+          <target state="translated">MySQLの出力に欠陥があります。いくつかはここにリストされています： &lt;code&gt;&lt;a href=&quot;../explain-formatjson-in-mysql/index&quot;&gt;EXPLAIN FORMAT=JSON in MySQL&lt;/a&gt;&lt;/code&gt; ）</target>
         </trans-unit>
         <trans-unit id="4e3ca4b95a84df00fc6b4976d9d6c0252b1ddc74" translate="yes" xml:space="preserve">
           <source>MySQL's plan for the second step is to read 18 rows using an index on &lt;code&gt;City.Country&lt;/code&gt; for each record it receives for table &lt;code&gt;Country&lt;/code&gt;. This works out to a cost of &lt;code&gt;(18*239) = 4302&lt;/code&gt; reads. Had there been fewer subquery invocations, this plan would have been better than the one with Materialization. By the way, MariaDB has an option to use such a query plan, too (see &lt;a href=&quot;../firstmatch-strategy/index&quot;&gt;FirstMatch Strategy&lt;/a&gt;), but it did not choose it.</source>
@@ -2969,11 +2969,11 @@
         </trans-unit>
         <trans-unit id="4dedba0f01d84a8f0c0c809bcbf0711b61312890" translate="yes" xml:space="preserve">
           <source>NOT BETWEEN</source>
-          <target state="translated">間にはない</target>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="835c2bb3a191f7fc2cd7b09521514b133ca778b7" translate="yes" xml:space="preserve">
           <source>NOT IN</source>
-          <target state="translated">ありませんで</target>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="a059b6f15b2fd3e1294b024968ad8a3e2dafb4dd" translate="yes" xml:space="preserve">
           <source>NOT LIKE</source>
@@ -3077,11 +3077,11 @@
         </trans-unit>
         <trans-unit id="b1da9940edae4e3a828624f4520e817e97f5da5a" translate="yes" xml:space="preserve">
           <source>NOTE: Setting 'NumBlocksPct' to 50% Setting 'TotalUmMemory' to 25% of total memory (Combined Server Install maximum value is 16G). Value set to 4G</source>
-          <target state="translated">注:'NumBlocksPct'を50%に設定し、'TotalUmMemory'を総メモリの25%に設定します。4Gに設定</target>
+          <target state="translated">注:'NumBlocksPct'を50%に設定 'TotalUmMemory'を総メモリの25%に設定します(複合サーバーインストールの最大値は16G)。4Gに設定</target>
         </trans-unit>
         <trans-unit id="8b202f9f8389aab0fe771ad88deedd8ed90a2397" translate="yes" xml:space="preserve">
           <source>NOTE: The Multi-Server Quick Installer defaults to a Non-Distributed Install meaning the user is required to install the MariaDB ColumnStore on all nodes and starting the ColumnStore Server on all non-pm1 nodes before running the script.</source>
-          <target state="translated">注:マルチサーバー クイック インストーラのデフォルトは非分散インストールになっています。つまり、ユーザーはスクリプトを実行する前に、すべてのノードにMariaDB ColumnStoreをインストールし、pm1以外のすべてのノードでColumnStoreサーバーを起動する必要があります。</target>
+          <target state="translated">注:マルチサーバー クイック インストーラーのデフォルトは非分散インストールになっています。つまり、ユーザーはスクリプトを実行する前に、すべてのノードにMariaDB ColumnStoreをインストールし、pm1以外のすべてのノードでColumnStoreサーバーを起動する必要があります。</target>
         </trans-unit>
         <trans-unit id="1cc32e5861ac43b886c4bd9e19a3666a414a245c" translate="yes" xml:space="preserve">
           <source>NOTE: The following utility can be used to dump the internal memory copy of the Extent Map &lt;code&gt;/usr/local/mariadb/columnstore/bin/editem&lt;/code&gt; : there are a few options with this command, -i dumps a raw copy and -d dumps a formatted copy</source>
@@ -3129,7 +3129,7 @@
         </trans-unit>
         <trans-unit id="cae4eb65c4d6b8c7bc2d81d133f423e728647f51" translate="yes" xml:space="preserve">
           <source>NOTE: When prompted for password, enter the non-user account password OR just hit enter if you have configured password-less ssh keys on all nodes (Please see the &amp;ldquo;System Administration Information&amp;rdquo; section earlier in this guide for more information on ssh keys.)</source>
-          <target state="translated">注：パスワードの入力を求められたら、非ユーザーアカウントのパスワードを入力するか、すべてのノードでパスワードなしのsshキーを設定している場合は、Enterキーを押します（sshキーの詳細については、このガイドの「システム管理情報」セクションを参照してください） 。）</target>
+          <target state="translated">注：パスワードの入力を求められたら、非ユーザーアカウントのパスワードを入力するか、すべてのノードでパスワードなしのsshキーを設定している場合は、Enterキーを押します（SSHキーの詳細については、このガイドの「システム管理情報」セクションを参照してください） 。）</target>
         </trans-unit>
         <trans-unit id="d7bcf31dbf7d616ffba8cea96d0ec88fb8db7d09" translate="yes" xml:space="preserve">
           <source>NOTE: When prompted for password, enter the non-user account password OR just hit enter if you have setup the non-root user with password-less ssh keys on all nodes (Please see the &amp;ldquo;System Administration Information&amp;rdquo; section earlier in this guide for more information on ssh keys.)</source>
@@ -3145,7 +3145,7 @@
         </trans-unit>
         <trans-unit id="dc5bc7a413c06a40fb24dd907851fca6f006e28f" translate="yes" xml:space="preserve">
           <source>NOTE: You can install MariaDB ColumnStore as a root user or non-root user. This is based on how you setup the servers based on &quot;Preparing for Installation Document&quot;. If installing as root, you need to be logged in as root user in a root login shell. If you are installing as non-root, you need to be logged in as a non-root user that was setup in the &lt;a href=&quot;../preparing-for-columnstore-installation/index&quot;&gt;&quot;Preparing for Installation Document&quot;&lt;/a&gt;</source>
-          <target state="translated">注：MariaDB ColumnStoreは、rootユーザーまたは非rootユーザーとしてインストールできます。これは、「インストールドキュメントの準備」に基づいてサーバーをセットアップする方法に基づいています。rootとしてインストールする場合は、rootログインシェルでrootユーザーとしてログインする必要があります。非rootとしてインストールする場合は、&lt;a href=&quot;../preparing-for-columnstore-installation/index&quot;&gt;「インストールの準備ドキュメント」で&lt;/a&gt;設定した非rootユーザーとしてログインする必要があります。</target>
+          <target state="translated">注：MariaDB ColumnStoreは、rootユーザーまたは非rootユーザーとしてインストールできます。これは、「インストールドキュメントの準備」に基づいてサーバーをセットアップする方法に基づいています。rootとしてインストールする場合は、rootログインシェルでrootユーザーとしてログインする必要があります。非rootとしてインストールする場合は、&lt;a href=&quot;../preparing-for-columnstore-installation/index&quot;&gt;「インストールの準備に関するドキュメント」で&lt;/a&gt;設定した非rootユーザーとしてログインする必要があります。</target>
         </trans-unit>
         <trans-unit id="1312e875849fcfd95a7842c3b282f4084450da1a" translate="yes" xml:space="preserve">
           <source>NOTE: You cannot remove the last um or pm module. To remove a module</source>
@@ -3177,11 +3177,11 @@
         </trans-unit>
         <trans-unit id="ab83d9278e6858185f7eea57714d4501739d6883" translate="yes" xml:space="preserve">
           <source>NO_AUTO_CREATE_USER, NO_ENGINE_SUBSTITUTION</source>
-          <target state="translated">no_auto_create_user,no_engine_substitution</target>
+          <target state="translated">NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION</target>
         </trans-unit>
         <trans-unit id="7ae87ff29f980db4ba4dfbea017f079423b41062" translate="yes" xml:space="preserve">
           <source>NO_ENGINE_SUBSTITUTION, NO_AUTO_CREATE_USER</source>
-          <target state="translated">no_engine_substitution,no_auto_create_user</target>
+          <target state="translated">NO_ENGINE_SUBSTITUTION,NO_AUTO_CREATE_USER</target>
         </trans-unit>
         <trans-unit id="740b6c7e83349359f276dd4b862dc27f63d48da0" translate="yes" xml:space="preserve">
           <source>NO_WRITE_TO_BINLOG</source>
@@ -3205,7 +3205,7 @@
         </trans-unit>
         <trans-unit id="71303c783af1089e137a1f1a0df7495970a193f6" translate="yes" xml:space="preserve">
           <source>NTILE() is a &lt;a href=&quot;../window-functions/index&quot;&gt;window function&lt;/a&gt; that returns an integer indicating which group a given row falls into. The number of groups is specified in the argument (&lt;em&gt;expr&lt;/em&gt;), starting at one. Ordered rows in the partition are divided into the specified number of groups with as equal a size as possible.</source>
-          <target state="translated">NTILE（）は、特定の行がどのグループに属するかを示す整数を返す&lt;a href=&quot;../window-functions/index&quot;&gt;ウィンドウ関数&lt;/a&gt;です。グループの数は、引数（&lt;em&gt;expr&lt;/em&gt;）で指定され、1から始まります。パーティション内の順序付けられた行は、指定された数のグループに、可能な限り同じサイズで分割されます。</target>
+          <target state="translated">NTILE（）は、特定の行がどのグループに分類されるかを示す整数を返す&lt;a href=&quot;../window-functions/index&quot;&gt;ウィンドウ関数&lt;/a&gt;です。グループの数は、引数（&lt;em&gt;expr&lt;/em&gt;）で指定され、1から始まります。パーティション内の順序付けられた行は、指定された数のグループに、可能な限り同じサイズで分割されます。</target>
         </trans-unit>
         <trans-unit id="20fba7fb07c15dd5e4b286e814069b42b6d4cf66" translate="yes" xml:space="preserve">
           <source>NUL</source>
@@ -3261,7 +3261,7 @@
         </trans-unit>
         <trans-unit id="68a29c365aac5402a0ede98d49235e7ad14c5bff" translate="yes" xml:space="preserve">
           <source>NULL values cannot be used with most &lt;a href=&quot;../comparison-operators/index&quot;&gt;comparison operators&lt;/a&gt;. For example, &lt;a href=&quot;../equal/index&quot;&gt;=&lt;/a&gt;, &lt;a href=&quot;../greater-than/index&quot;&gt;&amp;gt;&lt;/a&gt;, &lt;a href=&quot;../greater-than-or-equal/index&quot;&gt;&amp;gt;=&lt;/a&gt;, &lt;a href=&quot;../less-than-or-equal/index&quot;&gt;&amp;lt;=&lt;/a&gt;, &lt;a href=&quot;../less-than/index&quot;&gt;&amp;lt;&lt;/a&gt;, or &lt;a href=&quot;../not-equal/index&quot;&gt;!=&lt;/a&gt; cannot be used, as any comparison with a NULL always returns a NULL value, never true (1) or false (0).</source>
-          <target state="translated">NULL値は、ほとんどの&lt;a href=&quot;../comparison-operators/index&quot;&gt;比較演算子では&lt;/a&gt;使用できません。たとえば、&lt;a href=&quot;../equal/index&quot;&gt;=&lt;/a&gt;、&lt;a href=&quot;../greater-than/index&quot;&gt;&amp;gt;&lt;/a&gt;、&lt;a href=&quot;../greater-than-or-equal/index&quot;&gt;&amp;gt; =&lt;/a&gt;、&lt;a href=&quot;../less-than-or-equal/index&quot;&gt;&amp;lt;=&lt;/a&gt;、&lt;a href=&quot;../less-than/index&quot;&gt;&amp;lt;&lt;/a&gt;、または&lt;a href=&quot;../not-equal/index&quot;&gt;！=&lt;/a&gt;は使用できません。NULLとの比較は常にNULL値を返し、真（1）または偽（0）になることはないためです。</target>
+          <target state="translated">NULL値は、ほとんどの&lt;a href=&quot;../comparison-operators/index&quot;&gt;比較演算子では&lt;/a&gt;使用できません。たとえば、&lt;a href=&quot;../equal/index&quot;&gt;=&lt;/a&gt;、&lt;a href=&quot;../greater-than/index&quot;&gt;&amp;gt;&lt;/a&gt;、&lt;a href=&quot;../greater-than-or-equal/index&quot;&gt;&amp;gt; =&lt;/a&gt;、&lt;a href=&quot;../less-than-or-equal/index&quot;&gt;&amp;lt;=&lt;/a&gt;、&lt;a href=&quot;../less-than/index&quot;&gt;&amp;lt;&lt;/a&gt;、または&lt;a href=&quot;../not-equal/index&quot;&gt;！=&lt;/a&gt;は使用できません。NULLとの比較では常にNULL値が返され、真（1）または偽（0）になることはないためです。</target>
         </trans-unit>
         <trans-unit id="ec39c9f13c6aeecff0f581610095bbcd0366828a" translate="yes" xml:space="preserve">
           <source>NULL, &amp;acute;NULL&amp;acute;, and Empty Values in XML</source>
@@ -3325,7 +3325,7 @@
         </trans-unit>
         <trans-unit id="94e03fcb295b5d165a95053ffb142dc5d500b4ee" translate="yes" xml:space="preserve">
           <source>NUMERIC, DECIMAL, VARBINARY</source>
-          <target state="translated">すうじゅうすうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅうじゅせき</target>
+          <target state="translated">目標、デシマル、バイナリ</target>
         </trans-unit>
         <trans-unit id="cb6fcfa9ab653121a49988b0299dba278de56efa" translate="yes" xml:space="preserve">
           <source>NUMERIC_PRECISION</source>
@@ -3517,7 +3517,7 @@
         </trans-unit>
         <trans-unit id="b95a79494491e64af5599f2d0460e8b5287367af" translate="yes" xml:space="preserve">
           <source>Named pipes will also be used if the &lt;code&gt;libmysql&lt;/code&gt; / &lt;code&gt;libmariadb&lt;/code&gt; client library detects that the client doesn't support tcpip.</source>
-          <target state="translated">名前付きパイプは、 &lt;code&gt;libmysql&lt;/code&gt; / &lt;code&gt;libmariadb&lt;/code&gt; クライアントライブラリがクライアントがtcpipをサポートしていないことを検出した場合にも使用されます。</target>
+          <target state="translated">名前付きパイプは、クライアントがtcpipをサポートしていないことを &lt;code&gt;libmysql&lt;/code&gt; / &lt;code&gt;libmariadb&lt;/code&gt; クライアントライブラリが検出した場合にも使用されます。</target>
         </trans-unit>
         <trans-unit id="a9f8b8cb77fcec0396d1ce2cd1d025c227b7c863" translate="yes" xml:space="preserve">
           <source>Names such as 5e6, 9e are not prohibited, but it's strongly recommended not to use them, as they could lead to ambiguity in certain contexts, being treated as a number or expression.</source>
@@ -3741,7 +3741,7 @@
         </trans-unit>
         <trans-unit id="56d13ddfe1dfd0a76b4635f866b39905790c95f5" translate="yes" xml:space="preserve">
           <source>New error codes are being continually being added as new features are added. For a definitive list, see the file sql/share/errmsg-utf8.txt. Also, the &lt;a href=&quot;../perror/index&quot;&gt;perror&lt;/a&gt; tool can be used to get the error message which is associated with a given error code.</source>
-          <target state="translated">新しい機能が追加されると、新しいエラーコードが継続的に追加されます。確実なリストについては、sql / share / errmsg-utf8.txtファイルを参照してください。また、&lt;a href=&quot;../perror/index&quot;&gt;perror&lt;/a&gt;ツールを使用して、特定のエラーコードに関連付けられているエラーメッセージを取得できます。</target>
+          <target state="translated">新しい機能が追加されると、新しいエラーコードが継続的に追加されます。決定的なリストについては、sql / share / errmsg-utf8.txtファイルを参照してください。また、&lt;a href=&quot;../perror/index&quot;&gt;perror&lt;/a&gt;ツールを使用して、特定のエラーコードに関連付けられているエラーメッセージを取得できます。</target>
         </trans-unit>
         <trans-unit id="7e6618ac75280e3b070874665792a0c725642b5e" translate="yes" xml:space="preserve">
           <source>New features in FederatedX</source>
@@ -3765,7 +3765,7 @@
         </trans-unit>
         <trans-unit id="97c1c05269675e6566718b1991b6af1289992cf6" translate="yes" xml:space="preserve">
           <source>New global variable: &lt;a href=&quot;../myisam-system-variables/index#key_cache_segments&quot;&gt;key_cache_segments&lt;/a&gt;. This variable sets the number of segments in a key cache. Valid values for this variable are whole numbers between &lt;code&gt;0&lt;/code&gt; and &lt;code&gt;64&lt;/code&gt;. If the number of segments is set to a number greater than &lt;code&gt;64&lt;/code&gt; the number of segments will be truncated to 64 and a warning will be issued.</source>
-          <target state="translated">新しいグローバル変数：&lt;a href=&quot;../myisam-system-variables/index#key_cache_segments&quot;&gt;key_cache_segments&lt;/a&gt;。この変数は、キーキャッシュのセグメント数を設定します。この変数の有効な値は、 &lt;code&gt;0&lt;/code&gt; から &lt;code&gt;64&lt;/code&gt; までの整数です。セグメントの数が &lt;code&gt;64&lt;/code&gt; より大きい数に設定されている場合、セグメントの数は64に切り捨てられ、警告が発行されます。</target>
+          <target state="translated">新しいグローバル変数：&lt;a href=&quot;../myisam-system-variables/index#key_cache_segments&quot;&gt;key_cache_segments&lt;/a&gt;。この変数は、キーキャッシュのセグメント数を設定します。この変数の有効な値は、 &lt;code&gt;0&lt;/code&gt; から &lt;code&gt;64&lt;/code&gt; までの整数です。セグメント数が &lt;code&gt;64&lt;/code&gt; より大きい数に設定されている場合、セグメント数は64に切り捨てられ、警告が発行されます。</target>
         </trans-unit>
         <trans-unit id="26445874a106cfefa3c07ad7bc5c677499886874" translate="yes" xml:space="preserve">
           <source>New key</source>
@@ -3885,7 +3885,7 @@
         </trans-unit>
         <trans-unit id="12ecbd087ae43e8a7696e8808fce9ebbd9a233d1" translate="yes" xml:space="preserve">
           <source>Next, click on the &lt;strong&gt;Get Started Now&lt;/strong&gt; button. Alternatively, you can click on the &lt;strong&gt;Launch DB Instance&lt;/strong&gt; button from the &lt;a href=&quot;https://console.aws.amazon.com/rds/home#dbinstances:&quot;&gt;Instances section of the RDS Dashboard&lt;/a&gt;.</source>
-          <target state="translated">次に、[ &lt;strong&gt;今すぐ開始&lt;/strong&gt; ]ボタンをクリックします。または、&lt;a href=&quot;https://console.aws.amazon.com/rds/home#dbinstances:&quot;&gt;RDSダッシュボードの&lt;/a&gt; [ &lt;strong&gt;インスタンス&lt;/strong&gt; ] セクションから[ &lt;strong&gt;DBインスタンス&lt;/strong&gt;の&lt;strong&gt;起動&lt;/strong&gt; ]ボタンをクリックすることもできます。</target>
+          <target state="translated">次に、[ &lt;strong&gt;今すぐ始める&lt;/strong&gt; ]ボタンをクリックします。または、&lt;a href=&quot;https://console.aws.amazon.com/rds/home#dbinstances:&quot;&gt;RDSダッシュボードの&lt;/a&gt; [ &lt;strong&gt;インスタンス&lt;/strong&gt; ] セクションから[ &lt;strong&gt;Launch DB Instance&lt;/strong&gt; ]ボタンをクリックすることもできます。</target>
         </trans-unit>
         <trans-unit id="86c41855746e258cdac08784edf42604334b610d" translate="yes" xml:space="preserve">
           <source>Next, configure the router for the Avro service.</source>
@@ -3909,7 +3909,7 @@
         </trans-unit>
         <trans-unit id="9418e0299d2744287a1c7007700052d135d42044" translate="yes" xml:space="preserve">
           <source>Next, let's &lt;a href=&quot;../authentication-plugin-pam/index#configuring-the-pam-service&quot;&gt;configure the PAM service&lt;/a&gt;. We will call our service &lt;code&gt;mariadb&lt;/code&gt;, so our PAM service configuration file will be located at &lt;code&gt;/etc/pam.d/mariadb&lt;/code&gt; on most systems.</source>
-          <target state="translated">次に、&lt;a href=&quot;../authentication-plugin-pam/index#configuring-the-pam-service&quot;&gt;PAMサービスを構成し&lt;/a&gt;ましょう。サービスを &lt;code&gt;mariadb&lt;/code&gt; と呼ぶので、ほとんどのシステムでは、PAMサービス構成ファイルは &lt;code&gt;/etc/pam.d/mariadb&lt;/code&gt; にあります。</target>
+          <target state="translated">次に、&lt;a href=&quot;../authentication-plugin-pam/index#configuring-the-pam-service&quot;&gt;PAMサービスを構成します&lt;/a&gt;。ここでは、サービスを &lt;code&gt;mariadb&lt;/code&gt; と呼びます。したがって、PAMサービス構成ファイルは、ほとんどのシステムの &lt;code&gt;/etc/pam.d/mariadb&lt;/code&gt; にあります。</target>
         </trans-unit>
         <trans-unit id="2fbe5a9988ec8c22301e55cee4db237816f07a70" translate="yes" xml:space="preserve">
           <source>Next, let's &lt;a href=&quot;../authentication-plugin-pam/index#creating-users&quot;&gt;create the MariaDB users&lt;/a&gt;. Remember that our PAM service is called &lt;code&gt;mariadb&lt;/code&gt;.</source>
@@ -3929,7 +3929,7 @@
         </trans-unit>
         <trans-unit id="a1dac4c586eed5c4edeadd57de6e4bff53fc9669" translate="yes" xml:space="preserve">
           <source>Next, let's configure LDAP on the system. We can use &lt;code&gt;&lt;a href=&quot;https://linux.die.net/man/8/authconfig&quot;&gt;authconfig&lt;/a&gt;&lt;/code&gt; for this:</source>
-          <target state="translated">次に、システムにLDAPを構成します。これには &lt;code&gt;&lt;a href=&quot;https://linux.die.net/man/8/authconfig&quot;&gt;authconfig&lt;/a&gt;&lt;/code&gt; を使用できます。</target>
+          <target state="translated">次に、システムでLDAPを構成します。これには &lt;code&gt;&lt;a href=&quot;https://linux.die.net/man/8/authconfig&quot;&gt;authconfig&lt;/a&gt;&lt;/code&gt; を使用できます。</target>
         </trans-unit>
         <trans-unit id="3a116d73f9deadf7694d0bd84edcf9b9e16b115c" translate="yes" xml:space="preserve">
           <source>Next, let's create the structure of the directory by creating parts of our tree.</source>
@@ -3945,7 +3945,7 @@
         </trans-unit>
         <trans-unit id="90b766d35327579dcc149a26c356d764a8f7acde" translate="yes" xml:space="preserve">
           <source>Next, let's to configure the OpenLDAP Server. The easiest way to do that is to copy the template configuration file that is included with the installation. In many installations, that will be at &lt;code&gt;/usr/share/openldap-servers/DB_CONFIG.example&lt;/code&gt;. For example:</source>
-          <target state="translated">次に、OpenLDAPサーバーを設定しましょう。これを行う最も簡単な方法は、インストールに含まれているテンプレート構成ファイルをコピーすることです。多くのインストールでは、/ &lt;code&gt;/usr/share/openldap-servers/DB_CONFIG.example&lt;/code&gt; 。例えば：</target>
+          <target state="translated">次に、OpenLDAPサーバーを設定します。これを行う最も簡単な方法は、インストールに含まれているテンプレート構成ファイルをコピーすることです。多くのインストールでは、/ &lt;code&gt;/usr/share/openldap-servers/DB_CONFIG.example&lt;/code&gt; 。例えば：</target>
         </trans-unit>
         <trans-unit id="6b6a2a7ebf58f47c3a72fa3fb4ca7707cac3d84e" translate="yes" xml:space="preserve">
           <source>Next, make sure that the Galera version numbers are compatible.</source>
@@ -3957,7 +3957,7 @@
         </trans-unit>
         <trans-unit id="56961ed9e4f7aa13ef6f646ec17822d674254ef9" translate="yes" xml:space="preserve">
           <source>Next, point the slave to the master with &lt;a href=&quot;../change-master-to/index&quot;&gt;CHANGE MASTER&lt;/a&gt;. Specify master_host etc. as usual. But instead of specifying master_log_file and master_log_pos manually, use &lt;code&gt;master_use_gtid=current_pos&lt;/code&gt; (or &lt;code&gt;slave_pos&lt;/code&gt; to have GTID do it automatically:</source>
-          <target state="translated">次に、&lt;a href=&quot;../change-master-to/index&quot;&gt;CHANGE MASTERで&lt;/a&gt;スレーブをマスターに向けます。通常どおりmaster_hostなどを指定します。しかし、master_log_fileとmaster_log_posを手動で指定する代わりに、 &lt;code&gt;master_use_gtid=current_pos&lt;/code&gt; （または、 &lt;code&gt;slave_pos&lt;/code&gt; を使用してGTIDに自動的に実行させる）：</target>
+          <target state="translated">次に、&lt;a href=&quot;../change-master-to/index&quot;&gt;CHANGE MASTERで&lt;/a&gt;スレーブをマスターに向けます。通常どおりmaster_hostなどを指定します。しかし、master_log_fileとmaster_log_posを手動で指定する代わりに、 &lt;code&gt;master_use_gtid=current_pos&lt;/code&gt; （または、 &lt;code&gt;slave_pos&lt;/code&gt; を使用してGTIDに自動的に指定させる）：</target>
         </trans-unit>
         <trans-unit id="40b4f6f815b48a70878c08a096ddb7a004f70203" translate="yes" xml:space="preserve">
           <source>Next, set the &lt;code&gt;&lt;a href=&quot;../innodb-system-variables/index#innodb_encryption_threads&quot;&gt;innodb_encryption_threads&lt;/a&gt;&lt;/code&gt; system variable to a non-zero value:</source>

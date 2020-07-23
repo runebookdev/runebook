@@ -77,7 +77,7 @@
         </trans-unit>
         <trans-unit id="972bdce579a2ccb46ffc89633f944a1036448e92" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;TRANSACTIONAL= 0 &lt;code&gt;|&lt;/code&gt; 1&lt;/code&gt; :&lt;/strong&gt; Not set by default, if set to &lt;code&gt;1&lt;/code&gt;, tables will be transactional, meaning all changes are logged to a transaction log, and synced at the end of the statement. This will marginally slow down writes and updates, but makes the table crash-proof, so that if the server dies before the statement ends, all changes will roll back to the state at the beginning of the statement. This also needs up to 6 bytes more for each row and key to store the transaction id (to allow concurrent insert's and selects). &lt;code&gt;TRANSACTIONAL=1&lt;/code&gt; is not supported for partitioned tables. If left unset, tables may still be transactional (see below).</source>
-          <target state="translated">&lt;strong&gt; &lt;code&gt;TRANSACTIONAL= 0 &lt;code&gt;|&lt;/code&gt; 1&lt;/code&gt; :&lt;/strong&gt; 기본적으로 설정되지 않고, &lt;code&gt;1&lt;/code&gt; 로 설정되면 테이블은 트랜잭션 처리됩니다. 즉, 모든 변경 사항이 트랜잭션 로그에 기록되고 명령문 끝에서 동기화됩니다. 이렇게하면 쓰기 및 업데이트 속도가 약간 느려지지만 테이블이 충돌 방지되므로 명령문이 끝나기 전에 서버가 종료되면 모든 변경 사항이 명령문 시작시 상태로 롤백됩니다. 또한 트랜잭션 삽입을 저장하기 위해 각 행과 키에 대해 최대 6 바이트가 더 필요합니다 (동시 삽입 및 선택을 허용하기 위해). 파티션 된 테이블에는 &lt;code&gt;TRANSACTIONAL=1&lt;/code&gt; 이 지원되지 않습니다. 설정하지 않으면 테이블이 여전히 트랜잭션 상태 일 수 있습니다 (아래 참조).</target>
+          <target state="translated">&lt;strong&gt; &lt;code&gt;TRANSACTIONAL= 0 &lt;code&gt;|&lt;/code&gt; 1&lt;/code&gt; :&lt;/strong&gt; 기본적으로 설정되지 않고, &lt;code&gt;1&lt;/code&gt; 로 설정된 경우테이블은 트랜잭션 처리됩니다. 즉, 모든 변경 사항이 트랜잭션 로그에 기록되고 명령문 끝에서 동기화됩니다. 이렇게하면 쓰기 및 업데이트 속도가 약간 느려지지만 테이블이 충돌 방지되므로 명령문이 끝나기 전에 서버가 종료되면 모든 변경 사항이 명령문 시작시 상태로 롤백됩니다. 또한 트랜잭션 삽입을 저장하기 위해 각 행과 키에 대해 최대 6 바이트가 더 필요합니다 (동시 삽입 및 선택을 허용하기 위해). 파티션 된 테이블에는 &lt;code&gt;TRANSACTIONAL=1&lt;/code&gt; 이 지원되지 않습니다. 설정하지 않으면 테이블이 여전히 트랜잭션 상태 일 수 있습니다 (아래 참조).</target>
         </trans-unit>
         <trans-unit id="46cac82351e2f7fc0a6a069f75dfb3448a6279a7" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;Table&lt;/code&gt;&lt;/strong&gt;</source>
@@ -101,7 +101,7 @@
         </trans-unit>
         <trans-unit id="5b032adb74aa2c59a4d467fac34365ec0ea2f735" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;column_name&lt;/code&gt;&lt;/strong&gt; specifies the name of the column to be added. If &lt;code&gt;dyncol_blob&lt;/code&gt; already has a column with this name, it will be overwritten.</source>
-          <target state="translated">&lt;strong&gt; &lt;code&gt;column_name&lt;/code&gt; &lt;/strong&gt; 은 추가 할 열의 이름을 지정합니다. 경우 &lt;code&gt;dyncol_blob&lt;/code&gt; 가 이미이 이름의 열이, 그것은 덮어 쓰게됩니다.</target>
+          <target state="translated">&lt;strong&gt; &lt;code&gt;column_name&lt;/code&gt; &lt;/strong&gt; 은 추가 할 열의 이름을 지정합니다. &lt;code&gt;dyncol_blob&lt;/code&gt; 에이 이름의 열이 이미있으면덮어 씁니다.</target>
         </trans-unit>
         <trans-unit id="5fecdead3f1e22ca5fc7d45c18aeeefe46c7e042" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;compress&lt;/code&gt;&lt;/strong&gt;: This directive configures it to compress the log files with &lt;code&gt;&lt;a href=&quot;https://linux.die.net/man/1/gzip&quot;&gt;gzip&lt;/a&gt;&lt;/code&gt;.</source>
@@ -157,7 +157,7 @@
         </trans-unit>
         <trans-unit id="777c5da44187ea9124979cdfa9182371fe7fbf6a" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;notifempty&lt;/code&gt;&lt;/strong&gt;: This directive configures it to skip a log file during log rotation if it is empty.</source>
-          <target state="translated">&lt;strong&gt; &lt;code&gt;notifempty&lt;/code&gt; &lt;/strong&gt; :이 지정 문은 로그 파일이 비어있는 경우 로그 회전 중에이를 건너 뛰도록 구성합니다.</target>
+          <target state="translated">&lt;strong&gt; &lt;code&gt;notifempty&lt;/code&gt; &lt;/strong&gt; :이 지시문은 로그 파일이 비어있는 경우 로그 회전 중에이를 건너 뛰도록 구성합니다.</target>
         </trans-unit>
         <trans-unit id="ed872433f2a1865436fdbc88fb287665c19cd1b1" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;olddir archive/&lt;/code&gt;&lt;/strong&gt;: This directive configures it to archive the rotated log files in &lt;code&gt;/var/log/mysql/archive/&lt;/code&gt;.</source>
@@ -165,7 +165,7 @@
         </trans-unit>
         <trans-unit id="d780a9ff2150f48bda01eba195f592375d16b801" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;postrotate&lt;/code&gt;&lt;/strong&gt;: This directive configures it to execute a script after log rotation. This particular script executes the &lt;code&gt;&lt;a href=&quot;../mysqladmin/index&quot;&gt;mysqladmin&lt;/a&gt;&lt;/code&gt; utility, which executes the &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH&lt;/a&gt;&lt;/code&gt; statement, which tells the MariaDB server to flush its various log files. When MariaDB server flushes a log file, it closes its existing file handle and reopens a new one. This ensure that MariaDB server does not continue writing to a log file after it has been rotated. This is an important component of the log rotation process.</source>
-          <target state="translated">&lt;strong&gt; &lt;code&gt;postrotate&lt;/code&gt; &lt;/strong&gt; :이 지시문은 로그 회전 후 스크립트를 실행하도록 구성합니다. 이 특정 스크립트는 &lt;code&gt;&lt;a href=&quot;../mysqladmin/index&quot;&gt;mysqladmin&lt;/a&gt;&lt;/code&gt; 유틸리티를 실행하며, &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH&lt;/a&gt;&lt;/code&gt; 문을 실행하여 MariaDB 서버가 다양한 로그 파일을 플러시하도록 지시합니다. MariaDB 서버가 로그 파일을 플러시하면 기존 파일 핸들을 닫고 새 핸들을 다시 엽니 다. 이렇게하면 MariaDB 서버가 회전 한 후 로그 파일에 계속 쓰지 않습니다. 이것은 로그 순환 프로세스의 중요한 구성 요소입니다.</target>
+          <target state="translated">&lt;strong&gt; &lt;code&gt;postrotate&lt;/code&gt; &lt;/strong&gt; :이 지시문은 로그 회전 후 스크립트를 실행하도록 지시합니다. 이 특정 스크립트는 &lt;code&gt;&lt;a href=&quot;../mysqladmin/index&quot;&gt;mysqladmin&lt;/a&gt;&lt;/code&gt; 유틸리티를 실행하며, &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH&lt;/a&gt;&lt;/code&gt; 문을 실행하여 MariaDB 서버가 다양한 로그 파일을 플러시하도록 지시합니다. MariaDB 서버가 로그 파일을 플러시하면 기존 파일 핸들을 닫고 새 핸들을 다시 엽니 다. 이렇게하면 MariaDB 서버가 회전 한 후 로그 파일에 계속 쓰지 않습니다. 이것은 로그 순환 프로세스의 중요한 구성 요소입니다.</target>
         </trans-unit>
         <trans-unit id="f28ce25195c9755d23be965c6f313211819b1d97" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;r_buffer_size&lt;/code&gt;&lt;/strong&gt; field. Query plan nodes that make use of buffers report the size of buffer that was was used.</source>
@@ -185,11 +185,11 @@
         </trans-unit>
         <trans-unit id="e88837895dc0966b5aa9c2693d2edd24e58de5f9" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;r_rows&lt;/code&gt;&lt;/strong&gt; is an observation-based counterpart of the &lt;strong&gt;rows&lt;/strong&gt; column. It shows how many rows were actually read from the table.</source>
-          <target state="translated">&lt;strong&gt; &lt;code&gt;r_rows&lt;/code&gt; &lt;/strong&gt; 는&lt;strong&gt; 행&lt;/strong&gt; 열의관찰 기반 대응 물입니다. 실제로 테이블에서 읽은 행 수를 표시합니다.</target>
+          <target state="translated">&lt;strong&gt; &lt;code&gt;r_rows&lt;/code&gt; &lt;/strong&gt; 는&lt;strong&gt; 행&lt;/strong&gt; 기반의 관찰 기반 대응입니다. 실제로 테이블에서 읽은 행 수를 표시합니다.</target>
         </trans-unit>
         <trans-unit id="ca1985c9e3cab9045ef9e143225eb5d0f5bd9df1" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;r_rows&lt;/code&gt;&lt;/strong&gt; is provided for any node that reads rows. It shows how many rows were read, on average</source>
-          <target state="translated">&lt;strong&gt; &lt;code&gt;r_rows&lt;/code&gt; &lt;/strong&gt; 는 행을 읽는 모든 노드에 제공됩니다. 평균적으로 읽은 행 수를 표시합니다.</target>
+          <target state="translated">&lt;strong&gt; &lt;code&gt;r_rows&lt;/code&gt; &lt;/strong&gt; 는 행을 읽는 모든 노드에 제공됩니다. 평균적으로 읽은 행 수를 보여줍니다.</target>
         </trans-unit>
         <trans-unit id="48f319fa4bc618d874440eaf4fb96cc80a646dc9" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;&lt;code&gt;r_total_time_ms&lt;/code&gt;&lt;/strong&gt; field. It shows how much time in total was spent executing this node. If the node has subnodes, their execution time is included.</source>
@@ -233,7 +233,7 @@
         </trans-unit>
         <trans-unit id="8136d1cded588ecc29e393d99daf43cad9d5b13f" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Additional Single Column Filters&lt;/strong&gt; - Project additional column(s) for any rows found by a previous scan and apply additional single column predicates as needed. Access of blocks is based on row identifier, going directly to the block(s). See additional column read section of &lt;a href=&quot;../mariadb-columnstore-performance-related-configuration-settings/index&quot;&gt;performance configuration&lt;/a&gt; for additional details on tuning this.</source>
-          <target state="translated">&lt;strong&gt;추가 단일 열 필터&lt;/strong&gt; -이전 스캔에서 찾은 행에 대해 추가 열을 투영하고 필요에 따라 추가 단일 열 술어를 적용하십시오. 블록 액세스는 행 식별자를 기반으로 블록으로 직접 이동합니다. 튜닝에 대한 추가 세부 사항 은 &lt;a href=&quot;../mariadb-columnstore-performance-related-configuration-settings/index&quot;&gt;성능 구성&lt;/a&gt; 의 추가 컬럼 읽기 섹션을 참조하십시오 .</target>
+          <target state="translated">&lt;strong&gt;추가 단일 열 필터&lt;/strong&gt; -이전 스캔에서 찾은 행에 대해 추가 열을 투영하고 필요에 따라 추가 단일 열 술어를 적용하십시오. 블록의 액세스는 행 식별자를 기반으로 블록으로 직접 이동합니다. 튜닝에 대한 추가 세부 사항 은 &lt;a href=&quot;../mariadb-columnstore-performance-related-configuration-settings/index&quot;&gt;성능 구성&lt;/a&gt; 의 추가 컬럼 읽기 섹션을 참조하십시오 .</target>
         </trans-unit>
         <trans-unit id="a25046afd6e7b7a13345eff3a8ffc48c089ef21d" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Aggregation/Distinct Operation Part 1&lt;/strong&gt; - Apply any local group by, distinct, or aggregation operation against the set of joined rows assigned to a given Batch Primitive. Part 1 of This process is handled by Performance Modules</source>
@@ -241,7 +241,7 @@
         </trans-unit>
         <trans-unit id="ca28ce3a750fff0a8d4c787ca7d8cadf5c262230" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Aggregation/Distinct Operation Part 2&lt;/strong&gt; Apply any final group by, distinct, or aggregation operation against the set of joined rows assigned to a given Batch Primitive. This processing is handled by the User Module. See memory manageent section of &lt;a href=&quot;../mariadb-columnstore-performance-related-configuration-settings/index&quot;&gt;performance configuration&lt;/a&gt; for additional details on tuning this.</source>
-          <target state="translated">&lt;strong&gt;집계 / 고유 작업 2 부&lt;/strong&gt; 주어진 배치 프리미티브에 할당 된 조인 된 행 집합에 대해 최종 그룹 별, 고유 또는 집계 작업을 적용합니다. 이 처리는 사용자 모듈에서 처리합니다. 이를 조정하는 데 대한 추가 세부 사항 은 &lt;a href=&quot;../mariadb-columnstore-performance-related-configuration-settings/index&quot;&gt;성능 구성&lt;/a&gt; 의 메모리 관리 섹션을 참조하십시오 .</target>
+          <target state="translated">&lt;strong&gt;집계 / 고유 작업 2 부&lt;/strong&gt; 지정된 일괄 처리 기본에 할당 된 조인 행 집합에 대해 최종 그룹 별, 고유 또는 집계 작업을 적용합니다. 이 처리는 사용자 모듈에서 처리합니다. 이를 조정하는 데 대한 추가 세부 사항 은 &lt;a href=&quot;../mariadb-columnstore-performance-related-configuration-settings/index&quot;&gt;성능 구성&lt;/a&gt; 의 메모리 관리 섹션을 참조하십시오 .</target>
         </trans-unit>
         <trans-unit id="d535096ae4ef1ba78278d9461bc2e48d05858a94" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Alias:&lt;/strong&gt;&lt;code&gt;maria_group_commit&lt;/code&gt;</source>
@@ -285,7 +285,7 @@
         </trans-unit>
         <trans-unit id="6af84ec001b73b972b99fd15b80215c8ba745114" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;BUFFER POOL AND MEMORY:&lt;/strong&gt; Information on buffer pool pages read and written, which allows you to see the number of data file I/O operations performed by your queries. See &lt;a href=&quot;../innodb-buffer-pool/index&quot;&gt;InnoDB Buffer Pool&lt;/a&gt; for more. Similar information is also available from the &lt;a href=&quot;../information-schema-innodb_buffer_pool_stats-table/index&quot;&gt;INFORMATION_SCHEMA.INNODB_BUFFER_POOL_STATS&lt;/a&gt; table.</source>
-          <target state="translated">&lt;strong&gt;버퍼 풀 및 메모리 :&lt;/strong&gt; 읽고 쓰는 버퍼 풀 페이지에 대한 정보를 통해 쿼리에서 수행 한 데이터 파일 I / O 작업 수를 확인할 수 있습니다. 자세한 내용은 &lt;a href=&quot;../innodb-buffer-pool/index&quot;&gt;InnoDB 버퍼 풀&lt;/a&gt; 을 참조하십시오 . &lt;a href=&quot;../information-schema-innodb_buffer_pool_stats-table/index&quot;&gt;INFORMATION_SCHEMA.INNODB_BUFFER_POOL_STATS&lt;/a&gt; 테이블 에서도 유사한 정보를 사용할 수 있습니다 .</target>
+          <target state="translated">&lt;strong&gt;버퍼 풀 및 메모리 :&lt;/strong&gt; 읽고 쓰는 버퍼 풀 페이지에 대한 정보를 통해 쿼리에서 수행 한 데이터 파일 I / O 작업 수를 볼 수 있습니다. 자세한 내용은 &lt;a href=&quot;../innodb-buffer-pool/index&quot;&gt;InnoDB 버퍼 풀&lt;/a&gt; 을 참조하십시오 . &lt;a href=&quot;../information-schema-innodb_buffer_pool_stats-table/index&quot;&gt;INFORMATION_SCHEMA.INNODB_BUFFER_POOL_STATS&lt;/a&gt; 테이블 에서도 유사한 정보를 사용할 수 있습니다 .</target>
         </trans-unit>
         <trans-unit id="ed65171384c36b8a3d4879f26e8381e433575285" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Block Size:&lt;/strong&gt;&lt;code&gt;1024&lt;/code&gt;</source>
@@ -297,7 +297,7 @@
         </trans-unit>
         <trans-unit id="2262b825bbe7ec00ce5372f15171424bd0baf3ea" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Blocks Touched (blocksTouched)&lt;/strong&gt; - The total number of blocks that the query accessed physically and from the cache. This should be equal or less than the sum of physical I/O and cache I/O. This statistic is only valid for queries that are processed by ExeMgr, i.e. SELECT, DML with WHERE clause, and INSERT SELECT.</source>
-          <target state="translated">&lt;strong&gt;터치 된 블록 (블록 터치)&lt;/strong&gt; -쿼리가 물리적으로 캐시에서 액세스 한 총 블록 수입니다. 실제 I / O와 캐시 I / O의 합보다 작거나 같아야합니다. 이 통계는 ExeMgr에 의해 처리되는 쿼리 (예 : SELECT, WHERE 절이있는 DML 및 INSERT SELECT)에만 유효합니다.</target>
+          <target state="translated">&lt;strong&gt;터치 된 블록 수 (blocksTouched)&lt;/strong&gt; -쿼리가 물리적으로 캐시에서 액세스 한 총 블록 수입니다. 실제 I / O와 캐시 I / O의 합보다 작거나 같아야합니다. 이 통계는 ExeMgr에 의해 처리되는 쿼리 (예 : SELECT, WHERE 절이있는 DML 및 INSERT SELECT)에만 유효합니다.</target>
         </trans-unit>
         <trans-unit id="ab2e64e224f38fccc283b4f49d944ccd3dca127c" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;BlocksTouched&lt;/strong&gt; - Approximate number of 8k blocks processed in memory.</source>
@@ -361,7 +361,7 @@
         </trans-unit>
         <trans-unit id="5b6dc497d4fe2e033ecbfec511f81731e8c44d98" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Caution:&lt;/strong&gt; Avoid accessing tables belonging to the currently running MariaDB server via the MySQL ODBC connector. This may not work and may cause the server to be restarted.</source>
-          <target state="translated">&lt;strong&gt;주의 :&lt;/strong&gt; MySQL ODBC 커넥터를 통해 현재 실행중인 MariaDB 서버에 속하는 테이블에 액세스하지 마십시오. 작동하지 않아 서버가 다시 시작될 수 있습니다.</target>
+          <target state="translated">&lt;strong&gt;주의 :&lt;/strong&gt; MySQL ODBC 커넥터를 통해 현재 실행중인 MariaDB 서버에 속한 테이블에 액세스하지 마십시오. 작동하지 않아 서버가 다시 시작될 수 있습니다.</target>
         </trans-unit>
         <trans-unit id="28f70584a6e2e4c3d915959987b692aaddc52511" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Caution:&lt;/strong&gt; Take care not to refer to the MYSQL table itself to avoid an infinite loop!</source>
@@ -397,7 +397,7 @@
         </trans-unit>
         <trans-unit id="1edbfba77e9bb8f3bc15ce0659338ab8c3dc3197" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Commandline:&lt;/strong&gt; No</source>
-          <target state="translated">&lt;strong&gt;명령 줄 :&lt;/strong&gt; 아니요</target>
+          <target state="translated">&lt;strong&gt;커맨드 라인 :&lt;/strong&gt; No</target>
         </trans-unit>
         <trans-unit id="253bf8e1a31b5aecb7973c32a9fc9fe689177308" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Commandline:&lt;/strong&gt; None</source>

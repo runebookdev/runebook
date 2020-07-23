@@ -93,7 +93,7 @@
         </trans-unit>
         <trans-unit id="954806623263eec83965435d4b03d56697b9e46d" translate="yes" xml:space="preserve">
           <source>Compatibility: Any future changes to the package will endeavor to maintain compatibility with streams encoded using previous versions. That is, any released version of this package should be able to decode data written with any previously released version, subject to issues such as security fixes. See the Go compatibility document for background: &lt;a href=&quot;https://golang.org/doc/go1compat&quot;&gt;https://golang.org/doc/go1compat&lt;/a&gt;</source>
-          <target state="translated">互換性：パッケージへの将来の変更は、以前のバージョンを使用してエンコードされたストリームとの互換性を維持するよう努めます。つまり、このパッケージのリリースされたバージョンは、セキュリティ修正などの問題を前提として、以前にリリースされたバージョンで書き込まれたデータをデコードできる必要があります。背景については、Go互換性ドキュメントを参照してください：&lt;a href=&quot;https://golang.org/doc/go1compat&quot;&gt;https&lt;/a&gt; : //golang.org/doc/go1compat</target>
+          <target state="translated">互換性：パッケージへの将来の変更は、以前のバージョンを使用してエンコードされたストリームとの互換性を維持するよう努めます。つまり、このパッケージのリリースされたバージョンは、セキュリティ修正などの問題を前提として、以前にリリースされたバージョンで書き込まれたデータをデコードできるはずです。背景については、Go互換性ドキュメントを参照してください：&lt;a href=&quot;https://golang.org/doc/go1compat&quot;&gt;https&lt;/a&gt; : //golang.org/doc/go1compat</target>
         </trans-unit>
         <trans-unit id="0baebc95c01171c0c52e34f8d0b193a89bd2a16d" translate="yes" xml:space="preserve">
           <source>Compile compiles the regexp into a program to be executed. The regexp should have been simplified already (returned from re.Simplify).</source>
@@ -221,7 +221,7 @@
         </trans-unit>
         <trans-unit id="7e6cda7519c219248a0508d2822b6c702c671a99" translate="yes" xml:space="preserve">
           <source>ConstantTimeLessOrEq returns 1 if x &amp;lt;= y and 0 otherwise. Its behavior is undefined if x or y are negative or &amp;gt; 2**31 - 1.</source>
-          <target state="translated">ConstantTimeLessOrEqは、x &amp;lt;= yの場合は1を、それ以外の場合は0を返します。xまたはyが負または2 ** 31-1より大きい場合の動作は未定義です。</target>
+          <target state="translated">ConstantTimeLessOrEqは、x &amp;lt;= yの場合は1を返し、それ以外の場合は0を返します。xまたはyが負の場合、または2 ** 31-1より大きい場合の動作は未定義です。</target>
         </trans-unit>
         <trans-unit id="8097a05c2ae8e15642a918a2dfd5de0ec4d3229d" translate="yes" xml:space="preserve">
           <source>ConstantTimeSelect returns x if v == 1 and y if v == 0. Its behavior is undefined if v takes any other value.</source>
@@ -725,7 +725,7 @@
         </trans-unit>
         <trans-unit id="9459e2df37f9d7b79d9c22b47888407d5cae69bd" translate="yes" xml:space="preserve">
           <source>Decode decodes src into dst, returning both the number of bytes written to dst and the number consumed from src. If src contains invalid ascii85 data, Decode will return the number of bytes successfully written and a CorruptInputError. Decode ignores space and control characters in src. Often, ascii85-encoded data is wrapped in &amp;lt;~ and ~&amp;gt; symbols. Decode expects these to have been stripped by the caller.</source>
-          <target state="translated">Decodeは、srcをdstにデコードし、dstに書き込まれたバイト数とsrcから消費されたバイト数の両方を返します。 srcに無効なascii85データが含まれている場合、Decodeは正常に書き込まれたバイト数とCorruptInputErrorを返します。デコードは、src内のスペースと制御文字を無視します。多くの場合、ascii85でエンコードされたデータは、&amp;lt;〜および〜&amp;gt;記号で囲まれています。デコードは、これらが呼び出し元によって削除されていることを期待します。</target>
+          <target state="translated">Decodeは、srcをdstにデコードし、dstに書き込まれたバイト数とsrcから消費されたバイト数の両方を返します。 srcに無効なascii85データが含まれている場合、Decodeは正常に書き込まれたバイト数とCorruptInputErrorを返します。デコードは、src内のスペースと制御文字を無視します。多くの場合、ascii85でエンコードされたデータは、&amp;lt;〜および〜&amp;gt;記号で囲まれています。 Decodeは、これらが呼び出し元によって削除されていることを期待します。</target>
         </trans-unit>
         <trans-unit id="f4e08a18b5e0596336160230bc4fa0088423d426" translate="yes" xml:space="preserve">
           <source>Decode decodes src using the encoding enc. It writes at most DecodedLen(len(src)) bytes to dst and returns the number of bytes written. If src contains invalid base32 data, it will return the number of bytes successfully written and CorruptInputError. New line characters (\r and \n) are ignored.</source>
@@ -913,7 +913,7 @@
         </trans-unit>
         <trans-unit id="5034a4dbba2441d68b5bba30749025b8a62d6758" translate="yes" xml:space="preserve">
           <source>DecryptPKCS1v15SessionKey decrypts a session key using RSA and the padding scheme from PKCS#1 v1.5. If rand != nil, it uses RSA blinding to avoid timing side-channel attacks. It returns an error if the ciphertext is the wrong length or if the ciphertext is greater than the public modulus. Otherwise, no error is returned. If the padding is valid, the resulting plaintext message is copied into key. Otherwise, key is unchanged. These alternatives occur in constant time. It is intended that the user of this function generate a random session key beforehand and continue the protocol with the resulting value. This will remove any possibility that an attacker can learn any information about the plaintext. See &amp;ldquo;Chosen Ciphertext Attacks Against Protocols Based on the RSA Encryption Standard PKCS #1&amp;rdquo;, Daniel Bleichenbacher, Advances in Cryptology (Crypto '98).</source>
-          <target state="translated">DecryptPKCS1v15SessionKeyは、RSAおよびPKCS＃1 v1.5のパディング方式を使用してセッションキーを復号化します。 rand！= nilの場合、RSAブラインドを使用して、サイドチャネル攻撃のタイミングを回避します。暗号文の長さが正しくない場合、または暗号文が公開モジュラスより大きい場合は、エラーを返します。それ以外の場合、エラーは返されません。パディングが有効な場合、結果のプレーンテキストメッセージがkeyにコピーされます。それ以外の場合、キーは変更されません。これらの選択肢は一定の時間内に発生します。この関数のユーザーは、事前にランダムセッションキーを生成し、結果の値でプロトコルを続行することを目的としています。これにより、攻撃者が平文に関する情報を入手できる可能性がなくなります。 Daniel Bleichenbacherの「RSA Encryption Standard PKCS＃1に基づくプロトコルに対する選択された暗号文攻撃」を参照してください。暗号学の進歩（Crypto '98）。</target>
+          <target state="translated">DecryptPKCS1v15SessionKeyは、RSAおよびPKCS＃1 v1.5のパディング方式を使用してセッションキーを復号化します。 rand！= nilの場合、RSAブラインドを使用して、サイドチャネル攻撃のタイミングを回避します。暗号文の長さが正しくない場合、または暗号文がパブリックモジュラスより大きい場合は、エラーを返します。それ以外の場合、エラーは返されません。パディングが有効な場合、結果のプレーンテキストメッセージがkeyにコピーされます。それ以外の場合、キーは変更されません。これらの選択肢は一定の時間内に発生します。この関数のユーザーは、事前にランダムセッションキーを生成し、結果の値でプロトコルを続行することを目的としています。これにより、攻撃者が平文に関する情報を入手できる可能性がなくなります。 Daniel Bleichenbacherの「RSA Encryption Standard PKCS＃1に基づくプロトコルに対する選択された暗号文攻撃」を参照してください。暗号学の進歩（Crypto '98）。</target>
         </trans-unit>
         <trans-unit id="42a6dfe4c2e189c8de29f15cddcf7cf9dba25238" translate="yes" xml:space="preserve">
           <source>Decrypter is an interface for an opaque private key that can be used for asymmetric decryption operations. An example would be an RSA key kept in a hardware module.</source>
@@ -921,7 +921,7 @@
         </trans-unit>
         <trans-unit id="b7ae957644bea42b7ff65d51f99ce49cb83fd388" translate="yes" xml:space="preserve">
           <source>DeepEqual reports whether x and y are &amp;ldquo;deeply equal,&amp;rdquo; defined as follows. Two values of identical type are deeply equal if one of the following cases applies. Values of distinct types are never deeply equal.</source>
-          <target state="translated">DeepEqualは、xとyが「深く等しい」かどうかを報告します。これは、次のように定義されています。同じタイプの2つの値は、次のいずれかの場合が当てはまる場合、完全に等しくなります。特殊タイプの値が深く等しくなることはありません。</target>
+          <target state="translated">DeepEqualは、xとyが「深く等しい」かどうかを報告します。以下のように定義されています。同じタイプの2つの値は、次のいずれかの場合に当てはまる場合、完全に等しくなります。特殊タイプの値が深く等しくなることはありません。</target>
         </trans-unit>
         <trans-unit id="d88594116663c9d491607d208f07eaf0d91b8568" translate="yes" xml:space="preserve">
           <source>DefPredeclaredTestFuncs defines the assert and trace built-ins. These built-ins are intended for debugging and testing of this package only.</source>
@@ -1029,7 +1029,7 @@
         </trans-unit>
         <trans-unit id="0b8eeb4cd02c6a77b7f55a05d7bd3c8acc59c71d" translate="yes" xml:space="preserve">
           <source>Denom returns the denominator of x; x must be Int, Float, or Unknown. If x is Unknown, or if it is too large or small to represent as a fraction, the result is Unknown. Otherwise the result is an Int &amp;gt;= 1.</source>
-          <target state="translated">Denomはxの分母を返します。xは、Int、Float、またはUnknownでなければなりません。xが不明である場合、またはxが小さすぎて分数として表現できない場合、結果は不明になります。それ以外の場合、結果はInt&amp;gt; = 1になります。</target>
+          <target state="translated">Denomはxの分母を返します。xは、Int、Float、またはUnknownでなければなりません。xが不明の場合、またはxが小さすぎて分数として表現できない場合、結果は不明になります。それ以外の場合、結果はInt&amp;gt; = 1です。</target>
         </trans-unit>
         <trans-unit id="02dfda4f203755036a797366a5e270c14beadf5b" translate="yes" xml:space="preserve">
           <source>Depending on the HTTP client software, HTTP protocol version, and any intermediaries between the client and the Go server, it may not be possible to read from the Request.Body after writing to the ResponseWriter. Cautious handlers should read the Request.Body first, and then reply.</source>
@@ -1153,11 +1153,11 @@
         </trans-unit>
         <trans-unit id="cb2a5b2d0ed3d2503d1117d6b88d116db1a5c733" translate="yes" xml:space="preserve">
           <source>Deprecated: this package is locked down. Callers should use the corresponding package in the golang.org/x/sys repository instead. That is also where updates required by new systems or versions should be applied. See &lt;a href=&quot;https://golang.org/s/go1.4-syscall&quot;&gt;https://golang.org/s/go1.4-syscall&lt;/a&gt; for more information.</source>
-          <target state="translated">非推奨：このパッケージはロックダウンされています。呼び出し元は、代わりにgolang.org/x/sysリポジトリ内の対応するパッケージを使用する必要があります。新しいシステムまたはバージョンで必要な更新を適用する必要があるのもここです。詳細については、&lt;a href=&quot;https://golang.org/s/go1.4-syscall&quot;&gt;https：//golang.org/s/go1.4-syscall&lt;/a&gt;を参照してください。</target>
+          <target state="translated">非推奨：このパッケージはロックダウンされています。呼び出し元は、代わりにgolang.org/x/sysリポジトリ内の対応するパッケージを使用する必要があります。また、新しいシステムまたはバージョンで必要な更新を適用する必要がある場所でもあります。詳細については、&lt;a href=&quot;https://golang.org/s/go1.4-syscall&quot;&gt;https：//golang.org/s/go1.4-syscall&lt;/a&gt;を参照してください。</target>
         </trans-unit>
         <trans-unit id="11f97aa680aa5a60014104f440129ac907153497" translate="yes" xml:space="preserve">
           <source>DetectContentType implements the algorithm described at &lt;a href=&quot;https://mimesniff.spec.whatwg.org/&quot;&gt;https://mimesniff.spec.whatwg.org/&lt;/a&gt; to determine the Content-Type of the given data. It considers at most the first 512 bytes of data. DetectContentType always returns a valid MIME type: if it cannot determine a more specific one, it returns &quot;application/octet-stream&quot;.</source>
-          <target state="translated">DetectContentTypeは、&lt;a href=&quot;https://mimesniff.spec.whatwg.org/&quot;&gt;https：&lt;/a&gt; //mimesniff.spec.whatwg.org/で説明されているアルゴリズムを実装して、指定されたデータのContent-Typeを決定します。データの最大で最初の512バイトが考慮されます。DetectContentTypeは常に有効なMIMEタイプを返します。より具体的なMIMEタイプを判別できない場合は、「application / octet-stream」を返します。</target>
+          <target state="translated">DetectContentTypeは、&lt;a href=&quot;https://mimesniff.spec.whatwg.org/&quot;&gt;https：&lt;/a&gt; //mimesniff.spec.whatwg.org/で説明されているアルゴリズムを実装して、指定されたデータのContent-Typeを決定します。最大で最初の512バイトのデータが考慮されます。DetectContentTypeは常に有効なMIMEタイプを返します。より具体的なMIMEタイプを判別できない場合は、「application / octet-stream」を返します。</target>
         </trans-unit>
         <trans-unit id="367a791e4c8a0aab798febfdd40fb481c8e6a937" translate="yes" xml:space="preserve">
           <source>DevNull is the name of the operating system's &amp;ldquo;null device.&amp;rdquo; On Unix-like systems, it is &quot;/dev/null&quot;; on Windows, &quot;NUL&quot;.</source>
@@ -1277,7 +1277,7 @@
         </trans-unit>
         <trans-unit id="5ec7907f27bd994c3fb8583301b913b0b6813a3a" translate="yes" xml:space="preserve">
           <source>Div returns the quotient and remainder of (hi, lo) divided by y: quo = (hi, lo)/y, rem = (hi, lo)%y with the dividend bits' upper half in parameter hi and the lower half in parameter lo. Div panics for y == 0 (division by zero) or y &amp;lt;= hi (quotient overflow).</source>
-          <target state="translated">Divは、（hi、lo）をyで割った商と剰余を返します：quo =（hi、lo）/ y、rem =（hi、lo）％y被除数ビットの上半分がパラメーターhiに、下半分がパラメーターhiパラメータlo。y == 0（ゼロによる除算）またはy &amp;lt;= hi（商のオーバーフロー）のDivパニック。</target>
+          <target state="translated">Divは、（hi、lo）をyで除算した商と剰余を返します：quo =（hi、lo）/ y、rem =（hi、lo）％y被除数ビットの上半分をパラメーターhiに、下半分をパラメーターhiパラメータlo。y == 0（ゼロによる除算）またはy &amp;lt;= hi（商のオーバーフロー）のDivパニック。</target>
         </trans-unit>
         <trans-unit id="4fc57c9c02ed421c232712ba11343274d994963e" translate="yes" xml:space="preserve">
           <source>Div returns the vector p/k.</source>
@@ -1289,11 +1289,11 @@
         </trans-unit>
         <trans-unit id="6969f247b499f527d10065936434631c47245711" translate="yes" xml:space="preserve">
           <source>Div32 returns the quotient and remainder of (hi, lo) divided by y: quo = (hi, lo)/y, rem = (hi, lo)%y with the dividend bits' upper half in parameter hi and the lower half in parameter lo. Div32 panics for y == 0 (division by zero) or y &amp;lt;= hi (quotient overflow).</source>
-          <target state="translated">Div32は、（hi、lo）をyで割った商と剰余を返します：quo =（hi、lo）/ y、rem =（hi、lo）％y被除数ビットの上半分がパラメーターhiに、下半分がパラメーターhiパラメータlo。y == 0（ゼロによる除算）またはy &amp;lt;= hi（商のオーバーフロー）のDiv32パニック。</target>
+          <target state="translated">Div32は、（hi、lo）をyで除算した商と剰余を返します：quo =（hi、lo）/ y、rem =（hi、lo）％y被除数ビットの上半分がパラメーターhiで下半分がパラメーターhiパラメータlo。y == 0（ゼロによる除算）またはy &amp;lt;= hi（商のオーバーフロー）のDiv32パニック。</target>
         </trans-unit>
         <trans-unit id="64a140393f99aaa8275c3c523c2f0109eb59db32" translate="yes" xml:space="preserve">
           <source>Div64 returns the quotient and remainder of (hi, lo) divided by y: quo = (hi, lo)/y, rem = (hi, lo)%y with the dividend bits' upper half in parameter hi and the lower half in parameter lo. Div64 panics for y == 0 (division by zero) or y &amp;lt;= hi (quotient overflow).</source>
-          <target state="translated">Div64は、（hi、lo）をyで割った商と剰余を返します：quo =（hi、lo）/ y、rem =（hi、lo）％y被除数ビットの上半分はパラメーターhiに、下半分はパラメータlo。y == 0（ゼロによる除算）またはy &amp;lt;= hi（商のオーバーフロー）のDiv64パニック。</target>
+          <target state="translated">Div64は、（hi、lo）をyで除算した商と剰余を返します：quo =（hi、lo）/ y、rem =（hi、lo）％y被除数ビットの上半分がパラメーターhiで下半分がパラメーターhiパラメータlo。y == 0（ゼロによる除算）またはy &amp;lt;= hi（商のオーバーフロー）のDiv64パニック。</target>
         </trans-unit>
         <trans-unit id="73ee7e85e1219c9b6dd08a952c5d23488d8e580c" translate="yes" xml:space="preserve">
           <source>DivMod implements Euclidean division and modulus (unlike Go):</source>
@@ -1645,7 +1645,7 @@
         </trans-unit>
         <trans-unit id="6b3b30426371820daeb94800f4f247d67b378492" translate="yes" xml:space="preserve">
           <source>Elem returns the value that the interface v contains or that the pointer v points to. It panics if v's Kind is not Interface or Ptr. It returns the zero Value if v is nil.</source>
-          <target state="translated">elem は、v が含むインターフェース、またはポインタ v が指す値を返します。vのKindがInterfaceまたはPtrでない場合はパニックになります。vがnilの場合は0の値を返します。</target>
+          <target state="translated">Elem は、v が含むインターフェース、またはポインタ v が指す値を返します。vのKindがInterfaceまたはPtrでない場合はパニックになります。vがnilの場合は0の値を返します。</target>
         </trans-unit>
         <trans-unit id="362386365af358238b7934a96826d937830ebf3a" translate="yes" xml:space="preserve">
           <source>Element is an element of a linked list.</source>
@@ -1681,7 +1681,7 @@
         </trans-unit>
         <trans-unit id="aa1a82640541370ae1891158035802a1ac918358" translate="yes" xml:space="preserve">
           <source>Empty strings:</source>
-          <target state="translated">空の文字列。</target>
+          <target state="translated">空の文字列</target>
         </trans-unit>
         <trans-unit id="1e0a04a02a4b36d462dfbd7a50f1ba95ab97db02" translate="yes" xml:space="preserve">
           <source>EmptyOpContext returns the zero-width assertions satisfied at the position between the runes r1 and r2. Passing r1 == -1 indicates that the position is at the beginning of the text. Passing r2 == -1 indicates that the position is at the end of the text.</source>
@@ -1729,7 +1729,7 @@
         </trans-unit>
         <trans-unit id="37c9bfb263c03b8e0db64db584d5ef43161f60ee" translate="yes" xml:space="preserve">
           <source>Encode writes the Image m to w in JPEG 4:2:0 baseline format with the given options. Default parameters are used if a nil *Options is passed.</source>
-          <target state="translated">Encode は、与えられたオプションを使用して JPEG 4:2:0 のベースラインフォーマットで画像 m を w に書き込みます。nil *Optionsが渡された場合、デフォルトのパラメータが使用されます。</target>
+          <target state="translated">Encode は、与えられたオプションを使用して JPEG 4:2:0 ベースラインフォーマットで画像 m を w に書き込みます。nil *Optionsが渡された場合、デフォルトのパラメータが使用されます。</target>
         </trans-unit>
         <trans-unit id="b163cff27e48e422e82d5a5f5dd2edfa89cd1991" translate="yes" xml:space="preserve">
           <source>Encode writes the Image m to w in PNG format.</source>
@@ -1737,7 +1737,7 @@
         </trans-unit>
         <trans-unit id="a5cbca07b15679a333d2f3c1093e760dc8fed50b" translate="yes" xml:space="preserve">
           <source>Encode writes the Image m to w in PNG format. Any Image may be encoded, but images that are not image.NRGBA might be encoded lossily.</source>
-          <target state="translated">エンコードは画像mから画像wにPNG形式で書き込みます。どんな画像でもエンコードできますが、image.NRGBAではない画像でもエンコードされてしまう場合があります。</target>
+          <target state="translated">エンコードは画像mから画像wへPNG形式で書き込みます。どんな画像でもエンコードできますが、image.NRGBAではない画像でもエンコードされてしまう場合があります。</target>
         </trans-unit>
         <trans-unit id="9c8d80de5513517293c9312bce84a60a51e18c30" translate="yes" xml:space="preserve">
           <source>Encode writes the JSON encoding of v to the stream, followed by a newline character.</source>
@@ -2257,7 +2257,7 @@
         </trans-unit>
         <trans-unit id="3a32d6d4d267bdae71baa4ebb4864da534840bc0" translate="yes" xml:space="preserve">
           <source>EscapeString escapes special characters like &quot;&amp;lt;&quot; to become &quot;&amp;amp;lt;&quot;. It escapes only five such characters: &amp;lt;, &amp;gt;, &amp;amp;, ' and &quot;. UnescapeString(EscapeString(s)) == s always holds, but the converse isn't always true.</source>
-          <target state="translated">EscapeStringは、「&amp;lt;」などの特殊文字をエスケープして「＆lt;」にします。エスケープ文字は、&amp;lt;、&amp;gt;、＆、 '、 &quot;の5つだけです。UnescapeString（EscapeString（s））== sは常に成り立ちますが、その逆は常に真とは限りません。</target>
+          <target state="translated">EscapeStringは、「&amp;lt;」などの特殊文字をエスケープして「＆lt;」にします。このような文字は、&amp;lt;、&amp;gt;、＆、 '、 &quot;の5つだけエスケープします。UnescapeString（EscapeString（s））== sは常に成り立ちますが、その逆は常に正しいとは限りません。</target>
         </trans-unit>
         <trans-unit id="2d03f838319f2b58cce7d4023faf3595f32ebc4a" translate="yes" xml:space="preserve">
           <source>EscapeText writes to w the properly escaped XML equivalent of the plain text data s.</source>
@@ -2265,7 +2265,7 @@
         </trans-unit>
         <trans-unit id="d16488cf3f3e8d2bcd7180af8373e57e18ef4565" translate="yes" xml:space="preserve">
           <source>EscapedPath returns the escaped form of u.Path. In general there are multiple possible escaped forms of any path. EscapedPath returns u.RawPath when it is a valid escaping of u.Path. Otherwise EscapedPath ignores u.RawPath and computes an escaped form on its own. The String and RequestURI methods use EscapedPath to construct their results. In general, code should call EscapedPath instead of reading u.RawPath directly.</source>
-          <target state="translated">EscapedPathは、u.Pathのエスケープされた形式を返します。一般的に、どのようなパスでも複数のエスケープされた形が考えられます。EscapedPath は u.Path の有効なエスケープであれば u.RawPath を返します。それ以外の場合、EscapedPathはu.RawPathを無視し、独自にエスケープされた形を計算します。StringメソッドとRequestURIメソッドは、結果を構築するためにEscapedPathを使用します。一般的に、コードは u.RawPath を直接読み込むのではなく EscapedPath を呼び出すべきです。</target>
+          <target state="translated">EscapedPathは、u.Pathのエスケープされた形式を返します。一般的に、どのようなパスでも複数のエスケープされた形が考えられます。EscapedPathはu.Pathの有効なエスケープであればu.RawPathを返します。それ以外の場合、EscapedPathはu.RawPathを無視し、独自にエスケープされた形を計算します。StringメソッドとRequestURIメソッドは、結果を構築するためにEscapedPathを使用します。一般的に、コードは u.RawPath を直接読み込むのではなく EscapedPath を呼び出すべきです。</target>
         </trans-unit>
         <trans-unit id="f6f139cba9287a2764afe8ce53317ff229147fba" translate="yes" xml:space="preserve">
           <source>Eval returns the type and, if constant, the value for the expression expr, evaluated at position pos of package pkg, which must have been derived from type-checking an AST with complete position information relative to the provided file set.</source>
@@ -2277,7 +2277,7 @@
         </trans-unit>
         <trans-unit id="e74e7ce3c8abf4b80ec56864d1aae4c5480b2b01" translate="yes" xml:space="preserve">
           <source>Even if ReadAt returns n &amp;lt; len(p), it may use all of p as scratch space during the call. If some data is available but not len(p) bytes, ReadAt blocks until either all the data is available or an error occurs. In this respect ReadAt is different from Read.</source>
-          <target state="translated">ReadAtがn &amp;lt;len（p）を返す場合でも、呼び出し中にpのすべてをスクラッチスペースとして使用する場合があります。一部のデータは利用可能であるがlen（p）バイトは利用できない場合、ReadAtは、すべてのデータが利用可能になるか、エラーが発生するまでブロックします。この点で、ReadAtはReadとは異なります。</target>
+          <target state="translated">ReadAtがn &amp;lt;len（p）を返す場合でも、呼び出し中にpのすべてをスクラッチ領域として使用する場合があります。一部のデータは利用可能であるがlen（p）バイトは利用できない場合、ReadAtは、すべてのデータが利用可能になるか、エラーが発生するまでブロックします。この点で、ReadAtはReadとは異なります。</target>
         </trans-unit>
         <trans-unit id="53a0efcd9116915108429249f6aa89cdbb04bf0f" translate="yes" xml:space="preserve">
           <source>Even when enabled, the server may not change its identity between handshakes (i.e. the leaf certificate must be the same). Additionally, concurrent handshake and application data flow is not permitted so renegotiation can only be used with protocols that synchronise with the renegotiation, such as HTTPS.</source>
@@ -2769,7 +2769,7 @@
         </trans-unit>
         <trans-unit id="95aa110ed338c85b885ee58002691284514da3af" translate="yes" xml:space="preserve">
           <source>Exp sets z = x**y mod |m| (i.e. the sign of m is ignored), and returns z. If m == nil or m == 0, z = x**y unless y &amp;lt;= 0 then z = 1. If m &amp;gt; 0, y &amp;lt; 0, and x and n are not relatively prime, z is unchanged and nil is returned.</source>
-          <target state="translated">Expはz = x ** y mod | m |を設定します（つまり、mの符号は無視されます）、zを返します。 m == nilまたはm == 0の場合、z = x ** y y &amp;lt;= 0でない限りz = 1です。m&amp;gt; 0、y &amp;lt;0、およびxとnが比較的素数でない場合、zは変更されず、nil返されます。</target>
+          <target state="translated">Expはz = x ** y mod | m |を設定します （つまり、mの符号は無視されます）、zを返します。m == nilまたはm == 0の場合、z = x ** y y &amp;lt;= 0でない限り、z = 1です。m&amp;gt; 0、y &amp;lt;0、およびxとnが比較的素数でない場合、zは変更されず、nil返されます。</target>
         </trans-unit>
         <trans-unit id="ea1f0ddfdecd3517aad8d1a91705ef531de70942" translate="yes" xml:space="preserve">
           <source>Exp2 returns 2**x, the base-2 exponential of x.</source>
@@ -2941,7 +2941,7 @@
         </trans-unit>
         <trans-unit id="8183a55fec39ebd325b9f393dccbc786cb50e104" translate="yes" xml:space="preserve">
           <source>FieldByName and related functions consider struct field names to be equal if the names are equal, even if they are unexported names originating in different packages. The practical effect of this is that the result of t.FieldByName(&quot;x&quot;) is not well defined if the struct type t contains multiple fields named x (embedded from different packages). FieldByName may return one of the fields named x or may report that there are none. See &lt;a href=&quot;https://golang.org/issue/4876&quot;&gt;https://golang.org/issue/4876&lt;/a&gt; for more details.</source>
-          <target state="translated">FieldByNameおよび関連する関数は、それらが異なるパッケージに由来するエクスポートされていない名前であっても、名前が等しい場合、構造体フィールド名は等しいと見なします。これの実際的な効果は、構造体型tにxという名前の複数のフィールド（異なるパッケージから埋め込まれた）が含まれている場合、t.FieldByName（ &quot;x&quot;）の結果が適切に定義されないことです。FieldByNameは、xという名前のフィールドの1つを返すか、フィールドがないことを報告する場合があります。詳細については、&lt;a href=&quot;https://golang.org/issue/4876&quot;&gt;https：//golang.org/issue/4876&lt;/a&gt;を参照してください。</target>
+          <target state="translated">FieldByNameおよび関連する関数は、異なるパッケージに由来するエクスポートされていない名前であっても、名前が等しい場合、構造体フィールド名は等しいと見なします。これの実際的な効果は、構造体型tにxという名前の複数のフィールド（異なるパッケージから埋め込まれた）が含まれている場合、t.FieldByName（ &quot;x&quot;）の結果が適切に定義されないことです。FieldByNameは、xという名前のフィールドの1つを返すか、フィールドがないことを報告する場合があります。詳細については、&lt;a href=&quot;https://golang.org/issue/4876&quot;&gt;https：//golang.org/issue/4876&lt;/a&gt;を参照してください。</target>
         </trans-unit>
         <trans-unit id="64a2508218e09b64bdd0d9e7f24c36121018ee1f" translate="yes" xml:space="preserve">
           <source>FieldByName returns the struct field with the given name. It returns the zero Value if no field was found. It panics if v's Kind is not struct.</source>
@@ -3117,7 +3117,7 @@
         </trans-unit>
         <trans-unit id="64167db3c8ee867d45eebbc9c53b064e2bb836d4" translate="yes" xml:space="preserve">
           <source>Finalizers are run in dependency order: if A points at B, both have finalizers, and they are otherwise unreachable, only the finalizer for A runs; once A is freed, the finalizer for B can run. If a cyclic structure includes a block with a finalizer, that cycle is not guaranteed to be garbage collected and the finalizer is not guaranteed to run, because there is no ordering that respects the dependencies.</source>
-          <target state="translated">ファイナライザは依存関係の順に実行されます。AがBを指していて、両方にファイナライザがあり、それ以外の場合は到達できない場合、A用のファイナライザのみが実行されます。Aが解放されると、B用のファイナライザが実行され、Aが解放されると、B用のファイナライザが実行されます。</target>
+          <target state="translated">ファイナライザは依存関係順に実行されます。AがBを指していて、両方にファイナライザがあり、それ以外の場合は到達できない場合、A用のファイナライザのみが実行されます。Aが解放されると、B用のファイナライザが実行され、Aが解放されると、B用のファイナライザが実行されます。</target>
         </trans-unit>
         <trans-unit id="04c286b7e901d165a790bb4d85625ee624e6c5de" translate="yes" xml:space="preserve">
           <source>Finally, *Int, *Rat, and *Float satisfy the fmt package's Scanner interface for scanning and (except for *Rat) the Formatter interface for formatted printing.</source>
@@ -3145,7 +3145,7 @@
         </trans-unit>
         <trans-unit id="f5f37301641ba46ce0b020d50232dcdae9f0dad0" translate="yes" xml:space="preserve">
           <source>FindAllIndex returns a sorted list of non-overlapping matches of the regular expression r, where a match is a pair of indices specifying the matched slice of x.Bytes(). If n &amp;lt; 0, all matches are returned in successive order. Otherwise, at most n matches are returned and they may not be successive. The result is nil if there are no matches, or if n == 0.</source>
-          <target state="translated">FindAllIndexは、正規表現rの重複しない一致のソートされたリストを返します。一致は、x.Bytes（）の一致したスライスを指定するインデックスのペアです。 n &amp;lt;0の場合、すべての一致が連続した順序で返されます。それ以外の場合、最大でn個の一致が返され、それらは連続しない可能性があります。一致がない場合、またはn == 0の場合、結果はnilです。</target>
+          <target state="translated">FindAllIndexは、正規表現rの重複しない一致のソートされたリストを返します。一致は、x.Bytes（）の一致したスライスを指定するインデックスのペアです。 n &amp;lt;0の場合、すべての一致が連続した順序で返されます。それ以外の場合、最大でn個の一致が返され、それらは連続しない場合があります。一致がない場合、またはn == 0の場合、結果はnilです。</target>
         </trans-unit>
         <trans-unit id="9de88adfecc3f20e0c2ffdbb0f036f7a79d80f3b" translate="yes" xml:space="preserve">
           <source>FindAllString is the 'All' version of FindString; it returns a slice of all successive matches of the expression, as defined by the 'All' description in the package comment. A return value of nil indicates no match.</source>
@@ -3197,7 +3197,7 @@
         </trans-unit>
         <trans-unit id="a789ded76b89d56fcfc993f95abd7a8461164bf2" translate="yes" xml:space="preserve">
           <source>FindStringSubmatch returns a slice of strings holding the text of the leftmost match of the regular expression in s and the matches, if any, of its subexpressions, as defined by the 'Submatch' description in the package comment. A return value of nil indicates no match.</source>
-          <target state="translated">FindStringSubmatch は、パッケージのコメントにある 'Submatch' の説明で定義されているように、 s の正規表現の左端にマッチしたテキストと、そのサブ表現にマッチしたものがあればそのテキストを保持する文字列のスライスを返します。nil の戻り値は一致しないことを示します。</target>
+          <target state="translated">FindStringSubmatch は、パッケージのコメントにある 'Submatch' の説明で定義されているように、 s の正規表現の左端にマッチしたテキストと、その副表現にマッチしたものがあればそのテキストを保持する文字列のスライスを返します。nil の戻り値は一致しないことを示します。</target>
         </trans-unit>
         <trans-unit id="716a3ff38a9d712fef426438e6f03f83ab81e7b5" translate="yes" xml:space="preserve">
           <source>FindStringSubmatchIndex returns a slice holding the index pairs identifying the leftmost match of the regular expression in s and the matches, if any, of its subexpressions, as defined by the 'Submatch' and 'Index' descriptions in the package comment. A return value of nil indicates no match.</source>
@@ -3281,7 +3281,7 @@
         </trans-unit>
         <trans-unit id="b29933c6b53142cadd8d7b922f23fae52793b020" translate="yes" xml:space="preserve">
           <source>Float32 returns the float32 value nearest to x. If x is too small to be represented by a float32 (|x| &amp;lt; math.SmallestNonzeroFloat32), the result is (0, Below) or (-0, Above), respectively, depending on the sign of x. If x is too large to be represented by a float32 (|x| &amp;gt; math.MaxFloat32), the result is (+Inf, Above) or (-Inf, Below), depending on the sign of x.</source>
-          <target state="translated">Float32は、xに最も近いfloat32値を返します。xが小さすぎてfloat32（| x | &amp;lt;math.SmallestNonzeroFloat32）で表現できない場合、xの符号に応じて、結果はそれぞれ（0、Below）または（-0、Above）になります。xが大きすぎてfloat32（| x |&amp;gt; math.MaxFloat32）で表現できない場合、結果はxの符号に応じて（+ Inf、Above）または（-Inf、Below）になります。</target>
+          <target state="translated">Float32は、xに最も近いfloat32値を返します。xが小さすぎてfloat32（| x | &amp;lt;math.SmallestNonzeroFloat32）で表すことができない場合、結果はそれぞれxの符号に応じて（0、Below）または（-0、Above）になります。xが大きすぎてfloat32（| x |&amp;gt; math.MaxFloat32）で表現できない場合、結果はxの符号に応じて（+ Inf、Above）または（-Inf、Below）になります。</target>
         </trans-unit>
         <trans-unit id="f0d283c114b964a75d4c408e464182f402cb0b18" translate="yes" xml:space="preserve">
           <source>Float32 returns the nearest float32 value for x and a bool indicating whether f represents x exactly. If the magnitude of x is too large to be represented by a float32, f is an infinity and exact is false. The sign of f always matches the sign of x, even if f == 0.</source>
@@ -3313,7 +3313,7 @@
         </trans-unit>
         <trans-unit id="932e539e33ca068476000955a48af619cccb5721" translate="yes" xml:space="preserve">
           <source>Float64 returns the float64 value nearest to x. If x is too small to be represented by a float64 (|x| &amp;lt; math.SmallestNonzeroFloat64), the result is (0, Below) or (-0, Above), respectively, depending on the sign of x. If x is too large to be represented by a float64 (|x| &amp;gt; math.MaxFloat64), the result is (+Inf, Above) or (-Inf, Below), depending on the sign of x.</source>
-          <target state="translated">Float64は、xに最も近いfloat64値を返します。xが小さすぎてfloat64で表すことができない場合（| x | &amp;lt;math.SmallestNonzeroFloat64）、xの符号に応じて、結果はそれぞれ（0、下）または（-0、上）になります。xが大きすぎてfloat64（| x |&amp;gt; math.MaxFloat64）で表現できない場合、結果はxの符号に応じて（+ Inf、Above）または（-Inf、Below）になります。</target>
+          <target state="translated">Float64は、xに最も近いfloat64値を返します。xが小さすぎてfloat64で表すことができない場合（| x | &amp;lt;math.SmallestNonzeroFloat64）、xの符号に応じて、結果はそれぞれ（0、下）または（-0、上）になります。xが大きすぎてfloat64（| x |&amp;gt; math.MaxFloat64）で表すことができない場合、結果はxの符号に応じて（+ Inf、Above）または（-Inf、Below）になります。</target>
         </trans-unit>
         <trans-unit id="9246cdfb5427d2669759af0d644a975a43bcf09a" translate="yes" xml:space="preserve">
           <source>Float64 returns the nearest float64 value for x and a bool indicating whether f represents x exactly. If the magnitude of x is too large to be represented by a float64, f is an infinity and exact is false. The sign of f always matches the sign of x, even if f == 0.</source>
@@ -3517,19 +3517,19 @@
         </trans-unit>
         <trans-unit id="d8c341cebb2371fc4554d9fb0c6e54c2c5900936" translate="yes" xml:space="preserve">
           <source>For base 0, an underscore character &amp;ldquo;_&amp;rdquo; may appear between a base prefix and an adjacent digit, and between successive digits; such underscores do not change the value of the number, or the returned digit count. Incorrect placement of underscores is reported as an error if there are no other errors. If base != 0, underscores are not recognized and thus terminate scanning like any other character that is not a valid radix point or digit.</source>
-          <target state="translated">ベース0の場合、ベースプレフィックスと隣接する数字の間、および連続する数字の間にアンダースコア文字「_」が表示されることがあります。このような下線は、数値の値や返される桁数を変更しません。他にエラーがない場合、アンダースコアの不適切な配置はエラーとして報告されます。base！= 0の場合、アンダースコアは認識されないため、有効な基数ポイントまたは数字ではない他の文字と同様にスキャンを終了します。</target>
+          <target state="translated">ベース0の場合、ベースプレフィックスと隣接する数字の間、および連続する数字の間にアンダースコア文字「_」が表示されることがあります。このようなアンダースコアは、数値の値や返される桁数を変更しません。他にエラーがない場合、アンダースコアの不適切な配置はエラーとして報告されます。base！= 0の場合、アンダースコアは認識されないため、有効な基数ポイントまたは数字ではない他の文字と同様にスキャンを終了します。</target>
         </trans-unit>
         <trans-unit id="e5942b37cf590ae4aabd1b760f075ef90fd1c294" translate="yes" xml:space="preserve">
           <source>For base 0, an underscore character &amp;ldquo;_&amp;rdquo; may appear between a base prefix and an adjacent digit, and between successive digits; such underscores do not change the value of the number. Incorrect placement of underscores is reported as an error if there are no other errors. If base != 0, underscores are not recognized and act like any other character that is not a valid digit.</source>
-          <target state="translated">ベース0の場合、ベースプレフィックスと隣接する数字の間、および連続する数字の間にアンダースコア文字「_」が表示されることがあります。このようなアンダースコアは、数値の値を変更しません。他にエラーがない場合、アンダースコアの不適切な配置はエラーとして報告されます。base！= 0の場合、アンダースコアは認識されず、有効な数字ではない他の文字と同様に機能します。</target>
+          <target state="translated">ベース0の場合、ベースプレフィックスと隣接する数字の間、および連続する数字の間にアンダースコア文字「_」が表示されることがあります。このような下線は、数値の値を変更しません。他にエラーがない場合、アンダースコアの不適切な配置はエラーとして報告されます。base！= 0の場合、アンダースコアは認識されず、有効な数字ではない他の文字と同様に機能します。</target>
         </trans-unit>
         <trans-unit id="5f1ac8df1f8e77c9fdc27bc0637f8b872484b6a1" translate="yes" xml:space="preserve">
           <source>For base 0, the number prefix determines the actual base: A prefix of &amp;ldquo;0b&amp;rdquo; or &amp;ldquo;0B&amp;rdquo; selects base 2, &amp;ldquo;0o&amp;rdquo; or &amp;ldquo;0O&amp;rdquo; selects base 8, and &amp;ldquo;0x&amp;rdquo; or &amp;ldquo;0X&amp;rdquo; selects base 16. Otherwise, the actual base is 10 and no prefix is accepted. The octal prefix &quot;0&quot; is not supported (a leading &quot;0&quot; is simply considered a &quot;0&quot;).</source>
-          <target state="translated">基数0の場合、数値の接頭辞は実際の基数を決定します。「0b」または「0B」の接頭辞は基数2を選択し、「0o」または「0O」は基数8を選択し、「0x」または「0X」は基数16を選択します。それ以外の場合、実際のベースは10で、接頭辞は受け入れられません。8進数のプレフィックス「0」はサポートされていません（先頭の「0」は単に「0」と見なされます）。</target>
+          <target state="translated">基数0の場合、数値プレフィックスは実際の基数を決定します。「0b」または「0B」のプレフィックスは基数2を選択し、「0o」または「0O」は基数8を選択し、「0x」または「0X」は基数16を選択します。 、実際のベースは10であり、接頭辞は受け入れられません。8進数の接頭辞「0」はサポートされていません（先頭の「0」は単に「0」と見なされます）。</target>
         </trans-unit>
         <trans-unit id="8da96f7777bef60314c708eb513a45527fc86e1a" translate="yes" xml:space="preserve">
           <source>For bases &amp;lt;= 36, lower and upper case letters are considered the same: The letters 'a' to 'z' and 'A' to 'Z' represent digit values 10 to 35. For bases &amp;gt; 36, the upper case letters 'A' to 'Z' represent the digit values 36 to 61.</source>
-          <target state="translated">基数が36以下の場合、小文字と大文字は同じと見なされます。文字「a」から「z」および「A」から「Z」は、10から35の数字の値を表します。基数&amp;gt; 36の場合は、大文字の「 AからZは、36から61までの数字の値を表します。</target>
+          <target state="translated">基数が36以下の場合、小文字と大文字は同じと見なされます。文字「a」から「z」および「A」から「Z」は、10から35までの数字の値を表します。塩基&amp;gt; 36の場合は、大文字の「 AからZは、36から61までの数字の値を表します。</target>
         </trans-unit>
         <trans-unit id="1cda30f1e34e7fc3ab26bca0abe9bc827de94de0" translate="yes" xml:space="preserve">
           <source>For calls ForCompiler with a new FileSet.</source>
@@ -3629,7 +3629,7 @@
         </trans-unit>
         <trans-unit id="fbc897ff158a8e45243f9b229fc5329d56c63ca4" translate="yes" xml:space="preserve">
           <source>For information about UTF-8 strings in Go, see &lt;a href=&quot;https://blog.golang.org/strings&quot;&gt;https://blog.golang.org/strings&lt;/a&gt;.</source>
-          <target state="translated">GoでのUTF-8文字列については、&lt;a href=&quot;https://blog.golang.org/strings&quot;&gt;https：//blog.golang.org/stringsをご覧ください&lt;/a&gt;。</target>
+          <target state="translated">GoのUTF-8文字列の詳細については、&lt;a href=&quot;https://blog.golang.org/strings&quot;&gt;https：//blog.golang.org/stringsを&lt;/a&gt;参照してください。</target>
         </trans-unit>
         <trans-unit id="63fe9b03e1c707dfe354f7496b7b0ea1047361fe" translate="yes" xml:space="preserve">
           <source>For instance, NewInt(x) returns an *Int set to the value of the int64 argument x, NewRat(a, b) returns a *Rat set to the fraction a/b where a and b are int64 values, and NewFloat(f) returns a *Float initialized to the float64 argument f. More flexibility is provided with explicit setters, for instance:</source>
@@ -3637,7 +3637,7 @@
         </trans-unit>
         <trans-unit id="ef36fa9bc6685ceb9dbf97a5a5da2cffd6025d4b" translate="yes" xml:space="preserve">
           <source>For instance, given a slice data sorted in ascending order, the call Search(len(data), func(i int) bool { return data[i] &amp;gt;= 23 }) returns the smallest index i such that data[i] &amp;gt;= 23. If the caller wants to find whether 23 is in the slice, it must test data[i] == 23 separately.</source>
-          <target state="translated">たとえば、昇順で並べ替えられたスライスデータが指定されている場合、Search（len（data）、func（i int）bool {return data [i]&amp;gt; = 23}）を呼び出すと、data [i]&amp;gt; =23。発信者が23がスライス内にあるかどうかを確認する場合は、data [i] == 23を個別にテストする必要があります。</target>
+          <target state="translated">たとえば、昇順で並べ替えられたスライスデータを指定して、Search（len（data）、func（i int）bool {return data [i]&amp;gt; = 23}）を呼び出すと、data [i]&amp;gt; =23。発信者が23がスライス内にあるかどうかを確認する場合は、data [i] == 23を個別にテストする必要があります。</target>
         </trans-unit>
         <trans-unit id="c7dfa4cd456b849ced74b774ac752b76885a540c" translate="yes" xml:space="preserve">
           <source>For instance, the arguments for (*Int).Add are named x and y, and because the receiver specifies the result destination, it is called z:</source>
@@ -3853,7 +3853,7 @@
         </trans-unit>
         <trans-unit id="29e428f2dcc8699c0417730387a64fac7ddd1961" translate="yes" xml:space="preserve">
           <source>FormatUint returns the string representation of i in the given base, for 2 &amp;lt;= base &amp;lt;= 36. The result uses the lower-case letters 'a' to 'z' for digit values &amp;gt;= 10.</source>
-          <target state="translated">FormatUintは、2 &amp;lt;= base &amp;lt;= 36の場合、指定された基数でiの文字列表現を返します。結果は、数字の値&amp;gt; = 10に小文字の「a」から「z」を使用します。</target>
+          <target state="translated">FormatUintは、2 &amp;lt;= base &amp;lt;= 36の場合、指定されたbaseでiの文字列表現を返します。結果は、数字の値&amp;gt; = 10に小文字の「a」から「z」を使用します。</target>
         </trans-unit>
         <trans-unit id="74de65e787a3b1e89f96cc3e3b260c1d5a19f78c" translate="yes" xml:space="preserve">
           <source>Formatter is the interface implemented by values with a custom formatter. The implementation of Format may call Sprint(f) or Fprint(f) etc. to generate its output.</source>
@@ -3917,7 +3917,7 @@
         </trans-unit>
         <trans-unit id="2d6c189d92419208a8893cd5a97e05687d681927" translate="yes" xml:space="preserve">
           <source>Frexp breaks f into a normalized fraction and an integral power of two. It returns frac and exp satisfying f == frac &amp;times; 2**exp, with the absolute value of frac in the interval [&amp;frac12;, 1).</source>
-          <target state="translated">Frexpはfを正規化された分数と2のべき乗に分解します。この関数は、f == frac&amp;times;2 ** expを満たすfracとexpを返し、区間[&amp;frac12;、1）内のfracの絶対値を返します。</target>
+          <target state="translated">Frexpはfを正規化された分数と2のべき乗に分割します。これはf == frac&amp;times;2 ** expを満たすfracとexpを返し、区間[&amp;frac12;、1）内のfracの絶対値を含みます。</target>
         </trans-unit>
         <trans-unit id="fa23c274e14dd5cc1e7fa9a8a9b29bf34200b44f" translate="yes" xml:space="preserve">
           <source>FromSlash returns the result of replacing each slash ('/') character in path with a separator character. Multiple slashes are replaced by multiple separators.</source>
