@@ -493,7 +493,7 @@
         </trans-unit>
         <trans-unit id="2c9678e93d65d3a18ef910d0ddb50425ba2bc5a2" translate="yes" xml:space="preserve">
           <source>instead. This is particularly useful if you have foreign libraries that need to call &lt;code&gt;hs_exit()&lt;/code&gt; at program exit (perhaps via a C++ destructor): in this case you should use &lt;code&gt;hs_exit_nowait()&lt;/code&gt;, because the thread that called &lt;code&gt;exit()&lt;/code&gt; and is running C++ destructors is in a foreign call from Haskell that will never return, so &lt;code&gt;hs_exit()&lt;/code&gt; would deadlock.</source>
-          <target state="translated">代わりに。これは、プログラムの終了時に（おそらくC ++デストラクタを介して &lt;code&gt;hs_exit()&lt;/code&gt; を呼び出す必要のある外部ライブラリがある場合に特に便利です。この場合、 &lt;code&gt;exit()&lt;/code&gt; を呼び出してC ++デストラクタを実行しているスレッドのため、 &lt;code&gt;hs_exit_nowait()&lt;/code&gt; を使用する必要があります。Haskellからの外部呼び出しで返されないため、 &lt;code&gt;hs_exit()&lt;/code&gt; がデッドロックします。</target>
+          <target state="translated">代わりに。これは、プログラムの終了時に（おそらくC ++デストラクタを介して &lt;code&gt;hs_exit()&lt;/code&gt; を呼び出す必要がある外部ライブラリがある場合に特に便利です。この場合、 &lt;code&gt;exit()&lt;/code&gt; を呼び出してC ++デストラクタを実行しているスレッドのため、 &lt;code&gt;hs_exit_nowait()&lt;/code&gt; を使用する必要があります。Haskellからの外部呼び出しで返されないため、 &lt;code&gt;hs_exit()&lt;/code&gt; がデッドロックします。</target>
         </trans-unit>
         <trans-unit id="46f8ab7c0cff9df7cd124852e26022a6bf89e315" translate="yes" xml:space="preserve">
           <source>int</source>
@@ -633,7 +633,7 @@
         </trans-unit>
         <trans-unit id="9dcc252f0a6414ac7c982813f8c4967e4f85996c" translate="yes" xml:space="preserve">
           <source>integer division truncated toward zero</source>
-          <target state="translated">切り捨て整数</target>
+          <target state="translated">ゼロに切り捨てられた整数分割</target>
         </trans-unit>
         <trans-unit id="3d30efbea20fd6892060111185aa6d3e4564eec2" translate="yes" xml:space="preserve">
           <source>integer modulus, satisfying</source>
@@ -917,11 +917,11 @@
         </trans-unit>
         <trans-unit id="32d813be8a7be1e2d25c310dae20c3635f80bcb4" translate="yes" xml:space="preserve">
           <source>is permitted. If this is used, the header is assumed to be &lt;code&gt;module Main(main) where&lt;/code&gt;.&amp;rdquo;</source>
-          <target state="translated">許可されています。これが使用される場合、ヘッダーは &lt;code&gt;module Main(main) where&lt;/code&gt; と想定されます。</target>
+          <target state="translated">許可されます。これを使用する場合、ヘッダーは &lt;code&gt;module Main(main) where&lt;/code&gt; と想定されます。</target>
         </trans-unit>
         <trans-unit id="d3cf1dcb880b032728eaf6eb77ab77cbf9729dae" translate="yes" xml:space="preserve">
           <source>is rewritten such that the resulting &lt;code&gt;&lt;a href=&quot;data-bytestring-builder#t:Builder&quot;&gt;Builder&lt;/a&gt;&lt;/code&gt; checks only once, if ther are at 8 free bytes, instead of checking twice, if there are 4 free bytes. This optimization is not observationally equivalent in a strict sense, as it influences the boundaries of the generated chunks. However, for a user of this library it is observationally equivalent, as chunk boundaries of a lazy &lt;code&gt;&lt;a href=&quot;data-bytestring-lazy#t:ByteString&quot;&gt;ByteString&lt;/a&gt;&lt;/code&gt; can only be observed through the internal interface. Morevoer, we expect that all primitives write much fewer than 4kb (the default short buffer size). Hence, it is safe to ignore the additional memory spilled due to the more agressive buffer wrapping introduced by this optimization.</source>
-          <target state="translated">は、結果の &lt;code&gt;&lt;a href=&quot;data-bytestring-builder#t:Builder&quot;&gt;Builder&lt;/a&gt;&lt;/code&gt; が空きバイト数が8の場合は1回だけチェックするように書き直され、空きバイト数が4の場合は2回チェックされません。この最適化は、生成されたチャンクの境界に影響を与えるため、厳密な意味では観察上同等ではありません。ただし、このライブラリのユーザーにとっては、レイジーな &lt;code&gt;&lt;a href=&quot;data-bytestring-lazy#t:ByteString&quot;&gt;ByteString&lt;/a&gt;&lt;/code&gt; のチャンクの境界は内部インターフェイスを通じてのみ監視できるため、これは観測上は同等です。さらに、すべてのプリミティブが4kb（デフォルトの短いバッファーサイズ）よりはるかに少ない値を書き込むと予想されます。したがって、この最適化によって導入されたより積極的なバッファラップにより、こぼれた追加メモリを無視しても安全です。</target>
+          <target state="translated">は、結果の &lt;code&gt;&lt;a href=&quot;data-bytestring-builder#t:Builder&quot;&gt;Builder&lt;/a&gt;&lt;/code&gt; が8バイトの空きがある場合は1回だけチェックするように書き直され、4バイトの場合は2回チェックするのではなく、この最適化は、生成されたチャンクの境界に影響を与えるため、厳密な意味では観察上同等ではありません。ただし、このライブラリのユーザーにとっては、レイジーな &lt;code&gt;&lt;a href=&quot;data-bytestring-lazy#t:ByteString&quot;&gt;ByteString&lt;/a&gt;&lt;/code&gt; のチャンク境界は内部インターフェイスからしか観察できないため、これは観察的には同等です。さらに、すべてのプリミティブが4kb（デフォルトの短いバッファーサイズ）よりはるかに少ない値を書き込むと予想されます。したがって、この最適化によって導入されたより積極的なバッファラップにより、こぼれた追加メモリを無視しても安全です。</target>
         </trans-unit>
         <trans-unit id="112b92456776d68bafd900a9c2008e60f5301c67" translate="yes" xml:space="preserve">
           <source>is safe; it never loses a unit of the resource.</source>
@@ -2761,11 +2761,11 @@
         </trans-unit>
         <trans-unit id="e55e5061b6e1070194ca178b28667b25c02d3892" translate="yes" xml:space="preserve">
           <source>like &lt;code&gt;&lt;a href=&quot;ghc-io-handle#v:mkFileHandle&quot;&gt;mkFileHandle&lt;/a&gt;&lt;/code&gt;, except that a &lt;code&gt;&lt;a href=&quot;ghc-io-handle#t:Handle&quot;&gt;Handle&lt;/a&gt;&lt;/code&gt; is created with two independent buffers, one for reading and one for writing. Used for full-duplex streams, such as network sockets.</source>
-          <target state="translated">&lt;code&gt;&lt;a href=&quot;ghc-io-handle#v:mkFileHandle&quot;&gt;mkFileHandle&lt;/a&gt;&lt;/code&gt; に似ていますが、 &lt;code&gt;&lt;a href=&quot;ghc-io-handle#t:Handle&quot;&gt;Handle&lt;/a&gt;&lt;/code&gt; が2つの独立したバッファで作成されます。1つは読み取り用、もう1つは書き込み用です。ネットワークソケットなどの全二重ストリームに使用されます。</target>
+          <target state="translated">&lt;code&gt;&lt;a href=&quot;ghc-io-handle#v:mkFileHandle&quot;&gt;mkFileHandle&lt;/a&gt;&lt;/code&gt; に似ていますが、 &lt;code&gt;&lt;a href=&quot;ghc-io-handle#t:Handle&quot;&gt;Handle&lt;/a&gt;&lt;/code&gt; は2つの独立したバッファで作成されます。1つは読み取り用、もう1つは書き込み用です。ネットワークソケットなどの全二重ストリームに使用されます。</target>
         </trans-unit>
         <trans-unit id="d2dc74a01576609495dd7b87d8000130def04c76" translate="yes" xml:space="preserve">
           <source>like &lt;code&gt;&lt;a href=&quot;ghc-io-handle-internals#v:mkFileHandle&quot;&gt;mkFileHandle&lt;/a&gt;&lt;/code&gt;, except that a &lt;code&gt;&lt;a href=&quot;ghc-io-handle#t:Handle&quot;&gt;Handle&lt;/a&gt;&lt;/code&gt; is created with two independent buffers, one for reading and one for writing. Used for full-duplex streams, such as network sockets.</source>
-          <target state="translated">&lt;code&gt;&lt;a href=&quot;ghc-io-handle-internals#v:mkFileHandle&quot;&gt;mkFileHandle&lt;/a&gt;&lt;/code&gt; に似ていますが、 &lt;code&gt;&lt;a href=&quot;ghc-io-handle#t:Handle&quot;&gt;Handle&lt;/a&gt;&lt;/code&gt; が2つの独立したバッファで作成されます。1つは読み取り用、もう1つは書き込み用です。ネットワークソケットなどの全二重ストリームに使用されます。</target>
+          <target state="translated">&lt;code&gt;&lt;a href=&quot;ghc-io-handle-internals#v:mkFileHandle&quot;&gt;mkFileHandle&lt;/a&gt;&lt;/code&gt; に似ていますが、 &lt;code&gt;&lt;a href=&quot;ghc-io-handle#t:Handle&quot;&gt;Handle&lt;/a&gt;&lt;/code&gt; は2つの独立したバッファで作成されます。1つは読み取り用、もう1つは書き込み用です。ネットワークソケットなどの全二重ストリームに使用されます。</target>
         </trans-unit>
         <trans-unit id="6f6fb1420d09a6e765ae6779a24fb68d117492ae" translate="yes" xml:space="preserve">
           <source>like failIfFalse_, but retried on sharing violations. This is necessary for many file operations; see &lt;a href=&quot;http://support.microsoft.com/kb/316609&quot;&gt;http://support.microsoft.com/kb/316609&lt;/a&gt;</source>
@@ -3853,7 +3853,7 @@
         </trans-unit>
         <trans-unit id="e517764df32bf1f5b8583e42fae0ec4411b8353a" translate="yes" xml:space="preserve">
           <source>may throw either &lt;code&gt;&quot;foo&quot;&lt;/code&gt; or &lt;code&gt;&quot;bar&quot;&lt;/code&gt;, depending on the optimizations performed by the compiler. On the other hand,</source>
-          <target state="translated">コンパイラーによって実行された最適化に応じて、 &lt;code&gt;&quot;foo&quot;&lt;/code&gt; または &lt;code&gt;&quot;bar&quot;&lt;/code&gt; いずれかをスローします。一方、</target>
+          <target state="translated">コンパイラーによって実行される最適化に応じて、 &lt;code&gt;&quot;foo&quot;&lt;/code&gt; または &lt;code&gt;&quot;bar&quot;&lt;/code&gt; いずれかをスローします。一方、</target>
         </trans-unit>
         <trans-unit id="f1b58e1d9e1990aa604be5d711c5396d10e42799" translate="yes" xml:space="preserve">
           <source>maybe</source>

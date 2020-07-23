@@ -129,7 +129,7 @@
         </trans-unit>
         <trans-unit id="b6e2f2d0132d4f0471ccc4c030832b7075252bc4" translate="yes" xml:space="preserve">
           <source>OSError constructor</source>
-          <target state="translated">OSErrorコンストラクタ</target>
+          <target state="translated">オーエスエラーコンストラクタ</target>
         </trans-unit>
         <trans-unit id="b55c0aa51339cdc2bf5bcbaa7007c3ce8d8b7165" translate="yes" xml:space="preserve">
           <source>OSError.OSError</source>
@@ -925,7 +925,7 @@
         </trans-unit>
         <trans-unit id="39f0983624f848be1c9989e871b4f4ecfcfd4c6c" translate="yes" xml:space="preserve">
           <source>On Linux and OS X a normal exit code will be a positive value in the range &lt;code&gt;0..255&lt;/code&gt;. If the process was terminated due to a signal the exit code will be a negative value in the range &lt;code&gt;-255..-1&lt;/code&gt;, where the absolute value of the exit code is the signal number. For example, if a process crashes due to a segmentation violation the exit code will be -11, as the signal SIGSEGV has the number 11.</source>
-          <target state="translated">LinuxおよびOS Xでは、通常の終了コードは &lt;code&gt;0..255&lt;/code&gt; の範囲の正の値になります。シグナルが原因でプロセスが終了した場合、終了コードは &lt;code&gt;-255..-1&lt;/code&gt; の範囲の負の値になります。終了コードの絶対値はシグナル番号です。たとえば、シグナルSIGSEGVの番号が11であるため、セグメンテーション違反が原因でプロセスがクラッシュした場合、終了コードは-11になります。</target>
+          <target state="translated">LinuxおよびOS Xでは、通常の終了コードは &lt;code&gt;0..255&lt;/code&gt; の範囲の正の値になります。シグナルが原因でプロセスが終了した場合、終了コードは &lt;code&gt;-255..-1&lt;/code&gt; の範囲の負の値になります。ここで、終了コードの絶対値はシグナル番号です。たとえば、シグナルSIGSEGVの数値が11であるため、セグメンテーション違反が原因でプロセスがクラッシュした場合、終了コードは-11になります。</target>
         </trans-unit>
         <trans-unit id="873f1ad91c9719089d1ad29b8efbee425dffb49b" translate="yes" xml:space="preserve">
           <source>On Linux and OS X an exit code for normal termination will always be in the range &lt;code&gt;0..255&lt;/code&gt;. If an exit code outside this range is set the actual exit code will be the lower 8 bits masked off and treated as an unsigned value. E.g. using an exit code of -1 will result in an actual exit code of 255 being reported.</source>
@@ -933,7 +933,7 @@
         </trans-unit>
         <trans-unit id="80d9c68e8057dd3351fb493c9fa923a7d3a23b75" translate="yes" xml:space="preserve">
           <source>On Linux and OS X this uses advisory locks, which have the surprising semantics that all locks associated with a given file are removed when &lt;em&gt;any&lt;/em&gt; file descriptor for that file is closed by the process. Note that this does not actually lock the file for access. Also note that advisory locks are on a process level. This means that several isolates in the same process can obtain an exclusive lock on the same file.</source>
-          <target state="translated">LinuxとOS Xでは、これは時に指定したファイルに関連付けられたすべてのロックが削除されていることは驚くべきことでセマンティクス持っている勧告的ロック、使用する&lt;em&gt;任意の&lt;/em&gt;そのファイルのファイルディスクリプタがプロセスによって閉鎖されています。これは実際にアクセスのためにファイルをロックしないことに注意してください。また、アドバイザリロックはプロセスレベルであることに注意してください。これは、同じプロセス内のいくつかの分離株が同じファイルの排他ロックを取得できることを意味します。</target>
+          <target state="translated">LinuxとOS Xでは、これは時に指定したファイルに関連付けられたすべてのロックが削除されていることは驚くべきことでセマンティクス持っている勧告的ロック、使用する&lt;em&gt;任意の&lt;/em&gt;そのファイルのファイルディスクリプタがプロセスによって閉鎖されています。これは実際にアクセスのためにファイルをロックするわけではないことに注意してください。また、アドバイザリロックはプロセスレベルにあることに注意してください。これは、同じプロセス内のいくつかの分離株が同じファイルの排他ロックを取得できることを意味します。</target>
         </trans-unit>
         <trans-unit id="a8b146812ffa87e9ccfd4814d8593680d6a86e52" translate="yes" xml:space="preserve">
           <source>On Posix systems, &lt;a href=&quot;processsignal-class&quot;&gt;ProcessSignal&lt;/a&gt; is used to send a specific signal to a child process, see &lt;code&gt;Process.kill&lt;/code&gt;.</source>
@@ -946,7 +946,7 @@
         <trans-unit id="48752a552483f2b7b3874befe6eb2c572641d7af" translate="yes" xml:space="preserve">
           <source>On Windows a process can report any 32-bit value as an exit code. When returning the exit code this exit code is turned into a signed value. Some special values are used to report termination due to some system event. E.g. if a process crashes due to an access violation the 32-bit exit code is &lt;code&gt;0xc0000005&lt;/code&gt;, which will be returned as the negative number &lt;code&gt;-1073741819&lt;/code&gt;. To get the original 32-bit value use &lt;code&gt;(0x100000000 + exitCode) &amp;amp;
 0xffffffff&lt;/code&gt;.</source>
-          <target state="translated">Windowsでは、プロセスは32ビット値を終了コードとして報告できます。終了コードを返すと、この終了コードは符号付きの値に変わります。いくつかの特別な値は、システムイベントによる終了を報告するために使用されます。たとえば、アクセス違反が原因でプロセスがクラッシュした場合、32ビットの終了コードは &lt;code&gt;0xc0000005&lt;/code&gt; であり、負の数値 &lt;code&gt;-1073741819&lt;/code&gt; として返されます。元の32ビット値を取得するには、 &lt;code&gt;(0x100000000 + exitCode) &amp;amp; 0xffffffff&lt;/code&gt; ます。</target>
+          <target state="translated">Windowsでは、プロセスは32ビット値を終了コードとして報告できます。終了コードを返すと、この終了コードは符号付きの値に変わります。一部の特別な値は、システムイベントによる終了を報告するために使用されます。たとえば、アクセス違反が原因でプロセスがクラッシュした場合、32ビットの終了コードは &lt;code&gt;0xc0000005&lt;/code&gt; であり、負の数値 &lt;code&gt;-1073741819&lt;/code&gt; として返されます。元の32ビット値を取得するには、 &lt;code&gt;(0x100000000 + exitCode) &amp;amp; 0xffffffff&lt;/code&gt; ます。</target>
         </trans-unit>
         <trans-unit id="f38e59f2bf7bdf0981c11dacb583abeae13b09d4" translate="yes" xml:space="preserve">
           <source>On Windows platforms, this is instead the file creation time.</source>
@@ -958,7 +958,7 @@
         </trans-unit>
         <trans-unit id="b06b431723208d1618f1ab5c26009ab870309d99" translate="yes" xml:space="preserve">
           <source>On Windows the &lt;code&gt;..&lt;/code&gt; segments are resolved &lt;em&gt;before&lt;/em&gt; resolving the symbolic link, and on other platforms the symbolic links are &lt;em&gt;resolved to their target&lt;/em&gt; before applying a &lt;code&gt;..&lt;/code&gt; that follows.</source>
-          <target state="translated">Windowsでは、 &lt;code&gt;..&lt;/code&gt; セグメントはシンボリックリンクを解決する&lt;em&gt;前に&lt;/em&gt;解決されます。他のプラットフォームでは、シンボリックリンクは、それに続く &lt;code&gt;..&lt;/code&gt; を適用する前に&lt;em&gt;ターゲット&lt;/em&gt;に&lt;em&gt;解決され&lt;/em&gt;ます。</target>
+          <target state="translated">Windowsでは &lt;code&gt;..&lt;/code&gt; セグメントはシンボリックリンクを解決する&lt;em&gt;前に&lt;/em&gt;解決され、他のプラットフォームではシンボリックリンクはその後に &lt;code&gt;..&lt;/code&gt; を適用する前に&lt;em&gt;ターゲット&lt;/em&gt;に&lt;em&gt;解決され&lt;/em&gt;ます。</target>
         </trans-unit>
         <trans-unit id="e28976ddd89bd6e9a05b7af0668da39ba3c65d5a" translate="yes" xml:space="preserve">
           <source>On Windows the exit code can be set to any 32-bit value. However some of these values are reserved for reporting system errors like crashes.</source>
@@ -982,7 +982,7 @@
         </trans-unit>
         <trans-unit id="533a7525ded83cc372ab423ea7e0c4f312a51935" translate="yes" xml:space="preserve">
           <source>On Windows, a path is absolute if it starts with \\ or a drive letter between a and z (upper or lower case) followed by :\ or :/. On non-Windows, a path is absolute if it starts with /.</source>
-          <target state="translated">On Windows,a path is absolute if it start with \ or a drive letter between a and z (a and z(upper or lower case)followed by :\ or :.Windows以外では、パスが .</target>
+          <target state="translated">On Windows,a path is absolute if it starts with ″\″ or a and z (a and z(upper or lower case)followed by :\ or :/.Windows以外では、/で始まる場合、パスは絶対です。</target>
         </trans-unit>
         <trans-unit id="747bb2488acb9cc2745822ec000a7a0c64cc685b" translate="yes" xml:space="preserve">
           <source>On each data event from this stream, the subscriber's &lt;code&gt;onData&lt;/code&gt; handler is called. If &lt;code&gt;onData&lt;/code&gt; is &lt;code&gt;null&lt;/code&gt;, nothing happens.</source>
@@ -990,11 +990,11 @@
         </trans-unit>
         <trans-unit id="d81d1f767c703818967d5f6ab406a2a2425b4ff0" translate="yes" xml:space="preserve">
           <source>On either kind of stream, stream transformations, such as &lt;a href=&quot;stream/where&quot;&gt;where&lt;/a&gt; and &lt;a href=&quot;stream/skip&quot;&gt;skip&lt;/a&gt;, return the same type of stream as the one the method was called on, unless otherwise noted.</source>
-          <target state="translated">どちらの種類のストリームでも、特に断りのない限り、&lt;a href=&quot;stream/where&quot;&gt;where&lt;/a&gt;や&lt;a href=&quot;stream/skip&quot;&gt;skip&lt;/a&gt;などのストリーム変換は、メソッドが呼び出されたときと同じタイプのストリームを返します。</target>
+          <target state="translated">どちらの種類のストリームでも、特に断りのない限り、&lt;a href=&quot;stream/where&quot;&gt;where&lt;/a&gt;や&lt;a href=&quot;stream/skip&quot;&gt;skip&lt;/a&gt;などのストリーム変換は、メソッドが呼び出されたストリームと同じタイプのストリームを返します。</target>
         </trans-unit>
         <trans-unit id="9310d14ada30712a7924c28a956ff4d35be89745" translate="yes" xml:space="preserve">
           <source>On errors from this stream, the &lt;code&gt;onError&lt;/code&gt; handler is called with the error object and possibly a stack trace.</source>
-          <target state="translated">このストリームからのエラーでは、エラーオブジェクトとスタックトレースを &lt;code&gt;onError&lt;/code&gt; ハンドラーが呼び出されます。</target>
+          <target state="translated">このストリームからのエラーでは、 &lt;code&gt;onError&lt;/code&gt; ハンドラーがエラーオブジェクトと、場合によってはスタックトレースとともに呼び出されます。</target>
         </trans-unit>
         <trans-unit id="62f89c65db718481b6879531334481ca94f3ef64" translate="yes" xml:space="preserve">
           <source>On other platforms, the posix symlink() call is used to make a symbolic link containing the string &lt;code&gt;target&lt;/code&gt;. If &lt;code&gt;target&lt;/code&gt; is a relative path, it will be interpreted relative to the directory containing the link.</source>
@@ -1006,11 +1006,11 @@
         </trans-unit>
         <trans-unit id="47e05114323799f2e3de575c1a305fe224fa9177" translate="yes" xml:space="preserve">
           <source>On platforms without signal support, including Windows, the call just terminates the process with id &lt;code&gt;pid&lt;/code&gt; in a platform specific way, and the &lt;code&gt;signal&lt;/code&gt; parameter is ignored.</source>
-          <target state="translated">Windowsを含むシグナルサポートのないプラットフォームでは、呼び出しはプラットフォーム固有の方法でid &lt;code&gt;pid&lt;/code&gt; のプロセスを終了するだけで、 &lt;code&gt;signal&lt;/code&gt; パラメーターは無視されます。</target>
+          <target state="translated">Windowsを含むシグナルサポートのないプラットフォームでは、呼び出しはプラットフォーム固有の方法でID &lt;code&gt;pid&lt;/code&gt; のプロセスを終了するだけで、 &lt;code&gt;signal&lt;/code&gt; パラメーターは無視されます。</target>
         </trans-unit>
         <trans-unit id="c6beb0aa7938161d9da91fc874e11c40fc6348d5" translate="yes" xml:space="preserve">
           <source>On the Windows platform, this call will create a true symbolic link instead of a Junction. In order to create a symbolic link on Windows, Dart must be run in Administrator mode or the system must have Developer Mode enabled, otherwise a &lt;a href=&quot;../filesystemexception-class&quot;&gt;FileSystemException&lt;/a&gt; will be raised with &lt;code&gt;ERROR_PRIVILEGE_NOT_HELD&lt;/code&gt; set as the errno when this call is made.</source>
-          <target state="translated">Windowsプラットフォームでは、この呼び出しにより、ジャンクションの代わりに真のシンボリックリンクが作成されます。Windowsでシンボリックリンクを作成するには、Dartを管理者モードで実行するか、システムで開発者モードを有効にする必要があり&lt;a href=&quot;../filesystemexception-class&quot;&gt;ます&lt;/a&gt;。そうしないと、この呼び出しが行われたときに &lt;code&gt;ERROR_PRIVILEGE_NOT_HELD&lt;/code&gt; がerrnoとして設定され、FileSystemExceptionが発生します。</target>
+          <target state="translated">Windowsプラットフォームでは、この呼び出しはジャンクションの代わりに真のシンボリックリンクを作成します。Windowsでシンボリックリンクを作成するには、Dartを管理者モードで実行するか、システムで開発者モードを有効にする必要があり&lt;a href=&quot;../filesystemexception-class&quot;&gt;ます&lt;/a&gt;。そうでない場合、この呼び出しが行われると、 &lt;code&gt;ERROR_PRIVILEGE_NOT_HELD&lt;/code&gt; がerrnoとして設定されてFileSystemExceptionが発生します。</target>
         </trans-unit>
         <trans-unit id="7fc54ebc46aa8cae9009fea0e87f8c06b4bd5456" translate="yes" xml:space="preserve">
           <source>Once &lt;a href=&quot;closesync&quot;&gt;closeSync&lt;/a&gt; has been called, attempting to call &lt;a href=&quot;readsync&quot;&gt;readSync&lt;/a&gt;, &lt;a href=&quot;readintosync&quot;&gt;readIntoSync&lt;/a&gt;, &lt;a href=&quot;writefromsync&quot;&gt;writeFromSync&lt;/a&gt;, &lt;a href=&quot;remoteaddress&quot;&gt;remoteAddress&lt;/a&gt;, and &lt;a href=&quot;remoteport&quot;&gt;remotePort&lt;/a&gt; will cause a &lt;a href=&quot;../socketexception-class&quot;&gt;SocketException&lt;/a&gt; to be thrown.</source>
@@ -1026,7 +1026,7 @@
         </trans-unit>
         <trans-unit id="6ee1e3c640beaad1e71383ad4030ce6a5dc68243" translate="yes" xml:space="preserve">
           <source>One ex is equal to the x-height of a font's baseline to its mean line, generally the height of the letter &quot;x&quot; in the font, which is usually about half the font-size.</source>
-          <target state="translated">One exは、フォントのベースラインから平均線までのxの高さに相当し、一般的にはフォント内の文字「x」の高さで、通常はフォントサイズの半分程度です。</target>
+          <target state="translated">1 exは、フォントのベースラインから平均線までのxの高さに相当し、一般的にはフォント内の文字「x」の高さで、通常はフォントサイズの半分程度です。</target>
         </trans-unit>
         <trans-unit id="cc04215546c19714b221da1315c450d9948cf32d" translate="yes" xml:space="preserve">
           <source>Only acts on the substring from &lt;code&gt;start&lt;/code&gt; to &lt;code&gt;end&lt;/code&gt;, with &lt;code&gt;end&lt;/code&gt; defaulting to the end of the string.</source>
@@ -1054,11 +1054,11 @@
         </trans-unit>
         <trans-unit id="ebea39d5918cc2554400951ff3b0d1616a5b70d2" translate="yes" xml:space="preserve">
           <source>Open the file for random access operations. Returns a &lt;code&gt;Future&amp;lt;RandomAccessFile&amp;gt;&lt;/code&gt; that completes with the opened random access file. &lt;a href=&quot;../randomaccessfile-class&quot;&gt;RandomAccessFile&lt;/a&gt;s must be closed using the &lt;a href=&quot;../randomaccessfile/close&quot;&gt;RandomAccessFile.close&lt;/a&gt; method.</source>
-          <target state="translated">ランダムアクセス操作のためにファイルを開きます。開かれたランダムアクセスファイルで完了する &lt;code&gt;Future&amp;lt;RandomAccessFile&amp;gt;&lt;/code&gt; を返します。&lt;a href=&quot;../randomaccessfile-class&quot;&gt;RandomAccessFile.closeメソッド&lt;/a&gt;を使用して&lt;a href=&quot;../randomaccessfile/close&quot;&gt;RandomAccessFileを&lt;/a&gt;閉じる必要があります。</target>
+          <target state="translated">ランダムアクセス操作のためにファイルを開きます。開かれたランダムアクセスファイルで完了する &lt;code&gt;Future&amp;lt;RandomAccessFile&amp;gt;&lt;/code&gt; を返します。&lt;a href=&quot;../randomaccessfile-class&quot;&gt;RandomAccessFile&lt;/a&gt;は、&lt;a href=&quot;../randomaccessfile/close&quot;&gt;RandomAccessFile.close&lt;/a&gt;メソッドを使用して閉じる必要があります。</target>
         </trans-unit>
         <trans-unit id="fb4ad564c077f02aef85a96af15210a8e02b387b" translate="yes" xml:space="preserve">
           <source>Open the file for random access operations. Returns a &lt;code&gt;Future&amp;lt;RandomAccessFile&amp;gt;&lt;/code&gt; that completes with the opened random access file. &lt;a href=&quot;randomaccessfile-class&quot;&gt;RandomAccessFile&lt;/a&gt;s must be closed using the &lt;a href=&quot;randomaccessfile/close&quot;&gt;RandomAccessFile.close&lt;/a&gt; method. &lt;a href=&quot;file/open&quot;&gt;[...]&lt;/a&gt;</source>
-          <target state="translated">ランダムアクセス操作のためにファイルを開きます。開かれたランダムアクセスファイルで完了する &lt;code&gt;Future&amp;lt;RandomAccessFile&amp;gt;&lt;/code&gt; を返します。&lt;a href=&quot;randomaccessfile-class&quot;&gt;RandomAccessFile.closeメソッド&lt;/a&gt;を使用して&lt;a href=&quot;randomaccessfile/close&quot;&gt;RandomAccessFileを&lt;/a&gt;閉じる必要があります。&lt;a href=&quot;file/open&quot;&gt;[...]&lt;/a&gt;</target>
+          <target state="translated">ランダムアクセス操作のためにファイルを開きます。開かれたランダムアクセスファイルで完了する &lt;code&gt;Future&amp;lt;RandomAccessFile&amp;gt;&lt;/code&gt; を返します。&lt;a href=&quot;randomaccessfile-class&quot;&gt;RandomAccessFile&lt;/a&gt;は、&lt;a href=&quot;randomaccessfile/close&quot;&gt;RandomAccessFile.close&lt;/a&gt;メソッドを使用して閉じる必要があります。&lt;a href=&quot;file/open&quot;&gt;[...]&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="6431f6074a970a9e3d3c6edccd6792e1c43b3ac0" translate="yes" xml:space="preserve">
           <source>Open-ended Encoding enum.</source>
@@ -1334,7 +1334,7 @@
         </trans-unit>
         <trans-unit id="41417c53fa3a09eb807ebff82f559f50ea8d85bc" translate="yes" xml:space="preserve">
           <source>Optionally takes a list of &lt;code&gt;typeArguments&lt;/code&gt; for generic classes. If the list is provided, then the &lt;code&gt;key&lt;/code&gt; must be a generic class type, and the number of the provided type arguments must be equal to the number of type variables declared by the class.</source>
-          <target state="translated">必要に応じて、ジェネリッククラスの &lt;code&gt;typeArguments&lt;/code&gt; のリストを取得します。リストが提供される場合、 &lt;code&gt;key&lt;/code&gt; はジェネリッククラス型である必要があり、提供される型引数の数は、クラスによって宣言された型変数の数と等しくなければなりません。</target>
+          <target state="translated">オプションで、ジェネリッククラスの &lt;code&gt;typeArguments&lt;/code&gt; のリストを取得します。リストが提供される場合、 &lt;code&gt;key&lt;/code&gt; はジェネリッククラス型である必要があり、提供される型引数の数は、クラスによって宣言された型変数の数と等しくなければなりません。</target>
         </trans-unit>
         <trans-unit id="f9d5224943a94ff55fefbbf17d33e5837c0030b0" translate="yes" xml:space="preserve">
           <source>Options controlling compression in a &lt;a href=&quot;websocket-class&quot;&gt;WebSocket&lt;/a&gt;.</source>
@@ -1442,7 +1442,7 @@
         </trans-unit>
         <trans-unit id="5806317aea234f7c5c3bc1ac7c86694381485ce4" translate="yes" xml:space="preserve">
           <source>Otherwise, let &lt;em&gt;f&lt;/em&gt; be the simple name of the constructor denoted by &lt;code&gt;constructorName&lt;/code&gt;. Then this method will execute the instance creation expression &lt;em&gt;new c.f(a1, ..., an, k1: v1, ..., km: vm)&lt;/em&gt; in a scope that has access to the private members of &lt;em&gt;c&lt;/em&gt;.</source>
-          <target state="translated">それ以外の場合は、&lt;em&gt;fを&lt;/em&gt; constructorNameで示される &lt;code&gt;constructorName&lt;/code&gt; ターの単純な名前とします。次に、このメソッドは、&lt;em&gt;cの&lt;/em&gt;プライベートメンバーにアクセスできるスコープでインスタンス作成式&lt;em&gt;new cf（a1、...、an、k1：v1、.​​..、km：vm）&lt;/em&gt;を実行します。&lt;em&gt;&lt;/em&gt;</target>
+          <target state="translated">それ以外の場合は、&lt;em&gt;fを&lt;/em&gt;コンストラクタ名で示される &lt;code&gt;constructorName&lt;/code&gt; 単純な名前とします。次に、このメソッドは、インスタンス作成式&lt;em&gt;new cf（a1、...、an、k1：v1、.​​..、km：vm）&lt;/em&gt;を、のプライベートメンバーにアクセスできるスコープで実行します。&lt;em&gt; cの&lt;/em&gt;。</target>
         </trans-unit>
         <trans-unit id="793cc2eef38ae751c479204792b49ba93b68b140" translate="yes" xml:space="preserve">
           <source>Otherwise, the original string itself is returned:</source>
@@ -1610,7 +1610,7 @@
         </trans-unit>
         <trans-unit id="a3df870aab0b02c7428f5768c9f1464604879419" translate="yes" xml:space="preserve">
           <source>Overwrites objects of &lt;code&gt;this&lt;/code&gt; with the objects of &lt;code&gt;iterable&lt;/code&gt;, starting at position &lt;code&gt;index&lt;/code&gt; in this list.</source>
-          <target state="translated">このリストの位置 &lt;code&gt;index&lt;/code&gt; から始めて、 &lt;code&gt;this&lt;/code&gt; のオブジェクトを &lt;code&gt;iterable&lt;/code&gt; のオブジェクトで上書きします。</target>
+          <target state="translated">&lt;code&gt;this&lt;/code&gt; オブジェクトを &lt;code&gt;iterable&lt;/code&gt; のオブジェクトで、位置 &lt;code&gt;index&lt;/code&gt; から上書きしますこのリストの。</target>
         </trans-unit>
         <trans-unit id="f75caacf41c28a38e070e5d08e512d2f8526917d" translate="yes" xml:space="preserve">
           <source>Overwrites objects of &lt;code&gt;this&lt;/code&gt; with the objects of &lt;code&gt;iterable&lt;/code&gt;, starting at position &lt;code&gt;index&lt;/code&gt; in this list. &lt;a href=&quot;../dart-collection/listmixin/setall&quot;&gt;[...]&lt;/a&gt;</source>
@@ -1770,7 +1770,7 @@
         </trans-unit>
         <trans-unit id="d0fa727067b28499cb810bf36165e370e5615101" translate="yes" xml:space="preserve">
           <source>PROXY_AUTHORIZATION constant</source>
-          <target state="translated">PROXY_AUTHORIZATION定数</target>
+          <target state="translated">定数PROXY_AUTHORIZATION</target>
         </trans-unit>
         <trans-unit id="dffcb3905b47e3ba6ba717fc5b1281c21149bd1f" translate="yes" xml:space="preserve">
           <source>Pads this string on the left if it is shorter than &lt;code&gt;width&lt;/code&gt;.</source>
@@ -1782,11 +1782,11 @@
         </trans-unit>
         <trans-unit id="5cd61dac7fe49061ee1ae23404491e362d9ccc48" translate="yes" xml:space="preserve">
           <source>Pads this string on the right if it is shorter than &lt;code&gt;width&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;width&lt;/code&gt; より短い場合、この文字列を右側に埋め込みます。</target>
+          <target state="translated">この文字列が &lt;code&gt;width&lt;/code&gt; より短い場合は、右側にパディングします。</target>
         </trans-unit>
         <trans-unit id="9ddf96887d865b04a2db13ae059793805d97e1e3" translate="yes" xml:space="preserve">
           <source>Pads this string on the right if it is shorter than &lt;code&gt;width&lt;/code&gt;. &lt;a href=&quot;string/padright&quot;&gt;[...]&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;width&lt;/code&gt; より短い場合、この文字列を右側に埋め込みます。&lt;a href=&quot;string/padright&quot;&gt;[...]&lt;/a&gt;</target>
+          <target state="translated">この文字列が &lt;code&gt;width&lt;/code&gt; より短い場合は、右側にパディングします。&lt;a href=&quot;string/padright&quot;&gt;[...]&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="cb63a40ce4a594c0d671ede7900a7ad68a0cdfa2" translate="yes" xml:space="preserve">
           <source>PageTransitionEvent</source>
@@ -2294,11 +2294,11 @@
         </trans-unit>
         <trans-unit id="6886d52ea1bba419c67de385c216fca57ab04196" translate="yes" xml:space="preserve">
           <source>Parse the &lt;code&gt;host&lt;/code&gt; as an IP version 4 (IPv4) address, returning the address as a list of 4 bytes in network byte order (big endian).</source>
-          <target state="translated">&lt;code&gt;host&lt;/code&gt; をIPバージョン4（IPv4）アドレスとして解析し、アドレスをネットワークバイト順（ビッグエンディアン）の4バイトのリストとして返します。</target>
+          <target state="translated">&lt;code&gt;host&lt;/code&gt; をIPバージョン4（IPv4）アドレスとして解析し、アドレスをネットワークバイトオーダー（ビッグエンディアン）の4バイトのリストとして返します。</target>
         </trans-unit>
         <trans-unit id="896eaab43d6eb460a91284815ffd2b2deff97b7a" translate="yes" xml:space="preserve">
           <source>Parse the &lt;code&gt;host&lt;/code&gt; as an IP version 4 (IPv4) address, returning the address as a list of 4 bytes in network byte order (big endian). &lt;a href=&quot;uri/parseipv4address&quot;&gt;[...]&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;host&lt;/code&gt; をIPバージョン4（IPv4）アドレスとして解析し、アドレスをネットワークバイト順（ビッグエンディアン）の4バイトのリストとして返します。&lt;a href=&quot;uri/parseipv4address&quot;&gt;[...]&lt;/a&gt;</target>
+          <target state="translated">&lt;code&gt;host&lt;/code&gt; をIPバージョン4（IPv4）アドレスとして解析し、アドレスをネットワークバイトオーダー（ビッグエンディアン）の4バイトのリストとして返します。&lt;a href=&quot;uri/parseipv4address&quot;&gt;[...]&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="5a9cfdec89e3eae6ae422b74952103d7f6eaceb4" translate="yes" xml:space="preserve">
           <source>Parse the &lt;code&gt;host&lt;/code&gt; as an IP version 6 (IPv6) address, returning the address as a list of 16 bytes in network byte order (big endian).</source>
@@ -2426,7 +2426,7 @@
         </trans-unit>
         <trans-unit id="41df087823f9d44253bed9f81a95d6be79ecf7c8" translate="yes" xml:space="preserve">
           <source>PasswordCredential constructor</source>
-          <target state="translated">PasswordCredential のコンストラクタ</target>
+          <target state="translated">パスワードクレデンシャルのコンストラクタ</target>
         </trans-unit>
         <trans-unit id="da4dca2867747a23945e0ce6fa1dd0dd4c27b7ab" translate="yes" xml:space="preserve">
           <source>PasswordCredential(</source>
@@ -2842,7 +2842,7 @@
         </trans-unit>
         <trans-unit id="8ad440c15160aa697e9ec7087186056b48d709be" translate="yes" xml:space="preserve">
           <source>PaymentRequestEvent constructor</source>
-          <target state="translated">PaymentRequestEventのコンストラクタ</target>
+          <target state="translated">PaymentRequestEventコンストラクタ</target>
         </trans-unit>
         <trans-unit id="6fb2c60bb2500f7f69b9d8311614eaa719351b2d" translate="yes" xml:space="preserve">
           <source>PaymentRequestEvent(</source>
@@ -3438,11 +3438,11 @@
         </trans-unit>
         <trans-unit id="becc0be20c51001b1a227832beff504e6a3e6bbb" translate="yes" xml:space="preserve">
           <source>Performs an operation repeatedly until it returns &lt;code&gt;false&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;false&lt;/code&gt; を返すまで操作を繰り返し実行します。</target>
+          <target state="translated">&lt;code&gt;false&lt;/code&gt; が返されるまで操作を繰り返し実行します。</target>
         </trans-unit>
         <trans-unit id="1507d29eb064e263cc8cf79534f68aae5bb41c0f" translate="yes" xml:space="preserve">
           <source>Performs an operation repeatedly until it returns &lt;code&gt;false&lt;/code&gt;. &lt;a href=&quot;future/dowhile&quot;&gt;[...]&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;false&lt;/code&gt; を返すまで操作を繰り返し実行します。&lt;a href=&quot;future/dowhile&quot;&gt;[...]&lt;/a&gt;</target>
+          <target state="translated">&lt;code&gt;false&lt;/code&gt; が返されるまで操作を繰り返し実行します。&lt;a href=&quot;future/dowhile&quot;&gt;[...]&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="9aad2e813a4d896e159173cd267f9a6470d5bbca" translate="yes" xml:space="preserve">
           <source>Performs sanitization of a node tree after construction to ensure that it does not contain any disallowed elements or attributes.</source>
@@ -3474,11 +3474,11 @@
         </trans-unit>
         <trans-unit id="4f2efc064a08ce8a3001ac4dd9ef12c396da8053" translate="yes" xml:space="preserve">
           <source>Permanently stops this &lt;a href=&quot;../httpserver-class&quot;&gt;HttpServer&lt;/a&gt; from listening for new connections. This closes the &lt;a href=&quot;../../dart-async/stream-class&quot;&gt;Stream&lt;/a&gt; of &lt;a href=&quot;../httprequest-class&quot;&gt;HttpRequest&lt;/a&gt;s with a done event. The returned future completes when the server is stopped. For a server started using &lt;a href=&quot;bind&quot;&gt;bind&lt;/a&gt; or &lt;a href=&quot;bindsecure&quot;&gt;bindSecure&lt;/a&gt; this means that the port listened on no longer in use.</source>
-          <target state="translated">この&lt;a href=&quot;../httpserver-class&quot;&gt;HttpServer&lt;/a&gt;が新しい接続をリッスンするのを永続的に停止します。これは、doneイベントで&lt;a href=&quot;../httprequest-class&quot;&gt;HttpRequest&lt;/a&gt;の&lt;a href=&quot;../../dart-async/stream-class&quot;&gt;ストリーム&lt;/a&gt;を閉じます。返されたフューチャーは、サーバーが停止すると完了します。&lt;a href=&quot;bind&quot;&gt;bind&lt;/a&gt;または&lt;a href=&quot;bindsecure&quot;&gt;bindSecureの&lt;/a&gt;使用を開始したサーバーの場合、これは、リッスンしているポートが使用されなくなったことを意味します。</target>
+          <target state="translated">この&lt;a href=&quot;../httpserver-class&quot;&gt;HttpServer&lt;/a&gt;が新しい接続をリッスンするのを永続的に停止します。これは、doneイベントで&lt;a href=&quot;../httprequest-class&quot;&gt;HttpRequest&lt;/a&gt;の&lt;a href=&quot;../../dart-async/stream-class&quot;&gt;ストリーム&lt;/a&gt;を閉じます。返されたフューチャーは、サーバーが停止すると完了します。&lt;a href=&quot;bind&quot;&gt;bind&lt;/a&gt;または&lt;a href=&quot;bindsecure&quot;&gt;bindSecure&lt;/a&gt;を使用して開始されたサーバーの場合、これは、ポートがリッスンしていないことを意味します。</target>
         </trans-unit>
         <trans-unit id="7faf6602db777502e951c151e458af4cfee6ea6f" translate="yes" xml:space="preserve">
           <source>Permanently stops this &lt;a href=&quot;httpserver-class&quot;&gt;HttpServer&lt;/a&gt; from listening for new connections. This closes the &lt;a href=&quot;../dart-async/stream-class&quot;&gt;Stream&lt;/a&gt; of &lt;a href=&quot;httprequest-class&quot;&gt;HttpRequest&lt;/a&gt;s with a done event. The returned future completes when the server is stopped. For a server started using &lt;a href=&quot;httpserver/bind&quot;&gt;bind&lt;/a&gt; or &lt;a href=&quot;httpserver/bindsecure&quot;&gt;bindSecure&lt;/a&gt; this means that the port listened on no longer in use. &lt;a href=&quot;httpserver/close&quot;&gt;[...]&lt;/a&gt;</source>
-          <target state="translated">この&lt;a href=&quot;httpserver-class&quot;&gt;HttpServer&lt;/a&gt;が新しい接続をリッスンするのを永続的に停止します。これは、doneイベントで&lt;a href=&quot;httprequest-class&quot;&gt;HttpRequest&lt;/a&gt;の&lt;a href=&quot;../dart-async/stream-class&quot;&gt;ストリーム&lt;/a&gt;を閉じます。返されたフューチャーは、サーバーが停止すると完了します。&lt;a href=&quot;httpserver/bind&quot;&gt;bind&lt;/a&gt;または&lt;a href=&quot;httpserver/bindsecure&quot;&gt;bindSecureの&lt;/a&gt;使用を開始したサーバーの場合、これは、リッスンしているポートが使用されなくなったことを意味します。&lt;a href=&quot;httpserver/close&quot;&gt;[...]&lt;/a&gt;</target>
+          <target state="translated">この&lt;a href=&quot;httpserver-class&quot;&gt;HttpServer&lt;/a&gt;が新しい接続をリッスンするのを永続的に停止します。これは、doneイベントで&lt;a href=&quot;httprequest-class&quot;&gt;HttpRequest&lt;/a&gt;の&lt;a href=&quot;../dart-async/stream-class&quot;&gt;ストリーム&lt;/a&gt;を閉じます。返されたフューチャーは、サーバーが停止すると完了します。&lt;a href=&quot;httpserver/bind&quot;&gt;bind&lt;/a&gt;または&lt;a href=&quot;httpserver/bindsecure&quot;&gt;bindSecure&lt;/a&gt;を使用して開始されたサーバーの場合、これは、ポートがリッスンしていないことを意味します。&lt;a href=&quot;httpserver/close&quot;&gt;[...]&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="06a9a77bce84da1997ea08d88e8eaf982f884770" translate="yes" xml:space="preserve">
           <source>PermissionStatus</source>
@@ -3702,11 +3702,11 @@
         </trans-unit>
         <trans-unit id="e22595ece8c7e521a1c4278269907890b5ac01b8" translate="yes" xml:space="preserve">
           <source>Please be aware that nesting calls to &lt;a href=&quot;waitfor&quot;&gt;waitFor&lt;/a&gt; can lead to deadlock if subsequent calls block waiting for a condition that is only satisfied when an earlier call returns.</source>
-          <target state="translated">後続の呼び出しが、前の呼び出しが戻ったときにのみ満たされる条件を待つのをブロックする場合、&lt;a href=&quot;waitfor&quot;&gt;waitFor&lt;/a&gt;への呼び出しをネストするとデッドロックにつながる可能性があることに注意してください。</target>
+          <target state="translated">後続の呼び出しが、前の呼び出しが戻ったときにのみ満たされる条件の待機をブロックする場合、&lt;a href=&quot;waitfor&quot;&gt;waitFor&lt;/a&gt;への呼び出しのネストはデッドロックにつながる可能性があることに注意してください。</target>
         </trans-unit>
         <trans-unit id="2e828ec9149280172afe8767c2bb5b73c4e1cfdb" translate="yes" xml:space="preserve">
           <source>Please note the property name camelCase, not-hyphens. This method returns true if the property is accessible via an unprefixed &lt;em&gt;or&lt;/em&gt; prefixed property.</source>
-          <target state="translated">プロパティ名はキャメルケースで、ハイフンではないことに注意してください。このメソッドは&lt;em&gt;、&lt;/em&gt;接頭辞なし&lt;em&gt;または&lt;/em&gt;接頭辞付きのプロパティを介してプロパティにアクセスできる場合、trueを返します。</target>
+          <target state="translated">プロパティ名はキャメルケースであり、ハイフンではありません。このメソッドは&lt;em&gt;、&lt;/em&gt;接頭辞なし&lt;em&gt;または&lt;/em&gt;接頭辞付きのプロパティを介してプロパティにアクセスできる場合、trueを返します。</target>
         </trans-unit>
         <trans-unit id="a41da270ae6a6c1b7141d23f8d04f162148159e3" translate="yes" xml:space="preserve">
           <source>Please note the property name uses camelCase, not-hyphens.</source>

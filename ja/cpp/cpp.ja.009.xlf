@@ -25,7 +25,7 @@
         </trans-unit>
         <trans-unit id="b8db3a9ed4cca1914878705608c3f4ee37d3ab72" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;std::valarray&lt;/code&gt; and helper classes are defined to be free of certain forms of aliasing, thus allowing operations on these classes to be optimized similar to the effect of the keyword &lt;a href=&quot;http://en.cppreference.com/w/c/language/restrict.html&quot;&gt;restrict&lt;/a&gt; in the C programming language. In addition, functions and operators that take &lt;code&gt;valarray&lt;/code&gt; arguments are allowed to return proxy objects to make it possible for the compiler to optimize an expression such as &lt;code&gt;v1 = a*v2 + v3;&lt;/code&gt; as a single loop that executes &lt;code&gt;v1[i] = a*v2[i] + v3[i];&lt;/code&gt; avoiding any temporaries or multiple passes. However, &lt;a href=&quot;https://en.wikipedia.org/wiki/Expression_templates&quot;&gt;expression templates&lt;/a&gt; make the same optimization technique available for any C++ container, and the majority of numeric libraries prefer expression templates to valarrays for flexibility. Some C++ standard library implementations use expression templates to implement efficient operations on &lt;code&gt;std::valarray&lt;/code&gt; (e.g. GNU libstdc++ and LLVM libc++). Only rarely are valarrays optimized any further, as in e.g. &lt;a href=&quot;https://software.intel.com/en-us/node/684140&quot;&gt;Intel Integrated Performance Primitives&lt;/a&gt;.</source>
-          <target state="translated">&lt;code&gt;std::valarray&lt;/code&gt; クラスとヘルパークラスは、特定の形式のエイリアシングを含まないように定義されているため、Cプログラミング言語のキーワード&lt;a href=&quot;http://en.cppreference.com/w/c/language/restrict.html&quot;&gt;制限の&lt;/a&gt;効果と同様に、これらのクラスの操作を最適化できます。さらに、 &lt;code&gt;valarray&lt;/code&gt; 引数をとる関数と演算子は、プロキシオブジェクトを返すことができ、コンパイラーが &lt;code&gt;v1 = a*v2 + v3;&lt;/code&gt; などの式を最適化できるようにします。 &lt;code&gt;v1[i] = a*v2[i] + v3[i];&lt;/code&gt; を実行する単一のループとして。一時的または複数のパスを回避します。ただし、&lt;a href=&quot;https://en.wikipedia.org/wiki/Expression_templates&quot;&gt;式テンプレート&lt;/a&gt;すべてのC ++コンテナーで同じ最適化手法を利用できるようにします。数値ライブラリの大部分は、柔軟性のためにvalarrayよりも式テンプレートを優先します。一部のC ++標準ライブラリ実装では、式テンプレートを使用して &lt;code&gt;std::valarray&lt;/code&gt; 効率的な操作を実装しています（たとえば、GNU libstdc ++およびLLVM libc ++）。たとえば、&lt;a href=&quot;https://software.intel.com/en-us/node/684140&quot;&gt;Intel Integrated Performance Primitivesの&lt;/a&gt;ように、valarrayがそれ以上最適化されることはほとんどありません。</target>
+          <target state="translated">&lt;code&gt;std::valarray&lt;/code&gt; クラスとヘルパークラスは特定の形式のエイリアシングを含まないように定義されているため、Cプログラミング言語のキーワード&lt;a href=&quot;http://en.cppreference.com/w/c/language/restrict.html&quot;&gt;制限の&lt;/a&gt;効果と同様に、これらのクラスの操作を最適化できます。さらに、 &lt;code&gt;valarray&lt;/code&gt; 引数を取る関数と演算子は、プロキシオブジェクトを返すことができ、コンパイラーが &lt;code&gt;v1 = a*v2 + v3;&lt;/code&gt; などの式を最適化できるようにします。 &lt;code&gt;v1[i] = a*v2[i] + v3[i];&lt;/code&gt; を実行する単一のループとして。一時的または複数のパスを回避します。ただし、&lt;a href=&quot;https://en.wikipedia.org/wiki/Expression_templates&quot;&gt;式テンプレート&lt;/a&gt;同じ最適化手法を任意のC ++コンテナーで使用できるようにします。数値ライブラリの大部分は、柔軟性のためにvalarrayよりも式テンプレートを優先します。一部のC ++標準ライブラリ実装では、式テンプレートを使用して &lt;code&gt;std::valarray&lt;/code&gt; 効率的な操作を実装しています（たとえば、GNU libstdc ++およびLLVM libc ++）。たとえば、&lt;a href=&quot;https://software.intel.com/en-us/node/684140&quot;&gt;Intel Integrated Performance Primitivesの&lt;/a&gt;ように、valarrayがさらに最適化されることはほとんどありません。</target>
         </trans-unit>
         <trans-unit id="b20d004774c851fdc0796598dc359ee1dd1fac93" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;std::valarray&lt;/code&gt; is the class for representing and manipulating arrays of values. It supports element-wise mathematical operations and various forms of generalized subscript operators, slicing and indirect access.</source>
@@ -37,7 +37,7 @@
         </trans-unit>
         <trans-unit id="e68dae847aabbd16cd93d3f879e7971cdf10e709" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;std::wbuffer_convert&lt;/code&gt; is a wrapper over stream buffer of type &lt;code&gt;&lt;a href=&quot;../io/basic_streambuf&quot;&gt;std::basic_streambuf&lt;/a&gt;&amp;lt;char&amp;gt;&lt;/code&gt; which gives it the appearance of &lt;code&gt;&lt;a href=&quot;../io/basic_streambuf&quot;&gt;std::basic_streambuf&lt;/a&gt;&amp;lt;Elem&amp;gt;&lt;/code&gt;. All I/O performed through &lt;code&gt;std::wbuffer_convert&lt;/code&gt; undergoes character conversion as defined by the facet &lt;code&gt;Codecvt&lt;/code&gt;. &lt;code&gt;std::wbuffer_convert&lt;/code&gt; assumes ownership of the conversion facet, and cannot use a facet managed by a locale. The standard facets suitable for use with &lt;code&gt;std::wbuffer_convert&lt;/code&gt; are &lt;code&gt;&lt;a href=&quot;codecvt_utf8&quot;&gt;std::codecvt_utf8&lt;/a&gt;&lt;/code&gt; for UTF-8/UCS2 and UTF-8/UCS4 conversions and &lt;code&gt;&lt;a href=&quot;codecvt_utf8_utf16&quot;&gt;std::codecvt_utf8_utf16&lt;/a&gt;&lt;/code&gt; for UTF-8/UTF-16 conversions.</source>
-          <target state="translated">&lt;code&gt;std::wbuffer_convert&lt;/code&gt; は、 &lt;code&gt;&lt;a href=&quot;../io/basic_streambuf&quot;&gt;std::basic_streambuf&lt;/a&gt;&amp;lt;Elem&amp;gt;&lt;/code&gt; &amp;lt;Elem&amp;gt;の外観を与える &lt;code&gt;&lt;a href=&quot;../io/basic_streambuf&quot;&gt;std::basic_streambuf&lt;/a&gt;&amp;lt;char&amp;gt;&lt;/code&gt; タイプのストリームバッファーのラッパーです。 &lt;code&gt;std::wbuffer_convert&lt;/code&gt; を介して実行されるすべてのI / Oは、ファセット &lt;code&gt;Codecvt&lt;/code&gt; で定義されている文字変換を受けます。 &lt;code&gt;std::wbuffer_convert&lt;/code&gt; は変換ファセットの所有権を想定しており、ロケールが管理するファセットを使用できません。使用するのに適した標準ファセット &lt;code&gt;std::wbuffer_convert&lt;/code&gt; ある &lt;code&gt;&lt;a href=&quot;codecvt_utf8&quot;&gt;std::codecvt_utf8&lt;/a&gt;&lt;/code&gt; UTF-8 / UCS2とUTF-8 / UCS4変換及びため &lt;code&gt;&lt;a href=&quot;codecvt_utf8_utf16&quot;&gt;std::codecvt_utf8_utf16&lt;/a&gt;&lt;/code&gt; UTF-8 / UTF-16の変換のために。</target>
+          <target state="translated">&lt;code&gt;std::wbuffer_convert&lt;/code&gt; は &lt;code&gt;&lt;a href=&quot;../io/basic_streambuf&quot;&gt;std::basic_streambuf&lt;/a&gt;&amp;lt;Elem&amp;gt;&lt;/code&gt; &amp;lt;Elem&amp;gt;の外観を与える &lt;code&gt;&lt;a href=&quot;../io/basic_streambuf&quot;&gt;std::basic_streambuf&lt;/a&gt;&amp;lt;char&amp;gt;&lt;/code&gt; タイプのストリームバッファーのラッパーです。 &lt;code&gt;std::wbuffer_convert&lt;/code&gt; を介して実行されるすべてのI / Oは、ファセット &lt;code&gt;Codecvt&lt;/code&gt; で定義されている文字変換を受けます。 &lt;code&gt;std::wbuffer_convert&lt;/code&gt; は変換ファセットの所有権を想定しており、ロケールが管理するファセットを使用できません。使用するのに適した標準ファセット &lt;code&gt;std::wbuffer_convert&lt;/code&gt; ある &lt;code&gt;&lt;a href=&quot;codecvt_utf8&quot;&gt;std::codecvt_utf8&lt;/a&gt;&lt;/code&gt; UTF-8 / UCS2とUTF-8 / UCS4変換及びため &lt;code&gt;&lt;a href=&quot;codecvt_utf8_utf16&quot;&gt;std::codecvt_utf8_utf16&lt;/a&gt;&lt;/code&gt; UTF-8 / UTF-16の変換のために。</target>
         </trans-unit>
         <trans-unit id="aa98bfc69be64ea7f590ca3281f0a779c81d2441" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;std::wctrans_t&lt;/code&gt; object suitable for use with &lt;code&gt;&lt;a href=&quot;towctrans&quot;&gt;std::towctrans&lt;/a&gt;&lt;/code&gt; to map wide characters according to the named mapping of the current C locale or zero if &lt;code&gt;str&lt;/code&gt; does not name a mapping supported by the current C locale.</source>
@@ -45,7 +45,7 @@
         </trans-unit>
         <trans-unit id="ee24a8db61effffbf5bb45fcf3ddb9dfa64496df" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;std::wctype_t&lt;/code&gt; object suitable for use with &lt;code&gt;&lt;a href=&quot;iswctype&quot;&gt;std::iswctype&lt;/a&gt;&lt;/code&gt; to classify wide characters according to the named category of the current C locale or zero if &lt;code&gt;str&lt;/code&gt; does not name a category supported by the current C locale.</source>
-          <target state="translated">&lt;code&gt;std::wctype_t&lt;/code&gt; 現在のCロケールの名前付きカテゴリに従ってワイド文字を分類するための &lt;code&gt;&lt;a href=&quot;iswctype&quot;&gt;std::iswctype&lt;/a&gt;&lt;/code&gt; との使用に適したstd :: wctype_tオブジェクト、または &lt;code&gt;str&lt;/code&gt; が現在のCロケールでサポートされているカテゴリを指定していない場合はゼロ。</target>
+          <target state="translated">&lt;code&gt;std::wctype_t&lt;/code&gt; での使用に適したオブジェクト &lt;code&gt;&lt;a href=&quot;iswctype&quot;&gt;std::iswctype&lt;/a&gt;&lt;/code&gt; 場合、現在のCロケールまたはゼロのというカテゴリに応じてワイド文字を分類する &lt;code&gt;str&lt;/code&gt; は現在のCロケールでサポートされているカテゴリに名前を付けていません。</target>
         </trans-unit>
         <trans-unit id="1864ac005fcbd2a93ddb1571e43e44be4412c438" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;std::weak_equality::equivalent&lt;/code&gt; if &lt;code&gt;v&lt;/code&gt; is &lt;code&gt;equal&lt;/code&gt; or &lt;code&gt;equivalent&lt;/code&gt;, &lt;code&gt;std::weak_equality::nonequivalent&lt;/code&gt; if &lt;code&gt;v&lt;/code&gt; is &lt;code&gt;less&lt;/code&gt; or &lt;code&gt;greater&lt;/code&gt;.</source>
@@ -77,7 +77,7 @@
         </trans-unit>
         <trans-unit id="5ed6ce6014df72db0fd24242c93b9ed9e7cb3aec" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;std::weak_ptr&lt;/code&gt; is a smart pointer that holds a non-owning (&quot;weak&quot;) reference to an object that is managed by &lt;code&gt;&lt;a href=&quot;shared_ptr&quot;&gt;std::shared_ptr&lt;/a&gt;&lt;/code&gt;. It must be converted to &lt;code&gt;&lt;a href=&quot;shared_ptr&quot;&gt;std::shared_ptr&lt;/a&gt;&lt;/code&gt; in order to access the referenced object.</source>
-          <target state="translated">&lt;code&gt;std::weak_ptr&lt;/code&gt; は、 &lt;code&gt;&lt;a href=&quot;shared_ptr&quot;&gt;std::shared_ptr&lt;/a&gt;&lt;/code&gt; によって管理されるオブジェクトへの非所有（「弱い」）参照を保持するスマートポインターです。参照されるオブジェクトにアクセスするには、 &lt;code&gt;&lt;a href=&quot;shared_ptr&quot;&gt;std::shared_ptr&lt;/a&gt;&lt;/code&gt; に変換する必要があります。</target>
+          <target state="translated">&lt;code&gt;std::weak_ptr&lt;/code&gt; は、 &lt;code&gt;&lt;a href=&quot;shared_ptr&quot;&gt;std::shared_ptr&lt;/a&gt;&lt;/code&gt; によって管理されるオブジェクトへの非所有（「弱い」）参照を保持するスマートポインターです。参照先のオブジェクトにアクセスするには、 &lt;code&gt;&lt;a href=&quot;shared_ptr&quot;&gt;std::shared_ptr&lt;/a&gt;&lt;/code&gt; に変換する必要があります。</target>
         </trans-unit>
         <trans-unit id="20112f6fadc4cc459253cb7dc0888944be0042a2" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;std::weak_ptr&lt;/code&gt; models temporary ownership: when an object needs to be accessed only if it exists, and it may be deleted at any time by someone else, &lt;code&gt;std::weak_ptr&lt;/code&gt; is used to track the object, and it is converted to &lt;code&gt;&lt;a href=&quot;shared_ptr&quot;&gt;std::shared_ptr&lt;/a&gt;&lt;/code&gt; to assume temporary ownership. If the original &lt;code&gt;&lt;a href=&quot;shared_ptr&quot;&gt;std::shared_ptr&lt;/a&gt;&lt;/code&gt; is destroyed at this time, the object's lifetime is extended until the temporary &lt;code&gt;&lt;a href=&quot;shared_ptr&quot;&gt;std::shared_ptr&lt;/a&gt;&lt;/code&gt; is destroyed as well.</source>
@@ -97,7 +97,7 @@
         </trans-unit>
         <trans-unit id="6ca1b1119f74c8027d6a698cddd2f8621287cabd" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;str&lt;/code&gt; on success, &lt;code&gt;&lt;a href=&quot;../../types/null&quot;&gt;NULL&lt;/a&gt;&lt;/code&gt; on an error.</source>
-          <target state="translated">&lt;code&gt;str&lt;/code&gt; 成功した場合はstr、エラーの場合は &lt;code&gt;&lt;a href=&quot;../../types/null&quot;&gt;NULL&lt;/a&gt;&lt;/code&gt; 。</target>
+          <target state="translated">&lt;code&gt;str&lt;/code&gt; を成功に &lt;code&gt;&lt;a href=&quot;../../types/null&quot;&gt;NULL&lt;/a&gt;&lt;/code&gt; エラーに。</target>
         </trans-unit>
         <trans-unit id="8465c65bcc1337f8b180748b84ca0fcba853f24f" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;str&lt;/code&gt; on success, &lt;code&gt;&lt;a href=&quot;../../types/null&quot;&gt;NULL&lt;/a&gt;&lt;/code&gt; on failure.</source>
@@ -125,7 +125,7 @@
         </trans-unit>
         <trans-unit id="37d147c625f9c05ae1ae1cdc4935ea2e562430c5" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;strstream&lt;/code&gt; has been deprecated since C++98, &lt;code&gt;&lt;a href=&quot;basic_stringstream&quot;&gt;std::stringstream&lt;/a&gt;&lt;/code&gt; and &lt;a href=&quot;http://www.boost.org/doc/libs/release/libs/iostreams/doc/classes/array.html#array&quot;&gt;boost::iostreams::array&lt;/a&gt; are the recommended replacements.</source>
-          <target state="translated">&lt;code&gt;strstream&lt;/code&gt; はC ++ 98以降非推奨であり、 &lt;code&gt;&lt;a href=&quot;basic_stringstream&quot;&gt;std::stringstream&lt;/a&gt;&lt;/code&gt; および&lt;a href=&quot;http://www.boost.org/doc/libs/release/libs/iostreams/doc/classes/array.html#array&quot;&gt;boost :: iostreams :: array&lt;/a&gt;が推奨される代替物です。</target>
+          <target state="translated">&lt;code&gt;strstream&lt;/code&gt; はC ++ 98以降廃止されており、 &lt;code&gt;&lt;a href=&quot;basic_stringstream&quot;&gt;std::stringstream&lt;/a&gt;&lt;/code&gt; および&lt;a href=&quot;http://www.boost.org/doc/libs/release/libs/iostreams/doc/classes/array.html#array&quot;&gt;boost :: iostreams :: array&lt;/a&gt;が推奨される代替物です。</target>
         </trans-unit>
         <trans-unit id="25aeda6590fba592dce6baae63ea15f2c4d06097" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;sub_match&lt;/code&gt; inherits from &lt;code&gt;&lt;a href=&quot;../utility/pair&quot;&gt;std::pair&lt;/a&gt;&amp;lt;BidirIt, BidirIt&amp;gt;&lt;/code&gt;, although it cannot be treated as a &lt;code&gt;&lt;a href=&quot;../utility/pair&quot;&gt;std::pair&lt;/a&gt;&lt;/code&gt; object because member functions such as swap and assignment will not work as expected.</source>
@@ -145,7 +145,7 @@
         </trans-unit>
         <trans-unit id="93f0e9b4c17c3584eca8f331f5237ce885f1fe70" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;sync()&lt;/code&gt; or its equivalent is implicitly called by &lt;code&gt;close()&lt;/code&gt;, &lt;code&gt;seekoff()&lt;/code&gt;, and &lt;code&gt;seekpos()&lt;/code&gt; and explicitly called by &lt;code&gt;&lt;a href=&quot;../basic_streambuf/pubsync&quot;&gt;std::basic_streambuf::pubsync()&lt;/a&gt;&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;sync()&lt;/code&gt; または同等の機能は、 &lt;code&gt;close()&lt;/code&gt; 、 &lt;code&gt;seekoff()&lt;/code&gt; 、および &lt;code&gt;seekpos()&lt;/code&gt; によって暗黙的に呼び出され、 &lt;code&gt;&lt;a href=&quot;../basic_streambuf/pubsync&quot;&gt;std::basic_streambuf::pubsync()&lt;/a&gt;&lt;/code&gt; によって明示的に呼び出されます。</target>
+          <target state="translated">&lt;code&gt;sync()&lt;/code&gt; またはそれに相当するものは、 &lt;code&gt;close()&lt;/code&gt; 、 &lt;code&gt;seekoff()&lt;/code&gt; 、および &lt;code&gt;seekpos()&lt;/code&gt; によって暗黙的に呼び出され、 &lt;code&gt;&lt;a href=&quot;../basic_streambuf/pubsync&quot;&gt;std::basic_streambuf::pubsync()&lt;/a&gt;&lt;/code&gt; によって明示的に呼び出されます。</target>
         </trans-unit>
         <trans-unit id="679a3e4e6d2bfb15eb2d8b5c5738cb4f6396cdfb" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;sync()&lt;/code&gt; or its equivalent is implicitly called for output streams by &lt;code&gt;&lt;a href=&quot;close&quot;&gt;close()&lt;/a&gt;&lt;/code&gt;, &lt;code&gt;&lt;a href=&quot;../basic_streambuf/pubseekoff&quot;&gt;seekoff()&lt;/a&gt;&lt;/code&gt;, and &lt;code&gt;&lt;a href=&quot;../basic_streambuf/pubseekpos&quot;&gt;seekpos()&lt;/a&gt;&lt;/code&gt; and explicitly called by &lt;code&gt;&lt;a href=&quot;../basic_streambuf/pubsync&quot;&gt;std::basic_streambuf::pubsync()&lt;/a&gt;&lt;/code&gt;.</source>
@@ -161,11 +161,11 @@
         </trans-unit>
         <trans-unit id="054851ea09d5f2815e5123d31e8f59874d9d3c22" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;synchronized_pool_resource&lt;/code&gt; may be accessed from multiple threads without external synchronization, and may have thread-specific pools to reduce synchronization costs. If the memory resource is only accessed from one thread, &lt;a href=&quot;unsynchronized_pool_resource&quot;&gt;&lt;code&gt;unsynchronized_pool_resource&lt;/code&gt;&lt;/a&gt; is more efficient.</source>
-          <target state="translated">&lt;code&gt;synchronized_pool_resource&lt;/code&gt; は、外部同期なしで複数のスレッドからアクセスでき、スレッド固有のプールを使用して同期コストを削減できます。メモリリソースが1つのスレッドからのみアクセスされる場合は、&lt;a href=&quot;unsynchronized_pool_resource&quot;&gt; &lt;code&gt;unsynchronized_pool_resource&lt;/code&gt; の&lt;/a&gt;方が効率的です。</target>
+          <target state="translated">&lt;code&gt;synchronized_pool_resource&lt;/code&gt; は、外部同期なしで複数のスレッドからアクセスでき、同期固有のプールを使用して同期コストを削減できます。メモリリソースが1つのスレッドからのみアクセスされる場合は、&lt;a href=&quot;unsynchronized_pool_resource&quot;&gt; &lt;code&gt;unsynchronized_pool_resource&lt;/code&gt; の&lt;/a&gt;方が効率的です。</target>
         </trans-unit>
         <trans-unit id="1198634d869eb8501699c0d2c005e9cbe2ef230b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;system_clock&lt;/code&gt; measures Unix Time (i.e., time since 00:00:00 Coordinated Universal Time (UTC), Thursday, 1 January 1970, not counting leap seconds).</source>
-          <target state="translated">&lt;code&gt;system_clock&lt;/code&gt; はUnix時間（つまり、1970年1月1日木曜日の00:00:00協定世界時（UTC）からの時間、うるう秒はカウントしない）を測定します。</target>
+          <target state="translated">&lt;code&gt;system_clock&lt;/code&gt; はUnix時間（つまり、1970年1月1日木曜日の00:00:00協定世界時（UTC）からの時間、うるう秒は数えない）を測定します。</target>
         </trans-unit>
         <trans-unit id="975fc5dd020b3a62835d5173c6970e7eb1cfe4db" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;t&lt;/code&gt;, a modifiable &lt;a href=&quot;../language/value_category&quot;&gt;lvalue expression&lt;/a&gt; of type &lt;code&gt;T&lt;/code&gt;</source>
@@ -181,7 +181,7 @@
         </trans-unit>
         <trans-unit id="1b5c0793defdd57124cafb9905809907ddf8535c" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;tai_clock&lt;/code&gt; meets the &lt;a href=&quot;../named_req/clock&quot;&gt;Clock&lt;/a&gt; requirements. It does not meet the &lt;a href=&quot;../named_req/trivialclock&quot;&gt;TrivialClock&lt;/a&gt; requirements unless the implementation can guarantee that &lt;a href=&quot;tai_clock/now&quot;&gt;&lt;code&gt;now()&lt;/code&gt;&lt;/a&gt; does not throw an exception.</source>
-          <target state="translated">&lt;code&gt;tai_clock&lt;/code&gt; は&lt;a href=&quot;../named_req/clock&quot;&gt;クロック&lt;/a&gt;要件を満たしています。&lt;a href=&quot;tai_clock/now&quot;&gt; &lt;code&gt;now()&lt;/code&gt; &lt;/a&gt;が例外をスローしないことを実装が保証できない限り、これは&lt;a href=&quot;../named_req/trivialclock&quot;&gt;TrivialClock&lt;/a&gt;要件を満たしていません。</target>
+          <target state="translated">&lt;code&gt;tai_clock&lt;/code&gt; は&lt;a href=&quot;../named_req/clock&quot;&gt;クロック&lt;/a&gt;要件を満たしています。&lt;a href=&quot;tai_clock/now&quot;&gt; &lt;code&gt;now()&lt;/code&gt; &lt;/a&gt;が例外をスローしないことを実装が保証できない限り、これは&lt;a href=&quot;../named_req/trivialclock&quot;&gt;TrivialClock&lt;/a&gt;要件を満たしません。</target>
         </trans-unit>
         <trans-unit id="4f4fc1efa78ee5255898d3df98d6ec199babc3e4" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;template&lt;/code&gt;&lt;code&gt;&amp;lt;&amp;gt;&lt;/code&gt;declaration</source>
@@ -285,7 +285,7 @@
         </trans-unit>
         <trans-unit id="699119966bdd1b85af68fc960d1b82c22d66a7a2" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;throw &lt;/code&gt;object&lt;code&gt;;&lt;/code&gt;</source>
-          <target state="translated">&lt;code&gt;throw &lt;/code&gt; オブジェクトを投げる &lt;code&gt;;&lt;/code&gt;</target>
+          <target state="translated">&lt;code&gt;throw &lt;/code&gt; オブジェクト &lt;code&gt;;&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="d3bf225abaa03f16050908b861154f0c280035fe" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;throw(&lt;/code&gt;&lt;code&gt;)&lt;/code&gt;</source>
@@ -309,7 +309,7 @@
         </trans-unit>
         <trans-unit id="0893d51f0b8564356f4e175f506e1f035224a7a4" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;time_of_day&lt;/code&gt; splits a duration representing time elapsed since midnight into hours, minutes, seconds, and fractional seconds, as applicable. It is primarily a formatting tool.</source>
-          <target state="translated">&lt;code&gt;time_of_day&lt;/code&gt; は、真夜中から経過した時間を表す期間を、必要に応じて、時間、分、秒、および端数秒に分割します。これは主にフォーマットツールです。</target>
+          <target state="translated">&lt;code&gt;time_of_day&lt;/code&gt; は、真夜中からの経過時間を表す期間を、必要に応じて、時間、分、秒、および端数秒に分割します。これは主にフォーマットツールです。</target>
         </trans-unit>
         <trans-unit id="41774b2b7834a7c9300db964e82aa508cd2a0f23" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;time_point&lt;/code&gt; to convert from</source>
@@ -321,7 +321,7 @@
         </trans-unit>
         <trans-unit id="c7e87fc979fdc276061810e2061ff505dce08a71" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;time_zone&lt;/code&gt; is not copyable but does have a defaulted move constructor and a defaulted move assignment operator. However, as users have only &lt;code&gt;const&lt;/code&gt; access to &lt;code&gt;time_zone&lt;/code&gt; objects, these functions cannot be called in user code without invoking &lt;a href=&quot;../language/ub&quot;&gt;undefined behavior&lt;/a&gt;.</source>
-          <target state="translated">&lt;code&gt;time_zone&lt;/code&gt; はコピーできませんが、デフォルトの移動コンストラクターとデフォルトの移動割り当て演算子があります。ただし、ユーザーは &lt;code&gt;time_zone&lt;/code&gt; オブジェクトへの &lt;code&gt;const&lt;/code&gt; アクセスしか持っていないため、これらの関数は&lt;a href=&quot;../language/ub&quot;&gt;未定義の動作&lt;/a&gt;を呼び出さずにユーザーコードで呼び出すことはできません。</target>
+          <target state="translated">&lt;code&gt;time_zone&lt;/code&gt; はコピーできませんが、デフォルトの移動コンストラクターとデフォルトの移動割り当て演算子があります。ただし、ユーザーは &lt;code&gt;time_zone&lt;/code&gt; オブジェクトへの &lt;code&gt;const&lt;/code&gt; アクセスしか持っていないため、これらの関数は、&lt;a href=&quot;../language/ub&quot;&gt;未定義の動作&lt;/a&gt;を呼び出さずにユーザーコードで呼び出すことはできません。</target>
         </trans-unit>
         <trans-unit id="98ed1571b14b52948622ae54ee17b9eb2346abfb" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;tm_hour&lt;/code&gt;, &lt;code&gt;tm_min&lt;/code&gt;</source>
@@ -353,7 +353,7 @@
         </trans-unit>
         <trans-unit id="c758ae651b4b1b8f58cd6578ccb94902f484afd0" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; (the entire sequence is matched)</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; （シーケンス全体が一致します）</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; （シーケンス全体が一致する）</target>
         </trans-unit>
         <trans-unit id="b337fa35a98c22ea1fef2a94b3acc654600c1dcd" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if *this refers to a shared state, otherwise &lt;code&gt;false&lt;/code&gt;.</source>
@@ -373,7 +373,7 @@
         </trans-unit>
         <trans-unit id="897cf60c64bf6c8adf9c9f2a86f2b56069816509" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if &lt;code&gt;*this&lt;/code&gt; has an associated mutex and has acquired ownership of it, &lt;code&gt;false&lt;/code&gt; otherwise.</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;*this&lt;/code&gt; ミューテックスが関連付けられていて、その所有権を取得している場合はtrue、そうでない場合は &lt;code&gt;false&lt;/code&gt; 。</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;*this&lt;/code&gt; に関連するミューテックスがあり、その所有権を取得している場合はtrue、それ以外の場合は &lt;code&gt;false&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="d64904471fddc80d155bcc3c1a8fbc8b6eebdd92" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if &lt;code&gt;*this&lt;/code&gt; has an associated mutex and has acquired shared ownership of it, &lt;code&gt;false&lt;/code&gt; otherwise.</source>
@@ -409,7 +409,7 @@
         </trans-unit>
         <trans-unit id="54718d3dce95fd672e8bd5fd850dfed66817adcc" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if &lt;code&gt;Derived&lt;/code&gt; is derived from &lt;code&gt;Base&lt;/code&gt; or if both are the same non-union class (in both cases ignoring cv-qualification), &lt;code&gt;false&lt;/code&gt; otherwise</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; 場合に &lt;code&gt;Derived&lt;/code&gt; に由来する &lt;code&gt;Base&lt;/code&gt; または両方場合（両方の場合において、CV-資格を無視して）同じ非組合クラスであり、 &lt;code&gt;false&lt;/code&gt; さもなければ</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;Derived&lt;/code&gt; が &lt;code&gt;Base&lt;/code&gt; から派生した場合、または両方が同じ非ユニオンクラスである場合はtrue（どちらの場合もcv-qualificationを無視し &lt;code&gt;false&lt;/code&gt; ）、そうでない場合はfalse</target>
         </trans-unit>
         <trans-unit id="54db9751ef6490d27fa40e1f9becf5b364291cd7" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if &lt;code&gt;From&lt;/code&gt; is convertible to &lt;code&gt;To&lt;/code&gt; , &lt;code&gt;false&lt;/code&gt; otherwise</source>
@@ -445,7 +445,7 @@
         </trans-unit>
         <trans-unit id="33656bb5f9fe41fe760e6396a3d5de0ea1b922bd" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if &lt;code&gt;T&lt;/code&gt; and &lt;code&gt;U&lt;/code&gt; is the same type , &lt;code&gt;false&lt;/code&gt; otherwise</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;T&lt;/code&gt; と &lt;code&gt;U&lt;/code&gt; が同じ型で &lt;code&gt;false&lt;/code&gt; 場合はtrue、そうでない場合はfalse</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;T&lt;/code&gt; と &lt;code&gt;U&lt;/code&gt; が同じ型の場合はtrue、そうでない場合は &lt;code&gt;false&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="28d2a44b105fc2ea4ebdc7759f674772926f44cd" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if &lt;code&gt;T&lt;/code&gt; has a virtual destructor , &lt;code&gt;false&lt;/code&gt; otherwise</source>
@@ -461,7 +461,7 @@
         </trans-unit>
         <trans-unit id="86841b918c3b5aa4bf6fc74125e065809f54b4ff" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if &lt;code&gt;T&lt;/code&gt; is a POD type , &lt;code&gt;false&lt;/code&gt; otherwise</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;T&lt;/code&gt; がPODタイプの場合はtrue、それ以外の場合は &lt;code&gt;false&lt;/code&gt;</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;T&lt;/code&gt; がPODタイプの場合はtrue、そうでない場合は &lt;code&gt;false&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="43256d3a170a8216ec596aadf18c944e03c3ed60" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if &lt;code&gt;T&lt;/code&gt; is a compound type , &lt;code&gt;false&lt;/code&gt; otherwise</source>
@@ -469,11 +469,11 @@
         </trans-unit>
         <trans-unit id="a13bbc1373ef76774c00ac24575b9d248ef4411a" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if &lt;code&gt;T&lt;/code&gt; is a const-qualified type , &lt;code&gt;false&lt;/code&gt; otherwise</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;T&lt;/code&gt; がconst修飾型の場合はtrue、それ以外の場合は &lt;code&gt;false&lt;/code&gt;</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;T&lt;/code&gt; がconst修飾型で &lt;code&gt;false&lt;/code&gt; 場合はtrue、そうでない場合はfalse</target>
         </trans-unit>
         <trans-unit id="279886cc647fdc4cca818d9056acf5f16f60c12e" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if &lt;code&gt;T&lt;/code&gt; is a final class type , &lt;code&gt;false&lt;/code&gt; otherwise</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;T&lt;/code&gt; が最終クラス型で &lt;code&gt;false&lt;/code&gt; 場合はtrue、そうでない場合はfalse</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;T&lt;/code&gt; が最終クラス型の場合はtrue、それ以外の場合は &lt;code&gt;false&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="70cb39a09cbf2fb91ae701cbc53458f4103c456a" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if &lt;code&gt;T&lt;/code&gt; is a floating-point type (possibly cv-qualified) , &lt;code&gt;false&lt;/code&gt; otherwise</source>
@@ -505,7 +505,7 @@
         </trans-unit>
         <trans-unit id="be9a692aec6f60f510972993792edb7ceb7df5f0" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if &lt;code&gt;T&lt;/code&gt; is a non-union class type , &lt;code&gt;false&lt;/code&gt; otherwise</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;T&lt;/code&gt; が共用体クラスではない場合はtrue、そうでない場合は &lt;code&gt;false&lt;/code&gt;</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;T&lt;/code&gt; が非共用クラス型の場合はtrue、それ以外の場合は &lt;code&gt;false&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="2824cf3958551b1a80b8c2d2cd9b6be31d3d839b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if &lt;code&gt;T&lt;/code&gt; is a pointer to member object , &lt;code&gt;false&lt;/code&gt; otherwise</source>
@@ -553,7 +553,7 @@
         </trans-unit>
         <trans-unit id="ee52ffe3e1e9db1ab92779afa612a128eab077df" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if &lt;code&gt;T&lt;/code&gt; is an &lt;a href=&quot;../language/abstract_class&quot;&gt;abstract class&lt;/a&gt; type , &lt;code&gt;false&lt;/code&gt; otherwise</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;T&lt;/code&gt; が&lt;a href=&quot;../language/abstract_class&quot;&gt;抽象クラス&lt;/a&gt;型の場合はtrue、そうでない場合は &lt;code&gt;false&lt;/code&gt;</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;T&lt;/code&gt; が&lt;a href=&quot;../language/abstract_class&quot;&gt;抽象クラス&lt;/a&gt;型の場合はtrue、それ以外の場合は &lt;code&gt;false&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="ac70f06310b441c83c89b23ccd0c0202a32fa2bd" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if &lt;code&gt;T&lt;/code&gt; is an aggregate type , &lt;code&gt;false&lt;/code&gt; otherwise</source>
@@ -605,11 +605,11 @@
         </trans-unit>
         <trans-unit id="c1d3754f063e3ddf7aefad55063a55ae0e36d800" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if &lt;code&gt;T&lt;/code&gt; is an rvalue reference type , &lt;code&gt;false&lt;/code&gt; otherwise</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;T&lt;/code&gt; が右辺値参照型の場合はtrue、それ以外の場合は &lt;code&gt;false&lt;/code&gt;</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;T&lt;/code&gt; が右辺値参照型の場合はtrue、そうでない場合は &lt;code&gt;false&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="3a4af62411a901ee93d4980d9a31b5d15a419aa2" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if &lt;code&gt;T&lt;/code&gt; is an unsigned arithmetic type , &lt;code&gt;false&lt;/code&gt; otherwise</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;T&lt;/code&gt; が符号なし算術型の場合はtrue、そうでない場合は &lt;code&gt;false&lt;/code&gt;</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;T&lt;/code&gt; が符号なし算術型の場合はtrue、それ以外の場合は &lt;code&gt;false&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="b221cc0617be6c204f1353e23be2c22563ffd342" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if &lt;code&gt;T&lt;/code&gt; is assignable from &lt;code&gt;U&lt;/code&gt; , &lt;code&gt;false&lt;/code&gt; otherwise</source>
@@ -685,7 +685,7 @@
         </trans-unit>
         <trans-unit id="fecb1cd84a1e1205e0e304db06b224b9ac956588" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if &lt;code&gt;arg&lt;/code&gt; is normal, &lt;code&gt;false&lt;/code&gt; otherwise.</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;arg&lt;/code&gt; が正常な場合はtrue、それ以外の場合は &lt;code&gt;false&lt;/code&gt; 。</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;arg&lt;/code&gt; が正常な場合はtrue、そうでない場合は &lt;code&gt;false&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="faa7833673d1c90323b97e307b34f34143d63144" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if &lt;code&gt;c1&lt;/code&gt; is equal to &lt;code&gt;c2&lt;/code&gt; under the rules described above, &lt;code&gt;false&lt;/code&gt; otherwise.</source>
@@ -793,7 +793,7 @@
         </trans-unit>
         <trans-unit id="f2a5221dfda344f736e743802c2676734e20b3b8" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if &lt;code&gt;x&lt;/code&gt; and &lt;code&gt;y&lt;/code&gt; are in the same state (such that repeated future calls to &lt;code&gt;x()&lt;/code&gt; and &lt;code&gt;y()&lt;/code&gt; will produce identical sequences). Otherwise, &lt;code&gt;false&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;x&lt;/code&gt; と &lt;code&gt;y&lt;/code&gt; が同じ状態の場合はtrue（今後 &lt;code&gt;x()&lt;/code&gt; と &lt;code&gt;y()&lt;/code&gt; を繰り返し呼び出すと、同じシーケンスが生成される）。それ以外の場合は &lt;code&gt;false&lt;/code&gt; 。</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;x&lt;/code&gt; と &lt;code&gt;y&lt;/code&gt; が同じ状態の場合はtrue（今後 &lt;code&gt;x()&lt;/code&gt; と &lt;code&gt;y()&lt;/code&gt; を繰り返し呼び出すと同一のシーケンスが生成される）。それ以外の場合は &lt;code&gt;false&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="b52764c8952951fbe08c47ae1c319748495f62c1" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if &lt;code&gt;x&lt;/code&gt; is an integral power of two; otherwise &lt;code&gt;false&lt;/code&gt;.</source>
@@ -801,7 +801,7 @@
         </trans-unit>
         <trans-unit id="daf77f8a170a0b7cf8e197edd700f2ee2f4bb8c4" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if a directory was created for the directory &lt;code&gt;p&lt;/code&gt; resolves to, &lt;code&gt;false&lt;/code&gt; otherwise.</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; ディレクトリ &lt;code&gt;p&lt;/code&gt; が解決されるディレクトリに対してディレクトリが作成された場合はtrue、それ以外の場合は &lt;code&gt;false&lt;/code&gt; 。</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; ディレクトリ &lt;code&gt;p&lt;/code&gt; が解決するディレクトリに対してディレクトリが作成された場合はtrue、それ以外の場合は &lt;code&gt;false&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="bece88ec75292f03199bedab744dd32715f9f3fb" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if a non-recoverable error has occurred, &lt;code&gt;false&lt;/code&gt; otherwise.</source>
@@ -825,7 +825,7 @@
         </trans-unit>
         <trans-unit id="abb7a945f2cf54748f4dc8cbe0d588d6f1b8dd0b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if any two allocators of type &lt;code&gt;A&lt;/code&gt; always compare equal. If not provided, &lt;code&gt;&lt;a href=&quot;../memory/allocator_traits&quot;&gt;std::allocator_traits&lt;/a&gt;&lt;/code&gt; defaults this to equal &lt;code&gt;&lt;a href=&quot;../types/is_empty&quot;&gt;std::is_empty&lt;/a&gt;&amp;lt;A&amp;gt;::type&lt;/code&gt;</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; タイプ &lt;code&gt;A&lt;/code&gt; の 2つのアロケーターが常に等しい場合はtrue。提供されない場合、 &lt;code&gt;&lt;a href=&quot;../memory/allocator_traits&quot;&gt;std::allocator_traits&lt;/a&gt;&lt;/code&gt; これをデフォルトで &lt;code&gt;&lt;a href=&quot;../types/is_empty&quot;&gt;std::is_empty&lt;/a&gt;&amp;lt;A&amp;gt;::type&lt;/code&gt; &amp;lt;A&amp;gt; :: typeに等しくします</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; タイプ &lt;code&gt;A&lt;/code&gt; の 2つのアロケーターが常に等しい場合はtrue。提供されない場合、 &lt;code&gt;&lt;a href=&quot;../memory/allocator_traits&quot;&gt;std::allocator_traits&lt;/a&gt;&lt;/code&gt; デフォルトでこれを &lt;code&gt;&lt;a href=&quot;../types/is_empty&quot;&gt;std::is_empty&lt;/a&gt;&amp;lt;A&amp;gt;::type&lt;/code&gt; &amp;lt;A&amp;gt; :: typeに等しくします</target>
         </trans-unit>
         <trans-unit id="d75e79f96736cec0da4422496d046ca43a70e271" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if both &lt;code&gt;*this&lt;/code&gt; and &lt;code&gt;it&lt;/code&gt; are valid, or both are invalid, &lt;code&gt;false&lt;/code&gt; otherwise.</source>
@@ -833,7 +833,7 @@
         </trans-unit>
         <trans-unit id="31889d3052d3523de793be538c512f07dc006883" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if either &lt;code&gt;x&lt;/code&gt; or &lt;code&gt;y&lt;/code&gt; is NaN, &lt;code&gt;false&lt;/code&gt; otherwise.</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;x&lt;/code&gt; または &lt;code&gt;y&lt;/code&gt; のいずれかがNaNの場合はtrue、それ以外の場合は &lt;code&gt;false&lt;/code&gt; 。</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;x&lt;/code&gt; または &lt;code&gt;y&lt;/code&gt; がNaNの場合はtrue、それ以外の場合は &lt;code&gt;false&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="8061fcebee76efb0b8e9ac2a22fa95246d06fcc6" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if instance contains a value, otherwise &lt;code&gt;false&lt;/code&gt;.</source>
@@ -853,7 +853,7 @@
         </trans-unit>
         <trans-unit id="ebb4243227b7226e633bdbcd4bccf181169d0463" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the allocator of type &lt;code&gt;A&lt;/code&gt; needs to be moved when the container that uses it is move-assigned. If this member is &lt;code&gt;false&lt;/code&gt; and the allocators of the source and the target containers do not compare equal, move assignment cannot take ownership of the source memory and must move-assign or move-construct the elements individually, resizing its own memory as needed.</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; タイプ &lt;code&gt;A&lt;/code&gt; のアロケータを使用するコンテナが移動割り当てされているときに、タイプAのアロケータを移動する必要がある場合はtrue。このメンバーが &lt;code&gt;false&lt;/code&gt; で、ソースコンテナーとターゲットコンテナーのアロケーターが等しくない場合、移動割り当てはソースメモリの所有権を取得できず、要素を個別に移動割り当てまたは移動構築し、必要に応じて独自のメモリのサイズを変更する必要があります。</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; タイプ &lt;code&gt;A&lt;/code&gt; のアロケーターを使用するコンテナーが移動割り当てされているときに、タイプAのアロケーターを移動する必要がある場合はtrue。このメンバーが &lt;code&gt;false&lt;/code&gt; で、ソースコンテナーとターゲットコンテナーのアロケーターが等しくない場合、移動割り当てはソースメモリの所有権を取得できず、要素を個別に移動割り当てまたは移動構築し、必要に応じて独自のメモリのサイズを変更する必要があります。</target>
         </trans-unit>
         <trans-unit id="71a989fc0f089a5f2c131ec55fc8697d2393cc43" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the allocators of type &lt;code&gt;A&lt;/code&gt; need to be swapped when two containers that use them are swapped. If this member is &lt;code&gt;false&lt;/code&gt; and the allocators of the two containers do not compare equal, the behavior of container swap is undefined.</source>
@@ -889,7 +889,7 @@
         </trans-unit>
         <trans-unit id="d1836e5d6e1e7a62ca904ac434d76f8282910904" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the corresponding comparison holds, &lt;code&gt;false&lt;/code&gt; otherwise.</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; 対応する比較が成立する場合はtrue、それ以外の場合は &lt;code&gt;false&lt;/code&gt; 。</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; 対応する比較が成立する場合はtrue、そうでない場合は &lt;code&gt;false&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="7627d1e51ad70c5ee2cc9dd8de593da75ce7f349" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the corresponding comparison yields &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; otherwise.</source>
@@ -905,11 +905,11 @@
         </trans-unit>
         <trans-unit id="435ba71d15fe35847d288669d7ffe64adaf2e965" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the corresponding relation holds, &lt;code&gt;false&lt;/code&gt; otherwise.</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; 対応する関係が成立する場合はtrue、それ以外の場合は &lt;code&gt;false&lt;/code&gt; 。</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; 対応する関係が成立する場合はtrue、そうでない場合は &lt;code&gt;false&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="21e34dfd5278ce73774a6aadf8a971b3a87aca54" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the day value stored in &lt;code&gt;*this&lt;/code&gt; is in the range [1, 31]. Otherwise &lt;code&gt;false&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;*this&lt;/code&gt; 格納されている日の値が[1、31]の範囲内にある場合はtrue。それ以外の場合は &lt;code&gt;false&lt;/code&gt; 。</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;*this&lt;/code&gt; 保存されている日の値が[1、31]の範囲内にある場合はtrue。それ以外の場合は &lt;code&gt;false&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="ade861a9f26fc914acd9e634902525dd6a953d53" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the elements in the range are sorted in ascending order.</source>
@@ -941,7 +941,7 @@
         </trans-unit>
         <trans-unit id="68c4658f587b6b5415938a087542db2e1d03af29" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the file indicated by &lt;code&gt;p&lt;/code&gt; or if the type indicated &lt;code&gt;s&lt;/code&gt; refers to a file that is not regular file, directory, or a symlink, &lt;code&gt;false&lt;/code&gt; otherwise. The non-throwing overload returns &lt;code&gt;false&lt;/code&gt; if an error occurs.</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;p&lt;/code&gt; で示されるファイルまたは &lt;code&gt;s&lt;/code&gt; で示されるタイプが通常のファイル、ディレクトリ、またはシンボリックリンクではないファイルを参照する場合はtrue、それ以外の場合は &lt;code&gt;false&lt;/code&gt; 。エラーが発生した場合、スローしないオーバーロードは &lt;code&gt;false&lt;/code&gt; を返します。</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;p&lt;/code&gt; で示されるファイル、または &lt;code&gt;s&lt;/code&gt; で示されるタイプが通常のファイル、ディレクトリ、またはシンボリックリンクではないファイルを参照する場合はtrue、それ以外の場合は &lt;code&gt;false&lt;/code&gt; 。エラーが発生した場合、スローしないオーバーロードは &lt;code&gt;false&lt;/code&gt; を返します。</target>
         </trans-unit>
         <trans-unit id="a444768282eb1b92ae8ccae062b31180fc15fe7b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the file indicated by &lt;code&gt;p&lt;/code&gt; or if the type indicated &lt;code&gt;s&lt;/code&gt; refers to a named socket. The non-throwing overload returns &lt;code&gt;false&lt;/code&gt; if an error occurs.</source>
@@ -953,7 +953,7 @@
         </trans-unit>
         <trans-unit id="511cfdc5bfa36df8669b7dd625f008c5da5a67e6" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the file indicated by &lt;code&gt;p&lt;/code&gt; or if the type indicated &lt;code&gt;s&lt;/code&gt; refers to an empty file or directory, &lt;code&gt;false&lt;/code&gt; otherwise. The non-throwing overload returns &lt;code&gt;false&lt;/code&gt; if an error occurs.</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;p&lt;/code&gt; で示されるファイルまたは &lt;code&gt;s&lt;/code&gt; で示されるタイプが空のファイルまたはディレクトリを参照する場合はtrue、それ以外の場合は &lt;code&gt;false&lt;/code&gt; 。エラーが発生した場合、スローしないオーバーロードは &lt;code&gt;false&lt;/code&gt; を返します。</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;p&lt;/code&gt; で示されるファイル、または &lt;code&gt;s&lt;/code&gt; で示されるタイプが空のファイルまたはディレクトリを参照する場合はtrue、それ以外の場合は &lt;code&gt;false&lt;/code&gt; 。エラーが発生した場合、スローしないオーバーロードは &lt;code&gt;false&lt;/code&gt; を返します。</target>
         </trans-unit>
         <trans-unit id="32b18a5c93be2c1a6c3f4c03d3053ebed3c6dc6e" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the file indicated by &lt;code&gt;p&lt;/code&gt; or if the type indicated by &lt;code&gt;s&lt;/code&gt; refers to a regular file, &lt;code&gt;false&lt;/code&gt; otherwise. The non-throwing overload returns &lt;code&gt;false&lt;/code&gt; if an error occurs.</source>
@@ -965,7 +965,7 @@
         </trans-unit>
         <trans-unit id="813e4dc8203e2000a880994e7765d1083e858af9" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the first range is lexicographically</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; 最初の範囲が辞書式順序である場合はtrue</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; 最初の範囲が辞書式順序であればtrue</target>
         </trans-unit>
         <trans-unit id="774d06495aeafee6200a549323ec527e82d9d366" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the given file status is a known file status.</source>
@@ -985,7 +985,7 @@
         </trans-unit>
         <trans-unit id="ff41e350b367f7a3de8bc91240afaaa1c5a0fb19" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the lock was acquired, &lt;code&gt;false&lt;/code&gt; otherwise</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; ロックが取得された場合はtrue、それ以外の場合は &lt;code&gt;false&lt;/code&gt;</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; ロックが取得された場合はtrue、そうでない場合は &lt;code&gt;false&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="fed8e9e1aad9d50cab487c82cc96bf9a2d76504e" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the lock was acquired, &lt;code&gt;false&lt;/code&gt; otherwise.</source>
@@ -993,7 +993,7 @@
         </trans-unit>
         <trans-unit id="56d1e54d3b787c77666338119d196f840e48e1f0" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the managed object has already been deleted, &lt;code&gt;false&lt;/code&gt; otherwise.</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; 管理対象オブジェクトがすでに削除されている場合はtrue、そうでない場合は &lt;code&gt;false&lt;/code&gt; 。</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; 管理対象オブジェクトがすでに削除されている場合はtrue、それ以外の場合は &lt;code&gt;false&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="3777ed7fa1cc6d603efabbdf42cb72de04079673" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the match results are ready, &lt;code&gt;false&lt;/code&gt; otherwise.</source>
@@ -1005,23 +1005,23 @@
         </trans-unit>
         <trans-unit id="1b5a5de7c58b60d34d97d7aa15766326699bb85c" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the month value stored in &lt;code&gt;*this&lt;/code&gt; is in the range [1, 12]. Otherwise &lt;code&gt;false&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;*this&lt;/code&gt; 格納された月の値が[1、12]の範囲内にある場合はtrue。それ以外の場合は &lt;code&gt;false&lt;/code&gt; 。</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; &lt;code&gt;*this&lt;/code&gt; 格納されている月の値が[1、12]の範囲内にある場合はtrue。それ以外の場合は &lt;code&gt;false&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="3326a1a8b0006cb0d54e3b41e3129045db78d1a0" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the new permutation is lexicographically greater than the old. &lt;code&gt;false&lt;/code&gt; if the last permutation was reached and the range was reset to the first permutation.</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; 新しい順列が辞書式順序で古い順列より大きい場合はtrue。最後の順列に達し、範囲が最初の順列にリセットされた場合は &lt;code&gt;false&lt;/code&gt; 。</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; 新しい順列が辞書式順序で古い順列よりも大きい場合はtrue。最後の順列に達し、範囲が最初の順列にリセットされた場合は &lt;code&gt;false&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="f78bf4c0f66bafc6942692c75330fcbb627cd5a0" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the new permutation precedes the old in lexicographical order. &lt;code&gt;false&lt;/code&gt; if the first permutation was reached and the range was reset to the last permutation.</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; 新しい順列が辞書式順序で古い順の前にある場合はtrue。最初の順列に達し、範囲が最後の順列にリセットされた場合は &lt;code&gt;false&lt;/code&gt; 。</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; 新しい順列が辞書順で古い順の前にある場合はtrue。最初の順列に達し、範囲が最後の順列にリセットされた場合は &lt;code&gt;false&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="0b7bab2f9360fc758ef20de3e35f5aac543f29b9" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the next increment will iterate into the currently referred directory, &lt;code&gt;false&lt;/code&gt; otherwise.</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; 次の増分が現在参照されているディレクトリを反復処理する場合はtrue、それ以外の場合は &lt;code&gt;false&lt;/code&gt; 。</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; 次の増分が現在参照されているディレクトリを反復処理する場合はtrue、そうでない場合は &lt;code&gt;false&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="83d76b62497880f5b40c16493988543b02bd069a" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the ownership of the mutex has been acquired successfully, &lt;code&gt;false&lt;/code&gt; otherwise.</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; mutexの所有権が正常に取得された場合はtrue、それ以外の場合は &lt;code&gt;false&lt;/code&gt; 。</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; mutexの所有権が正常に取得された場合はtrue、そうでない場合は &lt;code&gt;false&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="9f06c2e4e785e50910ebe499c6237c23507b67a5" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the path is empty, &lt;code&gt;false&lt;/code&gt; otherwise.</source>
@@ -1033,7 +1033,7 @@
         </trans-unit>
         <trans-unit id="a0aff1ec423245460fcbe6f21acd5be965fe98d8" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the range &lt;code&gt;[first, last)&lt;/code&gt; is empty or is partitioned by &lt;code&gt;p&lt;/code&gt;. &lt;code&gt;false&lt;/code&gt; otherwise.</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; 範囲 &lt;code&gt;[first, last)&lt;/code&gt; が空であるか、 &lt;code&gt;p&lt;/code&gt; によってパーティション化されている場合はtrue。それ以外の場合は &lt;code&gt;false&lt;/code&gt; 。</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; 範囲 &lt;code&gt;[first, last)&lt;/code&gt; が空であるか、 &lt;code&gt;p&lt;/code&gt; で分割されている場合はtrue。それ以外の場合は &lt;code&gt;false&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="cc6ccfbdc802abe5dfa166b5b5c67bf5853aa443" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the range &lt;code&gt;[first1, last1)&lt;/code&gt; is a permutation of the range &lt;code&gt;[first2, last2)&lt;/code&gt;.</source>
@@ -1041,7 +1041,7 @@
         </trans-unit>
         <trans-unit id="58330fe78a5001387856c05f256100f19ad78e79" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the range is</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; 範囲がtrueの場合はtrue</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; 範囲がtrueの場合</target>
         </trans-unit>
         <trans-unit id="3069cc79408f4d8e829ff11d845f47c4ee4786ca" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the referenced object was successfully changed, &lt;code&gt;false&lt;/code&gt; otherwise.</source>
@@ -1093,27 +1093,27 @@
         </trans-unit>
         <trans-unit id="6424740ec90619dfa2062e4901878d09eef08776" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the time between ticks is always constant, i.e. calls to &lt;a href=&quot;file_clock/now&quot;&gt;&lt;code&gt;now()&lt;/code&gt;&lt;/a&gt; return values that increase monotonically even in case of some external clock adjustment, otherwise &lt;code&gt;false&lt;/code&gt;</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; ティック間の時間が常に一定である場合はtrue、つまり、&lt;a href=&quot;file_clock/now&quot;&gt; &lt;code&gt;now()&lt;/code&gt; &lt;/a&gt;への呼び出しは、外部クロック調整の場合でも単調に増加する値を返し、そうでない場合は &lt;code&gt;false&lt;/code&gt;</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; ティック間の時間が常に一定である場合はtrue、つまり、&lt;a href=&quot;file_clock/now&quot;&gt; &lt;code&gt;now()&lt;/code&gt; の&lt;/a&gt;呼び出しは、外部クロック調整の場合でも単調に増加する値を返し、そうでない場合は &lt;code&gt;false&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="a630c6a3fed2983afdf951e2e600510907bf48e4" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the time between ticks is always constant, i.e. calls to &lt;a href=&quot;gps_clock/now&quot;&gt;&lt;code&gt;now()&lt;/code&gt;&lt;/a&gt; return values that increase monotonically even in case of some external clock adjustment, otherwise &lt;code&gt;false&lt;/code&gt;</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; ティック間の時間が常に一定である場合はtrue、つまり、&lt;a href=&quot;gps_clock/now&quot;&gt; &lt;code&gt;now()&lt;/code&gt; &lt;/a&gt;への呼び出しは、外部クロック調整の場合でも単調に増加する値を返し、そうでない場合は &lt;code&gt;false&lt;/code&gt;</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; ティック間の時間が常に一定である場合はtrue、つまり、&lt;a href=&quot;gps_clock/now&quot;&gt; &lt;code&gt;now()&lt;/code&gt; の&lt;/a&gt;呼び出しは、外部クロック調整の場合でも単調に増加する値を返し、そうでない場合は &lt;code&gt;false&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="2489102da4d878fbb76a0b0fdf9a1793d05fdc9b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the time between ticks is always constant, i.e. calls to &lt;a href=&quot;high_resolution_clock/now&quot;&gt;&lt;code&gt;now()&lt;/code&gt;&lt;/a&gt; return values that increase monotonically even in case of some external clock adjustment, otherwise &lt;code&gt;false&lt;/code&gt;</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; ティック間の時間が常に一定である場合はtrue、つまり、&lt;a href=&quot;high_resolution_clock/now&quot;&gt; &lt;code&gt;now()&lt;/code&gt; &lt;/a&gt;への呼び出しは、外部クロック調整の場合でも単調に増加する値を返し、そうでない場合は &lt;code&gt;false&lt;/code&gt;</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; ティック間の時間が常に一定である場合はtrue、つまり、&lt;a href=&quot;high_resolution_clock/now&quot;&gt; &lt;code&gt;now()&lt;/code&gt; の&lt;/a&gt;呼び出しは、外部クロック調整の場合でも単調に増加する値を返し、そうでない場合は &lt;code&gt;false&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="077807af7dc617f9b0ac57a7837c08e8be3ce5e3" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the time between ticks is always constant, i.e. calls to &lt;a href=&quot;system_clock/now&quot;&gt;&lt;code&gt;now()&lt;/code&gt;&lt;/a&gt; return values that increase monotonically even in case of some external clock adjustment, otherwise &lt;code&gt;false&lt;/code&gt;</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; ティック間の時間が常に一定である場合はtrue、つまり、&lt;a href=&quot;system_clock/now&quot;&gt; &lt;code&gt;now()&lt;/code&gt; &lt;/a&gt;への呼び出しは、外部クロック調整の場合でも単調に増加する値を返し、そうでない場合は &lt;code&gt;false&lt;/code&gt;</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; ティック間の時間が常に一定である場合はtrue、つまり、&lt;a href=&quot;system_clock/now&quot;&gt; &lt;code&gt;now()&lt;/code&gt; の&lt;/a&gt;呼び出しは、外部クロック調整の場合でも単調に増加する値を返し、そうでない場合は &lt;code&gt;false&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="a7ea55852419a54b76982a7674a5f38c1e663d44" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the time between ticks is always constant, i.e. calls to &lt;a href=&quot;tai_clock/now&quot;&gt;&lt;code&gt;now()&lt;/code&gt;&lt;/a&gt; return values that increase monotonically even in case of some external clock adjustment, otherwise &lt;code&gt;false&lt;/code&gt;</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; ティック間の時間が常に一定である場合はtrue、つまり、&lt;a href=&quot;tai_clock/now&quot;&gt; &lt;code&gt;now()&lt;/code&gt; &lt;/a&gt;への呼び出しは、外部クロック調整の場合でも単調に増加する値を返し、そうでない場合は &lt;code&gt;false&lt;/code&gt;</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; ティック間の時間が常に一定である場合はtrue、つまり、&lt;a href=&quot;tai_clock/now&quot;&gt; &lt;code&gt;now()&lt;/code&gt; の&lt;/a&gt;呼び出しは、外部クロック調整の場合でも単調に増加する値を返し、そうでない場合は &lt;code&gt;false&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="a49aea1fc683785d84be61de2bb37d61b6c8adce" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the time between ticks is always constant, i.e. calls to &lt;a href=&quot;utc_clock/now&quot;&gt;&lt;code&gt;now()&lt;/code&gt;&lt;/a&gt; return values that increase monotonically even in case of some external clock adjustment, otherwise &lt;code&gt;false&lt;/code&gt;</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; ティック間の時間が常に一定である場合はtrue、つまり、&lt;a href=&quot;utc_clock/now&quot;&gt; &lt;code&gt;now()&lt;/code&gt; &lt;/a&gt;への呼び出しは、外部クロック調整の場合でも単調に増加する値を返し、そうでない場合は &lt;code&gt;false&lt;/code&gt;</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; ティック間の時間が常に一定である場合はtrue、つまり、&lt;a href=&quot;utc_clock/now&quot;&gt; &lt;code&gt;now()&lt;/code&gt; の&lt;/a&gt;呼び出しは、外部クロック調整の場合でも単調に増加する値を返し、そうでない場合は &lt;code&gt;false&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="ff58a3c356ca070f6a1c170a72de9b83fe3547a9" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the type of this &lt;code&gt;type_info&lt;/code&gt; precedes the type of &lt;code&gt;rhs&lt;/code&gt; in the implementation's collation order.</source>
@@ -1121,7 +1121,7 @@
         </trans-unit>
         <trans-unit id="ad1c9abd2ced7b84aa1820e0f302f4bc7eb14bd3" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the underlying atomic value was successfully changed, &lt;code&gt;false&lt;/code&gt; otherwise.</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; 基になるアトミック値が正常に変更された場合はtrue、それ以外の場合は &lt;code&gt;false&lt;/code&gt; 。</target>
+          <target state="translated">&lt;code&gt;true&lt;/code&gt; 基本となるアトミック値が正常に変更された場合はtrue、それ以外の場合は &lt;code&gt;false&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="8a514e3ff53d006e7cf424694f0f2f6778f8dfda" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;true&lt;/code&gt; if the underlying container is empty, &lt;code&gt;false&lt;/code&gt; otherwise.</source>
@@ -1185,7 +1185,7 @@
         </trans-unit>
         <trans-unit id="82eeb6a7ab38369f465c1d77559d0a5ec2f5ac15" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;ts-&amp;gt;tv_nsec&lt;/code&gt; member is set to the integral number of nanoseconds, rounded to the resolution of the system clock</source>
-          <target state="translated">&lt;code&gt;ts-&amp;gt;tv_nsec&lt;/code&gt; メンバーは、システムクロックの分解能に丸められた、ナノ秒の整数に設定されます。</target>
+          <target state="translated">&lt;code&gt;ts-&amp;gt;tv_nsec&lt;/code&gt; メンバーは、システムクロックの精度に丸められた、ナノ秒の整数に設定されます。</target>
         </trans-unit>
         <trans-unit id="3d525bc62418789da89010b3ec4eb3ba2c35c7de" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;ts-&amp;gt;tv_sec&lt;/code&gt; is set to the number of seconds since an implementation defined epoch, truncated to a whole value</source>
@@ -1245,7 +1245,7 @@
         </trans-unit>
         <trans-unit id="adf6128ae48441019db83a6f7bb8b02694f423e1" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;typeid(T)&lt;/code&gt; if the stored function has type &lt;code&gt;T&lt;/code&gt;, otherwise &lt;code&gt;typeid(void)&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;typeid(T)&lt;/code&gt; ストアド関数の型が &lt;code&gt;T&lt;/code&gt; の場合はtypeid（T）、それ以外の場合は &lt;code&gt;typeid(void)&lt;/code&gt; 。</target>
+          <target state="translated">&lt;code&gt;typeid(T)&lt;/code&gt; ストアドファンクションの型が &lt;code&gt;T&lt;/code&gt; の場合はtypeid（T）、それ以外の場合は &lt;code&gt;typeid(void)&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="517d87c5c43705d5a420aca2ea6263ee06628131" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;typeid&lt;/code&gt; operator</source>
@@ -1257,15 +1257,15 @@
         </trans-unit>
         <trans-unit id="d08f8111368f1ddb9c373cbdc2bcbe28b9ece2bf" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;tzdb_list&lt;/code&gt; is a singleton list of &lt;code&gt;std::chrono::tzdb&lt;/code&gt;s, each of which represents a copy of the IANA time zone database. Users cannot construct a &lt;code&gt;tzdb_list&lt;/code&gt; and can only obtain access to one via the &lt;code&gt;std::chrono::get_tzdb_list&lt;/code&gt; free function.</source>
-          <target state="translated">&lt;code&gt;tzdb_list&lt;/code&gt; は &lt;code&gt;std::chrono::tzdb&lt;/code&gt; のシングルトンリストで、それぞれがIANAタイムゾーンデータベースのコピーを表します。ユーザーは &lt;code&gt;tzdb_list&lt;/code&gt; を作成できず、 &lt;code&gt;std::chrono::get_tzdb_list&lt;/code&gt; free関数を介してのみtzdb_listにアクセスできます。</target>
+          <target state="translated">&lt;code&gt;tzdb_list&lt;/code&gt; は &lt;code&gt;std::chrono::tzdb&lt;/code&gt; のシングルトンリストで、それぞれがIANAタイムゾーンデータベースのコピーを表します。ユーザーは &lt;code&gt;tzdb_list&lt;/code&gt; を作成できず、 &lt;code&gt;std::chrono::get_tzdb_list&lt;/code&gt; free関数を介してのみtzdb_listへのアクセスを取得できます。</target>
         </trans-unit>
         <trans-unit id="5a9128a24fc7b8ef6f6bf0d2717e3f62e0b25563" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;tzdb_list&lt;/code&gt; is intended to be implementable as a singly linked list, and its interface resembles that of &lt;code&gt;&lt;a href=&quot;../../container/forward_list&quot;&gt;std::forward_list&lt;/a&gt;&lt;/code&gt;. It has no &lt;code&gt;before_begin()&lt;/code&gt;, however, and so it is not possible to erase the first element.</source>
-          <target state="translated">&lt;code&gt;tzdb_list&lt;/code&gt; は単一リンクリストとして実装できるように設計されており、そのインターフェースは &lt;code&gt;&lt;a href=&quot;../../container/forward_list&quot;&gt;std::forward_list&lt;/a&gt;&lt;/code&gt; インターフェースに似ています。それは何もありません &lt;code&gt;before_begin()&lt;/code&gt; 、最初の要素を消去することはできません、しかし、およびように。</target>
+          <target state="translated">&lt;code&gt;tzdb_list&lt;/code&gt; は、単一リンクリストとして実装できるように意図されており、そのインターフェースは &lt;code&gt;&lt;a href=&quot;../../container/forward_list&quot;&gt;std::forward_list&lt;/a&gt;&lt;/code&gt; インターフェースに似ています。それは何もありません &lt;code&gt;before_begin()&lt;/code&gt; 、最初の要素を消去することはできません、しかし、およびように。</target>
         </trans-unit>
         <trans-unit id="7f99d130506cd61b59950fb41e91e4a928c2778a" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;u.time_since_epoch() - t.time_since_epoch()&lt;/code&gt; is equal to the number of leap seconds that was inserted between &lt;code&gt;t&lt;/code&gt; and 1 January 1970. If &lt;code&gt;t&lt;/code&gt; is the exact date of a leap second insertion, that leap second is counted as inserted.</source>
-          <target state="translated">&lt;code&gt;u.time_since_epoch() - t.time_since_epoch()&lt;/code&gt; 間に挿入したうるう秒の数に等しく、 &lt;code&gt;t&lt;/code&gt; 場合及び1970年1月1日 &lt;code&gt;t&lt;/code&gt; はうるう秒挿入の正確な日付で挿入されるように、そのうるう秒がカウントされます。</target>
+          <target state="translated">&lt;code&gt;u.time_since_epoch() - t.time_since_epoch()&lt;/code&gt; 間に挿入したうるう秒の数に等しく、 &lt;code&gt;t&lt;/code&gt; 場合及び1970年1月1日 &lt;code&gt;t&lt;/code&gt; うるう秒挿入の正確な日付で挿入されるように、そのうるう秒がカウントされます。</target>
         </trans-unit>
         <trans-unit id="cfe2c5b0ce0658607dcfb726e551be62e7f65f36" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;u16streampos&lt;/code&gt;(since C++11)</source>
@@ -1273,7 +1273,7 @@
         </trans-unit>
         <trans-unit id="c4814eaac3d4ecd2429b4a776bb615b582ba3501" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;u2&lt;/code&gt;, a distinct object of type &lt;code&gt;T&lt;/code&gt; equal to &lt;code&gt;rv&lt;/code&gt;,</source>
-          <target state="translated">&lt;code&gt;u2&lt;/code&gt; 、種類の異なるオブジェクト &lt;code&gt;T&lt;/code&gt; は、に等しく &lt;code&gt;rv&lt;/code&gt; 、</target>
+          <target state="translated">&lt;code&gt;u2&lt;/code&gt; 、タイプ &lt;code&gt;T&lt;/code&gt; で &lt;code&gt;rv&lt;/code&gt; に等しいオブジェクト</target>
         </trans-unit>
         <trans-unit id="57db0a8466ac43fcd90a34e0c4547ad7239f6411" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;u32streampos&lt;/code&gt;(since C++11)</source>
@@ -1309,7 +1309,7 @@
         </trans-unit>
         <trans-unit id="051bf391911e4aab231cebc9601fc1c13c6c795f" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;u&lt;/code&gt;, an &lt;a href=&quot;../language/value_category&quot;&gt;lvalue&lt;/a&gt; expression of type &lt;code&gt;Key&lt;/code&gt;</source>
-          <target state="translated">&lt;code&gt;u&lt;/code&gt; 、型 &lt;code&gt;Key&lt;/code&gt; の&lt;a href=&quot;../language/value_category&quot;&gt;左辺値&lt;/a&gt;式</target>
+          <target state="translated">&lt;code&gt;u&lt;/code&gt; 、型の&lt;a href=&quot;../language/value_category&quot;&gt;左辺値&lt;/a&gt;式 &lt;code&gt;Key&lt;/code&gt; の</target>
         </trans-unit>
         <trans-unit id="d2fda841c0ca87e969fe78f01d450f12e7c89faf" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;u&lt;/code&gt;, an arbitrary identifier</source>
@@ -1353,11 +1353,11 @@
         </trans-unit>
         <trans-unit id="1575dd8d6c070f48e9f2e57b1ba9326e37fb9787" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;unary_op&lt;/code&gt; and &lt;code&gt;binary_op&lt;/code&gt; must not invalidate any iterators, including the end iterators, or modify any elements of the ranges involved.</source>
-          <target state="translated">&lt;code&gt;unary_op&lt;/code&gt; と &lt;code&gt;binary_op&lt;/code&gt; は、終了反復子を含む反復子を無効にしたり、関係する範囲の要素を変更したりしてはなりません。</target>
+          <target state="translated">&lt;code&gt;unary_op&lt;/code&gt; および &lt;code&gt;binary_op&lt;/code&gt; は、終了反復子を含む反復子を無効にしたり、関係する範囲の要素を変更したりしてはなりません。</target>
         </trans-unit>
         <trans-unit id="e64e195dd5d60a5b1b5780ff083112a2c11f8a45" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;unary_op&lt;/code&gt; and &lt;code&gt;binary_op&lt;/code&gt; shall not invalidate iterators (including the end iterators) or subranges, nor modify elements in the ranges [first, last) or [d_first, d_first + (last - first)). Otherwise, the behavior is undefined.</source>
-          <target state="translated">&lt;code&gt;unary_op&lt;/code&gt; および &lt;code&gt;binary_op&lt;/code&gt; は、イテレータ（終了イテレータを含む）またはサブ範囲を無効にしたり、範囲[first、last）または[d_first、d_first +（last-first））の要素を変更したりしません。それ以外の場合、動作は未定義です。</target>
+          <target state="translated">&lt;code&gt;unary_op&lt;/code&gt; および &lt;code&gt;binary_op&lt;/code&gt; は、イテレータ（終了イテレータを含む）またはサブ範囲を無効にしたり、[first、last）または[d_first、d_first +（last-first））の範囲の要素を変更したりしません。それ以外の場合、動作は未定義です。</target>
         </trans-unit>
         <trans-unit id="3a8104674065f73930b5cea90af0e6dec99838d0" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;unary_op&lt;/code&gt; is not applied to &lt;code&gt;init&lt;/code&gt;.</source>
@@ -1377,7 +1377,7 @@
         </trans-unit>
         <trans-unit id="518e3975526ba1045b4424be875670889b42cae7" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;unique_ptr&amp;lt;U,E&amp;gt;::pointer&lt;/code&gt; is the same type as &lt;code&gt;unique_ptr&amp;lt;U,E&amp;gt;::element_type*&lt;/code&gt;</source>
-          <target state="translated">&lt;code&gt;unique_ptr&amp;lt;U,E&amp;gt;::pointer&lt;/code&gt; は、 &lt;code&gt;unique_ptr&amp;lt;U,E&amp;gt;::element_type*&lt;/code&gt; と同じタイプです</target>
+          <target state="translated">&lt;code&gt;unique_ptr&amp;lt;U,E&amp;gt;::pointer&lt;/code&gt; は、 &lt;code&gt;unique_ptr&amp;lt;U,E&amp;gt;::element_type*&lt;/code&gt; と同じ型です</target>
         </trans-unit>
         <trans-unit id="b9fe7af9266774360734e8f967fee38bcf7c2331" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;unique_ptr&lt;/code&gt;s to compare</source>
@@ -1393,7 +1393,7 @@
         </trans-unit>
         <trans-unit id="f6690db3689521fcd10086053cfb4efd5422d12f" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;unsigned char&lt;/code&gt; - type for unsigned character representation. Also used to inspect &lt;a href=&quot;objects&quot;&gt;object representations&lt;/a&gt; (raw memory).</source>
-          <target state="translated">&lt;code&gt;unsigned char&lt;/code&gt; -符号なし文字表現のタイプ。&lt;a href=&quot;objects&quot;&gt;オブジェクト表現&lt;/a&gt;（未加工メモリ）の検査にも使用されます。</target>
+          <target state="translated">&lt;code&gt;unsigned char&lt;/code&gt; -符号なし文字表現のタイプ。&lt;a href=&quot;objects&quot;&gt;オブジェクト表現の&lt;/a&gt;検査にも使用されます（生メモリ）の。</target>
         </trans-unit>
         <trans-unit id="34d10a02b0359dc23adffdddaee386ca253c6f5e" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;unsigned char&lt;/code&gt;, &lt;code&gt;char8_t&lt;/code&gt;(since C++20) or &lt;code&gt;unsigned short&lt;/code&gt; can be converted to &lt;code&gt;int&lt;/code&gt; if it can hold its entire value range, and &lt;code&gt;unsigned int&lt;/code&gt; otherwise;</source>
@@ -1429,7 +1429,7 @@
         </trans-unit>
         <trans-unit id="57eb3c7ce1dddb1b2f7506cfccc04e826d27be1d" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;unsynchronized_pool_resource&lt;/code&gt; is not thread-safe, and cannot be accessed from multiple threads simultaneously; use &lt;a href=&quot;synchronized_pool_resource&quot;&gt;&lt;code&gt;synchronized_pool_resource&lt;/code&gt;&lt;/a&gt; if access from multiple threads is required.</source>
-          <target state="translated">&lt;code&gt;unsynchronized_pool_resource&lt;/code&gt; はスレッドセーフではなく、複数のスレッドから同時にアクセスすることはできません。複数のスレッドからのアクセスが必要な場合は、&lt;a href=&quot;synchronized_pool_resource&quot;&gt; &lt;code&gt;synchronized_pool_resource&lt;/code&gt; を&lt;/a&gt;使用します。</target>
+          <target state="translated">&lt;code&gt;unsynchronized_pool_resource&lt;/code&gt; はスレッドセーフではなく、複数のスレッドから同時にアクセスすることはできません。&lt;a href=&quot;synchronized_pool_resource&quot;&gt; &lt;code&gt;synchronized_pool_resource&lt;/code&gt; を&lt;/a&gt;使用します複数のスレッドからのアクセスが必要な場合。</target>
         </trans-unit>
         <trans-unit id="4a6fea5bc72f1892d15a8a447790f0ebd7ee1a8a" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;using&lt;/code&gt;&lt;code&gt;namespace&lt;/code&gt;ns_name&lt;code&gt;;&lt;/code&gt;</source>
@@ -1497,7 +1497,7 @@
         </trans-unit>
         <trans-unit id="96ec5806d68c61f73bf0a2d99a0203b3053cc09a" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;value_type&lt;/code&gt; - the type of the values that can be obtained by dereferencing the iterator. This type is &lt;code&gt;void&lt;/code&gt; for output iterators.</source>
-          <target state="translated">&lt;code&gt;value_type&lt;/code&gt; -イテレータを逆参照することで取得できる値のタイプ。このタイプは、出力反復子には &lt;code&gt;void&lt;/code&gt; です。</target>
+          <target state="translated">&lt;code&gt;value_type&lt;/code&gt; -イテレータを逆参照することで取得できる値のタイプ。このタイプは出力反復子には &lt;code&gt;void&lt;/code&gt; です。</target>
         </trans-unit>
         <trans-unit id="a3b203cb9a14e449e95d3ccffdaa7838d6fe39b5" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;value_type&lt;/code&gt; is intended for use with &lt;a href=&quot;https://en.cppreference.com/mwiki/index.php?title=cpp/iterator/Readable&amp;amp;action=edit&amp;amp;redlink=1&quot;&gt;&lt;code&gt;Readable&lt;/code&gt;&lt;/a&gt; types such as iterators. It is not intended for use with ranges.</source>
@@ -1537,7 +1537,7 @@
         </trans-unit>
         <trans-unit id="26b97b7b91d0799c052220d69f6aba03b7b5ec9c" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;void&lt;/code&gt; - type with an empty set of values. It is an &lt;a href=&quot;incomplete_type&quot;&gt;incomplete type&lt;/a&gt; that cannot be completed (consequently, objects of type &lt;code&gt;void&lt;/code&gt; are disallowed). There are no &lt;a href=&quot;array&quot;&gt;arrays&lt;/a&gt; of &lt;code&gt;void&lt;/code&gt;, nor &lt;a href=&quot;reference&quot;&gt;references&lt;/a&gt; to &lt;code&gt;void&lt;/code&gt;. However, &lt;a href=&quot;pointer#Pointers_to_void&quot;&gt;pointers to &lt;code&gt;void&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;function&quot;&gt;functions&lt;/a&gt; returning type &lt;code&gt;void&lt;/code&gt; (</source>
-          <target state="translated">&lt;code&gt;void&lt;/code&gt; -空の値のセットを持つ型。これは完了できない&lt;a href=&quot;incomplete_type&quot;&gt;不完全なタイプ&lt;/a&gt;です（その結果、タイプ &lt;code&gt;void&lt;/code&gt; のオブジェクトは許可されません）。何もありません&lt;a href=&quot;array&quot;&gt;配列&lt;/a&gt;の &lt;code&gt;void&lt;/code&gt; 、も&lt;a href=&quot;reference&quot;&gt;言及&lt;/a&gt;する &lt;code&gt;void&lt;/code&gt; 。しかし、&lt;a href=&quot;pointer#Pointers_to_void&quot;&gt;へのポインタ &lt;code&gt;void&lt;/code&gt; &lt;/a&gt;と&lt;a href=&quot;function&quot;&gt;機能&lt;/a&gt;型返す &lt;code&gt;void&lt;/code&gt; （</target>
+          <target state="translated">&lt;code&gt;void&lt;/code&gt; -空の値のセットを持つ型。これは完了できない&lt;a href=&quot;incomplete_type&quot;&gt;不完全なタイプ&lt;/a&gt;です（その結果、 &lt;code&gt;void&lt;/code&gt; タイプのオブジェクトは許可されません）。何もありません&lt;a href=&quot;array&quot;&gt;配列&lt;/a&gt;の &lt;code&gt;void&lt;/code&gt; 、も&lt;a href=&quot;reference&quot;&gt;言及&lt;/a&gt;する &lt;code&gt;void&lt;/code&gt; 。しかし、&lt;a href=&quot;pointer#Pointers_to_void&quot;&gt;へのポインタ &lt;code&gt;void&lt;/code&gt; &lt;/a&gt;と&lt;a href=&quot;function&quot;&gt;機能&lt;/a&gt;型返す &lt;code&gt;void&lt;/code&gt; （</target>
         </trans-unit>
         <trans-unit id="ae27c766ee93a054f5ae2c4fa3798f5058d167fa" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;void&lt;/code&gt; and the other is a pointer to</source>
@@ -1585,15 +1585,15 @@
         </trans-unit>
         <trans-unit id="227f3f7a4e52bd1b39031247c70c318577230e3e" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;wchar_t&lt;/code&gt; - type for wide character representation (see &lt;a href=&quot;../string/wide&quot;&gt;wide strings&lt;/a&gt;). Required to be large enough to represent any supported character code point (32 bits on systems that support Unicode. A notable exception is Windows, where wchar_t is 16 bits and holds UTF-16 code units) It has the same size, signedness, and alignment as one of the integer types, but is a distinct type.</source>
-          <target state="translated">&lt;code&gt;wchar_t&lt;/code&gt; -ワイド文字表現のタイプ（&lt;a href=&quot;../string/wide&quot;&gt;ワイド文字列を&lt;/a&gt;参照）サポートされているすべての文字コードポイントを表すのに十分な大きさである必要があります（Unicodeをサポートするシステムでは32ビット。注目すべき例外はWindowsで、wchar_tは16ビットで、UTF-16コード単位を保持します）サイズ、符号、配置が同じです。整数型の1つですが、特殊な型です。</target>
+          <target state="translated">&lt;code&gt;wchar_t&lt;/code&gt; -ワイド文字表現のタイプ（&lt;a href=&quot;../string/wide&quot;&gt;ワイド文字列を&lt;/a&gt;参照）サポートされているすべての文字コードポイントを表すのに十分な大きさである必要があります（Unicodeをサポートするシステムでは32ビット。注目すべき例外はWindowsで、wchar_tは16ビットで、UTF-16コード単位を保持します）同じサイズ、符号、配置整数型の1つですが、特殊な型です。</target>
         </trans-unit>
         <trans-unit id="bbbe03b5b4f46b5c3d05df7f45e8551e7692ae91" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;wchar_t&lt;/code&gt;, &lt;code&gt;char16_t&lt;/code&gt;, and &lt;code&gt;char32_t&lt;/code&gt;(since C++11) can be converted to the first type from the following list able to hold their entire value range: &lt;code&gt;int&lt;/code&gt;, &lt;code&gt;unsigned int&lt;/code&gt;, &lt;code&gt;long&lt;/code&gt;, &lt;code&gt;unsigned long&lt;/code&gt;, &lt;code&gt;long long&lt;/code&gt;, &lt;code&gt;unsigned long long&lt;/code&gt;(since C++11);</source>
-          <target state="translated">&lt;code&gt;wchar_t&lt;/code&gt; 、 &lt;code&gt;char16_t&lt;/code&gt; 、および &lt;code&gt;char32_t&lt;/code&gt; （C ++ 11以降）は、値の範囲全体を保持できる次のリストから最初の型に変換できます： &lt;code&gt;int&lt;/code&gt; 、 &lt;code&gt;unsigned int&lt;/code&gt; 、 &lt;code&gt;long&lt;/code&gt; 、 &lt;code&gt;unsigned long&lt;/code&gt; 、 &lt;code&gt;long long&lt;/code&gt; 、 &lt;code&gt;unsigned long long&lt;/code&gt; （since C ++ 11）;</target>
+          <target state="translated">&lt;code&gt;wchar_t&lt;/code&gt; 、 &lt;code&gt;char16_t&lt;/code&gt; 、および &lt;code&gt;char32_t&lt;/code&gt; （C ++ 11以降）は、値の範囲全体を保持できる次のリストの最初の型に変換できます： &lt;code&gt;int&lt;/code&gt; 、 &lt;code&gt;unsigned int&lt;/code&gt; 、 &lt;code&gt;long&lt;/code&gt; 、 &lt;code&gt;unsigned long&lt;/code&gt; 、 &lt;code&gt;long long&lt;/code&gt; 、 &lt;code&gt;unsigned long long&lt;/code&gt; （since C ++ 11）;</target>
         </trans-unit>
         <trans-unit id="a1e47e76d1a12efd124c4f04f389d0690efb628b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;weak_ptr::owner_before&lt;/code&gt; isn't noexcept while its &lt;code&gt;shared_ptr&lt;/code&gt; counterpart is</source>
-          <target state="translated">&lt;code&gt;weak_ptr::owner_before&lt;/code&gt; は、その &lt;code&gt;shared_ptr&lt;/code&gt; が対応する間、例外ではありません</target>
+          <target state="translated">&lt;code&gt;weak_ptr::owner_before&lt;/code&gt; は、その &lt;code&gt;shared_ptr&lt;/code&gt; の対応物が</target>
         </trans-unit>
         <trans-unit id="cfdcbd980369eeb475f8a897f011a0a46e4015b5" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;weak_this&lt;/code&gt;(private)(C++17)</source>
@@ -1609,7 +1609,7 @@
         </trans-unit>
         <trans-unit id="da3c2c9506b7585f9384eb7c9d7d843a0460b580" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;weekday&lt;/code&gt; does not support the &lt;code&gt;&amp;lt;&lt;/code&gt;, &lt;code&gt;&amp;lt;=&lt;/code&gt;, &lt;code&gt;&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;gt;=&lt;/code&gt; operators because there is no universal consensus on which day is the first day of the week.</source>
-          <target state="translated">&lt;code&gt;weekday&lt;/code&gt; は、 &lt;code&gt;&amp;lt;&lt;/code&gt; 、 &lt;code&gt;&amp;lt;=&lt;/code&gt; 、 &lt;code&gt;&amp;gt;&lt;/code&gt; 、および &lt;code&gt;&amp;gt;=&lt;/code&gt; 演算子をサポートしていません。これは、どの曜日が週の最初の日であるかについての共通の合意がないためです。</target>
+          <target state="translated">&lt;code&gt;weekday&lt;/code&gt; は、 &lt;code&gt;&amp;lt;&lt;/code&gt; 、 &lt;code&gt;&amp;lt;=&lt;/code&gt; 、 &lt;code&gt;&amp;gt;&lt;/code&gt; および &lt;code&gt;&amp;gt;=&lt;/code&gt; 演算子をサポートしていません。これは、どの曜日が週の最初の日であるかについての共通の合意がないためです。</target>
         </trans-unit>
         <trans-unit id="cf95a66daedede5a021016f837333beb4248dffa" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;weekday&lt;/code&gt; is a &lt;a href=&quot;../named_req/triviallycopyable&quot;&gt;TriviallyCopyable&lt;/a&gt;&lt;a href=&quot;../named_req/standardlayouttype&quot;&gt;StandardLayoutType&lt;/a&gt;.</source>
@@ -1641,7 +1641,7 @@
         </trans-unit>
         <trans-unit id="1554ef8dede17deda94d594a8d3275646307e489" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;x&lt;/code&gt; and &lt;code&gt;y&lt;/code&gt;, possibly const values of type &lt;code&gt;E&lt;/code&gt;</source>
-          <target state="translated">&lt;code&gt;x&lt;/code&gt; および &lt;code&gt;y&lt;/code&gt; 、タイプ &lt;code&gt;E&lt;/code&gt; の const値</target>
+          <target state="translated">&lt;code&gt;x&lt;/code&gt; と &lt;code&gt;y&lt;/code&gt; 、おそらく &lt;code&gt;E&lt;/code&gt; 型のconst値</target>
         </trans-unit>
         <trans-unit id="4fd70e96c2f99fe42eefc9bea55555018f270bbb" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;x&lt;/code&gt;, &lt;code&gt;X&lt;/code&gt;</source>
@@ -1697,15 +1697,15 @@
         </trans-unit>
         <trans-unit id="560f1f3590105bf75381edb24d3eb03f9ac05308" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;z&lt;/code&gt;, a value of type &lt;code&gt;unsigned long long&lt;/code&gt;</source>
-          <target state="translated">&lt;code&gt;z&lt;/code&gt; 、 &lt;code&gt;unsigned long long&lt;/code&gt; 型の値</target>
+          <target state="translated">&lt;code&gt;z&lt;/code&gt; 、型 &lt;code&gt;unsigned long long&lt;/code&gt; の値</target>
         </trans-unit>
         <trans-unit id="07e3142bbe268171c386fc35bda121e902fe0a84" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;zone-&amp;gt;get_info(tp)&lt;/code&gt;, where &lt;code&gt;zone&lt;/code&gt; is the non-static data member holding the time zone pointer, and &lt;code&gt;tp&lt;/code&gt; is the non-static data member holding the stored time point (as a &lt;code&gt;&lt;a href=&quot;../system_clock&quot;&gt;std::chrono::sys_time&lt;/a&gt;&amp;lt;duration&amp;gt;&lt;/code&gt;).</source>
-          <target state="translated">&lt;code&gt;zone-&amp;gt;get_info(tp)&lt;/code&gt; 。ここで、 &lt;code&gt;zone&lt;/code&gt; はタイムゾーンポインターを保持する非静的データメンバー、 &lt;code&gt;tp&lt;/code&gt; は（ &lt;code&gt;&lt;a href=&quot;../system_clock&quot;&gt;std::chrono::sys_time&lt;/a&gt;&amp;lt;duration&amp;gt;&lt;/code&gt; として）保存された時点を保持する非静的データメンバーです。）。</target>
+          <target state="translated">&lt;code&gt;zone-&amp;gt;get_info(tp)&lt;/code&gt; 。ここで、 &lt;code&gt;zone&lt;/code&gt; はタイムゾーンポインターを保持する非静的データメンバーであり、 &lt;code&gt;tp&lt;/code&gt; は（ &lt;code&gt;&lt;a href=&quot;../system_clock&quot;&gt;std::chrono::sys_time&lt;/a&gt;&amp;lt;duration&amp;gt;&lt;/code&gt; として）保存された時点を保持する非静的データメンバーです。）。</target>
         </trans-unit>
         <trans-unit id="cee0c780e7d068c3b31b2c9dfeceb23e7bd42618" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;zoned_time&lt;/code&gt; does not have a move constructor and attempting to move one will perform a copy instead using the defaulted copy constructor (3). Thus, when &lt;code&gt;TimeZonePtr&lt;/code&gt; is a move-only type, &lt;code&gt;zoned_time&lt;/code&gt; is immovable: it can be neither moved nor copied.</source>
-          <target state="translated">&lt;code&gt;zoned_time&lt;/code&gt; には移動コンストラクターがなく、1つを移動しようとすると、代わりにデフォルトのコピーコンストラクター（3）を使用してコピーが実行されます。したがって、 &lt;code&gt;TimeZonePtr&lt;/code&gt; が移動のみのタイプの場合、 &lt;code&gt;zoned_time&lt;/code&gt; は移動できません。移動もコピーもできません。</target>
+          <target state="translated">&lt;code&gt;zoned_time&lt;/code&gt; には移動コンストラクターがありません。移動コンストラクターを移動しようとすると、代わりにデフォルトのコピーコンストラクター（3）を使用してコピーが実行されます。したがって、 &lt;code&gt;TimeZonePtr&lt;/code&gt; が移動のみのタイプの場合、 &lt;code&gt;zoned_time&lt;/code&gt; は移動できません。移動もコピーもできません。</target>
         </trans-unit>
         <trans-unit id="0365fc220ec4659675a47cbf32ef27ee70178dd2" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;{ &lt;/code&gt;initializer-list&lt;code&gt;} &lt;/code&gt;</source>
@@ -1817,7 +1817,7 @@
         </trans-unit>
         <trans-unit id="8ffd9a66825ddde10a2ec3ec7e9e16fab9f07dbf" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;​0​&lt;/code&gt; upon success, nonzero value otherwise. Also sets &lt;code&gt;&lt;a href=&quot;../../error/errno&quot;&gt;errno&lt;/a&gt;&lt;/code&gt; on failure.</source>
-          <target state="translated">&lt;code&gt;​0​&lt;/code&gt; それ以外の場合は成功、ゼロ以外の値に依存します。失敗時には &lt;code&gt;&lt;a href=&quot;../../error/errno&quot;&gt;errno&lt;/a&gt;&lt;/code&gt; も設定します。</target>
+          <target state="translated">&lt;code&gt;​0​&lt;/code&gt; それ以外の場合は成功、ゼロ以外の値に依存します。失敗時に &lt;code&gt;&lt;a href=&quot;../../error/errno&quot;&gt;errno&lt;/a&gt;&lt;/code&gt; も設定します。</target>
         </trans-unit>
         <trans-unit id="9fc83bf7a04c5ef5607f314231fcba3a93d958bd" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;​0​&lt;/code&gt; upon success, nonzero value otherwise. Also, sets &lt;code&gt;&lt;a href=&quot;../../error/errno&quot;&gt;errno&lt;/a&gt;&lt;/code&gt; on failure.</source>
@@ -2977,7 +2977,7 @@
         </trans-unit>
         <trans-unit id="daf7d8e16b0681bcc7c5063a26b9edcda88942c4" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;CharTraits&lt;/strong&gt; is a traits class that abstracts basic character and string operations for a given character type. Most standard library string and input/output classes require a CharTraits template type parameter alongside a corresponding character template type parameter.</source>
-          <target state="translated">&lt;strong&gt;CharTraits&lt;/strong&gt;は、特定の文字タイプの基本的な文字と文字列の操作を抽象化する特性クラスです。ほとんどの標準ライブラリ文字列と入力/出力クラスには、対応する文字テンプレートタイプパラメータとともにCharTraitsテンプレートタイプパラメータが必要です。</target>
+          <target state="translated">&lt;strong&gt;CharTraits&lt;/strong&gt;は、指定された文字タイプの基本的な文字および文字列操作を抽象化する特性クラスです。ほとんどの標準ライブラリ文字列と入出力クラスには、対応する文字テンプレート型パラメーターとともにCharTraitsテンプレート型パラメーターが必要です。</target>
         </trans-unit>
         <trans-unit id="e2c13017e7e8f2d9adf08adb882b4db09b62cc37" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Compare&lt;/strong&gt; is a set of requirements expected by some of the standard library facilities from the user-provided function object types.</source>
@@ -3009,7 +3009,7 @@
         </trans-unit>
         <trans-unit id="965d3f320957be3ad72e928e912186a77e19275b" translate="yes" xml:space="preserve">
           <source>&lt;sup&gt;-x&lt;/sup&gt;), is returned.</source>
-          <target state="translated">&lt;sup&gt;-x&lt;/sup&gt;）が返されます。</target>
+          <target state="translated">&lt;sup&gt;-バツ&lt;/sup&gt;）が返されます。</target>
         </trans-unit>
         <trans-unit id="149a72ad8e00441ffe95eba131c80e578d0adde4" translate="yes" xml:space="preserve">
           <source>&lt;sup&gt;x2&lt;br/&gt;&lt;/sup&gt;</source>
@@ -3021,27 +3021,27 @@
         </trans-unit>
         <trans-unit id="0bfc5228282d755daf15fff800045061a14771e5" translate="yes" xml:space="preserve">
           <source>= -1 and the related exponents.</source>
-          <target state="translated">=-1 と関連する指数である。</target>
+          <target state="translated">= -1および関連する指数。</target>
         </trans-unit>
         <trans-unit id="0c97bb15e4b25bdec35638f2b1bc7761899184bd" translate="yes" xml:space="preserve">
           <source>= -2nu.</source>
-          <target state="translated">=-2nu.</target>
+          <target state="translated">= -2nu。</target>
         </trans-unit>
         <trans-unit id="02defd0662f5031a7cb6eeb79c6b3ed327cf9329" translate="yes" xml:space="preserve">
           <source>= 0, and</source>
-          <target state="translated">=0であり</target>
+          <target state="translated">= 0、および</target>
         </trans-unit>
         <trans-unit id="bcd4ff98d65c01bef15947a0dae533467a1e03a0" translate="yes" xml:space="preserve">
           <source>= 1,</source>
-          <target state="translated">=1,</target>
+          <target state="translated">= 1、</target>
         </trans-unit>
         <trans-unit id="76556565fc31fd629ab558daaa54df88fec792b4" translate="yes" xml:space="preserve">
           <source>= 1.</source>
-          <target state="translated">=1.</target>
+          <target state="translated">= 1。</target>
         </trans-unit>
         <trans-unit id="a520a1e8ed14533a28c00393129807aaabdf3279" translate="yes" xml:space="preserve">
           <source>== !=</source>
-          <target state="translated">==!=</target>
+          <target state="translated">==！=</target>
         </trans-unit>
         <trans-unit id="532c1bc43406f64ae3a933341259e4a3e66a150a" translate="yes" xml:space="preserve">
           <source>== != &amp;lt; &amp;gt; &amp;lt;= &amp;gt;=</source>
@@ -3053,7 +3053,7 @@
         </trans-unit>
         <trans-unit id="d1e097af8f9be2971caa79bdfe9fa4c236c7094c" translate="yes" xml:space="preserve">
           <source>?:with a void can be lvalue</source>
-          <target state="translated">?は void で lvalue にすることができます。</target>
+          <target state="translated">？：ボイドは左辺値にすることができます</target>
         </trans-unit>
         <trans-unit id="0e980cc0d0cefbf7b079d7df0c9109a8a1af5c70" translate="yes" xml:space="preserve">
           <source>@a</source>
@@ -3073,7 +3073,7 @@
         </trans-unit>
         <trans-unit id="e331c264669e17c1ada1276954d97de48d813354" translate="yes" xml:space="preserve">
           <source>A &lt;a href=&quot;../language/value_initialization&quot;&gt;value-initialized&lt;/a&gt; LegacyForwardIterator behaves like the past-the-end iterator of some unspecified empty container: it compares equal to all value-initialized LegacyForwardIterators of the same type.</source>
-          <target state="translated">&lt;a href=&quot;../language/value_initialization&quot;&gt;値初期化&lt;/a&gt; LegacyForwardIterator挙動一部不特定の空の容器の過去エンドイテレータように：それは、同じタイプのすべての値を初期化LegacyForwardIteratorsと等しいです。</target>
+          <target state="translated">&lt;a href=&quot;../language/value_initialization&quot;&gt;値が初期化&lt;/a&gt; LegacyForwardIterator挙動一部不特定の空の容器の過去エンドイテレータように：それは、同じタイプのすべての値を初期化LegacyForwardIteratorsと等しいです。</target>
         </trans-unit>
         <trans-unit id="86a0caf1b58ecd7b529638ebaa55885c40a23bbe" translate="yes" xml:space="preserve">
           <source>A &lt;a href=&quot;../named_req/bitmasktype&quot;&gt;BitmaskType&lt;/a&gt; used to specify floating-point formatting for &lt;a href=&quot;to_chars&quot;&gt;&lt;code&gt;std::to_chars&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;from_chars&quot;&gt;&lt;code&gt;std::from_chars&lt;/code&gt;&lt;/a&gt;.</source>
@@ -3089,7 +3089,7 @@
         </trans-unit>
         <trans-unit id="d12c64beefdbab4d8cfc39f0de5f154d31d8878c" translate="yes" xml:space="preserve">
           <source>A &lt;a href=&quot;bitmasktype&quot;&gt;BitmaskType&lt;/a&gt; type that represents a particular character classification.</source>
-          <target state="translated">&lt;a href=&quot;bitmasktype&quot;&gt;BitmaskTypeの&lt;/a&gt;特定の文字の分類を表しているタイプ。</target>
+          <target state="translated">A &lt;a href=&quot;bitmasktype&quot;&gt;BitmaskType&lt;/a&gt;特定の文字の分類を表しているタイプ。</target>
         </trans-unit>
         <trans-unit id="db065190b60edd23d995ed1f71c3c8f1a8a40599" translate="yes" xml:space="preserve">
           <source>A &lt;a href=&quot;consteval&quot;&gt;&lt;code&gt;consteval&lt;/code&gt;&lt;/a&gt; virtual function must not override or be overidden by a non-&lt;code&gt;consteval&lt;/code&gt; virtual function.</source>
@@ -3101,7 +3101,7 @@
         </trans-unit>
         <trans-unit id="d342e221a05a9be698f1bedcecd4188f19c14cba" translate="yes" xml:space="preserve">
           <source>A &lt;a href=&quot;function&quot;&gt;function declaration&lt;/a&gt; may appear in any scope, but a &lt;a href=&quot;function&quot;&gt;function definition&lt;/a&gt; may only appear in namespace scope or, for &lt;a href=&quot;member_functions&quot;&gt;member&lt;/a&gt; and &lt;a href=&quot;friend&quot;&gt;friend&lt;/a&gt; functions, in class scope. A function that is declared in a class body without a friend specifier is a class member function. Such functions have many additional properties, see &lt;a href=&quot;member_functions&quot;&gt;member functions&lt;/a&gt; for details.</source>
-          <target state="translated">&lt;a href=&quot;function&quot;&gt;関数の宣言は、&lt;/a&gt;任意の範囲で表示されることがありますが、&lt;a href=&quot;function&quot;&gt;関数の定義は&lt;/a&gt;のみのために、名前空間スコープに表示されたりする&lt;a href=&quot;member_functions&quot;&gt;メンバー&lt;/a&gt;や&lt;a href=&quot;friend&quot;&gt;友人&lt;/a&gt;、クラスのスコープに、機能しています。フレンド指定子なしでクラス本体で宣言された関数は、クラスメンバー関数です。このような関数には、多くの追加プロパティがあります。詳細については、&lt;a href=&quot;member_functions&quot;&gt;メンバー関数&lt;/a&gt;を参照してください。</target>
+          <target state="translated">&lt;a href=&quot;function&quot;&gt;関数の宣言は、&lt;/a&gt;任意の範囲で表示されることがありますが、&lt;a href=&quot;function&quot;&gt;関数の定義は&lt;/a&gt;のみのために、名前空間スコープに表示されたりする&lt;a href=&quot;member_functions&quot;&gt;メンバー&lt;/a&gt;や&lt;a href=&quot;friend&quot;&gt;友人&lt;/a&gt;、クラスのスコープに、機能しています。フレンド指定子なしでクラス本体で宣言された関数は、クラスメンバー関数です。このような関数には、多くの追加のプロパティがあります。詳細については、&lt;a href=&quot;member_functions&quot;&gt;メンバー関数&lt;/a&gt;を参照してください。</target>
         </trans-unit>
         <trans-unit id="67bc573d7995338e82b2c28d9dfe52514d24a4e7" translate="yes" xml:space="preserve">
           <source>A &lt;a href=&quot;name&quot;&gt;name&lt;/a&gt; can be declared to refer to a type by means of:</source>
@@ -3109,7 +3109,7 @@
         </trans-unit>
         <trans-unit id="bedaf8c98056acf96dfaddd1299d4f039fe604ea" translate="yes" xml:space="preserve">
           <source>A &lt;a href=&quot;namespace#Using-directives&quot;&gt;using-directive&lt;/a&gt; (does not define any entities)</source>
-          <target state="translated">&lt;a href=&quot;namespace#Using-directives&quot;&gt;使用したディレクティブ&lt;/a&gt;（任意のエンティティを定義していません）</target>
+          <target state="translated">&lt;a href=&quot;namespace#Using-directives&quot;&gt;使用して、ディレクティブ&lt;/a&gt;（任意のエンティティを定義していません）</target>
         </trans-unit>
         <trans-unit id="9163fdc28977121d141ccf44bc7ada6509a9af52" translate="yes" xml:space="preserve">
           <source>A &lt;a href=&quot;statements#Labels&quot;&gt;label (and only a label)&lt;/a&gt; declared inside a function is in scope everywhere in that function, in all nested blocks, before and after its own declaration.</source>
@@ -3137,11 +3137,11 @@
         </trans-unit>
         <trans-unit id="116191517e8ca5619b7cc289a50c5d18452024d7" translate="yes" xml:space="preserve">
           <source>A &lt;a href=&quot;value_category#glvalue&quot;&gt;glvalue&lt;/a&gt; of any non-function, non-array type &lt;code&gt;T&lt;/code&gt; can be implicitly converted to a &lt;a href=&quot;value_category#prvalue&quot;&gt;prvalue&lt;/a&gt; of the same type. If &lt;code&gt;T&lt;/code&gt; is a non-class type, this conversion also removes cv-qualifiers.</source>
-          <target state="translated">&lt;a href=&quot;value_category#glvalue&quot;&gt;glvalue&lt;/a&gt;任意の非機能、非アレイタイプの &lt;code&gt;T&lt;/code&gt; は、暗黙的に変換することができる&lt;a href=&quot;value_category#prvalue&quot;&gt;prvalue&lt;/a&gt;同じタイプの。場合 &lt;code&gt;T&lt;/code&gt; は非クラスタイプであり、この変換はまた、CV-修飾子を除去します。</target>
+          <target state="translated">&lt;a href=&quot;value_category#glvalue&quot;&gt;glvalue&lt;/a&gt;任意の非機能、非アレイタイプの &lt;code&gt;T&lt;/code&gt; は、暗黙的に変換することができる&lt;a href=&quot;value_category#prvalue&quot;&gt;prvalue&lt;/a&gt;同じタイプの。もし &lt;code&gt;T&lt;/code&gt; 非クラスタイプであり、この変換はまた、CV-修飾子を除去します。</target>
         </trans-unit>
         <trans-unit id="8a0f85c362fc8f1b2298be8e6762cb9b513d80c6" translate="yes" xml:space="preserve">
           <source>A &lt;a href=&quot;value_category#prvalue&quot;&gt;prvalue&lt;/a&gt; of a floating-point type can be converted to a prvalue of any other floating-point type. If the conversion is listed under floating-point promotions, it is a promotion and not a conversion.</source>
-          <target state="translated">&lt;a href=&quot;value_category#prvalue&quot;&gt;prvalue&lt;/a&gt;浮動小数点型のは、他の浮動小数点型のprvalueに変換することができます。コンバージョンが浮動小数点のプロモーションにリストされている場合、それはプロモーションであり、コンバージョンではありません。</target>
+          <target state="translated">&lt;a href=&quot;value_category#prvalue&quot;&gt;prvalue&lt;/a&gt;浮動小数点型のは、他の浮動小数点型のprvalueに変換することができます。コンバージョンが浮動小数点プロモーションにリストされている場合、それはプロモーションであり、コンバージョンではありません。</target>
         </trans-unit>
         <trans-unit id="baac3f5f28f67e1840f0932b9f8a084aa8900efa" translate="yes" xml:space="preserve">
           <source>A &lt;a href=&quot;value_category#prvalue&quot;&gt;prvalue&lt;/a&gt; of an integer type or of an unscoped enumeration type can be converted to any other integer type. If the conversion is listed under integral promotions, it is a promotion and not a conversion.</source>
@@ -3149,7 +3149,7 @@
         </trans-unit>
         <trans-unit id="ea5e6ce4839d6a91b85d165b9801732b24cac54e" translate="yes" xml:space="preserve">
           <source>A &lt;a href=&quot;value_category#prvalue&quot;&gt;prvalue&lt;/a&gt; of any complete type &lt;code&gt;T&lt;/code&gt; can be converted to an xvalue of the same type &lt;code&gt;T&lt;/code&gt;. This conversion initializes a temporary object of type T from the prvalue by evaluating the prvalue with the temporary object as its result object, and produces an xvalue denoting the temporary object. If &lt;code&gt;T&lt;/code&gt; is a class or array of class type, it must have an accessible and non-deleted destructor.</source>
-          <target state="translated">&lt;a href=&quot;value_category#prvalue&quot;&gt;prvalue&lt;/a&gt;任意完全な型の &lt;code&gt;T&lt;/code&gt; は、同じタイプのはxValueに変換することができる &lt;code&gt;T&lt;/code&gt; 。この変換では、一時オブジェクトを結果オブジェクトとして使用してprvalueを評価することにより、prvalueからタイプTの一時オブジェクトを初期化し、一時オブジェクトを示すxvalueを生成します。 &lt;code&gt;T&lt;/code&gt; がクラスまたはクラス型の配列の場合、アクセス可能で削除されていないデストラクタが必要です。</target>
+          <target state="translated">&lt;a href=&quot;value_category#prvalue&quot;&gt;prvalue&lt;/a&gt;任意完全な型の &lt;code&gt;T&lt;/code&gt; は、同じタイプのはxValueに変換することができる &lt;code&gt;T&lt;/code&gt; 。この変換では、一時オブジェクトを結果オブジェクトとして使用してprvalueを評価することにより、prvalueからT型の一時オブジェクトを初期化し、一時オブジェクトを示すxvalueを生成します。もし &lt;code&gt;T&lt;/code&gt; がクラスまたはクラス型の配列の、アクセス可能で削除されていないデストラクタが必要です。</target>
         </trans-unit>
         <trans-unit id="6acddb420a369aaaea57c1ed0fa976136d77d295" translate="yes" xml:space="preserve">
           <source>A &lt;a href=&quot;value_category#prvalue&quot;&gt;prvalue&lt;/a&gt; of floating-point type can be converted to a prvalue of any integer type. The fractional part is truncated, that is, the fractional part is discarded. If the value cannot fit into the destination type, the behavior is undefined (even when the destination type is unsigned, modulo arithmetic does not apply). If the destination type is &lt;code&gt;bool&lt;/code&gt;, this is a boolean conversion (see below).</source>
@@ -3169,7 +3169,7 @@
         </trans-unit>
         <trans-unit id="3c6ca63328114163ca430edcfeff8a53f07a1eeb" translate="yes" xml:space="preserve">
           <source>A &lt;a href=&quot;value_category#prvalue&quot;&gt;prvalue&lt;/a&gt; of type pointer to non-throwing function can be converted to a prvalue pointer to potentially-throwing function.</source>
-          <target state="translated">非スロー関数へのポインタ型の&lt;a href=&quot;value_category#prvalue&quot;&gt;prvalue&lt;/a&gt;は、スローされる可能性のある関数へのprvalueポインタに変換できます。</target>
+          <target state="translated">非スロー関数へのポインタ型の&lt;a href=&quot;value_category#prvalue&quot;&gt;prvalue&lt;/a&gt;は、潜在的にスローする関数へのprvalueポインタに変換できます。</target>
         </trans-unit>
         <trans-unit id="5f2dae328679253c6053c8e9aa9baf65ddc220eb" translate="yes" xml:space="preserve">
           <source>A &lt;a href=&quot;value_category#prvalue&quot;&gt;prvalue&lt;/a&gt; pointer to any (optionally cv-qualified) object type &lt;code&gt;T&lt;/code&gt; can be converted to a prvalue pointer to (identically cv-qualified) &lt;code&gt;void&lt;/code&gt;. The resulting pointer represents the same location in memory as the original pointer value. If the original pointer is a null pointer value, the result is a null pointer value of the destination type.</source>
@@ -3193,7 +3193,7 @@
         </trans-unit>
         <trans-unit id="9dfcd740d489150fc3da15e6802bd232839f4946" translate="yes" xml:space="preserve">
           <source>A &lt;code&gt;##&lt;/code&gt; operator between any two successive identifiers in the replacement-list runs parameter replacement on the two identifiers (which are not macro-expanded first) and then concatenates the result. This operation is called &quot;concatenation&quot; or &quot;token pasting&quot;. Only tokens that form a valid token together may be pasted: identifiers that form a longer identifier, digits that form a number, or operators &lt;code&gt;+&lt;/code&gt; and &lt;code&gt;=&lt;/code&gt; that form a &lt;code&gt;+=&lt;/code&gt;. A comment cannot be created by pasting &lt;code&gt;/&lt;/code&gt; and &lt;code&gt;*&lt;/code&gt; because comments are removed from text before macro substitution is considered. If the result of concatenation is not a valid token, the behavior is undefined.</source>
-          <target state="translated">replacement-list内の任意の2つの連続する識別子の間の &lt;code&gt;##&lt;/code&gt; 演算子は、2つの識別子（最初にマクロ展開されていない）でパラメーター置換を実行し、結果を連結します。この操作は「連結」または「トークンの貼り付け」と呼ばれます。一緒に有効なトークンを形成するトークンのみを貼り付けることができます：より長い識別子を形成する識別子、数値を形成する数字、または &lt;code&gt;+&lt;/code&gt; &lt;code&gt;=&lt;/code&gt; を形成する演算子+および &lt;code&gt;+=&lt;/code&gt; 。マクロ置換が考慮される前にテキストからコメントが削除されるため、 &lt;code&gt;/&lt;/code&gt; と &lt;code&gt;*&lt;/code&gt; を貼り付けてコメントを作成することはできません。連結の結果が有効なトークンでない場合、動作は未定義です。</target>
+          <target state="translated">replacement-list内の任意の2つの連続する識別子間の &lt;code&gt;##&lt;/code&gt; 演算子は、2つの識別子（最初にマクロ展開されていない）でパラメーターの置換を実行し、結果を連結します。この操作は「連結」または「トークンの貼り付け」と呼ばれます。一緒に有効なトークンを形成するトークンのみを貼り付けることができます：より長い識別子を形成する識別子、数値を形成する数字、または &lt;code&gt;+&lt;/code&gt; &lt;code&gt;=&lt;/code&gt; を形成する演算子+および &lt;code&gt;+=&lt;/code&gt; 。マクロ置換が考慮される前にコメントがテキストから削除されるため、 &lt;code&gt;/&lt;/code&gt; と &lt;code&gt;*&lt;/code&gt; を貼り付けてコメントを作成することはできません。連結の結果が有効なトークンでない場合、動作は未定義です。</target>
         </trans-unit>
         <trans-unit id="99eeaccfefc49e26835b8d22f35d5c39c1ab7ebf" translate="yes" xml:space="preserve">
           <source>A &lt;code&gt;(&lt;/code&gt; token that follows &lt;code&gt;explicit&lt;/code&gt; is parsed as part of the explicit specifier:</source>
@@ -3289,7 +3289,7 @@
         </trans-unit>
         <trans-unit id="2e6cdf022bdbbe8ab886fea76cb81fdf2f05a841" translate="yes" xml:space="preserve">
           <source>A &lt;code&gt;&lt;a href=&quot;reverse_iterator&quot;&gt;std::reverse_iterator&lt;/a&gt;&lt;/code&gt; constructed from &lt;code&gt;i&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;&lt;a href=&quot;reverse_iterator&quot;&gt;std::reverse_iterator&lt;/a&gt;&lt;/code&gt; から構築 &lt;code&gt;i&lt;/code&gt; 。</target>
+          <target state="translated">&lt;code&gt;i&lt;/code&gt; から構築された &lt;code&gt;&lt;a href=&quot;reverse_iterator&quot;&gt;std::reverse_iterator&lt;/a&gt;&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="2f13978d47a30d4f6eb9300a5a76627192cbeab4" translate="yes" xml:space="preserve">
           <source>A &lt;code&gt;__has_include&lt;/code&gt; result of &lt;code&gt;1&lt;/code&gt; only means that a header or source file with the specified name exists. It does not mean that the header or source file, when included, would not cause an error or would contain anything useful. For example, on a C++ implementation that supports both C++14 and C++17 modes (and provides &lt;code&gt;__has_include&lt;/code&gt; in its C++14 mode as a conforming extension), &lt;code&gt;__has_include(&amp;lt;optional&amp;gt;)&lt;/code&gt; may be &lt;code&gt;1&lt;/code&gt; in C++14 mode, but actually &lt;code&gt;#include &amp;lt;optional&amp;gt;&lt;/code&gt; may cause an error.</source>
@@ -3301,7 +3301,7 @@
         </trans-unit>
         <trans-unit id="357b8db4e0d10e9f4ade042c2b099a74a9d9c6f5" translate="yes" xml:space="preserve">
           <source>A &lt;code&gt;byte_string&lt;/code&gt; object containing the results of the wide to multibyte conversion. If the conversion failed and there was a user-supplied byte-error string provided to the constructor of this &lt;code&gt;wstring_convert&lt;/code&gt;, returns that byte-error string.</source>
-          <target state="translated">&lt;code&gt;byte_string&lt;/code&gt; マルチバイト変換ワイドの結果を含むオブジェクト。変換が失敗し、この &lt;code&gt;wstring_convert&lt;/code&gt; のコンストラクターにユーザー指定のバイトエラー文字列が提供されていた場合、そのバイトエラー文字列を返します。</target>
+          <target state="translated">&lt;code&gt;byte_string&lt;/code&gt; マルチバイト変換ワイドの結果を含むオブジェクト。変換が失敗し、この &lt;code&gt;wstring_convert&lt;/code&gt; のコンストラクターに提供されたユーザー指定のバイトエラー文字列があった場合、そのバイトエラー文字列を返します。</target>
         </trans-unit>
         <trans-unit id="8f79b46b0a6455310e69f4eaaba2516ca3a8f9e1" translate="yes" xml:space="preserve">
           <source>A &lt;code&gt;proxy&lt;/code&gt; object holds a &lt;code&gt;char_type&lt;/code&gt; character and a &lt;code&gt;streambuf_type*&lt;/code&gt; pointer.</source>
@@ -3317,7 +3317,7 @@
         </trans-unit>
         <trans-unit id="a3e789bb486beef08f12cb2eb86c0def84fdf724" translate="yes" xml:space="preserve">
           <source>A &lt;code&gt;shared_ptr&lt;/code&gt; can share ownership of an object while storing a pointer to another object. This feature can be used to point to member objects while owning the object they belong to. The stored pointer is the one accessed by &lt;code&gt;get()&lt;/code&gt;, the dereference and the comparison operators. The managed pointer is the one passed to the deleter when use count reaches zero.</source>
-          <target state="translated">&lt;code&gt;shared_ptr&lt;/code&gt; のは、別のオブジェクトへのポインタを格納しながら、オブジェクトの所有権を共有することができます。この機能を使用して、メンバーオブジェクトが属するオブジェクトを所有しているときに、それらをポイントすることができます。格納されるポインタは、 &lt;code&gt;get()&lt;/code&gt; 、逆参照、および比較演算子によってアクセスされるものです。マネージポインターは、使用カウントがゼロに達したときに削除プログラムに渡されるポインターです。</target>
+          <target state="translated">&lt;code&gt;shared_ptr&lt;/code&gt; のは、別のオブジェクトへのポインタを格納しながら、オブジェクトの所有権を共有することができます。この機能を使用すると、メンバーオブジェクトが属するオブジェクトを所有しているときに、そのオブジェクトをポイントできます。格納されるポインタは、 &lt;code&gt;get()&lt;/code&gt; 、逆参照、および比較演算子によってアクセスされるものです。マネージポインターは、使用カウントがゼロに達したときに削除プログラムに渡されるポインターです。</target>
         </trans-unit>
         <trans-unit id="3f727339e73ce27b458015a2d537d9270fcfc075" translate="yes" xml:space="preserve">
           <source>A &lt;code&gt;shared_ptr&lt;/code&gt; may also own no objects, in which case it is called</source>
@@ -3377,7 +3377,7 @@
         </trans-unit>
         <trans-unit id="0554d008c5ddcb923a07e86f2f8e3e45d810c460" translate="yes" xml:space="preserve">
           <source>A &lt;code&gt;std::chrono::tai_time&lt;/code&gt; representing the same point in time as &lt;code&gt;t&lt;/code&gt;, computed as if by constructing a value of the return type from &lt;code&gt;t.time_since_epoch()&lt;/code&gt; and adding &lt;code&gt;378691210s&lt;/code&gt;. (378691210 is the number of seconds between the epochs of the two clocks: 1958-01-01 00:00:00 TAI and 1970-01-01 00:00:00 UTC.).</source>
-          <target state="translated">&lt;code&gt;std::chrono::tai_time&lt;/code&gt; として同じ時点を表す &lt;code&gt;t&lt;/code&gt; からの戻り型の値を構築することによってかのように計算され、 &lt;code&gt;t.time_since_epoch()&lt;/code&gt; を加算 &lt;code&gt;378691210s&lt;/code&gt; を。 （378691210は、2つのクロックのエポック間の秒数です：1958-01-01 00:00:00 TAIおよび1970-01-01 00:00:00 UTC。）。</target>
+          <target state="translated">&lt;code&gt;std::chrono::tai_time&lt;/code&gt; として同じ時点を表す &lt;code&gt;t&lt;/code&gt; からの戻り型の値を構築することによってかのように計算され、 &lt;code&gt;t.time_since_epoch()&lt;/code&gt; を加算 &lt;code&gt;378691210s&lt;/code&gt; を。 （378691210は、2つのクロックのエポック間の秒数です：1958-01-01 00:00:00 TAIと1970-01-01 00:00:00 UTC。）。</target>
         </trans-unit>
         <trans-unit id="1803e0676180e6423d4a462a6c44d55a10b0087d" translate="yes" xml:space="preserve">
           <source>A &lt;code&gt;std::chrono::utc_time&lt;/code&gt; representing the same point in time as &lt;code&gt;t&lt;/code&gt;, computed as if by constructing a value of the return type from &lt;code&gt;t.time_since_epoch()&lt;/code&gt; and adding &lt;code&gt;315964809s&lt;/code&gt;. (315964809 is the number of seconds between the epochs of the two clocks: 1980-01-06 00:00:00 UTC for &lt;code&gt;gps_clock&lt;/code&gt; and 1970-01-01 00:00:00 UTC for &lt;code&gt;utc_clock&lt;/code&gt;.).</source>
@@ -3385,7 +3385,7 @@
         </trans-unit>
         <trans-unit id="ca2a9c59e6ba4f0548b3c04909b0e8262184603f" translate="yes" xml:space="preserve">
           <source>A &lt;code&gt;std::chrono::utc_time&lt;/code&gt; representing the same point in time as &lt;code&gt;t&lt;/code&gt;, computed as if by constructing a value of the return type from &lt;code&gt;t.time_since_epoch()&lt;/code&gt; and subtracting &lt;code&gt;378691210s&lt;/code&gt;. (378691210 is the number of seconds between the epochs of the two clocks: 1958-01-01 00:00:00 TAI and 1970-01-01 00:00:00 UTC.).</source>
-          <target state="translated">&lt;code&gt;std::chrono::utc_time&lt;/code&gt; として同じ時点を表す &lt;code&gt;t&lt;/code&gt; からの戻り型の値を構築することによってかのように計算さ &lt;code&gt;t.time_since_epoch()&lt;/code&gt; と減算 &lt;code&gt;378691210s&lt;/code&gt; を。（378691210は、2つのクロックのエポック間の秒数です：1958-01-01 00:00:00 TAIおよび1970-01-01 00:00:00 UTC。）。</target>
+          <target state="translated">&lt;code&gt;std::chrono::utc_time&lt;/code&gt; として同じ時点を表す &lt;code&gt;t&lt;/code&gt; からの戻り型の値を構築することによってかのように計算さ &lt;code&gt;t.time_since_epoch()&lt;/code&gt; と減算 &lt;code&gt;378691210s&lt;/code&gt; を。（378691210は、2つのクロックのエポック間の秒数です：1958-01-01 00:00:00 TAIと1970-01-01 00:00:00 UTC。）。</target>
         </trans-unit>
         <trans-unit id="c8cbd7a47650f6823fccd8a99b574e7080bec72c" translate="yes" xml:space="preserve">
           <source>A &lt;code&gt;std::chrono::year&lt;/code&gt; initialized from &lt;code&gt;int(y)&lt;/code&gt;. If &lt;code&gt;y &amp;gt; 32767&lt;/code&gt;, the stored value is unspecified.</source>
@@ -3405,7 +3405,7 @@
         </trans-unit>
         <trans-unit id="2416d5002cbb5c36f532d8063f03389d8b5422e8" translate="yes" xml:space="preserve">
           <source>A &lt;code&gt;sys_days&lt;/code&gt; in the range &lt;code&gt;[&lt;a href=&quot;../duration&quot;&gt;std::chrono::days&lt;/a&gt;{-12687428}, &lt;a href=&quot;../duration&quot;&gt;std::chrono::days&lt;/a&gt;{11248737}]&lt;/code&gt;, when converted to &lt;code&gt;year_month_day&lt;/code&gt; and back, yields the same value.</source>
-          <target state="translated">&lt;code&gt;[&lt;a href=&quot;../duration&quot;&gt;std::chrono::days&lt;/a&gt;{-12687428}, &lt;a href=&quot;../duration&quot;&gt;std::chrono::days&lt;/a&gt;{11248737}]&lt;/code&gt; &lt;a href=&quot;../duration&quot;&gt;std :: chrono :: days&lt;/a&gt; {-12687428}、&lt;a href=&quot;../duration&quot;&gt;std :: chrono :: days&lt;/a&gt; {11248737}]の範囲の &lt;code&gt;sys_days&lt;/code&gt; は、year_month_dayに変換して &lt;code&gt;year_month_day&lt;/code&gt; と、同じ値になります。</target>
+          <target state="translated">&lt;code&gt;[&lt;a href=&quot;../duration&quot;&gt;std::chrono::days&lt;/a&gt;{-12687428}, &lt;a href=&quot;../duration&quot;&gt;std::chrono::days&lt;/a&gt;{11248737}]&lt;/code&gt; &lt;a href=&quot;../duration&quot;&gt;std :: chrono :: days&lt;/a&gt; {-12687428}、&lt;a href=&quot;../duration&quot;&gt;std :: chrono :: days&lt;/a&gt; {11248737}]の範囲の &lt;code&gt;sys_days&lt;/code&gt; は、year_month_dayに変換されて &lt;code&gt;year_month_day&lt;/code&gt; と、同じ値になります。</target>
         </trans-unit>
         <trans-unit id="31cd92d06ec407b65d4b95f11cad94c00e4f216c" translate="yes" xml:space="preserve">
           <source>A &lt;code&gt;sys_time&lt;/code&gt; representing the same point in time as &lt;code&gt;t&lt;/code&gt;, or the last representable value prior to the insertion of the leap second if &lt;code&gt;t&lt;/code&gt; represents a time point during a leap second insertion.</source>
@@ -3585,7 +3585,7 @@
         </trans-unit>
         <trans-unit id="a590718d11fd286b69f0c237198c6d1822013e63" translate="yes" xml:space="preserve">
           <source>A braced-init-list is not an expression and therefore has no type, e.g. &lt;code&gt;decltype({1,2})&lt;/code&gt; is ill-formed. Having no type implies that template type deduction cannot deduce a type that matches a braced-init-list, so given the declaration &lt;code&gt;template&amp;lt;class T&amp;gt; void f(T);&lt;/code&gt; the expression &lt;code&gt;f({1,2,3})&lt;/code&gt; is ill-formed. However, the template parameter can otherwise be deduced, as is the case for &lt;code&gt;&lt;a href=&quot;../container/vector&quot;&gt;std::vector&lt;/a&gt;&amp;lt;int&amp;gt; v(&lt;a href=&quot;../iterator/istream_iterator&quot;&gt;std::istream_iterator&lt;/a&gt;&amp;lt;int&amp;gt;(&lt;a href=&quot;../io/cin&quot;&gt;std::cin&lt;/a&gt;), {})&lt;/code&gt;, where the iterator type is deduced by the first argument but also used in the second parameter position. A special exception is made for &lt;a href=&quot;template_argument_deduction#Other_contexts&quot;&gt;type deduction using the keyword &lt;code&gt;auto&lt;/code&gt; &lt;/a&gt;, which deduces any braced-init-list as &lt;code&gt;&lt;a href=&quot;../utility/initializer_list&quot;&gt;std::initializer_list&lt;/a&gt;&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;decltype({1,2})&lt;/code&gt; -init-listは式ではないため、型がありません。たとえば、decltype（{1,2}）は形式が正しくありません。タイプがないことは、テンプレートタイプの推論がbraced-init-listに一致するタイプを推論できないことを意味するため、 &lt;code&gt;template&amp;lt;class T&amp;gt; void f(T);&lt;/code&gt; の宣言が与えられます。式 &lt;code&gt;f({1,2,3})&lt;/code&gt; の形式が正しくありません。ただし、 &lt;code&gt;&lt;a href=&quot;../container/vector&quot;&gt;std::vector&lt;/a&gt;&amp;lt;int&amp;gt; v(&lt;a href=&quot;../iterator/istream_iterator&quot;&gt;std::istream_iterator&lt;/a&gt;&amp;lt;int&amp;gt;(&lt;a href=&quot;../io/cin&quot;&gt;std::cin&lt;/a&gt;), {})&lt;/code&gt; の場合と同様に、テンプレートパラメータは他の方法で推定できます。イテレータタイプは、最初の引数ですが、2番目のパラメーターの位置でも使用されます。&lt;a href=&quot;template_argument_deduction#Other_contexts&quot;&gt;キーワード&lt;/a&gt; &lt;code&gt;auto&lt;/code&gt; を使用した型の推定については、特別な例外が設けられています 、括弧で囲まれた初期リストを &lt;code&gt;&lt;a href=&quot;../utility/initializer_list&quot;&gt;std::initializer_list&lt;/a&gt;&lt;/code&gt; として推定します。</target>
+          <target state="translated">&lt;code&gt;decltype({1,2})&lt;/code&gt; -init-listは式ではないため、型がありません。たとえば、decltype（{1,2}）は形式が正しくありません。型がないことは、テンプレート型の推定がbraced-init-listに一致する型を推定できないことを意味するため、宣言 &lt;code&gt;template&amp;lt;class T&amp;gt; void f(T);&lt;/code&gt; 式 &lt;code&gt;f({1,2,3})&lt;/code&gt; の形式が正しくありません。ただし、 &lt;code&gt;&lt;a href=&quot;../container/vector&quot;&gt;std::vector&lt;/a&gt;&amp;lt;int&amp;gt; v(&lt;a href=&quot;../iterator/istream_iterator&quot;&gt;std::istream_iterator&lt;/a&gt;&amp;lt;int&amp;gt;(&lt;a href=&quot;../io/cin&quot;&gt;std::cin&lt;/a&gt;), {})&lt;/code&gt; の場合と同様に、テンプレートパラメータは別の方法で推定できます。イテレータタイプは、最初の引数ですが、2番目のパラメーターの位置でも使用されます。&lt;a href=&quot;template_argument_deduction#Other_contexts&quot;&gt;キーワード&lt;/a&gt; &lt;code&gt;auto&lt;/code&gt; を使用した型の推定については、特別な例外があります。 、括弧で囲まれた初期リストを &lt;code&gt;&lt;a href=&quot;../utility/initializer_list&quot;&gt;std::initializer_list&lt;/a&gt;&lt;/code&gt; として推定します。</target>
         </trans-unit>
         <trans-unit id="e25a945c48cf6f76f2a11977d7e5d96d55161783" translate="yes" xml:space="preserve">
           <source>A break statement cannot be used to break out of multiple nested loops. The &lt;a href=&quot;goto&quot;&gt;goto statement&lt;/a&gt; may be used for this purpose.</source>
@@ -3597,7 +3597,7 @@
         </trans-unit>
         <trans-unit id="6ac00aaac3e166d5f02787d362ff61a7dbdfec8c" translate="yes" xml:space="preserve">
           <source>A call to &lt;code&gt;&lt;a href=&quot;deque/resize&quot;&gt;resize&lt;/a&gt;&lt;/code&gt; with a bigger size does not invalidate any references to elements of the deque.</source>
-          <target state="translated">大きいサイズでサイズ &lt;code&gt;&lt;a href=&quot;deque/resize&quot;&gt;resize&lt;/a&gt;&lt;/code&gt; を呼び出しても、両端キューの要素への参照は無効になりません。</target>
+          <target state="translated">大きなサイズでサイズ &lt;code&gt;&lt;a href=&quot;deque/resize&quot;&gt;resize&lt;/a&gt;&lt;/code&gt; を呼び出しても、両端キューの要素への参照は無効になりません。</target>
         </trans-unit>
         <trans-unit id="7a3bd25a45a77ef2cd90ffdff2bbd6a3f417bccc" translate="yes" xml:space="preserve">
           <source>A call to &lt;code&gt;&lt;a href=&quot;deque/resize&quot;&gt;resize&lt;/a&gt;&lt;/code&gt; with a smaller size does not invalidate any references to non-erased elements.</source>
@@ -3605,7 +3605,7 @@
         </trans-unit>
         <trans-unit id="6f4085f69cdbe79bbedc544a370d8a6d054d8e3f" translate="yes" xml:space="preserve">
           <source>A call to &lt;code&gt;ranges::swap&lt;/code&gt; is equivalent to:</source>
-          <target state="translated">&lt;code&gt;ranges::swap&lt;/code&gt; 呼び出しは、以下と同等です。</target>
+          <target state="translated">&lt;code&gt;ranges::swap&lt;/code&gt; 呼び出しは次と同等です。</target>
         </trans-unit>
         <trans-unit id="97bf0ef2a40ed34d578e8eca5302265c933381c1" translate="yes" xml:space="preserve">
           <source>A call to the function &lt;code&gt;signal()&lt;/code&gt;&lt;a href=&quot;../../atomic/memory_order&quot;&gt;synchronizes-with&lt;/a&gt; any resulting invocation of the signal handler.</source>
@@ -3641,15 +3641,15 @@
         </trans-unit>
         <trans-unit id="0d718390377b6b62f30fd556cf96e27540adb5b7" translate="yes" xml:space="preserve">
           <source>A character sequence made of any source character but parentheses, backslash and &lt;a href=&quot;../string/byte/isspace&quot;&gt;spaces&lt;/a&gt; (can be empty, and at most 16 characters long)</source>
-          <target state="translated">かっこ、バックスラッシュ、&lt;a href=&quot;../string/byte/isspace&quot;&gt;スペース&lt;/a&gt;以外の任意のソース文字で構成される文字シーケンス（空にすることができ、長さは最大16文字）</target>
+          <target state="translated">かっこ、バックスラッシュ、&lt;a href=&quot;../string/byte/isspace&quot;&gt;スペース&lt;/a&gt;以外の任意のソース文字で構成される文字シーケンス（空にすることができ、最大16文字）</target>
         </trans-unit>
         <trans-unit id="c2079fc01e090f90cbd9362f60edfe4448456c14" translate="yes" xml:space="preserve">
           <source>A class can have multiple copy assignment operators, e.g. both &lt;code&gt;T&amp;amp; T::operator=(const T&amp;amp;)&lt;/code&gt; and &lt;code&gt;T&amp;amp; T::operator=(T)&lt;/code&gt;. If some user-defined copy assignment operators are present, the user may still force the generation of the implicitly declared copy assignment operator with the keyword &lt;code&gt;default&lt;/code&gt;.(since C++11).</source>
-          <target state="translated">クラスは複数のコピー代入演算子を持つことができます。たとえば、 &lt;code&gt;T&amp;amp; T::operator=(const T&amp;amp;)&lt;/code&gt; と &lt;code&gt;T&amp;amp; T::operator=(T)&lt;/code&gt; 両方です。ユーザー定義のコピー割り当て演算子が存在する場合でも、ユーザーは暗黙的に宣言されたコピー割り当て演算子をキーワード &lt;code&gt;default&lt;/code&gt; で強制的に生成できます（C ++ 11以降）。</target>
+          <target state="translated">クラスは複数のコピー代入演算子を持つことができます。たとえば、 &lt;code&gt;T&amp;amp; T::operator=(const T&amp;amp;)&lt;/code&gt; と &lt;code&gt;T&amp;amp; T::operator=(T)&lt;/code&gt; 両方です。一部のユーザー定義のコピー割り当て演算子が存在する場合でも、ユーザーは暗黙的に宣言されたコピー割り当て演算子をキーワード &lt;code&gt;default&lt;/code&gt; で強制的に生成できます（C ++ 11以降）。</target>
         </trans-unit>
         <trans-unit id="08294a0fbe1cdc67a6e89a0a3196176e7255ac69" translate="yes" xml:space="preserve">
           <source>A class can have multiple copy constructors, e.g. both &lt;code&gt;T::T(const T&amp;amp;)&lt;/code&gt; and &lt;code&gt;T::T(T&amp;amp;)&lt;/code&gt;. If some user-defined copy constructors are present, the user may still force the generation of the implicitly declared copy constructor with the keyword &lt;code&gt;default&lt;/code&gt;.</source>
-          <target state="translated">クラスは複数のコピーコンストラクタを持つことができます。たとえば、 &lt;code&gt;T::T(const T&amp;amp;)&lt;/code&gt; と &lt;code&gt;T::T(T&amp;amp;)&lt;/code&gt; 両方です。ユーザー定義のコピーコンストラクターがいくつか存在する場合でも、ユーザーは暗黙的に宣言されたコピーコンストラクターをキーワード &lt;code&gt;default&lt;/code&gt; で強制的に生成できます。</target>
+          <target state="translated">クラスは、 &lt;code&gt;T::T(const T&amp;amp;)&lt;/code&gt; と &lt;code&gt;T::T(T&amp;amp;)&lt;/code&gt; 両方など、複数のコピーコンストラクタを持つことができます。一部のユーザー定義のコピーコンストラクターが存在する場合でも、ユーザーは暗黙的に宣言されたコピーコンストラクターをキーワード &lt;code&gt;default&lt;/code&gt; で強制的に生成できます。</target>
         </trans-unit>
         <trans-unit id="ea0fd74db644a3b140608452cb77e014bcf47686" translate="yes" xml:space="preserve">
           <source>A class can have multiple move assignment operators, e.g. both &lt;code&gt;T&amp;amp; T::operator=(const T&amp;amp;&amp;amp;)&lt;/code&gt; and &lt;code&gt;T&amp;amp; T::operator=(T&amp;amp;&amp;amp;)&lt;/code&gt;. If some user-defined move assignment operators are present, the user may still force the generation of the implicitly declared move assignment operator with the keyword &lt;code&gt;default&lt;/code&gt;.</source>
@@ -3665,11 +3665,11 @@
         </trans-unit>
         <trans-unit id="7b609924b6cbf0e0eb45f7692c32df793ac93816" translate="yes" xml:space="preserve">
           <source>A class declaration can appear in namespace scope (in which case it defines an ordinary class), inside another class definition (in which case it defines a &lt;a href=&quot;nested_classes&quot;&gt;nested class&lt;/a&gt;), and inside the body of a function, in which case it defines a</source>
-          <target state="translated">クラス宣言は、名前空間スコープ（この場合は通常のクラスを定義する）、別のクラス定義（この場合は&lt;a href=&quot;nested_classes&quot;&gt;ネストされたクラスを&lt;/a&gt;定義する）、および関数の本体（この場合は</target>
+          <target state="translated">クラス宣言は、名前空間スコープ（この場合は通常のクラスを定義）、別のクラス定義（この場合は&lt;a href=&quot;nested_classes&quot;&gt;ネストされたクラスを&lt;/a&gt;定義）、および関数の本体（この場合は、</target>
         </trans-unit>
         <trans-unit id="1e3849ae6dd831af666fcb3de9bb2eb1299702a7" translate="yes" xml:space="preserve">
           <source>A class defined with the keyword &lt;code&gt;class&lt;/code&gt; has private access for its members and its base classes by default. A class defined with the keyword &lt;code&gt;struct&lt;/code&gt; has public access for its members and its base classes by default. A &lt;a href=&quot;union&quot;&gt;union&lt;/a&gt; has public access for its members by default.</source>
-          <target state="translated">キーワードclassで定義された &lt;code&gt;class&lt;/code&gt; は、デフォルトで、そのメンバーとその基本クラスにプライベートアクセスできます。キーワード &lt;code&gt;struct&lt;/code&gt; で定義されたクラスは、デフォルトで、そのメンバーとその基本クラスにパブリックアクセスできます。&lt;a href=&quot;union&quot;&gt;組合は&lt;/a&gt;、デフォルトでは、そのメンバーのためのパブリックアクセスを持っています。</target>
+          <target state="translated">キーワードclassで定義された &lt;code&gt;class&lt;/code&gt; は、デフォルトで、そのメンバーとその基本クラスに対してプライベートアクセス権を持っています。キーワード &lt;code&gt;struct&lt;/code&gt; で定義されたクラスは、デフォルトでそのメンバーとその基本クラスにパブリックアクセスできます。&lt;a href=&quot;union&quot;&gt;組合は&lt;/a&gt;、デフォルトでは、そのメンバーのためのパブリックアクセスを持っています。</target>
         </trans-unit>
         <trans-unit id="9a1ff8f108445c52327d9383ef06a59f94e3314e" translate="yes" xml:space="preserve">
           <source>A class does not have to implement a &lt;a href=&quot;../language/move_constructor&quot;&gt;move constructor&lt;/a&gt; to satisfy this type requirement: a &lt;a href=&quot;../language/copy_constructor&quot;&gt;copy constructor&lt;/a&gt; that takes a &lt;code&gt;const T&amp;amp;&lt;/code&gt; argument can bind rvalue expressions.</source>
@@ -3681,7 +3681,7 @@
         </trans-unit>
         <trans-unit id="be9d6f5d743dcff79fee7ca9e10287f1a607fc17" translate="yes" xml:space="preserve">
           <source>A class or struct declared &lt;a href=&quot;final&quot;&gt;final&lt;/a&gt; cannot appear in base-clause.</source>
-          <target state="translated">&lt;a href=&quot;final&quot;&gt;finalとして&lt;/a&gt;宣言されたクラスまたは構造体は、base-clauseに出現できません。</target>
+          <target state="translated">&lt;a href=&quot;final&quot;&gt;finalとして&lt;/a&gt;宣言されたクラスまたは構造体は、base-clauseに含めることはできません。</target>
         </trans-unit>
         <trans-unit id="8c698751e9d04b7a69e80ad9f11830612c93f3b4" translate="yes" xml:space="preserve">
           <source>A class suitable for use with &lt;a href=&quot;https://en.cppreference.com/mwiki/index.php?title=cpp/named_req/Searcher&amp;amp;action=edit&amp;amp;redlink=1&quot;&gt;Searcher&lt;/a&gt; overload of &lt;code&gt;&lt;a href=&quot;../../algorithm/search&quot;&gt;std::search&lt;/a&gt;&lt;/code&gt; that delegates the search operation to the pre-C++17 standard library's &lt;code&gt;&lt;a href=&quot;../../algorithm/search&quot;&gt;std::search&lt;/a&gt;&lt;/code&gt;.</source>
@@ -3697,7 +3697,7 @@
         </trans-unit>
         <trans-unit id="2e1368668d87864c4bddcbf53db914a3e9406651" translate="yes" xml:space="preserve">
           <source>A class type (such as &lt;code&gt;class X&lt;/code&gt;) might be incomplete at one point in a translation unit and complete later on; the type &lt;code&gt;class X&lt;/code&gt; is the same type at both points:</source>
-          <target state="translated">クラスタイプ（ &lt;code&gt;class X&lt;/code&gt; など）は、翻訳単位のある時点で不完全で、後で完了する場合があります。型 &lt;code&gt;class X&lt;/code&gt; は両方の点で同じ型です。</target>
+          <target state="translated">クラスタイプ（ &lt;code&gt;class X&lt;/code&gt; など）は、翻訳単位のある時点で不完全であり、後で完了する場合があります。型 &lt;code&gt;class X&lt;/code&gt; は両方の点で同じ型です。</target>
         </trans-unit>
         <trans-unit id="a8e03c028d42dc38b8cf8cd0fe8b5a855a9e6d9b" translate="yes" xml:space="preserve">
           <source>A class type is defined by class-specifier, which appears in decl-specifier-seq of the &lt;a href=&quot;declarations&quot;&gt;declaration&lt;/a&gt; syntax. The class specifier has the following syntax:</source>
@@ -3729,7 +3729,7 @@
         </trans-unit>
         <trans-unit id="cc307299d5ed9d552e26de173efa748ec8760cfc" translate="yes" xml:space="preserve">
           <source>A common guideline is that a destructor for a base class must be &lt;a href=&quot;http://www.gotw.ca/publications/mill18.htm&quot;&gt;either public and virtual or protected and nonvirtual&lt;/a&gt;.</source>
-          <target state="translated">共通のガイドラインとして、基本クラスのデストラクタは&lt;a href=&quot;http://www.gotw.ca/publications/mill18.htm&quot;&gt;パブリックで仮想であるか、保護されていて非仮想である&lt;/a&gt;必要があります。</target>
+          <target state="translated">一般的なガイドラインとして、基本クラスのデストラクタは&lt;a href=&quot;http://www.gotw.ca/publications/mill18.htm&quot;&gt;パブリックかつ仮想であるか、保護されていて非仮想である&lt;/a&gt;必要があります。</target>
         </trans-unit>
         <trans-unit id="afac72f5ab6e0fcd2aca25cac87606b663fdcfca" translate="yes" xml:space="preserve">
           <source>A common idiom is to use expression SFINAE on the return type, where the expression uses the comma operator, whose left subexpression is the one that is being examined (cast to void to ensure the user-defined operator comma on the returned type is not selected), and the right subexpression has the type that the function is supposed to return.</source>
@@ -3737,11 +3737,11 @@
         </trans-unit>
         <trans-unit id="7837d1b2ad2344135b3ced236eedd67243ea95ab" translate="yes" xml:space="preserve">
           <source>A common implementation for &lt;code&gt;enable_shared_from_this&lt;/code&gt; is to hold a weak reference (such as &lt;code&gt;&lt;a href=&quot;weak_ptr&quot;&gt;std::weak_ptr&lt;/a&gt;&lt;/code&gt;) to &lt;code&gt;this&lt;/code&gt;. The constructors of &lt;code&gt;&lt;a href=&quot;shared_ptr&quot;&gt;std::shared_ptr&lt;/a&gt;&lt;/code&gt; detect the presence of an unambiguous and accessible(since C++17)&lt;code&gt;enable_shared_from_this&lt;/code&gt; base and assign the newly created &lt;code&gt;&lt;a href=&quot;shared_ptr&quot;&gt;std::shared_ptr&lt;/a&gt;&lt;/code&gt; to the internally stored weak reference if not already owned by a live &lt;code&gt;&lt;a href=&quot;shared_ptr&quot;&gt;std::shared_ptr&lt;/a&gt;&lt;/code&gt;(since C++17). Constructing a &lt;code&gt;&lt;a href=&quot;shared_ptr&quot;&gt;std::shared_ptr&lt;/a&gt;&lt;/code&gt; for an object that is already managed by another &lt;code&gt;&lt;a href=&quot;shared_ptr&quot;&gt;std::shared_ptr&lt;/a&gt;&lt;/code&gt; will not consult the internally stored weak reference and thus will lead to undefined behavior.</source>
-          <target state="translated">&lt;code&gt;enable_shared_from_this&lt;/code&gt; の一般的な実装は、thisへの弱い参照（ &lt;code&gt;&lt;a href=&quot;weak_ptr&quot;&gt;std::weak_ptr&lt;/a&gt;&lt;/code&gt; ）を保持する &lt;code&gt;this&lt;/code&gt; です。 &lt;code&gt;&lt;a href=&quot;shared_ptr&quot;&gt;std::shared_ptr&lt;/a&gt;&lt;/code&gt; のコンストラクターは、明確でアクセス可能な（C ++ 17以降） &lt;code&gt;enable_shared_from_this&lt;/code&gt; ベースの存在を検出し、新しく作成された &lt;code&gt;&lt;a href=&quot;shared_ptr&quot;&gt;std::shared_ptr&lt;/a&gt;&lt;/code&gt; を、ライブ &lt;code&gt;&lt;a href=&quot;shared_ptr&quot;&gt;std::shared_ptr&lt;/a&gt;&lt;/code&gt; まだ所有していない場合、内部に格納された弱参照に割り当てます（C ++ 17以降）。別の &lt;code&gt;&lt;a href=&quot;shared_ptr&quot;&gt;std::shared_ptr&lt;/a&gt;&lt;/code&gt; によってすでに管理されているオブジェクトの &lt;code&gt;&lt;a href=&quot;shared_ptr&quot;&gt;std::shared_ptr&lt;/a&gt;&lt;/code&gt; を構築すると、内部に格納されている弱参照が参照されないため、未定義の動作が発生します。</target>
+          <target state="translated">&lt;code&gt;enable_shared_from_this&lt;/code&gt; の一般的な実装は、thisへの弱い参照（ &lt;code&gt;&lt;a href=&quot;weak_ptr&quot;&gt;std::weak_ptr&lt;/a&gt;&lt;/code&gt; ）を保持する &lt;code&gt;this&lt;/code&gt; です。 &lt;code&gt;&lt;a href=&quot;shared_ptr&quot;&gt;std::shared_ptr&lt;/a&gt;&lt;/code&gt; のコンストラクターは、明確でアクセス可能な（C ++ 17以降） &lt;code&gt;enable_shared_from_this&lt;/code&gt; ベースの存在を検出し、新しく作成された &lt;code&gt;&lt;a href=&quot;shared_ptr&quot;&gt;std::shared_ptr&lt;/a&gt;&lt;/code&gt; を、ライブ &lt;code&gt;&lt;a href=&quot;shared_ptr&quot;&gt;std::shared_ptr&lt;/a&gt;&lt;/code&gt; まだ所有していない場合は、内部に格納された弱参照に割り当てます（C ++ 17以降）。別の &lt;code&gt;&lt;a href=&quot;shared_ptr&quot;&gt;std::shared_ptr&lt;/a&gt;&lt;/code&gt; によってすでに管理されているオブジェクトの &lt;code&gt;&lt;a href=&quot;shared_ptr&quot;&gt;std::shared_ptr&lt;/a&gt;&lt;/code&gt; を構築すると、内部に格納された弱参照が参照されないため、未定義の動作が発生します。</target>
         </trans-unit>
         <trans-unit id="d0627f677b6bfa79bd80b2e27378433051033d60" translate="yes" xml:space="preserve">
           <source>A common mistake is to declare two function templates that differ only in their default template arguments. This is illegal because default template arguments are not part of function template's signature, and declaring two different function templates with the same signature is illegal.</source>
-          <target state="translated">よくある間違いは、デフォルトテンプレートの引数だけが異なる2つの関数テンプレートを宣言することです。なぜなら、デフォルトテンプレートの引数は関数テンプレートのシグネチャの一部ではないからです。</target>
+          <target state="translated">よくある間違いは、デフォルトテンプレートの引数だけが異なる2つの関数テンプレートを宣言することです。なぜなら、デフォルトテンプレートの引数は関数テンプレートのシグネチャの一部ではないため、これは違法であり、同じシグネチャで2つの異なる関数テンプレートを宣言することは違法です。</target>
         </trans-unit>
         <trans-unit id="903cfada6023cc984b76c527f017096ab2951ca5" translate="yes" xml:space="preserve">
           <source>A common requirement for &lt;a href=&quot;operators#Relational_operators&quot;&gt;user-defined operator&amp;lt;&lt;/a&gt; is &lt;a href=&quot;https://en.wikipedia.org/wiki/Strict_weak_ordering&quot;&gt;strict weak ordering&lt;/a&gt;. In particular, this is required by the standard algorithms and containers that work with &lt;a href=&quot;../named_req/compare&quot;&gt;Compare&lt;/a&gt; types: &lt;code&gt;&lt;a href=&quot;../algorithm/sort&quot;&gt;std::sort&lt;/a&gt;&lt;/code&gt;, &lt;code&gt;&lt;a href=&quot;../algorithm/max_element&quot;&gt;std::max_element&lt;/a&gt;&lt;/code&gt;, &lt;code&gt;&lt;a href=&quot;../container/map&quot;&gt;std::map&lt;/a&gt;&lt;/code&gt;, etc.</source>
@@ -3749,11 +3749,11 @@
         </trans-unit>
         <trans-unit id="edb21f3ed0a362e2b913da91c1d4edf3f68ea44c" translate="yes" xml:space="preserve">
           <source>A common use case for &lt;code&gt;optional&lt;/code&gt; is the return value of a function that may fail. As opposed to other approaches, such as &lt;code&gt;&lt;a href=&quot;pair&quot;&gt;std::pair&lt;/a&gt;&amp;lt;T,bool&amp;gt;&lt;/code&gt;, &lt;code&gt;optional&lt;/code&gt; handles expensive-to-construct objects well and is more readable, as the intent is expressed explicitly.</source>
-          <target state="translated">&lt;code&gt;optional&lt;/code&gt; 一般的な使用例は、失敗する可能性のある関数の戻り値です。 &lt;code&gt;&lt;a href=&quot;pair&quot;&gt;std::pair&lt;/a&gt;&amp;lt;T,bool&amp;gt;&lt;/code&gt; などの他のアプローチとは対照的に、 &lt;code&gt;optional&lt;/code&gt; は、意図が明示的に表現されているため、高価なオブジェクトを適切に処理し、より読みやすくなっています。</target>
+          <target state="translated">&lt;code&gt;optional&lt;/code&gt; 一般的な使用例は、失敗する可能性のある関数の戻り値です。 &lt;code&gt;&lt;a href=&quot;pair&quot;&gt;std::pair&lt;/a&gt;&amp;lt;T,bool&amp;gt;&lt;/code&gt; などの他のアプローチとは対照的に、 &lt;code&gt;optional&lt;/code&gt; は、意図が明示的に表現されているため、高価なオブジェクトを適切に処理し、読みやすくなっています。</target>
         </trans-unit>
         <trans-unit id="288296bf65cd832fd0b7a3defc250adc0a788f8f" translate="yes" xml:space="preserve">
           <source>A common use case for template friends is declaration of a non-member operator overload that acts on a class template, e.g. &lt;code&gt;operator&amp;lt;&amp;lt;(&lt;a href=&quot;../io/basic_ostream&quot;&gt;std::ostream&lt;/a&gt;&amp;amp;, const Foo&amp;lt;T&amp;gt;&amp;amp;)&lt;/code&gt; for some user-defined &lt;code&gt;Foo&amp;lt;T&amp;gt;&lt;/code&gt;</source>
-          <target state="translated">テンプレートのフレンドの一般的な使用例は、クラステンプレートに作用する非メンバーオペレーターオーバーロードの宣言です。たとえば &lt;code&gt;operator&amp;lt;&amp;lt;(&lt;a href=&quot;../io/basic_ostream&quot;&gt;std::ostream&lt;/a&gt;&amp;amp;, const Foo&amp;lt;T&amp;gt;&amp;amp;)&lt;/code&gt; ユーザー定義 &lt;code&gt;Foo&amp;lt;T&amp;gt;&lt;/code&gt; 場合、operator &amp;lt;&amp;lt;（&lt;a href=&quot;../io/basic_ostream&quot;&gt;std :: ostream&lt;/a&gt;＆、const Foo &amp;lt;T&amp;gt;＆）です。</target>
+          <target state="translated">テンプレートのフレンドの一般的な使用例は、クラステンプレートに作用する非メンバーオペレーターオーバーロードの宣言です。たとえば、いくつかのユーザー定義 &lt;code&gt;Foo&amp;lt;T&amp;gt;&lt;/code&gt; &lt;code&gt;operator&amp;lt;&amp;lt;(&lt;a href=&quot;../io/basic_ostream&quot;&gt;std::ostream&lt;/a&gt;&amp;amp;, const Foo&amp;lt;T&amp;gt;&amp;amp;)&lt;/code&gt; です。</target>
         </trans-unit>
         <trans-unit id="b78a767c7077e09f1e58aaf3b98e4d2d1181c576" translate="yes" xml:space="preserve">
           <source>A comparison category type as defined above.</source>
@@ -3793,7 +3793,7 @@
         </trans-unit>
         <trans-unit id="1cc0004e44d74512bcd82773523e4ea2e9520116" translate="yes" xml:space="preserve">
           <source>A constructor (including default constructors) for a class is odr-used by the &lt;a href=&quot;initialization&quot;&gt;initialization&lt;/a&gt; that selects it.</source>
-          <target state="translated">クラスのコンストラクター（デフォルトのコンストラクターを含む）は、クラスを選択する&lt;a href=&quot;initialization&quot;&gt;初期化&lt;/a&gt;によってodrで使用されます。</target>
+          <target state="translated">クラスのコンストラクター（デフォルトのコンストラクターを含む）は、それを選択する&lt;a href=&quot;initialization&quot;&gt;初期化&lt;/a&gt;によってodrで使用されます。</target>
         </trans-unit>
         <trans-unit id="154f81a48f0df5cddfe21451d0ef22feca0bdd6b" translate="yes" xml:space="preserve">
           <source>A constructor is</source>
@@ -3801,7 +3801,7 @@
         </trans-unit>
         <trans-unit id="cf82d4cf1aa18950145c2a2e92b194366d9a05e9" translate="yes" xml:space="preserve">
           <source>A constructor is called a 'move constructor' when it takes an rvalue reference as a parameter. It is not obligated to move anything, the class is not required to have a resource to be moved and a 'move constructor' may not be able to move a resource as in the allowable (but maybe not sensible) case where the parameter is a const rvalue reference (const T&amp;amp;&amp;amp;).</source>
-          <target state="translated">コンストラクターは、右辺値参照をパラメーターとして取る場合、「移動コンストラクター」と呼ばれます。何かを移動する義務はありません。クラスにリソースを移動する必要はありません。パラメータがaである許容される（ただし、賢明ではない）場合のように、「移動コンストラクタ」はリソースを移動できない場合があります。 const右辺値参照（const T &amp;amp;&amp;amp;）。</target>
+          <target state="translated">コンストラクターは、右辺値参照をパラメーターとして取る場合、「移動コンストラクター」と呼ばれます。何かを移動する義務はありません。クラスにリソースを移動する必要はありません。また、パラメーターがaである許容される（ただし、賢明ではない）場合と同様に、「移動コンストラクター」はリソースを移動できない場合があります。 const右辺値参照（const T &amp;amp;&amp;amp;）。</target>
         </trans-unit>
         <trans-unit id="786a4fb43ed69e1b336387fd02859d1a82132b52" translate="yes" xml:space="preserve">
           <source>A constructor that is not declared with the specifier &lt;a href=&quot;explicit&quot;&gt;explicit&lt;/a&gt;and which can be called with a single parameter(until C++11) is called a</source>
@@ -3813,7 +3813,7 @@
         </trans-unit>
         <trans-unit id="04cb17190fa300b187e4a29716390493694b575f" translate="yes" xml:space="preserve">
           <source>A conversion-type-id in a &lt;a href=&quot;cast_operator&quot;&gt;user-defined conversion&lt;/a&gt; function name is first looked up in the scope of the class. If not found, the name is then looked up in the current scope.</source>
-          <target state="translated">&lt;a href=&quot;cast_operator&quot;&gt;ユーザー定義の変換&lt;/a&gt;関数名のconversion-type-idは、まずクラスのスコープで検索されます。見つからない場合、名前は現在のスコープで検索されます。</target>
+          <target state="translated">&lt;a href=&quot;cast_operator&quot;&gt;ユーザー定義の変換&lt;/a&gt;関数名のconversion-type-id は、クラスのスコープで最初に検索されます。見つからない場合、名前は現在のスコープで検索されます。</target>
         </trans-unit>
         <trans-unit id="e775fcf05b002de801de31f682bafa87ff617bac" translate="yes" xml:space="preserve">
           <source>A copy assignment operator for a class that holds resources that can handle multiple readers, but only one writer.</source>
@@ -3825,7 +3825,7 @@
         </trans-unit>
         <trans-unit id="e583729bec2b79b7851639a4a20cb9009a77edb6" translate="yes" xml:space="preserve">
           <source>A copy constructor of class &lt;code&gt;T&lt;/code&gt; is a non-template &lt;a href=&quot;constructor&quot;&gt;constructor&lt;/a&gt; whose first parameter is &lt;code&gt;T&amp;amp;&lt;/code&gt;&amp;zwj;, &lt;code&gt;const T&amp;amp;&lt;/code&gt;&amp;zwj;, &lt;code&gt;volatile T&amp;amp;&lt;/code&gt;&amp;zwj;, or &lt;code&gt;const volatile T&amp;amp;&lt;/code&gt;&amp;zwj;, and either there are no other parameters, or the rest of the parameters all have default values.</source>
-          <target state="translated">クラス &lt;code&gt;T&lt;/code&gt; のコピーコンストラクターは、最初のパラメーターが &lt;code&gt;T&amp;amp;&lt;/code&gt; &amp;zwj;、 &lt;code&gt;const T&amp;amp;&lt;/code&gt; &amp;zwj;、 &lt;code&gt;volatile T&amp;amp;&lt;/code&gt; &amp;zwj;、または &lt;code&gt;const volatile T&amp;amp;&lt;/code&gt; &amp;zwj;である非テンプレート&lt;a href=&quot;constructor&quot;&gt;コンストラクター&lt;/a&gt;であり、他のパラメーターがないか、残りのパラメーターすべてにデフォルトがある値。</target>
+          <target state="translated">クラス &lt;code&gt;T&lt;/code&gt; のコピーコンストラクターは、最初のパラメーターが &lt;code&gt;T&amp;amp;&lt;/code&gt; &amp;zwj;、 &lt;code&gt;const T&amp;amp;&lt;/code&gt; &amp;zwj;、 &lt;code&gt;volatile T&amp;amp;&lt;/code&gt; &amp;zwj;、または &lt;code&gt;const volatile T&amp;amp;&lt;/code&gt; &amp;zwj;である非テンプレート&lt;a href=&quot;constructor&quot;&gt;コンストラクター&lt;/a&gt;であり、他のパラメーターがないか、残りのパラメーターがすべてデフォルトである値。</target>
         </trans-unit>
         <trans-unit id="be82bccc96946d36b70dc97ec2624b93f79fe9d6" translate="yes" xml:space="preserve">
           <source>A copy of &lt;code&gt;&lt;a href=&quot;../basic_streambuf/gptr&quot;&gt;eback()&lt;/a&gt;&lt;/code&gt;, which may be a null pointer.</source>
@@ -3841,7 +3841,7 @@
         </trans-unit>
         <trans-unit id="b9f1bd488dfb48b629618e2a1d06482488ffb310" translate="yes" xml:space="preserve">
           <source>A copy of the returned string along with the category used in this call to &lt;code&gt;std::setlocale&lt;/code&gt; may be used later in the program to restore the locale back to the state at the end of this call.</source>
-          <target state="translated">&lt;code&gt;std::setlocale&lt;/code&gt; へのこの呼び出しで使用されたカテゴリとともに返された文字列のコピーを後でプログラムで使用して、ロケールをこの呼び出しの最後の状態に戻すことができます。</target>
+          <target state="translated">&lt;code&gt;std::setlocale&lt;/code&gt; へのこの呼び出しで使用されたカテゴリと一緒に返された文字列のコピーを後でプログラムで使用して、ロケールをこの呼び出しの最後の状態に戻すことができます。</target>
         </trans-unit>
         <trans-unit id="3c62723db0b8ca37045a0c9bb3b70acae310e0c1" translate="yes" xml:space="preserve">
           <source>A copy of the stored time zone pointer.</source>
@@ -3849,15 +3849,15 @@
         </trans-unit>
         <trans-unit id="6b693cce6ae5221a781b8a07c471b1f15ee61bea" translate="yes" xml:space="preserve">
           <source>A coroutine is a function that can suspend execution to be resumed later. Coroutines are stackless: they suspend execution by returning to the caller. This allows for sequential code that executes asynchronously (e.g. to handle non-blocking I/O without explicit callbacks), and also supports algorithms on lazy-computed infinite sequences and other uses.</source>
-          <target state="translated">コアーチンとは、実行を中断して後で再開することができる関数のことです。コルーチンはスタックレスで、呼び出し元に戻ることで実行を中断します。これにより、非同期に実行されるシーケンシャルコード(例えば、明示的なコールバックなしでノンブロッキングIOを処理するなど)が可能になり、遅延計算された無限シーケンスやその他の用途でのアルゴリズムもサポートします。</target>
+          <target state="translated">コアーチンとは、実行を中断して後で再開することができる関数のことです。コルーチンはスタックレスで、呼び出し元に戻ることで実行を中断します。これにより、非同期に実行されるシーケンシャルコード(例えば、明示的なコールバックなしでノンブロッキングI/Oを処理するなど)が可能になり、遅延計算された無限シーケンス上のアルゴリズムやその他の用途をサポートします。</target>
         </trans-unit>
         <trans-unit id="ba75a881abd2a6557e91f8b47ac8a6575d6bd0c9" translate="yes" xml:space="preserve">
           <source>A counted range &lt;code&gt;[i, n)&lt;/code&gt; is the &lt;code&gt;n&lt;/code&gt; elements starting with the element pointed to by &lt;code&gt;i&lt;/code&gt; and up to but not including the element, if any, pointed to by the result of &lt;code&gt;n&lt;/code&gt; applications of &lt;code&gt;++i&lt;/code&gt;.</source>
-          <target state="translated">カウントされた範囲 &lt;code&gt;[i, n)&lt;/code&gt; は、 &lt;code&gt;i&lt;/code&gt; が指す要素から始まり、 &lt;code&gt;++i&lt;/code&gt; の &lt;code&gt;n&lt;/code&gt; 回の適用の結果が指す要素があればそれを含まない &lt;code&gt;n&lt;/code&gt; 個の要素です。</target>
+          <target state="translated">カウント範囲 &lt;code&gt;[i, n)&lt;/code&gt; は、 &lt;code&gt;i&lt;/code&gt; が指す要素から始まり、 &lt;code&gt;++i&lt;/code&gt; の &lt;code&gt;n&lt;/code&gt; 回の適用の結果が指す要素があればそれを含まない &lt;code&gt;n&lt;/code&gt; 個の要素です。</target>
         </trans-unit>
         <trans-unit id="448d103896a72988a86efcfd3d4dff473c54647a" translate="yes" xml:space="preserve">
           <source>A counted view presents a &lt;a href=&quot;view&quot;&gt;&lt;code&gt;View&lt;/code&gt;&lt;/a&gt; of the elements of the</source>
-          <target state="translated">カウントされた&lt;a href=&quot;view&quot;&gt; &lt;code&gt;View&lt;/code&gt; &lt;/a&gt;は、要素のビューを表します</target>
+          <target state="translated">カウントされた&lt;a href=&quot;view&quot;&gt; &lt;code&gt;View&lt;/code&gt; &lt;/a&gt;は、要素のビューを表示します</target>
         </trans-unit>
         <trans-unit id="d7756ec5996ae63b7229d1cb191ddbaa0002df17" translate="yes" xml:space="preserve">
           <source>A deallocation function for a class is odr-used by a &lt;a href=&quot;delete&quot;&gt;delete expression&lt;/a&gt; appearing in a potentially-evaluated expression</source>
@@ -3865,7 +3865,7 @@
         </trans-unit>
         <trans-unit id="68c3d6d57bebaaed7123b28c5dc529f120ec4034" translate="yes" xml:space="preserve">
           <source>A declaration directly contained in a language linkage specification is treated as if it contains the &lt;a href=&quot;storage_duration&quot;&gt;extern specifier&lt;/a&gt; for the purpose of determining the &lt;a href=&quot;storage_duration#Linkage&quot;&gt;linkage&lt;/a&gt; of the declared name and whether it is a &lt;a href=&quot;definition&quot;&gt;definition&lt;/a&gt;.</source>
-          <target state="translated">言語リンケージ仕様に直接含まれる宣言は、宣言された名前の&lt;a href=&quot;storage_duration#Linkage&quot;&gt;リンケージ&lt;/a&gt;およびそれが&lt;a href=&quot;definition&quot;&gt;定義である&lt;/a&gt;かどうかを決定する目的で、&lt;a href=&quot;storage_duration&quot;&gt;extern指定子&lt;/a&gt;を含むかのように扱われます。</target>
+          <target state="translated">言語リンケージ仕様に直接含まれる宣言は、宣言された名前の&lt;a href=&quot;storage_duration#Linkage&quot;&gt;リンケージ&lt;/a&gt;およびそれが&lt;a href=&quot;definition&quot;&gt;定義である&lt;/a&gt;かどうかを判別する目的で、&lt;a href=&quot;storage_duration&quot;&gt;extern指定子&lt;/a&gt;を含むかのように扱われます。</target>
         </trans-unit>
         <trans-unit id="f5ece06d6cbf7b0b2875beacd53b2ad0a1206cfd" translate="yes" xml:space="preserve">
           <source>A declaration is one of the following:</source>
@@ -3889,7 +3889,7 @@
         </trans-unit>
         <trans-unit id="aa37ccd8d8d756aada7ae1d3f6fecf8c8f8f3061" translate="yes" xml:space="preserve">
           <source>A deduction guide is not a function and does not have a body. Deduction guides are not found by name lookup and do not participate in overload resolution except for the &lt;a href=&quot;overload_resolution#Best_viable_function&quot;&gt;overload resolution against other deduction guides&lt;/a&gt; when deducing class template arguments. Deduction guides cannot be redeclared in the same translation unit for the same class template.</source>
-          <target state="translated">控除ガイドは機能ではなく、本文もありません。クラステンプレート引数を推論するときの&lt;a href=&quot;overload_resolution#Best_viable_function&quot;&gt;他の推論ガイドに対する&lt;/a&gt;オーバーロード解決を除いて、推論ガイドは名前の検索では見つかりません。オーバーロード解決には参加しません。控除ガイドを同じクラステンプレートの同じ翻訳単位で再宣言することはできません。</target>
+          <target state="translated">控除ガイドは機能ではなく、本文もありません。クラステンプレート引数を推論するときの&lt;a href=&quot;overload_resolution#Best_viable_function&quot;&gt;他の推論ガイドに対する&lt;/a&gt;オーバーロードの解決を除いて、推論ガイドは名前の検索では見つかりません。オーバーロードの解決には参加しません。控除ガイドは、同じクラステンプレートの同じ翻訳単位で再宣言することはできません。</target>
         </trans-unit>
         <trans-unit id="18b582f9b8089c8fad2b6aef72209d901f622aa9" translate="yes" xml:space="preserve">
           <source>A default constructor is a &lt;a href=&quot;constructor&quot;&gt;constructor&lt;/a&gt; which can be called with no arguments (either defined with an empty parameter list, or with default arguments provided for every parameter). A type with a public default constructor is &lt;a href=&quot;../named_req/defaultconstructible&quot;&gt;DefaultConstructible&lt;/a&gt;.</source>
@@ -3913,7 +3913,7 @@
         </trans-unit>
         <trans-unit id="0ada824ffc3c79281079e53b6cb3db89386ccf30" translate="yes" xml:space="preserve">
           <source>A defaulted copy assignment operator for class &lt;code&gt;T&lt;/code&gt; is defined as</source>
-          <target state="translated">クラス &lt;code&gt;T&lt;/code&gt; のデフォルトのコピー代入演算子は次のように定義されます</target>
+          <target state="translated">クラス &lt;code&gt;T&lt;/code&gt; のデフォルトのコピー代入演算子は、次のように定義されます。</target>
         </trans-unit>
         <trans-unit id="9f4fde283c8ff24d3d454915c90ed3c9ab54ae88" translate="yes" xml:space="preserve">
           <source>A deleted function is implicitly an inline function: its (deleted) definition can appear in more than one translation unit.</source>
@@ -3941,7 +3941,7 @@
         </trans-unit>
         <trans-unit id="dd75f21c22d3624cfc21c2eaf157652238adfd51" translate="yes" xml:space="preserve">
           <source>A destructor may be declared &lt;a href=&quot;abstract_class&quot;&gt;pure virtual&lt;/a&gt;, for example in a base class which needs to be made abstract, but has no other suitable functions that could be declared pure virtual. Such destructor must have a definition, since all base class destructors are always called when the derived class is destroyed:</source>
-          <target state="translated">デストラクタを宣言することができる&lt;a href=&quot;abstract_class&quot;&gt;仮想的に純粋な&lt;/a&gt;抽象行う必要があるが、純粋仮想宣言することができる他の適切な機能を有していない基本クラスで、例えば、。派生クラスが破棄されると、すべての基本クラスデストラクタが常に呼び出されるため、このようなデストラクタには定義が必要です。</target>
+          <target state="translated">デストラクタを宣言することができる&lt;a href=&quot;abstract_class&quot;&gt;仮想的に純粋な&lt;/a&gt;抽象行う必要があるが、純粋仮想宣言することができる他の適切な機能を有していない基本クラスで、例えば、。すべての基本クラスデストラクタは、派生クラスが破棄されるときに常に呼び出されるため、このようなデストラクタには定義が必要です。</target>
         </trans-unit>
         <trans-unit id="35a0bdae03b190e366e55aaedf802460df63da63" translate="yes" xml:space="preserve">
           <source>A deterministic random number generator (e.g. a pseudo-random engine) has entropy zero.</source>
@@ -3949,7 +3949,7 @@
         </trans-unit>
         <trans-unit id="2ba4368c481f7e07c3699c3a67e9a78a76dcb42e" translate="yes" xml:space="preserve">
           <source>A directory suitable for temporary files. The path is guaranteed to exist and to be a directory. The overload that takes &lt;code&gt;error_code&amp;amp;&lt;/code&gt; argument returns an empty path on error.</source>
-          <target state="translated">一時ファイルに適したディレクトリ。パスは存在し、ディレクトリであることが保証されています。 &lt;code&gt;error_code&amp;amp;&lt;/code&gt; 引数を取るオーバーロードは、エラー時に空のパスを返します。</target>
+          <target state="translated">一時ファイルに適したディレクトリ。パスは存在し、ディレクトリであることが保証されています。 &lt;code&gt;error_code&amp;amp;&lt;/code&gt; 引数を受け取るオーバーロードは、エラー時に空のパスを返します。</target>
         </trans-unit>
         <trans-unit id="2c9c094be632a0a865a6166ec40c981fbc2b8fac" translate="yes" xml:space="preserve">
           <source>A disjunction of two constraints is satisfied if either constraint is satisfied. Disjunctions are evaluated left to right and short-circuited (if the left constraint is satisfied, template argument substitution into the right constraint is not attempted).</source>
@@ -3957,11 +3957,11 @@
         </trans-unit>
         <trans-unit id="089c028655f5931200be1bc3ff6ad58ddd4abdfd" translate="yes" xml:space="preserve">
           <source>A domain error or range error may occur if &lt;code&gt;arg&lt;/code&gt; is zero, infinite, or NaN.</source>
-          <target state="translated">&lt;code&gt;arg&lt;/code&gt; がゼロ、無限、またはNaNの場合、ドメインエラーまたは範囲エラーが発生する可能性があります。</target>
+          <target state="translated">&lt;code&gt;arg&lt;/code&gt; がゼロ、無限、またはNaNの場合、ドメインエラーまたは範囲エラーが発生することがあります。</target>
         </trans-unit>
         <trans-unit id="53e473a92e89597b00e7916dbd0a636020aa56b0" translate="yes" xml:space="preserve">
           <source>A downcast can also be performed with &lt;code&gt;static_cast&lt;/code&gt;, which avoids the cost of the runtime check, but it's only safe if the program can guarantee (through some other logic) that the object pointed to by expression is definitely &lt;code&gt;Derived&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;static_cast&lt;/code&gt; を使用してダウンキャストを実行することもできます。これにより、実行時チェックのコストが回避されますが、プログラムが（他のロジックを介して）式が指すオブジェクトが確実に &lt;code&gt;Derived&lt;/code&gt; であることを保証できる場合にのみ安全です。</target>
+          <target state="translated">&lt;code&gt;static_cast&lt;/code&gt; を使用してダウンキャストを実行することもできます。これにより、ランタイムチェックのコストを回避できますが、プログラムが（他のロジックを介して）式によって指し示されるオブジェクトが確実に &lt;code&gt;Derived&lt;/code&gt; であることを保証できる場合にのみ安全です。</target>
         </trans-unit>
         <trans-unit id="20a6c97456730ebe82433bded5f34157e8861bdc" translate="yes" xml:space="preserve">
           <source>A duration consists of a span of time, defined as some number of ticks of some time unit. For example, &quot;42 seconds&quot; could be represented by a duration consisting of 42 ticks of a 1-second time unit.</source>
@@ -3969,7 +3969,7 @@
         </trans-unit>
         <trans-unit id="c9d5f985455aec9d5b30cd29942a2a8b4f2dc3ae" translate="yes" xml:space="preserve">
           <source>A friend class declaration cannot define a new class (&lt;code&gt;friend class X {};&lt;/code&gt; is an error).</source>
-          <target state="translated">フレンドクラス宣言では新しいクラスを定義できません（ &lt;code&gt;friend class X {};&lt;/code&gt; 、エラーです）。</target>
+          <target state="translated">フレンドクラス宣言は新しいクラスを定義できません（ &lt;code&gt;friend class X {};&lt;/code&gt; 、エラーです）。</target>
         </trans-unit>
         <trans-unit id="c164b8418ab75a2e5bbac8718c7afdde0672f0ad" translate="yes" xml:space="preserve">
           <source>A fully-sorted range meets these criteria.</source>
@@ -3981,7 +3981,7 @@
         </trans-unit>
         <trans-unit id="da4396153ec7254552c3bf758717ccd722434b42" translate="yes" xml:space="preserve">
           <source>A function can be re-declared without a linkage specification after it was declared with a language specification, the second declaration will reuse the first language linkage. The opposite is not true: if the first declaration has no language linkage, it is assumed &lt;code&gt;&quot;C++&quot;&lt;/code&gt;, and redeclaring with another language is an error.</source>
-          <target state="translated">関数は、言語仕様で宣言された後、リンケージ指定なしで再宣言できます。2番目の宣言は、最初の言語リンケージを再利用します。逆は当てはまりません。最初の宣言に言語リンケージがない場合、 &lt;code&gt;&quot;C++&quot;&lt;/code&gt; と見なされ、別の言語で再宣言するとエラーになります。</target>
+          <target state="translated">関数は、言語仕様で宣言された後、リンケージ仕様なしで再宣言できます。2番目の宣言は、最初の言語リンケージを再利用します。逆は当てはまりません。最初の宣言に言語リンケージがない場合、 &lt;code&gt;&quot;C++&quot;&lt;/code&gt; と見なされ、別の言語で再宣言するとエラーになります。</target>
         </trans-unit>
         <trans-unit id="d48dbb4188a44c75a7c9c9bb0ae4fd5694fac0ce" translate="yes" xml:space="preserve">
           <source>A function can terminate by &lt;a href=&quot;return&quot;&gt;returning&lt;/a&gt; or by &lt;a href=&quot;throw&quot;&gt;throwing&lt;/a&gt; an &lt;a href=&quot;exceptions&quot;&gt;exception&lt;/a&gt;.</source>
@@ -3989,7 +3989,7 @@
         </trans-unit>
         <trans-unit id="e906d7d09117dff8da8e93d630b0ab6f1f193aed" translate="yes" xml:space="preserve">
           <source>A function declaration introduces the function name and its type. A function definition associates the function name/type with the function body.</source>
-          <target state="translated">関数宣言は、関数名とその型を紹介します。関数定義は、関数名型と関数本体を関連付けます。</target>
+          <target state="translated">関数宣言は、関数名とその型を紹介します。関数定義は、関数名と型を関数本体に関連付けます。</target>
         </trans-unit>
         <trans-unit id="ffb38575cbb95e86066c28731cb8ece89ed7d8b5" translate="yes" xml:space="preserve">
           <source>A function declaration without a decl-specifier-seq:</source>
@@ -4081,11 +4081,11 @@
         </trans-unit>
         <trans-unit id="e0c478b6ebdeb08cc8b5ae99d5822e50d913def2" translate="yes" xml:space="preserve">
           <source>A generic captureless lambda has a user-defined conversion function template with the same invented template parameter list as the function-call operator template. If the return type is empty or auto, it is obtained by return type deduction on the function template specialization, which, in turn, is obtained by &lt;a href=&quot;template_argument_deduction&quot;&gt;template argument deduction&lt;/a&gt; for conversion function templates.</source>
-          <target state="translated">汎用のキャプチャレスラムダには、関数呼び出し演算子テンプレートと同じ発明のテンプレートパラメーターリストを持つユーザー定義の変換関数テンプレートがあります。戻り値の型が空または自動の場合、関数テンプレートの特殊化での戻り値の型の演繹によって取得されます。これは、変換関数テンプレートの&lt;a href=&quot;template_argument_deduction&quot;&gt;テンプレート引数の演繹&lt;/a&gt;によって取得されます。</target>
+          <target state="translated">汎用のキャプチャレスラムダには、関数呼び出し演算子テンプレートと同じ発明されたテンプレートパラメータリストを持つユーザー定義の変換関数テンプレートがあります。戻り値の型が空または自動の場合、関数テンプレートの特殊化での戻り値の型の演繹によって取得されます。これは、変換関数テンプレートの&lt;a href=&quot;template_argument_deduction&quot;&gt;テンプレート引数の演繹&lt;/a&gt;によって取得されます。</target>
         </trans-unit>
         <trans-unit id="faee911640b7bcb780b8ce78e1d67e4a8a1f4c11" translate="yes" xml:space="preserve">
           <source>A glvalue can have &lt;a href=&quot;type-id#Incomplete_type&quot;&gt;incomplete type&lt;/a&gt;, where permitted by the expression.</source>
-          <target state="translated">glvalueは、式で許可されている場合、&lt;a href=&quot;type-id#Incomplete_type&quot;&gt;不完全なtype&lt;/a&gt;を持つことができます。</target>
+          <target state="translated">glvalueは、式で許可されている場合、&lt;a href=&quot;type-id#Incomplete_type&quot;&gt;不完全なtype&lt;/a&gt;を持つことがあります。</target>
         </trans-unit>
         <trans-unit id="6b0fe9a2db69c91f90e3611345c407e88159cd56" translate="yes" xml:space="preserve">
           <source>A glvalue may be &lt;a href=&quot;objects#Polymorphic_objects&quot;&gt;polymorphic&lt;/a&gt;: the &lt;a href=&quot;type-id#Dynamic_type&quot;&gt;dynamic type&lt;/a&gt; of the object it identifies is not necessarily the static type of the expression.</source>
@@ -4101,7 +4101,7 @@
         </trans-unit>
         <trans-unit id="15292f4673498136ecff031fb3f30153a4dc7b04" translate="yes" xml:space="preserve">
           <source>A helper alias template &lt;code&gt;std::bool_constant&lt;/code&gt; is defined for the common case where &lt;code&gt;T&lt;/code&gt; is &lt;code&gt;bool&lt;/code&gt;.</source>
-          <target state="translated">ヘルパーエイリアステンプレート &lt;code&gt;std::bool_constant&lt;/code&gt; は、 &lt;code&gt;T&lt;/code&gt; が &lt;code&gt;bool&lt;/code&gt; である一般的なケースに対して定義されています。</target>
+          <target state="translated">&lt;code&gt;T&lt;/code&gt; が &lt;code&gt;bool&lt;/code&gt; である一般的なケースに対して、ヘルパーエイリアステンプレート &lt;code&gt;std::bool_constant&lt;/code&gt; が定義されています。</target>
         </trans-unit>
         <trans-unit id="0b3c2467c41e2b75c0a9c40219370cc5f3f2dacc" translate="yes" xml:space="preserve">
           <source>A helper alias template &lt;code&gt;std::index_sequence&lt;/code&gt; is defined for the common case where &lt;code&gt;T&lt;/code&gt; is &lt;code&gt;&lt;a href=&quot;../types/size_t&quot;&gt;std::size_t&lt;/a&gt;&lt;/code&gt;.</source>
@@ -4113,7 +4113,7 @@
         </trans-unit>
         <trans-unit id="9a32a1c6ab3b77893556fe5ee65c2d9a42a41be5" translate="yes" xml:space="preserve">
           <source>A helper alias template &lt;code&gt;std::make_integer_sequence&lt;/code&gt; is defined to simplify creation of &lt;code&gt;std::integer_sequence&lt;/code&gt; and &lt;code&gt;std::index_sequence&lt;/code&gt; types with 0, 1, 2, ..., &lt;code&gt;N-1&lt;/code&gt; as &lt;code&gt;Ints&lt;/code&gt;:</source>
-          <target state="translated">ヘルパーエイリアステンプレート &lt;code&gt;std::make_integer_sequence&lt;/code&gt; は、0、1、2、...、 &lt;code&gt;N-1&lt;/code&gt; を &lt;code&gt;Ints&lt;/code&gt; として持つ &lt;code&gt;std::integer_sequence&lt;/code&gt; および &lt;code&gt;std::index_sequence&lt;/code&gt; タイプの作成を簡単にするために定義されています。</target>
+          <target state="translated">ヘルパーエイリアステンプレート &lt;code&gt;std::make_integer_sequence&lt;/code&gt; は、0、1、2、...、 &lt;code&gt;N-1&lt;/code&gt; が &lt;code&gt;Ints&lt;/code&gt; である &lt;code&gt;std::integer_sequence&lt;/code&gt; および &lt;code&gt;std::index_sequence&lt;/code&gt; タイプの作成を簡単にするために定義されています。</target>
         </trans-unit>
         <trans-unit id="8b96bb19789c3bb31d9a6d33b876372301de6683" translate="yes" xml:space="preserve">
           <source>A implicitly-declared copy assignment operator for class &lt;code&gt;T&lt;/code&gt; is defined as</source>
@@ -4165,11 +4165,11 @@
         </trans-unit>
         <trans-unit id="7f230d1a09bc7b6bdfcbc967fa62f2a1068e4aa4" translate="yes" xml:space="preserve">
           <source>A member name found in a sub-object &lt;code&gt;B&lt;/code&gt; hides the same member name in any sub-object &lt;code&gt;A&lt;/code&gt; if &lt;code&gt;A&lt;/code&gt; is a base class sub-object of &lt;code&gt;B&lt;/code&gt;. (Note that this does not hide the name in any additional, non-virtual, copies of &lt;code&gt;A&lt;/code&gt; on the inheritance lattice that aren't bases of &lt;code&gt;B&lt;/code&gt;: this rule only has an effect on virtual inheritance.) Names introduced by using-declarations are treated as names in the class containing the declaration. After examining each base, the resulting set must either include declarations of a static member from subobjects of the same type, or declarations of non-static members from the same subobject</source>
-          <target state="translated">メンバ名がサブオブジェクトに見出さ &lt;code&gt;B&lt;/code&gt; 任意のサブオブジェクトで同じメンバー名を非表示に &lt;code&gt;A&lt;/code&gt; 場合 &lt;code&gt;A&lt;/code&gt; はの基本クラスのサブオブジェクトである &lt;code&gt;B&lt;/code&gt; 。 （これにより、 &lt;code&gt;B&lt;/code&gt; のベースではない継承ラティス上の &lt;code&gt;A&lt;/code&gt; の追加の非仮想コピーに名前が隠されないことに注意してください。このルールは仮想継承にのみ影響します。）使用宣言によって導入された名前は、宣言を含むクラスの名前として扱われます。各ベースを調べた後、結果セットには、同じタイプのサブオブジェクトからの静的メンバーの宣言、または同じサブオブジェクトからの非静的メンバーの宣言が含まれている必要があります</target>
+          <target state="translated">メンバ名がサブオブジェクトに見出さ &lt;code&gt;B&lt;/code&gt; 任意のサブオブジェクトで同じメンバー名を非表示に &lt;code&gt;A&lt;/code&gt; 場合 &lt;code&gt;A&lt;/code&gt; はの基本クラスのサブオブジェクトである &lt;code&gt;B&lt;/code&gt; 。 （これは、 &lt;code&gt;B&lt;/code&gt; のベースではない継承ラティス上の &lt;code&gt;A&lt;/code&gt; の追加の非仮想コピーに名前を隠さないことに注意してください。このルールは仮想継承にのみ影響します。）using宣言によって導入された名前は、宣言を含むクラスの名前として扱われます。各ベースを調べた後、結果セットには、同じタイプのサブオブジェクトからの静的メンバーの宣言、または同じサブオブジェクトからの非静的メンバーの宣言が含まれている必要があります</target>
         </trans-unit>
         <trans-unit id="5de0dced78d11272f963c83043ebca189594c138" translate="yes" xml:space="preserve">
           <source>A member of a class &lt;code&gt;T&lt;/code&gt; cannot use &lt;code&gt;T&lt;/code&gt; as its name if the member is a static data member, a member function, a member type, a member template , an enumerator of an unscoped enumeration, a member of a member anonymous union. However, a non-static data member may use the name &lt;code&gt;T&lt;/code&gt; as long as there are no user-declared constructors.</source>
-          <target state="translated">メンバーが静的データメンバー、メンバー関数、メンバータイプ、メンバーテンプレート、対象範囲外の列挙の列挙子、メンバーの匿名ユニオンのメンバーである場合、クラス &lt;code&gt;T&lt;/code&gt; のメンバーは名前として &lt;code&gt;T&lt;/code&gt; を使用できません。ただし、非静的データメンバーは、ユーザーが宣言したコンストラクターがない限り、名前 &lt;code&gt;T&lt;/code&gt; を使用できます。</target>
+          <target state="translated">メンバーが静的データメンバー、メンバー関数、メンバータイプ、メンバーテンプレート、対象範囲外の列挙の列挙子、メンバーの匿名ユニオンのメンバーである場合、クラス &lt;code&gt;T&lt;/code&gt; のメンバーは &lt;code&gt;T&lt;/code&gt; を名前として使用できません。ただし、非静的データメンバーは、ユーザーが宣言したコンストラクターがない限り、名前 &lt;code&gt;T&lt;/code&gt; を使用できます。</target>
         </trans-unit>
         <trans-unit id="b4ca9ae096395091286ce2f97b84c334ccf6644c" translate="yes" xml:space="preserve">
           <source>A member or a member template of a class template may be explicitly specialized for a given implicit instantiation of the class template, even if the member or member template is defined in the class template definition.</source>
@@ -4189,7 +4189,7 @@
         </trans-unit>
         <trans-unit id="1a8c5116dd01717b8a1f75b9620c596b6f5367a7" translate="yes" xml:space="preserve">
           <source>A more convenient way to construct a &lt;code&gt;month_weekday&lt;/code&gt; is with &lt;code&gt;operator/&lt;/code&gt;, e.g., &lt;code&gt;&lt;a href=&quot;../month&quot;&gt;std::chrono::April&lt;/a&gt;/&lt;a href=&quot;../weekday&quot;&gt;std::chrono::Sunday&lt;/a&gt;[2]&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;month_weekday&lt;/code&gt; を作成するより便利な方法は、 &lt;code&gt;operator/&lt;/code&gt; 。たとえば、 &lt;code&gt;&lt;a href=&quot;../month&quot;&gt;std::chrono::April&lt;/a&gt;/&lt;a href=&quot;../weekday&quot;&gt;std::chrono::Sunday&lt;/a&gt;[2]&lt;/code&gt; です。</target>
+          <target state="translated">&lt;code&gt;month_weekday&lt;/code&gt; を作成するより便利な方法は、 &lt;code&gt;operator/&lt;/code&gt; （例： &lt;code&gt;&lt;a href=&quot;../month&quot;&gt;std::chrono::April&lt;/a&gt;/&lt;a href=&quot;../weekday&quot;&gt;std::chrono::Sunday&lt;/a&gt;[2]&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="4752a9f37cdb6658a9a8728cdd2291f0b5ec64d6" translate="yes" xml:space="preserve">
           <source>A more convenient way to construct a &lt;code&gt;month_weekday_last&lt;/code&gt; is with &lt;code&gt;operator/&lt;/code&gt;, e.g., &lt;code&gt;&lt;a href=&quot;../month&quot;&gt;std::chrono::April&lt;/a&gt;/&lt;a href=&quot;../weekday&quot;&gt;std::chrono::Sunday&lt;/a&gt;[&lt;a href=&quot;../last_spec&quot;&gt;std::chrono::last&lt;/a&gt;]&lt;/code&gt;.</source>
@@ -4217,7 +4217,7 @@
         </trans-unit>
         <trans-unit id="16af80cf4cdc5acb425ed5fb5f2a532dceaaf925" translate="yes" xml:space="preserve">
           <source>A multibyte character string is layout-compatible with null-terminated byte string (NTBS), that is, can be stored, copied, and examined using the same facilities, except for calculating the number of characters. If the correct locale is in effect, I/O functions also handle multibyte strings. Multibyte strings can be converted to and from wide strings using the &lt;code&gt;&lt;a href=&quot;../locale/codecvt&quot;&gt;std::codecvt&lt;/a&gt;&lt;/code&gt; member functions, &lt;code&gt;&lt;a href=&quot;../locale/wstring_convert&quot;&gt;std::wstring_convert&lt;/a&gt;&lt;/code&gt;, or the following locale-dependent conversion functions:</source>
-          <target state="translated">マルチバイト文字列は、ヌル終了バイト文字列（NTBS）とレイアウト互換です。つまり、文字数の計算を除いて、同じ機能を使用して格納、コピー、および検査できます。正しいロケールが有効な場合、I / O関数はマルチバイト文字列も処理します。マルチバイト文字列は、 &lt;code&gt;&lt;a href=&quot;../locale/codecvt&quot;&gt;std::codecvt&lt;/a&gt;&lt;/code&gt; メンバー関数、 &lt;code&gt;&lt;a href=&quot;../locale/wstring_convert&quot;&gt;std::wstring_convert&lt;/a&gt;&lt;/code&gt; 、または次のロケール依存の変換関数を使用して、ワイド文字列との間で変換できます。</target>
+          <target state="translated">マルチバイト文字列は、ヌル終了バイト文字列（NTBS）とレイアウト互換です。つまり、文字数の計算を除いて、同じ機能を使用して、保存、コピー、および検査できます。正しいロケールが有効な場合、I / O関数はマルチバイト文字列も処理します。マルチバイト文字列は、 &lt;code&gt;&lt;a href=&quot;../locale/codecvt&quot;&gt;std::codecvt&lt;/a&gt;&lt;/code&gt; メンバー関数、 &lt;code&gt;&lt;a href=&quot;../locale/wstring_convert&quot;&gt;std::wstring_convert&lt;/a&gt;&lt;/code&gt; 、または次のロケール依存の変換関数を使用して、ワイド文字列との間で変換できます。</target>
         </trans-unit>
         <trans-unit id="d98fb2bdc836fccaa6d115487be59107743d4bcc" translate="yes" xml:space="preserve">
           <source>A name declared non-deprecated may be redeclared deprecated. A name declared deprecated cannot be un-deprecated by redeclaring it without this attribute.</source>
@@ -4249,7 +4249,7 @@
         </trans-unit>
         <trans-unit id="039345001a9866dd339fc34b017f987d45772976" translate="yes" xml:space="preserve">
           <source>A narrow character string is created as if by a call to &lt;code&gt;&lt;a href=&quot;../../io/c/fprintf&quot;&gt;std::printf&lt;/a&gt;(spec, v)&lt;/code&gt; in the &quot;C&quot; locale, where &lt;code&gt;spec&lt;/code&gt; is the chosen conversion specifier.</source>
-          <target state="translated">狭い文字列は、 &quot;C&quot;ロケールで &lt;code&gt;&lt;a href=&quot;../../io/c/fprintf&quot;&gt;std::printf&lt;/a&gt;(spec, v)&lt;/code&gt; を呼び出したかのように作成されます &lt;code&gt;spec&lt;/code&gt; は、選択された変換指定子です。</target>
+          <target state="translated">狭い文字列は、 &quot;C&quot;ロケールで &lt;code&gt;&lt;a href=&quot;../../io/c/fprintf&quot;&gt;std::printf&lt;/a&gt;(spec, v)&lt;/code&gt; を呼び出したかのように作成されます &lt;code&gt;spec&lt;/code&gt; は選択された変換指定子です。</target>
         </trans-unit>
         <trans-unit id="105e80128937d46ea748308c3640f225aa1f1163" translate="yes" xml:space="preserve">
           <source>A negative value of &lt;code&gt;time-&amp;gt;tm_isdst&lt;/code&gt; causes &lt;code&gt;mktime&lt;/code&gt; to attempt to determine if Daylight Saving Time was in effect.</source>
@@ -4261,7 +4261,7 @@
         </trans-unit>
         <trans-unit id="aab04a416d50d68103518e61edffcc3d876b52d0" translate="yes" xml:space="preserve">
           <source>A new &lt;code&gt;std::scoped_allocator_adaptor&lt;/code&gt; object, constructed from correctly copied allocators.</source>
-          <target state="translated">正しくコピーされたアロケータから構築された新しい &lt;code&gt;std::scoped_allocator_adaptor&lt;/code&gt; オブジェクト。</target>
+          <target state="translated">正しくコピーされたアロケーターから構築された新しい &lt;code&gt;std::scoped_allocator_adaptor&lt;/code&gt; オブジェクト。</target>
         </trans-unit>
         <trans-unit id="b3fea0735582c1d92ba9ca4265c504066694d506" translate="yes" xml:space="preserve">
           <source>A newly constructed object of type &lt;code&gt;pos_type&lt;/code&gt; which stores the resulting file position, or &lt;code&gt;pos_type(off_type(-1))&lt;/code&gt; on failure.</source>
@@ -4269,7 +4269,7 @@
         </trans-unit>
         <trans-unit id="7812e17881f85045a11332d843939ff143d1510b" translate="yes" xml:space="preserve">
           <source>A newly opened stream has no orientation. The first call to &lt;code&gt;std::fwide&lt;/code&gt; or to any I/O function establishes the orientation: wide I/O function makes the stream wide-oriented, narrow I/O function makes the stream narrow-oriented. Once set, orientation can only be changed with &lt;code&gt;&lt;a href=&quot;c/freopen&quot;&gt;std::freopen&lt;/a&gt;&lt;/code&gt;. Narrow I/O functions cannot be called on a wide-oriented stream, wide I/O functions cannot be called on a narrow-oriented stream. Wide I/O functions convert between wide and multibyte characters as if by calling &lt;code&gt;&lt;a href=&quot;../string/multibyte/mbrtowc&quot;&gt;std::mbrtowc&lt;/a&gt;&lt;/code&gt; and &lt;code&gt;&lt;a href=&quot;../string/multibyte/wcrtomb&quot;&gt;std::wcrtomb&lt;/a&gt;&lt;/code&gt;. Unlike the multibyte character strings that are valid in a program, multibyte characters in the file may contain embedded nulls and do not have to begin or end in the initial shift state.</source>
-          <target state="translated">新しく開かれたストリームには方向性がありません。 &lt;code&gt;std::fwide&lt;/code&gt; または任意のI / O関数への最初の呼び出しは方向を確立します。ワイドI / O関数はストリームをワイド指向にし、ナローI / O関数はストリームをナロー指向にします。一度設定すると、向きは &lt;code&gt;&lt;a href=&quot;c/freopen&quot;&gt;std::freopen&lt;/a&gt;&lt;/code&gt; でのみ変更できます。ナローI / O関数をワイド指向のストリームで呼び出すことはできません。ワイドI / O関数をナロー指向のストリームで呼び出すことはできません。ワイドI / O関数は、 &lt;code&gt;&lt;a href=&quot;../string/multibyte/mbrtowc&quot;&gt;std::mbrtowc&lt;/a&gt;&lt;/code&gt; および &lt;code&gt;&lt;a href=&quot;../string/multibyte/wcrtomb&quot;&gt;std::wcrtomb&lt;/a&gt;&lt;/code&gt; wcrtombを呼び出すのと同じように、ワイド文字とマルチバイト文字の間で変換します。プログラムで有効なマルチバイト文字ストリングとは異なり、ファイル内のマルチバイト文字にはヌルが埋め込まれている場合があり、初期シフト状態で開始または終了する必要はありません。</target>
+          <target state="translated">新しく開いたストリームには方向性がありません。 &lt;code&gt;std::fwide&lt;/code&gt; または任意のI / O関数への最初の呼び出しは方向を確立します。ワイドI / O関数はストリームをワイド指向にし、ナローI / O関数はストリームをナロー指向にします。一度設定すると、向きは &lt;code&gt;&lt;a href=&quot;c/freopen&quot;&gt;std::freopen&lt;/a&gt;&lt;/code&gt; でのみ変更できます。ナローI / O関数をワイド指向のストリームで呼び出すことはできません。ワイドI / O関数をナロー指向のストリームで呼び出すことはできません。ワイドI / O関数は、 &lt;code&gt;&lt;a href=&quot;../string/multibyte/mbrtowc&quot;&gt;std::mbrtowc&lt;/a&gt;&lt;/code&gt; および &lt;code&gt;&lt;a href=&quot;../string/multibyte/wcrtomb&quot;&gt;std::wcrtomb&lt;/a&gt;&lt;/code&gt; wcrtombを呼び出すのと同じように、ワイド文字とマルチバイト文字の間で変換します。プログラムで有効なマルチバイト文字ストリングとは異なり、ファイル内のマルチバイト文字にはヌルが埋め込まれている場合があり、初期シフト状態で開始または終了する必要はありません。</target>
         </trans-unit>
         <trans-unit id="869a3424851c79242efec3e07d77e356612111d6" translate="yes" xml:space="preserve">
           <source>A noexcept-specification of a function is considered to be</source>
@@ -4281,11 +4281,11 @@
         </trans-unit>
         <trans-unit id="9c16e8da66b88facf18bcff094f8898640478943" translate="yes" xml:space="preserve">
           <source>A non-const rvalue of type &lt;code&gt;X::node_type&lt;/code&gt;</source>
-          <target state="translated">タイプ &lt;code&gt;X::node_type&lt;/code&gt; 非const右辺値</target>
+          <target state="translated">タイプ &lt;code&gt;X::node_type&lt;/code&gt; 非const rvalue</target>
         </trans-unit>
         <trans-unit id="cbfbc01b79d14846f146d50d1446c4035f6cd1b8" translate="yes" xml:space="preserve">
           <source>A non-explicit constructor that accepts an argument of type (possibly const) &lt;code&gt;&lt;a href=&quot;streamoff&quot;&gt;std::streamoff&lt;/a&gt;&lt;/code&gt;, which stores that offset and and value-initializes the state object. This constructor must also accept the special value &lt;code&gt;&lt;a href=&quot;streamoff&quot;&gt;std::streamoff&lt;/a&gt;(-1)&lt;/code&gt;: the &lt;code&gt;std::fpos&lt;/code&gt; constructed in this manner is returned by some stream operations to indicate errors.</source>
-          <target state="translated">タイプ（おそらくconst）の引数を受け取る非明示的なコンストラクター &lt;code&gt;&lt;a href=&quot;streamoff&quot;&gt;std::streamoff&lt;/a&gt;&lt;/code&gt; 、そのオフセットを格納し、状態オブジェクトを値で初期化します。このコンストラクタは、特別な値 &lt;code&gt;&lt;a href=&quot;streamoff&quot;&gt;std::streamoff&lt;/a&gt;(-1)&lt;/code&gt; も受け入れる必要があります。この方法で構築された &lt;code&gt;std::fpos&lt;/code&gt; は、エラーを示すために一部のストリーム操作によって返されます。</target>
+          <target state="translated">型オブジェクト（おそらくconst） &lt;code&gt;&lt;a href=&quot;streamoff&quot;&gt;std::streamoff&lt;/a&gt;&lt;/code&gt; 引数を受け入れる非明示的なコンストラクター。そのオフセットを保存し、状態オブジェクトを値で初期化します。このコンストラクタは、特別な値 &lt;code&gt;&lt;a href=&quot;streamoff&quot;&gt;std::streamoff&lt;/a&gt;(-1)&lt;/code&gt; も受け入れる必要があります。この方法で構築された &lt;code&gt;std::fpos&lt;/code&gt; は、エラーを示すために一部のストリーム操作によって返されます。</target>
         </trans-unit>
         <trans-unit id="7c5f2f406d4c6d5a6be68be9a352e598e29e63cd" translate="yes" xml:space="preserve">
           <source>A non-member function definition may appear at namespace scope only (there are no nested functions). A &lt;a href=&quot;member_functions&quot;&gt;member function&lt;/a&gt; definition may also appear in the body of a &lt;a href=&quot;class&quot;&gt;class definition&lt;/a&gt;. They have the following syntax:</source>
@@ -4301,11 +4301,11 @@
         </trans-unit>
         <trans-unit id="57427d16d98090f308df82f3319c4bb23d4b400e" translate="yes" xml:space="preserve">
           <source>A non-static member function can be declared with a const, volatile, or const volatile qualifier (this qualifier appears after the parameter list in the &lt;a href=&quot;function&quot;&gt;function declaration&lt;/a&gt;). Differently cv-qualified functions have different types and so may overload each other.</source>
-          <target state="translated">非静的メンバー関数は、const、volatile、またはconst volatile修飾子を使用して&lt;a href=&quot;function&quot;&gt;宣言&lt;/a&gt;できます（この修飾子は、関数宣言のパラメーターリストの後に表示されます）。cvで修飾された関数はタイプが異なるため、相互にオーバーロードする可能性があります。</target>
+          <target state="translated">非静的メンバー関数は、const、volatile、またはconst volatile修飾子で宣言できます（この修飾子は、&lt;a href=&quot;function&quot;&gt;関数宣言の&lt;/a&gt;パラメーターリストの後に表示されます）。cvで修飾された関数はタイプが異なるため、相互にオーバーロードする可能性があります。</target>
         </trans-unit>
         <trans-unit id="6269d14f99ea7d83ea3dec1f28326b8c6d5c5ecd" translate="yes" xml:space="preserve">
           <source>A non-static member function can be declared with no ref-qualifier, with an lvalue ref-qualifier (the token &lt;code&gt;&amp;amp;&lt;/code&gt; after the parameter list) or the rvalue ref-qualifier (the token &lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt; after the parameter list). During &lt;a href=&quot;overload_resolution&quot;&gt;overload resolution&lt;/a&gt;, non-static cv-qualified member function of class X is treated as follows:</source>
-          <target state="translated">非静的メンバー関数は、左辺値ref-qualifier（パラメーターリストの後のトークン &lt;code&gt;&amp;amp;&lt;/code&gt; ）または右辺値ref-qualifier（パラメーターリストの後のトークン &lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt; ）を使用して、ref-qualifierなしで宣言できます。&lt;a href=&quot;overload_resolution&quot;&gt;オーバーロード解決&lt;/a&gt;中に、クラスXの非静的cv修飾メンバー関数は次のように処理されます。</target>
+          <target state="translated">非静的メンバー関数は、参照修飾子なし、左辺値参照修飾子（パラメーターリストの後のトークン &lt;code&gt;&amp;amp;&lt;/code&gt; ）または右辺値参照修飾子（パラメーターリストの後のトークン &lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt; ）を使用して宣言できます。&lt;a href=&quot;overload_resolution&quot;&gt;オーバーロード解決&lt;/a&gt;中に、クラスXの非静的cv修飾メンバー関数は次のように扱われます。</target>
         </trans-unit>
         <trans-unit id="c58ef98b1f97443f7f30d89e9dea4b508149bdcf" translate="yes" xml:space="preserve">
           <source>A non-static member function is a function that is declared in a &lt;a href=&quot;class&quot;&gt;member specification&lt;/a&gt; of a class without a &lt;a href=&quot;static&quot;&gt;static&lt;/a&gt; or &lt;a href=&quot;friend&quot;&gt;friend&lt;/a&gt; specifier.</source>
@@ -4321,7 +4321,7 @@
         </trans-unit>
         <trans-unit id="3dd8b8cff9d7f40f60c773d5633d2a93e250abe4" translate="yes" xml:space="preserve">
           <source>A non-template function is always distinct from a template specialization with the same type. Specializations of different function templates are always distinct from each other even if they have the same type. Two function templates with the same return type and the same parameter list are distinct and can be distinguished with explicit template argument list.</source>
-          <target state="translated">テンプレート以外の関数は、同じ型を持つテンプレートの特殊化とは常に区別されます。異なる関数テンプレートの特殊化は、同じ型を持っていても常に互いに区別されます。同じ戻り値型で同じパラメータリストを持つ 2 つの関数テンプレートは区別され、明示的なテンプレート引数リストを使用して区別することができます。</target>
+          <target state="translated">テンプレート以外の関数は、同じ型を持つテンプレートの特殊化とは常に区別されます。異なる関数テンプレートの特殊化は、同じ型を持っていても常に互いに区別されます。同じ戻り値型で同じパラメータリストを持つ 2 つの関数テンプレートは区別され、明示的なテンプレート引数リストで区別することができます。</target>
         </trans-unit>
         <trans-unit id="ec8d1e0238ca169189cb132939968a32e225940d" translate="yes" xml:space="preserve">
           <source>A non-template member function and a template member function with the same name may be declared. In case of conflict (when some template specialization matches the non-template function signature exactly), use of that name and type refers to the non-template member unless an explicit template argument list is supplied.</source>
@@ -4333,11 +4333,11 @@
         </trans-unit>
         <trans-unit id="d97541bdffeb4e63b35a3a02617d21fc06220467" translate="yes" xml:space="preserve">
           <source>A null pointer constant may be &lt;a href=&quot;../language/implicit_cast&quot;&gt;implicitly converted&lt;/a&gt; to any pointer type; such conversion results in the null pointer value of that type. If a null pointer constant has integer type, it may be converted to a prvalue of type &lt;code&gt;&lt;a href=&quot;nullptr_t&quot;&gt;std::nullptr_t&lt;/a&gt;&lt;/code&gt;.</source>
-          <target state="translated">nullポインター定数は、&lt;a href=&quot;../language/implicit_cast&quot;&gt;暗黙的&lt;/a&gt;に任意のポインター型に変換できます。そのような変換の結果、その型のnullポインター値になります。nullポインタ定数が整数型の場合、それは &lt;code&gt;&lt;a href=&quot;nullptr_t&quot;&gt;std::nullptr_t&lt;/a&gt;&lt;/code&gt; 型のprvalueに変換されます。</target>
+          <target state="translated">nullポインター定数は、&lt;a href=&quot;../language/implicit_cast&quot;&gt;暗黙的&lt;/a&gt;に任意のポインター型に変換できます。そのような変換の結果、その型のnullポインター値になります。nullポインタ定数が整数型の場合、それは &lt;code&gt;&lt;a href=&quot;nullptr_t&quot;&gt;std::nullptr_t&lt;/a&gt;&lt;/code&gt; 型のprvalueに変換される場合があります。</target>
         </trans-unit>
         <trans-unit id="f1572c78e938eb0e97af4e78573d5ecf38073eb0" translate="yes" xml:space="preserve">
           <source>A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by a byte with value zero (the terminating null character). Each byte in a byte string encodes one character of some character set. For example, the character array &lt;code&gt;{'\x63', '\x61', '\x74', '\0'}&lt;/code&gt; is an NTBS holding the string &lt;code&gt;&quot;cat&quot;&lt;/code&gt; in ASCII encoding.</source>
-          <target state="translated">ヌル終了バイト文字列（NTBS）は、ゼロ以外のバイトのシーケンスで、その後に値0のバイト（終了ヌル文字）が続きます。バイト文字列の各バイトは、ある文字セットの1文字をエンコードします。たとえば、文字配列 &lt;code&gt;{'\x63', '\x61', '\x74', '\0'}&lt;/code&gt; は、文字列 &lt;code&gt;&quot;cat&quot;&lt;/code&gt; をASCIIエンコーディングで保持するNTBS です。</target>
+          <target state="translated">NULLで終了するバイト文字列（NTBS）は、ゼロ以外のバイトのシーケンスで、その後に値が0のバイト（終了するNULL文字）が続きます。バイト文字列の各バイトは、ある文字セットの1文字をエンコードします。たとえば、文字配列 &lt;code&gt;{'\x63', '\x61', '\x74', '\0'}&lt;/code&gt; は、文字列 &lt;code&gt;&quot;cat&quot;&lt;/code&gt; をASCIIエンコーディングで保持するNTBS です。</target>
         </trans-unit>
         <trans-unit id="3b3fe15454343ce4cbfa8b2d64edd72623154c83" translate="yes" xml:space="preserve">
           <source>A null-terminated multibyte string (NTMBS), or &quot;multibyte string&quot;, is a sequence of nonzero bytes followed by a byte with value zero (the terminating null character).</source>
