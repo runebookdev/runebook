@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="ko" datatype="htmlbody" original="https://pypi.org/project/aics-dask-utils/">
+    <body>
+      <group id="aics-dask-utils">
+        <trans-unit id="b9be48f0c329a1dbc4ac9f7d42f58066a1dc0faf" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Development Head:&lt;/strong&gt;&lt;code&gt;pip install git+https://github.com/AllenCellModeling/aics_dask_utils.git&lt;/code&gt;</source>
+          <target state="translated">&lt;strong&gt;개발 책임자 : &lt;/strong&gt; &lt;code&gt;pip install git+https://github.com/AllenCellModeling/aics_dask_utils.git&lt;/code&gt;</target>
+        </trans-unit>
+        <trans-unit id="59e281f8a33d5251d00c38bc28f02a85aeccf690" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Free software: Allen Institute Software License&lt;/strong&gt;</source>
+          <target state="translated">&lt;strong&gt;무료 소프트웨어 : Allen Institute 소프트웨어 라이선스&lt;/strong&gt;</target>
+        </trans-unit>
+        <trans-unit id="2f65d3e5a841f7f1cda69429839be4c5bff6177d" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Important Note:&lt;/strong&gt; Notice, &quot;... iterable that would &lt;em&gt;result&lt;/em&gt; in less than hundreds
+of thousands of tasks...&quot;. This is important because what happens when you try to &lt;code&gt;map&lt;/code&gt;
+over a thousand image paths, each which spawns an &lt;code&gt;AICSImage&lt;/code&gt; object. Each one adds
+thousands more tasks to the scheduler to complete. This will break and you should look
+to &lt;a href=&quot;#large-iterable-batching&quot;&gt;Large Iterable Batching&lt;/a&gt; instead.</source>
+          <target state="translated">&lt;strong&gt;중요 참고 사항 :&lt;/strong&gt; &quot;... 수십만 개의 작업을 &lt;em&gt;생성&lt;/em&gt; 하는 반복 가능 ...&quot;에 &lt;strong&gt;유의하십시오&lt;/strong&gt; . 이것은 &lt;code&gt;AICSImage&lt;/code&gt; 객체 를 생성하는 1,000 개 이상의 이미지 경로 를 &lt;code&gt;map&lt;/code&gt; 하려고 할 때 발생하는 일이 중요 합니다. 각각은 완료 할 스케줄러에 수천 개의 작업을 추가합니다. 이것은 깨질 것이고 대신 &lt;a href=&quot;#large-iterable-batching&quot;&gt;Large Iterable Batching을&lt;/a&gt; 찾아야합니다 .</target>
+        </trans-unit>
+        <trans-unit id="2f91077797a7d12e0ebd1988ea178520253fba20" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Note:&lt;/strong&gt; Notice that there is no &lt;code&gt;handler.gather&lt;/code&gt; call after &lt;code&gt;batched_map&lt;/code&gt;. This is
+because &lt;code&gt;batched_map&lt;/code&gt; gathers results at the end of each batch rather than simply
+returning their future's.</source>
+          <target state="translated">&lt;strong&gt;참고 : &lt;/strong&gt; &lt;code&gt;batched_map&lt;/code&gt; 이후 에는 &lt;code&gt;handler.gather&lt;/code&gt; 호출 이 없습니다 . 이는 &lt;code&gt;batched_map&lt;/code&gt; 이 단순히 미래를 반환하는 것이 아니라 각 배치의 끝에서 결과를 수집 하기 때문 입니다.</target>
+        </trans-unit>
+        <trans-unit id="856e99ed602edd75ecc436e526670936feb894c9" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Stable Release:&lt;/strong&gt;&lt;code&gt;pip install aics_dask_utils&lt;/code&gt;</source>
+          <target state="translated">&lt;strong&gt;안정적인 릴리스 : &lt;/strong&gt; &lt;code&gt;pip install aics_dask_utils&lt;/code&gt;</target>
+        </trans-unit>
+        <trans-unit id="bcf39484c9165e52e91fec301ac0dbc2347a2579" translate="yes" xml:space="preserve">
+          <source>A task is a single static function to be processed. Simple enough. However, relevant to
+AICS, is that when using &lt;code&gt;aicsimageio&lt;/code&gt; (and / or &lt;code&gt;dask.array.Array&lt;/code&gt;), your image (or
+&lt;code&gt;dask.array.Array&lt;/code&gt;) is split up into &lt;em&gt;many&lt;/em&gt; tasks. This is dependent on the image reader
+and the size of the file you are reading. But in general it is safe to assume that each
+image you read is split many thousands of tasks. If you want to see how many tasks your
+image is split into you can either compute:</source>
+          <target state="translated">작업은 처리 할 단일 정적 함수입니다. 충분히 간단합니다. 그러나 AICS와 관련하여 &lt;code&gt;aicsimageio&lt;/code&gt; (및 / 또는 &lt;code&gt;dask.array.Array&lt;/code&gt; )를 사용할 때 이미지 (또는 &lt;code&gt;dask.array.Array&lt;/code&gt; )가 &lt;em&gt;여러&lt;/em&gt; 작업 으로 분할됩니다 . 이것은 이미지 리더와 읽고있는 파일의 크기에 따라 다릅니다. 그러나 일반적으로 읽는 각 이미지가 수천 개의 작업으로 분할되어 있다고 가정하는 것이 안전합니다. 이미지가 분할 된 작업 수를 확인하려면 다음 중 하나를 계산할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="282639132dd9e525ffc1e4f1daf1c99459b57cb3" translate="yes" xml:space="preserve">
+          <source>AICS Dask Utils</source>
+          <target state="translated">AICS Dask 유틸리티</target>
+        </trans-unit>
+        <trans-unit id="5b2468753aeeda1edfd220bafda145b49ecef8b6" translate="yes" xml:space="preserve">
+          <source>Additional Comments</source>
+          <target state="translated">추가 댓글</target>
+        </trans-unit>
+        <trans-unit id="e5a091a2e2e44fc2a3d12ad7b9798c59b54114af" translate="yes" xml:space="preserve">
+          <source>An object that will become available but is currently not defined. There is no guarantee
+that the object is a valid result or an error and you should handle errors once the
+future's state has resolved (usually this means after a &lt;code&gt;gather&lt;/code&gt; operation).</source>
+          <target state="translated">사용할 수있게되지만 현재 정의되지 않은 개체입니다. 객체가 유효한 결과인지 오류인지 보장 할 수 없으며 퓨처 상태가 해결되면 (일반적으로 &lt;code&gt;gather&lt;/code&gt; 작업 후) 오류를 처리해야합니다 .</target>
+        </trans-unit>
+        <trans-unit id="a68f80ec6916219192268850edb74e288be68ec1" translate="yes" xml:space="preserve">
+          <source>Apply a given function to the provided iterables as used as parameters to the function.
+Given &lt;code&gt;lambda x: x + 1&lt;/code&gt; and &lt;code&gt;[1, 2, 3]&lt;/code&gt;, the result of &lt;code&gt;map(func, *iterables)&lt;/code&gt; in this
+case would be &lt;code&gt;[2, 3, 4]&lt;/code&gt;. Usually, you are provided back an iterable of &lt;code&gt;future&lt;/code&gt;
+objects back from a &lt;code&gt;map&lt;/code&gt; operation. The results from the map operation are not
+guaranteed to be in the order of the iterable that went in as operations are started as
+resources become available and item to item variance may result in different output
+ordering.</source>
+          <target state="translated">함수에 대한 매개 변수로 사용되는 제공된 이터 러블에 주어진 함수를 적용합니다. &lt;code&gt;lambda x: x + 1&lt;/code&gt; 및 &lt;code&gt;[1, 2, 3]&lt;/code&gt; 주어지면 이 경우 &lt;code&gt;map(func, *iterables)&lt;/code&gt; 의 결과는 &lt;code&gt;[2, 3, 4]&lt;/code&gt; 입니다. 일반적으로 &lt;code&gt;map&lt;/code&gt; 작업 에서 &lt;code&gt;future&lt;/code&gt; 개체 의 반복 가능한 개체를 다시 제공받습니다 . 맵 작업의 결과는 리소스를 사용할 수있게되면서 작업이 시작될 때 들어간 반복 가능한 순서로 보장되지 않으며 항목 대 항목 차이로 인해 다른 출력 순서가 발생할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="4b1b4fa513401945598adb36cad3cf30f34c8082" translate="yes" xml:space="preserve">
+          <source>Basic Mapping with Distributed Handler</source>
+          <target state="translated">분산 처리기를 사용한 기본 매핑</target>
+        </trans-unit>
+        <trans-unit id="5fcebeefad3cdbbf8733aa928160dec7dc90c1a1" translate="yes" xml:space="preserve">
+          <source>Basics</source>
+          <target state="translated">기초</target>
+        </trans-unit>
+        <trans-unit id="ed2bb173232eb53e1bc3924b8fc800db349e55bc" translate="yes" xml:space="preserve">
+          <source>Before we jump into quick starts there are some basic definitions to understand.</source>
+          <target state="translated">빠른 시작으로 이동하기 전에 이해해야 할 몇 가지 기본 정의가 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="e2884c98ead78b59813c87fc907df932c7c96101" translate="yes" xml:space="preserve">
+          <source>Block the process from moving forward until all futures are resolved. Control flow here
+would mean that you could potentially generate thousands of futures and keep moving on
+locally while those futures slowly resolve but if you ever want a hard stop and wait for
+some set of futures to complete, you would need gather them.</source>
+          <target state="translated">모든 미래가 해결 될 때까지 프로세스가 진행되는 것을 차단하십시오. 여기서 제어 흐름은 잠재적으로 수천 개의 미래를 생성하고 해당 미래가 천천히 해결되는 동안 로컬로 계속 진행할 수 있음을 의미하지만, 하드 스톱을 원하고 일부 미래 세트가 완료 될 때까지 기다리면 수집해야합니다.</target>
+        </trans-unit>
+        <trans-unit id="25bb87b8722939e50782c25eaf8e56f1c9a57eb7" translate="yes" xml:space="preserve">
+          <source>Dask graph length: &lt;code&gt;len(AICSImage.dask_data.__dask_graph__())&lt;/code&gt;</source>
+          <target state="translated">Dask 그래프 길이 : &lt;code&gt;len(AICSImage.dask_data.__dask_graph__())&lt;/code&gt;</target>
+        </trans-unit>
+        <trans-unit id="b5d53b03894abc1063a24bf7d40d9986b452da93" translate="yes" xml:space="preserve">
+          <source>Dask tries to mirror the standard library &lt;code&gt;concurrent.futures&lt;/code&gt; wherever possible which
+is what allows for this library to have simple wrappers around Dask to allow for easy
+debugging as we are simply swapping out &lt;code&gt;distributed.Client.map&lt;/code&gt; with
+&lt;code&gt;concurrent.futures.ThreadPoolExecutor.map&lt;/code&gt; for example. If at any point in your code
+you don't want to use &lt;code&gt;dask&lt;/code&gt; for some reason or another, it is equally valid to use
+&lt;code&gt;concurrent.futures.ThreadPoolExecutor&lt;/code&gt; or &lt;code&gt;concurrent.futures.ProcessPoolExecutor&lt;/code&gt;.</source>
+          <target state="translated">DASK는 표준 라이브러리 반영하려고 &lt;code&gt;concurrent.futures&lt;/code&gt; 을 이 라이브러리는 우리가 단순히 스와핑대로 쉽게 디버깅 할 수 있도록 DASK 주위에 간단한 래퍼를 가질 수 있습니다 무엇 인 가능한 &lt;code&gt;distributed.Client.map&lt;/code&gt; 을 함께 &lt;code&gt;concurrent.futures.ThreadPoolExecutor.map&lt;/code&gt; 에 대한 예. 코드의 어느 시점 에서든 어떤 이유로 든 &lt;code&gt;dask&lt;/code&gt; 를 사용하고 싶지 않다면 , &lt;code&gt;concurrent.futures.ThreadPoolExecutor&lt;/code&gt; 또는 &lt;code&gt;concurrent.futures.ProcessPoolExecutor&lt;/code&gt; 를 사용하는 것도 똑같이 유효 합니다 .</target>
+        </trans-unit>
+        <trans-unit id="4c17aadf5117487aab7bc50cbf056caf3977cc31" translate="yes" xml:space="preserve">
+          <source>Development</source>
+          <target state="translated">개발</target>
+        </trans-unit>
+        <trans-unit id="d92d8ab9a47ac653efc2047c53a05a398aa45a9f" translate="yes" xml:space="preserve">
+          <source>Distributed handler to manage various debugging or cluster configurations</source>
+          <target state="translated">다양한 디버깅 또는 클러스터 구성을 관리하기위한 분산 처리기</target>
+        </trans-unit>
+        <trans-unit id="9e9cf3221a30246219863f1d2366e36cb580debc" translate="yes" xml:space="preserve">
+          <source>Documentation</source>
+          <target state="translated">선적 서류 비치</target>
+        </trans-unit>
+        <trans-unit id="b0c079dfde8f8ffb035151be0f97139748f9815b" translate="yes" xml:space="preserve">
+          <source>Documentation on example cluster deployments</source>
+          <target state="translated">예제 클러스터 배포에 대한 문서</target>
+        </trans-unit>
+        <trans-unit id="9270a295249a94eb74bda523060f05bd8eaf8e02" translate="yes" xml:space="preserve">
+          <source>Documentation related to Dask, Distributed, and related packages.
+Utility functions commonly used by AICS projects.</source>
+          <target state="translated">Dask, Distributed 및 관련 패키지와 관련된 문서입니다. AICS 프로젝트에서 일반적으로 사용되는 유틸리티 기능.</target>
+        </trans-unit>
+        <trans-unit id="fc338f87a058158eb824b53705961801516a9460" translate="yes" xml:space="preserve">
+          <source>Features</source>
+          <target state="translated">풍모</target>
+        </trans-unit>
+        <trans-unit id="6ddcf8e330f3b08e8af2e74632bbd67c10157243" translate="yes" xml:space="preserve">
+          <source>For full package documentation please visit
+&lt;a href=&quot;https://AllenCellModeling.github.io/aics_dask_utils&quot;&gt;AllenCellModeling.github.io/aics_dask_utils&lt;/a&gt;.</source>
+          <target state="translated">전체 패키지 문서는 &lt;a href=&quot;https://AllenCellModeling.github.io/aics_dask_utils&quot;&gt;AllenCellModeling.github.io/aics_dask_utils&lt;/a&gt; 를 방문하십시오 .</target>
+        </trans-unit>
+        <trans-unit id="047ca54032a1756c098d3bc1a941a0ed8e583df8" translate="yes" xml:space="preserve">
+          <source>Future</source>
+          <target state="translated">미래</target>
+        </trans-unit>
+        <trans-unit id="d85fb4eb9b5275137b92e9c14d3dd2b6f13641af" translate="yes" xml:space="preserve">
+          <source>Gather</source>
+          <target state="translated">모으다</target>
+        </trans-unit>
+        <trans-unit id="6b21c4c7a10bec9a3c34490971774fbecd841aad" translate="yes" xml:space="preserve">
+          <source>If you have an iterable (or iterables) that would result in less than hundreds of
+thousands of tasks, it you can simply use the normal &lt;code&gt;map&lt;/code&gt; provided by the
+&lt;code&gt;DistributedHandler.client&lt;/code&gt;.</source>
+          <target state="translated">작업이 수십만 개 미만인 이터 러블 (또는 이터 러블)이 있는 경우 &lt;code&gt;DistributedHandler.client&lt;/code&gt; 에서 제공 하는 노멀 &lt;code&gt;map&lt;/code&gt; 사용하면 됩니다 .</target>
+        </trans-unit>
+        <trans-unit id="ac3d2e8e90f987f5639d05ba5a4c404ae12e19cf" translate="yes" xml:space="preserve">
+          <source>If you have an iterable (or iterables) that would result in more than hundreds of
+thousands of tasks, you should use &lt;code&gt;handler.batched_map&lt;/code&gt; to reduce the load on the
+client. This will batch your requests rather than send than all at once.</source>
+          <target state="translated">수십만 개 이상의 작업을 생성하는 반복 가능 (또는 반복 가능)이있는 경우 &lt;code&gt;handler.batched_map&lt;/code&gt; 을 사용 하여 클라이언트의로드를 줄여야합니다. 이것은 한꺼번에 보내는 것이 아니라 일괄 적으로 요청을 보냅니다.</target>
+        </trans-unit>
+        <trans-unit id="c81b79df3c6448eae7c4f80428b54cd5692a17d7" translate="yes" xml:space="preserve">
+          <source>Installation</source>
+          <target state="translated">설치</target>
+        </trans-unit>
+        <trans-unit id="53c8bd24989e6cfa4673dcf1616eeee4019b65ff" translate="yes" xml:space="preserve">
+          <source>Large Iterable Batching</source>
+          <target state="translated">반복 가능한 대규모 일괄 처리</target>
+        </trans-unit>
+        <trans-unit id="ab478f3efc840eebab919dff1b9512286f70c10c" translate="yes" xml:space="preserve">
+          <source>Map</source>
+          <target state="translated">지도</target>
+        </trans-unit>
+        <trans-unit id="b22ddf1e04606d5919c237c76b0f7b5d800fe8d5" translate="yes" xml:space="preserve">
+          <source>Other Comments</source>
+          <target state="translated">기타 의견</target>
+        </trans-unit>
+        <trans-unit id="172aed00af180a5a83d5e01ee6cd25ffc0dd9497" translate="yes" xml:space="preserve">
+          <source>Psuedo-code: &lt;code&gt;sum(2 * size(channel) for channel if channel not in [&quot;Y&quot;, &quot;X&quot;])&lt;/code&gt;</source>
+          <target state="translated">의사 코드 : &lt;code&gt;sum(2 * size(channel) for channel if channel not in [&quot;Y&quot;, &quot;X&quot;])&lt;/code&gt;</target>
+        </trans-unit>
+        <trans-unit id="f1a628a56e707842a8c6c6e47c32af28c1e0f2d6" translate="yes" xml:space="preserve">
+          <source>See &lt;a href=&quot;CONTRIBUTING.md&quot;&gt;CONTRIBUTING.md&lt;/a&gt; for information related to developing the code.</source>
+          <target state="translated">코드 개발과 관련된 정보는 &lt;a href=&quot;CONTRIBUTING.md&quot;&gt;CONTRIBUTING.md&lt;/a&gt; 를 참조하십시오 .</target>
+        </trans-unit>
+        <trans-unit id="7bb0ddf9221c03b806b03c209e8366000124aa15" translate="yes" xml:space="preserve">
+          <source>Task</source>
+          <target state="translated">직무</target>
+        </trans-unit>
+        <trans-unit id="90382918c2c7711ab208a286f8c400dcdae74e78" translate="yes" xml:space="preserve">
+          <source>This README, provided tooling, and documentation are not meant to be all encompassing
+of the various operations you can do with &lt;code&gt;dask&lt;/code&gt; and other similar computing systems.
+For further reading go to &lt;a href=&quot;https://dask.org/&quot;&gt;dask.org&lt;/a&gt;.</source>
+          <target state="translated">이 README, 제공된 도구 및 문서는 &lt;code&gt;dask&lt;/code&gt; 및 기타 유사한 컴퓨팅 시스템으로 수행 할 수있는 다양한 작업을 모두 포함하는 것은 아닙니다 . 자세한 내용은 &lt;a href=&quot;https://dask.org/&quot;&gt;dask.org&lt;/a&gt; 로 이동 하십시오 .</target>
+        </trans-unit>
+        <trans-unit id="b60bdfeef3ecf1f6f29c7f6e1f96ee0967df85a4" translate="yes" xml:space="preserve">
+          <source>Utility functions and documentation related to Dask and AICS</source>
+          <target state="translated">Dask 및 AICS와 관련된 유틸리티 기능 및 문서</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

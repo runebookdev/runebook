@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="ja" datatype="htmlbody" original="https://pypi.org/project/mockselector/">
+    <body>
+      <group id="mockselector">
+        <trans-unit id="5c965f39de05fddf61e772dedb0d43e46a8cd234" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;ListenSocket&lt;/code&gt; is used to mimic a listening socket. Its initializer takes
+an iterable of &lt;code&gt;socket.socket&lt;/code&gt; objects (including plain &lt;code&gt;Mock&lt;/code&gt; or
+&lt;code&gt;MockSocket&lt;/code&gt; objects) or callables returning an object like that.
+The socket objects are returned one at a time by the &lt;code&gt;accept&lt;/code&gt; method.</source>
+          <target state="translated">&lt;code&gt;ListenSocket&lt;/code&gt; は、リスニングソケットを模倣するために使用されます。その初期化子は、 &lt;code&gt;socket.socket&lt;/code&gt; オブジェクト（プレーンな &lt;code&gt;Mock&lt;/code&gt; または &lt;code&gt;MockSocket&lt;/code&gt; オブジェクトを含む）の反復可能オブジェクト、またはそのようなオブジェクトを返す呼び出し可能オブジェクトを受け取ります。ソケットオブジェクトは、 &lt;code&gt;accept&lt;/code&gt; メソッドによって一度に1つずつ返されます。</target>
+        </trans-unit>
+        <trans-unit id="c4c3d95df3f41b38d2755c5a26eaaad051affddc" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;MockSelector&lt;/code&gt; is a &lt;code&gt;selectors.BaseSelector&lt;/code&gt; subclass. At creation time it
+takes an iterable of objects. Those objects can be:</source>
+          <target state="translated">&lt;code&gt;MockSelector&lt;/code&gt; は &lt;code&gt;selectors.BaseSelector&lt;/code&gt; サブクラスです。作成時には、反復可能なオブジェクトが必要です。それらのオブジェクトは次のようになります。</target>
+        </trans-unit>
+        <trans-unit id="8a9d75c0ca6b526ecf4ba88c7fa5b11e9b89b3f7" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;MockSocket&lt;/code&gt; is a specialization of a &lt;code&gt;Mock(socket.socket)&lt;/code&gt;. Its initializer
+takes an iterable of byte strings or functions returning byte strings.
+The functions can be used as a run time side effect to set a flag in a
+server and allow a clean exit from the main loop.
+The byte strings are returned one at a time by the &lt;code&gt;recv&lt;/code&gt; method. When
+the iterable is exhausted, &lt;code&gt;recv&lt;/code&gt; returns an empty byte string (&lt;code&gt;b''&lt;/code&gt;)
+to mimic a client close or shutdown on the socket.</source>
+          <target state="translated">&lt;code&gt;MockSocket&lt;/code&gt; は、 &lt;code&gt;Mock(socket.socket)&lt;/code&gt; の特殊化です。その初期化子は、反復可能なバイト文字列またはバイト文字列を返す関数を取ります。これらの関数は、サーバーにフラグを設定し、メインループからのクリーンな終了を可能にする実行時の副作用として使用できます。バイト文字列は、 &lt;code&gt;recv&lt;/code&gt; メソッドによって一度に1つずつ返されます。 iterableが使い果たされると、 &lt;code&gt;recv&lt;/code&gt; は空のバイト文字列（ &lt;code&gt;b''&lt;/code&gt; ）を返し、ソケットでのクライアントのクローズまたはシャットダウンを模倣します。</target>
+        </trans-unit>
+        <trans-unit id="196ead3d4d613eaa7efe5ed4e3d4a7fa785cc9ea" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;mockselector&lt;/code&gt; relies on &lt;code&gt;setuptools-scm&lt;/code&gt; to automatically extract a
+version number from git metadata and store it in a &lt;code&gt;version.py&lt;/code&gt; file
+for later use. The requires the availability of both &lt;code&gt;git&lt;/code&gt; (which should
+not be a problem when the project is downloaded from Github), and
+&lt;code&gt;setuptools-scm&lt;/code&gt;. If it fails because one is not available or because
+git metadata is not there (if you only downloaded a zip archive from
+Github), the version is set to 0.0.0</source>
+          <target state="translated">&lt;code&gt;mockselector&lt;/code&gt; は &lt;code&gt;setuptools-scm&lt;/code&gt; に依存して、gitメタデータからバージョン番号を自動的に抽出し、後で使用できるように &lt;code&gt;version.py&lt;/code&gt; ファイルに保存します。には、 &lt;code&gt;git&lt;/code&gt; （プロジェクトをGithubからダウンロードする場合は問題にならないはずです）と &lt;code&gt;setuptools-scm&lt;/code&gt; の両方が利用可能である必要があります。利用できないため、またはgitメタデータがないために失敗した場合（Githubからzipアーカイブのみをダウンロードした場合）、バージョンは0.0.0に設定されます。</target>
+        </trans-unit>
+        <trans-unit id="4b6592e407f065a26e072951418c2497e5ed88ad" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;pip&lt;/code&gt; should be used to install it for the first time in order to have
+&lt;code&gt;setuptools-scm&lt;/code&gt; to generate the &lt;code&gt;version.py&lt;/code&gt; file from git metadata.
+Once this is done, &lt;code&gt;setup.py&lt;/code&gt; can be used with no special issue.</source>
+          <target state="translated">&lt;code&gt;pip&lt;/code&gt; &lt;code&gt;setuptools-scm&lt;/code&gt; でgitメタデータから &lt;code&gt;version.py&lt;/code&gt; ファイルを生成するには、pipを使用して初めてインストールする必要があり ます。これが完了すると、 &lt;code&gt;setup.py&lt;/code&gt; を特別な問題なしで使用できます。</target>
+        </trans-unit>
+        <trans-unit id="101fb22f34cc02d4f73529a03d2c53188f7a16a9" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;pip&lt;/code&gt; uses the &lt;code&gt;pyproject.toml&lt;/code&gt; file with respect to PEP-518 and
+PEP-517 to know that &lt;code&gt;setuptools-scm&lt;/code&gt; is required before the build.</source>
+          <target state="translated">&lt;code&gt;pip&lt;/code&gt; は、PEP-518およびPEP-517に関して &lt;code&gt;pyproject.toml&lt;/code&gt; ファイルを使用して、ビルドの前に &lt;code&gt;setuptools-scm&lt;/code&gt; が必要であることを認識します。</target>
+        </trans-unit>
+        <trans-unit id="d1ab285d567a2f02ce550dc09de2a5df8c708358" translate="yes" xml:space="preserve">
+          <source>Advanced use and contribution</source>
+          <target state="translated">高度な利用と貢献</target>
+        </trans-unit>
+        <trans-unit id="b5311e1c64b6abbdd9b39654888e91122b36d66b" translate="yes" xml:space="preserve">
+          <source>Alternatively you can manually install &lt;code&gt;setuptools-scm&lt;/code&gt;:</source>
+          <target state="translated">または、 &lt;code&gt;setuptools-scm&lt;/code&gt; を手動でインストールすることもできます。</target>
+        </trans-unit>
+        <trans-unit id="168929183d2470cb5fd9c8ab272eed288ccb698d" translate="yes" xml:space="preserve">
+          <source>Basic use</source>
+          <target state="translated">基本的な使い方</target>
+        </trans-unit>
+        <trans-unit id="55f8ebc805e65b5b71ddafdae390e3be2bcd69af" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="translated">説明</target>
+        </trans-unit>
+        <trans-unit id="5deddc83e30130f483cdfd9d3f63b05d6aff5cb8" translate="yes" xml:space="preserve">
+          <source>Disclaimer: beta quality</source>
+          <target state="translated">免責事項:ベータ品質</target>
+        </trans-unit>
+        <trans-unit id="d11a97d90a845be5521ce7e78d03c57c33f7776a" translate="yes" xml:space="preserve">
+          <source>Even if the package has a nice test coverage (&amp;gt; 95%), it currently only
+contains what I need to test another project of mine. It might not meet
+your own requirements, or main contain Still Unidentified Bugs...</source>
+          <target state="translated">パッケージのテストカバレッジが良好（&amp;gt; 95％）であっても、現在、別のプロジェクトをテストするために必要なものだけが含まれています。それはあなた自身の要件を満たしていないか、メインにまだ識別されていないバグが含まれている可能性があります...</target>
+        </trans-unit>
+        <trans-unit id="ed4acbbfb6dce0686b9903c1f84471846953ee1d" translate="yes" xml:space="preserve">
+          <source>Facing a main server loop close to:</source>
+          <target state="translated">メインサーバーのループに近いところに直面しています。</target>
+        </trans-unit>
+        <trans-unit id="af05ea80ae71129e0e6f32126b09a86a4f5d08f6" translate="yes" xml:space="preserve">
+          <source>For that reason, if you do not use git to download the sources, you
+should download a source distribution from PyPI, because the latter
+contains a valid &lt;code&gt;version.py&lt;/code&gt;</source>
+          <target state="translated">そのため、gitを使用してソースをダウンロードしない場合は、PyPIからソースディストリビューションをダウンロードする必要があります &lt;code&gt;version.py&lt;/code&gt; 後者には有効なversion.pyが含まれているためです。</target>
+        </trans-unit>
+        <trans-unit id="b6099df6a655a96ea2246feae778e64089bd6cfc" translate="yes" xml:space="preserve">
+          <source>From Github</source>
+          <target state="translated">Githubから</target>
+        </trans-unit>
+        <trans-unit id="0497f9c6f240debffc9e9a2160d24cab3f0d8f5e" translate="yes" xml:space="preserve">
+          <source>From PyPI</source>
+          <target state="translated">PyPIより</target>
+        </trans-unit>
+        <trans-unit id="a72acdedb02c9456c4f5532eb2d3e5d794db7fe5" translate="yes" xml:space="preserve">
+          <source>I will be glad to receive issues that would help to improve this project...</source>
+          <target state="translated">このプロジェクトの改善につながるような課題が出てくると嬉しいのですが...。</target>
+        </trans-unit>
+        <trans-unit id="da830bd98271f4bdee879704bbba3e964907e33c" translate="yes" xml:space="preserve">
+          <source>If you want to tailor the package, it already contains a number of tests.
+You can run all of them from the top folder:</source>
+          <target state="translated">パッケージをカスタマイズしたい場合は、すでにいくつかのテストが含まれています。一番上のフォルダからすべてのテストを実行することができます。</target>
+        </trans-unit>
+        <trans-unit id="c81b79df3c6448eae7c4f80428b54cd5692a17d7" translate="yes" xml:space="preserve">
+          <source>Installation</source>
+          <target state="translated">インストール</target>
+        </trans-unit>
+        <trans-unit id="577f7ee5c88ba7d2a5031bc7e2ffb21c1726a58c" translate="yes" xml:space="preserve">
+          <source>It is still a 0.x version, so the API is not guaranteed to be stable.</source>
+          <target state="translated">まだ0.x版なので、APIの安定性は保証されていません。</target>
+        </trans-unit>
+        <trans-unit id="3229609e15436ec51bcf00818a69a84dbc58a0c2" translate="yes" xml:space="preserve">
+          <source>License</source>
+          <target state="translated">ライセンス</target>
+        </trans-unit>
+        <trans-unit id="2822ed554c7be24e89138ad6c33c90d1a860c3cc" translate="yes" xml:space="preserve">
+          <source>Mock subclass of BaseSelector</source>
+          <target state="translated">BaseSelector のモックサブクラス</target>
+        </trans-unit>
+        <trans-unit id="ddadf321ace3a61dcf80e64655b29a265a14a516" translate="yes" xml:space="preserve">
+          <source>MockSelector</source>
+          <target state="translated">モックセレクタ</target>
+        </trans-unit>
+        <trans-unit id="43d089df1f9715e26c2001956a2b35a41746ec95" translate="yes" xml:space="preserve">
+          <source>Note: the &lt;code&gt;test&lt;/code&gt; folder is only available in the source distribution.</source>
+          <target state="translated">注： &lt;code&gt;test&lt;/code&gt; フォルダーは、ソースディストリビューションでのみ使用できます。</target>
+        </trans-unit>
+        <trans-unit id="8b8721ee58ba353c54d34430f12eff5ad5230371" translate="yes" xml:space="preserve">
+          <source>Of course, this can be done in a relevant venv if you do not want to have it
+in your main installation.</source>
+          <target state="translated">もちろん、メインのインストールに入れたくない場合は、関連するvenvで行うことができます。</target>
+        </trans-unit>
+        <trans-unit id="c7e0a7eae14b049ebb14444ce538953f5f662ee8" translate="yes" xml:space="preserve">
+          <source>Once installed, you can easily import it in your tests.</source>
+          <target state="translated">インストールしたら、テストに簡単にインポートすることができます。</target>
+        </trans-unit>
+        <trans-unit id="1b7728b9ec6cee44a957511a2f48bf8e2c25a783" translate="yes" xml:space="preserve">
+          <source>Special handling of &lt;code&gt;version.py&lt;/code&gt;:</source>
+          <target state="translated">&lt;code&gt;version.py&lt;/code&gt; の特別な取り扱い：</target>
+        </trans-unit>
+        <trans-unit id="9b79b971c6f36b36653862b1e6817495b8652c45" translate="yes" xml:space="preserve">
+          <source>Starting from 0.1.1, &lt;code&gt;mockselector&lt;/code&gt; is available on PyPI. If you just want to
+use it in your projects, it is the recommended way:</source>
+          <target state="translated">0.1.1以降、 &lt;code&gt;mockselector&lt;/code&gt; はPyPIで使用できます。プロジェクトで使用したいだけの場合は、次の方法をお勧めします。</target>
+        </trans-unit>
+        <trans-unit id="329862ba1bf52f198f010d40f26763efbfd252b2" translate="yes" xml:space="preserve">
+          <source>That work is licenced under a MIT Licence. See &lt;a href=&quot;https://raw.githubusercontent.com/s-ball/MockSelector/master/LICENCE.txt&quot;&gt;LICENSE.txt&lt;/a&gt;</source>
+          <target state="translated">その作品はMITライセンスの下でライセンスされています。&lt;a href=&quot;https://raw.githubusercontent.com/s-ball/MockSelector/master/LICENCE.txt&quot;&gt;LICENSE.txtを&lt;/a&gt;参照してください</target>
+        </trans-unit>
+        <trans-unit id="f4f24180723e72148f05f247d61d7fadcd5213a4" translate="yes" xml:space="preserve">
+          <source>This is a collection of Python classes designed to help to test TCP servers
+based on selectors. The &lt;code&gt;mockselector&lt;/code&gt; package provides everything needed to easily write
+unittest TestCases simulating incoming connections and the associated
+input data</source>
+          <target state="translated">これは、セレクターに基づいてTCPサーバーをテストするのに役立つように設計されたPythonクラスのコレクションです。 &lt;code&gt;mockselector&lt;/code&gt; のパッケージには、簡単に書き込み、着信接続をシミュレートするunittestのテストケースと関連付けられた入力データに必要なすべてを提供します</target>
+        </trans-unit>
+        <trans-unit id="864c64f3daffbccc5d3469b3e428ead1f9ff353f" translate="yes" xml:space="preserve">
+          <source>This is the recommended way if you want to contribute or simply tweak
+&lt;code&gt;mockselector&lt;/code&gt; to your own requirements. You can get a local copy by
+downloading a zipfile but if you want to make changes, you should
+rather clone the repository to have access to all &lt;code&gt;git&lt;/code&gt; goodies:</source>
+          <target state="translated">これは、 &lt;code&gt;mockselector&lt;/code&gt; を独自の要件に貢献したり、単に微調整したりする場合に推奨される方法 です。zipファイルをダウンロードすることでローカルコピーを取得できますが、変更を加える場合は、リポジトリのクローンを作成して、すべての &lt;code&gt;git&lt;/code&gt; グッズにアクセスできるようにする必要があります。</target>
+        </trans-unit>
+        <trans-unit id="b2b4a58364a66ddc31be2ebe3b25104e625fbee3" translate="yes" xml:space="preserve">
+          <source>Typical use</source>
+          <target state="translated">代表的な使用方法</target>
+        </trans-unit>
+        <trans-unit id="907ec8dd47bc3fc0d7e789b5f4942f384b9adefd" translate="yes" xml:space="preserve">
+          <source>You can do:</source>
+          <target state="translated">できるんだよ。</target>
+        </trans-unit>
+        <trans-unit id="2930805d8e9c7be12b45006dbad4cebd64b69b13" translate="yes" xml:space="preserve">
+          <source>You can find a full code example in the &lt;code&gt;miniserv.py&lt;/code&gt; and &lt;code&gt;test_miniserv.py&lt;/code&gt;
+files in the tests folder</source>
+          <target state="translated">あなたには、完全なコード例を見つけることができます &lt;code&gt;miniserv.py&lt;/code&gt; と &lt;code&gt;test_miniserv.py&lt;/code&gt; テストでのファイルフォルダ</target>
+        </trans-unit>
+        <trans-unit id="62371cdaedf2325d05d161e5cbd16a8c64121246" translate="yes" xml:space="preserve">
+          <source>You can then install it in your main Python installation or in a venv with:</source>
+          <target state="translated">そして、メインのPythonインストールやvenvでインストールすることができます。</target>
+        </trans-unit>
+        <trans-unit id="81672b3eefa3fd74b60b8a9c157758291fad07c1" translate="yes" xml:space="preserve">
+          <source>a &lt;code&gt;socket.socket&lt;/code&gt; (or a &lt;code&gt;Mock&lt;/code&gt;) that will be returned by a &lt;code&gt;select&lt;/code&gt; call
+along with an &lt;code&gt;EVENT_READ&lt;/code&gt; event</source>
+          <target state="translated">&lt;code&gt;socket.socket&lt;/code&gt; （または &lt;code&gt;Mock&lt;/code&gt; で返されます） &lt;code&gt;select&lt;/code&gt; と一緒に呼び出し &lt;code&gt;EVENT_READ&lt;/code&gt; のイベント</target>
+        </trans-unit>
+        <trans-unit id="32feb6bb42a2f4c588f6ddca474388fa882bff62" translate="yes" xml:space="preserve">
+          <source>a pair &lt;code&gt;(socket, event)&lt;/code&gt; that will be returned - this allows to pass
+&lt;code&gt;EVENT_WRITE&lt;/code&gt; events</source>
+          <target state="translated">返されるペア &lt;code&gt;(socket, event)&lt;/code&gt; -これにより、 &lt;code&gt;EVENT_WRITE&lt;/code&gt; イベントを渡すことができ ます</target>
+        </trans-unit>
+        <trans-unit id="37c75840d617bcee050d37558935873a501f9fe6" translate="yes" xml:space="preserve">
+          <source>an iterable of above elements. They will be returned in a list by a
+single &lt;code&gt;select&lt;/code&gt; call as &lt;em&gt;simultaneous&lt;/em&gt; events</source>
+          <target state="translated">上記の要素の反復可能。それらは、&lt;em&gt;同時&lt;/em&gt;イベントとして1回の &lt;code&gt;select&lt;/code&gt; 呼び出しによってリストに返されます&lt;em&gt;&lt;/em&gt;</target>
+        </trans-unit>
+        <trans-unit id="18ab2bf3c96d7c91902aa402ae115a01b32d5cc0" translate="yes" xml:space="preserve">
+          <source>or on Windows with the launcher:</source>
+          <target state="translated">またはWindows上でランチャーを使ってください。</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

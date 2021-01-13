@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="ja" datatype="htmlbody" original="https://pypi.org/project/dm-zodb-asynchronous/">
+    <body>
+      <group id="dm-zodb-asynchronous">
+        <trans-unit id="6edda85377c6af613a717201ee78c816906e0e87" translate="yes" xml:space="preserve">
+          <source>&amp;ndash; even though,</source>
+          <target state="translated">- たとえ、</target>
+        </trans-unit>
+        <trans-unit id="66a041fc1ab1d77988df149573a6bb908db19f00" translate="yes" xml:space="preserve">
+          <source>(&amp;gt;= 3.8) or</source>
+          <target state="translated">（&amp;gt; = 3.8）または</target>
+        </trans-unit>
+        <trans-unit id="8fc9eea31fe7bad141be356fc4f90d34086e62f7" translate="yes" xml:space="preserve">
+          <source>(&amp;gt;= 5.0)).</source>
+          <target state="translated">（&amp;gt; = 5.0））。</target>
+        </trans-unit>
+        <trans-unit id="4953dc3b4187660e6e9b0f7cbd363b931409e677" translate="yes" xml:space="preserve">
+          <source>(and derived</source>
+          <target state="translated">（そして派生</target>
+        </trans-unit>
+        <trans-unit id="3422f2444d87d217aa1ccdd69c1cf73b70c28d3c" translate="yes" xml:space="preserve">
+          <source>(and other instances of</source>
+          <target state="translated">（および他のインスタンス</target>
+        </trans-unit>
+        <trans-unit id="ede645a65e8a43f17a61920cd414f93f09390f44" translate="yes" xml:space="preserve">
+          <source>(in our trivial exemple, there
+will be no exception). Note that a failing asynchronous operation
+does not mean that the current request has failed. The purpose of the
+current request is to inform us about the fate of the asynchronous
+operation, not to perform this operation. Therefore, a failure
+of the asynchronous operation usually should result in the success
+of the current request (no exception) &amp;ndash; with appropriate information
+that the asynchronous operation has failed.
+In our exemple, we have decorated</source>
+          <target state="translated">（私たちのささいな例では、例外はありません）。非同期操作の失敗は、現在の要求が失敗したことを意味しないことに注意してください。現在のリクエストの目的は、非同期操作の運命を通知することであり、この操作を実行することではありません。したがって、非同期操作が失敗すると、通常、現在の要求が成功するはずです（例外はありません）。非同期操作が失敗したという適切な情報が含まれます。私たちの例では、私たちは装飾しました</target>
+        </trans-unit>
+        <trans-unit id="cb8eb51d09b09a87c869edc0fe34094d43a9a619" translate="yes" xml:space="preserve">
+          <source>(not just</source>
+          <target state="translated">（だけでなく</target>
+        </trans-unit>
+        <trans-unit id="75b477119f28a9b58d1504a428b66757b5b27763" translate="yes" xml:space="preserve">
+          <source>(usually
+done via an utility). Somehow, the followup request has learned
+of the schedule id (from the user session or via a request parameter).
+With this information, it can check the fate of the asynchronous
+operation, process the result and commit.</source>
+          <target state="translated">（通常はユーティリティを介して行われます）。どういうわけか、フォローアップリクエストはスケジュールIDを（ユーザーセッションから、またはリクエストパラメータを介して）学習しました。この情報を使用して、非同期操作の運命を確認し、結果を処理してコミットすることができます。</target>
+        </trans-unit>
+        <trans-unit id="bd4e1f49b5bf81c8d1c5862c7656f16aa653ebc9" translate="yes" xml:space="preserve">
+          <source>)
+and a simple function (</source>
+          <target state="translated">）と単純な関数（</target>
+        </trans-unit>
+        <trans-unit id="382c73b1f08357983b804e99b19cc37d2ba95420" translate="yes" xml:space="preserve">
+          <source>)
+and abort hooks (provided by</source>
+          <target state="translated">）および中止フック（提供</target>
+        </trans-unit>
+        <trans-unit id="b4878465cc2e3eeddd831bd41e348af2e98290c2" translate="yes" xml:space="preserve">
+          <source>)
+have effect only at the top level, as the ZODB does not support fully
+nested transactions (it can, however, partially emulated
+nested transactions by so called &amp;ldquo;savepoint&amp;rdquo;s).
+Nested calls (inside the same transaction) simply
+call the decorated function/method. The decorators recognize only
+their own transaction management: if the transaction is managed on higher
+level, this is not recognized and control is taken over.</source>
+          <target state="translated">）ZODBは完全にネストされたトランザクションをサポートしていないため、トップレベルでのみ効果があります（ただし、いわゆる「セーブポイント」によってネストされたトランザクションを部分的にエミュレートできます）。ネストされた呼び出し（同じトランザクション内）は、装飾された関数/メソッドを呼び出すだけです。デコレータは、独自のトランザクション管理のみを認識します。トランザクションがより高いレベルで管理されている場合、これは認識されず、制御が引き継がれます。</target>
+        </trans-unit>
+        <trans-unit id="5c2be6ee913f761d8e9e66ad064ee0d3a6f7a290" translate="yes" xml:space="preserve">
+          <source>)
+with prints something and returns something so that we can monitor
+when it is called.</source>
+          <target state="translated">）withは何かを出力し、何かを返すので、呼び出されたときに監視できます。</target>
+        </trans-unit>
+        <trans-unit id="c8878b8439034bb25725c66abcc4ed0111091139" translate="yes" xml:space="preserve">
+          <source>) declare a function or method to
+be transactional: before the function is called, a new transaction
+is begun (a potentially pending transaction aborted), metadata is registered
+for the transaction
+and when the function returns the transaction is either committed (no exception)
+or aborted (exception). If the exception was a</source>
+          <target state="translated">）関数またはメソッドをトランザクションとして宣言します。関数が呼び出される前に、新しいトランザクションが開始され（保留中のトランザクションが中止される可能性があります）、メタデータがトランザクションに登録され、関数が返されるときにトランザクションがコミットされます（例外なし）。中止されました（例外）。例外が</target>
+        </trans-unit>
+        <trans-unit id="e34247b30304a5d24002edc5b66555fe2b5a6f5e" translate="yes" xml:space="preserve">
+          <source>) is used and what it does.</source>
+          <target state="translated">）が使用され、それが何をするか。</target>
+        </trans-unit>
+        <trans-unit id="17d5325d4c798c7fdb145723fd7149ac3eb23962" translate="yes" xml:space="preserve">
+          <source>).
+With them, we define the auxiliary function</source>
+          <target state="translated">）。それらを使用して、補助関数を定義します</target>
+        </trans-unit>
+        <trans-unit id="5c10b5b2cd673a0616d529aa5234b12ee7153808" translate="yes" xml:space="preserve">
+          <source>,</source>
+          <target state="translated">、</target>
+        </trans-unit>
+        <trans-unit id="2e3cbcc474d5bfa91c5ebf032b7346538c04fc7b" translate="yes" xml:space="preserve">
+          <source>, a function which raises an exception.</source>
+          <target state="translated">、例外を発生させる関数。</target>
+        </trans-unit>
+        <trans-unit id="d0847450729e07b30fd36c6ac1cfab939f41d9ba" translate="yes" xml:space="preserve">
+          <source>, a particular
+instance of the class</source>
+          <target state="translated">、クラスの特定のインスタンス</target>
+        </trans-unit>
+        <trans-unit id="79af8cac2b1f0da72b096678ea73803837e562bd" translate="yes" xml:space="preserve">
+          <source>, for demonstrational
+purposes. In real life, the scheduler would probably be global,
+e.g. provided by a so called &amp;ldquo;utility&amp;rdquo;.</source>
+          <target state="translated">、デモンストレーション目的で。実生活では、スケジューラはおそらくグローバルであり、たとえばいわゆる「ユーティリティ」によって提供されます。</target>
+        </trans-unit>
+        <trans-unit id="a641771ada1088e95b13f2f702b12e642123bd02" translate="yes" xml:space="preserve">
+          <source>, subscription is used to access the
+persistent objects; an integer index accesses positional arguments, an</source>
+          <target state="translated">、サブスクリプションは永続オブジェクトにアクセスするために使用されます。整数インデックスは位置引数にアクセスします。</target>
+        </trans-unit>
+        <trans-unit id="1f06f1dee3ec6e8ed1118c136af0718d8aebcdd7" translate="yes" xml:space="preserve">
+          <source>, the
+call is retried up to a configurable number of times after configurable delays.</source>
+          <target state="translated">、コールは、設定可能な遅延の後、設定可能な回数まで再試行されます。</target>
+        </trans-unit>
+        <trans-unit id="4c6d1ad82f8b09adbdf058579359ebc4dd6d882c" translate="yes" xml:space="preserve">
+          <source>, the call is automatically retried
+(in a new transaction). Retrial may be repeated (how often is
+controlled by a</source>
+          <target state="translated">、呼び出しは自動的に再試行されます（新しいトランザクションで）。再試行が繰り返される場合があります（どのくらいの頻度で</target>
+        </trans-unit>
+        <trans-unit id="7ea7a2abc4b1e12ad746a935c15342e99166ab02" translate="yes" xml:space="preserve">
+          <source>, the package can be used in
+(e.g.) a Zope 2 environment when some operation takes too much time
+to be performed inline (in the same request). In this case,
+one can execute it in a separate thread and look for its results
+in a following (new) request. We present now a simple example.</source>
+          <target state="translated">、パッケージは、（同じリクエストで）インラインで実行するのに時間がかかりすぎる操作がある場合に、（たとえば）Zope2環境で使用できます。この場合、別のスレッドで実行し、次の（新しい）リクエストで結果を探すことができます。ここで簡単な例を示します。</target>
+        </trans-unit>
+        <trans-unit id="8baa5de13999060bf01cc7249c8f62c5b489d33e" translate="yes" xml:space="preserve">
+          <source>, the schedule is unknown
+(probably lost);</source>
+          <target state="translated">、スケジュールは不明です（おそらく失われます）。</target>
+        </trans-unit>
+        <trans-unit id="3a52ce780950d4d969792a2559cd519d7ee8c727" translate="yes" xml:space="preserve">
+          <source>.</source>
+          <target state="translated">。</target>
+        </trans-unit>
+        <trans-unit id="7fc2333138b085b91830aef95d742acd31aced70" translate="yes" xml:space="preserve">
+          <source>.
+If set it specifies a function to call (without arguments)
+before the transaction is aborted in an exception case.
+The typical use is to enter a debugger in order to analyse modifications
+to persistent objects before those modifications are undone
+by the abort.</source>
+          <target state="translated">。設定されている場合、例外の場合にトランザクションが中止される前に（引数なしで）呼び出す関数を指定します。典型的な使用法は、永続オブジェクトへの変更を分析するためにデバッガーに入ってから、それらの変更がアボートによって取り消されることです。</target>
+        </trans-unit>
+        <trans-unit id="9cb2e0ead42209df5756e8f04ccd3500eed1a31a" translate="yes" xml:space="preserve">
+          <source>.
+Inside</source>
+          <target state="translated">。内部</target>
+        </trans-unit>
+        <trans-unit id="5fc8e66423e192adb2159209593cecf771df3393" translate="yes" xml:space="preserve">
+          <source>. In the former
+case, the schedule will be removed and</source>
+          <target state="translated">。前者の場合、スケジュールは削除され、</target>
+        </trans-unit>
+        <trans-unit id="b9749ecbc769f18871cfa3c4002513b348b38462" translate="yes" xml:space="preserve">
+          <source>. It can be used
+to pass persistent objects from one (thread) context to another one.
+As described in the</source>
+          <target state="translated">。ある（スレッド）コンテキストから別のコンテキストに永続オブジェクトを渡すために使用できます。で説明されているように</target>
+        </trans-unit>
+        <trans-unit id="e7d5a9c87ec2d1a64911136b7756a699672664c3" translate="yes" xml:space="preserve">
+          <source>. This way, it handles transaction management correctly
+in case of errors (the transaction gets aborted when the
+asynchronous operation should fail).</source>
+          <target state="translated">。このようにして、エラーが発生した場合にトランザクション管理を正しく処理します（非同期操作が失敗した場合、トランザクションは中止されます）。</target>
+        </trans-unit>
+        <trans-unit id="17fb28f162e5c9f9f75226defb303126294a70bd" translate="yes" xml:space="preserve">
+          <source>. We set up logging, a scheduler (</source>
+          <target state="translated">。ロギング、スケジューラーを設定します（</target>
+        </trans-unit>
+        <trans-unit id="61ae379167c5b6a3d5171464980da55005ccc726" translate="yes" xml:space="preserve">
+          <source>1.x</source>
+          <target state="translated">1.x</target>
+        </trans-unit>
+        <trans-unit id="7441a76e19392ddf06b8e9891a8a6b9063ec95f6" translate="yes" xml:space="preserve">
+          <source>A transaction abort deletes the schedule.</source>
+          <target state="translated">トランザクションの中止はスケジュールを削除します。</target>
+        </trans-unit>
+        <trans-unit id="221c558696339f78bcb7b8f3b29a4aa3e761414c" translate="yes" xml:space="preserve">
+          <source>After a new schedule, the schedule is known but not yet complete.</source>
+          <target state="translated">新しいスケジュールができてからは、スケジュールはわかっていても、まだ完成していない。</target>
+        </trans-unit>
+        <trans-unit id="85577a9d21900efa00e28ad153e052634ab7dd94" translate="yes" xml:space="preserve">
+          <source>After the completion,</source>
+          <target state="translated">完成後の様子。</target>
+        </trans-unit>
+        <trans-unit id="eff7e4977c4081189e52d057a0f4d209071aaac7" translate="yes" xml:space="preserve">
+          <source>Again,</source>
+          <target state="translated">またかよ</target>
+        </trans-unit>
+        <trans-unit id="d6b0f7a12ad3c32d4e532e7bf66eb8c4727a3f34" translate="yes" xml:space="preserve">
+          <source>An example is shown in the section &amp;ldquo;Typical Usage Example&amp;rdquo;.</source>
+          <target state="translated">例は、「一般的な使用例」のセクションに示されています。</target>
+        </trans-unit>
+        <trans-unit id="414c148e24273e407fb086cba2d795906efda721" translate="yes" xml:space="preserve">
+          <source>As an alternative, this module defines the class</source>
+          <target state="translated">別の方法として、このモジュールは</target>
+        </trans-unit>
+        <trans-unit id="80b89acd76a94e9897a2f504f73b668bc9448981" translate="yes" xml:space="preserve">
+          <source>As mentioned in section</source>
+          <target state="translated">セクションで述べたように</target>
+        </trans-unit>
+        <trans-unit id="557a6908a96df3fdc6f41cfa27455165469296ef" translate="yes" xml:space="preserve">
+          <source>At the end of the initial request, there will be either
+a</source>
+          <target state="translated">最初のリクエストの最後には、以下のいずれかがあります。</target>
+        </trans-unit>
+        <trans-unit id="23919cd584f3327e6016f69d1e8fc2edb810b552" translate="yes" xml:space="preserve">
+          <source>ConflictError</source>
+          <target state="translated">コンフリクトエラー</target>
+        </trans-unit>
+        <trans-unit id="da9229bda89a128e984d87cb0ba92ecc65cac36d" translate="yes" xml:space="preserve">
+          <source>Debugging support:</source>
+          <target state="translated">デバッグサポート。</target>
+        </trans-unit>
+        <trans-unit id="0562f32dc56f5c702810cbe010068ddd38dbd69a" translate="yes" xml:space="preserve">
+          <source>Dependencies</source>
+          <target state="translated">依存関係</target>
+        </trans-unit>
+        <trans-unit id="04a8a4fd06a006bfd4d62555ac6944122f7f01af" translate="yes" xml:space="preserve">
+          <source>Detailed information can be found in the source via docstrings.</source>
+          <target state="translated">詳細な情報は、docstrings経由のソースで確認することができます。</target>
+        </trans-unit>
+        <trans-unit id="597f8b4431a4aac7d398f75c8e4dcaec0801cbb2" translate="yes" xml:space="preserve">
+          <source>Easy dependencies are declared, complex ones not.</source>
+          <target state="translated">簡単な依存関係は宣言されていますが、複雑な依存関係は宣言されていません。</target>
+        </trans-unit>
+        <trans-unit id="0f01ed56a1e32a05e5ef96e4d779f34784af9a96" translate="yes" xml:space="preserve">
+          <source>Example</source>
+          <target state="translated">Exemple</target>
+        </trans-unit>
+        <trans-unit id="97cdbdc7feff827efb082a6b6dd2727237cd49fd" translate="yes" xml:space="preserve">
+          <source>False</source>
+          <target state="translated">False</target>
+        </trans-unit>
+        <trans-unit id="dbd8de6e7601890ae6f7b889ad7439901792764a" translate="yes" xml:space="preserve">
+          <source>For demonstrational purposes, we define
+a class for with the first call raises</source>
+          <target state="translated">実証のために、最初の呼び出しでレイズを行うクラスを定義します。</target>
+        </trans-unit>
+        <trans-unit id="f5aec1058d3968a6b39fda844927cfaceefb47d2" translate="yes" xml:space="preserve">
+          <source>For the sake of Python 2/Python 3 compatibility, we activate
+the future</source>
+          <target state="translated">Python 2/Python 3との互換性のために、将来の</target>
+        </trans-unit>
+        <trans-unit id="90ccd6497400b5576aeca1bd94af74aae1e0a250" translate="yes" xml:space="preserve">
+          <source>History</source>
+          <target state="translated">歴史</target>
+        </trans-unit>
+        <trans-unit id="1f78a72da4564683245a3f6ef183d0f6a69c227c" translate="yes" xml:space="preserve">
+          <source>If the transaction is commited, the scheduled operation is
+called.</source>
+          <target state="translated">トランザクションがコミットされると、スケジュールされた操作が呼び出されます。</target>
+        </trans-unit>
+        <trans-unit id="c3849bbe060f4c2856b3be0b6141ddbd2f261cee" translate="yes" xml:space="preserve">
+          <source>In case of a</source>
+          <target state="translated">の場合には</target>
+        </trans-unit>
+        <trans-unit id="a2b5cc8531829f54bc644c29226e4b3b78fe8014" translate="yes" xml:space="preserve">
+          <source>In this section, we set up a simple example that demonstrates
+how</source>
+          <target state="translated">このセクションでは、簡単な例を設定して</target>
+        </trans-unit>
+        <trans-unit id="072d85367c5b2f6eb7301862eb6808e038d1a010" translate="yes" xml:space="preserve">
+          <source>Its main content is the decorator</source>
+          <target state="translated">その主な内容は、デコレーター</target>
+        </trans-unit>
+        <trans-unit id="37214505c4ac4e17eb8146e5d00f0c8284d16ae2" translate="yes" xml:space="preserve">
+          <source>Made Python3/ZODB4+/Zope4+ compatible.</source>
+          <target state="translated">Python3/ZODB4+/Zope4+に対応させた。</target>
+        </trans-unit>
+        <trans-unit id="04e9462c0ff02bb9032b92abd45881a3c7e15fb7" translate="yes" xml:space="preserve">
+          <source>Modules</source>
+          <target state="translated">モジュール</target>
+        </trans-unit>
+        <trans-unit id="6403f2b7eb2aaafe6de34cbf2a029b01afebc512" translate="yes" xml:space="preserve">
+          <source>New</source>
+          <target state="translated">新しい</target>
+        </trans-unit>
+        <trans-unit id="6eef6648406c333a4035cd5e60d0bf2ecf2606d7" translate="yes" xml:space="preserve">
+          <source>None</source>
+          <target state="translated">なし</target>
+        </trans-unit>
+        <trans-unit id="83423c198b6099edba08f185f940042d5dba3b79" translate="yes" xml:space="preserve">
+          <source>Note:</source>
+          <target state="translated">注)。</target>
+        </trans-unit>
+        <trans-unit id="46fd9261586f89a9f669a46fe8d1d5513eaa5902" translate="yes" xml:space="preserve">
+          <source>Note: The output above comes from the logging; the</source>
+          <target state="translated">注意:上記の出力はロギングから来ています。</target>
+        </trans-unit>
+        <trans-unit id="71cf42f91e52109143fbf953707a3adc686b86c5" translate="yes" xml:space="preserve">
+          <source>PersistantContext</source>
+          <target state="translated">永続文脈</target>
+        </trans-unit>
+        <trans-unit id="4f0bd294bcdafcbdaf221fe45cae49021abd60ac" translate="yes" xml:space="preserve">
+          <source>PersistentContext</source>
+          <target state="translated">永続コンテキスト</target>
+        </trans-unit>
+        <trans-unit id="430164f7a0d13a705535167c1f31666add919ef8" translate="yes" xml:space="preserve">
+          <source>PersistentTransactionalScheduler</source>
+          <target state="translated">持続的トランザクションスケジューラ</target>
+        </trans-unit>
+        <trans-unit id="99665ec9a7706711e2aad33b849d3b5b9f197010" translate="yes" xml:space="preserve">
+          <source>See the module docstrings for details, especially
+about the restrictions and risks.</source>
+          <target state="translated">特に制限やリスクについては、モジュールの docstrings を参照してください。</target>
+        </trans-unit>
+        <trans-unit id="49de18eacbb98ae12b94214d6cb9440e397cba0f" translate="yes" xml:space="preserve">
+          <source>Should a transactional method raise an exception, the transaction
+is aborted and the exception is propagated:</source>
+          <target state="translated">トランザクションメソッドが例外を発生させると、トランザクションは中断され、例外は伝播されます。</target>
+        </trans-unit>
+        <trans-unit id="01df7da68f738eeca06c3cabaed7946358a20764" translate="yes" xml:space="preserve">
+          <source>Targeting Python2/ZODB3/Zope2.10+</source>
+          <target state="translated">Python2/ZODB3/Zope2.10+をターゲットにしています。</target>
+        </trans-unit>
+        <trans-unit id="e80e59c33d91a6795b134826493dc6cc8e7a241c" translate="yes" xml:space="preserve">
+          <source>The ZODB is a mostly easy to use object oriented database &amp;ndash; especially,
+when used within a framework which provides transaction management (such
+as Zope). Nice features are the almost transparent persistency (modified
+objects are automatically stored when the transaction is committed)
+and the absence of locking requirements (due to an optimistic
+concurrency control). However, the ZODB becomes a bit difficult when
+operations need to be performed asynchronously, i.e. in a separate thread.</source>
+          <target state="translated">ZODBは、特にトランザクション管理を提供するフレームワーク（Zopeなど）内で使用する場合、ほとんどの場合、使いやすいオブジェクト指向データベースです。優れた機能は、ほぼ透過的な永続性（トランザクションがコミットされると、変更されたオブジェクトが自動的に保存される）と、ロック要件がないこと（楽観的同時実行制御による）です。ただし、操作を非同期で実行する必要がある場合、つまり別のスレッドで実行する必要がある場合、ZODBは少し難しくなります。</target>
+        </trans-unit>
+        <trans-unit id="b5f92bcaf25651de073acdb7405a0e1ec73ef716" translate="yes" xml:space="preserve">
+          <source>The code snippet above has an extended comment about exception
+handling from</source>
+          <target state="translated">上のコードスニペットには、例外処理に関する拡張コメントがあります。</target>
+        </trans-unit>
+        <trans-unit id="5efb3525b7bee0a874ab16e0d4bcb5474ebe7f6d" translate="yes" xml:space="preserve">
+          <source>The function becomes nontrivial when the operation must access the ZODB.
+The ZODB forbids a thread to access persistent objects loaded in
+a separate thread. Therefore, persistent objects accessed asynchronously
+must be reloaded from the ZODB via a new thread specific connection.
+Without special measures, the asynchronous operation may not see modifications
+to persistent objects performed by the context which has scheduled
+the asynchonous operation (as they become available only after the
+transaction has committed).</source>
+          <target state="translated">この関数は、操作がZODBにアクセスしなければならない場合には、非自明になります。ZODBは、スレッドが別のスレッドでロードされた永続オブジェクトにアクセスすることを禁じています。そのため、非同期にアクセスされた永続オブジェクトは、新しいスレッド固有の接続を介してZODBからリロードされなければなりません。特別な対策がない場合、非同期操作は、非同期操作をスケジュールしたコンテキストによって実行された永続オブジェクトへの変更を見ることができないかもしれません(トランザクションがコミットされた後にのみ利用可能になるため)。</target>
+        </trans-unit>
+        <trans-unit id="0352bb5a3b8f31b184acb2198b2f0a8dadca45f8" translate="yes" xml:space="preserve">
+          <source>The initial schedule returns an identifier which can later be used
+to check for and access results.</source>
+          <target state="translated">最初のスケジュールは、後で結果をチェックしたりアクセスしたりするために使用できる識別子を返します。</target>
+        </trans-unit>
+        <trans-unit id="3a53357f11465725d38d814ff941d393401ed024" translate="yes" xml:space="preserve">
+          <source>The module</source>
+          <target state="translated">モジュール</target>
+        </trans-unit>
+        <trans-unit id="5477d67cc864bac7bbea32f72a35de24ac29d35b" translate="yes" xml:space="preserve">
+          <source>The output tells us, that transaction commit hooks have been
+called. This means that some transaction has been commited.
+In addition, the</source>
+          <target state="translated">出力は、トランザクションのコミットフックが呼び出されたことを示しています。これは、何らかのトランザクションがコミットされたことを意味します。さらに</target>
+        </trans-unit>
+        <trans-unit id="f98d5cc6bc1f8f4e070f8fe4d8ff56a9e799bf98" translate="yes" xml:space="preserve">
+          <source>The package consists of modules</source>
+          <target state="translated">パッケージはモジュールで構成されています。</target>
+        </trans-unit>
+        <trans-unit id="315e52939ecda0a0f71590f221aa9675af84dc1c" translate="yes" xml:space="preserve">
+          <source>The package depends on</source>
+          <target state="translated">パッケージは以下に依存します。</target>
+        </trans-unit>
+        <trans-unit id="8887d8304eb6d6298fece2df22ff593ef65b1f6c" translate="yes" xml:space="preserve">
+          <source>The scheduling returns an id which (in real life) would somehow be
+stored (e.g. in the user session or (better) be incorporated inside
+the generated response and be used as parameter of a followup request).
+The assignment to</source>
+          <target state="translated">スケジューリングは、(実際の生活では)何らかの形で保存されているであろうidを返します(例えば、ユーザセッションに保存されていたり、生成されたレスポンスの中に組み込まれていたり、フォローアップリクエストのパラメータとして使用されていたりします)。への割り当ては</target>
+        </trans-unit>
+        <trans-unit id="e5205b01eba5eeedf4f34723b3c2fbd1f18355b1" translate="yes" xml:space="preserve">
+          <source>The scheduling returns an id which can be used to learn about
+the operation&amp;rsquo;s fate via a</source>
+          <target state="translated">スケジューリングは、を介して操作の運命について学習するために使用できるIDを返します。</target>
+        </trans-unit>
+        <trans-unit id="7a8bdaef1e2f6ee7d6428ae5f5a7d6518f86d1aa" translate="yes" xml:space="preserve">
+          <source>This example demonstrates the working of the</source>
+          <target state="translated">この例では</target>
+        </trans-unit>
+        <trans-unit id="0e70fce31159296a0414f111cd179f8b4e65277a" translate="yes" xml:space="preserve">
+          <source>This module contains adaptations of facilities defined in the other
+modules to a Zope2 environment. For example, there is
+an adapted</source>
+          <target state="translated">このモジュールには、他のモジュールで定義されている機能を Zope2 環境に適応させたものが含まれています。例えば、他のモジュールで定義されている</target>
+        </trans-unit>
+        <trans-unit id="20dd10a38c8487a3739f45f2b56549d928559a6a" translate="yes" xml:space="preserve">
+          <source>This module defines the class</source>
+          <target state="translated">このモジュールは、クラス</target>
+        </trans-unit>
+        <trans-unit id="19204290f724f905745883429f3f28eb0709edd0" translate="yes" xml:space="preserve">
+          <source>This package contains some utilities to make it easier to implement
+asynchronous access to the ZODB. Some of those can be helpful, too,
+in a synchronous environment.</source>
+          <target state="translated">本パッケージには、ZODB への非同期アクセスを容易に実装するためのユーティリティが含まれています。これらのうちのいくつかは、同期環境でも役立ちます。</target>
+        </trans-unit>
+        <trans-unit id="a32c9d8489ffeb5a3b2d645d564916dfaf4a2858" translate="yes" xml:space="preserve">
+          <source>TransactionManager</source>
+          <target state="translated">トランザクションマネージャ</target>
+        </trans-unit>
+        <trans-unit id="a82fd12e6ab5efb755ed78def7574d392ea6c72f" translate="yes" xml:space="preserve">
+          <source>TransactionManager.begin</source>
+          <target state="translated">TransactionManager.begin</target>
+        </trans-unit>
+        <trans-unit id="3e9c24eb488f1eb9a47c3c35e108d9f8540b8cb4" translate="yes" xml:space="preserve">
+          <source>TransactionScheduler</source>
+          <target state="translated">トランザクションスケジューラ</target>
+        </trans-unit>
+        <trans-unit id="ea75caa0001c4bc194e170a251cd23e00862d143" translate="yes" xml:space="preserve">
+          <source>TransactionalScheduler</source>
+          <target state="translated">トランザクショナルスケジューラ</target>
+        </trans-unit>
+        <trans-unit id="afc6b3aeebf29c32dae936b4a9c3d1465380a2de" translate="yes" xml:space="preserve">
+          <source>Typical Usage Example</source>
+          <target state="translated">代表的な使用例</target>
+        </trans-unit>
+        <trans-unit id="036f6d3fdbbee78abb7d0eba165802fe53ff18e5" translate="yes" xml:space="preserve">
+          <source>Utilities to implement asynchronous operations accessing the ZODB</source>
+          <target state="translated">ZODB にアクセスする非同期操作を実装するためのユーティリティ</target>
+        </trans-unit>
+        <trans-unit id="caa6f04a601751406bb09171a2944e2d3a79104b" translate="yes" xml:space="preserve">
+          <source>We define a simple</source>
+          <target state="translated">我々は単純な</target>
+        </trans-unit>
+        <trans-unit id="b437cf513a449ae0566992f4b0f88cb6391ca434" translate="yes" xml:space="preserve">
+          <source>We look now at the followup request. Things must somehow have
+been set up that it can access the same</source>
+          <target state="translated">今、フォローアップリクエストを見ています。何らかの方法で、同じ</target>
+        </trans-unit>
+        <trans-unit id="9cdaf92fcbcb1e32e3e9a81bea55bdbbcc84a1ad" translate="yes" xml:space="preserve">
+          <source>We now define two simple transactional functions</source>
+          <target state="translated">ここで、2つの単純なトランザクション関数を定義します。</target>
+        </trans-unit>
+        <trans-unit id="3484e11270f9153a73cba62d1b5eacc6f0901346" translate="yes" xml:space="preserve">
+          <source>We now schedule</source>
+          <target state="translated">我々は今、スケジュールを立てています。</target>
+        </trans-unit>
+        <trans-unit id="d501fa177ce17097d3df6bf33aba70db202092ba" translate="yes" xml:space="preserve">
+          <source>We simulate now a request which schedules</source>
+          <target state="translated">ここでは、以下のようなリクエストをシミュレーションしています。</target>
+        </trans-unit>
+        <trans-unit id="42089d72ea462368b0787fb29704effd57ebf72c" translate="yes" xml:space="preserve">
+          <source>When the result of an asynchronous operation is fetched, its deletion
+is automatically scheduled at transaction commit. A deletion timeout
+controls deletion of results which got &amp;ldquo;forgotten&amp;rdquo;.</source>
+          <target state="translated">非同期操作の結果がフェッチされると、その削除はトランザクションのコミット時に自動的にスケジュールされます。削除タイムアウトは、「忘れられた」結果の削除を制御します。</target>
+        </trans-unit>
+        <trans-unit id="48cf13177db6e55882c7bf7964bfab0f3c57aad9" translate="yes" xml:space="preserve">
+          <source>ZODB</source>
+          <target state="translated">ゾッドビー</target>
+        </trans-unit>
+        <trans-unit id="6c2ada2b88bb107629fc962d24fa1eed82c9f5c8" translate="yes" xml:space="preserve">
+          <source>ZODB3</source>
+          <target state="translated">ZODB3</target>
+        </trans-unit>
+        <trans-unit id="be6a181712a417a864e0039d82caa4c01da7a5c8" translate="yes" xml:space="preserve">
+          <source>a transactional function can now internally
+abort/commit the transaction.
+Note however, that this disables the detection of calls
+to nested transactional functions.
+Use the class method</source>
+          <target state="translated">トランザクション関数が内部的にトランザクションを中断/コミットできるようになりました。ただし、これによりネストしたトランザクション関数への呼び出しを検出できなくなることに注意してください。クラスメソッド</target>
+        </trans-unit>
+        <trans-unit id="7bc2938e2f4df397e134f04b605d80d63241424e" translate="yes" xml:space="preserve">
+          <source>abort/commit</source>
+          <target state="translated">棄権</target>
+        </trans-unit>
+        <trans-unit id="1064674887312d5dc98f740152fd7afb4c220952" translate="yes" xml:space="preserve">
+          <source>after the</source>
+          <target state="translated">の後に</target>
+        </trans-unit>
+        <trans-unit id="39b15dde419bab28a422039d527e2dc9124ba793" translate="yes" xml:space="preserve">
+          <source>after-commit</source>
+          <target state="translated">アフターコミット</target>
+        </trans-unit>
+        <trans-unit id="cffa50a32cb13a240d705317bcec65dd1f31b6ad" translate="yes" xml:space="preserve">
+          <source>and</source>
+          <target state="translated">そして</target>
+        </trans-unit>
+        <trans-unit id="93d661160e08fcc7dd15c6bbb3b9198a7f7c753e" translate="yes" xml:space="preserve">
+          <source>and (</source>
+          <target state="translated">と(</target>
+        </trans-unit>
+        <trans-unit id="471e86afe447e524b76cb3eb8c6d2e5c4f4ded63" translate="yes" xml:space="preserve">
+          <source>and allows it to access the</source>
+          <target state="translated">にアクセスできるようにして</target>
+        </trans-unit>
+        <trans-unit id="7360e98844fa91459ed512a23cd22f019af31d44" translate="yes" xml:space="preserve">
+          <source>and the second
+call succeeds. Therefore, the first retrial succeeds and the example
+will not show further retrials.</source>
+          <target state="translated">と表示され、2回目の呼び出しが成功します。したがって、最初の再試行は成功し、この例ではそれ以上の再試行は表示されません。</target>
+        </trans-unit>
+        <trans-unit id="610e2bb45077bf6d24db04adfde5265d04b48aa3" translate="yes" xml:space="preserve">
+          <source>and then call</source>
+          <target state="translated">を呼び出して</target>
+        </trans-unit>
+        <trans-unit id="7d1043473d55bfa90e8530d35801d4e381bc69f0" translate="yes" xml:space="preserve">
+          <source>app</source>
+          <target state="translated">アプリ</target>
+        </trans-unit>
+        <trans-unit id="1a549473169661670d89885483fb3a94e7527e70" translate="yes" xml:space="preserve">
+          <source>app.x</source>
+          <target state="translated">アプリエックス</target>
+        </trans-unit>
+        <trans-unit id="53f30fd26ace6c299573d1ef29e92dbe573389b2" translate="yes" xml:space="preserve">
+          <source>asynchronous_operation</source>
+          <target state="translated">非同期操作</target>
+        </trans-unit>
+        <trans-unit id="0b68623156bf8816e62e2d7b79a220a1325aca68" translate="yes" xml:space="preserve">
+          <source>asynchronous_request</source>
+          <target state="translated">非同期要求</target>
+        </trans-unit>
+        <trans-unit id="311355180359ffe0e3342d32c66b88fe1082f7dd" translate="yes" xml:space="preserve">
+          <source>attribute) with increasing
+randomly chosen delays between retries (also controlled
+by</source>
+          <target state="translated">属性)で制御されます。</target>
+        </trans-unit>
+        <trans-unit id="9a217dd2f69c2cd09f0f21f68ef6ba069b05e847" translate="yes" xml:space="preserve">
+          <source>attributes).</source>
+          <target state="translated">属性)を使用しています。</target>
+        </trans-unit>
+        <trans-unit id="c69774177a10d0bf792b3df02f0931f9ea2ab345" translate="yes" xml:space="preserve">
+          <source>both positional as well as via the keyword</source>
+          <target state="translated">位置的にもキーワードを介しても</target>
+        </trans-unit>
+        <trans-unit id="2b2df26e9fd00579f59f6e9992e87d74f98a63f1" translate="yes" xml:space="preserve">
+          <source>call but at the end of the</source>
+          <target state="translated">を呼び出しますが、最後に</target>
+        </trans-unit>
+        <trans-unit id="5f48572281a9bf9d0fb8323f8c38f8ad80f1f8e1" translate="yes" xml:space="preserve">
+          <source>call has not introduced its own transaction
+level but participates on that of</source>
+          <target state="translated">呼び出しは独自のトランザクションレベルを導入せずに</target>
+        </trans-unit>
+        <trans-unit id="57d1f60c47e1854ea5d73d8b98f96e6e8e2e5f74" translate="yes" xml:space="preserve">
+          <source>call.
+If</source>
+          <target state="translated">を呼び出します。の場合は</target>
+        </trans-unit>
+        <trans-unit id="71fd90ef7c36aec19381855ee70e8d8325a88e22" translate="yes" xml:space="preserve">
+          <source>call.
+This means that the</source>
+          <target state="translated">を呼び出します。ということは</target>
+        </trans-unit>
+        <trans-unit id="eed986797fe67a1e83c1e024acde670770b95ccf" translate="yes" xml:space="preserve">
+          <source>calling</source>
+          <target state="translated">呼び出し</target>
+        </trans-unit>
+        <trans-unit id="00a5090f52430ad3971238532225fad09cc74890" translate="yes" xml:space="preserve">
+          <source>calls must arrive at the same web application process as the former
+request which called the</source>
+          <target state="translated">を呼び出した前者のリクエストと同じウェブアプリケーションプロセスに到着しなければなりません。</target>
+        </trans-unit>
+        <trans-unit id="a36ee3a3949478bbf043a97eaa52c793caf60e6b" translate="yes" xml:space="preserve">
+          <source>changes:</source>
+          <target state="translated">を変更します。</target>
+        </trans-unit>
+        <trans-unit id="4015b57a143aec5156fd1444a017a32137a3fd0f" translate="yes" xml:space="preserve">
+          <source>commit</source>
+          <target state="translated">託す</target>
+        </trans-unit>
+        <trans-unit id="7a44b99edc8a3ce5f20207d4c222a2714db425cf" translate="yes" xml:space="preserve">
+          <source>contains decorators which provide transaction management
+in environments where this is not provided by the framework.
+They can be useful even in a synchronous environment (e.g. a script
+environment). The transaction management comprises automatic retry
+after concurrency problems (which the ZODB indicates by a so
+called</source>
+          <target state="translated">は、フレームワークが提供しない環境でトランザクション管理を提供するデコレータを含みます。これらは同期環境 (例えばスクリプト環境)であっても有用です。トランザクション管理は、同時実行問題が発生した後に自動的にリトライすることから成り立っています (ZODB はいわゆる</target>
+        </trans-unit>
+        <trans-unit id="ec2727b3b71f07635f726026bef44352ec89e452" translate="yes" xml:space="preserve">
+          <source>context</source>
+          <target state="translated">文脈</target>
+        </trans-unit>
+        <trans-unit id="32faaecac742100f7753f0c1d0aa0add01b4046b" translate="yes" xml:space="preserve">
+          <source>debug</source>
+          <target state="translated">デバッグ</target>
+        </trans-unit>
+        <trans-unit id="ee329fb660d413c67e1d067f80ee172e6e8b17ed" translate="yes" xml:space="preserve">
+          <source>decorator</source>
+          <target state="translated">装飾家</target>
+        </trans-unit>
+        <trans-unit id="aafd6d49238e1793a9d655c19db3a183ff3bfb10" translate="yes" xml:space="preserve">
+          <source>decorator) which provides transaction metadata in the way typical
+for the Zope 2 framework. There are also</source>
+          <target state="translated">デコレータ)は、Zope 2 フレームワークの典型的な方法でトランザクションのメタデータを提供します。また、以下のような</target>
+        </trans-unit>
+        <trans-unit id="dba180f69b68430f8a102a10de7dc482cb867fbb" translate="yes" xml:space="preserve">
+          <source>def exc(): raise Exception()
+&amp;hellip;
+&amp;gt;&amp;gt;&amp;gt; sid = s.schedule(exc)
+&amp;gt;&amp;gt;&amp;gt; commit()
+&amp;gt;&amp;gt;&amp;gt; ERROR:dm.zodb.asynchronous.scheduler:exception in call of &amp;lt;function exc at 0xb687fb54&amp;gt;
+Traceback (most recent call last):
+&amp;hellip;
+Exception</source>
+          <target state="translated">def exc（）：raise Exception（）&amp;hellip;&amp;gt;&amp;gt;&amp;gt; sid = s.schedule（exc）&amp;gt;&amp;gt;&amp;gt; commit（）&amp;gt;&amp;gt;&amp;gt;エラー：dm.zodb.asynchronous.scheduler：&amp;lt;function exc at0xb687fb54&amp;gt;の呼び出しでの例外トレースバック（最後の最後の呼び出し）：&amp;hellip;例外</target>
+        </trans-unit>
+        <trans-unit id="008f09ae730745a7541692dc06b6df76aaedc751" translate="yes" xml:space="preserve">
+          <source>depends on Zope 2 (&amp;gt;= 2.10) or Zope (&amp;gt;= 4.0b7).</source>
+          <target state="translated">Zope 2（&amp;gt; = 2.10）またはZope（&amp;gt; = 4.0b7）に依存します。</target>
+        </trans-unit>
+        <trans-unit id="ee755a26be89bb47992841ce2e842985a39bced7" translate="yes" xml:space="preserve">
+          <source>directly, we see that
+in this case, it gets its own transaction control.</source>
+          <target state="translated">を直接使用すると、この場合、それ自身のトランザクション制御を取得することがわかります。</target>
+        </trans-unit>
+        <trans-unit id="82b2055c35f1990482328c3bff777aec106e07a0" translate="yes" xml:space="preserve">
+          <source>dm.transaction.aborthook</source>
+          <target state="translated">dm.transaction.aborthook</target>
+        </trans-unit>
+        <trans-unit id="e3d95f544b13de8a7a0d213a4bd51261e095de98" translate="yes" xml:space="preserve">
+          <source>does
+not output anything by itself.</source>
+          <target state="translated">はそれだけでは何も出力しません。</target>
+        </trans-unit>
+        <trans-unit id="168052cb2998d4d860ce1349a124ae7289115c28" translate="yes" xml:space="preserve">
+          <source>does not retain any acquisition context.
+This means (among others) that the Zope2 security mechanism will fail
+and that the target thread will not have access to the request object
+(a good thing as it gets closed asynchronously). Thus, there are
+still severe limitations of what you can do in an asynchronous operation.</source>
+          <target state="translated">は取得コンテキストを保持しません。これは (とりわけ)Zope2 のセキュリティメカニズムが失敗し、ターゲットスレッドがリクエストオブジェクトにアクセスできなくなることを意味します (非同期にクローズされるので良いことです)。このように、非同期操作でできることにはまだまだ厳しい制限があります。</target>
+        </trans-unit>
+        <trans-unit id="778865dc050890ddaafc8bb11ca8ae6a8f431b94" translate="yes" xml:space="preserve">
+          <source>exc</source>
+          <target state="translated">褒め称える</target>
+        </trans-unit>
+        <trans-unit id="4a0a19218e082a343a1b17e5333409af9d98f0f5" translate="yes" xml:space="preserve">
+          <source>f</source>
+          <target state="translated">f</target>
+        </trans-unit>
+        <trans-unit id="54fd1711209fb1c0781092374132c66e79e2241b" translate="yes" xml:space="preserve">
+          <source>g</source>
+          <target state="translated">g</target>
+        </trans-unit>
+        <trans-unit id="34f7f08aa727c9fd2d26185c9787cb7df332d0cd" translate="yes" xml:space="preserve">
+          <source>get_result</source>
+          <target state="translated">ゲットリザルト</target>
+        </trans-unit>
+        <trans-unit id="07a9de91358f976534119be7b26d01c7b734daba" translate="yes" xml:space="preserve">
+          <source>gets a new attribute</source>
+          <target state="translated">新しい属性を取得します。</target>
+        </trans-unit>
+        <trans-unit id="d4ddedbc42ba27f904e4844751e84b084ca12179" translate="yes" xml:space="preserve">
+          <source>has
+be declared transactional. When we call</source>
+          <target state="translated">はトランザクション宣言されています。を呼び出すときに</target>
+        </trans-unit>
+        <trans-unit id="fa330633d094525aeb45eec925a3350a7bbc2f96" translate="yes" xml:space="preserve">
+          <source>hook of ZODB transactions to start the asynchronous
+operation ensuring that modifications are seen.</source>
+          <target state="translated">フックを使用して、ZODB トランザクションの非同期操作を開始し、変更が見られるようにします。</target>
+        </trans-unit>
+        <trans-unit id="6101f55699d0d0901998fbd547b36a75d02ad025" translate="yes" xml:space="preserve">
+          <source>implementations
+which automatically determines the root database using Zope 2 implementation
+details.</source>
+          <target state="translated">Zope 2 の実装詳細を使用してルートデータベースを自動的に決定する実装。</target>
+        </trans-unit>
+        <trans-unit id="e2944f374426b6951a00f86c314a94ac72e1ab68" translate="yes" xml:space="preserve">
+          <source>index the keyword arguments.</source>
+          <target state="translated">キーワード引数をインデックス化します。</target>
+        </trans-unit>
+        <trans-unit id="d22e05cc75396d6607e458441cfd263a9fc32c28" translate="yes" xml:space="preserve">
+          <source>is used to demonstrate that</source>
+          <target state="translated">を使用して、以下のことを実証します。</target>
+        </trans-unit>
+        <trans-unit id="d8860219f70138580a2c5b845ddfe3d5b520355b" translate="yes" xml:space="preserve">
+          <source>maintains its schedules in RAM. It is therefore
+important that the</source>
+          <target state="translated">はそのスケジュールを RAM に保持しています。そのため</target>
+        </trans-unit>
+        <trans-unit id="3d526cfa081f5d02c9cdb7f711552f243c25e790" translate="yes" xml:space="preserve">
+          <source>manages transactions. Therefore, it is
+useful to be able to monitor transaction management.
+We use after commit hooks (directly provided by</source>
+          <target state="translated">はトランザクションを管理します。そのため、トランザクション管理を監視できると便利です。私たちはアフターコミットフックを使用しています (</target>
+        </trans-unit>
+        <trans-unit id="4b20742f682d77af031ec25d58c940c26d4edefb" translate="yes" xml:space="preserve">
+          <source>may return a tuple &lt;em&gt;return-value&lt;/em&gt;, &lt;em&gt;exception&lt;/em&gt;.</source>
+          <target state="translated">タプルの&lt;em&gt;戻り値&lt;/em&gt;、&lt;em&gt;例外を&lt;/em&gt;&lt;em&gt;返す場合&lt;/em&gt;が&lt;em&gt;あり&lt;/em&gt;ます。</target>
+        </trans-unit>
+        <trans-unit id="994bdf6bcba3e09aa5e16c189be8d0200da0ea82" translate="yes" xml:space="preserve">
+          <source>means known but not yet complete.
+Finally,</source>
+          <target state="translated">は、既知ではあるがまだ完全ではないことを意味します。最後に</target>
+        </trans-unit>
+        <trans-unit id="32ee0605f8658c63315f2f006e0870fa2b702d82" translate="yes" xml:space="preserve">
+          <source>methods are
+called in the same process (such that they see the same RAM content).
+As a conseqeunce,
+in a replicated web application context the requests with</source>
+          <target state="translated">メソッドは同じプロセス内で呼び出されます (同じ RAM コンテンツを見るように)。結論から言うと、レプリケートされたウェブアプリケーションのコンテキストでは</target>
+        </trans-unit>
+        <trans-unit id="acf8e8723c099b38c8ff6264a693c9a17a5d8d63" translate="yes" xml:space="preserve">
+          <source>not
+started. In the latter case,</source>
+          <target state="translated">が始まっていません。後者の場合。</target>
+        </trans-unit>
+        <trans-unit id="c86c07000b09931301cd9abd19dd8d62a9922614" translate="yes" xml:space="preserve">
+          <source>object (the Zope2 root object)
+via</source>
+          <target state="translated">オブジェクト (Zope2 ルートオブジェクト)を経由して</target>
+        </trans-unit>
+        <trans-unit id="3927572c45dc7a8d20da56759afcb9b30937e4d2" translate="yes" xml:space="preserve">
+          <source>or a</source>
+          <target state="translated">または</target>
+        </trans-unit>
+        <trans-unit id="df06651788c884556a0b4b290fb40475ec9a45ba" translate="yes" xml:space="preserve">
+          <source>param</source>
+          <target state="translated">パラメーター</target>
+        </trans-unit>
+        <trans-unit id="e89ca48276b1f20d7cb4df910966f0be39716805" translate="yes" xml:space="preserve">
+          <source>print_function</source>
+          <target state="translated">印刷機能</target>
+        </trans-unit>
+        <trans-unit id="a46622a9ffcb3cad7cd903241ed5ec03b139fa55" translate="yes" xml:space="preserve">
+          <source>provides information about the result.</source>
+          <target state="translated">は結果に関する情報を提供します。</target>
+        </trans-unit>
+        <trans-unit id="34c32622805b48427ec0e60f2bae3dfe76b429f5" translate="yes" xml:space="preserve">
+          <source>records the databases and oids associated with the persistent objects
+and facilitates the reloading inside the target.</source>
+          <target state="translated">は、永続オブジェクトに関連付けられたデータベースと oid を記録し、ターゲット内部でのリロードを容易にします。</target>
+        </trans-unit>
+        <trans-unit id="9460e1bf60a359c4e283d7e565d70db702791e0e" translate="yes" xml:space="preserve">
+          <source>register_hooks</source>
+          <target state="translated">レジスタフック</target>
+        </trans-unit>
+        <trans-unit id="24806bfb1a51919b90d0db7f2aca11b69b4dbb93" translate="yes" xml:space="preserve">
+          <source>retries now for all</source>
+          <target state="translated">リトライ中</target>
+        </trans-unit>
+        <trans-unit id="414e681ebabcd2f23de1f32468992b9c81c5f909" translate="yes" xml:space="preserve">
+          <source>returns</source>
+          <target state="translated">還暦</target>
+        </trans-unit>
+        <trans-unit id="3043f63c35efa3a1092b6de1f2f3dae36a2be506" translate="yes" xml:space="preserve">
+          <source>returns its result.
+A transaction abort does not delete the result. However, a commit
+will.</source>
+          <target state="translated">はその結果を返します。トランザクションの中止は結果を削除しません。しかし、コミットは結果を削除します。</target>
+        </trans-unit>
+        <trans-unit id="a0f1490a20d0211c997b44bc357e1972deab8ae3" translate="yes" xml:space="preserve">
+          <source>s</source>
+          <target state="translated">s</target>
+        </trans-unit>
+        <trans-unit id="11e9ba26c91a2db7452a5ef9ff7051e19b6b377a" translate="yes" xml:space="preserve">
+          <source>schedule</source>
+          <target state="translated">予定表</target>
+        </trans-unit>
+        <trans-unit id="142f817c3ec0586de0f960c1c0483043b61a0d06" translate="yes" xml:space="preserve">
+          <source>scheduler</source>
+          <target state="translated">スケジューラ</target>
+        </trans-unit>
+        <trans-unit id="8c704db814a8441d6b4494bcbde7d49f25114ee9" translate="yes" xml:space="preserve">
+          <source>section, persistent objects cannot
+simply be passed on: instead the target context must reload them
+from a (new) connection associated with the target.</source>
+          <target state="translated">セクションでは、永続オブジェクトを単純に渡すことはできません。</target>
+        </trans-unit>
+        <trans-unit id="b536802786d62d0dda6bcc0501f60be6a091bee0" translate="yes" xml:space="preserve">
+          <source>sees modifications performed in the
+original request (even when they happen after the scheduling).</source>
+          <target state="translated">は、元のリクエストで行われた変更を見ます (スケジューリング後に行われた場合でも)。</target>
+        </trans-unit>
+        <trans-unit id="9fb29051f2217270a7b253a39f820310d85a78f0" translate="yes" xml:space="preserve">
+          <source>show</source>
+          <target state="translated">見せる</target>
+        </trans-unit>
+        <trans-unit id="3442496b96dd01591a8cd44b1eec1368ab728aba" translate="yes" xml:space="preserve">
+          <source>str</source>
+          <target state="translated">スト</target>
+        </trans-unit>
+        <trans-unit id="3d6721211612672de2eec047489a5ac6f4cabe9e" translate="yes" xml:space="preserve">
+          <source>supports both positional
+as well as keyword parameters. For demonstational purposes, we
+pass</source>
+          <target state="translated">は、キーワードパラメータだけでなく位置パラメータもサポートしています。実証的な目的のために</target>
+        </trans-unit>
+        <trans-unit id="da483ee31f41665243ea040a300231dc98471e94" translate="yes" xml:space="preserve">
+          <source>to reenable the detection.</source>
+          <target state="translated">をクリックして検出を再有効にします。</target>
+        </trans-unit>
+        <trans-unit id="41c48b55fa9164e123cc73b1157459e840be5d24" translate="yes" xml:space="preserve">
+          <source>transaction</source>
+          <target state="translated">取引</target>
+        </trans-unit>
+        <trans-unit id="2280679a7fbee6d6a45021477004d4850744a033" translate="yes" xml:space="preserve">
+          <source>transaction commit hook was not called at
+the end of the</source>
+          <target state="translated">の最後にトランザクションコミットフックが呼び出されませんでした。</target>
+        </trans-unit>
+        <trans-unit id="9738e1563828eac6e8a92f5f95c7a573be2ccd74" translate="yes" xml:space="preserve">
+          <source>transaction.abort()</source>
+          <target state="translated">transaction.abort()</target>
+        </trans-unit>
+        <trans-unit id="dfff9135e05ee8d8d751f1d04769a37b7297e9c5" translate="yes" xml:space="preserve">
+          <source>transaction.commit()</source>
+          <target state="translated">transaction.commit()</target>
+        </trans-unit>
+        <trans-unit id="f5d675dad1bf5fba4c4989286c05d5f3f45fbede" translate="yes" xml:space="preserve">
+          <source>transactional</source>
+          <target state="translated">トランザクショナル</target>
+        </trans-unit>
+        <trans-unit id="a20e8889322e87bf69dc6fc6b74eb6964238974e" translate="yes" xml:space="preserve">
+          <source>transactional.interfaces.TransientError</source>
+          <target state="translated">transactional.interfaces.TransientError</target>
+        </trans-unit>
+        <trans-unit id="ffde8c83ca53790bab138e077612ee355fcf8c5a" translate="yes" xml:space="preserve">
+          <source>uses the</source>
+          <target state="translated">を使用します。</target>
+        </trans-unit>
+        <trans-unit id="d9721c2cbfdc86a2cbf83d1c07879ccef4743428" translate="yes" xml:space="preserve">
+          <source>which
+will monitor transaction aborts and commits. We also set up logging
+to see logging messages.</source>
+          <target state="translated">これは、トランザクションのアボートとコミットを監視します。また、ロギングメッセージを見るためにロギングを設定しています。</target>
+        </trans-unit>
+        <trans-unit id="e28e7ee7f0a52804945ce3d4ebb2980e05a1c2fb" translate="yes" xml:space="preserve">
+          <source>which supports
+the following use case: some context starts an operation in a separate
+thread and then terminates; a different context later checks whether
+the operation has completed and if so processes the results.
+The use case arises for example in a web application (such as Zope) for
+long running operations which should be processed asynchronously
+(in a separate thread) rather than inline (in the originating request)
+to provide useful partial results or feedback immediately. Later results
+are fetched and presented e.g. via dynamic (AJAX, Web 2) techniques.</source>
+          <target state="translated">あるコンテキストが別のスレッドで操作を開始して終了し、別のコンテキストが操作が完了したかどうかを後でチェックし、完了していれば結果を処理します。このユースケースは、例えば (Zope のような)ウェブアプリケーションで、(元のリクエストで)インラインではなく (別のスレッドで)非同期に処理され、有用な部分的な結果やフィードバックをすぐに提供しなければならないような 長時間実行されている操作の場合に発生します。後で結果を取得して、例えば動的な(AJAX,Web 2)技術を使って表示することができます。</target>
+        </trans-unit>
+        <trans-unit id="b523f052484795efe4737ff5a499130f938c70e7" translate="yes" xml:space="preserve">
+          <source>whose instances store the schedules
+in itself and thereby in the ZODB. For details, read its docstring.</source>
+          <target state="translated">のインスタンスがそれ自身の中に、そしてそれによってZODBの中にスケジュールを保存します。詳細は docstring を参照してください。</target>
+        </trans-unit>
+        <trans-unit id="e627ba12abeaaad9ae3f251b28ff9fcd994017da" translate="yes" xml:space="preserve">
+          <source>will start.</source>
+          <target state="translated">が始まります。</target>
+        </trans-unit>
+        <trans-unit id="8fcd25a39d2037183044a8897e9a5333d727fded" translate="yes" xml:space="preserve">
+          <source>with</source>
+          <target state="translated">をもって</target>
+        </trans-unit>
+        <trans-unit id="58f0c140ca8c36c7271afa2428a8c169111fe1f9" translate="yes" xml:space="preserve">
+          <source>zope2</source>
+          <target state="translated">ゾープ2</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

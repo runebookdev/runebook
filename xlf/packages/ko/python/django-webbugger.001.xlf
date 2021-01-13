@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="ko" datatype="htmlbody" original="https://pypi.org/project/django-webbugger/">
+    <body>
+      <group id="django-webbugger">
+        <trans-unit id="85b71acad4a7a81ac58c559af7410d6ac96de7cb" translate="yes" xml:space="preserve">
+          <source># What is this?
+Django-Webbugger is a simple application that can be used to track visitors to your website. It uses the django content-types framework to allow the most flexible approach possible for processing tracking information. This allows you to customize what data is tracked in a very flexible way.</source>
+          <target state="translated">#이게 뭐야? Django-Webbugger는 웹 사이트 방문자를 추적하는 데 사용할 수있는 간단한 애플리케이션입니다. django 콘텐츠 유형 프레임 워크를 사용하여 추적 정보를 처리 할 수있는 가장 유연한 접근 방식을 허용합니다. 이를 통해 매우 유연한 방식으로 추적되는 데이터를 사용자 정의 할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="ab85e4e58803f59872b5dc5fe34e29420fe5c895" translate="yes" xml:space="preserve">
+          <source># django webbugger
+#### Brandon R. Stoner &amp;lt;&lt;a href=&quot;mailto:monokrome%40monokro.me&quot;&gt;monokrome@monokro.me&lt;/a&gt;</source>
+          <target state="translated"># 장고 웹 버거 #### Brandon R. Stoner &amp;lt; &lt;a href=&quot;mailto:monokrome%40monokro.me&quot;&gt;monokrome@monokro.me&lt;/a&gt;</target>
+        </trans-unit>
+        <trans-unit id="462e0606e0072b56a7138d1a99b8acaa6e27f181" translate="yes" xml:space="preserve">
+          <source>## Model structure</source>
+          <target state="translated">## 모델 구조</target>
+        </trans-unit>
+        <trans-unit id="984fdf91c1cd1fe3d8bf138b71ea79e67510a93d" translate="yes" xml:space="preserve">
+          <source>## Modes of operation
+The main view used for tracking is &lt;strong&gt;webbugger.views.trigger&lt;/strong&gt; which normally works in redirect mode, but can optionally be told to work in pixel mode instead.</source>
+          <target state="translated">## 작동 모드 추적에 사용되는 기본보기는 &lt;strong&gt;webbugger.views.trigger&lt;/strong&gt; 로 일반적으로 리디렉션 모드에서 작동하지만 선택적으로 대신 픽셀 모드에서 작동하도록 지시 할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="97795d5a8474097c5ba86b21de41d7b17f12803d" translate="yes" xml:space="preserve">
+          <source>### Pixel Mode
+The trigger view also takes a keyword argument with the name of &amp;ldquo;pixel&amp;rdquo;. When set to True, this argument tells the view to return a 1x1 pixel clear GIF instead of redirecting the user to a new page. With this feature, it is possible to embed tracking URLs directly into pages as invisible image elements. Not only that, but you can make use of any online medium that downloads images by this system.</source>
+          <target state="translated">### 픽셀 모드 트리거 뷰는 &quot;픽셀&quot;이라는 이름의 키워드 인수도받습니다. True로 설정하면이 인수는 사용자를 새 페이지로 리디렉션하는 대신 1x1 픽셀 투명 GIF를 반환하도록 뷰에 지시합니다. 이 기능을 사용하면 추적 URL을 보이지 않는 이미지 요소로 페이지에 직접 포함 할 수 있습니다. 뿐만 아니라이 시스템으로 이미지를 다운로드하는 모든 온라인 매체를 사용할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="a2716e5a66769571dbc9d15e7d95b2231cc1c381" translate="yes" xml:space="preserve">
+          <source>### Redirect Mode
+When in redirect mode, the tracking system uses a given Target class to redirect the client to another page after the tracking is finished. This accomplishes a method of tracking that is transparent to users - depending on your URL schema.</source>
+          <target state="translated">### 리디렉션 모드 리디렉션 모드에서 추적 시스템은 추적이 완료된 후 지정된 Target 클래스를 사용하여 클라이언트를 다른 페이지로 리디렉션합니다. 이는 URL 스키마에 따라 사용자에게 투명한 추적 방법을 수행합니다.</target>
+        </trans-unit>
+        <trans-unit id="e400e4480d0f08262b80631f8ecda7fcb69e11ed" translate="yes" xml:space="preserve">
+          <source>### Request Entities
+An &amp;ldquo;Entity&amp;rdquo; is a django model that stores information related to an HTTP request in django. An entity can be any django model and can optionally define a method called &amp;ldquo;beacon_update&amp;rdquo; which will be called and passed the request from the tracking view prior to redirecting to our target URL. This allows you to save data from the request straight into the model very easily.</source>
+          <target state="translated">### 요청 엔터티 &quot;엔티티&quot;는 django에 HTTP 요청과 관련된 정보를 저장하는 django 모델입니다. 엔터티는 모든 django 모델이 될 수 있으며 선택적으로 &quot;beacon_update&quot;라는 메서드를 정의 할 수 있습니다.이 메서드는 대상 URL로 리디렉션되기 전에 추적보기에서 호출되고 전달됩니다. 이를 통해 요청의 데이터를 모델에 매우 쉽게 저장할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="b46c5c2cb7b76c7ee07ba6dfd9b07bdabb16dfa8" translate="yes" xml:space="preserve">
+          <source>### Target Destinations
+When not being used in pixel mode, a &amp;ldquo;target&amp;rdquo; represents where to redirect traffic after the Beacon has been created. A target is simply a model that defines a get_beacon_url method, which should return a URL to the page that our &amp;ldquo;entity&amp;rdquo; will be redirected to after processing a beacon. For compatibility with other django applications, webbugger checks if get_absolute_url is defined as an attribute on our target model when get_beacon_url does not exist. If neither of these methods exist, an HTTP 404 is shown because we have nowhere to direct traffic to after creating the tracking beacon.</source>
+          <target state="translated">### 대상 대상 픽셀 모드에서 사용되지 않는 경우 &quot;대상&quot;은 비콘이 생성 된 후 트래픽을 리디렉션 할 위치를 나타냅니다. 타겟은 단순히 get_beacon_url 메소드를 정의하는 모델로, 비콘을 처리 한 후 &quot;엔티티&quot;가 리디렉션되는 페이지에 대한 URL을 반환해야합니다. 다른 django 애플리케이션과의 호환성을 위해 웹 버거는 get_beacon_url이 존재하지 않을 때 get_absolute_url이 대상 모델의 속성으로 정의되어 있는지 확인합니다. 이러한 방법이 모두 존재하지 않으면 추적 비콘을 만든 후 트래픽을 보낼 곳이 없기 때문에 HTTP 404가 표시됩니다.</target>
+        </trans-unit>
+        <trans-unit id="d95589f5c9838b81a307e64f0333f1ded6afb455" translate="yes" xml:space="preserve">
+          <source>### Traffic Sources
+The &amp;ldquo;Source&amp;rdquo; can be any django model. This is useful for storing information regarding where the traffic came from. For instance, in an affiliate marketing system - you could use the source attribute of our beacon to reference the affiliate that sent the traffic to your site.</source>
+          <target state="translated">### 트래픽 소스 &quot;소스&quot;는 모든 django 모델이 될 수 있습니다. 이는 트래픽의 출처에 관한 정보를 저장하는 데 유용합니다. 예를 들어 제휴 마케팅 시스템에서 비콘의 소스 속성을 사용하여 귀하의 사이트로 트래픽을 보낸 제휴사를 참조 할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="7fcc0d7beacc203d05f947cadc5d2a75c4e81ee6" translate="yes" xml:space="preserve">
+          <source>Basic webbugger/tracking beacon for django</source>
+          <target state="translated">Django 용 기본 웹 버거 / 추적 비콘</target>
+        </trans-unit>
+        <trans-unit id="f9d8915409f4a22a6693f500efd76d26e642d00e" translate="yes" xml:space="preserve">
+          <source>For everything tracked, a &amp;ldquo;Beacon&amp;rdquo; is created. This beacon represents our tracking data. Beacons can consist of a Target, an Entity, and a Source. Entity and Source are provided for systems that want to track some sort of data affiliated with their page hits. A Target is required when redirecting, but it is unneeded when using pixels for tracking.</source>
+          <target state="translated">추적되는 모든 항목에 대해 &quot;Beacon&quot;이 생성됩니다. 이 비콘은 우리의 추적 데이터를 나타냅니다. 비콘은 대상, 엔터티 및 소스로 구성 될 수 있습니다. 페이지 히트와 관련된 일종의 데이터를 추적하려는 시스템을 위해 엔티티 및 소스가 제공됩니다. 리디렉션시 Target이 필요하지만 추적을 위해 픽셀을 사용할 때는 필요하지 않습니다.</target>
+        </trans-unit>
+        <trans-unit id="af3a2bc77e2ad9f22d1b961b5f2a9e8ed281a604" translate="yes" xml:space="preserve">
+          <source>The pixel method allows you to do more clever things, such as including tracking inside of emails in order to see if someone has viewed an email that you sent them - assuming that they have images enabled in their email client, of course.</source>
+          <target state="translated">픽셀 방법을 사용하면 이메일 클라이언트에서 이미지가 활성화되어 있다고 가정하고 누군가가 보낸 이메일을 보았는지 확인하기 위해 이메일 내부 추적을 포함하는 등 더 영리한 작업을 수행 할 수 있습니다.</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

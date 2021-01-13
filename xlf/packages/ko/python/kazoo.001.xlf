@@ -1,0 +1,1422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="ko" datatype="htmlbody" original="https://pypi.org/project/kazoo/">
+    <body>
+      <group id="kazoo">
+        <trans-unit id="9e4e01cd1d2fb5a533883888ca94ac3eb52d02f6" translate="yes" xml:space="preserve">
+          <source>#112: Add IPv6 support. Patch by Dan Kruchinin.</source>
+          <target state="translated"># 112 : IPv6 지원 추가. Dan Kruchinin의 패치.</target>
+        </trans-unit>
+        <trans-unit id="f04452497b4c84e96a81f7555cd2786cc5bb3cb9" translate="yes" xml:space="preserve">
+          <source>#115: Limit the backends we use for SLF4J during tests.</source>
+          <target state="translated"># 115 : 테스트 중에 SLF4J에 사용하는 백엔드를 제한합니다.</target>
+        </trans-unit>
+        <trans-unit id="c96754f2894bbfb6dc0b9f154dafdbeda94ce4e9" translate="yes" xml:space="preserve">
+          <source>#118, #125, #128: Fix unknown variable in KazooClient
+command_retry argument handling.</source>
+          <target state="translated"># 118, # 125, # 128 : KazooClient command_retry 인수 처리에서 알 수없는 변수 수정.</target>
+        </trans-unit>
+        <trans-unit id="70f5bfcfaef4921922cdd4bb8eb8b778a5d96b22" translate="yes" xml:space="preserve">
+          <source>#118: Correct session/socket timeout conversion (int vs. float).</source>
+          <target state="translated"># 118 : 올바른 세션 / 소켓 시간 제한 변환 (int 대 float).</target>
+        </trans-unit>
+        <trans-unit id="79366e3d3fc70b221b1b71420105834f7a9d1ad8" translate="yes" xml:space="preserve">
+          <source>#121: Add a note about kazoo.recipe.queue.LockingQueue requiring a
+Zookeeper 3.4+ server.</source>
+          <target state="translated"># 121 : Zookeeper 3.4 이상 서버가 필요한 kazoo.recipe.queue.LockingQueue에 대한 메모를 추가합니다.</target>
+        </trans-unit>
+        <trans-unit id="c3df97f885d7cc32abf824a2d067b1ff211433db" translate="yes" xml:space="preserve">
+          <source>#126: Fix KazooRetry.copy to correctly copy sleep function.</source>
+          <target state="translated"># 126 : KazooRetry.copy를 수정하여 절전 기능을 올바르게 복사합니다.</target>
+        </trans-unit>
+        <trans-unit id="58a621ba8794ef51b2803e78bd2e6e7c328dbc30" translate="yes" xml:space="preserve">
+          <source>#144, #221: Let client.command work with IPv6 addresses.</source>
+          <target state="translated"># 144, # 221 : client.command가 IPv6 주소와 함께 작동하도록합니다.</target>
+        </trans-unit>
+        <trans-unit id="4c01ec532835c8550309c5afa9a11de43d6efe07" translate="yes" xml:space="preserve">
+          <source>#216: Fixed timeout for ConnectionHandler._invoke.</source>
+          <target state="translated"># 216 : ConnectionHandler._invoke에 대한 시간 초과 수정.</target>
+        </trans-unit>
+        <trans-unit id="f0e4510df549947bcfc9edce753c184aa01b0e01" translate="yes" xml:space="preserve">
+          <source>#222: Document that committed on the transaction is used to ensure
+only one commit and is not an indicator of whether operations in the
+transaction returned desired results.</source>
+          <target state="translated"># 222 : 트랜잭션에서 커밋 된 문서는 하나의 커밋 만 보장하는 데 사용되며 트랜잭션의 작업이 원하는 결과를 반환했는지 여부를 나타내는 지표가 아닙니다.</target>
+        </trans-unit>
+        <trans-unit id="a2a5d6fd90b3ad9b5bb15682fc810baac1d2dfc6" translate="yes" xml:space="preserve">
+          <source>#261: Creating a sequential znode under / doesn't work.</source>
+          <target state="translated"># 261 : / 아래에 순차적 인 znode 생성이 작동하지 않습니다.</target>
+        </trans-unit>
+        <trans-unit id="8a8dc3cc0c4f144617b6bc1e8dac6038cb6a7171" translate="yes" xml:space="preserve">
+          <source>#271: Fixed handling of KazooState.SUSPENDED in SetPartitioner.</source>
+          <target state="translated"># 271 : SetPartitioner에서 KazooState.SUSPENDED 처리를 수정했습니다.</target>
+        </trans-unit>
+        <trans-unit id="51ce782135339d0df669c3675ef997fdaf2e7faa" translate="yes" xml:space="preserve">
+          <source>#274: Add server_version() retries (by default 4 attempts will be
+made) to better handle flakey responses.</source>
+          <target state="translated"># 274 : flakey 응답을 더 잘 처리하기 위해 server_version () 재시도 (기본적으로 4 번 시도)를 추가합니다.</target>
+        </trans-unit>
+        <trans-unit id="add626c9b152453d989e639a1e3c61b8671220e3" translate="yes" xml:space="preserve">
+          <source>#283: Fixed a race condition in SetPartitioner when party changes
+during handling of lock acquisition.</source>
+          <target state="translated"># 283 : 잠금 획득을 처리하는 동안 파티가 변경 될 때 SetPartitioner의 경쟁 조건을 수정했습니다.</target>
+        </trans-unit>
+        <trans-unit id="a70a5a3a4e77f45f8443bc7b8f49295904e32467" translate="yes" xml:space="preserve">
+          <source>#291: Kazoo lock recipe was only partially re-entrant in that
+multiple calls to acquire would obtain the the lock but the first
+call to release would remove the underlying lock. This would leave
+the X - 1 other acquire statements unprotected (and no longer
+holding there expected lock). To fix this the comment about that
+lock recipe being re-entrant has been removed and multiple acquires
+will now block when attempted.</source>
+          <target state="translated"># 291 : Kazoo 잠금 레시피는 획득을위한 여러 호출이 잠금을 획득하지만 해제를위한 첫 번째 호출이 기본 잠금을 제거한다는 점에서 부분적으로 만 재진입되었습니다. 이렇게하면 X-1 개의 다른 취득 문이 보호되지 않고 더 이상 예상되는 잠금이 유지되지 않습니다. 이 문제를 해결하기 위해 재진입중인 잠금 레시피에 대한 설명이 제거되었으며 이제 여러 획득이 시도 될 때 차단됩니다.</target>
+        </trans-unit>
+        <trans-unit id="e636bc80d0594af3761c4f74da1b7478f8dca7f1" translate="yes" xml:space="preserve">
+          <source>#303: don't crash on random input as the hosts string.</source>
+          <target state="translated"># 303 : 호스트 문자열로 임의 입력시 충돌하지 않습니다.</target>
+        </trans-unit>
+        <trans-unit id="4db489d5963970d667de410bc2223bebaa2eb67d" translate="yes" xml:space="preserve">
+          <source>#315: multiple acquires of a kazoo lock using the lock recipe would
+block when using acquire even when non-blocking is specified (only
+when the lock was/has been already acquired).</source>
+          <target state="translated"># 315 : 잠금 레시피를 사용한 kazoo 잠금의 다중 획득은 비 차단이 지정된 경우에도 획득을 사용할 때 차단됩니다 (잠금이 이미 획득 된 경우에만 해당).</target>
+        </trans-unit>
+        <trans-unit id="32eea661371b13070f7156b64caf607e96bd8c40" translate="yes" xml:space="preserve">
+          <source>#318: At exit register takes &lt;code&gt;*args&lt;/code&gt; and &lt;code&gt;**kwargs&lt;/code&gt; not args and
+kargs</source>
+          <target state="translated"># 318 : 종료 레지스터에서 &lt;code&gt;*args&lt;/code&gt; 및 &lt;code&gt;**kwargs&lt;/code&gt; 는 args 및 kargs가 아닙니다.</target>
+        </trans-unit>
+        <trans-unit id="ec74851268e2ac36fe8a1b089f2b17f78b60fe27" translate="yes" xml:space="preserve">
+          <source>#372: fully resolve multiple records for hosts in the zookeeper
+connection string</source>
+          <target state="translated"># 372 : zookeeper 연결 문자열에서 호스트에 대한 여러 레코드를 완전히 확인</target>
+        </trans-unit>
+        <trans-unit id="1c71ef85139eb7f917fceca88e841c66032217cf" translate="yes" xml:space="preserve">
+          <source>#78: Kazoo now uses socketpairs instead of pipes making it
+compatible with Windows.</source>
+          <target state="translated"># 78 : Kazoo는 이제 파이프 대신 소켓 쌍을 사용하여 Windows와 호환됩니다.</target>
+        </trans-unit>
+        <trans-unit id="1e70191ecd0a7b8b750bd4d1b509fb66a68fd79b" translate="yes" xml:space="preserve">
+          <source>'&quot;is&quot; with a literal' syntax errors (#609) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/6b6ffe62a073d1ed5413c65c2d8ec94ea2fa1760&quot;&gt;6b6ffe62&lt;/a&gt;)</source>
+          <target state="translated">' &quot;is&quot;with a literal'구문 오류 (# 609) ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/6b6ffe62a073d1ed5413c65c2d8ec94ea2fa1760&quot;&gt;6b6ffe62&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="692a6e81b706dfaeba5bf9e577c6c49f2b31ba8a" translate="yes" xml:space="preserve">
+          <source>0.2 (2012-08-12)</source>
+          <target state="translated">0.2 (2012-08-12)</target>
+        </trans-unit>
+        <trans-unit id="615845ca0966f70a987ac9d7fb8196ef419c4b7c" translate="yes" xml:space="preserve">
+          <source>0.2b1 (2012-07-27)</source>
+          <target state="translated">0.2b1 (2012-07-27)</target>
+        </trans-unit>
+        <trans-unit id="f5ec8e8a36bfa0b49bf85326dbee493ab189b756" translate="yes" xml:space="preserve">
+          <source>0.3 (2012-08-23)</source>
+          <target state="translated">0.3 (2012-08-23)</target>
+        </trans-unit>
+        <trans-unit id="99f81dc83fdcee48d5ace5c7d8d5653ba6364471" translate="yes" xml:space="preserve">
+          <source>0.5 (2012-09-06)</source>
+          <target state="translated">0.5 (2012-09-06)</target>
+        </trans-unit>
+        <trans-unit id="95efc23380dce3162c1f89dd916c498560fb7ad7" translate="yes" xml:space="preserve">
+          <source>0.6 (2012-09-27)</source>
+          <target state="translated">0.6 (2012-09-27)</target>
+        </trans-unit>
+        <trans-unit id="6fdb7c96fea332fff6c48bcd283ac4d7cb794148" translate="yes" xml:space="preserve">
+          <source>0.7 (2012-10-15)</source>
+          <target state="translated">0.7 (2012-10-15)</target>
+        </trans-unit>
+        <trans-unit id="949ba444c12ce48f7ba85b90900dcfb0c37a00c6" translate="yes" xml:space="preserve">
+          <source>0.8 (2012-10-26)</source>
+          <target state="translated">0.8 (2012-10-26)</target>
+        </trans-unit>
+        <trans-unit id="96c5d52e990e1722f4f86b32e6dfda6ca21204d0" translate="yes" xml:space="preserve">
+          <source>0.9 (2013-01-07)</source>
+          <target state="translated">0.9 (2013-01-07)</target>
+        </trans-unit>
+        <trans-unit id="b6d75554d9565d75c4fc6ed93d8e342fad377665" translate="yes" xml:space="preserve">
+          <source>1.0 (2013-03-26)</source>
+          <target state="translated">1.0 (2013-03-26)</target>
+        </trans-unit>
+        <trans-unit id="39431ecd0ae0dcd03d37c2d14cae688072267591" translate="yes" xml:space="preserve">
+          <source>1.0b1 (2013-02-24)</source>
+          <target state="translated">1.0b1 (2013-02-24)</target>
+        </trans-unit>
+        <trans-unit id="ebc6542ff281b8edc5499c79f2cd4e4d54df0f00" translate="yes" xml:space="preserve">
+          <source>1.1 (2013-06-08)</source>
+          <target state="translated">1.1 (2013-06-08)</target>
+        </trans-unit>
+        <trans-unit id="c2839a279192254c157b232d207fabd90ef0e65c" translate="yes" xml:space="preserve">
+          <source>1.2 (2013-07-24)</source>
+          <target state="translated">1.2 (2013-07-24)</target>
+        </trans-unit>
+        <trans-unit id="2ad63cd56c2b9534531ec6e588ec336de2ecee38" translate="yes" xml:space="preserve">
+          <source>1.2.1 (2013-08-01)</source>
+          <target state="translated">1.2.1 (2013-08-01)</target>
+        </trans-unit>
+        <trans-unit id="f5dcb64a23a124625b2d3aa2825accfe2142d11b" translate="yes" xml:space="preserve">
+          <source>1.3 (2013-09-05)</source>
+          <target state="translated">1.3 (2013-09-05)</target>
+        </trans-unit>
+        <trans-unit id="8bcde20c9141d807303bea9f24b042ccf298c81a" translate="yes" xml:space="preserve">
+          <source>1.3.1 (2013-09-25)</source>
+          <target state="translated">1.3.1 (2013-09-25)</target>
+        </trans-unit>
+        <trans-unit id="80a2e3e46be6f150bc89fe6be6e7ffaa39efa46a" translate="yes" xml:space="preserve">
+          <source>2.0 (2014-06-19)</source>
+          <target state="translated">2.0 (2014-06-19)</target>
+        </trans-unit>
+        <trans-unit id="78555361c6aa142c0bc82c8214a5c8b5bf1d93d5" translate="yes" xml:space="preserve">
+          <source>2.0b1 (2014-04-24)</source>
+          <target state="translated">2.0b1 (2014-04-24)</target>
+        </trans-unit>
+        <trans-unit id="890d026dfa61533ef104a91a6145ddd1fa48b546" translate="yes" xml:space="preserve">
+          <source>2.1 (2015-05-11)</source>
+          <target state="translated">2.1 (2015-05-11)</target>
+        </trans-unit>
+        <trans-unit id="13e1d6f2a326476f02b0c2c41053d8cc75f21e05" translate="yes" xml:space="preserve">
+          <source>2.2 (2015-06-15)</source>
+          <target state="translated">2.2 (2015-06-15)</target>
+        </trans-unit>
+        <trans-unit id="8b2d38ce17fe1e580272c0f0a06bfc2abd1df381" translate="yes" xml:space="preserve">
+          <source>2.2.1 (2015-06-17)</source>
+          <target state="translated">2.2.1 (2015-06-17)</target>
+        </trans-unit>
+        <trans-unit id="e3f7188ff7af91273be74e77942020edcba59ffa" translate="yes" xml:space="preserve">
+          <source>2.3.0 (2017-05-31)</source>
+          <target state="translated">2.3.0 (2017-05-31)</target>
+        </trans-unit>
+        <trans-unit id="1d0f378c0e18d3d65ccbd95c97b5ac7175ad81d5" translate="yes" xml:space="preserve">
+          <source>2.3.1 (2017-06-01)</source>
+          <target state="translated">2.3.1 (2017-06-01)</target>
+        </trans-unit>
+        <trans-unit id="d8c4e467335c53e93c80df062dc2e170d754d854" translate="yes" xml:space="preserve">
+          <source>2.4.0 (2017-06-14)</source>
+          <target state="translated">2.4.0 (2017-06-14)</target>
+        </trans-unit>
+        <trans-unit id="f221073dfe951732f433900f3e9750b59e8c5710" translate="yes" xml:space="preserve">
+          <source>2.5.0 (2018-06-01)</source>
+          <target state="translated">2.5.0 (2018-06-01)</target>
+        </trans-unit>
+        <trans-unit id="9969d1e5416ed3ea95d0370e5de3f249f80ea356" translate="yes" xml:space="preserve">
+          <source>2.6.0 (2018-11-14)</source>
+          <target state="translated">2.6.0 (2018-11-14)</target>
+        </trans-unit>
+        <trans-unit id="fd83cb2b9f30f3b2dda50ad068909f5ccd1a4561" translate="yes" xml:space="preserve">
+          <source>2.6.1 (2019-01-22)</source>
+          <target state="translated">2.6.1 (2019-01-22)</target>
+        </trans-unit>
+        <trans-unit id="41daac3fbd97c0108f904eef82243068f1b71af9" translate="yes" xml:space="preserve">
+          <source>2.7.0 (2020-03-13)</source>
+          <target state="translated">2.7.0 (2020-03-13)</target>
+        </trans-unit>
+        <trans-unit id="02524e2bff3dfcfedd4f2d06e0531cfb84011dd4" translate="yes" xml:space="preserve">
+          <source>2.8.0 (2020-07-11)</source>
+          <target state="translated">2.8.0 (2020-07-11)</target>
+        </trans-unit>
+        <trans-unit id="21b7da5f8756aee07967d4672bde3ebd06c3bbea" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;kazoo&lt;/code&gt; implements a higher level API to &lt;a href=&quot;http://zookeeper.apache.org/&quot;&gt;Apache
+Zookeeper&lt;/a&gt; for Python clients.</source>
+          <target state="translated">&lt;code&gt;kazoo&lt;/code&gt; 는 Python 클라이언트 용 &lt;a href=&quot;http://zookeeper.apache.org/&quot;&gt;Apache Zookeeper에&lt;/a&gt; 대한 상위 수준 API를 구현합니다 .</target>
+        </trans-unit>
+        <trans-unit id="88faf5b80b1be42ae14378f153ce4f7bc5c537e7" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;kazoo&lt;/code&gt; is offered under the Apache License 2.0.</source>
+          <target state="translated">&lt;code&gt;kazoo&lt;/code&gt; 는 Apache License 2.0에 따라 제공됩니다.</target>
+        </trans-unit>
+        <trans-unit id="e26f43244476c45caab186bc477eac4f4a9ed887" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;kazoo&lt;/code&gt; started under the &lt;a href=&quot;http://www.nimbusproject.org/&quot;&gt;Nimbus
+Project&lt;/a&gt; and through collaboration with
+the open-source community has been merged with code from
+&lt;a href=&quot;http://www.mozilla.org/&quot;&gt;Mozilla&lt;/a&gt; and the &lt;a href=&quot;http://zope.com/&quot;&gt;Zope
+Corporation&lt;/a&gt;. It has since gathered an active
+community of over fifty contributors.</source>
+          <target state="translated">&lt;code&gt;kazoo&lt;/code&gt; 는 &lt;a href=&quot;http://www.nimbusproject.org/&quot;&gt;Nimbus Project&lt;/a&gt; 에서 시작되었으며 오픈 소스 커뮤니티와의 협력을 통해 &lt;a href=&quot;http://www.mozilla.org/&quot;&gt;Mozilla&lt;/a&gt; 및 &lt;a href=&quot;http://zope.com/&quot;&gt;Zope Corporation&lt;/a&gt; 의 코드와 병합되었습니다 . 이후 50 명이 넘는 기여자로 구성된 활발한 커뮤니티를 모았습니다.</target>
+        </trans-unit>
+        <trans-unit id="2dbc71778d27ff45ee97df6a96bff2083103ace5" translate="yes" xml:space="preserve">
+          <source>&lt;em&gt;WARNING:&lt;/em&gt; THIS IS THE LAST KAZOO RELEASE THAT SUPPORTS PYTHON 2.6. ALL FUTURE
+VERSIONS WILL REQUIRE PYTHON 2.7 AND ABOVE.</source>
+          <target state="translated">&lt;em&gt;경고 :&lt;/em&gt; 이것은 PYTHON 2.6을 지원하는 마지막 KAZOO 릴리스입니다. 모든 향후 버전에는 PYTHON 2.7 이상이 필요합니다.</target>
+        </trans-unit>
+        <trans-unit id="3403a75bdcb83595c49e796e9a9b013ef26aab8c" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;CI:&lt;/strong&gt;  Keep only Python 3.{6,7} to CI and bump ZK versions to latests (#574) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/c293aabf39676b94006cf736f9f75392637b8292&quot;&gt;c293aabf&lt;/a&gt;)</source>
+          <target state="translated">&lt;strong&gt;CI :&lt;/strong&gt; Python 3. {6,7} 만 &lt;strong&gt;CI에&lt;/strong&gt; 유지하고 ZK 버전을 최신 버전으로 범프 (# 574) ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/c293aabf39676b94006cf736f9f75392637b8292&quot;&gt;c293aabf&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="492920557ab08a5e123705b958e26e049c93c5d4" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;CI:&lt;/strong&gt;  deploying only for 1 job (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/0ba3634d99740c9ccc2dd01924a36dffff262f8e&quot;&gt;0ba3634d&lt;/a&gt;)</source>
+          <target state="translated">&lt;strong&gt;CI :&lt;/strong&gt; 1 개 작업에만 배포 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/0ba3634d99740c9ccc2dd01924a36dffff262f8e&quot;&gt;0ba3634d&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="02fa3bbc2937253dd25119501ca770b0ca178c64" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;PYTHON SUPPORTED VERSIONS CHANGE&lt;/strong&gt;: Please note that Kazoo no longer tests
+on Python 2.6 or 3.3. Tested versions are 2.7, 3.4, 3.5, 3.6, and PyPy. The
+multiple endpoint support for KazooClient may not work correctly on 2.6.</source>
+          <target state="translated">&lt;strong&gt;PYTHON 지원 버전 변경&lt;/strong&gt; : Kazoo는 더 이상 Python 2.6 또는 3.3에서 테스트하지 않습니다. 테스트 된 버전은 2.7, 3.4, 3.5, 3.6 및 PyPy입니다. KazooClient에 대한 다중 엔드 포인트 지원은 2.6에서 올바르게 작동하지 않을 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="f41e56cb7a0bc51f34881ecb4d6a36947a419922" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;chore:&lt;/strong&gt;  using Github templates for issues and PRs (#610) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/eddc0976bf1ef9d9fb97990cebbc3f9b1abe9d7d&quot;&gt;eddc0976&lt;/a&gt;)</source>
+          <target state="translated">&lt;strong&gt;잡일 :&lt;/strong&gt; 문제 및 PR에 Github 템플릿 사용 (# 610) ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/eddc0976bf1ef9d9fb97990cebbc3f9b1abe9d7d&quot;&gt;eddc0976&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="8498ef2942a7211b64848f03dedb56e6e7d45c13" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;client:&lt;/strong&gt;  add missing paren (#550) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/1452a48f3070fe9034314476a6fdb94ca206dede&quot;&gt;1452a48f&lt;/a&gt;)</source>
+          <target state="translated">&lt;strong&gt;클라이언트 :&lt;/strong&gt; 누락 된 괄호 추가 (# 550) ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/1452a48f3070fe9034314476a6fdb94ca206dede&quot;&gt;1452a48f&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="24570eed114b3644235aaf829a987807c8c6f890" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;core:&lt;/strong&gt;</source>
+          <target state="translated">&lt;strong&gt;핵심:&lt;/strong&gt;</target>
+        </trans-unit>
+        <trans-unit id="06270008b7b198acfd55cf3934538b048e90619e" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;core:&lt;/strong&gt;  Update matrix: add pypy3, drop py27 (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/522189da0f238faafc8f1db34f682f49b15ec503&quot;&gt;522189da&lt;/a&gt;)</source>
+          <target state="translated">&lt;strong&gt;core :&lt;/strong&gt; 업데이트 매트릭스 : pypy3 추가, py27 드롭 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/522189da0f238faafc8f1db34f682f49b15ec503&quot;&gt;522189da&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="c570860e7ab6006c917f40d41dc316f6740e9f13" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;core:&lt;/strong&gt;  Use chain.from_iterable in threading.py (#614) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/13c73ec5f4d4f2215deb987a059051bb821674ca&quot;&gt;13c73ec5&lt;/a&gt;)</source>
+          <target state="translated">&lt;strong&gt;core :&lt;/strong&gt; threading.py에서 chain.from_iterable 사용 (# 614) ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/13c73ec5f4d4f2215deb987a059051bb821674ca&quot;&gt;13c73ec5&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="e475286df71555fbaadd34b5ec719525daefd596" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;core:&lt;/strong&gt;  fix broken zookeeper programmers guide link (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/8ecf8a50c746ab7cc588ce9ac10a91ad1d1e5f34&quot;&gt;8ecf8a50&lt;/a&gt;)</source>
+          <target state="translated">&lt;strong&gt;핵심 :&lt;/strong&gt; 깨진 사육사 프로그래머 가이드 링크 수정 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/8ecf8a50c746ab7cc588ce9ac10a91ad1d1e5f34&quot;&gt;8ecf8a50&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="e68a18f1157950f345fab9176aafcc50c1727b52" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;core:&lt;/strong&gt;  revert PR #305 SetWatches which caused RuntimeError (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/a7b45390f3720a33c9ad3896a8a185bfb2628839&quot;&gt;a7b45390&lt;/a&gt;)</source>
+          <target state="translated">&lt;strong&gt;핵심 :&lt;/strong&gt; RuntimeError ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/a7b45390f3720a33c9ad3896a8a185bfb2628839&quot;&gt;a7b45390&lt;/a&gt; ) 를 발생시킨 PR # 305 SetWatches 되돌리기</target>
+        </trans-unit>
+        <trans-unit id="88e209fcbb3b7c50417315d3cd1fff6a1dde8e4d" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;handlers:&lt;/strong&gt;  make AsyncResult call all registered callbacks instantly if the handler has stopped running (#549) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/d9e0e7208e56c31f0abec60a3701f8d6ec1e7d32&quot;&gt;d9e0e720&lt;/a&gt;)</source>
+          <target state="translated">&lt;strong&gt;핸들러 :&lt;/strong&gt; 핸들러 실행이 중지 된 경우 AsyncResult에서 등록 된 모든 콜백을 즉시 호출하도록합니다 (# 549) ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/d9e0e7208e56c31f0abec60a3701f8d6ec1e7d32&quot;&gt;d9e0e720&lt;/a&gt; ).</target>
+        </trans-unit>
+        <trans-unit id="6a7a3f421161d42f8e5d006efe8047e327a5c9f1" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;recipe:&lt;/strong&gt;</source>
+          <target state="translated">&lt;strong&gt;레시피:&lt;/strong&gt;</target>
+        </trans-unit>
+        <trans-unit id="ee9ac3a55c8a8c7a1038c43a5bd985cbfa9c1f3c" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;recipe:&lt;/strong&gt;  Add TreeCache recipe (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/ec8b337e6f1a4ff12e669f4b96ca98fb37ee5d8a&quot;&gt;ec8b337e&lt;/a&gt;)</source>
+          <target state="translated">&lt;strong&gt;레시피 :&lt;/strong&gt; TreeCache 레시피 추가 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/ec8b337e6f1a4ff12e669f4b96ca98fb37ee5d8a&quot;&gt;ec8b337e&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="e3e325b4cdcf255b5ea22acb6ee007169271e8fb" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;recipe:&lt;/strong&gt;  Delete lock node in queue recipe if entry already consumed (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/7a8167dea381b3a2015c869a443c96b9d5179411&quot;&gt;7a8167de&lt;/a&gt;)</source>
+          <target state="translated">&lt;strong&gt;레시피 :&lt;/strong&gt; 항목이 이미 사용 된 경우 큐 레시피에서 잠금 노드 삭제 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/7a8167dea381b3a2015c869a443c96b9d5179411&quot;&gt;7a8167de&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="99572f8a01eb16c1322003c5bbd8cfb06d8fae2e" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;recipe:&lt;/strong&gt;  Give TreeCache standalone queue (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/4456f180735a0f8520bfc42474de9d27fa01bb2c&quot;&gt;4456f180&lt;/a&gt;)</source>
+          <target state="translated">&lt;strong&gt;레시피 :&lt;/strong&gt; TreeCache 독립형 대기열 제공 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/4456f180735a0f8520bfc42474de9d27fa01bb2c&quot;&gt;4456f180&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="6f38f15273ea5f32ba07a0cad21ad1520b6b5d4f" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;recipe:&lt;/strong&gt;  add support for curator SharedCount recipe (#559) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/88b657a0977161f3815657878ba48f82a97a3846&quot;&gt;88b657a0&lt;/a&gt;, closes &lt;a href=&quot;https://github.com/python-zk/kazoo/issues/558&quot;&gt;#558&lt;/a&gt;)</source>
+          <target state="translated">&lt;strong&gt;recipe :&lt;/strong&gt; 큐레이터 SharedCount 레시피 지원 추가 (# 559) ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/88b657a0977161f3815657878ba48f82a97a3846&quot;&gt;88b657a0&lt;/a&gt; , &lt;a href=&quot;https://github.com/python-zk/kazoo/issues/558&quot;&gt;# 558&lt;/a&gt; 종료 )</target>
+        </trans-unit>
+        <trans-unit id="0786b5f7180ccb645bec5009176aca7c346b9d54" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;recipe:&lt;/strong&gt;  allow non ephemeral locking (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/6f7a603de9f04ec46d9946c6f5b1cb6e2b913b63&quot;&gt;6f7a603d&lt;/a&gt;)</source>
+          <target state="translated">&lt;strong&gt;레시피 :&lt;/strong&gt; 비 임시 잠금 허용 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/6f7a603de9f04ec46d9946c6f5b1cb6e2b913b63&quot;&gt;6f7a603d&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="21bab43b927ffc99cbf7cbc6256f94fc10cdae41" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;recipe:&lt;/strong&gt;  crash if None in znode (#569) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/ded79467a8254e43841dfeb69f7c3baa1980232c&quot;&gt;ded79467&lt;/a&gt;)</source>
+          <target state="translated">&lt;strong&gt;레시피 :&lt;/strong&gt; znode에서 없음 인 경우 충돌 (# 569) ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/ded79467a8254e43841dfeb69f7c3baa1980232c&quot;&gt;ded79467&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="5661a472f764a696e83169f1a862c23f4c4e2196" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;tests:&lt;/strong&gt;</source>
+          <target state="translated">&lt;strong&gt;테스트 :&lt;/strong&gt;</target>
+        </trans-unit>
+        <trans-unit id="fb2a109e2b49f203d7d2778565a393219b8cca91" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;tests:&lt;/strong&gt;  Add coverage report on codecov.io (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/bb475843905af1a2d25b1f5834085c85c28bb175&quot;&gt;bb475843&lt;/a&gt;)</source>
+          <target state="translated">&lt;strong&gt;테스트 :&lt;/strong&gt; codecov.io에 커버리지 보고서 추가 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/bb475843905af1a2d25b1f5834085c85c28bb175&quot;&gt;bb475843&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="ba4b71ec4b74d4b9eb7332053823f98611b22e1e" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;utils:&lt;/strong&gt;  extend create_tcp_connection utility (#568) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/ab0cd00c12624b07dcc3b2d62aa96f8f1e658f65&quot;&gt;ab0cd00c&lt;/a&gt;)</source>
+          <target state="translated">&lt;strong&gt;utils :&lt;/strong&gt; create_tcp_connection 유틸리티 확장 (# 568) ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/ab0cd00c12624b07dcc3b2d62aa96f8f1e658f65&quot;&gt;ab0cd00c&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="62845d0d9af23cbc1eec333eb2ecfd163d55a726" translate="yes" xml:space="preserve">
+          <source>API Changes</source>
+          <target state="translated">API 변경</target>
+        </trans-unit>
+        <trans-unit id="b904a3f0fdc399e90a312515cc35f73dcf5ae749" translate="yes" xml:space="preserve">
+          <source>Add &lt;code&gt;state_change_event&lt;/code&gt; to
+&lt;code&gt;kazoo.recipe.partitioner.SetPartitioner&lt;/code&gt; which is set on every
+state change.</source>
+          <target state="translated">모든 상태 변경시 설정되는 &lt;code&gt;kazoo.recipe.partitioner.SetPartitioner&lt;/code&gt; 에 &lt;code&gt;state_change_event&lt;/code&gt; 를 추가 합니다.</target>
+        </trans-unit>
+        <trans-unit id="a16f2f2fe7a2a82518b02f9ac65307c3a2893e68" translate="yes" xml:space="preserve">
+          <source>Add a NonBlockingLease recipe. The recipe allows e.g. cron jobs
+scheduled on multiple machines to ensure that at most N instances
+will run a particular job, with lease timeout for graceful handover
+in case of node failures.</source>
+          <target state="translated">NonBlockingLease 레시피를 추가하십시오. 레시피는 예를 들어 여러 시스템에서 예약 된 크론 작업을 통해 노드 장애시 우아한 핸드 오버를위한 임대 시간 초과와 함께 최대 N 개의 인스턴스가 특정 작업을 실행하도록 보장합니다.</target>
+        </trans-unit>
+        <trans-unit id="86bfd4b4b3b11176c9f655ce0e83e4c591020d78" translate="yes" xml:space="preserve">
+          <source>Add a max_leases consistency check to the semaphore recipe.</source>
+          <target state="translated">세마포어 레시피에 max_leases 일관성 검사를 추가합니다.</target>
+        </trans-unit>
+        <trans-unit id="883cfe0fe1efa6dfd305e131ed277587b3e3de80" translate="yes" xml:space="preserve">
+          <source>Add a new retry_max_delay argument to the client and by default
+limit the retry delay to at most an hour regardless of exponential
+backoff settings.</source>
+          <target state="translated">새로운 retry_max_delay 인수를 클라이언트에 추가하고 기본적으로 지수 백 오프 설정에 관계없이 재시도 지연을 최대 1 시간으로 제한합니다.</target>
+        </trans-unit>
+        <trans-unit id="2b44a39e6bc32d2dd0faf8d496aec2f68372d090" translate="yes" xml:space="preserve">
+          <source>Add create2 support (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/1d81f96a77a6fd7ae2476cd798a5cb4bf1c1d9a2&quot;&gt;1d81f96a&lt;/a&gt;)</source>
+          <target state="translated">create2 지원 추가 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/1d81f96a77a6fd7ae2476cd798a5cb4bf1c1d9a2&quot;&gt;1d81f96a&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="4d35f1e445084b99c1a4d41671218703e7b21f1a" translate="yes" xml:space="preserve">
+          <source>Add license to Wheel (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/43d156de3d41173d7baf6e8edb4efa377b3732fc&quot;&gt;43d156de&lt;/a&gt;)</source>
+          <target state="translated">휠에 라이센스 추가 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/43d156de3d41173d7baf6e8edb4efa377b3732fc&quot;&gt;43d156de&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="8c9a6ba38f59c24bb42e66056b3ec4e30c269b2e" translate="yes" xml:space="preserve">
+          <source>Add new Counter recipe.</source>
+          <target state="translated">새로운 카운터 레시피를 추가합니다.</target>
+        </trans-unit>
+        <trans-unit id="29c1a47b22cae67da2fa1437c8fcdefeb9b3c3bd" translate="yes" xml:space="preserve">
+          <source>Add new Queue recipe, with optional priority support.</source>
+          <target state="translated">선택적 우선 순위 지원과 함께 새 대기열 레시피를 추가합니다.</target>
+        </trans-unit>
+        <trans-unit id="498c4cde3871a9c97b5a760d6ba2f66059e49595" translate="yes" xml:space="preserve">
+          <source>Add new Semaphore recipe.</source>
+          <target state="translated">새 Semaphore 레시피를 추가합니다.</target>
+        </trans-unit>
+        <trans-unit id="df15adebd8e8d777c6ab5e9ad8cb603437229c8c" translate="yes" xml:space="preserve">
+          <source>Add new randomize_hosts argument to KazooClient, allowing one to
+disable host randomization.</source>
+          <target state="translated">KazooClient에 새로운 randomize_hosts 인수를 추가하여 호스트 무작위 화를 비활성화 할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="78da9a6bea505a277e28c2aa2c98d64714daf86e" translate="yes" xml:space="preserve">
+          <source>Add note about alternate use of DataWatch.</source>
+          <target state="translated">DataWatch의 대체 사용에 대한 메모를 추가합니다.</target>
+        </trans-unit>
+        <trans-unit id="d3c1bdcaa42afc06a07fa7efd06cc00c26af48e1" translate="yes" xml:space="preserve">
+          <source>Add section on contributing recipes, add maintainer/status
+information for existing recipes.</source>
+          <target state="translated">레시피 기여에 대한 섹션을 추가하고 기존 레시피에 대한 관리자 / 상태 정보를 추가합니다.</target>
+        </trans-unit>
+        <trans-unit id="314519cb94f2eba30193a5e4f53141f7d7c0748d" translate="yes" xml:space="preserve">
+          <source>Add support for Python 3.2, 3.3 and PyPy (only for the threading
+handler).</source>
+          <target state="translated">Python 3.2, 3.3 및 PyPy에 대한 지원을 추가합니다 (스레딩 처리기에만 해당).</target>
+        </trans-unit>
+        <trans-unit id="4f7c6a883df5f48cec5bce0142e2680485f514b5" translate="yes" xml:space="preserve">
+          <source>Added 'include_data' option for get_children to include the node's
+Stat object.</source>
+          <target state="translated">노드의 Stat 개체를 포함하도록 get_children에 대한 'include_data'옵션을 추가했습니다.</target>
+        </trans-unit>
+        <trans-unit id="5e9c7b6fc2c0a23244ecb63196baf4420abe6af3" translate="yes" xml:space="preserve">
+          <source>Added Barrier and DoubleBarrier implementation.</source>
+          <target state="translated">Barrier 및 DoubleBarrier 구현이 추가되었습니다.</target>
+        </trans-unit>
+        <trans-unit id="61536e7909f583ecb500cfbe66bdf1787bd47b82" translate="yes" xml:space="preserve">
+          <source>Added SSL support (#513) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/35ce10669ace9d0d7e787793f0d4937d5d389f69&quot;&gt;35ce1066&lt;/a&gt;)</source>
+          <target state="translated">SSL 지원 추가 (# 513) ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/35ce10669ace9d0d7e787793f0d4937d5d389f69&quot;&gt;35ce1066&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="9716262d8766ac7189fbc3403b4f19222c311373" translate="yes" xml:space="preserve">
+          <source>Added a LockingQueue recipe. The queue first locks an item and
+removes it from the queue only after the consume() method is called.
+This enables other nodes to retake the item if an error occurs on
+the first node.</source>
+          <target state="translated">LockingQueue 레시피를 추가했습니다. 큐는 먼저 항목을 잠그고 consumer () 메서드가 호출 된 후에 만 ​​큐에서 제거합니다. 이렇게하면 첫 번째 노드에서 오류가 발생하는 경우 다른 노드가 항목을 다시 가져올 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="3f5ac80f025aaea761155b91ca4f2c0ef456e8e1" translate="yes" xml:space="preserve">
+          <source>Added debian packaging rules.</source>
+          <target state="translated">데비안 패키징 규칙이 추가되었습니다.</target>
+        </trans-unit>
+        <trans-unit id="a570c06319ef5e08c94e5d7607dc76c67f4da16f" translate="yes" xml:space="preserve">
+          <source>All future commits must abide by the new CONTRIBUTING.md document describing
+how to label commits so they can be automatically used to automatically
+generate an accurate changelog.</source>
+          <target state="translated">모든 향후 커밋은 정확한 변경 로그를 자동으로 생성하는 데 자동으로 사용될 수 있도록 커밋에 레이블을 지정하는 방법을 설명하는 새 CONTRIBUTING.md 문서를 따라야합니다.</target>
+        </trans-unit>
+        <trans-unit id="d9c811408fdcd491f5628d759a147305b7f4aab1" translate="yes" xml:space="preserve">
+          <source>Another fix for atexit handling so that when disposing of
+connections the atexit handler is removed. PR #190, patch by Devaev
+Maxim.</source>
+          <target state="translated">연결을 폐기 할 때 atexit 처리기가 제거되도록 atexit 처리에 대한 또 다른 수정 사항입니다. PR # 190, Devaev Maxim의 패치.</target>
+        </trans-unit>
+        <trans-unit id="d2a52548bd0852b99153ddd79a1f550f70674c7d" translate="yes" xml:space="preserve">
+          <source>Authors</source>
+          <target state="translated">저자</target>
+        </trans-unit>
+        <trans-unit id="795f1d4b8d81527238d40b0ed9b0d9317ee5314a" translate="yes" xml:space="preserve">
+          <source>Automatic background scanning for a Read/Write server when connected
+to a server in read-only mode.</source>
+          <target state="translated">읽기 전용 모드로 서버에 연결된 경우 읽기 / 쓰기 서버에 대한 자동 백그라운드 검색.</target>
+        </trans-unit>
+        <trans-unit id="0657e50b6a0c4821856455f29e77ec8227f3c934" translate="yes" xml:space="preserve">
+          <source>Backwards compatible exception class aliases are provided for now in
+kazoo exceptions for the prior C exception names.</source>
+          <target state="translated">이전 C 예외 이름에 대한 kazoo 예외에서 역 호환 예외 클래스 별칭이 현재 제공됩니다.</target>
+        </trans-unit>
+        <trans-unit id="025227d75ab81aadd6a13faa2dc102c7a8b0b9e0" translate="yes" xml:space="preserve">
+          <source>Base client library with handler support for threading and gevent
+async environments.</source>
+          <target state="translated">스레딩 및 gevent 비동기 환경에 대한 핸들러 지원이 포함 된 기본 클라이언트 라이브러리입니다.</target>
+        </trans-unit>
+        <trans-unit id="57a6465f9c4b12d9c6da8b9fa760e0daef844727" translate="yes" xml:space="preserve">
+          <source>Bug Fixes</source>
+          <target state="translated">버그 수정</target>
+        </trans-unit>
+        <trans-unit id="7799d6c8cf72cd8824fe9f15c6c5ebe1460afea2" translate="yes" xml:space="preserve">
+          <source>Bug Handling</source>
+          <target state="translated">버그 처리</target>
+        </trans-unit>
+        <trans-unit id="fc80d37404801d5984d639270820dd5170cbd05e" translate="yes" xml:space="preserve">
+          <source>Calling a DataWatch or ChildrenWatch instance twice (decorator) now
+throws an exception as only a single function can be associated with
+a single watcher. Issue #154.</source>
+          <target state="translated">DataWatch 또는 ChildrenWatch 인스턴스를 두 번 (데코레이터) 호출하면 단일 함수 만 단일 감시자와 연결할 수 있으므로 이제 예외가 발생합니다. 문제 # 154.</target>
+        </trans-unit>
+        <trans-unit id="3d21afc00c0f4de406db4c013865d836d6a9449b" translate="yes" xml:space="preserve">
+          <source>Change gevent import to remove deprecation warning when newer gevent
+is used. PR #191, patch by Hiroaki Kawai.</source>
+          <target state="translated">최신 gevent가 사용될 때 지원 중단 경고를 제거하도록 gevent 가져 오기를 변경하십시오. PR # 191, 패치 : Hiroaki Kawai.</target>
+        </trans-unit>
+        <trans-unit id="43ba42ffef9f10ee4baa3eb2d93a12067a05d9a4" translate="yes" xml:space="preserve">
+          <source>Changes being made now to ensure more accuracy in the changelog will appear
+in all future versions going forward. Read the commit history for a better
+understanding of changes merged between 2.2.1 and 2.3.0.</source>
+          <target state="translated">변경 로그의 정확성을 높이기 위해 지금 수행중인 변경 사항은 향후 모든 버전에 표시됩니다. 2.2.1과 2.3.0 사이에 병합 된 변경 사항을 더 잘 이해하려면 커밋 기록을 읽으십시오.</target>
+        </trans-unit>
+        <trans-unit id="cfbc8a1433bb5d443ed4c0a5c929e7a23fe334ec" translate="yes" xml:space="preserve">
+          <source>Chore</source>
+          <target state="translated">하기 싫은 일</target>
+        </trans-unit>
+        <trans-unit id="674461b1a0f7505a5cefa02b3e7967d2ee228204" translate="yes" xml:space="preserve">
+          <source>Correctly document supported versions (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/f860de5284e8ba7d0ed4171d9e5c5bef41f6b64d&quot;&gt;f860de52&lt;/a&gt;)</source>
+          <target state="translated">지원되는 버전을 올바르게 문서화 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/f860de5284e8ba7d0ed4171d9e5c5bef41f6b64d&quot;&gt;f860de52&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="6b0d52725b9f4872252f0648ca01aab7e78ea6ed" translate="yes" xml:space="preserve">
+          <source>Correctly fire multiple callbacks (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/0905c47bff3cfc42382daff0d5ac81189c8ba46d&quot;&gt;0905c47b&lt;/a&gt;)</source>
+          <target state="translated">여러 콜백을 올바르게 실행 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/0905c47bff3cfc42382daff0d5ac81189c8ba46d&quot;&gt;0905c47b&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="8c4fb563b6058945464a2a133dc133fc6422282f" translate="yes" xml:space="preserve">
+          <source>Data and Children watching API's.</source>
+          <target state="translated">API를보고있는 데이터 및 어린이.</target>
+        </trans-unit>
+        <trans-unit id="66d67f6dff24f60bb1a5db056026fcdd1e70c285" translate="yes" xml:space="preserve">
+          <source>Data-watchers for the same node are no longer 'stacked'. That is, if
+a get and an exists call occur for the same node with the same watch
+function, then it will be registered only once. This change results
+in Kazoo behaving per Zookeeper client spec regarding repeat watch
+use.</source>
+          <target state="translated">동일한 노드에 대한 데이터 감시자는 더 이상 '스택'되지 않습니다. 즉, 동일한 watch 함수를 가진 동일한 노드에 대해 get 및 exists 호출이 발생하면 한 번만 등록됩니다. 이 변경으로 Kazoo는 반복 시계 사용과 관련하여 Zookeeper 클라이언트 사양에 따라 작동합니다.</target>
+        </trans-unit>
+        <trans-unit id="839518e3d40255266f7934d1d1449159f338ab56" translate="yes" xml:space="preserve">
+          <source>DataWatch no longer takes any parameters besides for the optional
+function during instantiation. The additional options are now
+implicitly True, with the user being left to ignore events as they
+choose. See the DataWatch API docs for more information.</source>
+          <target state="translated">DataWatch는 인스턴스화하는 동안 선택적 함수 외에 더 이상 매개 변수를 사용하지 않습니다. 추가 옵션은 이제 암시 적으로 True가되며 사용자가 선택한 이벤트를 무시할 수 있습니다. 자세한 정보는 DataWatch API 문서를 참조하십시오.</target>
+        </trans-unit>
+        <trans-unit id="b8b0ff2d5f08b8fc7655b53e52f62a034a8a9de3" translate="yes" xml:space="preserve">
+          <source>DataWatch now has a allow_missing_node setting that allows a watch
+to be set on a node that doesn't exist when the DataWatch is
+created.</source>
+          <target state="translated">DataWatch에는 이제 DataWatch가 생성 될 때 존재하지 않는 노드에 감시를 설정할 수있는 allow_missing_node 설정이 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="34730e9bbd5c0ba7b7655973316eed44e39da85f" translate="yes" xml:space="preserve">
+          <source>Deprecations</source>
+          <target state="translated">지원 중단</target>
+        </trans-unit>
+        <trans-unit id="b448828f5c992a82053cb48beed8cbda3572b1f8" translate="yes" xml:space="preserve">
+          <source>Disable JAAS isInitiator for Server (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/933b38b5506d84e05ed6f6c5c8c208a3367400da&quot;&gt;933b38b5&lt;/a&gt;)</source>
+          <target state="translated">JAAS isInitiator for Server 비활성화 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/933b38b5506d84e05ed6f6c5c8c208a3367400da&quot;&gt;933b38b5&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="52110cb5777609df5c90bd82b042b2aa39fa8e03" translate="yes" xml:space="preserve">
+          <source>Disable problematic hound-flake8-black integration. (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/75f62a0dd40a9f9bdefcb04cea5ee5fcd3438c0e&quot;&gt;75f62a0d&lt;/a&gt;)</source>
+          <target state="translated">문제가있는 Hound-flake8-black 통합을 비활성화합니다. ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/75f62a0dd40a9f9bdefcb04cea5ee5fcd3438c0e&quot;&gt;75f62a0d&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="cdba60a525e91017acace2575a32341fe23198be" translate="yes" xml:space="preserve">
+          <source>Doc</source>
+          <target state="translated">문서</target>
+        </trans-unit>
+        <trans-unit id="95b25ca3b04c0054cb74dfd4768bd96d5c41859c" translate="yes" xml:space="preserve">
+          <source>Docs have been restructured to handle the new classes and locations
+of the methods from the pure Python refactor.</source>
+          <target state="translated">순수한 Python 리팩터링에서 메서드의 새 클래스와 위치를 처리하도록 문서가 재구성되었습니다.</target>
+        </trans-unit>
+        <trans-unit id="9e9cf3221a30246219863f1d2366e36cb580debc" translate="yes" xml:space="preserve">
+          <source>Documentation</source>
+          <target state="translated">선적 서류 비치</target>
+        </trans-unit>
+        <trans-unit id="38e8e007fcfcee003ce5a1b5480b233cc399125c" translate="yes" xml:space="preserve">
+          <source>Exponential backoff with jitter for retrying commands.</source>
+          <target state="translated">명령 재 시도를위한 지터가있는 지수 백 오프.</target>
+        </trans-unit>
+        <trans-unit id="8c0cfc9ffa16ea7bb826f477d2a2cdb26402cd57" translate="yes" xml:space="preserve">
+          <source>Extend support to Python 3.4, deprecating Python 3.2.</source>
+          <target state="translated">지원을 Python 3.4로 확장하여 Python 3.2를 더 이상 사용하지 않습니다.</target>
+        </trans-unit>
+        <trans-unit id="fc338f87a058158eb824b53705961801516a9460" translate="yes" xml:space="preserve">
+          <source>Features</source>
+          <target state="translated">풍모</target>
+        </trans-unit>
+        <trans-unit id="97a2e2e734dcbf541338bce5bcfb690bb46decb0" translate="yes" xml:space="preserve">
+          <source>Fix PatientChildrenWatch to use handler specific sleep function.</source>
+          <target state="translated">처리기 특정 수면 기능을 사용하도록 PatientChildrenWatch를 수정하십시오.</target>
+        </trans-unit>
+        <trans-unit id="4a5e65adb1a27d6fbd09b5c452f10590fbe566f3" translate="yes" xml:space="preserve">
+          <source>Fix atexit handling for kazoo threading handler, PR #183. Patch by
+Brian Wickman.</source>
+          <target state="translated">kazoo 스레딩 처리기, PR # 183에 대한 atexit 처리를 수정합니다. Brian Wickman의 패치.</target>
+        </trans-unit>
+        <trans-unit id="3a0d1a5b4afa0c9f410bf16d1c4a5aca89994c44" translate="yes" xml:space="preserve">
+          <source>Fix bug with gevent 0.13.x backport of peekable queue.</source>
+          <target state="translated">peekable 대기열의 gevent 0.13.x 백 포트 버그를 수정했습니다.</target>
+        </trans-unit>
+        <trans-unit id="0e2faf92662f42abc41d694e9f6195b30608607a" translate="yes" xml:space="preserve">
+          <source>Fix bug with locks not handling intermediary lock contenders
+disappearing.</source>
+          <target state="translated">중간 잠금 경쟁자가 사라지는 잠금을 처리하지 않는 버그 수정.</target>
+        </trans-unit>
+        <trans-unit id="ffde1d1ecc70707b053fea00ee27b5899a929e9d" translate="yes" xml:space="preserve">
+          <source>Fix bug with set_data type check failing to catch unicode values.</source>
+          <target state="translated">set_data 유형 검사가 유니 코드 값을 포착하지 못하는 버그를 수정합니다.</target>
+        </trans-unit>
+        <trans-unit id="2194cec8dee9b19b52d625fe1bae9efce1205a2a" translate="yes" xml:space="preserve">
+          <source>Fix gevent 1.3b1+ timeout import (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/257b58961f7ddd9db04d6efa070739a1b0404487&quot;&gt;257b5896&lt;/a&gt;)</source>
+          <target state="translated">gevent 1.3b1 + 시간 초과 가져 오기 수정 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/257b58961f7ddd9db04d6efa070739a1b0404487&quot;&gt;257b5896&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="efc8eabf2b08dd756add50fb6f8b5dcfe4dbe6b4" translate="yes" xml:space="preserve">
+          <source>Fix issue with client.stop() not always setting the client state to
+KeeperState.CLOSED. Patch by Jyrki Pulliainen in PR #174.</source>
+          <target state="translated">클라이언트 상태를 항상 KeeperState.CLOSED로 설정하지 않는 client.stop () 문제를 해결합니다. PR # 174에서 Jyrki Pulliainen의 패치.</target>
+        </trans-unit>
+        <trans-unit id="abbe8192148088636490a4e6aee74452b9469dd2" translate="yes" xml:space="preserve">
+          <source>Fix ordering of exception catches in lock.acquire as it was
+capturing a parent exception before the child. Patch by ReneSac.</source>
+          <target state="translated">lock.acquire의 예외 캐치 순서를 수정하여 하위 이전에 상위 예외를 캡처했습니다. ReneSac의 패치.</target>
+        </trans-unit>
+        <trans-unit id="f5f61acf908ff4b31f16177c73ad703b7048f37b" translate="yes" xml:space="preserve">
+          <source>Fix the recipe examples, so they actually work by connecting to
+ZooKeeper. Without start() they just hang and can't be killed.</source>
+          <target state="translated">레시피 예제를 수정하여 실제로 ZooKeeper에 연결하여 작동합니다. start ()없이 그들은 그냥 매달리고 죽일 수 없습니다.</target>
+        </trans-unit>
+        <trans-unit id="6e7e8b61b2bcea6bbd23b9e3ae7b8f632586a991" translate="yes" xml:space="preserve">
+          <source>Fixed bug similar to #14 for ChildrenWatch on the session listener.</source>
+          <target state="translated">세션 리스너에서 ChildrenWatch의 # 14와 유사한 버그를 수정했습니다.</target>
+        </trans-unit>
+        <trans-unit id="4a63f1212abd0dea0eae33b51eaca4d653a3f845" translate="yes" xml:space="preserve">
+          <source>Fixed bug with client reconnection looping indefinitely using an
+expired session id.</source>
+          <target state="translated">만료 된 세션 ID를 사용하여 클라이언트 재 연결이 무한 반복되는 버그를 수정했습니다.</target>
+        </trans-unit>
+        <trans-unit id="d789632ee15b342f5e63b2fc5291cd31d30ae0ad" translate="yes" xml:space="preserve">
+          <source>Fixed doc references to start_async using an AsyncResult object, it
+uses an Event object.</source>
+          <target state="translated">AsyncResult 개체를 사용하여 start_async에 대한 문서 참조를 수정했으며 Event 개체를 사용합니다.</target>
+        </trans-unit>
+        <trans-unit id="50e9f96a2c740cbf5a86cd856024bf649e260ca3" translate="yes" xml:space="preserve">
+          <source>Fixed password bug with updated zc-zookeeper-static release, which
+retains null bytes in the password properly.</source>
+          <target state="translated">암호에 null 바이트를 올바르게 유지하는 업데이트 된 zc-zookeeper-static 릴리스의 암호 버그를 수정했습니다.</target>
+        </trans-unit>
+        <trans-unit id="0ae713b25b3632ff2689d3e5318526586d9cddb9" translate="yes" xml:space="preserve">
+          <source>Fixed possible bug with using a threading.Condition in the set
+partitioner. Set partitioner uses new rlock_object handler API to
+get an appropriate RLock for gevent.</source>
+          <target state="translated">set partitioner에서 threading.Condition을 사용할 때 발생할 수있는 버그를 수정했습니다. Set 파티 셔 너는 새로운 rlock_object 핸들러 API를 사용하여 gevent에 대한 적절한 RLock을 얻습니다.</target>
+        </trans-unit>
+        <trans-unit id="3a998b1fdba7c32bf8a25b18b648c2c30d3cac03" translate="yes" xml:space="preserve">
+          <source>Fixed reconnect hammering, so that the reconnection follows retry
+jitter and retry backoff's.</source>
+          <target state="translated">재 연결 해머링을 수정하여 재 연결이 재시도 지터를 따르고 백 오프를 재 시도하도록했습니다.</target>
+        </trans-unit>
+        <trans-unit id="a87f2051e23578bb89603051ca20323798e8a27f" translate="yes" xml:space="preserve">
+          <source>Gevent 0.13 and 1.0b support.</source>
+          <target state="translated">Gevent 0.13 및 1.0b 지원.</target>
+        </trans-unit>
+        <trans-unit id="caf6daf16c1367c235f9b35849ca537ab05e65bc" translate="yes" xml:space="preserve">
+          <source>Handler interface now has an rlock_object for use by recipes.</source>
+          <target state="translated">핸들러 인터페이스에는 이제 레시피에서 사용할 수있는 rlock_object가 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="1589429f3fb4ff3b934eb28cda73f7b2260c787f" translate="yes" xml:space="preserve">
+          <source>Handles connecting to Zookeeper 3.4+ read-only servers.</source>
+          <target state="translated">Zookeeper 3.4 이상 읽기 전용 서버에 대한 연결을 처리합니다.</target>
+        </trans-unit>
+        <trans-unit id="0394b28d6118aa13ed2ac7c3f11e59492e8c1471" translate="yes" xml:space="preserve">
+          <source>Higher Level Zookeeper Client</source>
+          <target state="translated">상위 수준의 Zookeeper 클라이언트</target>
+        </trans-unit>
+        <trans-unit id="be034204f6ab60397551507ead1dc573db49d699" translate="yes" xml:space="preserve">
+          <source>Implement proper retry backoff logic with jitter. (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/0bb0659cf3fd73714a9d75b093a75c7122e116e6&quot;&gt;0bb0659c&lt;/a&gt;)</source>
+          <target state="translated">지터가있는 적절한 재시도 백 오프 논리를 구현합니다. ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/0bb0659cf3fd73714a9d75b093a75c7122e116e6&quot;&gt;0bb0659c&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="f870953201cd80b302efb65a5b8ec35c5d4f9125" translate="yes" xml:space="preserve">
+          <source>Improvements to Debian packaging rules.</source>
+          <target state="translated">데비안 패키징 규칙 개선.</target>
+        </trans-unit>
+        <trans-unit id="8409bb74170081a61fbf99ae231fd2dffc513770" translate="yes" xml:space="preserve">
+          <source>Integrate eventlet &lt;em&gt;handler&lt;/em&gt; support into kazoo so that along with
+[gevent, threading] handlers there can now be a dedicated eventlet
+handler for projects that need to (or want to) use eventlet (such as
+those working in the openstack community). The
+&lt;code&gt;requirements_eventlet.txt&lt;/code&gt; file lists the optional eventlet
+requirement(s) that needs to be satisfied when this new handler is
+used.</source>
+          <target state="translated">이벤트 렛 &lt;em&gt;핸들러&lt;/em&gt; 지원을 kazoo에 통합 하여 [gevent, threading] 핸들러와 함께 이제 eventlet을 사용해야하는 (또는 원하는) 프로젝트 (예 : openstack 커뮤니티에서 작업하는 프로젝트)를위한 전용 이벤트 렛 핸들러가있을 수 있습니다. &lt;code&gt;requirements_eventlet.txt&lt;/code&gt; 의 파일 목록이 새로운 핸들러를 사용하는 경우의 요구가 충족 될 수있는 옵션 eventlet 요구 사항 (들).</target>
+        </trans-unit>
+        <trans-unit id="7783b6638a6a836c6b7415fc6657823f9a5aa6c5" translate="yes" xml:space="preserve">
+          <source>Issue #100: Make it easier to see exception context in threading
+and connection modules.</source>
+          <target state="translated">문제 # 100 : 스레딩 및 연결 모듈에서 예외 컨텍스트를 더 쉽게 볼 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="f57167aaea58454b8191e3ec438a9714d5848c8b" translate="yes" xml:space="preserve">
+          <source>Issue #103: Allow prefix-less sequential znodes.</source>
+          <target state="translated">문제 # 103 : 접두사가없는 순차적 znode를 허용합니다.</target>
+        </trans-unit>
+        <trans-unit id="e8136c889a41dd284c48678024469c9254bcf139" translate="yes" xml:space="preserve">
+          <source>Issue #105: Avoid rare import lock problems by moving module
+imports in client.py to the module scope.</source>
+          <target state="translated">문제 # 105 : client.py의 모듈 가져 오기를 모듈 범위로 이동하여 드문 가져 오기 잠금 문제를 방지합니다.</target>
+        </trans-unit>
+        <trans-unit id="37ebfbec216f9732e17bd8e882686f7529f92ff5" translate="yes" xml:space="preserve">
+          <source>Issue #106, #107: client.create_async didn't strip change root
+from the returned path.</source>
+          <target state="translated">문제 # 106, # 107 : client.create_async가 반환 된 경로에서 변경 루트를 제거하지 않았습니다.</target>
+        </trans-unit>
+        <trans-unit id="5d78e163da7ba5be83e5dc786c2055e43d2a46dd" translate="yes" xml:space="preserve">
+          <source>Issue #108: Circular import fail when importing
+kazoo.recipe.watchers directly has now been resolved. Watchers and
+partitioner properly import the KazooState from
+kazoo.protocol.states rather than kazoo.client.</source>
+          <target state="translated">문제 # 108 : kazoo.recipe.watchers를 직접 가져올 때 순환 가져 오기 실패가 이제 해결되었습니다. 감시자와 파티 셔 너는 kazoo.client가 아닌 kazoo.protocol.states에서 KazooState를 올바르게 가져옵니다.</target>
+        </trans-unit>
+        <trans-unit id="50922d62ef6b2e60f9ce9c5f2f260955a17551bd" translate="yes" xml:space="preserve">
+          <source>Issue #109: Partials not usable properly as a datawatch call can
+now be used. All funcs will be called with 3 args and fall back to 2
+args if there's an argument error.</source>
+          <target state="translated">문제 # 109 : 이제 데이터 워치 호출로 제대로 사용할 수없는 부분을 사용할 수 있습니다. 모든 함수는 3 개의 인수로 호출되고 인수 오류가있는 경우 2 개의 인수로 대체됩니다.</target>
+        </trans-unit>
+        <trans-unit id="d98676a435da2c211d87b8c2c75122f28fe72ec0" translate="yes" xml:space="preserve">
+          <source>Issue #119: Handler timeout takes the max of the random interval or
+the read timeout to ensure a negative number isn't used for the read
+timeout.</source>
+          <target state="translated">문제 # 119 : 처리기 시간 제한은 임의 간격의 최대 값 또는 읽기 시간 제한을 사용하여 음수가 읽기 제한 시간에 사용되지 않도록합니다.</target>
+        </trans-unit>
+        <trans-unit id="10ff70a91f1f16393a2ec4ccefbfba8c8a456c04" translate="yes" xml:space="preserve">
+          <source>Issue #12 fixed: gevent 0.13 doesn't use the same
+start_new_thread as gevent 1.0 which resulted in a fully
+monkey-patched environment halting due to the wrong thread. Updated
+to use the older kazoo method of getting the real thread module
+object.</source>
+          <target state="translated">이슈 # 12 수정 : gevent 0.13은 gevent 1.0과 동일한 start_new_thread를 사용하지 않아 잘못된 스레드로 인해 완전히 원숭이 패치 된 환경이 중지되었습니다. 실제 스레드 모듈 개체를 가져 오는 이전 kazoo 메서드를 사용하도록 업데이트되었습니다.</target>
+        </trans-unit>
+        <trans-unit id="846851e6cc2d268049233cc9e789e291c97bf460" translate="yes" xml:space="preserve">
+          <source>Issue #133: Introduce a new environment variable
+ZOOKEEPER_PORT_OFFSET for the testing support, to run the testing
+cluster on a different range.</source>
+          <target state="translated">문제 # 133 : 테스트 지원을 위해 새로운 환경 변수 ZOOKEEPER_PORT_OFFSET을 도입하여 다른 범위에서 테스트 클러스터를 실행합니다.</target>
+        </trans-unit>
+        <trans-unit id="2d3fbe956bf12bc211466cd1d9bdbaebd8a706af" translate="yes" xml:space="preserve">
+          <source>Issue #14 fixed: DataWatch had inconsistent handling of the node it
+was watching not existing. DataWatch also properly spawns its
+_get_data function to avoid blocking session events.</source>
+          <target state="translated">이슈 # 14 수정 : DataWatch가 감시하던 노드가 존재하지 않는 것을 일관되게 처리하지 못했습니다. DataWatch는 또한 세션 이벤트 차단을 방지하기 위해 _get_data 함수를 올바르게 생성합니다.</target>
+        </trans-unit>
+        <trans-unit id="129f5743e6376de2950a83ec141620a82da43688" translate="yes" xml:space="preserve">
+          <source>Issue #15 fixed again: Force sleep delay to be a float to appease
+gevent.</source>
+          <target state="translated">문제 # 15 다시 수정 : gevent를 달래기 위해 강제로 수면 지연을 부동으로 만듭니다.</target>
+        </trans-unit>
+        <trans-unit id="561eb6e6ae688014060689a2088a3b26fc6f94ce" translate="yes" xml:space="preserve">
+          <source>Issue #15 fixed: sleep_func for SequentialGeventHandler was not
+set on the class appropriately leading to additional arguments being
+passed to gevent.sleep.</source>
+          <target state="translated">이슈 # 15 수정 : SequentialGeventHandler에 대한 sleep_func가 클래스에 적절하게 설정되지 않아 추가 인수가 gevent.sleep에 전달되었습니다.</target>
+        </trans-unit>
+        <trans-unit id="fcdb1690fd00f3a2425ded93ac2c798c912a5fe1" translate="yes" xml:space="preserve">
+          <source>Issue #16 fixed: gevent zookeeper logging failed to handle a monkey
+patched logging setup. Logging is now setup such that a greenlet is
+used for logging messages under gevent, and the thread one is used
+otherwise.</source>
+          <target state="translated">문제 # 16 수정 : gevent zookeeper 로깅이 monkey 패치 로깅 설정을 처리하지 못했습니다. 이제 gevent에서 메시지를 로깅하는 데 그린 렛이 사용되고 그렇지 않으면 스레드 1이 사용되도록 로깅이 설정됩니다.</target>
+        </trans-unit>
+        <trans-unit id="3610c274deb1f863fe9112d0fcc2838980e8d462" translate="yes" xml:space="preserve">
+          <source>Issue #167: Closing a client that was never started throws a type
+error. Patch by Joshua Harlow.</source>
+          <target state="translated">문제 # 167 : 시작되지 않은 클라이언트를 닫으면 유형 오류가 발생합니다. Joshua Harlow의 패치.</target>
+        </trans-unit>
+        <trans-unit id="ea2cebc179cc37a4183eccfe514031af07c5e704" translate="yes" xml:space="preserve">
+          <source>Issue #169: Fixed pipes leaking into child processes.</source>
+          <target state="translated">문제 # 169 : 하위 프로세스로 누출되는 파이프 수정.</target>
+        </trans-unit>
+        <trans-unit id="407833890b70615f83e0a922b3922a12d95e426c" translate="yes" xml:space="preserve">
+          <source>Issue #17 fixed: Wrap timeout exceptions with staticmethod so they
+can be used directly as intended. Patch by Bob Van Zant.</source>
+          <target state="translated">이슈 # 17 수정 : 시간 초과 예외를 staticmethod로 래핑하여 의도 한대로 직접 사용할 수 있습니다. Bob Van Zant의 패치.</target>
+        </trans-unit>
+        <trans-unit id="5ce4d29c79eb1715dce5f9b4aec9ce7961704a07" translate="yes" xml:space="preserve">
+          <source>Issue #181: Add documentation on basic logging setup.</source>
+          <target state="translated">문제 # 181 : 기본 로깅 설정에 대한 문서를 추가합니다.</target>
+        </trans-unit>
+        <trans-unit id="7026c56edd7175ce1d51d3658ea6a96959b48183" translate="yes" xml:space="preserve">
+          <source>Issue #198: Mention Zake as a sophisticated kazoo mock testing
+library.</source>
+          <target state="translated">Issue # 198 : Zake를 정교한 kazoo 모의 테스트 라이브러리로 언급합니다.</target>
+        </trans-unit>
+        <trans-unit id="bafd84232ee232dcdfc8986371db25e75f357bfc" translate="yes" xml:space="preserve">
+          <source>Issue #234: Add support for reconfig cluster membership operation</source>
+          <target state="translated">문제 # 234 : 재구성 클러스터 멤버십 작업에 대한 지원 추가</target>
+        </trans-unit>
+        <trans-unit id="90599d84db37fbe4c387ea54c6739b255cf5c9f4" translate="yes" xml:space="preserve">
+          <source>Issue #29 fixed: DataWatch and ChildrenWatch properly re-register
+their watches on server disconnect.</source>
+          <target state="translated">문제 # 29 수정 : DataWatch 및 ChildrenWatch가 서버 연결 해제시 시계를 올바르게 다시 등록합니다.</target>
+        </trans-unit>
+        <trans-unit id="ecc2b27a0d586ee96862972beebe4095620eceb2" translate="yes" xml:space="preserve">
+          <source>Issue #31 fixed: Only catch KazooExceptions in catch-all calls.</source>
+          <target state="translated">문제 # 31 수정 : catch-all 호출에서 KazooExceptions 만 catch합니다.</target>
+        </trans-unit>
+        <trans-unit id="12fb155a6c7c5dbf2f252eb6bc9f848e01f1e535" translate="yes" xml:space="preserve">
+          <source>Issue #34: Be more careful while handling socket connection errors.</source>
+          <target state="translated">문제 # 34 : 소켓 연결 오류를 처리 할 때 더주의하십시오.</target>
+        </trans-unit>
+        <trans-unit id="c65e57e95e4c3c7c9569f885605e5c4b4083428e" translate="yes" xml:space="preserve">
+          <source>Issue #35: KazooClient.__init__ didn't pass on
+retry_max_delay to the retry helper.</source>
+          <target state="translated">문제 # 35 : KazooClient .__ init__가 retry_max_delay를 재시도 도우미에 전달하지 않았습니다.</target>
+        </trans-unit>
+        <trans-unit id="4118790335916e3a46167cb94d53e94d71f636fd" translate="yes" xml:space="preserve">
+          <source>Issue #36: Correctly set ConnectionHandler.writer_stopped even if
+an exception is raised inside the writer, like a retry operation
+failing.</source>
+          <target state="translated">문제 # 36 : 재시도 작업 실패와 같이 작성기 내부에서 예외가 발생하더라도 ConnectionHandler.writer_stopped를 올바르게 설정합니다.</target>
+        </trans-unit>
+        <trans-unit id="13e33acb12ae5f1ea48c3fba4819a650fd7c697d" translate="yes" xml:space="preserve">
+          <source>Issue #37 / #40: Handle timeout errors during select calls on
+sockets.</source>
+          <target state="translated">이슈 # 37 / # 40 : 소켓에서 선택 호출 중 시간 초과 오류를 처리합니다.</target>
+        </trans-unit>
+        <trans-unit id="f198d8a5a481fef94811c97a938ac47857b789ed" translate="yes" xml:space="preserve">
+          <source>Issue #38: Set CLOEXEC flag on all sockets when available.</source>
+          <target state="translated">문제 # 38 : 가능한 경우 모든 소켓에 CLOEXEC 플래그를 설정합니다.</target>
+        </trans-unit>
+        <trans-unit id="aff57d5abaffe4131ec238a958c82bba60b6507d" translate="yes" xml:space="preserve">
+          <source>Issue #39 / #41: Handle connection dropped errors during session
+writes. Ensure client connection is re-established to a new ZK node
+if available.</source>
+          <target state="translated">이슈 # 39 / # 41 : 세션 쓰기 중 연결이 끊어진 오류를 처리합니다. 가능한 경우 새 ZK 노드에 대한 클라이언트 연결이 다시 설정되었는지 확인합니다.</target>
+        </trans-unit>
+        <trans-unit id="5a770d65149cfeac73d879da2b2201eb8c97ef0c" translate="yes" xml:space="preserve">
+          <source>Issue #43: Let DataWatch return node data if allow_missing_node
+is used.</source>
+          <target state="translated">문제 # 43 : allow_missing_node를 사용하는 경우 DataWatch가 노드 데이터를 반환하도록합니다.</target>
+        </trans-unit>
+        <trans-unit id="706040e3acfe1983b2bb287b7ccf2cbafa74de36" translate="yes" xml:space="preserve">
+          <source>Issue #46: Avoid TypeError in GeneratorContextManager on process
+shutdown.</source>
+          <target state="translated">문제 # 46 : 프로세스 종료시 GeneratorContextManager에서 TypeError를 방지합니다.</target>
+        </trans-unit>
+        <trans-unit id="547b4ea111e4ddc94498ad65c04b3da6cdbb869a" translate="yes" xml:space="preserve">
+          <source>Issue #48: Added documentation for the retry helper module.</source>
+          <target state="translated">문제 # 48 : 재시도 도우미 모듈에 대한 설명서가 추가되었습니다.</target>
+        </trans-unit>
+        <trans-unit id="fbbdb287ab0cbca2ba05e97442a410ec6b6baad7" translate="yes" xml:space="preserve">
+          <source>Issue #50: Avoid problems with sleep function in mixed
+gevent/threading setup.</source>
+          <target state="translated">문제 # 50 : 혼합 gevent / 스레딩 설정에서 절전 기능 문제를 방지합니다.</target>
+        </trans-unit>
+        <trans-unit id="cc125a1993be62a6e5d458ba907a5f8baa330b53" translate="yes" xml:space="preserve">
+          <source>Issue #53: Throw a warning upon starting if the chroot path doesn't
+exist so that it's more obvious when the chroot should be created
+before performing more operations.</source>
+          <target state="translated">문제 # 53 : chroot 경로가 존재하지 않으면 시작시 경고를 표시하여 더 많은 작업을 수행하기 전에 chroot를 만들어야하는시기를 더 명확하게 알 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="deae8d98ac9fd1f8d07a137687222b18ce567814" translate="yes" xml:space="preserve">
+          <source>Issue #55: Fix os.pipe file descriptor leak and introduce a
+KazooClient.close method. The method is particular useful in tests,
+where multiple KazooClients are created and closed in the same
+process.</source>
+          <target state="translated">문제 # 55 : os.pipe 파일 설명자 누출을 수정하고 KazooClient.close 메서드를 도입합니다. 이 방법은 동일한 프로세스에서 여러 KazooClient가 생성되고 닫히는 테스트에서 특히 유용합니다.</target>
+        </trans-unit>
+        <trans-unit id="e6bfc2ec405570396d2df78d48114db4c8782545" translate="yes" xml:space="preserve">
+          <source>Issue #56: Avoid issues with watch callbacks evaluating to false.</source>
+          <target state="translated">문제 # 56 : 시계 콜백이 거짓으로 평가되는 문제를 피하십시오.</target>
+        </trans-unit>
+        <trans-unit id="fe29d23c99bbe9f37f01a7d36b67bd0bb7e342d3" translate="yes" xml:space="preserve">
+          <source>Issue #58: DataWatcher failed to re-register for changes after
+non-existent node was created then deleted.</source>
+          <target state="translated">문제 # 58 : 존재하지 않는 노드가 생성 된 후 삭제 된 후 DataWatcher가 변경 사항을 다시 등록하지 못했습니다.</target>
+        </trans-unit>
+        <trans-unit id="94fdf02fa5879d73400fc962590740bf58abd0fd" translate="yes" xml:space="preserve">
+          <source>Issue #62, #92, #89, #101, #102: Allow KazooRetry to have a max
+deadline, transition properly when connection fails to LOST, and
+setup separate connection retry behavior from client command retry
+behavior. Patches by Mike Lundy.</source>
+          <target state="translated">문제 # 62, # 92, # 89, # 101, # 102 : KazooRetry가 최대 기한을 갖도록 허용하고, 연결이 LOST에 실패 할 때 제대로 전환하고, 클라이언트 명령 재시도 동작에서 별도의 연결 재시도 동작을 설정합니다. Mike Lundy의 패치.</target>
+        </trans-unit>
+        <trans-unit id="740b9c253a8b8e0182ce2e6262860965d09d8e33" translate="yes" xml:space="preserve">
+          <source>Issue #63: Watchers weren't reset on lost connection.</source>
+          <target state="translated">문제 # 63 : 연결이 끊어지면 감시자가 재설정되지 않았습니다.</target>
+        </trans-unit>
+        <trans-unit id="c7388f688c68bd4573dfb3871cf75aaddd6de60b" translate="yes" xml:space="preserve">
+          <source>Issue #65: Allow non-blocking semaphore acquisition.</source>
+          <target state="translated">문제 # 65 : 비 차단 세마포어 획득을 허용합니다.</target>
+        </trans-unit>
+        <trans-unit id="02545dce553e2aac7c35622d3ab986a80e9ddc31" translate="yes" xml:space="preserve">
+          <source>Issue #66: Require ping reply before sending another ping,
+otherwise the connection will be considered dead and a
+ConnectionDropped will be raised to trigger a reconnect.</source>
+          <target state="translated">문제 # 66 : 다른 핑을 보내기 전에 핑 응답이 필요합니다. 그렇지 않으면 연결이 끊어진 것으로 간주되고 ConnectionDropped가 발생하여 재 연결을 트리거합니다.</target>
+        </trans-unit>
+        <trans-unit id="6da2ab479129a2f869e6d977932d9244a4fe6c3f" translate="yes" xml:space="preserve">
+          <source>Issue #68: Closing the connection causes exceptions to be raised by
+watchers which assume the connection won't be closed when running
+commands.</source>
+          <target state="translated">문제 # 68 : 연결을 닫으면 명령을 실행할 때 연결이 닫히지 않는다고 가정하는 감시자에 의해 예외가 발생합니다.</target>
+        </trans-unit>
+        <trans-unit id="b129faeb6ffb560489fb08beaee05dd056631379" translate="yes" xml:space="preserve">
+          <source>Issue #69: Only ensure path once in lock and semaphore recipes.</source>
+          <target state="translated">문제 # 69 : 잠금 및 세마포어 레시피에서 경로를 한 번만 확인하십시오.</target>
+        </trans-unit>
+        <trans-unit id="f202e8c50b979cb6a08c99a00bde14957c07095b" translate="yes" xml:space="preserve">
+          <source>Issue #76: Extend testing helpers to allow customization of the
+Java classpath by specifying the new ZOOKEEPER_CLASSPATH
+environment variable.</source>
+          <target state="translated">문제 # 76 : 새 ZOOKEEPER_CLASSPATH 환경 변수를 지정하여 Java 클래스 경로를 사용자 정의 할 수 있도록 테스트 도우미를 확장합니다.</target>
+        </trans-unit>
+        <trans-unit id="f6ada938979c30605ef1e175f5fd41bbbd62c777" translate="yes" xml:space="preserve">
+          <source>Issue #77: Use timeout in initial socket connection.</source>
+          <target state="translated">문제 # 77 : 초기 소켓 연결에서 시간 초과를 사용합니다.</target>
+        </trans-unit>
+        <trans-unit id="a429589e525865b07099ea0c9736b1dd7f3c9a2a" translate="yes" xml:space="preserve">
+          <source>Issue #79 / #90: Add ability to pass the WatchedEvent to DataWatch
+and ChildWatch functions.</source>
+          <target state="translated">문제 # 79 / # 90 : WatchedEvent를 DataWatch 및 ChildWatch 함수에 전달하는 기능 추가.</target>
+        </trans-unit>
+        <trans-unit id="c7d0b78bac515d630b50f85c4d6280c73c040748" translate="yes" xml:space="preserve">
+          <source>Issue #85: Increase information density of logs and don't prevent
+dynamic reconfiguration of log levels at runtime.</source>
+          <target state="translated">문제 # 85 : 로그의 정보 밀도를 높이고 런타임시 로그 수준의 동적 재구성을 방지하지 마십시오.</target>
+        </trans-unit>
+        <trans-unit id="e95d4a12e332d0147ea12047551a1aad1f8bcda8" translate="yes" xml:space="preserve">
+          <source>Issue #87 / #88: Allow re-acquiring lock after cancel.</source>
+          <target state="translated">문제 # 87 / # 88 : 취소 후 잠금 다시 획득을 허용합니다.</target>
+        </trans-unit>
+        <trans-unit id="737432508c328349713823b360f97c77d2fdfcbc" translate="yes" xml:space="preserve">
+          <source>Issue #9 fixed: Threads/greenlets didn't gracefully shut down.
+Handler now has a start/stop that is used by the client when calling
+start and stop that shuts down the handler workers. This addresses
+errors and warnings that could be emitted upon process shutdown
+regarding a clean exit of the workers.</source>
+          <target state="translated">이슈 # 9 수정 : 스레드 / 그린 렛이 정상적으로 종료되지 않았습니다. 핸들러에는 이제 핸들러 작업자를 종료하는 시작 및 중지를 호출 할 때 클라이언트가 사용하는 시작 / 중지가 있습니다. 이는 작업자의 깨끗한 종료와 관련하여 프로세스 종료시 발생할 수있는 오류 및 경고를 해결합니다.</target>
+        </trans-unit>
+        <trans-unit id="4f249f73ba1956245632fba4573e7c80c55dabf0" translate="yes" xml:space="preserve">
+          <source>Issue #93: Add timeout option to lock/semaphore acquire methods.</source>
+          <target state="translated">문제 # 93 : 잠금 / 세마포어 획득 방법에 시간 초과 옵션을 추가합니다.</target>
+        </trans-unit>
+        <trans-unit id="fbd505929644bea6c85e8650aceec97d1ee60f62" translate="yes" xml:space="preserve">
+          <source>Issue #94: Clean up stray bytes in connection pipe.</source>
+          <target state="translated">문제 # 94 : 연결 파이프에서 부유 바이트를 정리합니다.</target>
+        </trans-unit>
+        <trans-unit id="2a0c0755bac0a14ffa8746a851a1876de4fc8aeb" translate="yes" xml:space="preserve">
+          <source>Issue #95: Handle errors deserializing connection response.</source>
+          <target state="translated">문제 # 95 : 연결 응답을 역 직렬화하는 오류를 처리합니다.</target>
+        </trans-unit>
+        <trans-unit id="cd9fed57232df15cb419b6c36cd837195276936f" translate="yes" xml:space="preserve">
+          <source>Issue #96: Provide Windows compatibility in testing harness.</source>
+          <target state="translated">문제 # 96 : 테스트 장치에서 Windows 호환성을 제공합니다.</target>
+        </trans-unit>
+        <trans-unit id="a501dbf860edebb472ee2ca45afc7c952718307b" translate="yes" xml:space="preserve">
+          <source>Issue #97: Update some docstrings to reflect current state of
+handlers.</source>
+          <target state="translated">문제 # 97 : 처리기의 현재 상태를 반영하도록 일부 독 스트링을 업데이트합니다.</target>
+        </trans-unit>
+        <trans-unit id="81fc3976445447dd3c94baff3948692d31f0613a" translate="yes" xml:space="preserve">
+          <source>Issue #98: Extend testing ZK harness to work with different file
+locations on some versions of Debian/Ubuntu.</source>
+          <target state="translated">문제 # 98 : 일부 Debian / Ubuntu 버전에서 다른 파일 위치에서 작동하도록 테스트 ZK 하네스를 확장합니다.</target>
+        </trans-unit>
+        <trans-unit id="89d44e17051891d6772a37fa3e125a1a1533d173" translate="yes" xml:space="preserve">
+          <source>Issue #99: Better exception raised when the writer fails to close.
+A WriterNotClosedException that inherits from KazooException is now
+raised when the writer fails to close in time.</source>
+          <target state="translated">문제 # 99 : 작성자가 닫히지 않을 때 발생하는 더 나은 예외. KazooException에서 상속 된 WriterNotClosedException은 이제 작성자가 시간 내에 닫히지 못할 때 발생합니다.</target>
+        </trans-unit>
+        <trans-unit id="d25065a79cdd365d363914584b3eb1b425f295af" translate="yes" xml:space="preserve">
+          <source>Kazoo</source>
+          <target state="translated">Kazoo</target>
+        </trans-unit>
+        <trans-unit id="e59468a6476cbc97ac669fbda786d3ff80e55442" translate="yes" xml:space="preserve">
+          <source>Kazoo previously would let the same function be registered as a
+data-watch or child-watch multiple times, and then call it multiple
+times upon being triggered. This was non-compliant Zookeeper client
+behavior, the same watch can now only be registered once for the
+same znode path per Zookeeper client documentation.</source>
+          <target state="translated">Kazoo는 이전에 동일한 기능을 data-watch 또는 child-watch로 여러 번 등록한 다음 트리거 될 때 여러 번 호출하도록했습니다. 이것은 비준수 Zookeeper 클라이언트 동작으로, 동일한 감시는 이제 Zookeeper 클라이언트 문서 당 동일한 znode 경로에 대해 한 번만 등록 될 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="bb1b31e9a377c3d6ffc7079157e5c70b584bec4d" translate="yes" xml:space="preserve">
+          <source>KazooClient can now be stopped more reliably even if its in the
+middle of a long retry sleep. This utilizes the new interrupt
+feature of KazooRetry which lets the sleep be broken down into
+chunks and an interrupt function called to determine if the retry
+should fail early.</source>
+          <target state="translated">KazooClient는 이제 긴 재시도 대기 중에도 더 안정적으로 중지 할 수 있습니다. 이것은 KazooRetry의 새로운 인터럽트 기능을 사용하여 수면을 청크로 분할하고 재 시도가 조기에 실패해야하는지 결정하기 위해 호출되는 인터럽트 함수를 사용합니다.</target>
+        </trans-unit>
+        <trans-unit id="c30d546a9d5428953f0e6798b43c1c6c5a24cf1a" translate="yes" xml:space="preserve">
+          <source>KazooClient.create_async now supports the makepath argument.</source>
+          <target state="translated">KazooClient.create_async는 이제 makepath 인수를 지원합니다.</target>
+        </trans-unit>
+        <trans-unit id="04b05d89625c5bc2f320a452743b0c48659cd609" translate="yes" xml:space="preserve">
+          <source>KazooClient.ensure_path now has an async version,
+ensure_path_async.</source>
+          <target state="translated">KazooClient.ensure_path에는 이제 비동기 버전 ensure_path_async가 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="3229609e15436ec51bcf00818a69a84dbc58a0c2" translate="yes" xml:space="preserve">
+          <source>License</source>
+          <target state="translated">특허</target>
+        </trans-unit>
+        <trans-unit id="a691aa37244f46427632c1b729ba2dba4be48dad" translate="yes" xml:space="preserve">
+          <source>Lock recipe was failing to use the client's sleep_func causing
+issues with gevent. Issue #150.</source>
+          <target state="translated">잠금 레시피가 클라이언트의 sleep_func를 사용하지 못하여 gevent에 문제가 발생했습니다. 150 호.</target>
+        </trans-unit>
+        <trans-unit id="77a8eccf83695816519719383ba77ee236789c9f" translate="yes" xml:space="preserve">
+          <source>Lock, Party, SetPartitioner, and Election recipe implementations.</source>
+          <target state="translated">Lock, Party, SetPartitioner 및 Election 레시피 구현.</target>
+        </trans-unit>
+        <trans-unit id="66cb25aff50d9fe8f7301a3f24b79a27d30d1b20" translate="yes" xml:space="preserve">
+          <source>Logging levels have been reduced.</source>
+          <target state="translated">로깅 수준이 감소했습니다.</target>
+        </trans-unit>
+        <trans-unit id="95d8ba5ea2991e5b23c4f9bf224c796ef46a6d59" translate="yes" xml:space="preserve">
+          <source>Logging previously at the &lt;code&gt;logging.DEBUG&lt;/code&gt; level is now logged at
+the &lt;code&gt;kazoo.loggingsupport.BLATHER&lt;/code&gt; level (5).</source>
+          <target state="translated">이전에 &lt;code&gt;logging.DEBUG&lt;/code&gt; 수준 에서 로깅하면 이제 &lt;code&gt;kazoo.loggingsupport.BLATHER&lt;/code&gt; 수준 (5) 에서 로깅됩니다 .</target>
+        </trans-unit>
+        <trans-unit id="8a6810fead668af51b3666bca4b5e6eaa97155e7" translate="yes" xml:space="preserve">
+          <source>Move to pytest (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/de97d74b50b62cd2f0cddc2a04e150575d9c6bc7&quot;&gt;de97d74b&lt;/a&gt;)</source>
+          <target state="translated">pytest로 이동 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/de97d74b50b62cd2f0cddc2a04e150575d9c6bc7&quot;&gt;de97d74b&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="03206b9c6158061fa0af982989f876c7ce927212" translate="yes" xml:space="preserve">
+          <source>New KeeperState.CONNECTED_RO state for Zookeeper servers connected
+in read-only mode.</source>
+          <target state="translated">읽기 전용 모드로 연결된 Zookeeper 서버의 새로운 KeeperState.CONNECTED_RO 상태.</target>
+        </trans-unit>
+        <trans-unit id="0d0cc617d0a5b793b6049e4a20fad68c52aff940" translate="yes" xml:space="preserve">
+          <source>New NotReadOnlyCallError exception when issuing a write change
+against a server thats currently read-only.</source>
+          <target state="translated">현재 읽기 전용 인 서버에 대해 쓰기 변경을 발행 할 때 새로운 NotReadOnlyCallError 예외가 발생합니다.</target>
+        </trans-unit>
+        <trans-unit id="7380cd0e721e7b9082a031fc169651c7bb221827" translate="yes" xml:space="preserve">
+          <source>New client.command and client.server_version API, exposing
+Zookeeper's four letter commands and giving access to structured
+version information.</source>
+          <target state="translated">새로운 client.command 및 client.server_version API는 Zookeeper의 네 글자 명령을 노출하고 구조화 된 버전 정보에 대한 액세스를 제공합니다.</target>
+        </trans-unit>
+        <trans-unit id="d3b5b313ea565382d3fa6532f39842948841b0b1" translate="yes" xml:space="preserve">
+          <source>No more memory leak once TreeCache was closed (#524) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/c48f2733f2a6b2c2941738e4208e8cfede676730&quot;&gt;c48f2733&lt;/a&gt;)</source>
+          <target state="translated">TreeCache가 닫히면 더 이상 메모리 누수가 발생하지 않음 (# 524) ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/c48f2733f2a6b2c2941738e4208e8cfede676730&quot;&gt;c48f2733&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="a0e0e7c4a0c3f2ab6792196aa5f4ab932073bd45" translate="yes" xml:space="preserve">
+          <source>No more memory leak when ChildrenWatch was stopped (#543) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/37bcda357463155aba5f2383bc70528413a10f1b&quot;&gt;37bcda35&lt;/a&gt;)</source>
+          <target state="translated">ChildrenWatch가 중지되었을 때 더 이상 메모리 누수 없음 (# 543) ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/37bcda357463155aba5f2383bc70528413a10f1b&quot;&gt;37bcda35&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="4a43c714cc42a1102558de274fbb0204a902d1da" translate="yes" xml:space="preserve">
+          <source>Node paths are assumed to be Unicode objects. Under Python 2
+pure-ascii strings will also be accepted. Node values are considered
+bytes. The byte type is an alias for str under Python 2.</source>
+          <target state="translated">노드 경로는 유니 코드 객체로 간주됩니다. Python 2에서는 순수 ASCII 문자열도 허용됩니다. 노드 값은 바이트로 간주됩니다. 바이트 유형은 Python 2에서 str의 별칭입니다.</target>
+        </trans-unit>
+        <trans-unit id="9211331eda28299ab9a47ed3a72f480c704b7292" translate="yes" xml:space="preserve">
+          <source>Null or None data is no longer treated as &quot;&quot;. Pull req #165, patch
+by Raul Gutierrez S. This will affect how you should treat null data
+in a znode vs. an empty string.</source>
+          <target state="translated">Null 또는 None 데이터는 더 이상 &quot;&quot;로 처리되지 않습니다. Pull req # 165, Raul Gutierrez S의 패치. 이것은 znode에서 null 데이터를 처리하는 방법과 빈 문자열을 처리하는 방법에 영향을줍니다.</target>
+        </trans-unit>
+        <trans-unit id="e27f65d11afe1d4664a477f7da0130bbcaf30811" translate="yes" xml:space="preserve">
+          <source>Partitioner should handle a suspended connection properly and
+restore an allocated state if it was allocated previously. Patch by
+Manish Tomar.</source>
+          <target state="translated">파티 셔 너는 일시 중단 된 연결을 올바르게 처리하고 이전에 할당 된 경우 할당 된 상태를 복원해야합니다. Manish Tomar의 패치.</target>
+        </trans-unit>
+        <trans-unit id="5f5b56f4ef668ea3d474357c462d68b20753c8b9" translate="yes" xml:space="preserve">
+          <source>Pass watch as keyword arg instead of positional arg (#495) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/2385079267db0bea6793c4f20588644381803a98&quot;&gt;23850792&lt;/a&gt;)</source>
+          <target state="translated">위치 인수 (# 495) 대신 키워드 인수로 조사 식 전달 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/2385079267db0bea6793c4f20588644381803a98&quot;&gt;23850792&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="cd82516a052d00ea69d2afa24586740f5033617f" translate="yes" xml:space="preserve">
+          <source>Passing acl=[] to create() now works properly instead of an
+InvalidACLError as it returned before. Patch by Raul Gutierrez S in
+PR #164.</source>
+          <target state="translated">acl = []를 create ()에 전달하면 이전에 반환 된 InvalidACLError 대신 제대로 작동합니다. PR # 164에서 Raul Gutierrez S의 패치.</target>
+        </trans-unit>
+        <trans-unit id="06185ce6fd6c87bf0e38b0652fa114d9ce990e07" translate="yes" xml:space="preserve">
+          <source>Passing dictionaries to KazooClient.__init__() wasn't actually
+working properly. Patch by Ryan Uber.</source>
+          <target state="translated">사전을 KazooClient .__ init __ ()에 전달하는 것이 실제로 제대로 작동하지 않았습니다. Ryan Uber의 패치.</target>
+        </trans-unit>
+        <trans-unit id="fef36ae99f8d522a0fb11294b1b43e75f7d2ba77" translate="yes" xml:space="preserve">
+          <source>Password mangling due to the C lib is gone.</source>
+          <target state="translated">C lib로 인한 암호 변경이 사라졌습니다.</target>
+        </trans-unit>
+        <trans-unit id="63c904559993935c470f516c8b549ca7f3640dbb" translate="yes" xml:space="preserve">
+          <source>Performance</source>
+          <target state="translated">공연</target>
+        </trans-unit>
+        <trans-unit id="4ecca21c4e493d4863615f81586aca1f52f26506" translate="yes" xml:space="preserve">
+          <source>Please note, there have been a few dozen merges that failed to update the
+changelog here. As such, the log here should not be considered conclusive as
+to the changes that are arriving in 2.3.0.</source>
+          <target state="translated">여기에서 변경 로그를 업데이트하지 못한 수십 개의 병합이 있습니다. 따라서 여기에있는 로그는 2.3.0에 도착한 변경 사항에 대해 결정적인 것으로 간주해서는 안됩니다.</target>
+        </trans-unit>
+        <trans-unit id="e2bdff1a58ae29fc49bb2a2958286674d13414be" translate="yes" xml:space="preserve">
+          <source>Possible segfaults from the C lib are gone.</source>
+          <target state="translated">C lib에서 가능한 segfault가 사라졌습니다.</target>
+        </trans-unit>
+        <trans-unit id="9fb1092f32d4fcbf9e061ffd718d4ec689c6c95e" translate="yes" xml:space="preserve">
+          <source>Recipes</source>
+          <target state="translated">조리법</target>
+        </trans-unit>
+        <trans-unit id="fa1e7a89d2866a9b04e86b36345161b9c9ad7da3" translate="yes" xml:space="preserve">
+          <source>Refactor</source>
+          <target state="translated">리팩터링</target>
+        </trans-unit>
+        <trans-unit id="cd7db1b33ce972f492b771f1d7c79d3e287b0c23" translate="yes" xml:space="preserve">
+          <source>Refactored ChildrenWatcher used by SetPartitioner into a publicly
+exposed PatientChildrenWatch under recipe.watchers.</source>
+          <target state="translated">SetPartitioner에서 사용하는 ChildrenWatcher를 recipe.watchers에서 공개적으로 노출 된 PatientChildrenWatch로 리팩터링했습니다.</target>
+        </trans-unit>
+        <trans-unit id="4676fc22b586c18a94da8a72d76144767878d827" translate="yes" xml:space="preserve">
+          <source>Refactored the internal connection handler to use a single thread.
+It now uses a deque and pipe to signal the ZK thread that there's a
+new command to send, so that the ZK thread can send it, or retrieve
+a response. Processing ZK requests and responses serially in a
+single thread eliminates the need for a bunch of the locking, the
+peekable queue and two threads working on the same underlying
+socket.</source>
+          <target state="translated">단일 스레드를 사용하도록 내부 연결 처리기를 리팩터링했습니다. 이제 deque와 파이프를 사용하여 보낼 새 명령이 있음을 ZK 스레드에 신호하여 ZK 스레드가 명령을 보내거나 응답을 검색 할 수 있도록합니다. 단일 스레드에서 ZK 요청 및 응답을 직렬로 처리하면 동일한 기본 소켓에서 작동하는 여러 개의 잠금, 피킹 가능한 큐 및 두 개의 스레드가 필요하지 않습니다.</target>
+        </trans-unit>
+        <trans-unit id="369d5860549f2dbdc060c626e93752969fe74a9e" translate="yes" xml:space="preserve">
+          <source>Remove use of &quot;async&quot; as a variable (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/225d3369c7a0736125a9375951a079f70fbe9e79&quot;&gt;225d3369&lt;/a&gt;, closes &lt;a href=&quot;https://github.com/python-zk/kazoo/issues/455&quot;&gt;#455&lt;/a&gt;)</source>
+          <target state="translated">변수로 &quot;async&quot;사용 제거 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/225d3369c7a0736125a9375951a079f70fbe9e79&quot;&gt;225d3369&lt;/a&gt; , 닫힘 &lt;a href=&quot;https://github.com/python-zk/kazoo/issues/455&quot;&gt;# 455&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="d1b15e84186a76a65943c972cc432ec963961039" translate="yes" xml:space="preserve">
+          <source>Removed the dependency on zope.interface. The classes in the
+interfaces module are left for documentation purposes only (issue
+#131).</source>
+          <target state="translated">zope.interface에 대한 종속성을 제거했습니다. 인터페이스 모듈의 클래스는 문서화 목적으로 만 남아 있습니다 (문제 번호 131).</target>
+        </trans-unit>
+        <trans-unit id="ca69cc635842b9c0910c7137ea404ce3a73430a7" translate="yes" xml:space="preserve">
+          <source>Respect large client timeout values when closing the connection.</source>
+          <target state="translated">연결을 닫을 때 큰 클라이언트 제한 시간 값을 준수하십시오.</target>
+        </trans-unit>
+        <trans-unit id="0554d3fcf83aecaca33700bd6b0f0d10eb150422" translate="yes" xml:space="preserve">
+          <source>See &lt;a href=&quot;http://kazoo.rtfd.org/&quot;&gt;the full docs&lt;/a&gt; for more information.</source>
+          <target state="translated">자세한 내용 &lt;a href=&quot;http://kazoo.rtfd.org/&quot;&gt;은 전체 문서&lt;/a&gt; 를 참조하십시오.</target>
+        </trans-unit>
+        <trans-unit id="788c3e97063e102a7a2fb2195537c531421bc1a7" translate="yes" xml:space="preserve">
+          <source>Skipping a version to reflect the magnitude of the change. Kazoo is now
+a pure Python client with no C bindings. This release should run without
+a problem on alternate Python implementations such as PyPy and Jython.
+Porting to Python 3 in the future should also be much easier.</source>
+          <target state="translated">변경의 규모를 반영하기 위해 버전을 건너 뜁니다. Kazoo는 이제 C 바인딩이없는 순수한 Python 클라이언트입니다. 이 릴리스는 PyPy 및 Jython과 같은 대체 Python 구현에서 문제없이 실행되어야합니다. 앞으로 Python 3으로 이식하는 것도 훨씬 쉬워 질 것입니다.</target>
+        </trans-unit>
+        <trans-unit id="c0b5c6c462a2455fdea20154db207de19d1a4c09" translate="yes" xml:space="preserve">
+          <source>Some low-level logging previously at the &lt;code&gt;logging.INFO&lt;/code&gt; level is
+now logged at the &lt;code&gt;logging.DEBUG&lt;/code&gt; level.</source>
+          <target state="translated">이전에 &lt;code&gt;logging.INFO&lt;/code&gt; 수준의 일부 저수준 로깅 이 이제 &lt;code&gt;logging.DEBUG&lt;/code&gt; 수준 에서 기록 됩니다.</target>
+        </trans-unit>
+        <trans-unit id="239dd767acd5cf90d9e659dc79e4c0dda0b6c6a0" translate="yes" xml:space="preserve">
+          <source>Start running tests against Zookeeper 3.5.0 alpha and explicitly
+configure the admin.serverPort in tests to avoid port conflicts. The
+Zookeeper alpha version is not yet officially supported.</source>
+          <target state="translated">Zookeeper 3.5.0 알파에 대해 테스트 실행을 시작하고 포트 충돌을 피하기 위해 테스트에서 admin.serverPort를 명시 적으로 구성하십시오. Zookeeper 알파 버전은 아직 공식적으로 지원되지 않습니다.</target>
+        </trans-unit>
+        <trans-unit id="18c9b4c960b8e4f51a3974bddc4533a0feb97843" translate="yes" xml:space="preserve">
+          <source>State transition handling with listener registering to handle
+session state changes (choose to fatal the app on session
+expiration, etc.)</source>
+          <target state="translated">세션 상태 변경을 처리하기 위해 리스너 등록을 통한 상태 전환 처리 (세션 만료시 앱이 치명적일 때 선택)</target>
+        </trans-unit>
+        <trans-unit id="d35b705168abbce4b8a39e059abf1c172a8bdadc" translate="yes" xml:space="preserve">
+          <source>Substantial increase in logging data with debug mode. All
+correspondence with the Zookeeper server can now be seen to help in
+debugging.</source>
+          <target state="translated">디버그 모드로 로깅 데이터가 크게 증가합니다. 이제 Zookeeper 서버와의 모든 통신이 디버깅에 도움이되도록 볼 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="4ba265133c8826d7ddbcde5b556b0034002e6dc8" translate="yes" xml:space="preserve">
+          <source>Support additionaal lock contenter patterns (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/225eeecbe66c10d46dc7928681783d17f389f13a&quot;&gt;225eeecb&lt;/a&gt;)</source>
+          <target state="translated">추가 잠금 &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/225eeecbe66c10d46dc7928681783d17f389f13a&quot;&gt;컨텐트&lt;/a&gt; 패턴 지원 ( 225eeecb )</target>
+        </trans-unit>
+        <trans-unit id="b3b666db40567098cf52ff0d90d79ea2e2074ace" translate="yes" xml:space="preserve">
+          <source>The KazooClient handler is now officially exposed as
+KazooClient.handler so that the appropriate sync objects can be used
+by end-users.</source>
+          <target state="translated">KazooClient 핸들러는 이제 공식적으로 KazooClient.handler로 노출되어 최종 사용자가 적절한 동기화 개체를 사용할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="bf5719cdd76c679abbc91bce1c79bc9b7f285289" translate="yes" xml:space="preserve">
+          <source>The KazooClient.__init__ took as watcher argument as its second
+keyword argument. The argument had no effect anymore since version
+0.5 and was removed.</source>
+          <target state="translated">KazooClient .__ init__는 두 번째 키워드 인수로 감시자 인수로 사용되었습니다. 이 인수는 버전 0.5 이후로 더 이상 효과가 없었으며 제거되었습니다.</target>
+        </trans-unit>
+        <trans-unit id="d8b9752a77853c095a3b098854d39e67b555bc39" translate="yes" xml:space="preserve">
+          <source>The data value argument for the create and create_async methods of
+the client was made optional and defaults to an empty byte string.
+The data value must be a byte string. Unicode values are no longer
+allowed and will raise a TypeError.</source>
+          <target state="translated">클라이언트의 create 및 create_async 메서드에 대한 데이터 값 인수는 선택 사항이었으며 기본값은 빈 바이트 문자열입니다. 데이터 값은 바이트 문자열이어야합니다. 유니 코드 값은 더 이상 허용되지 않으며 TypeError를 발생시킵니다.</target>
+        </trans-unit>
+        <trans-unit id="e8098b3532eb2b959a4f85d1f392b7f9b30f2dee" translate="yes" xml:space="preserve">
+          <source>The kazoo.handlers.util module was removed.</source>
+          <target state="translated">kazoo.handlers.util 모듈이 제거되었습니다.</target>
+        </trans-unit>
+        <trans-unit id="27a5b1a5f5cb93c72aceaccb2bdf7090398cb43b" translate="yes" xml:space="preserve">
+          <source>The kazoo.testing.harness.KazooTestHarness class directly inherits
+from unittest.TestCase and you need to ensure to call its
+__init__ method.</source>
+          <target state="translated">kazoo.testing.harness.KazooTestHarness 클래스는 unittest.TestCase에서 직접 상속되며 __init__ 메서드를 호출해야합니다.</target>
+        </trans-unit>
+        <trans-unit id="ea061defda8fac751a0af7440acd2c968cf44076" translate="yes" xml:space="preserve">
+          <source>The party recipes didn't set their participating flag to False after
+leaving.</source>
+          <target state="translated">파티 레시피가 떠난 후 참여 플래그를 False로 설정하지 않았습니다.</target>
+        </trans-unit>
+        <trans-unit id="cec1b67646f6624b7b3009c92624a0945d0ae058" translate="yes" xml:space="preserve">
+          <source>The testing helpers have been moved from testing.__init__ into a
+testing.harness module. The official API's of KazooTestCase and
+KazooTestHarness can still be directly imported from testing.</source>
+          <target state="translated">테스트 도우미가 testing .__ init__에서 testing.harness 모듈로 이동되었습니다. KazooTestCase 및 KazooTestHarness의 공식 API는 여전히 테스트에서 직접 가져올 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="ff4523de363e1aa108924e9b401fda3bbf5f6bb6" translate="yes" xml:space="preserve">
+          <source>This change may introduce new bugs, however there is no longer the
+possibility of a complete Python segfault due to errors in the C library
+and/or the C binding.</source>
+          <target state="translated">이 변경으로 인해 새로운 버그가 발생할 수 있지만 C 라이브러리 및 / 또는 C 바인딩의 오류로 인해 더 이상 완전한 Python segfault의 가능성이 없습니다.</target>
+        </trans-unit>
+        <trans-unit id="7800347fda933f400500c40f398fd8ec4ddd15a8" translate="yes" xml:space="preserve">
+          <source>Unexpected exceptions break TreeCache (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/db0c2d4f8ab5ecfb367b7b2accfd9c52c1c91fcd&quot;&gt;db0c2d4f&lt;/a&gt;)</source>
+          <target state="translated">예기치 않은 예외로 인해 TreeCache가 &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/db0c2d4f8ab5ecfb367b7b2accfd9c52c1c91fcd&quot;&gt;중단됨&lt;/a&gt; ( db0c2d4f )</target>
+        </trans-unit>
+        <trans-unit id="f676240f8a9edd65c4ee78912e1126c975ac38d1" translate="yes" xml:space="preserve">
+          <source>Unicode strings now work fine for node names and are properly
+converted to and from unicode objects.</source>
+          <target state="translated">이제 유니 코드 문자열이 노드 이름에 대해 제대로 작동하며 유니 코드 객체와 올바르게 변환됩니다.</target>
+        </trans-unit>
+        <trans-unit id="e4d7fd1b17544ee8b6d8d9b0a0dc8e7da4b13978" translate="yes" xml:space="preserve">
+          <source>Unify queue factory in various handlers (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/cbd02f5ccc6ea9e6dd6b5da01a0397ea649143a0&quot;&gt;cbd02f5c&lt;/a&gt;)</source>
+          <target state="translated">다양한 핸들러에서 큐 팩토리 통합 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/cbd02f5ccc6ea9e6dd6b5da01a0397ea649143a0&quot;&gt;cbd02f5c&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="14beb47bdbd3cd495809887c23ecabf9f45dc897" translate="yes" xml:space="preserve">
+          <source>Use &lt;code&gt;six&lt;/code&gt; to nicely handle the cross compatibility of kazoo with
+python 2.x and 3.x (reducing/removing the need to have custom
+compatibility code that replicates what six already provides).</source>
+          <target state="translated">&lt;code&gt;six&lt;/code&gt; 을 사용 하여 kazoo와 python 2.x 및 3.x의 교차 호환성을 훌륭하게 처리합니다 ( 6 개가 이미 제공하는 것을 복제하는 사용자 지정 호환성 코드를 가질 필요성을 줄이거 나 제거합니다).</target>
+        </trans-unit>
+        <trans-unit id="91452a5343abbadc8b9d482841156cbf6185d0ed" translate="yes" xml:space="preserve">
+          <source>Use a copy of auth data when reconnecting (#509) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/de20be917855713169863b65a7aa0634fb78b698&quot;&gt;de20be91&lt;/a&gt;)</source>
+          <target state="translated">다시 연결할 때 인증 데이터 사본 사용 (# 509) ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/de20be917855713169863b65a7aa0634fb78b698&quot;&gt;de20be91&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="cc63a5a1a952f5c2a2a6c580d3d23155e46ee2a9" translate="yes" xml:space="preserve">
+          <source>Use strict regex to identify lock contenders. (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/cc8ce8929116a1f0a2f0d088afa82ac9576395dc&quot;&gt;cc8ce892&lt;/a&gt;)</source>
+          <target state="translated">잠금 경쟁자를 식별하려면 엄격한 정규식을 사용하십시오. ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/cc8ce8929116a1f0a2f0d088afa82ac9576395dc&quot;&gt;cc8ce892&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="f33ed175ba57790a1083886aac1ab01ab7ad06de" translate="yes" xml:space="preserve">
+          <source>When a retry operation ultimately fails, it now raises a
+kazoo.retry.RetryFailedError exception, instead of a general
+Exception instance. RetryFailedError also inherits from the base
+KazooException.</source>
+          <target state="translated">재시도 작업이 궁극적으로 실패하면 이제 일반 Exception 인스턴스 대신 kazoo.retry.RetryFailedError 예외가 발생합니다. RetryFailedError는 또한 기본 KazooException에서 상속됩니다.</target>
+        </trans-unit>
+        <trans-unit id="55dbe5d8b9973f5421348892dd8822c3b6dd2ea4" translate="yes" xml:space="preserve">
+          <source>When authenticating via add_auth() the auth data will be saved to
+ensure that the authentication happens on reconnect (as is the case
+when feeding auth data via KazooClient's constructor). PR #172,
+patch by Raul Gutierrez S.</source>
+          <target state="translated">add_auth ()를 통해 인증 할 때 인증 데이터가 저장되어 재 연결시 인증이 이루어 지도록합니다 (KazooClient의 생성자를 통해 인증 데이터를 공급할 때와 마찬가지로). PR # 172, Raul Gutierrez S.</target>
+        </trans-unit>
+        <trans-unit id="ac048d7a0be5a52a7fe6fd95f2dd9f126f78b364" translate="yes" xml:space="preserve">
+          <source>ZOOKEEPER-1318: SystemError is caught and rethrown as the proper
+invalid state exception in older zookeeper python bindings where
+this issue is still valid.</source>
+          <target state="translated">ZOOKEEPER-1318 : SystemError가 포착되어이 문제가 여전히 유효한 이전 zookeeper python 바인딩에서 적절한 잘못된 상태 예외로 다시 발생합니다.</target>
+        </trans-unit>
+        <trans-unit id="51c217c472347a74e77beaf836458e6dd1c6090d" translate="yes" xml:space="preserve">
+          <source>ZOOKEEPER-1431: Install the latest zc-zookeeper-static library or
+use the packaged ubuntu one for ubuntu 12.04 or later.</source>
+          <target state="translated">ZOOKEEPER-1431 : 최신 zc-zookeeper-static 라이브러리를 설치하거나 ubuntu 12.04 이상을 위해 패키지 된 ubuntu 라이브러리를 사용하십시오.</target>
+        </trans-unit>
+        <trans-unit id="db04d5879f0c5737288aeed2e31626a0f360f52c" translate="yes" xml:space="preserve">
+          <source>ZOOKEEPER-553: State handling isn't checked via this method, we
+track it in a simpler manner with the watcher to ensure we know the
+right state.</source>
+          <target state="translated">ZOOKEEPER-553 : 상태 처리는이 방법을 통해 확인되지 않으며, 올바른 상태를 알 수 있도록 감시자와 함께 더 간단한 방식으로 추적합니다.</target>
+        </trans-unit>
+        <trans-unit id="cfa6b433bf9b74f268e39252a081f77ca90d8960" translate="yes" xml:space="preserve">
+          <source>Zookeeper logging stream redirected into Python logging channel
+under the name 'Zookeeper'.</source>
+          <target state="translated">Zookeeper 로깅 스트림은 'Zookeeper'라는 이름으로 Python 로깅 채널로 리디렉션되었습니다.</target>
+        </trans-unit>
+        <trans-unit id="8cbccaa11068bb66d90b8bf7e21b13b4c96ecac6" translate="yes" xml:space="preserve">
+          <source>add Python 3.8 and remove Python 3.6 from the testing suite (#611) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/e4f808f7f0fe17e7e01468a2c54684f048e12b52&quot;&gt;e4f808f7&lt;/a&gt;)</source>
+          <target state="translated">Python 3.8을 추가하고 테스트 스위트에서 Python 3.6을 제거합니다 (# 611) ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/e4f808f7f0fe17e7e01468a2c54684f048e12b52&quot;&gt;e4f808f7&lt;/a&gt; ).</target>
+        </trans-unit>
+        <trans-unit id="8bb9a0066c94db8e86caf317cd3c9a52246f63f5" translate="yes" xml:space="preserve">
+          <source>add SASL DIGEST-MD5 support (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/aa2664b880d1456c3ccf6515c6ca42653047e272&quot;&gt;aa2664b8&lt;/a&gt;)</source>
+          <target state="translated">SASL DIGEST-MD5 지원 추가 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/aa2664b880d1456c3ccf6515c6ca42653047e272&quot;&gt;aa2664b8&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="73acc167c0e1ae64c5a811ae86b8afbdda0990b5" translate="yes" xml:space="preserve">
+          <source>add missed parens to LockingQueue function call. (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/88cf4aa7bcd1437a44f6d3aeec34989c467fcf9d&quot;&gt;88cf4aa7&lt;/a&gt;)</source>
+          <target state="translated">LockingQueue 함수 호출에 누락 된 괄호를 추가합니다. ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/88cf4aa7bcd1437a44f6d3aeec34989c467fcf9d&quot;&gt;88cf4aa7&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="c81dc70138280afd8792ea33cf42807bc5399bae" translate="yes" xml:space="preserve">
+          <source>add travis deployment and update ZK versions (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/7d5d59cb049244b89625d621c9d91d9a44c4b051&quot;&gt;7d5d59cb&lt;/a&gt;, closes &lt;a href=&quot;https://github.com/python-zk/kazoo/issues/436&quot;&gt;#436&lt;/a&gt;)</source>
+          <target state="translated">트래비스 배포 추가 및 ZK 버전 업데이트 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/7d5d59cb049244b89625d621c9d91d9a44c4b051&quot;&gt;7d5d59cb&lt;/a&gt; , 닫힘 &lt;a href=&quot;https://github.com/python-zk/kazoo/issues/436&quot;&gt;# 436&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="8893eaf3c3d9da87991beb1e03b66d89105249fb" translate="yes" xml:space="preserve">
+          <source>allow authentification in RO and RW modes (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/2320ab391f3804a9ddea9c5c86eb86467bb1dbf8&quot;&gt;2320ab39&lt;/a&gt;)</source>
+          <target state="translated">RO 및 RW 모드에서 인증 허용 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/2320ab391f3804a9ddea9c5c86eb86467bb1dbf8&quot;&gt;2320ab39&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="c82000a814c3cb5bb65be1bfedd65c9fcc9531cb" translate="yes" xml:space="preserve">
+          <source>allow having observers and different sized clusters</source>
+          <target state="translated">관찰자와 다른 크기의 클러스터를 가질 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="554f4c017104e33615c320b2ae2652778bf17d59" translate="yes" xml:space="preserve">
+          <source>allow multiple endpoints in KazooClient hosts arg (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/72a8d96ca188c3c2e93bd0243283539ebd6c16f1&quot;&gt;72a8d96c&lt;/a&gt;, closes &lt;a href=&quot;https://github.com/python-zk/kazoo/issues/411&quot;&gt;#411&lt;/a&gt;)</source>
+          <target state="translated">KazooClient 호스트 arg ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/72a8d96ca188c3c2e93bd0243283539ebd6c16f1&quot;&gt;72a8d96c&lt;/a&gt; , 닫힘 &lt;a href=&quot;https://github.com/python-zk/kazoo/issues/411&quot;&gt;# 411&lt;/a&gt; ) 에서 여러 엔드 포인트 허용</target>
+        </trans-unit>
+        <trans-unit id="bf491dfa7988500461a91077ed508abc7cc2afb0" translate="yes" xml:space="preserve">
+          <source>allow requests to be queued in CONNECTING state (#374) (#588) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/a636d7a6bb88ab9080e902983b10c8f0f1bf60a8&quot;&gt;a636d7a6&lt;/a&gt;)</source>
+          <target state="translated">CONNECTING 상태 (# 374) (# 588) ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/a636d7a6bb88ab9080e902983b10c8f0f1bf60a8&quot;&gt;a636d7a6&lt;/a&gt; ) 에서 요청을 큐에 넣도록 허용</target>
+        </trans-unit>
+        <trans-unit id="82e39843b10357d1b5260777a19564a8019180f0" translate="yes" xml:space="preserve">
+          <source>capitalize the default_domain value (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/7fd22bfd1992b90042db7946949ce992ddfd1821&quot;&gt;7fd22bfd&lt;/a&gt;)</source>
+          <target state="translated">default_domain 값 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/7fd22bfd1992b90042db7946949ce992ddfd1821&quot;&gt;7fd22bfd&lt;/a&gt; )을 대문자로</target>
+        </trans-unit>
+        <trans-unit id="bbadf3ee95d04dfab34e629a1c0eddcf7eec1b6e" translate="yes" xml:space="preserve">
+          <source>change KazooRetry to uniformly jitter over the whole backoff interval (#521) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/60366d2c7910fc833991fad8e04bbe33817c0544&quot;&gt;60366d2c&lt;/a&gt;)</source>
+          <target state="translated">KazooRetry를 전체 백 오프 간격 (# 521)에 걸쳐 균일하게 지터하도록 변경 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/60366d2c7910fc833991fad8e04bbe33817c0544&quot;&gt;60366d2c&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="874047b95587e7cd7f4a08d1a3964d4267a1ae17" translate="yes" xml:space="preserve">
+          <source>closed states instead of lost states (#573) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/961b2f3be557f8314ab41f75444125222638f9cc&quot;&gt;961b2f3b&lt;/a&gt;)</source>
+          <target state="translated">손실 된 상태 대신 닫힌 상태 (# 573) ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/961b2f3be557f8314ab41f75444125222638f9cc&quot;&gt;961b2f3b&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="d582b34fc40b589ad4d85885587bda1017ae5576" translate="yes" xml:space="preserve">
+          <source>conn hangs when TreeCache refreshing (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/111941371daec00a2ecb5d8c29b9b1d35d6aa4ff&quot;&gt;11194137&lt;/a&gt;)</source>
+          <target state="translated">TreeCache를 새로 고칠 때 conn이 중단됨 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/111941371daec00a2ecb5d8c29b9b1d35d6aa4ff&quot;&gt;11194137&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="2179d7197c78cb0d74f7df1aed9cf07020422786" translate="yes" xml:space="preserve">
+          <source>connect/connect_async has been renamed to start/start_async to
+better match the stop to indicate connection handling. The prior
+names are aliased for the time being.</source>
+          <target state="translated">connect / connect_async는 연결 처리를 나타내는 중지와 더 잘 일치하도록 start / start_async로 이름이 변경되었습니다. 이전 이름은 당분간 별칭으로 지정됩니다.</target>
+        </trans-unit>
+        <trans-unit id="fa890e2ad1b5070e0631d91cb855e8a9637b3b34" translate="yes" xml:space="preserve">
+          <source>deactivate TCP port that was enabled by default. (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/d7bed550fee1b861eb2ee81cc685e6d08ee35c34&quot;&gt;d7bed550&lt;/a&gt;)</source>
+          <target state="translated">기본적으로 활성화 된 TCP 포트를 비활성화합니다. ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/d7bed550fee1b861eb2ee81cc685e6d08ee35c34&quot;&gt;d7bed550&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="2345bf307f26ff9b831917c20b886668e95c2ad5" translate="yes" xml:space="preserve">
+          <source>drop Python 2.6/3.3 official support, add 3.5/3.6 testing (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/2faba9ff3bdeff151ac6c922bf65b2dcf9c7bd7b&quot;&gt;2faba9ff&lt;/a&gt;, closes &lt;a href=&quot;https://github.com/python-zk/kazoo/issues/441&quot;&gt;#441&lt;/a&gt;)</source>
+          <target state="translated">Python 2.6 / 3.3 공식 지원 중단, 3.5 / 3.6 테스트 추가 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/2faba9ff3bdeff151ac6c922bf65b2dcf9c7bd7b&quot;&gt;2faba9ff&lt;/a&gt; , &lt;a href=&quot;https://github.com/python-zk/kazoo/issues/441&quot;&gt;# 441&lt;/a&gt; 종료 )</target>
+        </trans-unit>
+        <trans-unit id="a497b14627c57eb085faab5e73d1e9c24c4652f5" translate="yes" xml:space="preserve">
+          <source>drop python 2.6 compatible gevent (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/2e8dcd3836d01640f07e8de911cdfb3639f97d20&quot;&gt;2e8dcd38&lt;/a&gt;)</source>
+          <target state="translated">드롭 파이썬 2.6 호환 gevent ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/2e8dcd3836d01640f07e8de911cdfb3639f97d20&quot;&gt;2e8dcd38&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="b89da0ce6df7d722e991a5d47b592264db1c3faa" translate="yes" xml:space="preserve">
+          <source>ensure timeout argument is positive (#534) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/8c5ce11883a86b15bc6497706cf36abf1b36145f&quot;&gt;8c5ce118&lt;/a&gt;)</source>
+          <target state="translated">시간 초과 인수가 양수인지 확인 (# 534) ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/8c5ce11883a86b15bc6497706cf36abf1b36145f&quot;&gt;8c5ce118&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="078856651f46284d1b0b97efc36d93dff004d8cf" translate="yes" xml:space="preserve">
+          <source>get_children with include_data=True uses GetChildren2 types (#514) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/901cba7a40d67ec96c06abe109e3cf51a992b24d&quot;&gt;901cba7a&lt;/a&gt;)</source>
+          <target state="translated">include_data = True 인 get_children은 GetChildren2 유형 (# 514)을 사용합니다 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/901cba7a40d67ec96c06abe109e3cf51a992b24d&quot;&gt;901cba7a&lt;/a&gt; ).</target>
+        </trans-unit>
+        <trans-unit id="2b77afe34257f489151230eea679a76c5ad0c87a" translate="yes" xml:space="preserve">
+          <source>handle NameError with basestring on py3k.</source>
+          <target state="translated">py3k에서 basestring으로 NameError를 처리하십시오.</target>
+        </trans-unit>
+        <trans-unit id="4abd6249e88713ca4c701e9ebd29dbf028f55228" translate="yes" xml:space="preserve">
+          <source>handle SSL_WANT_READ/WRITE errors (#619) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/cbdc4749edb5879099c1f9b832c055d9eeb52dea&quot;&gt;cbdc4749&lt;/a&gt;, closes &lt;a href=&quot;https://github.com/python-zk/kazoo/issues/618&quot;&gt;#618&lt;/a&gt;)</source>
+          <target state="translated">SSL_WANT_READ / WRITE 오류 처리 (# 619) ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/cbdc4749edb5879099c1f9b832c055d9eeb52dea&quot;&gt;cbdc4749&lt;/a&gt; , 닫힘 &lt;a href=&quot;https://github.com/python-zk/kazoo/issues/618&quot;&gt;# 618&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="4b165fb304d623d184253c2ccc4a54a5bb6b2f12" translate="yes" xml:space="preserve">
+          <source>improve SASL interface (#546) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/cd49b3fa01136848c5e6bfafb4c241b9704f249d&quot;&gt;cd49b3fa&lt;/a&gt;)</source>
+          <target state="translated">SASL 인터페이스 개선 (# 546) ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/cd49b3fa01136848c5e6bfafb4c241b9704f249d&quot;&gt;cd49b3fa&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="0ae6752001a804f56be79bbf82f5dc50558ebacc" translate="yes" xml:space="preserve">
+          <source>make badges link to travis and pypi (#528) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/367a1df35b3b168580327e9f52a4cb9c000ea750&quot;&gt;367a1df3&lt;/a&gt;)</source>
+          <target state="translated">배지를 travis 및 pypi에 연결 (# 528) ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/367a1df35b3b168580327e9f52a4cb9c000ea750&quot;&gt;367a1df3&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="a986e95b4194b6b0f13a2ff7f424025c59fa4f1f" translate="yes" xml:space="preserve">
+          <source>minor tweaks to contributing.md (#464) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/5837d11bb541be1296e1b3c1842b11ceb7e743d4&quot;&gt;5837d11b&lt;/a&gt;)</source>
+          <target state="translated">contributing.md에 대한 사소한 조정 (# 464) ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/5837d11bb541be1296e1b3c1842b11ceb7e743d4&quot;&gt;5837d11b&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="ab4d6911004d8e589324dd7cbc9d589925f395c7" translate="yes" xml:space="preserve">
+          <source>need gevent &amp;gt;= 1.2, not &amp;gt; 1.1 (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/18f3531b605119a547cfc4d5a4223b4b3f185405&quot;&gt;18f3531b&lt;/a&gt;)</source>
+          <target state="translated">&amp;gt; 1.1이 아닌 gevent&amp;gt; = 1.2 필요 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/18f3531b605119a547cfc4d5a4223b4b3f185405&quot;&gt;18f3531b&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="5542d9e21574c404993fb33822572000d786737f" translate="yes" xml:space="preserve">
+          <source>pep8 all the things (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/928803420721b81962e50d425610e62b0c12e438&quot;&gt;92880342&lt;/a&gt;, closes &lt;a href=&quot;https://github.com/python-zk/kazoo/issues/445&quot;&gt;#445&lt;/a&gt;)</source>
+          <target state="translated">pep8 모든 것 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/928803420721b81962e50d425610e62b0c12e438&quot;&gt;92880342&lt;/a&gt; , &lt;a href=&quot;https://github.com/python-zk/kazoo/issues/445&quot;&gt;# 445&lt;/a&gt; 닫음 )</target>
+        </trans-unit>
+        <trans-unit id="5f5093898369e42effd13574404abbecdaee6eaf" translate="yes" xml:space="preserve">
+          <source>prefix with toxinidir variable with a / to ensure path to ensure-zookeeper-env.sh is correct (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/c4d42ca7722dec5332ecd4524e8d802a81e2ddca&quot;&gt;c4d42ca7&lt;/a&gt;)</source>
+          <target state="translated">toxinidir 변수를 접두사로 사용하여 /를 사용하여 경로가 올바른지 확인합니다 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/c4d42ca7722dec5332ecd4524e8d802a81e2ddca&quot;&gt;c4d42ca7&lt;/a&gt; ).</target>
+        </trans-unit>
+        <trans-unit id="27f51547de244d54f8987570500d8f30cf2f6cc6" translate="yes" xml:space="preserve">
+          <source>reduce timeout for the first Connect() request (#540) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/2ae392e69c4b2daca5d8e7f0e79b7ce90423e65c&quot;&gt;2ae392e6&lt;/a&gt;)</source>
+          <target state="translated">첫 번째 Connect () 요청에 대한 시간 초과 감소 (# 540) ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/2ae392e69c4b2daca5d8e7f0e79b7ce90423e65c&quot;&gt;2ae392e6&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="203cbbe6968cc8bfc90127d076c77b72fc99dccd" translate="yes" xml:space="preserve">
+          <source>remove &lt;code&gt;easy_install&lt;/code&gt; instructions (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/6e6627d58628dec11d127fc5508f9a1d16e9c317&quot;&gt;6e6627d5&lt;/a&gt;)</source>
+          <target state="translated">&lt;code&gt;easy_install&lt;/code&gt; 지침 제거 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/6e6627d58628dec11d127fc5508f9a1d16e9c317&quot;&gt;6e6627d5&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="72436c78dfb9bb11002b7707425dbb7bbdeb3ba5" translate="yes" xml:space="preserve">
+          <source>remove broken downloads badge (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/47e07a9674713b0756bce0811545c4442d40b60b&quot;&gt;47e07a96&lt;/a&gt;)</source>
+          <target state="translated">깨진 다운로드 배지 제거 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/47e07a9674713b0756bce0811545c4442d40b60b&quot;&gt;47e07a96&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="f80dd069eae7cc8500efd877f66a105b5f2278d1" translate="yes" xml:space="preserve">
+          <source>remove debian packaging (#468) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/a28423aac7f33111388372dec50653a3091b9045&quot;&gt;a28423aa&lt;/a&gt;)</source>
+          <target state="translated">데비안 패키지 제거 (# 468) ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/a28423aac7f33111388372dec50653a3091b9045&quot;&gt;a28423aa&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="bc2d2b4731a08bca097e9d2322fe2c40ee5418e3" translate="yes" xml:space="preserve">
+          <source>remove python 3.3 from tox (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/cf66474b27b4efc9f65e292434c2fcffb697d34d&quot;&gt;cf66474b&lt;/a&gt;)</source>
+          <target state="translated">tox에서 파이썬 3.3 제거 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/cf66474b27b4efc9f65e292434c2fcffb697d34d&quot;&gt;cf66474b&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="3bb98a8f3a90496f604b7f3615f22cb6e21ee77c" translate="yes" xml:space="preserve">
+          <source>resolve race in IAsyncResult.wait() (#487) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/4d268adf9837836f05dde5ec81be0d7bbd759e78&quot;&gt;4d268adf&lt;/a&gt;)</source>
+          <target state="translated">IAsyncResult.wait ()에서 레이스 해결 (# 487) ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/4d268adf9837836f05dde5ec81be0d7bbd759e78&quot;&gt;4d268adf&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="53c93c8b4a21465a48383b59992339e26e64f8a4" translate="yes" xml:space="preserve">
+          <source>run SASL Kerberos tests as part of build (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/5c461bdff50efd762805b40fbe283b194d175c61&quot;&gt;5c461bdf&lt;/a&gt;)</source>
+          <target state="translated">빌드의 일부로 SASL Kerberos 테스트 실행 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/5c461bdff50efd762805b40fbe283b194d175c61&quot;&gt;5c461bdf&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="e919fc033e8b0448c4a6474e6d5fc210204cac4e" translate="yes" xml:space="preserve">
+          <source>specify -Dfile.encoding=UTF-8 when starting the ZK JVM (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/5764da0b3c25556cb6760f68c51b387f2fd8307b&quot;&gt;5764da0b&lt;/a&gt;)</source>
+          <target state="translated">ZK JVM을 시작할 때 -Dfile.encoding = UTF-8 지정 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/5764da0b3c25556cb6760f68c51b387f2fd8307b&quot;&gt;5764da0b&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="33e4885544f6e5278a7144c4b1264144ebd3a7bb" translate="yes" xml:space="preserve">
+          <source>specify description type for pypi to render correctly (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/cc4006e6a8ea9441b01a631f3350357a8a2e4088&quot;&gt;cc4006e6&lt;/a&gt;)</source>
+          <target state="translated">pypi가 올바르게 렌더링되도록 설명 유형 지정 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/cc4006e6a8ea9441b01a631f3350357a8a2e4088&quot;&gt;cc4006e6&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="9224f2f59f4d3aa2f6b64cfd971d8f3bd256ae7c" translate="yes" xml:space="preserve">
+          <source>stop bundling virtualenv (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/af9b4cab39982d961647afca8119816ffe7bf5e6&quot;&gt;af9b4cab&lt;/a&gt;)</source>
+          <target state="translated">virtualenv 번들링 중지 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/af9b4cab39982d961647afca8119816ffe7bf5e6&quot;&gt;af9b4cab&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="dc52c280175a378efa16661dea10a6c82457f546" translate="yes" xml:space="preserve">
+          <source>support deprecated KazooRetry argument (#545) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/4242da801e8da7b76d7e88e37c3948f97a2b5aae&quot;&gt;4242da80&lt;/a&gt;)</source>
+          <target state="translated">지원 중단 된 KazooRetry 인수 (# 545) ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/4242da801e8da7b76d7e88e37c3948f97a2b5aae&quot;&gt;4242da80&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="f2e8b74a19cadb8f9adc4c53d45ecaa00ced1f16" translate="yes" xml:space="preserve">
+          <source>sync() return should be unchrooted (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/cbde70ac87435afbbacc9806c675184c7f778343&quot;&gt;cbde70ac&lt;/a&gt;, closes &lt;a href=&quot;https://github.com/python-zk/kazoo/issues/601&quot;&gt;#601&lt;/a&gt;)</source>
+          <target state="translated">sync () return은 루트가 없어야합니다 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/cbde70ac87435afbbacc9806c675184c7f778343&quot;&gt;cbde70ac&lt;/a&gt; , closes &lt;a href=&quot;https://github.com/python-zk/kazoo/issues/601&quot;&gt;# 601&lt;/a&gt; ).</target>
+        </trans-unit>
+        <trans-unit id="63a684a61830f8faba3216f729536ecc21d673e6" translate="yes" xml:space="preserve">
+          <source>update MANIFEST.in to reflect changes to filenames (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/c9a38c5d650d6d92ff30fd3c1c792fc71db9ce02&quot;&gt;c9a38c5d&lt;/a&gt;)</source>
+          <target state="translated">파일 이름 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/c9a38c5d650d6d92ff30fd3c1c792fc71db9ce02&quot;&gt;c9a38c5d&lt;/a&gt; )의 변경 사항을 반영하도록 MANIFEST.in 업데이트</target>
+        </trans-unit>
+        <trans-unit id="ae8d1f12b3f43dc734aaeb837abfcb28913aa2db" translate="yes" xml:space="preserve">
+          <source>update Zookeeper 3.5.2-alpha to 3.5.4-beta (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/3033091530b8f0aba13a1b8d031a7297e54006c2&quot;&gt;30330915&lt;/a&gt;, closes &lt;a href=&quot;https://github.com/python-zk/kazoo/issues/477&quot;&gt;#477&lt;/a&gt;)</source>
+          <target state="translated">Zookeeper 3.5.2-alpha를 &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/3033091530b8f0aba13a1b8d031a7297e54006c2&quot;&gt;3.5.4-&lt;/a&gt; 베타로 업데이트 ( 30330915 , &lt;a href=&quot;https://github.com/python-zk/kazoo/issues/477&quot;&gt;# 477&lt;/a&gt; 종료 )</target>
+        </trans-unit>
+        <trans-unit id="b616e2a25872b5f2994921d0e9c75edd0b9a783c" translate="yes" xml:space="preserve">
+          <source>update Zookeeper version from 3.4.10 to 3.4.13 (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/287749b422c886f69e46d108d2ddbb5ad064773e&quot;&gt;287749b4&lt;/a&gt;)</source>
+          <target state="translated">Zookeeper 버전을 3.4.10에서 3.4.13으로 업데이트 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/287749b422c886f69e46d108d2ddbb5ad064773e&quot;&gt;287749b4&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="5e92477a6285912b9707e718bb12334eff5b95e3" translate="yes" xml:space="preserve">
+          <source>use epoll when available to support fds &amp;gt; 1023 (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/267e61b4323bc13505e8933fa9b89d0591af3a69&quot;&gt;267e61b4&lt;/a&gt;, closes &lt;a href=&quot;https://github.com/python-zk/kazoo/issues/171&quot;&gt;#171&lt;/a&gt;)</source>
+          <target state="translated">fds&amp;gt; 1023 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/267e61b4323bc13505e8933fa9b89d0591af3a69&quot;&gt;267e61b4&lt;/a&gt; , closes &lt;a href=&quot;https://github.com/python-zk/kazoo/issues/171&quot;&gt;# 171&lt;/a&gt; ) 을 지원하는 데 사용할 수있는 경우 epoll 사용</target>
+        </trans-unit>
+        <trans-unit id="7bd3c2eaec880ed48350ee73e5e3c9f0309243fe" translate="yes" xml:space="preserve">
+          <source>weaker crypto when configuring Kerberos (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/844df87ac83e72c155367cfe4ff4d52d34d46c99&quot;&gt;844df87a&lt;/a&gt;)</source>
+          <target state="translated">Kerberos를 구성 할 때 약한 암호화 ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/844df87ac83e72c155367cfe4ff4d52d34d46c99&quot;&gt;844df87a&lt;/a&gt; )</target>
+        </trans-unit>
+        <trans-unit id="0c847669d643770913c81d1797c55e63db37b952" translate="yes" xml:space="preserve">
+          <source>when connection fails, close the ConnectionHandler (#577) (#579) (&lt;a href=&quot;https://github.com/python-zk/kazoo/commit/c7e80503f3be97d26ff2de27f9e424070c8181bb&quot;&gt;c7e80503&lt;/a&gt;)</source>
+          <target state="translated">연결이 실패하면 ConnectionHandler를 닫습니다 (# 577) (# 579) ( &lt;a href=&quot;https://github.com/python-zk/kazoo/commit/c7e80503f3be97d26ff2de27f9e424070c8181bb&quot;&gt;c7e80503&lt;/a&gt; )</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="zh-CN" datatype="htmlbody" original="https://pypi.org/project/libusb1/">
+    <body>
+      <group id="libusb1">
+        <trans-unit id="564042ecbe9ba8309706be8fdf987da7a661b150" translate="yes" xml:space="preserve">
+          <source>) would be enough. And for more
+advanced uses (ie, actually needing to poll non-libusb file descriptors), this
+class only works reliably with epoll: kqueue (which should tehcnically work)
+has a different API on python level, and poll (which has the same API as epoll
+on python level) lacks the critical ability to change the set of monitored file
+descriptors while a poll is already running, causing long pauses - if not
+deadlocks.</source>
+          <target state="translated">）就足够了。对于更高级的用途（即，实际上需要轮询非libusb文件描述符），此类仅可与epoll一起可靠地工作：kqueue（应在技术上起作用）在python级别具有不同的API，而poll（具有相同的API） （例如python级别的epoll）缺乏在轮询已运行时更改受监视文件描述符集的关键能力，这会导致较长的暂停时间-如果没有死锁的话。</target>
+        </trans-unit>
+        <trans-unit id="3e5bd53fd0f9a5b8b5e6c212066bb8145ed7d7dd" translate="yes" xml:space="preserve">
+          <source>2to3 friendly.</source>
+          <target state="translated">2对3友好。</target>
+        </trans-unit>
+        <trans-unit id="168aafcd794877c9c24ab749c23345f68cac0f83" translate="yes" xml:space="preserve">
+          <source>&lt;a href=&quot;http://www.python.org/&quot;&gt;CPython&lt;/a&gt; 2.7+ or 3.4+, &lt;a href=&quot;http://pypy.org/&quot;&gt;pypy&lt;/a&gt; 2.0+. Older versions may work, but are not
+recommended as there is no automated regression testing set up for them.</source>
+          <target state="translated">&lt;a href=&quot;http://www.python.org/&quot;&gt;CPython&lt;/a&gt; 2.7+或&lt;a href=&quot;http://pypy.org/&quot;&gt;3.4&lt;/a&gt; + ，pypy 2.0+。较旧的版本可能会起作用，但由于不为它们设置自动回归测试，因此不建议使用。</target>
+        </trans-unit>
+        <trans-unit id="46e46607fb08f683388cab19a2bd36d6942cef8a" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;int libusb_init (libusb_context **context)&lt;/code&gt; becomes USBContext class
+constructor, &lt;code&gt;USBContext.__init__(self)&lt;/code&gt;</source>
+          <target state="translated">&lt;code&gt;int libusb_init (libusb_context **context)&lt;/code&gt; 成为USBContext类的构造函数 &lt;code&gt;USBContext.__init__(self)&lt;/code&gt;</target>
+        </trans-unit>
+        <trans-unit id="b8a6e65abafc38a04c51343b5ba0ec2940cfe614" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;ssize_t libusb_get_device_list (libusb_context *ctx,
+libusb_device ***list)&lt;/code&gt; becomes an USBContext method, returning a
+list of USBDevice instances, &lt;code&gt;USBDevice.getDeviceList(self)&lt;/code&gt;</source>
+          <target state="translated">&lt;code&gt;ssize_t libusb_get_device_list (libusb_context *ctx, libusb_device ***list)&lt;/code&gt; 成为USBContext方法，返回USBDevice实例列表 &lt;code&gt;USBDevice.getDeviceList(self)&lt;/code&gt;</target>
+        </trans-unit>
+        <trans-unit id="a2c0a35e9e4e4c24eb6991b4708c5b8b00e6e8e9" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;uint8_t libusb_get_bus_number (libusb_device *dev)&lt;/code&gt; becomes an
+USBDevice method, &lt;code&gt;USBDevice.getBusNumber(self)&lt;/code&gt;</source>
+          <target state="translated">&lt;code&gt;uint8_t libusb_get_bus_number (libusb_device *dev)&lt;/code&gt; 成为USBDevice方法 &lt;code&gt;USBDevice.getBusNumber(self)&lt;/code&gt;</target>
+        </trans-unit>
+        <trans-unit id="ff0683a295db2efb9d5b2ddbb08529dbc201a1e9" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Backward-incompatible change&lt;/strong&gt;: Enum class now affects caller&amp;rsquo;s local scope,
+not its global scope. This should not be of much importance, as:</source>
+          <target state="translated">&lt;strong&gt;向后不兼容的更改&lt;/strong&gt;：Enum类现在影响调用者的本地范围，而不是其全局范围。这应该不是很重要，因为：</target>
+        </trans-unit>
+        <trans-unit id="6af2f233795e48dc1ff4042528e5175e0d1b5814" translate="yes" xml:space="preserve">
+          <source>Add Cygwin support.</source>
+          <target state="translated">增加Cygwin支持。</target>
+        </trans-unit>
+        <trans-unit id="d5778d70c18f6fa8db683ce0ad0f844c003816f3" translate="yes" xml:space="preserve">
+          <source>Add FreeBSD support.</source>
+          <target state="translated">增加FreeBSD支持。</target>
+        </trans-unit>
+        <trans-unit id="4e3a8715bbb132be8790ea3b0bbb5c50f7cacd0e" translate="yes" xml:space="preserve">
+          <source>Add Transfer.iterISO for more efficient isochronous reception.</source>
+          <target state="translated">增加Transfer.iterISO,实现更高效的等时接收。</target>
+        </trans-unit>
+        <trans-unit id="dcf53fec5ba7fa3be4e5d2c5725888c8a14dd52a" translate="yes" xml:space="preserve">
+          <source>Add USBContext.getDeviceIterator method.</source>
+          <target state="translated">增加USBContext.getDeviceIterator方法。</target>
+        </trans-unit>
+        <trans-unit id="9a23cf80adbea8904adbeffa454608b8719892bd" translate="yes" xml:space="preserve">
+          <source>Add a few new upstream enum values.</source>
+          <target state="translated">增加一些新的上游枚举值。</target>
+        </trans-unit>
+        <trans-unit id="3e0df6b66f0b34f38933954eb32a051cf947adce" translate="yes" xml:space="preserve">
+          <source>Add examples.</source>
+          <target state="translated">补充例子:</target>
+        </trans-unit>
+        <trans-unit id="92970fff281d2efb638cefeab4a2293b96f0d318" translate="yes" xml:space="preserve">
+          <source>Add fink and homebrew support on OSX.</source>
+          <target state="translated">在OSX上增加fink和homebrew支持。</target>
+        </trans-unit>
+        <trans-unit id="212389da819e83499b97e46b35676def5f7b8b1e" translate="yes" xml:space="preserve">
+          <source>Assorted documentation improvements.</source>
+          <target state="translated">各种文件的改进。</target>
+        </trans-unit>
+        <trans-unit id="2bc881efea2e8ec3b20e5919d1484978110295ec" translate="yes" xml:space="preserve">
+          <source>Asynchronous I/O, with more error handling:</source>
+          <target state="translated">异步I/O,有更多的错误处理。</target>
+        </trans-unit>
+        <trans-unit id="9200ff38699f6a4563012e15251b8804b285cd46" translate="yes" xml:space="preserve">
+          <source>Better documentation.</source>
+          <target state="translated">更好的文件。</target>
+        </trans-unit>
+        <trans-unit id="ae47e07a4b985b6e91068155e6377f30809b0aa1" translate="yes" xml:space="preserve">
+          <source>Better exception handling in enumeration.</source>
+          <target state="translated">在枚举中更好地处理异常。</target>
+        </trans-unit>
+        <trans-unit id="c39888a1f9813bbf7f5495a0e1eddb68d67bc668" translate="yes" xml:space="preserve">
+          <source>Beware of libusb-win32, which implements 0.1 API, not 1.0 .</source>
+          <target state="translated">小心libusb-win32,它实现的是0.1的API,而不是1.0。</target>
+        </trans-unit>
+        <trans-unit id="b0a05b9251fdf2eb8897bd57d08d6c68901dc931" translate="yes" xml:space="preserve">
+          <source>Beware of possible lack of select.poll if you want to use asynchronous
+API.</source>
+          <target state="translated">如果你想使用异步API,要注意可能缺少select.poll。</target>
+        </trans-unit>
+        <trans-unit id="f5cbdf6bfb51439be085b5c6b7460a7c91eabc3c" translate="yes" xml:space="preserve">
+          <source>Contents</source>
+          <target state="translated">内容</target>
+        </trans-unit>
+        <trans-unit id="518fc77c235170aa9c49a03763e1c0ee2b77529f" translate="yes" xml:space="preserve">
+          <source>Define exception classes for each error values.</source>
+          <target state="translated">为每个错误值定义异常类。</target>
+        </trans-unit>
+        <trans-unit id="0562f32dc56f5c702810cbe010068ddd38dbd69a" translate="yes" xml:space="preserve">
+          <source>Dependencies</source>
+          <target state="translated">依赖性</target>
+        </trans-unit>
+        <trans-unit id="5e3572a77a84a9804dd68982c1493773ab89e4e6" translate="yes" xml:space="preserve">
+          <source>Deprecate &amp;ldquo;transfer&amp;rdquo; constructor parameter to allow instance reuse.</source>
+          <target state="translated">弃用&amp;ldquo;传输&amp;rdquo;构造函数参数以允许实例重用。</target>
+        </trans-unit>
+        <trans-unit id="9e03bcb656e568bd64350eaf6736c9b9feea3be2" translate="yes" xml:space="preserve">
+          <source>Deprecate USBPollerThread . It is mileading users for which the simple version
+(a thread calling</source>
+          <target state="translated">废弃USBPollerThread。它的简单版本(一个调用了</target>
+        </trans-unit>
+        <trans-unit id="3e3d98c3afd2e93d74bf01413a4bb84089d31b9a" translate="yes" xml:space="preserve">
+          <source>Deprecate libusb1 module import, which should not be needed since all (?)
+needed constants were re-bound to usb1 module.</source>
+          <target state="translated">废弃libusb1模块的导入,因为所有(?)需要的常量都被重新绑定到usb1模块,所以不应该需要导入。</target>
+        </trans-unit>
+        <trans-unit id="173d3f404e9dd4519be67eede6553ffaac4660ba" translate="yes" xml:space="preserve">
+          <source>Descriptor walk API documented.</source>
+          <target state="translated">描述符走API文档化。</target>
+        </trans-unit>
+        <trans-unit id="5c6edff41e090eccb4a80108f85ee74ca83c12e9" translate="yes" xml:space="preserve">
+          <source>Document hotplug handler limitations.</source>
+          <target state="translated">记录热插拔处理程序的限制。</target>
+        </trans-unit>
+        <trans-unit id="9e9cf3221a30246219863f1d2366e36cb580debc" translate="yes" xml:space="preserve">
+          <source>Documentation</source>
+          <target state="translated">文件资料</target>
+        </trans-unit>
+        <trans-unit id="65bd6cc16ecfccdf29a254e5414e0812dd7b61c3" translate="yes" xml:space="preserve">
+          <source>Drop PATH_MAX definition.</source>
+          <target state="translated">删除 PATH_MAX 定义。</target>
+        </trans-unit>
+        <trans-unit id="b287518a1edac549950dc9883a1986b82ddabf2f" translate="yes" xml:space="preserve">
+          <source>Drop deprecated USBDevice.reprConfigurations method.</source>
+          <target state="translated">丢弃已废弃的USBDevice.reprConfigurations方法。</target>
+        </trans-unit>
+        <trans-unit id="1d87291cfae6f1a3ea1b4c5c3629b24ccd8664c9" translate="yes" xml:space="preserve">
+          <source>Drop wrapper for libusb_strerror, with compatibility place-holder.</source>
+          <target state="translated">libusb_strerror 的下拉包装器,带有兼容性占位器。</target>
+        </trans-unit>
+        <trans-unit id="eda2cf08d33f15baa6bc926b957a61eb78a2b69a" translate="yes" xml:space="preserve">
+          <source>Easier to list connected devices.</source>
+          <target state="translated">更容易列出连接的设备。</target>
+        </trans-unit>
+        <trans-unit id="1972d690373529b11404fb780ec1f015deeb22f2" translate="yes" xml:space="preserve">
+          <source>Easier to terminate all async transfers for clean exit.</source>
+          <target state="translated">更容易终止所有的异步传输,实现干净的退出。</target>
+        </trans-unit>
+        <trans-unit id="20588ae8e5c269292d35f9dfffa8f2eb3fd3c259" translate="yes" xml:space="preserve">
+          <source>Enum</source>
+          <target state="translated">Enum</target>
+        </trans-unit>
+        <trans-unit id="15f81e5f75d005e782a52bbf0954014303c10599" translate="yes" xml:space="preserve">
+          <source>Error statuses are converted into &lt;code&gt;usb1.USBError&lt;/code&gt; exceptions, with
+status as</source>
+          <target state="translated">错误状态将转换为 &lt;code&gt;usb1.USBError&lt;/code&gt; 异常，状态为</target>
+        </trans-unit>
+        <trans-unit id="c46e75db6b5af7606771b837cfd79645eccb755f" translate="yes" xml:space="preserve">
+          <source>Expose bare string descriptors (aka string indexes) on USBDevice.</source>
+          <target state="translated">在USBDevice上暴露裸露的字符串描述符(也就是字符串索引)。</target>
+        </trans-unit>
+        <trans-unit id="29a93c208352151b632462b9341b9ecd329bb9b4" translate="yes" xml:space="preserve">
+          <source>Finding a device and gaining exclusive access:</source>
+          <target state="translated">寻找设备并获得专属访问权。</target>
+        </trans-unit>
+        <trans-unit id="004472524dcbe906003f0166b42371d366b10286" translate="yes" xml:space="preserve">
+          <source>Fix FreeBSD ABI compatibility.</source>
+          <target state="translated">修正FreeBSD ABI兼容性。</target>
+        </trans-unit>
+        <trans-unit id="147270d8afe86c0050413bdfd29574873a5bb1cf" translate="yes" xml:space="preserve">
+          <source>Fix USBDeviceHandle.getSupportedLanguageList bug when running under python 3.
+While fixing this bug it was realised that this method returned ctypes objects.
+This was not intended, and it now returns regular integers.</source>
+          <target state="translated">修正USBDeviceHandle.getSupportedLanguageList在python 3下运行时的bug。在修复这个bug的时候,发现这个方法返回的是ctypes对象。这不是有意为之,现在它返回的是常规的整数。</target>
+        </trans-unit>
+        <trans-unit id="98aef00664a70fa397ceb794f5282420f417e77f" translate="yes" xml:space="preserve">
+          <source>Fix USBTransfer.cancel exception raising introduced in 1.5.2: it was
+accidentally becomming a bound method, preventing the raise to actually
+happen (in at least CPython 2.x) or raising type conversion errors (in at least
+CPython 3.5.2).</source>
+          <target state="translated">修正1.5.2中引入的USBTransfer.cancel异常引发的问题:它意外地成为一个绑定方法,使得引发的异常无法实际发生(至少在CPython 2.x中)或引发类型转换错误(至少在CPython 3.5.2中)。</target>
+        </trans-unit>
+        <trans-unit id="a9a60761eb4db56ab6b61f0eb335bfae18f08e70" translate="yes" xml:space="preserve">
+          <source>Fix and extend get{,ASCII}StringDescriptor .</source>
+          <target state="translated">修复和扩展get{,ASCII}StringDescriptor。</target>
+        </trans-unit>
+        <trans-unit id="5f646164d8cb681d46bf3efe8ef9e812cb1acbd5" translate="yes" xml:space="preserve">
+          <source>Fix asynchronous configuration transfers.</source>
+          <target state="translated">修复异步配置传输。</target>
+        </trans-unit>
+        <trans-unit id="1bdd346bf27be58a90fbf1dd275407bd4c13c7a7" translate="yes" xml:space="preserve">
+          <source>Fix asynchronous control transfers.</source>
+          <target state="translated">修复异步控制传输。</target>
+        </trans-unit>
+        <trans-unit id="6a9355c7d80de6574f063e03f7809319e1b78f17" translate="yes" xml:space="preserve">
+          <source>Fix few segfault causes.</source>
+          <target state="translated">修复少数segfault原因。</target>
+        </trans-unit>
+        <trans-unit id="02e697164a9136c92c7d9ecc3235e0a5a5750a0f" translate="yes" xml:space="preserve">
+          <source>Fix getASCIIStringDescriptor: unlike getStringDescriptor, this returns only the
+payload of the string descriptor, without its header.</source>
+          <target state="translated">修正getASCIIStringDescriptor:与getStringDescriptor不同的是,这只返回字符串描述符的有效载荷,而没有它的头。</target>
+        </trans-unit>
+        <trans-unit id="21fb983d234c061f72b8b36b428f37e9680fec4d" translate="yes" xml:space="preserve">
+          <source>Fix getExtra and libusb1.libusb_control_transfer_get_data .
+Fix getMaxPower unit on SuperSpeed devices.</source>
+          <target state="translated">修正getExtra和libusb1.libusb_control_transfer_get_data 。修复了SuperSpeed设备上的getMaxPower单元。</target>
+        </trans-unit>
+        <trans-unit id="72dc3ba97bed761ad73e460ff6a2701cca4567cc" translate="yes" xml:space="preserve">
+          <source>Fix getSupportedLanguageList.</source>
+          <target state="translated">修复getSupportedLanguageList。</target>
+        </trans-unit>
+        <trans-unit id="eca0492d1d24f0e6dd0441959146bac25ecf98ea" translate="yes" xml:space="preserve">
+          <source>Fix iterISO and getISOBufferList.</source>
+          <target state="translated">修正iterISO和getISOBufferList。</target>
+        </trans-unit>
+        <trans-unit id="7955e7f13cb0bff3e097d53f28d19f43bfcdae4d" translate="yes" xml:space="preserve">
+          <source>Fix libusb1.LIBUSB_ENDPOINT_ENDPOINT_MASK and
+libusb1.LIBUSB_ENDPOINT_DIR_MASK naming.</source>
+          <target state="translated">修正libusb1.LIBUSB_ENDPOINT_ENDPOINT_MASK和libusb1.LIBUSB_ENDPOINT_DIR_MASK的命名。</target>
+        </trans-unit>
+        <trans-unit id="5751bacf1669635db99cd7531f24147a9eeadeb6" translate="yes" xml:space="preserve">
+          <source>Fix libusb1.REQUEST_TYPE_* names (were TYPE_*). Preserve backward
+compatibility.</source>
+          <target state="translated">修正 libusb1.REQUEST_TYPE_*名称(原来是 TYPE_*)。保留向后兼容性。</target>
+        </trans-unit>
+        <trans-unit id="db324d6d2e08573fb4d2a75f8d1db41434c2287d" translate="yes" xml:space="preserve">
+          <source>Fix pydoc appearance of several USBContext methods.</source>
+          <target state="translated">修复了几个USBContext方法的pydoc外观。</target>
+        </trans-unit>
+        <trans-unit id="fbd5c681e5fe61b4bb633e0c23248965b91e430a" translate="yes" xml:space="preserve">
+          <source>Fix some more USBTransfer memory leaks.</source>
+          <target state="translated">修复一些更多的USBTransfer内存泄漏。</target>
+        </trans-unit>
+        <trans-unit id="24c05d9ab3efdd1d9e7ce12d77ae04d6ef503026" translate="yes" xml:space="preserve">
+          <source>Fix typo in USBInterfaceSetting.getClassTuple method name. Backward
+compatibility preserved.</source>
+          <target state="translated">修正USBInterfaceSetting.getClassTuple方法名称中的拼写错误。保留了向后的兼容性。</target>
+        </trans-unit>
+        <trans-unit id="41d273fb1e85b2d5bec753e69c6f4342a522cda8" translate="yes" xml:space="preserve">
+          <source>Fix wheel generation (</source>
+          <target state="translated">修正轮子生成(</target>
+        </trans-unit>
+        <trans-unit id="e4e289467552de804ca104bfd6d492eda6da11c3" translate="yes" xml:space="preserve">
+          <source>Fixed USBContext.waitForEvent.</source>
+          <target state="translated">修正了USBContext.waitForEvent。</target>
+        </trans-unit>
+        <trans-unit id="248793a2a0b2a169bbede5aa07648345ac032388" translate="yes" xml:space="preserve">
+          <source>For more, see the</source>
+          <target state="translated">更多信息,请见</target>
+        </trans-unit>
+        <trans-unit id="60d234c654296c6068cf26f1bc3236cb348a0451" translate="yes" xml:space="preserve">
+          <source>FreeBSD (including Debian GNU/kFreeBSD)</source>
+          <target state="translated">FreeBSD (包括 Debian GNU/kFreeBSD)</target>
+        </trans-unit>
+        <trans-unit id="fc0c5624b977347bee4a3c56812d8862a8cf1a9e" translate="yes" xml:space="preserve">
+          <source>GNU/Linux</source>
+          <target state="translated">GNU/Linux</target>
+        </trans-unit>
+        <trans-unit id="90ccd6497400b5576aeca1bd94af74aae1e0a250" translate="yes" xml:space="preserve">
+          <source>History</source>
+          <target state="translated">历程</target>
+        </trans-unit>
+        <trans-unit id="bfa78e57d6e61072ef44915c5eefafdd3dc1762a" translate="yes" xml:space="preserve">
+          <source>Home: &lt;a href=&quot;http://github.com/vpelletier/python-libusb1&quot;&gt;http://github.com/vpelletier/python-libusb1&lt;/a&gt;</source>
+          <target state="translated">主页：&lt;a href=&quot;http://github.com/vpelletier/python-libusb1&quot;&gt;http&lt;/a&gt; : //github.com/vpelletier/python-libusb1</target>
+        </trans-unit>
+        <trans-unit id="9aa5acc2d5f8f9d9031f209d3a0daa79e9cbae78" translate="yes" xml:space="preserve">
+          <source>Improve asynchronous transfer performance: (very) suboptimal code was used to
+initialise asynchronous transfer buffer. As a consequence, usb1 now exposes</source>
+          <target state="translated">提高异步传输性能。(非常)次优的代码被用于初始化异步传输缓冲区。因此,usb1现在公开了以下代码</target>
+        </trans-unit>
+        <trans-unit id="8214a68790cdf52bcbc601efc64d6437f5ec7b14" translate="yes" xml:space="preserve">
+          <source>Improve start-up time on CPython by not importing standard</source>
+          <target state="translated">改进CPython的启动时间,不导入标准的</target>
+        </trans-unit>
+        <trans-unit id="31bf69f6d0b4084ed5a34d02b1615c2844aa3a3d" translate="yes" xml:space="preserve">
+          <source>Initial release</source>
+          <target state="translated">初次发布</target>
+        </trans-unit>
+        <trans-unit id="c81b79df3c6448eae7c4f80428b54cd5692a17d7" translate="yes" xml:space="preserve">
+          <source>Installation</source>
+          <target state="translated">安装</target>
+        </trans-unit>
+        <trans-unit id="98c233bae6d5dee689e0fb033ddc131a702ffd28" translate="yes" xml:space="preserve">
+          <source>Introduce USBPollerThread.stop .</source>
+          <target state="translated">引入USBPollerThread.stop。</target>
+        </trans-unit>
+        <trans-unit id="bd288d5c7847401ed48ae7f6104b91f7e979baca" translate="yes" xml:space="preserve">
+          <source>Isochronous transfer refuses to round transfer size.</source>
+          <target state="translated">异步传输拒绝圆形传输大小。</target>
+        </trans-unit>
+        <trans-unit id="3a53c5b66056fb67002dcc7a7260b6ca94fa3623" translate="yes" xml:space="preserve">
+          <source>It is possible to get former behaviour by providing the new</source>
+          <target state="translated">可以通过提供新的</target>
+        </trans-unit>
+        <trans-unit id="642f1c7b948a5802e91a998cddd3a242fcf3b114" translate="yes" xml:space="preserve">
+          <source>Latest version from source tree:</source>
+          <target state="translated">最新版本从源树。</target>
+        </trans-unit>
+        <trans-unit id="264bbcd1a50f4e706672559d575140d162b92334" translate="yes" xml:space="preserve">
+          <source>Made USBDevice instances hashable.</source>
+          <target state="translated">使USBDevice实例可以哈希。</target>
+        </trans-unit>
+        <trans-unit id="266f71524cba92952538830b93469750fc3ca5f9" translate="yes" xml:space="preserve">
+          <source>Make USBDeviceHandle.claimInterface a context manager, for easier interface
+releasing.</source>
+          <target state="translated">让USBDeviceHandle.claimInterface成为一个上下文管理器,以便于接口的释放。</target>
+        </trans-unit>
+        <trans-unit id="febc10fcda3df4942d265c811cddb4e961b33c9f" translate="yes" xml:space="preserve">
+          <source>Make USBTransfer.cancel raise specific error instances.</source>
+          <target state="translated">使USBTransfer.cancel引发特定的错误实例。</target>
+        </trans-unit>
+        <trans-unit id="bcceca18baf0885e8398c2a872a0dbf350bfecc4" translate="yes" xml:space="preserve">
+          <source>Massive rework of usb1.py, making it more python-ish and fixing some
+memory leaks.</source>
+          <target state="translated">对usb1.py进行了大规模的重构,使其更像python,并修复了一些内存泄漏。</target>
+        </trans-unit>
+        <trans-unit id="6f135c5b19eda92ca0383af6d3ba740ed4ffede2" translate="yes" xml:space="preserve">
+          <source>More libusb methods exposed on objects, including ones not yet part of
+released libusb versions (up to their commit 4630fc2).</source>
+          <target state="translated">在对象上暴露了更多的 libusb 方法,包括那些尚未发布的 libusb 版本中的方法 (截止到提交 4630fc2)。</target>
+        </trans-unit>
+        <trans-unit id="99ceb40d0935fd7d599ee90f1891cbe982aba074" translate="yes" xml:space="preserve">
+          <source>Move testUSB1 module inside usb1, to eventually only expose usb1 as top-level
+module.</source>
+          <target state="translated">将testUSB1模块移到usb1里面,最终只将usb1作为顶层模块暴露出来。</target>
+        </trans-unit>
+        <trans-unit id="15d624a3523e7a61cdc20e318c51b4b4f0324146" translate="yes" xml:space="preserve">
+          <source>OSX &lt;a href=&quot;#id4&quot; id=&quot;id2&quot;&gt;[2]&lt;/a&gt; via &lt;a href=&quot;https://www.macports.org/&quot;&gt;MacPorts&lt;/a&gt;, &lt;a href=&quot;http://www.finkproject.org/&quot;&gt;Fink&lt;/a&gt; or &lt;a href=&quot;http://brew.sh/&quot;&gt;Homebrew&lt;/a&gt;</source>
+          <target state="translated">通过&lt;a href=&quot;https://www.macports.org/&quot;&gt;MacPorts&lt;/a&gt;，&lt;a href=&quot;http://www.finkproject.org/&quot;&gt;Fink&lt;/a&gt;或&lt;a href=&quot;http://brew.sh/&quot;&gt;Homebrew的&lt;/a&gt;OSX &lt;a href=&quot;#id4&quot; id=&quot;id2&quot;&gt;[2]&lt;/a&gt;</target>
+        </trans-unit>
+        <trans-unit id="db3951317261fd51cb4c1a3e01c4748b4896c421" translate="yes" xml:space="preserve">
+          <source>OpenBSD</source>
+          <target state="translated">OpenBSD</target>
+        </trans-unit>
+        <trans-unit id="692a620443dd3851f7944d20adf9b9ac93d13b26" translate="yes" xml:space="preserve">
+          <source>OpenBSD support checked (no change).</source>
+          <target state="translated">检查了OpenBSD支持(没有变化)。</target>
+        </trans-unit>
+        <trans-unit id="e91c39fb405e11aeda81ddf23cc73bfb141ff31b" translate="yes" xml:space="preserve">
+          <source>Properly cast libusb_set_pollfd_notifiers arguments.
+Fix null pointer value: POINTER(None) is the type of a pointer which may be a
+null pointer, which falls back to c_void_p. But c_void_p() is an actual null
+pointer.</source>
+          <target state="translated">正确投递 libusb_set_pollfd_notifiers 参数。修正空指针值。POINTER(None)是一个指针的类型,它可能是一个空指针,这就回到了 c_void_p。但c_void_p()是一个实际的空指针。</target>
+        </trans-unit>
+        <trans-unit id="f775ede9ff00dabbfb53148d3c542fbb647d05e4" translate="yes" xml:space="preserve">
+          <source>Pure-python wrapper for libusb-1.0</source>
+          <target state="translated">libusb-1.0的Pure-python封装器。</target>
+        </trans-unit>
+        <trans-unit id="dcf624f51c6a288f28d191749422bb6ac7e9b299" translate="yes" xml:space="preserve">
+          <source>PyPI: &lt;a href=&quot;http://pypi.python.org/pypi/libusb1&quot;&gt;http://pypi.python.org/pypi/libusb1&lt;/a&gt;</source>
+          <target state="translated">PyPI：&lt;a href=&quot;http://pypi.python.org/pypi/libusb1&quot;&gt;http&lt;/a&gt; : //pypi.python.org/pypi/libusb1</target>
+        </trans-unit>
+        <trans-unit id="e5c95b4c87363bf85b7a876092cfe3df3ac81543" translate="yes" xml:space="preserve">
+          <source>Reduce (remove ?) the need to import libusb1 module by exposing USBError and
+constants in usb1 module.</source>
+          <target state="translated">通过暴露usb1模块中的USBError和常量,减少(删除?)导入libusb1模块的必要性。</target>
+        </trans-unit>
+        <trans-unit id="b395a6da05d23858821e754974a3079fa1add55b" translate="yes" xml:space="preserve">
+          <source>Relaxed licensing by moving from GPL v2+ to LGPL v2.1+, for consistency with
+libusb1.</source>
+          <target state="translated">为了与 libusb1 保持一致,从 GPL v2+转为 LGPL v2.1+,放宽了授权。</target>
+        </trans-unit>
+        <trans-unit id="5b5b6a0a2bb63f26df1c16752dbb8a4d7ee76ac9" translate="yes" xml:space="preserve">
+          <source>Releases from PyPI, with name &lt;em&gt;libusb1&lt;/em&gt;. Installing from command line:</source>
+          <target state="translated">从PyPI发布，名称为&lt;em&gt;libusb1&lt;/em&gt;。从命令行安装：</target>
+        </trans-unit>
+        <trans-unit id="fef0124a214c5b875eba1cba6d2073b855314b40" translate="yes" xml:space="preserve">
+          <source>Remove globals accesses from USBDeviceHandle destructor.</source>
+          <target state="translated">移除USBDeviceHandle分解器中的globals访问。</target>
+        </trans-unit>
+        <trans-unit id="17876e3673523bd1a7069fac6051a82645d1bab6" translate="yes" xml:space="preserve">
+          <source>Rename USBContext.exit as USBContext.close for consistency with other USB*
+classes. Preserve backward compatibility.</source>
+          <target state="translated">将 USBContext.exit 重命名为 USBContext.close,以便与其他 USB*类保持一致。保留向后兼容性。</target>
+        </trans-unit>
+        <trans-unit id="32a4c44e9674e8c5cf603ff59b163388c35d1c30" translate="yes" xml:space="preserve">
+          <source>Run 2to3 when running setup.py with python3, and reduce differences with
+python3.</source>
+          <target state="translated">用python3运行setup.py时,运行2to3,用python3减少差异。</target>
+        </trans-unit>
+        <trans-unit id="4c11b98c319bf1638966e6ba33e6f66aa47c7001" translate="yes" xml:space="preserve">
+          <source>Some description is needed though on how to jump from libusb-1.0 documentation
+to python-libusb1, and vice-versa:</source>
+          <target state="translated">不过需要对如何从 libusb-1.0 文档跳转到 python-libusb1,以及反之亦然进行一些描述。</target>
+        </trans-unit>
+        <trans-unit id="e324f74ef3e6cc9380674e948f038d75277ebbfe" translate="yes" xml:space="preserve">
+          <source>Some portability fixes (OSes, python versions).</source>
+          <target state="translated">一些可移植性修复(操作系统、python版本)。</target>
+        </trans-unit>
+        <trans-unit id="3a95f03fa2cab09e1f10904882f1c302fc1ce4e3" translate="yes" xml:space="preserve">
+          <source>Some work on isochronous &amp;ldquo;in&amp;rdquo; transfers. They don&amp;rsquo;t raise exceptions anymore,
+but data validity and python-induced latency impact weren&amp;rsquo;t properly checked.</source>
+          <target state="translated">一些工作在同步&amp;ldquo; in&amp;rdquo;传输中。它们不再引发异常，但是没有正确检查数据有效性和python引起的延迟影响。</target>
+        </trans-unit>
+        <trans-unit id="fde29f766b01616c9a8256cb5d90a7abc4c9b717" translate="yes" xml:space="preserve">
+          <source>Stand-alone polling thread for multi-threaded apps.</source>
+          <target state="translated">多线程应用程序的独立轮询线程。</target>
+        </trans-unit>
+        <trans-unit id="424728ecd0cc17b1d31e9951146e7bc583851be6" translate="yes" xml:space="preserve">
+          <source>Supported OSes</source>
+          <target state="translated">支持的操作系统</target>
+        </trans-unit>
+        <trans-unit id="a753c583e787443559f025f5af2bb1c67e44533a" translate="yes" xml:space="preserve">
+          <source>Supports all transfer types, both in synchronous and asynchronous mode.</source>
+          <target state="translated">支持所有传输类型,包括同步和异步模式。</target>
+        </trans-unit>
+        <trans-unit id="2c360388c6cc68034733f2bfe33c82c98b7e4bbe" translate="yes" xml:space="preserve">
+          <source>Synchronous I/O:</source>
+          <target state="translated">同步I/O。</target>
+        </trans-unit>
+        <trans-unit id="46aa24688256ea9859e9892de4e00197cc45bdff" translate="yes" xml:space="preserve">
+          <source>This class is probably mostly used at module level, where locals == globals.</source>
+          <target state="translated">这个类可能主要用于模块级,其中locals ==globals。</target>
+        </trans-unit>
+        <trans-unit id="0199613de579123997337bcfd93ea1cccde5314a" translate="yes" xml:space="preserve">
+          <source>This class is probably very little used outside libusb1.py</source>
+          <target state="translated">这个类可能在libusb1.py以外的地方很少使用。</target>
+        </trans-unit>
+        <trans-unit id="f7be797c90f3f255e95ce5de5ff2577eaabce2dc" translate="yes" xml:space="preserve">
+          <source>Try harder when looking for libusb.</source>
+          <target state="translated">找libusb的时候要多加努力。</target>
+        </trans-unit>
+        <trans-unit id="118d19205b037b810ac78aa1f42749d1ef884a3e" translate="yes" xml:space="preserve">
+          <source>USBContext.handleEvents</source>
+          <target state="translated">USBContext.handleEvents</target>
+        </trans-unit>
+        <trans-unit id="0bb18642b70b9f8a9c12ccf39487328f306b8e19" translate="yes" xml:space="preserve">
+          <source>Usage</source>
+          <target state="translated">使用方法</target>
+        </trans-unit>
+        <trans-unit id="3b501dd9f5f27388f6c0be782a7f6140eb628d52" translate="yes" xml:space="preserve">
+          <source>Version and capability APIs exposed.</source>
+          <target state="translated">暴露的版本和能力API。</target>
+        </trans-unit>
+        <trans-unit id="8b458cdc15c1b8d75c3c2dfc3d51fbf4134b5045" translate="yes" xml:space="preserve">
+          <source>Windows &lt;a href=&quot;#id3&quot; id=&quot;id1&quot;&gt;[1]&lt;/a&gt; native dll or via &lt;a href=&quot;https://www.cygwin.com/&quot;&gt;Cygwin&lt;/a&gt;</source>
+          <target state="translated">Windows &lt;a href=&quot;#id3&quot; id=&quot;id1&quot;&gt;[1]&lt;/a&gt;本机dll或通过&lt;a href=&quot;https://www.cygwin.com/&quot;&gt;Cygwin&lt;/a&gt;</target>
+        </trans-unit>
+        <trans-unit id="cb51eb36862ea41c0868a005d412172a9f4971ac" translate="yes" xml:space="preserve">
+          <source>Wrap hotplug API.</source>
+          <target state="translated">封装hotplug API。</target>
+        </trans-unit>
+        <trans-unit id="3264440000a32e12f9afbbbe7af49edbe5f80a20" translate="yes" xml:space="preserve">
+          <source>Wrap kernel auto-detach API.</source>
+          <target state="translated">封装内核自动分离API。</target>
+        </trans-unit>
+        <trans-unit id="339c5320c12da773a223ae394325b5ddddc0c3c0" translate="yes" xml:space="preserve">
+          <source>Wrap port number API.</source>
+          <target state="translated">包裹端口号API。</target>
+        </trans-unit>
+        <trans-unit id="6f3b0e839b273fedcf534e5e1886ae948b843f3a" translate="yes" xml:space="preserve">
+          <source>bytearrays</source>
+          <target state="translated">字节数组</target>
+        </trans-unit>
+        <trans-unit id="daf529a73101c2be626b99fc6938163e7a27620b" translate="yes" xml:space="preserve">
+          <source>bytes</source>
+          <target state="translated">字节数</target>
+        </trans-unit>
+        <trans-unit id="f222d079d8898a6539a06b56d3424266897102bb" translate="yes" xml:space="preserve">
+          <source>command.</source>
+          <target state="translated">命令。</target>
+        </trans-unit>
+        <trans-unit id="9d0a28b48a7c57ed0619bc6f6f666ba3815020f0" translate="yes" xml:space="preserve">
+          <source>constructor:</source>
+          <target state="translated">构造者。</target>
+        </trans-unit>
+        <trans-unit id="8e5dd23164095a4dfc07bf29c67339ede77e434a" translate="yes" xml:space="preserve">
+          <source>controlWrite, bulkWrite and interruptWrite now reject (with TypeError) numeric
+values for</source>
+          <target state="translated">controlWrite、bulkkWrite和interruptWrite现在拒绝接受(用TypeError)数值的</target>
+        </trans-unit>
+        <trans-unit id="a17c9aaa61e80a1bf71d0d850af4e5baa9800bbd" translate="yes" xml:space="preserve">
+          <source>data</source>
+          <target state="translated">资料</target>
+        </trans-unit>
+        <trans-unit id="cbd9d886e949d7cb382991471b203a63ae721520" translate="yes" xml:space="preserve">
+          <source>directory.</source>
+          <target state="translated">目录。</target>
+        </trans-unit>
+        <trans-unit id="c3499c2729730a7f807efb8676a92dcb6f8a3f8f" translate="yes" xml:space="preserve">
+          <source>example</source>
+          <target state="translated">例子</target>
+        </trans-unit>
+        <trans-unit id="afbef8d4a431f36fc568e8ed2ae288823c578e95" translate="yes" xml:space="preserve">
+          <source>get{,ASCII}StringDescriptor now return None for descriptor 0 instead of raising
+UnicodeDecodeError. Use getSupportedLanguageList to access it.
+Moved getManufacturer, getProduct and getSerialNumber to USBDeviceHandle. Kept
+shortcuts for these on USBDevice.</source>
+          <target state="translated">get{,ASCII}StringDescriptor现在对描述符0返回None,而不是引发UnicodeDecodeError。使用 getSupportedLanguageList 来访问它。将 getManufacturer、getProduct 和 getSerialNumber 移至 USBDeviceHandle。在 USBDevice 上保留了这些功能的快捷方式。</target>
+        </trans-unit>
+        <trans-unit id="870acecb8e77b4c30183de1e637c0539ec427d97" translate="yes" xml:space="preserve">
+          <source>get{,ASCII}StringDescriptor now return None for descriptor 0, use
+getSupportedLanguageList to get its content.
+getManufacturer, getProduct and getSerialNumber are now on USBDeviceHandle,
+with backward-compatibility aliases on their original location.
+Synchronous bulk and interrupt API exposes number of bytes sent and received
+bytes even when a timeout occurs.</source>
+          <target state="translated">get{,ASCII}StringDescriptor现在对描述符0返回None,使用getSupportedLanguageList获取其内容。 getManufacturer、getProduct和getSerialNumber现在是在USBDeviceHandle上,在其原始位置上有向后兼容的别名。同步的批量和中断API公开了发送和接收的字节数,即使发生超时。</target>
+        </trans-unit>
+        <trans-unit id="a1a2ae18fa153a52a05172a40a60c6c0848214e2" translate="yes" xml:space="preserve">
+          <source>inspect</source>
+          <target state="translated">检验</target>
+        </trans-unit>
+        <trans-unit id="f2870a37b64269d74c2b03862d27df727f341cf9" translate="yes" xml:space="preserve">
+          <source>instance property.</source>
+          <target state="translated">实例属性。</target>
+        </trans-unit>
+        <trans-unit id="2c6107fd82ffa89297f43b1eadf8f18e114accaf" translate="yes" xml:space="preserve">
+          <source>libusb-1.0</source>
+          <target state="translated">libusb-1.0</target>
+        </trans-unit>
+        <trans-unit id="5fbdc59aaa3ba894d713350f5020839ad8a2c87c" translate="yes" xml:space="preserve">
+          <source>libusb_...</source>
+          <target state="translated">libusb_...</target>
+        </trans-unit>
+        <trans-unit id="9f365d4349198d24dee648331810c1833fa70680" translate="yes" xml:space="preserve">
+          <source>module also defines a few more functions and classes, which are
+otherwise not so convenient to call from Python: the event handling API needed
+by async API.</source>
+          <target state="translated">模块还定义了一些函数和类,否则从Python中调用这些函数和类并不方便:async API所需要的事件处理API。</target>
+        </trans-unit>
+        <trans-unit id="71775be18c169dac62eb26f2687c1f1082b7d21c" translate="yes" xml:space="preserve">
+          <source>module groups libusb-1.0 functions as class methods. The first
+parameter (when it&amp;rsquo;s a</source>
+          <target state="translated">模块组libusb-1.0用作类方法。第一个参数（当它是一个</target>
+        </trans-unit>
+        <trans-unit id="a21867509c883fff7a024de5f5d5839d06e9f445" translate="yes" xml:space="preserve">
+          <source>module.</source>
+          <target state="translated">模块。</target>
+        </trans-unit>
+        <trans-unit id="515ce87318c2cfb6127886c462c920dc2d480fea" translate="yes" xml:space="preserve">
+          <source>objects.</source>
+          <target state="translated">对象。</target>
+        </trans-unit>
+        <trans-unit id="1758356db21759f7c5a0da9b4dd1db8fd6feab3f" translate="yes" xml:space="preserve">
+          <source>or</source>
+          <target state="translated">or</target>
+        </trans-unit>
+        <trans-unit id="1d9ad0addee82809659247e9008e6f9e82aa9000" translate="yes" xml:space="preserve">
+          <source>or:</source>
+          <target state="translated">或:</target>
+        </trans-unit>
+        <trans-unit id="287bbcd10dbb517b7caa59aa8578a4acb751ed88" translate="yes" xml:space="preserve">
+          <source>parameter to</source>
+          <target state="translated">参数为</target>
+        </trans-unit>
+        <trans-unit id="648d85d4deed6cb9dfdf5959665ccd0d4101b6d1" translate="yes" xml:space="preserve">
+          <source>parameter.</source>
+          <target state="translated">参数。</target>
+        </trans-unit>
+        <trans-unit id="cb902e410643e815f0924c4f4b75593e9aa44daa" translate="yes" xml:space="preserve">
+          <source>pointer) defined the class the fonction
+belongs to. For example:</source>
+          <target state="translated">pointer)定义了fonction所属的类。例如:</target>
+        </trans-unit>
+        <trans-unit id="86f86df43ee76b3ac55c90cf9d5e7fd9a60b6b25" translate="yes" xml:space="preserve">
+          <source>pydoc</source>
+          <target state="translated">pydoc</target>
+        </trans-unit>
+        <trans-unit id="5ecd16ce0db1980089dbc1a80c639ce894e5bc95" translate="yes" xml:space="preserve">
+          <source>pypy support.</source>
+          <target state="translated">pypy支持。</target>
+        </trans-unit>
+        <trans-unit id="374754c0b304a0d97860942153d3ff6308d60005" translate="yes" xml:space="preserve">
+          <source>python-libusb1 can be expected to work on:</source>
+          <target state="translated">python-libusb1可以预期工作在。</target>
+        </trans-unit>
+        <trans-unit id="03e7c0444223266799dd33ecc490faa0ae7dc344" translate="yes" xml:space="preserve">
+          <source>python-libusb1 follows libusb-1.0 documentation as closely as possible, without
+taking decisions for you. Thanks to this, python-libusb1 does not need to
+duplicate the nice existing &lt;a href=&quot;http://libusb.sourceforge.net/api-1.0/&quot;&gt;libusb1.0 documentation&lt;/a&gt;.</source>
+          <target state="translated">python-libusb1尽可能严格地遵循libusb-1.0文档，而无需为您做决定。因此，python-libusb1不需要复制现有的精美&lt;a href=&quot;http://libusb.sourceforge.net/api-1.0/&quot;&gt;libusb1.0文档&lt;/a&gt;。</target>
+        </trans-unit>
+        <trans-unit id="31e220b2c6d3c6329ef07717b978c70eda270c9c" translate="yes" xml:space="preserve">
+          <source>python-libusb1 main documentation is accessible with python&amp;rsquo;s standard</source>
+          <target state="translated">python-libusb1主要文档可通过python的标准访问</target>
+        </trans-unit>
+        <trans-unit id="c6c52c2a8f5a51a2a546447f9aba5f9d60af2d6b" translate="yes" xml:space="preserve">
+          <source>python3 setup.py bdist_wheel</source>
+          <target state="translated">python3 setup.py bdist_wheel</target>
+        </trans-unit>
+        <trans-unit id="22ebaff6c4f49055f3d624c61ccb11ff21692059" translate="yes" xml:space="preserve">
+          <source>scope_dict</source>
+          <target state="translated">scope_dict</target>
+        </trans-unit>
+        <trans-unit id="3442496b96dd01591a8cd44b1eec1368ab728aba" translate="yes" xml:space="preserve">
+          <source>str</source>
+          <target state="translated">跨越</target>
+        </trans-unit>
+        <trans-unit id="16ba0c94f13786408f901198a361ce64bb09295a" translate="yes" xml:space="preserve">
+          <source>usb1</source>
+          <target state="translated">usb1</target>
+        </trans-unit>
+        <trans-unit id="f1af4fbc57658d0c944713c925d688b90ba4501f" translate="yes" xml:space="preserve">
+          <source>usb1.__version__ is now present, managed by versioneer.
+Fix an occasional segfault when closing a transfer from inside its callback
+function.</source>
+          <target state="translated">usb1.__version__现已存在,由 versioneer 管理。修正了在回调函数中关闭传输时偶尔出现的 segfault。</target>
+        </trans-unit>
+        <trans-unit id="f32b67c7e26342af42efabc674d441dca0a281c5" translate="yes" xml:space="preserve">
+          <source>value</source>
+          <target state="translated">价值</target>
+        </trans-unit>
+        <trans-unit id="bfc788e6b4cf92d80b4019130faf66f47cb89876" translate="yes" xml:space="preserve">
+          <source>where it used to expose</source>
+          <target state="translated">过去暴露的地方</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

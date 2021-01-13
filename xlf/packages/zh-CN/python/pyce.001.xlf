@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="zh-CN" datatype="htmlbody" original="https://pypi.org/project/pyce/">
+    <body>
+      <group id="pyce">
+        <trans-unit id="7220d61e61d9e2652e2e8c73eaa03a6d2791500d" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;pyce&lt;/code&gt; enables the creation of a Trusted Computing Python environment by
+ensuring each deployed file is precisely what the developer intended by
+enforcing end-to-end encryption.  Execution halts if even a single bit of an
+imported Python file is modified.</source>
+          <target state="translated">&lt;code&gt;pyce&lt;/code&gt; 通过实施端到端加密来确保每个部署的文件正是开发人员想要的，从而能够创建Trusted Computing Python环境。即使修改了一个导入的Python文件的一小部分，执行也会暂停。</target>
+        </trans-unit>
+        <trans-unit id="5b570989f30f2c44d1bf228f9676441765e87bf9" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;pyce&lt;/code&gt; expects files to be pre-compiled Python bytecode, using a command
+similar to &lt;code&gt;python3 -mcompileall -b&lt;/code&gt; where &lt;code&gt;-b&lt;/code&gt; does an in place compilation.</source>
+          <target state="translated">&lt;code&gt;pyce&lt;/code&gt; 希望使用类似于 &lt;code&gt;python3 -mcompileall -b&lt;/code&gt; 的命令对文件进行预编译的Python字节码，其中 &lt;code&gt;-b&lt;/code&gt; 进行就地编译。</target>
+        </trans-unit>
+        <trans-unit id="40d8a7e89611ab4ff3927c3a37dc0215fd1c68fa" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;pyce&lt;/code&gt; is a library to work with encrypted Python bytecode.  It adds
+functionality to a Python runtime by extending the way the builtin keyword
+&lt;code&gt;import&lt;/code&gt; works.  Currently, it assumes that convergent encryption will be used,
+but the library can be extended.  For example, functionality could be added to
+decrypt files via &lt;a href=&quot;https://www.vaultproject.io/&quot;&gt;Hashicorp's Vault&lt;/a&gt; (which also
+supports convergent encryption as a mode of operation).</source>
+          <target state="translated">&lt;code&gt;pyce&lt;/code&gt; 是一个使用加密的Python字节码的库。通过扩展内置关键字 &lt;code&gt;import&lt;/code&gt; 工作方式，它为Python运行时添加了功能。当前，它假定将使用融合加密，但是可以扩展该库。例如，可以添加功能以通过&lt;a href=&quot;https://www.vaultproject.io/&quot;&gt;Hashicorp的Vault&lt;/a&gt;解密文件（该文件库还支持融合加密作为一种操作模式）。</target>
+        </trans-unit>
+        <trans-unit id="f2e1bbf38f99446fb650d8b305e2e4b0cefb6b79" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;At-rest Code Protection:&lt;/strong&gt; You could just protect code at rest by integrating
+on-the-fly decryption with an IDE or other software.  This would be more of a
+DIY project at this point in time, but &lt;code&gt;pyce&lt;/code&gt; gives you all the building blocks
+you need!</source>
+          <target state="translated">&lt;strong&gt;静态代码保护：&lt;/strong&gt;您可以通过将即时解密与IDE或其他软件集成在一起来保护静态代码。此时，这 &lt;code&gt;pyce&lt;/code&gt; 一个DIY项目，但是pyce会为您提供所需的所有构建块！</target>
+        </trans-unit>
+        <trans-unit id="7e54ad43a87b672fcb045309a94aeff66fe24495" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;File Integrity Monitoring:&lt;/strong&gt; You could protect your production code running
+on application servers by adding in automatic cryptographic checks of imports.</source>
+          <target state="translated">&lt;strong&gt;文件完整性监视：&lt;/strong&gt;您可以通过添加导入的自动密码检查来保护在应用程序服务器上运行的生产代码。</target>
+        </trans-unit>
+        <trans-unit id="a4ff274c4c6f778a2747ce2f475183f6000f5f8b" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Licensing:&lt;/strong&gt; You could publish encrypted modules to PyPI and only release
+decryption keys to certain organizations, people, or others!  You could publish
+such modules anywhere!</source>
+          <target state="translated">&lt;strong&gt;许可：&lt;/strong&gt;您可以将加密的模块发布到PyPI，而仅将解密密钥发布给某些组织，人员或其他人！您可以在任何地方发布此类模块！</target>
+        </trans-unit>
+        <trans-unit id="d73cba4cd29d390c2e73cb25a75dfa70c74e76c7" translate="yes" xml:space="preserve">
+          <source>All of this code is released under the &lt;a href=&quot;https://www.apache.org/licenses/LICENSE-2.0&quot;&gt;Apache v2.0
+License&lt;/a&gt;.</source>
+          <target state="translated">所有这些代码都是根据&lt;a href=&quot;https://www.apache.org/licenses/LICENSE-2.0&quot;&gt;Apache v2.0许可发布的&lt;/a&gt;。</target>
+        </trans-unit>
+        <trans-unit id="4dcc292d2fb7b4058ad3d38bd0f91c85daef1f51" translate="yes" xml:space="preserve">
+          <source>Execute encrypted Python bytecode.</source>
+          <target state="translated">执行加密的Python字节码。</target>
+        </trans-unit>
+        <trans-unit id="6b522d4892272ac439a1152cd99727373df352f6" translate="yes" xml:space="preserve">
+          <source>First, you'll want to encrypt a module or package.  &lt;strong&gt;Note: this is a
+destructive action.&lt;/strong&gt;  Do not run this on a codebase that is not saved
+elsewhere.  This can recursively operate on folders, and supports exclusion
+lists (to not encrypt certain files).</source>
+          <target state="translated">首先，您需要对模块或软件包进行加密。&lt;strong&gt;注意：这是一种破坏性行为。&lt;/strong&gt;不要在未保存在其他地方的代码库上运行此代码。这可以对文件夹进行递归操作，并支持排除列表（不加密某些文件）。</target>
+        </trans-unit>
+        <trans-unit id="b05b322d83bfb47db730d9d1707bae561b692314" translate="yes" xml:space="preserve">
+          <source>How do I use it?</source>
+          <target state="translated">如何使用它?</target>
+        </trans-unit>
+        <trans-unit id="7044cdd9d6418ed93041c3eebc069f6785386acc" translate="yes" xml:space="preserve">
+          <source>Key distribution is outside the scope of this project.  You will need to
+maintain keys typically by using a networked key server such as &lt;a href=&quot;https://www.vaultproject.io/&quot;&gt;Hashicorp's
+Vault&lt;/a&gt;.  You could pass keys by environment
+variable, &lt;code&gt;stdin&lt;/code&gt;, or some other mechanism.</source>
+          <target state="translated">密钥分发不在该项目的范围内。通常，您将需要使用网络密钥服务器（例如&lt;a href=&quot;https://www.vaultproject.io/&quot;&gt;Hashicorp的Vault）&lt;/a&gt;来维护密钥。您可以通过环境变量， &lt;code&gt;stdin&lt;/code&gt; 或其他某种机制传递密钥。</target>
+        </trans-unit>
+        <trans-unit id="3229609e15436ec51bcf00818a69a84dbc58a0c2" translate="yes" xml:space="preserve">
+          <source>License</source>
+          <target state="translated">许可证</target>
+        </trans-unit>
+        <trans-unit id="6a65edd353c5c3cd5039e413ffc77c8ff386b9b8" translate="yes" xml:space="preserve">
+          <source>PYCE</source>
+          <target state="translated">PYCE</target>
+        </trans-unit>
+        <trans-unit id="1c0b9ef46dd4b9fbb52c53cd6c10bf1330b4a8e0" translate="yes" xml:space="preserve">
+          <source>Second, register your keys and try importing from the encrypted module or
+package:</source>
+          <target state="translated">其次,注册你的密钥,并尝试从加密的模块或包中导入。</target>
+        </trans-unit>
+        <trans-unit id="6200e73c15ad9ab26f9436c0155499b816dcd3b5" translate="yes" xml:space="preserve">
+          <source>Typically, you will leave (exclude) a stub file that is designed to just hook
+Python's import path parsers, setup the keys, and then execute your code.</source>
+          <target state="translated">通常情况下,你会留下(排除)一个存根文件,这个存根文件的设计只是为了钩住Python的导入路径解析器,设置键,然后执行你的代码。</target>
+        </trans-unit>
+        <trans-unit id="356b951caf7cbe2df0adf165183ef4a7d86e7c13" translate="yes" xml:space="preserve">
+          <source>What can I do with it?</source>
+          <target state="translated">我可以用它做什么?</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

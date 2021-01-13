@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="es" datatype="htmlbody" original="https://pypi.org/project/dkimpy-milter/">
+    <body>
+      <group id="dkimpy-milter">
+        <trans-unit id="88573316c8494037c3105ecb07be3f67dcf77fb2" translate="yes" xml:space="preserve">
+          <source>(a) When the MTA will be used for relaying emails, e.g. delivering to other
+hosts using the aliases mechanism, it is important not to break
+signatures inserted by the original sender.  This is particularly sensitive
+particular when the sending domain has published a &quot;reject&quot; DMARC policy.</source>
+          <target state="translated">(a) Cuando el MTA se utilizar&amp;aacute; para retransmitir correos electr&amp;oacute;nicos, por ejemplo, entreg&amp;aacute;ndolos a otros hosts utilizando el mecanismo de alias, es importante no romper las firmas insertadas por el remitente original. Esto es particularmente delicado cuando el dominio remitente ha publicado una pol&amp;iacute;tica DMARC de &quot;rechazo&quot;.</target>
+        </trans-unit>
+        <trans-unit id="d96cc0cbab3c8df553c10efdf44a3a0e327dc3df" translate="yes" xml:space="preserve">
+          <source>(b) As stated in sendmail's KNOWNBUGS file, sendmail truncates header field
+values longer than 256 characters, which could mean truncating the domain
+of a long From: header field value and invalidating the signature.
+You may wish to consider increasing MAXNAME in sendmail/conf.h to mitigate
+changing the messages and invalidating their signatures.  This change
+requires recompiling sendmail.</source>
+          <target state="translated">(b) Como se indica en el archivo KNOWNBUGS de sendmail, sendmail trunca los valores del campo de encabezado de m&amp;aacute;s de 256 caracteres, lo que podr&amp;iacute;a significar truncar el dominio de un valor de campo de encabezado From: largo e invalidar la firma. Es posible que desee considerar aumentar MAXNAME en sendmail / conf.h para mitigar el cambio de mensajes y la invalidaci&amp;oacute;n de sus firmas. Este cambio requiere volver a compilar sendmail.</target>
+        </trans-unit>
+        <trans-unit id="03b3a7f311b213ed473be5da48afd8b6a29feb50" translate="yes" xml:space="preserve">
+          <source>(c) Similar to (a) above, sendmail may wrap very long single-line recipient
+fields for presentation purposes; for example:</source>
+          <target state="translated">(c) De manera similar a (a) anterior, sendmail puede incluir campos de destinatarios de una sola l&amp;iacute;nea muy largos para fines de presentaci&amp;oacute;n; por ejemplo:</target>
+        </trans-unit>
+        <trans-unit id="a63780aea9d6d22effa58904beb0edcdeac6e9a0" translate="yes" xml:space="preserve">
+          <source>As an example, to change the run directory to /var/run, one would do:</source>
+          <target state="translated">Por ejemplo,para cambiar el directorio de ejecución a /var/run,se podría hacer:</target>
+        </trans-unit>
+        <trans-unit id="6d0eceff48c2bd1a38b3692d32e5824e5c00b3af" translate="yes" xml:space="preserve">
+          <source>As with all milters, dkimpy-milter needs to be integrated with your MTA of
+choice (Sendmail or Postfix).  When integrating with your MTA, the risk of
+signature invalidation due to content conversion of the message body needs to
+be considered.  See RFC 6376, Section 5.3 for discussion of this issue.  As a
+practical matter, when signing, configure the milter to follow all others that
+might modify the message body.  When verifying, configure the milter before
+other processes that might modify the message body.</source>
+          <target state="translated">Como con todos los filtros,el dkimpy-milter necesita ser integrado con el MTA de su elección (Sendmail o Postfix).Al integrarse con su MTA,el riesgo de invalidación de la firma debido a la conversión del contenido del cuerpo del mensaje debe ser considerado.Ver RFC 6376,Sección 5.3 para la discusión de este tema.Como cuestión práctica,al firmar,configure el milter para que siga a todos los demás que puedan modificar el cuerpo del mensaje.Al verificar,configure el &quot;milter&quot; antes de otros procesos que puedan modificar el cuerpo del mensaje.</target>
+        </trans-unit>
+        <trans-unit id="2172dee673ec46d7887d7f22ecd566a57e32439a" translate="yes" xml:space="preserve">
+          <source>Both a systemd unit file and a sysv init file are provided.  Both make
+assumptions about defaults being used, e.g. if a non-standard pidfile name is
+used, they will need to be updated.  The sysv init file uses start-stop-deamon
+from Debian.  It is not portable to systems without that available.</source>
+          <target state="translated">Se proporcionan tanto un archivo de unidad del sistema como un archivo de inicio del sistema.Ambos hacen suposiciones sobre los valores predeterminados que se utilizan,por ejemplo,si se utiliza un nombre de archivo pid no estándar,será necesario actualizarlos.El archivo de inicio sysv utiliza el parámetro start-stop de Debian.No es portable a sistemas que no lo tengan disponible.</target>
+        </trans-unit>
+        <trans-unit id="19c39e1770abfa777f8007031f0b82115d24020c" translate="yes" xml:space="preserve">
+          <source>Both public and private keys for RSA have standard formats and there are many
+tools available to create them.  Keys must (RFC 8302) have a minimum size of
+1024 bits and should have a size of at least 2048 bits.  The dknewkey script
+that is provided with dkimpy is one such tool:</source>
+          <target state="translated">Tanto las claves públicas como las privadas de la RSA tienen formatos estándar y hay muchas herramientas disponibles para crearlas.Las claves deben (RFC 8302)tener un tamaño mínimo de 1024 bits y deben tener un tamaño de al menos 2048 bits.El script dknewkey que se proporciona con dkimpy es una de esas herramientas:</target>
+        </trans-unit>
+        <trans-unit id="5f3fb7c776ee6f02ef6590885a4a7a97ce1e1435" translate="yes" xml:space="preserve">
+          <source>COMPLEX SIGNING CONFIGURATIONS</source>
+          <target state="translated">COMPLEJAS CONFIGURACIONES DE FIRMAS</target>
+        </trans-unit>
+        <trans-unit id="917508ffa8a9172d62f39302317abe8c66d9c56a" translate="yes" xml:space="preserve">
+          <source>Care is required to segregate outbound mail to be signed and inbound mail to
+be verified.  The above example uses two instances of dkimpy-milter to do
+this.  There are many possible ways.  Here is another example using milter
+macros to keep the mail streams segregated:</source>
+          <target state="translated">Es necesario tener cuidado de separar el correo de salida para que sea firmado y el de entrada para que sea verificado.En el ejemplo anterior se utilizan dos instancias de dkimpy-milter para hacerlo.Hay muchas maneras posibles.He aquí otro ejemplo que utiliza macros milter para mantener los flujos de correo segregados:</target>
+        </trans-unit>
+        <trans-unit id="34682efb1315542a312fe9a8989a2e26f08a97ad" translate="yes" xml:space="preserve">
+          <source>Changing the sendmail.mc file requires a Make (to compile it into sendmail.cf)
+and a restart of sendmail.  Note that S= needs to match the value of Socket in
+the dkimpy-milter configuration file.</source>
+          <target state="translated">Para cambiar el archivo sendmail.mc se requiere un Make (para compilarlo en sendmail.cf)y un reinicio de sendmail.Ten en cuenta que S=necesita coincidir con el valor de Socket en el archivo de configuración de dkimpy-milter.</target>
+        </trans-unit>
+        <trans-unit id="7e72824d8118a3f138bfda3b38d8a5fbd19fb9bd" translate="yes" xml:space="preserve">
+          <source>Configuration is very similar to opendkim, but needs some adjustment for
+dkimpy-milter. Here's an example configuration line to include in your
+sendmail.mc:</source>
+          <target state="translated">La configuración es muy similar a la de opendkim,pero necesita algunos ajustes para el dkimpy-milter.Aquí hay una línea de configuración de ejemplo para incluir en tu sendmail.mc:</target>
+        </trans-unit>
+        <trans-unit id="ff36f73945f41fd03114e8d8a41faf731f52ba60" translate="yes" xml:space="preserve">
+          <source>DKIM with Ed25519 signatures are described in RFC 8463.  Version 1.0.0 and
+later support Ed25519 signing and verification.  RFC 8301 removed rsa-sha1
+from DKIM.  dkimpy-milter does not sign with rsa-sha1, but still considers
+rsa-sha1 signatures as valid for verification because they are still in
+common use and are not known to be cryptographically broken.</source>
+          <target state="translated">Las firmas de DKIM con Ed25519 se describen en el RFC 8463.La versión 1.0.0 y posteriores soportan la firma y verificación del Ed25519.RFC 8301 eliminó rsa-sha1 de DKIM.dkimpy-milter no firma con rsa-sha1,pero aún considera las firmas de rsa-sha1 como válidas para la verificación porque aún son de uso común y no se sabe que estén criptográficamente rotas.</target>
+        </trans-unit>
+        <trans-unit id="287c061320aa44487f4c2b0a82cb40d7dbf1a8ba" translate="yes" xml:space="preserve">
+          <source>Dkimpy-milter.conf:</source>
+          <target state="translated">Dkimpy-milter.conf:</target>
+        </trans-unit>
+        <trans-unit id="889dc46e908efb37522342a2d57f4969240f0191" translate="yes" xml:space="preserve">
+          <source>Domain Keys Identified Mail (DKIM) signing/verifying milter for Postfix/Sendmail.</source>
+          <target state="translated">Domain Keys Identified Mail (DKIM)firmando/verificando milter para Postfix/Sendmail.</target>
+        </trans-unit>
+        <trans-unit id="ba9fb1358355ff4ce72752768f260f4aff72d86e" translate="yes" xml:space="preserve">
+          <source>ED25519</source>
+          <target state="translated">ED25519</target>
+        </trans-unit>
+        <trans-unit id="1dd21da3d930243d120614f14f290ba4f9dffeec" translate="yes" xml:space="preserve">
+          <source>Finally, tell the filter that it should use these files by adding this to
+your configuration file:</source>
+          <target state="translated">Finalmente,dígale al filtro que debe usar estos archivos agregando esto a su archivo de configuración:</target>
+        </trans-unit>
+        <trans-unit id="312c99ca9acc0b897a94799f00878d88ab683d8a" translate="yes" xml:space="preserve">
+          <source>First, select the type of database you will use for each.  They need not
+be the same.  The &quot;DATA SETS&quot; portion of the dkimpy-milter(8) man page
+describes the possibilities and how they are formatted.  Then, construct those
+databases.</source>
+          <target state="translated">Primero,seleccione el tipo de base de datos que usará para cada uno.No tienen por qué ser iguales.La parte de &quot;DATA SETS&quot; de la página man de dkimpy-milter(8)describe las posibilidades y cómo están formateadas.Luego,construye esas bases de datos.</target>
+        </trans-unit>
+        <trans-unit id="ec84c0811db73dd1376a44e90bfc6a1a19363233" translate="yes" xml:space="preserve">
+          <source>First, write the KeyTable.  This is a list of the keys you intend to use,
+and you just assign arbitrary names to them.  So as a flat file, the KeyTable
+for the above might look like this:</source>
+          <target state="translated">Primero,escribe la Tabla de Claves.Esta es una lista de las teclas que piensas usar,y sólo les asignas nombres arbitrarios.Así que como un archivo plano,la Tabla de Teclas para lo anterior podría verse así:</target>
+        </trans-unit>
+        <trans-unit id="2e4dd4d2e7801d08d7f7a6c87b698f4281776f0e" translate="yes" xml:space="preserve">
+          <source>For users of Debian Stable (Debian 9, Codename Squeeze), all dependencies are
+available in either the main or backports repositories:</source>
+          <target state="translated">Para los usuarios de Debian Estable (Debian 9,Codename Squeeze),todas las dependencias están disponibles en los repositorios principales o de backports:</target>
+        </trans-unit>
+        <trans-unit id="9d09dba09f4e15504911bf4a5e67189762904dd8" translate="yes" xml:space="preserve">
+          <source>INSTALLATION</source>
+          <target state="translated">INSTALACIÓN</target>
+        </trans-unit>
+        <trans-unit id="a27f7f448db9b20c937d92bb2e104c4e156870cf" translate="yes" xml:space="preserve">
+          <source>ISSUES USING SENDMAIL TO SIGN AND VERIFY</source>
+          <target state="translated">PROBLEMAS CON EL USO DE SENDMAIL PARA FIRMAR Y VERIFICAR</target>
+        </trans-unit>
+        <trans-unit id="434730b0678b1cd81e06212569e57db0f1e1fffb" translate="yes" xml:space="preserve">
+          <source>If also signing with ed25519, specify a KeyTableEd25519, with the same
+names, pointing to the keys needed for ed25519.  Both KeyTable and
+KeyTableEd25519 are evaluated if there is a SigningTable (see below).</source>
+          <target state="translated">Si también firma con ed25519,especifique un KeyTableEd25519,con los mismos nombres,apuntando a las claves necesarias para ed25519.Tanto KeyTable como KeyTableEd25519 se evalúan si hay una SigningTable (ver más abajo).</target>
+        </trans-unit>
+        <trans-unit id="64e45f351c4e84ec3f75293d06299f576bc80e33" translate="yes" xml:space="preserve">
+          <source>In order to create DKIM signatures, a private key must be available.  Signing
+keys should be protected (owned by root:root with permissions 600 in a
+directory that is not world readable).  Different keys are required for RSA
+and (if used) Ed25519.</source>
+          <target state="translated">Para crear firmas DKIM,debe estar disponible una clave privada.Las claves de firma deben estar protegidas (propiedad de root:root con permisos 600 en un directorio que no es legible en el mundo).Se requieren diferentes claves para RSA y (si se usan)Ed25519.</target>
+        </trans-unit>
+        <trans-unit id="19af87b97df7ab90bc2f66208fbbc5fab4b4ea1d" translate="yes" xml:space="preserve">
+          <source>Integration of dkimpy-milter into Postfix is like any milter (See Postfix's
+README_FILES/MILTER_README).  Here's an example master.cf excerpt that talks
+to two dkimpy-milter instances, one configured for signing and one configured
+for verification:</source>
+          <target state="translated">La integración de dkimpy-milter en Postfix es como cualquier milter (Ver README_FILES/MILTER_README de Postfix).Aquí hay un extracto del ejemplo master.cf que habla de dos instancias de dkimpy-milter,una configurada para la firma y otra configurada para la verificación:</target>
+        </trans-unit>
+        <trans-unit id="7d215d10e5b3efacabb74ffca4c9386ff1fcac3f" translate="yes" xml:space="preserve">
+          <source>It is also available in the Debian package archive:</source>
+          <target state="translated">También está disponible en el archivo de paquetes de Debian:</target>
+        </trans-unit>
+        <trans-unit id="62437c72eccfdb064f5bda9e13a298c551713b59" translate="yes" xml:space="preserve">
+          <source>Let's suppose you want to sign for two domains, example.com and example.net.
+Within example.com, you want to sign for user &quot;president&quot; differently than
+everyone else.  Let's say further that you want to use a flat text file.</source>
+          <target state="translated">Supongamos que quieres firmar por dos dominios,ejemplo.com y ejemplo.net.Dentro de example.com,quieres firmar para el usuario &quot;presidente&quot; de forma diferente a todos los demás.Digamos además que quieres usar un archivo de texto plano.</target>
+        </trans-unit>
+        <trans-unit id="883a2844879a26a177af9733b6b02671679be3dc" translate="yes" xml:space="preserve">
+          <source>MTA INTEGRATION</source>
+          <target state="translated">INTEGRACIÓN MTA</target>
+        </trans-unit>
+        <trans-unit id="eab0044b9d9a2365549916230f077dbfaaf6659e" translate="yes" xml:space="preserve">
+          <source>Milter support should be present by default in most versions of sendmail
+these days, but if not included in your Sendmail build, see:
+&lt;a href=&quot;http://www.elandsys.com/resources/sendmail/milter.html&quot;&gt;http://www.elandsys.com/resources/sendmail/milter.html&lt;/a&gt;</source>
+          <target state="translated">El soporte de Milter deber&amp;iacute;a estar presente de forma predeterminada en la mayor&amp;iacute;a de las versiones de sendmail en estos d&amp;iacute;as, pero si no est&amp;aacute; incluido en su compilaci&amp;oacute;n de Sendmail, consulte: &lt;a href=&quot;http://www.elandsys.com/resources/sendmail/milter.html&quot;&gt;http://www.elandsys.com/resources/sendmail/milter.html&lt;/a&gt;</target>
+        </trans-unit>
+        <trans-unit id="cbc4e2d2c25020d961bc455a46aae200cfd2d078" translate="yes" xml:space="preserve">
+          <source>NON-STANDARD INSTALLATION PATHS</source>
+          <target state="translated">VÍAS DE INSTALACIÓN NO ESTÁNDAR</target>
+        </trans-unit>
+        <trans-unit id="e69fc18a69727f31dc484cc6cc5d98f4552fffd6" translate="yes" xml:space="preserve">
+          <source>NOTES</source>
+          <target state="translated">NOTAS</target>
+        </trans-unit>
+        <trans-unit id="a87e15870c113e44945eb71cb0cea1fe3cfa6feb" translate="yes" xml:space="preserve">
+          <source>Next, write the SigningTable.  This maps senders (by default, taken from the
+From: header field of a message passing through the filter) to which keys
+will be used to sign their mail.  Wildcards are allowed.  So to do what was
+described above, we write it as follows:</source>
+          <target state="translated">A continuación,escribe la Tabla de Firmas.Esta asigna a los remitentes (por defecto,tomada del campo de encabezado From:de un mensaje que pasa por el filtro)a qué claves se usarán para firmar su correo.Se permiten los comodines.Así que para hacer lo que se describió anteriormente,lo escribimos de la siguiente manera:</target>
+        </trans-unit>
+        <trans-unit id="e164e41a561c469ad80493a7b397d3bb7c7ab79f" translate="yes" xml:space="preserve">
+          <source>Note: Unlike opendkim, dkimpy-milter will check for &quot;*&quot; in the signing table
+regardless of if refile is specified or not.  Use of refile is supported for
+compatibility with configurations initially developed for use with opendkim.</source>
+          <target state="translated">Nota:A diferencia de opendkim,dkimpy-milter comprobará si hay un &quot;*&quot; en la tabla de firmas,independientemente de si se especifica o no el reenvío.El uso de reflejo es soportado para la compatibilidad con configuraciones inicialmente desarrolladas para el uso con opendkim.</target>
+        </trans-unit>
+        <trans-unit id="f275fdb83760cf7f81c0389520bf2b7351b38004" translate="yes" xml:space="preserve">
+          <source>OVERVIEW</source>
+          <target state="translated">PANORAMA GENERAL</target>
+        </trans-unit>
+        <trans-unit id="f64b7aa3460497cec3f51324e2d1e456d6669ae8" translate="yes" xml:space="preserve">
+          <source>POSTFIX</source>
+          <target state="translated">POSTFIX</target>
+        </trans-unit>
+        <trans-unit id="5b368e81e096b98cc56b14046d07188282219646" translate="yes" xml:space="preserve">
+          <source>Per the documentation, multi-field data sets that are made of flat files have
+the fields separated by colons, but the key and value(s) are separated by
+whitespace.</source>
+          <target state="translated">Según la documentación,los conjuntos de datos de múltiples campos que están hechos de archivos planos tienen los campos separados por dos puntos,pero la clave y el valor o valores están separados por espacios en blanco.</target>
+        </trans-unit>
+        <trans-unit id="37e60cb9feec579894885a8955495d81048f82db" translate="yes" xml:space="preserve">
+          <source>Postfix master.cf:</source>
+          <target state="translated">Postfix master.cf:</target>
+        </trans-unit>
+        <trans-unit id="56d91d770f6fd64e188020f40d1d915be6e046dc" translate="yes" xml:space="preserve">
+          <source>RSA</source>
+          <target state="translated">RSA</target>
+        </trans-unit>
+        <trans-unit id="3334625f4766a132e1c0b68a2399b1ceab54880f" translate="yes" xml:space="preserve">
+          <source>SENDMAIL</source>
+          <target state="translated">CORREO DE ENVÍO</target>
+        </trans-unit>
+        <trans-unit id="93d5cdf0fbce4ae8d70e72b5109a926e1641df8a" translate="yes" xml:space="preserve">
+          <source>SETUP</source>
+          <target state="translated">CONFIGURACIÓN</target>
+        </trans-unit>
+        <trans-unit id="ad699a1e94d9bbb2668e5aa2159900364555dcb5" translate="yes" xml:space="preserve">
+          <source>SIGNING KEYS</source>
+          <target state="translated">FIRMANDO LLAVES</target>
+        </trans-unit>
+        <trans-unit id="14f32d898aece0211d31dd545aa81698b6334ab8" translate="yes" xml:space="preserve">
+          <source>Since /var/run or /run is sometimes on a tempfs, if the PID file directory is
+missing, the milter will create it on startup.</source>
+          <target state="translated">Ya que /var/run o /run a veces está en un tempfs,si el directorio de archivos PID falta,el milter lo creará al inicio.</target>
+        </trans-unit>
+        <trans-unit id="f03d9550cce995dc148e6ccbeae8862dd9f31219" translate="yes" xml:space="preserve">
+          <source>Since we want to use wildcards, we can't actually use a regular flat file.
+Wildcards require a regular expression file, or &quot;refile&quot;.  The above is
+valid format for one of those.  Let's say you put this in
+/usr/local/etc/dkim/signingtable.</source>
+          <target state="translated">Como queremos usar comodines,no podemos usar un archivo plano normal.Los comodines requieren un archivo de expresión regular,o &quot;refile&quot;.Lo anterior es un formato válido para uno de ellos.Digamos que pones esto en /usr/local/etc/dkim/signingtable.</target>
+        </trans-unit>
+        <trans-unit id="207179a0be77a9966e0286c1a3a3a36d9046e1d5" translate="yes" xml:space="preserve">
+          <source>So now we've named each key file, and specified with which selector and domain
+each will be used, and then given each of those groupings a name.  This
+is your KeyTable.  Let's say you put it in /usr/local/etc/dkim/keytable.</source>
+          <target state="translated">Así que ahora hemos nombrado cada archivo de claves,y especificado con qué selector y dominio se utilizará cada uno,y luego le hemos dado un nombre a cada una de esas agrupaciones.Esta es tu KeyTable.Digamos que la pones en /usr/local/etc/dkim/keytable.</target>
+        </trans-unit>
+        <trans-unit id="5d2fa3f19c20f956fdc796118e24e16aa4d48818" translate="yes" xml:space="preserve">
+          <source>The KeyTable, KeyTableEd25519, and SigningTable are used to define signing
+instructions to the filter where use of Domain, Selector and KeyFile together
+are insufficient.</source>
+          <target state="translated">Las tablas KeyTable,KeyTableEd25519 y SigningTable se utilizan para definir las instrucciones de firma del filtro cuando el uso de Domain,Selector y KeyFile juntos es insuficiente.</target>
+        </trans-unit>
+        <trans-unit id="4e3a33cbe5eaf9171d49563425dbf38c5609366f" translate="yes" xml:space="preserve">
+          <source>The configuration file is designed to be compatible with OpenDKIM, but only
+a subset of OpenDKIM options are supported.  If an unsupported option is
+specified, an error will be raised.</source>
+          <target state="translated">El archivo de configuración está diseñado para ser compatible con OpenDKIM,pero sólo se admite un subconjunto de opciones de OpenDKIM.Si se especifica una opción no soportada,se producirá un error.</target>
+        </trans-unit>
+        <trans-unit id="287a8a9838dfa25f0e9ee5e75af600d61aec60e2" translate="yes" xml:space="preserve">
+          <source>The dkimpy-milter drops priviledges after setup to the user/group specified in
+UserID.  During initial setup, this system user needs to be manually created.
+As an example, using the default dkimpy-user on Debian, the command would be:</source>
+          <target state="translated">El dkimpy-milter deja caer los privilegios después de la configuración al usuario/grupo especificado en UserID.Durante la configuración inicial,este usuario del sistema debe ser creado manualmente.Como ejemplo,usando el dkimpy-user por defecto en Debian,el comando sería:</target>
+        </trans-unit>
+        <trans-unit id="33b4c0355720ec76b0135102395a7362bccf485a" translate="yes" xml:space="preserve">
+          <source>The milter will work with either py3dns (DNS) or dnspython (dns), preferring
+dnspython if both are available.  The dkimpy DKIM module also works with
+either.</source>
+          <target state="translated">El ordeñador trabajará con py3dns (DNS)o dnspython (dns),prefiriendo dnspython si ambos están disponibles.El módulo dkimpy DKIM también funciona con cualquiera de los dos.</target>
+        </trans-unit>
+        <trans-unit id="52351a052e046c396f38a7331b1297e961255cd4" translate="yes" xml:space="preserve">
+          <source>The package includes a custom setup command called expand.  It allows various
+file locations in init scripts, man pages, and config files to be over-ridden
+at install time.</source>
+          <target state="translated">El paquete incluye un comando de configuración personalizado llamado expandir.Permite que varias ubicaciones de archivos en los scripts de inicio,páginas de manual y archivos de configuración sean anulados en el momento de la instalación.</target>
+        </trans-unit>
+        <trans-unit id="9b5d19ac55192a35a09a269119b532753ced6101" translate="yes" xml:space="preserve">
+          <source>The preferred method of installation is from PyPi using pip (if distribution
+packages are not available):</source>
+          <target state="translated">El método preferido de instalación es desde PyPi utilizando pip (si no se dispone de paquetes de distribución):</target>
+        </trans-unit>
+        <trans-unit id="10b8fa1794e8af20926b201783b26cf9dea4361c" translate="yes" xml:space="preserve">
+          <source>The python DKIM library, dkimpy, requires the entire message being signed or
+verified to be in memory, so dkimpy-milter does not write messages out to a
+temp file.  This may impact performance on low-memory systems.</source>
+          <target state="translated">La biblioteca DKIM de python,dkimpy,requiere que todo el mensaje sea firmado o verificado para estar en memoria,por lo que dkimpy-milter no escribe mensajes en un archivo temporal.Esto puede afectar el rendimiento en sistemas de baja memoria.</target>
+        </trans-unit>
+        <trans-unit id="f090872085a6df03bae1fb39fb8e6df6df010bb1" translate="yes" xml:space="preserve">
+          <source>There is no standardized non-binary representation for Ed25519 private keys,
+so in order to generate Ed25519 keys for dkimpy-milter, dkimpy specific tools
+must be used to be compatible.  The same dknewkey script support Ed25519:</source>
+          <target state="translated">No existe una representación no binaria estandarizada para las claves privadas de Ed25519,por lo que para generar las claves de Ed25519 para el dkimpy-milter,se deben utilizar herramientas específicas para el dkimpy para que sean compatibles.El mismo script dknewkey es compatible con Ed25519:</target>
+        </trans-unit>
+        <trans-unit id="c3996effc280f22ed675129b27e5458d1e588636" translate="yes" xml:space="preserve">
+          <source>These need to match the Socket value for each dkimpy-milter instance.</source>
+          <target state="translated">Estos necesitan coincidir con el valor de Socket para cada instancia de dkimpy-milter.</target>
+        </trans-unit>
+        <trans-unit id="d299f02e90d55a70432ce37b398bf99998325a7c" translate="yes" xml:space="preserve">
+          <source>This is a DKIM signing and verification milter.  It has been tested with both
+Postfix and Sendmail.</source>
+          <target state="translated">Esta es una máquina de firmar y verificar DKIM.Ha sido probada tanto con Postfix como con Sendmail.</target>
+        </trans-unit>
+        <trans-unit id="a49fe4bb575cb20a505c651fb7f576f05d9f069a" translate="yes" xml:space="preserve">
+          <source>This package includes a default configuration file and man pages.  For those
+to be installed when installing using setup.py, the following incantation is
+required because setuptools developers decided not being able to do this by
+default is a feature:</source>
+          <target state="translated">Este paquete incluye un archivo de configuración predeterminado y páginas de manual.Para los que se instalen al usar setup.py,se requiere el siguiente conjuro porque los desarrolladores de setuptools decidieron que no se puede hacer esto por defecto es una característica:</target>
+        </trans-unit>
+        <trans-unit id="7d0cfe06f64a8776aafc6661dfdae28d42a72a03" translate="yes" xml:space="preserve">
+          <source>To start dkimpy-milter with systemd for the first time, you will need to take
+the following steps:</source>
+          <target state="translated">Para iniciar dkimpy-milter con systemd por primera vez,tendrás que tomar los siguientes pasos:</target>
+        </trans-unit>
+        <trans-unit id="7a0c30a3c45f073994d6b9da5c7248b5a425635a" translate="yes" xml:space="preserve">
+          <source>Using pip will cause required packages to be installed via easy_install if they
+have not been previously installed.  Because pymilter and PyNaCl are compiled
+Python extensions, the system will need appropriate development packages and
+an C compiler.  Alternately, install these dependencies from distribution/OS
+packages and then pip install dkimpy_milter.</source>
+          <target state="translated">El uso de pip hará que los paquetes necesarios se instalen a través de easy_install si no han sido instalados previamente.Debido a que pymilter y PyNaCl son extensiones de Python compiladas,el sistema necesitará los paquetes de desarrollo apropiados y un compilador C.Alternativamente,instale estas dependencias desde los paquetes de la distribución/OS y luego instale pip dkimpy_milter.</target>
+        </trans-unit>
+        <trans-unit id="55e68c7091a7fa265d8d150d50923792feefbd2b" translate="yes" xml:space="preserve">
+          <source>When installing using the Debian package, all dependencies are automatically
+installed.</source>
+          <target state="translated">Cuando se instala usando el paquete Debian,todas las dependencias se instalan automáticamente.</target>
+        </trans-unit>
+        <trans-unit id="e93179e7b0d9f29bc2bc989cdc60d8d667b4cab7" translate="yes" xml:space="preserve">
+          <source>When using the sendmail MTA in both signing and verifying mode, there are
+a few issues of which to be aware that might cause operational problems
+and deserve consideration.</source>
+          <target state="translated">Cuando se utiliza el ATM de sendmail tanto en el modo de firma como en el de verificación,hay algunas cuestiones que hay que tener en cuenta y que podrían causar problemas operacionales y merecen consideración.</target>
+        </trans-unit>
+        <trans-unit id="3b3c06ab3bd899219f587b309c0c5bf185349b4a" translate="yes" xml:space="preserve">
+          <source>You could put &quot;file:&quot; in front of the filename for the KeyTable just to be
+precise, but &quot;file:&quot; is assumed if the value starts with a &quot;/&quot;.</source>
+          <target state="translated">Podrías poner &quot;file:&quot; delante del nombre del archivo de la Tabla de Claves para ser precisos,pero &quot;file:&quot; se asume si el valor empieza por &quot;/&quot;.</target>
+        </trans-unit>
+        <trans-unit id="322235c7e9edde4a9dd7c3f33b2115bb24111048" translate="yes" xml:space="preserve">
+          <source>You've generated private key files for each of these and stored them
+in the directory /usr/local/etc/dkim/keys as files &quot;president&quot;, &quot;excom&quot; and
+&quot;exnet&quot;, with the obvious intents.  You want to use selectors &quot;foo&quot;, &quot;bar&quot;
+and &quot;baz&quot; for those, respectively.  The signing domains match the senders
+(i.e. the signatures for example.com's stuff will be held by example.com,
+and example.net likewise).</source>
+          <target state="translated">Has generado archivos de claves privadas para cada uno de ellos y los has almacenado en el directorio /usr/local/etc/dkim/keys como archivos &quot;president&quot;,&quot;excom&quot; y &quot;exnet&quot;,con las intenciones obvias.Quieres usar los selectores &quot;foo&quot;,&quot;bar&quot; y &quot;baz&quot; para esos,respectivamente.Los dominios de firma coinciden con los remitentes (es decir,las firmas,por ejemplo,las cosas de example.com serán mantenidas por example.com,y example.net igualmente).</target>
+        </trans-unit>
+        <trans-unit id="3001fe2fc6e606cee84c3ccb0a9a5eec274e6a80" translate="yes" xml:space="preserve">
+          <source>[sudo] apt install dkimpy-milter [Debian 10 or later]
+[sudo] apt install -t stretch-backports dkimpy-milter [Debian 9]</source>
+          <target state="translated">[sudo] apt install dkimpy-milter [Debian 10 o posterior] [sudo] apt install -t stretch-backports dkimpy-milter [Debian 9]</target>
+        </trans-unit>
+        <trans-unit id="b9aa4c105264339c01ded2faa78e4d122c09a867" translate="yes" xml:space="preserve">
+          <source>[sudo] apt install python3-milter python3-nacl python3-dnspython
+[sudo] apt install -t stretch-backports python3-authres python3-dkim</source>
+          <target state="translated">[sudo] apt install python3-milter python3-nacl python3-dnspython [sudo] apt install -t stretch-backports python3-authres python3-dkim</target>
+        </trans-unit>
+        <trans-unit id="a5193b3fd05a552b702d97d8c0fd4fb9c76d6c61" translate="yes" xml:space="preserve">
+          <source>[sudo] pip install dkimpy_milter</source>
+          <target state="translated">[sudo] pip install dkimpy_milter</target>
+        </trans-unit>
+        <trans-unit id="259c5be6ff2a7d6acf5f36db315d6f05578a899d" translate="yes" xml:space="preserve">
+          <source>[sudo] python3 setup.py install --single-version-externally-managed --record=/dev/null</source>
+          <target state="translated">[sudo] python3 setup.py install --single-version-externally-managed --record = / dev / null</target>
+        </trans-unit>
+        <trans-unit id="0ad6c89738bd0113ffab95f799aefc0d120e247c" translate="yes" xml:space="preserve">
+          <source>or in a single step (the order matters):</source>
+          <target state="translated">o en un solo paso (el orden importa):</target>
+        </trans-unit>
+        <trans-unit id="f3657f9f5c3c6909ef826d1588b78a96c4d4d3f9" translate="yes" xml:space="preserve">
+          <source>will produce both the private key file (.key suffix) and a file with the DKIM
+public key record to be published DNS (.dns suffix).  RSA is the default key
+type.  2048 bits is the default key size.</source>
+          <target state="translated">producirá tanto el archivo de clave privada (sufijo .key)como un archivo con el registro de clave pública DKIM que se publicará en el DNS (sufijo .dns).RSA es el tipo de clave por defecto.2048 bits es el tamaño de clave por defecto.</target>
+        </trans-unit>
+        <trans-unit id="3792992c308ead6519b6937602f54d28038e3ef9" translate="yes" xml:space="preserve">
+          <source>will provide both the private key file (.key suffix) and a file with the DKIM
+public key record to be published DNS (.dns suffix).  Ed25519 keys do not have
+variable bit lengths.</source>
+          <target state="translated">proporcionará tanto el archivo de clave privada (sufijo .key)como un archivo con el registro de clave pública DKIM que se publicará en el DNS (sufijo .dns).Las claves de Ed25519 no tienen longitudes de bits variables.</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

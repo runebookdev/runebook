@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="ko" datatype="htmlbody" original="https://pypi.org/project/dkimpy-milter/">
+    <body>
+      <group id="dkimpy-milter">
+        <trans-unit id="88573316c8494037c3105ecb07be3f67dcf77fb2" translate="yes" xml:space="preserve">
+          <source>(a) When the MTA will be used for relaying emails, e.g. delivering to other
+hosts using the aliases mechanism, it is important not to break
+signatures inserted by the original sender.  This is particularly sensitive
+particular when the sending domain has published a &quot;reject&quot; DMARC policy.</source>
+          <target state="translated">(a) MTA가 이메일 릴레이에 사용될 때, 예를 들어 별칭 메커니즘을 사용하여 다른 호스트로 전달하는 경우, 원래 보낸 사람이 삽입 한 서명을 깨지 않는 것이 중요합니다. 특히 발신 도메인이 '거부'DMARC 정책을 게시 한 경우 특히 중요합니다.</target>
+        </trans-unit>
+        <trans-unit id="d96cc0cbab3c8df553c10efdf44a3a0e327dc3df" translate="yes" xml:space="preserve">
+          <source>(b) As stated in sendmail's KNOWNBUGS file, sendmail truncates header field
+values longer than 256 characters, which could mean truncating the domain
+of a long From: header field value and invalidating the signature.
+You may wish to consider increasing MAXNAME in sendmail/conf.h to mitigate
+changing the messages and invalidating their signatures.  This change
+requires recompiling sendmail.</source>
+          <target state="translated">(b) sendmail의 KNOWNBUGS 파일에 명시된 바와 같이 sendmail은 256 자보다 긴 헤더 필드 값을 자릅니다. 이는 긴 From : 헤더 필드 값의 도메인을 자르고 서명을 무효화하는 것을 의미 할 수 있습니다. sendmail / conf.h에서 MAXNAME을 늘려 메시지 변경 및 서명 무효화를 완화 할 수 있습니다. 이 변경은 sendmail을 다시 컴파일해야합니다.</target>
+        </trans-unit>
+        <trans-unit id="03b3a7f311b213ed473be5da48afd8b6a29feb50" translate="yes" xml:space="preserve">
+          <source>(c) Similar to (a) above, sendmail may wrap very long single-line recipient
+fields for presentation purposes; for example:</source>
+          <target state="translated">(c) 위의 (a)와 유사하게 sendmail은 프리젠 테이션 목적으로 매우 긴 단일 행 수신자 필드를 래핑 할 수 있습니다. 예를 들면 :</target>
+        </trans-unit>
+        <trans-unit id="a63780aea9d6d22effa58904beb0edcdeac6e9a0" translate="yes" xml:space="preserve">
+          <source>As an example, to change the run directory to /var/run, one would do:</source>
+          <target state="translated">예를 들어 실행 디렉토리를 / var / run으로 변경하려면 다음을 수행합니다.</target>
+        </trans-unit>
+        <trans-unit id="6d0eceff48c2bd1a38b3692d32e5824e5c00b3af" translate="yes" xml:space="preserve">
+          <source>As with all milters, dkimpy-milter needs to be integrated with your MTA of
+choice (Sendmail or Postfix).  When integrating with your MTA, the risk of
+signature invalidation due to content conversion of the message body needs to
+be considered.  See RFC 6376, Section 5.3 for discussion of this issue.  As a
+practical matter, when signing, configure the milter to follow all others that
+might modify the message body.  When verifying, configure the milter before
+other processes that might modify the message body.</source>
+          <target state="translated">모든 milter와 마찬가지로 dkimpy-milter는 선택한 MTA (Sendmail 또는 Postfix)와 통합되어야합니다. MTA와 통합 할 때 메시지 본문의 내용 변환으로 인한 서명 무효화 위험을 고려해야합니다. 이 문제에 대한 논의는 RFC 6376, 섹션 5.3을 참조하십시오. 실질적으로 서명 할 때 메시지 본문을 수정할 수있는 다른 모든 항목을 따르도록 밀터를 구성합니다. 확인할 때 메시지 본문을 수정할 수있는 다른 프로세스보다 먼저 밀터를 구성하십시오.</target>
+        </trans-unit>
+        <trans-unit id="2172dee673ec46d7887d7f22ecd566a57e32439a" translate="yes" xml:space="preserve">
+          <source>Both a systemd unit file and a sysv init file are provided.  Both make
+assumptions about defaults being used, e.g. if a non-standard pidfile name is
+used, they will need to be updated.  The sysv init file uses start-stop-deamon
+from Debian.  It is not portable to systems without that available.</source>
+          <target state="translated">systemd 단위 파일과 sysv init 파일이 모두 제공됩니다. 둘 다 사용중인 기본값에 대해 가정합니다. 예를 들어 비표준 pidfile 이름이 사용되는 경우 업데이트해야합니다. sysv init 파일은 Debian의 start-stop-deamon을 사용합니다. 사용할 수없는 시스템에는 이식 할 수 없습니다.</target>
+        </trans-unit>
+        <trans-unit id="19c39e1770abfa777f8007031f0b82115d24020c" translate="yes" xml:space="preserve">
+          <source>Both public and private keys for RSA have standard formats and there are many
+tools available to create them.  Keys must (RFC 8302) have a minimum size of
+1024 bits and should have a size of at least 2048 bits.  The dknewkey script
+that is provided with dkimpy is one such tool:</source>
+          <target state="translated">RSA의 공개 및 개인 키는 모두 표준 형식을 가지며이를 생성하는 데 사용할 수있는 많은 도구가 있습니다. 키 (RFC 8302)의 최소 크기는 1024 비트이고 크기는 최소 2048 비트 여야합니다. dkimpy와 함께 제공되는 dknewkey 스크립트는 이러한 도구 중 하나입니다.</target>
+        </trans-unit>
+        <trans-unit id="5f3fb7c776ee6f02ef6590885a4a7a97ce1e1435" translate="yes" xml:space="preserve">
+          <source>COMPLEX SIGNING CONFIGURATIONS</source>
+          <target state="translated">복잡한 서명 구성</target>
+        </trans-unit>
+        <trans-unit id="917508ffa8a9172d62f39302317abe8c66d9c56a" translate="yes" xml:space="preserve">
+          <source>Care is required to segregate outbound mail to be signed and inbound mail to
+be verified.  The above example uses two instances of dkimpy-milter to do
+this.  There are many possible ways.  Here is another example using milter
+macros to keep the mail streams segregated:</source>
+          <target state="translated">서명 할 아웃 바운드 메일과 확인할 인바운드 메일을 분리하려면주의가 필요합니다. 위의 예에서는 dkimpy-milter의 두 인스턴스를 사용하여이를 수행합니다. 가능한 많은 방법이 있습니다. 다음은 메일 스트림을 분리하기 위해 milter 매크로를 사용하는 또 다른 예입니다.</target>
+        </trans-unit>
+        <trans-unit id="34682efb1315542a312fe9a8989a2e26f08a97ad" translate="yes" xml:space="preserve">
+          <source>Changing the sendmail.mc file requires a Make (to compile it into sendmail.cf)
+and a restart of sendmail.  Note that S= needs to match the value of Socket in
+the dkimpy-milter configuration file.</source>
+          <target state="translated">sendmail.mc 파일을 변경하려면 Make (Sendmail.cf로 컴파일)와 sendmail을 다시 시작해야합니다. S =는 dkimpy-milter 구성 파일의 Socket 값과 일치해야합니다.</target>
+        </trans-unit>
+        <trans-unit id="7e72824d8118a3f138bfda3b38d8a5fbd19fb9bd" translate="yes" xml:space="preserve">
+          <source>Configuration is very similar to opendkim, but needs some adjustment for
+dkimpy-milter. Here's an example configuration line to include in your
+sendmail.mc:</source>
+          <target state="translated">구성은 opendkim과 매우 유사하지만 dkimpy-milter에 대한 조정이 필요합니다. 다음은 sendmail.mc에 포함 할 구성 행의 예입니다.</target>
+        </trans-unit>
+        <trans-unit id="ff36f73945f41fd03114e8d8a41faf731f52ba60" translate="yes" xml:space="preserve">
+          <source>DKIM with Ed25519 signatures are described in RFC 8463.  Version 1.0.0 and
+later support Ed25519 signing and verification.  RFC 8301 removed rsa-sha1
+from DKIM.  dkimpy-milter does not sign with rsa-sha1, but still considers
+rsa-sha1 signatures as valid for verification because they are still in
+common use and are not known to be cryptographically broken.</source>
+          <target state="translated">Ed25519 서명이있는 DKIM은 RFC 8463에 설명되어 있습니다. 버전 1.0.0 이상은 Ed25519 서명 및 확인을 지원합니다. RFC 8301은 DKIM에서 rsa-sha1을 제거했습니다. dkimpy-milter는 rsa-sha1로 서명하지 않지만 rsa-sha1 서명은 여전히 ​​일반적으로 사용되고 있으며 암호 학적으로 손상되지 않았기 때문에 검증에 유효한 것으로 간주합니다.</target>
+        </trans-unit>
+        <trans-unit id="287c061320aa44487f4c2b0a82cb40d7dbf1a8ba" translate="yes" xml:space="preserve">
+          <source>Dkimpy-milter.conf:</source>
+          <target state="translated">Dkimpy-milter.conf :</target>
+        </trans-unit>
+        <trans-unit id="889dc46e908efb37522342a2d57f4969240f0191" translate="yes" xml:space="preserve">
+          <source>Domain Keys Identified Mail (DKIM) signing/verifying milter for Postfix/Sendmail.</source>
+          <target state="translated">Postfix / Sendmail에 대한 DKIM (Domain Keys Identified Mail) 서명 / 확인 밀터.</target>
+        </trans-unit>
+        <trans-unit id="ba9fb1358355ff4ce72752768f260f4aff72d86e" translate="yes" xml:space="preserve">
+          <source>ED25519</source>
+          <target state="translated">ED25519</target>
+        </trans-unit>
+        <trans-unit id="1dd21da3d930243d120614f14f290ba4f9dffeec" translate="yes" xml:space="preserve">
+          <source>Finally, tell the filter that it should use these files by adding this to
+your configuration file:</source>
+          <target state="translated">마지막으로 다음을 구성 파일에 추가하여 필터에 이러한 파일을 사용해야한다고 알려줍니다.</target>
+        </trans-unit>
+        <trans-unit id="312c99ca9acc0b897a94799f00878d88ab683d8a" translate="yes" xml:space="preserve">
+          <source>First, select the type of database you will use for each.  They need not
+be the same.  The &quot;DATA SETS&quot; portion of the dkimpy-milter(8) man page
+describes the possibilities and how they are formatted.  Then, construct those
+databases.</source>
+          <target state="translated">먼저 각각에 사용할 데이터베이스 유형을 선택하십시오. 동일 할 필요는 없습니다. dkimpy-milter (8) 매뉴얼 페이지의 &quot;데이터 세트&quot;부분은 가능성과 형식화 방법을 설명합니다. 그런 다음 해당 데이터베이스를 구성하십시오.</target>
+        </trans-unit>
+        <trans-unit id="ec84c0811db73dd1376a44e90bfc6a1a19363233" translate="yes" xml:space="preserve">
+          <source>First, write the KeyTable.  This is a list of the keys you intend to use,
+and you just assign arbitrary names to them.  So as a flat file, the KeyTable
+for the above might look like this:</source>
+          <target state="translated">먼저 KeyTable을 작성하십시오. 이것은 사용하려는 키 목록이며 임의의 이름을 할당하기 만하면됩니다. 따라서 플랫 파일로서 위의 KeyTable은 다음과 같습니다.</target>
+        </trans-unit>
+        <trans-unit id="2e4dd4d2e7801d08d7f7a6c87b698f4281776f0e" translate="yes" xml:space="preserve">
+          <source>For users of Debian Stable (Debian 9, Codename Squeeze), all dependencies are
+available in either the main or backports repositories:</source>
+          <target state="translated">Debian Stable (Debian 9, Codename Squeeze) 사용자의 경우 모든 종속성은 기본 또는 백 포트 저장소에서 사용할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="9d09dba09f4e15504911bf4a5e67189762904dd8" translate="yes" xml:space="preserve">
+          <source>INSTALLATION</source>
+          <target state="translated">설치</target>
+        </trans-unit>
+        <trans-unit id="a27f7f448db9b20c937d92bb2e104c4e156870cf" translate="yes" xml:space="preserve">
+          <source>ISSUES USING SENDMAIL TO SIGN AND VERIFY</source>
+          <target state="translated">SENDMAIL을 사용하여 서명 및 확인하는 문제</target>
+        </trans-unit>
+        <trans-unit id="434730b0678b1cd81e06212569e57db0f1e1fffb" translate="yes" xml:space="preserve">
+          <source>If also signing with ed25519, specify a KeyTableEd25519, with the same
+names, pointing to the keys needed for ed25519.  Both KeyTable and
+KeyTableEd25519 are evaluated if there is a SigningTable (see below).</source>
+          <target state="translated">ed25519로도 서명하는 경우 ed25519에 필요한 키를 가리키는 동일한 이름으로 KeyTableEd25519를 지정하십시오. SigningTable이있는 경우 KeyTable 및 KeyTableEd25519가 모두 평가됩니다 (아래 참조).</target>
+        </trans-unit>
+        <trans-unit id="64e45f351c4e84ec3f75293d06299f576bc80e33" translate="yes" xml:space="preserve">
+          <source>In order to create DKIM signatures, a private key must be available.  Signing
+keys should be protected (owned by root:root with permissions 600 in a
+directory that is not world readable).  Different keys are required for RSA
+and (if used) Ed25519.</source>
+          <target state="translated">DKIM 서명을 생성하려면 개인 키를 사용할 수 있어야합니다. 서명 키는 보호되어야합니다 (모든 사람이 읽을 수없는 디렉토리에 600 권한이있는 root : root 소유). RSA 및 Ed25519 (사용 된 경우)에는 다른 키가 필요합니다.</target>
+        </trans-unit>
+        <trans-unit id="19af87b97df7ab90bc2f66208fbbc5fab4b4ea1d" translate="yes" xml:space="preserve">
+          <source>Integration of dkimpy-milter into Postfix is like any milter (See Postfix's
+README_FILES/MILTER_README).  Here's an example master.cf excerpt that talks
+to two dkimpy-milter instances, one configured for signing and one configured
+for verification:</source>
+          <target state="translated">dkimpy-milter를 Postfix에 통합하는 것은 모든 milter와 같습니다 (Postfix의 README_FILES / MILTER_README 참조). 다음은 두 개의 dkimpy-milter 인스턴스와 통신하는 master.cf 발췌 예제입니다. 하나는 서명용으로 구성되고 다른 하나는 확인 용으로 구성됩니다.</target>
+        </trans-unit>
+        <trans-unit id="7d215d10e5b3efacabb74ffca4c9386ff1fcac3f" translate="yes" xml:space="preserve">
+          <source>It is also available in the Debian package archive:</source>
+          <target state="translated">Debian 패키지 아카이브에서도 사용할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="62437c72eccfdb064f5bda9e13a298c551713b59" translate="yes" xml:space="preserve">
+          <source>Let's suppose you want to sign for two domains, example.com and example.net.
+Within example.com, you want to sign for user &quot;president&quot; differently than
+everyone else.  Let's say further that you want to use a flat text file.</source>
+          <target state="translated">example.com과 example.net이라는 두 도메인에 서명한다고 가정 해 보겠습니다. example.com 내에서 사용자 &quot;president&quot;에 대해 다른 사람과 다르게 서명하려고합니다. 플랫 텍스트 파일을 사용하고 싶다고 가정 해 보겠습니다.</target>
+        </trans-unit>
+        <trans-unit id="883a2844879a26a177af9733b6b02671679be3dc" translate="yes" xml:space="preserve">
+          <source>MTA INTEGRATION</source>
+          <target state="translated">MTA 통합</target>
+        </trans-unit>
+        <trans-unit id="eab0044b9d9a2365549916230f077dbfaaf6659e" translate="yes" xml:space="preserve">
+          <source>Milter support should be present by default in most versions of sendmail
+these days, but if not included in your Sendmail build, see:
+&lt;a href=&quot;http://www.elandsys.com/resources/sendmail/milter.html&quot;&gt;http://www.elandsys.com/resources/sendmail/milter.html&lt;/a&gt;</source>
+          <target state="translated">Milter 지원은 요즘 대부분의 sendmail 버전에서 기본적으로 제공되어야하지만 Sendmail 빌드에 포함되지 않은 경우 &lt;a href=&quot;http://www.elandsys.com/resources/sendmail/milter.html&quot;&gt;http://www.elandsys.com/resources/sendmail/milter.html을&lt;/a&gt; 참조하십시오.</target>
+        </trans-unit>
+        <trans-unit id="cbc4e2d2c25020d961bc455a46aae200cfd2d078" translate="yes" xml:space="preserve">
+          <source>NON-STANDARD INSTALLATION PATHS</source>
+          <target state="translated">비표준 설치 경로</target>
+        </trans-unit>
+        <trans-unit id="e69fc18a69727f31dc484cc6cc5d98f4552fffd6" translate="yes" xml:space="preserve">
+          <source>NOTES</source>
+          <target state="translated">메모</target>
+        </trans-unit>
+        <trans-unit id="a87e15870c113e44945eb71cb0cea1fe3cfa6feb" translate="yes" xml:space="preserve">
+          <source>Next, write the SigningTable.  This maps senders (by default, taken from the
+From: header field of a message passing through the filter) to which keys
+will be used to sign their mail.  Wildcards are allowed.  So to do what was
+described above, we write it as follows:</source>
+          <target state="translated">다음으로 SigningTable을 작성합니다. 이것은 메일에 서명하는 데 사용할 키를 사용할 발신자 (기본적으로 필터를 통과하는 메시지의 From : 헤더 필드에서 가져옴)를 매핑합니다. 와일드 카드가 허용됩니다. 따라서 위에서 설명한 것을 수행하기 위해 다음과 같이 작성합니다.</target>
+        </trans-unit>
+        <trans-unit id="e164e41a561c469ad80493a7b397d3bb7c7ab79f" translate="yes" xml:space="preserve">
+          <source>Note: Unlike opendkim, dkimpy-milter will check for &quot;*&quot; in the signing table
+regardless of if refile is specified or not.  Use of refile is supported for
+compatibility with configurations initially developed for use with opendkim.</source>
+          <target state="translated">참고 : opendkim과 달리 dkimpy-milter는 refile이 지정되었는지 여부에 관계없이 서명 테이블에서 &quot;*&quot;를 확인합니다. opendkim과 함께 사용하기 위해 처음 개발 된 구성과의 호환성을 위해 refile 사용이 지원됩니다.</target>
+        </trans-unit>
+        <trans-unit id="f275fdb83760cf7f81c0389520bf2b7351b38004" translate="yes" xml:space="preserve">
+          <source>OVERVIEW</source>
+          <target state="translated">개요</target>
+        </trans-unit>
+        <trans-unit id="f64b7aa3460497cec3f51324e2d1e456d6669ae8" translate="yes" xml:space="preserve">
+          <source>POSTFIX</source>
+          <target state="translated">포스트 픽스</target>
+        </trans-unit>
+        <trans-unit id="5b368e81e096b98cc56b14046d07188282219646" translate="yes" xml:space="preserve">
+          <source>Per the documentation, multi-field data sets that are made of flat files have
+the fields separated by colons, but the key and value(s) are separated by
+whitespace.</source>
+          <target state="translated">문서에 따르면 플랫 파일로 구성된 다중 필드 데이터 세트에는 콜론으로 구분 된 필드가 있지만 키와 값은 공백으로 구분됩니다.</target>
+        </trans-unit>
+        <trans-unit id="37e60cb9feec579894885a8955495d81048f82db" translate="yes" xml:space="preserve">
+          <source>Postfix master.cf:</source>
+          <target state="translated">Postfix master.cf :</target>
+        </trans-unit>
+        <trans-unit id="56d91d770f6fd64e188020f40d1d915be6e046dc" translate="yes" xml:space="preserve">
+          <source>RSA</source>
+          <target state="translated">RSA</target>
+        </trans-unit>
+        <trans-unit id="3334625f4766a132e1c0b68a2399b1ceab54880f" translate="yes" xml:space="preserve">
+          <source>SENDMAIL</source>
+          <target state="translated">메일을 보내다</target>
+        </trans-unit>
+        <trans-unit id="93d5cdf0fbce4ae8d70e72b5109a926e1641df8a" translate="yes" xml:space="preserve">
+          <source>SETUP</source>
+          <target state="translated">설정</target>
+        </trans-unit>
+        <trans-unit id="ad699a1e94d9bbb2668e5aa2159900364555dcb5" translate="yes" xml:space="preserve">
+          <source>SIGNING KEYS</source>
+          <target state="translated">서명 키</target>
+        </trans-unit>
+        <trans-unit id="14f32d898aece0211d31dd545aa81698b6334ab8" translate="yes" xml:space="preserve">
+          <source>Since /var/run or /run is sometimes on a tempfs, if the PID file directory is
+missing, the milter will create it on startup.</source>
+          <target state="translated">/ var / run 또는 / run은 때때로 tempfs에 있기 때문에 PID 파일 디렉토리가 없으면 milter는 시작할 때 생성합니다.</target>
+        </trans-unit>
+        <trans-unit id="f03d9550cce995dc148e6ccbeae8862dd9f31219" translate="yes" xml:space="preserve">
+          <source>Since we want to use wildcards, we can't actually use a regular flat file.
+Wildcards require a regular expression file, or &quot;refile&quot;.  The above is
+valid format for one of those.  Let's say you put this in
+/usr/local/etc/dkim/signingtable.</source>
+          <target state="translated">와일드 카드를 사용하고 싶기 때문에 실제로 일반 플랫 파일을 사용할 수 없습니다. 와일드 카드에는 정규식 파일 또는 &quot;재 파일&quot;이 필요합니다. 위는 그중 하나에 유효한 형식입니다. 이것을 / usr / local / etc / dkim / signingtable에 넣었다고 가정 해 봅시다.</target>
+        </trans-unit>
+        <trans-unit id="207179a0be77a9966e0286c1a3a3a36d9046e1d5" translate="yes" xml:space="preserve">
+          <source>So now we've named each key file, and specified with which selector and domain
+each will be used, and then given each of those groupings a name.  This
+is your KeyTable.  Let's say you put it in /usr/local/etc/dkim/keytable.</source>
+          <target state="translated">이제 각 키 파일의 이름을 지정하고 각각 사용할 선택기와 도메인을 지정한 다음 각 그룹에 이름을 지정했습니다. 이것이 KeyTable입니다. / usr / local / etc / dkim / keytable에 넣었다고 가정 해 봅시다.</target>
+        </trans-unit>
+        <trans-unit id="5d2fa3f19c20f956fdc796118e24e16aa4d48818" translate="yes" xml:space="preserve">
+          <source>The KeyTable, KeyTableEd25519, and SigningTable are used to define signing
+instructions to the filter where use of Domain, Selector and KeyFile together
+are insufficient.</source>
+          <target state="translated">KeyTable, KeyTableEd25519 및 SigningTable은 Domain, Selector 및 KeyFile을 함께 사용하는 것이 불충분 한 경우 필터에 대한 서명 지침을 정의하는 데 사용됩니다.</target>
+        </trans-unit>
+        <trans-unit id="4e3a33cbe5eaf9171d49563425dbf38c5609366f" translate="yes" xml:space="preserve">
+          <source>The configuration file is designed to be compatible with OpenDKIM, but only
+a subset of OpenDKIM options are supported.  If an unsupported option is
+specified, an error will be raised.</source>
+          <target state="translated">구성 파일은 OpenDKIM과 호환되도록 설계되었지만 OpenDKIM 옵션의 하위 집합 만 지원됩니다. 지원되지 않는 옵션을 지정하면 오류가 발생합니다.</target>
+        </trans-unit>
+        <trans-unit id="287a8a9838dfa25f0e9ee5e75af600d61aec60e2" translate="yes" xml:space="preserve">
+          <source>The dkimpy-milter drops priviledges after setup to the user/group specified in
+UserID.  During initial setup, this system user needs to be manually created.
+As an example, using the default dkimpy-user on Debian, the command would be:</source>
+          <target state="translated">dkimpy-milter는 설정 후 UserID에 지정된 사용자 / 그룹에 대한 권한을 삭제합니다. 초기 설정 중에이 시스템 사용자를 수동으로 만들어야합니다. 예를 들어 Debian에서 기본 dkimpy-user를 사용하는 경우 명령은 다음과 같습니다.</target>
+        </trans-unit>
+        <trans-unit id="33b4c0355720ec76b0135102395a7362bccf485a" translate="yes" xml:space="preserve">
+          <source>The milter will work with either py3dns (DNS) or dnspython (dns), preferring
+dnspython if both are available.  The dkimpy DKIM module also works with
+either.</source>
+          <target state="translated">milter는 py3dns (DNS) 또는 dnspython (dns)과 함께 작동하며 둘 다 사용 가능한 경우 dnspython을 선호합니다. dkimpy DKIM 모듈은 둘 중 하나에서도 작동합니다.</target>
+        </trans-unit>
+        <trans-unit id="52351a052e046c396f38a7331b1297e961255cd4" translate="yes" xml:space="preserve">
+          <source>The package includes a custom setup command called expand.  It allows various
+file locations in init scripts, man pages, and config files to be over-ridden
+at install time.</source>
+          <target state="translated">패키지에는 확장이라는 사용자 지정 설치 명령이 포함되어 있습니다. init 스크립트, man 페이지 및 구성 파일의 다양한 파일 위치를 설치시 재정의 할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="9b5d19ac55192a35a09a269119b532753ced6101" translate="yes" xml:space="preserve">
+          <source>The preferred method of installation is from PyPi using pip (if distribution
+packages are not available):</source>
+          <target state="translated">선호하는 설치 방법은 pip를 사용하는 PyPi에서 설치하는 것입니다 (배포 패키지를 사용할 수없는 경우).</target>
+        </trans-unit>
+        <trans-unit id="10b8fa1794e8af20926b201783b26cf9dea4361c" translate="yes" xml:space="preserve">
+          <source>The python DKIM library, dkimpy, requires the entire message being signed or
+verified to be in memory, so dkimpy-milter does not write messages out to a
+temp file.  This may impact performance on low-memory systems.</source>
+          <target state="translated">python DKIM 라이브러리 인 dkimpy는 전체 메시지가 서명되거나 메모리에 있는지 확인해야하므로 dkimpy-milter는 임시 파일에 메시지를 쓰지 않습니다. 이는 메모리 부족 시스템의 성능에 영향을 미칠 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="f090872085a6df03bae1fb39fb8e6df6df010bb1" translate="yes" xml:space="preserve">
+          <source>There is no standardized non-binary representation for Ed25519 private keys,
+so in order to generate Ed25519 keys for dkimpy-milter, dkimpy specific tools
+must be used to be compatible.  The same dknewkey script support Ed25519:</source>
+          <target state="translated">Ed25519 개인 키에 대한 표준화 된 비 바이너리 표현이 없으므로 dkimpy-milter 용 Ed25519 키를 생성하려면 dkimpy 특정 도구를 사용하여 호환되어야합니다. 동일한 dknewkey 스크립트가 Ed25519를 지원합니다.</target>
+        </trans-unit>
+        <trans-unit id="c3996effc280f22ed675129b27e5458d1e588636" translate="yes" xml:space="preserve">
+          <source>These need to match the Socket value for each dkimpy-milter instance.</source>
+          <target state="translated">이는 각 dkimpy-milter 인스턴스의 Socket 값과 일치해야합니다.</target>
+        </trans-unit>
+        <trans-unit id="d299f02e90d55a70432ce37b398bf99998325a7c" translate="yes" xml:space="preserve">
+          <source>This is a DKIM signing and verification milter.  It has been tested with both
+Postfix and Sendmail.</source>
+          <target state="translated">이것은 DKIM 서명 및 검증 밀터입니다. Postfix와 Sendmail 모두에서 테스트되었습니다.</target>
+        </trans-unit>
+        <trans-unit id="a49fe4bb575cb20a505c651fb7f576f05d9f069a" translate="yes" xml:space="preserve">
+          <source>This package includes a default configuration file and man pages.  For those
+to be installed when installing using setup.py, the following incantation is
+required because setuptools developers decided not being able to do this by
+default is a feature:</source>
+          <target state="translated">이 패키지에는 기본 구성 파일과 매뉴얼 페이지가 포함되어 있습니다. setup.py를 사용하여 설치할 때 설치되는 항목의 경우, setuptools 개발자가 기본적으로이 작업을 수행 할 수없는 것이 기능이라고 결정했기 때문에 다음과 같은 명령이 필요합니다.</target>
+        </trans-unit>
+        <trans-unit id="7d0cfe06f64a8776aafc6661dfdae28d42a72a03" translate="yes" xml:space="preserve">
+          <source>To start dkimpy-milter with systemd for the first time, you will need to take
+the following steps:</source>
+          <target state="translated">systemd로 처음으로 dkimpy-milter를 시작하려면 다음 단계를 수행해야합니다.</target>
+        </trans-unit>
+        <trans-unit id="7a0c30a3c45f073994d6b9da5c7248b5a425635a" translate="yes" xml:space="preserve">
+          <source>Using pip will cause required packages to be installed via easy_install if they
+have not been previously installed.  Because pymilter and PyNaCl are compiled
+Python extensions, the system will need appropriate development packages and
+an C compiler.  Alternately, install these dependencies from distribution/OS
+packages and then pip install dkimpy_milter.</source>
+          <target state="translated">pip를 사용하면 필요한 패키지가 이전에 설치되지 않은 경우 easy_install을 통해 설치됩니다. pymilter 및 PyNaCl은 컴파일 된 Python 확장이므로 시스템에 적절한 개발 패키지와 C 컴파일러가 필요합니다. 또는 배포 / OS 패키지에서 이러한 종속성을 설치 한 다음 pip install dkimpy_milter.</target>
+        </trans-unit>
+        <trans-unit id="55e68c7091a7fa265d8d150d50923792feefbd2b" translate="yes" xml:space="preserve">
+          <source>When installing using the Debian package, all dependencies are automatically
+installed.</source>
+          <target state="translated">Debian 패키지를 사용하여 설치할 때 모든 종속성이 자동으로 설치됩니다.</target>
+        </trans-unit>
+        <trans-unit id="e93179e7b0d9f29bc2bc989cdc60d8d667b4cab7" translate="yes" xml:space="preserve">
+          <source>When using the sendmail MTA in both signing and verifying mode, there are
+a few issues of which to be aware that might cause operational problems
+and deserve consideration.</source>
+          <target state="translated">서명 및 확인 모드 모두에서 sendmail MTA를 사용하는 경우 작동 문제를 일으킬 수 있고 고려해야 할 몇 가지 문제가 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="3b3c06ab3bd899219f587b309c0c5bf185349b4a" translate="yes" xml:space="preserve">
+          <source>You could put &quot;file:&quot; in front of the filename for the KeyTable just to be
+precise, but &quot;file:&quot; is assumed if the value starts with a &quot;/&quot;.</source>
+          <target state="translated">정확하게 KeyTable의 파일 이름 앞에 &quot;file :&quot;을 넣을 수 있지만 값이 &quot;/&quot;로 시작하면 &quot;file :&quot;이 가정됩니다.</target>
+        </trans-unit>
+        <trans-unit id="322235c7e9edde4a9dd7c3f33b2115bb24111048" translate="yes" xml:space="preserve">
+          <source>You've generated private key files for each of these and stored them
+in the directory /usr/local/etc/dkim/keys as files &quot;president&quot;, &quot;excom&quot; and
+&quot;exnet&quot;, with the obvious intents.  You want to use selectors &quot;foo&quot;, &quot;bar&quot;
+and &quot;baz&quot; for those, respectively.  The signing domains match the senders
+(i.e. the signatures for example.com's stuff will be held by example.com,
+and example.net likewise).</source>
+          <target state="translated">이들 각각에 대한 개인 키 파일을 생성하고 명백한 의도로 &quot;president&quot;, &quot;excom&quot;및 &quot;exnet&quot;파일로 / usr / local / etc / dkim / keys 디렉토리에 저장했습니다. 선택기 &quot;foo&quot;, &quot;bar&quot;및 &quot;baz&quot;를 각각 사용하려고합니다. 서명 도메인은 보낸 사람과 일치합니다 (예 : example.com의 항목에 대한 서명은 example.com에 보관되며 example.net도 마찬가지 임).</target>
+        </trans-unit>
+        <trans-unit id="3001fe2fc6e606cee84c3ccb0a9a5eec274e6a80" translate="yes" xml:space="preserve">
+          <source>[sudo] apt install dkimpy-milter [Debian 10 or later]
+[sudo] apt install -t stretch-backports dkimpy-milter [Debian 9]</source>
+          <target state="translated">[sudo] apt install dkimpy-milter [Debian 10 이상] [sudo] apt install -t stretch-backports dkimpy-milter [Debian 9]</target>
+        </trans-unit>
+        <trans-unit id="b9aa4c105264339c01ded2faa78e4d122c09a867" translate="yes" xml:space="preserve">
+          <source>[sudo] apt install python3-milter python3-nacl python3-dnspython
+[sudo] apt install -t stretch-backports python3-authres python3-dkim</source>
+          <target state="translated">[sudo] apt install python3-milter python3-nacl python3-dnspython [sudo] apt install -t stretch-backports python3-authres python3-dkim</target>
+        </trans-unit>
+        <trans-unit id="a5193b3fd05a552b702d97d8c0fd4fb9c76d6c61" translate="yes" xml:space="preserve">
+          <source>[sudo] pip install dkimpy_milter</source>
+          <target state="translated">[sudo] pip 설치 dkimpy_milter</target>
+        </trans-unit>
+        <trans-unit id="259c5be6ff2a7d6acf5f36db315d6f05578a899d" translate="yes" xml:space="preserve">
+          <source>[sudo] python3 setup.py install --single-version-externally-managed --record=/dev/null</source>
+          <target state="translated">[sudo] python3 setup.py install --single-version-externally-managed --record = / dev / null</target>
+        </trans-unit>
+        <trans-unit id="0ad6c89738bd0113ffab95f799aefc0d120e247c" translate="yes" xml:space="preserve">
+          <source>or in a single step (the order matters):</source>
+          <target state="translated">또는 단일 단계 (순서 중요) :</target>
+        </trans-unit>
+        <trans-unit id="f3657f9f5c3c6909ef826d1588b78a96c4d4d3f9" translate="yes" xml:space="preserve">
+          <source>will produce both the private key file (.key suffix) and a file with the DKIM
+public key record to be published DNS (.dns suffix).  RSA is the default key
+type.  2048 bits is the default key size.</source>
+          <target state="translated">개인 키 파일 (.key 접미사)과 DKIM 공개 키 레코드가 게시 된 DNS (.dns 접미사)가있는 파일을 모두 생성합니다. RSA는 기본 키 유형입니다. 기본 키 크기는 2048 비트입니다.</target>
+        </trans-unit>
+        <trans-unit id="3792992c308ead6519b6937602f54d28038e3ef9" translate="yes" xml:space="preserve">
+          <source>will provide both the private key file (.key suffix) and a file with the DKIM
+public key record to be published DNS (.dns suffix).  Ed25519 keys do not have
+variable bit lengths.</source>
+          <target state="translated">개인 키 파일 (.key 접미사)과 게시 할 DKIM 공개 키 레코드가있는 파일 (.dns 접미사)을 모두 제공합니다. Ed25519 키에는 가변 비트 길이가 없습니다.</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

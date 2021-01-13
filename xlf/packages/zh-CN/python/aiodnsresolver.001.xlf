@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="zh-CN" datatype="htmlbody" original="https://pypi.org/project/aiodnsresolver/">
+    <body>
+      <group id="aiodnsresolver">
+        <trans-unit id="5271bccbbe941ae52abb53cc0fecaec4be011917" translate="yes" xml:space="preserve">
+          <source>&lt;a href=&quot;https://nvd.nist.gov/vuln/detail/CVE-2017-2909&quot;&gt;Pointer loops&lt;/a&gt; are detected.</source>
+          <target state="translated">&lt;a href=&quot;https://nvd.nist.gov/vuln/detail/CVE-2017-2909&quot;&gt;&lt;/a&gt;检测到指针循环。</target>
+        </trans-unit>
+        <trans-unit id="929dca150227ac071b7a3bc11408a076f3f42dcd" translate="yes" xml:space="preserve">
+          <source>A cache is part of each &lt;code&gt;Resolver()&lt;/code&gt;, expiring records automatically according to their TTL.</source>
+          <target state="translated">缓存是每个 &lt;code&gt;Resolver()&lt;/code&gt; 的一部分，记录根据其TTL自动过期。</target>
+        </trans-unit>
+        <trans-unit id="211b06c40eb506400c76ecdf544257469ed37a5b" translate="yes" xml:space="preserve">
+          <source>A higher risk assumption is that many tests use the, otherwise private, &lt;code&gt;pack&lt;/code&gt; and &lt;code&gt;parse&lt;/code&gt; functions as part of the built-in DNS server that is used by the tests. These are the core functions used by the production code used to pack and parse DNS messages. While asserting that the resolver can communicate to the built-in nameserver, all the tests do is assert that &lt;code&gt;pack&lt;/code&gt; and &lt;code&gt;parse&lt;/code&gt; are consistent with each other: it is an assumption that other nameservers have equivalent behaviour.</source>
+          <target state="translated">较高的风险假设是，许多测试将（否则为私有的） &lt;code&gt;pack&lt;/code&gt; 和 &lt;code&gt;parse&lt;/code&gt; 功能用作测试所使用的内置DNS服务器的一部分。这些是用于打包和解析DNS消息的生产代码所使用的核心功能。在断言解析器可以与内置名称服务器进行通信的同时，所有测试所做的都是断言 &lt;code&gt;pack&lt;/code&gt; 和 &lt;code&gt;parse&lt;/code&gt; 是彼此一致的：这是假定其他名称服务器具有相同的行为。</target>
+        </trans-unit>
+        <trans-unit id="5e187dda81d772797388202838eb2eeeac356582" translate="yes" xml:space="preserve">
+          <source>A maximum of two messages per DNS query are logged at &lt;code&gt;INFO&lt;/code&gt;. If a nameserver fails, a &lt;code&gt;WARNING&lt;/code&gt; is issued [although an exception will be raised if no nameservers succeed], and the remainder of messages are logged at &lt;code&gt;DEBUG&lt;/code&gt;. No &lt;code&gt;ERROR&lt;/code&gt; or &lt;code&gt;CRITICAL&lt;/code&gt; messages are issued when exceptions are raised: it is the responsiblity of client code to log these if desired.</source>
+          <target state="translated">每个DNS查询最多两个消息记录在 &lt;code&gt;INFO&lt;/code&gt; 。如果名称服务器失败，则会发出 &lt;code&gt;WARNING&lt;/code&gt; （尽管如果没有名称服务器成功，则会引发异常），其余消息将记录在 &lt;code&gt;DEBUG&lt;/code&gt; 。没有 &lt;code&gt;ERROR&lt;/code&gt; 或 &lt;code&gt;CRITICAL&lt;/code&gt; 时异常升高的消息发出：它是客户端代码的责任心，如果需要记录这些。</target>
+        </trans-unit>
+        <trans-unit id="51f7f0ed3e00a224445ea9af92863e69074b3f06" translate="yes" xml:space="preserve">
+          <source>A new socket, and so a new random local port, is used for each query.</source>
+          <target state="translated">每次查询都会使用一个新的套接字,因此会使用一个新的随机本地端口。</target>
+        </trans-unit>
+        <trans-unit id="9100aca195719601490d3778547d5c3de3ae9465" translate="yes" xml:space="preserve">
+          <source>Also, to migitate the risk of evil responses/configuration</source>
+          <target state="translated">同时,为了迁移恶性反应/配置的风险。</target>
+        </trans-unit>
+        <trans-unit id="52e9f6aaf6e7b4bf71883e35141db1b9fcfd8250" translate="yes" xml:space="preserve">
+          <source>Asyncio Python DNS resolver. Pure Python, with no dependencies other than the standard library, threads are not used, no additional tasks are created, and all code is in a single module. The nameservers to query are taken from &lt;code&gt;/etc/resolv.conf&lt;/code&gt;, and treats hosts in &lt;code&gt;/etc/hosts&lt;/code&gt; as A or AAAA records with a TTL of 0.</source>
+          <target state="translated">Asyncio Python DNS解析器。纯Python，除了标准库外没有其他依赖项，不使用线程，不创建其他任务，并且所有代码都在单个模块中。要查询的名称服务器取自 &lt;code&gt;/etc/resolv.conf&lt;/code&gt; ，并将 &lt;code&gt;/etc/hosts&lt;/code&gt; 中的主机视为TTL为0的A或AAAA记录。</target>
+        </trans-unit>
+        <trans-unit id="61a84ef6505fac2720810c22f65c1971715da98b" translate="yes" xml:space="preserve">
+          <source>By default each domain name is encoded with &lt;a href=&quot;https://astrolavos.gatech.edu/articles/increased_dns_resistance.pdf&quot;&gt;0x20-bit encoding&lt;/a&gt; before being sent to the nameservers. However, some nameservers, such as Docker's built-in, do not support this. So, to control or disable the encoding, you can pass a custom &lt;code&gt;transform_fqdn&lt;/code&gt; coroutine to Resolver that does not perform any additional encoding.</source>
+          <target state="translated">默认情况下，每个域名在发送到名称服务器之前&lt;a href=&quot;https://astrolavos.gatech.edu/articles/increased_dns_resistance.pdf&quot;&gt;均已&lt;/a&gt;使用0x20位编码进行编码。但是，某些名称服务器（例如Docker的内置服务器）不支持此功能。因此，要控制或禁用编码，可以将自定义的 &lt;code&gt;transform_fqdn&lt;/code&gt; 协程传递给不执行任何其他编码的Resolver。</target>
+        </trans-unit>
+        <trans-unit id="e4c00516cc8b5ef50215908476d463b79c1132af" translate="yes" xml:space="preserve">
+          <source>By default each domain name is encoded with &lt;a href=&quot;https://astrolavos.gatech.edu/articles/increased_dns_resistance.pdf&quot;&gt;0x20-bit encoding&lt;/a&gt;, which is checked against any response.</source>
+          <target state="translated">默认情况下，每个域名都使用&lt;a href=&quot;https://astrolavos.gatech.edu/articles/increased_dns_resistance.pdf&quot;&gt;0x20位编码进行编码&lt;/a&gt;，并根据任何响应进行检查。</target>
+        </trans-unit>
+        <trans-unit id="503d0636b431f0d0a6b8edd31c135f4675377d16" translate="yes" xml:space="preserve">
+          <source>By default logging is through the &lt;code&gt;Logger&lt;/code&gt; named &lt;code&gt;aiodnsresolver&lt;/code&gt;, and all messages are prefixed with &lt;code&gt;[dns]&lt;/code&gt; or &lt;code&gt;[dns:&amp;lt;fqdn&amp;gt;,&amp;lt;query-type&amp;gt;]&lt;/code&gt; through a &lt;code&gt;LoggerAdapter&lt;/code&gt;. Each function accepts &lt;code&gt;get_logger_adapter&lt;/code&gt;: the default of which results in this behaviour, and can be overridden to set either the &lt;code&gt;Logger&lt;/code&gt; or the &lt;code&gt;LoggerAdapter&lt;/code&gt;.</source>
+          <target state="translated">通过默认记录是通过 &lt;code&gt;Logger&lt;/code&gt; 命名 &lt;code&gt;aiodnsresolver&lt;/code&gt; ，和所有消息的前缀为 &lt;code&gt;[dns]&lt;/code&gt; 或 &lt;code&gt;[dns:&amp;lt;fqdn&amp;gt;,&amp;lt;query-type&amp;gt;]&lt;/code&gt; 通过 &lt;code&gt;LoggerAdapter&lt;/code&gt; 。每个函数都接受 &lt;code&gt;get_logger_adapter&lt;/code&gt; ：默认情况下会导致此行为，并且可以覆盖此函数以设置 &lt;code&gt;Logger&lt;/code&gt; 或 &lt;code&gt;LoggerAdapter&lt;/code&gt; 。</target>
+        </trans-unit>
+        <trans-unit id="83abfbe2bfed3c1a456c2d7e47463ba5e76f0bf5" translate="yes" xml:space="preserve">
+          <source>CNAME chains have a maximum length.</source>
+          <target state="translated">CNAME链有一个最大长度。</target>
+        </trans-unit>
+        <trans-unit id="73ab091294665e57efeb4610bc88824653477946" translate="yes" xml:space="preserve">
+          <source>CNAME records are followed transparently. The &lt;code&gt;expires_at&lt;/code&gt; of IP addresses found via intermediate CNAME(s) is determined by using the minimum &lt;code&gt;expires_at&lt;/code&gt; of all the records involved in determining those IP addresses.</source>
+          <target state="translated">透明地跟踪CNAME记录。通过使用确定这些IP地址所涉及的所有记录中的最小 &lt;code&gt;expires_at&lt;/code&gt; ，可以确定通过中间CNAME找到的IP地址的 &lt;code&gt;expires_at&lt;/code&gt; 。</target>
+        </trans-unit>
+        <trans-unit id="86ce9e2117503436712e78317ab8f9b96432ceac" translate="yes" xml:space="preserve">
+          <source>CNAMEs</source>
+          <target state="translated">CNAMEs</target>
+        </trans-unit>
+        <trans-unit id="50338b3b242845e21a0ace9ae9684283d945fb52" translate="yes" xml:space="preserve">
+          <source>Cache</source>
+          <target state="translated">缓存</target>
+        </trans-unit>
+        <trans-unit id="2061cc2c0ce561bb4de9ddce9e6148ae313ff804" translate="yes" xml:space="preserve">
+          <source>Chaining logging adapters</source>
+          <target state="translated">链式记录适配器</target>
+        </trans-unit>
+        <trans-unit id="8c053f773becf89e1d9c570970fcb6dea5254931" translate="yes" xml:space="preserve">
+          <source>Custom hosts</source>
+          <target state="translated">自定义主机</target>
+        </trans-unit>
+        <trans-unit id="95f255134c54184a554be6e3edb813828ba95cc9" translate="yes" xml:space="preserve">
+          <source>Custom nameservers and timeouts</source>
+          <target state="translated">自定义名称服务器和超时</target>
+        </trans-unit>
+        <trans-unit id="4331f6e2659b79348247b80b3a69e3c78192b683" translate="yes" xml:space="preserve">
+          <source>Designed for highly concurrent/HA situations. Based on &lt;a href=&quot;https://github.com/gera2ld/async_dns&quot;&gt;https://github.com/gera2ld/async_dns&lt;/a&gt;.</source>
+          <target state="translated">专为高度并发/高可用性情况而设计。基于&lt;a href=&quot;https://github.com/gera2ld/async_dns&quot;&gt;https://github.com/gera2ld/async_dns&lt;/a&gt;。</target>
+        </trans-unit>
+        <trans-unit id="7d4318283b3f106b523e323d9909c77fc9121b46" translate="yes" xml:space="preserve">
+          <source>Disable 0x20-bit encoding</source>
+          <target state="translated">禁用0x20位编码</target>
+        </trans-unit>
+        <trans-unit id="325543124cab344013bc013d35cbe2a615311047" translate="yes" xml:space="preserve">
+          <source>Each query is given a random ID, which is checked against any response.</source>
+          <target state="translated">每个查询都有一个随机的ID,它与任何响应进行检查。</target>
+        </trans-unit>
+        <trans-unit id="8d63cc4af916c7b99a241bad8b0d502181c245e4" translate="yes" xml:space="preserve">
+          <source>Event loop, tasks, and yielding</source>
+          <target state="translated">事件循环、任务和产量</target>
+        </trans-unit>
+        <trans-unit id="8f118b077e6a503af07b266e698154147805e76c" translate="yes" xml:space="preserve">
+          <source>Example: aiohttp</source>
+          <target state="translated">例如:aiohttp</target>
+        </trans-unit>
+        <trans-unit id="db74fe5b20374d125b242d991f69908b127e41ce" translate="yes" xml:space="preserve">
+          <source>Example: lowhaio</source>
+          <target state="translated">例如:lowhaio</target>
+        </trans-unit>
+        <trans-unit id="daa475826a7caf2c8d6e1edf8f9fcbc611880db5" translate="yes" xml:space="preserve">
+          <source>Example: tornado</source>
+          <target state="translated">例如:龙卷风</target>
+        </trans-unit>
+        <trans-unit id="cd3dfbe79fda3a9d92de67b1bd4f1dc9f60ab723" translate="yes" xml:space="preserve">
+          <source>Exceptions</source>
+          <target state="translated">例外情况</target>
+        </trans-unit>
+        <trans-unit id="5e214e6879427a717b554f7c20bad14ac9ba6048" translate="yes" xml:space="preserve">
+          <source>Exceptions are subclasses of &lt;code&gt;DnsError&lt;/code&gt;, and are raised if a record does not exist, on socket errors, timeouts, message parsing errors, or other errors returned from the nameserver.</source>
+          <target state="translated">异常是 &lt;code&gt;DnsError&lt;/code&gt; 的子类，如果记录不存在，套接字错误，超时，消息解析错误或从名称服务器返回的其他错误，则引发异常。</target>
+        </trans-unit>
+        <trans-unit id="5481c7b8170c168b824c771b6718a3b6d2901efe" translate="yes" xml:space="preserve">
+          <source>For CNAME chains, the event loop is yielded during each communication for non-cached parts of the chain.</source>
+          <target state="translated">对于CNAME链,在每次通信过程中,链的非缓存部分都会产生事件循环。</target>
+        </trans-unit>
+        <trans-unit id="d1ce204dbf3ac8a86a74a6e0f2ade815849b3dd0" translate="yes" xml:space="preserve">
+          <source>For complex or highly concurrent applications, it may be desirable that logging adapters be chained to output log messages that incorporate a parent context. So the default ouput of</source>
+          <target state="translated">对于复杂或高并发的应用,可能希望日志适配器能够链式输出包含父上下文的日志消息。因此,默认的</target>
+        </trans-unit>
+        <trans-unit id="37b6d39ee4f6fbd194c7fcc66f1205f74e971cac" translate="yes" xml:space="preserve">
+          <source>If a lower-level exception caused the &lt;code&gt;DnsError&lt;/code&gt;, it will be in the &lt;code&gt;__cause__&lt;/code&gt; attribute of the exception.</source>
+          <target state="translated">如果较低级别的异常导致 &lt;code&gt;DnsError&lt;/code&gt; ，它将位于异常的 &lt;code&gt;__cause__&lt;/code&gt; 属性中。</target>
+        </trans-unit>
+        <trans-unit id="c81b79df3c6448eae7c4f80428b54cd5692a17d7" translate="yes" xml:space="preserve">
+          <source>Installation</source>
+          <target state="translated">安装</target>
+        </trans-unit>
+        <trans-unit id="98c528a0f6bb272f1be116323214c541e9884abd" translate="yes" xml:space="preserve">
+          <source>It is possible to query nameservers other than those in &lt;code&gt;/etc/resolv.conf&lt;/code&gt;, and for each to specify a timeout in seconds to wait for a reply before querying the next.</source>
+          <target state="translated">可以查询 &lt;code&gt;/etc/resolv.conf&lt;/code&gt; 中的名称服务器以外的名称服务器，并且可以为每个名称服务器指定以秒为单位的超时时间，以等待查询之前的答复。</target>
+        </trans-unit>
+        <trans-unit id="15c9db7d7fff447ccf33673477c532475866aef0" translate="yes" xml:space="preserve">
+          <source>It is technically possible that in the case of extremely high numbers of A or AAAA records for a domain, they would not fit in a single UDP message. However, this is extremely unlikely, and in this unlikely case, extremely unlikely to affect target applications in any meaningful way. If a truncated message is received, a warning is logged.</source>
+          <target state="translated">从技术上讲,在一个域的A或AAAA记录数量极多的情况下,它们不适合放在一个UDP消息中。然而,这是极不可能的,而且在这种不可能的情况下,极不可能以任何有意义的方式影响目标应用程序。如果收到一个截断的消息,会记录一个警告。</target>
+        </trans-unit>
+        <trans-unit id="24c4c96f064c57e2f915eb36267d9c1af72b39d9" translate="yes" xml:space="preserve">
+          <source>It's possible to specify hosts without editing the &lt;code&gt;/etc/hosts&lt;/code&gt; file.</source>
+          <target state="translated">无需编辑 &lt;code&gt;/etc/hosts&lt;/code&gt; 文件就可以指定主机。</target>
+        </trans-unit>
+        <trans-unit id="81abd20921dba1c2e53084d841b924ad28377ed3" translate="yes" xml:space="preserve">
+          <source>Log levels</source>
+          <target state="translated">对数水平</target>
+        </trans-unit>
+        <trans-unit id="57003616863fe634c645e342ee9080681e419c5f" translate="yes" xml:space="preserve">
+          <source>Logging</source>
+          <target state="translated">伐木</target>
+        </trans-unit>
+        <trans-unit id="bf89335514117c4e318f57395975d95081d6e290" translate="yes" xml:space="preserve">
+          <source>Many tests assume that timeouts are controlled by &lt;code&gt;asyncio.sleep&lt;/code&gt;, &lt;code&gt;loop.call_later&lt;/code&gt; or &lt;code&gt;loop.call_at&lt;/code&gt;. This is to allow time to be fast-forwarded through cache invalidation using &lt;a href=&quot;https://github.com/michalc/aiofastforward&quot;&gt;aiofastforward&lt;/a&gt; without actually having to wait the corresponding time in the tests. Also, many tests assume &lt;code&gt;open&lt;/code&gt; is used to access files, and patch it to allow assertions on what the code would do with different contents of &lt;code&gt;/etc/resolv.conf&lt;/code&gt; or &lt;code&gt;/etc/hosts&lt;/code&gt;.</source>
+          <target state="translated">许多测试都假定超时由 &lt;code&gt;asyncio.sleep&lt;/code&gt; ， &lt;code&gt;loop.call_later&lt;/code&gt; 或 &lt;code&gt;loop.call_at&lt;/code&gt; 控制。这是为了允许通过使用&lt;a href=&quot;https://github.com/michalc/aiofastforward&quot;&gt;aiofastforward&lt;/a&gt;通过缓存失效来快速转发时间，而实际上不必等待测试中的相应时间。另外，许多测试都假定 &lt;code&gt;open&lt;/code&gt; 是用来访问文件的，并对其进行修补，以允许声明使用 &lt;code&gt;/etc/resolv.conf&lt;/code&gt; 或 &lt;code&gt;/etc/hosts&lt;/code&gt; 不同内容的代码。</target>
+        </trans-unit>
+        <trans-unit id="47e6cc73f64a548366be4705e275679eeccea863" translate="yes" xml:space="preserve">
+          <source>No extra code is needed to use aiodnsresolver with &lt;a href=&quot;https://github.com/michalc/lowhaio&quot;&gt;lowhaio&lt;/a&gt;: it is used by default.</source>
+          <target state="translated">不需要额外的代码即可将aiodnsresolver与&lt;a href=&quot;https://github.com/michalc/lowhaio&quot;&gt;lowhaio&lt;/a&gt;一起使用：默认情况下使用。</target>
+        </trans-unit>
+        <trans-unit id="0dd8a289d527539de842bf7f512ddc6f16bab278" translate="yes" xml:space="preserve">
+          <source>No tasks are created, and the event loop is only yielded to during socket communication. Because fetching results from the cache involves no socket communication, this means that cached results are fetched without yielding. This introduces a small inconsistency between fetching cached and non-cached results, and so clients should be written to not depend on the presence or lack of a yield during resolution. This is a typically recommended process however: it should be expected that coroutines might yield.</source>
+          <target state="translated">不创建任何任务,只有在socket通信时才会对事件循环进行屈服。因为从缓存中获取结果不涉及套接字通信,这意味着缓存结果的获取不需要屈服。这在获取缓存结果和非缓存结果之间引入了一个小的不一致,因此客户端应该被写成不依赖于在解析过程中是否存在屈服。然而,这是一个典型的推荐过程:应该预计到coroutine可能会产生结果。</target>
+        </trans-unit>
+        <trans-unit id="13af06a45ae2e367e0503ca4e7145d79f1f7d234" translate="yes" xml:space="preserve">
+          <source>Parallel requests to multiple nameservers are also possible, where the first response from each set of requests is used.</source>
+          <target state="translated">也可以对多个命名服务器进行并行请求,其中使用每组请求的第一个响应。</target>
+        </trans-unit>
+        <trans-unit id="7fd5bb751b3ce87db39b88c5e968bcfa48b440a4" translate="yes" xml:space="preserve">
+          <source>Pure asyncio Python DNS resolver</source>
+          <target state="translated">Pure asyncio Python DNS解析器</target>
+        </trans-unit>
+        <trans-unit id="bef2a4699d00603b20da781b86d5845c0046fb44" translate="yes" xml:space="preserve">
+          <source>Requests made for a domain while there is an in-flight query for that domain, wait for the the in-flight query to finish, and use its result.</source>
+          <target state="translated">在对某一域进行飞行中查询时,对该域提出的请求,等待飞行中查询结束后,使用其结果。</target>
+        </trans-unit>
+        <trans-unit id="c1ada94ed2819eb16c6fe64f64fb6e10147a7afd" translate="yes" xml:space="preserve">
+          <source>Returned are tuples of subclasses of &lt;a href=&quot;https://docs.python.org/3/library/ipaddress.html#ipaddress.IPv4Address&quot;&gt;IPv4Address&lt;/a&gt; or &lt;a href=&quot;https://docs.python.org/3/library/ipaddress.html#ipaddress.IPv6Address&quot;&gt;IPv6Address&lt;/a&gt;. Both support conversion to their usual string form by passing them to &lt;code&gt;str&lt;/code&gt;.</source>
+          <target state="translated">返回的是&lt;a href=&quot;https://docs.python.org/3/library/ipaddress.html#ipaddress.IPv4Address&quot;&gt;IPv4Address&lt;/a&gt;或&lt;a href=&quot;https://docs.python.org/3/library/ipaddress.html#ipaddress.IPv6Address&quot;&gt;IPv6Address&lt;/a&gt;子类的元组。两者都通过将它们传递给 &lt;code&gt;str&lt;/code&gt; 来支持转换为它们通常的字符串形式。</target>
+        </trans-unit>
+        <trans-unit id="4651a34e4df9619783ad372f905d6d3b84e9d76d" translate="yes" xml:space="preserve">
+          <source>Scope</source>
+          <target state="translated">范围</target>
+        </trans-unit>
+        <trans-unit id="2931d5d3232f2248933a3926c6bcfde0392f4223" translate="yes" xml:space="preserve">
+          <source>Security considerations</source>
+          <target state="translated">安全方面的考虑</target>
+        </trans-unit>
+        <trans-unit id="d4bcd58ee108472a46cd86b218d9752854fdfe5c" translate="yes" xml:space="preserve">
+          <source>Specifically, if a record is determined to not exist, &lt;code&gt;DnsRecordDoesNotExist&lt;/code&gt; is raised.</source>
+          <target state="translated">具体来说，如果确定一条记录不存在，则会引发 &lt;code&gt;DnsRecordDoesNotExist&lt;/code&gt; 。</target>
+        </trans-unit>
+        <trans-unit id="fd95ae54dec0b2580591259365e6f9ec1bc37a56" translate="yes" xml:space="preserve">
+          <source>TTL / Record expiry</source>
+          <target state="translated">TTL/记录到期时间</target>
+        </trans-unit>
+        <trans-unit id="d84c76a661a2d9eed7c499c29179e4493a22dfb7" translate="yes" xml:space="preserve">
+          <source>Testing strategy</source>
+          <target state="translated">测试策略</target>
+        </trans-unit>
+        <trans-unit id="724d10488fa0d7f2fcdb5593b3ca64e996ef7b86" translate="yes" xml:space="preserve">
+          <source>Tests attempt to closly match real-world use, and assert on how input translate to output, i.e. the &lt;em&gt;public&lt;/em&gt; behaviour of the resolver. Therefore the tests avoid assumptions on implementation details.</source>
+          <target state="translated">测试试图严格匹配实际使用情况，并断言输入如何转换为输出，即解析器的&lt;em&gt;公共&lt;/em&gt;行为。因此，测试避免了对实现细节的假设。</target>
+        </trans-unit>
+        <trans-unit id="8c7516866aa18f7d36f81b46de3023d136af8722" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;LoggerAdapter&lt;/code&gt; used by &lt;code&gt;resolve&lt;/code&gt; and &lt;code&gt;clear_cache&lt;/code&gt; defaults to the one passed to &lt;code&gt;Resolver&lt;/code&gt;.</source>
+          <target state="translated">&lt;code&gt;resolve&lt;/code&gt; 和 &lt;code&gt;clear_cache&lt;/code&gt; 使用的 &lt;code&gt;LoggerAdapter&lt;/code&gt; 默认为传递给 &lt;code&gt;Resolver&lt;/code&gt; 的LoggerAdapter。</target>
+        </trans-unit>
+        <trans-unit id="466b71a3cf44833cb3278ebc0b07a27c257d9e55" translate="yes" xml:space="preserve">
+          <source>The address objects each have an extra property, &lt;code&gt;expires_at&lt;/code&gt;, that returns the expiry time of the address, according to the &lt;code&gt;loop.time()&lt;/code&gt; clock, and the TTL of the records involved to find that address.</source>
+          <target state="translated">每个地址对象都有一个额外的属性 &lt;code&gt;expires_at&lt;/code&gt; ，该属性根据 &lt;code&gt;loop.time()&lt;/code&gt; 时钟以及查找该地址所涉及的记录的TTL 返回地址的到期时间。</target>
+        </trans-unit>
+        <trans-unit id="9e9f8b0ae56b3bb4ce43ae4f8e3ab8863677bbde" translate="yes" xml:space="preserve">
+          <source>The cache for each record starts on the &lt;em&gt;start&lt;/em&gt; of each request, so duplicate concurrent requests for the same record are not made.</source>
+          <target state="translated">每个记录的缓存均从每个请求的&lt;em&gt;开始处开始&lt;/em&gt;，因此不会对同一记录进行重复的并发请求。</target>
+        </trans-unit>
+        <trans-unit id="a30c90204c5ee38410b23c24343172c003f232be" translate="yes" xml:space="preserve">
+          <source>The resolver is a &lt;em&gt;stub&lt;/em&gt; resolver: it delegates the responsibility of recursion to the nameserver(s) it queries. In the vast majority of envisioned use cases this is acceptable, since the nameservers in &lt;code&gt;/etc/resolv.conf&lt;/code&gt; will be recursive.</source>
+          <target state="translated">解析器是一个&lt;em&gt;存根&lt;/em&gt;解析器：它将递归的责任委托给它所查询的名称服务器。在大多数设想的用例中，这是可以接受的，因为 &lt;code&gt;/etc/resolv.conf&lt;/code&gt; 中的名称服务器将是递归的。</target>
+        </trans-unit>
+        <trans-unit id="ad52e794eb4fcc06ecc4985810a0f8022f6a02b9" translate="yes" xml:space="preserve">
+          <source>The scope of this project is deliberately restricted to operations that are used to resolve A or AAAA records: to resolve a domain name to its IP addresses so that IP connections can be made, and have similar responsibilities to &lt;code&gt;gethostbyname&lt;/code&gt;. Some limited extra behaviour is present/may be added, but great care is taken to prevent scope creep, especially to not add complexity that isn't required to resolve A or AAAA records.</source>
+          <target state="translated">该项目的范围特意限于用于解析A或AAAA记录的操作：将域名解析为其IP地址，以便可以建立IP连接，并具有与 &lt;code&gt;gethostbyname&lt;/code&gt; 相似的职责。存在/可以添加一些有限的额外行为，但是要格外小心，以防止范围爬行，尤其是不要增加解析A或AAAA记录不需要的复杂性。</target>
+        </trans-unit>
+        <trans-unit id="57e4103bc66f1c02c2c9e171ff330eee6102ce2e" translate="yes" xml:space="preserve">
+          <source>The trade-off for this inconsistency is that cached results are fetched slightly faster than if resolving were to yield in all cases.</source>
+          <target state="translated">这种不一致性的权衡是,缓存结果的获取速度要比在所有情况下解析产生的速度略快。</target>
+        </trans-unit>
+        <trans-unit id="568b9215249186337b28f4ddd655addeb1beaa3b" translate="yes" xml:space="preserve">
+          <source>There are however exceptions.</source>
+          <target state="translated">但也有例外。</target>
+        </trans-unit>
+        <trans-unit id="b70f278fda8094a172d4312fe7f6e058f3578c19" translate="yes" xml:space="preserve">
+          <source>This can be used as part of a HA system: if a nameserver isn't contactable, this pattern avoids waiting for its timeout before querying another nameserver.</source>
+          <target state="translated">这可以作为HA系统的一部分:如果一个命名服务器无法联系,这个模式可以避免在查询另一个命名服务器之前等待其超时。</target>
+        </trans-unit>
+        <trans-unit id="cbcd6514ef7beea9d2b0457fb1fbbe2b4b520b8e" translate="yes" xml:space="preserve">
+          <source>This can be used in HA situations to assist failovers. The timer for &lt;code&gt;expires_at&lt;/code&gt; starts just &lt;em&gt;before&lt;/em&gt; the request to the nameserver is made.</source>
+          <target state="translated">可以在高可用性情况下使用它来辅助故障转移。 &lt;code&gt;expires_at&lt;/code&gt; 的计时器&lt;em&gt;在&lt;/em&gt;向名称服务器发出请求&lt;em&gt;之前&lt;/em&gt;开始。</target>
+        </trans-unit>
+        <trans-unit id="69758f85250db2d85cf4c9bb890236bb8f46f07d" translate="yes" xml:space="preserve">
+          <source>To do this, set &lt;code&gt;get_logger_adapter&lt;/code&gt; as a function that chains multiple &lt;code&gt;LoggerAdapter&lt;/code&gt;.</source>
+          <target state="translated">为此，将 &lt;code&gt;get_logger_adapter&lt;/code&gt; 设置为链接多个 &lt;code&gt;LoggerAdapter&lt;/code&gt; 的函数。</target>
+        </trans-unit>
+        <trans-unit id="e5453419f7808d077e72a0951df66da4d335a1ef" translate="yes" xml:space="preserve">
+          <source>To migitate spoofing, several techniques are used.</source>
+          <target state="translated">为了迁移欺骗,采用了几种技术。</target>
+        </trans-unit>
+        <trans-unit id="fdac2c4c6b417e4e42de66d3df4d768bdf14bb25" translate="yes" xml:space="preserve">
+          <source>To mitigate the risks that these assumptions bring, some &quot;end to end&quot;-style tests are included, which use whatever nameservers are in &lt;code&gt;/etc/resolv.conf&lt;/code&gt;, and asserting on globally available DNS results. While not going through every possible case of input, they do validate that core behaviour is consistent with one other implementation of the protocol.</source>
+          <target state="translated">为了减轻这些假设带来的风险，其中包括一些&amp;ldquo;端到端&amp;rdquo;样式的测试，这些测试使用 &lt;code&gt;/etc/resolv.conf&lt;/code&gt; 中的任何名称服务器，并声明可全局使用的DNS结果。尽管没有遍历所有可能的输入情况，但它们确实验证了核心行为与该协议的另一种实现是一致的。</target>
+        </trans-unit>
+        <trans-unit id="ee99461aee3846058cc1f0f7023e131f12d74143" translate="yes" xml:space="preserve">
+          <source>UDP queries are made, but not TCP. DNS servers must support UDP, and it's impossible for a single A and AAAA record to not fit into the maximum size of a UDP DNS response, 512 bytes. There may be other data that the DNS server would return in TCP connections, but this isn't required to resolve a domain name to a single IP address.</source>
+          <target state="translated">进行UDP查询,但不支持TCP。DNS服务器必须支持UDP,单个A和AAAA记录不可能不适合UDP DNS响应的最大大小,512字节。在TCP连接中,DNS服务器可能会返回其他数据,但这并不是解析域名到单个IP地址所需要的。</target>
+        </trans-unit>
+        <trans-unit id="0bb18642b70b9f8a9c12ccf39487328f306b8e19" translate="yes" xml:space="preserve">
+          <source>Usage</source>
+          <target state="translated">使用方法</target>
+        </trans-unit>
+        <trans-unit id="e3eb7e120df55fe0ce4ae5e02b1795d6bc597530" translate="yes" xml:space="preserve">
+          <source>While both being assumptions, they are both unlikely to change, and in the case that they are changed, this would much more likely result in tests failing incorrectly rather than passing incorrectly. Therefore these are low-risk assumptions.</source>
+          <target state="translated">虽然都是假设,但它们都不太可能改变,而且在改变的情况下,更有可能导致测试错误地失败,而不是错误地通过。因此这些都是低风险的假设。</target>
+        </trans-unit>
+        <trans-unit id="f7cccc0372b47247d5fc2e3825d4126fb7823822" translate="yes" xml:space="preserve">
+          <source>aiodnsresolver</source>
+          <target state="translated">aiodnsresolver</target>
+        </trans-unit>
+        <trans-unit id="08aea82c41d0ad520a61ea165d592487b6c577fe" translate="yes" xml:space="preserve">
+          <source>or performs it conditionally</source>
+          <target state="translated">或有条件地执行</target>
+        </trans-unit>
+        <trans-unit id="e329b5389944db05ea8909e826a45be38a49022b" translate="yes" xml:space="preserve">
+          <source>would be prefixed with a &lt;em&gt;parent&lt;/em&gt; context to output something like</source>
+          <target state="translated">将带有&lt;em&gt;父&lt;/em&gt;上下文前缀以输出类似</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

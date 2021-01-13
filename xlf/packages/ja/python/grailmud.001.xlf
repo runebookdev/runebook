@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="ja" datatype="htmlbody" original="https://pypi.org/project/grailmud/">
+    <body>
+      <group id="grailmud">
+        <trans-unit id="35a20710a67ce1d93ad224463fb892934456cb89" translate="yes" xml:space="preserve">
+          <source>&amp;rsquo;s code and add the goblin
+logic in there.</source>
+          <target state="translated">のコードを作成し、そこにゴブリンロジックを追加します。</target>
+        </trans-unit>
+        <trans-unit id="69f1a772a103f106040e1e5fc7bdb6ed21c404c8" translate="yes" xml:space="preserve">
+          <source>A Python MUD server</source>
+          <target state="translated">PythonのMUDサーバ</target>
+        </trans-unit>
+        <trans-unit id="f660583deb8d9a1fc5042fb8a1c14a8a4d2e2c65" translate="yes" xml:space="preserve">
+          <source>Decoupling object logic and object state results in promoting &amp;lsquo;controllers&amp;rsquo;
+(or as they ended up being called in the codebase, &lt;em&gt;delegates&lt;/em&gt;, in the Self
+tradition) to first-class objects which can be added or removed from objects
+at will. So if you want a staff to suddenly start acting like a goblin chief,
+it becomes as simple as this:</source>
+          <target state="translated">オブジェクトロジックとオブジェクト状態を分離すると、オブジェクトに自由に追加または削除できるファーストクラスのオブジェクトに「コントローラー」（またはコードベースで呼び出されることになった&lt;em&gt;デリゲート&lt;/em&gt;）が昇格します。したがって、スタッフが突然ゴブリンの首長のように振る舞い始めたい場合は、次のように簡単になります。</target>
+        </trans-unit>
+        <trans-unit id="2f580c18380983d909ab8ed0e762474eba7adc85" translate="yes" xml:space="preserve">
+          <source>One result of the decoupling of display and game logic is that the difference
+between player avatars and NPCs becomes the &amp;lsquo;controller&amp;rsquo; (the object that
+receives the object&amp;rsquo;s events and acts upon them) for players is linked to a
+socket (via the bowels of Twisted) and a few extra instance variables and
+methods on the player (eg, the player&amp;rsquo;s password hash, and the method to take
+a line of input and dispatch it to the appropriate command). In more tightly
+coupled implementations, players and NPCs are different beasts entirely,
+possibly resulting in ridiculous duplication like different &amp;lsquo;take away &lt;em&gt;X&lt;/em&gt;
+hitpoints&amp;rsquo; routines for each type, which should reside in a common base class.</source>
+          <target state="translated">表示とゲームロジックの分離の結果の1つは、プレーヤーのアバターとNPCの違いが、プレーヤーが（Twistedの腸を介して）ソケットにリンクされるための「コントローラー」（オブジェクトのイベントを受信して​​それらに作用するオブジェクト）になることです。 ）およびプレーヤー上のいくつかの追加のインスタンス変数とメソッド（たとえば、プレーヤーのパスワードハッシュ、および入力行を取得して適切なコマンドにディスパッチするメソッド）。より緊密に結合された実装では、プレイヤーとNPCは完全に異なる獣であり 、共通の基本クラスに存在する必要があるタイプごとに異なる「テイクアウト&lt;em&gt;X&lt;/em&gt;ヒットポイント」ルーチンのようなばかげた重複をもたらす可能性があります。</target>
+        </trans-unit>
+        <trans-unit id="5bdee608fa661c1b5b42d8036a9e58c876a2a097" translate="yes" xml:space="preserve">
+          <source>StaffObject</source>
+          <target state="translated">スタッフオブジェクト</target>
+        </trans-unit>
+        <trans-unit id="796ef8afc2a04895ef9d3c38e51c25c6880b0cc3" translate="yes" xml:space="preserve">
+          <source>These points make grailmud different from other (aspiring-to-be)
+production-ready MUD servers in this area (ie, MUDs written in Python).
+PythonMOO, POO, et al, have used a custom scripting language for programming
+game logic in, wheras grailmud uses Python for this task. Buyasta, wordplay,
+et al, have a tighter coupling between display and game logic. nakedmud
+reimplements a -lot- of stuff in C (ick!) which is already done in some
+library, or which can be done painlessly in Python. There are many, many
+hackish little MUD servers written (I wrote 2 or 3 of them before I got the
+design more-or-less Right), but none of these are really suitable to build a
+whole game in.</source>
+          <target state="translated">これらの点がgrailmudを、この分野では他の(これから本番を迎えるであろう)MUDサーバ(つまりPythonで書かれたMUD)とは異なるものにしています。PythonMOO,POO,et al.はゲームロジックのプログラミングにカスタムスクリプト言語を使用していますが、grailmudはこのタスクにPythonを使用しています。ネイキッドマッドは、すでにいくつかのライブラリで行われているか、Pythonで簡単にできるような、C言語の多くのことを再実装しています(くそ!)。ハックな小さなMUDサーバはたくさんありますが(私はそのうちの2、3つを書きましたが、デザインを多少なりとも正しいものにする前に書きました)、どれもゲーム全体を構築するのには本当に適していません。</target>
+        </trans-unit>
+        <trans-unit id="7a8942901e61a4f168cd3a280ed469807aa28ce8" translate="yes" xml:space="preserve">
+          <source>grailmud is a MUD server written entirely in Python (though optimising
+bottlenecks in C, and a more restricted language for builders and untrusted
+coders to work in are options which will be considered in the future) with a
+loosely coupled design between the game logic and the display logic for
+players, as well as a more loose than is traditional coupling between object
+logic and object state. grailmud also leverages Twisted, pyparsing and durus,
+so a bare minimum of low-level (networking|parsing|serialisation) code has to
+be written.</source>
+          <target state="translated">grailmudは完全にPythonで書かれたMUDサーバーです(ただし、C言語でのボトルネックを最適化したり、ビルダーや信頼されていないコーダーが作業できるように制限された言語を使うことは、将来的に検討されるオプションです)。ゲームロジックとプレイヤーのための表示ロジックの間はゆるく結合されており、オブジェクトロジックとオブジェクトステートの間は従来の結合よりもゆるくなっています。</target>
+        </trans-unit>
+        <trans-unit id="7996c3f3750c7adbd6240d4b253cc9cff31940d3" translate="yes" xml:space="preserve">
+          <source>rather than having to delve into the</source>
+          <target state="translated">を掘り下げるよりも</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="zh-CN" datatype="htmlbody" original="https://pypi.org/project/django-webbugger/">
+    <body>
+      <group id="django-webbugger">
+        <trans-unit id="85b71acad4a7a81ac58c559af7410d6ac96de7cb" translate="yes" xml:space="preserve">
+          <source># What is this?
+Django-Webbugger is a simple application that can be used to track visitors to your website. It uses the django content-types framework to allow the most flexible approach possible for processing tracking information. This allows you to customize what data is tracked in a very flexible way.</source>
+          <target state="translated">＃ 这是什么？Django-Webbugger是一个简单的应用程序，可用于跟踪您网站的访问者。它使用django内容类型框架来允许最灵活的方法来处理跟踪信息。这使您可以非常灵活地自定义要跟踪的数据。</target>
+        </trans-unit>
+        <trans-unit id="ab85e4e58803f59872b5dc5fe34e29420fe5c895" translate="yes" xml:space="preserve">
+          <source># django webbugger
+#### Brandon R. Stoner &amp;lt;&lt;a href=&quot;mailto:monokrome%40monokro.me&quot;&gt;monokrome@monokro.me&lt;/a&gt;</source>
+          <target state="translated">＃django webbugger ####布兰登&amp;middot;R&amp;middot;斯通纳&amp;lt; &lt;a href=&quot;mailto:monokrome%40monokro.me&quot;&gt;monokrome@monokro.me&lt;/a&gt;</target>
+        </trans-unit>
+        <trans-unit id="462e0606e0072b56a7138d1a99b8acaa6e27f181" translate="yes" xml:space="preserve">
+          <source>## Model structure</source>
+          <target state="translated">##模型结构</target>
+        </trans-unit>
+        <trans-unit id="984fdf91c1cd1fe3d8bf138b71ea79e67510a93d" translate="yes" xml:space="preserve">
+          <source>## Modes of operation
+The main view used for tracking is &lt;strong&gt;webbugger.views.trigger&lt;/strong&gt; which normally works in redirect mode, but can optionally be told to work in pixel mode instead.</source>
+          <target state="translated">##操作模式用于跟踪的主视图是&lt;strong&gt;webbugger.views.trigger&lt;/strong&gt;，该视图通常在重定向模式下工作，但也可以选择被告知在像素模式下工作。</target>
+        </trans-unit>
+        <trans-unit id="97795d5a8474097c5ba86b21de41d7b17f12803d" translate="yes" xml:space="preserve">
+          <source>### Pixel Mode
+The trigger view also takes a keyword argument with the name of &amp;ldquo;pixel&amp;rdquo;. When set to True, this argument tells the view to return a 1x1 pixel clear GIF instead of redirecting the user to a new page. With this feature, it is possible to embed tracking URLs directly into pages as invisible image elements. Not only that, but you can make use of any online medium that downloads images by this system.</source>
+          <target state="translated">###像素模式触发器视图还使用名为&amp;ldquo; pixel&amp;rdquo;的关键字参数。设置为True时，此参数告诉视图返回1x1像素的透明GIF，而不是将用户重定向到新页面。使用此功能，可以将跟踪URL作为不可见的图像元素直接嵌入到页面中。不仅如此，您还可以利用此系统下载图像的任何在线媒体。</target>
+        </trans-unit>
+        <trans-unit id="a2716e5a66769571dbc9d15e7d95b2231cc1c381" translate="yes" xml:space="preserve">
+          <source>### Redirect Mode
+When in redirect mode, the tracking system uses a given Target class to redirect the client to another page after the tracking is finished. This accomplishes a method of tracking that is transparent to users - depending on your URL schema.</source>
+          <target state="translated">###重定向模式在重定向模式下，跟踪完成后，跟踪系统使用给定的Target类将客户端重定向到另一个页面。这完成了一种对用户透明的跟踪方法-取决于您的URL架构。</target>
+        </trans-unit>
+        <trans-unit id="e400e4480d0f08262b80631f8ecda7fcb69e11ed" translate="yes" xml:space="preserve">
+          <source>### Request Entities
+An &amp;ldquo;Entity&amp;rdquo; is a django model that stores information related to an HTTP request in django. An entity can be any django model and can optionally define a method called &amp;ldquo;beacon_update&amp;rdquo; which will be called and passed the request from the tracking view prior to redirecting to our target URL. This allows you to save data from the request straight into the model very easily.</source>
+          <target state="translated">###请求实体&amp;ldquo;实体&amp;rdquo;是django模型，用于在django中存储与HTTP请求相关的信息。实体可以是任何Django模型，并且可以选择定义一个名为&amp;ldquo; beacon_update&amp;rdquo;的方法，该方法将在重定向到我们的目标URL之前从跟踪视图中调用并传递请求。这使您可以非常轻松地将请求中的数据直接保存到模型中。</target>
+        </trans-unit>
+        <trans-unit id="b46c5c2cb7b76c7ee07ba6dfd9b07bdabb16dfa8" translate="yes" xml:space="preserve">
+          <source>### Target Destinations
+When not being used in pixel mode, a &amp;ldquo;target&amp;rdquo; represents where to redirect traffic after the Beacon has been created. A target is simply a model that defines a get_beacon_url method, which should return a URL to the page that our &amp;ldquo;entity&amp;rdquo; will be redirected to after processing a beacon. For compatibility with other django applications, webbugger checks if get_absolute_url is defined as an attribute on our target model when get_beacon_url does not exist. If neither of these methods exist, an HTTP 404 is shown because we have nowhere to direct traffic to after creating the tracking beacon.</source>
+          <target state="translated">###目标目的地在像素模式下不使用时，&amp;ldquo;目标&amp;rdquo;表示创建信标后将流量重定向到何处。目标只是一个定义get_beacon_url方法的模型，该方法应将URL返回到处理信标后将&amp;ldquo;实体&amp;rdquo;重定向到的页面。为了与其他django应用程序兼容，当get_beacon_url不存在时，webbugger会检查是否将get_absolute_url定义为目标模型上的属性。如果这两种方法都不存在，则会显示HTTP 404，因为在创建跟踪信标后我们无处将流量定向到。</target>
+        </trans-unit>
+        <trans-unit id="d95589f5c9838b81a307e64f0333f1ded6afb455" translate="yes" xml:space="preserve">
+          <source>### Traffic Sources
+The &amp;ldquo;Source&amp;rdquo; can be any django model. This is useful for storing information regarding where the traffic came from. For instance, in an affiliate marketing system - you could use the source attribute of our beacon to reference the affiliate that sent the traffic to your site.</source>
+          <target state="translated">###流量来源&amp;ldquo;来源&amp;rdquo;可以是任何Django模型。这对于存储有关流量来自何处的信息很有用。例如，在会员营销系统中，您可以使用我们的信标的source属性来引用向网站发送流量的会员。</target>
+        </trans-unit>
+        <trans-unit id="7fcc0d7beacc203d05f947cadc5d2a75c4e81ee6" translate="yes" xml:space="preserve">
+          <source>Basic webbugger/tracking beacon for django</source>
+          <target state="translated">django的基本webbugger/跟踪信标。</target>
+        </trans-unit>
+        <trans-unit id="f9d8915409f4a22a6693f500efd76d26e642d00e" translate="yes" xml:space="preserve">
+          <source>For everything tracked, a &amp;ldquo;Beacon&amp;rdquo; is created. This beacon represents our tracking data. Beacons can consist of a Target, an Entity, and a Source. Entity and Source are provided for systems that want to track some sort of data affiliated with their page hits. A Target is required when redirecting, but it is unneeded when using pixels for tracking.</source>
+          <target state="translated">对于所有跟踪的内容，都会创建一个&amp;ldquo;信标&amp;rdquo;。该信标代表我们的跟踪数据。信标可以由目标，实体和源组成。实体和源是为希望跟踪与其页面匹配相关的某种数据的系统提供的。重定向时需要使用目标，但在使用像素进行跟踪时则不需要。</target>
+        </trans-unit>
+        <trans-unit id="af3a2bc77e2ad9f22d1b961b5f2a9e8ed281a604" translate="yes" xml:space="preserve">
+          <source>The pixel method allows you to do more clever things, such as including tracking inside of emails in order to see if someone has viewed an email that you sent them - assuming that they have images enabled in their email client, of course.</source>
+          <target state="translated">像素方法可以让你做更多聪明的事情,比如在邮件中加入跟踪功能,以便查看某人是否查看了你发送给他们的邮件--当然,前提是他们在邮件客户端中启用了图片。</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

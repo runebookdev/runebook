@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="ru" datatype="htmlbody" original="https://pypi.org/project/pcodedmp/">
+    <body>
+      <group id="pcodedmp">
+        <trans-unit id="bdb479e6c124df71a32ee8281a697c94ed0807cc" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;-b&lt;/code&gt;, &lt;code&gt;--verbose&lt;/code&gt; The contents of the &lt;code&gt;dir&lt;/code&gt; and &lt;code&gt;_VBA_PROJECT&lt;/code&gt; streams is dumped in hex and ASCII form. In addition, the raw bytes of each compiled into p-code VBA line are also dumped in hex and ASCII.</source>
+          <target state="translated">&lt;code&gt;-b&lt;/code&gt; , &lt;code&gt;--verbose&lt;/code&gt; The contents of the &lt;code&gt;dir&lt;/code&gt; and &lt;code&gt;_VBA_PROJECT&lt;/code&gt; streams is dumped in hex and ASCII form. In addition, the raw bytes of each compiled into p-code VBA line are also dumped in hex and ASCII.</target>
+        </trans-unit>
+        <trans-unit id="9c84d5286883bb1b479c962af498619c03da167b" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;-d&lt;/code&gt;, &lt;code&gt;--disasmonly&lt;/code&gt; Only the p-code will be disassembled, without the parsed contents of the &lt;code&gt;dir&lt;/code&gt; stream or the identifiers in the &lt;code&gt;_VBA_PROJECT&lt;/code&gt; stream.</source>
+          <target state="translated">&lt;code&gt;-d&lt;/code&gt; , &lt;code&gt;--disasmonly&lt;/code&gt; Only the p-code will be disassembled, without the parsed contents of the &lt;code&gt;dir&lt;/code&gt; stream or the identifiers in the &lt;code&gt;_VBA_PROJECT&lt;/code&gt; stream.</target>
+        </trans-unit>
+        <trans-unit id="b7154718162ed39e2a135011a31d4cacbc928c2e" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;-h&lt;/code&gt;, &lt;code&gt;--help&lt;/code&gt;    Displays a short explanation how to use the script and what the command-line options are.</source>
+          <target state="translated">&lt;code&gt;-h&lt;/code&gt; , &lt;code&gt;--help&lt;/code&gt; Displays a short explanation how to use the script and what the command-line options are.</target>
+        </trans-unit>
+        <trans-unit id="edb952c2a04dca30c6a3d1e0ae483b923ad04d47" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;-n&lt;/code&gt;, &lt;code&gt;--norecurse&lt;/code&gt; If a name specified on the command line is a directory, process only the files in this directory; do not process the files in its subdirectories.</source>
+          <target state="translated">&lt;code&gt;-n&lt;/code&gt; , &lt;code&gt;--norecurse&lt;/code&gt; If a name specified on the command line is a directory, process only the files in this directory; do not process the files in its subdirectories.</target>
+        </trans-unit>
+        <trans-unit id="5965c2762dc9c28e064b92bb361aeb1c981cf245" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;-o OUTFILE&lt;/code&gt;, &lt;code&gt;--output OUTFILE&lt;/code&gt; Save the results to the specified output file, instead of sending it to the standard output.</source>
+          <target state="translated">&lt;code&gt;-o OUTFILE&lt;/code&gt; , &lt;code&gt;--output OUTFILE&lt;/code&gt; Save the results to the specified output file, instead of sending it to the standard output.</target>
+        </trans-unit>
+        <trans-unit id="014c6497a6eba7b85d09892c9a4d88c4741612fc" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;-v&lt;/code&gt;, &lt;code&gt;--version&lt;/code&gt; Displays the version of the script.</source>
+          <target state="translated">&lt;code&gt;-v&lt;/code&gt; , &lt;code&gt;--version&lt;/code&gt; Displays the version of the script.</target>
+        </trans-unit>
+        <trans-unit id="68ea6693503222e1001639a400a43b3facf26d0a" translate="yes" xml:space="preserve">
+          <source>&lt;em&gt;Execodes&lt;/em&gt;. When the p-code has been executed at least once, a further tokenized form of it is stored elsewhere in the document (in streams, the names of which begin with &lt;code&gt;__SRP_&lt;/code&gt;, followed by a number). From there it can be executed much faster. However, the format of the execodes is extremely complex and is specific for the particular Office version (not VBA version) in which they have been created. This makes them extremely non-portable. In addition, their presence is not necessary - they can be removed and the macros will run just fine (from the p-code).</source>
+          <target state="translated">&lt;em&gt;Execodes&lt;/em&gt;. When the p-code has been executed at least once, a further tokenized form of it is stored elsewhere in the document (in streams, the names of which begin with &lt;code&gt;__SRP_&lt;/code&gt; , followed by a number). From there it can be executed much faster. However, the format of the execodes is extremely complex and is specific for the particular Office version (not VBA version) in which they have been created. This makes them extremely non-portable. In addition, their presence is not necessary - they can be removed and the macros will run just fine (from the p-code).</target>
+        </trans-unit>
+        <trans-unit id="01591000f682757164719e05b89ad25f95d6fb04" translate="yes" xml:space="preserve">
+          <source>&lt;em&gt;P-code&lt;/em&gt;. As each VBA line is entered into the VBA editor, it is immediately compiled into p-code (a pseudo code for a stack machine) and stored in a different place in the module stream. The p-code is precisely what is executed most of the time. In fact, even when you open the source of a macro module in the VBA editor, what is displayed is not the decompressed source code but the p-code decompiled into source. Only if the document is opened under a version of Office that uses a different VBA version from the one that has been used to create the document, the stored compressed source code is re-compiled into p-code and then that p-code is executed. This makes it possible to open a VBA-containing document on any version of Office that supports VBA and have the macros inside remain executable, despite the fact that the different versions of VBA use different (incompatible) p-code instructions.</source>
+          <target state="translated">&lt;em&gt;P-code&lt;/em&gt;. As each VBA line is entered into the VBA editor, it is immediately compiled into p-code (a pseudo code for a stack machine) and stored in a different place in the module stream. The p-code is precisely what is executed most of the time. In fact, even when you open the source of a macro module in the VBA editor, what is displayed is not the decompressed source code but the p-code decompiled into source. Only if the document is opened under a version of Office that uses a different VBA version from the one that has been used to create the document, the stored compressed source code is re-compiled into p-code and then that p-code is executed. This makes it possible to open a VBA-containing document on any version of Office that supports VBA and have the macros inside remain executable, despite the fact that the different versions of VBA use different (incompatible) p-code instructions.</target>
+        </trans-unit>
+        <trans-unit id="07745f8277821ea70ee3fde3e580608b13d2111a" translate="yes" xml:space="preserve">
+          <source>&lt;em&gt;Source code&lt;/em&gt;. The original source code of the macro module is compressed and stored at the end of the module stream. This makes it relatively easy to locate and extract and most free DFIR tools for macro analysis like &lt;a href=&quot;https://blog.didierstevens.com/programs/oledump-py/&quot;&gt;oledump&lt;/a&gt; or &lt;a href=&quot;http://www.decalage.info/python/olevba&quot;&gt;olevba&lt;/a&gt; or even many professional anti-virus tools look only at this form. However, most of the time the source code is completely ignored by Office. In fact, it is possible to remove the source code (and therefore make all these tools think that there are no macros present), yet the macros will still execute without any problems. I have created a &lt;a href=&quot;http://bontchev.my.contact.bg/poc2.zip&quot;&gt;proof of concept&lt;/a&gt; illustrating this. Most tools will not see any macros in the documents in this archive it but if opened with the corresponding Word version (that matches the document name), it will display a message and will launch &lt;code&gt;calc.exe&lt;/code&gt;. It is surprising that malware authors are not using this trick more widely.</source>
+          <target state="translated">&lt;em&gt;Source code&lt;/em&gt;. The original source code of the macro module is compressed and stored at the end of the module stream. This makes it relatively easy to locate and extract and most free DFIR tools for macro analysis like &lt;a href=&quot;https://blog.didierstevens.com/programs/oledump-py/&quot;&gt;oledump&lt;/a&gt; or &lt;a href=&quot;http://www.decalage.info/python/olevba&quot;&gt;olevba&lt;/a&gt; or even many professional anti-virus tools look only at this form. However, most of the time the source code is completely ignored by Office. In fact, it is possible to remove the source code (and therefore make all these tools think that there are no macros present), yet the macros will still execute without any problems. I have created a &lt;a href=&quot;http://bontchev.my.contact.bg/poc2.zip&quot;&gt;proof of concept&lt;/a&gt; illustrating this. Most tools will not see any macros in the documents in this archive it but if opened with the corresponding Word version (that matches the document name), it will display a message and will launch &lt;code&gt;calc.exe&lt;/code&gt; . It is surprising that malware authors are not using this trick more widely.</target>
+        </trans-unit>
+        <trans-unit id="66d12c163e5b6df36ab5063ff55086d804a4cef0" translate="yes" xml:space="preserve">
+          <source>A VBA p-code disassembler</source>
+          <target state="translated">Разобранный VBA p-код</target>
+        </trans-unit>
+        <trans-unit id="4a78678bfdefd498564b5685f72ac3b2441cfb74" translate="yes" xml:space="preserve">
+          <source>Added a sanity check to avoid errors when parsing object declarations</source>
+          <target state="translated">Добавлена проверка вменяемости во избежание ошибок при разборе объявлений объектов</target>
+        </trans-unit>
+        <trans-unit id="e182999e1af27e8bfbdf3fff5ce23475f47e015a" translate="yes" xml:space="preserve">
+          <source>All versions of Office: The &lt;code&gt;Alias &quot;SomeName&quot;&lt;/code&gt; part of external function declarations (e.g., &lt;code&gt;Private Declare PtrSafe Function SomeFunc Lib &quot;SomeLib&quot; Alias &quot;SomeName&quot; () As Long&lt;/code&gt;) is not disassembled.</source>
+          <target state="translated">All versions of Office: The &lt;code&gt;Alias &quot;SomeName&quot;&lt;/code&gt; part of external function declarations (e.g., &lt;code&gt;Private Declare PtrSafe Function SomeFunc Lib &quot;SomeLib&quot; Alias &quot;SomeName&quot; () As Long&lt;/code&gt; ) is not disassembled.</target>
+        </trans-unit>
+        <trans-unit id="12238224608eba95ce64d13490381b85aff78645" translate="yes" xml:space="preserve">
+          <source>All versions of Office: The &lt;code&gt;Public&lt;/code&gt; property of custom type definitions (e.g., &lt;code&gt;Public Type SomeType&lt;/code&gt;) is not disassembled.</source>
+          <target state="translated">All versions of Office: The &lt;code&gt;Public&lt;/code&gt; property of custom type definitions (e.g., &lt;code&gt;Public Type SomeType&lt;/code&gt; ) is not disassembled.</target>
+        </trans-unit>
+        <trans-unit id="22c5d1f0bd4e193c6d706b75e2c580fc84945bb7" translate="yes" xml:space="preserve">
+          <source>All versions of Office: The custom type of a subroutine or function argument is not disassembled correctly and &lt;code&gt;CustomType&lt;/code&gt; is used instead. For instance, &lt;code&gt;Sub Foo (arg As Bar)&lt;/code&gt; will be disassembled as &lt;code&gt;Sub Foo (arg As CustomType)&lt;/code&gt;.</source>
+          <target state="translated">All versions of Office: The custom type of a subroutine or function argument is not disassembled correctly and &lt;code&gt;CustomType&lt;/code&gt; is used instead. For instance, &lt;code&gt;Sub Foo (arg As Bar)&lt;/code&gt; will be disassembled as &lt;code&gt;Sub Foo (arg As CustomType)&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="8ef7213e575119b9063a9829bf0081766983433e" translate="yes" xml:space="preserve">
+          <source>Change log</source>
+          <target state="translated">Журнал изменений</target>
+        </trans-unit>
+        <trans-unit id="b2e01f62c3eb40f5bf2532e51f25e5e6874f7447" translate="yes" xml:space="preserve">
+          <source>Changed it not to require the &lt;code&gt;win_unicode_console&lt;/code&gt; module when it is not available - e.g., when not running on a Windows machine or when running under the PyPy implementation of Python, thanks to &lt;a href=&quot;https://github.com/decalage2&quot;&gt;Philippe Lagadec&lt;/a&gt;.</source>
+          <target state="translated">Changed it not to require the &lt;code&gt;win_unicode_console&lt;/code&gt; module when it is not available - e.g., when not running on a Windows machine or when running under the PyPy implementation of Python, thanks to &lt;a href=&quot;https://github.com/decalage2&quot;&gt;Philippe Lagadec&lt;/a&gt;.</target>
+        </trans-unit>
+        <trans-unit id="90c3138a6ef2403ee4a4fbbba3a183ac120fb2a1" translate="yes" xml:space="preserve">
+          <source>Converted the script into a package that can be installed with &lt;code&gt;pip&lt;/code&gt;. Use the command &lt;code&gt;pip install pcodedmp&lt;/code&gt;.</source>
+          <target state="translated">Converted the script into a package that can be installed with &lt;code&gt;pip&lt;/code&gt; . Use the command &lt;code&gt;pip install pcodedmp&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="081ff55729387a4207a85431246ff58510d28797" translate="yes" xml:space="preserve">
+          <source>Disassembling the various declarations (&lt;code&gt;New&lt;/code&gt;, &lt;code&gt;Type&lt;/code&gt;, &lt;code&gt;Dim&lt;/code&gt;, &lt;code&gt;ReDim&lt;/code&gt;, &lt;code&gt;Sub&lt;/code&gt;, &lt;code&gt;Function&lt;/code&gt;, &lt;code&gt;Property&lt;/code&gt;).</source>
+          <target state="translated">Disassembling the various declarations ( &lt;code&gt;New&lt;/code&gt; , &lt;code&gt;Type&lt;/code&gt; , &lt;code&gt;Dim&lt;/code&gt; , &lt;code&gt;ReDim&lt;/code&gt; , &lt;code&gt;Sub&lt;/code&gt; , &lt;code&gt;Function&lt;/code&gt; , &lt;code&gt;Property&lt;/code&gt; ).</target>
+        </trans-unit>
+        <trans-unit id="2d7e53487dfc475dc3b5bcbd15c56e872322b951" translate="yes" xml:space="preserve">
+          <source>Fixed a few crashes and documented better some disassembly failures.</source>
+          <target state="translated">Исправлено несколько сбоев и лучше документированы некоторые сбои при разборке.</target>
+        </trans-unit>
+        <trans-unit id="7c7e45279b897dcaa62f2b89332ca558f0283e7f" translate="yes" xml:space="preserve">
+          <source>Fixed a parsing error when disassembling object declarations.</source>
+          <target state="translated">Исправлена ошибка синтаксического анализа при разборке объявлений объектов.</target>
+        </trans-unit>
+        <trans-unit id="22668ed8c745c58c1cd91d8b885a4b4eba03edf2" translate="yes" xml:space="preserve">
+          <source>For instance, using the script on one of the documents in the &lt;a href=&quot;http://bontchev.my.contact.bg/poc2.zip&quot;&gt;proof of concept&lt;/a&gt; mentioned above produces the following results:</source>
+          <target state="translated">For instance, using the script on one of the documents in the &lt;a href=&quot;http://bontchev.my.contact.bg/poc2.zip&quot;&gt;proof of concept&lt;/a&gt; mentioned above produces the following results:</target>
+        </trans-unit>
+        <trans-unit id="30fbae0be30f9572a2044c56c91a52bf41a9651d" translate="yes" xml:space="preserve">
+          <source>For reference, it is the result of compiling the following VBA code:</source>
+          <target state="translated">Для справки,это результат компиляции следующего кода VBA:</target>
+        </trans-unit>
+        <trans-unit id="82204cf57f7ea8f0386796f910f563c53928e36d" translate="yes" xml:space="preserve">
+          <source>I am not an experienced Python programmer and the code is ugly. Somebody more familiar with Python than me should probably rewrite the script and make it look better.</source>
+          <target state="translated">Я не опытный программист с Python и код уродлив.Кто-то более знакомый с Python,чем я,наверное,должен переписать скрипт и сделать его лучше.</target>
+        </trans-unit>
+        <trans-unit id="6ad3bb46ab7dc43d49697fcdbfd57a4ca81f089f" translate="yes" xml:space="preserve">
+          <source>I do not have access to 64-bit Office 2016 and the few samples of documents, generated by this version of Office, that I have, have been insufficient for me to figure out where the corresponding information resides. I know where it resides in the other versions of Office, but it has been moved elsewhere in 64-bit Office 2016 and the old algorithms no longer work.</source>
+          <target state="translated">У меня нет доступа к 64-битной версии Office 2016,а те немногие образцы документов,которые были сгенерированы этой версией Office,были недостаточны для того,чтобы я мог выяснить,где находится соответствующая информация.Я знаю,где она находится в других версиях Office,но она была перенесена в другое место в 64-битном Office 2016,и старые алгоритмы больше не работают.</target>
+        </trans-unit>
+        <trans-unit id="86d5e4cde3699b011573800d512cc35dfeed8ddc" translate="yes" xml:space="preserve">
+          <source>If the output of the program is sent to a file, instead of to the console (either by using the &lt;code&gt;-o&lt;/code&gt; option or by redirecting &lt;code&gt;stdout&lt;/code&gt;), any non-ASCII strings (like module names, texsts used in the macros, etc.) might not be properly encoded.</source>
+          <target state="translated">If the output of the program is sent to a file, instead of to the console (either by using the &lt;code&gt;-o&lt;/code&gt; option or by redirecting &lt;code&gt;stdout&lt;/code&gt; ), any non-ASCII strings (like module names, texsts used in the macros, etc.) might not be properly encoded.</target>
+        </trans-unit>
+        <trans-unit id="2b8927fcd44574fb245bc143a8145a9e39aad6d0" translate="yes" xml:space="preserve">
+          <source>If you would rather install it from the GitHub repository, you can do it like this:</source>
+          <target state="translated">Если вы хотите установить его из репозитория GitHub,вы можете сделать это следующим образом:</target>
+        </trans-unit>
+        <trans-unit id="de68ce19e33e4de9f51cdd77901388a6cbd36f6a" translate="yes" xml:space="preserve">
+          <source>Implement support of VBA3 (Excel95).</source>
+          <target state="translated">Поддержка VBA3 (Excel95).</target>
+        </trans-unit>
+        <trans-unit id="86c81fb94f734483d1b8eacfb739b225a6a63eb0" translate="yes" xml:space="preserve">
+          <source>Implemented VBA7 support.</source>
+          <target state="translated">Реализована поддержка VBA7.</target>
+        </trans-unit>
+        <trans-unit id="34cba57a8f3937847ed4db3cecf7ebf6dd54c125" translate="yes" xml:space="preserve">
+          <source>Implemented handling of documents saved in Open XML format (which is the default format of Office 2007 and higher) - &lt;code&gt;.docm&lt;/code&gt;, &lt;code&gt;.xlsm&lt;/code&gt;, &lt;code&gt;.pptm&lt;/code&gt;.</source>
+          <target state="translated">Implemented handling of documents saved in Open XML format (which is the default format of Office 2007 and higher) - &lt;code&gt;.docm&lt;/code&gt; , &lt;code&gt;.xlsm&lt;/code&gt; , &lt;code&gt;.pptm&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="51d65764c7db13cac79bb00887c9001f88a8cb04" translate="yes" xml:space="preserve">
+          <source>Implemented support for documents created by the 64-bit version of Office.</source>
+          <target state="translated">Реализована поддержка документов,созданных 64-битной версией Office.</target>
+        </trans-unit>
+        <trans-unit id="0ae27a611c3dde6d2f4b1a13b400f462df1a11c7" translate="yes" xml:space="preserve">
+          <source>Implemented support for module names with non-ASCII characters in their names. Thanks to &lt;a href=&quot;https://github.com/decalage2&quot;&gt;Philippe Lagadec&lt;/a&gt; for helping me with that.</source>
+          <target state="translated">Implemented support for module names with non-ASCII characters in their names. Thanks to &lt;a href=&quot;https://github.com/decalage2&quot;&gt;Philippe Lagadec&lt;/a&gt; for helping me with that.</target>
+        </trans-unit>
+        <trans-unit id="05cd90b6c020ee46fd8b388d4fffedcf48e81102" translate="yes" xml:space="preserve">
+          <source>Implemented support of some VBA7-specific features (&lt;code&gt;Friend&lt;/code&gt;, &lt;code&gt;PtrSafe&lt;/code&gt;, &lt;code&gt;LongPtr&lt;/code&gt;).</source>
+          <target state="translated">Implemented support of some VBA7-specific features ( &lt;code&gt;Friend&lt;/code&gt; , &lt;code&gt;PtrSafe&lt;/code&gt; , &lt;code&gt;LongPtr&lt;/code&gt; ).</target>
+        </trans-unit>
+        <trans-unit id="e4bdfaea0273c29654697e50389999ca099a3915" translate="yes" xml:space="preserve">
+          <source>Improved support of 64-bit Office documents.</source>
+          <target state="translated">Улучшение поддержки 64-битных документов Office.</target>
+        </trans-unit>
+        <trans-unit id="a219d5f4d39c8bcc078154a75cce9607e48dee1b" translate="yes" xml:space="preserve">
+          <source>Improved the disassembling of &lt;code&gt;Dim&lt;/code&gt; declarations.</source>
+          <target state="translated">Improved the disassembling of &lt;code&gt;Dim&lt;/code&gt; declarations.</target>
+        </trans-unit>
+        <trans-unit id="b4380bca018f92d07c43a12e7515e1f67d6037b3" translate="yes" xml:space="preserve">
+          <source>Improved the documentation a bit.</source>
+          <target state="translated">Немного улучшила документацию.</target>
+        </trans-unit>
+        <trans-unit id="2d2745c6a52a8530e3d1ae44888db948ce2624e9" translate="yes" xml:space="preserve">
+          <source>Initial version.</source>
+          <target state="translated">Первоначальная версия.</target>
+        </trans-unit>
+        <trans-unit id="c81b79df3c6448eae7c4f80428b54cd5692a17d7" translate="yes" xml:space="preserve">
+          <source>Installation</source>
+          <target state="translated">Установка</target>
+        </trans-unit>
+        <trans-unit id="2473e96bc614a911821242119918a241a41836d6" translate="yes" xml:space="preserve">
+          <source>Introduction</source>
+          <target state="translated">Введение</target>
+        </trans-unit>
+        <trans-unit id="1bbb9e29fd65fe00d35c0b72a777ecad45954782" translate="yes" xml:space="preserve">
+          <source>It is not widely known, but macros written in VBA (Visual Basic for Applications; the macro programming language used in Microsoft Office) exist in three different executable forms, each of which can be what is actually executed at run time, depending on the circumstances. These forms are:</source>
+          <target state="translated">Это малоизвестно,но макросы,написанные на VBA (Visual Basic for Applications;язык программирования макросов,используемый в Microsoft Office),существуют в трех различных исполняемых формах,каждая из которых может быть тем,что реально выполняется во время выполнения,в зависимости от обстоятельств.Этими формами являются:</target>
+        </trans-unit>
+        <trans-unit id="b35d4f63dc3fe926a9db173d1f73bb17b3726246" translate="yes" xml:space="preserve">
+          <source>Known problems</source>
+          <target state="translated">Известные проблемы</target>
+        </trans-unit>
+        <trans-unit id="6dcac53a9020da573d9e929bd2a74e3896840f99" translate="yes" xml:space="preserve">
+          <source>Now runs under Python 3.x too.</source>
+          <target state="translated">Теперь и под Питоном 3.x тоже.</target>
+        </trans-unit>
+        <trans-unit id="f302e3bab1e3d4e3b999b847752d4cb124b5bb4f" translate="yes" xml:space="preserve">
+          <source>Office 2000 and higher: The type of a subroutine or function argument of type &lt;code&gt;ParamArray&lt;/code&gt; is not disassembled correctly. For instance, &lt;code&gt;Sub Foo (ParamArray arg())&lt;/code&gt; will be disassembled as &lt;code&gt;Sub Foo (arg)&lt;/code&gt;.</source>
+          <target state="translated">Office 2000 and higher: The type of a subroutine or function argument of type &lt;code&gt;ParamArray&lt;/code&gt; is not disassembled correctly. For instance, &lt;code&gt;Sub Foo (ParamArray arg())&lt;/code&gt; will be disassembled as &lt;code&gt;Sub Foo (arg)&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="2739c3899c96ac7b2c4ef1aad7c4d042b0ac6ff7" translate="yes" xml:space="preserve">
+          <source>Office 2016 64-bit only: The &lt;code&gt;Declare&lt;/code&gt; part of external function declarations (e.g., &lt;code&gt;Private Declare PtrSafe Function SomeFunc Lib &quot;SomeLib&quot; Alias &quot;SomeName&quot; () As Long&lt;/code&gt;) is not disassembled.</source>
+          <target state="translated">Office 2016 64-bit only: The &lt;code&gt;Declare&lt;/code&gt; part of external function declarations (e.g., &lt;code&gt;Private Declare PtrSafe Function SomeFunc Lib &quot;SomeLib&quot; Alias &quot;SomeName&quot; () As Long&lt;/code&gt; ) is not disassembled.</target>
+        </trans-unit>
+        <trans-unit id="a535802e19decb96ddc691f158bb8b4a08c785f0" translate="yes" xml:space="preserve">
+          <source>Office 2016 64-bit only: The &lt;code&gt;Private&lt;/code&gt; property of &lt;code&gt;Sub&lt;/code&gt;, &lt;code&gt;Function&lt;/code&gt; and &lt;code&gt;Property&lt;/code&gt; declarations is not disassembled.</source>
+          <target state="translated">Office 2016 64-bit only: The &lt;code&gt;Private&lt;/code&gt; property of &lt;code&gt;Sub&lt;/code&gt; , &lt;code&gt;Function&lt;/code&gt; and &lt;code&gt;Property&lt;/code&gt; declarations is not disassembled.</target>
+        </trans-unit>
+        <trans-unit id="a3712abb84071349f8ec9ca3c76b8344dfb9f5ff" translate="yes" xml:space="preserve">
+          <source>Office 2016 64-bit only: When disassembling variables declared as being of custom type (e.g., &lt;code&gt;Dim SomeVar As SomeType&lt;/code&gt;), the type (&lt;code&gt;As SomeType&lt;/code&gt;) is not disassembled.</source>
+          <target state="translated">Office 2016 64-bit only: When disassembling variables declared as being of custom type (e.g., &lt;code&gt;Dim SomeVar As SomeType&lt;/code&gt; ), the type ( &lt;code&gt;As SomeType&lt;/code&gt; ) is not disassembled.</target>
+        </trans-unit>
+        <trans-unit id="0980501d375d03a81c84efb40dbd303377ecc808" translate="yes" xml:space="preserve">
+          <source>Removed some unused variables.</source>
+          <target state="translated">Удалены некоторые неиспользуемые переменные.</target>
+        </trans-unit>
+        <trans-unit id="745fa3c0f1f0a3896b084ecdfc8d64f201014cdd" translate="yes" xml:space="preserve">
+          <source>Since most of the time it is the p-code that determines what exactly a macro would do (even if neither source code, nor execodes are present), it would make sense to have a tool that can display it. This is what prompted us to create this VBA p-code disassembler.</source>
+          <target state="translated">Поскольку в большинстве случаев именно p-код определяет,что именно будет делать макрос (даже если ни исходный код,ни исполняемые файлы отсутствуют),имеет смысл иметь инструмент,способный его отобразить.Именно это и побудило нас создать этот дизассемблер VBA p-кода.</target>
+        </trans-unit>
+        <trans-unit id="363088ffba1823d4877038af2b24429a8c48e8b4" translate="yes" xml:space="preserve">
+          <source>Storing the opcodes in a more efficient manner.</source>
+          <target state="translated">Хранение опкодов более эффективным способом.</target>
+        </trans-unit>
+        <trans-unit id="e42e8bfac71244811caaeb0d6b139cca9b18bd12" translate="yes" xml:space="preserve">
+          <source>The above command will install the latest version of &lt;code&gt;pcodedmp&lt;/code&gt; (upgrading an older one if it already exists), while also installing all the necessary dependencies (currently only &lt;code&gt;oletools&lt;/code&gt; and &lt;code&gt;win_unicode_console&lt;/code&gt; but there might be additional ones in the future).</source>
+          <target state="translated">The above command will install the latest version of &lt;code&gt;pcodedmp&lt;/code&gt; (upgrading an older one if it already exists), while also installing all the necessary dependencies (currently only &lt;code&gt;oletools&lt;/code&gt; and &lt;code&gt;win_unicode_console&lt;/code&gt; but there might be additional ones in the future).</target>
+        </trans-unit>
+        <trans-unit id="976759f03053f29e7b1c6f2fe13fb5dcd3e7ff1e" translate="yes" xml:space="preserve">
+          <source>The functions that produce output now have the output file (default is &lt;code&gt;stdout&lt;/code&gt;) as a parameter, for better integration with other tools, thanks to &lt;a href=&quot;https://github.com/decalage2&quot;&gt;Philippe Lagadec&lt;/a&gt;.</source>
+          <target state="translated">The functions that produce output now have the output file (default is &lt;code&gt;stdout&lt;/code&gt; ) as a parameter, for better integration with other tools, thanks to &lt;a href=&quot;https://github.com/decalage2&quot;&gt;Philippe Lagadec&lt;/a&gt;.</target>
+        </trans-unit>
+        <trans-unit id="3db4900c916e278a75d750e7ae37319f8b86e43e" translate="yes" xml:space="preserve">
+          <source>The script also accepts the following command-line options:</source>
+          <target state="translated">Скрипт также принимает следующие опции командной строки:</target>
+        </trans-unit>
+        <trans-unit id="07eb68e01c35a54138f80e99d3e17ed5816b1b64" translate="yes" xml:space="preserve">
+          <source>The script supports VBA5 (Office 97, MacOffice 98), VBA6 (Office 2000 to Office 2009) and VBA7 (Office 2010 and higher).</source>
+          <target state="translated">Скрипт поддерживает VBA5 (Office 97,MacOffice 98),VBA6 (Office 2000 to Office 2009)и VBA7 (Office 2010 и выше).</target>
+        </trans-unit>
+        <trans-unit id="22c5636a04e03bb41720cd4af188439348cd161b" translate="yes" xml:space="preserve">
+          <source>The script takes as a command-line argument a list of one or more names of files or directories. If the name is an OLE2 document, it will be inspected for VBA code and the p-code of each code module will be disassembled. If the name is a directory, all the files in this directory and its subdirectories will be similarly processed. In addition to the disassembled p-code, by default the script also displays the parsed records of the &lt;code&gt;dir&lt;/code&gt; stream, as well as the identifiers (variable and function names) used in the VBA modules and stored in the &lt;code&gt;_VBA_PROJECT&lt;/code&gt; stream.</source>
+          <target state="translated">The script takes as a command-line argument a list of one or more names of files or directories. If the name is an OLE2 document, it will be inspected for VBA code and the p-code of each code module will be disassembled. If the name is a directory, all the files in this directory and its subdirectories will be similarly processed. In addition to the disassembled p-code, by default the script also displays the parsed records of the &lt;code&gt;dir&lt;/code&gt; stream, as well as the identifiers (variable and function names) used in the VBA modules and stored in the &lt;code&gt;_VBA_PROJECT&lt;/code&gt; stream.</target>
+        </trans-unit>
+        <trans-unit id="97e4f6e0fcb79d09d9a3e2deb7d099a104e73cb1" translate="yes" xml:space="preserve">
+          <source>The script will work both in Python version 2.6+ and in Python 3.x. The simplest way to install it is from &lt;a href=&quot;https://pypi.org/&quot;&gt;PyPi&lt;/a&gt; with &lt;code&gt;pip&lt;/code&gt;:</source>
+          <target state="translated">The script will work both in Python version 2.6+ and in Python 3.x. The simplest way to install it is from &lt;a href=&quot;https://pypi.org/&quot;&gt;PyPi&lt;/a&gt; with &lt;code&gt;pip&lt;/code&gt; :</target>
+        </trans-unit>
+        <trans-unit id="8665aed3624f4916345a2b028d6d28d352ad4245" translate="yes" xml:space="preserve">
+          <source>To do</source>
+          <target state="translated">Делать</target>
+        </trans-unit>
+        <trans-unit id="0bb18642b70b9f8a9c12ccf39487328f306b8e19" translate="yes" xml:space="preserve">
+          <source>Usage</source>
+          <target state="translated">Использование</target>
+        </trans-unit>
+        <trans-unit id="cde88e6ee1e2e408c3846cd16abdedae59b8ecef" translate="yes" xml:space="preserve">
+          <source>Version 1.0.0:</source>
+          <target state="translated">Версия 1.0.0:</target>
+        </trans-unit>
+        <trans-unit id="753f9b3e7ea63ffddafee3524790513e61e1948d" translate="yes" xml:space="preserve">
+          <source>Version 1.1.0:</source>
+          <target state="translated">Версия 1.1.0:</target>
+        </trans-unit>
+        <trans-unit id="689b7b02aa425a99d84980400262c0500575f8a4" translate="yes" xml:space="preserve">
+          <source>Version 1.2.0:</source>
+          <target state="translated">Версия 1.2.0:</target>
+        </trans-unit>
+        <trans-unit id="37eb3d6075a85827f3512535e9a9ddd8ee1e1f03" translate="yes" xml:space="preserve">
+          <source>Version 1.2.1:</source>
+          <target state="translated">Версия 1.2.1:</target>
+        </trans-unit>
+        <trans-unit id="9b6174c9be11e333503a30b2e4432e667f36a8f0" translate="yes" xml:space="preserve">
+          <source>Version 1.2.2:</source>
+          <target state="translated">Версия 1.2.2:</target>
+        </trans-unit>
+        <trans-unit id="705149d825edc587c6af7fa8cfeb48f74ade2e2f" translate="yes" xml:space="preserve">
+          <source>Version 1.2.3:</source>
+          <target state="translated">Версия 1.2.3:</target>
+        </trans-unit>
+        <trans-unit id="1bdb30ade3d0c6432bd4ed6fb5855a2bb08c6941" translate="yes" xml:space="preserve">
+          <source>Version 1.2.4:</source>
+          <target state="translated">Версия 1.2.4:</target>
+        </trans-unit>
+        <trans-unit id="1fa1d30660787ec8f75efa3f8b3319f1a7716c68" translate="yes" xml:space="preserve">
+          <source>Version 1.2.5:</source>
+          <target state="translated">Версия 1.2.5:</target>
+        </trans-unit>
+        <trans-unit id="080bc6d7602caa234f0332fff3bf745ee048be3e" translate="yes" xml:space="preserve">
+          <source>Version 1.2.6:</source>
+          <target state="translated">Версия 1.2.6:</target>
+        </trans-unit>
+        <trans-unit id="6db019182b0c4b5f9e31da4224d9c3c5b911ebc4" translate="yes" xml:space="preserve">
+          <source>While the script should support documents created by MacOffice, this has not been tested (and you know how well untested code usually works). This should be tested and any bugs related to it should be fixed.</source>
+          <target state="translated">Хотя скрипт должен поддерживать документы,созданные MacOffice,он не был протестирован (и вы знаете,как хорошо работает непроверенный код).Он должен быть протестирован и любые связанные с ним ошибки должны быть исправлены.</target>
+        </trans-unit>
+        <trans-unit id="14bf767eaaf8ed478c8eb99ca8ddd5e1adfcd3f7" translate="yes" xml:space="preserve">
+          <source>pcodedmp.py - A VBA p-code disassembler</source>
+          <target state="translated">pcodedmp.py-Разобранный p-код VBA</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

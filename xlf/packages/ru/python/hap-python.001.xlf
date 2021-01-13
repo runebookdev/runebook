@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="ru" datatype="htmlbody" original="https://pypi.org/project/hap-python/">
+    <body>
+      <group id="hap-python">
+        <trans-unit id="1e6dd649c61ba19988b0dd74d2e9ed21787b36d7" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;avahi-utils&lt;/code&gt; may also fit the bill. Then, you can install with &lt;code&gt;pip3&lt;/code&gt; (you will need &lt;code&gt;sudo&lt;/code&gt; or &lt;code&gt;--user&lt;/code&gt; for the install):</source>
+          <target state="translated">&lt;code&gt;avahi-utils&lt;/code&gt; также может отвечать всем требованиям. Затем вы можете установить с помощью &lt;code&gt;pip3&lt;/code&gt; (для установки вам понадобится &lt;code&gt;sudo&lt;/code&gt; или &lt;code&gt;--user&lt;/code&gt; ):</target>
+        </trans-unit>
+        <trans-unit id="39ab1402cb92992d90c529e9fe530c79b3918c19" translate="yes" xml:space="preserve">
+          <source>A typical flow for using HAP-python starts with implementing an Accessory. This is done by
+subclassing &lt;a href=&quot;pyhap/accessory.py&quot;&gt;Accessory&lt;/a&gt; and putting in place a few details
+(see below). After that, you give your accessory to an AccessoryDriver to manage. This
+will take care of advertising it on the local network, setting a HAP server and
+running the Accessory. Take a look at &lt;a href=&quot;main.py&quot;&gt;main.py&lt;/a&gt; for a quick start on that.</source>
+          <target state="translated">Типичный процесс использования HAP-python начинается с реализации аксессуара. Это делается путем создания подкласса &lt;a href=&quot;pyhap/accessory.py&quot;&gt;Accessory&lt;/a&gt; и добавления некоторых деталей (см. Ниже). После этого вы передаете аксессуар в распоряжение AccessoryDriver. Это позаботится о его рекламе в локальной сети, настройке HAP-сервера и запуске аксессуара. Взгляните на &lt;a href=&quot;main.py&quot;&gt;main.py,&lt;/a&gt; чтобы быстро начать это.</target>
+        </trans-unit>
+        <trans-unit id="d93d10ff0fbef1b4aa0ddc24e10e907746d3c85a" translate="yes" xml:space="preserve">
+          <source>API</source>
+          <target state="translated">API</target>
+        </trans-unit>
+        <trans-unit id="e32043c4f480968ce1c52b3484864cc608e695d9" translate="yes" xml:space="preserve">
+          <source>As a prerequisite, you will need Avahi/Bonjour installed (due to zeroconf package).
+On a Raspberry Pi, you can get it with:</source>
+          <target state="translated">В качестве предварительного условия вам необходимо установить Avahi/Bonjour (в связи с пакетом zeroconf).На малиновой пи,вы можете получить его с:</target>
+        </trans-unit>
+        <trans-unit id="889cb30a8fedbc8dc50a0a98b7f82364d8dd89b2" translate="yes" xml:space="preserve">
+          <source>As of version 2.0.0, HAP-python no longer supports python older than 3.5, because we
+are moving to asyncio. If your platform does not have a compatible python out of the
+box, you can install it manually or just use an older version of HAP-python.</source>
+          <target state="translated">Начиная с версии 2.0.0,HAP-питон больше не поддерживает питон старше 3.5,потому что мы переходим на асинсцио.Если на вашей платформе нет совместимого питона из коробки,вы можете установить его вручную или просто использовать более старую версию HAP-питона.</target>
+        </trans-unit>
+        <trans-unit id="3afa7e5cbfe031ecd2f4e3a7cc8d3a805f51d6f8" translate="yes" xml:space="preserve">
+          <source>By default, HAP-python will execute the &lt;code&gt;ffmpeg&lt;/code&gt; command with the negotiated parameters
+when the stream should be started and will &lt;code&gt;terminate&lt;/code&gt; the started process when the
+stream should be stopped (see the default: &lt;code&gt;Camera.FFMPEG_CMD&lt;/code&gt;).
+If the default command is not supported or correctly formatted for your platform,
+the streaming can fail.</source>
+          <target state="translated">По умолчанию HAP-python выполнит команду &lt;code&gt;ffmpeg&lt;/code&gt; с согласованными параметрами, когда поток должен быть запущен, и &lt;code&gt;terminate&lt;/code&gt; запущенный процесс, когда поток должен быть остановлен (см. &lt;code&gt;Camera.FFMPEG_CMD&lt;/code&gt; по умолчанию: Camera.FFMPEG_CMD ). Если команда по умолчанию не поддерживается или правильно отформатирована для вашей платформы, потоковая передача может завершиться ошибкой.</target>
+        </trans-unit>
+        <trans-unit id="1d95cf756f9d65b49696a59f4ee11e64d0cfbeff" translate="yes" xml:space="preserve">
+          <source>Camera - HAP-python supports the camera accessory from version 2.3.0!</source>
+          <target state="translated">Камера-HAP-питон поддерживает аксессуар для камеры начиная с версии 2.3.0!</target>
+        </trans-unit>
+        <trans-unit id="cfcec5427d3d66fe15054694a10327e5f45ea2ae" translate="yes" xml:space="preserve">
+          <source>Copy the below in &lt;code&gt;/etc/systemd/system/HAP-python.service&lt;/code&gt; (needs sudo).</source>
+          <target state="translated">Скопируйте приведенное ниже в &lt;code&gt;/etc/systemd/system/HAP-python.service&lt;/code&gt; (требуется sudo).</target>
+        </trans-unit>
+        <trans-unit id="01807e83877a54cd7fadca3bc37630754e7679bb" translate="yes" xml:space="preserve">
+          <source>Finally, if you can take snapshots from the camera, you may want to implement the
+&lt;code&gt;Camera.snapshot&lt;/code&gt; method. By default, this serves a stock photo.</source>
+          <target state="translated">Наконец, если вы можете делать снимки с камеры, вы можете реализовать метод &lt;code&gt;Camera.snapshot&lt;/code&gt; . По умолчанию это стандартная фотография.</target>
+        </trans-unit>
+        <trans-unit id="f84fc6d58a6e6a920dc6c865da8b853f646cd793" translate="yes" xml:space="preserve">
+          <source>For the above to work, you need to enable passwordless &lt;code&gt;/sbin/shutdown&lt;/code&gt; to whichever
+user is running &lt;code&gt;HAP-python&lt;/code&gt;. For example, do:</source>
+          <target state="translated">Чтобы вышеперечисленное работало, вам необходимо включить &lt;code&gt;/sbin/shutdown&lt;/code&gt; без пароля для любого пользователя, который запускает &lt;code&gt;HAP-python&lt;/code&gt; . Например, сделайте:</target>
+        </trans-unit>
+        <trans-unit id="ad37e324410258749eaaf612499da6572d1dbd65" translate="yes" xml:space="preserve">
+          <source>For these cases, HAP-python has hooks so that you can insert your own command or implement
+the logic for starting or stopping the stream. There are two options:</source>
+          <target state="translated">Для этих случаев HAP-пилон имеет крючки,так что вы можете вставить свою собственную команду или реализовать логику запуска или остановки потока.Есть два варианта:</target>
+        </trans-unit>
+        <trans-unit id="59b3d91075ff574717bd61fdefed059261984e24" translate="yes" xml:space="preserve">
+          <source>HAP-python</source>
+          <target state="translated">HAP-питон</target>
+        </trans-unit>
+        <trans-unit id="dd31d89b35abdb62b8f0d57d906b56e8bd239c56" translate="yes" xml:space="preserve">
+          <source>Have a look at the documentation of these methods for more information.</source>
+          <target state="translated">Для получения более подробной информации ознакомьтесь с документацией по этим методам.</target>
+        </trans-unit>
+        <trans-unit id="8503ede3ea63ea360679c1a7bb9c6feb415c1aeb" translate="yes" xml:space="preserve">
+          <source>Have fun!</source>
+          <target state="translated">Развлекайтесь!</target>
+        </trans-unit>
+        <trans-unit id="701dacd1cf472cbfc1b0c05cc139207e2529c590" translate="yes" xml:space="preserve">
+          <source>HomeKit Accessory Protocol implementation in python</source>
+          <target state="translated">HomeKit Вспомогательный протокол реализации в питоне</target>
+        </trans-unit>
+        <trans-unit id="45013ac76e301ac1539f391feaef4b0094fd2e2f" translate="yes" xml:space="preserve">
+          <source>HomeKit Accessory Protocol implementation in python 3.
+With this project, you can integrate your own smart devices and add them to your
+iOS Home app. Since Siri is integrated with the Home app, you can start voice-control your
+accessories right away.</source>
+          <target state="translated">Реализация протокола аксессуаров HomeKit в питоне 3.С помощью этого проекта вы можете интегрировать свои собственные смарт-устройства и добавить их в ваше приложение iOS Home.Так как Siri интегрирована с домашним приложением,вы можете сразу же начать голосовое управление своими аксессуарами.</target>
+        </trans-unit>
+        <trans-unit id="76176953d9ff84e4d067f99cad93203315365458" translate="yes" xml:space="preserve">
+          <source>I am not aware of any bugs, but I am more than confident that such exist. If you find any,
+please report and I will try to fix them.</source>
+          <target state="translated">Я не знаю ни об одной ошибке,но я более чем уверен,что такие ошибки существуют.Если вы найдете какие-нибудь из них,пожалуйста,сообщите об этом,и я постараюсь их исправить.</target>
+        </trans-unit>
+        <trans-unit id="e2f8051d617ad7d054c44910abaf3826ed42d36c" translate="yes" xml:space="preserve">
+          <source>If you are running &lt;code&gt;HAP-python&lt;/code&gt; on a Raspberry Pi, you may want to add a
+&lt;a href=&quot;pyhap/accessories/ShutdownSwitch.py&quot;&gt;Shutdown Switch&lt;/a&gt; to your Home. This is a
+Switch Accessory, which, when triggered, executes &lt;code&gt;sudo shutdown -h now&lt;/code&gt;, i.e.
+it shutdowns and halts the Pi. This allows you to safely unplug it.</source>
+          <target state="translated">Если вы используете &lt;code&gt;HAP-python&lt;/code&gt; на Raspberry Pi, вы можете добавить &lt;a href=&quot;pyhap/accessories/ShutdownSwitch.py&quot;&gt;выключатель&lt;/a&gt; в свой дом. Это аксессуар коммутатора, который при срабатывании выполняет &lt;code&gt;sudo shutdown -h now&lt;/code&gt; , то есть отключает и останавливает Pi. Это позволяет безопасно отключить его.</target>
+        </trans-unit>
+        <trans-unit id="43c3772e28b699c4c9e98678a3b2e12ce9cfe53d" translate="yes" xml:space="preserve">
+          <source>If you need more flexibility in managing streams, you can directly implement the
+&lt;code&gt;Camera&lt;/code&gt; methods &lt;code&gt;start&lt;/code&gt;, &lt;code&gt;stop&lt;/code&gt; and &lt;code&gt;reconfigure&lt;/code&gt;. Each will be called when the
+stream should be respectively started, stopped or reconfigured. The start and
+reconfigure methods are given the negotiated stream configuration parameters.</source>
+          <target state="translated">Если вам нужна большая гибкость в управлении потоками, вы можете напрямую реализовать методы &lt;code&gt;Camera&lt;/code&gt; &lt;code&gt;start&lt;/code&gt; , &lt;code&gt;stop&lt;/code&gt; и &lt;code&gt;reconfigure&lt;/code&gt; . Каждый из них будет вызываться, когда поток должен быть соответственно запущен, остановлен или перенастроен. Методы запуска и перенастройки получают согласованные параметры конфигурации потока.</target>
+        </trans-unit>
+        <trans-unit id="c7b59723f34b816f8f66ab192b40fdc6d43d532a" translate="yes" xml:space="preserve">
+          <source>Implement your own logic to start, stop and reconfigure the stream.</source>
+          <target state="translated">Реализуйте свою собственную логику запуска,остановки и перенастройки потока.</target>
+        </trans-unit>
+        <trans-unit id="c81b79df3c6448eae7c4f80428b54cd5692a17d7" translate="yes" xml:space="preserve">
+          <source>Installation</source>
+          <target state="translated">Установка</target>
+        </trans-unit>
+        <trans-unit id="cc9b9379809b1d8649301d28d38bf45a17370b7e" translate="yes" xml:space="preserve">
+          <source>Integrated with the home automation framework &lt;a href=&quot;https://github.com/home-assistant/home-assistant&quot;&gt;Home Assistant&lt;/a&gt;.</source>
+          <target state="translated">Интегрирован со средой домашней автоматизации &lt;a href=&quot;https://github.com/home-assistant/home-assistant&quot;&gt;Home Assistant&lt;/a&gt; .</target>
+        </trans-unit>
+        <trans-unit id="e9979a0a59ccc478044f75358f106166597a1dd5" translate="yes" xml:space="preserve">
+          <source>Main features:</source>
+          <target state="translated">Основные характеристики:</target>
+        </trans-unit>
+        <trans-unit id="5256fffffb868a37e07fc3a3a770a754b7273025" translate="yes" xml:space="preserve">
+          <source>Notice</source>
+          <target state="translated">Уведомление</target>
+        </trans-unit>
+        <trans-unit id="dd35a82571e22d2d74c1a6a873bee1c689bebc76" translate="yes" xml:space="preserve">
+          <source>Out of the box support for Apple-defined services - see them in &lt;a href=&quot;pyhap/resources&quot;&gt;the resources folder&lt;/a&gt;.</source>
+          <target state="translated">Готовая поддержка служб, определенных Apple - см. Их в &lt;a href=&quot;pyhap/resources&quot;&gt;папке ресурсов&lt;/a&gt; .</target>
+        </trans-unit>
+        <trans-unit id="ce10b116c4730d1733981731be4dec208438d7dd" translate="yes" xml:space="preserve">
+          <source>Pass your own command that will be executed when the stream should be started.</source>
+          <target state="translated">Передайте свою команду,которая будет выполнена при запуске потока.</target>
+        </trans-unit>
+        <trans-unit id="69e4cb5a69d9b79e83451b45a314219c694a4b75" translate="yes" xml:space="preserve">
+          <source>Run at boot</source>
+          <target state="translated">Бегите в ботинок</target>
+        </trans-unit>
+        <trans-unit id="23a6491664e0c009b610db0c34d857ea0276d788" translate="yes" xml:space="preserve">
+          <source>Run at boot (and a Switch to shutdown your device)</source>
+          <target state="translated">Запустите при загрузке (и переключатель для выключения устройства).</target>
+        </trans-unit>
+        <trans-unit id="cb887f1c4d7aac00b56faee324375eb025546107" translate="yes" xml:space="preserve">
+          <source>Secure pairing by just scanning the QR code.</source>
+          <target state="translated">Защитите сопряжение,просто отсканировав QR-код.</target>
+        </trans-unit>
+        <trans-unit id="ded9eb262af524cb1757730f871e2bde1dd84d24" translate="yes" xml:space="preserve">
+          <source>Service Callbacks</source>
+          <target state="translated">Обратные вызовы</target>
+        </trans-unit>
+        <trans-unit id="3adacee69486471079fd1ff1b455d67b4ccd2459" translate="yes" xml:space="preserve">
+          <source>Setting up a camera</source>
+          <target state="translated">Настройка камеры</target>
+        </trans-unit>
+        <trans-unit id="8718c7b57a23418bc7dab9d250279c2e19e779ad" translate="yes" xml:space="preserve">
+          <source>Shutdown switch</source>
+          <target state="translated">Выключатель выключения</target>
+        </trans-unit>
+        <trans-unit id="27dc3781f4f883f1ff966f6c0bcdf654a45bd571" translate="yes" xml:space="preserve">
+          <source>Some HAP know-how was taken from &lt;a href=&quot;https://github.com/KhaosT/HAP-NodeJS&quot;&gt;HAP-NodeJS by KhaosT&lt;/a&gt;.</source>
+          <target state="translated">Некоторые ноу-хау HAP были взяты из &lt;a href=&quot;https://github.com/KhaosT/HAP-NodeJS&quot;&gt;HAP-NodeJS компанией KhaosT&lt;/a&gt; .</target>
+        </trans-unit>
+        <trans-unit id="0584ec9c5715714a3382b500c551f7acc0f423b0" translate="yes" xml:space="preserve">
+          <source>Suggestions are always welcome.</source>
+          <target state="translated">Предложения всегда приветствуются.</target>
+        </trans-unit>
+        <trans-unit id="9730d4326a7b8a0d13c2be3b7fe29b80ad152bf6" translate="yes" xml:space="preserve">
+          <source>Table of Contents</source>
+          <target state="translated">Содержание</target>
+        </trans-unit>
+        <trans-unit id="916d6724a130780cee9f609f81f3928a0506c51b" translate="yes" xml:space="preserve">
+          <source>Test that everything is fine by doing:</source>
+          <target state="translated">Проверьте,что все в порядке:</target>
+        </trans-unit>
+        <trans-unit id="6387cc412d5f4a190c664ee31235a643a3ca951c" translate="yes" xml:space="preserve">
+          <source>The &lt;a href=&quot;pyhap/camera.py&quot;&gt;Camera accessory&lt;/a&gt; implements the HomeKit Protocol for negotiating stream settings,
+such as the picture width and height, number of audio channels and others.
+Starting a video and/or audio stream is very platform specific. Because of this,
+you need to figure out what video and audio settings your camera supports and set them
+in the &lt;code&gt;options&lt;/code&gt; parameter that is passed to the &lt;code&gt;Camera&lt;/code&gt; Accessory. Refer to the
+documentation for the &lt;code&gt;Camera&lt;/code&gt; contructor for the settings you need to specify.</source>
+          <target state="translated">&lt;a href=&quot;pyhap/camera.py&quot;&gt;Камера аксессуар&lt;/a&gt; реализует HomeKit протокол для переговоров параметров потока, например, шириной изображений и высоты, количество звуковых каналов и других. Запуск видео- и / или аудиопотока очень зависит от платформы. Из-за этого вам необходимо выяснить, какие настройки видео и звука поддерживает ваша камера, и установить их в &lt;code&gt;options&lt;/code&gt; параметров, который передается в аксессуар &lt;code&gt;Camera&lt;/code&gt; . Обратитесь к документации на конструктор &lt;code&gt;Camera&lt;/code&gt; узнать о необходимых настройках.</target>
+        </trans-unit>
+        <trans-unit id="2ca852a8d3481e0387951d298a60906d8c55ac96" translate="yes" xml:space="preserve">
+          <source>The full list of negotiated stream configuration parameters can be found in the
+documentation for the &lt;code&gt;Camera.start&lt;/code&gt; method.</source>
+          <target state="translated">Полный список согласованных параметров конфигурации потока можно найти в документации к методу &lt;code&gt;Camera.start&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="400fa412edabfd20c83e8e2f87812d6410e658d5" translate="yes" xml:space="preserve">
+          <source>The project was developed for a Raspberry Pi, but it should work on other platforms. To kick-start things,
+you can open &lt;code&gt;main.py&lt;/code&gt; or &lt;code&gt;busy_home.py&lt;/code&gt;, where you will find some fake accessories.
+Just run one of them, for example &lt;code&gt;python3 busy_home.py&lt;/code&gt;, and you can add it in
+the Home app (be sure to be in the same network).
+Stop it by hitting Ctrl+C.</source>
+          <target state="translated">Проект был разработан для Raspberry Pi, но он должен работать и на других платформах. Чтобы начать работу, вы можете открыть &lt;code&gt;main.py&lt;/code&gt; или &lt;code&gt;busy_home.py&lt;/code&gt; , где вы найдете несколько поддельных аксессуаров. Просто запустите один из них, например &lt;code&gt;python3 busy_home.py&lt;/code&gt; , и вы сможете добавить его в приложение Home (обязательно в той же сети). Остановите его, нажав Ctrl + C.</target>
+        </trans-unit>
+        <trans-unit id="9679ea9c3ff4e80415c86a1bd58c81fb697b2bd8" translate="yes" xml:space="preserve">
+          <source>There are example accessories as well as integrations with real products
+in &lt;a href=&quot;accessories&quot;&gt;the accessories folder&lt;/a&gt;. See how to configure your camera in
+&lt;a href=&quot;camera_main.py&quot;&gt;camera_main.py&lt;/a&gt;.</source>
+          <target state="translated">В &lt;a href=&quot;accessories&quot;&gt;папке с аксессуарами&lt;/a&gt; есть примеры аксессуаров, а также интеграции с реальными продуктами . Посмотрите, как настроить камеру, в &lt;a href=&quot;camera_main.py&quot;&gt;camera_main.py&lt;/a&gt; .</target>
+        </trans-unit>
+        <trans-unit id="7c46f59df1ae3acba98ff7a6394ec4a6b7c0cbc1" translate="yes" xml:space="preserve">
+          <source>This is a quick way to get &lt;code&gt;HAP-python&lt;/code&gt; to run at boot on a Raspberry Pi. It is recommended
+to turn on &quot;Wait for network&quot; in &lt;code&gt;raspi-config&lt;/code&gt;. If this turns to be unreliable, see
+&lt;a href=&quot;https://www.raspberrypi.org/forums/viewtopic.php?f=66&amp;amp;t=187225&quot;&gt;this&lt;/a&gt;.</source>
+          <target state="translated">Это быстрый способ запустить &lt;code&gt;HAP-python&lt;/code&gt; при загрузке на Raspberry Pi. В &lt;code&gt;raspi-config&lt;/code&gt; рекомендуется включить &quot;Ждать сеть&quot; . Если это окажется ненадежным, посмотрите &lt;a href=&quot;https://www.raspberrypi.org/forums/viewtopic.php?f=66&amp;amp;t=187225&quot;&gt;это&lt;/a&gt; .</target>
+        </trans-unit>
+        <trans-unit id="09e603d418289d063812e3555f3006d5fb63f0c0" translate="yes" xml:space="preserve">
+          <source>This will install HAP-python in your python packages, so that you can import it as &lt;code&gt;pyhap&lt;/code&gt;. To uninstall, just do:</source>
+          <target state="translated">Это установит HAP-python в ваши пакеты python, чтобы вы могли импортировать его как &lt;code&gt;pyhap&lt;/code&gt; . Для удаления просто выполните:</target>
+        </trans-unit>
+        <trans-unit id="9132a2e99530322cbba4e67cef987eae36540b65" translate="yes" xml:space="preserve">
+          <source>To enable or disable at boot, do:</source>
+          <target state="translated">Чтобы включить или отключить при загрузке,сделайте это:</target>
+        </trans-unit>
+        <trans-unit id="90a107562af2e5a9a8d84ac3a9fe16ee09edb22b" translate="yes" xml:space="preserve">
+          <source>When you are working with tightly coupled characteristics such as &quot;On&quot; and &quot;Brightness,&quot;
+you may need to use a service callback to receive all changes in a single request.</source>
+          <target state="translated">Когда вы работаете с тесно связанными характеристиками,такими как &quot;Вкл&quot; и &quot;Яркость&quot;,вам может потребоваться использовать обратный сервисный вызов для получения всех изменений в одном запросе.</target>
+        </trans-unit>
+        <trans-unit id="886fae67ad0772f8befd4e8229d586573dccef11" translate="yes" xml:space="preserve">
+          <source>With characteristic callbacks, you do now know that a &quot;Brightness&quot; characteristic is
+about to be processed right after an &quot;On&quot; and may end up setting a LightBulb to 100%
+and then dim it back down to the expected level.</source>
+          <target state="translated">С характерными обратными вызовами,вы теперь знаете,что характеристика &quot;Яркость&quot; скоро будет обработана сразу после &quot;Вкл&quot; и может в конечном итоге установить лампочку LightBulb на 100% и затем затем затемнить ее обратно до ожидаемого уровня.</target>
+        </trans-unit>
+        <trans-unit id="8801c4d2cc3257924f433c4d01ec2c6681013602" translate="yes" xml:space="preserve">
+          <source>You pass the command as a value to the key &lt;code&gt;start_stream_cmd&lt;/code&gt; in the &lt;code&gt;options&lt;/code&gt; parameter to
+the constuctor of the &lt;code&gt;Camera&lt;/code&gt; Accessory. The command is formatted using the
+negotiated stream configuration parameters. For example, if the negotiated width
+is 640 and you pass &lt;code&gt;foo start -width {width}&lt;/code&gt;, the command will be formatted as
+&lt;code&gt;foo start -width 640&lt;/code&gt;.</source>
+          <target state="translated">Вы передаете команду как значение ключу &lt;code&gt;start_stream_cmd&lt;/code&gt; в параметре &lt;code&gt;options&lt;/code&gt; в конструктор аксессуара &lt;code&gt;Camera&lt;/code&gt; . Команда форматируется с использованием согласованных параметров конфигурации потока. Например, если согласованная ширина равна 640 и вы передаете &lt;code&gt;foo start -width {width}&lt;/code&gt; , команда будет отформатирована как &lt;code&gt;foo start -width 640&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="9ecf7b7b5319384df5d09c54ca84bcc70e75582d" translate="yes" xml:space="preserve">
+          <source>asyncio support - You can run various tasks or accessories in the event loop.</source>
+          <target state="translated">поддержка asyncio-Вы можете запускать различные задачи или аксессуары в цикле событий.</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

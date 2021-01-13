@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="es" datatype="htmlbody" original="https://pypi.org/project/libusb1/">
+    <body>
+      <group id="libusb1">
+        <trans-unit id="564042ecbe9ba8309706be8fdf987da7a661b150" translate="yes" xml:space="preserve">
+          <source>) would be enough. And for more
+advanced uses (ie, actually needing to poll non-libusb file descriptors), this
+class only works reliably with epoll: kqueue (which should tehcnically work)
+has a different API on python level, and poll (which has the same API as epoll
+on python level) lacks the critical ability to change the set of monitored file
+descriptors while a poll is already running, causing long pauses - if not
+deadlocks.</source>
+          <target state="translated">) seria suficiente. Y para usos m&amp;aacute;s avanzados (es decir, que realmente necesitan sondear descriptores de archivos que no sean libusb), esta clase solo funciona de manera confiable con epoll: kqueue (que deber&amp;iacute;a funcionar t&amp;eacute;cnicamente) tiene una API diferente a nivel de python, y poll (que tiene la misma API como epoll a nivel de python) carece de la capacidad cr&amp;iacute;tica para cambiar el conjunto de descriptores de archivos supervisados ​​mientras ya se est&amp;aacute; ejecutando una encuesta, lo que provoca largas pausas, si no puntos muertos.</target>
+        </trans-unit>
+        <trans-unit id="3e5bd53fd0f9a5b8b5e6c212066bb8145ed7d7dd" translate="yes" xml:space="preserve">
+          <source>2to3 friendly.</source>
+          <target state="translated">2 a 3 amistosos.</target>
+        </trans-unit>
+        <trans-unit id="168aafcd794877c9c24ab749c23345f68cac0f83" translate="yes" xml:space="preserve">
+          <source>&lt;a href=&quot;http://www.python.org/&quot;&gt;CPython&lt;/a&gt; 2.7+ or 3.4+, &lt;a href=&quot;http://pypy.org/&quot;&gt;pypy&lt;/a&gt; 2.0+. Older versions may work, but are not
+recommended as there is no automated regression testing set up for them.</source>
+          <target state="translated">&lt;a href=&quot;http://www.python.org/&quot;&gt;CPython&lt;/a&gt; 2.7+ o 3.4+, &lt;a href=&quot;http://pypy.org/&quot;&gt;pypy&lt;/a&gt; 2.0+. Las versiones anteriores pueden funcionar, pero no se recomiendan, ya que no hay una prueba de regresi&amp;oacute;n automatizada configurada para ellas.</target>
+        </trans-unit>
+        <trans-unit id="46e46607fb08f683388cab19a2bd36d6942cef8a" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;int libusb_init (libusb_context **context)&lt;/code&gt; becomes USBContext class
+constructor, &lt;code&gt;USBContext.__init__(self)&lt;/code&gt;</source>
+          <target state="translated">&lt;code&gt;int libusb_init (libusb_context **context)&lt;/code&gt; se convierte en el constructor de la clase &lt;code&gt;USBContext.__init__(self)&lt;/code&gt; , USBContext .__ init __ (self)</target>
+        </trans-unit>
+        <trans-unit id="b8a6e65abafc38a04c51343b5ba0ec2940cfe614" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;ssize_t libusb_get_device_list (libusb_context *ctx,
+libusb_device ***list)&lt;/code&gt; becomes an USBContext method, returning a
+list of USBDevice instances, &lt;code&gt;USBDevice.getDeviceList(self)&lt;/code&gt;</source>
+          <target state="translated">&lt;code&gt;ssize_t libusb_get_device_list (libusb_context *ctx, libusb_device ***list)&lt;/code&gt; convierte en un m&amp;eacute;todo USBContext, devolviendo una lista de instancias &lt;code&gt;USBDevice.getDeviceList(self)&lt;/code&gt; , USBDevice.getDeviceList (self)</target>
+        </trans-unit>
+        <trans-unit id="a2c0a35e9e4e4c24eb6991b4708c5b8b00e6e8e9" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;uint8_t libusb_get_bus_number (libusb_device *dev)&lt;/code&gt; becomes an
+USBDevice method, &lt;code&gt;USBDevice.getBusNumber(self)&lt;/code&gt;</source>
+          <target state="translated">&lt;code&gt;uint8_t libusb_get_bus_number (libusb_device *dev)&lt;/code&gt; convierte en un m&amp;eacute;todo &lt;code&gt;USBDevice.getBusNumber(self)&lt;/code&gt; , USBDevice.getBusNumber (self)</target>
+        </trans-unit>
+        <trans-unit id="ff0683a295db2efb9d5b2ddbb08529dbc201a1e9" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Backward-incompatible change&lt;/strong&gt;: Enum class now affects caller&amp;rsquo;s local scope,
+not its global scope. This should not be of much importance, as:</source>
+          <target state="translated">&lt;strong&gt;Cambio incompatible con versiones anteriores&lt;/strong&gt; : la clase Enum ahora afecta el alcance local de la persona que llama, no su alcance global. Esto no deber&amp;iacute;a ser de mucha importancia, ya que:</target>
+        </trans-unit>
+        <trans-unit id="6af2f233795e48dc1ff4042528e5175e0d1b5814" translate="yes" xml:space="preserve">
+          <source>Add Cygwin support.</source>
+          <target state="translated">Añade el soporte de Cygwin.</target>
+        </trans-unit>
+        <trans-unit id="d5778d70c18f6fa8db683ce0ad0f844c003816f3" translate="yes" xml:space="preserve">
+          <source>Add FreeBSD support.</source>
+          <target state="translated">Añade soporte para FreeBSD.</target>
+        </trans-unit>
+        <trans-unit id="4e3a8715bbb132be8790ea3b0bbb5c50f7cacd0e" translate="yes" xml:space="preserve">
+          <source>Add Transfer.iterISO for more efficient isochronous reception.</source>
+          <target state="translated">Añade Transfer.iterISO para una recepción isócrona más eficiente.</target>
+        </trans-unit>
+        <trans-unit id="dcf53fec5ba7fa3be4e5d2c5725888c8a14dd52a" translate="yes" xml:space="preserve">
+          <source>Add USBContext.getDeviceIterator method.</source>
+          <target state="translated">Añade el método USBContext.getDeviceIterator.</target>
+        </trans-unit>
+        <trans-unit id="9a23cf80adbea8904adbeffa454608b8719892bd" translate="yes" xml:space="preserve">
+          <source>Add a few new upstream enum values.</source>
+          <target state="translated">Añade unos cuantos nuevos valores enumerativos ascendentes.</target>
+        </trans-unit>
+        <trans-unit id="3e0df6b66f0b34f38933954eb32a051cf947adce" translate="yes" xml:space="preserve">
+          <source>Add examples.</source>
+          <target state="translated">Añade ejemplos.</target>
+        </trans-unit>
+        <trans-unit id="92970fff281d2efb638cefeab4a2293b96f0d318" translate="yes" xml:space="preserve">
+          <source>Add fink and homebrew support on OSX.</source>
+          <target state="translated">Añade el soporte de Fink y Homebrew en OSX.</target>
+        </trans-unit>
+        <trans-unit id="212389da819e83499b97e46b35676def5f7b8b1e" translate="yes" xml:space="preserve">
+          <source>Assorted documentation improvements.</source>
+          <target state="translated">Diversas mejoras en la documentación.</target>
+        </trans-unit>
+        <trans-unit id="2bc881efea2e8ec3b20e5919d1484978110295ec" translate="yes" xml:space="preserve">
+          <source>Asynchronous I/O, with more error handling:</source>
+          <target state="translated">E/S asíncrona,con más manejo de errores:</target>
+        </trans-unit>
+        <trans-unit id="9200ff38699f6a4563012e15251b8804b285cd46" translate="yes" xml:space="preserve">
+          <source>Better documentation.</source>
+          <target state="translated">Mejor documentación.</target>
+        </trans-unit>
+        <trans-unit id="ae47e07a4b985b6e91068155e6377f30809b0aa1" translate="yes" xml:space="preserve">
+          <source>Better exception handling in enumeration.</source>
+          <target state="translated">Mejor manejo de las excepciones en la enumeración.</target>
+        </trans-unit>
+        <trans-unit id="c39888a1f9813bbf7f5495a0e1eddb68d67bc668" translate="yes" xml:space="preserve">
+          <source>Beware of libusb-win32, which implements 0.1 API, not 1.0 .</source>
+          <target state="translated">Cuidado con libusb-win32,que implementa 0.1 API,no 1.0 .</target>
+        </trans-unit>
+        <trans-unit id="b0a05b9251fdf2eb8897bd57d08d6c68901dc931" translate="yes" xml:space="preserve">
+          <source>Beware of possible lack of select.poll if you want to use asynchronous
+API.</source>
+          <target state="translated">Tenga cuidado con la posible falta de select.poll si quiere usar la API asíncrona.</target>
+        </trans-unit>
+        <trans-unit id="f5cbdf6bfb51439be085b5c6b7460a7c91eabc3c" translate="yes" xml:space="preserve">
+          <source>Contents</source>
+          <target state="translated">Contenido</target>
+        </trans-unit>
+        <trans-unit id="518fc77c235170aa9c49a03763e1c0ee2b77529f" translate="yes" xml:space="preserve">
+          <source>Define exception classes for each error values.</source>
+          <target state="translated">Definir clases de excepción para cada valor de error.</target>
+        </trans-unit>
+        <trans-unit id="0562f32dc56f5c702810cbe010068ddd38dbd69a" translate="yes" xml:space="preserve">
+          <source>Dependencies</source>
+          <target state="translated">Dependencias</target>
+        </trans-unit>
+        <trans-unit id="5e3572a77a84a9804dd68982c1493773ab89e4e6" translate="yes" xml:space="preserve">
+          <source>Deprecate &amp;ldquo;transfer&amp;rdquo; constructor parameter to allow instance reuse.</source>
+          <target state="translated">Desaproveche el par&amp;aacute;metro del constructor &quot;transferir&quot; para permitir la reutilizaci&amp;oacute;n de instancias.</target>
+        </trans-unit>
+        <trans-unit id="9e03bcb656e568bd64350eaf6736c9b9feea3be2" translate="yes" xml:space="preserve">
+          <source>Deprecate USBPollerThread . It is mileading users for which the simple version
+(a thread calling</source>
+          <target state="translated">Despreciar el USBPollerThread.Es engañar a los usuarios para que la versión simple (un hilo que llama</target>
+        </trans-unit>
+        <trans-unit id="3e3d98c3afd2e93d74bf01413a4bb84089d31b9a" translate="yes" xml:space="preserve">
+          <source>Deprecate libusb1 module import, which should not be needed since all (?)
+needed constants were re-bound to usb1 module.</source>
+          <target state="translated">Despreciar la importación del módulo libusb1,que no debería ser necesario,ya que todas las constantes (?)necesarias se remontaban al módulo usb1.</target>
+        </trans-unit>
+        <trans-unit id="173d3f404e9dd4519be67eede6553ffaac4660ba" translate="yes" xml:space="preserve">
+          <source>Descriptor walk API documented.</source>
+          <target state="translated">El API de la caminata descriptiva está documentado.</target>
+        </trans-unit>
+        <trans-unit id="5c6edff41e090eccb4a80108f85ee74ca83c12e9" translate="yes" xml:space="preserve">
+          <source>Document hotplug handler limitations.</source>
+          <target state="translated">Documentar las limitaciones de los manipuladores de bujías calientes.</target>
+        </trans-unit>
+        <trans-unit id="9e9cf3221a30246219863f1d2366e36cb580debc" translate="yes" xml:space="preserve">
+          <source>Documentation</source>
+          <target state="translated">Documentación</target>
+        </trans-unit>
+        <trans-unit id="65bd6cc16ecfccdf29a254e5414e0812dd7b61c3" translate="yes" xml:space="preserve">
+          <source>Drop PATH_MAX definition.</source>
+          <target state="translated">Definición de Drop PATH_MAX.</target>
+        </trans-unit>
+        <trans-unit id="b287518a1edac549950dc9883a1986b82ddabf2f" translate="yes" xml:space="preserve">
+          <source>Drop deprecated USBDevice.reprConfigurations method.</source>
+          <target state="translated">Deje caer el método de la depreciación de USBDevice.reprConfiguraciones.</target>
+        </trans-unit>
+        <trans-unit id="1d87291cfae6f1a3ea1b4c5c3629b24ccd8664c9" translate="yes" xml:space="preserve">
+          <source>Drop wrapper for libusb_strerror, with compatibility place-holder.</source>
+          <target state="translated">Envoltura de caída para libusb_strerror,con soporte de compatibilidad.</target>
+        </trans-unit>
+        <trans-unit id="eda2cf08d33f15baa6bc926b957a61eb78a2b69a" translate="yes" xml:space="preserve">
+          <source>Easier to list connected devices.</source>
+          <target state="translated">Es más fácil listar los dispositivos conectados.</target>
+        </trans-unit>
+        <trans-unit id="1972d690373529b11404fb780ec1f015deeb22f2" translate="yes" xml:space="preserve">
+          <source>Easier to terminate all async transfers for clean exit.</source>
+          <target state="translated">Es más fácil terminar todas las transferencias asincrónicas para una salida limpia.</target>
+        </trans-unit>
+        <trans-unit id="20588ae8e5c269292d35f9dfffa8f2eb3fd3c259" translate="yes" xml:space="preserve">
+          <source>Enum</source>
+          <target state="translated">Enum</target>
+        </trans-unit>
+        <trans-unit id="15f81e5f75d005e782a52bbf0954014303c10599" translate="yes" xml:space="preserve">
+          <source>Error statuses are converted into &lt;code&gt;usb1.USBError&lt;/code&gt; exceptions, with
+status as</source>
+          <target state="translated">Los estados de error se convierten en excepciones &lt;code&gt;usb1.USBError&lt;/code&gt; , con el estado como</target>
+        </trans-unit>
+        <trans-unit id="c46e75db6b5af7606771b837cfd79645eccb755f" translate="yes" xml:space="preserve">
+          <source>Expose bare string descriptors (aka string indexes) on USBDevice.</source>
+          <target state="translated">Exponer los descriptores de cadenas desnudas (alias índices de cadenas)en el dispositivo USB.</target>
+        </trans-unit>
+        <trans-unit id="29a93c208352151b632462b9341b9ecd329bb9b4" translate="yes" xml:space="preserve">
+          <source>Finding a device and gaining exclusive access:</source>
+          <target state="translated">Encontrar un dispositivo y obtener acceso exclusivo:</target>
+        </trans-unit>
+        <trans-unit id="004472524dcbe906003f0166b42371d366b10286" translate="yes" xml:space="preserve">
+          <source>Fix FreeBSD ABI compatibility.</source>
+          <target state="translated">Arreglar la compatibilidad ABI de FreeBSD.</target>
+        </trans-unit>
+        <trans-unit id="147270d8afe86c0050413bdfd29574873a5bb1cf" translate="yes" xml:space="preserve">
+          <source>Fix USBDeviceHandle.getSupportedLanguageList bug when running under python 3.
+While fixing this bug it was realised that this method returned ctypes objects.
+This was not intended, and it now returns regular integers.</source>
+          <target state="translated">Arreglar el error de USBDeviceHandle.getSupportedLanguageList cuando se ejecuta bajo python 3.Mientras se arreglaba este error,se vio que este método devolvía objetos tipo.Esto no estaba previsto,y ahora devuelve enteros regulares.</target>
+        </trans-unit>
+        <trans-unit id="98aef00664a70fa397ceb794f5282420f417e77f" translate="yes" xml:space="preserve">
+          <source>Fix USBTransfer.cancel exception raising introduced in 1.5.2: it was
+accidentally becomming a bound method, preventing the raise to actually
+happen (in at least CPython 2.x) or raising type conversion errors (in at least
+CPython 3.5.2).</source>
+          <target state="translated">Fix USBTransfer.cancel excepción de elevación introducida en 1.5.2:se estaba convirtiendo accidentalmente en un método vinculante,impidiendo que la elevación se produjera realmente (en al menos CPython 2.x)o errores de conversión de tipo de elevación (en al menos CPython 3.5.2).</target>
+        </trans-unit>
+        <trans-unit id="a9a60761eb4db56ab6b61f0eb335bfae18f08e70" translate="yes" xml:space="preserve">
+          <source>Fix and extend get{,ASCII}StringDescriptor .</source>
+          <target state="translated">Arreglar y extender get{,ASCII}StringDescriptor .</target>
+        </trans-unit>
+        <trans-unit id="5f646164d8cb681d46bf3efe8ef9e812cb1acbd5" translate="yes" xml:space="preserve">
+          <source>Fix asynchronous configuration transfers.</source>
+          <target state="translated">Fija las transferencias de configuración asíncrona.</target>
+        </trans-unit>
+        <trans-unit id="1bdd346bf27be58a90fbf1dd275407bd4c13c7a7" translate="yes" xml:space="preserve">
+          <source>Fix asynchronous control transfers.</source>
+          <target state="translated">Fija las transferencias de control asíncrono.</target>
+        </trans-unit>
+        <trans-unit id="6a9355c7d80de6574f063e03f7809319e1b78f17" translate="yes" xml:space="preserve">
+          <source>Fix few segfault causes.</source>
+          <target state="translated">Arreglar algunas causas de fallos de segmento.</target>
+        </trans-unit>
+        <trans-unit id="02e697164a9136c92c7d9ecc3235e0a5a5750a0f" translate="yes" xml:space="preserve">
+          <source>Fix getASCIIStringDescriptor: unlike getStringDescriptor, this returns only the
+payload of the string descriptor, without its header.</source>
+          <target state="translated">Arreglar getASCIIStringDescriptor:a diferencia de getStringDescriptor,este devuelve sólo la carga del descriptor de la cadena,sin su cabecera.</target>
+        </trans-unit>
+        <trans-unit id="21fb983d234c061f72b8b36b428f37e9680fec4d" translate="yes" xml:space="preserve">
+          <source>Fix getExtra and libusb1.libusb_control_transfer_get_data .
+Fix getMaxPower unit on SuperSpeed devices.</source>
+          <target state="translated">Arreglar getExtra y libusb1.libusb_control_transfer_get_data.Arreglar la unidad getMaxPower en los dispositivos de SuperSpeed.</target>
+        </trans-unit>
+        <trans-unit id="72dc3ba97bed761ad73e460ff6a2701cca4567cc" translate="yes" xml:space="preserve">
+          <source>Fix getSupportedLanguageList.</source>
+          <target state="translated">Arreglar la lista de idiomas de apoyo.</target>
+        </trans-unit>
+        <trans-unit id="eca0492d1d24f0e6dd0441959146bac25ecf98ea" translate="yes" xml:space="preserve">
+          <source>Fix iterISO and getISOBufferList.</source>
+          <target state="translated">Arregla el iterISO y consigue la lista de IOBuffer.</target>
+        </trans-unit>
+        <trans-unit id="7955e7f13cb0bff3e097d53f28d19f43bfcdae4d" translate="yes" xml:space="preserve">
+          <source>Fix libusb1.LIBUSB_ENDPOINT_ENDPOINT_MASK and
+libusb1.LIBUSB_ENDPOINT_DIR_MASK naming.</source>
+          <target state="translated">Arreglar el nombre de libusb1.LIBUSB_ENDPOINT_ENDPOINT_MASK y libusb1.LIBUSB_ENDPOINT_DIR_MASK.</target>
+        </trans-unit>
+        <trans-unit id="5751bacf1669635db99cd7531f24147a9eeadeb6" translate="yes" xml:space="preserve">
+          <source>Fix libusb1.REQUEST_TYPE_* names (were TYPE_*). Preserve backward
+compatibility.</source>
+          <target state="translated">Arreglar los nombres de libusb1.REQUEST_TYPE_*(eran TYPE_*).Preservar la compatibilidad retroactiva.</target>
+        </trans-unit>
+        <trans-unit id="db324d6d2e08573fb4d2a75f8d1db41434c2287d" translate="yes" xml:space="preserve">
+          <source>Fix pydoc appearance of several USBContext methods.</source>
+          <target state="translated">Arreglar la apariencia de Pydoc de varios métodos de USBContext.</target>
+        </trans-unit>
+        <trans-unit id="fbd5c681e5fe61b4bb633e0c23248965b91e430a" translate="yes" xml:space="preserve">
+          <source>Fix some more USBTransfer memory leaks.</source>
+          <target state="translated">Arreglar más fugas de memoria de USBTransfer.</target>
+        </trans-unit>
+        <trans-unit id="24c05d9ab3efdd1d9e7ce12d77ae04d6ef503026" translate="yes" xml:space="preserve">
+          <source>Fix typo in USBInterfaceSetting.getClassTuple method name. Backward
+compatibility preserved.</source>
+          <target state="translated">Arreglar el error tipográfico en USBInterfaceSetting.getClassTuple nombre de método.Se mantiene la compatibilidad retroactiva.</target>
+        </trans-unit>
+        <trans-unit id="41d273fb1e85b2d5bec753e69c6f4342a522cda8" translate="yes" xml:space="preserve">
+          <source>Fix wheel generation (</source>
+          <target state="translated">La generación de la rueda fija (</target>
+        </trans-unit>
+        <trans-unit id="e4e289467552de804ca104bfd6d492eda6da11c3" translate="yes" xml:space="preserve">
+          <source>Fixed USBContext.waitForEvent.</source>
+          <target state="translated">Arreglado USBContext.waitForEvent.</target>
+        </trans-unit>
+        <trans-unit id="248793a2a0b2a169bbede5aa07648345ac032388" translate="yes" xml:space="preserve">
+          <source>For more, see the</source>
+          <target state="translated">Para más información,vea el</target>
+        </trans-unit>
+        <trans-unit id="60d234c654296c6068cf26f1bc3236cb348a0451" translate="yes" xml:space="preserve">
+          <source>FreeBSD (including Debian GNU/kFreeBSD)</source>
+          <target state="translated">FreeBSD (incluyendo Debian GNU/kFreeBSD)</target>
+        </trans-unit>
+        <trans-unit id="fc0c5624b977347bee4a3c56812d8862a8cf1a9e" translate="yes" xml:space="preserve">
+          <source>GNU/Linux</source>
+          <target state="translated">GNU/Linux</target>
+        </trans-unit>
+        <trans-unit id="90ccd6497400b5576aeca1bd94af74aae1e0a250" translate="yes" xml:space="preserve">
+          <source>History</source>
+          <target state="translated">Historia</target>
+        </trans-unit>
+        <trans-unit id="bfa78e57d6e61072ef44915c5eefafdd3dc1762a" translate="yes" xml:space="preserve">
+          <source>Home: &lt;a href=&quot;http://github.com/vpelletier/python-libusb1&quot;&gt;http://github.com/vpelletier/python-libusb1&lt;/a&gt;</source>
+          <target state="translated">Inicio: &lt;a href=&quot;http://github.com/vpelletier/python-libusb1&quot;&gt;http://github.com/vpelletier/python-libusb1&lt;/a&gt;</target>
+        </trans-unit>
+        <trans-unit id="9aa5acc2d5f8f9d9031f209d3a0daa79e9cbae78" translate="yes" xml:space="preserve">
+          <source>Improve asynchronous transfer performance: (very) suboptimal code was used to
+initialise asynchronous transfer buffer. As a consequence, usb1 now exposes</source>
+          <target state="translated">Mejorar el rendimiento de la transferencia asíncrona:Se utilizó un código (muy)subóptimo para inicializar el búfer de transferencia asíncrono.Como consecuencia,usb1 ahora expone</target>
+        </trans-unit>
+        <trans-unit id="8214a68790cdf52bcbc601efc64d6437f5ec7b14" translate="yes" xml:space="preserve">
+          <source>Improve start-up time on CPython by not importing standard</source>
+          <target state="translated">Mejorar el tiempo de arranque del CPython al no importar el estándar</target>
+        </trans-unit>
+        <trans-unit id="31bf69f6d0b4084ed5a34d02b1615c2844aa3a3d" translate="yes" xml:space="preserve">
+          <source>Initial release</source>
+          <target state="translated">Lanzamiento inicial</target>
+        </trans-unit>
+        <trans-unit id="c81b79df3c6448eae7c4f80428b54cd5692a17d7" translate="yes" xml:space="preserve">
+          <source>Installation</source>
+          <target state="translated">Instalación</target>
+        </trans-unit>
+        <trans-unit id="98c233bae6d5dee689e0fb033ddc131a702ffd28" translate="yes" xml:space="preserve">
+          <source>Introduce USBPollerThread.stop .</source>
+          <target state="translated">Introducir USBPollerThread.stop .</target>
+        </trans-unit>
+        <trans-unit id="bd288d5c7847401ed48ae7f6104b91f7e979baca" translate="yes" xml:space="preserve">
+          <source>Isochronous transfer refuses to round transfer size.</source>
+          <target state="translated">La transferencia isócrona se niega a redondear el tamaño de la transferencia.</target>
+        </trans-unit>
+        <trans-unit id="3a53c5b66056fb67002dcc7a7260b6ca94fa3623" translate="yes" xml:space="preserve">
+          <source>It is possible to get former behaviour by providing the new</source>
+          <target state="translated">Es posible obtener el comportamiento anterior proporcionando el nuevo</target>
+        </trans-unit>
+        <trans-unit id="642f1c7b948a5802e91a998cddd3a242fcf3b114" translate="yes" xml:space="preserve">
+          <source>Latest version from source tree:</source>
+          <target state="translated">La última versión del árbol fuente:</target>
+        </trans-unit>
+        <trans-unit id="264bbcd1a50f4e706672559d575140d162b92334" translate="yes" xml:space="preserve">
+          <source>Made USBDevice instances hashable.</source>
+          <target state="translated">Hizo que las instancias de USBDevice se pudieran usar.</target>
+        </trans-unit>
+        <trans-unit id="266f71524cba92952538830b93469750fc3ca5f9" translate="yes" xml:space="preserve">
+          <source>Make USBDeviceHandle.claimInterface a context manager, for easier interface
+releasing.</source>
+          <target state="translated">Hacer de USBDeviceHandle.claimInterface un gestor de contexto,para facilitar la liberación de la interfaz.</target>
+        </trans-unit>
+        <trans-unit id="febc10fcda3df4942d265c811cddb4e961b33c9f" translate="yes" xml:space="preserve">
+          <source>Make USBTransfer.cancel raise specific error instances.</source>
+          <target state="translated">Hacer que USBTransfer.cancel levante instancias de error específicas.</target>
+        </trans-unit>
+        <trans-unit id="bcceca18baf0885e8398c2a872a0dbf350bfecc4" translate="yes" xml:space="preserve">
+          <source>Massive rework of usb1.py, making it more python-ish and fixing some
+memory leaks.</source>
+          <target state="translated">Reelaboración masiva de usb1.py,haciéndolo más pitónico y arreglando algunas fugas de memoria.</target>
+        </trans-unit>
+        <trans-unit id="6f135c5b19eda92ca0383af6d3ba740ed4ffede2" translate="yes" xml:space="preserve">
+          <source>More libusb methods exposed on objects, including ones not yet part of
+released libusb versions (up to their commit 4630fc2).</source>
+          <target state="translated">Más métodos de libusb expuestos en objetos,incluyendo los que aún no forman parte de las versiones de libusb publicadas (hasta su commit 4630fc2).</target>
+        </trans-unit>
+        <trans-unit id="99ceb40d0935fd7d599ee90f1891cbe982aba074" translate="yes" xml:space="preserve">
+          <source>Move testUSB1 module inside usb1, to eventually only expose usb1 as top-level
+module.</source>
+          <target state="translated">Mover el módulo de testUSB1 dentro de usb1,para eventualmente sólo exponer usb1 como módulo de nivel superior.</target>
+        </trans-unit>
+        <trans-unit id="15d624a3523e7a61cdc20e318c51b4b4f0324146" translate="yes" xml:space="preserve">
+          <source>OSX &lt;a href=&quot;#id4&quot; id=&quot;id2&quot;&gt;[2]&lt;/a&gt; via &lt;a href=&quot;https://www.macports.org/&quot;&gt;MacPorts&lt;/a&gt;, &lt;a href=&quot;http://www.finkproject.org/&quot;&gt;Fink&lt;/a&gt; or &lt;a href=&quot;http://brew.sh/&quot;&gt;Homebrew&lt;/a&gt;</source>
+          <target state="translated">OSX &lt;a href=&quot;#id4&quot; id=&quot;id2&quot;&gt;[2] a&lt;/a&gt; trav&amp;eacute;s de &lt;a href=&quot;https://www.macports.org/&quot;&gt;MacPorts&lt;/a&gt; , &lt;a href=&quot;http://www.finkproject.org/&quot;&gt;Fink&lt;/a&gt; o &lt;a href=&quot;http://brew.sh/&quot;&gt;Homebrew&lt;/a&gt;</target>
+        </trans-unit>
+        <trans-unit id="db3951317261fd51cb4c1a3e01c4748b4896c421" translate="yes" xml:space="preserve">
+          <source>OpenBSD</source>
+          <target state="translated">OpenBSD</target>
+        </trans-unit>
+        <trans-unit id="692a620443dd3851f7944d20adf9b9ac93d13b26" translate="yes" xml:space="preserve">
+          <source>OpenBSD support checked (no change).</source>
+          <target state="translated">Comprobado el soporte de OpenBSD (sin cambios).</target>
+        </trans-unit>
+        <trans-unit id="e91c39fb405e11aeda81ddf23cc73bfb141ff31b" translate="yes" xml:space="preserve">
+          <source>Properly cast libusb_set_pollfd_notifiers arguments.
+Fix null pointer value: POINTER(None) is the type of a pointer which may be a
+null pointer, which falls back to c_void_p. But c_void_p() is an actual null
+pointer.</source>
+          <target state="translated">Lanza correctamente los argumentos de libusb_set_pollfd_notificadores.Fijar el valor nulo del puntero:POINTER(None)es el tipo de puntero que puede ser un puntero nulo,el cual cae en c_void_p.Pero c_void_p()es un puntero nulo real.</target>
+        </trans-unit>
+        <trans-unit id="f775ede9ff00dabbfb53148d3c542fbb647d05e4" translate="yes" xml:space="preserve">
+          <source>Pure-python wrapper for libusb-1.0</source>
+          <target state="translated">Envoltura de pitón puro para libusb-1.0</target>
+        </trans-unit>
+        <trans-unit id="dcf624f51c6a288f28d191749422bb6ac7e9b299" translate="yes" xml:space="preserve">
+          <source>PyPI: &lt;a href=&quot;http://pypi.python.org/pypi/libusb1&quot;&gt;http://pypi.python.org/pypi/libusb1&lt;/a&gt;</source>
+          <target state="translated">PyPI: &lt;a href=&quot;http://pypi.python.org/pypi/libusb1&quot;&gt;http://pypi.python.org/pypi/libusb1&lt;/a&gt;</target>
+        </trans-unit>
+        <trans-unit id="e5c95b4c87363bf85b7a876092cfe3df3ac81543" translate="yes" xml:space="preserve">
+          <source>Reduce (remove ?) the need to import libusb1 module by exposing USBError and
+constants in usb1 module.</source>
+          <target state="translated">Reducir (eliminar ?)la necesidad de importar el módulo libusb1 exponiendo el USBError y las constantes en el módulo usb1.</target>
+        </trans-unit>
+        <trans-unit id="b395a6da05d23858821e754974a3079fa1add55b" translate="yes" xml:space="preserve">
+          <source>Relaxed licensing by moving from GPL v2+ to LGPL v2.1+, for consistency with
+libusb1.</source>
+          <target state="translated">Relajó la licencia al pasar de GPL v2+a LGPL v2.1+,para la consistencia con la libusb1.</target>
+        </trans-unit>
+        <trans-unit id="5b5b6a0a2bb63f26df1c16752dbb8a4d7ee76ac9" translate="yes" xml:space="preserve">
+          <source>Releases from PyPI, with name &lt;em&gt;libusb1&lt;/em&gt;. Installing from command line:</source>
+          <target state="translated">Lanzamientos de PyPI, con nombre &lt;em&gt;libusb1&lt;/em&gt; . Instalaci&amp;oacute;n desde la l&amp;iacute;nea de comandos:</target>
+        </trans-unit>
+        <trans-unit id="fef0124a214c5b875eba1cba6d2073b855314b40" translate="yes" xml:space="preserve">
+          <source>Remove globals accesses from USBDeviceHandle destructor.</source>
+          <target state="translated">Quitar los accesos globales del destructor del dispositivo USB.</target>
+        </trans-unit>
+        <trans-unit id="17876e3673523bd1a7069fac6051a82645d1bab6" translate="yes" xml:space="preserve">
+          <source>Rename USBContext.exit as USBContext.close for consistency with other USB*
+classes. Preserve backward compatibility.</source>
+          <target state="translated">Renombrar USBContext.exit como USBContext.close para ser consistente con otras clases de USB*.Preserva la compatibilidad con las versiones anteriores.</target>
+        </trans-unit>
+        <trans-unit id="32a4c44e9674e8c5cf603ff59b163388c35d1c30" translate="yes" xml:space="preserve">
+          <source>Run 2to3 when running setup.py with python3, and reduce differences with
+python3.</source>
+          <target state="translated">Corre 2to3 cuando corras setup.py con python3,y reduce las diferencias con python3.</target>
+        </trans-unit>
+        <trans-unit id="4c11b98c319bf1638966e6ba33e6f66aa47c7001" translate="yes" xml:space="preserve">
+          <source>Some description is needed though on how to jump from libusb-1.0 documentation
+to python-libusb1, and vice-versa:</source>
+          <target state="translated">Sin embargo,se necesita una descripción de cómo saltar de la documentación de la libra-1.0 a la pitón-libra-1,y viceversa:</target>
+        </trans-unit>
+        <trans-unit id="e324f74ef3e6cc9380674e948f038d75277ebbfe" translate="yes" xml:space="preserve">
+          <source>Some portability fixes (OSes, python versions).</source>
+          <target state="translated">Algunos arreglos de portabilidad (OS,versiones python).</target>
+        </trans-unit>
+        <trans-unit id="3a95f03fa2cab09e1f10904882f1c302fc1ce4e3" translate="yes" xml:space="preserve">
+          <source>Some work on isochronous &amp;ldquo;in&amp;rdquo; transfers. They don&amp;rsquo;t raise exceptions anymore,
+but data validity and python-induced latency impact weren&amp;rsquo;t properly checked.</source>
+          <target state="translated">Algunos trabajan en transferencias &quot;entrantes&quot; is&amp;oacute;cronas. Ya no generan excepciones, pero la validez de los datos y el impacto de latencia inducido por Python no se verificaron adecuadamente.</target>
+        </trans-unit>
+        <trans-unit id="fde29f766b01616c9a8256cb5d90a7abc4c9b717" translate="yes" xml:space="preserve">
+          <source>Stand-alone polling thread for multi-threaded apps.</source>
+          <target state="translated">Hilo de votación independiente para aplicaciones multi-hilo.</target>
+        </trans-unit>
+        <trans-unit id="424728ecd0cc17b1d31e9951146e7bc583851be6" translate="yes" xml:space="preserve">
+          <source>Supported OSes</source>
+          <target state="translated">Sistemas operativos soportados</target>
+        </trans-unit>
+        <trans-unit id="a753c583e787443559f025f5af2bb1c67e44533a" translate="yes" xml:space="preserve">
+          <source>Supports all transfer types, both in synchronous and asynchronous mode.</source>
+          <target state="translated">Soporta todos los tipos de transferencia,tanto en modo síncrono como asíncrono.</target>
+        </trans-unit>
+        <trans-unit id="2c360388c6cc68034733f2bfe33c82c98b7e4bbe" translate="yes" xml:space="preserve">
+          <source>Synchronous I/O:</source>
+          <target state="translated">E/S síncrona:</target>
+        </trans-unit>
+        <trans-unit id="46aa24688256ea9859e9892de4e00197cc45bdff" translate="yes" xml:space="preserve">
+          <source>This class is probably mostly used at module level, where locals == globals.</source>
+          <target state="translated">Esta clase probablemente se utiliza sobre todo a nivel de módulo,donde locales ==globales.</target>
+        </trans-unit>
+        <trans-unit id="0199613de579123997337bcfd93ea1cccde5314a" translate="yes" xml:space="preserve">
+          <source>This class is probably very little used outside libusb1.py</source>
+          <target state="translated">Esta clase es probablemente muy poco usada fuera de libusb1.py</target>
+        </trans-unit>
+        <trans-unit id="f7be797c90f3f255e95ce5de5ff2577eaabce2dc" translate="yes" xml:space="preserve">
+          <source>Try harder when looking for libusb.</source>
+          <target state="translated">Esfuérzate más cuando busques libusb.</target>
+        </trans-unit>
+        <trans-unit id="118d19205b037b810ac78aa1f42749d1ef884a3e" translate="yes" xml:space="preserve">
+          <source>USBContext.handleEvents</source>
+          <target state="translated">USBContext.handleEventos</target>
+        </trans-unit>
+        <trans-unit id="0bb18642b70b9f8a9c12ccf39487328f306b8e19" translate="yes" xml:space="preserve">
+          <source>Usage</source>
+          <target state="translated">Uso</target>
+        </trans-unit>
+        <trans-unit id="3b501dd9f5f27388f6c0be782a7f6140eb628d52" translate="yes" xml:space="preserve">
+          <source>Version and capability APIs exposed.</source>
+          <target state="translated">Versión y capacidad de las APIs expuestas.</target>
+        </trans-unit>
+        <trans-unit id="8b458cdc15c1b8d75c3c2dfc3d51fbf4134b5045" translate="yes" xml:space="preserve">
+          <source>Windows &lt;a href=&quot;#id3&quot; id=&quot;id1&quot;&gt;[1]&lt;/a&gt; native dll or via &lt;a href=&quot;https://www.cygwin.com/&quot;&gt;Cygwin&lt;/a&gt;</source>
+          <target state="translated">Dll nativa de Windows &lt;a href=&quot;#id3&quot; id=&quot;id1&quot;&gt;[1]&lt;/a&gt; o mediante &lt;a href=&quot;https://www.cygwin.com/&quot;&gt;Cygwin&lt;/a&gt;</target>
+        </trans-unit>
+        <trans-unit id="cb51eb36862ea41c0868a005d412172a9f4971ac" translate="yes" xml:space="preserve">
+          <source>Wrap hotplug API.</source>
+          <target state="translated">Envuelva el API de la bujía caliente.</target>
+        </trans-unit>
+        <trans-unit id="3264440000a32e12f9afbbbe7af49edbe5f80a20" translate="yes" xml:space="preserve">
+          <source>Wrap kernel auto-detach API.</source>
+          <target state="translated">Envuelve la API de auto-desprendimiento del núcleo.</target>
+        </trans-unit>
+        <trans-unit id="339c5320c12da773a223ae394325b5ddddc0c3c0" translate="yes" xml:space="preserve">
+          <source>Wrap port number API.</source>
+          <target state="translated">Envuelva el número de puerto API.</target>
+        </trans-unit>
+        <trans-unit id="6f3b0e839b273fedcf534e5e1886ae948b843f3a" translate="yes" xml:space="preserve">
+          <source>bytearrays</source>
+          <target state="translated">bytearrays</target>
+        </trans-unit>
+        <trans-unit id="daf529a73101c2be626b99fc6938163e7a27620b" translate="yes" xml:space="preserve">
+          <source>bytes</source>
+          <target state="translated">bytes</target>
+        </trans-unit>
+        <trans-unit id="f222d079d8898a6539a06b56d3424266897102bb" translate="yes" xml:space="preserve">
+          <source>command.</source>
+          <target state="translated">...comando.</target>
+        </trans-unit>
+        <trans-unit id="9d0a28b48a7c57ed0619bc6f6f666ba3815020f0" translate="yes" xml:space="preserve">
+          <source>constructor:</source>
+          <target state="translated">constructor:</target>
+        </trans-unit>
+        <trans-unit id="8e5dd23164095a4dfc07bf29c67339ede77e434a" translate="yes" xml:space="preserve">
+          <source>controlWrite, bulkWrite and interruptWrite now reject (with TypeError) numeric
+values for</source>
+          <target state="translated">controlWrite,bulkWrite e interruptWrite ahora rechazan (con TypeError)valores numéricos para</target>
+        </trans-unit>
+        <trans-unit id="a17c9aaa61e80a1bf71d0d850af4e5baa9800bbd" translate="yes" xml:space="preserve">
+          <source>data</source>
+          <target state="translated">datos</target>
+        </trans-unit>
+        <trans-unit id="cbd9d886e949d7cb382991471b203a63ae721520" translate="yes" xml:space="preserve">
+          <source>directory.</source>
+          <target state="translated">directorio.</target>
+        </trans-unit>
+        <trans-unit id="c3499c2729730a7f807efb8676a92dcb6f8a3f8f" translate="yes" xml:space="preserve">
+          <source>example</source>
+          <target state="translated">ejemplo</target>
+        </trans-unit>
+        <trans-unit id="afbef8d4a431f36fc568e8ed2ae288823c578e95" translate="yes" xml:space="preserve">
+          <source>get{,ASCII}StringDescriptor now return None for descriptor 0 instead of raising
+UnicodeDecodeError. Use getSupportedLanguageList to access it.
+Moved getManufacturer, getProduct and getSerialNumber to USBDeviceHandle. Kept
+shortcuts for these on USBDevice.</source>
+          <target state="translated">get{,ASCII}StringDescriptor ahora devuelve None para el descriptor 0 en lugar de subir UnicodeDecodeError.Usa getSupportedLanguageList para acceder a él.Movido getManufacturer,getProduct y getSerialNumber a USBDeviceHandle.Mantuvo los atajos para estos en USBDevice.</target>
+        </trans-unit>
+        <trans-unit id="870acecb8e77b4c30183de1e637c0539ec427d97" translate="yes" xml:space="preserve">
+          <source>get{,ASCII}StringDescriptor now return None for descriptor 0, use
+getSupportedLanguageList to get its content.
+getManufacturer, getProduct and getSerialNumber are now on USBDeviceHandle,
+with backward-compatibility aliases on their original location.
+Synchronous bulk and interrupt API exposes number of bytes sent and received
+bytes even when a timeout occurs.</source>
+          <target state="translated">get{,ASCII}StringDescriptor ahora devuelve Ninguno para el descriptor 0,usa getSupportedLanguageList para obtener su contenido.getManufacturer,getProduct y getSerialNumber están ahora en USBDeviceHandle,con alias de compatibilidad inversa en su ubicación original.La API de interrupción y envío masivo sincronizado expone el número de bytes enviados y recibidos,incluso cuando se produce un timeout.</target>
+        </trans-unit>
+        <trans-unit id="a1a2ae18fa153a52a05172a40a60c6c0848214e2" translate="yes" xml:space="preserve">
+          <source>inspect</source>
+          <target state="translated">inspeccionar</target>
+        </trans-unit>
+        <trans-unit id="f2870a37b64269d74c2b03862d27df727f341cf9" translate="yes" xml:space="preserve">
+          <source>instance property.</source>
+          <target state="translated">propiedad de la instancia.</target>
+        </trans-unit>
+        <trans-unit id="2c6107fd82ffa89297f43b1eadf8f18e114accaf" translate="yes" xml:space="preserve">
+          <source>libusb-1.0</source>
+          <target state="translated">libusb-1.0</target>
+        </trans-unit>
+        <trans-unit id="5fbdc59aaa3ba894d713350f5020839ad8a2c87c" translate="yes" xml:space="preserve">
+          <source>libusb_...</source>
+          <target state="translated">libusb_...</target>
+        </trans-unit>
+        <trans-unit id="9f365d4349198d24dee648331810c1833fa70680" translate="yes" xml:space="preserve">
+          <source>module also defines a few more functions and classes, which are
+otherwise not so convenient to call from Python: the event handling API needed
+by async API.</source>
+          <target state="translated">El módulo también define algunas funciones y clases más,que de otra manera no son tan convenientes para llamar desde Python:la API de manejo de eventos que necesita la API de async.</target>
+        </trans-unit>
+        <trans-unit id="71775be18c169dac62eb26f2687c1f1082b7d21c" translate="yes" xml:space="preserve">
+          <source>module groups libusb-1.0 functions as class methods. The first
+parameter (when it&amp;rsquo;s a</source>
+          <target state="translated">El m&amp;oacute;dulo agrupa las funciones libusb-1.0 como m&amp;eacute;todos de clase. El primer par&amp;aacute;metro (cuando es un</target>
+        </trans-unit>
+        <trans-unit id="a21867509c883fff7a024de5f5d5839d06e9f445" translate="yes" xml:space="preserve">
+          <source>module.</source>
+          <target state="translated">módulo.</target>
+        </trans-unit>
+        <trans-unit id="515ce87318c2cfb6127886c462c920dc2d480fea" translate="yes" xml:space="preserve">
+          <source>objects.</source>
+          <target state="translated">objetos.</target>
+        </trans-unit>
+        <trans-unit id="1758356db21759f7c5a0da9b4dd1db8fd6feab3f" translate="yes" xml:space="preserve">
+          <source>or</source>
+          <target state="translated">lub</target>
+        </trans-unit>
+        <trans-unit id="1d9ad0addee82809659247e9008e6f9e82aa9000" translate="yes" xml:space="preserve">
+          <source>or:</source>
+          <target state="translated">o:</target>
+        </trans-unit>
+        <trans-unit id="287bbcd10dbb517b7caa59aa8578a4acb751ed88" translate="yes" xml:space="preserve">
+          <source>parameter to</source>
+          <target state="translated">parámetro para</target>
+        </trans-unit>
+        <trans-unit id="648d85d4deed6cb9dfdf5959665ccd0d4101b6d1" translate="yes" xml:space="preserve">
+          <source>parameter.</source>
+          <target state="translated">parámetro.</target>
+        </trans-unit>
+        <trans-unit id="cb902e410643e815f0924c4f4b75593e9aa44daa" translate="yes" xml:space="preserve">
+          <source>pointer) defined the class the fonction
+belongs to. For example:</source>
+          <target state="translated">puntero)definió la clase a la que pertenece la función.Por ejemplo:</target>
+        </trans-unit>
+        <trans-unit id="86f86df43ee76b3ac55c90cf9d5e7fd9a60b6b25" translate="yes" xml:space="preserve">
+          <source>pydoc</source>
+          <target state="translated">pydoc</target>
+        </trans-unit>
+        <trans-unit id="5ecd16ce0db1980089dbc1a80c639ce894e5bc95" translate="yes" xml:space="preserve">
+          <source>pypy support.</source>
+          <target state="translated">apoyo piadoso.</target>
+        </trans-unit>
+        <trans-unit id="374754c0b304a0d97860942153d3ff6308d60005" translate="yes" xml:space="preserve">
+          <source>python-libusb1 can be expected to work on:</source>
+          <target state="translated">en el que se puede esperar que funcione la pitón-libusb1:</target>
+        </trans-unit>
+        <trans-unit id="03e7c0444223266799dd33ecc490faa0ae7dc344" translate="yes" xml:space="preserve">
+          <source>python-libusb1 follows libusb-1.0 documentation as closely as possible, without
+taking decisions for you. Thanks to this, python-libusb1 does not need to
+duplicate the nice existing &lt;a href=&quot;http://libusb.sourceforge.net/api-1.0/&quot;&gt;libusb1.0 documentation&lt;/a&gt;.</source>
+          <target state="translated">python-libusb1 sigue la documentaci&amp;oacute;n de libusb-1.0 lo m&amp;aacute;s fielmente posible, sin tomar decisiones por usted. Gracias a esto, python-libusb1 no necesita duplicar la buena &lt;a href=&quot;http://libusb.sourceforge.net/api-1.0/&quot;&gt;documentaci&amp;oacute;n&lt;/a&gt; existente de libusb1.0 .</target>
+        </trans-unit>
+        <trans-unit id="31e220b2c6d3c6329ef07717b978c70eda270c9c" translate="yes" xml:space="preserve">
+          <source>python-libusb1 main documentation is accessible with python&amp;rsquo;s standard</source>
+          <target state="translated">La documentaci&amp;oacute;n principal de python-libusb1 es accesible con el est&amp;aacute;ndar de Python</target>
+        </trans-unit>
+        <trans-unit id="c6c52c2a8f5a51a2a546447f9aba5f9d60af2d6b" translate="yes" xml:space="preserve">
+          <source>python3 setup.py bdist_wheel</source>
+          <target state="translated">python3 setup.py bdist_wheel</target>
+        </trans-unit>
+        <trans-unit id="22ebaff6c4f49055f3d624c61ccb11ff21692059" translate="yes" xml:space="preserve">
+          <source>scope_dict</source>
+          <target state="translated">alcance_de_dicto</target>
+        </trans-unit>
+        <trans-unit id="3442496b96dd01591a8cd44b1eec1368ab728aba" translate="yes" xml:space="preserve">
+          <source>str</source>
+          <target state="translated">str</target>
+        </trans-unit>
+        <trans-unit id="16ba0c94f13786408f901198a361ce64bb09295a" translate="yes" xml:space="preserve">
+          <source>usb1</source>
+          <target state="translated">usb1</target>
+        </trans-unit>
+        <trans-unit id="f1af4fbc57658d0c944713c925d688b90ba4501f" translate="yes" xml:space="preserve">
+          <source>usb1.__version__ is now present, managed by versioneer.
+Fix an occasional segfault when closing a transfer from inside its callback
+function.</source>
+          <target state="translated">usb1.__versión__está ahora presente,gestionada por versioneer.Arreglar un fallo de segmento ocasional al cerrar una transferencia desde el interior de su función de devolución de llamada.</target>
+        </trans-unit>
+        <trans-unit id="f32b67c7e26342af42efabc674d441dca0a281c5" translate="yes" xml:space="preserve">
+          <source>value</source>
+          <target state="translated">valor</target>
+        </trans-unit>
+        <trans-unit id="bfc788e6b4cf92d80b4019130faf66f47cb89876" translate="yes" xml:space="preserve">
+          <source>where it used to expose</source>
+          <target state="translated">donde solía exponer</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

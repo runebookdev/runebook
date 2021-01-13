@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="ko" datatype="htmlbody" original="https://pypi.org/project/pymartini/">
+    <body>
+      <group id="pymartini">
+        <trans-unit id="b96fdab7ba45f516e8bf1f93dd7918731f976d0f" translate="yes" xml:space="preserve">
+          <source>(&lt;code&gt;np.ndarray&lt;/code&gt;) Array with decoded elevation values. If &lt;code&gt;backfill&lt;/code&gt; is &lt;code&gt;True&lt;/code&gt;,
+returned shape is (&lt;code&gt;tile_size + 1&lt;/code&gt;, &lt;code&gt;tile_size + 1&lt;/code&gt;), otherwise returned shape
+is (&lt;code&gt;tile_size&lt;/code&gt;, &lt;code&gt;tile_size&lt;/code&gt;), where &lt;code&gt;tile_size&lt;/code&gt; is the shape of the input
+array.</source>
+          <target state="translated">( &lt;code&gt;np.ndarray&lt;/code&gt; ) Array with decoded elevation values. If &lt;code&gt;backfill&lt;/code&gt; is &lt;code&gt;True&lt;/code&gt; , returned shape is ( &lt;code&gt;tile_size + 1&lt;/code&gt; , &lt;code&gt;tile_size + 1&lt;/code&gt; ), otherwise returned shape is ( &lt;code&gt;tile_size&lt;/code&gt; , &lt;code&gt;tile_size&lt;/code&gt; ), where &lt;code&gt;tile_size&lt;/code&gt; is the shape of the input array.</target>
+        </trans-unit>
+        <trans-unit id="2abecd6c7d41209a92f5c294a30bc41d8f850ae0" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;backfill&lt;/code&gt; (&lt;code&gt;bool&lt;/code&gt;, default &lt;code&gt;True&lt;/code&gt;): Whether to create an array of size
+(&lt;code&gt;tile_size + 1&lt;/code&gt;, &lt;code&gt;tile_size + 1&lt;/code&gt;), backfilling the bottom and right edges. This is used
+because Martini needs a grid of size &lt;code&gt;2^n + 1&lt;/code&gt;</source>
+          <target state="translated">&lt;code&gt;backfill&lt;/code&gt; ( &lt;code&gt;bool&lt;/code&gt; , default &lt;code&gt;True&lt;/code&gt; ): Whether to create an array of size ( &lt;code&gt;tile_size + 1&lt;/code&gt; , &lt;code&gt;tile_size + 1&lt;/code&gt; ), backfilling the bottom and right edges. This is used because Martini needs a grid of size &lt;code&gt;2^n + 1&lt;/code&gt;</target>
+        </trans-unit>
+        <trans-unit id="23a12b9cf6c442137d057a41bb97ddcd67a50703" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;bounds&lt;/code&gt;: (&lt;code&gt;List[float]&lt;/code&gt;, default &lt;code&gt;None&lt;/code&gt;) linearly rescale position values to
+this extent, expected to be [minx, miny, maxx, maxy]. If not provided, no
+rescaling is done</source>
+          <target state="translated">&lt;code&gt;bounds&lt;/code&gt; : ( &lt;code&gt;List[float]&lt;/code&gt; , default &lt;code&gt;None&lt;/code&gt; ) linearly rescale position values to this extent, expected to be [minx, miny, maxx, maxy]. If not provided, no rescaling is done</target>
+        </trans-unit>
+        <trans-unit id="65a5ed716312d4d928ca4f7635e2de260e235999" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;encoding&lt;/code&gt; (&lt;code&gt;str&lt;/code&gt;): Either 'mapbox' or 'terrarium', the two main RGB
+encodings for elevation values</source>
+          <target state="translated">&lt;code&gt;encoding&lt;/code&gt; ( &lt;code&gt;str&lt;/code&gt; ): Either 'mapbox' or 'terrarium', the two main RGB encodings for elevation values</target>
+        </trans-unit>
+        <trans-unit id="cb17823d86405da47f4050a489bd9195306a73b9" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;flip_y&lt;/code&gt;: (&lt;code&gt;bool&lt;/code&gt;, default &lt;code&gt;False&lt;/code&gt;) Flip y coordinates. Can be useful when
+original data source is a PNG, since the origin of a PNG is the top left.</source>
+          <target state="translated">&lt;code&gt;flip_y&lt;/code&gt; : ( &lt;code&gt;bool&lt;/code&gt; , default &lt;code&gt;False&lt;/code&gt; ) Flip y coordinates. Can be useful when original data source is a PNG, since the origin of a PNG is the top left.</target>
+        </trans-unit>
+        <trans-unit id="b7322e048d2182d20a2e9723073fc603a118fd55" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;grid_size&lt;/code&gt; (&lt;code&gt;int&lt;/code&gt;, default &lt;code&gt;257&lt;/code&gt;): the grid size to use when generating the
+mesh. Must be 2^k+1. If your source heightmap is 256x256 pixels, use
+&lt;code&gt;grid_size=257&lt;/code&gt; and backfill the border pixels.</source>
+          <target state="translated">&lt;code&gt;grid_size&lt;/code&gt; ( &lt;code&gt;int&lt;/code&gt; , default &lt;code&gt;257&lt;/code&gt; ): the grid size to use when generating the mesh. Must be 2^k+1. If your source heightmap is 256x256 pixels, use &lt;code&gt;grid_size=257&lt;/code&gt; and backfill the border pixels.</target>
+        </trans-unit>
+        <trans-unit id="c730f0e8577ba07f76d49490ac85a7b980b34b1a" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;max_error&lt;/code&gt; (&lt;code&gt;float&lt;/code&gt;, default &lt;code&gt;0&lt;/code&gt;): the maximum vertical error for each
+triangle in the output mesh. For example if the units of the input heightmap
+is meters, using &lt;code&gt;max_error=5&lt;/code&gt; would mean that the mesh is continually refined
+until every triangle approximates the surface of the heightmap within 5
+meters.</source>
+          <target state="translated">&lt;code&gt;max_error&lt;/code&gt; ( &lt;code&gt;float&lt;/code&gt; , default &lt;code&gt;0&lt;/code&gt; ): the maximum vertical error for each triangle in the output mesh. For example if the units of the input heightmap is meters, using &lt;code&gt;max_error=5&lt;/code&gt; would mean that the mesh is continually refined until every triangle approximates the surface of the heightmap within 5 meters.</target>
+        </trans-unit>
+        <trans-unit id="1c66d5348615bbfb6d18f0d408ee5928b7c9a6b4" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;png&lt;/code&gt; (&lt;code&gt;np.ndarray&lt;/code&gt;): Ndarray of elevations encoded in three channels,
+representing red, green, and blue. Must be of shape (&lt;code&gt;tile_size&lt;/code&gt;, &lt;code&gt;tile_size&lt;/code&gt;,
+&lt;code&gt;&amp;gt;=3&lt;/code&gt;) or (&lt;code&gt;&amp;gt;=3&lt;/code&gt;, &lt;code&gt;tile_size&lt;/code&gt;, &lt;code&gt;tile_size&lt;/code&gt;), where &lt;code&gt;tile_size&lt;/code&gt; is usually 256
+or 512</source>
+          <target state="translated">&lt;code&gt;png&lt;/code&gt; ( &lt;code&gt;np.ndarray&lt;/code&gt; ): Ndarray of elevations encoded in three channels, representing red, green, and blue. Must be of shape ( &lt;code&gt;tile_size&lt;/code&gt; , &lt;code&gt;tile_size&lt;/code&gt; , &lt;code&gt;&amp;gt;=3&lt;/code&gt; ) or ( &lt;code&gt;&amp;gt;=3&lt;/code&gt; , &lt;code&gt;tile_size&lt;/code&gt; , &lt;code&gt;tile_size&lt;/code&gt; ), where &lt;code&gt;tile_size&lt;/code&gt; is usually 256 or 512</target>
+        </trans-unit>
+        <trans-unit id="b7a78bd38c31006ea4609998b3377b24c725f81f" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;pymartini&lt;/code&gt; passes the (only) test case included in the original Martini JS
+library. I also wrote a few extra conformance tests to compare output by
+&lt;code&gt;pymartini&lt;/code&gt; and Martini. I've found some small differences in float values at
+the end of the second step.</source>
+          <target state="translated">&lt;code&gt;pymartini&lt;/code&gt; passes the (only) test case included in the original Martini JS library. I also wrote a few extra conformance tests to compare output by &lt;code&gt;pymartini&lt;/code&gt; and Martini. I've found some small differences in float values at the end of the second step.</target>
+        </trans-unit>
+        <trans-unit id="3aab2e16bbb0dbb3e0a47658b6c3db70ab21853a" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;terrain&lt;/code&gt; (numpy &lt;code&gt;ndarray&lt;/code&gt;): an array of dtype &lt;code&gt;float32&lt;/code&gt; representing the
+input heightmap. The array can either be flattened, of shape (2^k+1 * 2^k+1)
+or a two-dimensional array of shape (2^k+1, 2^k+1). Note that for a 2D array
+pymartini expects indices in (columns, rows) order, so you might need to
+transpose your array first. Currently an error will be produced if the dtype
+of your input array is not &lt;code&gt;np.float32&lt;/code&gt;.</source>
+          <target state="translated">&lt;code&gt;terrain&lt;/code&gt; (numpy &lt;code&gt;ndarray&lt;/code&gt; ): an array of dtype &lt;code&gt;float32&lt;/code&gt; representing the input heightmap. The array can either be flattened, of shape (2^k+1 * 2^k+1) or a two-dimensional array of shape (2^k+1, 2^k+1). Note that for a 2D array pymartini expects indices in (columns, rows) order, so you might need to transpose your array first. Currently an error will be produced if the dtype of your input array is not &lt;code&gt;np.float32&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="9254f8e89972728c2154a0fef2c8061c7f07d82c" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;terrain&lt;/code&gt;: (&lt;code&gt;np.ndarray&lt;/code&gt;) 2d heightmap array of elevations as output by
+&lt;code&gt;decode_ele&lt;/code&gt;. Expected to have shape (&lt;code&gt;grid_size&lt;/code&gt;, &lt;code&gt;grid_size&lt;/code&gt;). &lt;strong&gt;&lt;code&gt;terrain&lt;/code&gt;
+is expected to be the exact same array passed to &lt;code&gt;Martini.create_tile&lt;/code&gt;.&lt;/strong&gt; If
+you use a different or transposed array, the mesh will look weird. See
+&lt;a href=&quot;https://github.com/kylebarron/pymartini/issues/15&quot;&gt;#15&lt;/a&gt;. If you need to
+transpose your array, do it before passing to &lt;code&gt;Martini.create_tile&lt;/code&gt;.</source>
+          <target state="translated">&lt;code&gt;terrain&lt;/code&gt; : ( &lt;code&gt;np.ndarray&lt;/code&gt; ) 2d heightmap array of elevations as output by &lt;code&gt;decode_ele&lt;/code&gt; . Expected to have shape ( &lt;code&gt;grid_size&lt;/code&gt; , &lt;code&gt;grid_size&lt;/code&gt; ). &lt;strong&gt; &lt;code&gt;terrain&lt;/code&gt; is expected to be the exact same array passed to &lt;code&gt;Martini.create_tile&lt;/code&gt; .&lt;/strong&gt; If you use a different or transposed array, the mesh will look weird. See &lt;a href=&quot;https://github.com/kylebarron/pymartini/issues/15&quot;&gt;#15&lt;/a&gt;. If you need to transpose your array, do it before passing to &lt;code&gt;Martini.create_tile&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="0db49a882d269ae42780f1c732386b7fbf47fc4f" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;triangles&lt;/code&gt; represents &lt;em&gt;indices&lt;/em&gt; within the &lt;code&gt;vertices&lt;/code&gt; array. So &lt;code&gt;[0, 1, 3, ...]&lt;/code&gt; would use the first, second, and fourth vertices within the &lt;code&gt;vertices&lt;/code&gt;
+array as a single triangle.</source>
+          <target state="translated">&lt;code&gt;triangles&lt;/code&gt; represents &lt;em&gt;indices&lt;/em&gt; within the &lt;code&gt;vertices&lt;/code&gt; array. So &lt;code&gt;[0, 1, 3, ...]&lt;/code&gt; would use the first, second, and fourth vertices within the &lt;code&gt;vertices&lt;/code&gt; array as a single triangle.</target>
+        </trans-unit>
+        <trans-unit id="de7387c275b9966fd1fbbdb4bf11da85bec985dd" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;vertices&lt;/code&gt;: (&lt;code&gt;np.array&lt;/code&gt;) vertices output from Martini</source>
+          <target state="translated">&lt;code&gt;vertices&lt;/code&gt; : ( &lt;code&gt;np.array&lt;/code&gt; ) vertices output from Martini</target>
+        </trans-unit>
+        <trans-unit id="822822ac5ef84cbe32eb7772e7e5a3237bff1c23" translate="yes" xml:space="preserve">
+          <source>A Cython port of &lt;a href=&quot;https://github.com/mapbox/martini&quot;&gt;Martini&lt;/a&gt; for fast RTIN terrain mesh generation, 2-3x
+faster than Martini in Node. The only dependency is Numpy.</source>
+          <target state="translated">A Cython port of &lt;a href=&quot;https://github.com/mapbox/martini&quot;&gt;Martini&lt;/a&gt; for fast RTIN terrain mesh generation, 2-3x faster than Martini in Node. The only dependency is Numpy.</target>
+        </trans-unit>
+        <trans-unit id="043ed9ade189d719787d9e7b8d6a72408886e3ff" translate="yes" xml:space="preserve">
+          <source>A Python port of Martini for fast terrain mesh generation</source>
+          <target state="translated">A Python port of Martini for fast terrain mesh generation</target>
+        </trans-unit>
+        <trans-unit id="a0ce003352c49719cdca4b1a71ae3d7e0cc2929b" translate="yes" xml:space="preserve">
+          <source>A class to instantiate constants needed for the &lt;code&gt;create_tile&lt;/code&gt; and &lt;code&gt;get_mesh&lt;/code&gt;
+steps. As noted in the benchmarks below, instantiating the &lt;code&gt;Martini&lt;/code&gt; class is
+the slowest of the three functions. If you're planning to create many meshes of
+the same size, create one &lt;code&gt;Martini&lt;/code&gt; class and create many tiles from it.</source>
+          <target state="translated">A class to instantiate constants needed for the &lt;code&gt;create_tile&lt;/code&gt; and &lt;code&gt;get_mesh&lt;/code&gt; steps. As noted in the benchmarks below, instantiating the &lt;code&gt;Martini&lt;/code&gt; class is the slowest of the three functions. If you're planning to create many meshes of the same size, create one &lt;code&gt;Martini&lt;/code&gt; class and create many tiles from it.</target>
+        </trans-unit>
+        <trans-unit id="5d2f052e2f38da939e42033068af2b84e145c157" translate="yes" xml:space="preserve">
+          <source>A helper function to decode a PNG terrain tile into elevations.</source>
+          <target state="translated">A helper function to decode a PNG terrain tile into elevations.</target>
+        </trans-unit>
+        <trans-unit id="a07f28b2b23e4b9717e7e9c6890c958933d255de" translate="yes" xml:space="preserve">
+          <source>A helper function to rescale the &lt;code&gt;vertices&lt;/code&gt; output and add elevations. The
+output is a numpy ndarray of the form &lt;code&gt;[[x1, y1, z1], [x2, y2, z2], ...]&lt;/code&gt;.</source>
+          <target state="translated">A helper function to rescale the &lt;code&gt;vertices&lt;/code&gt; output and add elevations. The output is a numpy ndarray of the form &lt;code&gt;[[x1, y1, z1], [x2, y2, z2], ...]&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="321b18a9bfb99fe35d7e75b57f0fcbca11e5ae87" translate="yes" xml:space="preserve">
+          <source>A wireframe rendering of the Grand Canyon. The mesh is created using
+&lt;code&gt;pymartini&lt;/code&gt;, encoded using &lt;a href=&quot;https://github.com/kylebarron/quantized-mesh-encoder&quot;&gt;&lt;code&gt;quantized-mesh-encoder&lt;/code&gt;&lt;/a&gt;,
+served on-demand using &lt;a href=&quot;https://github.com/kylebarron/dem-tiler&quot;&gt;&lt;code&gt;dem-tiler&lt;/code&gt;&lt;/a&gt;, and rendered with
+&lt;a href=&quot;https://deck.gl&quot;&gt;deck.gl&lt;/a&gt;.</source>
+          <target state="translated">A wireframe rendering of the Grand Canyon. The mesh is created using &lt;code&gt;pymartini&lt;/code&gt; , encoded using &lt;a href=&quot;https://github.com/kylebarron/quantized-mesh-encoder&quot;&gt; &lt;code&gt;quantized-mesh-encoder&lt;/code&gt; &lt;/a&gt;, served on-demand using &lt;a href=&quot;https://github.com/kylebarron/dem-tiler&quot;&gt; &lt;code&gt;dem-tiler&lt;/code&gt; &lt;/a&gt;, and rendered with &lt;a href=&quot;https://deck.gl&quot;&gt;deck.gl&lt;/a&gt;.</target>
+        </trans-unit>
+        <trans-unit id="d93d10ff0fbef1b4aa0ddc24e10e907746d3c85a" translate="yes" xml:space="preserve">
+          <source>API</source>
+          <target state="translated">API</target>
+        </trans-unit>
+        <trans-unit id="1687b141896e0670acd170edcb23fad8ec9aec77" translate="yes" xml:space="preserve">
+          <source>Additionally I include two helper functions: &lt;code&gt;decode_ele&lt;/code&gt; to decode a Mapbox
+Terrain RGB or Terrarium PNG array to elevations; and &lt;code&gt;rescale_positions&lt;/code&gt;, which
+adds elevations to each vertex and optionally linearly rescales each vertex's XY
+coordinates to a new bounding box.</source>
+          <target state="translated">Additionally I include two helper functions: &lt;code&gt;decode_ele&lt;/code&gt; to decode a Mapbox Terrain RGB or Terrarium PNG array to elevations; and &lt;code&gt;rescale_positions&lt;/code&gt; , which adds elevations to each vertex and optionally linearly rescales each vertex's XY coordinates to a new bounding box.</target>
+        </trans-unit>
+        <trans-unit id="cbb9fa252e60809efa55a7ad83aea5438ef56753" translate="yes" xml:space="preserve">
+          <source>Arguments</source>
+          <target state="translated">인수</target>
+        </trans-unit>
+        <trans-unit id="9ed99e75a9b04f273de29c9fef2bd3fb53d2e2de" translate="yes" xml:space="preserve">
+          <source>Benchmark</source>
+          <target state="translated">기준</target>
+        </trans-unit>
+        <trans-unit id="8218def4058a4a1af5c6a85ac1d7daf0f43f5906" translate="yes" xml:space="preserve">
+          <source>Copyright (c) 2019, Mapbox</source>
+          <target state="translated">Copyright (c) 2019, Mapbox</target>
+        </trans-unit>
+        <trans-unit id="819214edaf30ae1fe5baa36fffe06272040e396a" translate="yes" xml:space="preserve">
+          <source>Correctness</source>
+          <target state="translated">Correctness</target>
+        </trans-unit>
+        <trans-unit id="0ad81bd5d6a2c9adf910135bfc8343d5e7785cd8" translate="yes" xml:space="preserve">
+          <source>Each is a flat numpy array. Vertices represents the interleaved &lt;strong&gt;2D&lt;/strong&gt;
+coordinates of each vertex, e.g. &lt;code&gt;[x0, y0, x1, y1, ...]&lt;/code&gt;. If you need 3D
+coordinates, you can use the &lt;code&gt;rescale_positions&lt;/code&gt; helper function described
+below.</source>
+          <target state="translated">Each is a flat numpy array. Vertices represents the interleaved &lt;strong&gt;2D&lt;/strong&gt; coordinates of each vertex, e.g. &lt;code&gt;[x0, y0, x1, y1, ...]&lt;/code&gt; . If you need 3D coordinates, you can use the &lt;code&gt;rescale_positions&lt;/code&gt; helper function described below.</target>
+        </trans-unit>
+        <trans-unit id="0f01ed56a1e32a05e5ef96e4d779f34784af9a96" translate="yes" xml:space="preserve">
+          <source>Example</source>
+          <target state="translated">예</target>
+        </trans-unit>
+        <trans-unit id="e5f055ade0503505d546b5cef6740d63ca3de427" translate="yes" xml:space="preserve">
+          <source>Generate RTIN hierarchy from terrain data. This is faster than creating the
+&lt;code&gt;Martini&lt;/code&gt; instance, but slower than creating a mesh for a given max error. If
+you need to create many meshes with different errors for the same tile, you
+should reuse a &lt;code&gt;Tile&lt;/code&gt; instance.</source>
+          <target state="translated">Generate RTIN hierarchy from terrain data. This is faster than creating the &lt;code&gt;Martini&lt;/code&gt; instance, but slower than creating a mesh for a given max error. If you need to create many meshes with different errors for the same tile, you should reuse a &lt;code&gt;Tile&lt;/code&gt; instance.</target>
+        </trans-unit>
+        <trans-unit id="2e544ce11918e7b9750258943d93349b6f664c29" translate="yes" xml:space="preserve">
+          <source>Get a mesh for a given max error.</source>
+          <target state="translated">Get a mesh for a given max error.</target>
+        </trans-unit>
+        <trans-unit id="3382561fc50f41e95478afadf93f8fe7706de196" translate="yes" xml:space="preserve">
+          <source>ISC License</source>
+          <target state="translated">ISC 라이센스</target>
+        </trans-unit>
+        <trans-unit id="dcded0e49f75b44f7cd3de4b36713ed505954d42" translate="yes" xml:space="preserve">
+          <source>If you'd like to explore this in more detail, look at the &lt;code&gt;Tile.update()&lt;/code&gt; in
+&lt;code&gt;martini.pyx&lt;/code&gt; and the corresponding Martini code.</source>
+          <target state="translated">If you'd like to explore this in more detail, look at the &lt;code&gt;Tile.update()&lt;/code&gt; in &lt;code&gt;martini.pyx&lt;/code&gt; and the corresponding Martini code.</target>
+        </trans-unit>
+        <trans-unit id="fd6c3ebf7befca9f8208f86c76e4d4180303745c" translate="yes" xml:space="preserve">
+          <source>Install</source>
+          <target state="translated">설치</target>
+        </trans-unit>
+        <trans-unit id="5edac1d943121e3b64f847279bdb017a4135d205" translate="yes" xml:space="preserve">
+          <source>JS (Node)</source>
+          <target state="translated">JS (Node)</target>
+        </trans-unit>
+        <trans-unit id="3229609e15436ec51bcf00818a69a84dbc58a0c2" translate="yes" xml:space="preserve">
+          <source>License</source>
+          <target state="translated">특허</target>
+        </trans-unit>
+        <trans-unit id="a9dc80b6e217fc4397c99c93937093de1edc108f" translate="yes" xml:space="preserve">
+          <source>Permission to use, copy, modify, and/or distribute this software for any purpose
+with or without fee is hereby granted, provided that the above copyright notice
+and this permission notice appear in all copies.</source>
+          <target state="translated">Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.</target>
+        </trans-unit>
+        <trans-unit id="2feb08e76c3a686144c66f6e7994622aa7ab37f9" translate="yes" xml:space="preserve">
+          <source>Preparation steps are about 3x faster in Python than in Node; generating the
+mesh is about 2x faster in Python than in Node.</source>
+          <target state="translated">Preparation steps are about 3x faster in Python than in Node; generating the mesh is about 2x faster in Python than in Node.</target>
+        </trans-unit>
+        <trans-unit id="6e3604888c4b4ec08e2837913d012fe2834ffa83" translate="yes" xml:space="preserve">
+          <source>Python</source>
+          <target state="translated">파이썬</target>
+        </trans-unit>
+        <trans-unit id="9582a02f141fc4b345b2936eba691cd0654efebc" translate="yes" xml:space="preserve">
+          <source>Returns</source>
+          <target state="translated">보고</target>
+        </trans-unit>
+        <trans-unit id="0b9e272a80ee51c1ffeb0edea3a8a9765d1537af" translate="yes" xml:space="preserve">
+          <source>Returns a &lt;code&gt;Martini&lt;/code&gt; instance on which you can call &lt;code&gt;create_tile&lt;/code&gt;.</source>
+          <target state="translated">Returns a &lt;code&gt;Martini&lt;/code&gt; instance on which you can call &lt;code&gt;create_tile&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="146f712f1545f14669d5bd9595f3aa0b6a794f80" translate="yes" xml:space="preserve">
+          <source>Returns a &lt;code&gt;Tile&lt;/code&gt; instance on which you can call &lt;code&gt;get_mesh&lt;/code&gt;.</source>
+          <target state="translated">Returns a &lt;code&gt;Tile&lt;/code&gt; instance on which you can call &lt;code&gt;get_mesh&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="794d56c5dbe178529f648e59191c294f69cb1e38" translate="yes" xml:space="preserve">
+          <source>Returns a tuple of (&lt;code&gt;vertices&lt;/code&gt;, &lt;code&gt;triangles&lt;/code&gt;).</source>
+          <target state="translated">Returns a tuple of ( &lt;code&gt;vertices&lt;/code&gt; , &lt;code&gt;triangles&lt;/code&gt; ).</target>
+        </trans-unit>
+        <trans-unit id="87941035b8d9f51c2bbafe278ff14f7748635ff5" translate="yes" xml:space="preserve">
+          <source>THE SOFTWARE IS PROVIDED &quot;AS IS&quot; AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS
+OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
+THIS SOFTWARE.</source>
+          <target state="translated">THE SOFTWARE IS PROVIDED &quot;AS IS&quot; AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.</target>
+        </trans-unit>
+        <trans-unit id="29e3dc94db9b63cb1122409dbc7575519f4a6c7e" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;Martini&lt;/code&gt; class and &lt;code&gt;create_tile&lt;/code&gt; and &lt;code&gt;get_mesh&lt;/code&gt; methods are a direct port
+from the JS Martini library.</source>
+          <target state="translated">The &lt;code&gt;Martini&lt;/code&gt; class and &lt;code&gt;create_tile&lt;/code&gt; and &lt;code&gt;get_mesh&lt;/code&gt; methods are a direct port from the JS Martini library.</target>
+        </trans-unit>
+        <trans-unit id="82d9c5c54fa97d3f8ea97cfa7973b2d5a0e00f65" translate="yes" xml:space="preserve">
+          <source>The API is modeled after Martini.</source>
+          <target state="translated">The API is modeled after Martini.</target>
+        </trans-unit>
+        <trans-unit id="f02bc1584ead9faa1f231ed2f0679c714b2bb31f" translate="yes" xml:space="preserve">
+          <source>These differences are larger when using 512px tiles compared to 256px tiles,
+which reinforces my hypothesis that the differences have something to do with
+small low-level float or bitwise operations differences between Python and
+JavaScript.</source>
+          <target state="translated">These differences are larger when using 512px tiles compared to 256px tiles, which reinforces my hypothesis that the differences have something to do with small low-level float or bitwise operations differences between Python and JavaScript.</target>
+        </trans-unit>
+        <trans-unit id="4fc37209ece7b96479232e3c327dc92f137c5186" translate="yes" xml:space="preserve">
+          <source>This library is ported from Mapbox's &lt;a href=&quot;https://github.com/mapbox/martini&quot;&gt;Martini&lt;/a&gt;, which is licensed under
+the ISC License. My additions are licensed under the MIT license.</source>
+          <target state="translated">This library is ported from Mapbox's &lt;a href=&quot;https://github.com/mapbox/martini&quot;&gt;Martini&lt;/a&gt;, which is licensed under the ISC License. My additions are licensed under the MIT license.</target>
+        </trans-unit>
+        <trans-unit id="aa081c92c189f9c663ab24c2ab9e1f2002016abb" translate="yes" xml:space="preserve">
+          <source>This second step, &lt;code&gt;martini.create_tile(terrain)&lt;/code&gt;, computes the maximum error of
+every possible triangle and accumulates them. Thus, small float errors appear to
+be magnified by the summation of errors into larger triangles. These errors
+appear to be within &lt;code&gt;1e-5&lt;/code&gt; of the JS output. I'm guessing that this variance is
+greater than normal float rounding errors, due to this summation behavior.</source>
+          <target state="translated">This second step, &lt;code&gt;martini.create_tile(terrain)&lt;/code&gt; , computes the maximum error of every possible triangle and accumulates them. Thus, small float errors appear to be magnified by the summation of errors into larger triangles. These errors appear to be within &lt;code&gt;1e-5&lt;/code&gt; of the JS output. I'm guessing that this variance is greater than normal float rounding errors, due to this summation behavior.</target>
+        </trans-unit>
+        <trans-unit id="c25de2e83e9fceeee022a34e378748baf14ac201" translate="yes" xml:space="preserve">
+          <source>Using</source>
+          <target state="translated">사용</target>
+        </trans-unit>
+        <trans-unit id="15dc748f2a9efaf4b38de9c1935369d20ec343f4" translate="yes" xml:space="preserve">
+          <source>pymartini</source>
+          <target state="translated">pymartini</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

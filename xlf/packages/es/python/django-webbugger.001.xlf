@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="es" datatype="htmlbody" original="https://pypi.org/project/django-webbugger/">
+    <body>
+      <group id="django-webbugger">
+        <trans-unit id="85b71acad4a7a81ac58c559af7410d6ac96de7cb" translate="yes" xml:space="preserve">
+          <source># What is this?
+Django-Webbugger is a simple application that can be used to track visitors to your website. It uses the django content-types framework to allow the most flexible approach possible for processing tracking information. This allows you to customize what data is tracked in a very flexible way.</source>
+          <target state="translated"># &amp;iquest;Que es esto? Django-Webbugger es una aplicaci&amp;oacute;n sencilla que se puede utilizar para realizar un seguimiento de los visitantes de su sitio web. Utiliza el marco de tipos de contenido de django para permitir el enfoque m&amp;aacute;s flexible posible para procesar la informaci&amp;oacute;n de seguimiento. Esto le permite personalizar qu&amp;eacute; datos se rastrean de una manera muy flexible.</target>
+        </trans-unit>
+        <trans-unit id="ab85e4e58803f59872b5dc5fe34e29420fe5c895" translate="yes" xml:space="preserve">
+          <source># django webbugger
+#### Brandon R. Stoner &amp;lt;&lt;a href=&quot;mailto:monokrome%40monokro.me&quot;&gt;monokrome@monokro.me&lt;/a&gt;</source>
+          <target state="translated"># django webbugger #### Brandon R. Stoner &amp;lt; &lt;a href=&quot;mailto:monokrome%40monokro.me&quot;&gt;monokrome@monokro.me&lt;/a&gt;</target>
+        </trans-unit>
+        <trans-unit id="462e0606e0072b56a7138d1a99b8acaa6e27f181" translate="yes" xml:space="preserve">
+          <source>## Model structure</source>
+          <target state="translated">## Estructura del modelo</target>
+        </trans-unit>
+        <trans-unit id="984fdf91c1cd1fe3d8bf138b71ea79e67510a93d" translate="yes" xml:space="preserve">
+          <source>## Modes of operation
+The main view used for tracking is &lt;strong&gt;webbugger.views.trigger&lt;/strong&gt; which normally works in redirect mode, but can optionally be told to work in pixel mode instead.</source>
+          <target state="translated">## Modos de operaci&amp;oacute;n La vista principal utilizada para el seguimiento es &lt;strong&gt;webbugger.views.trigger,&lt;/strong&gt; que normalmente funciona en modo de redireccionamiento, pero opcionalmente se le puede decir que trabaje en modo de p&amp;iacute;xeles.</target>
+        </trans-unit>
+        <trans-unit id="97795d5a8474097c5ba86b21de41d7b17f12803d" translate="yes" xml:space="preserve">
+          <source>### Pixel Mode
+The trigger view also takes a keyword argument with the name of &amp;ldquo;pixel&amp;rdquo;. When set to True, this argument tells the view to return a 1x1 pixel clear GIF instead of redirecting the user to a new page. With this feature, it is possible to embed tracking URLs directly into pages as invisible image elements. Not only that, but you can make use of any online medium that downloads images by this system.</source>
+          <target state="translated">### Modo de p&amp;iacute;xel La vista de disparador tambi&amp;eacute;n toma un argumento de palabra clave con el nombre de &amp;ldquo;p&amp;iacute;xel&amp;rdquo;. Cuando se establece en True, este argumento le dice a la vista que devuelva un GIF transparente de 1x1 p&amp;iacute;xeles en lugar de redirigir al usuario a una nueva p&amp;aacute;gina. Con esta funci&amp;oacute;n, es posible incrustar URL de seguimiento directamente en las p&amp;aacute;ginas como elementos de imagen invisibles. No solo eso, sino que puedes hacer uso de cualquier medio en l&amp;iacute;nea que descargue im&amp;aacute;genes por este sistema.</target>
+        </trans-unit>
+        <trans-unit id="a2716e5a66769571dbc9d15e7d95b2231cc1c381" translate="yes" xml:space="preserve">
+          <source>### Redirect Mode
+When in redirect mode, the tracking system uses a given Target class to redirect the client to another page after the tracking is finished. This accomplishes a method of tracking that is transparent to users - depending on your URL schema.</source>
+          <target state="translated">### Modo de redireccionamiento Cuando est&amp;aacute; en modo de redireccionamiento, el sistema de seguimiento usa una clase Target determinada para redirigir al cliente a otra p&amp;aacute;gina una vez finalizado el seguimiento. Esto logra un m&amp;eacute;todo de seguimiento que es transparente para los usuarios, dependiendo de su esquema de URL.</target>
+        </trans-unit>
+        <trans-unit id="e400e4480d0f08262b80631f8ecda7fcb69e11ed" translate="yes" xml:space="preserve">
+          <source>### Request Entities
+An &amp;ldquo;Entity&amp;rdquo; is a django model that stores information related to an HTTP request in django. An entity can be any django model and can optionally define a method called &amp;ldquo;beacon_update&amp;rdquo; which will be called and passed the request from the tracking view prior to redirecting to our target URL. This allows you to save data from the request straight into the model very easily.</source>
+          <target state="translated">### Solicitudes de entidades Una &quot;entidad&quot; es un modelo de django que almacena informaci&amp;oacute;n relacionada con una solicitud HTTP en django. Una entidad puede ser cualquier modelo de django y opcionalmente puede definir un m&amp;eacute;todo llamado &amp;ldquo;beacon_update&amp;rdquo; que ser&amp;aacute; llamado y pasado la solicitud desde la vista de seguimiento antes de redirigir a nuestra URL de destino. Esto le permite guardar datos de la solicitud directamente en el modelo con mucha facilidad.</target>
+        </trans-unit>
+        <trans-unit id="b46c5c2cb7b76c7ee07ba6dfd9b07bdabb16dfa8" translate="yes" xml:space="preserve">
+          <source>### Target Destinations
+When not being used in pixel mode, a &amp;ldquo;target&amp;rdquo; represents where to redirect traffic after the Beacon has been created. A target is simply a model that defines a get_beacon_url method, which should return a URL to the page that our &amp;ldquo;entity&amp;rdquo; will be redirected to after processing a beacon. For compatibility with other django applications, webbugger checks if get_absolute_url is defined as an attribute on our target model when get_beacon_url does not exist. If neither of these methods exist, an HTTP 404 is shown because we have nowhere to direct traffic to after creating the tracking beacon.</source>
+          <target state="translated">### Destinos objetivo Cuando no se utiliza en modo p&amp;iacute;xel, un &quot;objetivo&quot; representa hacia d&amp;oacute;nde redirigir el tr&amp;aacute;fico despu&amp;eacute;s de que se haya creado la baliza. Un objetivo es simplemente un modelo que define un m&amp;eacute;todo get_beacon_url, que deber&amp;iacute;a devolver una URL a la p&amp;aacute;gina a la que nuestra &quot;entidad&quot; ser&amp;aacute; redirigida despu&amp;eacute;s de procesar una baliza. Para compatibilidad con otras aplicaciones de django, webbugger comprueba si get_absolute_url est&amp;aacute; definido como un atributo en nuestro modelo de destino cuando get_beacon_url no existe. Si ninguno de estos m&amp;eacute;todos existe, se muestra un HTTP 404 porque no tenemos a d&amp;oacute;nde dirigir el tr&amp;aacute;fico despu&amp;eacute;s de crear la baliza de seguimiento.</target>
+        </trans-unit>
+        <trans-unit id="d95589f5c9838b81a307e64f0333f1ded6afb455" translate="yes" xml:space="preserve">
+          <source>### Traffic Sources
+The &amp;ldquo;Source&amp;rdquo; can be any django model. This is useful for storing information regarding where the traffic came from. For instance, in an affiliate marketing system - you could use the source attribute of our beacon to reference the affiliate that sent the traffic to your site.</source>
+          <target state="translated">### Fuentes de tr&amp;aacute;fico La &quot;Fuente&quot; puede ser cualquier modelo de django. Esto es &amp;uacute;til para almacenar informaci&amp;oacute;n sobre el origen del tr&amp;aacute;fico. Por ejemplo, en un sistema de marketing de afiliados, puede usar el atributo de origen de nuestra baliza para hacer referencia al afiliado que envi&amp;oacute; el tr&amp;aacute;fico a su sitio.</target>
+        </trans-unit>
+        <trans-unit id="7fcc0d7beacc203d05f947cadc5d2a75c4e81ee6" translate="yes" xml:space="preserve">
+          <source>Basic webbugger/tracking beacon for django</source>
+          <target state="translated">Faro de rastreo/webbugger básico para django</target>
+        </trans-unit>
+        <trans-unit id="f9d8915409f4a22a6693f500efd76d26e642d00e" translate="yes" xml:space="preserve">
+          <source>For everything tracked, a &amp;ldquo;Beacon&amp;rdquo; is created. This beacon represents our tracking data. Beacons can consist of a Target, an Entity, and a Source. Entity and Source are provided for systems that want to track some sort of data affiliated with their page hits. A Target is required when redirecting, but it is unneeded when using pixels for tracking.</source>
+          <target state="translated">Para todo lo que se rastrea, se crea un &quot;Beacon&quot;. Esta baliza representa nuestros datos de seguimiento. Las balizas pueden constar de un objetivo, una entidad y una fuente. La entidad y la fuente se proporcionan para los sistemas que desean realizar un seguimiento de alg&amp;uacute;n tipo de datos asociados con sus visitas a la p&amp;aacute;gina. Se requiere un objetivo al redirigir, pero no es necesario cuando se utilizan p&amp;iacute;xeles para el seguimiento.</target>
+        </trans-unit>
+        <trans-unit id="af3a2bc77e2ad9f22d1b961b5f2a9e8ed281a604" translate="yes" xml:space="preserve">
+          <source>The pixel method allows you to do more clever things, such as including tracking inside of emails in order to see if someone has viewed an email that you sent them - assuming that they have images enabled in their email client, of course.</source>
+          <target state="translated">El método de los píxeles permite hacer cosas más inteligentes,como incluir el seguimiento dentro de los correos electrónicos para ver si alguien ha visto un correo electrónico que usted le ha enviado,suponiendo que tengan imágenes habilitadas en su cliente de correo electrónico,por supuesto.</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

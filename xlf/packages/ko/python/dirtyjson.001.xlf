@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="ko" datatype="htmlbody" original="https://pypi.org/project/dirtyjson/">
+    <body>
+      <group id="dirtyjson">
+        <trans-unit id="6ae4a0ca172385853893acdb24f9c7cc4bf26cdc" translate="yes" xml:space="preserve">
+          <source>&amp;gt;&amp;gt;&amp;gt; d = dirtyjson.loads(&quot;&quot;&quot;[&quot;foo&quot;, /* not fu*/ {bar: ['baz', null, 1.0, 2,]}] and then ignore this junk&quot;&quot;&quot;)</source>
+          <target state="translated">&amp;gt;&amp;gt;&amp;gt; d = dirtyjson.loads ( &quot;&quot; &quot;[&quot;foo &quot;, / * not fu * / {bar : [ 'baz', null, 1.0, 2,]}] 그런 다음이 정크 무시&quot; &quot;&quot;)</target>
+        </trans-unit>
+        <trans-unit id="b8018bc567b820d0bff01a55ebed0dba52195bda" translate="yes" xml:space="preserve">
+          <source>&amp;gt;&amp;gt;&amp;gt; d == obj</source>
+          <target state="translated">&amp;gt;&amp;gt;&amp;gt; d == obj</target>
+        </trans-unit>
+        <trans-unit id="8749208a83cf4ca9d79b2f6fa89d01acfddba65b" translate="yes" xml:space="preserve">
+          <source>&amp;gt;&amp;gt;&amp;gt; dirtyjson.load(io)[0] == 'streaming API'</source>
+          <target state="translated">&amp;gt;&amp;gt;&amp;gt; dirtyjson.load (io) [0] == '스트리밍 API'</target>
+        </trans-unit>
+        <trans-unit id="50ef2f2c125b05d7ad8f7e79d1d0ec2e7ee65c23" translate="yes" xml:space="preserve">
+          <source>&amp;gt;&amp;gt;&amp;gt; dirtyjson.loads('&quot;\\&quot;foo\\bar&quot;') == u'&quot;foo\x08ar'</source>
+          <target state="translated">&amp;gt;&amp;gt;&amp;gt; dirtyjson.loads ( ' &quot;\\&quot;foo \\ bar &quot;') == u '&quot;foo \ x08ar'</target>
+        </trans-unit>
+        <trans-unit id="b7576760f9f5be25265e4702d48595bcadacdce5" translate="yes" xml:space="preserve">
+          <source>&amp;gt;&amp;gt;&amp;gt; dirtyjson.loads('1.1', parse_float=Decimal) == Decimal('1.1')</source>
+          <target state="translated">&amp;gt;&amp;gt;&amp;gt; dirtyjson.loads ( '1.1', parse_float = Decimal) == Decimal ( '1.1')</target>
+        </trans-unit>
+        <trans-unit id="73c6533d0679cd0380ed8e05f1fd05fee27751dd" translate="yes" xml:space="preserve">
+          <source>&amp;gt;&amp;gt;&amp;gt; from decimal import Decimal</source>
+          <target state="translated">&amp;gt;&amp;gt;&amp;gt; from decimal import Decimal</target>
+        </trans-unit>
+        <trans-unit id="8add3916f54cbd4bb1b405547dab6738071c9904" translate="yes" xml:space="preserve">
+          <source>&amp;gt;&amp;gt;&amp;gt; from dirtyjson.compat import StringIO</source>
+          <target state="translated">&amp;gt;&amp;gt;&amp;gt; dirtyjson.compat에서 StringIO 가져 오기</target>
+        </trans-unit>
+        <trans-unit id="be6f2ca7bbf94788b627091c0fb810eee1d1da54" translate="yes" xml:space="preserve">
+          <source>&amp;gt;&amp;gt;&amp;gt; import dirtyjson</source>
+          <target state="translated">&amp;gt;&amp;gt;&amp;gt; dirtyjson 가져 오기</target>
+        </trans-unit>
+        <trans-unit id="3e215510061529c0113bec24d6ccb8fcb23d6b60" translate="yes" xml:space="preserve">
+          <source>&amp;gt;&amp;gt;&amp;gt; io = StringIO('[&quot;streaming API&quot;]')</source>
+          <target state="translated">&amp;gt;&amp;gt;&amp;gt; io = StringIO ( '[ &quot;스트리밍 API&quot;]')</target>
+        </trans-unit>
+        <trans-unit id="b083dd314cc867b321b0626f121509b1e1f47d67" translate="yes" xml:space="preserve">
+          <source>&amp;gt;&amp;gt;&amp;gt; obj = [u'foo', {u'bar': [u'baz', None, 1.0, 2]}]</source>
+          <target state="translated">&amp;gt;&amp;gt;&amp;gt; obj = [u'foo ', {u'bar': [u'baz ', 없음, 1.0, 2]}]</target>
+        </trans-unit>
+        <trans-unit id="3801b1799e3f3f1afdee2d7a99f77f3b01dddd1f" translate="yes" xml:space="preserve">
+          <source>&amp;gt;&amp;gt;&amp;gt; pos = d.attributes(0)  # line/column position of first element in array</source>
+          <target state="translated">&amp;gt;&amp;gt;&amp;gt; pos = d.attributes (0) # 배열에서 첫 번째 요소의 행 / 열 위치</target>
+        </trans-unit>
+        <trans-unit id="17ee0cc6d97ace975cdb45c7c1ddfcbf5192c5a4" translate="yes" xml:space="preserve">
+          <source>&amp;gt;&amp;gt;&amp;gt; pos = d[1].attributes('bar')  # line/column position of 'bar' key/value pair</source>
+          <target state="translated">&amp;gt;&amp;gt;&amp;gt; pos = d [1] .attributes ( 'bar') # 'bar'키 / 값 쌍의 행 / 열 위치</target>
+        </trans-unit>
+        <trans-unit id="ec8920b634349bc6ef5974a92cdc248e7294e0b8" translate="yes" xml:space="preserve">
+          <source>&amp;gt;&amp;gt;&amp;gt; pos.column == 2</source>
+          <target state="translated">&amp;gt;&amp;gt;&amp;gt; pos.column == 2</target>
+        </trans-unit>
+        <trans-unit id="597f87b16d9ce558a3c647180d83644b24aab19c" translate="yes" xml:space="preserve">
+          <source>&amp;gt;&amp;gt;&amp;gt; pos.key.column == 22</source>
+          <target state="translated">&amp;gt;&amp;gt;&amp;gt; pos.key.column == 22</target>
+        </trans-unit>
+        <trans-unit id="3098590b0929ac26e384d90081781ae41fafbf35" translate="yes" xml:space="preserve">
+          <source>&amp;gt;&amp;gt;&amp;gt; pos.key.line == 1</source>
+          <target state="translated">&amp;gt;&amp;gt;&amp;gt; pos.key.line == 1</target>
+        </trans-unit>
+        <trans-unit id="233fab9e100474a11f8fff4b00dcdbd36630774c" translate="yes" xml:space="preserve">
+          <source>&amp;gt;&amp;gt;&amp;gt; pos.line == 1</source>
+          <target state="translated">&amp;gt;&amp;gt;&amp;gt; pos.line == 1</target>
+        </trans-unit>
+        <trans-unit id="e349bb4e07cb0d1b1d2a315c6e99db142bea95c6" translate="yes" xml:space="preserve">
+          <source>&amp;gt;&amp;gt;&amp;gt; pos.value.column == 27</source>
+          <target state="translated">&amp;gt;&amp;gt;&amp;gt; pos.value.column == 27</target>
+        </trans-unit>
+        <trans-unit id="e943cbcc1b39f61ddcf9a5d763f397127f25fbb5" translate="yes" xml:space="preserve">
+          <source>&amp;gt;&amp;gt;&amp;gt; pos.value.line == 1</source>
+          <target state="translated">&amp;gt;&amp;gt;&amp;gt; pos.value.line == 1</target>
+        </trans-unit>
+        <trans-unit id="2e182d10984e41d0fa4db2a38ba07c1de90715b4" translate="yes" xml:space="preserve">
+          <source>(e.g. :class:`decimal.Decimal`).</source>
+          <target state="translated">(예 : class :`decimal.Decimal`).</target>
+        </trans-unit>
+        <trans-unit id="c74cfd87b536b17fa33bf8833c3043b9f67b6895" translate="yes" xml:space="preserve">
+          <source>(e.g. :class:`float`).</source>
+          <target state="translated">(예 : class :`float`).</target>
+        </trans-unit>
+        <trans-unit id="e03759a131bd85f1a76c3451cae491ed618b3310" translate="yes" xml:space="preserve">
+          <source>*parse_constant*, if specified, will be called with one of the following</source>
+          <target state="translated">* parse_constant * (지정된 경우)는 다음 중 하나로 호출됩니다.</target>
+        </trans-unit>
+        <trans-unit id="03239d75370d4db1f30e06bfb05d608dfa51e7bd" translate="yes" xml:space="preserve">
+          <source>*parse_float*, if specified, will be called with the string of every JSON</source>
+          <target state="translated">* parse_float * (지정된 경우)는 모든 JSON의 문자열로 호출됩니다.</target>
+        </trans-unit>
+        <trans-unit id="3c5f66fe41083ebe7d5c8699467e8480dc3dc85c" translate="yes" xml:space="preserve">
+          <source>*parse_int*, if specified, will be called with the int of the string of every</source>
+          <target state="translated">* parse_int *가 지정되면 모든 문자열의 int로 호출됩니다.</target>
+        </trans-unit>
+        <trans-unit id="1565caab8d89a5a763b8fcf90bbd6c8032ed729b" translate="yes" xml:space="preserve">
+          <source>*search_for_first_object*, if ``True``, will cause the parser to search for</source>
+          <target state="translated">* search_for_first_object *,``True ''인 경우 파서가</target>
+        </trans-unit>
+        <trans-unit id="2fc53797ce53c11146819cdde599361c56e55f3c" translate="yes" xml:space="preserve">
+          <source>*start_index*, if non-zero, will cause the parser to start processing from</source>
+          <target state="translated">* start_index * (0이 아닌 경우)는 파서가 처리를 시작하도록합니다.</target>
+        </trans-unit>
+        <trans-unit id="3d984f1d8aee6dc2729d706d08da7a96d408b9e0" translate="yes" xml:space="preserve">
+          <source>+---------------+-------------------------+</source>
+          <target state="translated">+ --------------- + ------------------------- +</target>
+        </trans-unit>
+        <trans-unit id="98b7f59b3a32439a6288b733a9be1156b62bc83f" translate="yes" xml:space="preserve">
+          <source>+===============+=========================+</source>
+          <target state="translated">+ =============== + ======================== +</target>
+        </trans-unit>
+        <trans-unit id="56bbea5c4b8d8feaab13028168f8c94bbc2ca540" translate="yes" xml:space="preserve">
+          <source>.. attribute:: colno</source>
+          <target state="translated">.. 속성 :: colno</target>
+        </trans-unit>
+        <trans-unit id="7c92713a04fd363f991c7befa7ef3ef9920f8d0b" translate="yes" xml:space="preserve">
+          <source>.. attribute:: doc</source>
+          <target state="translated">.. 속성 :: 문서</target>
+        </trans-unit>
+        <trans-unit id="3cf4d31bca9a62fc578251e839f38dfffe707123" translate="yes" xml:space="preserve">
+          <source>.. attribute:: lineno</source>
+          <target state="translated">.. 속성 :: lineno</target>
+        </trans-unit>
+        <trans-unit id="6d1ca6b4f4791fca4600c9163ce28d3cada9bf36" translate="yes" xml:space="preserve">
+          <source>.. attribute:: msg</source>
+          <target state="translated">.. 속성 :: msg</target>
+        </trans-unit>
+        <trans-unit id="2f02ebb107d21a77ccdf6bec9ad2e9a27b566f45" translate="yes" xml:space="preserve">
+          <source>.. attribute:: pos</source>
+          <target state="translated">.. 속성 :: 위치</target>
+        </trans-unit>
+        <trans-unit id="99ae25b996eb23c2e7d67014ed9892896e3d31ef" translate="yes" xml:space="preserve">
+          <source>.. class:: AttributedDict()</source>
+          <target state="translated">.. 클래스 :: AttributedDict ()</target>
+        </trans-unit>
+        <trans-unit id="e0f2937240d0005fbd15a487a15a470fc9cd59b5" translate="yes" xml:space="preserve">
+          <source>.. class:: AttributedList()</source>
+          <target state="translated">.. 클래스 :: AttributedList ()</target>
+        </trans-unit>
+        <trans-unit id="32a57aac3d98452caa2e513432bab54f76c6c260" translate="yes" xml:space="preserve">
+          <source>.. class:: KeyValuePosition()</source>
+          <target state="translated">.. 클래스 :: KeyValuePosition ()</target>
+        </trans-unit>
+        <trans-unit id="4d01d05f1540cb7eecc9fcaa49d433d119894bca" translate="yes" xml:space="preserve">
+          <source>.. class:: Position()</source>
+          <target state="translated">.. 클래스 :: Position ()</target>
+        </trans-unit>
+        <trans-unit id="99303046f2e9b790166118f40fa11ba9fd186620" translate="yes" xml:space="preserve">
+          <source>.. exception:: dirtyjson.Error(msg, doc, pos)</source>
+          <target state="translated">.. 예외 :: dirtyjson.Error (msg, doc, pos)</target>
+        </trans-unit>
+        <trans-unit id="bc4ed93949fc7a256af35d0fe2a687c8fde34743" translate="yes" xml:space="preserve">
+          <source>.. function:: load(fp[, encoding[, parse_float[, parse_int[, parse_constant[, search_for_first_object]]]]])</source>
+          <target state="translated">.. function :: load (fp [, encoding [, parse_float [, parse_int [, parse_constant [, search_for_first_object]]]]])</target>
+        </trans-unit>
+        <trans-unit id="948c39cb7b7df537f734c820a7e8538c9fc2e36c" translate="yes" xml:space="preserve">
+          <source>.. function:: loads(s[, encoding[, parse_float[, parse_int[, parse_constant[, search_for_first_object[, start_index]]]]])</source>
+          <target state="translated">.. function :: loads (s [, encoding [, parse_float [, parse_int [, parse_constant [, search_for_first_object [, start_index]]]]])</target>
+        </trans-unit>
+        <trans-unit id="fb6deafc8e6ccd9b354e14a91ed5e32b91dc3d9b" translate="yes" xml:space="preserve">
+          <source>.. method:: add_with_attributes(self, key, value, attributes)</source>
+          <target state="translated">.. 메소드 :: add_with_attributes (self, key, value, attributes)</target>
+        </trans-unit>
+        <trans-unit id="1c14e2ad1c548a47458264241585808bccaf857d" translate="yes" xml:space="preserve">
+          <source>.. method:: append(self, value, attributes=None):</source>
+          <target state="translated">.. method :: append (self, value, attributes = None) :</target>
+        </trans-unit>
+        <trans-unit id="92f0115bc282f604f136fb823467c728a27c4166" translate="yes" xml:space="preserve">
+          <source>.. method:: attributes(self, index)</source>
+          <target state="translated">.. 메소드 :: 속성 (자기, 색인)</target>
+        </trans-unit>
+        <trans-unit id="72c713ead8a205f850b3e08f63036222ca16dbef" translate="yes" xml:space="preserve">
+          <source>.. method:: attributes(self, key)</source>
+          <target state="translated">.. method :: 속성 (self, key)</target>
+        </trans-unit>
+        <trans-unit id="22217cf8bef85658359134506aa8b5f78bf15d09" translate="yes" xml:space="preserve">
+          <source>.. module:: dirtyjson</source>
+          <target state="translated">.. 모듈 :: dirtyjson</target>
+        </trans-unit>
+        <trans-unit id="ba401896be6e524e1ebc17b934c44dc73c74594c" translate="yes" xml:space="preserve">
+          <source>.. moduleauthor:: Scott Maxwell &amp;lt;scott@codecobblers.com&amp;gt;</source>
+          <target state="translated">.. moduleauthor :: Scott Maxwell &amp;lt;scott@codecobblers.com&amp;gt;</target>
+        </trans-unit>
+        <trans-unit id="1dff53afa2a7b7a3f94dcd2842f3dfe0d65a5128" translate="yes" xml:space="preserve">
+          <source>.. note::</source>
+          <target state="translated">.. 노트::</target>
+        </trans-unit>
+        <trans-unit id="60d2867d15d2fbf405f45b619ed8efd7a1a11154" translate="yes" xml:space="preserve">
+          <source>:class:`AttributedList` instead of ``dict`` and ``list``. Each is actually a</source>
+          <target state="translated">: class : ʻAttributedList` 대신``dict ''및``list ''. 각각은 실제로</target>
+        </trans-unit>
+        <trans-unit id="5d55effad6025b6349c9e6822020831e95c86779" translate="yes" xml:space="preserve">
+          <source>:class:`KeyValuePosition`. Retrieve position info like this::</source>
+          <target state="translated">: class :`KeyValuePosition`. 다음과 같은 위치 정보 검색 ::</target>
+        </trans-unit>
+        <trans-unit id="44becaa8a6102a22e1259aff0920fc72fc66dd15" translate="yes" xml:space="preserve">
+          <source>:mod:`dirtyjson` --- JSON decoder</source>
+          <target state="translated">: mod :`dirtyjson` --- JSON 디코더</target>
+        </trans-unit>
+        <trans-unit id="649e99d7a54f411156244adbc538a0a1b1aff278" translate="yes" xml:space="preserve">
+          <source>:mod:`dirtyjson` exposes an API familiar to users of the standard library</source>
+          <target state="translated">: mod :`dirtyjson`은 표준 라이브러리 사용자에게 친숙한 API를 제공합니다.</target>
+        </trans-unit>
+        <trans-unit id="64974b61e2d18c2ac8305456743528533d56dff6" translate="yes" xml:space="preserve">
+          <source>:mod:`dirtyjson` is a JSON decoder meant for extracting JSON-type data from .js</source>
+          <target state="translated">: mod :`dirtyjson`은 .js에서 JSON 유형 데이터를 추출하기위한 JSON 디코더입니다.</target>
+        </trans-unit>
+        <trans-unit id="36bdba2ca242a4c02570ef9d45f2de4be049fef6" translate="yes" xml:space="preserve">
+          <source>:mod:`json` library or :mod:`simplejson`.</source>
+          <target state="translated">: mod :`json` 라이브러리 또는 : mod :`simplejson`.</target>
+        </trans-unit>
+        <trans-unit id="43f40d1a73d878b7bb00b4ecb58ade221f636927" translate="yes" xml:space="preserve">
+          <source>:mod:`marshal` and :mod:`pickle` modules. However, :mod:`dirtyjson` provides</source>
+          <target state="translated">: mod :`marshal` 및 : mod :`pickle` 모듈. 그러나 : mod :`dirtyjson`은</target>
+        </trans-unit>
+        <trans-unit id="4c5c18776b9ddfcfcf3de91b6e2f7ca2f9216f8e" translate="yes" xml:space="preserve">
+          <source>:mod:`simplejson` project for providing such a nice starting point.</source>
+          <target state="translated">: mod :`simplejson` 프로젝트는 멋진 시작점을 제공합니다.</target>
+        </trans-unit>
+        <trans-unit id="407cee2965f423cf38d7220a3d4837b627382078" translate="yes" xml:space="preserve">
+          <source>:synopsis: Decode JSON data from dirty files.</source>
+          <target state="translated">: synopsis : 더티 파일에서 JSON 데이터를 디코딩합니다.</target>
+        </trans-unit>
+        <trans-unit id="df606e8c5f112c6341f5dce578eaa7682f6059f6" translate="yes" xml:space="preserve">
+          <source>A subclass of ``dict`` that behaves exactly like a ``dict`` except that it</source>
+          <target state="translated">``dict ''와 똑같이 작동하는``dict ''의 하위 클래스</target>
+        </trans-unit>
+        <trans-unit id="39981105da4dcb54e072e00e8e60c2e0ee21c179" translate="yes" xml:space="preserve">
+          <source>A subclass of ``list`` that behaves exactly like a ``list`` except that it</source>
+          <target state="translated">``list ''와 똑같이 동작하는``list ''의 서브 클래스</target>
+        </trans-unit>
+        <trans-unit id="7674c2e95690bdc027a6d82b17b4b50fb2e2d977" translate="yes" xml:space="preserve">
+          <source>Appends *value* to the list and *attributes* to the associated location.</source>
+          <target state="translated">* 값 *을 목록에 추가하고 * 속성 *을 연관된 위치에 추가합니다.</target>
+        </trans-unit>
+        <trans-unit id="eec5d1983a43e5b1f30e4f35ee5c1e9ddd26cf73" translate="yes" xml:space="preserve">
+          <source>AttributedDict and AttributedList</source>
+          <target state="translated">AttributedDict 및 AttributedList</target>
+        </trans-unit>
+        <trans-unit id="b20cbc384159fd820ed034fd3615298ec09f5902" translate="yes" xml:space="preserve">
+          <source>Basic Usage</source>
+          <target state="translated">기본 사용법</target>
+        </trans-unit>
+        <trans-unit id="ae9d2b9412493b99f8adc5483176b0ecd3c7a743" translate="yes" xml:space="preserve">
+          <source>Decoding JSON and getting position information::</source>
+          <target state="translated">JSON 디코딩 및 위치 정보 가져 오기 ::</target>
+        </trans-unit>
+        <trans-unit id="ae43eb15973330d65594bd677efb0eaf2e2e8999" translate="yes" xml:space="preserve">
+          <source>Decoding JSON from streams::</source>
+          <target state="translated">스트림에서 JSON 디코딩 ::</target>
+        </trans-unit>
+        <trans-unit id="8da54f66b15406d6457bc37e21d9690872c68a24" translate="yes" xml:space="preserve">
+          <source>Decoding unicode from JSON::</source>
+          <target state="translated">JSON에서 유니 코드 디코딩 ::</target>
+        </trans-unit>
+        <trans-unit id="030646e272ae5ae87b221d2b0ffc471a5bdfd209" translate="yes" xml:space="preserve">
+          <source>Deserialize *fp* (a ``.read()``-supporting file-like object containing a JSON</source>
+          <target state="translated">* fp * 역 직렬화 (``.read ()``-JSON을 포함하는 파일 류 객체 지원</target>
+        </trans-unit>
+        <trans-unit id="7f57e6bd195cf183fc0bdc9ae24284b1e5d6aa07" translate="yes" xml:space="preserve">
+          <source>Deserialize *s* (a :class:`str` or :class:`unicode` instance containing a JSON</source>
+          <target state="translated">* s * 역 직렬화 (JSON을 포함하는 : class :`str` 또는 : class : ʻunicode` 인스턴스</target>
+        </trans-unit>
+        <trans-unit id="58a846eba037551e3edaa28f7c7dbd47766273e8" translate="yes" xml:space="preserve">
+          <source>Development of dirtyjson happens on Github:</source>
+          <target state="translated">dirtyjson의 개발은 Github에서 발생합니다.</target>
+        </trans-unit>
+        <trans-unit id="1312725a0bb65854bed8e64bbfad5e5382b3df4f" translate="yes" xml:space="preserve">
+          <source>Encodings that are not ASCII based (such as UCS-2) are not allowed, and</source>
+          <target state="translated">ASCII 기반이 아닌 인코딩 (예 : UCS-2)은 허용되지 않습니다.</target>
+        </trans-unit>
+        <trans-unit id="cd3dfbe79fda3a9d92de67b1bd4f1dc9f60ab723" translate="yes" xml:space="preserve">
+          <source>Exceptions</source>
+          <target state="translated">예외</target>
+        </trans-unit>
+        <trans-unit id="0d449c794168922c45056708820610954e3b9048" translate="yes" xml:space="preserve">
+          <source>If *fp.read()* returns :class:`str` then decoded JSON strings that contain</source>
+          <target state="translated">* fp.read () *가 : class :`str`을 반환하면 다음을 포함하는 디코딩 된 JSON 문자열</target>
+        </trans-unit>
+        <trans-unit id="350072150174d3b775d974846b6f69b99aeb990c" translate="yes" xml:space="preserve">
+          <source>If *s* is a :class:`str` instance and is encoded with an ASCII based encoding</source>
+          <target state="translated">* s *가 : class :`str` 인스턴스이고 ASCII 기반 인코딩으로 인코딩 된 경우</target>
+        </trans-unit>
+        <trans-unit id="d7e06b7a888b1177a2133b15abc536ae280f623a" translate="yes" xml:space="preserve">
+          <source>If *s* is a :class:`str` then decoded JSON strings that contain</source>
+          <target state="translated">* s *가 : class :`str`이면 다음을 포함하는 디코딩 된 JSON 문자열</target>
+        </trans-unit>
+        <trans-unit id="1e51a849310d87982decec04b1742f487fea97d2" translate="yes" xml:space="preserve">
+          <source>If the contents of *fp* are encoded with an ASCII based encoding other than</source>
+          <target state="translated">* fp *의 내용이 다음 이외의 ASCII 기반 인코딩으로 인코딩 된 경우</target>
+        </trans-unit>
+        <trans-unit id="9597d43b5348fc4203ca46caa26c651a475c0874" translate="yes" xml:space="preserve">
+          <source>In our case, we store :class:`Position`.</source>
+          <target state="translated">우리의 경우 : class :`Position`을 저장합니다.</target>
+        </trans-unit>
+        <trans-unit id="487665d7e921bfcb7973264e9fa3e5b863bebba5" translate="yes" xml:space="preserve">
+          <source>It also understands ``NaN``, ``Infinity``, and ``-Infinity`` as their</source>
+          <target state="translated">또한``NaN '',`ʻInfinity ''및``-Infinity``를</target>
+        </trans-unit>
+        <trans-unit id="61a75ab528b7a12bc62292ebd66489d27bd17b3e" translate="yes" xml:space="preserve">
+          <source>It is used for storing the position attributes for :class:`AttributedList`</source>
+          <target state="translated">: class : ʻAttributedList`의 위치 속성을 저장하는 데 사용됩니다.</target>
+        </trans-unit>
+        <trans-unit id="67125291cf10c87c6fe8581cc7cdd58f7ed80c80" translate="yes" xml:space="preserve">
+          <source>JSON (JavaScript Object Notation) &amp;lt;http://json.org&amp;gt; is a subset of JavaScript</source>
+          <target state="translated">JSON (JavaScript Object Notation) &amp;lt;http://json.org&amp;gt;는 JavaScript의 하위 집합입니다.</target>
+        </trans-unit>
+        <trans-unit id="cd1b7d2f184c788c6c40c3831f227920363ccb0f" translate="yes" xml:space="preserve">
+          <source>JSON decoder for Python that can extract data from the muck</source>
+          <target state="translated">muck에서 데이터를 추출 할 수있는 Python 용 JSON 디코더</target>
+        </trans-unit>
+        <trans-unit id="3c31af323daa17c1ebc65f055ba47603eed16090" translate="yes" xml:space="preserve">
+          <source>JSON int to be decoded. By default, this is equivalent to ``int(num_str)``.</source>
+          <target state="translated">디코딩 할 JSON 정수입니다. 기본적으로 이것은`ʻint (num_str)``와 같습니다.</target>
+        </trans-unit>
+        <trans-unit id="d60454ef21734ebe87a8161d440e5d61b544e188" translate="yes" xml:space="preserve">
+          <source>Performs the following translations in decoding by default:</source>
+          <target state="translated">기본적으로 디코딩시 다음과 같은 변환을 수행합니다.</target>
+        </trans-unit>
+        <trans-unit id="01fba3c10555782f2c38a3e842be3fd16696bf22" translate="yes" xml:space="preserve">
+          <source>Return the attributes associated with the specified *key* or ``None`` if</source>
+          <target state="translated">지정된 * key * 또는``None ''과 관련된 속성을 반환합니다.</target>
+        </trans-unit>
+        <trans-unit id="8fab449a92f0f8868c1ed414424f04075012408b" translate="yes" xml:space="preserve">
+          <source>Returns the attributes for the value at the given *index*. In our case,</source>
+          <target state="translated">주어진 * index *에있는 값의 속성을 반환합니다. 우리의 경우</target>
+        </trans-unit>
+        <trans-unit id="2ee0611bde2938ee3c458d9bb748d77510f4c869" translate="yes" xml:space="preserve">
+          <source>Set the *key* in the underlying ``dict`` to the *value* and also store</source>
+          <target state="translated">기본``dict ''의 * key *를 * value *로 설정하고 저장합니다.</target>
+        </trans-unit>
+        <trans-unit id="f548c370c1bdbc74240d8d2d82f40af5a0b797f7" translate="yes" xml:space="preserve">
+          <source>Subclass of :exc:`ValueError` with the following additional attributes:</source>
+          <target state="translated">다음 추가 속성이있는 : exc :`ValueError`의 하위 클래스 :</target>
+        </trans-unit>
+        <trans-unit id="62d318f4f1aa68043a2bc6a22f43102154bd0b03" translate="yes" xml:space="preserve">
+          <source>The :mod:`dirtyjson` module uses :class:`AttributedDict` and</source>
+          <target state="translated">: mod :`dirtyjson` 모듈은 : class : ʻAttributedDict`를 사용하고</target>
+        </trans-unit>
+        <trans-unit id="49348368764d639b9afa24152df542dc22fd0732" translate="yes" xml:space="preserve">
+          <source>The JSON document being parsed</source>
+          <target state="translated">구문 분석중인 JSON 문서</target>
+        </trans-unit>
+        <trans-unit id="f7ad3588c24e017f43af8b85f226a2e3094828d5" translate="yes" xml:space="preserve">
+          <source>The code for :mod:`dirtyjson` is a fairly drastically rewritten version</source>
+          <target state="translated">: mod :`dirtyjson`의 코드는 상당히 재 작성된 버전입니다.</target>
+        </trans-unit>
+        <trans-unit id="76d28f49df3b9c6b0de7e0a3769d7de6e33b0293" translate="yes" xml:space="preserve">
+          <source>The column corresponding to pos</source>
+          <target state="translated">pos에 해당하는 열</target>
+        </trans-unit>
+        <trans-unit id="ec556d7ea71ebc68be5177945283ad4874de9524" translate="yes" xml:space="preserve">
+          <source>The goal of :mod:`dirtyjson` is to read JSON objects out of files that are</source>
+          <target state="translated">: mod :`dirtyjson`의 목표는 다음과 같은 파일에서 JSON 객체를 읽는 것입니다.</target>
+        </trans-unit>
+        <trans-unit id="c6aebee1745abf602ee9bc11b5a09910316e3e19" translate="yes" xml:space="preserve">
+          <source>The line corresponding to pos</source>
+          <target state="translated">pos에 해당하는 라인</target>
+        </trans-unit>
+        <trans-unit id="8f5207c9db3f7fe279f3814b995c8b5435afc953" translate="yes" xml:space="preserve">
+          <source>The other arguments have the same meaning as in :func:`load`.</source>
+          <target state="translated">다른 인수는 : func :`load`에서와 동일한 의미를 갖습니다.</target>
+        </trans-unit>
+        <trans-unit id="e70ce5ee7409c8cb913ae6b1ba45895aa685d1cc" translate="yes" xml:space="preserve">
+          <source>The start index of doc where parsing failed</source>
+          <target state="translated">파싱이 실패한 문서의 시작 인덱스</target>
+        </trans-unit>
+        <trans-unit id="6b76b45321a57535855ab3250e026b75d4652899" translate="yes" xml:space="preserve">
+          <source>The unformatted error message</source>
+          <target state="translated">형식화되지 않은 오류 메시지</target>
+        </trans-unit>
+        <trans-unit id="02b7e5406e899979ee37f8538fb3805ec8282b2e" translate="yes" xml:space="preserve">
+          <source>This can be used to use another datatype or parser for JSON floats</source>
+          <target state="translated">이것은 JSON 부동에 대해 다른 데이터 유형 또는 파서를 사용하는 데 사용할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="f3763d1e75511ae645c6d3f008f9de309df01fa4" translate="yes" xml:space="preserve">
+          <source>This can be used to use another datatype or parser for JSON integers</source>
+          <target state="translated">JSON 정수에 다른 데이터 유형 또는 파서를 사용하는 데 사용할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="7da9479875097596df522522b0ad99023a60bd4e" translate="yes" xml:space="preserve">
+          <source>This class is *NOT* robust. If you insert or delete items, the attributes</source>
+          <target state="translated">이 클래스는 강력하지 * 않습니다 *. 항목을 삽입하거나 삭제하면 속성이</target>
+        </trans-unit>
+        <trans-unit id="80c9b9d2ed6ffff12c1e407668c3596b5235167a" translate="yes" xml:space="preserve">
+          <source>This is a very simple utility class that contains ``line`` and ``column``.</source>
+          <target state="translated">이것은``line ''과``column ''을 포함하는 매우 간단한 유틸리티 클래스입니다.</target>
+        </trans-unit>
+        <trans-unit id="71b878e8b2403e1a57803b4c7d81c4b4bb0bb219" translate="yes" xml:space="preserve">
+          <source>This is another very simple utility class that contains ``key`` and</source>
+          <target state="translated">이것은``키 ''와</target>
+        </trans-unit>
+        <trans-unit id="8d4455363582361016f7e07d5aea99e04c3162cf" translate="yes" xml:space="preserve">
+          <source>This is very useful for reading an object from the middle of a JavaScript</source>
+          <target state="translated">이것은 자바 스크립트 중간에서 객체를 읽을 때 매우 유용합니다.</target>
+        </trans-unit>
+        <trans-unit id="88b33e4e12f75ac8bf792aebde41f1a090f3a612" translate="yes" xml:space="preserve">
+          <source>True</source>
+          <target state="translated">진실</target>
+        </trans-unit>
+        <trans-unit id="495d14c7deac9423dd8b129ebe7c2224e7a50390" translate="yes" xml:space="preserve">
+          <source>UTF-8 (e.g. latin-1), then an appropriate *encoding* name must be specified.</source>
+          <target state="translated">UTF-8 (예 : latin-1) 인 경우 적절한 * 인코딩 * 이름을 지정해야합니다.</target>
+        </trans-unit>
+        <trans-unit id="b27bc16cad03d30176641ea3494b6d2a24c905a7" translate="yes" xml:space="preserve">
+          <source>Unlike the standard :mod:`json` module, :mod:`dirtyjson` always does</source>
+          <target state="translated">표준 : mod :`json` 모듈과 달리 : mod :`dirtyjson`은 항상</target>
+        </trans-unit>
+        <trans-unit id="6e37a0564d20a280063b7794f2fd0b324a6886fa" translate="yes" xml:space="preserve">
+          <source>Using Decimal instead of float::</source>
+          <target state="translated">float 대신 Decimal 사용 ::</target>
+        </trans-unit>
+        <trans-unit id="8a8ec394cd4043e2f0f18da2292680c2037a0c30" translate="yes" xml:space="preserve">
+          <source>``'NaN'``. This can be used to raise an exception if invalid JSON numbers are</source>
+          <target state="translated">`` 'NaN'``. 유효하지 않은 JSON 번호가있는 경우 예외를 발생시키는 데 사용할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="a9b9e383f77aa5eb01bb272b03801a58bbd3b46d" translate="yes" xml:space="preserve">
+          <source>``int(num_str, 0)`` before passing through to the converter passed is as</source>
+          <target state="translated">`ʻint (num_str, 0)``은 변환기를 통과하기 전에 다음과 같이 전달됩니다.</target>
+        </trans-unit>
+        <trans-unit id="9636c03d8f82a806629661e4165c53cdbc379a4a" translate="yes" xml:space="preserve">
+          <source>``value``. Each of those is a :class:`Position` object specifying the</source>
+          <target state="translated">``가치 ''. 각각은 다음을 지정하는 : class :`Position` 객체입니다.</target>
+        </trans-unit>
+        <trans-unit id="798272c5f8e01867ca768069c2ccffb5f1cfff71" translate="yes" xml:space="preserve">
+          <source>allowed and should be decoded to :class:`unicode` first.</source>
+          <target state="translated">허용되며 먼저 : class : ʻunicode`로 디코딩되어야합니다.</target>
+        </trans-unit>
+        <trans-unit id="11bf10b583649e8bf7e629e77065770ab875d0d0" translate="yes" xml:space="preserve">
+          <source>allows storing attributes for each value.</source>
+          <target state="translated">각 값에 대한 속성을 저장할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="84d72bb3ee5494b81bde0baf81788e3d94634d5a" translate="yes" xml:space="preserve">
+          <source>and :class:`KeyValuePosition`</source>
+          <target state="translated">및 : class :`KeyValuePosition`</target>
+        </trans-unit>
+        <trans-unit id="5d136206738d96ea85768a62434f982edecd2141" translate="yes" xml:space="preserve">
+          <source>and octal numbers.</source>
+          <target state="translated">그리고 8 진수.</target>
+        </trans-unit>
+        <trans-unit id="04d6a7243b5effae6e870607c604eb39ce786b0d" translate="yes" xml:space="preserve">
+          <source>corresponding ``float`` values, which is outside the JSON spec.</source>
+          <target state="translated">JSON 사양을 벗어난 해당``float ''값.</target>
+        </trans-unit>
+        <trans-unit id="82c3664db8c6dc163df11b26bcc050db33dbd5de" translate="yes" xml:space="preserve">
+          <source>document) to a Python object. :exc:`dirtyjson.Error` will be</source>
+          <target state="translated">문서)를 Python 개체에 추가합니다. : exc :`dirtyjson.Error`는</target>
+        </trans-unit>
+        <trans-unit id="08ab528bf5c6a0e65f7b67a6f4bb56836d404387" translate="yes" xml:space="preserve">
+          <source>each key/value pair.</source>
+          <target state="translated">각 키 / 값 쌍.</target>
+        </trans-unit>
+        <trans-unit id="76ddfa7e843ce882c59db89039de8ef3cc294046" translate="yes" xml:space="preserve">
+          <source>element. We use those attributes to store line and column numbers. You can use</source>
+          <target state="translated">요소. 이러한 속성을 사용하여 행 및 열 번호를 저장합니다. 당신이 사용할 수있는</target>
+        </trans-unit>
+        <trans-unit id="2cd2dfed50a80740d331fb2bf0a654e8f2e00cab" translate="yes" xml:space="preserve">
+          <source>encountered or to provide alternate values for any of these constants.</source>
+          <target state="translated">이러한 상수에 대한 대체 값을 제공하거나 발생합니다.</target>
+        </trans-unit>
+        <trans-unit id="6b9b9cc867fcb6eed8cbce02e66ff87bd7a6f52e" translate="yes" xml:space="preserve">
+          <source>enhancement.</source>
+          <target state="translated">상승.</target>
+        </trans-unit>
+        <trans-unit id="e1ae90fc2f86d79825a96562add0919aed98dd02" translate="yes" xml:space="preserve">
+          <source>file.</source>
+          <target state="translated">파일.</target>
+        </trans-unit>
+        <trans-unit id="d3d4179a135073afccaf353416318299eb0bbde9" translate="yes" xml:space="preserve">
+          <source>files. The returned data structure includes information about line and column</source>
+          <target state="translated">파일. 반환 된 데이터 구조에는 행 및 열에 대한 정보가 포함됩니다.</target>
+        </trans-unit>
+        <trans-unit id="c00bdc981eea1b4e021284acaec014008cad2e7c" translate="yes" xml:space="preserve">
+          <source>float to be decoded. By default, this is equivalent to ``float(num_str)``.</source>
+          <target state="translated">디코딩 할 수 있습니다. 기본적으로 이것은``float (num_str)``와 동일합니다.</target>
+        </trans-unit>
+        <trans-unit id="783780642b4ad6074dc9701b78f55d7fe8871034" translate="yes" xml:space="preserve">
+          <source>for a complex data parser or compiler.</source>
+          <target state="translated">복잡한 데이터 파서 또는 컴파일러의 경우.</target>
+        </trans-unit>
+        <trans-unit id="a2b4eb94122001eb9c2a773ffee38481b830b8b2" translate="yes" xml:space="preserve">
+          <source>for storing the position attributes for :class:`AttributedDict`.</source>
+          <target state="translated">: class : ʻAttributedDict`의 위치 속성을 저장합니다.</target>
+        </trans-unit>
+        <trans-unit id="105f9ea9aa4ecf0fb5d5cba36faf62bd2567919e" translate="yes" xml:space="preserve">
+          <source>include single quotes, line comments, inline comments, dangling commas,</source>
+          <target state="translated">작은 따옴표, 줄 주석, 인라인 주석, 매달린 쉼표,</target>
+        </trans-unit>
+        <trans-unit id="0a28965c789d51aefb531ff9218bf35695513799" translate="yes" xml:space="preserve">
+          <source>key_column = pos.key.column</source>
+          <target state="translated">key_column = pos.key.column</target>
+        </trans-unit>
+        <trans-unit id="5f8dd46adca7cab01fc1a3465f342d0dd00ef7a7" translate="yes" xml:space="preserve">
+          <source>key_line = pos.key.line</source>
+          <target state="translated">key_line = pos.key.line</target>
+        </trans-unit>
+        <trans-unit id="664823ad8389cb0434210c7bcd53abb5120662c1" translate="yes" xml:space="preserve">
+          <source>line and column number contexts, a dirty JSON file can be used as source input</source>
+          <target state="translated">행 및 열 번호 컨텍스트, 더티 JSON 파일을 소스 입력으로 사용할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="a0d2b89be985853bef04fab0abe4f445af0b7c3d" translate="yes" xml:space="preserve">
+          <source>littered with elements that do not fit the official JSON standard. By providing</source>
+          <target state="translated">공식 JSON 표준에 맞지 않는 요소로 가득 차 있습니다. 를 제공함으로써</target>
+        </trans-unit>
+        <trans-unit id="c4c07791a141a424c735dbe611c43aa7ef7a71bc" translate="yes" xml:space="preserve">
+          <source>location in the original source string/file of the key and value. It is used</source>
+          <target state="translated">키 및 값의 원래 소스 문자열 / 파일에있는 위치입니다. 사용</target>
+        </trans-unit>
+        <trans-unit id="85a8c46e5dc9b38358b58c9047ee195aa9b4b1ff" translate="yes" xml:space="preserve">
+          <source>maintains order like an ``OrderedDict`` and allows storing attributes for</source>
+          <target state="translated">'OrderedDict'와 같은 순서를 유지하고 속성을 저장할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="3f0654f0194dac882aa3f51dc745e98e78d439c9" translate="yes" xml:space="preserve">
+          <source>memory reasons. If your code expects only :class:`unicode` the appropriate</source>
+          <target state="translated">기억 이유. 코드에 : class : ʻunicode` 만 필요한 경우 적절한</target>
+        </trans-unit>
+        <trans-unit id="0a8a0494064673104b30b2cf2d8becd460ea79b3" translate="yes" xml:space="preserve">
+          <source>no attributes exist for the key. In our case, we store</source>
+          <target state="translated">키에 대한 속성이 없습니다. 우리의 경우 우리는</target>
+        </trans-unit>
+        <trans-unit id="8feb067fa8f12a28da06e57a5f911f0de921badf" translate="yes" xml:space="preserve">
+          <source>numbers, so you can output more useful error messages. The input can also</source>
+          <target state="translated">더 유용한 오류 메시지를 출력 할 수 있습니다. 입력은 또한</target>
+        </trans-unit>
+        <trans-unit id="f0aad7c6b8f9a811215c0082e8b565212aab7374" translate="yes" xml:space="preserve">
+          <source>of the loader in :mod:`simplejson` so thanks go to Bob Ippolito of the</source>
+          <target state="translated">: mod :`simplejson`의 로더에 대한 감사의 말은 Bob Ippolito의</target>
+        </trans-unit>
+        <trans-unit id="d8b01ef41035356cc26c5d56f452925692cd4eb7" translate="yes" xml:space="preserve">
+          <source>only ASCII characters may be parsed as :class:`str` for performance and</source>
+          <target state="translated">ASCII 문자 만 성능을 위해 : class :`str`로 구문 분석 할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="03ef6ac632c706e21929d4f0582d25ef8f5a5c78" translate="yes" xml:space="preserve">
+          <source>only the `load(s)` capability. To write JSON, use either the standard</source>
+          <target state="translated">'load (s)'기능 만 있습니다. JSON을 작성하려면 표준</target>
+        </trans-unit>
+        <trans-unit id="35e9fdceb38fe2700d26e80c02e1e2282613e108" translate="yes" xml:space="preserve">
+          <source>other than UTF-8 (e.g. latin-1), then an appropriate *encoding* name must be</source>
+          <target state="translated">UTF-8 (예 : latin-1)이 아닌 경우 적절한 * 인코딩 * 이름은</target>
+        </trans-unit>
+        <trans-unit id="9693521e27e355be599e8e5a4c781885db9bc81a" translate="yes" xml:space="preserve">
+          <source>pos = d.attributes(key)</source>
+          <target state="translated">pos = d.attributes (key)</target>
+        </trans-unit>
+        <trans-unit id="128ff0ab18f022b491b7abb84cded22ee0491ab5" translate="yes" xml:space="preserve">
+          <source>pos = l.attributes(index)</source>
+          <target state="translated">pos = l.attributes (index)</target>
+        </trans-unit>
+        <trans-unit id="35dddfa3077397e97e91c318f6a89a005bd6ee5b" translate="yes" xml:space="preserve">
+          <source>raised if the given JSON document is not valid.</source>
+          <target state="translated">주어진 JSON 문서가 유효하지 않은 경우 발생합니다.</target>
+        </trans-unit>
+        <trans-unit id="45f4b7f8dc2d85054bb50bc393e95510bcb27bcd" translate="yes" xml:space="preserve">
+          <source>raised if the given document is not valid.</source>
+          <target state="translated">주어진 문서가 유효하지 않은 경우 발생합니다.</target>
+        </trans-unit>
+        <trans-unit id="5b95c83f57e1bae1acfdcf45208c9c1ca2d48d71" translate="yes" xml:space="preserve">
+          <source>reading an object from a JavaScript file.</source>
+          <target state="translated">JavaScript 파일에서 객체 읽기.</target>
+        </trans-unit>
+        <trans-unit id="9af9d976b88fb0f45628db976c0c7a467dad997d" translate="yes" xml:space="preserve">
+          <source>setting of ``'utf-8'`` is fastest and should be using whenever possible.</source>
+          <target state="translated">`` 'utf-8'``의 설정이 가장 빠르며 가능할 때마다 사용해야합니다.</target>
+        </trans-unit>
+        <trans-unit id="770c083a00eb8d6b9a6318a1786e9801c7cc9045" translate="yes" xml:space="preserve">
+          <source>should be wrapped with ``codecs.getreader(fp)(encoding)``, or simply decoded</source>
+          <target state="translated">``codecs.getreader (fp) (encoding)``로 래핑되거나 단순히 디코딩되어야합니다.</target>
+        </trans-unit>
+        <trans-unit id="54fa91d90d8f74cb656e1edd530b659e0dd6bcad" translate="yes" xml:space="preserve">
+          <source>solution is decode *s* to :class:`unicode` prior to calling loads.</source>
+          <target state="translated">해결책은로드를 호출하기 전에 * s *를 : class : ʻunicode`로 디코딩하는 것입니다.</target>
+        </trans-unit>
+        <trans-unit id="38ae8bcd87e3d545b3592656da635b0412da05d7" translate="yes" xml:space="preserve">
+          <source>solution is to wrap fp with a reader as demonstrated above.</source>
+          <target state="translated">해결책은 위에서 설명한 것처럼 리더로 fp를 래핑하는 것입니다.</target>
+        </trans-unit>
+        <trans-unit id="3119a94b0ebb2cdbac230374f62a22acd61892d5" translate="yes" xml:space="preserve">
+          <source>source file.</source>
+          <target state="translated">소스 파일.</target>
+        </trans-unit>
+        <trans-unit id="c70ac4ff36d86dcd1da429828099124ddb7183e5" translate="yes" xml:space="preserve">
+          <source>specified. Encodings that are not ASCII based (such as UCS-2) are not</source>
+          <target state="translated">지정. ASCII 기반이 아닌 인코딩 (예 : UCS-2)은</target>
+        </trans-unit>
+        <trans-unit id="b96181544ee9501392e31b06987147692a26e714" translate="yes" xml:space="preserve">
+          <source>strings: ``true``, ``false``, ``null``, ``'-Infinity'``, ``'Infinity'``,</source>
+          <target state="translated">문자열 :``true '',``false '',``null '',`` '-Infinity'``,``' 'Infinity'``,</target>
+        </trans-unit>
+        <trans-unit id="045b906efee7600d54cfdddfb35a35e5b19e4c38" translate="yes" xml:space="preserve">
+          <source>subclass of its base type (``dict`` or ``list``) and can be used as if they were</source>
+          <target state="translated">기본 유형 (``dict ''또는``list '')의 하위 클래스이며 마치 다음과 같이 사용할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="88001324b099fbee3a101c8a8f35a6d0f1a2bfda" translate="yes" xml:space="preserve">
+          <source>syntax (ECMA-262 3rd edition) used as a lightweight data interchange format.</source>
+          <target state="translated">경량 데이터 교환 형식으로 사용되는 구문 (ECMA-262 3rd edition).</target>
+        </trans-unit>
+        <trans-unit id="67d9645549c225ce3a54fc161c794e9a635f6746" translate="yes" xml:space="preserve">
+          <source>that information to refer users back to the exact location in the original</source>
+          <target state="translated">사용자를 원래의 정확한 위치로 다시 안내하는 정보</target>
+        </trans-unit>
+        <trans-unit id="d2d40d4dc4684a4a801e5d4e28f08664ff13170a" translate="yes" xml:space="preserve">
+          <source>the *parse_int* parameter. This is to enable automatic handling of hex</source>
+          <target state="translated">* parse_int * 매개 변수. 이것은 hex의 자동 처리를 가능하게하기 위함입니다.</target>
+        </trans-unit>
+        <trans-unit id="d19efee517b4235748e83077142fa7f27661a9a0" translate="yes" xml:space="preserve">
+          <source>the first occurrence of either ``{`` or ``[``. This is very useful for</source>
+          <target state="translated">``{``또는``[``의 첫 번째 발생. 이것은 매우 유용합니다</target>
+        </trans-unit>
+        <trans-unit id="45e8ca04db96216263b175675afa4b241dfc5a37" translate="yes" xml:space="preserve">
+          <source>the specified offset, while maintaining the correct line and column numbers.</source>
+          <target state="translated">정확한 행과 열 번호를 유지하면서 지정된 오프셋.</target>
+        </trans-unit>
+        <trans-unit id="8a2e4efe2ca3700581d42f095adfa25b37a68167" translate="yes" xml:space="preserve">
+          <source>the standard class, but these have been enhanced to store attributes with each</source>
+          <target state="translated">표준 클래스이지만 각 속성을 저장하도록 향상되었습니다.</target>
+        </trans-unit>
+        <trans-unit id="70e4980fd95952e0eb1963b4b4f7c843ca5b8451" translate="yes" xml:space="preserve">
+          <source>to a :class:`unicode` object and passed to :func:`loads`. The default</source>
+          <target state="translated">: class : ʻunicode` 객체에 전달되고 : func :`loads`에 전달됩니다. 기본값</target>
+        </trans-unit>
+        <trans-unit id="0245dae0231cce5a1fe12732c16b72171c3035a2" translate="yes" xml:space="preserve">
+          <source>unquoted single-word keys, and hexadecimal and octal numbers.</source>
+          <target state="translated">인용되지 않은 단일 단어 키, 16 진수 및 8 진수.</target>
+        </trans-unit>
+        <trans-unit id="dd6ba266cf5dfce218ccc78ba9835a1123fdc956" translate="yes" xml:space="preserve">
+          <source>value_column = pos.column</source>
+          <target state="translated">value_column = pos.column</target>
+        </trans-unit>
+        <trans-unit id="13a4a643e03cab44d57322fcb153329f65b9960a" translate="yes" xml:space="preserve">
+          <source>value_column = pos.value.column</source>
+          <target state="translated">value_column = pos.value.column</target>
+        </trans-unit>
+        <trans-unit id="473f27a7b81e0ed765b8955609663b590d345cfc" translate="yes" xml:space="preserve">
+          <source>value_line = pos.line</source>
+          <target state="translated">value_line = pos.line</target>
+        </trans-unit>
+        <trans-unit id="b1539dfab432a3b6deb11920769e889005b0bb7a" translate="yes" xml:space="preserve">
+          <source>value_line = pos.value.line</source>
+          <target state="translated">value_line = pos.value.line</target>
+        </trans-unit>
+        <trans-unit id="ff30f4f6a317b62b616c9948f915dbaada5e324e" translate="yes" xml:space="preserve">
+          <source>we store :class:`KeyValuePosition`.</source>
+          <target state="translated">우리는 : class :`KeyValuePosition`을 저장합니다.</target>
+        </trans-unit>
+        <trans-unit id="b68da68439b901160fb074fc8b6b5c81d7184906" translate="yes" xml:space="preserve">
+          <source>we store :class:`Position`. Retrieve position info like this::</source>
+          <target state="translated">우리는 : class :`Position`을 저장합니다. 다음과 같은 위치 정보 검색 ::</target>
+        </trans-unit>
+        <trans-unit id="5371d7dac72f83c7a0894b7c9b5dda310e76ac9e" translate="yes" xml:space="preserve">
+          <source>whatever is passed in as *attributes* for later retrieval. In our case,</source>
+          <target state="translated">나중에 검색하기 위해 * 속성 *으로 전달되는 모든 것. 우리의 경우</target>
+        </trans-unit>
+        <trans-unit id="11bb6fbcb5f572117d6158b07a7ee4963ac4685e" translate="yes" xml:space="preserve">
+          <source>will get out of sync. Making this a non-naive class would be a nice</source>
+          <target state="translated">동기화되지 않습니다. 순진하지 않은 수업을 만드는 것이 좋을 것입니다.</target>
+        </trans-unit>
+        <trans-unit id="e8c635314f5be5a0b095aa243f6409b64391a9f5" translate="yes" xml:space="preserve">
+          <source>| JSON          | Python                  |</source>
+          <target state="translated">| JSON | 파이썬 |</target>
+        </trans-unit>
+        <trans-unit id="ce58eaea7d62ddd61404943a6569c3b3207778ee" translate="yes" xml:space="preserve">
+          <source>| array         | :class:`AttributedList` |</source>
+          <target state="translated">| 배열 | : class : ʻAttributedList` |</target>
+        </trans-unit>
+        <trans-unit id="2c9d0fc8207b541f0bd5223d34669bce9f0a4d28" translate="yes" xml:space="preserve">
+          <source>| false         | False                   |</source>
+          <target state="translated">| 거짓 | 거짓 |</target>
+        </trans-unit>
+        <trans-unit id="67021ff8c444da800a1818f864f9eef9483307ab" translate="yes" xml:space="preserve">
+          <source>| null          | None                    |</source>
+          <target state="translated">| null | 없음 |</target>
+        </trans-unit>
+        <trans-unit id="7a890f0f7a6bdc7a189fcf1d06a1a48614643fb7" translate="yes" xml:space="preserve">
+          <source>| number (int)  | int, long               |</source>
+          <target state="translated">| 숫자 (int) | int, long |</target>
+        </trans-unit>
+        <trans-unit id="b079360d3d9fec86792432dc2139e9a0b8a94bdf" translate="yes" xml:space="preserve">
+          <source>| number (real) | float                   |</source>
+          <target state="translated">| 숫자 (실수) | 플로트 |</target>
+        </trans-unit>
+        <trans-unit id="f967f09f1b73b9c652807afe2234fd45538470fd" translate="yes" xml:space="preserve">
+          <source>| object        | :class:`AttributedDict` |</source>
+          <target state="translated">| 개체 | : class : ʻAttributedDict` |</target>
+        </trans-unit>
+        <trans-unit id="2091856b1fe01414f6a88b815006626cd1686ad1" translate="yes" xml:space="preserve">
+          <source>| string        | unicode                 |</source>
+          <target state="translated">| 문자열 | 유니 코드 |</target>
+        </trans-unit>
+        <trans-unit id="8726a0c04fbd2cba5c1b2ffbdd8c5eb71a8b1f89" translate="yes" xml:space="preserve">
+          <source>| true          | True                    |</source>
+          <target state="translated">| 사실 | 사실 |</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

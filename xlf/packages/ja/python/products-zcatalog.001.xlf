@@ -1,0 +1,1425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="ja" datatype="htmlbody" original="https://pypi.org/project/products-zcatalog/">
+    <body>
+      <group id="products-zcatalog">
+        <trans-unit id="4fdd290acbbc32c8e676e89ae8aed39c7d0fa8e0" translate="yes" xml:space="preserve">
+          <source>#12: Add request cache for index results to all UnIndex subclasses.</source>
+          <target state="translated">#12: Add request cache for index results to all UnIndex subclasses.</target>
+        </trans-unit>
+        <trans-unit id="ac53cbc37ebd262c4a52907209f979e56b19f970" translate="yes" xml:space="preserve">
+          <source>#13: Deal with threshold value of None in add/delColum.</source>
+          <target state="translated">#13: Deal with threshold value of None in add/delColum.</target>
+        </trans-unit>
+        <trans-unit id="cbf7a537132e7bdd55cebaa5f3d4361f33c9a498" translate="yes" xml:space="preserve">
+          <source>#19: Fix stale cache results after clearing an index.</source>
+          <target state="translated">#19: Fix stale cache results after clearing an index.</target>
+        </trans-unit>
+        <trans-unit id="2bf3abd3cfb43cb19c8854597adf588f64ea1f58" translate="yes" xml:space="preserve">
+          <source>#5: Ignore None values in UnIndex instead of raising a TypeError.</source>
+          <target state="translated">#5: Ignore None values in UnIndex instead of raising a TypeError.</target>
+        </trans-unit>
+        <trans-unit id="f21cb762fd6b2c5e2240d43b89e5c6e38177fac5" translate="yes" xml:space="preserve">
+          <source>#6, #7, #11: Run ZODB cache garbage collection during queries.</source>
+          <target state="translated">#6, #7, #11: Run ZODB cache garbage collection during queries.</target>
+        </trans-unit>
+        <trans-unit id="63c364d4a87450a8f4dfac924108c962a6065b5e" translate="yes" xml:space="preserve">
+          <source>(&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/issues/98&quot;&gt;#98&lt;/a&gt;)</source>
+          <target state="translated">(&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/issues/98&quot;&gt;#98&lt;/a&gt;)</target>
+        </trans-unit>
+        <trans-unit id="9694b856f863774ba5fcdfd8bb8c3b0df6f34890" translate="yes" xml:space="preserve">
+          <source>) adding</source>
+          <target state="translated">) adding</target>
+        </trans-unit>
+        <trans-unit id="05c4cbbacd198d98c07eeed3191d2dbfaa018545" translate="yes" xml:space="preserve">
+          <source>, a query for</source>
+          <target state="translated">, a query for</target>
+        </trans-unit>
+        <trans-unit id="e71b0e7868fc780898b82fdbadcbf26373b06a62" translate="yes" xml:space="preserve">
+          <source>, i.e.</source>
+          <target state="translated">、すなわち</target>
+        </trans-unit>
+        <trans-unit id="fec44191c319bba2e294d9dea78eb12c6b331b17" translate="yes" xml:space="preserve">
+          <source>, which allows
+one to load a plan from a file, instead of a module via an environment var.</source>
+          <target state="translated">, which allows one to load a plan from a file, instead of a module via an environment var.</target>
+        </trans-unit>
+        <trans-unit id="0ffd188d38debb6ee209598cdf844eda3f33aa0a" translate="yes" xml:space="preserve">
+          <source>.
+(&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/issues/96&quot;&gt;#96&lt;/a&gt;)</source>
+          <target state="translated">. (&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/issues/96&quot;&gt;#96&lt;/a&gt;)</target>
+        </trans-unit>
+        <trans-unit id="339a26e03aa0fd204db3aff9bee1ea2ad0722fbd" translate="yes" xml:space="preserve">
+          <source>.
+Fixes an issue on a ZMI redirect after rebuilding the catalog.</source>
+          <target state="translated">. Fixes an issue on a ZMI redirect after rebuilding the catalog.</target>
+        </trans-unit>
+        <trans-unit id="c3dc6f5e3f4a25e788f21cba551e8f2b903cbb0b" translate="yes" xml:space="preserve">
+          <source>.
+It stores document ids as keys, which can only be ints.</source>
+          <target state="translated">. It stores document ids as keys, which can only be ints.</target>
+        </trans-unit>
+        <trans-unit id="9d75a28b7eb61c7129b6e5f1bf5ad9f1d520301c" translate="yes" xml:space="preserve">
+          <source>.
+Note that negative filtering on an index still restricts items to those
+having a value in the index. So with 10 documents, 5 of them in the</source>
+          <target state="translated">. Note that negative filtering on an index still restricts items to those having a value in the index. So with 10 documents, 5 of them in the</target>
+        </trans-unit>
+        <trans-unit id="81284ff0ffa50bdde6feb2d46ed89a367d1e057f" translate="yes" xml:space="preserve">
+          <source>. The indexed value will determine the smaller set
+automatically and choose its best value. An inline switch is done once the
+indexed value set grows larger than 60% of the total length. 60% was chosen
+to avoid constant switching for indexes that have an almost equal
+distribution of</source>
+          <target state="translated">. The indexed value will determine the smaller set automatically and choose its best value. An inline switch is done once the indexed value set grows larger than 60% of the total length. 60% was chosen to avoid constant switching for indexes that have an almost equal distribution of</target>
+        </trans-unit>
+        <trans-unit id="202b722e7c0dace8747a8b672758a8e47a28c3b3" translate="yes" xml:space="preserve">
+          <source>. The responsibility for parsing and skipping the query
+has moved into the catalog, and the return value no longer has to be
+a tuple of (result, used_attributes), as the later wasn&amp;rsquo;t used by the
+catalog.</source>
+          <target state="translated">. The responsibility for parsing and skipping the query has moved into the catalog, and the return value no longer has to be a tuple of (result, used_attributes), as the later wasn&amp;rsquo;t used by the catalog.</target>
+        </trans-unit>
+        <trans-unit id="57441b561bf892aafe967a77bdf5c4e9609bed52" translate="yes" xml:space="preserve">
+          <source>. This allows the
+index to apply its optimizations, while objects with values outside this
+range can still be stored in a normal date index, which omits explicitly
+passed in</source>
+          <target state="translated">. This allows the index to apply its optimizations, while objects with values outside this range can still be stored in a normal date index, which omits explicitly passed in</target>
+        </trans-unit>
+        <trans-unit id="8a406472154ccca5ebca1626bbe1049649748b82" translate="yes" xml:space="preserve">
+          <source>2.13.0 (2010-12-25)</source>
+          <target state="translated">2.13.0 (2010-12-25)</target>
+        </trans-unit>
+        <trans-unit id="0d70b060142b3f4b1d992f220a5fb0fe598e56c9" translate="yes" xml:space="preserve">
+          <source>2.13.1 (2010-12-25)</source>
+          <target state="translated">2.13.1 (2010-12-25)</target>
+        </trans-unit>
+        <trans-unit id="13ea5e029491d48b78bfb2c6134a891b16a839d5" translate="yes" xml:space="preserve">
+          <source>2.13.10 (2011-04-21)</source>
+          <target state="translated">2.13.10 (2011-04-21)</target>
+        </trans-unit>
+        <trans-unit id="09d8fccf42269c52b420c9fa6831ee42da781557" translate="yes" xml:space="preserve">
+          <source>2.13.11 (2011-05-02)</source>
+          <target state="translated">2.13.11 (2011-05-02)</target>
+        </trans-unit>
+        <trans-unit id="bc1fe4ea7ed842c60f384de06173284f5de365b4" translate="yes" xml:space="preserve">
+          <source>2.13.12 (2011-05-02)</source>
+          <target state="translated">2.13.12 (2011-05-02)</target>
+        </trans-unit>
+        <trans-unit id="503c61c176fb373b195dcb9e307614d82783f3f2" translate="yes" xml:space="preserve">
+          <source>2.13.13 (2011-05-04)</source>
+          <target state="translated">2.13.13 (2011-05-04)</target>
+        </trans-unit>
+        <trans-unit id="3e9aa990022ee21b566e1bccd9363be972c26b79" translate="yes" xml:space="preserve">
+          <source>2.13.14 (2011-05-19)</source>
+          <target state="translated">2.13.14 (2011-05-19)</target>
+        </trans-unit>
+        <trans-unit id="be222812c634a4ca0d10ee614694cccd6a9c6d8c" translate="yes" xml:space="preserve">
+          <source>2.13.15 (2011-06-30)</source>
+          <target state="translated">2.13.15 (2011-06-30)</target>
+        </trans-unit>
+        <trans-unit id="000a34df7c321f54c7502c5d4ddae6b859e79858" translate="yes" xml:space="preserve">
+          <source>2.13.16 (2011-07-24)</source>
+          <target state="translated">2.13.16 (2011-07-24)</target>
+        </trans-unit>
+        <trans-unit id="31315abe15a9373491774b15426cb66129510cdc" translate="yes" xml:space="preserve">
+          <source>2.13.17 (2011-07-29)</source>
+          <target state="translated">2.13.17 (2011-07-29)</target>
+        </trans-unit>
+        <trans-unit id="8b503cb20d8821832099aaab2ca519f5b97ca2f1" translate="yes" xml:space="preserve">
+          <source>2.13.18 (2011-07-29)</source>
+          <target state="translated">2.13.18 (2011-07-29)</target>
+        </trans-unit>
+        <trans-unit id="59b3741674b221a42daa2415e2e121a8f9735e1b" translate="yes" xml:space="preserve">
+          <source>2.13.19 (2011-08-20)</source>
+          <target state="translated">2.13.19 (2011-08-20)</target>
+        </trans-unit>
+        <trans-unit id="c5c0fb29d1a4d68da485db3ac521d707fa6e946a" translate="yes" xml:space="preserve">
+          <source>2.13.2 (2010-12-31)</source>
+          <target state="translated">2.13.2 (2010-12-31)</target>
+        </trans-unit>
+        <trans-unit id="64879d4bae42bd8e16c992e4ebb5501ef4378f1c" translate="yes" xml:space="preserve">
+          <source>2.13.20 (2011-08-23)</source>
+          <target state="translated">2.13.20 (2011-08-23)</target>
+        </trans-unit>
+        <trans-unit id="88dfa77ad4a6b284312897cc1295247ddca29e4b" translate="yes" xml:space="preserve">
+          <source>2.13.21 (2011-10-20)</source>
+          <target state="translated">2.13.21 (2011-10-20)</target>
+        </trans-unit>
+        <trans-unit id="939db5b1f0b44a8b1b2f2c84b3dd4940fd307e0d" translate="yes" xml:space="preserve">
+          <source>2.13.22 (2011-11-17)</source>
+          <target state="translated">2.13.22 (2011-11-17)</target>
+        </trans-unit>
+        <trans-unit id="230beacd28582b40810f1645c7bf03c57de1c39a" translate="yes" xml:space="preserve">
+          <source>2.13.3 (2011-01-01)</source>
+          <target state="translated">2.13.3 (2011-01-01)</target>
+        </trans-unit>
+        <trans-unit id="f16999a1028a4426d8f0fe0191b4d53c127fb0c1" translate="yes" xml:space="preserve">
+          <source>2.13.4 (2011-02-05)</source>
+          <target state="translated">2.13.4 (2011-02-05)</target>
+        </trans-unit>
+        <trans-unit id="05778e984a6f740ac5347f446e7e3c236f058451" translate="yes" xml:space="preserve">
+          <source>2.13.5 (2011-02-05)</source>
+          <target state="translated">2.13.5 (2011-02-05)</target>
+        </trans-unit>
+        <trans-unit id="b40c7c2a4f7340fb9f0f3b68944b686befa8a489" translate="yes" xml:space="preserve">
+          <source>2.13.6 (2011-02-10)</source>
+          <target state="translated">2.13.6 (2011-02-10)</target>
+        </trans-unit>
+        <trans-unit id="556f90e373ae34d0124c4468672bcea8a8700091" translate="yes" xml:space="preserve">
+          <source>2.13.7 (2011-02-15)</source>
+          <target state="translated">2.13.7 (2011-02-15)</target>
+        </trans-unit>
+        <trans-unit id="f7878b174efda53ab5ca383c0c90bc9ef2376ba9" translate="yes" xml:space="preserve">
+          <source>2.13.8 (2011-04-01)</source>
+          <target state="translated">2.13.8 (2011-04-01)</target>
+        </trans-unit>
+        <trans-unit id="f5c2ba7f676c64c5102976a01a5dfabd2173024c" translate="yes" xml:space="preserve">
+          <source>2.13.9 (2011-04-10)</source>
+          <target state="translated">2.13.9 (2011-04-10)</target>
+        </trans-unit>
+        <trans-unit id="ee06791c5dcb96951a323f98c500c379718e0bad" translate="yes" xml:space="preserve">
+          <source>3.0 (2013-02-24)</source>
+          <target state="translated">3.0 (2013-02-24)</target>
+        </trans-unit>
+        <trans-unit id="70fb084efbc01ad06db49f9fc92dcbff98d3eb4a" translate="yes" xml:space="preserve">
+          <source>3.0.1 (2013-10-15)</source>
+          <target state="translated">3.0.1 (2013-10-15)</target>
+        </trans-unit>
+        <trans-unit id="8629e8defe8b7cd04961b2964974abe1e9f7a625" translate="yes" xml:space="preserve">
+          <source>3.0.2 (2014-03-04)</source>
+          <target state="translated">3.0.2 (2014-03-04)</target>
+        </trans-unit>
+        <trans-unit id="4b305462b9ef692568112405928c027f9028a493" translate="yes" xml:space="preserve">
+          <source>3.0a1 (2012-04-22)</source>
+          <target state="translated">3.0a1 (2012-04-22)</target>
+        </trans-unit>
+        <trans-unit id="6e4a7a947a06507b13fa3a4e70c938c0c34c0509" translate="yes" xml:space="preserve">
+          <source>3.0a2 (2012-04-26)</source>
+          <target state="translated">3.0a2 (2012-04-26)</target>
+        </trans-unit>
+        <trans-unit id="a58b7dd4d828763821feda51cf39e9563be40cca" translate="yes" xml:space="preserve">
+          <source>3.0b1 (2012-07-19)</source>
+          <target state="translated">3.0b1 (2012-07-19)</target>
+        </trans-unit>
+        <trans-unit id="86a40c7d683a031a1d0f4fe79e1c863c51de132a" translate="yes" xml:space="preserve">
+          <source>3.1 (2014-11-02)</source>
+          <target state="translated">3.1 (2014-11-02)</target>
+        </trans-unit>
+        <trans-unit id="63be45ae9aaceaf5c92ef9e83afeec194f7cd7fb" translate="yes" xml:space="preserve">
+          <source>3.1.1 (2016-07-17)</source>
+          <target state="translated">3.1.1 (2016-07-17)</target>
+        </trans-unit>
+        <trans-unit id="c38e14ca247fa85e8ea4ed22d681f2b3e8705d06" translate="yes" xml:space="preserve">
+          <source>3.1.2 (2016-07-17)</source>
+          <target state="translated">3.1.2 (2016-07-17)</target>
+        </trans-unit>
+        <trans-unit id="59a82df58e183b9980477fde5cfd447746e07983" translate="yes" xml:space="preserve">
+          <source>3.2 (2016-07-18)</source>
+          <target state="translated">3.2 (2016-07-18)</target>
+        </trans-unit>
+        <trans-unit id="6f40992b606503d6b4edeb96c70fb03d40a2e488" translate="yes" xml:space="preserve">
+          <source>4.0.0 (2017-05-23)</source>
+          <target state="translated">4.0.0 (2017-05-23)</target>
+        </trans-unit>
+        <trans-unit id="bd546156bd4aa4a29174e448c2368240134243d9" translate="yes" xml:space="preserve">
+          <source>4.0.1 (2017-10-10)</source>
+          <target state="translated">4.0.1 (2017-10-10)</target>
+        </trans-unit>
+        <trans-unit id="3464f05f5a5dc07fc287232b806528d55d4429c8" translate="yes" xml:space="preserve">
+          <source>4.0a1 (2016-07-22)</source>
+          <target state="translated">4.0a1 (2016-07-22)</target>
+        </trans-unit>
+        <trans-unit id="4cf57f5e4c9bad43d0c03fe13c87ff502186f7ef" translate="yes" xml:space="preserve">
+          <source>4.0a2 (2016-08-28)</source>
+          <target state="translated">4.0a2 (2016-08-28)</target>
+        </trans-unit>
+        <trans-unit id="2849306fefe36b07826e0daed6847b09b2938313" translate="yes" xml:space="preserve">
+          <source>4.0a3 (2017-02-02)</source>
+          <target state="translated">4.0a3 (2017-02-02)</target>
+        </trans-unit>
+        <trans-unit id="63c6fa4e3a831dd643c9d4618d8031d90d9af724" translate="yes" xml:space="preserve">
+          <source>4.1 (2018-03-06)</source>
+          <target state="translated">4.1 (2018-03-06)</target>
+        </trans-unit>
+        <trans-unit id="caf1182b3f16a000bef39fc13d4adb6908f34dad" translate="yes" xml:space="preserve">
+          <source>4.1.1 (2018-07-05)</source>
+          <target state="translated">4.1.1 (2018-07-05)</target>
+        </trans-unit>
+        <trans-unit id="1f3a703540405794ce45418c6a37fb393a1c49ac" translate="yes" xml:space="preserve">
+          <source>4.2 (2018-10-05)</source>
+          <target state="translated">4.2 (2018-10-05)</target>
+        </trans-unit>
+        <trans-unit id="be8b93a5c947abb21b857fc194c322040f0c7968" translate="yes" xml:space="preserve">
+          <source>4.3 (2019-02-08)</source>
+          <target state="translated">4.3 (2019-02-08)</target>
+        </trans-unit>
+        <trans-unit id="407bfd65f8b89ab1b6619610a6846cd091d6852f" translate="yes" xml:space="preserve">
+          <source>4.4 (2019-03-08)</source>
+          <target state="translated">4.4 (2019-03-08)</target>
+        </trans-unit>
+        <trans-unit id="926dadb2a45eedd9ef51d0cdef810a3eb9deebb4" translate="yes" xml:space="preserve">
+          <source>5.0 (2019-05-10)</source>
+          <target state="translated">5.0 (2019-05-10)</target>
+        </trans-unit>
+        <trans-unit id="44e5c7e86464500fade1a2cc8795a106b148a335" translate="yes" xml:space="preserve">
+          <source>5.0.1 (2019-06-17)</source>
+          <target state="translated">5.0.1 (2019-06-17)</target>
+        </trans-unit>
+        <trans-unit id="144686b6c71eccd2c7cb0cbd3d158afd5bea8443" translate="yes" xml:space="preserve">
+          <source>5.0.2 (2019-12-06)</source>
+          <target state="translated">5.0.2 (2019-12-06)</target>
+        </trans-unit>
+        <trans-unit id="ae828dac70593e466c0bbe54e42433d014ba4725" translate="yes" xml:space="preserve">
+          <source>5.0.3 (2020-01-17)</source>
+          <target state="translated">5.0.3 (2020-01-17)</target>
+        </trans-unit>
+        <trans-unit id="0436ae69975921d65005e2deeb519d8f34de1c71" translate="yes" xml:space="preserve">
+          <source>5.0.4 (2020-02-11)</source>
+          <target state="translated">5.0.4 (2020-02-11)</target>
+        </trans-unit>
+        <trans-unit id="b2f3e1aa7347796ac2006a564850a0a7815e9054" translate="yes" xml:space="preserve">
+          <source>5.1 (2020-04-20)</source>
+          <target state="translated">5.1 (2020-04-20)</target>
+        </trans-unit>
+        <trans-unit id="fab9fc73ade892b01a5a60fc8d9fe52ef4a39ea8" translate="yes" xml:space="preserve">
+          <source>@implementer</source>
+          <target state="translated">@implementer</target>
+        </trans-unit>
+        <trans-unit id="593308dd788329dfa52ca8deeda1e6d03fa3ed3d" translate="yes" xml:space="preserve">
+          <source>Adapt remaining ZMI tabs to Bootstrap
+(&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/issues/45&quot;&gt;#45&lt;/a&gt;)</source>
+          <target state="translated">Adapt remaining ZMI tabs to Bootstrap (&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/issues/45&quot;&gt;#45&lt;/a&gt;)</target>
+        </trans-unit>
+        <trans-unit id="7504e6af0104a01b478009654b92cbd26e9ba818" translate="yes" xml:space="preserve">
+          <source>Adapt the ZMI HTML to the new Bootstrap ZMI.
+(&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/pull/41&quot;&gt;#41&lt;/a&gt;)</source>
+          <target state="translated">Adapt the ZMI HTML to the new Bootstrap ZMI. (&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/pull/41&quot;&gt;#41&lt;/a&gt;)</target>
+        </trans-unit>
+        <trans-unit id="61cc55aa0453184734c3fa0b621eda6fa874bd83" translate="yes" xml:space="preserve">
+          <source>Add</source>
+          <target state="translated">追加</target>
+        </trans-unit>
+        <trans-unit id="d537131f84a77948eb7921c6af1647aad1b5de5c" translate="yes" xml:space="preserve">
+          <source>Add a new getCounter method to indices.</source>
+          <target state="translated">indicesに新しいgetCounterメソッドを追加します。</target>
+        </trans-unit>
+        <trans-unit id="119d162ad24ef2f1c9584886695f94273482cab3" translate="yes" xml:space="preserve">
+          <source>Add configure.zcml with deprecatedManageAddDelete directives.</source>
+          <target state="translated">deprecatedManageAddDeleteディレクティブを使用してconfigure.zcmlを追加。</target>
+        </trans-unit>
+        <trans-unit id="491e72da1df20587ca330db13addaf53416cf586" translate="yes" xml:space="preserve">
+          <source>Add dependency on</source>
+          <target state="translated">依存関係の追加</target>
+        </trans-unit>
+        <trans-unit id="344d8b9acabc894ddf99d242e90a3b5b8434bcb1" translate="yes" xml:space="preserve">
+          <source>Add new</source>
+          <target state="translated">新規追加</target>
+        </trans-unit>
+        <trans-unit id="aa5395d697c3eddf2e7d474602242bc2f0d0e4d6" translate="yes" xml:space="preserve">
+          <source>Add new CompositeIndex index type.</source>
+          <target state="translated">新しいCompositeIndexインデックスタイプを追加します。</target>
+        </trans-unit>
+        <trans-unit id="5ce9a0ebeb0d2a7b710202bebc0706c537f03b81" translate="yes" xml:space="preserve">
+          <source>Add new IQueryIndex interface for indices. This introduces a new</source>
+          <target state="translated">インデックス用の新しい IQueryIndex インターフェイスを追加します。これにより、新しい</target>
+        </trans-unit>
+        <trans-unit id="7f3641bbda7eead762036528876594353cc3be7c" translate="yes" xml:space="preserve">
+          <source>Add new precision property to date and date range indexes.
+This lets you index more coarse grained time values instead of the
+default one minute based time resolution.</source>
+          <target state="translated">日付と日付範囲のインデックスに新しい精度プロパティを追加しました。これにより、デフォルトの1分ベースの時間分解能ではなく、より粗い粒度の時間値をインデックス化することができます。</target>
+        </trans-unit>
+        <trans-unit id="26d8abed050ec04750823356f2cdca9d35aaf553" translate="yes" xml:space="preserve">
+          <source>Add support for</source>
+          <target state="translated">サポートの追加</target>
+        </trans-unit>
+        <trans-unit id="5c9939d96ec5030765ea376c476f6394ff1b1c68" translate="yes" xml:space="preserve">
+          <source>Add support for Python 3.7.</source>
+          <target state="translated">Python 3.7のサポートを追加。</target>
+        </trans-unit>
+        <trans-unit id="aca8170e3e724a84861ce182f4f872ecc4f00a90" translate="yes" xml:space="preserve">
+          <source>Added a</source>
+          <target state="translated">を追加しました。</target>
+        </trans-unit>
+        <trans-unit id="e4302821f2efcc49e0c772d508d2a54c3a3a6f05" translate="yes" xml:space="preserve">
+          <source>Added a floor and ceiling value to the date range index. Values outside the
+specified range will be interpreted the same way as passing</source>
+          <target state="translated">日付範囲のインデックスにフロア値と天井値を追加しました。指定された範囲外の値は</target>
+        </trans-unit>
+        <trans-unit id="4d819706ca86fb686959d81cc01c6713cf1af49f" translate="yes" xml:space="preserve">
+          <source>Added a new</source>
+          <target state="translated">新規追加しました。</target>
+        </trans-unit>
+        <trans-unit id="b757cc749ba4293682f30f5dc093389eed80f74b" translate="yes" xml:space="preserve">
+          <source>Added a new UUIDIndex, based on the common UnIndex. It behaves like a
+FieldIndex, but can only store one document id per value, so there&amp;rsquo;s a 1:1
+mapping from value to document id. An error is logged if a different document
+id is indexed for an already taken value. The internal data structures are
+optimized for this and avoid storing one IITreeSet per value.</source>
+          <target state="translated">Added a new UUIDIndex, based on the common UnIndex. It behaves like a FieldIndex, but can only store one document id per value, so there&amp;rsquo;s a 1:1 mapping from value to document id. An error is logged if a different document id is indexed for an already taken value. The internal data structures are optimized for this and avoid storing one IITreeSet per value.</target>
+        </trans-unit>
+        <trans-unit id="89865c00f864638c44989d46517bdafc9bb631a6" translate="yes" xml:space="preserve">
+          <source>Added automatic sorting limit calculation based on batch arguments. If the
+query contains a</source>
+          <target state="translated">バッチ引数に基づく自動ソート制限の計算を追加しました。クエリに</target>
+        </trans-unit>
+        <trans-unit id="e6ff8c5208d57718b441a9e92320866a9c0023a1" translate="yes" xml:space="preserve">
+          <source>Added reporting of the intersection time of each index&amp;rsquo; result with the
+result set of the other indexes and consider this time to be part of each
+index time for prioritizing the index.</source>
+          <target state="translated">Added reporting of the intersection time of each index&amp;rsquo; result with the result set of the other indexes and consider this time to be part of each index time for prioritizing the index.</target>
+        </trans-unit>
+        <trans-unit id="8dbd4a528087e8e28d0d0411a06e4f5090a5b2e2" translate="yes" xml:space="preserve">
+          <source>Added support for</source>
+          <target state="translated">サポートを追加しました。</target>
+        </trans-unit>
+        <trans-unit id="0a17d4d8ea5f6fcbb83689116ea0e29d0ce3c74f" translate="yes" xml:space="preserve">
+          <source>Added support for Python 3.8</source>
+          <target state="translated">Python 3.8のサポートを追加</target>
+        </trans-unit>
+        <trans-unit id="c336805395052ef2a8f281520ecdf867a5b0694e" translate="yes" xml:space="preserve">
+          <source>Added support for using ZCatalog as local utility.
+This feature requires the optional</source>
+          <target state="translated">ローカルユーティリティとしてZCatalogを使用するためのサポートを追加しました。この機能は、オプションの</target>
+        </trans-unit>
+        <trans-unit id="ab166bd5e8c523a1464a4d6bc47c6fc75ffe7c8e" translate="yes" xml:space="preserve">
+          <source>Adjust</source>
+          <target state="translated">調整</target>
+        </trans-unit>
+        <trans-unit id="ee654a257cd5214f9657a07c5d9ffd24b7c776e7" translate="yes" xml:space="preserve">
+          <source>As part of each progress handler report, also do an automatic transaction
+savepoint, to give the ZODB cache a chance to do garbage collection.</source>
+          <target state="translated">各プログレスハンドラのレポートの一部として、ZODB キャッシュにガベージコレクションを行う機会を与えるために、自動トランザクションのセーブポイントも行います。</target>
+        </trans-unit>
+        <trans-unit id="64090ff7cbfb65ca2f15cc78ce26ff8fbedd35f1" translate="yes" xml:space="preserve">
+          <source>Avoid locale-dependent test condition in</source>
+          <target state="translated">での局部依存テスト条件の回避</target>
+        </trans-unit>
+        <trans-unit id="e27225055d47555bcd68ecdcfa41531f7b95b816" translate="yes" xml:space="preserve">
+          <source>Avoid pre-allocation of marker items in</source>
+          <target state="translated">マーカーアイテムの事前割り当てを避ける</target>
+        </trans-unit>
+        <trans-unit id="4d60dc8615dbcf97952471da7fc2a7e009f2b944" translate="yes" xml:space="preserve">
+          <source>Backwards incompatible changes</source>
+          <target state="translated">下位互換性のない変更</target>
+        </trans-unit>
+        <trans-unit id="1de9526f456e5138884e0e01586b12298617b6e1" translate="yes" xml:space="preserve">
+          <source>Bug fixes</source>
+          <target state="translated">バグ修正</target>
+        </trans-unit>
+        <trans-unit id="9461b623f86f8b0389bdac6219c6683006d7bfd3" translate="yes" xml:space="preserve">
+          <source>Catalog.updateMetadata</source>
+          <target state="translated">Catalog.updateMetadata</target>
+        </trans-unit>
+        <trans-unit id="61cd22e326a78c3f077731713b93c713f379bcba" translate="yes" xml:space="preserve">
+          <source>CatalogPlan.valueindexes</source>
+          <target state="translated">CatalogPlan.valueindexes</target>
+        </trans-unit>
+        <trans-unit id="64fbd995d3b6b156ee26ae3c03e6516434c34c12" translate="yes" xml:space="preserve">
+          <source>Change</source>
+          <target state="translated">変更</target>
+        </trans-unit>
+        <trans-unit id="164b3d4809f98d0458414f1bf9cf3c9dcba16bb5" translate="yes" xml:space="preserve">
+          <source>Changelog</source>
+          <target state="translated">変更履歴</target>
+        </trans-unit>
+        <trans-unit id="8deb2c3a371a65e87bda694c5033a8cbe20803df" translate="yes" xml:space="preserve">
+          <source>Clarify the</source>
+          <target state="translated">を明確にする</target>
+        </trans-unit>
+        <trans-unit id="06c8c5c4bfed1131d9f53f0bc5f9173239f6a811" translate="yes" xml:space="preserve">
+          <source>Code cleanup and completion of TopicIndex according to existing index
+methods and properties
+(&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/issues/65&quot;&gt;#65&lt;/a&gt;)</source>
+          <target state="translated">Code cleanup and completion of TopicIndex according to existing index methods and properties (&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/issues/65&quot;&gt;#65&lt;/a&gt;)</target>
+        </trans-unit>
+        <trans-unit id="9376595631ad5df5c0a068c06840a128d7596987" translate="yes" xml:space="preserve">
+          <source>Consistent use of</source>
+          <target state="translated">の一貫した使用</target>
+        </trans-unit>
+        <trans-unit id="48e09e45c570a5fc20d51a90faf1c88a9a965b16" translate="yes" xml:space="preserve">
+          <source>Correct</source>
+          <target state="translated">正解</target>
+        </trans-unit>
+        <trans-unit id="517905a9788460f7cc06fa708a7ae7af9fe3cb2c" translate="yes" xml:space="preserve">
+          <source>DateIndex._unindex</source>
+          <target state="translated">DateIndex._unindex</target>
+        </trans-unit>
+        <trans-unit id="80b1523f0df1980e843885867788bf3027e395aa" translate="yes" xml:space="preserve">
+          <source>DocumentTemplate</source>
+          <target state="translated">ドキュメントテンプレート</target>
+        </trans-unit>
+        <trans-unit id="5a8806d829d38c5d76e1d6ad1202a4eda0a2586a" translate="yes" xml:space="preserve">
+          <source>Drop support for Python 3.4.</source>
+          <target state="translated">Python 3.4 のサポートを削除しました。</target>
+        </trans-unit>
+        <trans-unit id="5433de3b4dda131a84429a480c3288f861aa5ad4" translate="yes" xml:space="preserve">
+          <source>Empty catalog queries now return no results.</source>
+          <target state="translated">空のカタログ クエリが結果を返さないようになりました。</target>
+        </trans-unit>
+        <trans-unit id="1fa1654d86670e9bcfbadcebb86928dc9b80011d" translate="yes" xml:space="preserve">
+          <source>Expand query report, to cover details on sort indexes, order and limits.</source>
+          <target state="translated">クエリレポートを拡張し、ソートインデックス、順序、および制限の詳細をカバーします。</target>
+        </trans-unit>
+        <trans-unit id="755dee6f88a6d81dd78fda04d2f7608a83c66f64" translate="yes" xml:space="preserve">
+          <source>Extend BooleanIndex by making the indexed value variable instead of
+hardcoding it to</source>
+          <target state="translated">にハードコーディングするのではなく、インデックス化された値を変数にすることで、BooleanIndex を拡張します。</target>
+        </trans-unit>
+        <trans-unit id="024970ef2d22eba1c73f25f2b568b53a57c58652" translate="yes" xml:space="preserve">
+          <source>Extend IQueryIndex interface to handle operator parsing.</source>
+          <target state="translated">IQueryIndex インターフェイスを拡張し、演算子の解析を処理するようになりました。</target>
+        </trans-unit>
+        <trans-unit id="99a423164819c464ad91761b94c3e9df171d91a1" translate="yes" xml:space="preserve">
+          <source>Fix</source>
+          <target state="translated">フィックス</target>
+        </trans-unit>
+        <trans-unit id="32c45e8395a174cc040ce14e272cbb241c4dccaa" translate="yes" xml:space="preserve">
+          <source>Fix &amp;ldquo;invalid escape sequence&amp;rdquo; warning in Python 3.</source>
+          <target state="translated">Fix &amp;ldquo;invalid escape sequence&amp;rdquo; warning in Python 3.</target>
+        </trans-unit>
+        <trans-unit id="c3879cac26e43eb31b755aa4014c0b34e031aa60" translate="yes" xml:space="preserve">
+          <source>Fix BooleanIndex when index inversion occurs as a result of reindexing
+and existing document with the opposite value. Fixes LP&amp;nbsp;#1236354.</source>
+          <target state="translated">Fix BooleanIndex when index inversion occurs as a result of reindexing and existing document with the opposite value. Fixes LP&amp;nbsp;#1236354.</target>
+        </trans-unit>
+        <trans-unit id="51ea401b3ddeb29c48014f4064c96c77f91614cc" translate="yes" xml:space="preserve">
+          <source>Fix a TypeError on Python 3 when trying to lookup in an OOBTree
+a value for a key that has an invalid type.
+(&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/pull/36&quot;&gt;#36&lt;/a&gt;)</source>
+          <target state="translated">Fix a TypeError on Python 3 when trying to lookup in an OOBTree a value for a key that has an invalid type. (&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/pull/36&quot;&gt;#36&lt;/a&gt;)</target>
+        </trans-unit>
+        <trans-unit id="35262e4471694194fa24add1ad03f069ad78272e" translate="yes" xml:space="preserve">
+          <source>Fix a bug in the BooleanIndex where documents without an entry in
+the index were not being filtered out in all queries.</source>
+          <target state="translated">BooleanIndexのバグを修正し、インデックスにエントリがないドキュメントがすべてのクエリでフィルタリングされないようにした。</target>
+        </trans-unit>
+        <trans-unit id="9417f3acd3c75c958d7afd1a1c88539bcf9334b7" translate="yes" xml:space="preserve">
+          <source>Fix exception happening when reindexing multiple indexes while having a
+progress handler.
+(&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/pull/89&quot;&gt;#89&lt;/a&gt;)</source>
+          <target state="translated">Fix exception happening when reindexing multiple indexes while having a progress handler. (&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/pull/89&quot;&gt;#89&lt;/a&gt;)</target>
+        </trans-unit>
+        <trans-unit id="5a9b79ace7b06eec3a74c38cb0883d40d7c4dd18" translate="yes" xml:space="preserve">
+          <source>Fix exception when viewing</source>
+          <target state="translated">閲覧時の例外を修正</target>
+        </trans-unit>
+        <trans-unit id="cddcd4e792751f6ed3dbfcde1061b4543f7359c0" translate="yes" xml:space="preserve">
+          <source>Fix logging issue in KeywordIndex.</source>
+          <target state="translated">KeywordIndex のロギングの問題を修正しました。</target>
+        </trans-unit>
+        <trans-unit id="87cab236a2fa332dfff6a243b552fec88a7c3cb3" translate="yes" xml:space="preserve">
+          <source>Fix performance issue of</source>
+          <target state="translated">のパフォーマンスの問題を修正</target>
+        </trans-unit>
+        <trans-unit id="14505c34992462ebb6d7149a41294e42d4d9e61a" translate="yes" xml:space="preserve">
+          <source>Fix possible TypeError in</source>
+          <target state="translated">の可能性のある TypeError を修正しました。</target>
+        </trans-unit>
+        <trans-unit id="a1e8cd6ab9251ba63add74111cbaa32a6006330f" translate="yes" xml:space="preserve">
+          <source>Fix rewriting of query to avoid wrong optimization of CompositeIndex.
+(&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/issues/59&quot;&gt;#59&lt;/a&gt;)</source>
+          <target state="translated">Fix rewriting of query to avoid wrong optimization of CompositeIndex. (&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/issues/59&quot;&gt;#59&lt;/a&gt;)</target>
+        </trans-unit>
+        <trans-unit id="d4828020bd9a6d4b8bd9ee973b62726dec6f795c" translate="yes" xml:space="preserve">
+          <source>Fix some</source>
+          <target state="translated">いくつかの修正</target>
+        </trans-unit>
+        <trans-unit id="831859380204ef2ce96367f8bf2199b141620e3e" translate="yes" xml:space="preserve">
+          <source>Fix sorting in _sort_iterate_resultset in Python 3.
+(&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/pull/42&quot;&gt;#42&lt;/a&gt;)</source>
+          <target state="translated">Fix sorting in _sort_iterate_resultset in Python 3. (&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/pull/42&quot;&gt;#42&lt;/a&gt;)</target>
+        </trans-unit>
+        <trans-unit id="ff098fc0cc5d2c60d06c4b0a494f6d89cf382590" translate="yes" xml:space="preserve">
+          <source>Fix sorting of index overview table in ZMI. Migrated the template from
+to zpt.
+(&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/issues/62&quot;&gt;#62&lt;/a&gt;)</source>
+          <target state="translated">Fix sorting of index overview table in ZMI. Migrated the template from to zpt. (&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/issues/62&quot;&gt;#62&lt;/a&gt;)</target>
+        </trans-unit>
+        <trans-unit id="c996af3abfc7369665c27db80f163d4f946a3ae2" translate="yes" xml:space="preserve">
+          <source>Fix with Python 3.8: Replace deprecated</source>
+          <target state="translated">Python 3.8 で修正。非推奨の</target>
+        </trans-unit>
+        <trans-unit id="6ab8278192294015d355abceb6828df4823ec557" translate="yes" xml:space="preserve">
+          <source>Fixed BooleanIndex&amp;rsquo; items method so the ZMI browse view works.</source>
+          <target state="translated">Fixed BooleanIndex&amp;rsquo; items method so the ZMI browse view works.</target>
+        </trans-unit>
+        <trans-unit id="3f31dc9e9fc438f0e328332dc59f0faaa72d3abf" translate="yes" xml:space="preserve">
+          <source>Fixed addition of two LazyCat&amp;rsquo;s if any of them was already flattened.</source>
+          <target state="translated">Fixed addition of two LazyCat&amp;rsquo;s if any of them was already flattened.</target>
+        </trans-unit>
+        <trans-unit id="60c5043e839e5465c21a5782bebec7dd6050b932" translate="yes" xml:space="preserve">
+          <source>Fixed another issue with preserving score values, when a custom index was
+queried first which was neither ILimitedResultIndex aware nor return scores,
+and a later index was of the default ZCTextIndex type.</source>
+          <target state="translated">ILimitedResultIndexを認識しておらず、スコアを返さないカスタムインデックスが最初に問い合わせられ、その後のインデックスがデフォルトのZCTextIndexタイプであった場合に、スコア値を保存する際の別の問題を修正しました。</target>
+        </trans-unit>
+        <trans-unit id="f00165e8af254d561a0537fc9dcf4d9d1bf2b0ae" translate="yes" xml:space="preserve">
+          <source>Fixed bug in date range index, which would omit objects exactly matching the
+query term if a resultset was provided.</source>
+          <target state="translated">結果セットが提供された場合に、クエリ用語に完全に一致するオブジェクトを省略してしまう日付範囲インデックスのバグを修正しました。</target>
+        </trans-unit>
+        <trans-unit id="14e15bef14ffe18afc25b74a1bdb220b91a7871c" translate="yes" xml:space="preserve">
+          <source>Fixed incorrect calculation of batches in the second half of the result set
+in sortResults.</source>
+          <target state="translated">sortResultsで結果セットの後半にあるバッチの計算が間違っていたのを修正しました。</target>
+        </trans-unit>
+        <trans-unit id="ca4196e7f4b3e6bd0d1df3011f9fc7d5d33048de" translate="yes" xml:space="preserve">
+          <source>Fixed inline</source>
+          <target state="translated">固定インライン</target>
+        </trans-unit>
+        <trans-unit id="85c8a4212bb24a32dd093440021ec359442d04f1" translate="yes" xml:space="preserve">
+          <source>Fixed test failures introduced in 2.13.4.</source>
+          <target state="translated">2.13.4で導入されたテストの不具合を修正しました。</target>
+        </trans-unit>
+        <trans-unit id="1e743b0b91f69142ae8cf27d6a9d4941c7120af5" translate="yes" xml:space="preserve">
+          <source>Fixed the</source>
+          <target state="translated">を修正しました。</target>
+        </trans-unit>
+        <trans-unit id="20ebef17cf6d3cf2f50d31bf6d850fa6c40b69ef" translate="yes" xml:space="preserve">
+          <source>Fixed the BooleanIndex to not index objects without the cataloged attribute.</source>
+          <target state="translated">BooleanIndexで、カタログ属性を持たないオブジェクトにインデックスを付けないように修正しました。</target>
+        </trans-unit>
+        <trans-unit id="6ddbc0913fbac36a0f7903afff5231d52a3d0104" translate="yes" xml:space="preserve">
+          <source>Fixed undefined variables in BooleanIndex inline migration code.</source>
+          <target state="translated">インライン移行コードのBooleanIndexで未定義の変数を修正しました。</target>
+        </trans-unit>
+        <trans-unit id="a71c0dc5766ab7f080492cb24d5dd919ea901980" translate="yes" xml:space="preserve">
+          <source>Flake8 the code.</source>
+          <target state="translated">コードはFlake8。</target>
+        </trans-unit>
+        <trans-unit id="d66b9835ac61d3d0f376cb85297de720b20a346f" translate="yes" xml:space="preserve">
+          <source>Forward compatibility for Zope 4 removal of RequestContainer.</source>
+          <target state="translated">Zope 4でRequestContainerを削除した場合の前方互換性。</target>
+        </trans-unit>
+        <trans-unit id="c0392b2b1c472815ba8d1a1e3b20f4a279bf6c50" translate="yes" xml:space="preserve">
+          <source>Handle</source>
+          <target state="translated">ハンドル</target>
+        </trans-unit>
+        <trans-unit id="de210c5f375069ae17ec7aee614bea7bdcf08a28" translate="yes" xml:space="preserve">
+          <source>IIBTree</source>
+          <target state="translated">アイビーティーツリー</target>
+        </trans-unit>
+        <trans-unit id="b4162eb9720cadec8ee975b3371562dfd809c8ba" translate="yes" xml:space="preserve">
+          <source>IISet</source>
+          <target state="translated">アイアイエスセット</target>
+        </trans-unit>
+        <trans-unit id="53926b064ddf988c63130f99b12860cc9a51d2c4" translate="yes" xml:space="preserve">
+          <source>IITreeSet</source>
+          <target state="translated">アイツリーセット</target>
+        </trans-unit>
+        <trans-unit id="e7e67f227b0b23daa8b1ed8d057c444e4f693bc7" translate="yes" xml:space="preserve">
+          <source>IUniqueValueIndex.uniqueValues</source>
+          <target state="translated">IUniqueValueIndex.uniqueValues</target>
+        </trans-unit>
+        <trans-unit id="4e511d543e6f69348d4089c8c92b2e02fac7bd11" translate="yes" xml:space="preserve">
+          <source>If batching arguments are provided, limit the returned lazy sequence to the
+items in the required batch instead of returning leading items falling
+outside of the requested batch.</source>
+          <target state="translated">バッチング引数が指定されている場合は、要求されたバッチの外にある先頭の項目を返すのではなく、要求されたバッチ内の項目に限定して遅延シーケンスを返します。</target>
+        </trans-unit>
+        <trans-unit id="5bb3bcd04828eabfd766b768b64ce7cb3091dadd" translate="yes" xml:space="preserve">
+          <source>In the path index, don&amp;rsquo;t update data if the value hasn&amp;rsquo;t changed.</source>
+          <target state="translated">In the path index, don&amp;rsquo;t update data if the value hasn&amp;rsquo;t changed.</target>
+        </trans-unit>
+        <trans-unit id="5ee3079956161842483b13a5c97c12e1bcd231da" translate="yes" xml:space="preserve">
+          <source>In the string representation of a catalog plan, round the times to at most
+two digits after the comma.</source>
+          <target state="translated">カタログプランの文字列表現では、コンマの後に最大2桁の数字に丸めます。</target>
+        </trans-unit>
+        <trans-unit id="fd2a46904eba99c58e6ec0e6d38c6743704ef296" translate="yes" xml:space="preserve">
+          <source>Increase plan precision to 4 digits in its string representation.</source>
+          <target state="translated">プランの精度を文字列表現で4桁に増加させます。</target>
+        </trans-unit>
+        <trans-unit id="852002055cef66922b28f1885f2d1a0e31beac4e" translate="yes" xml:space="preserve">
+          <source>IndexQuery</source>
+          <target state="translated">インデックスクエリー</target>
+        </trans-unit>
+        <trans-unit id="f642ee196088372ea886186c6c617515599afd3f" translate="yes" xml:space="preserve">
+          <source>Indexes</source>
+          <target state="translated">インデックス</target>
+        </trans-unit>
+        <trans-unit id="41ea73ca4575d73f7f521c683b8041a45ca9e801" translate="yes" xml:space="preserve">
+          <source>It comes with a variety of indexes for different types of data.</source>
+          <target state="translated">様々な種類のデータに対応したインデックスが付属しています。</target>
+        </trans-unit>
+        <trans-unit id="da49f769ea40e7774fe1954fb9aa4120de691c5a" translate="yes" xml:space="preserve">
+          <source>LP #727981: Fix DateIndex ZMI browsing for dates in the first month of a
+year.</source>
+          <target state="translated">LP #727981です。年の最初の月の日付の DateIndex ZMI ブラウジングを修正しました。</target>
+        </trans-unit>
+        <trans-unit id="4cc1c89a053f7048701ef4a74936689bd3381cd3" translate="yes" xml:space="preserve">
+          <source>LazyMap</source>
+          <target state="translated">遅延マップ</target>
+        </trans-unit>
+        <trans-unit id="4a345d106d779972ec9f3a84506821e7220696d9" translate="yes" xml:space="preserve">
+          <source>Made sure</source>
+          <target state="translated">慥かに</target>
+        </trans-unit>
+        <trans-unit id="1742266e1b8feb9534f6f0e41bc01b3ebe0aecda" translate="yes" xml:space="preserve">
+          <source>Make index-listing compatible with Zope 4.</source>
+          <target state="translated">インデックスリストを Zope 4 と互換性のあるものにしました。</target>
+        </trans-unit>
+        <trans-unit id="c4b09da18343125411a33117c52137bbe35f1a28" translate="yes" xml:space="preserve">
+          <source>Make sure</source>
+          <target state="translated">確認してください。</target>
+        </trans-unit>
+        <trans-unit id="d08910b3d0f05d9d06967e51bd79c88a4df5755c" translate="yes" xml:space="preserve">
+          <source>Make sure WidCode decode handles bytes that were improperly
+converted from Python 2 to Python 3.</source>
+          <target state="translated">WidCodeがPython 2からPython 3に不適切に変換されたバイトを処理していることを確認してください。</target>
+        </trans-unit>
+        <trans-unit id="90611f1bb2f011f6cb3ca504f5c0f6b836cbd9e5" translate="yes" xml:space="preserve">
+          <source>Merge in the ZCTextIndex code.</source>
+          <target state="translated">ZCTextIndex コードをマージします。</target>
+        </trans-unit>
+        <trans-unit id="3eb400046569a8a3aa2a383cad34590118d4ca4a" translate="yes" xml:space="preserve">
+          <source>More PEP8 compliance.</source>
+          <target state="translated">より多くのPEP8コンプライアンス。</target>
+        </trans-unit>
+        <trans-unit id="bd0d00c19e04e1198ec6487ca998a30819d81ddf" translate="yes" xml:space="preserve">
+          <source>Move PluginIndexes.common.UnIndex module to PluginIndexes.unindex.</source>
+          <target state="translated">PluginIndexes.common.UnIndexモジュールをPluginIndexes.unindexに移動します。</target>
+        </trans-unit>
+        <trans-unit id="0fc28db091e83c159a822b25dc379576e751455e" translate="yes" xml:space="preserve">
+          <source>Moved</source>
+          <target state="translated">移動</target>
+        </trans-unit>
+        <trans-unit id="b6279e2ecee4f6890147fb13ceba037a091a2719" translate="yes" xml:space="preserve">
+          <source>No longer special-case empty strings in catalog queries.</source>
+          <target state="translated">カタログクエリで空の文字列を特殊文字にしないようになりました。</target>
+        </trans-unit>
+        <trans-unit id="b3cb1762d498fdbf0f498d0671610e49a3d402eb" translate="yes" xml:space="preserve">
+          <source>No longer try to insert a None value into a field index in tests.</source>
+          <target state="translated">テストのフィールドインデックスに None 値を挿入しようとしなくなりました。</target>
+        </trans-unit>
+        <trans-unit id="6eef6648406c333a4035cd5e60d0bf2ecf2606d7" translate="yes" xml:space="preserve">
+          <source>None</source>
+          <target state="translated">なし</target>
+        </trans-unit>
+        <trans-unit id="cfb4120f65048efa62716db584094fe49dc3e5bb" translate="yes" xml:space="preserve">
+          <source>OIBTree</source>
+          <target state="translated">夾竹木</target>
+        </trans-unit>
+        <trans-unit id="a8cdd9eaea97b14fb1cc9f25ab60bf0bfba4a84e" translate="yes" xml:space="preserve">
+          <source>Optimize</source>
+          <target state="translated">最適化</target>
+        </trans-unit>
+        <trans-unit id="b03122bdd5a337c7904b474c20bb963790c5a43d" translate="yes" xml:space="preserve">
+          <source>Optimize DateRangeIndex for better conflict resolution handling. It always
+starts out with storing an IITreeSet of the value instead of special casing
+storing an int for a single value. The</source>
+          <target state="translated">DateRangeIndexを最適化して、より良い競合解決処理を行うようにしました。これは、単一の値に対してintを格納する特殊なケースではなく、常に値のIITreeSetを格納することから始まります。このような場合には、その値のIITreeSetを格納するための</target>
+        </trans-unit>
+        <trans-unit id="a3f43b079b6ab878f40d510adc241b2ead322747" translate="yes" xml:space="preserve">
+          <source>Optimize brain instantiation, by creating underlying record items in a
+single step, instead of creation and three update calls.</source>
+          <target state="translated">作成と3回の更新コールの代わりに、1回のステップで基礎となるレコード項目を作成することで、ブレインのインスタンス化を最適化します。</target>
+        </trans-unit>
+        <trans-unit id="df32e8cf2899a6b265ce4c155627802e5b02b01c" translate="yes" xml:space="preserve">
+          <source>Optimize sorting in presence of batching arguments. If a batch from the end
+of the result set is requested, we internally reverse the sorting order and
+at the end reverse the lazy sequence again. In a sequence with 100 entries,
+if we request the batch with items 80 to 90, we now reverse sort 20 items
+(100 to 80), slice of the first ten items and then reverse them. Before we
+would had to sort the first 90 items and then slice of the last 10.</source>
+          <target state="translated">バッチング引数の存在下でソートを最適化します。結果集合の末尾からのバッチが要求された場合、内部的にソート順を反転させ、最後に再び遅延シーケンスを反転させます。100個のエントリからなるシーケンスで、80から90までの項目を持つバッチをリクエストした場合、20個の項目(100から80まで)を逆ソートし、最初の10個の項目をスライスしてから逆ソートします。以前は、最初の90個の項目をソートしてから最後の10個の項目をスライスしなければなりませんでした。</target>
+        </trans-unit>
+        <trans-unit id="72566a5c7eb877f4430a2d9e563dac066ee98cbc" translate="yes" xml:space="preserve">
+          <source>Optimized length calculation of Lazy classes.</source>
+          <target state="translated">遅延クラスの長さ計算を最適化しました。</target>
+        </trans-unit>
+        <trans-unit id="0efc2e6be4c23b9a513d7ce0dcff8ed80e8912e7" translate="yes" xml:space="preserve">
+          <source>Overview</source>
+          <target state="translated">概要</target>
+        </trans-unit>
+        <trans-unit id="07ff4540e242221e3a57f7e27c7f8dd6ab4c1b6a" translate="yes" xml:space="preserve">
+          <source>PathIndex._index_object</source>
+          <target state="translated">PathIndex._index_object</target>
+        </trans-unit>
+        <trans-unit id="2523ea0c31c4c1ccff3d79e77b30b4998b462ccc" translate="yes" xml:space="preserve">
+          <source>PathIndex.uniqueValues</source>
+          <target state="translated">PathIndex.uniqueValues</target>
+        </trans-unit>
+        <trans-unit id="50813fc4893e60027625c09c0d0aca60625d30a2" translate="yes" xml:space="preserve">
+          <source>Preserve</source>
+          <target state="translated">保存</target>
+        </trans-unit>
+        <trans-unit id="d916cae868e967369ad3b2b393d4db28902b3c09" translate="yes" xml:space="preserve">
+          <source>Preserve the</source>
+          <target state="translated">を保存します。</target>
+        </trans-unit>
+        <trans-unit id="c003349e39fae7d8ab3d07a2751744670c7df5d8" translate="yes" xml:space="preserve">
+          <source>Prevent the new UUIDIndex from acquiring attributes via Acquisition.</source>
+          <target state="translated">新しいUUIDIndexがAcquisition経由で属性を取得できないようにします。</target>
+        </trans-unit>
+        <trans-unit id="453f4db0d9dab18d30b2898e982a3bb049f51432" translate="yes" xml:space="preserve">
+          <source>PriorityMap</source>
+          <target state="translated">優先度マップ</target>
+        </trans-unit>
+        <trans-unit id="a8aff5faae7bdb454c302e63c1d7889dedcd67aa" translate="yes" xml:space="preserve">
+          <source>Products.PluginIndexes.common.ResultList</source>
+          <target state="translated">Products.PluginIndexes.common.ResultList</target>
+        </trans-unit>
+        <trans-unit id="dcf6f0623e6f37ddea02273b5504215fcc0389a0" translate="yes" xml:space="preserve">
+          <source>Products.ZCatalog.Lazy</source>
+          <target state="translated">製品.ZCatalog.Lazy</target>
+        </trans-unit>
+        <trans-unit id="d9126c8879d120e053fac87f36387e434df66f6b" translate="yes" xml:space="preserve">
+          <source>Put back the</source>
+          <target state="translated">戻す</target>
+        </trans-unit>
+        <trans-unit id="b2431de93f24c1ad855f499d76fa43f94221067f" translate="yes" xml:space="preserve">
+          <source>Python 3 compatibility</source>
+          <target state="translated">Python 3 compatibility</target>
+        </trans-unit>
+        <trans-unit id="edcc99233cc2bb33a3ca4031dd577e667de18b16" translate="yes" xml:space="preserve">
+          <source>Raise BadRequest instead of returning MessageDialog.</source>
+          <target state="translated">MessageDialogを返す代わりにBadRequestを発生させます。</target>
+        </trans-unit>
+        <trans-unit id="a66c59de3d85510ee92adb2a093aa87fccf0b76b" translate="yes" xml:space="preserve">
+          <source>Raise a</source>
+          <target state="translated">レイズ</target>
+        </trans-unit>
+        <trans-unit id="bcde68302febac7bacd59083657a9c5daa638477" translate="yes" xml:space="preserve">
+          <source>Raise a TypeError when trying to index or lookup</source>
+          <target state="translated">インデックス作成や検索をしようとしたときに TypeError を発生させる</target>
+        </trans-unit>
+        <trans-unit id="749a9ca88eeae7dd88d8ec64d6972749622f8f36" translate="yes" xml:space="preserve">
+          <source>Refactored value index logic. Determine value indexes per catalog instead of
+globally. Store value index set in the priority map, so it can be seen in the
+ZMI and stored in the module level storage.</source>
+          <target state="translated">値インデックスロジックを再構成しました。グローバルではなく、カタログごとに値インデックスを決定します。値インデックスセットを優先度マップに格納することで、ZMIで見られるようになり、モジュールレベルのストレージに格納されるようになりました。</target>
+        </trans-unit>
+        <trans-unit id="f5dfb7c095564b218faf07cd6b57fa5bdf5af62f" translate="yes" xml:space="preserve">
+          <source>Released as separate distribution.</source>
+          <target state="translated">別配信としてリリース。</target>
+        </trans-unit>
+        <trans-unit id="456df9c78b46468e472cedcf3d10f18904adbdef" translate="yes" xml:space="preserve">
+          <source>Remove CatalogSearchArgumentsMap and support for using requests
+objects as queries.</source>
+          <target state="translated">CatalogSearchArgumentsMap を削除し、request オブジェクトをクエリとして使用できるようにしました。</target>
+        </trans-unit>
+        <trans-unit id="435c81d9e520cd513691f8dc23c07bed3f72216d" translate="yes" xml:space="preserve">
+          <source>Remove deprecated Catalog(Path)Awareness modules.</source>
+          <target state="translated">非推奨の Catalog(Path)Awareness モジュールを削除。</target>
+        </trans-unit>
+        <trans-unit id="31e852107e597e75844560bc834591921c12561e" translate="yes" xml:space="preserve">
+          <source>Remove docstrings from various methods, as they shouldn&amp;rsquo;t be web-publishable.</source>
+          <target state="translated">Remove docstrings from various methods, as they shouldn&amp;rsquo;t be web-publishable.</target>
+        </trans-unit>
+        <trans-unit id="d1ac638a87f2260f74e7ed7bb1aefd7438f88ca5" translate="yes" xml:space="preserve">
+          <source>Remove unused</source>
+          <target state="translated">未使用のものを削除する</target>
+        </trans-unit>
+        <trans-unit id="8164366e904f8a880ae530b7b38a227e6ec66594" translate="yes" xml:space="preserve">
+          <source>Remove unused ZMI icons.</source>
+          <target state="translated">未使用のZMIアイコンを削除します。</target>
+        </trans-unit>
+        <trans-unit id="f19b24c40cb52e01a2e8360c3660d4fa5437b046" translate="yes" xml:space="preserve">
+          <source>Removed tracking of result length from the query plan. The calculation of the
+length of an intermediate index result can itself be expensive.</source>
+          <target state="translated">クエリプランから結果の長さの追跡を削除しました。中間インデックスの結果の長さを計算すること自体が高額になる可能性があります。</target>
+        </trans-unit>
+        <trans-unit id="d3f4cb898fbe0c7a7ac4f721438c4c26ad1a2513" translate="yes" xml:space="preserve">
+          <source>Rename</source>
+          <target state="translated">名前の変更</target>
+        </trans-unit>
+        <trans-unit id="a7cf7b25a703b308887c7f1d100c4326ef20ac46" translate="yes" xml:space="preserve">
+          <source>Replace</source>
+          <target state="translated">置き換え</target>
+        </trans-unit>
+        <trans-unit id="78e5e72c0e18767f821ea13798cfa2e2e302e384" translate="yes" xml:space="preserve">
+          <source>Replace deprecated</source>
+          <target state="translated">廃止予定のものを置き換える</target>
+        </trans-unit>
+        <trans-unit id="05033aaac5d0258fb4f98a5f414995156fd83ce9" translate="yes" xml:space="preserve">
+          <source>Replaced</source>
+          <target state="translated">置き換え</target>
+        </trans-unit>
+        <trans-unit id="377352e763ee46cfa13f98466d2b240d8db31728" translate="yes" xml:space="preserve">
+          <source>Restore ability for indexes to use extra query params.
+See PR #1.</source>
+          <target state="translated">インデックスが余分なクエリパラメータを使用する機能を復元します。PR #1 を参照してください。</target>
+        </trans-unit>
+        <trans-unit id="8435263f838d93af140b792d8c75b02704780686" translate="yes" xml:space="preserve">
+          <source>Restore safeguard for using the</source>
+          <target state="translated">を使用するためのセーフガードを復元します。</target>
+        </trans-unit>
+        <trans-unit id="2b5dad549bd2d5e03cd6d8c9a53a28af5e314389" translate="yes" xml:space="preserve">
+          <source>Restored preserving score values from ZCTextIndex indices.
+&lt;a href=&quot;https://bugs.launchpad.net/zope2/+bug/815469&quot;&gt;https://bugs.launchpad.net/zope2/+bug/815469&lt;/a&gt;</source>
+          <target state="translated">Restored preserving score values from ZCTextIndex indices. &lt;a href=&quot;https://bugs.launchpad.net/zope2/+bug/815469&quot;&gt;https://bugs.launchpad.net/zope2/+bug/815469&lt;/a&gt;</target>
+        </trans-unit>
+        <trans-unit id="ae89513c46b05255df39e0cf746ddcd611286377" translate="yes" xml:space="preserve">
+          <source>Specify supported Python versions using</source>
+          <target state="translated">サポートされているPythonのバージョンを指定するには</target>
+        </trans-unit>
+        <trans-unit id="b1dd7e8df06575b235ec034ad85aac5ab25b60cc" translate="yes" xml:space="preserve">
+          <source>Strip white space from name when adding a column or index.</source>
+          <target state="translated">カラムやインデックスを追加する際に、名前から空白を取り除く。</target>
+        </trans-unit>
+        <trans-unit id="beabc6cba89fef77c136ea1271f02580a6ffd807" translate="yes" xml:space="preserve">
+          <source>Substitute catalog entry in UUIDIndex error message.</source>
+          <target state="translated">UUIDIndexエラーメッセージのカタログエントリを置換します。</target>
+        </trans-unit>
+        <trans-unit id="48879678cc55895744d2446a512f11d0c46a240e" translate="yes" xml:space="preserve">
+          <source>Target use with Zope 4:  no longer support 2.13.x.</source>
+          <target state="translated">Utilisation ciblée avec Zope 4:ne supporte plus le 2.13.x.</target>
+        </trans-unit>
+        <trans-unit id="d30453f938f674c2051dbbc68a7290427c087962" translate="yes" xml:space="preserve">
+          <source>The ZCatalog is Zope&amp;rsquo;s built in search engine. It allows you to categorize
+and search all kinds of Zope objects.</source>
+          <target state="translated">The ZCatalog is Zope&amp;rsquo;s built in search engine. It allows you to categorize and search all kinds of Zope objects.</target>
+        </trans-unit>
+        <trans-unit id="88b33e4e12f75ac8bf792aebde41f1a090f3a612" translate="yes" xml:space="preserve">
+          <source>True</source>
+          <target state="translated">Vero</target>
+        </trans-unit>
+        <trans-unit id="9acef652f134aabb3f52b3c71f3a5ead1f3ff4cb" translate="yes" xml:space="preserve">
+          <source>True/False</source>
+          <target state="translated">真/偽</target>
+        </trans-unit>
+        <trans-unit id="a448d92cbedbae6f8f18f537cec515287cc21137" translate="yes" xml:space="preserve">
+          <source>TypeErrors</source>
+          <target state="translated">タイプエラー</target>
+        </trans-unit>
+        <trans-unit id="6ede54883b9d497e1fb7fa16753d24f61ceed8d2" translate="yes" xml:space="preserve">
+          <source>UUIDIndex</source>
+          <target state="translated">ユーユーアイディーインデックス</target>
+        </trans-unit>
+        <trans-unit id="fcb4d383f059f59b6ed039e57c00603e89773309" translate="yes" xml:space="preserve">
+          <source>UnIndex._convert</source>
+          <target state="translated">UnIndex._convert</target>
+        </trans-unit>
+        <trans-unit id="63e822a1a9b48225131a0413e63e4921b195ceea" translate="yes" xml:space="preserve">
+          <source>Unify Unindex and DateIndex search logic (</source>
+          <target state="translated">Unindex と DateIndex の検索ロジックを統一 (</target>
+        </trans-unit>
+        <trans-unit id="dc3badb8354f7915eba44f863aa149f4d8fec052" translate="yes" xml:space="preserve">
+          <source>Update to ZODB 4.0 as direct dependency.</source>
+          <target state="translated">直接の依存関係としてZODB 4.0にアップデート。</target>
+        </trans-unit>
+        <trans-unit id="8c6ffc76103b8cfb5142c64bf46ef24da7a01703" translate="yes" xml:space="preserve">
+          <source>Updated deprecation warnings to point to Zope 4 instead of 2.14.</source>
+          <target state="translated">非推奨の警告を 2.14 ではなく Zope 4 に更新。</target>
+        </trans-unit>
+        <trans-unit id="1d4d43cc6f3a833e0340a0d1794b6d7b9958657e" translate="yes" xml:space="preserve">
+          <source>Use</source>
+          <target state="translated">使用方法</target>
+        </trans-unit>
+        <trans-unit id="249c4f0ee36a15c30b23244cc731f28517c6902b" translate="yes" xml:space="preserve">
+          <source>Use aq_inner before aq_parent at some places to safely get the parent.</source>
+          <target state="translated">aq_parentの前にaq_innerを使うと、安全に親を取得できる場所があります。</target>
+        </trans-unit>
+        <trans-unit id="ca5e1888f7ff9f4679a3377b455596a48d014681" translate="yes" xml:space="preserve">
+          <source>ValueError</source>
+          <target state="translated">値エラー</target>
+        </trans-unit>
+        <trans-unit id="6f094330369aa299dc0e058ae1e415e2b2e9cc5e" translate="yes" xml:space="preserve">
+          <source>ZCatalog.query</source>
+          <target state="translated">ZCatalog.query</target>
+        </trans-unit>
+        <trans-unit id="80818bf7d146809bc5f715fbb3eb34cfa046f535" translate="yes" xml:space="preserve">
+          <source>ZTUtils.Lazy</source>
+          <target state="translated">ZTUtils.Lazy</target>
+        </trans-unit>
+        <trans-unit id="5b58f16a712b205ab3ffbbf0febe5c5923cdc87b" translate="yes" xml:space="preserve">
+          <source>Zope's indexing and search solution.</source>
+          <target state="translated">ゾープのインデキシング・検索ソリューション。</target>
+        </trans-unit>
+        <trans-unit id="071528cda69371d769684c54d80587eb311a5ee4" translate="yes" xml:space="preserve">
+          <source>__contains__</source>
+          <target state="translated">__contains__</target>
+        </trans-unit>
+        <trans-unit id="2a13cb19a4f9ff982c9a09bdcab8bfa48f379556" translate="yes" xml:space="preserve">
+          <source>__len__</source>
+          <target state="translated">__len__</target>
+        </trans-unit>
+        <trans-unit id="878a4db9cb37d8eb19e73bcb9795d7de3f89ed1a" translate="yes" xml:space="preserve">
+          <source>_apply_index</source>
+          <target state="translated">_apply_index</target>
+        </trans-unit>
+        <trans-unit id="3fa7be2835c8fe7d58ee3ab0c9570fae31a2efe0" translate="yes" xml:space="preserve">
+          <source>_insertForwardIndexEntry</source>
+          <target state="translated">_insertForwardIndexEntry</target>
+        </trans-unit>
+        <trans-unit id="671caa95c975bcc1bd3320317cea680d24b714f2" translate="yes" xml:space="preserve">
+          <source>actual_result_count</source>
+          <target state="translated">じっせきresult_count</target>
+        </trans-unit>
+        <trans-unit id="299f7200eb0907603618b3f5ffd150008484ed58" translate="yes" xml:space="preserve">
+          <source>addColumn</source>
+          <target state="translated">アドカラム</target>
+        </trans-unit>
+        <trans-unit id="cffa50a32cb13a240d705317bcec65dd1f31b6ad" translate="yes" xml:space="preserve">
+          <source>and</source>
+          <target state="translated">そして</target>
+        </trans-unit>
+        <trans-unit id="f5c9f699bb2eef2759e3d9ab48cad90c05750497" translate="yes" xml:space="preserve">
+          <source>and move it to</source>
+          <target state="translated">に移動して</target>
+        </trans-unit>
+        <trans-unit id="94fb8e5024e554995ed68db07bd47b0c9d5f38a4" translate="yes" xml:space="preserve">
+          <source>argument and no explicit</source>
+          <target state="translated">引数と明示的な</target>
+        </trans-unit>
+        <trans-unit id="1e44e51542a6cea0a5a8b793807ecea2872ba41e" translate="yes" xml:space="preserve">
+          <source>argument name on</source>
+          <target state="translated">上の引数名</target>
+        </trans-unit>
+        <trans-unit id="56fe7a4432199634dd30d33ef8ad7cf94690f92f" translate="yes" xml:space="preserve">
+          <source>argument to the catalog&amp;rsquo;s</source>
+          <target state="translated">argument to the catalog&amp;rsquo;s</target>
+        </trans-unit>
+        <trans-unit id="a5d379754ea9b589b64f46877cb45745beb4088c" translate="yes" xml:space="preserve">
+          <source>avoiding a</source>
+          <target state="translated">忌避</target>
+        </trans-unit>
+        <trans-unit id="b09116530fdc03521a70695ef4418c60ec1ca5b0" translate="yes" xml:space="preserve">
+          <source>b_size</source>
+          <target state="translated">ビーサイズ</target>
+        </trans-unit>
+        <trans-unit id="f73e6f754e60807c1a8502805660ecbbf29b21f7" translate="yes" xml:space="preserve">
+          <source>b_start</source>
+          <target state="translated">ビースタート</target>
+        </trans-unit>
+        <trans-unit id="f7e1935a46b2ce30cf35ceb57c100bca1a06b16b" translate="yes" xml:space="preserve">
+          <source>b_start + b_size</source>
+          <target state="translated">b_start+b_size</target>
+        </trans-unit>
+        <trans-unit id="f8f602b2b19a6fd4f6800588792a8396a34f6844" translate="yes" xml:space="preserve">
+          <source>call on the
+result of each index</source>
+          <target state="translated">各インデックスの結果を呼び出す</target>
+        </trans-unit>
+        <trans-unit id="a78c362ca8dad355d7094452995d1c56e9cc6667" translate="yes" xml:space="preserve">
+          <source>calls with their
+non-weighted version, as we didn&amp;rsquo;t pass in weights.</source>
+          <target state="translated">calls with their non-weighted version, as we didn&amp;rsquo;t pass in weights.</target>
+        </trans-unit>
+        <trans-unit id="df345f6df9d7018363da7eae7692bef28d2edd05" translate="yes" xml:space="preserve">
+          <source>case and avoid
+it while using limiting at the same time. Fixes LP #1236790.</source>
+          <target state="translated">の場合に、同時にリミッティングを使用しながら回避するようにしました。LP #1236790 を修正しました。</target>
+        </trans-unit>
+        <trans-unit id="ae43c7ff1e420ad1337f09d0fb9b8562757249a4" translate="yes" xml:space="preserve">
+          <source>cgi.escape</source>
+          <target state="translated">cgi.escape</target>
+        </trans-unit>
+        <trans-unit id="e15d3ad6fb06fec4217a224d82678f3dbbb1c72b" translate="yes" xml:space="preserve">
+          <source>class decorator.</source>
+          <target state="translated">クラスのデコレーターです。</target>
+        </trans-unit>
+        <trans-unit id="583a50b1899f0bcf1fd05615b8fed55fd8f57036" translate="yes" xml:space="preserve">
+          <source>class method to the</source>
+          <target state="translated">クラスメソッドを</target>
+        </trans-unit>
+        <trans-unit id="3f93df17abececda76a401bcbc10d1bcd626024e" translate="yes" xml:space="preserve">
+          <source>conversion code inside DateRangeIndex&amp;rsquo;</source>
+          <target state="translated">conversion code inside DateRangeIndex&amp;rsquo;</target>
+        </trans-unit>
+        <trans-unit id="937fec31d12f385ad6a0d5dfbde719205dd75138" translate="yes" xml:space="preserve">
+          <source>delColumn</source>
+          <target state="translated">デルカラム</target>
+        </trans-unit>
+        <trans-unit id="aa6a591842f3c4b4798ffdfe14ad7a674b9c747d" translate="yes" xml:space="preserve">
+          <source>dependency.</source>
+          <target state="translated">依存関係があります。</target>
+        </trans-unit>
+        <trans-unit id="4ae5fb26eb9998fc4fb363ae7a043afdbb5cfba9" translate="yes" xml:space="preserve">
+          <source>five.globalrequest</source>
+          <target state="translated">5.グローバルリクエスト</target>
+        </trans-unit>
+        <trans-unit id="0beec7b5ea3f0fdbc95d0dd47f3c5bc275da8a33" translate="yes" xml:space="preserve">
+          <source>foo</source>
+          <target state="translated">フー</target>
+        </trans-unit>
+        <trans-unit id="4d0554dc220d0be4bb850b6378b6f851162f4ad1" translate="yes" xml:space="preserve">
+          <source>for Python 3.</source>
+          <target state="translated">for Python 3.</target>
+        </trans-unit>
+        <trans-unit id="d1d06b54d9138ef3ae0fc834d06756acacb4ed55" translate="yes" xml:space="preserve">
+          <source>for sorted queries where the sort index doesn&amp;rsquo;t
+contain all the documents. Fixes LP #1237141.</source>
+          <target state="translated">for sorted queries where the sort index doesn&amp;rsquo;t contain all the documents. Fixes LP #1237141.</target>
+        </trans-unit>
+        <trans-unit id="753c80bbeafc976c5b53926ca943513d8a324e0d" translate="yes" xml:space="preserve">
+          <source>from non-IOBTree types.</source>
+          <target state="translated">非IOBTree型からの</target>
+        </trans-unit>
+        <trans-unit id="e24e95cdf46e08af61156fc00bcc8886ab849f5e" translate="yes" xml:space="preserve">
+          <source>getAllBrains</source>
+          <target state="translated">ゲットオールブレインズ</target>
+        </trans-unit>
+        <trans-unit id="ca9acc01f2c5992bf5e643843a7b65fc5cbcdf37" translate="yes" xml:space="preserve">
+          <source>got merged into Zope2 itself.</source>
+          <target state="translated">Zope2自体に統合された</target>
+        </trans-unit>
+        <trans-unit id="f7f97c0caed3def4ec0d9840ce2e2a7127d0e718" translate="yes" xml:space="preserve">
+          <source>html.escape</source>
+          <target state="translated">html.escape</target>
+        </trans-unit>
+        <trans-unit id="38a2251cacd6928a9057d2191c8edd0f0c9f947d" translate="yes" xml:space="preserve">
+          <source>if a query uses invalid index parameters. This
+prevents the query from being changed without feedback to the user and
+delivering implausible search results.
+(&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/pull/67&quot;&gt;#67&lt;/a&gt;)</source>
+          <target state="translated">if a query uses invalid index parameters. This prevents the query from being changed without feedback to the user and delivering implausible search results. (&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/pull/67&quot;&gt;#67&lt;/a&gt;)</target>
+        </trans-unit>
+        <trans-unit id="d13a5c64555085ced3e4a2a84216e03971c76255" translate="yes" xml:space="preserve">
+          <source>if not explicitly provided.</source>
+          <target state="translated">明示的に提供されていない場合は</target>
+        </trans-unit>
+        <trans-unit id="931f58421ebe1d14d0b49d4f08a5aa63203030ae" translate="yes" xml:space="preserve">
+          <source>imports to prevent DeprecationWarnings</source>
+          <target state="translated">DeprecationWarningsを防ぐためのインポート</target>
+        </trans-unit>
+        <trans-unit id="0759024469e30752f9cc0c78f4e1a63db4d36629" translate="yes" xml:space="preserve">
+          <source>in an UnIndex.
+This is a required change for BTrees 4.0+ compatibility, which prevents
+objects without a clear ordering definition from being inserted in a tree.</source>
+          <target state="translated">を UnIndex で使用しています。これはBTrees 4.0+互換性のために必要な変更で、明確な順序定義のないオブジェクトがツリーに挿入されないようにします。</target>
+        </trans-unit>
+        <trans-unit id="7a9ee31f257d8efe1b354a282ff7109bb33d482f" translate="yes" xml:space="preserve">
+          <source>in setup.py
+(&lt;a href=&quot;https://github.com/zopefoundation/Zope/issues/481&quot;&gt;Zope#481&lt;/a&gt;)</source>
+          <target state="translated">in setup.py (&lt;a href=&quot;https://github.com/zopefoundation/Zope/issues/481&quot;&gt;Zope#481&lt;/a&gt;)</target>
+        </trans-unit>
+        <trans-unit id="a973057a966d094a09210292f99151e899030a56" translate="yes" xml:space="preserve">
+          <source>in the KeywordIndex if an indexed attribute is a method
+with required arguments.</source>
+          <target state="translated">インデックス化された属性が必須の引数を持つメソッドである場合は、KeywordIndexで</target>
+        </trans-unit>
+        <trans-unit id="6c8eeb6363462c2cb809d5f2f1b9e8a31f7f2f96" translate="yes" xml:space="preserve">
+          <source>index with a value of</source>
+          <target state="translated">の値を持つインデックス</target>
+        </trans-unit>
+        <trans-unit id="cb82821f5443620916128c66c024a61d87b0565d" translate="yes" xml:space="preserve">
+          <source>instead of</source>
+          <target state="translated">に代えて</target>
+        </trans-unit>
+        <trans-unit id="4d416911da890bf21761148440c80d70ed09e6eb" translate="yes" xml:space="preserve">
+          <source>is available on all lazy classes and falls
+back to</source>
+          <target state="translated">は、すべての怠惰なクラスで利用可能であり、フォールバックして</target>
+        </trans-unit>
+        <trans-unit id="748360637f41e4e225361f8ae13d6bd81e3a20d6" translate="yes" xml:space="preserve">
+          <source>is provided, the sort limit will be calculated as</source>
+          <target state="translated">が指定されている場合、ソートの上限は</target>
+        </trans-unit>
+        <trans-unit id="b970444d4cfe944fb8b926339ce5f153e21ab1dc" translate="yes" xml:space="preserve">
+          <source>iterate over sort index</source>
+          <target state="translated">並び替え</target>
+        </trans-unit>
+        <trans-unit id="a1ac1048afd36f6c030c3f2a6344482fb00904c0" translate="yes" xml:space="preserve">
+          <source>len()</source>
+          <target state="translated">len()</target>
+        </trans-unit>
+        <trans-unit id="a65e60eac6ab7ef1ddd636ec9eec2806f779b035" translate="yes" xml:space="preserve">
+          <source>load_from_path</source>
+          <target state="translated">ロードフロムパス</target>
+        </trans-unit>
+        <trans-unit id="63903062682ca4c7b0e58dbf0fb4e8461b74846c" translate="yes" xml:space="preserve">
+          <source>lookup and removing
+inline migration code for converting</source>
+          <target state="translated">変換のためのルックアップとインラインマイグレーションコードの削除</target>
+        </trans-unit>
+        <trans-unit id="1c1552eaadc0c86ead7d282f17d2accdeebf03d8" translate="yes" xml:space="preserve">
+          <source>method description and
+explicitly mention generators/iterators as potential return values.
+The PathIndex was one example returning a generator for some time.</source>
+          <target state="translated">メソッドの説明を参照して、潜在的な戻り値としてジェネレータ/イテレータについて明示的に言及してください。PathIndex は、しばらくの間ジェネレータを返す一例でした。</target>
+        </trans-unit>
+        <trans-unit id="acc5e3da97ebfdaf2435661badd88fd5b70106a4" translate="yes" xml:space="preserve">
+          <source>method for catalogs with
+many indexed objects
+(&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/issues/39&quot;&gt;#39&lt;/a&gt;)</source>
+          <target state="translated">method for catalogs with many indexed objects (&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/issues/39&quot;&gt;#39&lt;/a&gt;)</target>
+        </trans-unit>
+        <trans-unit id="16b4afed942fa6f951ebcaa45b3cc2e0ea965708" translate="yes" xml:space="preserve">
+          <source>method if only b_start but not b_size
+has been provided.</source>
+          <target state="translated">メソッドを使用します。</target>
+        </trans-unit>
+        <trans-unit id="a8def6cd72c59f6d58630c18bcd23591061662ce" translate="yes" xml:space="preserve">
+          <source>method on each index with a simplified contract compared
+to</source>
+          <target state="translated">と比較して、簡易契約の各指標では</target>
+        </trans-unit>
+        <trans-unit id="da25e5c49250705325e1e73018ddcb102cc100b0" translate="yes" xml:space="preserve">
+          <source>method to ZCatalogIndexes, fixes zopefoundation/Zope#69.</source>
+          <target state="translated">メソッドを ZCatalogIndexes に追加したのを修正した。</target>
+        </trans-unit>
+        <trans-unit id="04efaf9a9049272be54d13911b150842255dba2c" translate="yes" xml:space="preserve">
+          <source>method to avoid unnecessary
+doubling of code.
+(&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/issues/69&quot;&gt;#69&lt;/a&gt;)</source>
+          <target state="translated">method to avoid unnecessary doubling of code. (&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/issues/69&quot;&gt;#69&lt;/a&gt;)</target>
+        </trans-unit>
+        <trans-unit id="aa6ed5bae87df210e68ffc37cc5e5b9bce4928cf" translate="yes" xml:space="preserve">
+          <source>method to the ZCatalog, returning a generator
+of brains for all cataloged objects. You can use this if you relied
+on</source>
+          <target state="translated">メソッドをZCatalogに追加して、カタログ化された全てのオブジェクトの脳のジェネレーターを返します。に依存している場合は、これを使うことができます。</target>
+        </trans-unit>
+        <trans-unit id="946465000bd9e24c032001a54783f3574c94142e" translate="yes" xml:space="preserve">
+          <source>method.</source>
+          <target state="translated">メソッドを使用します。</target>
+        </trans-unit>
+        <trans-unit id="239bf78c88be01ed84cd0982adbbbd60e4a0a844" translate="yes" xml:space="preserve">
+          <source>method. This was loading entire BTrees
+into memory and caused excessive database load on startup.</source>
+          <target state="translated">メソッドを使用していました。これはBTrees全体をメモリにロードしていたため、起動時にデータベースに過剰な負荷がかかりました。</target>
+        </trans-unit>
+        <trans-unit id="47f2fcac8683f64dd98fa23115cf817a42c16eed" translate="yes" xml:space="preserve">
+          <source>methods and used it for a progress handler. Also optimized some of their
+internals.</source>
+          <target state="translated">メソッドを使用し、それをプログレスハンドラに使用しました。また、それらの内部のいくつかを最適化しました。</target>
+        </trans-unit>
+        <trans-unit id="d368914077fd1e369af7a3aa173c9247783e06cc" translate="yes" xml:space="preserve">
+          <source>module to</source>
+          <target state="translated">モジュールに</target>
+        </trans-unit>
+        <trans-unit id="e3b3c09be407f8156d22c2b317d817eefce31025" translate="yes" xml:space="preserve">
+          <source>modules.</source>
+          <target state="translated">モジュールを使用しています。</target>
+        </trans-unit>
+        <trans-unit id="557f255516719ea16f8f4a0aae1166054e2c9b43" translate="yes" xml:space="preserve">
+          <source>not</source>
+          <target state="translated">not</target>
+        </trans-unit>
+        <trans-unit id="cc420d82b6716ac2980c02d4a752789b3a0b4a42" translate="yes" xml:space="preserve">
+          <source>not 1</source>
+          <target state="translated">一人もいない</target>
+        </trans-unit>
+        <trans-unit id="553c17e989d7cb5fd3fd13c2f56c436c68b6eb94" translate="yes" xml:space="preserve">
+          <source>on all lazy return values. This allows
+to get proper batching information from catalog results which have been
+restricted by</source>
+          <target state="translated">をすべての遅延した戻り値に適用することができます。これにより、カタログの結果が</target>
+        </trans-unit>
+        <trans-unit id="d2b8c25eb2036daada70fded1778081fecc98922" translate="yes" xml:space="preserve">
+          <source>on flattening nested LazyCat&amp;rsquo;s.</source>
+          <target state="translated">on flattening nested LazyCat&amp;rsquo;s.</target>
+        </trans-unit>
+        <trans-unit id="5b993f7b99e84d0c35db63377d9d2245b2553237" translate="yes" xml:space="preserve">
+          <source>optimization
+should be provided via a separate API to be called periodically outside the
+context of a normal request.</source>
+          <target state="translated">の最適化は、通常のリクエストのコンテキスト外で定期的に呼び出される別の API を介して提供されるべきです。</target>
+        </trans-unit>
+        <trans-unit id="8a234066f08ac573c58e0f32156480e7e6a49784" translate="yes" xml:space="preserve">
+          <source>optimization but guard against results
+with values and do the appropriate fallback to the weighted version.</source>
+          <target state="translated">最適化を行いますが、値を持つ結果をガードし、重み付きバージョンへの適切なフォールバックを行います。</target>
+        </trans-unit>
+        <trans-unit id="acba0f5c2b0f4b265f32f6588b223815362b61cd" translate="yes" xml:space="preserve">
+          <source>parseIndexRequest</source>
+          <target state="translated">パースインデックス要求</target>
+        </trans-unit>
+        <trans-unit id="60b710bcf794853aa6dff6cd7273351cfa0d2d6a" translate="yes" xml:space="preserve">
+          <source>python_requires</source>
+          <target state="translated">python_reququires</target>
+        </trans-unit>
+        <trans-unit id="0cfaeb50baa186ee3da055dab948ee337b5f6970" translate="yes" xml:space="preserve">
+          <source>queries in field and keyword indexes. Both
+restrictions of normal queries and range queries are supported, as well as
+purely exclusive queries. For example:</source>
+          <target state="translated">フィールドインデックスとキーワードインデックスでの 通常のクエリと範囲クエリの両方の制限と、純粋に排他的なクエリがサポートされています。例えば、以下のようになります。</target>
+        </trans-unit>
+        <trans-unit id="e10115e4f96a7de29fa80fe70e55f3ce1c6f3f26" translate="yes" xml:space="preserve">
+          <source>queries in the</source>
+          <target state="translated">でのクエリ</target>
+        </trans-unit>
+        <trans-unit id="bb35e976b9b1e7ab22344528bd70c5a78760661b" translate="yes" xml:space="preserve">
+          <source>queries with any number of sort indexes and
+differing</source>
+          <target state="translated">任意の数のソートインデックスと異なる</target>
+        </trans-unit>
+        <trans-unit id="4dab953af403e6e33f4ccccc5321dd38e777699d" translate="yes" xml:space="preserve">
+          <source>query_index</source>
+          <target state="translated">クエリインデックス</target>
+        </trans-unit>
+        <trans-unit id="1efc05a68ddb8ebc49e6766b56636e8dfb7163f0" translate="yes" xml:space="preserve">
+          <source>randid</source>
+          <target state="translated">候補者</target>
+        </trans-unit>
+        <trans-unit id="89130fcc5ff281bdc64b95e9219df419e692a092" translate="yes" xml:space="preserve">
+          <source>removes old index entries
+when path of object changes
+(&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/issues/61&quot;&gt;#61&lt;/a&gt;)</source>
+          <target state="translated">removes old index entries when path of object changes (&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/issues/61&quot;&gt;#61&lt;/a&gt;)</target>
+        </trans-unit>
+        <trans-unit id="3cc0c43335fb6d686fcbd0aafbacf6c1ed5d961c" translate="yes" xml:space="preserve">
+          <source>returning all brains for empty queries before
+version 4.0a2.</source>
+          <target state="translated">バージョン4.0a2以前の空のクエリのためのすべてのブレインを返します。</target>
+        </trans-unit>
+        <trans-unit id="1fce43e968d33eab9422fbf7226fc43c3ed1936e" translate="yes" xml:space="preserve">
+          <source>searchResults</source>
+          <target state="translated">サーチ結果</target>
+        </trans-unit>
+        <trans-unit id="d00b25f7e1b3a8eb3ec6fb343cb3e12b36426494" translate="yes" xml:space="preserve">
+          <source>self.data</source>
+          <target state="translated">自己データ</target>
+        </trans-unit>
+        <trans-unit id="48f6baedaf14ee8edc3046227c0acd2a9a633b0e" translate="yes" xml:space="preserve">
+          <source>self.uids</source>
+          <target state="translated">自己UUID</target>
+        </trans-unit>
+        <trans-unit id="94143ea1315de02795f5843d71a3758dfd03b29a" translate="yes" xml:space="preserve">
+          <source>since the beginning of time</source>
+          <target state="translated">悠久の昔から</target>
+        </trans-unit>
+        <trans-unit id="4340afaccaf0889d0ded1e1dca956d7857093048" translate="yes" xml:space="preserve">
+          <source>single value as int</source>
+          <target state="translated">単値を整数とする</target>
+        </trans-unit>
+        <trans-unit id="cfc84f233071200ca107683fa178b743b45f7c64" translate="yes" xml:space="preserve">
+          <source>six.moves.urllib.parse.quote</source>
+          <target state="translated">シックスムーブス.ウルリブ.パース.クォート</target>
+        </trans-unit>
+        <trans-unit id="1ac605a565efea3d32e8c436a61d1b0b2869c9f4" translate="yes" xml:space="preserve">
+          <source>sortResults</source>
+          <target state="translated">ソート結果</target>
+        </trans-unit>
+        <trans-unit id="3d30347ef4b3e206336eb6a31c459460b45ed750" translate="yes" xml:space="preserve">
+          <source>sort_limit</source>
+          <target state="translated">ソートリミット</target>
+        </trans-unit>
+        <trans-unit id="c9378b0064e4c49279f081e67ffc01fc199bfefa" translate="yes" xml:space="preserve">
+          <source>sort_on</source>
+          <target state="translated">ソートオン</target>
+        </trans-unit>
+        <trans-unit id="7c7eadd425337413dc0e8c94a897ecf743614dbb" translate="yes" xml:space="preserve">
+          <source>sort_order</source>
+          <target state="translated">並べ替え順序</target>
+        </trans-unit>
+        <trans-unit id="483fa327017517a60cf7ee6e896a549095b53ff4" translate="yes" xml:space="preserve">
+          <source>support to DateIndexes.</source>
+          <target state="translated">をサポートしています。</target>
+        </trans-unit>
+        <trans-unit id="ce73d968329b4f320e98d112cd1531bf5cd89bca" translate="yes" xml:space="preserve">
+          <source>tab when Chameleon template
+engine is deactivated.
+(&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/issues/84&quot;&gt;#84&lt;/a&gt;)</source>
+          <target state="translated">tab when Chameleon template engine is deactivated. (&lt;a href=&quot;https://github.com/zopefoundation/Products.ZCatalog/issues/84&quot;&gt;#84&lt;/a&gt;)</target>
+        </trans-unit>
+        <trans-unit id="f5486ae6c31282ca7543706a6a5cfb199d481888" translate="yes" xml:space="preserve">
+          <source>test_length_with_filter</source>
+          <target state="translated">test_length_with_filter</target>
+        </trans-unit>
+        <trans-unit id="01dafae9a339175d1a66b90650d6b6d6b6214fb6" translate="yes" xml:space="preserve">
+          <source>threshold</source>
+          <target state="translated">敷居</target>
+        </trans-unit>
+        <trans-unit id="94cf378990f35e37e2a2067c52a42c0b0bff667a" translate="yes" xml:space="preserve">
+          <source>time.clock()</source>
+          <target state="translated">タイムクロック</target>
+        </trans-unit>
+        <trans-unit id="1aa10d6f2f4393d9fe0d4aabeb56362260427e9d" translate="yes" xml:space="preserve">
+          <source>time.process_time</source>
+          <target state="translated">時間処理時間</target>
+        </trans-unit>
+        <trans-unit id="4374aaee247fb237ce6c97d5c8d64bbe474d16de" translate="yes" xml:space="preserve">
+          <source>to</source>
+          <target state="translated">にとって</target>
+        </trans-unit>
+        <trans-unit id="4945b4dfc0e7a293a91e97c8a0257b74947b11a9" translate="yes" xml:space="preserve">
+          <source>to avoid unnecessary function calls.</source>
+          <target state="translated">を使用して、不要な関数呼び出しを避けることができます。</target>
+        </trans-unit>
+        <trans-unit id="ed0d6ca2437ab809cd2b243662c7a01ac706bd99" translate="yes" xml:space="preserve">
+          <source>to avoid using a</source>
+          <target state="translated">を使用しないようにするために</target>
+        </trans-unit>
+        <trans-unit id="f77c0a6c449fda2d873077caf92c6a23aa0cb0ca" translate="yes" xml:space="preserve">
+          <source>to be of type</source>
+          <target state="translated">型にはまった</target>
+        </trans-unit>
+        <trans-unit id="d4b22dd6c40dd5f58f11f83038aa93ec1fb5a1c1" translate="yes" xml:space="preserve">
+          <source>to use
+plural form, adhering to the interface specification.</source>
+          <target state="translated">を使用して、インターフェースの仕様に準拠して複数形を使用することができます。</target>
+        </trans-unit>
+        <trans-unit id="89e82aa82124a26709bc6225770caa48dfea928f" translate="yes" xml:space="preserve">
+          <source>uniqueValues</source>
+          <target state="translated">一意値</target>
+        </trans-unit>
+        <trans-unit id="80f5b0cfb3efc0de50859851a5c6b4f47f92a2bd" translate="yes" xml:space="preserve">
+          <source>until the end of it</source>
+          <target state="translated">尽きるまで</target>
+        </trans-unit>
+        <trans-unit id="b4f482c9c498c852c2927054824d2c5d73af9d9b" translate="yes" xml:space="preserve">
+          <source>urllib.quote</source>
+          <target state="translated">urllib.quote</target>
+        </trans-unit>
+        <trans-unit id="c299086d711515196e33cfa9371017bb5f368466" translate="yes" xml:space="preserve">
+          <source>use by</source>
+          <target state="translated">使う</target>
+        </trans-unit>
+        <trans-unit id="f4bcab502b35558a536119587eb0fa90e63650f7" translate="yes" xml:space="preserve">
+          <source>valueindexes</source>
+          <target state="translated">値指数</target>
+        </trans-unit>
+        <trans-unit id="8a3424929637e3c1eaa4d347caf4e347f9cfd7c9" translate="yes" xml:space="preserve">
+          <source>values.</source>
+          <target state="translated">の価値観を理解することができます。</target>
+        </trans-unit>
+        <trans-unit id="93767ed31dbe24179a00c49481e2dbe4453fdef0" translate="yes" xml:space="preserve">
+          <source>values. For example:</source>
+          <target state="translated">の価値観を示しています。例えば</target>
+        </trans-unit>
+        <trans-unit id="f9cf26edaf471e0767cdf9e7e3d0fbb14c521320" translate="yes" xml:space="preserve">
+          <source>weightedIntersection</source>
+          <target state="translated">重み付き交差点</target>
+        </trans-unit>
+        <trans-unit id="529a2b304566e1d96c4ac7c3ed951087f31891af" translate="yes" xml:space="preserve">
+          <source>weightedUnion</source>
+          <target state="translated">ウエイトユニオン</target>
+        </trans-unit>
+        <trans-unit id="b9e8a46f32cb88bb0c8340550ede1cc2d3a9d741" translate="yes" xml:space="preserve">
+          <source>will return no items instead
+of the 5 items without a value. You need to index a dummy/default value if
+you want to consider all items for a particular index.</source>
+          <target state="translated">は値のない5つのアイテムの代わりにアイテムを返しません。特定のインデックスに対してすべての項目を考慮したい場合は、ダミー/デフォルト値をインデックス化する必要があります。</target>
+        </trans-unit>
+        <trans-unit id="8fcd25a39d2037183044a8897e9a5333d727fded" translate="yes" xml:space="preserve">
+          <source>with</source>
+          <target state="translated">をもって</target>
+        </trans-unit>
+        <trans-unit id="92578cc79da0e9c6d725bbf245e37c3ab21dfe46" translate="yes" xml:space="preserve">
+          <source>withLengths</source>
+          <target state="translated">長さを持つ</target>
+        </trans-unit>
+        <trans-unit id="6c275281173ee92a475a007e279f22ebbc3409a3" translate="yes" xml:space="preserve">
+          <source>{&amp;lsquo;foo&amp;rsquo;: &amp;lsquo;a&amp;rsquo;, &amp;lsquo;sort_on&amp;rsquo;: (&amp;lsquo;foo&amp;rsquo;, &amp;lsquo;bar&amp;rsquo;), &amp;lsquo;sort_order&amp;rsquo;: (&amp;lsquo;&amp;rsquo;, &amp;lsquo;reverse&amp;rsquo;)}</source>
+          <target state="translated">{&amp;lsquo;foo&amp;rsquo;: &amp;lsquo;a&amp;rsquo;, &amp;lsquo;sort_on&amp;rsquo;: (&amp;lsquo;foo&amp;rsquo;, &amp;lsquo;bar&amp;rsquo;), &amp;lsquo;sort_order&amp;rsquo;: (&amp;lsquo;&amp;rsquo;, &amp;lsquo;reverse&amp;rsquo;)}</target>
+        </trans-unit>
+        <trans-unit id="eb56fd84cf278da9fc6082c7db388294953b795f" translate="yes" xml:space="preserve">
+          <source>{&amp;lsquo;foo&amp;rsquo;: &amp;lsquo;a&amp;rsquo;, &amp;lsquo;sort_on&amp;rsquo;: (&amp;lsquo;foo&amp;rsquo;, &amp;lsquo;bar&amp;rsquo;)}</source>
+          <target state="translated">{&amp;lsquo;foo&amp;rsquo;: &amp;lsquo;a&amp;rsquo;, &amp;lsquo;sort_on&amp;rsquo;: (&amp;lsquo;foo&amp;rsquo;, &amp;lsquo;bar&amp;rsquo;)}</target>
+        </trans-unit>
+        <trans-unit id="7926cfa3287d3151c95de9beb5d8b9d22840f895" translate="yes" xml:space="preserve">
+          <source>{&amp;lsquo;foo&amp;rsquo;: &amp;lsquo;a&amp;rsquo;, &amp;lsquo;sort_on&amp;rsquo;: (&amp;lsquo;foo&amp;rsquo;, &amp;lsquo;bar&amp;rsquo;, &amp;lsquo;baz&amp;rsquo;)}</source>
+          <target state="translated">{&amp;lsquo;foo&amp;rsquo;: &amp;lsquo;a&amp;rsquo;, &amp;lsquo;sort_on&amp;rsquo;: (&amp;lsquo;foo&amp;rsquo;, &amp;lsquo;bar&amp;rsquo;, &amp;lsquo;baz&amp;rsquo;)}</target>
+        </trans-unit>
+        <trans-unit id="63d0521f7c1fe5320d5e5a3d1d314996dd15d252" translate="yes" xml:space="preserve">
+          <source>{&amp;lsquo;foo&amp;rsquo;: {&amp;lsquo;not&amp;rsquo;: [&amp;lsquo;a&amp;rsquo;, &amp;lsquo;b&amp;rsquo;]}}</source>
+          <target state="translated">{&amp;lsquo;foo&amp;rsquo;: {&amp;lsquo;not&amp;rsquo;: [&amp;lsquo;a&amp;rsquo;, &amp;lsquo;b&amp;rsquo;]}}</target>
+        </trans-unit>
+        <trans-unit id="2d563fc8a5d643e143d297b3e423253a71ca0aa8" translate="yes" xml:space="preserve">
+          <source>{&amp;lsquo;foo&amp;rsquo;: {&amp;lsquo;query&amp;rsquo;: &amp;lsquo;a&amp;rsquo;, &amp;lsquo;range&amp;rsquo;: &amp;lsquo;min&amp;rsquo;, &amp;lsquo;not&amp;rsquo;: [&amp;lsquo;a&amp;rsquo;, &amp;lsquo;e&amp;rsquo;, &amp;lsquo;f&amp;rsquo;]}}</source>
+          <target state="translated">{&amp;lsquo;foo&amp;rsquo;: {&amp;lsquo;query&amp;rsquo;: &amp;lsquo;a&amp;rsquo;, &amp;lsquo;range&amp;rsquo;: &amp;lsquo;min&amp;rsquo;, &amp;lsquo;not&amp;rsquo;: [&amp;lsquo;a&amp;rsquo;, &amp;lsquo;e&amp;rsquo;, &amp;lsquo;f&amp;rsquo;]}}</target>
+        </trans-unit>
+        <trans-unit id="496322acc2bd7d5a8eca9d243ea8eda36cdc9d0a" translate="yes" xml:space="preserve">
+          <source>{&amp;lsquo;foo&amp;rsquo;: {&amp;lsquo;query&amp;rsquo;: [&amp;lsquo;a&amp;rsquo;, &amp;lsquo;ab&amp;rsquo;], &amp;lsquo;not&amp;rsquo;: &amp;lsquo;a&amp;rsquo;}}</source>
+          <target state="translated">{&amp;lsquo;foo&amp;rsquo;: {&amp;lsquo;query&amp;rsquo;: [&amp;lsquo;a&amp;rsquo;, &amp;lsquo;ab&amp;rsquo;], &amp;lsquo;not&amp;rsquo;: &amp;lsquo;a&amp;rsquo;}}</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

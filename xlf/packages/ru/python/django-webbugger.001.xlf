@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="ru" datatype="htmlbody" original="https://pypi.org/project/django-webbugger/">
+    <body>
+      <group id="django-webbugger">
+        <trans-unit id="85b71acad4a7a81ac58c559af7410d6ac96de7cb" translate="yes" xml:space="preserve">
+          <source># What is this?
+Django-Webbugger is a simple application that can be used to track visitors to your website. It uses the django content-types framework to allow the most flexible approach possible for processing tracking information. This allows you to customize what data is tracked in a very flexible way.</source>
+          <target state="translated"># Что это? Django-Webbugger - это простое приложение, которое можно использовать для отслеживания посетителей вашего сайта. Он использует структуру типов содержимого django, чтобы обеспечить наиболее гибкий подход к обработке информации отслеживания. Это позволяет очень гибко настраивать отслеживаемые данные.</target>
+        </trans-unit>
+        <trans-unit id="ab85e4e58803f59872b5dc5fe34e29420fe5c895" translate="yes" xml:space="preserve">
+          <source># django webbugger
+#### Brandon R. Stoner &amp;lt;&lt;a href=&quot;mailto:monokrome%40monokro.me&quot;&gt;monokrome@monokro.me&lt;/a&gt;</source>
+          <target state="translated"># django webbugger #### Брэндон Р. Стоунер &amp;lt; &lt;a href=&quot;mailto:monokrome%40monokro.me&quot;&gt;monokrome@monokro.me&lt;/a&gt;</target>
+        </trans-unit>
+        <trans-unit id="462e0606e0072b56a7138d1a99b8acaa6e27f181" translate="yes" xml:space="preserve">
+          <source>## Model structure</source>
+          <target state="translated">## Структура модели</target>
+        </trans-unit>
+        <trans-unit id="984fdf91c1cd1fe3d8bf138b71ea79e67510a93d" translate="yes" xml:space="preserve">
+          <source>## Modes of operation
+The main view used for tracking is &lt;strong&gt;webbugger.views.trigger&lt;/strong&gt; which normally works in redirect mode, but can optionally be told to work in pixel mode instead.</source>
+          <target state="translated">## Режимы работы Основным представлением, используемым для отслеживания, является &lt;strong&gt;webbugger.views.trigger,&lt;/strong&gt; который обычно работает в режиме перенаправления, но при желании может работать в пиксельном режиме.</target>
+        </trans-unit>
+        <trans-unit id="97795d5a8474097c5ba86b21de41d7b17f12803d" translate="yes" xml:space="preserve">
+          <source>### Pixel Mode
+The trigger view also takes a keyword argument with the name of &amp;ldquo;pixel&amp;rdquo;. When set to True, this argument tells the view to return a 1x1 pixel clear GIF instead of redirecting the user to a new page. With this feature, it is possible to embed tracking URLs directly into pages as invisible image elements. Not only that, but you can make use of any online medium that downloads images by this system.</source>
+          <target state="translated">### Режим пикселей. Представление триггера также принимает аргумент ключевого слова с именем &amp;laquo;пиксель&amp;raquo;. Если задано значение True, этот аргумент сообщает представлению, что необходимо вернуть чистый GIF размером 1x1 пиксель вместо перенаправления пользователя на новую страницу. С помощью этой функции можно встраивать URL-адреса отслеживания непосредственно на страницы как невидимые элементы изображения. Более того, вы можете использовать любой онлайн-носитель, который загружает изображения с помощью этой системы.</target>
+        </trans-unit>
+        <trans-unit id="a2716e5a66769571dbc9d15e7d95b2231cc1c381" translate="yes" xml:space="preserve">
+          <source>### Redirect Mode
+When in redirect mode, the tracking system uses a given Target class to redirect the client to another page after the tracking is finished. This accomplishes a method of tracking that is transparent to users - depending on your URL schema.</source>
+          <target state="translated">### Режим перенаправления В режиме перенаправления система отслеживания использует заданный класс Target для перенаправления клиента на другую страницу после завершения отслеживания. Это обеспечивает метод отслеживания, который прозрачен для пользователей - в зависимости от вашей схемы URL.</target>
+        </trans-unit>
+        <trans-unit id="e400e4480d0f08262b80631f8ecda7fcb69e11ed" translate="yes" xml:space="preserve">
+          <source>### Request Entities
+An &amp;ldquo;Entity&amp;rdquo; is a django model that stores information related to an HTTP request in django. An entity can be any django model and can optionally define a method called &amp;ldquo;beacon_update&amp;rdquo; which will be called and passed the request from the tracking view prior to redirecting to our target URL. This allows you to save data from the request straight into the model very easily.</source>
+          <target state="translated">### Сущности запроса &amp;laquo;Сущность&amp;raquo; - это модель django, которая хранит информацию, относящуюся к HTTP-запросу в django. Сущность может быть любой моделью django и может дополнительно определять метод под названием &amp;laquo;beacon_update&amp;raquo;, который будет вызываться и передавать запрос из представления отслеживания перед перенаправлением на наш целевой URL. Это позволяет очень легко сохранять данные из запроса прямо в модель.</target>
+        </trans-unit>
+        <trans-unit id="b46c5c2cb7b76c7ee07ba6dfd9b07bdabb16dfa8" translate="yes" xml:space="preserve">
+          <source>### Target Destinations
+When not being used in pixel mode, a &amp;ldquo;target&amp;rdquo; represents where to redirect traffic after the Beacon has been created. A target is simply a model that defines a get_beacon_url method, which should return a URL to the page that our &amp;ldquo;entity&amp;rdquo; will be redirected to after processing a beacon. For compatibility with other django applications, webbugger checks if get_absolute_url is defined as an attribute on our target model when get_beacon_url does not exist. If neither of these methods exist, an HTTP 404 is shown because we have nowhere to direct traffic to after creating the tracking beacon.</source>
+          <target state="translated">### Целевые пункты назначения Когда не используется в пиксельном режиме, &amp;laquo;цель&amp;raquo; представляет, куда перенаправить трафик после создания маяка. Цель - это просто модель, определяющая метод get_beacon_url, который должен возвращать URL-адрес страницы, на которую будет перенаправлен наш &amp;laquo;объект&amp;raquo; после обработки маяка. Для совместимости с другими приложениями django webbugger проверяет, определен ли get_absolute_url как атрибут в нашей целевой модели, когда get_beacon_url не существует. Если ни один из этих методов не существует, отображается HTTP 404, потому что нам некуда направить трафик после создания маяка отслеживания.</target>
+        </trans-unit>
+        <trans-unit id="d95589f5c9838b81a307e64f0333f1ded6afb455" translate="yes" xml:space="preserve">
+          <source>### Traffic Sources
+The &amp;ldquo;Source&amp;rdquo; can be any django model. This is useful for storing information regarding where the traffic came from. For instance, in an affiliate marketing system - you could use the source attribute of our beacon to reference the affiliate that sent the traffic to your site.</source>
+          <target state="translated">### Источники трафика &amp;laquo;Источник&amp;raquo; может быть любой моделью django. Это полезно для хранения информации о том, откуда пришел трафик. Например, в системе аффилированного маркетинга - вы можете использовать атрибут источника нашего маяка для ссылки на аффилированного лица, которое отправило трафик на ваш сайт.</target>
+        </trans-unit>
+        <trans-unit id="7fcc0d7beacc203d05f947cadc5d2a75c4e81ee6" translate="yes" xml:space="preserve">
+          <source>Basic webbugger/tracking beacon for django</source>
+          <target state="translated">Базовый веб-маяк для отладчика/маяк отслеживания для django</target>
+        </trans-unit>
+        <trans-unit id="f9d8915409f4a22a6693f500efd76d26e642d00e" translate="yes" xml:space="preserve">
+          <source>For everything tracked, a &amp;ldquo;Beacon&amp;rdquo; is created. This beacon represents our tracking data. Beacons can consist of a Target, an Entity, and a Source. Entity and Source are provided for systems that want to track some sort of data affiliated with their page hits. A Target is required when redirecting, but it is unneeded when using pixels for tracking.</source>
+          <target state="translated">Для всего отслеживаемого создается &amp;laquo;Маяк&amp;raquo;. Этот маяк представляет наши данные отслеживания. Маяки могут состоять из цели, объекта и источника. Entity и Source предназначены для систем, которые хотят отслеживать какие-то данные, связанные с их посещениями страниц. Цель требуется при перенаправлении, но не требуется при использовании пикселей для отслеживания.</target>
+        </trans-unit>
+        <trans-unit id="af3a2bc77e2ad9f22d1b961b5f2a9e8ed281a604" translate="yes" xml:space="preserve">
+          <source>The pixel method allows you to do more clever things, such as including tracking inside of emails in order to see if someone has viewed an email that you sent them - assuming that they have images enabled in their email client, of course.</source>
+          <target state="translated">Пиксельный метод позволяет делать более умные вещи,такие как отслеживание внутри писем для того,чтобы увидеть,просмотрел ли кто-нибудь отправленное вами письмо-конечно,предполагая,что в почтовом клиенте включены образы.</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

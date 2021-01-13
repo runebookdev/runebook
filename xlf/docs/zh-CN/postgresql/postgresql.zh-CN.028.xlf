@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="zh-CN" datatype="htmlbody" original="postgresql">
+    <body>
+      <group id="postgresql">
+        <trans-unit id="95363da9cd107f5dcc6d6108200a75dee0fecc9d" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;client_id&lt;/code&gt; indicates which client session ran the transaction, &lt;code&gt;transaction_no&lt;/code&gt; counts how many transactions have been run by that session, &lt;code&gt;time&lt;/code&gt; is the total elapsed transaction time in microseconds, &lt;code&gt;script_no&lt;/code&gt; identifies which script file was used (useful when multiple scripts were specified with &lt;code&gt;-f&lt;/code&gt; or &lt;code&gt;-b&lt;/code&gt;), and &lt;code&gt;time_epoch&lt;/code&gt;/&lt;code&gt;time_us&lt;/code&gt; are a Unix-epoch time stamp and an offset in microseconds (suitable for creating an ISO 8601 time stamp with fractional seconds) showing when the transaction completed. The &lt;code&gt;schedule_lag&lt;/code&gt; field is the difference between the transaction's scheduled start time, and the time it actually started, in microseconds. It is only present when the &lt;code&gt;--rate&lt;/code&gt; option is used. When both &lt;code&gt;--rate&lt;/code&gt; and &lt;code&gt;--latency-limit&lt;/code&gt; are used, the &lt;code&gt;time&lt;/code&gt; for a skipped transaction will be reported as &lt;code&gt;skipped&lt;/code&gt;.</source>
+          <target state="translated">其中 &lt;code&gt;client_id&lt;/code&gt; 指示哪个客户端会话运行了该事务， &lt;code&gt;transaction_no&lt;/code&gt; 计数了该会话已运行了多少个事务， &lt;code&gt;time&lt;/code&gt; 是经过的总事务时间（以微秒为单位）， &lt;code&gt;script_no&lt;/code&gt; 标识使用了哪个脚本文件（当使用 &lt;code&gt;-f&lt;/code&gt; 或-f指定多个脚本时有用） &lt;code&gt;-b&lt;/code&gt; ）和 &lt;code&gt;time_epoch&lt;/code&gt; / &lt;code&gt;time_us&lt;/code&gt; 是Unix时代的时间戳，以毫秒为单位的偏移量（适用于创建带有小数秒的ISO 8601时间戳），显示事务何时完成。该 &lt;code&gt;schedule_lag&lt;/code&gt; 栏位是交易的预定开始时间与实际开始时间之间的差，以微秒为单位。仅在使用 &lt;code&gt;--rate&lt;/code&gt; 选项时存在。当同时使用 &lt;code&gt;--rate&lt;/code&gt; 和 &lt;code&gt;--latency-limit&lt;/code&gt; &lt;code&gt;time&lt;/code&gt; ，跳过的事务的时间将报告为 &lt;code&gt;skipped&lt;/code&gt; 。</target>
+        </trans-unit>
+        <trans-unit id="15575bf8bc20a17322a91c6a004375b23fe3bede" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;collation&lt;/code&gt; is a possibly schema-qualified identifier. The &lt;code&gt;COLLATE&lt;/code&gt; clause binds tighter than operators; parentheses can be used when necessary.</source>
+          <target state="translated">其中 &lt;code&gt;collation&lt;/code&gt; 可能是模式限定的标识符。的 &lt;code&gt;COLLATE&lt;/code&gt; 子句结合不同于运营商更紧; 必要时可以使用括号。</target>
+        </trans-unit>
+        <trans-unit id="cd38ffefd9af14e03f114a3c898a1682942460e2" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;condition&lt;/code&gt; is any expression that evaluates to a result of type &lt;code&gt;boolean&lt;/code&gt;. Any row that does not satisfy this condition will be eliminated from the output. A row satisfies the condition if it returns true when the actual row values are substituted for any variable references.</source>
+          <target state="translated">其中 &lt;code&gt;condition&lt;/code&gt; 是任何计算结果为 &lt;code&gt;boolean&lt;/code&gt; 类型的表达式。任何不满足此条件的行将从输出中删除。如果用实际的行值替换任何变量引用，如果该行返回true，则该行满足条件。</target>
+        </trans-unit>
+        <trans-unit id="883e212f0298979617ff0fdf44518bd05a084205" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;condition&lt;/code&gt; is any expression that evaluates to a result of type &lt;code&gt;boolean&lt;/code&gt;. Any row that does not satisfy this condition will not be inserted to the table. A row satisfies the condition if it returns true when the actual row values are substituted for any variable references.</source>
+          <target state="translated">其中 &lt;code&gt;condition&lt;/code&gt; 是任何计算结果为 &lt;code&gt;boolean&lt;/code&gt; 类型的表达式。不满足此条件的任何行都不会插入到表中。如果用实际的行值替换任何变量引用，如果该行返回true，则该行满足条件。</target>
+        </trans-unit>
+        <trans-unit id="50d757545c644d09173ed3fc8ac85d6de14f6f0b" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;condition&lt;/code&gt; is the same as specified for the &lt;code&gt;WHERE&lt;/code&gt; clause.</source>
+          <target state="translated">其中 &lt;code&gt;condition&lt;/code&gt; 是相同的为指定的 &lt;code&gt;WHERE&lt;/code&gt; 子句。</target>
+        </trans-unit>
+        <trans-unit id="0e39ffa4c4736dc3798858fa334aa10d101b9ea1" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;config_name&lt;/code&gt; is a column in the &lt;code&gt;pgweb&lt;/code&gt; table. This allows mixed configurations in the same index while recording which configuration was used for each index entry. This would be useful, for example, if the document collection contained documents in different languages. Again, queries that are meant to use the index must be phrased to match, e.g., &lt;code&gt;WHERE to_tsvector(config_name, body) @@ 'a &amp;amp; b'&lt;/code&gt;.</source>
+          <target state="translated">其中 &lt;code&gt;config_name&lt;/code&gt; 是 &lt;code&gt;pgweb&lt;/code&gt; 表中的一列。这允许在同一索引中混合使用配置，同时记录每个索引条目所使用的配置。例如，如果文档集合包含不同语言的文档，这将很有用。同样，必须使用索引来查询要使用的索引，例如 &lt;code&gt;WHERE to_tsvector(config_name, body) @@ 'a &amp;amp; b'&lt;/code&gt; 。</target>
+        </trans-unit>
+        <trans-unit id="0e33c809b5aed59b29d15e3755cf042bcd7cf972" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;dbname&lt;/code&gt; is the name of the already-created database to test in. (You may also need &lt;code&gt;-h&lt;/code&gt;, &lt;code&gt;-p&lt;/code&gt;, and/or &lt;code&gt;-U&lt;/code&gt; options to specify how to connect to the database server.)</source>
+          <target state="translated">其中 &lt;code&gt;dbname&lt;/code&gt; 是要在其中进行测试的已创建数据库的名称。（您可能还需要 &lt;code&gt;-h&lt;/code&gt; ， &lt;code&gt;-p&lt;/code&gt; 和/或 &lt;code&gt;-U&lt;/code&gt; 选项来指定如何连接至数据库服务器。）</target>
+        </trans-unit>
+        <trans-unit id="2efafe66fc0fb01790e7b075da02f4b34a5191f4" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;delim&lt;/code&gt; is the delimiter character for the type, as recorded in its &lt;code&gt;pg_type&lt;/code&gt; entry. Among the standard data types provided in the PostgreSQL distribution, all use a comma (&lt;code&gt;,&lt;/code&gt;), except for type &lt;code&gt;box&lt;/code&gt; which uses a semicolon (&lt;code&gt;;&lt;/code&gt;). Each &lt;code&gt;val&lt;/code&gt; is either a constant of the array element type, or a subarray. An example of an array constant is:</source>
+          <target state="translated">其中 &lt;code&gt;delim&lt;/code&gt; 是该类型的分隔符，如其 &lt;code&gt;pg_type&lt;/code&gt; 条目中所记录。在PostgreSQL发行版中提供的标准数据类型中，除使用分号（ &lt;code&gt;;&lt;/code&gt; ）的类型 &lt;code&gt;box&lt;/code&gt; 外，所有数据均使用逗号（ &lt;code&gt;,&lt;/code&gt; ）。每个 &lt;code&gt;val&lt;/code&gt; 可以是数组元素类型的常量，也可以是子数组。数组常量的一个示例是：</target>
+        </trans-unit>
+        <trans-unit id="cc0c370cc6c4db09350c38f91dbc0ead530523ea" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;digits&lt;/code&gt; is one or more decimal digits (0 through 9). At least one digit must be before or after the decimal point, if one is used. At least one digit must follow the exponent marker (&lt;code&gt;e&lt;/code&gt;), if one is present. There cannot be any spaces or other characters embedded in the constant. Note that any leading plus or minus sign is not actually considered part of the constant; it is an operator applied to the constant.</source>
+          <target state="translated">其中 &lt;code&gt;digits&lt;/code&gt; 是一个或多个十进制数字（0到9）。如果使用一位，则小数点之前或之后必须至少有一位数字。指数标记（ &lt;code&gt;e&lt;/code&gt; ）后面必须至少有一位。常量中不能嵌入任何空格或其他字符。请注意，任何前导的正号或负号实际上都不认为是常数的一部分。它是应用于常量的运算符。</target>
+        </trans-unit>
+        <trans-unit id="bfd7fccfedd66d19eee35d6037183fff7ab24667" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;documents&lt;/code&gt; is a table that has a text field &lt;code&gt;bodytext&lt;/code&gt; that we wish to search. The reason for using the &lt;code&gt;simple&lt;/code&gt; configuration with the &lt;code&gt;to_tsvector&lt;/code&gt; function, instead of using a language-specific configuration, is that we want a list of the original (unstemmed) words.</source>
+          <target state="translated">其中 &lt;code&gt;documents&lt;/code&gt; 是具有我们要搜索的文本字段 &lt;code&gt;bodytext&lt;/code&gt; 的表。使用 &lt;code&gt;to_tsvector&lt;/code&gt; 函数的 &lt;code&gt;simple&lt;/code&gt; 配置而不是使用特定于语言的配置的原因是，我们需要原始单词（无词干）的列表。</target>
+        </trans-unit>
+        <trans-unit id="9a039bb227f52a1b9a93d81d62221c9b30047689" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;dumpfile&lt;/code&gt; is the file output by the pg_dump command. The database &lt;code&gt;dbname&lt;/code&gt; will not be created by this command, so you must create it yourself from &lt;code&gt;template0&lt;/code&gt; before executing psql (e.g., with &lt;code&gt;createdb -T template0 dbname&lt;/code&gt;). psql supports options similar to pg_dump for specifying the database server to connect to and the user name to use. See the &lt;a href=&quot;app-psql&quot;&gt;psql&lt;/a&gt; reference page for more information. Non-text file dumps are restored using the &lt;a href=&quot;app-pgrestore&quot;&gt;pg_restore&lt;/a&gt; utility.</source>
+          <target state="translated">其中 &lt;code&gt;dumpfile&lt;/code&gt; 是pg_dump命令输出的文件。该命令不会创建数据库 &lt;code&gt;dbname&lt;/code&gt; ，因此您必须在执行psql之前通过 &lt;code&gt;template0&lt;/code&gt; 自己创建数据库（例如，使用 &lt;code&gt;createdb -T template0 dbname&lt;/code&gt; ）。psql支持类似于pg_dump的选项，用于指定要连接的数据库服务器和要使用的用户名。有关更多信息，请参见&lt;a href=&quot;app-psql&quot;&gt;psql&lt;/a&gt;参考页。使用&lt;a href=&quot;app-pgrestore&quot;&gt;pg_restore&lt;/a&gt;实用工具恢复非文本文件转储。</target>
+        </trans-unit>
+        <trans-unit id="e33127f2af6130f52a3e81c11a87546a1d4d1276" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;frame_start&lt;/code&gt; and &lt;code&gt;frame_end&lt;/code&gt; can be one of</source>
+          <target state="translated">其中 &lt;code&gt;frame_start&lt;/code&gt; 和 &lt;code&gt;frame_end&lt;/code&gt; 可以是以下之一</target>
+        </trans-unit>
+        <trans-unit id="2f4a0bb9f112237b3006e826384b66b73f19342f" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;interval_start&lt;/code&gt; is the start of the interval (as a Unix epoch time stamp), &lt;code&gt;num_transactions&lt;/code&gt; is the number of transactions within the interval, &lt;code&gt;sum_latency&lt;/code&gt; is the sum of the transaction latencies within the interval, &lt;code&gt;sum_latency_2&lt;/code&gt; is the sum of squares of the transaction latencies within the interval, &lt;code&gt;min_latency&lt;/code&gt; is the minimum latency within the interval, and &lt;code&gt;max_latency&lt;/code&gt; is the maximum latency within the interval. The next fields, &lt;code&gt;sum_lag&lt;/code&gt;, &lt;code&gt;sum_lag_2&lt;/code&gt;, &lt;code&gt;min_lag&lt;/code&gt;, and &lt;code&gt;max_lag&lt;/code&gt;, are only present if the &lt;code&gt;--rate&lt;/code&gt; option is used. They provide statistics about the time each transaction had to wait for the previous one to finish, i.e. the difference between each transaction's scheduled start time and the time it actually started. The very last field, &lt;code&gt;skipped&lt;/code&gt;, is only present if the &lt;code&gt;--latency-limit&lt;/code&gt; option is used, too. It counts the number of transactions skipped because they would have started too late. Each transaction is counted in the interval when it was committed.</source>
+          <target state="translated">其中 &lt;code&gt;interval_start&lt;/code&gt; 是间隔的开始（以Unix纪元时间戳记）， &lt;code&gt;num_transactions&lt;/code&gt; 是间隔内的事务数， &lt;code&gt;sum_latency&lt;/code&gt; 是间隔内的事务延迟之和， &lt;code&gt;sum_latency_2&lt;/code&gt; 是其中的事务延迟的平方和在时间间隔中， &lt;code&gt;min_latency&lt;/code&gt; 是时间间隔内的最小延迟，而 &lt;code&gt;max_latency&lt;/code&gt; 是时间间隔内的最大延迟。接下来的字段 &lt;code&gt;sum_lag&lt;/code&gt; ， &lt;code&gt;sum_lag_2&lt;/code&gt; ， &lt;code&gt;min_lag&lt;/code&gt; 和 &lt;code&gt;max_lag&lt;/code&gt; 仅在 &lt;code&gt;--rate&lt;/code&gt; 时存在使用选项。它们提供有关每个事务必须等待上一个事务完成的时间的统计信息，即每个事务的计划开始时间与实际开始时间之间的差。仅在也使用 &lt;code&gt;--latency-limit&lt;/code&gt; 选项时，才显示最后一个字段 &lt;code&gt;skipped&lt;/code&gt; 。它计算因交易开始得太晚而被跳过的交易数量。每个事务在提交后的时间间隔中进行计数。</target>
+        </trans-unit>
+        <trans-unit id="21a535125ba922f6008364af8c73fa378c746f74" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;interval_start&lt;/code&gt; is the start of the interval (as a Unix epoch time stamp), &lt;code&gt;num_transactions&lt;/code&gt; is the number of transactions within the interval, &lt;code&gt;sum_latency&lt;/code&gt; is the sum of the transaction latencies within the interval, &lt;code&gt;sum_latency_2&lt;/code&gt; is the sum of squares of the transaction latencies within the interval, &lt;code&gt;min_latency&lt;/code&gt; is the minimum latency within the interval, and &lt;code&gt;max_latency&lt;/code&gt; is the maximum latency within the interval. The next fields, &lt;code&gt;sum_lag&lt;/code&gt;, &lt;code&gt;sum_lag_2&lt;/code&gt;, &lt;code&gt;min_lag&lt;/code&gt;, and &lt;code&gt;max_lag&lt;/code&gt;, are only present if the &lt;code&gt;--rate&lt;/code&gt; option is used. They provide statistics about the time each transaction had to wait for the previous one to finish, i.e., the difference between each transaction's scheduled start time and the time it actually started. The very last field, &lt;code&gt;skipped&lt;/code&gt;, is only present if the &lt;code&gt;--latency-limit&lt;/code&gt; option is used, too. It counts the number of transactions skipped because they would have started too late. Each transaction is counted in the interval when it was committed.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="02521c4b560914d5a494676dd3a10eaddf5a2d27" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;label&lt;/code&gt; is any string you want to use to uniquely identify this backup operation. &lt;code&gt;pg_start_backup&lt;/code&gt; creates a &lt;em&gt;backup label&lt;/em&gt; file, called &lt;code&gt;backup_label&lt;/code&gt;, in the cluster directory with information about your backup, including the start time and label string. The function also creates a &lt;em&gt;tablespace map&lt;/em&gt; file, called &lt;code&gt;tablespace_map&lt;/code&gt;, in the cluster directory with information about tablespace symbolic links in &lt;code&gt;pg_tblspc/&lt;/code&gt; if one or more such link is present. Both files are critical to the integrity of the backup, should you need to restore from it.</source>
+          <target state="translated">其中 &lt;code&gt;label&lt;/code&gt; 是您要用来唯一标识此备份操作的任何字符串。 &lt;code&gt;pg_start_backup&lt;/code&gt; 在集群目录中创建一个名为 &lt;code&gt;backup_label&lt;/code&gt; 的&lt;em&gt;备份标签&lt;/em&gt;文件，其中包含有关备份的信息，包括开始时间和标签字符串。该函数还会在集群目录中创建一个名为 &lt;code&gt;tablespace_map&lt;/code&gt; 的&lt;em&gt;表空间映射&lt;/em&gt;文件，并在 &lt;code&gt;pg_tblspc/&lt;/code&gt; 提供有关表空间符号链接的信息（如果存在一个或多个此类链接）。如果您需要从备份中恢复，这两个文件对于备份完整性至关重要。&lt;em&gt;&lt;/em&gt;</target>
+        </trans-unit>
+        <trans-unit id="2632c6a394b4c5afed578e3db6104be70d7c969c" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;label&lt;/code&gt; is any string you want to use to uniquely identify this backup operation. The connection calling &lt;code&gt;pg_start_backup&lt;/code&gt; must be maintained until the end of the backup, or the backup will be automatically aborted.</source>
+          <target state="translated">其中 &lt;code&gt;label&lt;/code&gt; 是您要用来唯一标识此备份操作的任何字符串。必须维持调用 &lt;code&gt;pg_start_backup&lt;/code&gt; 的连接，直到备份结束，否则备份将自动中止。</target>
+        </trans-unit>
+        <trans-unit id="14ec95115d9949716f5574166b53e4a99c82ef40" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;lock_strength&lt;/code&gt; can be one of</source>
+          <target state="translated">其中 &lt;code&gt;lock_strength&lt;/code&gt; 可以是以下之一</target>
+        </trans-unit>
+        <trans-unit id="bc24930f3c49a2f1c610c96b58a313a1bb2f6567" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;name&lt;/code&gt; follows the usual rules for SQL identifiers. The current role automatically becomes the owner of the new database. It is the privilege of the owner of a database to remove it later (which also removes all the objects in it, even if they have a different owner).</source>
+          <target state="translated">其中， &lt;code&gt;name&lt;/code&gt; 遵循SQL标识符的常规规则。当前角色自动成为新数据库的所有者。数据库所有者有特权在以后将其删除（即使它们具有不同的所有者，这也会删除数据库中的所有对象）。</target>
+        </trans-unit>
+        <trans-unit id="2e04d3386ac5dbafbf688329834c2f0edf9b1b29" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;num_sync&lt;/code&gt; is the number of synchronous standbys that transactions need to wait for replies from, and &lt;code&gt;standby_name&lt;/code&gt; is the name of a standby server. &lt;code&gt;FIRST&lt;/code&gt; and &lt;code&gt;ANY&lt;/code&gt; specify the method to choose synchronous standbys from the listed servers.</source>
+          <target state="translated">其中 &lt;code&gt;num_sync&lt;/code&gt; 是事务需要等待来自其回复的同步备用数据库的数量， &lt;code&gt;standby_name&lt;/code&gt; 是备用服务器的名称。 &lt;code&gt;FIRST&lt;/code&gt; 和 &lt;code&gt;ANY&lt;/code&gt; 指定从列出的服务器中选择同步备用数据库的方法。</target>
+        </trans-unit>
+        <trans-unit id="051ce8638a4cb0df58ccc78d0226c857003f3754" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;old_cluster&lt;/code&gt; and &lt;code&gt;new_cluster&lt;/code&gt; are relative to the current directory on the primary, and &lt;code&gt;remote_dir&lt;/code&gt; is &lt;em&gt;above&lt;/em&gt; the old and new cluster directories on the standby. The directory structure under the specified directories on the primary and standbys must match. Consult the rsync manual page for details on specifying the remote directory, e.g.</source>
+          <target state="translated">其中 &lt;code&gt;old_cluster&lt;/code&gt; 和 &lt;code&gt;new_cluster&lt;/code&gt; 是相对于在主当前目录，以及 &lt;code&gt;remote_dir&lt;/code&gt; 是&lt;em&gt;上述&lt;/em&gt;上待机的新老集群目录。主数据库和备用数据库上指定目录下的目录结构必须匹配。有关指定远程目录的详细信息，请参考rsync手册页。</target>
+        </trans-unit>
+        <trans-unit id="a7b5550c4042ab7be1b02d82ee60cb4e972c7064" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;old_cluster&lt;/code&gt; and &lt;code&gt;new_cluster&lt;/code&gt; are relative to the current directory on the primary, and &lt;code&gt;remote_dir&lt;/code&gt; is &lt;em&gt;above&lt;/em&gt; the old and new cluster directories on the standby. The directory structure under the specified directories on the primary and standbys must match. Consult the rsync manual page for details on specifying the remote directory, e.g.,</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="6995f4e58e8fe029424bd429b077f2eb8c3fe1f6" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;p&lt;/code&gt; is an optional precision specification giving the number of fractional digits in the seconds field. Precision can be specified for &lt;code&gt;time&lt;/code&gt;, &lt;code&gt;timestamp&lt;/code&gt;, and &lt;code&gt;interval&lt;/code&gt; types, and can range from 0 to 6. If no precision is specified in a constant specification, it defaults to the precision of the literal value (but not more than 6 digits).</source>
+          <target state="translated">其中 &lt;code&gt;p&lt;/code&gt; 是一个可选的精度规格，它给出秒字段中的小数位数。可以为 &lt;code&gt;time&lt;/code&gt; ， &lt;code&gt;timestamp&lt;/code&gt; 和 &lt;code&gt;interval&lt;/code&gt; 类型指定精度，范围可以从0到6。如果在常量说明中未指定精度，则默认为文字值的精度（但不超过6位）。</target>
+        </trans-unit>
+        <trans-unit id="3ae43e1773ab7435ea942bef4aab35ea977ed17e" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;quantity&lt;/code&gt; is a number (possibly signed); &lt;code&gt;unit&lt;/code&gt; is &lt;code&gt;microsecond&lt;/code&gt;, &lt;code&gt;millisecond&lt;/code&gt;, &lt;code&gt;second&lt;/code&gt;, &lt;code&gt;minute&lt;/code&gt;, &lt;code&gt;hour&lt;/code&gt;, &lt;code&gt;day&lt;/code&gt;, &lt;code&gt;week&lt;/code&gt;, &lt;code&gt;month&lt;/code&gt;, &lt;code&gt;year&lt;/code&gt;, &lt;code&gt;decade&lt;/code&gt;, &lt;code&gt;century&lt;/code&gt;, &lt;code&gt;millennium&lt;/code&gt;, or abbreviations or plurals of these units; &lt;code&gt;direction&lt;/code&gt; can be &lt;code&gt;ago&lt;/code&gt; or empty. The at sign (&lt;code&gt;@&lt;/code&gt;) is optional noise. The amounts of the different units are implicitly added with appropriate sign accounting. &lt;code&gt;ago&lt;/code&gt; negates all the fields. This syntax is also used for interval output, if &lt;a href=&quot;runtime-config-client#GUC-INTERVALSTYLE&quot;&gt;IntervalStyle&lt;/a&gt; is set to &lt;code&gt;postgres_verbose&lt;/code&gt;.</source>
+          <target state="translated">其中 &lt;code&gt;quantity&lt;/code&gt; 是数字（可能是带符号的）； &lt;code&gt;unit&lt;/code&gt; 是 &lt;code&gt;microsecond&lt;/code&gt; ， &lt;code&gt;millisecond&lt;/code&gt; ， &lt;code&gt;second&lt;/code&gt; ， &lt;code&gt;minute&lt;/code&gt; ， &lt;code&gt;hour&lt;/code&gt; ， &lt;code&gt;day&lt;/code&gt; ， &lt;code&gt;week&lt;/code&gt; ， &lt;code&gt;month&lt;/code&gt; ， &lt;code&gt;year&lt;/code&gt; ， &lt;code&gt;decade&lt;/code&gt; ， &lt;code&gt;century&lt;/code&gt; ， &lt;code&gt;millennium&lt;/code&gt; 或这些单位的缩写或复数； &lt;code&gt;direction&lt;/code&gt; 可以 &lt;code&gt;ago&lt;/code&gt; 或为空。 at符号（ &lt;code&gt;@&lt;/code&gt; ）是可选的噪音。不同单位的数量将通过适当的记号进行隐式添加。 &lt;code&gt;ago&lt;/code&gt; 否定所有字段。如果&lt;a href=&quot;runtime-config-client#GUC-INTERVALSTYLE&quot;&gt;IntervalStyle&lt;/a&gt;设置为 &lt;code&gt;postgres_verbose&lt;/code&gt; ，则此语法也用于间隔输出。</target>
+        </trans-unit>
+        <trans-unit id="bb85a9d1ba20986c4eabc4c0cc672867a0082382" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;salt&lt;/code&gt;, &lt;code&gt;StoredKey&lt;/code&gt; and &lt;code&gt;ServerKey&lt;/code&gt; are in Base64 encoded format. This format is the same as that specified by RFC 5803.</source>
+          <target state="translated">其中 &lt;code&gt;salt&lt;/code&gt; ， &lt;code&gt;StoredKey&lt;/code&gt; 和 &lt;code&gt;ServerKey&lt;/code&gt; 为Base64编码格式。此格式与RFC 5803指定的格式相同。</target>
+        </trans-unit>
+        <trans-unit id="902cd914b55268a7f42373967de3300fb2a6df74" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;search_condition&lt;/code&gt; is any value expression (see &lt;a href=&quot;sql-expressions&quot;&gt;Section 4.2&lt;/a&gt;) that returns a value of type &lt;code&gt;boolean&lt;/code&gt;.</source>
+          <target state="translated">其中 &lt;code&gt;search_condition&lt;/code&gt; 是返回 &lt;code&gt;boolean&lt;/code&gt; 类型值的任何值表达式（请参见&lt;a href=&quot;sql-expressions&quot;&gt;第4.2节&lt;/a&gt;）。</target>
+        </trans-unit>
+        <trans-unit id="9cab206ed9f849b266fa8bbb5c105eda41d171c2" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;window_definition&lt;/code&gt; has the syntax</source>
+          <target state="translated">其中 &lt;code&gt;window_definition&lt;/code&gt; 具有语法</target>
+        </trans-unit>
+        <trans-unit id="1ffcb73100c9208f3d73e7359a7710f21793aea4" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;window_name&lt;/code&gt; is a name that can be referenced from &lt;code&gt;OVER&lt;/code&gt; clauses or subsequent window definitions, and &lt;code&gt;window_definition&lt;/code&gt; is</source>
+          <target state="translated">其中， &lt;code&gt;window_name&lt;/code&gt; 是可以从 &lt;code&gt;OVER&lt;/code&gt; 子句或后续窗口定义中引用的名称，而 &lt;code&gt;window_definition&lt;/code&gt; 是</target>
+        </trans-unit>
+        <trans-unit id="05865f2594ddc7befb862529cd119701ff24e8ac" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;x&lt;/code&gt; and &lt;code&gt;y&lt;/code&gt; are the respective coordinates, as floating-point numbers.</source>
+          <target state="translated">其中 &lt;code&gt;x&lt;/code&gt; 和 &lt;code&gt;y&lt;/code&gt; 是各自的坐标，以浮点数表示。</target>
+        </trans-unit>
+        <trans-unit id="63a67aa07860e75ed55512e599efa11799c590cd" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;x&lt;/code&gt; is a single character with no other significance, matches that character</source>
+          <target state="translated">其中 &lt;code&gt;x&lt;/code&gt; 是没有其他意义的单个字符，与该字符匹配</target>
+        </trans-unit>
+        <trans-unit id="2cfc72d3af1bb50704e8aee07809af6321faa971" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;xsi&lt;/code&gt; is the XML namespace prefix for XML Schema Instance. An appropriate namespace declaration will be added to the result value. If false, columns containing null values are simply omitted from the output.</source>
+          <target state="translated">其中 &lt;code&gt;xsi&lt;/code&gt; 是XML模式实例的XML名称空间前缀。适当的名称空间声明将添加到结果值中。如果为false，则将从输出中省略包含空值的列。</target>
+        </trans-unit>
+        <trans-unit id="cbd4a92c9b71cd49ffa17bbdcc8f19ea4f09000a" translate="yes" xml:space="preserve">
+          <source>where the &lt;code&gt;nextval()&lt;/code&gt; function supplies successive values from a &lt;em&gt;sequence object&lt;/em&gt; (see &lt;a href=&quot;functions-sequence&quot;&gt;Section 9.16&lt;/a&gt;). This arrangement is sufficiently common that there's a special shorthand for it:</source>
+          <target state="translated">其中 &lt;code&gt;nextval()&lt;/code&gt; 函数提供来自&lt;em&gt;序列对象的&lt;/em&gt;连续值（请参见&lt;a href=&quot;functions-sequence&quot;&gt;第9.16节&lt;/a&gt;）。这种安排非常普遍，因此有一个特殊的缩写：</target>
+        </trans-unit>
+        <trans-unit id="7bd08f9310fcb14cbd5436b568512ce2df9ab484" translate="yes" xml:space="preserve">
+          <source>where the &lt;code&gt;nextval()&lt;/code&gt; function supplies successive values from a &lt;em&gt;sequence object&lt;/em&gt; (see &lt;a href=&quot;functions-sequence&quot;&gt;Section 9.17&lt;/a&gt;). This arrangement is sufficiently common that there's a special shorthand for it:</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="9f13f6d0c9013e1b5a9453aad6e84166421dc49f" translate="yes" xml:space="preserve">
+          <source>where the &lt;code&gt;operator&lt;/code&gt; token follows the syntax rules of &lt;a href=&quot;sql-syntax-lexical#SQL-SYNTAX-OPERATORS&quot;&gt;Section 4.1.3&lt;/a&gt;, or is one of the key words &lt;code&gt;AND&lt;/code&gt;, &lt;code&gt;OR&lt;/code&gt;, and &lt;code&gt;NOT&lt;/code&gt;, or is a qualified operator name in the form:</source>
+          <target state="translated">其中 &lt;code&gt;operator&lt;/code&gt; 符遵循&lt;a href=&quot;sql-syntax-lexical#SQL-SYNTAX-OPERATORS&quot;&gt;4.1.3节&lt;/a&gt;的语法规则，或者是 &lt;code&gt;AND&lt;/code&gt; ， &lt;code&gt;OR&lt;/code&gt; 和 &lt;code&gt;NOT&lt;/code&gt; 的关键字之一，或者是以下形式的合格运算符名称：</target>
+        </trans-unit>
+        <trans-unit id="8a017c95f90d3833011c4cbc0c74fcbcfe44ef42" translate="yes" xml:space="preserve">
+          <source>where the archive directory is physically located on the standby server, so that the &lt;code&gt;archive_command&lt;/code&gt; is accessing it across NFS, but the files are local to the standby. This will:</source>
+          <target state="translated">存档目录实际位于备用服务器上的位置，以便 &lt;code&gt;archive_command&lt;/code&gt; 通过NFS对其进行访问，但是文件在备用数据库本地。这将：</target>
+        </trans-unit>
+        <trans-unit id="a6b4be2958f0bb91c3ed3c4e4583c088a4832f4d" translate="yes" xml:space="preserve">
+          <source>where the colon (&lt;code&gt;:&lt;/code&gt;) symbol acts as a delimiter between a phrase and its replacement.</source>
+          <target state="translated">其中冒号（ &lt;code&gt;:&lt;/code&gt; ）符号作为一个短语和它的置换之间的分隔符。</target>
+        </trans-unit>
+        <trans-unit id="e11e7f071949ee7312e3026921c20a83a618fe45" translate="yes" xml:space="preserve">
+          <source>where the comment begins with &lt;code&gt;/*&lt;/code&gt; and extends to the matching occurrence of &lt;code&gt;*/&lt;/code&gt;. These block comments nest, as specified in the SQL standard but unlike C, so that one can comment out larger blocks of code that might contain existing block comments.</source>
+          <target state="translated">其中注释以 &lt;code&gt;/*&lt;/code&gt; 开头，并扩展到匹配的 &lt;code&gt;*/&lt;/code&gt; 。按照SQL标准的规定，这些块注释嵌套，但与C不同，因此可以注释掉可能包含现有块注释的较大代码块。</target>
+        </trans-unit>
+        <trans-unit id="8e7c67b39887933602dcee06120320113183300a" translate="yes" xml:space="preserve">
+          <source>where the component fields are:</source>
+          <target state="translated">其中组件字段为。</target>
+        </trans-unit>
+        <trans-unit id="0a5be562692973652e8751f219be291ae87f74a1" translate="yes" xml:space="preserve">
+          <source>where the file name for the source file must be available on the machine running the backend process, not the client, since the backend process reads the file directly. You can read more about the &lt;code&gt;COPY&lt;/code&gt; command in &lt;a href=&quot;sql-copy&quot;&gt;COPY&lt;/a&gt;.</source>
+          <target state="translated">源文件的文件名必须在运行后端进程的计算机（而不是客户端）上可用，因为后端进程直接读取文件。你可以阅读更多有关 &lt;code&gt;COPY&lt;/code&gt; 命令&lt;a href=&quot;sql-copy&quot;&gt;COPY&lt;/a&gt;。</target>
+        </trans-unit>
+        <trans-unit id="aca0a6010ee58659cb962578b12187acb232c0bd" translate="yes" xml:space="preserve">
+          <source>where the format of a table mapping depends on the &lt;em&gt;&lt;code&gt;tableforest&lt;/code&gt;&lt;/em&gt; parameter as explained above.</source>
+          <target state="translated">如上所述，表映射的格式取决于&lt;em&gt; &lt;code&gt;tableforest&lt;/code&gt; &lt;/em&gt;参数。</target>
+        </trans-unit>
+        <trans-unit id="c322d4fb81e0c24a81de070751209570b9a21fe2" translate="yes" xml:space="preserve">
+          <source>where the points are the end points of the line segments comprising the boundary of the polygon.</source>
+          <target state="translated">其中点是构成多边形边界的线段的端点。</target>
+        </trans-unit>
+        <trans-unit id="f3a39e39e3dc55cc38a327aeb589b6bbda39e7f5" translate="yes" xml:space="preserve">
+          <source>where the points are the end points of the line segments comprising the path. Square brackets (&lt;code&gt;[]&lt;/code&gt;) indicate an open path, while parentheses (&lt;code&gt;()&lt;/code&gt;) indicate a closed path. When the outermost parentheses are omitted, as in the third through fifth syntaxes, a closed path is assumed.</source>
+          <target state="translated">这些点是组成路径的线段的终点。方括号（ &lt;code&gt;[]&lt;/code&gt; ）表示开放路径，括号（ &lt;code&gt;()&lt;/code&gt; ）表示封闭路径。当省略最外面的括号时（如第三到第五种语法），则假定为封闭路径。</target>
+        </trans-unit>
+        <trans-unit id="8b49a312334fd1bdab104f06f0ce7761910dd239" translate="yes" xml:space="preserve">
+          <source>where the recursive self-reference must appear on the right-hand side of the &lt;code&gt;UNION&lt;/code&gt;. Only one recursive self-reference is permitted per query. Recursive data-modifying statements are not supported, but you can use the results of a recursive &lt;code&gt;SELECT&lt;/code&gt; query in a data-modifying statement. See &lt;a href=&quot;queries-with&quot;&gt;Section 7.8&lt;/a&gt; for an example.</source>
+          <target state="translated">递归自引用必须出现在 &lt;code&gt;UNION&lt;/code&gt; 的右侧。每个查询只允许一个递归自引用。不支持递归数据修改语句，但是您可以在数据修改语句中使用递归 &lt;code&gt;SELECT&lt;/code&gt; 查询的结果。有关示例，请参见&lt;a href=&quot;queries-with&quot;&gt;第7.8节&lt;/a&gt;。</target>
+        </trans-unit>
+        <trans-unit id="1dab6fc9fba9dce67d798f2e3e758f073548c0c8" translate="yes" xml:space="preserve">
+          <source>where the schema mapping is as above.</source>
+          <target state="translated">其中模式映射如上。</target>
+        </trans-unit>
+        <trans-unit id="382029671c1699461f42fe369fd317b19afaa4b7" translate="yes" xml:space="preserve">
+          <source>where the vacuum base threshold is &lt;a href=&quot;runtime-config-autovacuum#GUC-AUTOVACUUM-VACUUM-THRESHOLD&quot;&gt;autovacuum_vacuum_threshold&lt;/a&gt;, the vacuum scale factor is &lt;a href=&quot;runtime-config-autovacuum#GUC-AUTOVACUUM-VACUUM-SCALE-FACTOR&quot;&gt;autovacuum_vacuum_scale_factor&lt;/a&gt;, and the number of tuples is &lt;code&gt;pg_class&lt;/code&gt;.&lt;code&gt;reltuples&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="8e9fff4ccdc17ba4f1e6aa42fae36f876c94b66d" translate="yes" xml:space="preserve">
+          <source>where the vacuum base threshold is &lt;a href=&quot;runtime-config-autovacuum#GUC-AUTOVACUUM-VACUUM-THRESHOLD&quot;&gt;autovacuum_vacuum_threshold&lt;/a&gt;, the vacuum scale factor is &lt;a href=&quot;runtime-config-autovacuum#GUC-AUTOVACUUM-VACUUM-SCALE-FACTOR&quot;&gt;autovacuum_vacuum_scale_factor&lt;/a&gt;, and the number of tuples is &lt;code&gt;pg_class&lt;/code&gt;.&lt;code&gt;reltuples&lt;/code&gt;. The number of obsolete tuples is obtained from the statistics collector; it is a semi-accurate count updated by each &lt;code&gt;UPDATE&lt;/code&gt; and &lt;code&gt;DELETE&lt;/code&gt; operation. (It is only semi-accurate because some information might be lost under heavy load.) If the &lt;code&gt;relfrozenxid&lt;/code&gt; value of the table is more than &lt;code&gt;vacuum_freeze_table_age&lt;/code&gt; transactions old, an aggressive vacuum is performed to freeze old tuples and advance &lt;code&gt;relfrozenxid&lt;/code&gt;; otherwise, only pages that have been modified since the last vacuum are scanned.</source>
+          <target state="translated">其中真空基本阈值为&lt;a href=&quot;runtime-config-autovacuum#GUC-AUTOVACUUM-VACUUM-THRESHOLD&quot;&gt;autovacuum_vacuum_threshold&lt;/a&gt;，真空比例因子为&lt;a href=&quot;runtime-config-autovacuum#GUC-AUTOVACUUM-VACUUM-SCALE-FACTOR&quot;&gt;autovacuum_vacuum_scale_factor&lt;/a&gt;，元组数为 &lt;code&gt;pg_class&lt;/code&gt; 。 &lt;code&gt;reltuples&lt;/code&gt; 。过时的元组数是从统计信息收集器中获得的；它是每个 &lt;code&gt;UPDATE&lt;/code&gt; 和 &lt;code&gt;DELETE&lt;/code&gt; 操作更新的半精确计数。 （这是半准确的，因为某些信息可能会在重负载下丢失。）如果表的 &lt;code&gt;relfrozenxid&lt;/code&gt; 值大于旧的 &lt;code&gt;vacuum_freeze_table_age&lt;/code&gt; 事务，则将执行主动真空以冻结旧的元组并提前 &lt;code&gt;relfrozenxid&lt;/code&gt; 。; 否则，仅扫描自上次吸尘以来已修改的页面。</target>
+        </trans-unit>
+        <trans-unit id="2c431885a457348236e447edee84410e42626acc" translate="yes" xml:space="preserve">
+          <source>where the vacuum insert base threshold is &lt;a href=&quot;runtime-config-autovacuum#GUC-AUTOVACUUM-VACUUM-INSERT-THRESHOLD&quot;&gt;autovacuum_vacuum_insert_threshold&lt;/a&gt;, and vacuum insert scale factor is &lt;a href=&quot;runtime-config-autovacuum#GUC-AUTOVACUUM-VACUUM-INSERT-SCALE-FACTOR&quot;&gt;autovacuum_vacuum_insert_scale_factor&lt;/a&gt;. Such vacuums may allow portions of the table to be marked as &lt;em&gt;all visible&lt;/em&gt; and also allow tuples to be frozen, which can reduce the work required in subsequent vacuums. For tables which receive &lt;code&gt;INSERT&lt;/code&gt; operations but no or almost no &lt;code&gt;UPDATE&lt;/code&gt;/&lt;code&gt;DELETE&lt;/code&gt; operations, it may be beneficial to lower the table's &lt;a href=&quot;sql-createtable#RELOPTION-AUTOVACUUM-FREEZE-MIN-AGE&quot;&gt;autovacuum_freeze_min_age&lt;/a&gt; as this may allow tuples to be frozen by earlier vacuums. The number of obsolete tuples and the number of inserted tuples are obtained from the statistics collector; it is a semi-accurate count updated by each &lt;code&gt;UPDATE&lt;/code&gt;, &lt;code&gt;DELETE&lt;/code&gt; and &lt;code&gt;INSERT&lt;/code&gt; operation. (It is only semi-accurate because some information might be lost under heavy load.) If the &lt;code&gt;relfrozenxid&lt;/code&gt; value of the table is more than &lt;code&gt;vacuum_freeze_table_age&lt;/code&gt; transactions old, an aggressive vacuum is performed to freeze old tuples and advance &lt;code&gt;relfrozenxid&lt;/code&gt;; otherwise, only pages that have been modified since the last vacuum are scanned.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="4e9d5d3d104047e0064d4303bd59ec16810bf890" translate="yes" xml:space="preserve">
+          <source>where your own login name is mentioned. This will happen if the administrator has not created a PostgreSQL user account for you. (PostgreSQL user accounts are distinct from operating system user accounts.) If you are the administrator, see &lt;a href=&quot;https://www.postgresql.org/docs/12/user-manag.html&quot;&gt;Chapter 21&lt;/a&gt; for help creating accounts. You will need to become the operating system user under which PostgreSQL was installed (usually &lt;code&gt;postgres&lt;/code&gt;) to create the first user account. It could also be that you were assigned a PostgreSQL user name that is different from your operating system user name; in that case you need to use the &lt;code&gt;-U&lt;/code&gt; switch or set the &lt;code&gt;PGUSER&lt;/code&gt; environment variable to specify your PostgreSQL user name.</source>
+          <target state="translated">提到您自己的登录名。如果管理员没有为您创建PostgreSQL用户帐户，则会发生这种情况。（PostgreSQL用户帐户与操作系统用户帐户不同。）如果您是管理员，请参见&lt;a href=&quot;https://www.postgresql.org/docs/12/user-manag.html&quot;&gt;第21章&lt;/a&gt;以获取有关创建帐户的帮助。您需要成为安装PostgreSQL的操作系统用户（通常是 &lt;code&gt;postgres&lt;/code&gt; ）才能创建第一个用户帐户。也可能是您被分配了一个与您的操作系统用户名不同的PostgreSQL用户名。在这种情况下，您需要使用 &lt;code&gt;-U&lt;/code&gt; 开关或设置 &lt;code&gt;PGUSER&lt;/code&gt; 环境变量来指定您的PostgreSQL用户名。</target>
+        </trans-unit>
+        <trans-unit id="0112d5560695a821c035d2d69c40472d94f7f8cb" translate="yes" xml:space="preserve">
+          <source>where your own login name is mentioned. This will happen if the administrator has not created a PostgreSQL user account for you. (PostgreSQL user accounts are distinct from operating system user accounts.) If you are the administrator, see &lt;a href=&quot;https://www.postgresql.org/docs/13/user-manag.html&quot;&gt;Chapter 21&lt;/a&gt; for help creating accounts. You will need to become the operating system user under which PostgreSQL was installed (usually &lt;code&gt;postgres&lt;/code&gt;) to create the first user account. It could also be that you were assigned a PostgreSQL user name that is different from your operating system user name; in that case you need to use the &lt;code&gt;-U&lt;/code&gt; switch or set the &lt;code&gt;PGUSER&lt;/code&gt; environment variable to specify your PostgreSQL user name.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="8f1cf5f67d7b1357c152874d6df8382f05565c46" translate="yes" xml:space="preserve">
+          <source>which displays per-product sales totals in only the top sales regions. The &lt;code&gt;WITH&lt;/code&gt; clause defines two auxiliary statements named &lt;code&gt;regional_sales&lt;/code&gt; and &lt;code&gt;top_regions&lt;/code&gt;, where the output of &lt;code&gt;regional_sales&lt;/code&gt; is used in &lt;code&gt;top_regions&lt;/code&gt; and the output of &lt;code&gt;top_regions&lt;/code&gt; is used in the primary &lt;code&gt;SELECT&lt;/code&gt; query. This example could have been written without &lt;code&gt;WITH&lt;/code&gt;, but we'd have needed two levels of nested sub-&lt;code&gt;SELECT&lt;/code&gt;s. It's a bit easier to follow this way.</source>
+          <target state="translated">仅显示热门销售区域中的每产品销售总额。的 &lt;code&gt;WITH&lt;/code&gt; 子句定义两个辅助语句命名 &lt;code&gt;regional_sales&lt;/code&gt; 和 &lt;code&gt;top_regions&lt;/code&gt; ，其中的输出 &lt;code&gt;regional_sales&lt;/code&gt; 中使用 &lt;code&gt;top_regions&lt;/code&gt; 和的输出 &lt;code&gt;top_regions&lt;/code&gt; 在初级使用 &lt;code&gt;SELECT&lt;/code&gt; 查询。本示例可以在不 &lt;code&gt;WITH&lt;/code&gt; 情况下编写，但是我们需要两级嵌套的子 &lt;code&gt;SELECT&lt;/code&gt; 。遵循这种方式会容易一些。</target>
+        </trans-unit>
+        <trans-unit id="bae8a1a20973cccefd7c610839e91bd3974b4005" translate="yes" xml:space="preserve">
+          <source>which finds the ten places closest to a given target point. The ability to do this is again dependent on the particular operator class being used. In &lt;a href=&quot;gist-builtin-opclasses#GIST-BUILTIN-OPCLASSES-TABLE&quot;&gt;Table 64.1&lt;/a&gt;, operators that can be used in this way are listed in the column &amp;ldquo;Ordering Operators&amp;rdquo;.</source>
+          <target state="translated">查找最接近给定目标点的十个位置。再次执行此操作的能力取决于所使用的特定运算符类。在&lt;a href=&quot;gist-builtin-opclasses#GIST-BUILTIN-OPCLASSES-TABLE&quot;&gt;表64.1中&lt;/a&gt;，可以以这种方式使用的运算符在&amp;ldquo;订购运算符&amp;rdquo;列中列出。</target>
+        </trans-unit>
+        <trans-unit id="8dfde0f1cc2ebaaf170e42acdfe9b417e65a8fd3" translate="yes" xml:space="preserve">
+          <source>which gives us one output row per city. Each aggregate result is computed over the table rows matching that city. We can filter these grouped rows using &lt;code&gt;HAVING&lt;/code&gt;:</source>
+          <target state="translated">这样我们每个城市就有一个输出行。每个汇总结果都是在与该城市匹配的表行上计算的。我们可以使用 &lt;code&gt;HAVING&lt;/code&gt; 过滤这些分组的行：</target>
+        </trans-unit>
+        <trans-unit id="18b9fcfc65791db8244d0ec78c95baca6172d630" translate="yes" xml:space="preserve">
+          <source>which gives us the same results for only the cities that have all &lt;code&gt;temp_lo&lt;/code&gt; values below 40. Finally, if we only care about cities whose names begin with &amp;ldquo;&lt;code&gt;S&lt;/code&gt;&amp;rdquo;, we might do:</source>
+          <target state="translated">这仅对所有 &lt;code&gt;temp_lo&lt;/code&gt; 值均低于40 的城市提供相同的结果。最后，如果我们只关心名称以&amp;ldquo; &lt;code&gt;S&lt;/code&gt; &amp;rdquo; 开头的城市，则可以这样做：</target>
+        </trans-unit>
+        <trans-unit id="689a2e02b1a49db16b3b1be754391d4fc8da64e0" translate="yes" xml:space="preserve">
+          <source>which is executed as:</source>
+          <target state="translated">其执行方式为:</target>
+        </trans-unit>
+        <trans-unit id="f15875e884530dd30ab6d27db56535aa74c98f64" translate="yes" xml:space="preserve">
+          <source>which obtains the 50th percentile, or median, value of the &lt;code&gt;income&lt;/code&gt; column from table &lt;code&gt;households&lt;/code&gt;. Here, &lt;code&gt;0.5&lt;/code&gt; is a direct argument; it would make no sense for the percentile fraction to be a value varying across rows.</source>
+          <target state="translated">它从餐桌 &lt;code&gt;households&lt;/code&gt; 获得 &lt;code&gt;income&lt;/code&gt; 列的第50个百分位数（即中位数）。这里， &lt;code&gt;0.5&lt;/code&gt; 是直接参数；百分位数分数在各行之间变化是没有意义的。</target>
+        </trans-unit>
+        <trans-unit id="f6ee8c6433c23fa17a7f1946c5c1b26470b55b09" translate="yes" xml:space="preserve">
+          <source>which refers to a function with zero arguments, whereas the first variant can refer to a function with any number of arguments, including zero, as long as the name is unique.</source>
+          <target state="translated">的函数,而第一种变体可以引用包含零参数的函数,只要名称是唯一的,就可以引用包含任何数量的参数,包括零参数的函数。</target>
+        </trans-unit>
+        <trans-unit id="0e899e70b75b90b65729658ed54cd0ca39432992" translate="yes" xml:space="preserve">
+          <source>which returns:</source>
+          <target state="translated">其中返回:</target>
+        </trans-unit>
+        <trans-unit id="74cad75d5e4f20aa31f501f8fefdc21abad67352" translate="yes" xml:space="preserve">
+          <source>which shows that the planner thinks that sorting &lt;code&gt;onek&lt;/code&gt; by index-scanning is about 12% more expensive than sequential-scan-and-sort. Of course, the next question is whether it's right about that. We can investigate that using &lt;code&gt;EXPLAIN ANALYZE&lt;/code&gt;, as discussed below.</source>
+          <target state="translated">这表明计划者认为通过索引扫描对 &lt;code&gt;onek&lt;/code&gt; 进行排序比顺序扫描与排序的开销高出约12％。当然，下一个问题是这是否正确。我们可以使用 &lt;code&gt;EXPLAIN ANALYZE&lt;/code&gt; 进行调查，如下所述。</target>
+        </trans-unit>
+        <trans-unit id="7c0656a99c8833cfc345dd27d0b6820caa432991" translate="yes" xml:space="preserve">
+          <source>which we wish to display like</source>
+          <target state="translated">我们想显示的是</target>
+        </trans-unit>
+        <trans-unit id="c282db8639e1ae34ff018f3c72116a8c43100b68" translate="yes" xml:space="preserve">
+          <source>which will copy archivable WAL segments to the directory &lt;code&gt;/mnt/server/archivedir&lt;/code&gt;. (This is an example, not a recommendation, and might not work on all platforms.) After the &lt;code&gt;%p&lt;/code&gt; and &lt;code&gt;%f&lt;/code&gt; parameters have been replaced, the actual command executed might look like this:</source>
+          <target state="translated">它将可 &lt;code&gt;/mnt/server/archivedir&lt;/code&gt; WAL段复制到目录/ mnt / server / archivedir。（这是示例，而不是建议，并且可能不适用于所有平台。）替换 &lt;code&gt;%p&lt;/code&gt; 和 &lt;code&gt;%f&lt;/code&gt; 参数后，实际执行的命令可能如下所示：</target>
+        </trans-unit>
+        <trans-unit id="0a169e40949af2620c4e85dda15d79975492e73f" translate="yes" xml:space="preserve">
+          <source>which will copy previously archived WAL segments from the directory &lt;code&gt;/mnt/server/archivedir&lt;/code&gt;. Of course, you can use something much more complicated, perhaps even a shell script that requests the operator to mount an appropriate tape.</source>
+          <target state="translated">它将从目录 &lt;code&gt;/mnt/server/archivedir&lt;/code&gt; 复制以前存档的WAL段。当然，您可以使用更复杂的方法，甚至可以使用shell脚本来要求操作员安装适当的磁带。</target>
+        </trans-unit>
+        <trans-unit id="26cd6a2051ea99afa4a27d84b6ed47beb5036a7c" translate="yes" xml:space="preserve">
+          <source>which will leave the server running in the foreground. This must be done while logged into the PostgreSQL user account. Without &lt;code&gt;-D&lt;/code&gt;, the server will try to use the data directory named by the environment variable &lt;code&gt;PGDATA&lt;/code&gt;. If that variable is not provided either, it will fail.</source>
+          <target state="translated">这将使服务器在前台运行。必须在登录PostgreSQL用户帐户时完成此操作。如果不使用 &lt;code&gt;-D&lt;/code&gt; ，则服务器将尝试使用环境变量 &lt;code&gt;PGDATA&lt;/code&gt; 命名的数据目录。如果也未提供该变量，它将失败。</target>
+        </trans-unit>
+        <trans-unit id="c4e8f14819326dd3aae3a2cf53d737470310c24e" translate="yes" xml:space="preserve">
+          <source>which will match the stemmed form of &lt;code&gt;postgraduate&lt;/code&gt;.</source>
+          <target state="translated">这将符合 &lt;code&gt;postgraduate&lt;/code&gt; 的词干形式。</target>
+        </trans-unit>
+        <trans-unit id="5ff082187c1d02a1fdad2296ffb917870a45b03c" translate="yes" xml:space="preserve">
+          <source>which would allow a box value's component numbers to be accessed by subscripting. Otherwise the type behaves the same as before.</source>
+          <target state="translated">这将允许通过下标来访问一个盒子值的组件编号。否则,该类型的行为与之前相同。</target>
+        </trans-unit>
+        <trans-unit id="df5d2347727e9e14fc56d97420272403e963b0b6" translate="yes" xml:space="preserve">
+          <source>which would be a valid value of the &lt;code&gt;inventory_item&lt;/code&gt; type defined above. To make a field be NULL, write no characters at all in its position in the list. For example, this constant specifies a NULL third field:</source>
+          <target state="translated">这将是上面定义的 &lt;code&gt;inventory_item&lt;/code&gt; 类型的有效值。要使字段为NULL，请在列表中其位置完全不写任何字符。例如，此常数指定NULL第三字段：</target>
+        </trans-unit>
+        <trans-unit id="9a3be0245636efccdc3c57134520df09a0e4a0a4" translate="yes" xml:space="preserve">
+          <source>white space and comments cannot appear within multi-character symbols, such as &lt;code&gt;(?:&lt;/code&gt;</source>
+          <target state="translated">空格和注释不能出现在多字符符号中，例如 &lt;code&gt;(?:&lt;/code&gt;</target>
+        </trans-unit>
+        <trans-unit id="b43caaeffd6a470ec3896dc284dda83445964f79" translate="yes" xml:space="preserve">
+          <source>white space or &lt;code&gt;#&lt;/code&gt; within a bracket expression is retained</source>
+          <target state="translated">保留括号表达式中的空白或 &lt;code&gt;#&lt;/code&gt;</target>
+        </trans-unit>
+        <trans-unit id="52b07ed610fcda069d74b3a411d9e935637def49" translate="yes" xml:space="preserve">
+          <source>will be allowed if the cast from type &lt;code&gt;integer&lt;/code&gt; to type &lt;code&gt;text&lt;/code&gt; is marked &lt;code&gt;AS ASSIGNMENT&lt;/code&gt;, otherwise not. (We generally use the term &lt;em&gt;assignment cast&lt;/em&gt; to describe this kind of cast.)</source>
+          <target state="translated">如果从 &lt;code&gt;integer&lt;/code&gt; 类型到 &lt;code&gt;text&lt;/code&gt; 类型的转换标记为 &lt;code&gt;AS ASSIGNMENT&lt;/code&gt; ，则将被允许，否则。（我们通常使用术语&lt;em&gt;分配转换&lt;/em&gt;来描述这种转换。）</target>
+        </trans-unit>
+        <trans-unit id="e7b329bd0ae166b219c0dac7856440cebddc7bef" translate="yes" xml:space="preserve">
+          <source>will be parsed as:</source>
+          <target state="translated">将被解析为:</target>
+        </trans-unit>
+        <trans-unit id="fcc5b8ad0d43009e11ed531b9ba723b81a61922b" translate="yes" xml:space="preserve">
+          <source>will draw an error even though the &lt;code&gt;C&lt;/code&gt; and &lt;code&gt;POSIX&lt;/code&gt; collations have identical behaviors. Mixing stripped and non-stripped collation names is therefore not recommended.</source>
+          <target state="translated">即使 &lt;code&gt;C&lt;/code&gt; 和 &lt;code&gt;POSIX&lt;/code&gt; 归类具有相同的行为，也会产生错误。因此，不建议混合使用剥离和非剥离排序规则名称。</target>
+        </trans-unit>
+        <trans-unit id="8ea301593a0a7ff485b37c9d6c155df86be3bfc8" translate="yes" xml:space="preserve">
+          <source>will lock only rows having &lt;code&gt;col1 = 5&lt;/code&gt;, even though that condition is not textually within the sub-query.</source>
+          <target state="translated">将只锁定 &lt;code&gt;col1 = 5&lt;/code&gt; 行，即使该条件在文本上不在子查询中。</target>
+        </trans-unit>
+        <trans-unit id="b9075f9f3f87909783fee359888bd2c471dea042" translate="yes" xml:space="preserve">
+          <source>will only process the master table.</source>
+          <target state="translated">将只处理主表。</target>
+        </trans-unit>
+        <trans-unit id="166a3172a29e9b1013bd7227d7fa350d195805cd" translate="yes" xml:space="preserve">
+          <source>will remove the domain part for users with system user names that end with &lt;code&gt;@mydomain.com&lt;/code&gt;, and allow any user whose system name ends with &lt;code&gt;@otherdomain.com&lt;/code&gt; to log in as &lt;code&gt;guest&lt;/code&gt;.</source>
+          <target state="translated">将删除系统用户名以 &lt;code&gt;@mydomain.com&lt;/code&gt; 结尾的用户的域部分，并允许系统名以 &lt;code&gt;@otherdomain.com&lt;/code&gt; 结尾的用户以 &lt;code&gt;guest&lt;/code&gt; 用户身份登录。</target>
+        </trans-unit>
+        <trans-unit id="e42965869a7de1a0b4c9e3864a5bad5ded3e3510" translate="yes" xml:space="preserve">
+          <source>will require effort proportional to the size of the table: PostgreSQL will need to scan either the entire table or the entirety of an index that includes all rows in the table.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="733025f436e0af6dc9df77a7ba625859cbbf72ca" translate="yes" xml:space="preserve">
+          <source>will require effort proportional to the size of the table: PostgreSQL will need to scan either the entire table or the entirety of an index which includes all rows in the table.</source>
+          <target state="translated">将需要与表的大小成正比的努力。PostgreSQL将需要扫描整个表或包括表中所有行的索引的全部内容。</target>
+        </trans-unit>
+        <trans-unit id="91e07485ce9849ddc161bb7d803839b8f2cfb477" translate="yes" xml:space="preserve">
+          <source>will result in the three SQL commands being individually sent to the server, with each one's results being displayed before continuing to the next command. However, a semicolon entered as &lt;code&gt;\;&lt;/code&gt; will not trigger command processing, so that the command before it and the one after are effectively combined and sent to the server in one request. So for example</source>
+          <target state="translated">将导致将三个SQL命令分别发送到服务器，并在继续下一个命令之前显示每个命令的结果。但是，分号输入为 &lt;code&gt;\;&lt;/code&gt; ;。不会触发命令处理，因此前一个命令和后一个命令将有效地合并并在一个请求中发送到服务器。所以举个例子</target>
+        </trans-unit>
+        <trans-unit id="047ba62edd680e2d56a13904abdabc4188cb005b" translate="yes" xml:space="preserve">
+          <source>will return a table of two columns and three rows. It's effectively equivalent to:</source>
+          <target state="translated">将返回一个两列三行的表格。这实际上相当于:</target>
+        </trans-unit>
+        <trans-unit id="6cf8c1d7fdc60299e5a5cb3f3300a0c91cf43fb7" translate="yes" xml:space="preserve">
+          <source>will start the server in the background and put the output into the named log file. The &lt;code&gt;-D&lt;/code&gt; option has the same meaning here as for &lt;code&gt;postgres&lt;/code&gt;. &lt;code&gt;pg_ctl&lt;/code&gt; is also capable of stopping the server.</source>
+          <target state="translated">将在后台启动服务器并将输出放入命名的日志文件中。该 &lt;code&gt;-D&lt;/code&gt; 选项这里为具有相同的含义 &lt;code&gt;postgres&lt;/code&gt; 。 &lt;code&gt;pg_ctl&lt;/code&gt; 也能够停止服务器。</target>
+        </trans-unit>
+        <trans-unit id="7130bc171fc84062054c81f8bc4460528312537b" translate="yes" xml:space="preserve">
+          <source>with hot standby</source>
+          <target state="translated">热备</target>
+        </trans-unit>
+        <trans-unit id="af6d8270bf9a28cb0890365af8ad9fbaf343522d" translate="yes" xml:space="preserve">
+          <source>with sync off</source>
+          <target state="translated">同步关闭</target>
+        </trans-unit>
+        <trans-unit id="3a3cc3c4fb4b36db89f9594987cae52aab437928" translate="yes" xml:space="preserve">
+          <source>with sync on</source>
+          <target state="translated">与同步</target>
+        </trans-unit>
+        <trans-unit id="9370d4f218264e82510fdcf2db2c6328e076bb0c" translate="yes" xml:space="preserve">
+          <source>with the default &lt;code&gt;BLCKSZ&lt;/code&gt; of 8192 bytes</source>
+          <target state="translated">默认的 &lt;code&gt;BLCKSZ&lt;/code&gt; 为8192字节</target>
+        </trans-unit>
+        <trans-unit id="1fcb8a613e6e45488de8c47b5f45118a3ee76969" translate="yes" xml:space="preserve">
+          <source>without any precision or scale creates a column in which numeric values of any precision and scale can be stored, up to the implementation limit on precision. A column of this kind will not coerce input values to any particular scale, whereas &lt;code&gt;numeric&lt;/code&gt; columns with a declared scale will coerce input values to that scale. (The SQL standard requires a default scale of 0, i.e., coercion to integer precision. We find this a bit useless. If you're concerned about portability, always specify the precision and scale explicitly.)</source>
+          <target state="translated">没有任何精度或小数位数的列会创建一列，其中可以存储任何精度和小数位数的数值，但不超过精度的实施限制。这种类型的列不会将输入值强制转换为任何特定的小数 &lt;code&gt;numeric&lt;/code&gt; ，而具有声明的小数位数的数字列将将输入值强制转换为该小数位。（SQL标准要求默认小数位数为0，即强制转换为整数精度。我们发现这有点用。如果您担心可移植性，请始终明确指定精度和小数位数。）</target>
+        </trans-unit>
+        <trans-unit id="db48d21b6765af674c2d86f7d7085037c147d319" translate="yes" xml:space="preserve">
+          <source>would fail to preserve the &lt;code&gt;FOR UPDATE&lt;/code&gt; lock after the &lt;code&gt;ROLLBACK TO&lt;/code&gt;. This has been fixed in release 9.3.</source>
+          <target state="translated">在 &lt;code&gt;ROLLBACK TO&lt;/code&gt; 之后将无法保留 &lt;code&gt;FOR UPDATE&lt;/code&gt; 锁定。此问题已在9.3版中修复。</target>
+        </trans-unit>
+        <trans-unit id="d993c428e713634961b14ab1031f2202eb8ab483" translate="yes" xml:space="preserve">
+          <source>would query the table &lt;code&gt;my_table&lt;/code&gt;. Note that this may be unsafe: the value of the variable is copied literally, so it can contain unbalanced quotes, or even backslash commands. You must make sure that it makes sense where you put it.</source>
+          <target state="translated">将查询表 &lt;code&gt;my_table&lt;/code&gt; 。请注意，这可能是不安全的：该变量的值是按字面值复制的，因此它可能包含不平衡的引号，甚至包含反斜杠命令。您必须确保将它放在哪里有意义。</target>
+        </trans-unit>
+        <trans-unit id="4fb1884d01fa0af9488b72c839058eb9b1cd3ec9" translate="yes" xml:space="preserve">
+          <source>www.openwall.com</source>
+          <target state="translated">www.openwall.com</target>
+        </trans-unit>
+        <trans-unit id="ee60015c8f586443db97ad8f39f2b79227b8fd01" translate="yes" xml:space="preserve">
+          <source>xact</source>
+          <target state="translated">xact</target>
+        </trans-unit>
+        <trans-unit id="30e2ca63aa35fbb6880b2c6d43d8e5e3aa97095e" translate="yes" xml:space="preserve">
+          <source>xml2</source>
+          <target state="translated">xml2</target>
+        </trans-unit>
+        <trans-unit id="f94d7d22277dd8bae275a25a490b99203cccb3b3" translate="yes" xml:space="preserve">
+          <source>y-intercept of the least-squares-fit linear equation determined by the (&lt;code&gt;X&lt;/code&gt;, &lt;code&gt;Y&lt;/code&gt;) pairs</source>
+          <target state="translated">由（ &lt;code&gt;X&lt;/code&gt; ， &lt;code&gt;Y&lt;/code&gt; ）对确定的最小二乘拟合线性方程的y截距</target>
+        </trans-unit>
+        <trans-unit id="150f912c47bfa78eaad7a19807fcef6747d4b800" translate="yes" xml:space="preserve">
+          <source>year (4 or more digits)</source>
+          <target state="translated">年(4位以上)</target>
+        </trans-unit>
+        <trans-unit id="611de26b771af738f57fb9b6c8721bb546f69f99" translate="yes" xml:space="preserve">
+          <source>year (4 or more digits) with comma</source>
+          <target state="translated">年(4位或以上数字),带逗号</target>
+        </trans-unit>
+        <trans-unit id="127cd8c2aa50e43e37fcd0ad357fa69ed4e6f270" translate="yes" xml:space="preserve">
+          <source>year 99 BC</source>
+          <target state="translated">公元前99年</target>
+        </trans-unit>
+        <trans-unit id="d468eeeab09a5f89dd95cca8a1d68fbf5b52784a" translate="yes" xml:space="preserve">
+          <source>year and day of year</source>
+          <target state="translated">年月日</target>
+        </trans-unit>
+        <trans-unit id="fb360f9c09ac8c5edb2f18be5de4e80ea4c430d0" translate="yes" xml:space="preserve">
+          <source>yes</source>
+          <target state="translated">yes</target>
+        </trans-unit>
+        <trans-unit id="b7caf4dc1da846acd815fdde550fbd1677a60c12" translate="yes" xml:space="preserve">
+          <source>yes (Note 1)</source>
+          <target state="translated">有(注1)</target>
+        </trans-unit>
+        <trans-unit id="a6e931eb3e1e969efa57eb9a58fd4f25fd4cb2e1" translate="yes" xml:space="preserve">
+          <source>you will find that &lt;code&gt;tenk1&lt;/code&gt; has 358 disk pages and 10000 rows. The estimated cost is computed as (disk pages read * &lt;a href=&quot;runtime-config-query#GUC-SEQ-PAGE-COST&quot;&gt;seq_page_cost&lt;/a&gt;) + (rows scanned * &lt;a href=&quot;runtime-config-query#GUC-CPU-TUPLE-COST&quot;&gt;cpu_tuple_cost&lt;/a&gt;). By default, &lt;code&gt;seq_page_cost&lt;/code&gt; is 1.0 and &lt;code&gt;cpu_tuple_cost&lt;/code&gt; is 0.01, so the estimated cost is (358 * 1.0) + (10000 * 0.01) = 458.</source>
+          <target state="translated">您会发现 &lt;code&gt;tenk1&lt;/code&gt; 具有358个磁盘页面和10000行。估计成本的计算方式为（读取的磁盘页面* &lt;a href=&quot;runtime-config-query#GUC-SEQ-PAGE-COST&quot;&gt;seq_page_cost&lt;/a&gt;）+（扫描的行* &lt;a href=&quot;runtime-config-query#GUC-CPU-TUPLE-COST&quot;&gt;cpu_tuple_cost&lt;/a&gt;）。默认情况下， &lt;code&gt;seq_page_cost&lt;/code&gt; 为1.0而 &lt;code&gt;cpu_tuple_cost&lt;/code&gt; 为0.01，因此估计成本为（358 * 1.0）+（10000 * 0.01）= 458。</target>
+        </trans-unit>
+        <trans-unit id="1982d2d3e9d46b67ceb2b6b1086e041a7f7ce8a9" translate="yes" xml:space="preserve">
+          <source>zero octet</source>
+          <target state="translated">零八位数</target>
+        </trans-unit>
+        <trans-unit id="5aab974202bf0788f59e7ce97b96b6b4d59e6caf" translate="yes" xml:space="preserve">
+          <source>{A,B,C}</source>
+          <target state="translated">{A,B,C}</target>
+        </trans-unit>
+        <trans-unit id="f751f41a86686962c7eb6a6c72d7aead8c2eed66" translate="yes" xml:space="preserve">
+          <source>~ ! @ # % ^ &amp;amp; | ` ?</source>
+          <target state="translated">〜！@＃％^＆| ？</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

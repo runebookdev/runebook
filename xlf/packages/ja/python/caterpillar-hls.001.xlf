@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="ja" datatype="htmlbody" original="https://pypi.org/project/caterpillar-hls/">
+    <body>
+      <group id="caterpillar-hls">
+        <trans-unit id="07ddeb80a5b9590eb7b1cb5e6451b8aae1f8e54b" translate="yes" xml:space="preserve">
+          <source>&lt;a href=&quot;https://tools.ietf.org/html/rfc8216#section-4.3.4.1&quot;&gt;&lt;code&gt;EXT-X-MEDIA&lt;/code&gt;&lt;/a&gt; for alternative renditions are not supported since multiple playlists need to be downloaded, merged, and muxed, which is beyond the current scope of this tool.</source>
+          <target state="translated">&lt;a href=&quot;https://tools.ietf.org/html/rfc8216#section-4.3.4.1&quot;&gt; &lt;code&gt;EXT-X-MEDIA&lt;/code&gt; &lt;/a&gt;複数のプレイリストをダウンロード、マージ、および多重化する必要があるため、代替レンディションの EXT-X-MEDIAはサポートされていません。これは、このツールの現在の範囲を超えています。</target>
+        </trans-unit>
+        <trans-unit id="c68afd2e837f167bf5ef4098a834bc14f3098d20" translate="yes" xml:space="preserve">
+          <source>&lt;a href=&quot;https://tools.ietf.org/html/rfc8216#section-4.3.4.2&quot;&gt;&lt;code&gt;EXT-X-STREAM-INF&lt;/code&gt;&lt;/a&gt; variant streams are only partially supported: when two or more variant streams are present, the best one (selected based on higher resolution, higher average bandwidth, and higher bandwidth, in that order) is automatically selected; there is no mechanism for users to select another variant at the moment. In addition, &lt;code&gt;AUDIO&lt;/code&gt;, &lt;code&gt;VIDEO&lt;/code&gt;, &lt;code&gt;SUBTITLES&lt;/code&gt; or &lt;code&gt;CLOSED-CAPTIONS&lt;/code&gt; attributes referencing &lt;code&gt;EXT-X-MEDIA&lt;/code&gt; tags are not supported.</source>
+          <target state="translated">&lt;a href=&quot;https://tools.ietf.org/html/rfc8216#section-4.3.4.2&quot;&gt; &lt;code&gt;EXT-X-STREAM-INF&lt;/code&gt; &lt;/a&gt;バリアントストリームは部分的にのみサポートされています。2つ以上のバリアントストリームが存在する場合、最高のストリーム（高い解像度、高い平均帯域幅、高い帯域幅の順に選択）が自動的に選択されます。現在、ユーザーが別のバリアントを選択するためのメカニズムはありません。さらに、 &lt;code&gt;EXT-X-MEDIA&lt;/code&gt; タグを参照する &lt;code&gt;AUDIO&lt;/code&gt; 、 &lt;code&gt;VIDEO&lt;/code&gt; 、 &lt;code&gt;SUBTITLES&lt;/code&gt; または &lt;code&gt;CLOSED-CAPTIONS&lt;/code&gt; 属性はサポートされていません。</target>
+        </trans-unit>
+        <trans-unit id="f5be8edb2dad973b36728dbaec8d39a46959c3e0" translate="yes" xml:space="preserve">
+          <source>&lt;a id=&quot;encoding&quot;&gt;&lt;strong&gt;Encoding-related issues.&lt;/strong&gt;&lt;/a&gt;&lt;code&gt;caterpillar&lt;/code&gt;, since version 1.0, reads and writes every on-disk file in UTF-8 encoding, period. In particular, user config file and batch mode manifests need to be in UTF-8. Legacy config file might need to be migrated to UTF-8.</source>
+          <target state="translated">&lt;a id=&quot;encoding&quot;&gt;&lt;strong&gt;エンコーディング関連の問題。&lt;/strong&gt;&lt;/a&gt; &lt;code&gt;caterpillar&lt;/code&gt; は、バージョン1.0以降、すべてのディスク上のファイルをUTF-8エンコーディング、ピリオドで読み書きします。特に、ユーザー構成ファイルとバッチモードのマニフェストはUTF-8である必要があります。レガシー構成ファイルをUTF-8に移行する必要がある場合があります。</target>
+        </trans-unit>
+        <trans-unit id="c9551c5eb273eddf6d873dc3f04319bf60527961" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;caterpillar&lt;/code&gt; is a hardened HLS merger. It takes an HTTP Live Streaming VOD URL (typically an .m3u8 URL), downloads the video segments, and attempts to merge them into a single, coherent file. It is specially designed to combat timestamp discontinuities (symptom: a naive FFmpeg run spews tons of &quot;Non-monotonous DTS in output stream&quot; warning messages and ends up with a useless file with completely broken timestamps).</source>
+          <target state="translated">&lt;code&gt;caterpillar&lt;/code&gt; は、強化されたHLS合併です。これは、HTTPライブストリーミングVOD URL（通常は.m3u8 URL）を受け取り、ビデオセグメントをダウンロードして、それらを1つの一貫したファイルにマージしようとします。これは、タイムスタンプの不連続性に対処するように特別に設計されています（症状：単純なFFmpegの実行により、「出力ストリームに単調でないDTS」という大量の警告メッセージが吐き出され、タイムスタンプが完全に壊れた役に立たないファイルになります）。</target>
+        </trans-unit>
+        <trans-unit id="8e7df56f787f992fb9718d0b6f5cbd6aa3077d33" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;caterpillar&lt;/code&gt; supports &lt;a href=&quot;https://tools.ietf.org/html/rfc8216#section-7&quot;&gt;up to version 3&lt;/a&gt; of the HTTP Live Streaming protocol (VOD only; non-VOD playlists are treated as VOD, and may result in unexpected consequences).</source>
+          <target state="translated">&lt;code&gt;caterpillar&lt;/code&gt; は&lt;a href=&quot;https://tools.ietf.org/html/rfc8216#section-7&quot;&gt;、バージョン3&lt;/a&gt;までのHTTPライブストリーミングプロトコルをサポートしています（VODのみ。VOD以外のプレイリストはVODとして扱われ、予期しない結果が生じる可能性があります）。</target>
+        </trans-unit>
+        <trans-unit id="d86cc081d6ca5b0a39fe5b0124db564aa08a7162" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;process_entry&lt;/code&gt; and &lt;code&gt;process_batch&lt;/code&gt; additionally support event hooks (a feature not exposed to end users). See &lt;a href=&quot;https://github.com/zmwangx/caterpillar/blob/master/src/caterpillar/events.py&quot;&gt;&lt;code&gt;caterpillar.caterpillar.events&lt;/code&gt;&lt;/a&gt; for types of events emitted and associated data attributes.</source>
+          <target state="translated">&lt;code&gt;process_entry&lt;/code&gt; および &lt;code&gt;process_batch&lt;/code&gt; は、イベントフック（エンドユーザーに公開されていない機能）を追加でサポートします。発生するイベントのタイプと関連するデータ属性については、&lt;a href=&quot;https://github.com/zmwangx/caterpillar/blob/master/src/caterpillar/events.py&quot;&gt; &lt;code&gt;caterpillar.caterpillar.events&lt;/code&gt; &lt;/a&gt;を参照してください。</target>
+        </trans-unit>
+        <trans-unit id="07cdb36240ebe7a131af062bc17f1659c732273a" translate="yes" xml:space="preserve">
+          <source>&lt;em&gt;If in doubt, check out the detailed &quot;&lt;a href=&quot;https://github.com/zmwangx/caterpillar/wiki/Installation-Guide-for-Novices&quot;&gt;Installation Guide for Novices&lt;/a&gt;&quot;.&lt;/em&gt;</source>
+          <target state="translated">&lt;em&gt;疑問がある場合は、詳細な「&lt;a href=&quot;https://github.com/zmwangx/caterpillar/wiki/Installation-Guide-for-Novices&quot;&gt;初心者向けインストールガイド&lt;/a&gt;」を確認してください。&lt;/em&gt;</target>
+        </trans-unit>
+        <trans-unit id="3947f803cfd4827e8bf07feaa6db452d31392fda" translate="yes" xml:space="preserve">
+          <source>&lt;em&gt;In short, if the default fails you (either doesn't work outright, or the generated video is bad in some way), try &lt;code&gt;-m 1&lt;/code&gt;.&lt;/em&gt;</source>
+          <target state="translated">&lt;em&gt;簡単に言うと、デフォルトで失敗した場合（完全に機能しないか、生成されたビデオが何らかの &lt;code&gt;-m 1&lt;/code&gt; 不良である場合）は、-m 1を試してください。&lt;/em&gt;</target>
+        </trans-unit>
+        <trans-unit id="7e976f736bc272bccf8b84383bbe42c9ac2eebbe" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;A note on &lt;code&gt;-m, --concat-method&lt;/code&gt;&lt;/strong&gt;: The final step of &lt;code&gt;caterpillar&lt;/code&gt; is concatenating one or more parts (generated from splitted playlists with FFmpeg's &lt;code&gt;hls&lt;/code&gt; demuxer) into a single output file. In this step we provide two methods of choice: the &lt;a href=&quot;https://ffmpeg.org/ffmpeg-all.html#concat-1&quot;&gt;concat demuxer&lt;/a&gt; and the &lt;a href=&quot;https://ffmpeg.org/ffmpeg-all.html#concat-2&quot;&gt;concat protocol&lt;/a&gt; (the former is the default). To pick the non-default &lt;code&gt;concat_protocol&lt;/code&gt;, specify &lt;code&gt;--concat-method concat_protocol&lt;/code&gt; on the command line, or as a shortcut, &lt;code&gt;-m 1&lt;/code&gt; (&lt;code&gt;0&lt;/code&gt; is an alias for &lt;code&gt;concat_demuxer&lt;/code&gt;, and &lt;code&gt;1&lt;/code&gt; is an alias for &lt;code&gt;concat_protocol&lt;/code&gt;).</source>
+          <target state="translated">&lt;strong&gt; &lt;code&gt;-m, --concat-method&lt;/code&gt; &lt;/strong&gt;&lt;strong&gt;に関するメモ&lt;/strong&gt;： &lt;code&gt;caterpillar&lt;/code&gt; の最後のステップは、1つ以上のパーツ（FFmpegの &lt;code&gt;hls&lt;/code&gt; デマルチプレクサを使用した分割プレイリストから生成された）を単一の出力ファイルに連結することです。このステップでは、&lt;a href=&quot;https://ffmpeg.org/ffmpeg-all.html#concat-1&quot;&gt;concat demuxer&lt;/a&gt;と&lt;a href=&quot;https://ffmpeg.org/ffmpeg-all.html#concat-2&quot;&gt;concatプロトコルの&lt;/a&gt; 2つの選択方法を提供します（前者がデフォルトです）。デフォルト以外の &lt;code&gt;concat_protocol&lt;/code&gt; を選択するには、コマンドラインで &lt;code&gt;--concat-method concat_protocol&lt;/code&gt; を指定するか、ショートカットとして &lt;code&gt;-m 1&lt;/code&gt; （ &lt;code&gt;0&lt;/code&gt; は &lt;code&gt;concat_demuxer&lt;/code&gt; のエイリアス、 &lt;code&gt;1&lt;/code&gt; は &lt;code&gt;concat_protocol&lt;/code&gt; のエイリアス）を指定します。</target>
+        </trans-unit>
+        <trans-unit id="8d0fb24e493d7c4fa9f84dfcdfe6dde60a223897" translate="yes" xml:space="preserve">
+          <source>A recent version of &lt;a href=&quot;https://ffmpeg.org/download.html&quot;&gt;FFmpeg&lt;/a&gt;. FFmpeg 3.3.4 is known to work with caterpillar; FFmpeg 3.2.4 is known to NOT work.</source>
+          <target state="translated">&lt;a href=&quot;https://ffmpeg.org/download.html&quot;&gt;FFmpegの&lt;/a&gt;最新バージョン。FFmpeg 3.3.4はキャタピラーで動作することが知られています。FFmpeg 3.2.4は動作しないことがわかっています。</target>
+        </trans-unit>
+        <trans-unit id="a3ec2f369c5d90cfbfe2386954400172801f403d" translate="yes" xml:space="preserve">
+          <source>Batch mode</source>
+          <target state="translated">バッチモード</target>
+        </trans-unit>
+        <trans-unit id="271cca2c4fd855cf722b0c88c2ea5613d0808a4f" translate="yes" xml:space="preserve">
+          <source>Caterpillar</source>
+          <target state="translated">キャタピラー</target>
+        </trans-unit>
+        <trans-unit id="dffbb759fe70f184844e1fab5878364abe27c439" translate="yes" xml:space="preserve">
+          <source>Comments that start with &lt;code&gt;#&lt;/code&gt; are allowed in the manifest file.</source>
+          <target state="translated">マニフェストファイルでは、 &lt;code&gt;#&lt;/code&gt; で始まるコメントを使用できます。</target>
+        </trans-unit>
+        <trans-unit id="754164850f38c1ecdaf6b8ed894cb192bc36c5f4" translate="yes" xml:space="preserve">
+          <source>Configuration</source>
+          <target state="translated">構成</target>
+        </trans-unit>
+        <trans-unit id="f5cbdf6bfb51439be085b5c6b7460a7c91eabc3c" translate="yes" xml:space="preserve">
+          <source>Contents</source>
+          <target state="translated">内容</target>
+        </trans-unit>
+        <trans-unit id="057244ed6eb58b0c1760ece8f5edb950f45ac14c" translate="yes" xml:space="preserve">
+          <source>Converting a file to UTF-8, once you know its contents, is actually pretty easy. Any text editor worth its salt (and still afloat) should be able to save as UTF-8; heck, even Windows Notepad can do this (it even appears to be the default).</source>
+          <target state="translated">あなたがその内容を知っていれば、ファイルをUTF-8に変換することは、実際にはかなり簡単です。どんなテキストエディタでも、その価値のある(そしてまだ浮いている)テキストエディタは、UTF-8として保存することができるはずです;さらに、Windowsのメモ帳でさえこれを行うことができます(それもデフォルトであるように見えます)。</target>
+        </trans-unit>
+        <trans-unit id="a420abf6e89816696d0724f377c00c6447c28f0a" translate="yes" xml:space="preserve">
+          <source>Copyright</source>
+          <target state="translated">著作権</target>
+        </trans-unit>
+        <trans-unit id="235e9946e5a613d24d55a11bddc1bfd5673a6e4b" translate="yes" xml:space="preserve">
+          <source>Copyright &amp;copy; 2017 Zhiming Wang</source>
+          <target state="translated">Copyright&amp;copy;2017 Zhiming Wang</target>
+        </trans-unit>
+        <trans-unit id="0562f32dc56f5c702810cbe010068ddd38dbd69a" translate="yes" xml:space="preserve">
+          <source>Dependencies</source>
+          <target state="translated">依存関係</target>
+        </trans-unit>
+        <trans-unit id="b21342028d118423b2f401c44f06a2d0129d184a" translate="yes" xml:space="preserve">
+          <source>Each of these two methods may work better in certain cases. For instance, for &lt;a href=&quot;http://ts.snh48.com/chaoqing/8001/20171201185235-playlist.m3u8?beginTime=20171201205500&amp;amp;endTime=20171201210500&quot;&gt;this stream&lt;/a&gt;, the concat demuxer simply fails with loads of error messages like &quot;Application provided duration: 7980637472 / timestamp: 7994129672 is out of range for mov/mp4 format&quot;, whereas the concat protocol works fine. However, for &lt;a href=&quot;http://live.us.sinaimg.cn/000XDYqUjx07gRaRHSCz070d010002TZ0k01.m3u8&quot;&gt;this stream&lt;/a&gt;, the concat protocol dumps a bunch of worrisome warnings like &quot;DTS out of order&quot; or &quot;Non-monotonous DTS in output stream&quot;, whereas the concat demuxer doesn't.</source>
+          <target state="translated">これらの2つの方法はそれぞれ、特定の状況でうまく機能する場合があります。たとえば、&lt;a href=&quot;http://ts.snh48.com/chaoqing/8001/20171201185235-playlist.m3u8?beginTime=20171201205500&amp;amp;endTime=20171201210500&quot;&gt;このストリームの&lt;/a&gt;場合、concat demuxerは単に「アプリケーションが提供する期間：7980637472 /タイムスタンプ：7994129672がmov / mp4形式の範囲外です」などのエラーメッセージが表示されて失敗するのに対し、concatプロトコルは正常に機能します ただし、&lt;a href=&quot;http://live.us.sinaimg.cn/000XDYqUjx07gRaRHSCz070d010002TZ0k01.m3u8&quot;&gt;このストリームの&lt;/a&gt;場合、concatプロトコルは「DTSの順序が狂っている」や「出力ストリーム内の非単調なDTS」などの一連の気になる警告をダンプしますが、concatデマルチプレクサはそうしません。</target>
+        </trans-unit>
+        <trans-unit id="89055f01678f3efdc58ff6deebbf972636f5086c" translate="yes" xml:space="preserve">
+          <source>Efforts could be made to extract the variant streams and show them to the user, and it is even feasible to proceed with the download if only one variant stream is present. Contribution is welcome for this feature.</source>
+          <target state="translated">変形ストリームを抽出してユーザに見せるための努力がなされるかもしれませんし、 変形ストリームが 1 つしか存在しない場合にダウンロードを進めることも可能です。この機能への貢献を歓迎します。</target>
+        </trans-unit>
+        <trans-unit id="86c167c3798ec6551749a6cfc47136b350ed1bf0" translate="yes" xml:space="preserve">
+          <source>Etymology</source>
+          <target state="translated">語源</target>
+        </trans-unit>
+        <trans-unit id="16122d325d7b30c6d62f333f95e411cda148ffa7" translate="yes" xml:space="preserve">
+          <source>For application developers</source>
+          <target state="translated">アプリケーション開発者向け</target>
+        </trans-unit>
+        <trans-unit id="4e0bf4a4178cbbdad6bbcea3df1d68af1f1e06a7" translate="yes" xml:space="preserve">
+          <source>For developers and beta testers</source>
+          <target state="translated">開発者とベータテスターのために</target>
+        </trans-unit>
+        <trans-unit id="8129e3859507279a2ae7ab6a80629a24a510f363" translate="yes" xml:space="preserve">
+          <source>For end users</source>
+          <target state="translated">エンドユーザー向け</target>
+        </trans-unit>
+        <trans-unit id="6d9d86dfd50d340a45b183b980591abf14e4c94c" translate="yes" xml:space="preserve">
+          <source>Hardened HLS merger</source>
+          <target state="translated">硬化型HLS合併</target>
+        </trans-unit>
+        <trans-unit id="16b9b54af0f17fc7e7f0c2c884eb56afa8c08ac2" translate="yes" xml:space="preserve">
+          <source>If you're unfamiliar with the concept of character encodings, you may find the classic &lt;a href=&quot;https://goo.gl/kSwEYj&quot;&gt;&lt;em&gt;Joel on Software&lt;/em&gt; article on charsets and Unicode&lt;/a&gt; informative (gosh, it's fifteen years old now). On Unix-like systems, &lt;a href=&quot;https://www.freedesktop.org/wiki/Software/uchardet/&quot;&gt;&lt;code&gt;uchardet&lt;/code&gt;&lt;/a&gt; is my go-to tool for encoding detection; it's not readily packaged on Windows, and it's not officially supported and a royal pain to compile by yourself (to a non-Windows developer like me, and probably to whomever is reading this note). I don't know a good alternative on Windows, but I have a small web app that does encoding detection entirely in the browser: &lt;a href=&quot;https://chardet.tcl.sh/&quot;&gt;https://chardet.tcl.sh/&lt;/a&gt;.</source>
+          <target state="translated">文字エンコーディングの概念に慣れていない場合は、&lt;a href=&quot;https://goo.gl/kSwEYj&quot;&gt;文字セットとUnicode&lt;/a&gt;に関する古典的な&lt;em&gt;Joel on Softwareの&lt;/em&gt;記事が参考になるかもしれません（まあ、15年前のことです）。 Unixライクなシステムでは、&lt;a href=&quot;https://www.freedesktop.org/wiki/Software/uchardet/&quot;&gt; &lt;code&gt;uchardet&lt;/code&gt; &lt;/a&gt;がエンコーディング検出のための私の頼りになるツールです。これはWindowsに簡単にパッケージ化されておらず、公式にサポートされていないため、自分でコンパイルすることは非常に面倒です（私のような非Windows開発者、そしておそらくこのノートを読んでいる人には）。 Windowsでの適切な代替案はわかりませんが、ブラウザーで完全にエンコード検出を行う小さなWebアプリがあり&lt;a href=&quot;https://chardet.tcl.sh/&quot;&gt;ます&lt;/a&gt;：https : //chardet.tcl.sh/。</target>
+        </trans-unit>
+        <trans-unit id="3238b803a933d8de3830dba66dcc4fba08026bae" translate="yes" xml:space="preserve">
+          <source>In addition, if you ever have Chinese filenames in the English version of Windows &amp;mdash; gosh, they're so ugly they almost bring tears to my eyes. &lt;a href=&quot;https://gist.github.com/zmwangx/0d638102c04818f84176dc83096fb46e&quot;&gt;I had to swap the entire fucking system UI font via a registry hack&lt;/a&gt; to keep tears at bay. Last I heard there are plenty of Chinese folks working in Redmond &amp;mdash;&amp;nbsp;hell, I even have acquitances there. How they managed to tolerate this shit for so many years is beyond me.</source>
+          <target state="translated">さらに、英語版のWindowsで中国語のファイル名を使用したことがある場合、それは非常に醜く、ほとんど私の目に涙を浮かべます。涙を寄せ付けないために&lt;a href=&quot;https://gist.github.com/zmwangx/0d638102c04818f84176dc83096fb46e&quot;&gt;、レジストリハック&lt;/a&gt;を介してクソシステムUIフォント全体を交換する必要がありました。最後に、多くの中国人がレドモンドで働いていると聞きました&amp;mdash;地獄、私はそこにも無罪です。彼らが何年もの間このたわごとを容認することができた方法は私を超えています。</target>
+        </trans-unit>
+        <trans-unit id="1f3ae40a036c95b2b7c8070718882bd26382dcb2" translate="yes" xml:space="preserve">
+          <source>In normal mode, &lt;code&gt;caterpillar&lt;/code&gt; deals with only one stream. There is also a batch mode for downloading multiple streams at once. In this mode, you specify a manifest file on the command line in the place of the VOD URL, where the manifest file contains a VOD URL and a filename (or path) seperated by a tab on each line, e.g., &lt;code&gt;caterpillar manifest.txt&lt;/code&gt;, where &lt;code&gt;manifest.txt&lt;/code&gt; contains</source>
+          <target state="translated">通常モードでは、 &lt;code&gt;caterpillar&lt;/code&gt; は1つのストリームのみを扱います。複数のストリームを一度にダウンロードするためのバッチモードもあります。このモードでは、VOD URLの代わりにコマンドラインでマニフェストファイルを指定します。マニフェストファイルには、VOD URLと、各行のタブで区切られたファイル名（またはパス）が含まれています（例： &lt;code&gt;caterpillar manifest.txt&lt;/code&gt; )。、 &lt;code&gt;manifest.txt&lt;/code&gt; には</target>
+        </trans-unit>
+        <trans-unit id="c81b79df3c6448eae7c4f80428b54cd5692a17d7" translate="yes" xml:space="preserve">
+          <source>Installation</source>
+          <target state="translated">インストール</target>
+        </trans-unit>
+        <trans-unit id="176653c189403434ca952fcf261bd638c15242ac" translate="yes" xml:space="preserve">
+          <source>Most options for normal mode are also allowed in the batch mode, as are options set in the configuration file.</source>
+          <target state="translated">通常モードのほとんどのオプションは、設定ファイルで設定されているオプションと同様にバッチモードでも使用できます。</target>
+        </trans-unit>
+        <trans-unit id="f639fd19cacad8ed142f5691d5c48e2ed55ac47c" translate="yes" xml:space="preserve">
+          <source>Notes and limitations</source>
+          <target state="translated">注意事項と制限事項</target>
+        </trans-unit>
+        <trans-unit id="d0163213750cd3ab175a5b81d4367253b3373f42" translate="yes" xml:space="preserve">
+          <source>Pretty sure I can tell you a lot more if I spent more time with Microsoft products (which is close to zero at the moment).</source>
+          <target state="translated">かなり確信していますが、マイクロソフト製品にもっと時間をかけた方が(今のところゼロに近いですが)、もっと多くのことを伝えることができると思います。</target>
+        </trans-unit>
+        <trans-unit id="98dc74a74bc764ed79de20e230310c0deab6ec72" translate="yes" xml:space="preserve">
+          <source>Python 3.6 or later is required.</source>
+          <target state="translated">Python 3.6以降が必要です。</target>
+        </trans-unit>
+        <trans-unit id="9f21815761e4c50542b2a306a47595269196a2f7" translate="yes" xml:space="preserve">
+          <source>See the &lt;a href=&quot;https://github.com/zmwangx/caterpillar/wiki/Usage-Examples&quot;&gt;wiki page&lt;/a&gt; for usage examples.</source>
+          <target state="translated">使用例については、&lt;a href=&quot;https://github.com/zmwangx/caterpillar/wiki/Usage-Examples&quot;&gt;wikiページ&lt;/a&gt;を参照してください。</target>
+        </trans-unit>
+        <trans-unit id="656bc0b1c45b0f1a01ffe978f91a4da1db1657fb" translate="yes" xml:space="preserve">
+          <source>Short of calling &lt;code&gt;caterpillar.caterpillar.main&lt;/code&gt; with &lt;code&gt;sys.argv&lt;/code&gt; set appropriately, you can access caterpillar's functionality through &lt;code&gt;caterpillar.caterpillar.process_entry&lt;/code&gt; and &lt;code&gt;caterpillar.caterpillar.process_batch&lt;/code&gt;. Warning: there's no stability guarantee to these interfaces, although I won't break compatibility without a very compelling reason.</source>
+          <target state="translated">呼び出しの短い &lt;code&gt;caterpillar.caterpillar.main&lt;/code&gt; をして &lt;code&gt;sys.argv&lt;/code&gt; の適切な設定は、あなたが通過毛虫の機能にアクセスすることができ &lt;code&gt;caterpillar.caterpillar.process_entry&lt;/code&gt; と &lt;code&gt;caterpillar.caterpillar.process_batch&lt;/code&gt; 。警告：これらのインターフェースには安定性の保証はありませんが、非常に説得力のある理由なしに互換性を壊すことはありません。</target>
+        </trans-unit>
+        <trans-unit id="894434fcee345a7f128e6ac01ce90f0c9c26b704" translate="yes" xml:space="preserve">
+          <source>The filenames (or paths) are relative to the parent directory of the manifest file. The tab character is not allowed in the filenames (or paths).</source>
+          <target state="translated">ファイル名(またはパス)は、マニフェスト ファイルの親ディレクトリからの相対パスです。ファイル名 (またはパス)にはタブ文字は使用できません。</target>
+        </trans-unit>
+        <trans-unit id="4f4c45df9aba0a76541cde32643f04a33945ec86" translate="yes" xml:space="preserve">
+          <source>The syntax of the configuration file is documented in the template (automatically created for you if possible), duplicated below:</source>
+          <target state="translated">設定ファイルの構文はテンプレート(可能であれば自動的に作成されます)に記載されていますが、以下に重複します。</target>
+        </trans-unit>
+        <trans-unit id="53ff1dfa85b8ed290fa5877a03c0310461fb923c" translate="yes" xml:space="preserve">
+          <source>The word &quot;caterpillar&quot; starts with &lt;code&gt;cat(1)&lt;/code&gt;, and the body of a caterpillar is segmented.</source>
+          <target state="translated">「キャタピラー」という言葉は &lt;code&gt;cat(1)&lt;/code&gt; で始まり、キャタピラーの本体がセグメント化されています。</target>
+        </trans-unit>
+        <trans-unit id="74dd171d522ece1f1490552edaf47cd0575e2736" translate="yes" xml:space="preserve">
+          <source>This dissolved into another Microsoft rant. Oh well.</source>
+          <target state="translated">これは別のマイクロソフトの暴言に発展した。まあいいや。</target>
+        </trans-unit>
+        <trans-unit id="8990e693462993e8a62d4b6110434c4fb2a52d2d" translate="yes" xml:space="preserve">
+          <source>This note is mostly only relevant to Windows. I can't overstate how I absolutely fucking detest dealing with encodings surrounding Microsoft products. If you ever saw �'s on web pages in places where there should be quotation marks &amp;mdash; that's Latin-1, or Windows-1252, being decoded as UTF-8. That's just the tip of the iceberg. If you ever deal with CJK, or another alphabet other than Latin, oh baby, you're in for a world of pain. I can't count the number of times I opened a file or unzipped an archive from a Windows user, only to find garbage filenames or garbage content or both, and had to guess the encoding to restore the meaning. Also, meet Windows cmd or PowerShell; you have to fucking &lt;code&gt;chcp 65001&lt;/code&gt; just to work with Unicode, and even then for whatever fucking reason I still get ??? for Chinese characters in input commands &amp;ndash; oh and I use Cmder, which allows a secondary font for CJK, an infinite improvement over stock cmd or PowerShell already, but still no luck. You may also want to meet the latest and greatest Office for Mac, where you still can't import a UTF-8-encoded CSV file with non-ASCII characters (I know a workaround, for fuck's sake). Not sure about the Windows version, and not enthusiastic enough to find out. (In all fairness, Apple's HFS+ with its infamous NFD-based UTF-8-MAC encoding in filenames was hell, but other than that Mac OS X and its successors have been pretty good encoding-wise; and APFS is finally rid of the pseudo-NFD garbage &amp;mdash; it might have had its own problems at first, but I've yet to run into any. HFS+ encoding problems are peanuts compared to Microsoft's encoding problems, by the way. I'm not even bringing fonts into the mix.)</source>
+          <target state="translated">このメモは主にWindowsにのみ関連しています。私は、マイクロソフト製品を取り巻くエンコーディングを処理することを絶対に嫌うほど誇張することはできません。引用符が必要な場所のWebページでが表示された場合&amp;mdash;これは、Latin-1またはWindows-1252であり、UTF-8としてデコードされます。それは氷山の一角にすぎません。 CJK、またはラテン語以外の別のアルファベットを扱っているなら、ああ赤ちゃん、あなたは苦痛の世界にいます。 Windowsユーザーからファイルを開いた、またはアーカイブを解凍した回数を数えることはできません。ガベージファイル名またはガベージコンテンツ、あるいはその両方を見つけるためだけであり、意味を復元するためにエンコーディングを推測する必要がありました。また、Windows cmdまたはPowerShellにも対応しています。あなたは &lt;code&gt;chcp 65001&lt;/code&gt; をクソする必要がありますユニコードで作業するためだけに、そしてそれでもどんな理由でも私はまだ得るのですか？入力コマンドでの中国語文字の場合&amp;ndash;ああ、私はCmderを使用します。これにより、CJKのセカンダリフォントが使用できるようになります。また、ASCII以外の文字を含むUTF-8でエンコードされたCSVファイルをインポートできない最新かつ最高のOffice for Macに会いたい場合もあります（これは回避策を知っています）。 Windowsのバージョンがわからない、そしてそれを見つけるのに十分な熱意がない。 （公平に言えば、悪名高いNFDベースのUTF-8-MACエンコーディングをファイル名に使用したAppleのHFS +は地獄でしたが、それ以外のMac OS Xとその後継はエンコーディングに関してはかなり優れていて、APFSはついに疑似モデルを取り除きました-NFDガベージ&amp;mdash;最初はそれ自体に問題があったかもしれませんが、まだ何も実行していません。ちなみに、HFS +のエンコーディングの問題は、Microsoftのエンコーディングの問題に比べるとピーナッツです。フォントを組み合わせることすらしていません。）</target>
+        </trans-unit>
+        <trans-unit id="4a507ddc7dbce56f76234676008361d17d413ed6" translate="yes" xml:space="preserve">
+          <source>This project is licensed under &lt;a href=&quot;https://opensource.org/licenses/MIT&quot;&gt;the MIT license&lt;/a&gt;. See &lt;code&gt;COPYING&lt;/code&gt; for details.</source>
+          <target state="translated">このプロジェクトは&lt;a href=&quot;https://opensource.org/licenses/MIT&quot;&gt;MIT&lt;/a&gt;ライセンスの下でライセンスされています。詳細については、 &lt;code&gt;COPYING&lt;/code&gt; を参照してください。</target>
+        </trans-unit>
+        <trans-unit id="af8a4d070794596752eb5390591af0803216c7de" translate="yes" xml:space="preserve">
+          <source>To install from the master branch,</source>
+          <target state="translated">マスターブランチからインストールする場合</target>
+        </trans-unit>
+        <trans-unit id="a23988558c5b7ad28d9c2df36be23a4f0d0689a2" translate="yes" xml:space="preserve">
+          <source>To install,</source>
+          <target state="translated">インストールするには</target>
+        </trans-unit>
+        <trans-unit id="1c31cca1b120c743072605bf4a53404dc41e8aeb" translate="yes" xml:space="preserve">
+          <source>To save some retyping, &lt;code&gt;caterpillar&lt;/code&gt; supports the configuration of default options in an operating system and user-dependent configuration file. The path is usually &lt;code&gt;~/Library/Application Support/caterpillar/caterpillar.conf&lt;/code&gt; on macOS, &lt;code&gt;%AppData%\org.zhimingwang\caterpillar\caterpillar.conf&lt;/code&gt; on Windows, and &lt;code&gt;~/.config/caterpillar/caterpillar.conf&lt;/code&gt; on Linux. Run &lt;code&gt;caterpillar -h&lt;/code&gt; to view the actual path.</source>
+          <target state="translated">再入力を節約するために、 &lt;code&gt;caterpillar&lt;/code&gt; はオペレーティングシステムのデフォルトオプションの設定とユーザー依存の設定ファイルをサポートしています。パスは通常、macOSでは &lt;code&gt;~/Library/Application Support/caterpillar/caterpillar.conf&lt;/code&gt; &lt;code&gt;%AppData%\org.zhimingwang\caterpillar\caterpillar.conf&lt;/code&gt; 、Windowsでは％AppData％\ org.zhimingwang \ caterpillar \ &lt;code&gt;~/.config/caterpillar/caterpillar.conf&lt;/code&gt; 、Linuxでは〜/ .config / caterpillar / caterpillar.confです。 &lt;code&gt;caterpillar -h&lt;/code&gt; を実行して、実際のパスを表示します。</target>
+        </trans-unit>
+        <trans-unit id="4cbb9b00395c7d38f008b4ecee086460049c6b1d" translate="yes" xml:space="preserve">
+          <source>To update to the latest master,</source>
+          <target state="translated">最新のマスターに更新すること。</target>
+        </trans-unit>
+        <trans-unit id="cc974808cba8f796c73215f63f069bf819dcd3b7" translate="yes" xml:space="preserve">
+          <source>To upgrade to the latest version,</source>
+          <target state="translated">最新版にアップグレードするには</target>
+        </trans-unit>
+        <trans-unit id="0bb18642b70b9f8a9c12ccf39487328f306b8e19" translate="yes" xml:space="preserve">
+          <source>Usage</source>
+          <target state="translated">使用方法</target>
+        </trans-unit>
+        <trans-unit id="260bd0f03fe3da1fc08e7faefba32c62b51e679e" translate="yes" xml:space="preserve">
+          <source>Windows is more than thirty years old now, and the UN is more than seventy years old. Yet Redmond still hasn't got the memo on globalization.</source>
+          <target state="translated">Windowsは30年以上前のもので、国連は70年以上前のものです。それでもレッドモンドはまだグローバリゼーションについてのメモを取っていない。</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

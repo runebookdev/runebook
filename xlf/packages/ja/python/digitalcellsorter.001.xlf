@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="ja" datatype="htmlbody" original="https://pypi.org/project/digitalcellsorter/">
+    <body>
+      <group id="digitalcellsorter">
+        <trans-unit id="ef96291b60e09453c98a88b003798c88c0d9e27c" translate="yes" xml:space="preserve">
+          <source>*Note that the HCA BM1 data contains ~50000 sequenced cells, requiring more than 60Gb of RAM (we recommend to use High Performance Computers).
+If you want to run our example on a regular PC or a laptop, you can use a randomly chosen number of cells:</source>
+          <target state="translated">* HCA BM1データには最大50000のシーケンスセルが含まれており、60Gbを超えるRAMが必要であることに注意してください（高性能コンピューターの使用をお勧めします）。この例を通常のPCまたはラップトップで実行する場合は、ランダムに選択した数のセルを使用できます。</target>
+        </trans-unit>
+        <trans-unit id="a3d71be618eb7d0f0e6137ab6d2e137695b50942" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;Human.MitoCarta2.0.csv&lt;/code&gt;: An &lt;code&gt;csv&lt;/code&gt; spreadsheet with human mitochondrial genes, created within work
+&lt;a href=&quot;https://doi.org/10.1093/nar/gkv1003&quot;&gt;MitoCarta2.0: an updated inventory of mammalian mitochondrial proteins&lt;/a&gt;
+Sarah E. Calvo, Karl R. Clauser, Vamsi K. Mootha, &lt;em&gt;Nucleic Acids Research&lt;/em&gt;, Volume 44, Issue D1, 4 January 2016.</source>
+          <target state="translated">&lt;code&gt;Human.MitoCarta2.0.csv&lt;/code&gt; ：作業内で作成されたヒトミトコンドリア遺伝子を含む &lt;code&gt;csv&lt;/code&gt; スプレッドシート &lt;a href=&quot;https://doi.org/10.1093/nar/gkv1003&quot;&gt;MitoCarta2.0：哺乳類ミトコンドリアタンパク質の更新されたインベントリ&lt;/a&gt; Sarah E. Calvo、Karl R. Clauser、Vamsi K. Mootha、&lt;em&gt;Nucleic Acids Research&lt;/em&gt;、Volume 44、Issue D1、2016年1月4日。</target>
+        </trans-unit>
+        <trans-unit id="ba44dfe2c7707b4fb303f04c4aca287f09565e84" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;Pandas DataFrame&lt;/code&gt; where &lt;code&gt;axis 0&lt;/code&gt; is genes and &lt;code&gt;axis 1&lt;/code&gt; are cells.
+If the are batched in the data then the index of &lt;code&gt;axis 1&lt;/code&gt; should have two levels, e.g. &lt;code&gt;('batch', 'cell')&lt;/code&gt;,
+with the first level indicating patient, batch or expreriment where that cell was sequenced, and the
+second level containing cell barcodes for identification.</source>
+          <target state="translated">&lt;code&gt;Pandas DataFrame&lt;/code&gt; &lt;code&gt;axis 0&lt;/code&gt; 遺伝子であり、 &lt;code&gt;axis 1&lt;/code&gt; 細胞です。がデータでバッチ処理されている場合、 &lt;code&gt;axis 1&lt;/code&gt; のインデックスには2つのレベル、たとえば &lt;code&gt;('batch', 'cell')&lt;/code&gt; 必要です。最初のレベルは、そのセルがシーケンスされた患者、バッチ、または実験を示し、2番目のレベルは識別のためのセルバーコード。</target>
+        </trans-unit>
+        <trans-unit id="eb5f96c7aef42cf4db237ce711b03e4190475d7a" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;Pandas Series&lt;/code&gt; where index should have two levels, e.g. &lt;code&gt;('cell', 'gene')&lt;/code&gt;. If there are batched in the data
+the first level should be indicating patient, batch or expreriment where that cell was sequenced, the second level cell barcodes for
+identification and the third level gene names.</source>
+          <target state="translated">&lt;code&gt;Pandas Series&lt;/code&gt; インデックスに2つのレベルが必要なパンダシリーズ &lt;code&gt;('cell', 'gene')&lt;/code&gt; 例：（'cell'、 'gene'））。データにバッチが含まれている場合、第1レベルは、そのセルがシーケンスされた患者、バッチ、または実験、識別用の第2レベルのセルバーコード、および第3レベルの遺伝子名を示している必要があります。</target>
+        </trans-unit>
+        <trans-unit id="0e2e065dacfe243e44b5267b46881b593cb4b1de" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;getAnomalyScoresPlot()&lt;/code&gt;: plot with anomaly scores per cell</source>
+          <target state="translated">&lt;code&gt;getAnomalyScoresPlot()&lt;/code&gt; ：セルごとの異常スコアでプロット</target>
+        </trans-unit>
+        <trans-unit id="453376a1dead6ae6fcf876a2eb9df66abfb9a6b0" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;getIndividualGeneExpressionPlot()&lt;/code&gt;:  2D layout colored by individual gene's expression</source>
+          <target state="translated">&lt;code&gt;getIndividualGeneExpressionPlot()&lt;/code&gt; ：個々の遺伝子の発現によって色付けされた2Dレイアウト</target>
+        </trans-unit>
+        <trans-unit id="3af5de4f1062daa3a8d693d0e63c635b7498cb96" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;getIndividualGeneTtestPlot()&lt;/code&gt;: Produce heatmap plot of t-test p-Values calculated gene-pair-wise
+from the annotated clusters</source>
+          <target state="translated">&lt;code&gt;getIndividualGeneTtestPlot()&lt;/code&gt; ：注釈付きクラスターから遺伝子ペアごとに計算されたt検定p値のヒートマッププロットを生成します</target>
+        </trans-unit>
+        <trans-unit id="8b7207753f90c5e5a782ad4d16a1e3f88e46a2a1" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;makeHistogramNullDistributionPlot()&lt;/code&gt;: null distribution for each cluster and each cell type illustrating
+the &quot;machinery&quot; of the Digital Cell Sorter</source>
+          <target state="translated">&lt;code&gt;makeHistogramNullDistributionPlot()&lt;/code&gt; ：デジタルセルソーターの「機械」を示す各クラスターおよび各セルタイプのヌル分布</target>
+        </trans-unit>
+        <trans-unit id="8a56ace67e6976848d8ef9352466e58da4494b76" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;makeMarkerExpressionPlot()&lt;/code&gt;: a heatmap that shows all markers and their expression levels in the clusters,
+in addition this figure contains relative (%) and absolute (cell counts) cluster sizes</source>
+          <target state="translated">&lt;code&gt;makeMarkerExpressionPlot()&lt;/code&gt; ：クラスター内のすべてのマーカーとその発現レベルを示すヒートマップ。さらに、この図には相対（％）および絶対（セル数）クラスターサイズが含まれています</target>
+        </trans-unit>
+        <trans-unit id="198fed5eb28c51f4d00d9b8326bba84d8f0a470c" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;makePlotOfNewMarkers()&lt;/code&gt;: genes significantly expressed in the annotated cell types</source>
+          <target state="translated">&lt;code&gt;makePlotOfNewMarkers()&lt;/code&gt; ：注釈付きの細胞タイプで有意に発現する遺伝子</target>
+        </trans-unit>
+        <trans-unit id="080d2148621831679346524a9f88dec7eb801bbe" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;makeProjectionPlot()&lt;/code&gt;: 2D layout colored by number of unique genes expressed,
+number of counts measured, and a faraction of mitochondrial genes..</source>
+          <target state="translated">&lt;code&gt;makeProjectionPlot()&lt;/code&gt; ：発現された固有の遺伝子の数、測定されたカウントの数、およびミトコンドリア遺伝子のファラクションによって色分けされた2Dレイアウト。</target>
+        </trans-unit>
+        <trans-unit id="3867eeaf963820cba1b59322eab61afc11db07a8" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;makeQualityControlHistogramPlot()&lt;/code&gt;: Quality control histogram plots</source>
+          <target state="translated">&lt;code&gt;makeQualityControlHistogramPlot()&lt;/code&gt; ：品質管理ヒストグラムプロット</target>
+        </trans-unit>
+        <trans-unit id="14f4320dbf4d8edac7173e95d6e154d9fc75db16" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;makeSankeyDiagram()&lt;/code&gt;: river plot to compare various results</source>
+          <target state="translated">&lt;code&gt;makeSankeyDiagram()&lt;/code&gt; ：さまざまな結果を比較するための河川プロット</target>
+        </trans-unit>
+        <trans-unit id="729b6959a1af6ee728aa1fb91a35581f555c0e3a" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;makeStackedBarplot()&lt;/code&gt;: plot with fractions of various cell types</source>
+          <target state="translated">&lt;code&gt;makeStackedBarplot()&lt;/code&gt; ：さまざまなセルタイプの分数でプロット</target>
+        </trans-unit>
+        <trans-unit id="1835888608d64617a611b84fcc87b2d5e0718d3a" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;makeVotingResultsMatrixPlot()&lt;/code&gt;: z-scores of the voting results for each input cell type and each cluster,
+in addition this figure contains relative (%) and absolute (cell counts) cluster sizes</source>
+          <target state="translated">&lt;code&gt;makeVotingResultsMatrixPlot()&lt;/code&gt; ：各入力セルタイプおよび各クラスターの投票結果のzスコア。さらに、この図には、相対（％）および絶対（セル数）クラスターサイズが含まれています。</target>
+        </trans-unit>
+        <trans-unit id="97a331f81ca2d3b8781c9d4ad7f12517f5cd1a84" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;markersDCS.xlsx&lt;/code&gt;: An excel book with marker data. Rows are markers and columns are cell types.
+'1' means that the gene is a marker for that cell type, '-1' means that this gene is not expressed in this cell type, and '0' otherwise.
+This gene marker file included in the package is used by Default.
+If you use your own file it has to be prepared in the same format (including the two-line header). Note that only the first worksheet will be read,
+and its name can be arbitrary. The first column should contain gene names. The second row should contain cell types, and the first row how
+those cell types are grouped. If any of the cell types need to be skipped, have &quot;NA&quot; in the corresponding cell of the first row of that cell type.</source>
+          <target state="translated">&lt;code&gt;markersDCS.xlsx&lt;/code&gt; ：マーカーデータを含むExcelブック。行はマーカーで、列はセルタイプです。 「1」はその遺伝子がその細胞タイプのマーカーであることを意味し、「-1」はこの遺伝子がこの細胞タイプで発現されないことを意味し、「0」はそれ以外の場合です。パッケージに含まれているこの遺伝子マーカーファイルは、デフォルトで使用されます。独自のファイルを使用する場合は、同じ形式（2行のヘッダーを含む）で準備する必要があります。最初のワークシートのみが読み取られ、その名前は任意であることに注意してください。最初の列には遺伝子名が含まれている必要があります。 2番目の行にはセルタイプが含まれ、最初の行にはそれらのセルタイプがどのようにグループ化されているかが含まれている必要があります。セルタイプのいずれかをスキップする必要がある場合は、そのセルタイプの最初の行の対応するセルに「NA」を付けます。</target>
+        </trans-unit>
+        <trans-unit id="3c33d7f4c586dfc2a585a003ec55f75490221447" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;orca&lt;/code&gt; is necessary to convert Sankey diagrams to static images.
+If for any reason &lt;code&gt;orca&lt;/code&gt; is unavailable the Sankey diagrams will be saved as
+ineractive HTML figure, that can be opened in a browser (Chrome, Firefox etc.) and
+saved as static image. The visualization of &lt;code&gt;DigitalCellSorter&lt;/code&gt; are implemented
+with &lt;code&gt;matplotlib&lt;/code&gt;, allowing all the figures to be saved in either raster or
+vactor format. Since &lt;code&gt;plotly&lt;/code&gt; can convert simple &lt;code&gt;matplotlib&lt;/code&gt; figures
+(scatter, line, bar plots, but not heatmaps, splines or other complex patch objects) to
+ineractive HTML format &lt;code&gt;DigitalCellSorter&lt;/code&gt; can attempt to save any of its figures
+as HTML. This is particulatly useful with &lt;code&gt;Projection&lt;/code&gt; plots, even though the color
+bars are not rendered in HTML figures.</source>
+          <target state="translated">&lt;code&gt;orca&lt;/code&gt; サンキーダイアグラムを静止画像に変換するには、orcaが必要です。何らかの理由で &lt;code&gt;orca&lt;/code&gt; が利用できない場合、サンキーダイアグラムは非アクティブなHTMLフィギュアとして保存され、ブラウザー（Chrome、Firefoxなど）で開いて静止画像として保存できます。 &lt;code&gt;DigitalCellSorter&lt;/code&gt; の視覚化は &lt;code&gt;matplotlib&lt;/code&gt; で実装され、すべての図をラスター形式またはバクター形式で保存できます。以来 &lt;code&gt;plotly&lt;/code&gt; 簡単な変換することができます &lt;code&gt;matplotlib&lt;/code&gt; のをineractive HTML形式に数値（散布、ライン、バープロットではなく、ヒートマップ、スプラインまたは他の複雑なパッチオブジェクト） &lt;code&gt;DigitalCellSorter&lt;/code&gt; をHTMLとしての数字のいずれかを保存しようとすることができます。これは、 &lt;code&gt;Projection&lt;/code&gt; 特に役立ちます カラーバーがHTML図形でレンダリングされていない場合でも、プロットします。</target>
+        </trans-unit>
+        <trans-unit id="a97810d0d5edac109db14a3330d84c3beff30d31" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Annotating cell types&lt;/strong&gt;</source>
+          <target state="translated">&lt;strong&gt;セルタイプに注釈を付ける&lt;/strong&gt;</target>
+        </trans-unit>
+        <trans-unit id="087306918d1ceec4f59ee2079b0ffe6539a156f4" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Batch effects correction&lt;/strong&gt;</source>
+          <target state="translated">&lt;strong&gt;バッチ効果補正&lt;/strong&gt;</target>
+        </trans-unit>
+        <trans-unit id="88e5fe4bde9c1f7683e1afeaf90054ddf2b14197" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Cells anomaly score evaluation&lt;/strong&gt;</source>
+          <target state="translated">&lt;strong&gt;細胞異常スコア評価&lt;/strong&gt;</target>
+        </trans-unit>
+        <trans-unit id="cdb16029b94e168340ada0b1efc1296992908ee0" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Clustering&lt;/strong&gt;</source>
+          <target state="translated">&lt;strong&gt;クラスタリング&lt;/strong&gt;</target>
+        </trans-unit>
+        <trans-unit id="2255f28b38f1ed2e57bdb854b9468edaefff347a" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Dimensionality reduction&lt;/strong&gt;</source>
+          <target state="translated">&lt;strong&gt;次元削減&lt;/strong&gt;</target>
+        </trans-unit>
+        <trans-unit id="40a178805c8b721207464a5143dbf973085378fa" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Note:&lt;/strong&gt; We are currently preparing a manuscript describing the toolkit located this repository.
+If you want to access the package detailed in our latest publication of Polled Digital Cell Sorter
+go to &lt;a href=&quot;https://zenodo.org/record/2603265&quot;&gt;https://zenodo.org/record/2603265&lt;/a&gt; and download the package (v1.1).</source>
+          <target state="translated">&lt;strong&gt;注：&lt;/strong&gt;現在、このリポジトリにあるツールキットを説明する原稿を準備しています。Polled Digital Cell Sorterの最新の出版物に詳述されているパッケージにアクセスする場合は、&lt;a href=&quot;https://zenodo.org/record/2603265&quot;&gt;https：&lt;/a&gt; //zenodo.org/record/2603265にアクセスして、パッケージ（v1.1）をダウンロードしてください。</target>
+        </trans-unit>
+        <trans-unit id="4479d2837d53ace26daa8541fa7b8ddf9855c596" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Post-processing&lt;/strong&gt;.</source>
+          <target state="translated">&lt;strong&gt;後処理&lt;/strong&gt;。</target>
+        </trans-unit>
+        <trans-unit id="fe735a932832ae2185f42ede560c5947adeb3f26" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Pre-preprocessing&lt;/strong&gt;</source>
+          <target state="translated">&lt;strong&gt;前処理&lt;/strong&gt;</target>
+        </trans-unit>
+        <trans-unit id="03aa9ec08a696cf5305cb2cca714fc20f43c42df" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Quality control&lt;/strong&gt;</source>
+          <target state="translated">&lt;strong&gt;品質管理&lt;/strong&gt;</target>
+        </trans-unit>
+        <trans-unit id="cc3b260bcc041b375b719d7e733daa10a06a829a" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;The latest publication describing the methodology of cell types identification:&lt;/strong&gt;&lt;a href=&quot;https://doi.org/10.1186/s12859-019-2951-x&quot;&gt;Polled Digital Cell Sorter (p-DCS): Automatic identification of hematological cell types from single cell RNA-sequencing clusters&lt;/a&gt;
+Sergii Domanskyi, Anthony Szedlak, Nathaniel T Hawkins, Jiayin Wang, Giovanni Paternostro &amp;amp; Carlo Piermarocchi,
+&lt;em&gt;BMC Bioinformatics&lt;/em&gt; volume 20, Article number: 369 (&lt;strong&gt;2019&lt;/strong&gt;)</source>
+          <target state="translated">&lt;strong&gt;細胞タイプ識別の方法を説明する最新の出版物：&lt;/strong&gt;&lt;a href=&quot;https://doi.org/10.1186/s12859-019-2951-x&quot;&gt;Polled Digital Cell Sorter（p-DCS）：シングルセルRNAシーケンスクラスターからの血液細胞タイプの自動識別&lt;/a&gt; Sergii Domanskyi、Anthony Szedlak、Nathaniel T Hawkins、Jiayin Wang、Giovanni Paternostro＆ Carlo Piermarocchi、 &lt;em&gt;BMC Bioinformatics&lt;/em&gt; volume 20、記事番号：369（&lt;strong&gt;2019&lt;/strong&gt;）</target>
+        </trans-unit>
+        <trans-unit id="1193545d9be103342e02a15a5f27ba3e408481ab" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Vizualization&lt;/strong&gt;</source>
+          <target state="translated">&lt;strong&gt;Vizualization&lt;/strong&gt;</target>
+        </trans-unit>
+        <trans-unit id="6dcd4ce23d88e2ee9568ba546c007c63d9131c1b" translate="yes" xml:space="preserve">
+          <source>A</source>
+          <target state="translated">A</target>
+        </trans-unit>
+        <trans-unit id="d7baf91471f3e6150b8999669e0d62d77f09867f" translate="yes" xml:space="preserve">
+          <source>ABCB4</source>
+          <target state="translated">エービーシービーフォー</target>
+        </trans-unit>
+        <trans-unit id="07a2d445793c9bb77c83cfaee58cf8d1201c6463" translate="yes" xml:space="preserve">
+          <source>ABCB9</source>
+          <target state="translated">エービーシービー九</target>
+        </trans-unit>
+        <trans-unit id="c1c0479a2979f14c7b2eba092a7348678baa28f9" translate="yes" xml:space="preserve">
+          <source>ACAP1</source>
+          <target state="translated">ACAP1</target>
+        </trans-unit>
+        <trans-unit id="422cf358861e1166cb1229146aa3c859cc7c8bf3" translate="yes" xml:space="preserve">
+          <source>ACHE</source>
+          <target state="translated">アッシェ</target>
+        </trans-unit>
+        <trans-unit id="d8fc64da5fccc435a78d776b50430b39c489fd9f" translate="yes" xml:space="preserve">
+          <source>ACP5</source>
+          <target state="translated">ACP5</target>
+        </trans-unit>
+        <trans-unit id="1c08ac139f4cf3c72bd0a4baaf0c2e12a52d473a" translate="yes" xml:space="preserve">
+          <source>ADAM28</source>
+          <target state="translated">ADAM28</target>
+        </trans-unit>
+        <trans-unit id="63db27646dbff8af9ed4c6f876d2f330c5fe686c" translate="yes" xml:space="preserve">
+          <source>ADAMDEC1</source>
+          <target state="translated">アダムデックワン</target>
+        </trans-unit>
+        <trans-unit id="07fe5532e820867954de1f4e704ff77e99d4a7ba" translate="yes" xml:space="preserve">
+          <source>ADAMTS3</source>
+          <target state="translated">アダムス3</target>
+        </trans-unit>
+        <trans-unit id="528c1e95a5f529a1ed198949e3d99bca1af94968" translate="yes" xml:space="preserve">
+          <source>ADRB2</source>
+          <target state="translated">ADRB2</target>
+        </trans-unit>
+        <trans-unit id="2907fc9932e0d33bcd2ceab276072a21f3e02402" translate="yes" xml:space="preserve">
+          <source>AIF1</source>
+          <target state="translated">エーアイエフワン</target>
+        </trans-unit>
+        <trans-unit id="722b315959008f7e4523c2806a69e0a49f4e01eb" translate="yes" xml:space="preserve">
+          <source>AIM2</source>
+          <target state="translated">エイムツー</target>
+        </trans-unit>
+        <trans-unit id="7767505275feca0212a838f0c3d16df6908c1e35" translate="yes" xml:space="preserve">
+          <source>ALOX15</source>
+          <target state="translated">アロックス15</target>
+        </trans-unit>
+        <trans-unit id="ce23cbdfbb3de5f1d9d511ed6b62795cb17478d5" translate="yes" xml:space="preserve">
+          <source>ALOX5</source>
+          <target state="translated">アロックス5</target>
+        </trans-unit>
+        <trans-unit id="3be94f31863160d0a29dd40785017379d92a04f8" translate="yes" xml:space="preserve">
+          <source>AMPD1</source>
+          <target state="translated">エーエムピーディーワン</target>
+        </trans-unit>
+        <trans-unit id="a926807873d6bb72d6c2774fe2e7962d5d7298ad" translate="yes" xml:space="preserve">
+          <source>ANGPT4</source>
+          <target state="translated">ANGPT4</target>
+        </trans-unit>
+        <trans-unit id="a9cbc58fd80e219b51b464a599b59469b0775293" translate="yes" xml:space="preserve">
+          <source>All the output files are saved in &lt;code&gt;output&lt;/code&gt; directory inside the directory where the &lt;code&gt;demo.py&lt;/code&gt; script is.
+If you specify any other directory, the results will be generetaed in it.
+If you do not provide any directory the results will appear in the root where the script was executed.</source>
+          <target state="translated">すべての出力ファイルは、 &lt;code&gt;demo.py&lt;/code&gt; スクリプトがあるディレクトリ内の &lt;code&gt;output&lt;/code&gt; ディレクトリに保存されます。他のディレクトリを指定すると、結果がそのディレクトリに生成されます。ディレクトリを指定しない場合、結果はスクリプトが実行されたルートに表示されます。</target>
+        </trans-unit>
+        <trans-unit id="070a4780c70bc84915ed7111a6ef5a5564d7ecb4" translate="yes" xml:space="preserve">
+          <source>Alternatively, you can clone and install this module directly from GitHub using:</source>
+          <target state="translated">あるいは、以下の方法で GitHub から直接このモジュールをクローンしてインストールすることもできます。</target>
+        </trans-unit>
+        <trans-unit id="9025af9e0841ad726bc25eac31d9436d8308be41" translate="yes" xml:space="preserve">
+          <source>Any of the data types outlined above need to be prepared/validated with a function &lt;code&gt;prepare()&lt;/code&gt;.
+Let us demonstrate this on the input of type 1:</source>
+          <target state="translated">上記で概説したデータ型はすべて、関数 &lt;code&gt;prepare()&lt;/code&gt; を使用して準備/検証する必要があります。タイプ1の入力でこれを示しましょう。</target>
+        </trans-unit>
+        <trans-unit id="ae4f281df5a5d0ff3cad6371f76d5c29b6d953ec" translate="yes" xml:space="preserve">
+          <source>B</source>
+          <target state="translated">B</target>
+        </trans-unit>
+        <trans-unit id="304d9eb2541c1d7ecdbcf81f932fd947b10420eb" translate="yes" xml:space="preserve">
+          <source>B cells</source>
+          <target state="translated">B細胞</target>
+        </trans-unit>
+        <trans-unit id="3f9cb8194b93a919e0d8a75e2c8b1df867667132" translate="yes" xml:space="preserve">
+          <source>B cells memory</source>
+          <target state="translated">B細胞の記憶</target>
+        </trans-unit>
+        <trans-unit id="eb6b64d8fa69e452dfde1af0db785dcbdf51000d" translate="yes" xml:space="preserve">
+          <source>B cells naive</source>
+          <target state="translated">B細胞がナイーブ</target>
+        </trans-unit>
+        <trans-unit id="32096c2e0eff33d844ee6d675407ace18289357d" translate="yes" xml:space="preserve">
+          <source>C</source>
+          <target state="translated">C</target>
+        </trans-unit>
+        <trans-unit id="28c27031fe7162d732a1c2e209a40bbfcb5fef90" translate="yes" xml:space="preserve">
+          <source>C1</source>
+          <target state="translated">C1</target>
+        </trans-unit>
+        <trans-unit id="cb7d29f43f4a81ff1f3a1202c80293337faa7a0a" translate="yes" xml:space="preserve">
+          <source>C2</source>
+          <target state="translated">C2</target>
+        </trans-unit>
+        <trans-unit id="0371438f82b01efb31e37cd12a4a6b6c819b0e71" translate="yes" xml:space="preserve">
+          <source>C3</source>
+          <target state="translated">C3</target>
+        </trans-unit>
+        <trans-unit id="aaa025b3826509827b773a79dde61238b7846c09" translate="yes" xml:space="preserve">
+          <source>C4</source>
+          <target state="translated">C4</target>
+        </trans-unit>
+        <trans-unit id="54fd3fd25edcacb46c8c8f0d4ad6562e464300de" translate="yes" xml:space="preserve">
+          <source>Calculate and plot anomaly scores for an arbitrary cell type or cluster:</source>
+          <target state="translated">任意のセルタイプまたはクラスタのアノマリースコアを計算し、プロットします。</target>
+        </trans-unit>
+        <trans-unit id="46ceb2cb2f4fbc5d65be87562a6cb75d3d1fd46b" translate="yes" xml:space="preserve">
+          <source>Cell sub-types</source>
+          <target state="translated">セルのサブタイプ</target>
+        </trans-unit>
+        <trans-unit id="c3e861e23ae11d6a4c0b58e4035f67cd519c57a8" translate="yes" xml:space="preserve">
+          <source>Create an instance of class &lt;code&gt;DigitalCellSorter&lt;/code&gt;. Here, for simplicity, we use Default parameter values:</source>
+          <target state="translated">クラス &lt;code&gt;DigitalCellSorter&lt;/code&gt; のインスタンスを作成します。ここでは、簡単にするために、デフォルトのパラメータ値を使用します。</target>
+        </trans-unit>
+        <trans-unit id="50c9e8d5fc98727b4bbc93cf5d64a68db647f04f" translate="yes" xml:space="preserve">
+          <source>D</source>
+          <target state="translated">D</target>
+        </trans-unit>
+        <trans-unit id="e52c854d5631eec7468ba4727b4c77eb745f2965" translate="yes" xml:space="preserve">
+          <source>Demo</source>
+          <target state="translated">デモ</target>
+        </trans-unit>
+        <trans-unit id="02aa75e4ea776c6f56e7544985006e709a74dd60" translate="yes" xml:space="preserve">
+          <source>Digital Cell Sorter</source>
+          <target state="translated">デジタルセルソーター</target>
+        </trans-unit>
+        <trans-unit id="2daf86e4a265aa8b90b04f5579f1b77bf1d09115" translate="yes" xml:space="preserve">
+          <source>Digital Cell Sorter (DCS): a single cell RNA-seq analysis toolkit for clustering, cell type identification, and anomaly detection.</source>
+          <target state="translated">Digital Cell Sorter (DCS):クラスタリング、細胞型同定、異常検出のためのシングルセルRNA-seq解析ツールキット。</target>
+        </trans-unit>
+        <trans-unit id="c7b047de87b2b145039af8151fa1c55f14d9f686" translate="yes" xml:space="preserve">
+          <source>During the initialization a number of parameters can be specified. For detailed list see documentation.
+Many of these parameters are transfered to DCS attributes thus can be modified after initialization using, e.g.:</source>
+          <target state="translated">初期化の間に、多くのパラメータを指定することができます。詳細なリストはドキュメントを参照してください。これらのパラメータの多くはDCS属性に転送されるため、初期化後に例えば</target>
+        </trans-unit>
+        <trans-unit id="e0184adedf913b076626646d3f52c3b49c39ad6d" translate="yes" xml:space="preserve">
+          <source>E</source>
+          <target state="translated">E</target>
+        </trans-unit>
+        <trans-unit id="739b0ebf5ca06f0a198e3fb7c6f145230c6b5080" translate="yes" xml:space="preserve">
+          <source>Effect of batch correction demostrated on combining BM1, BM2, BM3 and processing the data jointly without (left) and with (right) batch correction option:</source>
+          <target state="translated">BM1,BM2,BM3を組み合わせて、バッチ補正を行わない場合(左)と行わない場合(右)のバッチ補正の効果をデモした。</target>
+        </trans-unit>
+        <trans-unit id="4ffa5a5d85d4748d310a1e2b7685a7159c5e7935" translate="yes" xml:space="preserve">
+          <source>Environment setup</source>
+          <target state="translated">環境設定</target>
+        </trans-unit>
+        <trans-unit id="64bad63677e6a4ef1030b5c6a4b2650644e8e869" translate="yes" xml:space="preserve">
+          <source>Example walkthrough of demo.py script</source>
+          <target state="translated">demo.pyスクリプトのウォークスルー例</target>
+        </trans-unit>
+        <trans-unit id="c63737abd7347a7ae582cb9fbdf37d6c0e5b251e" translate="yes" xml:space="preserve">
+          <source>Example:</source>
+          <target state="translated">例。</target>
+        </trans-unit>
+        <trans-unit id="fb3447b632f6a431215776dcf254a01001a40c4f" translate="yes" xml:space="preserve">
+          <source>Examples:</source>
+          <target state="translated">例。</target>
+        </trans-unit>
+        <trans-unit id="e69f20e9f683920d3fb4329abd951e878b1f9372" translate="yes" xml:space="preserve">
+          <source>F</source>
+          <target state="translated">F</target>
+        </trans-unit>
+        <trans-unit id="074121ef7501b5115e777f46bea976b1637840f9" translate="yes" xml:space="preserve">
+          <source>For a quick-start demo with a dataset of ~5k PBMCs execute
+in the terminal and follow prompts:</source>
+          <target state="translated">5k 個の PBMC のデータセットを使用したクイックスタートのデモについては、ターミナルで実行してプロンプトに従ってください。</target>
+        </trans-unit>
+        <trans-unit id="fcbc41c300434dde7e86f4a8487448b0b3cdab99" translate="yes" xml:space="preserve">
+          <source>Function &lt;code&gt;visualize()&lt;/code&gt; will produce most of the necessary files for post-analysis of the data.</source>
+          <target state="translated">関数 &lt;code&gt;visualize()&lt;/code&gt; は、データの事後分析に必要なファイルのほとんどを生成します。</target>
+        </trans-unit>
+        <trans-unit id="79fde2ac8490ff2b99ac9c9890e046fdff6e3659" translate="yes" xml:space="preserve">
+          <source>Functionality</source>
+          <target state="translated">機能性</target>
+        </trans-unit>
+        <trans-unit id="a36a6718f54524d846894fb04b5b885b4e43e63b" translate="yes" xml:space="preserve">
+          <source>G</source>
+          <target state="translated">G</target>
+        </trans-unit>
+        <trans-unit id="93191ceea4c8a7448d5d6e16ed257d9a6c0d5c70" translate="yes" xml:space="preserve">
+          <source>G1</source>
+          <target state="translated">G1</target>
+        </trans-unit>
+        <trans-unit id="4d6d0dc11bc8d601eaf6d40abd68092fc389c8f6" translate="yes" xml:space="preserve">
+          <source>G2</source>
+          <target state="translated">G2</target>
+        </trans-unit>
+        <trans-unit id="a1650ba68fd434ff4571a3ae6e0e946daaa36507" translate="yes" xml:space="preserve">
+          <source>G3</source>
+          <target state="translated">G3</target>
+        </trans-unit>
+        <trans-unit id="57c24c56c83113e722078337cfe2d513db43c570" translate="yes" xml:space="preserve">
+          <source>G4</source>
+          <target state="translated">G4</target>
+        </trans-unit>
+        <trans-unit id="bd4cca2ed2f2eb73a6877ac608d1b670146d7528" translate="yes" xml:space="preserve">
+          <source>Gene Expression Data Format</source>
+          <target state="translated">遺伝子発現データフォーマット</target>
+        </trans-unit>
+        <trans-unit id="010b85ad56b34c34c7c2a3b2436c740e30428ed5" translate="yes" xml:space="preserve">
+          <source>Getting Started</source>
+          <target state="translated">はじめに</target>
+        </trans-unit>
+        <trans-unit id="7cf184f4c67ad58283ecb19349720b0cae756829" translate="yes" xml:space="preserve">
+          <source>H</source>
+          <target state="translated">H</target>
+        </trans-unit>
+        <trans-unit id="ca73ab65568cd125c2d27a22bbd9e863c10b675d" translate="yes" xml:space="preserve">
+          <source>I</source>
+          <target state="translated">I</target>
+        </trans-unit>
+        <trans-unit id="49a5d289010bb4aa6a5364f0d3607df44d48d652" translate="yes" xml:space="preserve">
+          <source>In the demo, folder &lt;code&gt;data&lt;/code&gt; is intentionally left empty.
+The data file (cc95ff89-2e68-4a08-a234-480eca21ce79.homo_sapiens.mtx.zip) is about 2.4Gb in size and
+will be downloaded with the &lt;code&gt;demo.py&lt;/code&gt; script.</source>
+          <target state="translated">デモでは、フォルダー &lt;code&gt;data&lt;/code&gt; は意図的に空のままになっています。データファイル（cc95ff89-2e68-4a08-a234-480eca21ce79.homo_sapiens.mtx.zip）のサイズは約2.4Gbで、 &lt;code&gt;demo.py&lt;/code&gt; スクリプトとともにダウンロードされます。</target>
+        </trans-unit>
+        <trans-unit id="5807a695cd030ea7de132133f154fbf3752b9eb6" translate="yes" xml:space="preserve">
+          <source>Install &lt;code&gt;DigitalCellSorter&lt;/code&gt; with &lt;code&gt;pip&lt;/code&gt;. Most of the dependencies packages
+are automatically installed with installation of the  latest release
+of &lt;code&gt;DigitalCellSorter&lt;/code&gt;:</source>
+          <target state="translated">&lt;code&gt;pip&lt;/code&gt; を使用して &lt;code&gt;DigitalCellSorter&lt;/code&gt; をインストールします。ほとんどの依存関係パッケージは、 &lt;code&gt;DigitalCellSorter&lt;/code&gt; の最新リリースのインストールで自動的にインストールされます。</target>
+        </trans-unit>
+        <trans-unit id="deff9258a7dd1aa3dad317a3b65b41458ac88150" translate="yes" xml:space="preserve">
+          <source>Installation of the DigitalCellSorter package</source>
+          <target state="translated">DigitalCellSorterパッケージのインストール</target>
+        </trans-unit>
+        <trans-unit id="7e0e68a4dcdb77bb6edfc329112ea9dca7e7b7ea" translate="yes" xml:space="preserve">
+          <source>Interactive HTML figures</source>
+          <target state="translated">インタラクティブなHTML図形</target>
+        </trans-unit>
+        <trans-unit id="be418d51aebd9be6ebc671261ddbbce59a8edd00" translate="yes" xml:space="preserve">
+          <source>It is highly recommended to install Anaconda.
+Installers are available at &lt;a href=&quot;https://www.anaconda.com/distribution/&quot;&gt;https://www.anaconda.com/distribution/&lt;/a&gt;
+Whether you already had Anaconda installed or just installed it we recommend to
+update all packages by running:</source>
+          <target state="translated">Anacondaをインストールすることを強くお勧めします。インストーラーは&lt;a href=&quot;https://www.anaconda.com/distribution/&quot;&gt;https://www.anaconda.com/distribution/で&lt;/a&gt;入手できます 。Anacondaを既にインストールしているか、インストールしたばかりかに関わらず、以下を実行してすべてのパッケージを更新することをお勧めします。</target>
+        </trans-unit>
+        <trans-unit id="58668e7669fd564d99db5d581fcdb6a5618440b5" translate="yes" xml:space="preserve">
+          <source>J</source>
+          <target state="translated">J</target>
+        </trans-unit>
+        <trans-unit id="a7ee38bb7be4fc44198cb2685d9601dcf2b9f569" translate="yes" xml:space="preserve">
+          <source>K</source>
+          <target state="translated">K</target>
+        </trans-unit>
+        <trans-unit id="d160e0986aca4714714a16f29ec605af90be704d" translate="yes" xml:space="preserve">
+          <source>L</source>
+          <target state="translated">L</target>
+        </trans-unit>
+        <trans-unit id="37b6e75b658e8e47ec54aff16cfccc934202097c" translate="yes" xml:space="preserve">
+          <source>Loading the package</source>
+          <target state="translated">パッケージの読み込み</target>
+        </trans-unit>
+        <trans-unit id="c63ae6dd4fc9f9dda66970e827d13f7c73fe841c" translate="yes" xml:space="preserve">
+          <source>M</source>
+          <target state="translated">M</target>
+        </trans-unit>
+        <trans-unit id="d98e2d6996e08d2c7dd4efe065186531e2a2cda8" translate="yes" xml:space="preserve">
+          <source>Main cell types</source>
+          <target state="translated">主な細胞の種類</target>
+        </trans-unit>
+        <trans-unit id="4290a8030a7f070dc4f4687e2e974924ab63761b" translate="yes" xml:space="preserve">
+          <source>Marker</source>
+          <target state="translated">マーカー</target>
+        </trans-unit>
+        <trans-unit id="206985d76c3df5d678374c52878bbad62c6b1a57" translate="yes" xml:space="preserve">
+          <source>NK cells</source>
+          <target state="translated">NK細胞</target>
+        </trans-unit>
+        <trans-unit id="9cf49938ff662de49d3d0a31cff2a438cb941267" translate="yes" xml:space="preserve">
+          <source>NK cells activated</source>
+          <target state="translated">NK細胞の活性化</target>
+        </trans-unit>
+        <trans-unit id="bfd32d1299af4c9bebfdef5c2455aa628cf2ae0a" translate="yes" xml:space="preserve">
+          <source>NK cells resting</source>
+          <target state="translated">NK細胞の安静時</target>
+        </trans-unit>
+        <trans-unit id="394948ffe48a970382744b8b5d5daf00ac3e4065" translate="yes" xml:space="preserve">
+          <source>Note, if neither &lt;code&gt;fitsne&lt;/code&gt;, &lt;code&gt;umap&lt;/code&gt; nor &lt;code&gt;phate&lt;/code&gt; are installed
+&lt;code&gt;DigitalCellSorter&lt;/code&gt; defaults to PCA two largest principal components for
+visualization layout.</source>
+          <target state="translated">注、どちらの場合 &lt;code&gt;fitsne&lt;/code&gt; 、 &lt;code&gt;umap&lt;/code&gt; も &lt;code&gt;phate&lt;/code&gt; インストールされている &lt;code&gt;DigitalCellSorter&lt;/code&gt; のPCAに可視化レイアウトのための2つの最大の主要なコンポーネントをデフォルトを。</target>
+        </trans-unit>
+        <trans-unit id="93dd8d12db617ebb2239346c0480f5367d172eaa" translate="yes" xml:space="preserve">
+          <source>Note: use of conda environments (for instance DCS exemplified above)
+with a high performance computer
+such as MSU HPCC in a batch job, i.e. not on a development node but
+submitted to a SLURM queue, requires the following steps. In the slurm
+script, before line calling your python script,
+add &lt;code&gt;conda deactivate&lt;/code&gt; to deactivate base environnment
+and &lt;code&gt;conda activate DCS&lt;/code&gt;. After calling the script
+do &lt;code&gt;conda deactivate&lt;/code&gt;. The example testing script is shown below.</source>
+          <target state="translated">注：バッチジョブで、つまり開発ノードではなくSLURMキューに送信されるMSU HPCCなどの高性能コンピューターでconda環境（たとえば、上記のDCS）を使用するには、次の手順が必要です。SLURMスクリプトでは、ラインがあなたのPythonスクリプトを呼び出す前に、追加 &lt;code&gt;conda deactivate&lt;/code&gt; 非アクティブ化ベースenvironnmentへと &lt;code&gt;conda activate DCS&lt;/code&gt; 。スクリプトを呼び出した後、 &lt;code&gt;conda deactivate&lt;/code&gt; 実行します。テストスクリプトの例を以下に示します。</target>
+        </trans-unit>
+        <trans-unit id="b23574d18d268015a33c48206d87369aef48b872" translate="yes" xml:space="preserve">
+          <source>Now, in your new environment, the packages can be installed or updated without affecting
+your other environments. Note, environments use is not necessary, and the
+default &lt;code&gt;(base)&lt;/code&gt; is used if you dont set up any other. For more information see
+&lt;a href=&quot;https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html&quot;&gt;https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html&lt;/a&gt;</source>
+          <target state="translated">これで、新しい環境で、他の環境に影響を与えることなく、パッケージをインストールまたは更新できます。環境を使用する必要はなく、他に設定しない場合はデフォルト &lt;code&gt;(base)&lt;/code&gt; が使用されることに注意してください。詳細については、&lt;a href=&quot;https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html&quot;&gt;https：//docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.htmlを&lt;/a&gt;参照して ください。</target>
+        </trans-unit>
+        <trans-unit id="459722ad54b9a29b4d89b52237c7becce20df049" translate="yes" xml:space="preserve">
+          <source>On Windows the FI-tSNE wrapper and executable are already
+included with &lt;code&gt;DigitalCellSorter&lt;/code&gt;.</source>
+          <target state="translated">Windowsでは、FI-tSNEラッパーと実行可能ファイルはすでに &lt;code&gt;DigitalCellSorter&lt;/code&gt; に含まれています。</target>
+        </trans-unit>
+        <trans-unit id="8752b1d23d8215fc951065f58a2bf5471e4062cf" translate="yes" xml:space="preserve">
+          <source>On macOS Mojave C++ compiler has to be specified explicitly:</source>
+          <target state="translated">macOSのMojaveでは、C++コンパイラを明示的に指定する必要があります。</target>
+        </trans-unit>
+        <trans-unit id="206ffa81fe3db6b2c58be9a96451647df1e9fb05" translate="yes" xml:space="preserve">
+          <source>Other Data</source>
+          <target state="translated">その他のデータ</target>
+        </trans-unit>
+        <trans-unit id="0f332e1c7b589a8494a32f1f9bba6b16229ba0f6" translate="yes" xml:space="preserve">
+          <source>Other layouts</source>
+          <target state="translated">その他のレイアウト</target>
+        </trans-unit>
+        <trans-unit id="8a8cf753f7d864db36e717fffa0ef270bf0e7f7a" translate="yes" xml:space="preserve">
+          <source>Our software uses packages &lt;code&gt;numpy&lt;/code&gt;, &lt;code&gt;pandas&lt;/code&gt;, &lt;code&gt;matplotlib&lt;/code&gt;,
+&lt;code&gt;scikit-learn&lt;/code&gt;, &lt;code&gt;scipy&lt;/code&gt;, &lt;code&gt;mygene&lt;/code&gt;, &lt;code&gt;fftw&lt;/code&gt;,
+&lt;code&gt;fitsne&lt;/code&gt;, &lt;code&gt;adjustText&lt;/code&gt; and a few other standard Python packages.
+Some of the packages used in &lt;code&gt;DigitalCellSorter&lt;/code&gt; are not installed by default,
+and should by installed by separately if using certain functionality with
+Digital Cell Sorter. For example, for network-based clustering
+install packages &lt;code&gt;pynndescent&lt;/code&gt;, &lt;code&gt;networkx&lt;/code&gt;, &lt;code&gt;python-louvain&lt;/code&gt;.
+Other packages that have to be installed separately are &lt;code&gt;fitsne&lt;/code&gt;, &lt;code&gt;umap&lt;/code&gt;,
+&lt;code&gt;phate&lt;/code&gt; and &lt;code&gt;orca&lt;/code&gt;. The detailed instructions are below.</source>
+          <target state="translated">当社のソフトウェアが使用するパッケージの &lt;code&gt;numpy&lt;/code&gt; の、 &lt;code&gt;pandas&lt;/code&gt; 、 &lt;code&gt;matplotlib&lt;/code&gt; の、 &lt;code&gt;scikit-learn&lt;/code&gt; 、 &lt;code&gt;scipy&lt;/code&gt; のダウンロード、 &lt;code&gt;mygene&lt;/code&gt; 、 &lt;code&gt;fftw&lt;/code&gt; 、 &lt;code&gt;fitsne&lt;/code&gt; 、 &lt;code&gt;adjustText&lt;/code&gt; およびその他のいくつかの標準のPythonパッケージ。 &lt;code&gt;DigitalCellSorter&lt;/code&gt; で使用されるパッケージの一部はデフォルトではインストールされないため、Digital Cell Sorterで特定の機能を使用する場合は、個別にインストールする必要があります。たとえば、ネットワークベースのクラスタリングの場合、パッケージ &lt;code&gt;pynndescent&lt;/code&gt; 、 &lt;code&gt;networkx&lt;/code&gt; 、 &lt;code&gt;python-louvain&lt;/code&gt; をインストールします。個別にインストールする必要がある他のパッケージは &lt;code&gt;fitsne&lt;/code&gt; です、 &lt;code&gt;umap&lt;/code&gt; 、 &lt;code&gt;phate&lt;/code&gt; および &lt;code&gt;orca&lt;/code&gt; 。詳細な手順は以下のとおりです。</target>
+        </trans-unit>
+        <trans-unit id="4bed336194a9a5c86b6a734f03b3570d2aae1a68" translate="yes" xml:space="preserve">
+          <source>Output</source>
+          <target state="translated">出力</target>
+        </trans-unit>
+        <trans-unit id="8a528519bdaba69c0bdc57fdcdf7b370f2e098f2" translate="yes" xml:space="preserve">
+          <source>Overall</source>
+          <target state="translated">全体的に</target>
+        </trans-unit>
+        <trans-unit id="4f8440bc9089c85b9cc5e1a58dd01a2c6d3157b5" translate="yes" xml:space="preserve">
+          <source>Plasma cells</source>
+          <target state="translated">血漿細胞</target>
+        </trans-unit>
+        <trans-unit id="eed036e414a34a0c245858652e6d88f14c3faefb" translate="yes" xml:space="preserve">
+          <source>Prerequisites</source>
+          <target state="translated">前提条件</target>
+        </trans-unit>
+        <trans-unit id="60677da68e35a552973cab867d19b3f5db60e133" translate="yes" xml:space="preserve">
+          <source>Previously the HCA preview data was consolidated in file &lt;code&gt;ica_bone_marrow_h5.h5&lt;/code&gt; and downloadable</source>
+          <target state="translated">以前は、HCAプレビューデータはファイル &lt;code&gt;ica_bone_marrow_h5.h5&lt;/code&gt; に統合され、ダウンロード可能でした</target>
+        </trans-unit>
+        <trans-unit id="a38db0349c0422da81a5826e53f98d3dcb3ac353" translate="yes" xml:space="preserve">
+          <source>SLURM script example:</source>
+          <target state="translated">SLURMスクリプトの例。</target>
+        </trans-unit>
+        <trans-unit id="702f0e84d23c8ea903bf3f1a61412141fe0edfdb" translate="yes" xml:space="preserve">
+          <source>See
+&lt;a href=&quot;http://htmlpreview.github.io/?https://github.com/sdomanskyi/DigitalCellSorter/blob/master/docs/examples/dataName_energy_landscape_PC1_vs_PC0.html&quot;&gt;interactive Hopfield landscape figure&lt;/a&gt;
+and
+&lt;a href=&quot;http://htmlpreview.github.io/?https://github.com/sdomanskyi/DigitalCellSorter/blob/master/docs/examples/PanglaoDB_Sankey_SRS3296611.html&quot;&gt;interactive Sankey diagram figure&lt;/a&gt;
+in a browser.</source>
+          <target state="translated">ブラウザで&lt;a href=&quot;http://htmlpreview.github.io/?https://github.com/sdomanskyi/DigitalCellSorter/blob/master/docs/examples/dataName_energy_landscape_PC1_vs_PC0.html&quot;&gt;インタラクティブなホップフィールドの風景図&lt;/a&gt; と &lt;a href=&quot;http://htmlpreview.github.io/?https://github.com/sdomanskyi/DigitalCellSorter/blob/master/docs/examples/PanglaoDB_Sankey_SRS3296611.html&quot;&gt;インタラクティブなサンキーダイアグラムの図を&lt;/a&gt;参照してください 。</target>
+        </trans-unit>
+        <trans-unit id="2d1471846377c1e683b6266ec51d867a5c483c22" translate="yes" xml:space="preserve">
+          <source>See details of the script &lt;code&gt;demo.py&lt;/code&gt; at:</source>
+          <target state="translated">スクリプト &lt;code&gt;demo.py&lt;/code&gt; の詳細については、次を参照してください。</target>
+        </trans-unit>
+        <trans-unit id="068992c9a436b99d0693aa7d8f3236dd7719e939" translate="yes" xml:space="preserve">
+          <source>See examples of the visualization tools below.</source>
+          <target state="translated">以下の可視化ツールの例をご覧ください。</target>
+        </trans-unit>
+        <trans-unit id="5bc620cd5643d46d511151566df0dbeb4a554676" translate="yes" xml:space="preserve">
+          <source>Similarly, one can create a local copy of this project for development purposes, and
+install the package from the cloned directory:</source>
+          <target state="translated">同様に、開発目的でこのプロジェクトのローカルコピーを作成し、クローンされたディレクトリからパッケージをインストールすることもできます。</target>
+        </trans-unit>
+        <trans-unit id="09f56fec61f6e6019916f3b2a860c0d7a2c9249f" translate="yes" xml:space="preserve">
+          <source>Spreadsheet of comma-separated values &lt;code&gt;csv&lt;/code&gt; containing condensed matrix in a form &lt;code&gt;('cell', 'gene', 'expr')&lt;/code&gt;.
+If there are batches in the data the matrix has to be of the form &lt;code&gt;('batch', 'cell', 'gene', 'expr')&lt;/code&gt;. Columns order can be arbitrary.</source>
+          <target state="translated">フォーム &lt;code&gt;('cell', 'gene', 'expr')&lt;/code&gt; 凝縮されたマトリックスを含むコンマ区切り値 &lt;code&gt;csv&lt;/code&gt; のスプレッドシート。データにバッチがある場合、マトリックスは &lt;code&gt;('batch', 'cell', 'gene', 'expr')&lt;/code&gt; の形式である必要があります。列の順序は任意です。</target>
+        </trans-unit>
+        <trans-unit id="ce5fb1838e9effcc25eb013cd46a644ee18692d4" translate="yes" xml:space="preserve">
+          <source>Spreadsheet of comma-separated values &lt;code&gt;csv&lt;/code&gt; where rows are genes, columns are cells with gene expression counts.
+If there are batches in the data the spreadsheet the first row should be &lt;code&gt;'batch'&lt;/code&gt; and the second &lt;code&gt;'cell'&lt;/code&gt;.</source>
+          <target state="translated">カンマ区切り値のスプレッドシート &lt;code&gt;csv&lt;/code&gt; 。行は遺伝子、列は遺伝子発現数のセルです。データにバッチがある場合、スプレッドシートの最初の行は &lt;code&gt;'batch'&lt;/code&gt; 、2番目 &lt;code&gt;'cell'&lt;/code&gt; 行は「セル」である必要があります。</target>
+        </trans-unit>
+        <trans-unit id="df0b73b3acb35f22c2be2492de43e17229e08ce3" translate="yes" xml:space="preserve">
+          <source>T cells</source>
+          <target state="translated">T細胞</target>
+        </trans-unit>
+        <trans-unit id="e71a76449570cf117079689d2f2b30fb4c3e24af" translate="yes" xml:space="preserve">
+          <source>T cells CD4 memory activated</source>
+          <target state="translated">T細胞CD4メモリー活性化</target>
+        </trans-unit>
+        <trans-unit id="a9472b768a337656c906083d683554e266cd5576" translate="yes" xml:space="preserve">
+          <source>T cells CD4 memory resting</source>
+          <target state="translated">T細胞 CD4メモリー 安静時</target>
+        </trans-unit>
+        <trans-unit id="6f1ea454cb06bdba44c4881fdf883425b34b5078" translate="yes" xml:space="preserve">
+          <source>T cells CD4 naive</source>
+          <target state="translated">T細胞 CD4ナイーブ</target>
+        </trans-unit>
+        <trans-unit id="ba63c787cef9d9e9bb0c192d4dd67a9586736e08" translate="yes" xml:space="preserve">
+          <source>T cells CD8</source>
+          <target state="translated">T細胞CD8</target>
+        </trans-unit>
+        <trans-unit id="76f58966fece7da0cd87e71809fd696cb9b0be3f" translate="yes" xml:space="preserve">
+          <source>T cells follicular helper</source>
+          <target state="translated">T細胞濾胞ヘルパー</target>
+        </trans-unit>
+        <trans-unit id="59c888fc726a2bf95a6872fec2dead60874e4f95" translate="yes" xml:space="preserve">
+          <source>T cells gamma delta</source>
+          <target state="translated">T細胞ガンマデルタ</target>
+        </trans-unit>
+        <trans-unit id="070eb2b9c5380b587ee3b93a4edd6c9097aa3986" translate="yes" xml:space="preserve">
+          <source>T cells regulatory (Tregs)</source>
+          <target state="translated">調節性T細胞(Tregs</target>
+        </trans-unit>
+        <trans-unit id="59f4c31771cf800099bc5a2fbaf138bf31af06a7" translate="yes" xml:space="preserve">
+          <source>The documentation is available at &lt;a href=&quot;https://digital-cell-sorter.readthedocs.io/&quot;&gt;https://digital-cell-sorter.readthedocs.io/&lt;/a&gt;.</source>
+          <target state="translated">ドキュメントは&lt;a href=&quot;https://digital-cell-sorter.readthedocs.io/&quot;&gt;https://digital-cell-sorter.readthedocs.io/&lt;/a&gt;で入手できます。</target>
+        </trans-unit>
+        <trans-unit id="677d2cef811e9ee5cc02dc66b37491856ff98a03" translate="yes" xml:space="preserve">
+          <source>The input gene expression data is expected in one of the following formats:</source>
+          <target state="translated">入力された遺伝子発現データは、以下のいずれかの形式であることが予想される。</target>
+        </trans-unit>
+        <trans-unit id="908a45a63c7632b5ffbcd99646a7aeb82a2142eb" translate="yes" xml:space="preserve">
+          <source>The main class, DigitalCellSorter, includes tools for:</source>
+          <target state="translated">メインクラスであるDigitalCellSorterには、以下のためのツールが含まれています。</target>
+        </trans-unit>
+        <trans-unit id="5f85b97930cecb15229c3823d2191a8ea979eeb7" translate="yes" xml:space="preserve">
+          <source>The next installation step is platform specific. To install FI-tSNE for Linux:</source>
+          <target state="translated">次のインストールステップはプラットフォーム固有のものです。Linux用のFI-tSNEをインストールするには。</target>
+        </trans-unit>
+        <trans-unit id="7666ea3ab10b83b7cb23164bd7d206cec0450aab" translate="yes" xml:space="preserve">
+          <source>The second, more detailed demonstration analysis with step-by-step
+explanation is discussed here
+and in the demo section at the end of this README.
+In your script import the package:</source>
+          <target state="translated">2 番目の、より詳細なデモ分析については、こことこの README の最後にあるデモセクションで説明しています。スクリプトでパッケージをインポートします。</target>
+        </trans-unit>
+        <trans-unit id="d8c22db8bcc29c3e1c1bf9f5dbf91e71451ab547" translate="yes" xml:space="preserve">
+          <source>The software runs in Python &amp;gt;= 3.7</source>
+          <target state="translated">ソフトウェアはPython&amp;gt; = 3.7で実行されます</target>
+        </trans-unit>
+        <trans-unit id="6d6bc1254141b5a6aa9761189b1b36bf0baace5b" translate="yes" xml:space="preserve">
+          <source>The visualization tools include:</source>
+          <target state="translated">可視化ツールには以下のようなものがあります。</target>
+        </trans-unit>
+        <trans-unit id="92bf86b793450838a84273cf4f65a95ded66fde8" translate="yes" xml:space="preserve">
+          <source>Then install &lt;code&gt;fftw&lt;/code&gt; from the &lt;code&gt;conda-forge&lt;/code&gt; channel
+add &lt;code&gt;conda-forge&lt;/code&gt; to your channels, and install &lt;code&gt;fftw&lt;/code&gt;:</source>
+          <target state="translated">次に、 &lt;code&gt;conda-forge&lt;/code&gt; チャネルから &lt;code&gt;fftw&lt;/code&gt; をインストールし、チャネルに &lt;code&gt;conda-forge&lt;/code&gt; を追加して、 &lt;code&gt;fftw&lt;/code&gt; をインストールします。</target>
+        </trans-unit>
+        <trans-unit id="3d567dbbcaa78bf5e3bde9a9aab70c5379b1f1bf" translate="yes" xml:space="preserve">
+          <source>These instructions will get you a copy of the project up and running on your machine for data analysis, development or testing purposes.</source>
+          <target state="translated">これらの手順により、データ分析、開発、テストを目的としたプロジェクトのコピーをお使いのマシン上で稼働させることができます。</target>
+        </trans-unit>
+        <trans-unit id="c832fad163e7e109b3fcb13b96c39b0b2e126740" translate="yes" xml:space="preserve">
+          <source>To execute the complete script &lt;code&gt;demo.py&lt;/code&gt; run:</source>
+          <target state="translated">完全なスクリプト &lt;code&gt;demo.py&lt;/code&gt; を実行するには、次のコマンドを実行します。</target>
+        </trans-unit>
+        <trans-unit id="4dad7376d0dd02dde8a80ba94ef18d6a571ceaa6" translate="yes" xml:space="preserve">
+          <source>To use PHATE</source>
+          <target state="translated">PHATEを使用するには</target>
+        </trans-unit>
+        <trans-unit id="76d16607904e2e8fc194d9eb0dafee103fbb27b7" translate="yes" xml:space="preserve">
+          <source>To use Sankey diagrams that are part of Digital Cell Sorter
+install &lt;code&gt;plotly&lt;/code&gt; and &lt;code&gt;orca&lt;/code&gt;:</source>
+          <target state="translated">Digital Cell Sorterの一部であるSankeyダイアグラムを使用するには、 &lt;code&gt;plotly&lt;/code&gt; と &lt;code&gt;orca&lt;/code&gt; をインストールします。</target>
+        </trans-unit>
+        <trans-unit id="4d3d3cdff4cdf5020aadad2b9116ced036c3748f" translate="yes" xml:space="preserve">
+          <source>To use UMAP layout</source>
+          <target state="translated">UMAPレイアウトを使用するには</target>
+        </trans-unit>
+        <trans-unit id="fd05c958b885dc9f0c692ccaa0bb2699820f9668" translate="yes" xml:space="preserve">
+          <source>Toolkit for analysis and identification of cell types from heterogeneous single cell RNA-seq data</source>
+          <target state="translated">異種シングルセルRNA-seqデータからの細胞タイプの解析と同定のためのツールキット</target>
+        </trans-unit>
+        <trans-unit id="0bb18642b70b9f8a9c12ccf39487328f306b8e19" translate="yes" xml:space="preserve">
+          <source>Usage</source>
+          <target state="translated">使用方法</target>
+        </trans-unit>
+        <trans-unit id="f935ec4d266d25240bdb87b0b5477a615204bf96" translate="yes" xml:space="preserve">
+          <source>Use the latest release of PyPI package.</source>
+          <target state="translated">PyPIパッケージの最新リリースを使用します。</target>
+        </trans-unit>
+        <trans-unit id="d175985b87dd9f620aa960059c730b4a35e3bcb5" translate="yes" xml:space="preserve">
+          <source>Visualization</source>
+          <target state="translated">可視化</target>
+        </trans-unit>
+        <trans-unit id="7305551f1178957092942d28f57c663711f0f6ef" translate="yes" xml:space="preserve">
+          <source>We have made an example execution file &lt;code&gt;demo.py&lt;/code&gt; that shows how to use &lt;code&gt;DigitalCellSorter&lt;/code&gt;.</source>
+          <target state="translated">&lt;code&gt;DigitalCellSorter&lt;/code&gt; の使用方法を示す実行ファイル &lt;code&gt;demo.py&lt;/code&gt; の例を作成しました。</target>
+        </trans-unit>
+        <trans-unit id="50faed454dee848c0b6e70a53cf829d691e7e3d3" translate="yes" xml:space="preserve">
+          <source>With conda, you can create, export, list, remove, and update environments that
+have different versions of Python and/or packages installed in them.
+Switching or moving between environments is called activating the environment.</source>
+          <target state="translated">condaを使うと、異なるバージョンのPythonやパッケージがインストールされている環境を作成、エクスポート、リストアップ、削除、更新することができます。環境を切り替えたり、環境間を移動したりすることは、環境をアクティブにすることと呼ばれています。</target>
+        </trans-unit>
+        <trans-unit id="9ea7c7469161b4087fe705bf82974beab6a4ebe1" translate="yes" xml:space="preserve">
+          <source>With datasets containing less than 2000 cells &lt;code&gt;sklearn.manifold.TSNE&lt;/code&gt; is used.
+For large datasets Fast Fourier Transform-accelerated Interpolation-based t-SNE (FIt-SNE)
+implemented by &lt;strong&gt;KlugerLab&lt;/strong&gt; is used (&lt;a href=&quot;https://github.com/KlugerLab/FIt-SNE&quot;&gt;https://github.com/KlugerLab/FIt-SNE&lt;/a&gt;).
+To use FIt-SNE the following need to be installed. First update &lt;code&gt;cython&lt;/code&gt; by</source>
+          <target state="translated">2000セル未満のデータセットでは、 &lt;code&gt;sklearn.manifold.TSNE&lt;/code&gt; が使用されます。大規模なデータセットの場合、&lt;strong&gt;KlugerLab&lt;/strong&gt;によって実装された高速フーリエ変換加速補間ベースのt-SNE（&lt;strong&gt;FIt&lt;/strong&gt; -SNE）が使用されます（&lt;a href=&quot;https://github.com/KlugerLab/FIt-SNE&quot;&gt;https://github.com/KlugerLab/FIt-SNE&lt;/a&gt;）。FIt-SNEを使用するには、以下をインストールする必要があります。最初の更新 &lt;code&gt;cython&lt;/code&gt; により、</target>
+        </trans-unit>
+        <trans-unit id="7f01fe787c49e4adbe32533279699f08494c6472" translate="yes" xml:space="preserve">
+          <source>batch</source>
+          <target state="translated">一括</target>
+        </trans-unit>
+        <trans-unit id="5139b36e2897de0331644365afe58aa6cdf99922" translate="yes" xml:space="preserve">
+          <source>batch0</source>
+          <target state="translated">バッチゼロ</target>
+        </trans-unit>
+        <trans-unit id="31442bf4302dd7b34e796318f57912b743ccccf0" translate="yes" xml:space="preserve">
+          <source>batch1</source>
+          <target state="translated">バッチワン</target>
+        </trans-unit>
+        <trans-unit id="5f435eb30281de82a41717382717b0626fdd64bc" translate="yes" xml:space="preserve">
+          <source>cell</source>
+          <target state="translated">cell</target>
+        </trans-unit>
+        <trans-unit id="0fd1860204d6cee43392972817e66792ee702b89" translate="yes" xml:space="preserve">
+          <source>expr</source>
+          <target state="translated">例え</target>
+        </trans-unit>
+        <trans-unit id="f96035b4a5001ee178287230ee8b2f51d52e14c1" translate="yes" xml:space="preserve">
+          <source>from &lt;a href=&quot;https://preview.data.humancellatlas.org/&quot;&gt;https://preview.data.humancellatlas.org/&lt;/a&gt; (Raw Counts Matrix - Bone Marrow).
+That file was ~485Mb and containing 378000 cells from 8 bone marrow donors (BM1-BM8).</source>
+          <target state="translated">&lt;a href=&quot;https://preview.data.humancellatlas.org/&quot;&gt;https://preview.data.humancellatlas.org/&lt;/a&gt;（ -骨髄生は、マトリックスをカウントします）。そのファイルは約485Mbで、8人の骨髄ドナー（BM1-BM8）からの378000個の細胞が含まれていました。</target>
+        </trans-unit>
+        <trans-unit id="bdc8e6790aae8f6a22207d77eb88510bcf8f261a" translate="yes" xml:space="preserve">
+          <source>gene</source>
+          <target state="translated">いでんし</target>
+        </trans-unit>
+        <trans-unit id="1d9ad0addee82809659247e9008e6f9e82aa9000" translate="yes" xml:space="preserve">
+          <source>or:</source>
+          <target state="translated">または</target>
+        </trans-unit>
+        <trans-unit id="840193a578ae3df79c7da0916906516e148822fe" translate="yes" xml:space="preserve">
+          <source>t-SNE</source>
+          <target state="translated">ティーエスエヌイー</target>
+        </trans-unit>
+        <trans-unit id="fed54d5082ca9d46c9d912cb9905c9433e670417" translate="yes" xml:space="preserve">
+          <source>where &lt;code&gt;test.py&lt;/code&gt; is the python script where you import and use
+&lt;code&gt;DigitalCellSorter&lt;/code&gt;.</source>
+          <target state="translated">ここで、 &lt;code&gt;test.py&lt;/code&gt; は、 &lt;code&gt;DigitalCellSorter&lt;/code&gt; をインポートして使用するPythonスクリプトです 。</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

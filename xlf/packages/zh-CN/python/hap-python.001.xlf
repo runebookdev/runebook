@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="zh-CN" datatype="htmlbody" original="https://pypi.org/project/hap-python/">
+    <body>
+      <group id="hap-python">
+        <trans-unit id="1e6dd649c61ba19988b0dd74d2e9ed21787b36d7" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;avahi-utils&lt;/code&gt; may also fit the bill. Then, you can install with &lt;code&gt;pip3&lt;/code&gt; (you will need &lt;code&gt;sudo&lt;/code&gt; or &lt;code&gt;--user&lt;/code&gt; for the install):</source>
+          <target state="translated">&lt;code&gt;avahi-utils&lt;/code&gt; 也可以满足要求。然后，您可以使用 &lt;code&gt;pip3&lt;/code&gt; 进行安装（安装时将需要 &lt;code&gt;sudo&lt;/code&gt; 或 &lt;code&gt;--user&lt;/code&gt; ）：</target>
+        </trans-unit>
+        <trans-unit id="39ab1402cb92992d90c529e9fe530c79b3918c19" translate="yes" xml:space="preserve">
+          <source>A typical flow for using HAP-python starts with implementing an Accessory. This is done by
+subclassing &lt;a href=&quot;pyhap/accessory.py&quot;&gt;Accessory&lt;/a&gt; and putting in place a few details
+(see below). After that, you give your accessory to an AccessoryDriver to manage. This
+will take care of advertising it on the local network, setting a HAP server and
+running the Accessory. Take a look at &lt;a href=&quot;main.py&quot;&gt;main.py&lt;/a&gt; for a quick start on that.</source>
+          <target state="translated">使用HAP-python的典型流程始于实现附件。这是通过对&lt;a href=&quot;pyhap/accessory.py&quot;&gt;Accessory&lt;/a&gt;进行子类化并放置一些细节来完成的（请参见下文）。之后，将附件交给AccessoryDriver进行管理。这将有助于在本地网络上进行广告发布，设置HAP服务器并运行附件。查看&lt;a href=&quot;main.py&quot;&gt;main.py&lt;/a&gt;，以快速入门。</target>
+        </trans-unit>
+        <trans-unit id="d93d10ff0fbef1b4aa0ddc24e10e907746d3c85a" translate="yes" xml:space="preserve">
+          <source>API</source>
+          <target state="translated">API</target>
+        </trans-unit>
+        <trans-unit id="e32043c4f480968ce1c52b3484864cc608e695d9" translate="yes" xml:space="preserve">
+          <source>As a prerequisite, you will need Avahi/Bonjour installed (due to zeroconf package).
+On a Raspberry Pi, you can get it with:</source>
+          <target state="translated">作为先决条件,你需要安装Avahi/Bonjour (由于zeroconf包)。在Raspberry Pi上,你可以用。</target>
+        </trans-unit>
+        <trans-unit id="889cb30a8fedbc8dc50a0a98b7f82364d8dd89b2" translate="yes" xml:space="preserve">
+          <source>As of version 2.0.0, HAP-python no longer supports python older than 3.5, because we
+are moving to asyncio. If your platform does not have a compatible python out of the
+box, you can install it manually or just use an older version of HAP-python.</source>
+          <target state="translated">从2.0.0版本开始,HAP-python不再支持3.5以上的Python,因为我们要改用asyncio。如果你的平台没有兼容的python,你可以手动安装,或者直接使用旧版本的HAP-python。</target>
+        </trans-unit>
+        <trans-unit id="3afa7e5cbfe031ecd2f4e3a7cc8d3a805f51d6f8" translate="yes" xml:space="preserve">
+          <source>By default, HAP-python will execute the &lt;code&gt;ffmpeg&lt;/code&gt; command with the negotiated parameters
+when the stream should be started and will &lt;code&gt;terminate&lt;/code&gt; the started process when the
+stream should be stopped (see the default: &lt;code&gt;Camera.FFMPEG_CMD&lt;/code&gt;).
+If the default command is not supported or correctly formatted for your platform,
+the streaming can fail.</source>
+          <target state="translated">默认情况下，HAP-python将在应启动流时使用协商的参数执行 &lt;code&gt;ffmpeg&lt;/code&gt; 命令，并在应停止流时 &lt;code&gt;terminate&lt;/code&gt; 已启动的进程（请参阅默认值： &lt;code&gt;Camera.FFMPEG_CMD&lt;/code&gt; ）。如果您的平台不支持默认命令或格式不正确，则流式传输可能会失败。</target>
+        </trans-unit>
+        <trans-unit id="1d95cf756f9d65b49696a59f4ee11e64d0cfbeff" translate="yes" xml:space="preserve">
+          <source>Camera - HAP-python supports the camera accessory from version 2.3.0!</source>
+          <target state="translated">摄像头-HAP-python支持2.3.0版本的摄像头配件!</target>
+        </trans-unit>
+        <trans-unit id="cfcec5427d3d66fe15054694a10327e5f45ea2ae" translate="yes" xml:space="preserve">
+          <source>Copy the below in &lt;code&gt;/etc/systemd/system/HAP-python.service&lt;/code&gt; (needs sudo).</source>
+          <target state="translated">将以下内容复制到 &lt;code&gt;/etc/systemd/system/HAP-python.service&lt;/code&gt; 中（需要sudo）。</target>
+        </trans-unit>
+        <trans-unit id="01807e83877a54cd7fadca3bc37630754e7679bb" translate="yes" xml:space="preserve">
+          <source>Finally, if you can take snapshots from the camera, you may want to implement the
+&lt;code&gt;Camera.snapshot&lt;/code&gt; method. By default, this serves a stock photo.</source>
+          <target state="translated">最后，如果可以从相机拍摄快照，则可能要实现 &lt;code&gt;Camera.snapshot&lt;/code&gt; 方法。默认情况下，这将提供库存照片。</target>
+        </trans-unit>
+        <trans-unit id="f84fc6d58a6e6a920dc6c865da8b853f646cd793" translate="yes" xml:space="preserve">
+          <source>For the above to work, you need to enable passwordless &lt;code&gt;/sbin/shutdown&lt;/code&gt; to whichever
+user is running &lt;code&gt;HAP-python&lt;/code&gt;. For example, do:</source>
+          <target state="translated">为了使以上方法起作用，您需要为运行 &lt;code&gt;HAP-python&lt;/code&gt; 的任何用户启用无密码 &lt;code&gt;/sbin/shutdown&lt;/code&gt; 。例如，执行以下操作：</target>
+        </trans-unit>
+        <trans-unit id="ad37e324410258749eaaf612499da6572d1dbd65" translate="yes" xml:space="preserve">
+          <source>For these cases, HAP-python has hooks so that you can insert your own command or implement
+the logic for starting or stopping the stream. There are two options:</source>
+          <target state="translated">对于这些情况,HAP-python提供了钩子,这样你就可以插入自己的命令或者实现启动或停止流的逻辑。有两个选项。</target>
+        </trans-unit>
+        <trans-unit id="59b3d91075ff574717bd61fdefed059261984e24" translate="yes" xml:space="preserve">
+          <source>HAP-python</source>
+          <target state="translated">HAP-python</target>
+        </trans-unit>
+        <trans-unit id="dd31d89b35abdb62b8f0d57d906b56e8bd239c56" translate="yes" xml:space="preserve">
+          <source>Have a look at the documentation of these methods for more information.</source>
+          <target state="translated">请看一下这些方法的文档,了解更多信息。</target>
+        </trans-unit>
+        <trans-unit id="8503ede3ea63ea360679c1a7bb9c6feb415c1aeb" translate="yes" xml:space="preserve">
+          <source>Have fun!</source>
+          <target state="translated">玩得开心点</target>
+        </trans-unit>
+        <trans-unit id="701dacd1cf472cbfc1b0c05cc139207e2529c590" translate="yes" xml:space="preserve">
+          <source>HomeKit Accessory Protocol implementation in python</source>
+          <target state="translated">HomeKit附件协议在python中的实现</target>
+        </trans-unit>
+        <trans-unit id="45013ac76e301ac1539f391feaef4b0094fd2e2f" translate="yes" xml:space="preserve">
+          <source>HomeKit Accessory Protocol implementation in python 3.
+With this project, you can integrate your own smart devices and add them to your
+iOS Home app. Since Siri is integrated with the Home app, you can start voice-control your
+accessories right away.</source>
+          <target state="translated">在python 3中实现HomeKit附件协议。通过这个项目,你可以整合自己的智能设备,并将它们添加到iOS Home应用中。由于Siri与Home应用集成在一起,你可以马上开始语音控制你的配件。</target>
+        </trans-unit>
+        <trans-unit id="76176953d9ff84e4d067f99cad93203315365458" translate="yes" xml:space="preserve">
+          <source>I am not aware of any bugs, but I am more than confident that such exist. If you find any,
+please report and I will try to fix them.</source>
+          <target state="translated">我不知道有任何错误,但我更相信有这样的错误存在。如果你发现任何问题,请报告,我将努力修复它们。</target>
+        </trans-unit>
+        <trans-unit id="e2f8051d617ad7d054c44910abaf3826ed42d36c" translate="yes" xml:space="preserve">
+          <source>If you are running &lt;code&gt;HAP-python&lt;/code&gt; on a Raspberry Pi, you may want to add a
+&lt;a href=&quot;pyhap/accessories/ShutdownSwitch.py&quot;&gt;Shutdown Switch&lt;/a&gt; to your Home. This is a
+Switch Accessory, which, when triggered, executes &lt;code&gt;sudo shutdown -h now&lt;/code&gt;, i.e.
+it shutdowns and halts the Pi. This allows you to safely unplug it.</source>
+          <target state="translated">如果您在Raspberry Pi上运行 &lt;code&gt;HAP-python&lt;/code&gt; ，则可能需要将&amp;ldquo;&lt;a href=&quot;pyhap/accessories/ShutdownSwitch.py&quot;&gt;关机开关&amp;rdquo;&lt;/a&gt;添加 到家庭中。这是一个开关附件，当触发该开关附件时，将执行 &lt;code&gt;sudo shutdown -h now&lt;/code&gt; ，即它关闭并停止Pi。这使您可以安全地拔掉它。</target>
+        </trans-unit>
+        <trans-unit id="43c3772e28b699c4c9e98678a3b2e12ce9cfe53d" translate="yes" xml:space="preserve">
+          <source>If you need more flexibility in managing streams, you can directly implement the
+&lt;code&gt;Camera&lt;/code&gt; methods &lt;code&gt;start&lt;/code&gt;, &lt;code&gt;stop&lt;/code&gt; and &lt;code&gt;reconfigure&lt;/code&gt;. Each will be called when the
+stream should be respectively started, stopped or reconfigured. The start and
+reconfigure methods are given the negotiated stream configuration parameters.</source>
+          <target state="translated">如果您在管理流方面需要更大的灵活性，则可以直接实现 &lt;code&gt;Camera&lt;/code&gt; 方法的 &lt;code&gt;start&lt;/code&gt; ， &lt;code&gt;stop&lt;/code&gt; 和 &lt;code&gt;reconfigure&lt;/code&gt; 。当应分别启动，停止或重新配置流时，将分别调用每个方法。将为start和reconfigure方法提供协商的流配置参数。</target>
+        </trans-unit>
+        <trans-unit id="c7b59723f34b816f8f66ab192b40fdc6d43d532a" translate="yes" xml:space="preserve">
+          <source>Implement your own logic to start, stop and reconfigure the stream.</source>
+          <target state="translated">实现自己的逻辑来启动、停止和重新配置流。</target>
+        </trans-unit>
+        <trans-unit id="c81b79df3c6448eae7c4f80428b54cd5692a17d7" translate="yes" xml:space="preserve">
+          <source>Installation</source>
+          <target state="translated">安装</target>
+        </trans-unit>
+        <trans-unit id="cc9b9379809b1d8649301d28d38bf45a17370b7e" translate="yes" xml:space="preserve">
+          <source>Integrated with the home automation framework &lt;a href=&quot;https://github.com/home-assistant/home-assistant&quot;&gt;Home Assistant&lt;/a&gt;.</source>
+          <target state="translated">与家庭自动化框架&lt;a href=&quot;https://github.com/home-assistant/home-assistant&quot;&gt;Home Assistant&lt;/a&gt;集成。</target>
+        </trans-unit>
+        <trans-unit id="e9979a0a59ccc478044f75358f106166597a1dd5" translate="yes" xml:space="preserve">
+          <source>Main features:</source>
+          <target state="translated">主要特点:</target>
+        </trans-unit>
+        <trans-unit id="5256fffffb868a37e07fc3a3a770a754b7273025" translate="yes" xml:space="preserve">
+          <source>Notice</source>
+          <target state="translated">注意事项</target>
+        </trans-unit>
+        <trans-unit id="dd35a82571e22d2d74c1a6a873bee1c689bebc76" translate="yes" xml:space="preserve">
+          <source>Out of the box support for Apple-defined services - see them in &lt;a href=&quot;pyhap/resources&quot;&gt;the resources folder&lt;/a&gt;.</source>
+          <target state="translated">对Apple定义的服务的开箱即用支持-在&lt;a href=&quot;pyhap/resources&quot;&gt;resources文件夹中&lt;/a&gt;查看它们。</target>
+        </trans-unit>
+        <trans-unit id="ce10b116c4730d1733981731be4dec208438d7dd" translate="yes" xml:space="preserve">
+          <source>Pass your own command that will be executed when the stream should be started.</source>
+          <target state="translated">传递你自己的命令,该命令将在流启动时执行。</target>
+        </trans-unit>
+        <trans-unit id="69e4cb5a69d9b79e83451b45a314219c694a4b75" translate="yes" xml:space="preserve">
+          <source>Run at boot</source>
+          <target state="translated">启动时运行</target>
+        </trans-unit>
+        <trans-unit id="23a6491664e0c009b610db0c34d857ea0276d788" translate="yes" xml:space="preserve">
+          <source>Run at boot (and a Switch to shutdown your device)</source>
+          <target state="translated">在启动时运行(和一个开关来关闭你的设备)</target>
+        </trans-unit>
+        <trans-unit id="cb887f1c4d7aac00b56faee324375eb025546107" translate="yes" xml:space="preserve">
+          <source>Secure pairing by just scanning the QR code.</source>
+          <target state="translated">只需扫描二维码,即可实现安全配对。</target>
+        </trans-unit>
+        <trans-unit id="ded9eb262af524cb1757730f871e2bde1dd84d24" translate="yes" xml:space="preserve">
+          <source>Service Callbacks</source>
+          <target state="translated">服务回访</target>
+        </trans-unit>
+        <trans-unit id="3adacee69486471079fd1ff1b455d67b4ccd2459" translate="yes" xml:space="preserve">
+          <source>Setting up a camera</source>
+          <target state="translated">设置相机</target>
+        </trans-unit>
+        <trans-unit id="8718c7b57a23418bc7dab9d250279c2e19e779ad" translate="yes" xml:space="preserve">
+          <source>Shutdown switch</source>
+          <target state="translated">关机开关</target>
+        </trans-unit>
+        <trans-unit id="27dc3781f4f883f1ff966f6c0bcdf654a45bd571" translate="yes" xml:space="preserve">
+          <source>Some HAP know-how was taken from &lt;a href=&quot;https://github.com/KhaosT/HAP-NodeJS&quot;&gt;HAP-NodeJS by KhaosT&lt;/a&gt;.</source>
+          <target state="translated">&lt;a href=&quot;https://github.com/KhaosT/HAP-NodeJS&quot;&gt;KhaosT&lt;/a&gt;从HAP-NodeJS获得了一些HAP专有技术。</target>
+        </trans-unit>
+        <trans-unit id="0584ec9c5715714a3382b500c551f7acc0f423b0" translate="yes" xml:space="preserve">
+          <source>Suggestions are always welcome.</source>
+          <target state="translated">欢迎大家提出建议。</target>
+        </trans-unit>
+        <trans-unit id="9730d4326a7b8a0d13c2be3b7fe29b80ad152bf6" translate="yes" xml:space="preserve">
+          <source>Table of Contents</source>
+          <target state="translated">目录</target>
+        </trans-unit>
+        <trans-unit id="916d6724a130780cee9f609f81f3928a0506c51b" translate="yes" xml:space="preserve">
+          <source>Test that everything is fine by doing:</source>
+          <target state="translated">通过做来测试一切正常。</target>
+        </trans-unit>
+        <trans-unit id="6387cc412d5f4a190c664ee31235a643a3ca951c" translate="yes" xml:space="preserve">
+          <source>The &lt;a href=&quot;pyhap/camera.py&quot;&gt;Camera accessory&lt;/a&gt; implements the HomeKit Protocol for negotiating stream settings,
+such as the picture width and height, number of audio channels and others.
+Starting a video and/or audio stream is very platform specific. Because of this,
+you need to figure out what video and audio settings your camera supports and set them
+in the &lt;code&gt;options&lt;/code&gt; parameter that is passed to the &lt;code&gt;Camera&lt;/code&gt; Accessory. Refer to the
+documentation for the &lt;code&gt;Camera&lt;/code&gt; contructor for the settings you need to specify.</source>
+          <target state="translated">所述&lt;a href=&quot;pyhap/camera.py&quot;&gt;相机附件&lt;/a&gt;实现HomeKit协议用于协商流设置，如图象的宽度和高度，音频信道和其他的数量。启动视频和/或音频流是特定于平台的。因此，您需要确定相机支持哪些视频和音频设置，并在传递到&amp;ldquo; &lt;code&gt;Camera&lt;/code&gt; 附件&amp;rdquo;的 &lt;code&gt;options&lt;/code&gt; 参数中进行设置。有关您需要指定的设置，请参阅 &lt;code&gt;Camera&lt;/code&gt; 构造器的文档。</target>
+        </trans-unit>
+        <trans-unit id="2ca852a8d3481e0387951d298a60906d8c55ac96" translate="yes" xml:space="preserve">
+          <source>The full list of negotiated stream configuration parameters can be found in the
+documentation for the &lt;code&gt;Camera.start&lt;/code&gt; method.</source>
+          <target state="translated">可以在 &lt;code&gt;Camera.start&lt;/code&gt; 方法的文档中找到协商的流配置参数的完整列表。</target>
+        </trans-unit>
+        <trans-unit id="400fa412edabfd20c83e8e2f87812d6410e658d5" translate="yes" xml:space="preserve">
+          <source>The project was developed for a Raspberry Pi, but it should work on other platforms. To kick-start things,
+you can open &lt;code&gt;main.py&lt;/code&gt; or &lt;code&gt;busy_home.py&lt;/code&gt;, where you will find some fake accessories.
+Just run one of them, for example &lt;code&gt;python3 busy_home.py&lt;/code&gt;, and you can add it in
+the Home app (be sure to be in the same network).
+Stop it by hitting Ctrl+C.</source>
+          <target state="translated">该项目是为Raspberry Pi开发的，但它应可在其他平台上使用。要开始工作，您可以打开 &lt;code&gt;main.py&lt;/code&gt; 或 &lt;code&gt;busy_home.py&lt;/code&gt; ，在那里您会找到一些假冒的配件。只需运行其中一个，例如 &lt;code&gt;python3 busy_home.py&lt;/code&gt; ，您就可以将其添加到Home应用程序中（确保位于同一网络中）。通过按Ctrl + C停止它。</target>
+        </trans-unit>
+        <trans-unit id="9679ea9c3ff4e80415c86a1bd58c81fb697b2bd8" translate="yes" xml:space="preserve">
+          <source>There are example accessories as well as integrations with real products
+in &lt;a href=&quot;accessories&quot;&gt;the accessories folder&lt;/a&gt;. See how to configure your camera in
+&lt;a href=&quot;camera_main.py&quot;&gt;camera_main.py&lt;/a&gt;.</source>
+          <target state="translated">在&lt;a href=&quot;accessories&quot;&gt;附件文件夹中&lt;/a&gt;有示例附件以及与实际产品的集成。在&lt;a href=&quot;camera_main.py&quot;&gt;camera_main.py中&lt;/a&gt;查看如何配置相机 。</target>
+        </trans-unit>
+        <trans-unit id="7c46f59df1ae3acba98ff7a6394ec4a6b7c0cbc1" translate="yes" xml:space="preserve">
+          <source>This is a quick way to get &lt;code&gt;HAP-python&lt;/code&gt; to run at boot on a Raspberry Pi. It is recommended
+to turn on &quot;Wait for network&quot; in &lt;code&gt;raspi-config&lt;/code&gt;. If this turns to be unreliable, see
+&lt;a href=&quot;https://www.raspberrypi.org/forums/viewtopic.php?f=66&amp;amp;t=187225&quot;&gt;this&lt;/a&gt;.</source>
+          <target state="translated">这是使 &lt;code&gt;HAP-python&lt;/code&gt; 在Raspberry Pi上启动时运行的快速方法。建议在 &lt;code&gt;raspi-config&lt;/code&gt; 中打开&amp;ldquo; Wait for network&amp;rdquo; 。如果这变得不可靠，请参阅 &lt;a href=&quot;https://www.raspberrypi.org/forums/viewtopic.php?f=66&amp;amp;t=187225&quot;&gt;此&lt;/a&gt;。</target>
+        </trans-unit>
+        <trans-unit id="09e603d418289d063812e3555f3006d5fb63f0c0" translate="yes" xml:space="preserve">
+          <source>This will install HAP-python in your python packages, so that you can import it as &lt;code&gt;pyhap&lt;/code&gt;. To uninstall, just do:</source>
+          <target state="translated">这将在您的python软件包中安装HAP-python，以便您可以将其导入为 &lt;code&gt;pyhap&lt;/code&gt; 。要卸载，只需执行以下操作：</target>
+        </trans-unit>
+        <trans-unit id="9132a2e99530322cbba4e67cef987eae36540b65" translate="yes" xml:space="preserve">
+          <source>To enable or disable at boot, do:</source>
+          <target state="translated">要在启动时启用或禁用,请执行以下操作。</target>
+        </trans-unit>
+        <trans-unit id="90a107562af2e5a9a8d84ac3a9fe16ee09edb22b" translate="yes" xml:space="preserve">
+          <source>When you are working with tightly coupled characteristics such as &quot;On&quot; and &quot;Brightness,&quot;
+you may need to use a service callback to receive all changes in a single request.</source>
+          <target state="translated">当你在处理 &quot;开 &quot;和 &quot;亮度 &quot;等紧密耦合的特性时,你可能需要使用一个服务回调来接收单个请求中的所有变化。</target>
+        </trans-unit>
+        <trans-unit id="886fae67ad0772f8befd4e8229d586573dccef11" translate="yes" xml:space="preserve">
+          <source>With characteristic callbacks, you do now know that a &quot;Brightness&quot; characteristic is
+about to be processed right after an &quot;On&quot; and may end up setting a LightBulb to 100%
+and then dim it back down to the expected level.</source>
+          <target state="translated">有了特性回调,你现在知道一个 &quot;亮度 &quot;特性即将在 &quot;开启 &quot;之后被处理,并可能最终将LightBulb设置为100%,然后将其调暗到预期水平。</target>
+        </trans-unit>
+        <trans-unit id="8801c4d2cc3257924f433c4d01ec2c6681013602" translate="yes" xml:space="preserve">
+          <source>You pass the command as a value to the key &lt;code&gt;start_stream_cmd&lt;/code&gt; in the &lt;code&gt;options&lt;/code&gt; parameter to
+the constuctor of the &lt;code&gt;Camera&lt;/code&gt; Accessory. The command is formatted using the
+negotiated stream configuration parameters. For example, if the negotiated width
+is 640 and you pass &lt;code&gt;foo start -width {width}&lt;/code&gt;, the command will be formatted as
+&lt;code&gt;foo start -width 640&lt;/code&gt;.</source>
+          <target state="translated">您将该命令作为值传递给 &lt;code&gt;Camera&lt;/code&gt; Accessory构造器的 &lt;code&gt;options&lt;/code&gt; 参数中的键 &lt;code&gt;start_stream_cmd&lt;/code&gt; 。使用协商的流配置参数来格式化命令。例如，如果协商的宽度为640且您传递了 &lt;code&gt;foo start -width {width}&lt;/code&gt; ，则命令的格式将为 foo start-width &lt;code&gt;foo start -width 640&lt;/code&gt; 。</target>
+        </trans-unit>
+        <trans-unit id="9ecf7b7b5319384df5d09c54ca84bcc70e75582d" translate="yes" xml:space="preserve">
+          <source>asyncio support - You can run various tasks or accessories in the event loop.</source>
+          <target state="translated">支持asyncio-你可以在事件循环中运行各种任务或附件。</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

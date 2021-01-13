@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="ja" datatype="htmlbody" original="https://pypi.org/project/pactman/">
+    <body>
+      <group id="pactman">
+        <trans-unit id="f141907ca50bfd31e6b2c0cf0c73bbb1d218cfe8" translate="yes" xml:space="preserve">
+          <source>3.0.0 (FUTURE, DEPRECATION WARNINGS)</source>
+          <target state="translated">3.0.0 (未来、堕落警告)</target>
+        </trans-unit>
+        <trans-unit id="19b9d007b4ba03736621f27fb22dbaebe0a3efba" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;--pact-broker-url=&amp;lt;URL&amp;gt;&lt;/code&gt; provides the base URL of the Pact broker to retrieve pacts from for the
+provider. You must also provide &lt;code&gt;--pact-provider-name=&amp;lt;ProviderName&amp;gt;&lt;/code&gt; to identify which provider to
+retrieve pacts for from the broker. You may provider &lt;code&gt;--pact-verify-consumer=&amp;lt;ConsumerName&amp;gt;&lt;/code&gt; to limit
+the pacts verified to just that consumer. As with the command-line verifier, you may provide basic
+auth details in the broker URL, or through the &lt;code&gt;PACT_BROKER_AUTH&lt;/code&gt; environment variable. If your broker
+requires a bearer token you may provide it with &lt;code&gt;--pact-broker-token=&amp;lt;TOKEN&amp;gt;&lt;/code&gt; or the &lt;code&gt;PACT_BROKER_TOKEN&lt;/code&gt;
+environment variable.</source>
+          <target state="translated">&lt;code&gt;--pact-broker-url=&amp;lt;URL&amp;gt;&lt;/code&gt; provides the base URL of the Pact broker to retrieve pacts from for the provider. You must also provide &lt;code&gt;--pact-provider-name=&amp;lt;ProviderName&amp;gt;&lt;/code&gt; to identify which provider to retrieve pacts for from the broker. You may provider &lt;code&gt;--pact-verify-consumer=&amp;lt;ConsumerName&amp;gt;&lt;/code&gt; to limit the pacts verified to just that consumer. As with the command-line verifier, you may provide basic auth details in the broker URL, or through the &lt;code&gt;PACT_BROKER_AUTH&lt;/code&gt; environment variable. If your broker requires a bearer token you may provide it with &lt;code&gt;--pact-broker-token=&amp;lt;TOKEN&amp;gt;&lt;/code&gt; or the &lt;code&gt;PACT_BROKER_TOKEN&lt;/code&gt; environment variable.</target>
+        </trans-unit>
+        <trans-unit id="30e1c31f79f5d459d0280cf101961b41f329a797" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;--pact-files=&amp;lt;file pattern&amp;gt;&lt;/code&gt; verifies some on-disk pact JSON files identified by the wildcard pattern
+(unix glob pattern matching).</source>
+          <target state="translated">&lt;code&gt;--pact-files=&amp;lt;file pattern&amp;gt;&lt;/code&gt; verifies some on-disk pact JSON files identified by the wildcard pattern (unix glob pattern matching).</target>
+        </trans-unit>
+        <trans-unit id="6e57f4538b3e57b418b98327fff5ba2737fba5ac" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;file_write_mode&lt;/code&gt; defaults to &lt;code&gt;&quot;overwrite&quot;&lt;/code&gt; and should be that or &lt;code&gt;&quot;merge&quot;&lt;/code&gt;. Overwrite ensures
+that any existing pact file will be removed when &lt;code&gt;has_pact_with()&lt;/code&gt; is invoked. Merge will retain
+the pact file and add new pacts to that file. See &lt;a href=&quot;#writing-multiple-pacts&quot;&gt;writing multiple pacts&lt;/a&gt;.
+If you absolutely do not want pact files to be written, use &lt;code&gt;&quot;never&quot;&lt;/code&gt;.</source>
+          <target state="translated">&lt;code&gt;file_write_mode&lt;/code&gt; defaults to &lt;code&gt;&quot;overwrite&quot;&lt;/code&gt; and should be that or &lt;code&gt;&quot;merge&quot;&lt;/code&gt; . Overwrite ensures that any existing pact file will be removed when &lt;code&gt;has_pact_with()&lt;/code&gt; is invoked. Merge will retain the pact file and add new pacts to that file. See &lt;a href=&quot;#writing-multiple-pacts&quot;&gt;writing multiple pacts&lt;/a&gt;. If you absolutely do not want pact files to be written, use &lt;code&gt;&quot;never&quot;&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="96170e1cca19f70e3161883e2c9b1ea8e84eef1a" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;pactman&lt;/code&gt; requires Python 3.6 to run.</source>
+          <target state="translated">&lt;code&gt;pactman&lt;/code&gt; requires Python 3.6 to run.</target>
+        </trans-unit>
+        <trans-unit id="c8b335ac83acb7e65f312cab9ca6fa9a6bd18371" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;query&lt;/code&gt; is used to specify URL query parameters, so the above example expects
+a request made to &lt;code&gt;/api/v1/my-resources/?search=example&lt;/code&gt;.</source>
+          <target state="translated">&lt;code&gt;query&lt;/code&gt; is used to specify URL query parameters, so the above example expects a request made to &lt;code&gt;/api/v1/my-resources/?search=example&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="af1721130f89a58e8c8f8bf86c20c66f8c52d187" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;use_mocking_server&lt;/code&gt; defaults to &lt;code&gt;False&lt;/code&gt; and controls the mocking method used by &lt;code&gt;pactman&lt;/code&gt;. The default is to
+patch &lt;code&gt;urllib3&lt;/code&gt;, which is the library underpinning &lt;code&gt;requests&lt;/code&gt; and is also used by some other projects. If you
+are using a different library to make your HTTP requests which does not use &lt;code&gt;urllib3&lt;/code&gt; underneath then you will need
+to set the &lt;code&gt;use_mocking_server&lt;/code&gt; argument to &lt;code&gt;True&lt;/code&gt;. This causes &lt;code&gt;pactman&lt;/code&gt; to run an actual HTTP server to mock the
+requests (the server is listening on &lt;code&gt;pact.uri&lt;/code&gt; - use that to redirect your HTTP requests to the mock server.) You
+may also set the &lt;code&gt;PACT_USE_MOCKING_SERVER&lt;/code&gt; environment variable to &quot;yes&quot; to force your entire suite to use the server
+approach. You should declare the pact particpants (consumer and provider) outside of your tests and will need
+to start and stop the mocking service outside of your tests too. The code below shows what using the server might
+look like:</source>
+          <target state="translated">&lt;code&gt;use_mocking_server&lt;/code&gt; defaults to &lt;code&gt;False&lt;/code&gt; and controls the mocking method used by &lt;code&gt;pactman&lt;/code&gt; . The default is to patch &lt;code&gt;urllib3&lt;/code&gt; , which is the library underpinning &lt;code&gt;requests&lt;/code&gt; and is also used by some other projects. If you are using a different library to make your HTTP requests which does not use &lt;code&gt;urllib3&lt;/code&gt; underneath then you will need to set the &lt;code&gt;use_mocking_server&lt;/code&gt; argument to &lt;code&gt;True&lt;/code&gt; . This causes &lt;code&gt;pactman&lt;/code&gt; to run an actual HTTP server to mock the requests (the server is listening on &lt;code&gt;pact.uri&lt;/code&gt; - use that to redirect your HTTP requests to the mock server.) You may also set the &lt;code&gt;PACT_USE_MOCKING_SERVER&lt;/code&gt; environment variable to &quot;yes&quot; to force your entire suite to use the server approach. You should declare the pact particpants (consumer and provider) outside of your tests and will need to start and stop the mocking service outside of your tests too. The code below shows what using the server might look like:</target>
+        </trans-unit>
+        <trans-unit id="24606f00b5c296608f1f4125e964e84005a8c524" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;version&lt;/code&gt; declares the pact specification version that the provider supports. This defaults to &quot;2.0.0&quot;, but &quot;3.0.0&quot;
+is also acceptable if your provider supports &lt;a href=&quot;https://github.com/pact-foundation/pact-specification/tree/version-3&quot;&gt;Pact specification version 3&lt;/a&gt;:</source>
+          <target state="translated">&lt;code&gt;version&lt;/code&gt; declares the pact specification version that the provider supports. This defaults to &quot;2.0.0&quot;, but &quot;3.0.0&quot; is also acceptable if your provider supports &lt;a href=&quot;https://github.com/pact-foundation/pact-specification/tree/version-3&quot;&gt;Pact specification version 3&lt;/a&gt;:</target>
+        </trans-unit>
+        <trans-unit id="d56a007ceb0fab5181d9dd119a99434b64911d7e" translate="yes" xml:space="preserve">
+          <source>&lt;em&gt;Available in version 3.0.0+ pacts&lt;/em&gt;</source>
+          <target state="translated">&lt;em&gt;Available in version 3.0.0+ pacts&lt;/em&gt;</target>
+        </trans-unit>
+        <trans-unit id="8c13189dea590e7f0211ab957ac0d0c0e7420602" translate="yes" xml:space="preserve">
+          <source>A separate application that has access to the same datastore to create and delete,
+like a separate App Engine module or Docker container pointing to the same datastore</source>
+          <target state="translated">同じデータストアを指す別のApp EngineモジュールやDockerコンテナのように、作成や削除のために同じデータストアにアクセスできる別のアプリケーション</target>
+        </trans-unit>
+        <trans-unit id="b91ed8989137bed07d021caa0e162e42ef94c260" translate="yes" xml:space="preserve">
+          <source>A standalone application that can start and stop the other server with different datastore states</source>
+          <target state="translated">異なるデータストアの状態で他のサーバを起動したり停止したりできるスタンドアロンアプリケーション</target>
+        </trans-unit>
+        <trans-unit id="4f9a8daf718a5df62808ba6186d0f523ca936c87" translate="yes" xml:space="preserve">
+          <source>Actually use the version passed in to &lt;code&gt;has_pact_with()&lt;/code&gt;</source>
+          <target state="translated">Actually use the version passed in to &lt;code&gt;has_pact_with()&lt;/code&gt;</target>
+        </trans-unit>
+        <trans-unit id="2ac8526ecc3d204718065175ed59e617c4a4ba21" translate="yes" xml:space="preserve">
+          <source>Add &lt;code&gt;&quot;never&quot;&lt;/code&gt; to the &lt;code&gt;file_write_mode&lt;/code&gt; options.</source>
+          <target state="translated">Add &lt;code&gt;&quot;never&quot;&lt;/code&gt; to the &lt;code&gt;file_write_mode&lt;/code&gt; options.</target>
+        </trans-unit>
+        <trans-unit id="7e1b10ed485650bb938add2ce70fad91f8cf8107" translate="yes" xml:space="preserve">
+          <source>Add &lt;code&gt;Equals&lt;/code&gt; and &lt;code&gt;Includes&lt;/code&gt; matchers for pact v3+</source>
+          <target state="translated">Add &lt;code&gt;Equals&lt;/code&gt; and &lt;code&gt;Includes&lt;/code&gt; matchers for pact v3+</target>
+        </trans-unit>
+        <trans-unit id="af7ba230e1629224c2b71519a9bc0afb3fe5f6d9" translate="yes" xml:space="preserve">
+          <source>Add ability to supply additional headers to provider during verification (thanks @ryallsa)</source>
+          <target state="translated">検証中にプロバイダに追加ヘッダを提供する機能を追加 (thanks @ryallsa)</target>
+        </trans-unit>
+        <trans-unit id="91174aee2b5b191a782dae03bdb79e561de2b15d" translate="yes" xml:space="preserve">
+          <source>Add option to allow pytest to succeed even if a pact verification fails</source>
+          <target state="translated">契約の検証が失敗しても pytest が成功するようにするオプションを追加</target>
+        </trans-unit>
+        <trans-unit id="4d520edd06eb7cd66d292f245667ae027360be81" translate="yes" xml:space="preserve">
+          <source>Add shortcut so &lt;code&gt;python -m pactman.verifier.command_line&lt;/code&gt; is just &lt;code&gt;python -m pactman&lt;/code&gt;
+(mostly used in testing before release)</source>
+          <target state="translated">Add shortcut so &lt;code&gt;python -m pactman.verifier.command_line&lt;/code&gt; is just &lt;code&gt;python -m pactman&lt;/code&gt; (mostly used in testing before release)</target>
+        </trans-unit>
+        <trans-unit id="9383310932fc9a6b7fd49a8d994facbb4f097a37" translate="yes" xml:space="preserve">
+          <source>Added &lt;code&gt;and_given()&lt;/code&gt; as a method of defining additonal provider states for v3+ pacts</source>
+          <target state="translated">Added &lt;code&gt;and_given()&lt;/code&gt; as a method of defining additonal provider states for v3+ pacts</target>
+        </trans-unit>
+        <trans-unit id="bf7f43898892e90c8c5370f9a1d87695a4255c4e" translate="yes" xml:space="preserve">
+          <source>Added PATCH support</source>
+          <target state="translated">PATCHのサポートを追加しました。</target>
+        </trans-unit>
+        <trans-unit id="3437e62183a5025549f6c5a04e682c50d4a9e87a" translate="yes" xml:space="preserve">
+          <source>Added more tests for pact generation (serialisation) which fixed a few edge case bugs</source>
+          <target state="translated">いくつかのエッジケースのバグを修正したパクト生成(シリアライズ)のテストを追加しました。</target>
+        </trans-unit>
+        <trans-unit id="edefec680690ec0004395a25d4a66961a0d9bcd5" translate="yes" xml:space="preserve">
+          <source>Added some Trove classifiers to aid potential users.</source>
+          <target state="translated">潜在的なユーザーを支援するために、いくつかのTroveの分類子を追加しました。</target>
+        </trans-unit>
+        <trans-unit id="8bdaeb0ee9a111044da7fed515822b56cf615046" translate="yes" xml:space="preserve">
+          <source>Address deprecation of &lt;code&gt;semver.parse&lt;/code&gt; in semver</source>
+          <target state="translated">Address deprecation of &lt;code&gt;semver.parse&lt;/code&gt; in semver</target>
+        </trans-unit>
+        <trans-unit id="460b0826f401c0ceca46c857309564b33afa102c" translate="yes" xml:space="preserve">
+          <source>Allow &lt;code&gt;has_pact_with()&lt;/code&gt; to accept &lt;code&gt;file_write_mode&lt;/code&gt;</source>
+          <target state="translated">Allow &lt;code&gt;has_pact_with()&lt;/code&gt; to accept &lt;code&gt;file_write_mode&lt;/code&gt;</target>
+        </trans-unit>
+        <trans-unit id="f0f533a021e11603b85f67cb8360b028a5bbb503" translate="yes" xml:space="preserve">
+          <source>Allow filtering of pacts fetched from broker to be filtered by consumer version tag</source>
+          <target state="translated">ブローカーから取得したパクトのフィルタリングを、消費者バージョンタグでフィルタリングできるようにします。</target>
+        </trans-unit>
+        <trans-unit id="b70313b40d1ffc59abdeb28afbf4f82c51e16a8e" translate="yes" xml:space="preserve">
+          <source>Allow pytest verification to specify &lt;code&gt;extra_provider_headers&lt;/code&gt;</source>
+          <target state="translated">Allow pytest verification to specify &lt;code&gt;extra_provider_headers&lt;/code&gt;</target>
+        </trans-unit>
+        <trans-unit id="0693edd2da74c1bdc1130e795858a1f8b3955413" translate="yes" xml:space="preserve">
+          <source>Allow restricting pytest verification runs to a single consumer using --pact-consumer-name</source>
+          <target state="translated">pact-consumer-name を使用して単一の消費者に対して pytest 検証の実行を制限できるようにしました。</target>
+        </trans-unit>
+        <trans-unit id="e9af86323b52d60201fe69358e6ecf40ae02aad2" translate="yes" xml:space="preserve">
+          <source>An additional header may also be supplied in the &lt;code&gt;PROVIDER_EXTRA_HEADER&lt;/code&gt; environment variable, though the command
+line argument(s) would override this.</source>
+          <target state="translated">An additional header may also be supplied in the &lt;code&gt;PROVIDER_EXTRA_HEADER&lt;/code&gt; environment variable, though the command line argument(s) would override this.</target>
+        </trans-unit>
+        <trans-unit id="cfde002ecd0603f4522a45de5455fd8e6b93d750" translate="yes" xml:space="preserve">
+          <source>An example for a Django project might contain:</source>
+          <target state="translated">Django プロジェクトの例としては、以下のようなものがあります。</target>
+        </trans-unit>
+        <trans-unit id="30d68057eb37fdb6637ea3a8ff0a2f2fa41fe593" translate="yes" xml:space="preserve">
+          <source>An important note about pact relationship definition</source>
+          <target state="translated">契約関係の定義についての重要な注意事項</target>
+        </trans-unit>
+        <trans-unit id="e948502eb1dbf5880a1eab763d6801160a5768c8" translate="yes" xml:space="preserve">
+          <source>Applying Like to complex data structures</source>
+          <target state="translated">複雑なデータ構造にLikeを適用する</target>
+        </trans-unit>
+        <trans-unit id="56c47279452cddffd66d63b6f73caf8563b90d8b" translate="yes" xml:space="preserve">
+          <source>Asserts that the value should contain the given substring, for example::</source>
+          <target state="translated">値が指定された部分文字列を含むことを保証します。</target>
+        </trans-unit>
+        <trans-unit id="420c0cc8fe4f6c5eee0b34a8abf06dfc94ebb7ca" translate="yes" xml:space="preserve">
+          <source>Asserts the element's type matches the &lt;code&gt;sample_data&lt;/code&gt;. For example:</source>
+          <target state="translated">Asserts the element's type matches the &lt;code&gt;sample_data&lt;/code&gt; . For example:</target>
+        </trans-unit>
+        <trans-unit id="6850ef2dc6e5d6ddc26e838e19968d61811800c8" translate="yes" xml:space="preserve">
+          <source>Asserts the value is an array type that consists of elements
+like &lt;code&gt;sample_data&lt;/code&gt;. It can be used to assert simple arrays:</source>
+          <target state="translated">Asserts the value is an array type that consists of elements like &lt;code&gt;sample_data&lt;/code&gt; . It can be used to assert simple arrays:</target>
+        </trans-unit>
+        <trans-unit id="bf9d567ccbcd66bb732e3c9e1cfc802dcea31139" translate="yes" xml:space="preserve">
+          <source>Asserts the value should match the given regular expression. You could use this
+to expect a timestamp with a particular format in the request or response where
+you know you need a particular format, but are unconcerned about the exact date:</source>
+          <target state="translated">値が与えられた正規表現にマッチすることを保証します。特定のフォーマットが必要なことはわかっているが、正確な日付は気にしないというような場合に、リクエストやレスポンスの中で特定のフォーマットのタイムスタンプを期待するためにこれを使うことができます。</target>
+        </trans-unit>
+        <trans-unit id="c07620b4647499b9fdecc3086bab2855eb4eedbb" translate="yes" xml:space="preserve">
+          <source>Better implementation of change in 2.21.0</source>
+          <target state="translated">2.21.0での変更のより良い実装</target>
+        </trans-unit>
+        <trans-unit id="d6a6d204686bf21187d68dc040530ae63dd7b7d1" translate="yes" xml:space="preserve">
+          <source>Better integration of pact failure information in pytest</source>
+          <target state="translated">pytestにおけるパクト失敗情報のより良い統合</target>
+        </trans-unit>
+        <trans-unit id="8d2b42e85efb2ef166c992a5806cf540cd36def7" translate="yes" xml:space="preserve">
+          <source>Body payload rules</source>
+          <target state="translated">ボディペイロードのルール</target>
+        </trans-unit>
+        <trans-unit id="23d30a3df18bff62248f16edc5339fa024dec76a" translate="yes" xml:space="preserve">
+          <source>Close up some edge cases in body content during mocking, and document in README</source>
+          <target state="translated">モック中のボディコンテンツのエッジケースをクローズアップし、READMEに記載</target>
+        </trans-unit>
+        <trans-unit id="81592ee7d7a7991641b80c1fe0615d9f393846d4" translate="yes" xml:space="preserve">
+          <source>Command line options to control &lt;code&gt;pytest&lt;/code&gt; verifying pacts</source>
+          <target state="translated">Command line options to control &lt;code&gt;pytest&lt;/code&gt; verifying pacts</target>
+        </trans-unit>
+        <trans-unit id="eb4feb24f649c67567ed3d9b427f958ab9cc2e0d" translate="yes" xml:space="preserve">
+          <source>Contains code originally from the &lt;a href=&quot;https://github.com/pact-foundation/pact-python&quot;&gt;pact-python&lt;/a&gt; project.</source>
+          <target state="translated">Contains code originally from the &lt;a href=&quot;https://github.com/pact-foundation/pact-python&quot;&gt;pact-python&lt;/a&gt; project.</target>
+        </trans-unit>
+        <trans-unit id="60b2a14d195e5b846097555ae874c3b33c6ddf32" translate="yes" xml:space="preserve">
+          <source>Correct bug in cleanup that resulted in urllib mocking breaking.</source>
+          <target state="translated">urllib のモッキングが壊れる原因となっていたクリーンアップのバグを修正しました。</target>
+        </trans-unit>
+        <trans-unit id="69131612c09092b22c9871e0cecf3d664fb2467a" translate="yes" xml:space="preserve">
+          <source>Correct teardown of pact context manager where the pact is used in multiple
+interactions (&lt;code&gt;with interaction1, interaction2&lt;/code&gt; instead of &lt;code&gt;with pact&lt;/code&gt;).</source>
+          <target state="translated">Correct teardown of pact context manager where the pact is used in multiple interactions ( &lt;code&gt;with interaction1, interaction2&lt;/code&gt; instead of &lt;code&gt;with pact&lt;/code&gt; ).</target>
+        </trans-unit>
+        <trans-unit id="5524f766f1463b4b6d413988424e7920f36d5240" translate="yes" xml:space="preserve">
+          <source>Corrected mis-named command-line option.</source>
+          <target state="translated">コマンドラインオプションの名前の間違いを修正しました。</target>
+        </trans-unit>
+        <trans-unit id="71149fbbb70edc249fdfbb78e087e453650ee65d" translate="yes" xml:space="preserve">
+          <source>Corrected project URL in project metadata (thanks Jonathan Moss)</source>
+          <target state="translated">プロジェクトのメタデータのプロジェクトURLを修正しました(Jonathan Mossさんありがとうございます)。</target>
+        </trans-unit>
+        <trans-unit id="e01c2a30534da1073f8fe8ad0100658604d03dee" translate="yes" xml:space="preserve">
+          <source>Corrected some packaging issues</source>
+          <target state="translated">いくつかのパッケージの問題を修正しました。</target>
+        </trans-unit>
+        <trans-unit id="5b9d09b5615dd4bd46fd4ca94cd704e435f98d9f" translate="yes" xml:space="preserve">
+          <source>Corrected the definition of request payload when there is no &lt;code&gt;body&lt;/code&gt; in the request</source>
+          <target state="translated">Corrected the definition of request payload when there is no &lt;code&gt;body&lt;/code&gt; in the request</target>
+        </trans-unit>
+        <trans-unit id="d9b1fb3ce83a354d18f8fcf54da30592bb8c7a5f" translate="yes" xml:space="preserve">
+          <source>Corrected use of format_path in command line error handling.</source>
+          <target state="translated">コマンドラインのエラー処理で format_path の使用を修正しました。</target>
+        </trans-unit>
+        <trans-unit id="e740da7c2072711aed71373e1fca273b0c851e2e" translate="yes" xml:space="preserve">
+          <source>Correctly determine pact verification result when publishing to broker.</source>
+          <target state="translated">ブローカーに公開する際に、契約書の検証結果を正しく判断します。</target>
+        </trans-unit>
+        <trans-unit id="5bd2025f16922b3c04fd8671d5b38f00a14ff656" translate="yes" xml:space="preserve">
+          <source>Create a provider state that allows the contract to pass when replayed against the provider</source>
+          <target state="translated">プロバイダに対してリプレイされたときにコントラクトが通過するようにするプロバイダの状態を作成します。</target>
+        </trans-unit>
+        <trans-unit id="7a18ff05a40de926a3044cf718a4c446978df880" translate="yes" xml:space="preserve">
+          <source>Create a unit test on the consumer side that declares the expectations it has of the provider</source>
+          <target state="translated">コンシューマ側のユニットテストを作成し、プロバイダに期待することを宣言します。</target>
+        </trans-unit>
+        <trans-unit id="e56e2a0a98b1af9e269264ed6e281059afdebcdb" translate="yes" xml:space="preserve">
+          <source>Create the pact destination dir if it's missing and its parent exists</source>
+          <target state="translated">パクトの宛先ディレクトリが見つからず、その親が存在する場合は、そのディレクトリを作成します。</target>
+        </trans-unit>
+        <trans-unit id="2dd1761c2dfff380d26c0b58ea4392ead4e1ef54" translate="yes" xml:space="preserve">
+          <source>Creating a complete contract is a two step process:</source>
+          <target state="translated">完全な契約書の作成は、2つのステップで行われます。</target>
+        </trans-unit>
+        <trans-unit id="353030fe29f5a71490a68c0f1b1021acde31ae9c" translate="yes" xml:space="preserve">
+          <source>Defines how the server is expected to respond</source>
+          <target state="translated">サーバがどのように応答するかを定義します。</target>
+        </trans-unit>
+        <trans-unit id="6606d038ffc5b365d0cec685b1a4f0f37d2ea9d4" translate="yes" xml:space="preserve">
+          <source>Defines the Consumer and Provider objects that describe our product and our service under test</source>
+          <target state="translated">テスト対象の製品とサービスを記述する Consumer オブジェクトと Provider オブジェクトを定義します。</target>
+        </trans-unit>
+        <trans-unit id="7b1d71e919a26976562746f222e9aa37de2d0e79" translate="yes" xml:space="preserve">
+          <source>Defines what the request that is expected to be made by the consumer will contain</source>
+          <target state="translated">消費者が行うことが期待されるリクエストの内容を定義します。</target>
+        </trans-unit>
+        <trans-unit id="5c165e226692e852c63eb059dad6043021023d14" translate="yes" xml:space="preserve">
+          <source>Delay shenanigans around checking pacts directory until pacts are actually written
+to allow module-level pact definition without side effects.</source>
+          <target state="translated">パクトが実際に書き込まれるまでパクトディレクトリのチェックを遅延させ、副作用のないモジュールレベルのパクト定義を可能にします。</target>
+        </trans-unit>
+        <trans-unit id="4c17aadf5117487aab7bc50cbf056caf3977cc31" translate="yes" xml:space="preserve">
+          <source>Development</source>
+          <target state="translated">開発の様子</target>
+        </trans-unit>
+        <trans-unit id="7a7343c0cb17bf2b5c81981ecd3c7d2ef191f373" translate="yes" xml:space="preserve">
+          <source>Dropped Python 3.6 testing, added Python 3.8 testing</source>
+          <target state="translated">Python 3.6のテストを削除し、Python 3.8のテストを追加しました。</target>
+        </trans-unit>
+        <trans-unit id="eba49eada6a0547505aa5c71034272a9e25fb8a5" translate="yes" xml:space="preserve">
+          <source>During a test run you're likely to need to write multiple pact interactions for a consumer/provider
+relationship. &lt;code&gt;pactman&lt;/code&gt; will manage the pact file as follows:</source>
+          <target state="translated">During a test run you're likely to need to write multiple pact interactions for a consumer/provider relationship. &lt;code&gt;pactman&lt;/code&gt; will manage the pact file as follows:</target>
+        </trans-unit>
+        <trans-unit id="005e038ce51cada8b8265ec77c40ae54277b1891" translate="yes" xml:space="preserve">
+          <source>During mocking, the HTTP response will be handled as:</source>
+          <target state="translated">モック中は、HTTPレスポンスは次のように処理されます。</target>
+        </trans-unit>
+        <trans-unit id="d20a0f9ac12cc9976395ca4b69c97cb8da607418" translate="yes" xml:space="preserve">
+          <source>During verification non-JSON payloads are compared for equality.</source>
+          <target state="translated">検証中に、非JSONペイロードが等しくなるように比較されます。</target>
+        </trans-unit>
+        <trans-unit id="f94459359d8d8561ef3d5ae74c9db5c845420919" translate="yes" xml:space="preserve">
+          <source>EachLike(sample_data, minimum=1)</source>
+          <target state="translated">EachLike(sample_data,minimum=1)</target>
+        </trans-unit>
+        <trans-unit id="28972609d3e2c5fc29e18c70d7f64647e03517f3" translate="yes" xml:space="preserve">
+          <source>Enable setting of authentication credentials when connecting to the pact broker</source>
+          <target state="translated">パクトブローカーに接続する際の認証情報の設定を有効にする</target>
+        </trans-unit>
+        <trans-unit id="30a8f19b343247e5b068a63fe92a992f7a0e5945" translate="yes" xml:space="preserve">
+          <source>Enables &lt;a href=&quot;https://2018.pycon-au.org/talks/44811-pact-in-python/&quot;&gt;consumer driven contract testing&lt;/a&gt;, providing unit test mocking of provider services
+and DSL for the consumer project, and interaction playback and verification for the service
+provider project. Currently supports versions 1.1, 2 and 3 of the &lt;a href=&quot;https://github.com/pact-foundation/pact-specification&quot;&gt;Pact specification&lt;/a&gt;.</source>
+          <target state="translated">Enables &lt;a href=&quot;https://2018.pycon-au.org/talks/44811-pact-in-python/&quot;&gt;consumer driven contract testing&lt;/a&gt;, providing unit test mocking of provider services and DSL for the consumer project, and interaction playback and verification for the service provider project. Currently supports versions 1.1, 2 and 3 of the &lt;a href=&quot;https://github.com/pact-foundation/pact-specification&quot;&gt;Pact specification&lt;/a&gt;.</target>
+        </trans-unit>
+        <trans-unit id="eb85acddc883144744e3095532e063f1ddd6929d" translate="yes" xml:space="preserve">
+          <source>Enforcing equality matching with Equals</source>
+          <target state="translated">Equalsを使った平等マッチングの実施</target>
+        </trans-unit>
+        <trans-unit id="de015a2a2c263316977f3ad6c31c775cba0894c4" translate="yes" xml:space="preserve">
+          <source>Ensure pact spec versions are consistent across all mocks used to generate a pact file</source>
+          <target state="translated">パクトファイルの生成に使用されるすべてのモックで、パクトスペックのバージョンが一貫していることを確認します。</target>
+        </trans-unit>
+        <trans-unit id="821955052925a2c70c5f33ba6d52977b0d93678b" translate="yes" xml:space="preserve">
+          <source>Ensure query param values are lists</source>
+          <target state="translated">クエリのパラメータ値がリストであることを確認する</target>
+        </trans-unit>
+        <trans-unit id="66da467f31f6bb798b2b1820271b8563c7107f26" translate="yes" xml:space="preserve">
+          <source>Expecting Variable Content</source>
+          <target state="translated">変数の内容を期待する</target>
+        </trans-unit>
+        <trans-unit id="c791e922848d38aed114942d0b94491fba85ee0e" translate="yes" xml:space="preserve">
+          <source>Filtering Broker Pacts by Tag</source>
+          <target state="translated">タグによるブローカープラクトのフィルタリング</target>
+        </trans-unit>
+        <trans-unit id="a3e939518bb922f66a7656e04d0100b53fe0928f" translate="yes" xml:space="preserve">
+          <source>Fix &lt;code&gt;with_request&lt;/code&gt; when called with a dict query (thanks Cong)</source>
+          <target state="translated">Fix &lt;code&gt;with_request&lt;/code&gt; when called with a dict query (thanks Cong)</target>
+        </trans-unit>
+        <trans-unit id="cbf75815f48262757b2b1af3cc3db97e07450a06" translate="yes" xml:space="preserve">
+          <source>Fix bug introduced in 2.9.0 where generating multiple pacts would result in a single pact
+being recorded</source>
+          <target state="translated">2.9.0で導入された、複数のパクトを生成すると単一のパクトが記録されてしまうバグを修正</target>
+        </trans-unit>
+        <trans-unit id="d2d2724fba2849f6e984a75ad357ea1dc849415c" translate="yes" xml:space="preserve">
+          <source>Fix generation of consumer / provider name in &amp;lt;v3 pacts</source>
+          <target state="translated">Fix generation of consumer / provider name in &amp;lt;v3 pacts</target>
+        </trans-unit>
+        <trans-unit id="5cab8685785cf67502364ee4515cacbb1170a271" translate="yes" xml:space="preserve">
+          <source>Fix handling of lower-case HTTP methods in verifier (thanks Cong!)</source>
+          <target state="translated">ベリファイアでの小文字のHTTPメソッドの扱いを修正 (Congさんありがとうございます!)</target>
+        </trans-unit>
+        <trans-unit id="9093e4cf28c325342c8520ef5ae4b5757ad82eb3" translate="yes" xml:space="preserve">
+          <source>Fix header regex matching in mock verification</source>
+          <target state="translated">モック検証におけるヘッダ正規表現のマッチングを修正</target>
+        </trans-unit>
+        <trans-unit id="f3eb16dc3ef7ba2858b1a3b7175f34849b9b4638" translate="yes" xml:space="preserve">
+          <source>Fix issue where mocked &lt;code&gt;urlopen&lt;/code&gt; didn't handle the correct number of positional arguments</source>
+          <target state="translated">Fix issue where mocked &lt;code&gt;urlopen&lt;/code&gt; didn't handle the correct number of positional arguments</target>
+        </trans-unit>
+        <trans-unit id="8ee524b74ec7f5ed192d5036bd8c0ab0c64e390b" translate="yes" xml:space="preserve">
+          <source>Fix pact-python Term compatibility</source>
+          <target state="translated">pact-python の期間互換性を修正</target>
+        </trans-unit>
+        <trans-unit id="280af372ca2b424383002b207b9da01a49be4cda" translate="yes" xml:space="preserve">
+          <source>Fix pytest mode to correctly detect array element rule failure as a pytest failure</source>
+          <target state="translated">pytest モードで配列要素のルールの失敗を pytest の失敗として正しく検出するよう修正</target>
+        </trans-unit>
+        <trans-unit id="a69a22fd5665b1feb2eb098ea0a5ccf750758eda" translate="yes" xml:space="preserve">
+          <source>Fix rules applying to a single non-first element in an array</source>
+          <target state="translated">配列の最初の要素ではない単一の要素に適用されるルールを修正しました。</target>
+        </trans-unit>
+        <trans-unit id="a99cf0a752b48cf6c8cca84fc81aaef1780d4aa5" translate="yes" xml:space="preserve">
+          <source>Fix several issues cause by a failure to detect failure in several test cases
+(header, path and array element rules may not have been applied)</source>
+          <target state="translated">いくつかのテストケースで失敗を検出できなかったことが原因のいくつかの問題を修正 (ヘッダ、パス、配列要素のルールが適用されていない可能性があります)</target>
+        </trans-unit>
+        <trans-unit id="7edca5f2cefd160913fd849bf1613273c7ae3af0" translate="yes" xml:space="preserve">
+          <source>Fix some bugs around empty array verification</source>
+          <target state="translated">空の配列の検証に関するいくつかのバグを修正</target>
+        </trans-unit>
+        <trans-unit id="9cd7c130e30ebaa8056788425f282e53d952bbc5" translate="yes" xml:space="preserve">
+          <source>Fix some issues around mocking request queries and the mock's verification of same</source>
+          <target state="translated">リクエストクエリのモックとモックの同じ検証に関するいくつかの問題を修正しました。</target>
+        </trans-unit>
+        <trans-unit id="275d58a3702a0a16dc6f29e16097e363936b9193" translate="yes" xml:space="preserve">
+          <source>Fix some pact v3 generation issues (thanks pan Jacek)</source>
+          <target state="translated">いくつかの pact v3 世代の問題を修正 (pan Jacek に感謝)</target>
+        </trans-unit>
+        <trans-unit id="a355d53978aaee23a5b22f649a6f71b629de7286" translate="yes" xml:space="preserve">
+          <source>Fix structure of serialisation for header matching rules.</source>
+          <target state="translated">ヘッダーマッチングルールのためのシリアライズの構造を修正。</target>
+        </trans-unit>
+        <trans-unit id="6b4544007a02bb6e088be048d1c11b3872faf6d1" translate="yes" xml:space="preserve">
+          <source>Fix typo in pytest plugin preventing &lt;code&gt;--pact-verify-consumer-tag&lt;/code&gt; from working</source>
+          <target state="translated">Fix typo in pytest plugin preventing &lt;code&gt;--pact-verify-consumer-tag&lt;/code&gt; from working</target>
+        </trans-unit>
+        <trans-unit id="08d23b4fb060e1cc8b42abba57a339b5af81cb16" translate="yes" xml:space="preserve">
+          <source>Fix verbose output</source>
+          <target state="translated">冗長な出力を修正</target>
+        </trans-unit>
+        <trans-unit id="627d2bb8c177111161aa7d764174de01c8eb5314" translate="yes" xml:space="preserve">
+          <source>Fixed edge case where &lt;code&gt;fail()&lt;/code&gt; was not being invoked in an exact match
+causing the pytest reporter to not know there'd been a failure</source>
+          <target state="translated">Fixed edge case where &lt;code&gt;fail()&lt;/code&gt; was not being invoked in an exact match causing the pytest reporter to not know there'd been a failure</target>
+        </trans-unit>
+        <trans-unit id="f33b19d523435f5a4763f0f117a63efbd0a3d76c" translate="yes" xml:space="preserve">
+          <source>For more information about provider states, refer to the &lt;a href=&quot;https://docs.pact.io/&quot;&gt;Pact documentation&lt;/a&gt; on &lt;a href=&quot;https://docs.pact.io/provider/using_provider_states_effectively&quot;&gt;Provider States&lt;/a&gt;.</source>
+          <target state="translated">For more information about provider states, refer to the &lt;a href=&quot;https://docs.pact.io/&quot;&gt;Pact documentation&lt;/a&gt; on &lt;a href=&quot;https://docs.pact.io/provider/using_provider_states_effectively&quot;&gt;Provider States&lt;/a&gt;.</target>
+        </trans-unit>
+        <trans-unit id="e5a11c30b1597eddfbaf4cf5716d214c7e095475" translate="yes" xml:space="preserve">
+          <source>For more information about what Pact is, and how it can help you
+test your code more efficiently, check out the &lt;a href=&quot;https://docs.pact.io/&quot;&gt;Pact documentation&lt;/a&gt;.</source>
+          <target state="translated">For more information about what Pact is, and how it can help you test your code more efficiently, check out the &lt;a href=&quot;https://docs.pact.io/&quot;&gt;Pact documentation&lt;/a&gt;.</target>
+        </trans-unit>
+        <trans-unit id="ad48916d16173b1e09cce7f996a3ce4e59965ae1" translate="yes" xml:space="preserve">
+          <source>For more information see &lt;a href=&quot;https://docs.pact.io/documentation/matching.html&quot;&gt;Matching&lt;/a&gt;</source>
+          <target state="translated">For more information see &lt;a href=&quot;https://docs.pact.io/documentation/matching.html&quot;&gt;Matching&lt;/a&gt;</target>
+        </trans-unit>
+        <trans-unit id="acc03bcd93bfd8a88bdc88219a65de5acc399aef" translate="yes" xml:space="preserve">
+          <source>For pacts with &lt;strong&gt;providerState&lt;/strong&gt; the &lt;code&gt;name&lt;/code&gt; argument will be the &lt;code&gt;providerState&lt;/code&gt; value,
+and &lt;code&gt;params&lt;/code&gt; will be empty.</source>
+          <target state="translated">For pacts with &lt;strong&gt;providerState&lt;/strong&gt; the &lt;code&gt;name&lt;/code&gt; argument will be the &lt;code&gt;providerState&lt;/code&gt; value, and &lt;code&gt;params&lt;/code&gt; will be empty.</target>
+        </trans-unit>
+        <trans-unit id="fb3420535675bd3feb56ab9e8753fb77818e01f3" translate="yes" xml:space="preserve">
+          <source>For pacts with &lt;strong&gt;providerStates&lt;/strong&gt; the function will be invoked once per entry in &lt;code&gt;providerStates&lt;/code&gt;
+array with the &lt;code&gt;name&lt;/code&gt; argument taken from the array entry &lt;code&gt;name&lt;/code&gt; parameter, and &lt;code&gt;params&lt;/code&gt; from
+the &lt;code&gt;params&lt;/code&gt; parameter.</source>
+          <target state="translated">For pacts with &lt;strong&gt;providerStates&lt;/strong&gt; the function will be invoked once per entry in &lt;code&gt;providerStates&lt;/code&gt; array with the &lt;code&gt;name&lt;/code&gt; argument taken from the array entry &lt;code&gt;name&lt;/code&gt; parameter, and &lt;code&gt;params&lt;/code&gt; from the &lt;code&gt;params&lt;/code&gt; parameter.</target>
+        </trans-unit>
+        <trans-unit id="1f3b9df80310006df460e34a7e3bbf1fa6266568" translate="yes" xml:space="preserve">
+          <source>Handle absence of any provider state (!) in pytest setup.</source>
+          <target state="translated">pytest の設定でプロバイダの状態 (!)が存在しない場合を処理する。</target>
+        </trans-unit>
+        <trans-unit id="8a333d51f43ca0c433d0f75abc5079eb30b8bf4f" translate="yes" xml:space="preserve">
+          <source>Handle the &lt;code&gt;None&lt;/code&gt; provider state</source>
+          <target state="translated">Handle the &lt;code&gt;None&lt;/code&gt; provider state</target>
+        </trans-unit>
+        <trans-unit id="430de3efbf3d900bd683ffa009c133adbae05979" translate="yes" xml:space="preserve">
+          <source>Handle warning level messages in command line output handler</source>
+          <target state="translated">コマンドライン出力ハンドラで警告レベルのメッセージを扱う</target>
+        </trans-unit>
+        <trans-unit id="2bfd234c7e496977e36d343d3da3569dbb675a7a" translate="yes" xml:space="preserve">
+          <source>Handle x-www-form-urlencoded POST request bodies.</source>
+          <target state="translated">x-www-form-urlencodeされたPOSTリクエストボディを処理します。</target>
+        </trans-unit>
+        <trans-unit id="30336f4eb723d09fc0bb7387859b76f685ae401b" translate="yes" xml:space="preserve">
+          <source>Having endpoints in your application that are not active in production that create and delete your datastore state</source>
+          <target state="translated">本番環境ではアクティブではないアプリケーションのエンドポイントが、データストアの状態を作成したり削除したりする場合</target>
+        </trans-unit>
+        <trans-unit id="7d64696d1779b8a963f3d549d2471d6189936dad" translate="yes" xml:space="preserve">
+          <source>How to use pactman</source>
+          <target state="translated">パクトマンの使い方</target>
+        </trans-unit>
+        <trans-unit id="d50d59444ceb413b166a36f5d3ceaab9cc7617d5" translate="yes" xml:space="preserve">
+          <source>If HTTP Basic Auth is required for the broker, that may be provided in the URL:</source>
+          <target state="translated">ブローカーに HTTP Basic Auth が必要な場合は、URL に記載されているかもしれません。</target>
+        </trans-unit>
+        <trans-unit id="9b77361a46691e6bc63c2fb5fb50f8997f371ac7" translate="yes" xml:space="preserve">
+          <source>If that is not suitable, you may manually indicate to &lt;code&gt;has_pact_with()&lt;/code&gt; that it should either
+retain (&lt;code&gt;file_write_mode=&quot;merge&quot;&lt;/code&gt;) or remove (&lt;code&gt;file_write_mode=&quot;overwrite&quot;&lt;/code&gt;) the existing
+pact file.</source>
+          <target state="translated">If that is not suitable, you may manually indicate to &lt;code&gt;has_pact_with()&lt;/code&gt; that it should either retain ( &lt;code&gt;file_write_mode=&quot;merge&quot;&lt;/code&gt; ) or remove ( &lt;code&gt;file_write_mode=&quot;overwrite&quot;&lt;/code&gt; ) the existing pact file.</target>
+        </trans-unit>
+        <trans-unit id="cd973d58c3617dbd0cea932f77d5025cd8b53a80" translate="yes" xml:space="preserve">
+          <source>If the &lt;code&gt;Consumer&lt;/code&gt;'s code to fetch a user looked like this:</source>
+          <target state="translated">If the &lt;code&gt;Consumer&lt;/code&gt; 's code to fetch a user looked like this:</target>
+        </trans-unit>
+        <trans-unit id="b3ddf6542e1d42e8524c6a3350939ef76e167dea" translate="yes" xml:space="preserve">
+          <source>If there's a &lt;code&gt;Content-Type&lt;/code&gt; header and it says &lt;code&gt;application/json&lt;/code&gt; then serialise with
+json.dumps() and use the charset in the header, defaulting to UTF-8.</source>
+          <target state="translated">If there's a &lt;code&gt;Content-Type&lt;/code&gt; header and it says &lt;code&gt;application/json&lt;/code&gt; then serialise with json.dumps() and use the charset in the header, defaulting to UTF-8.</target>
+        </trans-unit>
+        <trans-unit id="44df974155185e9a36eebad781c14d1e394bc7b0" translate="yes" xml:space="preserve">
+          <source>If there's no &lt;code&gt;Content-Type&lt;/code&gt; header, assume JSON: serialise with &lt;code&gt;json.dumps()&lt;/code&gt;, encode to
+UTF-8 and add the header &lt;code&gt;Content-Type: application/json; charset=UTF-8&lt;/code&gt;.</source>
+          <target state="translated">If there's no &lt;code&gt;Content-Type&lt;/code&gt; header, assume JSON: serialise with &lt;code&gt;json.dumps()&lt;/code&gt; , encode to UTF-8 and add the header &lt;code&gt;Content-Type: application/json; charset=UTF-8&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="6b4c01199956aea34adf4787619bcd50119047fa" translate="yes" xml:space="preserve">
+          <source>If we have a method that communicates with one of our external services, which we'll call
+&lt;code&gt;Provider&lt;/code&gt;, and our product, &lt;code&gt;Consumer&lt;/code&gt; is hitting an endpoint on &lt;code&gt;Provider&lt;/code&gt; at
+&lt;code&gt;/users/&amp;lt;user&amp;gt;&lt;/code&gt; to get information about a particular user.</source>
+          <target state="translated">If we have a method that communicates with one of our external services, which we'll call &lt;code&gt;Provider&lt;/code&gt; , and our product, &lt;code&gt;Consumer&lt;/code&gt; is hitting an endpoint on &lt;code&gt;Provider&lt;/code&gt; at &lt;code&gt;/users/&amp;lt;user&amp;gt;&lt;/code&gt; to get information about a particular user.</target>
+        </trans-unit>
+        <trans-unit id="d2c4fb6381be46b51d64d22d26e67cb0f0e75166" translate="yes" xml:space="preserve">
+          <source>If you are defining a version 3 pact you may define provider states more richly, for example:</source>
+          <target state="translated">バージョン3の規約を定義している場合は、例えばプロバイダの状態をより豊富に定義することができます。</target>
+        </trans-unit>
+        <trans-unit id="74ec4be103e9d1653f3ab651a18de18be0035ca9" translate="yes" xml:space="preserve">
+          <source>If you have a sub-term of a &lt;code&gt;Like&lt;/code&gt; which needs to match an exact value like the default
+validity test then you can use &lt;code&gt;Equals&lt;/code&gt;, for example::</source>
+          <target state="translated">If you have a sub-term of a &lt;code&gt;Like&lt;/code&gt; which needs to match an exact value like the default validity test then you can use &lt;code&gt;Equals&lt;/code&gt; , for example::</target>
+        </trans-unit>
+        <trans-unit id="9a90e769242eb80fd2e7619ddbb6730ed2243632" translate="yes" xml:space="preserve">
+          <source>If you need to see the traceback that caused a pact failure you can use the verbosity flag
+to pytest (&lt;code&gt;pytest -v&lt;/code&gt;).</source>
+          <target state="translated">If you need to see the traceback that caused a pact failure you can use the verbosity flag to pytest ( &lt;code&gt;pytest -v&lt;/code&gt; ).</target>
+        </trans-unit>
+        <trans-unit id="d4f69912e18c94447c97d409c31bf3bfbb22703b" translate="yes" xml:space="preserve">
+          <source>If you pulled the pacts from a broker and wish to publish verification results, use &lt;code&gt;--pact-publish-results&lt;/code&gt;
+to turn on publishing the results. This option also requires you to specify &lt;code&gt;--pact-provider-version=&amp;lt;version&amp;gt;&lt;/code&gt;.</source>
+          <target state="translated">If you pulled the pacts from a broker and wish to publish verification results, use &lt;code&gt;--pact-publish-results&lt;/code&gt; to turn on publishing the results. This option also requires you to specify &lt;code&gt;--pact-provider-version=&amp;lt;version&amp;gt;&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="999997552fb6142d17acf87900425f172cb3fc66" translate="yes" xml:space="preserve">
+          <source>If you want more control over when the mock is configured and the interactions verified,
+use the &lt;code&gt;setup&lt;/code&gt; and &lt;code&gt;verify&lt;/code&gt; methods, respectively:</source>
+          <target state="translated">If you want more control over when the mock is configured and the interactions verified, use the &lt;code&gt;setup&lt;/code&gt; and &lt;code&gt;verify&lt;/code&gt; methods, respectively:</target>
+        </trans-unit>
+        <trans-unit id="edef4b37e54dba54ee216123d143861cf9baaddd" translate="yes" xml:space="preserve">
+          <source>If your broker needs a bearer token then you may provide that on the command line or set it in the
+environment variable &lt;code&gt;PACT_BROKER_TOKEN&lt;/code&gt;.</source>
+          <target state="translated">If your broker needs a bearer token then you may provide that on the command line or set it in the environment variable &lt;code&gt;PACT_BROKER_TOKEN&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="6980d69c272f12b545b96d385cea74860707b489" translate="yes" xml:space="preserve">
+          <source>If your consumer pacts have tags (called &quot;consumer version tags&quot; because they attach to specific
+versions) then you may specify the tag(s) to fetch pacts for on the command line. Multiple tags
+may be specified, and all pacts matching any tags specified will be verified. For example, to ensure
+you're verifying your Provider against the &lt;em&gt;production&lt;/em&gt; pact versions from your Consumers, use:</source>
+          <target state="translated">If your consumer pacts have tags (called &quot;consumer version tags&quot; because they attach to specific versions) then you may specify the tag(s) to fetch pacts for on the command line. Multiple tags may be specified, and all pacts matching any tags specified will be verified. For example, to ensure you're verifying your Provider against the &lt;em&gt;production&lt;/em&gt; pact versions from your Consumers, use:</target>
+        </trans-unit>
+        <trans-unit id="69e3cdc359dc439631d1639b1c4ad97733145942" translate="yes" xml:space="preserve">
+          <source>Improve the naming and organisation of the pytest command line options</source>
+          <target state="translated">pytest コマンドラインオプションの命名と整理を改善しました。</target>
+        </trans-unit>
+        <trans-unit id="65cb71341327d1cf69e756917804f407a3785588" translate="yes" xml:space="preserve">
+          <source>Improve verbose messages to clarify what they're saying.</source>
+          <target state="translated">冗長なメッセージを改善して、相手が何を言っているのかを明確にする。</target>
+        </trans-unit>
+        <trans-unit id="7d32bf636a072e61959d6eb1d2ca305ca7797e2f" translate="yes" xml:space="preserve">
+          <source>In many cases, your contracts will need very specific data to exist on the provider
+to pass successfully. If you are fetching a user profile, that user needs to exist,
+if querying a list of records, one or more records needs to exist. To support
+decoupling the testing of the consumer and provider, Pact offers the idea of provider
+states to communicate from the consumer what data should exist on the provider.</source>
+          <target state="translated">多くの場合、契約書が正常に通過するためには、プロバイダ上に非常に特殊なデータが存在する必要があります。ユーザープロファイルを取得する場合は、そのユーザーが存在している必要があり、レコードのリストを照会する場合は、1つ以上のレコードが存在している必要があります。コンシューマとプロバイダのテストをデカップリングするために、Pactはプロバイダの状態のアイデアを提供し、プロバイダ上にどのようなデータが存在すべきかをコンシューマから通信するようにしています。</target>
+        </trans-unit>
+        <trans-unit id="83cc3e05b30e43d6a6007fd32b10e4db05cd27a8" translate="yes" xml:space="preserve">
+          <source>Includes in request</source>
+          <target state="translated">リクエストに含まれる</target>
+        </trans-unit>
+        <trans-unit id="0512c27fec97d859a6815c32810d220e075c3225" translate="yes" xml:space="preserve">
+          <source>Includes in response</source>
+          <target state="translated">レスポンスに含まれる</target>
+        </trans-unit>
+        <trans-unit id="f1abf37745ebd5b970656899a81999f7af19ca83" translate="yes" xml:space="preserve">
+          <source>Includes(matcher, sample_data)</source>
+          <target state="translated">インクルード(matcher,sample_data)</target>
+        </trans-unit>
+        <trans-unit id="c946db2361042214c8eec39d3686636c4b4c5740" translate="yes" xml:space="preserve">
+          <source>Initial release of pactman, including ReeceTech's pact-verifier version 3.17 and pact-python version 0.17.0</source>
+          <target state="translated">ReeceTech の pact-verifier バージョン 3.17 と pact-python バージョン 0.17.0 を含む pactman の初期リリース。</target>
+        </trans-unit>
+        <trans-unit id="c81b79df3c6448eae7c4f80428b54cd5692a17d7" translate="yes" xml:space="preserve">
+          <source>Installation</source>
+          <target state="translated">インストール</target>
+        </trans-unit>
+        <trans-unit id="c5affdd14cc642b9317ca04c58ad74d072ed2ef8" translate="yes" xml:space="preserve">
+          <source>It also supports a broader set of the pact specification (versions 1.1 through to 3).</source>
+          <target state="translated">また、より広範なパクト仕様のセット(バージョン1.1から3まで)をサポートしています。</target>
+        </trans-unit>
+        <trans-unit id="1e702f6d2d4ff6582cfd63599e836cb32b7c2759" translate="yes" xml:space="preserve">
+          <source>Like in request</source>
+          <target state="translated">リクエストのように</target>
+        </trans-unit>
+        <trans-unit id="bcdd7ef5f62a3e84440a9b716778b4d1498b34c5" translate="yes" xml:space="preserve">
+          <source>Like in response</source>
+          <target state="translated">レスポンスのように</target>
+        </trans-unit>
+        <trans-unit id="6c8ca8c906c4b13f56ac832f3408bdd316853d7e" translate="yes" xml:space="preserve">
+          <source>Like(sample_data)</source>
+          <target state="translated">Like(sample_data)</target>
+        </trans-unit>
+        <trans-unit id="30cdebc1f5332cd8bf08255ed261dae8272b7490" translate="yes" xml:space="preserve">
+          <source>Make &lt;code&gt;start_mocking()&lt;/code&gt; and &lt;code&gt;stop_mocking()&lt;/code&gt; optional with non-server mocking</source>
+          <target state="translated">Make &lt;code&gt;start_mocking()&lt;/code&gt; and &lt;code&gt;stop_mocking()&lt;/code&gt; optional with non-server mocking</target>
+        </trans-unit>
+        <trans-unit id="9ce3957eda42fcde22437da2709e9859fc8ac0de" translate="yes" xml:space="preserve">
+          <source>Make verification fail if missing header specified in interaction</source>
+          <target state="translated">インタラクションで指定されたヘッダがない場合に検証を失敗させる</target>
+        </trans-unit>
+        <trans-unit id="67c9636da152d04b457d1c8bdc5c78892ffff399" translate="yes" xml:space="preserve">
+          <source>Note, you do not need to specify everything that will be returned from the Provider in a
+JSON response, any extra data that is received will be ignored and the tests will still pass.</source>
+          <target state="translated">JSON レスポンスでプロバイダから返されるすべてのデータを指定する必要はありません。</target>
+        </trans-unit>
+        <trans-unit id="f6fb8db227b0f92e53bdaf44a69c61d73c606cc2" translate="yes" xml:space="preserve">
+          <source>Now you may specify additional parameters to accompany your provider state text. These are
+passed as keyword arguments, and they're optional. You may also provider additional provider
+states using the &lt;code&gt;and_given()&lt;/code&gt; call, which may be invoked many times if necessary. It and
+&lt;code&gt;given()&lt;/code&gt; have the same calling convention: a provider state name and any optional parameters.</source>
+          <target state="translated">Now you may specify additional parameters to accompany your provider state text. These are passed as keyword arguments, and they're optional. You may also provider additional provider states using the &lt;code&gt;and_given()&lt;/code&gt; call, which may be invoked many times if necessary. It and &lt;code&gt;given()&lt;/code&gt; have the same calling convention: a provider state name and any optional parameters.</target>
+        </trans-unit>
+        <trans-unit id="dc39d00d2e5e4761a3f0d6376a744808131a09f6" translate="yes" xml:space="preserve">
+          <source>Once you have written the pytest code, you need to invoke pytest with additional arguments:</source>
+          <target state="translated">pytest のコードを書いたら、追加の引数で pytest を呼び出す必要があります。</target>
+        </trans-unit>
+        <trans-unit id="878e5bf1cab50987d957d9f7edbeca0561252059" translate="yes" xml:space="preserve">
+          <source>Or other matchers can be nested inside to assert more complex objects:</source>
+          <target state="translated">あるいは、他のマッチャを内部に入れ子にして、より複雑なオブジェクトをアサートすることもできます。</target>
+        </trans-unit>
+        <trans-unit id="889a8db8cb04f88f84db9d475498bb286d03f421" translate="yes" xml:space="preserve">
+          <source>Otherwise pass through the &lt;code&gt;Content-Type&lt;/code&gt; header and body as-is.
+Binary data is not supported.</source>
+          <target state="translated">Otherwise pass through the &lt;code&gt;Content-Type&lt;/code&gt; header and body as-is. Binary data is not supported.</target>
+        </trans-unit>
+        <trans-unit id="8e89162126f5e0bdb7c429e2906665838440d57d" translate="yes" xml:space="preserve">
+          <source>Pact Broker Configuration</source>
+          <target state="translated">パクトブローカーの設定</target>
+        </trans-unit>
+        <trans-unit id="df4c3fa395ce615dff49ec419b14fc8a78816765" translate="yes" xml:space="preserve">
+          <source>Please read &lt;a href=&quot;CONTRIBUTING.md&quot;&gt;CONTRIBUTING.md&lt;/a&gt;</source>
+          <target state="translated">Please read &lt;a href=&quot;CONTRIBUTING.md&quot;&gt;CONTRIBUTING.md&lt;/a&gt;</target>
+        </trans-unit>
+        <trans-unit id="12c1f2a759344409a0704380d1cde9fcb6d26434" translate="yes" xml:space="preserve">
+          <source>Provider States</source>
+          <target state="translated">プロバイダーの州</target>
+        </trans-unit>
+        <trans-unit id="0a66795f7782aeb0fc02371537292feb10f10ca2" translate="yes" xml:space="preserve">
+          <source>Provider states using &lt;code&gt;pytest&lt;/code&gt;</source>
+          <target state="translated">Provider states using &lt;code&gt;pytest&lt;/code&gt;</target>
+        </trans-unit>
+        <trans-unit id="b0633ffdbc65e8d60718f6eb9753efab46d2847e" translate="yes" xml:space="preserve">
+          <source>Python version of Pact mocking, generation and verification.</source>
+          <target state="translated">Python版Pactのモック、生成、検証。</target>
+        </trans-unit>
+        <trans-unit id="26e6f5af99526c9af97fb51c7c88fab43bc3f8d8" translate="yes" xml:space="preserve">
+          <source>Reinstate lost result output.</source>
+          <target state="translated">失われた結果出力を元に戻します。</target>
+        </trans-unit>
+        <trans-unit id="3f453891a8b048016ad785ded9267d527fc4c217" translate="yes" xml:space="preserve">
+          <source>Release History</source>
+          <target state="translated">リリース履歴</target>
+        </trans-unit>
+        <trans-unit id="ed89677a7088d20a8717e757c76aefb3f41f3c98" translate="yes" xml:space="preserve">
+          <source>Renamed the &lt;code&gt;pact-verifier&lt;/code&gt; command to &lt;code&gt;pactman-verifier&lt;/code&gt; to avoid
+confusion with other pre-existing packages that provide a command-line
+incompatible &lt;code&gt;pact-verifier&lt;/code&gt; command.</source>
+          <target state="translated">Renamed the &lt;code&gt;pact-verifier&lt;/code&gt; command to &lt;code&gt;pactman-verifier&lt;/code&gt; to avoid confusion with other pre-existing packages that provide a command-line incompatible &lt;code&gt;pact-verifier&lt;/code&gt; command.</target>
+        </trans-unit>
+        <trans-unit id="f7194e6a0d0b838382b202853e7c198d693fbabc" translate="yes" xml:space="preserve">
+          <source>Requests</source>
+          <target state="translated">ご要望</target>
+        </trans-unit>
+        <trans-unit id="c0ee47dc3193f71537b134752338552bc33bdb3e" translate="yes" xml:space="preserve">
+          <source>Run &lt;code&gt;pactman-verifier -h&lt;/code&gt; to see the options available. To run all pacts registered to a provider in a &lt;a href=&quot;https://docs.pact.io/getting_started/sharing_pacts&quot;&gt;Pact Broker&lt;/a&gt;:</source>
+          <target state="translated">Run &lt;code&gt;pactman-verifier -h&lt;/code&gt; to see the options available. To run all pacts registered to a provider in a &lt;a href=&quot;https://docs.pact.io/getting_started/sharing_pacts&quot;&gt;Pact Broker&lt;/a&gt;:</target>
+        </trans-unit>
+        <trans-unit id="3a774b570b605cd156762b57ff439ded54f54e77" translate="yes" xml:space="preserve">
+          <source>See the &quot;pact&quot; section in the pytest command-line help (&lt;code&gt;pytest -h&lt;/code&gt;) for all command-line options.</source>
+          <target state="translated">See the &quot;pact&quot; section in the pytest command-line help ( &lt;code&gt;pytest -h&lt;/code&gt; ) for all command-line options.</target>
+        </trans-unit>
+        <trans-unit id="2e989a910415f37bd5f03108ea11fed9a65f81f6" translate="yes" xml:space="preserve">
+          <source>Significantly improved support for pytest provider verification of pacts</source>
+          <target state="translated">pytestプロバイダーによるパクトの検証のサポートを大幅に改善</target>
+        </trans-unit>
+        <trans-unit id="772e7e97509a683d79a7535c8449f3c87e39e2d7" translate="yes" xml:space="preserve">
+          <source>So, for example:</source>
+          <target state="translated">だから、例えば</target>
+        </trans-unit>
+        <trans-unit id="005c332d9a05242377a3b1ae9bfa7a21c313faca" translate="yes" xml:space="preserve">
+          <source>Some important has_pact_with() options()</source>
+          <target state="translated">いくつかの重要な has_pact_with()オプション()</target>
+        </trans-unit>
+        <trans-unit id="b0b1e7a643d942988f1f439a81875568d2cc867b" translate="yes" xml:space="preserve">
+          <source>Some words about given()</source>
+          <target state="translated">given()に関するいくつかの言葉</target>
+        </trans-unit>
+        <trans-unit id="3444fdd1c906bea76a53f440a14b6d5d631cd815" translate="yes" xml:space="preserve">
+          <source>Support verification of HEAD requests (oops).</source>
+          <target state="translated">HEADリクエスト(ops)の検証をサポートします。</target>
+        </trans-unit>
+        <trans-unit id="ce8f8bccd998fb3762cb95fe040e48aea6ca148b" translate="yes" xml:space="preserve">
+          <source>Term in request</source>
+          <target state="translated">リクエスト中の用語</target>
+        </trans-unit>
+        <trans-unit id="783346a5c69a3ee2224ea1433eb6ba028cbb9cb7" translate="yes" xml:space="preserve">
+          <source>Term in response</source>
+          <target state="translated">対応する用語</target>
+        </trans-unit>
+        <trans-unit id="0ce8f03bb26b2b886ba4d2b83a6d4023b66cd0bd" translate="yes" xml:space="preserve">
+          <source>Term(matcher, sample_data)</source>
+          <target state="translated">Term(matcher,sample_data)</target>
+        </trans-unit>
+        <trans-unit id="35c960860379ff5b382f1030568f94f7331020fe" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;body&lt;/code&gt; payload is assumed to be JSON data. In the absence of a &lt;code&gt;Content-Type&lt;/code&gt; header
+we assume &lt;code&gt;Content-Type: application/json; charset=UTF-8&lt;/code&gt; (JSON text is Unicode and the
+default encoding is UTF-8).</source>
+          <target state="translated">The &lt;code&gt;body&lt;/code&gt; payload is assumed to be JSON data. In the absence of a &lt;code&gt;Content-Type&lt;/code&gt; header we assume &lt;code&gt;Content-Type: application/json; charset=UTF-8&lt;/code&gt; (JSON text is Unicode and the default encoding is UTF-8).</target>
+        </trans-unit>
+        <trans-unit id="2fe41e49834c720ed5c1efe5893f5bedf5a57c3f" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;has_pact_with(provider...)&lt;/code&gt; call has quite a few options documented in its API, but a couple are
+worth mentioning in particular:</source>
+          <target state="translated">The &lt;code&gt;has_pact_with(provider...)&lt;/code&gt; call has quite a few options documented in its API, but a couple are worth mentioning in particular:</target>
+        </trans-unit>
+        <trans-unit id="a661d164701ffc51588a8b6bdbec895ca57484f6" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;matcher&lt;/code&gt; and &lt;code&gt;sample_data&lt;/code&gt; are used differently by consumer and provider depending
+upon whether they're used in the &lt;code&gt;with_request()&lt;/code&gt; or &lt;code&gt;will_respond_with()&lt;/code&gt; sections
+of the pact. Using the above example:</source>
+          <target state="translated">The &lt;code&gt;matcher&lt;/code&gt; and &lt;code&gt;sample_data&lt;/code&gt; are used differently by consumer and provider depending upon whether they're used in the &lt;code&gt;with_request()&lt;/code&gt; or &lt;code&gt;will_respond_with()&lt;/code&gt; sections of the pact. Using the above example:</target>
+        </trans-unit>
+        <trans-unit id="c3b532562ec192dd8c86e93497c19e1fed796c8a" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;pact_verifier.verify&lt;/code&gt; call may also take a third argument to supply additional HTTP headers
+to send to the server during verification - specify them as a dictionary.</source>
+          <target state="translated">The &lt;code&gt;pact_verifier.verify&lt;/code&gt; call may also take a third argument to supply additional HTTP headers to send to the server during verification - specify them as a dictionary.</target>
+        </trans-unit>
+        <trans-unit id="c398d3f59bf8645582163aedb7fe4779e86848e6" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;provider_state&lt;/code&gt; function passed to &lt;code&gt;pact_verifier.verify&lt;/code&gt; will be passed the &lt;code&gt;providerState&lt;/code&gt; and
+&lt;code&gt;providerStates&lt;/code&gt; for all pacts being verified.</source>
+          <target state="translated">The &lt;code&gt;provider_state&lt;/code&gt; function passed to &lt;code&gt;pact_verifier.verify&lt;/code&gt; will be passed the &lt;code&gt;providerState&lt;/code&gt; and &lt;code&gt;providerStates&lt;/code&gt; for all pacts being verified.</target>
+        </trans-unit>
+        <trans-unit id="e10a02712f3304cc6648dcd2898d4e5e20f650a5" translate="yes" xml:space="preserve">
+          <source>The default validity testing of equal values works great if that user information is always
+static, but what happens if the user has a last updated field that is set to the current time
+every time the object is modified? To handle variable data and make your tests more robust,
+there are several helpful matchers:</source>
+          <target state="translated">ユーザー情報が常に静的であれば、等しい値のデフォルトの妥当性テストはうまく機能しますが、オブジェクトが変更されるたびに現在の時刻に設定される最終更新フィールドをユーザーが持っている場合はどうなるでしょうか?変数データを処理し、テストをより強固なものにするために、いくつかの便利なマッチングツールがあります。</target>
+        </trans-unit>
+        <trans-unit id="25ac69ea32a82508e2ab984468b34b30528e753c" translate="yes" xml:space="preserve">
+          <source>The key difference is all functionality is implemented in Python, rather than shelling out or forking
+to the ruby implementation. This allows for a much nicer mocking user experience (it mocks urllib3
+directly), is faster, less messy configuration (multiple providers means multiple ruby processes spawned
+on different ports).</source>
+          <target state="translated">重要な違いは、ルビーの実装にお金を払ったりフォークしたりするのではなく、すべての機能が Python で実装されていることです。これにより、より良いモック体験が可能になり(urllib3 を直接モックします)、より高速で、面倒な設定が少なくなります(複数のプロバイダがあるということは、異なるポートで複数の ruby プロセスが生成されることを意味します)。</target>
+        </trans-unit>
+        <trans-unit id="99491fc373b736ba2f7cc37dded76635561c98d5" translate="yes" xml:space="preserve">
+          <source>The pact verifier has been engineered from the start to talk to a pact broker (both to discover pacts
+and to return verification results).</source>
+          <target state="translated">パクトベリファイアは、最初からパクトブローカーと対話するように設計されています(パクトを発見し、検証結果を返すために)。</target>
+        </trans-unit>
+        <trans-unit id="410a50c54c75bc3bcedee1f088ca8f9e6458aede" translate="yes" xml:space="preserve">
+          <source>The test function may do any level of mocking and data setup using standard pytest fixtures - so mocking
+downstream APIs or other interactions within the provider may be done with standard monkeypatching.</source>
+          <target state="translated">テスト関数は、標準の pytest フィクスチャを使って任意のレベルのモッキングやデータのセットアップを行うことができます-下流の API やプロバイダ内の他のインタラクションのモッキングは、標準の monkeypatching で行うことができます。</target>
+        </trans-unit>
+        <trans-unit id="e35a95bade1b9c81a913952750cf7b7e6108cf30" translate="yes" xml:space="preserve">
+          <source>Then &lt;code&gt;Consumer&lt;/code&gt;'s contract test is a regular unit test, but &lt;em&gt;using pactman for mocking&lt;/em&gt;,
+and might look something like this:</source>
+          <target state="translated">Then &lt;code&gt;Consumer&lt;/code&gt; 's contract test is a regular unit test, but &lt;em&gt;using pactman for mocking&lt;/em&gt;, and might look something like this:</target>
+        </trans-unit>
+        <trans-unit id="1108843f02989253dcf97b726f64ab2e15facf05" translate="yes" xml:space="preserve">
+          <source>There&amp;rsquo;s a few other quality of life improvements, but those are the big ones.</source>
+          <target state="translated">There&amp;rsquo;s a few other quality of life improvements, but those are the big ones.</target>
+        </trans-unit>
+        <trans-unit id="e75e2ca7c8f0f8afd959548860d41271131ba5a5" translate="yes" xml:space="preserve">
+          <source>This does a few important things:</source>
+          <target state="translated">これはいくつかの重要なことをします。</target>
+        </trans-unit>
+        <trans-unit id="d5ba307bacaef3cd5a6b569420f56c7eb1300257" translate="yes" xml:space="preserve">
+          <source>This is because it &lt;em&gt;must only be done once&lt;/em&gt; per test suite. By default the pact file is
+cleared out when that relationship is defined, so if you define it more than once per test
+suite you'll end up only storing the &lt;em&gt;last&lt;/em&gt; pact declared per relationship. For more on this
+subject, see &lt;a href=&quot;#writing-multiple-pacts&quot;&gt;writing multiple pacts&lt;/a&gt;.</source>
+          <target state="translated">This is because it &lt;em&gt;must only be done once&lt;/em&gt; per test suite. By default the pact file is cleared out when that relationship is defined, so if you define it more than once per test suite you'll end up only storing the &lt;em&gt;last&lt;/em&gt; pact declared per relationship. For more on this subject, see &lt;a href=&quot;#writing-multiple-pacts&quot;&gt;writing multiple pacts&lt;/a&gt;.</target>
+        </trans-unit>
+        <trans-unit id="40892bb74151d3828cc079e172cfc1bedc9d7b93" translate="yes" xml:space="preserve">
+          <source>To verify pacts for a provider you would write a new pytest test module in the provider's test suite.
+If you don't want it to be exercised in your usual unit test run you can call it &lt;code&gt;verify_pacts.py&lt;/code&gt;.</source>
+          <target state="translated">To verify pacts for a provider you would write a new pytest test module in the provider's test suite. If you don't want it to be exercised in your usual unit test run you can call it &lt;code&gt;verify_pacts.py&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="cd569876c2dcb5ea18ed098997f390667ca882e7" translate="yes" xml:space="preserve">
+          <source>Tools for creating and verifying consumer driven contracts using the Pact framework.</source>
+          <target state="translated">Pactフレームワークを使用して消費者主導の契約を作成し、検証するためのツールです。</target>
+        </trans-unit>
+        <trans-unit id="4e5196d309158ef857a147c8bab3b9672217c44e" translate="yes" xml:space="preserve">
+          <source>Turned pact state call failures into warnings rather than errors</source>
+          <target state="translated">パクト状態の呼び出しの失敗をエラーではなく警告に変更</target>
+        </trans-unit>
+        <trans-unit id="f4581e1757dacc891fe025a9bde780bcfc76906f" translate="yes" xml:space="preserve">
+          <source>Tweaked README for clarity.</source>
+          <target state="translated">READMEを分かりやすくするために微調整しました。</target>
+        </trans-unit>
+        <trans-unit id="dc09dc3c9c8c9e742a26119da306fa3011ae9990" translate="yes" xml:space="preserve">
+          <source>Use the &lt;code&gt;pactman-verifier&lt;/code&gt; command-line program which replays the pact assertions against
+a running instance of your service, or</source>
+          <target state="translated">Use the &lt;code&gt;pactman-verifier&lt;/code&gt; command-line program which replays the pact assertions against a running instance of your service, or</target>
+        </trans-unit>
+        <trans-unit id="a758774dffc525f24a13dbdc9a338d90c5bad6d9" translate="yes" xml:space="preserve">
+          <source>Use the &lt;code&gt;pytest&lt;/code&gt; support built into pactman to replay the pacts as test cases, allowing
+use of other testing mechanisms such as mocking and transaction control.</source>
+          <target state="translated">Use the &lt;code&gt;pytest&lt;/code&gt; support built into pactman to replay the pacts as test cases, allowing use of other testing mechanisms such as mocking and transaction control.</target>
+        </trans-unit>
+        <trans-unit id="f7b937c301b6bd96638fa8b86c523aee33137c9b" translate="yes" xml:space="preserve">
+          <source>Uses &lt;code&gt;given&lt;/code&gt; to define the setup criteria for the Provider &lt;code&gt;UserA exists and is not an administrator&lt;/code&gt;</source>
+          <target state="translated">Uses &lt;code&gt;given&lt;/code&gt; to define the setup criteria for the Provider &lt;code&gt;UserA exists and is not an administrator&lt;/code&gt;</target>
+        </trans-unit>
+        <trans-unit id="71fc1d473b96d0d80bd1ec91353f90b50ff2ce20" translate="yes" xml:space="preserve">
+          <source>Using &lt;code&gt;pactman-verifier&lt;/code&gt;</source>
+          <target state="translated">Using &lt;code&gt;pactman-verifier&lt;/code&gt;</target>
+        </trans-unit>
+        <trans-unit id="bd9c6ace7b6fe603e08be7de59438841af0103df" translate="yes" xml:space="preserve">
+          <source>Using the Pact object as a &lt;a href=&quot;https://en.wikibooks.org/wiki/Python_Programming/Context_Managers&quot;&gt;context manager&lt;/a&gt;, we call our method under test
+which will then communicate with the Pact mock. The mock will respond with
+the items we defined, allowing us to assert that the method processed the response and
+returned the expected value.</source>
+          <target state="translated">Using the Pact object as a &lt;a href=&quot;https://en.wikibooks.org/wiki/Python_Programming/Context_Managers&quot;&gt;context manager&lt;/a&gt;, we call our method under test which will then communicate with the Pact mock. The mock will respond with the items we defined, allowing us to assert that the method processed the response and returned the expected value.</target>
+        </trans-unit>
+        <trans-unit id="7086d98620ba82f64081f239df6e55c20f6bfc42" translate="yes" xml:space="preserve">
+          <source>Verifying Pacts Against a Service</source>
+          <target state="translated">サービスに対するアクションの検証</target>
+        </trans-unit>
+        <trans-unit id="2e97b189badaf359813eab29d89e2398614fcf6b" translate="yes" xml:space="preserve">
+          <source>Verifying Pacts Using &lt;code&gt;pytest&lt;/code&gt;</source>
+          <target state="translated">Verifying Pacts Using &lt;code&gt;pytest&lt;/code&gt;</target>
+        </trans-unit>
+        <trans-unit id="fe418ac70327c027be1356bb0e0729a5511a09b7" translate="yes" xml:space="preserve">
+          <source>When &lt;code&gt;has_pact_with()&lt;/code&gt; is invoked it will by default remove any existing pact JSON file for the
+stated consumer &amp;amp; provider.</source>
+          <target state="translated">When &lt;code&gt;has_pact_with()&lt;/code&gt; is invoked it will by default remove any existing pact JSON file for the stated consumer &amp;amp; provider.</target>
+        </trans-unit>
+        <trans-unit id="6db2346b4274d72277d7d5797417c8690b02e23c" translate="yes" xml:space="preserve">
+          <source>When a dictionary is used as an argument for Like, all the child objects (and their child objects etc.)
+will be matched according to their types, unless you use a more specific matcher like a Term.</source>
+          <target state="translated">辞書をLikeの引数として使用した場合、Termのようなより特定の Matcherを使用しない限り、すべての子オブジェクト(およびその子オブジェクトなど)は、そのタイプに応じてマッチします。</target>
+        </trans-unit>
+        <trans-unit id="06b8761afa6ab0004a02cc074a3b2bbc85546000" translate="yes" xml:space="preserve">
+          <source>When defining the expected HTTP request that your code is expected to make you
+can specify the method, path, body, headers, and query:</source>
+          <target state="translated">コードが行うことが期待される HTTP リクエストを定義する際には、メソッド、パス、ボディ、ヘッダ、クエリを指定することができます。</target>
+        </trans-unit>
+        <trans-unit id="c5408928694f207110693f5854de6f7c701278b6" translate="yes" xml:space="preserve">
+          <source>When setting up the testing of a provider you will also need to setup the management of
+these provider states. The Pact verifier does this by making additional HTTP requests to
+the &lt;code&gt;&amp;lt;provider setup url&amp;gt;&lt;/code&gt; you provide. This URL could be
+on the provider application or a separate one. Some strategies for managing state include:</source>
+          <target state="translated">When setting up the testing of a provider you will also need to setup the management of these provider states. The Pact verifier does this by making additional HTTP requests to the &lt;code&gt;&amp;lt;provider setup url&amp;gt;&lt;/code&gt; you provide. This URL could be on the provider application or a separate one. Some strategies for managing state include:</target>
+        </trans-unit>
+        <trans-unit id="535c2a26ed48ec9a2b605460d1ca062df54cc054" translate="yes" xml:space="preserve">
+          <source>When you run the tests for the consumer, the mock will return the &lt;code&gt;last_modified&lt;/code&gt; you provided
+as &lt;code&gt;sample_data&lt;/code&gt;, in this case &lt;code&gt;2016-12-15T20:16:01&lt;/code&gt;. When the contract is verified on the
+provider, the regex will be used to search the response from the real provider service
+and the test will be considered successful if the regex finds a match in the response.</source>
+          <target state="translated">When you run the tests for the consumer, the mock will return the &lt;code&gt;last_modified&lt;/code&gt; you provided as &lt;code&gt;sample_data&lt;/code&gt; , in this case &lt;code&gt;2016-12-15T20:16:01&lt;/code&gt; . When the contract is verified on the provider, the regex will be used to search the response from the real provider service and the test will be considered successful if the regex finds a match in the response.</target>
+        </trans-unit>
+        <trans-unit id="d3f16a8c9af2130a49c27254d335e6876506c16d" translate="yes" xml:space="preserve">
+          <source>When you run the tests for the consumer, the mock will return the &lt;code&gt;sample_data&lt;/code&gt;.
+When the contract is verified on the provider, the values generated by the provider
+service will be checked to match the type of &lt;code&gt;sample_data&lt;/code&gt;.</source>
+          <target state="translated">When you run the tests for the consumer, the mock will return the &lt;code&gt;sample_data&lt;/code&gt; . When the contract is verified on the provider, the values generated by the provider service will be checked to match the type of &lt;code&gt;sample_data&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="e22dfb386205e6118e1fed0935d41aa2a9ae5caa" translate="yes" xml:space="preserve">
+          <source>When you run the tests for the consumer, the mock will return the data you provided
+as &lt;code&gt;sample_data&lt;/code&gt;, in this case &lt;code&gt;'Sample spamming content'&lt;/code&gt;. When the contract is verified on the
+provider, the data returned from the real provider service will be verified to ensure it
+contains the &lt;code&gt;matcher&lt;/code&gt; string.</source>
+          <target state="translated">When you run the tests for the consumer, the mock will return the data you provided as &lt;code&gt;sample_data&lt;/code&gt; , in this case &lt;code&gt;'Sample spamming content'&lt;/code&gt; . When the contract is verified on the provider, the data returned from the real provider service will be verified to ensure it contains the &lt;code&gt;matcher&lt;/code&gt; string.</target>
+        </trans-unit>
+        <trans-unit id="228b0f60d4a294f7102e0e205e68a2bac3a4e8ef" translate="yes" xml:space="preserve">
+          <source>When you run the tests for the consumer, the mock will verify that the &lt;code&gt;commencement_date&lt;/code&gt;
+the consumer uses in its request matches the &lt;code&gt;matcher&lt;/code&gt;, raising an AssertionError
+if invalid. When the contract is verified by the provider, the &lt;code&gt;sample_data&lt;/code&gt; will be
+used in the request to the real provider service, in this case &lt;code&gt;1972-01-01&lt;/code&gt;.</source>
+          <target state="translated">When you run the tests for the consumer, the mock will verify that the &lt;code&gt;commencement_date&lt;/code&gt; the consumer uses in its request matches the &lt;code&gt;matcher&lt;/code&gt; , raising an AssertionError if invalid. When the contract is verified by the provider, the &lt;code&gt;sample_data&lt;/code&gt; will be used in the request to the real provider service, in this case &lt;code&gt;1972-01-01&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="c3db08c0d7ae69ecf16e9b1bd80a7a541c5f7c35" translate="yes" xml:space="preserve">
+          <source>When you run the tests for the consumer, the mock will verify that the data
+the consumer uses in its request contains the &lt;code&gt;matcher&lt;/code&gt; string, raising an AssertionError
+if invalid. When the contract is verified by the provider, the &lt;code&gt;sample_data&lt;/code&gt; will be
+used in the request to the real provider service, in this case &lt;code&gt;'Sample spamming content'&lt;/code&gt;.</source>
+          <target state="translated">When you run the tests for the consumer, the mock will verify that the data the consumer uses in its request contains the &lt;code&gt;matcher&lt;/code&gt; string, raising an AssertionError if invalid. When the contract is verified by the provider, the &lt;code&gt;sample_data&lt;/code&gt; will be used in the request to the real provider service, in this case &lt;code&gt;'Sample spamming content'&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="faa0a415a14dac939f3c8645b68c2690d88c6290" translate="yes" xml:space="preserve">
+          <source>When you run the tests for the consumer, the mock will verify that values are
+of the correct type, raising an AssertionError if invalid. When the contract is
+verified by the provider, the &lt;code&gt;sample_data&lt;/code&gt; will be used in the request to the
+real provider service.</source>
+          <target state="translated">When you run the tests for the consumer, the mock will verify that values are of the correct type, raising an AssertionError if invalid. When the contract is verified by the provider, the &lt;code&gt;sample_data&lt;/code&gt; will be used in the request to the real provider service.</target>
+        </trans-unit>
+        <trans-unit id="23d26c54ec7a3943391a93e803a6edcf842208fa" translate="yes" xml:space="preserve">
+          <source>Where &lt;code&gt;pact-python&lt;/code&gt; required management of a background Ruby server, and manually starting and stopping
+it, &lt;code&gt;pactman&lt;/code&gt; allows a much nicer usage like:</source>
+          <target state="translated">Where &lt;code&gt;pact-python&lt;/code&gt; required management of a background Ruby server, and manually starting and stopping it, &lt;code&gt;pactman&lt;/code&gt; allows a much nicer usage like:</target>
+        </trans-unit>
+        <trans-unit id="f560c533a442ebfeaa22cfeccdebb1c0161f3208" translate="yes" xml:space="preserve">
+          <source>Writing a Pact</source>
+          <target state="translated">協定書の書き方</target>
+        </trans-unit>
+        <trans-unit id="c842e726a3508199a1e8041b8c54eb3ad6e18cb3" translate="yes" xml:space="preserve">
+          <source>Writing multiple pacts</source>
+          <target state="translated">複数のアクションを書く</target>
+        </trans-unit>
+        <trans-unit id="cdfdf793640c56f15f4efa33cbeb0c62a11d459f" translate="yes" xml:space="preserve">
+          <source>Writing the Consumer Test</source>
+          <target state="translated">消費者テストの書き方</target>
+        </trans-unit>
+        <trans-unit id="9ef97e8efbb32194b60231e87aaf0146fc7f4166" translate="yes" xml:space="preserve">
+          <source>You can define exact values for your expected request like the examples above,
+or you can use the matchers defined later to assist in handling values that are
+variable.</source>
+          <target state="translated">上記の例のように、期待されるリクエストに対して正確な値を定義することもできますし、後から定義されたマatcherを使用して変数の値の処理を支援することもできます。</target>
+        </trans-unit>
+        <trans-unit id="c63e63592923db246f61b748b3b60223e2cbcc6e" translate="yes" xml:space="preserve">
+          <source>You can pass in a local pact file with &lt;code&gt;-l&lt;/code&gt;, this will verify the service against the local file instead of the broker:</source>
+          <target state="translated">You can pass in a local pact file with &lt;code&gt;-l&lt;/code&gt; , this will verify the service against the local file instead of the broker:</target>
+        </trans-unit>
+        <trans-unit id="84fa600ea3c6e8a21e2d42b5a6e71175154c0195" translate="yes" xml:space="preserve">
+          <source>You can use &lt;code&gt;--custom-provider-header&lt;/code&gt; to pass in headers to be passed to provider state setup and verify calls. it can
+be used multiple times</source>
+          <target state="translated">You can use &lt;code&gt;--custom-provider-header&lt;/code&gt; to pass in headers to be passed to provider state setup and verify calls. it can be used multiple times</target>
+        </trans-unit>
+        <trans-unit id="00c3437a8f820acf678cf48bd8811c7b572d1647" translate="yes" xml:space="preserve">
+          <source>You have two options for verifying pacts against a service you created:</source>
+          <target state="translated">あなたが作成したサービスに対するパクトを検証するには、2つの選択肢があります。</target>
+        </trans-unit>
+        <trans-unit id="6342537d47b8c54e2df26fdfd0f494ec1cd4b8b1" translate="yes" xml:space="preserve">
+          <source>You may also specify the broker URL in the environment variable &lt;code&gt;PACT_BROKER_URL&lt;/code&gt;.</source>
+          <target state="translated">You may also specify the broker URL in the environment variable &lt;code&gt;PACT_BROKER_URL&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="e64306215f0514966797cceb93b08421b2a85420" translate="yes" xml:space="preserve">
+          <source>You may have noticed that the pact relationship is defined at the module level in our
+examples:</source>
+          <target state="translated">この例では、パクト関係がモジュールレベルで定義されていることにお気づきかもしれません。</target>
+        </trans-unit>
+        <trans-unit id="299a1058cc373e99053f729bc569f5078702a918" translate="yes" xml:space="preserve">
+          <source>You may invoke &lt;code&gt;Consumer('Consumer').has_pact_with(Provider('Provider'))&lt;/code&gt; once at the start of
+your tests. This could be done as a pytest module or session fixture, or through some other
+mechanism and store it in a variable. By convention this is called &lt;code&gt;pact&lt;/code&gt; in all of our examples.</source>
+          <target state="translated">You may invoke &lt;code&gt;Consumer('Consumer').has_pact_with(Provider('Provider'))&lt;/code&gt; once at the start of your tests. This could be done as a pytest module or session fixture, or through some other mechanism and store it in a variable. By convention this is called &lt;code&gt;pact&lt;/code&gt; in all of our examples.</target>
+        </trans-unit>
+        <trans-unit id="059b2aa88f214d3827443a949e8d381ae39f5c94" translate="yes" xml:space="preserve">
+          <source>You use &lt;code&gt;given()&lt;/code&gt; to indicate to the provider that they should have some state in order to
+be able to satisfy the interaction. You should agree upon the state and its specification
+in discussion with the provider.</source>
+          <target state="translated">You use &lt;code&gt;given()&lt;/code&gt; to indicate to the provider that they should have some state in order to be able to satisfy the interaction. You should agree upon the state and its specification in discussion with the provider.</target>
+        </trans-unit>
+        <trans-unit id="65c3bc416d293613881580b54ea248e1099bd473" translate="yes" xml:space="preserve">
+          <source>You'd then use &lt;code&gt;pact&lt;/code&gt; to declare pacts between those participants.</source>
+          <target state="translated">You'd then use &lt;code&gt;pact&lt;/code&gt; to declare pacts between those participants.</target>
+        </trans-unit>
+        <trans-unit id="cd6006c32176d9ebde5ce0c603cca390671d15cd" translate="yes" xml:space="preserve">
+          <source>You'll need to include some extra command-line arguments to pytest (also described below) to indicate
+where the pacts should come from, and whether verification results should be posted to a pact broker.</source>
+          <target state="translated">パクトがどこから来るのか、検証結果をパクトブローカーに投稿すべきかどうかを示すために、 pytest (後述)にいくつかの追加のコマンドライン引数を含める必要があります。</target>
+        </trans-unit>
+        <trans-unit id="bbedc8ca8317f0c437f7b00a15fa400e54d998a5" translate="yes" xml:space="preserve">
+          <source>Your test code needs to use the &lt;code&gt;pact_verifier&lt;/code&gt; fixture provided by pactman, invoking
+its &lt;code&gt;verify()&lt;/code&gt; method with the URL to the running instance of your service (&lt;code&gt;pytest-django&lt;/code&gt; provides
+a handy &lt;code&gt;live_server&lt;/code&gt; fixture which works well here) and a callback to set up provider states (described
+below).</source>
+          <target state="translated">Your test code needs to use the &lt;code&gt;pact_verifier&lt;/code&gt; fixture provided by pactman, invoking its &lt;code&gt;verify()&lt;/code&gt; method with the URL to the running instance of your service ( &lt;code&gt;pytest-django&lt;/code&gt; provides a handy &lt;code&gt;live_server&lt;/code&gt; fixture which works well here) and a callback to set up provider states (described below).</target>
+        </trans-unit>
+        <trans-unit id="30c0ad67868db805cc620bdab11ca63031029e04" translate="yes" xml:space="preserve">
+          <source>or set in the &lt;code&gt;PACT_BROKER_AUTH&lt;/code&gt; environment variable as &lt;code&gt;user:password&lt;/code&gt;.</source>
+          <target state="translated">or set in the &lt;code&gt;PACT_BROKER_AUTH&lt;/code&gt; environment variable as &lt;code&gt;user:password&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="3b0a6d9a94cc28b8c0838f06c1281618e2c34769" translate="yes" xml:space="preserve">
+          <source>pactman</source>
+          <target state="translated">密約者</target>
+        </trans-unit>
+        <trans-unit id="634a18af4c6f9de97f1ecd7d30b66b3089043bee" translate="yes" xml:space="preserve">
+          <source>pactman is maintained by the &lt;a href=&quot;https://www.reecetech.com.au/&quot;&gt;ReeceTech&lt;/a&gt; team as part of their toolkit to
+keep their large (and growing) microservices architecture under control.</source>
+          <target state="translated">pactman is maintained by the &lt;a href=&quot;https://www.reecetech.com.au/&quot;&gt;ReeceTech&lt;/a&gt; team as part of their toolkit to keep their large (and growing) microservices architecture under control.</target>
+        </trans-unit>
+        <trans-unit id="4d5219bcf5ed049e040689e95ede0c6b1f26fd5c" translate="yes" xml:space="preserve">
+          <source>pactman vs pact-python</source>
+          <target state="translated">パクトマン対パクトパイソン</target>
+        </trans-unit>
+        <trans-unit id="63d8579fdc17750a3aef4f29e0e41d052ebed650" translate="yes" xml:space="preserve">
+          <source>remove DEPRECATED &lt;code&gt;--pact-consumer-name&lt;/code&gt; command-line option</source>
+          <target state="translated">remove DEPRECATED &lt;code&gt;--pact-consumer-name&lt;/code&gt; command-line option</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="ko" datatype="htmlbody" original="https://pypi.org/project/lektor-webpack-support/">
+    <body>
+      <group id="lektor-webpack-support">
+        <trans-unit id="1c5c361b990ee5ec57dd26dbd96a5886844e8eef" translate="yes" xml:space="preserve">
+          <source>Creating a Webpack Project</source>
+          <target state="translated">Webpack 프로젝트 생성</target>
+        </trans-unit>
+        <trans-unit id="5d803f3b3159b683039c5578469cae18501c5223" translate="yes" xml:space="preserve">
+          <source>Creating the App</source>
+          <target state="translated">앱 만들기</target>
+        </trans-unit>
+        <trans-unit id="b810ed5f11a4561de867300ae968f0e80a787031" translate="yes" xml:space="preserve">
+          <source>Enabling the Plugin</source>
+          <target state="translated">플러그인 활성화</target>
+        </trans-unit>
+        <trans-unit id="f1653393005f301b57a3352688c437078f91567a" translate="yes" xml:space="preserve">
+          <source>Including The Files</source>
+          <target state="translated">파일 포함</target>
+        </trans-unit>
+        <trans-unit id="0df2b72b7a205a90baa0db7a47d1d94920e45df4" translate="yes" xml:space="preserve">
+          <source>Manual Builds</source>
+          <target state="translated">수동 빌드</target>
+        </trans-unit>
+        <trans-unit id="9d0751c1a9a5103fcd0bd21aef5df023406fd361" translate="yes" xml:space="preserve">
+          <source>Next up is the webpack config file.  Here we will go with a very basic
+setup that's good enough to cover most things you will encounter.  The
+idea is to build the files from &lt;code&gt;webpack/scss&lt;/code&gt; and &lt;code&gt;webpack/js&lt;/code&gt; into
+&lt;code&gt;assets/static/gen&lt;/code&gt; so that we can use it even if we do not have webpack
+installed for as long as someone else ran it before.</source>
+          <target state="translated">다음은 webpack 구성 파일입니다. 여기서는 직면하게 될 대부분의 일을 다룰 수있는 매우 기본적인 설정을 사용합니다. 아이디어는 &lt;code&gt;webpack/scss&lt;/code&gt; 및 &lt;code&gt;webpack/js&lt;/code&gt; 의 파일 을 &lt;code&gt;assets/static/gen&lt;/code&gt; 으로 빌드하여 다른 사람이 이전에 실행 한 한 웹팩이 설치되어 있지 않아도 사용할 수 있도록하는 것입니다.</target>
+        </trans-unit>
+        <trans-unit id="38c7da14fe614fb3068fd6a660c58209d1b85e26" translate="yes" xml:space="preserve">
+          <source>Next you need to create a webpack project. Create a &lt;code&gt;webpack/&lt;/code&gt; folder and
+inside that folder create &lt;code&gt;package.json&lt;/code&gt; and a &lt;code&gt;webpack.config.js&lt;/code&gt;</source>
+          <target state="translated">다음으로 웹팩 프로젝트를 생성해야합니다. 크리에이트 &lt;code&gt;webpack/&lt;/code&gt; 폴더 안에 폴더를 만드는 것이 &lt;code&gt;package.json&lt;/code&gt; 을 하고 &lt;code&gt;webpack.config.js&lt;/code&gt; 을</target>
+        </trans-unit>
+        <trans-unit id="0dd1920b0802a2f77b522dc44cd41c9941d3848b" translate="yes" xml:space="preserve">
+          <source>Now we can &lt;code&gt;npm install&lt;/code&gt; (or &lt;code&gt;yarn add&lt;/code&gt;) the rest:</source>
+          <target state="translated">이제 나머지 는 &lt;code&gt;npm install&lt;/code&gt; (또는 &lt;code&gt;yarn add&lt;/code&gt; ) 할 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="1886264809cf336c10603228a8c15b2ffb86c8c7" translate="yes" xml:space="preserve">
+          <source>Now we can start building our app.  We configured at least two files
+in webpack: &lt;code&gt;js/main.js&lt;/code&gt; and &lt;code&gt;scss/main.scss&lt;/code&gt;.  Those are the entry
+points we need to have.  You can create them as empty files in
+&lt;code&gt;webpack/js/main.js&lt;/code&gt; and &lt;code&gt;webpack/scss/main.scss&lt;/code&gt;.</source>
+          <target state="translated">이제 앱 빌드를 시작할 수 있습니다. webpack에 &lt;code&gt;js/main.js&lt;/code&gt; 및 &lt;code&gt;scss/main.scss&lt;/code&gt; 파일을 두 개 이상 구성했습니다 . 이것이 우리가 가져야 할 진입 점입니다. &lt;code&gt;webpack/js/main.js&lt;/code&gt; 및 &lt;code&gt;webpack/scss/main.scss&lt;/code&gt; 에서 빈 파일로 만들 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="edbef0ecbe9c034c55145e9fb55b71600c3ca33d" translate="yes" xml:space="preserve">
+          <source>Now you need to include the files in your template.  This will do it:</source>
+          <target state="translated">이제 템플릿에 파일을 포함해야합니다. 이렇게하면됩니다.</target>
+        </trans-unit>
+        <trans-unit id="a9bfcf98673db7ff5a4813710a6aa9aeaa0adb09" translate="yes" xml:space="preserve">
+          <source>Now you're ready to go.  When you run &lt;code&gt;lektor server&lt;/code&gt; webpack will not
+run, instead you need to now run it as &lt;code&gt;lektor server -f webpack&lt;/code&gt; which
+will enable the webpack build.  Webpack automatically builds your files
+into &lt;code&gt;assets/static/gen&lt;/code&gt; and this is where Lektor will then pick up the
+files.  This is done so that you can ship the webpack generated assets
+to others that do not have webpack installed which simplifies using a
+Lektor website that uses webpack.</source>
+          <target state="translated">이제 갈 준비가되었습니다. &lt;code&gt;lektor server&lt;/code&gt; 를 실행하면 webpack이 실행되지 않습니다. 대신 이제 webpack 빌드를 활성화하는 lektor &lt;code&gt;lektor server -f webpack&lt;/code&gt; 으로 실행해야합니다 . Webpack은 자동으로 파일을 &lt;code&gt;assets/static/gen&lt;/code&gt; 으로 빌드 하고 여기에서 Lektor가 파일을 선택합니다. 이는 웹팩을 사용하는 Lektor 웹 사이트 사용을 단순화하는 웹팩이 설치되지 않은 다른 사용자에게 웹팩 생성 자산을 배송 할 수 있도록하기위한 것입니다.</target>
+        </trans-unit>
+        <trans-unit id="48dd916c96025b1e57f8d56813d8611d15c051e4" translate="yes" xml:space="preserve">
+          <source>Running the Server</source>
+          <target state="translated">서버 실행</target>
+        </trans-unit>
+        <trans-unit id="64916c4955917776fb26b565620e7c3e64a3ee6d" translate="yes" xml:space="preserve">
+          <source>Super simple Lektor plugin that runs a webpack watcher</source>
+          <target state="translated">웹팩 감시자를 실행하는 매우 간단한 Lektor 플러그인</target>
+        </trans-unit>
+        <trans-unit id="42b8e1749f5f83730c1cd41f4040bb36ddb3a842" translate="yes" xml:space="preserve">
+          <source>This file instructs &lt;code&gt;npm&lt;/code&gt; which packages we will need.  All we need for a
+start is to create an almost empty file (name and version fields are mandatory
+but not important for functionality, change them to suit your own needs):</source>
+          <target state="translated">이 파일 은 필요한 패키지를 &lt;code&gt;npm&lt;/code&gt; 에 지시 합니다. 시작에 필요한 것은 거의 비어있는 파일을 만드는 것입니다 (이름 및 버전 필드는 필수이지만 기능에 중요하지 않습니다. 필요에 맞게 변경하십시오).</target>
+        </trans-unit>
+        <trans-unit id="836e71b50cf7917d80cb25cc6412a0a97376e195" translate="yes" xml:space="preserve">
+          <source>This is a plugin for Lektor that adds support for webpack to projects.  When
+enabled it can build a webpack project from the &lt;code&gt;webpack/&lt;/code&gt; folder into the
+asset folder automatically when the server (or build process) is run with
+the &lt;code&gt;-f webpack&lt;/code&gt; flag.</source>
+          <target state="translated">이것은 프로젝트에 webpack에 대한 지원을 추가하는 Lektor 용 플러그인입니다. 활성화되면 &lt;code&gt;-f webpack&lt;/code&gt; 플래그로 서버 (또는 빌드 프로세스)가 실행될 때 &lt;code&gt;webpack/&lt;/code&gt; 폴더에서 asset 폴더로 웹팩 프로젝트를 자동으로 빌드 할 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="0c85019f6049520cdcef3bbef0584acfa1c2957f" translate="yes" xml:space="preserve">
+          <source>This will install webpack itself together with babel and sass as well as
+a bunch of loaders we need for getting all that configured.  Because we
+created a &lt;code&gt;package.json&lt;/code&gt; before and we use &lt;code&gt;--save-dev&lt;/code&gt; the dependencies
+will be remembered in the &lt;code&gt;package.json&lt;/code&gt; file.</source>
+          <target state="translated">이것은 babel 및 sass와 함께 webpack 자체를 설치하고 모든 구성을 얻기 위해 필요한 많은 로더를 설치합니다. 이전 에 &lt;code&gt;package.json&lt;/code&gt; 을 만들고 &lt;code&gt;--save-dev&lt;/code&gt; 를 사용 했기 때문에 종속성이 &lt;code&gt;package.json&lt;/code&gt; 파일에 기억 됩니다.</target>
+        </trans-unit>
+        <trans-unit id="945ce48297bf9072d6a5c4eb7b6d146f7197c4fc" translate="yes" xml:space="preserve">
+          <source>To enable the plugin add this to your project file, run this command while
+sitting in your Lektor project directory:</source>
+          <target state="translated">플러그인을 활성화하려면 이것을 프로젝트 파일에 추가하십시오. Lektor 프로젝트 디렉토리에서 다음 명령을 실행하십시오.</target>
+        </trans-unit>
+        <trans-unit id="e01ee9f088796f10c013c406d150f2fcd2ee37f5" translate="yes" xml:space="preserve">
+          <source>To manually trigger a build that also invokes webpack you can use
+&lt;code&gt;lektor build -f webpack&lt;/code&gt;.</source>
+          <target state="translated">webpack을 호출하는 빌드를 수동으로 트리거하려면 &lt;code&gt;lektor build -f webpack&lt;/code&gt; 을 사용할 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="6b4a197af46053a4184246b9438ab6fbe58a3124" translate="yes" xml:space="preserve">
+          <source>lektor-webpack-support</source>
+          <target state="translated">lektor-webpack-support</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

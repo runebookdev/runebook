@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="zh-CN" datatype="htmlbody" original="https://pypi.org/project/chex/">
+    <body>
+      <group id="chex">
+        <trans-unit id="94ebe4e059572fd03ab09692bf1063dd3d86d4fe" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;with_device&lt;/code&gt; -- places all arguments (except specified in &lt;code&gt;ignore_argnums&lt;/code&gt;
+argument) into device memory before applying the function.</source>
+          <target state="translated">&lt;code&gt;with_device&lt;/code&gt; - 在应用函数之前，将所有参数（ &lt;code&gt;ignore_argnums&lt;/code&gt; 参数中指定的参数除外）放入设备内存。</target>
+        </trans-unit>
+        <trans-unit id="8d7a2e239f42c5889aa22b47d19320c62702f9c9" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;with_jit&lt;/code&gt; -- applies &lt;code&gt;jax.jit()&lt;/code&gt; transformation to the function.</source>
+          <target state="translated">&lt;code&gt;with_jit&lt;/code&gt; -将 &lt;code&gt;jax.jit()&lt;/code&gt; 转换应用于函数。</target>
+        </trans-unit>
+        <trans-unit id="73fc0bf901b3a1dc523d8d47441bd7896e9c20ab" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;with_pmap&lt;/code&gt; -- applies &lt;code&gt;jax.pmap()&lt;/code&gt; transformation to the function (see notes below).</source>
+          <target state="translated">&lt;code&gt;with_pmap&lt;/code&gt; -将 &lt;code&gt;jax.pmap()&lt;/code&gt; 转换应用于函数（请参见下面的注释）。</target>
+        </trans-unit>
+        <trans-unit id="d497dc4255a95a0f3f66e305d104e9c0bc55eb74" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;without_device&lt;/code&gt; -- places all arguments in RAM before applying the function.</source>
+          <target state="translated">&lt;code&gt;without_device&lt;/code&gt; -在应用函数之前将所有参数放在RAM中。</target>
+        </trans-unit>
+        <trans-unit id="2de3bafc6bc4edde0e1137e203b918fa6b241b93" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;without_jit&lt;/code&gt; -- uses the function as is, i.e. identity transformation.</source>
+          <target state="translated">&lt;code&gt;without_jit&lt;/code&gt; -按原样使用该功能，即身份转换。</target>
+        </trans-unit>
+        <trans-unit id="f0707e674ed5b9ef816bbb00c3cbf37715ab25a7" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;[&lt;code&gt;@chex.all_variants&lt;/code&gt;]&lt;/strong&gt; You can get all supported variants
+by using the decorator &lt;code&gt;@chex.all_variants&lt;/code&gt;.</source>
+          <target state="translated">&lt;strong&gt;[ &lt;code&gt;@chex.all_variants&lt;/code&gt; ]&lt;/strong&gt; You can get all supported variants by using the decorator &lt;code&gt;@chex.all_variants&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="c38f042fc2db72773ed7be756867a2f72c46cd5a" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;[&lt;code&gt;jax.vmap&lt;/code&gt;]&lt;/strong&gt; All variants can be applied to a vmapped function;
+please see an example in &lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/_src/variants_test.py&quot;&gt;variants_test.py&lt;/a&gt; (&lt;code&gt;test_vmapped_fn_named_params&lt;/code&gt; and
+&lt;code&gt;test_pmap_vmapped_fn&lt;/code&gt;).</source>
+          <target state="translated">&lt;strong&gt;[ &lt;code&gt;jax.vmap&lt;/code&gt; ]&lt;/strong&gt; All variants can be applied to a vmapped function; please see an example in &lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/_src/variants_test.py&quot;&gt;variants_test.py&lt;/a&gt; ( &lt;code&gt;test_vmapped_fn_named_params&lt;/code&gt; and &lt;code&gt;test_pmap_vmapped_fn&lt;/code&gt; ).</target>
+        </trans-unit>
+        <trans-unit id="f0fee62873e6b291bc5bbc161839ad7e77907b54" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;[&lt;code&gt;with_pmap&lt;/code&gt; variant]&lt;/strong&gt;&lt;code&gt;jax.pmap(fn)&lt;/code&gt;
+(&lt;a href=&quot;https://jax.readthedocs.io/en/latest/jax.html#jax.pmap&quot;&gt;doc&lt;/a&gt;) performs
+parallel map of &lt;code&gt;fn&lt;/code&gt; onto multiple devices. Since most tests run in a
+single-device environment (i.e. having access to a single CPU or GPU), in which
+case &lt;code&gt;jax.pmap&lt;/code&gt; is a functional equivalent to &lt;code&gt;jax.jit&lt;/code&gt;, &lt;code&gt;with_pmap&lt;/code&gt; variant is
+skipped by default (although it works fine with a single device). Below we
+describe  a way to properly test &lt;code&gt;fn&lt;/code&gt; if it is supposed to be used in
+multi-device environments (TPUs or multiple CPUs/GPUs). To disable skipping
+&lt;code&gt;with_pmap&lt;/code&gt; variants in case of a single device, add
+&lt;code&gt;--chex_skip_pmap_variant_if_single_device=false&lt;/code&gt; to your test command.</source>
+          <target state="translated">&lt;strong&gt;[ &lt;code&gt;with_pmap&lt;/code&gt; 变体] &lt;/strong&gt; &lt;code&gt;jax.pmap(fn)&lt;/code&gt; （&lt;a href=&quot;https://jax.readthedocs.io/en/latest/jax.html#jax.pmap&quot;&gt;doc&lt;/a&gt;）将 &lt;code&gt;fn&lt;/code&gt; 并行映射到多个设备上。由于大多数测试都在单设备环境中运行（即可以访问单个CPU或GPU），因此在这种情况下 &lt;code&gt;jax.pmap&lt;/code&gt; 与 &lt;code&gt;jax.jit&lt;/code&gt; 等效， &lt;code&gt;with_pmap&lt;/code&gt; 默认情况下会跳过with_pmap变体（尽管它在单个设备）。下面，我们描述一种正确测试 &lt;code&gt;fn&lt;/code&gt; 是否应在多设备环境（TPU或多个CPU / GPU）中使用的方法。要在单个设备的情况下禁用跳过 &lt;code&gt;with_pmap&lt;/code&gt; 变体，请添加 &lt;code&gt;--chex_skip_pmap_variant_if_single_device=false&lt;/code&gt; 到您的测试命令。</target>
+        </trans-unit>
+        <trans-unit id="7344b59df0142036cff36140e29bee990d210dcd" translate="yes" xml:space="preserve">
+          <source>Assertions (&lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/_src/asserts.py&quot;&gt;asserts.py&lt;/a&gt;)</source>
+          <target state="translated">断言（&lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/_src/asserts.py&quot;&gt;asserts.py&lt;/a&gt;）</target>
+        </trans-unit>
+        <trans-unit id="77f04361417d35f25ee269aa12e70afb164deb38" translate="yes" xml:space="preserve">
+          <source>Chex</source>
+          <target state="translated">切克斯</target>
+        </trans-unit>
+        <trans-unit id="0e096629f49d68312a4f90560da17c872bbc7099" translate="yes" xml:space="preserve">
+          <source>Chex can be installed with pip directly from github, with the following command:</source>
+          <target state="translated">Chex可以直接在github上用pip安装,命令如下。</target>
+        </trans-unit>
+        <trans-unit id="a14362556cb357f09b74617d9b06ccaedc9deeb4" translate="yes" xml:space="preserve">
+          <source>Chex currently supports the following variants:</source>
+          <target state="translated">Chex目前支持以下变体。</target>
+        </trans-unit>
+        <trans-unit id="2edb1b607f5aefafd3442c4d3008d0b380a3d508" translate="yes" xml:space="preserve">
+          <source>Chex has a flag &lt;code&gt;chex_n_cpu_devices&lt;/code&gt; that specifies a number of CPU threads to
+use as XLA devices.</source>
+          <target state="translated">Chex具有标志 &lt;code&gt;chex_n_cpu_devices&lt;/code&gt; ，该标志指定用作XLA设备的CPU线程数。</target>
+        </trans-unit>
+        <trans-unit id="cca243615eb459aab282f190ec64e7336ca2ec5a" translate="yes" xml:space="preserve">
+          <source>Chex implementation of &lt;code&gt;dataclass&lt;/code&gt; registers dataclasses as internal &lt;a href=&quot;https://jax.readthedocs.io/en/latest/pytrees.html&quot;&gt;&lt;em&gt;PyTree&lt;/em&gt;
+nodes&lt;/a&gt; to ensure
+compatibility with JAX data structures.</source>
+          <target state="translated">Chex &lt;code&gt;dataclass&lt;/code&gt; 类的实现将数据类注册为内部&lt;a href=&quot;https://jax.readthedocs.io/en/latest/pytrees.html&quot;&gt;&lt;em&gt;PyTree&lt;/em&gt; 节点，&lt;/a&gt;以确保与JAX数据结构的兼容性。</target>
+        </trans-unit>
+        <trans-unit id="be62373b687a2b6dffa02f28eae16b548f5af222" translate="yes" xml:space="preserve">
+          <source>Chex is a library of utilities for helping to write reliable JAX code.</source>
+          <target state="translated">Chex是一个帮助编写可靠的JAX代码的实用程序库。</target>
+        </trans-unit>
+        <trans-unit id="82bee0900bcc641448a9731adf5b5f9c66488097" translate="yes" xml:space="preserve">
+          <source>Chex: Testing made fun, in JAX!</source>
+          <target state="translated">Chex:测试很有趣,在JAX!</target>
+        </trans-unit>
+        <trans-unit id="f8d97282d9be5bcd887f88377f045f5d97359f7b" translate="yes" xml:space="preserve">
+          <source>Citing Chex</source>
+          <target state="translated">Citing Chex</target>
+        </trans-unit>
+        <trans-unit id="8efaa1ad264c622f0f5ef83166df75ec8abbc8d2" translate="yes" xml:space="preserve">
+          <source>Dataclass (&lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/_src/dataclass.p&quot;&gt;dataclass.py&lt;/a&gt;)</source>
+          <target state="translated">&lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/_src/dataclass.p&quot;&gt;数据类&lt;/a&gt;（dataclass.py ）</target>
+        </trans-unit>
+        <trans-unit id="c96fcfadd237e5889741902127b2c6e6d8697ab4" translate="yes" xml:space="preserve">
+          <source>Debug (e.g. transforming &lt;code&gt;pmaps&lt;/code&gt; in &lt;code&gt;vmaps&lt;/code&gt; within a context manager).</source>
+          <target state="translated">调试（例如，在上下文管理器中的 &lt;code&gt;vmaps&lt;/code&gt; 转换 &lt;code&gt;pmaps&lt;/code&gt; ）。</target>
+        </trans-unit>
+        <trans-unit id="af670505ca585be15f7492e64d2cb7ef2f8dcdaa" translate="yes" xml:space="preserve">
+          <source>Debugging in JAX is made more difficult by code transformations such as &lt;code&gt;jit&lt;/code&gt;
+and &lt;code&gt;pmap&lt;/code&gt;, which introduce optimizations that make code hard to inspect and
+trace. It can also be difficult to disable those transformations during
+debugging as they can be called at several places in the underlying
+code. Chex provides tools to globally replace &lt;code&gt;jax.jit&lt;/code&gt; with a no-op
+transformation and &lt;code&gt;jax.pmap&lt;/code&gt; with a (non-parallel) &lt;code&gt;jax.vmap&lt;/code&gt;, in order to more
+easily debug code in a single-device context.</source>
+          <target state="translated">通过 &lt;code&gt;jit&lt;/code&gt; 和 &lt;code&gt;pmap&lt;/code&gt; 之类的代码转换，JAX中的调试变得更加困难，它们引入了使代码难以检查和跟踪的优化。在调试期间禁用这些转换也很困难，因为可以在基础代码的多个位置调用它们。CHEX提供工具来全局替换 &lt;code&gt;jax.jit&lt;/code&gt; 与无操作变换和 &lt;code&gt;jax.pmap&lt;/code&gt; 与（非平行） &lt;code&gt;jax.vmap&lt;/code&gt; ，为了更容易地调试代码在单设备上下文。</target>
+        </trans-unit>
+        <trans-unit id="760804486c322c9a6435615b1eea56ea1813d4a3" translate="yes" xml:space="preserve">
+          <source>E.g. suppose you want to ensure that all tensors &lt;code&gt;t1&lt;/code&gt;, &lt;code&gt;t2&lt;/code&gt;, &lt;code&gt;t3&lt;/code&gt; have the same
+shape, and that tensors &lt;code&gt;t4&lt;/code&gt;, &lt;code&gt;t5&lt;/code&gt; have rank &lt;code&gt;2&lt;/code&gt; and (&lt;code&gt;3&lt;/code&gt; or &lt;code&gt;4&lt;/code&gt;), respectively.</source>
+          <target state="translated">例如，假设您要确保所有张量 &lt;code&gt;t1&lt;/code&gt; ， &lt;code&gt;t2&lt;/code&gt; ， &lt;code&gt;t3&lt;/code&gt; 都具有相同的形状，并且张量 &lt;code&gt;t4&lt;/code&gt; ， &lt;code&gt;t5&lt;/code&gt; 分别具有等级 &lt;code&gt;2&lt;/code&gt; 和（ &lt;code&gt;3&lt;/code&gt; 或 &lt;code&gt;4&lt;/code&gt; ）。</target>
+        </trans-unit>
+        <trans-unit id="2c236d214c67d12e9d980b4c08a69cfc88855493" translate="yes" xml:space="preserve">
+          <source>E.g. suppose you want to test the output of a function &lt;code&gt;fn&lt;/code&gt; with or without jit.
+You can use &lt;code&gt;chex.variants&lt;/code&gt; to run the test with both the jitted and non-jitted
+version of the function by simply decorating a test method with
+&lt;code&gt;@chex.variants&lt;/code&gt;, and then using &lt;code&gt;self.variant(fn)&lt;/code&gt; in place of &lt;code&gt;fn&lt;/code&gt; in the body
+of the test.</source>
+          <target state="translated">例如，假设您要使用或不使用jit 来测试函数 &lt;code&gt;fn&lt;/code&gt; 的输出。通过使用 &lt;code&gt;@chex.variants&lt;/code&gt; 装饰测试方法，然后使用 &lt;code&gt;self.variant(fn)&lt;/code&gt; 代替体内的 &lt;code&gt;fn&lt;/code&gt; ，可以使用 &lt;code&gt;chex.variants&lt;/code&gt; 对函数的jitted和非jitted版本运行测试。 测试。</target>
+        </trans-unit>
+        <trans-unit id="ca96675bbe3dc223fd955101d8a4622a9c8be468" translate="yes" xml:space="preserve">
+          <source>Example of parameterized test:</source>
+          <target state="translated">参数化测试的例子。</target>
+        </trans-unit>
+        <trans-unit id="23685afeaf21ac3b25ae4df66e1bb9507e6af7ef" translate="yes" xml:space="preserve">
+          <source>Fakes (&lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/_src/fake.py&quot;&gt;fake.py&lt;/a&gt;)</source>
+          <target state="translated">&lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/_src/fake.py&quot;&gt;伪造品&lt;/a&gt;（fake.py）</target>
+        </trans-unit>
+        <trans-unit id="d127af681671fb470ae3a1ab8e3ba11bc5ed8cbb" translate="yes" xml:space="preserve">
+          <source>Faking multi-device test environments</source>
+          <target state="translated">伪造多设备测试环境</target>
+        </trans-unit>
+        <trans-unit id="4e5c9e32d792b12b4af457881c55dbeb73d00294" translate="yes" xml:space="preserve">
+          <source>For example, you can use Chex to fake &lt;code&gt;pmap&lt;/code&gt; and have it replaced with a &lt;code&gt;vmap&lt;/code&gt;.
+This can be achieved by wrapping your code with a context manager:</source>
+          <target state="translated">例如，您可以使用Chex伪造 &lt;code&gt;pmap&lt;/code&gt; 并将其替换为 &lt;code&gt;vmap&lt;/code&gt; 。这可以通过使用上下文管理器包装代码来实现：</target>
+        </trans-unit>
+        <trans-unit id="364c22d211f08dfc5bde413824a95bf157fcab8e" translate="yes" xml:space="preserve">
+          <source>If you define the function in the test method, you may also use &lt;code&gt;self.variant&lt;/code&gt;
+as a decorator in the function definition. For example:</source>
+          <target state="translated">如果在测试方法中定义函数，则还可以 在函数定义中使用 &lt;code&gt;self.variant&lt;/code&gt; 作为修饰符。例如：</target>
+        </trans-unit>
+        <trans-unit id="b979d9a78d9058438385bde7512b4c981a6a0e6e" translate="yes" xml:space="preserve">
+          <source>In addition, you can fake a real multi-device test environment with a
+multi-threaded CPU. See section &lt;strong&gt;Faking multi-device test environments&lt;/strong&gt; for
+more details.</source>
+          <target state="translated">此外，您可以使用多线程CPU伪造一个真正的多设备测试环境。有关更多详细信息，请参见&lt;strong&gt;伪造多设备测试环境&lt;/strong&gt;部分。</target>
+        </trans-unit>
+        <trans-unit id="6b1ceb5a8cdb3a7d13573dc428a97fd35b492ef5" translate="yes" xml:space="preserve">
+          <source>In particular, one can force XLA to use a single CPU's threads as separate
+devices, i.e. to fake a real multi-device environment with a multi-threaded one.
+These two options are theoretically equivalent from XLA perspective because they
+expose the same interface and use identical abstractions.</source>
+          <target state="translated">特别是可以强制XLA将单个CPU的线程作为独立的设备使用,即用多线程来伪造一个真实的多设备环境。从XLA的角度来看,这两种方案理论上是等价的,因为它们暴露了相同的接口,使用了相同的抽象。</target>
+        </trans-unit>
+        <trans-unit id="9763181224ed68ff0ae45c803c01d8917092621b" translate="yes" xml:space="preserve">
+          <source>In situations where you do not have easy access to multiple devices, you can
+still test parallel computation using single-device multi-threading.</source>
+          <target state="translated">在不方便访问多个设备的情况下,你仍然可以使用单设备多线程来测试并行计算。</target>
+        </trans-unit>
+        <trans-unit id="1034e0fde9193849b4b017e3ffac5c4c476dc7f7" translate="yes" xml:space="preserve">
+          <source>In this bibtex entry, the version number is intended to be from
+&lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/__init__.py&quot;&gt;chex/__init__.py&lt;/a&gt;,
+and the year corresponds to the project's open-source release.</source>
+          <target state="translated">在此bibtex条目中，版本号旨在为 &lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/__init__.py&quot;&gt;chex / __ init__.py&lt;/a&gt;，并且年份对应于项目的开源版本。</target>
+        </trans-unit>
+        <trans-unit id="c81b79df3c6448eae7c4f80428b54cd5692a17d7" translate="yes" xml:space="preserve">
+          <source>Installation</source>
+          <target state="translated">安装</target>
+        </trans-unit>
+        <trans-unit id="64b5dbc70985ca8727aef7c08c8446030448f12e" translate="yes" xml:space="preserve">
+          <source>Instrument your code (e.g. assertions)</source>
+          <target state="translated">编写你的代码(如断言)</target>
+        </trans-unit>
+        <trans-unit id="56e6481b71aabe40a5779488d0a26caf7348a36d" translate="yes" xml:space="preserve">
+          <source>JAX relies extensively on code transformation and compilation, meaning that it
+can be hard to ensure that code is properly tested. For instance, just testing a
+python function using JAX code will not cover the actual code path that is
+executed when jitted, and that path will also differ whether the code is jitted
+for CPU, GPU, or TPU. This has been a source of obscure and hard to catch bugs
+where XLA changes would lead to undesirable behaviours that however only
+manifest in one specific code transformation.</source>
+          <target state="translated">JAX广泛地依赖于代码转换和编译,这意味着很难确保代码得到正确的测试。例如,仅仅使用JAX代码测试一个python函数,并不能覆盖jitted时执行的实际代码路径,而且无论代码是为CPU、GPU还是TPU进行jitted,这个路径也会有所不同。这一直是一个晦涩难懂的错误来源,在这里,XLA的改变会导致不理想的行为,然而这些行为只体现在一个特定的代码转换中。</target>
+        </trans-unit>
+        <trans-unit id="44a381f082d0a94e8e24432fe1b8809a859624e6" translate="yes" xml:space="preserve">
+          <source>JAX-friendly dataclass implementation reusing python &lt;a href=&quot;https://docs.python.org/3/library/dataclasses.html#module-dataclasses&quot;&gt;dataclasses&lt;/a&gt;.</source>
+          <target state="translated">重用python &lt;a href=&quot;https://docs.python.org/3/library/dataclasses.html#module-dataclasses&quot;&gt;数据类的&lt;/a&gt; JAX友好数据类实现。</target>
+        </trans-unit>
+        <trans-unit id="7fd7ac52ae8201efd1ed242c1d0e91dd7caa9247" translate="yes" xml:space="preserve">
+          <source>Modules Overview</source>
+          <target state="translated">模块概述</target>
+        </trans-unit>
+        <trans-unit id="f6d94e28d36f5c53e9bb080a0cbccb7bd8e9c7a3" translate="yes" xml:space="preserve">
+          <source>More examples can be found in &lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/_src/variants_test.py&quot;&gt;variants_test.py&lt;/a&gt;, &lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/_src/fake_test.py&quot;&gt;fake_test.py&lt;/a&gt; and &lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/_src/fake_set_n_cpu_devices_test.py&quot;&gt;fake_set_n_cpu_devices_test.py&lt;/a&gt;.</source>
+          <target state="translated">可以在&lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/_src/variants_test.py&quot;&gt;variants_test.py&lt;/a&gt;，&lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/_src/fake_test.py&quot;&gt;fake_test.py&lt;/a&gt;和&lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/_src/fake_set_n_cpu_devices_test.py&quot;&gt;fake_set_n_cpu_devices_test.py中&lt;/a&gt;找到更多示例。</target>
+        </trans-unit>
+        <trans-unit id="08965269be31a1f77226663d4b16152886fa2985" translate="yes" xml:space="preserve">
+          <source>More examples:</source>
+          <target state="translated">更多的例子。</target>
+        </trans-unit>
+        <trans-unit id="9a8c5d77a3061656258e25a1a873daeb3eac5fc5" translate="yes" xml:space="preserve">
+          <source>Now you can launch your test with &lt;code&gt;python test.py --chex_n_cpu_devices=N&lt;/code&gt; to run
+it in multi-device regime. Note that &lt;strong&gt;all&lt;/strong&gt; tests within a module will have an
+access to &lt;code&gt;N&lt;/code&gt; devices.</source>
+          <target state="translated">现在，您可以使用 &lt;code&gt;python test.py --chex_n_cpu_devices=N&lt;/code&gt; 启动测试，以在多设备环境下运行它。请注意，模块内的&lt;strong&gt;所有&lt;/strong&gt;测试都可以访问 &lt;code&gt;N&lt;/code&gt; 个设备。</target>
+        </trans-unit>
+        <trans-unit id="39ded40573e8327bb4561daf363d568ef5185204" translate="yes" xml:space="preserve">
+          <source>One limitation of PyType annotations for JAX is that they do not support the
+specification of &lt;code&gt;DeviceArray&lt;/code&gt; ranks, shapes or dtypes. Chex includes a number
+of functions that allow flexible and concise specification of these properties.</source>
+          <target state="translated">JAX的PyType注释的限制之一是它们不支持 &lt;code&gt;DeviceArray&lt;/code&gt; 等级，形状或dtype的规范。Chex包含许多功能，可以灵活，简明地指定这些属性。</target>
+        </trans-unit>
+        <trans-unit id="466a6688e1929562c79cbb67ecc154ec9b0efd41" translate="yes" xml:space="preserve">
+          <source>See documentation in &lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/_src/fake.py&quot;&gt;fake.py&lt;/a&gt; and examples in &lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/_src/fake_test.py&quot;&gt;fake_test.py&lt;/a&gt; for more details.</source>
+          <target state="translated">请参阅文档&lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/_src/fake.py&quot;&gt;fake.py&lt;/a&gt;和例子&lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/_src/fake_test.py&quot;&gt;fake_test.py&lt;/a&gt;了解更多详情。</target>
+        </trans-unit>
+        <trans-unit id="c5c15775c922f964d3d7765ef4526da08ed971e9" translate="yes" xml:space="preserve">
+          <source>See documentation in &lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/_src/variants.py&quot;&gt;variants.py&lt;/a&gt; for more details on the supported variants.
+More examples can be found in &lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/_src/variants_test.py&quot;&gt;variants_test.py&lt;/a&gt;.</source>
+          <target state="translated">有关受支持的变&lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/_src/variants.py&quot;&gt;体&lt;/a&gt;的更多详细信息，请参见variants.py中的文档。可以在&lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/_src/variants_test.py&quot;&gt;variants_test.py中&lt;/a&gt;找到更多示例。</target>
+        </trans-unit>
+        <trans-unit id="d508862cb4771fc01c43a05e9ed39242299c5c3a" translate="yes" xml:space="preserve">
+          <source>See documentation of &lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/_src/asserts.py&quot;&gt;asserts.py&lt;/a&gt; for details on all supported assertions.</source>
+          <target state="translated">有关所有受支持的断言的详细信息，请参见&lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/_src/asserts.py&quot;&gt;asserts.py的&lt;/a&gt;文档。</target>
+        </trans-unit>
+        <trans-unit id="bca13ab692ddcac83c3f581f48b2874e56a256f8" translate="yes" xml:space="preserve">
+          <source>Test JAX code across many &lt;code&gt;variants&lt;/code&gt; (e.g. jitted vs non-jitted).</source>
+          <target state="translated">在许多 &lt;code&gt;variants&lt;/code&gt; 测试JAX代码（例如jitted与non-jitted）。</target>
+        </trans-unit>
+        <trans-unit id="19bb5350389a346c5566820992648a379262d201" translate="yes" xml:space="preserve">
+          <source>Test classes that use &lt;code&gt;@chex.variants&lt;/code&gt; must inherit from
+&lt;code&gt;chex.TestCase&lt;/code&gt; (or any other base class that unrolls tests generators
+within &lt;code&gt;TestCase&lt;/code&gt;, e.g. &lt;code&gt;absl.testing.parameterized.TestCase&lt;/code&gt;).</source>
+          <target state="translated">使用 &lt;code&gt;@chex.variants&lt;/code&gt; 测试类必须继承 &lt;code&gt;chex.TestCase&lt;/code&gt; （或在 &lt;code&gt;TestCase&lt;/code&gt; 中展开测试生成器的任何其他基类，例如 &lt;code&gt;absl.testing.parameterized.TestCase&lt;/code&gt; ）。</target>
+        </trans-unit>
+        <trans-unit id="90724c1ce61531cfcebdb49c2ec31ecceeba16e2" translate="yes" xml:space="preserve">
+          <source>Test variants (&lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/_src/variants.py&quot;&gt;variants.py&lt;/a&gt;)</source>
+          <target state="translated">测试变体（&lt;a href=&quot;https://github.com/deepmind/chex/blob/master/chex/_src/variants.py&quot;&gt;variants.py&lt;/a&gt;）</target>
+        </trans-unit>
+        <trans-unit id="4b85178d8c8a663aebf3af9f9772995bca8fe96a" translate="yes" xml:space="preserve">
+          <source>The same functionality can also be invoked with &lt;code&gt;start&lt;/code&gt; and &lt;code&gt;stop&lt;/code&gt;:</source>
+          <target state="translated">也可以使用 &lt;code&gt;start&lt;/code&gt; 和 &lt;code&gt;stop&lt;/code&gt; 调用相同的功能：</target>
+        </trans-unit>
+        <trans-unit id="a13a8016452dc00349676f4fcee8e94af45f3ba7" translate="yes" xml:space="preserve">
+          <source>This includes utils to help:</source>
+          <target state="translated">这包括实用工具来帮助。</target>
+        </trans-unit>
+        <trans-unit id="452bb0f3c924efe70d033ab04de348cecec75af4" translate="yes" xml:space="preserve">
+          <source>To cite this repository:</source>
+          <target state="translated">要引用这个仓库。</target>
+        </trans-unit>
+        <trans-unit id="675ab48e655a33f35b0fa419e12fb8772dc2a516" translate="yes" xml:space="preserve">
+          <source>To set up a multi-threaded XLA environment for &lt;code&gt;absl&lt;/code&gt; tests, define
+&lt;code&gt;setUpModule&lt;/code&gt; function in your test module:</source>
+          <target state="translated">要为 &lt;code&gt;absl&lt;/code&gt; 测试设置多线程XLA环境，请在测试模块中定义 &lt;code&gt;setUpModule&lt;/code&gt; 函数：</target>
+        </trans-unit>
+        <trans-unit id="da3b1cc6863425d59dec746ab9233d545fa2d48e" translate="yes" xml:space="preserve">
+          <source>Variants make it easy to ensure that unit tests cover different &amp;lsquo;variations&amp;rsquo; of
+a function, by providing a simple decorator that can be used to repeat any test
+under all (or a subset) of the relevant code transformations.</source>
+          <target state="translated">变体通过提供一个简单的装饰器，可以轻松地确保单元测试覆盖功能的不同&amp;ldquo;变体&amp;rdquo;，该装饰器可用于在所有相关代码转换（或子集）下重复任何测试。</target>
+        </trans-unit>
+        <trans-unit id="04809452e50b47ee7de134ac0b7b7b86d3f666fd" translate="yes" xml:space="preserve">
+          <source>Variants notes</source>
+          <target state="translated">变动说明</target>
+        </trans-unit>
+        <trans-unit id="bc0ac604ab79b32cc792cd355919b25e15ea9bbc" translate="yes" xml:space="preserve">
+          <source>or from PyPI:</source>
+          <target state="translated">或从PyPI。</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

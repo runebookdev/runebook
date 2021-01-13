@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="ko" datatype="htmlbody" original="https://pypi.org/project/hap-python/">
+    <body>
+      <group id="hap-python">
+        <trans-unit id="1e6dd649c61ba19988b0dd74d2e9ed21787b36d7" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;avahi-utils&lt;/code&gt; may also fit the bill. Then, you can install with &lt;code&gt;pip3&lt;/code&gt; (you will need &lt;code&gt;sudo&lt;/code&gt; or &lt;code&gt;--user&lt;/code&gt; for the install):</source>
+          <target state="translated">&lt;code&gt;avahi-utils&lt;/code&gt; 도 계산서에 맞을 수 있습니다. 그런 다음 &lt;code&gt;pip3&lt;/code&gt; 으로 설치할 수 있습니다 (설치하려면 &lt;code&gt;sudo&lt;/code&gt; 또는 &lt;code&gt;--user&lt;/code&gt; 가 필요합니다 ) :</target>
+        </trans-unit>
+        <trans-unit id="39ab1402cb92992d90c529e9fe530c79b3918c19" translate="yes" xml:space="preserve">
+          <source>A typical flow for using HAP-python starts with implementing an Accessory. This is done by
+subclassing &lt;a href=&quot;pyhap/accessory.py&quot;&gt;Accessory&lt;/a&gt; and putting in place a few details
+(see below). After that, you give your accessory to an AccessoryDriver to manage. This
+will take care of advertising it on the local network, setting a HAP server and
+running the Accessory. Take a look at &lt;a href=&quot;main.py&quot;&gt;main.py&lt;/a&gt; for a quick start on that.</source>
+          <target state="translated">HAP-python을 사용하는 일반적인 흐름은 액세서리 구현으로 시작됩니다. 이것은 &lt;a href=&quot;pyhap/accessory.py&quot;&gt;Accessory&lt;/a&gt; 를 하위 분류 하고 몇 가지 세부 사항을 배치하여 수행됩니다 (아래 참조). 그런 다음 액세서리를 AccessoryDriver에 제공하여 관리합니다. 이것은 로컬 네트워크에 광고하고 HAP 서버를 설정하고 액세서리를 실행하는 것을 처리합니다. 그것에 대한 빠른 시작 은 &lt;a href=&quot;main.py&quot;&gt;main.py&lt;/a&gt; 를 참조하십시오.</target>
+        </trans-unit>
+        <trans-unit id="d93d10ff0fbef1b4aa0ddc24e10e907746d3c85a" translate="yes" xml:space="preserve">
+          <source>API</source>
+          <target state="translated">API</target>
+        </trans-unit>
+        <trans-unit id="e32043c4f480968ce1c52b3484864cc608e695d9" translate="yes" xml:space="preserve">
+          <source>As a prerequisite, you will need Avahi/Bonjour installed (due to zeroconf package).
+On a Raspberry Pi, you can get it with:</source>
+          <target state="translated">전제 조건으로 Avahi / Bonjour가 설치되어 있어야합니다 (zeroconf 패키지로 인해). Raspberry Pi에서는 다음을 통해 얻을 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="889cb30a8fedbc8dc50a0a98b7f82364d8dd89b2" translate="yes" xml:space="preserve">
+          <source>As of version 2.0.0, HAP-python no longer supports python older than 3.5, because we
+are moving to asyncio. If your platform does not have a compatible python out of the
+box, you can install it manually or just use an older version of HAP-python.</source>
+          <target state="translated">버전 2.0.0부터 HAP-python은 asyncio로 이동하기 때문에 더 이상 3.5 이전의 Python을 지원하지 않습니다. 플랫폼에 기본적으로 호환되는 Python이없는 경우 수동으로 설치하거나 HAP-python의 이전 버전을 사용할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="3afa7e5cbfe031ecd2f4e3a7cc8d3a805f51d6f8" translate="yes" xml:space="preserve">
+          <source>By default, HAP-python will execute the &lt;code&gt;ffmpeg&lt;/code&gt; command with the negotiated parameters
+when the stream should be started and will &lt;code&gt;terminate&lt;/code&gt; the started process when the
+stream should be stopped (see the default: &lt;code&gt;Camera.FFMPEG_CMD&lt;/code&gt;).
+If the default command is not supported or correctly formatted for your platform,
+the streaming can fail.</source>
+          <target state="translated">기본적으로 HAP-python은 스트림을 시작해야 할 때 협상 된 매개 변수로 &lt;code&gt;ffmpeg&lt;/code&gt; 명령을 실행 하고 스트림을 중지해야 할 때 시작된 프로세스 를 &lt;code&gt;terminate&lt;/code&gt; 합니다 (기본값 : &lt;code&gt;Camera.FFMPEG_CMD&lt;/code&gt; 참조 ). 기본 명령이 지원되지 않거나 플랫폼에 대해 올바르게 형식화되면 스트리밍이 실패 할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="1d95cf756f9d65b49696a59f4ee11e64d0cfbeff" translate="yes" xml:space="preserve">
+          <source>Camera - HAP-python supports the camera accessory from version 2.3.0!</source>
+          <target state="translated">카메라-HAP-python은 버전 2.3.0부터 카메라 액세서리를 지원합니다!</target>
+        </trans-unit>
+        <trans-unit id="cfcec5427d3d66fe15054694a10327e5f45ea2ae" translate="yes" xml:space="preserve">
+          <source>Copy the below in &lt;code&gt;/etc/systemd/system/HAP-python.service&lt;/code&gt; (needs sudo).</source>
+          <target state="translated">&lt;code&gt;/etc/systemd/system/HAP-python.service&lt;/code&gt; 에 아래를 복사하십시오 (sudo 필요).</target>
+        </trans-unit>
+        <trans-unit id="01807e83877a54cd7fadca3bc37630754e7679bb" translate="yes" xml:space="preserve">
+          <source>Finally, if you can take snapshots from the camera, you may want to implement the
+&lt;code&gt;Camera.snapshot&lt;/code&gt; method. By default, this serves a stock photo.</source>
+          <target state="translated">마지막으로 카메라에서 스냅 샷을 찍을 수 있다면 &lt;code&gt;Camera.snapshot&lt;/code&gt; 메서드 를 구현하는 것이 좋습니다. 기본적으로 이것은 스톡 사진을 제공합니다.</target>
+        </trans-unit>
+        <trans-unit id="f84fc6d58a6e6a920dc6c865da8b853f646cd793" translate="yes" xml:space="preserve">
+          <source>For the above to work, you need to enable passwordless &lt;code&gt;/sbin/shutdown&lt;/code&gt; to whichever
+user is running &lt;code&gt;HAP-python&lt;/code&gt;. For example, do:</source>
+          <target state="translated">위의 작업을 수행하려면 &lt;code&gt;HAP-python&lt;/code&gt; 을 실행하는 사용자에게 암호없는 &lt;code&gt;/sbin/shutdown&lt;/code&gt; 을 활성화해야합니다 . 예를 들어 다음을 수행하십시오.</target>
+        </trans-unit>
+        <trans-unit id="ad37e324410258749eaaf612499da6572d1dbd65" translate="yes" xml:space="preserve">
+          <source>For these cases, HAP-python has hooks so that you can insert your own command or implement
+the logic for starting or stopping the stream. There are two options:</source>
+          <target state="translated">이러한 경우 HAP-python에는 자체 명령을 삽입하거나 스트림 시작 또는 중지를위한 논리를 구현할 수 있도록 후크가 있습니다. 두 가지 옵션이 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="59b3d91075ff574717bd61fdefed059261984e24" translate="yes" xml:space="preserve">
+          <source>HAP-python</source>
+          <target state="translated">우연 파이썬</target>
+        </trans-unit>
+        <trans-unit id="dd31d89b35abdb62b8f0d57d906b56e8bd239c56" translate="yes" xml:space="preserve">
+          <source>Have a look at the documentation of these methods for more information.</source>
+          <target state="translated">자세한 내용은 이러한 방법에 대한 설명서를 참조하십시오.</target>
+        </trans-unit>
+        <trans-unit id="8503ede3ea63ea360679c1a7bb9c6feb415c1aeb" translate="yes" xml:space="preserve">
+          <source>Have fun!</source>
+          <target state="translated">즐기세요!</target>
+        </trans-unit>
+        <trans-unit id="701dacd1cf472cbfc1b0c05cc139207e2529c590" translate="yes" xml:space="preserve">
+          <source>HomeKit Accessory Protocol implementation in python</source>
+          <target state="translated">Python에서 HomeKit 액세서리 프로토콜 구현</target>
+        </trans-unit>
+        <trans-unit id="45013ac76e301ac1539f391feaef4b0094fd2e2f" translate="yes" xml:space="preserve">
+          <source>HomeKit Accessory Protocol implementation in python 3.
+With this project, you can integrate your own smart devices and add them to your
+iOS Home app. Since Siri is integrated with the Home app, you can start voice-control your
+accessories right away.</source>
+          <target state="translated">Python 3에서 HomeKit 액세서리 프로토콜 구현.이 프로젝트를 사용하면 자신의 스마트 장치를 통합하고 iOS 홈 앱에 추가 할 수 있습니다. Siri는 홈 앱과 통합되어 있기 때문에 즉시 액세서리 음성 제어를 시작할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="76176953d9ff84e4d067f99cad93203315365458" translate="yes" xml:space="preserve">
+          <source>I am not aware of any bugs, but I am more than confident that such exist. If you find any,
+please report and I will try to fix them.</source>
+          <target state="translated">나는 어떤 버그도 알고 있지 않지만 그러한 버그가 존재한다고 확신합니다. 발견하면 신고 해 주시면 수정하겠습니다.</target>
+        </trans-unit>
+        <trans-unit id="e2f8051d617ad7d054c44910abaf3826ed42d36c" translate="yes" xml:space="preserve">
+          <source>If you are running &lt;code&gt;HAP-python&lt;/code&gt; on a Raspberry Pi, you may want to add a
+&lt;a href=&quot;pyhap/accessories/ShutdownSwitch.py&quot;&gt;Shutdown Switch&lt;/a&gt; to your Home. This is a
+Switch Accessory, which, when triggered, executes &lt;code&gt;sudo shutdown -h now&lt;/code&gt;, i.e.
+it shutdowns and halts the Pi. This allows you to safely unplug it.</source>
+          <target state="translated">Raspberry Pi 에서 &lt;code&gt;HAP-python&lt;/code&gt; 을 실행하는 경우 홈에 &lt;a href=&quot;pyhap/accessories/ShutdownSwitch.py&quot;&gt;종료 스위치&lt;/a&gt; 를 추가 할 수 있습니다 . 이것은 트리거 될 때 &lt;code&gt;sudo shutdown -h now&lt;/code&gt; 를 실행하는 스위치 액세서리입니다 . 즉, Pi를 종료하고 중지합니다. 이렇게하면 안전하게 플러그를 뽑을 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="43c3772e28b699c4c9e98678a3b2e12ce9cfe53d" translate="yes" xml:space="preserve">
+          <source>If you need more flexibility in managing streams, you can directly implement the
+&lt;code&gt;Camera&lt;/code&gt; methods &lt;code&gt;start&lt;/code&gt;, &lt;code&gt;stop&lt;/code&gt; and &lt;code&gt;reconfigure&lt;/code&gt;. Each will be called when the
+stream should be respectively started, stopped or reconfigured. The start and
+reconfigure methods are given the negotiated stream configuration parameters.</source>
+          <target state="translated">스트림 관리에 더 많은 유연성이 필요한 경우 &lt;code&gt;Camera&lt;/code&gt; 메서드 &lt;code&gt;start&lt;/code&gt; , &lt;code&gt;stop&lt;/code&gt; 및 &lt;code&gt;reconfigure&lt;/code&gt; 를 직접 구현할 수 있습니다 . 스트림이 각각 시작, 중지 또는 재구성되어야 할 때 각각이 호출됩니다. 시작 및 재구성 방법에는 협상 된 스트림 구성 매개 변수가 제공됩니다.</target>
+        </trans-unit>
+        <trans-unit id="c7b59723f34b816f8f66ab192b40fdc6d43d532a" translate="yes" xml:space="preserve">
+          <source>Implement your own logic to start, stop and reconfigure the stream.</source>
+          <target state="translated">스트림을 시작, 중지 및 재구성하는 자체 로직을 구현하십시오.</target>
+        </trans-unit>
+        <trans-unit id="c81b79df3c6448eae7c4f80428b54cd5692a17d7" translate="yes" xml:space="preserve">
+          <source>Installation</source>
+          <target state="translated">설치</target>
+        </trans-unit>
+        <trans-unit id="cc9b9379809b1d8649301d28d38bf45a17370b7e" translate="yes" xml:space="preserve">
+          <source>Integrated with the home automation framework &lt;a href=&quot;https://github.com/home-assistant/home-assistant&quot;&gt;Home Assistant&lt;/a&gt;.</source>
+          <target state="translated">홈 오토메이션 프레임 워크 &lt;a href=&quot;https://github.com/home-assistant/home-assistant&quot;&gt;홈 어시스턴트&lt;/a&gt; 와 통합 .</target>
+        </trans-unit>
+        <trans-unit id="e9979a0a59ccc478044f75358f106166597a1dd5" translate="yes" xml:space="preserve">
+          <source>Main features:</source>
+          <target state="translated">주요 특징:</target>
+        </trans-unit>
+        <trans-unit id="5256fffffb868a37e07fc3a3a770a754b7273025" translate="yes" xml:space="preserve">
+          <source>Notice</source>
+          <target state="translated">주의</target>
+        </trans-unit>
+        <trans-unit id="dd35a82571e22d2d74c1a6a873bee1c689bebc76" translate="yes" xml:space="preserve">
+          <source>Out of the box support for Apple-defined services - see them in &lt;a href=&quot;pyhap/resources&quot;&gt;the resources folder&lt;/a&gt;.</source>
+          <target state="translated">Apple 정의 서비스에 대한 기본 지원- &lt;a href=&quot;pyhap/resources&quot;&gt;리소스 폴더&lt;/a&gt; 에서 확인하십시오 .</target>
+        </trans-unit>
+        <trans-unit id="ce10b116c4730d1733981731be4dec208438d7dd" translate="yes" xml:space="preserve">
+          <source>Pass your own command that will be executed when the stream should be started.</source>
+          <target state="translated">스트림이 시작되어야 할 때 실행될 고유 한 명령을 전달하십시오.</target>
+        </trans-unit>
+        <trans-unit id="69e4cb5a69d9b79e83451b45a314219c694a4b75" translate="yes" xml:space="preserve">
+          <source>Run at boot</source>
+          <target state="translated">부팅시 실행</target>
+        </trans-unit>
+        <trans-unit id="23a6491664e0c009b610db0c34d857ea0276d788" translate="yes" xml:space="preserve">
+          <source>Run at boot (and a Switch to shutdown your device)</source>
+          <target state="translated">부팅시 실행 (및 장치를 종료하는 스위치)</target>
+        </trans-unit>
+        <trans-unit id="cb887f1c4d7aac00b56faee324375eb025546107" translate="yes" xml:space="preserve">
+          <source>Secure pairing by just scanning the QR code.</source>
+          <target state="translated">QR 코드를 스캔하는 것만으로 안전한 페어링.</target>
+        </trans-unit>
+        <trans-unit id="ded9eb262af524cb1757730f871e2bde1dd84d24" translate="yes" xml:space="preserve">
+          <source>Service Callbacks</source>
+          <target state="translated">서비스 콜백</target>
+        </trans-unit>
+        <trans-unit id="3adacee69486471079fd1ff1b455d67b4ccd2459" translate="yes" xml:space="preserve">
+          <source>Setting up a camera</source>
+          <target state="translated">카메라 설정</target>
+        </trans-unit>
+        <trans-unit id="8718c7b57a23418bc7dab9d250279c2e19e779ad" translate="yes" xml:space="preserve">
+          <source>Shutdown switch</source>
+          <target state="translated">셧다운 스위치</target>
+        </trans-unit>
+        <trans-unit id="27dc3781f4f883f1ff966f6c0bcdf654a45bd571" translate="yes" xml:space="preserve">
+          <source>Some HAP know-how was taken from &lt;a href=&quot;https://github.com/KhaosT/HAP-NodeJS&quot;&gt;HAP-NodeJS by KhaosT&lt;/a&gt;.</source>
+          <target state="translated">일부 HAP 노하우는 &lt;a href=&quot;https://github.com/KhaosT/HAP-NodeJS&quot;&gt;KhaosT의 HAP-NodeJS에서 가져 왔습니다&lt;/a&gt; .</target>
+        </trans-unit>
+        <trans-unit id="0584ec9c5715714a3382b500c551f7acc0f423b0" translate="yes" xml:space="preserve">
+          <source>Suggestions are always welcome.</source>
+          <target state="translated">제안은 언제나 환영합니다.</target>
+        </trans-unit>
+        <trans-unit id="9730d4326a7b8a0d13c2be3b7fe29b80ad152bf6" translate="yes" xml:space="preserve">
+          <source>Table of Contents</source>
+          <target state="translated">목차</target>
+        </trans-unit>
+        <trans-unit id="916d6724a130780cee9f609f81f3928a0506c51b" translate="yes" xml:space="preserve">
+          <source>Test that everything is fine by doing:</source>
+          <target state="translated">다음을 수행하여 모든 것이 정상인지 테스트하십시오.</target>
+        </trans-unit>
+        <trans-unit id="6387cc412d5f4a190c664ee31235a643a3ca951c" translate="yes" xml:space="preserve">
+          <source>The &lt;a href=&quot;pyhap/camera.py&quot;&gt;Camera accessory&lt;/a&gt; implements the HomeKit Protocol for negotiating stream settings,
+such as the picture width and height, number of audio channels and others.
+Starting a video and/or audio stream is very platform specific. Because of this,
+you need to figure out what video and audio settings your camera supports and set them
+in the &lt;code&gt;options&lt;/code&gt; parameter that is passed to the &lt;code&gt;Camera&lt;/code&gt; Accessory. Refer to the
+documentation for the &lt;code&gt;Camera&lt;/code&gt; contructor for the settings you need to specify.</source>
+          <target state="translated">&lt;a href=&quot;pyhap/camera.py&quot;&gt;카메라 액세서리&lt;/a&gt; 등 사진의 폭과 높이, 오디오 채널 등의 수와 같은 스트림 설정을 협상 구현하는 HomeKit 프로토콜. 비디오 및 / 또는 오디오 스트림을 시작하는 것은 매우 플랫폼에 따라 다릅니다. 따라서 카메라가 지원하는 비디오 및 오디오 설정을 파악 하고 &lt;code&gt;Camera&lt;/code&gt; 액세서리에 전달 되는 &lt;code&gt;options&lt;/code&gt; 매개 변수 에서 설정해야합니다 . 지정해야하는 설정 은 &lt;code&gt;Camera&lt;/code&gt; 구성자에 대한 설명서를 참조하십시오 .</target>
+        </trans-unit>
+        <trans-unit id="2ca852a8d3481e0387951d298a60906d8c55ac96" translate="yes" xml:space="preserve">
+          <source>The full list of negotiated stream configuration parameters can be found in the
+documentation for the &lt;code&gt;Camera.start&lt;/code&gt; method.</source>
+          <target state="translated">협상 된 스트림 구성 매개 변수의 전체 목록은 &lt;code&gt;Camera.start&lt;/code&gt; 메서드 에 대한 설명서에서 찾을 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="400fa412edabfd20c83e8e2f87812d6410e658d5" translate="yes" xml:space="preserve">
+          <source>The project was developed for a Raspberry Pi, but it should work on other platforms. To kick-start things,
+you can open &lt;code&gt;main.py&lt;/code&gt; or &lt;code&gt;busy_home.py&lt;/code&gt;, where you will find some fake accessories.
+Just run one of them, for example &lt;code&gt;python3 busy_home.py&lt;/code&gt;, and you can add it in
+the Home app (be sure to be in the same network).
+Stop it by hitting Ctrl+C.</source>
+          <target state="translated">이 프로젝트는 Raspberry Pi 용으로 개발되었지만 다른 플랫폼에서도 작동합니다. 시작하려면 &lt;code&gt;main.py&lt;/code&gt; 또는 &lt;code&gt;busy_home.py&lt;/code&gt; 를 열면 가짜 액세서리가 있습니다. 그중 하나 (예 : &lt;code&gt;python3 busy_home.py&lt;/code&gt; ) 를 실행 하면 홈 앱에 추가 할 수 있습니다 (동일한 네트워크에 있어야 함). Ctrl + C를 눌러 중지하십시오.</target>
+        </trans-unit>
+        <trans-unit id="9679ea9c3ff4e80415c86a1bd58c81fb697b2bd8" translate="yes" xml:space="preserve">
+          <source>There are example accessories as well as integrations with real products
+in &lt;a href=&quot;accessories&quot;&gt;the accessories folder&lt;/a&gt;. See how to configure your camera in
+&lt;a href=&quot;camera_main.py&quot;&gt;camera_main.py&lt;/a&gt;.</source>
+          <target state="translated">&lt;a href=&quot;accessories&quot;&gt;액세서리 폴더&lt;/a&gt; 에는 실제 제품과의 통합뿐만 아니라 예제 액세서리가 있습니다 . &lt;a href=&quot;camera_main.py&quot;&gt;camera_main.py&lt;/a&gt; 에서 카메라를 구성하는 방법을 참조하세요 .</target>
+        </trans-unit>
+        <trans-unit id="7c46f59df1ae3acba98ff7a6394ec4a6b7c0cbc1" translate="yes" xml:space="preserve">
+          <source>This is a quick way to get &lt;code&gt;HAP-python&lt;/code&gt; to run at boot on a Raspberry Pi. It is recommended
+to turn on &quot;Wait for network&quot; in &lt;code&gt;raspi-config&lt;/code&gt;. If this turns to be unreliable, see
+&lt;a href=&quot;https://www.raspberrypi.org/forums/viewtopic.php?f=66&amp;amp;t=187225&quot;&gt;this&lt;/a&gt;.</source>
+          <target state="translated">이것은 &lt;code&gt;HAP-python&lt;/code&gt; 이 Raspberry Pi에서 부팅 할 때 실행되도록 하는 빠른 방법 입니다. &lt;code&gt;raspi-config&lt;/code&gt; 에서 &quot;Wait for network&quot;를 켜는 것이 좋습니다 . 이것이 신뢰할 수없는 것으로 판명되면이를 참조 &lt;a href=&quot;https://www.raspberrypi.org/forums/viewtopic.php?f=66&amp;amp;t=187225&quot;&gt;하십시오&lt;/a&gt; .</target>
+        </trans-unit>
+        <trans-unit id="09e603d418289d063812e3555f3006d5fb63f0c0" translate="yes" xml:space="preserve">
+          <source>This will install HAP-python in your python packages, so that you can import it as &lt;code&gt;pyhap&lt;/code&gt;. To uninstall, just do:</source>
+          <target state="translated">그러면 python 패키지에 HAP-python이 설치되므로 &lt;code&gt;pyhap&lt;/code&gt; 으로 가져올 수 있습니다 . 제거하려면 다음을 수행하십시오.</target>
+        </trans-unit>
+        <trans-unit id="9132a2e99530322cbba4e67cef987eae36540b65" translate="yes" xml:space="preserve">
+          <source>To enable or disable at boot, do:</source>
+          <target state="translated">부팅시 활성화 또는 비활성화하려면 다음을 수행하십시오.</target>
+        </trans-unit>
+        <trans-unit id="90a107562af2e5a9a8d84ac3a9fe16ee09edb22b" translate="yes" xml:space="preserve">
+          <source>When you are working with tightly coupled characteristics such as &quot;On&quot; and &quot;Brightness,&quot;
+you may need to use a service callback to receive all changes in a single request.</source>
+          <target state="translated">&quot;On&quot;및 &quot;Brightness&quot;와 같이 밀접하게 결합 된 특성으로 작업하는 경우 단일 요청으로 모든 변경 사항을 수신하려면 서비스 콜백을 사용해야 할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="886fae67ad0772f8befd4e8229d586573dccef11" translate="yes" xml:space="preserve">
+          <source>With characteristic callbacks, you do now know that a &quot;Brightness&quot; characteristic is
+about to be processed right after an &quot;On&quot; and may end up setting a LightBulb to 100%
+and then dim it back down to the expected level.</source>
+          <target state="translated">특성 콜백을 사용하면 이제 &quot;밝기&quot;특성이 &quot;켜기&quot;직후에 처리 될 것이며 결국 LightBulb를 100 %로 설정 한 다음 예상 수준으로 다시 어둡게 할 수 있다는 것을 알고 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="8801c4d2cc3257924f433c4d01ec2c6681013602" translate="yes" xml:space="preserve">
+          <source>You pass the command as a value to the key &lt;code&gt;start_stream_cmd&lt;/code&gt; in the &lt;code&gt;options&lt;/code&gt; parameter to
+the constuctor of the &lt;code&gt;Camera&lt;/code&gt; Accessory. The command is formatted using the
+negotiated stream configuration parameters. For example, if the negotiated width
+is 640 and you pass &lt;code&gt;foo start -width {width}&lt;/code&gt;, the command will be formatted as
+&lt;code&gt;foo start -width 640&lt;/code&gt;.</source>
+          <target state="translated">당신은 키 값으로 명령을 전달 &lt;code&gt;start_stream_cmd&lt;/code&gt; 에서 &lt;code&gt;options&lt;/code&gt; 의 constructor에에 매개 변수 &lt;code&gt;Camera&lt;/code&gt; 액세서리. 명령은 협상 된 스트림 구성 매개 변수를 사용하여 형식이 지정됩니다. 예를 들어, 협상 된 너비가 640이고 &lt;code&gt;foo start -width {width}&lt;/code&gt; 를 전달 하면 명령은 &lt;code&gt;foo start -width 640&lt;/code&gt; 형식으로 지정됩니다 .</target>
+        </trans-unit>
+        <trans-unit id="9ecf7b7b5319384df5d09c54ca84bcc70e75582d" translate="yes" xml:space="preserve">
+          <source>asyncio support - You can run various tasks or accessories in the event loop.</source>
+          <target state="translated">asyncio 지원-이벤트 루프에서 다양한 작업 또는 액세서리를 실행할 수 있습니다.</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
