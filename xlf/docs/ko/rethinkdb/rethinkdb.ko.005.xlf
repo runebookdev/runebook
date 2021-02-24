@@ -3,6 +3,918 @@
   <file source-language="en" target-language="ko" datatype="htmlbody" original="rethinkdb">
     <body>
       <group id="rethinkdb">
+        <trans-unit id="c081f805ae12217f57b46b44e966da71b81ef959" translate="yes" xml:space="preserve">
+          <source>Working with times</source>
+          <target state="translated">시간 작업</target>
+        </trans-unit>
+        <trans-unit id="369a3cda46aff60d2423048907eef67959000caa" translate="yes" xml:space="preserve">
+          <source>Workload A</source>
+          <target state="translated">작업량 A</target>
+        </trans-unit>
+        <trans-unit id="3ff249cc11740bb6ad8b6e01ed11cfa8c3c78f8f" translate="yes" xml:space="preserve">
+          <source>Workload C</source>
+          <target state="translated">작업량 C</target>
+        </trans-unit>
+        <trans-unit id="f39dd82bdd5c2b2b0591a73c0a966f99123a4a07" translate="yes" xml:space="preserve">
+          <source>Would be sent to the server as</source>
+          <target state="translated">서버로 전송됩니다</target>
+        </trans-unit>
+        <trans-unit id="89dc61bcc6d6ce0ce9d24febb8af7ea389f5b539" translate="yes" xml:space="preserve">
+          <source>Wrapping queries</source>
+          <target state="translated">줄 바꿈 쿼리</target>
+        </trans-unit>
+        <trans-unit id="659ca7d443e63ce2949dec486536ee88fa72c4d0" translate="yes" xml:space="preserve">
+          <source>Wrapping the DB query option</source>
+          <target state="translated">DB 쿼리 옵션 래핑</target>
+        </trans-unit>
+        <trans-unit id="dbedb4dc90f07d001648d9502697a610b881d451" translate="yes" xml:space="preserve">
+          <source>Write acks and durability</source>
+          <target state="translated">쓰기 acks와 내구성</target>
+        </trans-unit>
+        <trans-unit id="5e6eaa2c1185928e8b28fb617129c097ed9398c9" translate="yes" xml:space="preserve">
+          <source>Write atomicity is supported on a per-document basis &amp;ndash; updates to a single JSON document are guaranteed to be atomic. RethinkDB is different from other NoSQL systems in that atomic document updates aren&amp;rsquo;t limited to a small subset of possible operations &amp;ndash; any combination of operations that can be performed on a single document is guaranteed to update the document atomically. For example, the user may wish to update the value of attribute A to a sum of the values of attributes B and C, increment the value of attribute D by a fixed number, and append an element to an array in attribute E. All of these operations can be applied to the document atomically in a single update operation.</source>
+          <target state="translated">쓰기 원자 성은 문서별로 지원됩니다. 단일 JSON 문서에 대한 업데이트는 원 자성입니다. RethinkDB는 원자 문서 업데이트가 가능한 작은 작업 하위 집합으로 제한되지 않는다는 점에서 다른 NoSQL 시스템과 다릅니다. 단일 문서에서 수행 할 수있는 모든 작업 조합은 문서를 원자 적으로 업데이트합니다. 예를 들어, 사용자는 속성 A의 값을 속성 B 및 C의 값의 합으로 업데이트하고, 속성 D의 값을 고정 된 수만큼 증가시키고, 속성 E의 배열에 요소를 추가하고자 할 수있다. 이러한 작업은 단일 업데이트 작업으로 문서에 원자 적으로 적용될 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="f62115f9f3535c8b07d79df0f9f18ccafd554421" translate="yes" xml:space="preserve">
+          <source>Write operations on system tables are non-atomic. Avoid writing to the same system table row from more than one client at the same time.</source>
+          <target state="translated">시스템 테이블에 대한 쓰기 작업은 비원 자적입니다. 동시에 둘 이상의 클라이언트에서 동일한 시스템 테이블 행에 쓰지 마십시오.</target>
+        </trans-unit>
+        <trans-unit id="778b0b2b0319607e4822502fbb728b660dd8744d" translate="yes" xml:space="preserve">
+          <source>Writes are performed with &amp;ldquo;hard&amp;rdquo; durability (wait for data to be on disk on both replicas)</source>
+          <target state="translated">쓰기는 &quot;하드&quot;내구성으로 수행됩니다 (데이터가 두 복제본의 디스크에있을 때까지 기다리십시오)</target>
+        </trans-unit>
+        <trans-unit id="9e632869f49afb8aba3986c578bc41023c0edd69" translate="yes" xml:space="preserve">
+          <source>Writing Data</source>
+          <target state="translated">데이터 쓰기</target>
+        </trans-unit>
+        <trans-unit id="8a414f19d977be639835849a95f5232ef94bac3b" translate="yes" xml:space="preserve">
+          <source>Writing RethinkDB drivers</source>
+          <target state="translated">RethinkDB 드라이버 작성</target>
+        </trans-unit>
+        <trans-unit id="3f85d90f8a8e1dd726894cac4b4961c2ef2bc396" translate="yes" xml:space="preserve">
+          <source>Writing data</source>
+          <target state="translated">데이터 쓰기</target>
+        </trans-unit>
+        <trans-unit id="0592df9e765a33e009a61a0f043994284838f69d" translate="yes" xml:space="preserve">
+          <source>Writing drivers</source>
+          <target state="translated">드라이버 작성</target>
+        </trans-unit>
+        <trans-unit id="c61bb79a2505d2a4aa2a95f6ce80e265d54461a3" translate="yes" xml:space="preserve">
+          <source>YCSB comes with a variety of default workloads, but for the purposes of our testing we chose two of them to run against RethinkDB. Out of the YCSB workload options, we chose to run workload A which comprises 50% reads and 50% update operations, and workload C which performs strictly read operations. All documents stored by the YCSB tests contain 10 fields with randomized 100 byte strings as values, with each document totaling about 1 KB in size.</source>
+          <target state="translated">YCSB에는 다양한 기본 워크로드가 제공되지만 테스트를 위해 RethinkDB에 대해 실행할 두 가지를 선택했습니다. YCSB 워크로드 옵션 중에서 50 % 읽기 및 50 % 업데이트 작업으로 구성된 워크로드 A와 엄격하게 읽기 작업을 수행하는 워크로드 C를 실행하기로 선택했습니다. YCSB 테스트에 의해 저장된 모든 문서에는 100 바이트의 무작위 문자열이 값으로 10 개의 필드가 있으며 각 문서의 크기는 약 1KB입니다.</target>
+        </trans-unit>
+        <trans-unit id="3eb210c778a79793e9d78d22c3f1ede24830d9f8" translate="yes" xml:space="preserve">
+          <source>Yes. Distance calculations are done on a geodesic (either WGS84&amp;rsquo;s reference ellipsoid or a unit sphere).</source>
+          <target state="translated">예. 거리 계산은 측지선 (WGS84의 기준 타원체 또는 단위 구)에서 수행됩니다.</target>
+        </trans-unit>
+        <trans-unit id="7c3e24fef8be8e5708c75420ec10f7858a6a4a38" translate="yes" xml:space="preserve">
+          <source>You can &lt;a href=&quot;../../api/javascript/update/index&quot;&gt;update&lt;/a&gt; the password to a new value, or remove it by setting it to &lt;code&gt;false&lt;/code&gt;.</source>
+          <target state="translated">비밀번호를 새 값으로 &lt;a href=&quot;../../api/javascript/update/index&quot;&gt;업데이트&lt;/a&gt; 하거나 &lt;code&gt;false&lt;/code&gt; 로 설정하여 제거 할 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="948b7ad33f6106e0c518960b93f129c834918f85" translate="yes" xml:space="preserve">
+          <source>You can accomplish this with &lt;code&gt;object&lt;/code&gt; and a pivot.</source>
+          <target state="translated">&lt;code&gt;object&lt;/code&gt; 와 피벗 으로이 작업을 수행 할 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="925356081da49bb85c51c3cfc060b861749e8f91" translate="yes" xml:space="preserve">
+          <source>You can add or subtract a duration (in seconds):</source>
+          <target state="translated">지속 시간 (초)을 더하거나 뺄 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="4533fcb6c96cfc2d8d905dbd40d93091a926daf0" translate="yes" xml:space="preserve">
+          <source>You can also chain &lt;code&gt;changes&lt;/code&gt; before any command that operates on a sequence of documents, as long as that command doesn&amp;rsquo;t consume the entire sequence. (For instance, &lt;code&gt;count&lt;/code&gt; and &lt;code&gt;orderBy&lt;/code&gt; cannot come after the &lt;code&gt;changes&lt;/code&gt; command.)</source>
+          <target state="translated">해당 명령이 전체 시퀀스를 사용하지 않는 한 일련의 문서에서 작동하는 명령 전에 &lt;code&gt;changes&lt;/code&gt; 연결할 수도 있습니다 . 예를 들어, &lt;code&gt;count&lt;/code&gt; 및 &lt;code&gt;orderBy&lt;/code&gt; 는 &lt;code&gt;changes&lt;/code&gt; 명령 뒤에 올 수 없습니다 .</target>
+        </trans-unit>
+        <trans-unit id="aa193e7db24ef17527767c2a2fb1bc7e212cf120" translate="yes" xml:space="preserve">
+          <source>You can also choose to receive errors in the block by accepting two arguments.</source>
+          <target state="translated">두 개의 인수를 허용하여 블록에서 오류를 수신하도록 선택할 수도 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="7521a0e1d0a48d0648af79a67343e53203f19dc3" translate="yes" xml:space="preserve">
+          <source>You can also combine soft durability and &lt;code&gt;noreply&lt;/code&gt; for the highest performance:</source>
+          <target state="translated">최고 성능을 위해 부드러운 내구성과 &lt;code&gt;noreply&lt;/code&gt; 을 결합 할 수도 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="f7bee9dd40ed9b84d531cd93a05bc744d1be6b9b" translate="yes" xml:space="preserve">
+          <source>You can also filter messages by tags. We could put the tags into a string and build a regex to match messages with the tags we want, but luckily we have the full power of ReQL at our disposal. Instead, we can make the topic an actual JSON array, and use ReQL&amp;rsquo;s &lt;a href=&quot;../../../api/javascript/contains/index&quot;&gt;contains&lt;/a&gt; method to do the filtering.</source>
+          <target state="translated">태그별로 메시지를 필터링 할 수도 있습니다. 태그를 문자열에 넣고 원하는 태그와 메시지를 일치시키는 정규식을 작성할 수 있지만 다행히도 ReQL의 모든 기능을 사용할 수 있습니다. 대신, 주제를 실제 JSON 배열로 만들고 ReQL의 &lt;a href=&quot;../../../api/javascript/contains/index&quot;&gt;contains&lt;/a&gt; 메소드를 사용 하여 필터링을 수행 할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="55f7bbe803221ed2cce75841fcc9fc9bd55f8f78" translate="yes" xml:space="preserve">
+          <source>You can also group by a function.</source>
+          <target state="translated">기능별로 그룹화 할 수도 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="8f7329e3cb33fdb6c2fd3c98bf353c3c9bcd0191" translate="yes" xml:space="preserve">
+          <source>You can also group by more than one field.</source>
+          <target state="translated">둘 이상의 필드를 기준으로 그룹화 할 수도 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="a60b122be5d58582613cfb6b6776eff696b1b764" translate="yes" xml:space="preserve">
+          <source>You can also group on an index (primary key or secondary).</source>
+          <target state="translated">인덱스 (기본 키 또는 보조)로 그룹화 할 수도 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="6654958bc49bc05258fa3acec5130cab590a8a51" translate="yes" xml:space="preserve">
+          <source>You can also manually compare dates:</source>
+          <target state="translated">날짜를 수동으로 비교할 수도 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="0ec8c02dd35711b36397abb1da1ac1fa12d559ed" translate="yes" xml:space="preserve">
+          <source>You can also perform this query using the &lt;a href=&quot;https://rethinkdb.com/api/python/inner_join/&quot;&gt;inner_join&lt;/a&gt; command.</source>
+          <target state="translated">&lt;a href=&quot;https://rethinkdb.com/api/python/inner_join/&quot;&gt;inner_join&lt;/a&gt; 명령을 사용하여이 쿼리를 수행 할 수도 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="a74279a58953a26e9ef411c14ba12ac3c17b2d47" translate="yes" xml:space="preserve">
+          <source>You can also point the client drivers to &lt;code&gt;localhost:28015&lt;/code&gt; or &lt;code&gt;localhost:28016&lt;/code&gt; to start running queries (it doesn&amp;rsquo;t matter which node you use&amp;mdash;the cluster will automatically route all commands to appropriate nodes).</source>
+          <target state="translated">또한 클라이언트 드라이버가 &lt;code&gt;localhost:28015&lt;/code&gt; 또는 &lt;code&gt;localhost:28016&lt;/code&gt; 을 가리 키도록하여 쿼리 실행을 시작할 수 있습니다 (어떤 노드를 사용하든 상관 없습니다. 클러스터는 모든 명령을 적절한 노드로 자동 라우팅합니다).</target>
+        </trans-unit>
+        <trans-unit id="e44ac32db1d54d18e34eb6ab558c9e482d15daa2" translate="yes" xml:space="preserve">
+          <source>You can also select a descending ordering:</source>
+          <target state="translated">내림차순을 선택할 수도 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="b8fc5957165ff64f88a05853da874a06bd5d3701" translate="yes" xml:space="preserve">
+          <source>You can also specify explicitly which index and type you want synced documents to go to:</source>
+          <target state="translated">동기화 된 문서로 이동할 인덱스 및 유형을 명시 적으로 지정할 수도 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="80eac1c2d72fc26d947819c83575a858603c9378" translate="yes" xml:space="preserve">
+          <source>You can also transform a time object on the server using either &lt;code&gt;toEpochTime&lt;/code&gt; or &lt;code&gt;toISO8601&lt;/code&gt;.</source>
+          <target state="translated">&lt;code&gt;toEpochTime&lt;/code&gt; 또는 &lt;code&gt;toISO8601&lt;/code&gt; 을 사용하여 서버에서 시간 객체를 변환 할 수도 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="cac8d8320c3579227fb8c5d1475782eef117e2c2" translate="yes" xml:space="preserve">
+          <source>You can also use &lt;code&gt;r.now&lt;/code&gt; (which the server interprets as the time the query was received in UTC), or construct a time using &lt;code&gt;r.time&lt;/code&gt;, &lt;code&gt;r.epochTime&lt;/code&gt;, or &lt;code&gt;r.ISO8601&lt;/code&gt;.</source>
+          <target state="translated">당신은 또한 사용할 수 있습니다 &lt;code&gt;r.now&lt;/code&gt; (이 쿼리가 UTC에서 수신 된 시간으로 서버 해석)를 사용하여 시간, 구성 &lt;code&gt;r.time&lt;/code&gt; , &lt;code&gt;r.epochTime&lt;/code&gt; , 또는 &lt;code&gt;r.ISO8601&lt;/code&gt; 을 .</target>
+        </trans-unit>
+        <trans-unit id="cb2bd319a45cdc6fba892eaab1939a5068f518fa" translate="yes" xml:space="preserve">
+          <source>You can also use RethinkDB to query many to many relations. Let&amp;rsquo;s suppose we have a collaborative blogging platform where authors collaborate to create posts (multiple authors can work on any given post, and publish multiple posts).</source>
+          <target state="translated">RethinkDB를 사용하여 다 대다 관계를 쿼리 할 수도 있습니다. 작성자가 공동 작업하여 게시물을 작성하는 협업 블로그 플랫폼이 있다고 가정합니다 (여러 작성자가 특정 게시물에 대해 작업하고 여러 게시물을 게시 할 수 있음).</target>
+        </trans-unit>
+        <trans-unit id="260bde3e879639056344b2578c9acb496c3e9dfd" translate="yes" xml:space="preserve">
+          <source>You can also use more complicated expressions. Let&amp;rsquo;s say you have a table &lt;code&gt;scores&lt;/code&gt; that contains the latest game score for every user of your game. You can create a feed of all games where a user beats their previous score, and get only the new value:</source>
+          <target state="translated">더 복잡한 표현을 사용할 수도 있습니다. 게임의 모든 사용자에 대한 최신 게임 &lt;code&gt;scores&lt;/code&gt; 가 포함 된 테이블 점수 가 있다고 가정 합니다. 사용자가 이전 점수를이기는 모든 게임의 피드를 생성하고 새로운 값만 얻을 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="3d752132db71ae1e37214a4686c56d81c5eaeefd" translate="yes" xml:space="preserve">
+          <source>You can also use the &lt;a href=&quot;../limit/index&quot;&gt;limit&lt;/a&gt; command with the no-argument variant to achieve the same result in this case:</source>
+          <target state="translated">인수가없는 변형과 함께 &lt;a href=&quot;../limit/index&quot;&gt;limit&lt;/a&gt; 명령을 사용 하여이 경우에도 동일한 결과를 얻을 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="68b26d9038bb64d58ff064aaaf43b40e2b7dd37d" translate="yes" xml:space="preserve">
+          <source>You can also use the prefix notation (passing all arguments to &lt;code&gt;r.and&lt;/code&gt;), if that&amp;rsquo;s what you prefer:</source>
+          <target state="translated">원하는 경우 접두사 표기법 (모든 인수를 &lt;code&gt;r.and&lt;/code&gt; 로 전달)을 사용할 수도 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="98524810990f6ce3791d22ab50b4d44cc51b4729" translate="yes" xml:space="preserve">
+          <source>You can also use this approach with a &lt;a href=&quot;../../secondary-indexes/javascript/index&quot;&gt;compound index&lt;/a&gt; on the intervals you want to group:</source>
+          <target state="translated">그룹화하려는 간격에 대한 &lt;a href=&quot;../../secondary-indexes/javascript/index&quot;&gt;복합 인덱스&lt;/a&gt; 와 함께이 방법을 사용할 수도 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="2e210d90ddec99211d2b1d62f90c31cc57cbc7fa" translate="yes" xml:space="preserve">
+          <source>You can ask questions and get notes on changes introduced in new versions of RethinkDB on the &lt;a href=&quot;https://groups.google.com/forum/?fromgroups#!forum/rethinkdb-dev&quot;&gt;RethinkDB-Dev Google Group&lt;/a&gt;. You can also visit the &lt;a href=&quot;irc://irc.freenode.org/rethinkdb&quot;&gt;RethinkDB IRC Channel&lt;/a&gt;, where core developers and other driver developers frequently hang out. Also, you can ask questions on &lt;a href=&quot;http://stackoverflow.com/&quot;&gt;Stack Overflow&lt;/a&gt; using the tag &amp;ldquo;&lt;a href=&quot;http://stackoverflow.com/questions/tagged/rethinkdb&quot;&gt;rethinkdb&lt;/a&gt;.&amp;rdquo;</source>
+          <target state="translated">&lt;a href=&quot;https://groups.google.com/forum/?fromgroups#!forum/rethinkdb-dev&quot;&gt;RethinkDB-Dev Google 그룹&lt;/a&gt; 에서 새 버전의 RethinkDB에 도입 된 변경 사항에 대한 질문을하고 메모를받을 수 있습니다 . 핵심 개발자 및 기타 드라이버 개발자가 자주 &lt;a href=&quot;irc://irc.freenode.org/rethinkdb&quot;&gt;만나는 RethinkDB IRC 채널을&lt;/a&gt; 방문 할 수도 있습니다 . 또한 &quot; &lt;a href=&quot;http://stackoverflow.com/questions/tagged/rethinkdb&quot;&gt;rethinkdb&lt;/a&gt; &quot; 태그를 사용하여 &lt;a href=&quot;http://stackoverflow.com/&quot;&gt;Stack Overflow에&lt;/a&gt; 대한 질문을 할 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="ab33dc48c02612349a04e9a9040eefd1db934e27" translate="yes" xml:space="preserve">
+          <source>You can chain as many ReQL commands as necessary to perform data manipulation tasks. Since ReQL is explicitly designed for JSON querying and modification, it&amp;rsquo;s also an excellent language for operating on web services!</source>
+          <target state="translated">데이터 조작 태스크를 수행하는 데 필요한만큼 ReQL 명령을 연결할 수 있습니다. ReQL은 JSON 쿼리 및 수정을 위해 명시 적으로 설계되었으므로 웹 서비스 운영을위한 훌륭한 언어이기도합니다!</target>
+        </trans-unit>
+        <trans-unit id="1d30f31519b2594ea55d30183732bc6402bd588e" translate="yes" xml:space="preserve">
+          <source>You can combine multiple ReQL queries to build more complex ones.</source>
+          <target state="translated">여러 ReQL 쿼리를 결합하여 더 복잡한 쿼리를 작성할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="6cec52bedaeaa6b1b669dabc56c482be17d6581c" translate="yes" xml:space="preserve">
+          <source>You can compute the average value of a field with the &lt;code&gt;avg&lt;/code&gt; command.</source>
+          <target state="translated">&lt;code&gt;avg&lt;/code&gt; 명령 을 사용하여 필드의 평균값을 계산할 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="70626bab7a8c982a8c2b47eb0111e64d0d9ee6a0" translate="yes" xml:space="preserve">
+          <source>You can connect to your hosted cluster on Compose in one of two ways: via SSL or via SSH tunneling. With SSL, you can get a direct Admin URL and driver connection URL to your RethinkDB instance. SSL driver connections are only supported with the official RethinkDB drivers and the community-supported Go driver. For more details, read Compose&amp;rsquo;s &lt;a href=&quot;https://www.compose.io/articles/rethinkdb-and-ssl-think-secure/&quot;&gt;RethinkDB and SSL&lt;/a&gt; blog post.</source>
+          <target state="translated">SSL 또는 SSH 터널링을 통해 Compose에서 호스트 클러스터에 연결할 수 있습니다. SSL을 사용하면 RethinkDB 인스턴스에 대한 직접 관리 URL 및 드라이버 연결 URL을 얻을 수 있습니다. SSL 드라이버 연결은 공식 RethinkDB 드라이버 및 커뮤니티 지원 Go 드라이버에서만 지원됩니다. 자세한 내용은 Compose의 &lt;a href=&quot;https://www.compose.io/articles/rethinkdb-and-ssl-think-secure/&quot;&gt;RethinkDB 및 SSL&lt;/a&gt; 블로그 게시물을 참조하십시오.</target>
+        </trans-unit>
+        <trans-unit id="07b08edef601b139269d80f58b49bf6d38d77cbe" translate="yes" xml:space="preserve">
+          <source>You can construct queries incrementally by chaining transformations and examining intermediary results.</source>
+          <target state="translated">변환을 연결하고 중간 결과를 검사하여 점진적으로 쿼리를 구성 할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="e0d2d2ae12e1b289f792fb7810556ffc10df36f3" translate="yes" xml:space="preserve">
+          <source>You can count the number of documents with a &lt;code&gt;count&lt;/code&gt; command:</source>
+          <target state="translated">&lt;code&gt;count&lt;/code&gt; 명령을 사용하여 문서 수를 계산할 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="6c82b7f4625b4de3a4454fdede8889e7985323d5" translate="yes" xml:space="preserve">
+          <source>You can create a multi index on an arbitrary expression in similar fashion, by passing the multi option as the last parameter to &lt;code&gt;indexCreate&lt;/code&gt;.</source>
+          <target state="translated">마지막 옵션으로 multi 옵션을 &lt;code&gt;indexCreate&lt;/code&gt; 에 전달하여 유사한 방식으로 임의의 표현식에서 다중 색인을 작성할 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="0ff9726784d6a1aff26ac13770f9e52387b5cba0" translate="yes" xml:space="preserve">
+          <source>You can create an index on an arbitrary expression by passing an anonymous function to &lt;code&gt;indexCreate&lt;/code&gt;.</source>
+          <target state="translated">익명 함수를 &lt;code&gt;indexCreate&lt;/code&gt; 에 전달하여 임의의 표현식에서 색인을 작성할 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="8c85924dc6701675bf65f65e91338b361c7719c7" translate="yes" xml:space="preserve">
+          <source>You can find unofficial community-supported Docker images on our &lt;a href=&quot;../frameworks-and-libraries/index&quot;&gt;Frameworks and Libraries&lt;/a&gt; list under &amp;ldquo;Docker images.&amp;rdquo;</source>
+          <target state="translated">비공식 커뮤니티 지원 Docker 이미지 는 &quot;Docker images&quot;아래 의 &lt;a href=&quot;../frameworks-and-libraries/index&quot;&gt;Frameworks and Libraries&lt;/a&gt; 목록에서 찾을 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="7128754a7ec44d094fd8436c4f0024fffbe80772" translate="yes" xml:space="preserve">
+          <source>You can get the value of a specific field by using the &lt;code&gt;()&lt;/code&gt; operator successively to &amp;ldquo;drill down&amp;rdquo; in the document nesting:</source>
+          <target state="translated">&lt;code&gt;()&lt;/code&gt; 연산자 를 사용 하여 문서 중첩에서 &quot;드릴 다운&quot; 하여 특정 필드의 값을 얻을 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="3fab9bb039306b94d3dcceac9307f7438d69a0d8" translate="yes" xml:space="preserve">
+          <source>You can give the queue a name if you want, but since we passed an empty string to &lt;code&gt;assertQueue&lt;/code&gt; it&amp;rsquo;ll create a randomly generated name for us.</source>
+          <target state="translated">원하는 경우 대기열 이름을 지정할 수 있지만 빈 문자열을 &lt;code&gt;assertQueue&lt;/code&gt; 에 전달 했기 때문에 임의로 생성 된 이름이 만들어집니다.</target>
+        </trans-unit>
+        <trans-unit id="95a4afcf8eb4b7e86bde39ff9cd1eee507b21edb" translate="yes" xml:space="preserve">
+          <source>You can increase the performance of a query by using the &lt;code&gt;outdated&lt;/code&gt; read mode, which allows the cluster to return values from memory on arbitrarily-selected replicas.</source>
+          <target state="translated">&lt;code&gt;outdated&lt;/code&gt; 읽기 모드를 사용하여 클러스터가 임의로 선택된 복제본의 메모리에서 값을 반환 할 수 있도록 하여 쿼리 성능을 향상시킬 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="144b33ca938be37a7db68bea3a8e00681f057745" translate="yes" xml:space="preserve">
+          <source>You can insert data in soft durability mode as follows:</source>
+          <target state="translated">다음과 같이 부드러운 내구성 모드에서 데이터를 삽입 할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="19aa0f58079aaa5fdb28aefcf4d031b7fca0523d" translate="yes" xml:space="preserve">
+          <source>You can insert documents by calling the &lt;code&gt;insert&lt;/code&gt; command on the appropriate table:</source>
+          <target state="translated">해당 테이블 에서 &lt;code&gt;insert&lt;/code&gt; 명령을 호출하여 문서를 삽입 할 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="522166a599dd048fb9f36a688c8769900fab5110" translate="yes" xml:space="preserve">
+          <source>You can insert multiple documents at once by passing an array of documents to &lt;code&gt;insert&lt;/code&gt; as follows:</source>
+          <target state="translated">다음과 같이 &lt;code&gt;insert&lt;/code&gt; 문서 배열을 전달하여 여러 문서를 한 번에 삽입 할 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="bc5fd63ec4ce45a7100edbaad666967334a1bcbb" translate="yes" xml:space="preserve">
+          <source>You can insert times by simply passing a native &lt;code&gt;Date&lt;/code&gt; object.</source>
+          <target state="translated">기본 &lt;code&gt;Date&lt;/code&gt; 객체 를 전달하여 시간을 삽입 할 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="751f056e4fe6679c065eb7194734fc44fd1a7b13" translate="yes" xml:space="preserve">
+          <source>You can limit the number of documents returned by your queries with the &lt;code&gt;limit&lt;/code&gt; command. Let&amp;rsquo;s retrieve just the first 10 blog posts:</source>
+          <target state="translated">&lt;code&gt;limit&lt;/code&gt; 명령 을 사용하여 쿼리에서 반환 한 문서 수를 제한 할 수 있습니다 . 처음 10 개의 블로그 게시물 만 검색해 보겠습니다.</target>
+        </trans-unit>
+        <trans-unit id="76b17d6c854c4f6dab9445bfb353fd30b3552e94" translate="yes" xml:space="preserve">
+          <source>You can manually merge the &lt;code&gt;left&lt;/code&gt; and &lt;code&gt;right&lt;/code&gt; fields without using the &lt;code&gt;zip&lt;/code&gt; command. Suppose you want to keep the name of the employee and the name of his company. You can do:</source>
+          <target state="translated">&lt;code&gt;zip&lt;/code&gt; 명령 을 사용하지 않고 &lt;code&gt;left&lt;/code&gt; 및 &lt;code&gt;right&lt;/code&gt; 필드를 수동으로 병합 할 수 있습니다 . 직원 이름과 회사 이름을 유지하려고한다고 가정하십시오. 넌 할 수있어:</target>
+        </trans-unit>
+        <trans-unit id="ef36e76fd44a04fb2dd47cac5bdfd94615eb0032" translate="yes" xml:space="preserve">
+          <source>You can now access RethinkDB commands through the &lt;code&gt;r&lt;/code&gt; module.</source>
+          <target state="translated">이제 &lt;code&gt;r&lt;/code&gt; 모듈을 통해 RethinkDB 명령에 액세스 할 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="79a60802ebbd73788c71aa231b342a11949864ed" translate="yes" xml:space="preserve">
+          <source>You can now access the web interface using the following URL: &lt;code&gt;http://HOST/rethinkdb_admin&lt;/code&gt;.</source>
+          <target state="translated">: 이제 다음 URL을 사용하여 웹 인터페이스에 액세스 할 수 있습니다 &lt;code&gt;http://HOST/rethinkdb_admin&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="32d827dd1b8146523ca253b1fbd010534352b7e6" translate="yes" xml:space="preserve">
+          <source>You can now connect to your RethinkDB instance by connecting to the host &lt;code&gt;localhost&lt;/code&gt; and port &lt;code&gt;local_port&lt;/code&gt;:</source>
+          <target state="translated">이제 &lt;code&gt;localhost&lt;/code&gt; 호스트 와 &lt;code&gt;local_port&lt;/code&gt; 포트 에 연결하여 RethinkDB 인스턴스에 연결할 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="544a44f70a2d29fc913b28c805d563bd24f59665" translate="yes" xml:space="preserve">
+          <source>You can now generate models individually or use the scaffolding mechanism. For example, here&amp;rsquo;s a scaffold for an Article resource:</source>
+          <target state="translated">이제 모델을 개별적으로 생성하거나 스캐 폴딩 메커니즘을 사용할 수 있습니다. 예를 들어 다음은 기사 리소스에 대한 스캐 폴드입니다.</target>
+        </trans-unit>
+        <trans-unit id="1babd33de8299282e70321fd6e6921550e6a311f" translate="yes" xml:space="preserve">
+          <source>You can now visit &lt;code&gt;localhost:8080&lt;/code&gt; to see the RethinkDB web admin.</source>
+          <target state="translated">이제 &lt;code&gt;localhost:8080&lt;/code&gt; 을 방문 하여 RethinkDB 웹 관리자를 볼 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="2136ac157f038f4f09ae39e08df0720968297d60" translate="yes" xml:space="preserve">
+          <source>You can only check arity of the methods to a certain extent. If an &lt;code&gt;ARGS&lt;/code&gt; term is one of the argument, only the server can effectively verify that enough arguments are provided (or not too many). The arity errors reported by the server suppose a prefix notation. Things may change if the solution in &lt;a href=&quot;https://github.com/rethinkdb/rethinkdb/issues/2463#issuecomment-44584491&quot;&gt;#2463&lt;/a&gt; is implemented.</source>
+          <target state="translated">당신은 어느 정도 방법의 arity를 ​​확인할 수 있습니다. 는 IF &lt;code&gt;ARGS&lt;/code&gt; 의 용어는 인수 중 하나입니다 만 서버가 효과적으로 충분한 인수가 제공 (또는 너무 많은되지 않음)되는 것을 확인할 수 있습니다. 서버가보고 한 arity 오류는 접두사 표기법을 가정합니다. &lt;a href=&quot;https://github.com/rethinkdb/rethinkdb/issues/2463#issuecomment-44584491&quot;&gt;# 2463&lt;/a&gt; 의 솔루션 이 구현 되면 상황이 바뀔 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="c9c17135e144b5ea5748af8b5b13a317d020c5cc" translate="yes" xml:space="preserve">
+          <source>You can query for specific kinds of issues by filtering on the &lt;code&gt;type&lt;/code&gt; field.</source>
+          <target state="translated">&lt;code&gt;type&lt;/code&gt; 필드 에서 필터링하여 특정 종류의 문제를 쿼리 할 수 ​​있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="9a42ac8551b89b20f2c10b30974b7c931c71637d" translate="yes" xml:space="preserve">
+          <source>You can read more about ReQL in the &lt;a href=&quot;../introduction-to-reql/index&quot;&gt;Introduction to ReQL&lt;/a&gt; article, or go into greater depth with the &lt;a href=&quot;../../api/javascript/index&quot;&gt;API documentation&lt;/a&gt;.</source>
+          <target state="translated">ReQL &lt;a href=&quot;../introduction-to-reql/index&quot;&gt;소개&lt;/a&gt; 문서 에서 ReQL에 대한 자세한 내용을 읽 거나 &lt;a href=&quot;../../api/javascript/index&quot;&gt;API 설명서 &lt;/a&gt;를 자세히 살펴볼 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="be9ee9a22a35c38e47001b9b9f655322e519c2c4" translate="yes" xml:space="preserve">
+          <source>You can register multiple queries with the same &lt;code&gt;Handler&lt;/code&gt; instance. If you define &lt;code&gt;Handler&lt;/code&gt; methods with an additional argument (two arguments instead of one, or one argument instead of zero), that argument will receive the appropriate &lt;code&gt;QueryHandle&lt;/code&gt; instance.</source>
+          <target state="translated">동일한 &lt;code&gt;Handler&lt;/code&gt; 인스턴스로 여러 쿼리를 등록 할 수 있습니다 . 추가 인수 (하나가 아닌 두 개의 인수 또는 0이 아닌 하나의 인수)를 사용하여 &lt;code&gt;Handler&lt;/code&gt; 메소드 를 정의하면 해당 인수는 적절한 &lt;code&gt;QueryHandle&lt;/code&gt; 인스턴스를 수신합니다 .</target>
+        </trans-unit>
+        <trans-unit id="1933909364676c58638278c6dab0bcfb57c730da" translate="yes" xml:space="preserve">
+          <source>You can run the &lt;code&gt;tags&lt;/code&gt; and &lt;code&gt;hierarchy&lt;/code&gt; demos the same way.</source>
+          <target state="translated">&lt;code&gt;tags&lt;/code&gt; 와 &lt;code&gt;hierarchy&lt;/code&gt; 데모를 같은 방식으로 실행할 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="4b3967663785629ac46bd8c818c4a0c7fb7bb0b7" translate="yes" xml:space="preserve">
+          <source>You can select the database where you&amp;rsquo;d like to create the table with the &lt;code&gt;db&lt;/code&gt; command and use the &lt;code&gt;tableCreate&lt;/code&gt; command as follows:</source>
+          <target state="translated">&lt;code&gt;db&lt;/code&gt; 명령으로 테이블을 생성 할 데이터베이스를 선택하고 다음과 같이 &lt;code&gt;tableCreate&lt;/code&gt; 명령을 사용할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="3445238753b67722f154d32ffb435fb68a7c2ce7" translate="yes" xml:space="preserve">
+          <source>You can specify associations between models in the generator:</source>
+          <target state="translated">생성기에서 모델 간의 연관을 지정할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="4655d414014487455834f6df43050a9e8837e922" translate="yes" xml:space="preserve">
+          <source>You can then retrieve only the domain with the &lt;a href=&quot;../get_field/index&quot;&gt;()&lt;/a&gt; selector and &lt;a href=&quot;../nth/index&quot;&gt;nth&lt;/a&gt;.</source>
+          <target state="translated">그런 다음 &lt;a href=&quot;../get_field/index&quot;&gt;()&lt;/a&gt; selector 및 &lt;a href=&quot;../nth/index&quot;&gt;nth를 사용&lt;/a&gt; 하여 도메인 만 검색 할 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="cc57e6e3fb5364b78e07f1d7b90170685584269a" translate="yes" xml:space="preserve">
+          <source>You can upgrade your version of Node.js via &lt;code&gt;npm&lt;/code&gt;:</source>
+          <target state="translated">&lt;code&gt;npm&lt;/code&gt; 을 통해 Node.js 버전을 업그레이드 할 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="a96610657bbf110f72a345d4ecbc8d9e3ab92272" translate="yes" xml:space="preserve">
+          <source>You can use Ruby&amp;rsquo;s &lt;code&gt;DateTime.to_time&lt;/code&gt; and &lt;code&gt;Time.to_datetime&lt;/code&gt; methods to easily convert between one and the other.</source>
+          <target state="translated">Ruby의 &lt;code&gt;DateTime.to_time&lt;/code&gt; 및 &lt;code&gt;Time.to_datetime&lt;/code&gt; 메소드를 사용하여 서로간에 쉽게 변환 할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="4696c1747cc9a947e3f0c3d082249e222fd734da" translate="yes" xml:space="preserve">
+          <source>You can use a relational data modeling technique and create two tables to store your data. A typical document in the &lt;code&gt;authors&lt;/code&gt; table would look like this:</source>
+          <target state="translated">관계형 데이터 모델링 기술을 사용하고 두 개의 테이블을 만들어 데이터를 저장할 수 있습니다. &lt;code&gt;authors&lt;/code&gt; 테이블 의 일반적인 문서 는 다음과 같습니다.</target>
+        </trans-unit>
+        <trans-unit id="65f77048ddce4bc4a4e2b66b3f488074fd0873c3" translate="yes" xml:space="preserve">
+          <source>You can use a reverse HTTP proxy to allow access to the web interface from other servers. Most web servers (such as Apache or Nginx) support this feature. In the following example we&amp;rsquo;ll use Apache to set up a reverse proxy.</source>
+          <target state="translated">리버스 HTTP 프록시를 사용하여 다른 서버에서 웹 인터페이스에 액세스 할 수 있습니다. 대부분의 웹 서버 (예 : Apache 또는 Nginx)는이 기능을 지원합니다. 다음 예제에서는 Apache를 사용하여 리버스 프록시를 설정합니다.</target>
+        </trans-unit>
+        <trans-unit id="34248ba9eb41ee870921e136f9b749265031e98c" translate="yes" xml:space="preserve">
+          <source>You can use the &lt;a href=&quot;../args/index&quot;&gt;args&lt;/a&gt; command to pass an array of Point objects (or latitude-longitude pairs) to &lt;code&gt;line&lt;/code&gt;.</source>
+          <target state="translated">&lt;a href=&quot;../args/index&quot;&gt;args&lt;/a&gt; 명령을 사용하여 Point 객체의 배열 (또는 위도-경도 쌍)을 &lt;code&gt;line&lt;/code&gt; 에 전달할 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="e81a753574cef91d728da364d2a3db98c3d900d4" translate="yes" xml:space="preserve">
+          <source>You can use the &lt;a href=&quot;../args/index&quot;&gt;args&lt;/a&gt; command to pass an array of Point objects (or latitude-longitude pairs) to &lt;code&gt;polygon&lt;/code&gt;.</source>
+          <target state="translated">&lt;a href=&quot;../args/index&quot;&gt;args&lt;/a&gt; 명령을 사용하여 Point 객체의 배열 (또는 위도-경도 쌍)을 &lt;code&gt;polygon&lt;/code&gt; 에 전달할 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="c1883a6a496342b873c98c19cfd071b52992f989" translate="yes" xml:space="preserve">
+          <source>You can use the &lt;code&gt;dbCreate&lt;/code&gt; command as follows:</source>
+          <target state="translated">다음과 같이 &lt;code&gt;dbCreate&lt;/code&gt; 명령을 사용할 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="b1a8bb3cc77f7c36ca0ad2e7223d33bcbb516f2c" translate="yes" xml:space="preserve">
+          <source>You can use the &lt;code&gt;epochTime&lt;/code&gt; and &lt;code&gt;ISO8601&lt;/code&gt; commands to convert Unix timestamps (in seconds) and JSON date-time strings (which are in ISO 8601 format) to the ReQL time type. The ReQL driver will also convert JavaScript Date objects into ReQL time.</source>
+          <target state="translated">&lt;code&gt;epochTime&lt;/code&gt; 및 &lt;code&gt;ISO8601&lt;/code&gt; 명령을 사용하여 Unix 타임 스탬프 (초) 및 JSON 날짜-시간 문자열 (ISO 8601 형식)을 ReQL 시간 유형으로 변환 할 수 있습니다. ReQL 드라이버는 JavaScript Date 객체도 ReQL 시간으로 변환합니다.</target>
+        </trans-unit>
+        <trans-unit id="f1af73a9bb486d64ee96e9f24cb09d18d079d423" translate="yes" xml:space="preserve">
+          <source>You can use the same programming environment and tools you&amp;rsquo;re already used to.</source>
+          <target state="translated">이미 사용했던 것과 동일한 프로그래밍 환경과 도구를 사용할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="f1ca27ed70bc37c74353361fb557af790a5f1898" translate="yes" xml:space="preserve">
+          <source>You cannot apply a &lt;code&gt;filter&lt;/code&gt; after &lt;code&gt;orderBy.limit&lt;/code&gt; in a changefeed.</source>
+          <target state="translated">&lt;code&gt;orderBy.limit&lt;/code&gt; 에서 orderBy.limit 이후 에는 &lt;code&gt;filter&lt;/code&gt; 적용 할 수 없습니다 .</target>
+        </trans-unit>
+        <trans-unit id="0e488f04e53bcbc97716fbfbf8849bce6efacd19" translate="yes" xml:space="preserve">
+          <source>You cannot chain multiple &lt;code&gt;getAll&lt;/code&gt; commands. Use a compound index to efficiently retrieve documents by multiple fields.</source>
+          <target state="translated">여러 &lt;code&gt;getAll&lt;/code&gt; 명령을 연결할 수 없습니다 . 복합 색인을 사용하여 여러 필드로 문서를 효율적으로 검색하십시오.</target>
+        </trans-unit>
+        <trans-unit id="f812c4695332d39c66ee05c0e065ad6439a12fcd" translate="yes" xml:space="preserve">
+          <source>You cannot change a username once it&amp;rsquo;s been created. You can, however, &lt;a href=&quot;../../api/javascript/delete/index&quot;&gt;delete&lt;/a&gt; users from the table.</source>
+          <target state="translated">사용자 이름을 만든 후에는 변경할 수 없습니다. 그러나 테이블에서 사용자를 &lt;a href=&quot;../../api/javascript/delete/index&quot;&gt;삭제할&lt;/a&gt; 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="0f6e9f3b175f70884052e2fe6138e9def53f0107" translate="yes" xml:space="preserve">
+          <source>You cannot use changefeeds after &lt;a href=&quot;../../../api/javascript/concat_map/index&quot;&gt;concatMap&lt;/a&gt; or other transformations whose results cannot be pushed to the shards.</source>
+          <target state="translated">&lt;a href=&quot;../../../api/javascript/concat_map/index&quot;&gt;concatMap&lt;/a&gt; 또는 샤드로 결과를 푸시 할 수없는 다른 변환 후에는 변경 피드를 사용할 수 없습니다.</target>
+        </trans-unit>
+        <trans-unit id="d5ab7b5179be60b7819ad174aebb47f94c0041ef" translate="yes" xml:space="preserve">
+          <source>You have to explicitly use the &lt;code&gt;getAll&lt;/code&gt; command to take advantage of secondary indexes.</source>
+          <target state="translated">보조 인덱스를 이용하려면 &lt;code&gt;getAll&lt;/code&gt; 명령 을 명시 적으로 사용해야합니다 .</target>
+        </trans-unit>
+        <trans-unit id="4d08f89e234e17122771274000461c1cacfb079e" translate="yes" xml:space="preserve">
+          <source>You may also insert a time by inserting a literal pseudotype object. This is useful if, for instance, you exported a row using &lt;code&gt;{timeFormat: 'raw'}&lt;/code&gt; (see &lt;strong&gt;Retrieving Times&lt;/strong&gt; below).</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="3ccc70d6fea9d281cc273dec1dd133e29a74e62f" translate="yes" xml:space="preserve">
+          <source>You may also insert a time by inserting a literal pseudotype object. This is useful if, for instance, you exported a row using &lt;code&gt;{timeFormat:'raw'}&lt;/code&gt; (see &lt;strong&gt;Retrieving Times&lt;/strong&gt; below).</source>
+          <target state="translated">리터럴 의사 유형 객체를 삽입하여 시간을 삽입 할 수도 있습니다. 예를 들어 &lt;code&gt;{timeFormat:'raw'}&lt;/code&gt; 를 사용하여 행을 내 보낸 경우에 유용합니다 ( 아래의 &lt;strong&gt;시간 검색&lt;/strong&gt; 참조).</target>
+        </trans-unit>
+        <trans-unit id="d5c78d1f1e9d17eec8fcc2f3043e460ea50d9a31" translate="yes" xml:space="preserve">
+          <source>You may also rebuild indexes manually in ReQL:</source>
+          <target state="translated">ReQL에서 인덱스를 수동으로 다시 작성할 수도 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="6b801a804a689f7ce7c3a900f04b102e00c4a77e" translate="yes" xml:space="preserve">
+          <source>You may also see &lt;strong&gt;Any&lt;/strong&gt; used for commands that work with any data type.</source>
+          <target state="translated">모든 데이터 유형에서 작동하는 명령에 사용 된 &lt;strong&gt;모든 항목&lt;/strong&gt; 을 볼 수도 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="216cd29d79b5e764f267b1fbf7cd40f5945222e2" translate="yes" xml:space="preserve">
+          <source>You may also use the special constants &lt;code&gt;r.minval&lt;/code&gt; and &lt;code&gt;r.maxval&lt;/code&gt; for boundaries, which represent &amp;ldquo;less than any index key&amp;rdquo; and &amp;ldquo;more than any index key&amp;rdquo; respectively. For instance, if you use &lt;code&gt;r.minval&lt;/code&gt; as the lower key, then &lt;code&gt;between&lt;/code&gt; will return all documents whose primary keys (or indexes) are less than the specified upper key.</source>
+          <target state="translated">경계에 특수 상수 &lt;code&gt;r.minval&lt;/code&gt; 및 &lt;code&gt;r.maxval&lt;/code&gt; 을 사용할 수도 있습니다. 경계는 각각&amp;ldquo;모든 색인 키보다 작음&amp;rdquo;및&amp;ldquo;모든 색인 키보다 큼&amp;rdquo;을 나타냅니다. 당신이 사용하는 경우 예를 들어, &lt;code&gt;r.minval&lt;/code&gt; 낮은 키로하고 &lt;code&gt;between&lt;/code&gt; 누구의 기본 키 (또는 인덱스) 이하 지정된 상위 키보다 모든 문서를 반환합니다.</target>
+        </trans-unit>
+        <trans-unit id="7fd36a0d0214d1375b3acce6557fd40919d911a8" translate="yes" xml:space="preserve">
+          <source>You may be able to check if the kernel&amp;rsquo;s out-of-memory killer is responsible for the crash by checking the system message buffer:</source>
+          <target state="translated">시스템 메시지 버퍼를 확인하여 커널의 메모리 부족 킬러가 충돌을 담당하는지 확인할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="f4ab6a173ae1d00c9f2de8cdd6f47316610bceee" translate="yes" xml:space="preserve">
+          <source>You may be interested in retrieving the results in this format:</source>
+          <target state="translated">다음 형식으로 결과를 검색 할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="9ca4e5872728b2af78f129fbcb8862f39ba1561e" translate="yes" xml:space="preserve">
+          <source>You may call &lt;code&gt;branch&lt;/code&gt; infix style on the first test. (See the second example for an illustration.)</source>
+          <target state="translated">첫 번째 테스트에서 &lt;code&gt;branch&lt;/code&gt; 삽입 스타일을 호출 할 수 있습니다 . (그림은 두 번째 예를 참조하십시오.)</target>
+        </trans-unit>
+        <trans-unit id="88fbc6d30374c1685dcaa3058d32036e9d22c0e4" translate="yes" xml:space="preserve">
+          <source>You may need to adjust RethinkDB&amp;rsquo;s page cache size, using the &lt;code&gt;--cache-size&lt;/code&gt; argument or configuration file option. Read &amp;ldquo;&lt;a href=&quot;../memory-usage/index&quot;&gt;Understanding RethinkDB memory requirements&lt;/a&gt;&amp;rdquo; for a more detailed explanation of how RethinkDB uses memory and how to tune its performance.</source>
+          <target state="translated">&lt;code&gt;--cache-size&lt;/code&gt; 인수 또는 구성 파일 옵션을 사용하여 RethinkDB의 페이지 캐시 크기를 조정해야 할 수도 있습니다. RethinkDB가 메모리를 사용하는 방법 및 성능 조정 방법에 대한 자세한 설명은&amp;ldquo; &lt;a href=&quot;../memory-usage/index&quot;&gt;RethinkDB 메모리 요구 사항 이해&lt;/a&gt; &amp;rdquo;를 읽으십시오 .</target>
+        </trans-unit>
+        <trans-unit id="035b683c2eb870d8c3a4314f01b4185d55a4eaf3" translate="yes" xml:space="preserve">
+          <source>You may rebuild indexes with the &lt;code&gt;rethinkdb&lt;/code&gt; command line utility:</source>
+          <target state="translated">&lt;code&gt;rethinkdb&lt;/code&gt; 명령 행 유틸리티를 사용하여 색인을 재 빌드 할 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="9d45fcbef747c80cc440d1e1381aa9a9df031a71" translate="yes" xml:space="preserve">
+          <source>You may receive a warning message about secondary indexes on startup being &amp;ldquo;outdated&amp;rdquo; when you upgrade RethinkDB versions.</source>
+          <target state="translated">RethinkDB 버전을 업그레이드 할 때 시작시 2 차 색인이&amp;ldquo;구식 화&amp;rdquo;되었다는 경고 메시지가 표시 될 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="f2609f36c24cc34f3e43480b11002dab3d0ca9d7" translate="yes" xml:space="preserve">
+          <source>You may rewrite these with anonymous functions.</source>
+          <target state="translated">익명 함수로 다시 작성할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="ca1d5f446a7c535a121af4af891a4d8add811e03" translate="yes" xml:space="preserve">
+          <source>You might also want to use the &lt;a href=&quot;../ungroup/index&quot;&gt;ungroup&lt;/a&gt; command (see above), which will turn the grouped data into an array of objects on the server.</source>
+          <target state="translated">&lt;a href=&quot;../ungroup/index&quot;&gt;ungroup&lt;/a&gt; 명령 (위 참조) 을 사용하여 그룹화 된 데이터를 서버의 객체 배열로 변환 할 수도 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="d436e93d9a8764b9f606ec167d5f673b80bd6458" translate="yes" xml:space="preserve">
+          <source>You might have caught that there were 253 documents inserted, not 250. Either we have the top 253 movies, or there are a few duplicate records lurking in there. We can use &lt;code&gt;distinct&lt;/code&gt; to get a count of unique rows, but we need to remove the &lt;code&gt;id&lt;/code&gt; column from the query, since all ID values are unique.</source>
+          <target state="translated">250 개가 아닌 253 개의 문서가 삽입 된 것을 발견했을 수 있습니다. 최상위 253 개의 영화가 있거나 거기에 숨겨져있는 몇 개의 복제 레코드가 있습니다. &lt;code&gt;distinct&lt;/code&gt; 를 사용 하여 고유 한 행 수를 얻을 수 있지만 모든 ID 값이 고유하므로 쿼리에서 &lt;code&gt;id&lt;/code&gt; 열 을 제거해야합니다 .</target>
+        </trans-unit>
+        <trans-unit id="c327a4b6eb6a8adef5a599c8b2953dcb153c415f" translate="yes" xml:space="preserve">
+          <source>You might want to &amp;ldquo;tag&amp;rdquo; the tables to make it clear which changes belong to which table.</source>
+          <target state="translated">어떤 변경 사항이 어떤 테이블에 속하는지 명확히하기 위해 테이블에 &quot;태그&quot;를 표시 할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="c08b665617a6aa1f2e950387a4615085af0f8a22" translate="yes" xml:space="preserve">
+          <source>You might want to produce a &amp;ldquo;union&amp;rdquo; changefeed to watch multiple tables or queries on just one feed. Since the &lt;code&gt;union&lt;/code&gt; command works with &lt;code&gt;changes&lt;/code&gt;, ReQL makes this fairly straightforward. To monitor two tables at once:</source>
+          <target state="translated">하나의 피드에서 여러 테이블 또는 쿼리를 볼 수 있도록 &quot;연합&quot;변경 피드를 생성 할 수 있습니다. &lt;code&gt;union&lt;/code&gt; 명령은 &lt;code&gt;changes&lt;/code&gt; 와 함께 작동 하므로 ReQL은이를 매우 간단하게 만듭니다. 두 테이블을 한 번에 모니터하려면 다음을 수행하십시오.</target>
+        </trans-unit>
+        <trans-unit id="f40e2c91ca208432ed398a66468fc4cf49d642a7" translate="yes" xml:space="preserve">
+          <source>You might want to use &lt;code&gt;filter&lt;/code&gt; to return documents that have one of two (or more) optional fields set, such as the following:</source>
+          <target state="translated">&lt;code&gt;filter&lt;/code&gt; 를 사용 하여 다음과 같은 두 개 이상의 선택적 필드 중 하나가 설정된 문서를 반환 할 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="d42e3e3b1bf529384b192a0b26f47fb0a3069032" translate="yes" xml:space="preserve">
+          <source>You must export your data &lt;strong&gt;before&lt;/strong&gt; you&amp;rsquo;ve upgraded RethinkDB to a new version! If you&amp;rsquo;ve already updated, you can find binaries for previous versions in the &lt;a href=&quot;http://download.rethinkdb.com&quot;&gt;download archive&lt;/a&gt;.</source>
+          <target state="translated">RethinkDB를 새 버전으로 업그레이드 &lt;strong&gt;하기 전에&lt;/strong&gt; 데이터 &lt;strong&gt;를&lt;/strong&gt; 내 보내야합니다! 이미 업데이트 한 경우 &lt;a href=&quot;http://download.rethinkdb.com&quot;&gt;다운로드 아카이브&lt;/a&gt; 에서 이전 버전의 바이너리를 찾을 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="fa0fb02157010827a9f68f87e42ccef02cd5b688" translate="yes" xml:space="preserve">
+          <source>You must export your data &lt;strong&gt;before&lt;/strong&gt; you&amp;rsquo;ve upgraded RethinkDB to a new version! If you&amp;rsquo;ve already updated, you can find binaries for previous versions in the &lt;a href=&quot;https://download.rethinkdb.com&quot;&gt;download archive&lt;/a&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="565592f422a57bd14395f0aa5e9f7a0c35a0c8de" translate="yes" xml:space="preserve">
+          <source>You should not release a connection in the pool as soon as you receive a response. Only release the connection when you receive a response of a type other than &lt;code&gt;SUCCESS_PARTIAL&lt;/code&gt;.</source>
+          <target state="translated">응답을받는 즉시 풀에서 연결을 해제해서는 안됩니다. &lt;code&gt;SUCCESS_PARTIAL&lt;/code&gt; 이외의 유형의 응답을 수신 한 경우에만 연결을 해제하십시오 .</target>
+        </trans-unit>
+        <trans-unit id="e2a72e6345a75043e81786646c9dbb79a9081cfe" translate="yes" xml:space="preserve">
+          <source>You should see a &amp;ldquo;Setting up a RethinkDB AMI&amp;rdquo; web page. Click on the &lt;strong&gt;Continue&lt;/strong&gt; button to proceed.</source>
+          <target state="translated">&amp;ldquo;RethinkDB AMI 설정&amp;rdquo;웹 페이지가 표시되어야합니다. &lt;strong&gt;계속&lt;/strong&gt; 버튼을 클릭하여 &lt;strong&gt;계속&lt;/strong&gt; 진행하십시오.</target>
+        </trans-unit>
+        <trans-unit id="eaf96a569106f7f50b78dc40ac65e2bc7dc0d21b" translate="yes" xml:space="preserve">
+          <source>You start using ReQL in your program similarly to how you&amp;rsquo;d use other databases:</source>
+          <target state="translated">다른 데이터베이스를 사용하는 방법과 유사하게 프로그램에서 ReQL을 사용하기 시작합니다.</target>
+        </trans-unit>
+        <trans-unit id="404788204c896695d91565b254d02b6bcaa381e7" translate="yes" xml:space="preserve">
+          <source>You will need to create new copies of the &lt;code&gt;com.rethinkdb.server.plist&lt;/code&gt; file with different names (e.g., &lt;code&gt;com.rethinkdb.server2.plist&lt;/code&gt;), making the following changes:</source>
+          <target state="translated">다른 이름 (예 : &lt;code&gt;com.rethinkdb.server2.plist&lt;/code&gt; )으로 &lt;code&gt;com.rethinkdb.server.plist&lt;/code&gt; 파일 의 새 사본을 작성 하여 다음을 변경해야합니다.</target>
+        </trans-unit>
+        <trans-unit id="47868cbefdabe5748bbbe9252f2e32d2707b331b" translate="yes" xml:space="preserve">
+          <source>You will receive another response of either type &lt;code&gt;SUCCESS_PARTIAL&lt;/code&gt;, indicating there is still more data available, or &lt;code&gt;SUCCESS_SEQUENCE&lt;/code&gt; if you have reached the end of the stream. (This will never be returned for a feed.) Note that these &lt;code&gt;ResponseType&lt;/code&gt;s can be returned without data (an empty array as the &lt;code&gt;r&lt;/code&gt; value). A driver can send &lt;code&gt;CONTINUE&lt;/code&gt; to fetch the next batch of a sequence as soon as the response is received.</source>
+          <target state="translated">사용 가능한 더 많은 데이터가 있음을 나타내는 &lt;code&gt;SUCCESS_PARTIAL&lt;/code&gt; 유형 또는 스트림 끝에 도달 한 경우 &lt;code&gt;SUCCESS_SEQUENCE&lt;/code&gt; 유형의 다른 응답이 수신됩니다 . 피드에 대해서는 반환되지 않습니다. 이러한 &lt;code&gt;ResponseType&lt;/code&gt; 은 데이터없이 반환 될 수 있습니다 (공백 배열은 &lt;code&gt;r&lt;/code&gt; 값). 드라이버는 응답을 수신하자마자 &lt;code&gt;CONTINUE&lt;/code&gt; 를 보내 시퀀스의 다음 배치를 가져옵니다.</target>
+        </trans-unit>
+        <trans-unit id="86c4cbeddd9897a41e6259d4e6a3d2093444c21d" translate="yes" xml:space="preserve">
+          <source>You&amp;rsquo;ll need the following modules installed for Apache:</source>
+          <target state="translated">Apache 용으로 다음 모듈이 설치되어 있어야합니다.</target>
+        </trans-unit>
+        <trans-unit id="82c41a6c59099a5955fcbee15e65b236d0cbb940" translate="yes" xml:space="preserve">
+          <source>You&amp;rsquo;ll notice that both times we inserted are returned as native JavaScript &lt;code&gt;Date&lt;/code&gt; objects. (&lt;code&gt;Date&lt;/code&gt; objects don&amp;rsquo;t store time zone information, so both times are UTC, regardless of your server&amp;rsquo;s local time zone.)</source>
+          <target state="translated">삽입 한 두 번 모두 기본 JavaScript &lt;code&gt;Date&lt;/code&gt; 객체 로 반환됩니다 . ( &lt;code&gt;Date&lt;/code&gt; 모두 시간에 관계없이 서버의 로컬 시간대, UTC 그래서 개체는 시간대 정보를 저장하지 않습니다.)</target>
+        </trans-unit>
+        <trans-unit id="e157eeb5d7999ee35c81400e6f62bfd4665acb70" translate="yes" xml:space="preserve">
+          <source>You&amp;rsquo;re now up and running with RethinkDB and Rails!</source>
+          <target state="translated">이제 RethinkDB 및 Rails를 시작했습니다!</target>
+        </trans-unit>
+        <trans-unit id="060231f2ff139d1387dcc212f509aea6e53a8086" translate="yes" xml:space="preserve">
+          <source>You&amp;rsquo;re on your way with Ruby on Rails and RethinkDB! Be sure to check out additional resources for more information.</source>
+          <target state="translated">Ruby on Rails 및 RethinkDB를 사용하고 있습니다! 자세한 내용은 추가 리소스를 확인하십시오.</target>
+        </trans-unit>
+        <trans-unit id="c0f2169a05838f460f5e9de4b3001208843d3087" translate="yes" xml:space="preserve">
+          <source>Your application would by default receive the object as it existed in the database after the &lt;em&gt;most recent&lt;/em&gt; change. The previous two updates would be &amp;ldquo;squashed&amp;rdquo; into the third.</source>
+          <target state="translated">기본적으로 응용 프로그램은 &lt;em&gt;가장 최근에&lt;/em&gt; 변경 한 후 데이터베이스에있는 그대로 개체를받습니다 . 이전 두 업데이트는 세 번째로 &quot;중단&quot;되었습니다.</target>
+        </trans-unit>
+        <trans-unit id="d66cc44d6602b7bd31c89d7a1be1215e97a7adc8" translate="yes" xml:space="preserve">
+          <source>Your cluster configuration (number of servers, basic network topology, etc.)</source>
+          <target state="translated">클러스터 구성 (서버 수, 기본 네트워크 토폴로지 등)</target>
+        </trans-unit>
+        <trans-unit id="3375d9e34870f4082b05af85d0b6b6b292554300" translate="yes" xml:space="preserve">
+          <source>Your driver should assign each query a unique 8-byte token per connection. (The official RethinkDB drivers implement this as an unsigned 8-byte little-endian counter per connection.) The server will send responses to queries using this token as an identifier so the response can be matched to its query. The token can also be used to request more data for the query if all the results were not returned in the first response.</source>
+          <target state="translated">드라이버는 각 쿼리마다 연결 당 고유 한 8 바이트 토큰을 할당해야합니다. (공식 RethinkDB 드라이버는이를 연결 당 서명되지 않은 8 바이트 리틀 엔디안 카운터로 구현합니다.) 서버는이 토큰을 식별자로 사용하여 쿼리에 응답을 보내 응답을 해당 쿼리와 일치시킬 수 있습니다. 첫 번째 응답에서 모든 결과가 반환되지 않은 경우 토큰을 사용하여 쿼리에 대한 추가 데이터를 요청할 수도 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="5078ae8174ee0ebcf94480eb09d460024b113428" translate="yes" xml:space="preserve">
+          <source>Zipfian key access distribution</source>
+          <target state="translated">Zipfian 키 액세스 배포</target>
+        </trans-unit>
+        <trans-unit id="a8a0673c8ed7b6be0dbd6e89da9b275e36e95a98" translate="yes" xml:space="preserve">
+          <source>a &lt;strong&gt;field name&lt;/strong&gt;, to return the element of the sequence with the largest value in that field;</source>
+          <target state="translated">해당 &lt;strong&gt;필드&lt;/strong&gt; 에서 가장 큰 값을 갖는 시퀀스의 요소를 리턴 하는 &lt;strong&gt;필드 이름&lt;/strong&gt; ;</target>
+        </trans-unit>
+        <trans-unit id="03960db85c68eefbc47d4547b8d35cf0176392b6" translate="yes" xml:space="preserve">
+          <source>a &lt;strong&gt;field name&lt;/strong&gt;, to return the element of the sequence with the smallest value in that field;</source>
+          <target state="translated">그 &lt;strong&gt;필드 내&lt;/strong&gt; 에서 가장 작은 값을 가지는 순서의 요소를 돌려 주는 &lt;strong&gt;필드 명&lt;/strong&gt; .</target>
+        </trans-unit>
+        <trans-unit id="e6a2eac36c508310920d67198d9c07d0ac4346cb" translate="yes" xml:space="preserve">
+          <source>a &lt;strong&gt;function&lt;/strong&gt;, to apply the function to every element within the sequence and return the element which returns the largest value from the function, ignoring any elements where the function produces a non-existence error.</source>
+          <target state="translated">&lt;strong&gt;함수는&lt;/strong&gt; , 시퀀스 내의 모든 요소에 함수를 적용하는 기능이 존재하지 않는 오류 발생의 요소가 무시 함수에서 최대 값을 반환하는 요소를 반환한다.</target>
+        </trans-unit>
+        <trans-unit id="51161408b253db2bc8cd04ca036d0be54cc2469d" translate="yes" xml:space="preserve">
+          <source>a &lt;strong&gt;function&lt;/strong&gt;, to apply the function to every element within the sequence and return the element which returns the smallest value from the function, ignoring any elements where the function produces a non-existence error.</source>
+          <target state="translated">&lt;strong&gt;함수는&lt;/strong&gt; , 시퀀스 내의 모든 요소에 함수를 적용하는 기능이 존재하지 않는 오류 발생의 요소가 무시 함수에서 최소값을 리턴하는 요소를 반환한다.</target>
+        </trans-unit>
+        <trans-unit id="cd9872fbde97c7cf8b282e7afff9d51a63f70f22" translate="yes" xml:space="preserve">
+          <source>a binary object can be coerced to a string and vice-versa</source>
+          <target state="translated">이진 객체는 문자열로 강제 변환 할 수 있으며 그 반대의 경우도 마찬가지입니다.</target>
+        </trans-unit>
+        <trans-unit id="45abe18bbf8e0052b4064b1b9c9bd0cfa96182da" translate="yes" xml:space="preserve">
+          <source>a sequence, selection or an array of key-value pairs can be coerced to an object</source>
+          <target state="translated">키-값 쌍의 시퀀스, 선택 또는 배열을 객체로 강제 변환 할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="ab027b3a4f17d2c5fbc84639e3d462c468056de8" translate="yes" xml:space="preserve">
+          <source>a sequence, selection or object can be coerced to an array</source>
+          <target state="translated">시퀀스, 선택 또는 객체를 배열로 강제 변환 할 수 있습니다</target>
+        </trans-unit>
+        <trans-unit id="e325e7bf81dae8d35aeef7c7a58e7bf8c0a14465" translate="yes" xml:space="preserve">
+          <source>a stream will be handled by &lt;code&gt;on_stream_val&lt;/code&gt; if defined; otherwise it will be handled by &lt;code&gt;on_val&lt;/code&gt;.</source>
+          <target state="translated">정의 된 경우 &lt;code&gt;on_stream_val&lt;/code&gt; 에 의해 스트림이 처리됩니다 . 그렇지 않으면 &lt;code&gt;on_val&lt;/code&gt; 에 의해 처리됩니다 .</target>
+        </trans-unit>
+        <trans-unit id="59462ed31f22981dcea909b3a58fd3f7fee5aeea" translate="yes" xml:space="preserve">
+          <source>a string can be coerced to a number</source>
+          <target state="translated">문자열을 숫자로 강제 변환 할 수 있습니다</target>
+        </trans-unit>
+        <trans-unit id="bcdb933a90b832c025d603f918d6e6b32e96d626" translate="yes" xml:space="preserve">
+          <source>a tag (among many)</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="58d1bbce297de3c304a9fefc3b483181872a5c6b" translate="yes" xml:space="preserve">
+          <source>add</source>
+          <target state="translated">add</target>
+        </trans-unit>
+        <trans-unit id="c63d48ab6a49abed2ff11f28593398d7920e1365" translate="yes" xml:space="preserve">
+          <source>an &lt;strong&gt;index&lt;/strong&gt; (the primary key or a secondary index), to return the element of the sequence with the largest value in that index;</source>
+          <target state="translated">해당 &lt;strong&gt;인덱스&lt;/strong&gt; 에서 가장 큰 값을 가진 시퀀스 요소를 리턴 하는 &lt;strong&gt;인덱스&lt;/strong&gt; (기본 키 또는 보조 인덱스);</target>
+        </trans-unit>
+        <trans-unit id="b22fd606be8e50662952de0616e76de5f757397d" translate="yes" xml:space="preserve">
+          <source>an &lt;strong&gt;index&lt;/strong&gt; (the primary key or a secondary index), to return the element of the sequence with the smallest value in that index;</source>
+          <target state="translated">해당 &lt;strong&gt;인덱스&lt;/strong&gt; 에서 가장 작은 값을 가진 시퀀스 요소를 리턴 하는 &lt;strong&gt;인덱스&lt;/strong&gt; (기본 키 또는 보조 인덱스);</target>
+        </trans-unit>
+        <trans-unit id="2f61c5a7a1dd022dd82cf2297401f9e62417803b" translate="yes" xml:space="preserve">
+          <source>an array will be handled by &lt;code&gt;on_array&lt;/code&gt; if defined; otherwise it will be handled by &lt;code&gt;on_atom&lt;/code&gt;. If neither of those are defined, the &lt;em&gt;individual elements&lt;/em&gt; of the array will be handled by &lt;code&gt;on_stream_val&lt;/code&gt; or, if that is not defined, &lt;code&gt;on_val&lt;/code&gt;.</source>
+          <target state="translated">배열은 정의 된 경우 &lt;code&gt;on_array&lt;/code&gt; 에 의해 처리됩니다 . 그렇지 않으면 &lt;code&gt;on_atom&lt;/code&gt; 에 의해 처리됩니다 . 이들의 어느 쪽이 정의되면, &lt;em&gt;개별 요소&lt;/em&gt; 어레이에 의해 처리 될 &lt;code&gt;on_stream_val&lt;/code&gt; 이 정의되어 있지 않은 경우, 또는 &lt;code&gt;on_val&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="cffa50a32cb13a240d705317bcec65dd1f31b6ad" translate="yes" xml:space="preserve">
+          <source>and</source>
+          <target state="translated">and</target>
+        </trans-unit>
+        <trans-unit id="d09ece47e5e6eac4f0488488b4d27d82317b9e3a" translate="yes" xml:space="preserve">
+          <source>and in another window run:</source>
+          <target state="translated">다른 창에서 다음을 실행하십시오.</target>
+        </trans-unit>
+        <trans-unit id="2c6be7e76811f8a5e128fffbca0db1459bf763b3" translate="yes" xml:space="preserve">
+          <source>any datum (single value) can be coerced to to a string</source>
+          <target state="translated">모든 데이텀 (단일 값)을 문자열로 강제 변환 할 수 있습니다</target>
+        </trans-unit>
+        <trans-unit id="a58020f282bf4efacbf5d09a443a72fc9c66bcab" translate="yes" xml:space="preserve">
+          <source>anything else: as &lt;code&gt;text&lt;/code&gt;</source>
+          <target state="translated">다른 것 : &lt;code&gt;text&lt;/code&gt;</target>
+        </trans-unit>
+        <trans-unit id="db43bff34c78044870bc6b1ae2aa16902bb1bb8a" translate="yes" xml:space="preserve">
+          <source>append</source>
+          <target state="translated">append</target>
+        </trans-unit>
+        <trans-unit id="3030e728f154bf51419109efb93b6b8aeec9a976" translate="yes" xml:space="preserve">
+          <source>args</source>
+          <target state="translated">args</target>
+        </trans-unit>
+        <trans-unit id="fcc9016d1aa6a646348df69e14d31e955d51da60" translate="yes" xml:space="preserve">
+          <source>arrays</source>
+          <target state="translated">arrays</target>
+        </trans-unit>
+        <trans-unit id="dfc520a023c642ce8f2688447d7245de35aae993" translate="yes" xml:space="preserve">
+          <source>auth key</source>
+          <target state="translated">인증 키</target>
+        </trans-unit>
+        <trans-unit id="97e77871b5fcc4941bebceb4338c97c1fd149f8c" translate="yes" xml:space="preserve">
+          <source>avg</source>
+          <target state="translated">avg</target>
+        </trans-unit>
+        <trans-unit id="89f7376411836c9118d833584b7127b976b30eca" translate="yes" xml:space="preserve">
+          <source>backfill</source>
+          <target state="translated">backfill</target>
+        </trans-unit>
+        <trans-unit id="709634051471385aada32356842983beeff4b065" translate="yes" xml:space="preserve">
+          <source>between</source>
+          <target state="translated">between</target>
+        </trans-unit>
+        <trans-unit id="7e57cfe843145135aee1f4d0d63ceb7842093712" translate="yes" xml:space="preserve">
+          <source>binary</source>
+          <target state="translated">binary</target>
+        </trans-unit>
+        <trans-unit id="0cf36e054d06cf3e24262b9c117b8c36a2f910c2" translate="yes" xml:space="preserve">
+          <source>binary objects</source>
+          <target state="translated">이진 객체</target>
+        </trans-unit>
+        <trans-unit id="7390e97cc1cb07efe9050b1fa05c815d42663325" translate="yes" xml:space="preserve">
+          <source>bitAnd</source>
+          <target state="translated">bitAnd</target>
+        </trans-unit>
+        <trans-unit id="24b3daaa73f3daeff04cc6989c76506095dd9f39" translate="yes" xml:space="preserve">
+          <source>bitNot</source>
+          <target state="translated">bitNot</target>
+        </trans-unit>
+        <trans-unit id="114cf0c696b6bf3d43f1b03d61b228e1bf6fc8ea" translate="yes" xml:space="preserve">
+          <source>bitOr</source>
+          <target state="translated">bitOr</target>
+        </trans-unit>
+        <trans-unit id="89b1699dd39f31efcd2bf9fe55f4ccd439a7e8d5" translate="yes" xml:space="preserve">
+          <source>bitSal</source>
+          <target state="translated">bitSal</target>
+        </trans-unit>
+        <trans-unit id="6b14ec1ab08856d420220aa687810a7ef1d6b176" translate="yes" xml:space="preserve">
+          <source>bitSar</source>
+          <target state="translated">bitSar</target>
+        </trans-unit>
+        <trans-unit id="c06219f0c25f673788b2959385ae47bf64326977" translate="yes" xml:space="preserve">
+          <source>bitXor</source>
+          <target state="translated">bitXor</target>
+        </trans-unit>
+        <trans-unit id="f82cfa4bb91337ffcc219dff4d7092ce03f6928d" translate="yes" xml:space="preserve">
+          <source>bit_and</source>
+          <target state="translated">bit_and</target>
+        </trans-unit>
+        <trans-unit id="d66dfdf73bb4c2cf933a76173bfdd1f5de1bee20" translate="yes" xml:space="preserve">
+          <source>bit_not</source>
+          <target state="translated">bit_not</target>
+        </trans-unit>
+        <trans-unit id="5e1ab8f73ab06724b4769316dfdb9c01ddf308b8" translate="yes" xml:space="preserve">
+          <source>bit_or</source>
+          <target state="translated">bit_or</target>
+        </trans-unit>
+        <trans-unit id="31306ec9255a3e7b68a05f909b042939e2cea9d6" translate="yes" xml:space="preserve">
+          <source>bit_sal</source>
+          <target state="translated">bit_sal</target>
+        </trans-unit>
+        <trans-unit id="619929e77486689e6c71fcf883e6ee72afdf9a81" translate="yes" xml:space="preserve">
+          <source>bit_sar</source>
+          <target state="translated">bit_sar</target>
+        </trans-unit>
+        <trans-unit id="5e289abe10d66d745832acc5eb871227c30bf962" translate="yes" xml:space="preserve">
+          <source>bit_xor</source>
+          <target state="translated">bit_xor</target>
+        </trans-unit>
+        <trans-unit id="80a25bf9e5d787c109376c0b79d204a87d3b2159" translate="yes" xml:space="preserve">
+          <source>booleans</source>
+          <target state="translated">booleans</target>
+        </trans-unit>
+        <trans-unit id="8b7003a3cbdca58c13fadc160b3cb2a18890ccd4" translate="yes" xml:space="preserve">
+          <source>box-rethinkdb</source>
+          <target state="translated">box-rethinkdb</target>
+        </trans-unit>
+        <trans-unit id="10d735e581f1e2505cd69675691925490e447c44" translate="yes" xml:space="preserve">
+          <source>branch</source>
+          <target state="translated">branch</target>
+        </trans-unit>
+        <trans-unit id="613af80c25dfbc9ef75ce605280571b9a518d632" translate="yes" xml:space="preserve">
+          <source>ceil</source>
+          <target state="translated">ceil</target>
+        </trans-unit>
+        <trans-unit id="5b21c21f1b4d308af711792b548fc67cbdb3501b" translate="yes" xml:space="preserve">
+          <source>changeAt</source>
+          <target state="translated">changeAt</target>
+        </trans-unit>
+        <trans-unit id="49a04ba4469678c38e0f6a327f8702ea61d9e8a4" translate="yes" xml:space="preserve">
+          <source>changes</source>
+          <target state="translated">changes</target>
+        </trans-unit>
+        <trans-unit id="00b7b8118efde44c546b69243ec15b21cd64c9d9" translate="yes" xml:space="preserve">
+          <source>circle</source>
+          <target state="translated">circle</target>
+        </trans-unit>
+        <trans-unit id="da38860cb875cb64092e402d80d9fe29c4865b18" translate="yes" xml:space="preserve">
+          <source>close</source>
+          <target state="translated">close</target>
+        </trans-unit>
+        <trans-unit id="3f058d4502d8d3821d428b7868b825d469c09dfc" translate="yes" xml:space="preserve">
+          <source>close (cursor)</source>
+          <target state="translated">닫기 (커서)</target>
+        </trans-unit>
+        <trans-unit id="da68bf3a55223d19ffeabebe48b0af570d763307" translate="yes" xml:space="preserve">
+          <source>cluster</source>
+          <target state="translated">cluster</target>
+        </trans-unit>
+        <trans-unit id="b8359ca5f77b2d89fbef0ec0be2b08810eb6036f" translate="yes" xml:space="preserve">
+          <source>cluster_config</source>
+          <target state="translated">cluster_config</target>
+        </trans-unit>
+        <trans-unit id="09c2d2c08b69155cee87c21f7ba3f9df41b4ccbc" translate="yes" xml:space="preserve">
+          <source>coerceTo</source>
+          <target state="translated">coerceTo</target>
+        </trans-unit>
+        <trans-unit id="aa60230ab00282b5a1f3f1993b2d1c503e7d15a5" translate="yes" xml:space="preserve">
+          <source>column</source>
+          <target state="translated">column</target>
+        </trans-unit>
+        <trans-unit id="f4c35a76ac7be23c2bdef7981de2a3ccdf4c6dbd" translate="yes" xml:space="preserve">
+          <source>concatMap</source>
+          <target state="translated">concatMap</target>
+        </trans-unit>
+        <trans-unit id="aadcc2dbb054cb813f3bcabf9f333951aecd357d" translate="yes" xml:space="preserve">
+          <source>concat_map</source>
+          <target state="translated">concat_map</target>
+        </trans-unit>
+        <trans-unit id="dfba7aade0868074c2861c98e2a9a92f3178a51b" translate="yes" xml:space="preserve">
+          <source>config</source>
+          <target state="translated">config</target>
+        </trans-unit>
+        <trans-unit id="f11a107f38328604e9320754224b60375758bca1" translate="yes" xml:space="preserve">
+          <source>connect</source>
+          <target state="translated">connect</target>
+        </trans-unit>
+        <trans-unit id="348eb028ae2fba9221b11f8c2e3cdea9cb2bf40c" translate="yes" xml:space="preserve">
+          <source>contact &amp;rarr; phone &amp;rarr; work &amp;rarr; 408-555-1212</source>
+          <target state="translated">연락처 &amp;rarr; 전화 &amp;rarr; 직장 &amp;rarr; 408-555-1212</target>
+        </trans-unit>
+        <trans-unit id="caeb909ae4ff4ee25a0ff0d476946ed256f2aee1" translate="yes" xml:space="preserve">
+          <source>contains</source>
+          <target state="translated">contains</target>
+        </trans-unit>
+        <trans-unit id="be25171a40f5008c51632a20d39171138456c900" translate="yes" xml:space="preserve">
+          <source>could return &lt;code&gt;false&lt;/code&gt;! Each individual &lt;a href=&quot;../../api/javascript/get/index&quot;&gt;get&lt;/a&gt; operation is atomic, but the query as a whole is not. To read and modify a document in a single atomic operation, use the &lt;a href=&quot;../../api/javascript/update/index&quot;&gt;update&lt;/a&gt; or &lt;a href=&quot;../../api/javascript/replace/index&quot;&gt;replace&lt;/a&gt; commands.</source>
+          <target state="translated">&lt;code&gt;false&lt;/code&gt; 반환 할 수 있습니다 ! 각 개별 &lt;a href=&quot;../../api/javascript/get/index&quot;&gt;가져 오기&lt;/a&gt; 작업은 원 자성이지만 쿼리 전체는 그렇지 않습니다. 단일 원자 작업으로 문서를 읽고 수정하려면 &lt;a href=&quot;../../api/javascript/update/index&quot;&gt;update&lt;/a&gt; 또는 &lt;a href=&quot;../../api/javascript/replace/index&quot;&gt;replace&lt;/a&gt; 명령을 사용하십시오 .</target>
+        </trans-unit>
+        <trans-unit id="ee9f38e186ba06f57b7b74d7e626b94e13ce2556" translate="yes" xml:space="preserve">
+          <source>count</source>
+          <target state="translated">count</target>
+        </trans-unit>
+        <trans-unit id="825b192e87a09e48fa7650bc8b5c00660b37183c" translate="yes" xml:space="preserve">
+          <source>current_issues</source>
+          <target state="translated">current_issues</target>
+        </trans-unit>
+        <trans-unit id="233e3ce74af9b1e2688f1f811ea11b8770173d6e" translate="yes" xml:space="preserve">
+          <source>data that is &lt;em&gt;not&lt;/em&gt; a stream will be handled by &lt;code&gt;on_atom&lt;/code&gt; if defined; otherwise it will be handled by &lt;code&gt;on_val&lt;/code&gt;.</source>
+          <target state="translated">스트림 이 &lt;em&gt;아닌&lt;/em&gt; 데이터는 정의 된 경우 &lt;code&gt;on_atom&lt;/code&gt; 에 의해 처리됩니다 . 그렇지 않으면 &lt;code&gt;on_val&lt;/code&gt; 에 의해 처리됩니다 .</target>
+        </trans-unit>
+        <trans-unit id="6d613a1ee01eec4c0f8ca66df0db71dca0c6e1cf" translate="yes" xml:space="preserve">
+          <source>database</source>
+          <target state="translated">database</target>
+        </trans-unit>
+        <trans-unit id="03b1cc5f2e973088b9bb7dc062fee46bd8f432e7" translate="yes" xml:space="preserve">
+          <source>database (affecting a database and the tables within)</source>
+          <target state="translated">데이터베이스 (데이터베이스 및 테이블 내의 영향)</target>
+        </trans-unit>
+        <trans-unit id="e927d0677c77241b707442314346326278051dd6" translate="yes" xml:space="preserve">
+          <source>date</source>
+          <target state="translated">date</target>
+        </trans-unit>
+        <trans-unit id="a2620cbc10f5198dd03e3f5a1569eb5dcf9a6a87" translate="yes" xml:space="preserve">
+          <source>day</source>
+          <target state="translated">day</target>
+        </trans-unit>
+        <trans-unit id="d096c011585d07ea34d552634cab76998611ecd3" translate="yes" xml:space="preserve">
+          <source>dayOfWeek</source>
+          <target state="translated">dayOfWeek</target>
+        </trans-unit>
+        <trans-unit id="7d0afeccbd861b481e5513e7daf9473833eacec3" translate="yes" xml:space="preserve">
+          <source>dayOfYear</source>
+          <target state="translated">dayOfYear</target>
+        </trans-unit>
+        <trans-unit id="0352a8acc949c7df21fec16e566ba9a74e797a97" translate="yes" xml:space="preserve">
+          <source>db</source>
+          <target state="translated">db</target>
+        </trans-unit>
+        <trans-unit id="c6b86d9568cd42b1afb45d6533e1f5b6cc2dbfe9" translate="yes" xml:space="preserve">
+          <source>dbCreate</source>
+          <target state="translated">dbCreate</target>
+        </trans-unit>
+        <trans-unit id="3632550442fe7f7fb5788d44a3c05e77e638473d" translate="yes" xml:space="preserve">
+          <source>dbDrop</source>
+          <target state="translated">dbDrop</target>
+        </trans-unit>
+        <trans-unit id="8f9451107ae4c39ed8e37bcc9cfc7ffc3c891664" translate="yes" xml:space="preserve">
+          <source>dbList</source>
+          <target state="translated">dbList</target>
+        </trans-unit>
+        <trans-unit id="b7ff13c07403be6a24a21282f1e7367c3f378d23" translate="yes" xml:space="preserve">
+          <source>db_config</source>
+          <target state="translated">db_config</target>
+        </trans-unit>
+        <trans-unit id="7505d64a54e061b7acd54ccd58b49dc43500b635" translate="yes" xml:space="preserve">
+          <source>default</source>
+          <target state="translated">default</target>
+        </trans-unit>
+        <trans-unit id="9485989ff514b5106b7738850fd73c23e8c1e3f7" translate="yes" xml:space="preserve">
+          <source>delete</source>
+          <target state="translated">delete</target>
+        </trans-unit>
+        <trans-unit id="5a5ecfe6db57773e77aaacb83bd9dda4c230a08f" translate="yes" xml:space="preserve">
+          <source>deleteAt</source>
+          <target state="translated">deleteAt</target>
+        </trans-unit>
+        <trans-unit id="48d53c6e22192bbaaff43be3456d5f6f5d82da6f" translate="yes" xml:space="preserve">
+          <source>difference</source>
+          <target state="translated">difference</target>
+        </trans-unit>
+        <trans-unit id="8ae18ed496a7c0132f6bdd4064c9122781c753c0" translate="yes" xml:space="preserve">
+          <source>disk_compaction</source>
+          <target state="translated">disk_compaction</target>
+        </trans-unit>
+        <trans-unit id="104082c0efcf62ca0e142ebdffe15221e79de79d" translate="yes" xml:space="preserve">
+          <source>distance</source>
+          <target state="translated">distance</target>
+        </trans-unit>
+        <trans-unit id="21a08d6787a0d64238e8d57c9b087a45f1a70665" translate="yes" xml:space="preserve">
+          <source>distinct</source>
+          <target state="translated">distinct</target>
+        </trans-unit>
+        <trans-unit id="26021f1f4700496d68e21ef6d4a1b6945da4c8eb" translate="yes" xml:space="preserve">
+          <source>div</source>
+          <target state="translated">div</target>
+        </trans-unit>
+        <trans-unit id="eadcd9bd2a09c75aef04954e6799e50278ee124a" translate="yes" xml:space="preserve">
+          <source>do</source>
+          <target state="translated">do</target>
+        </trans-unit>
+        <trans-unit id="4f8278c89ad16da05fec4fdfc61fe44798b92720" translate="yes" xml:space="preserve">
+          <source>document</source>
+          <target state="translated">document</target>
+        </trans-unit>
+        <trans-unit id="e4370fb0ea59e2aeb0cf8fec4afadb0dd1b956c6" translate="yes" xml:space="preserve">
+          <source>downcase</source>
+          <target state="translated">downcase</target>
+        </trans-unit>
+        <trans-unit id="ffed391ca2a6c8bb0b20f95bace87ef78d0c9f59" translate="yes" xml:space="preserve">
+          <source>during</source>
+          <target state="translated">during</target>
+        </trans-unit>
+        <trans-unit id="b32f279e548b6fceef4343170778273bfe60658c" translate="yes" xml:space="preserve">
+          <source>each</source>
+          <target state="translated">each</target>
+        </trans-unit>
+        <trans-unit id="b1dbc1e1373091420361bccbec082ea83c366e5c" translate="yes" xml:space="preserve">
+          <source>eachAsync</source>
+          <target state="translated">eachAsync</target>
+        </trans-unit>
+        <trans-unit id="b07623c2ca4a8d4da83b94812562e891cb5c7139" translate="yes" xml:space="preserve">
+          <source>epochTime</source>
+          <target state="translated">epochTime</target>
+        </trans-unit>
+        <trans-unit id="a9c619705e8fcaa770885cac1837ae950f5c8ba5" translate="yes" xml:space="preserve">
+          <source>eq</source>
+          <target state="translated">eq</target>
+        </trans-unit>
+        <trans-unit id="e6fd069581a9f3fdcf06a7b624e63f0074e8b36f" translate="yes" xml:space="preserve">
+          <source>eqJoin</source>
+          <target state="translated">eqJoin</target>
+        </trans-unit>
+        <trans-unit id="f4ee2443ea84bd630ec142e6d14d7252fe5b111a" translate="yes" xml:space="preserve">
+          <source>eq_join</source>
+          <target state="translated">eq_join</target>
+        </trans-unit>
+        <trans-unit id="11f9578d05e6f7bb58a3cdd00107e9f4e3882671" translate="yes" xml:space="preserve">
+          <source>error</source>
+          <target state="translated">error</target>
+        </trans-unit>
+        <trans-unit id="0fd1860204d6cee43392972817e66792ee702b89" translate="yes" xml:space="preserve">
+          <source>expr</source>
+          <target state="translated">expr</target>
+        </trans-unit>
+        <trans-unit id="2da0b68df8841752bb747a76780679bcd87c6215" translate="yes" xml:space="preserve">
+          <source>field</source>
+          <target state="translated">field</target>
+        </trans-unit>
+        <trans-unit id="7aec9744ba1554e4d38febae4278e74a5e764414" translate="yes" xml:space="preserve">
+          <source>fill</source>
+          <target state="translated">fill</target>
+        </trans-unit>
+        <trans-unit id="4bb4ca75941b7bbc5bc6a12be44b22fc9c8d234e" translate="yes" xml:space="preserve">
+          <source>filter</source>
+          <target state="translated">filter</target>
+        </trans-unit>
+        <trans-unit id="3684c9d3c05e7bee19e2728c6a5b2bbccf0cd9c7" translate="yes" xml:space="preserve">
+          <source>floor</source>
+          <target state="translated">floor</target>
+        </trans-unit>
+        <trans-unit id="43402b235d9049b59f92a603a9cf29e68b57c71c" translate="yes" xml:space="preserve">
+          <source>fluent-plugin-rethinkdb</source>
+          <target state="translated">fluent-plugin-rethinkdb</target>
+        </trans-unit>
+        <trans-unit id="c5b2b01d33b40a69b0f829fd1827cb8201538518" translate="yes" xml:space="preserve">
+          <source>fold</source>
+          <target state="translated">fold</target>
+        </trans-unit>
+        <trans-unit id="7baf67ac9de40c6fc6e4dfd610bab1343f7292a2" translate="yes" xml:space="preserve">
+          <source>for each element in the sequence, call both the combining function and a separate emitting function. The emitting function takes three parameters: the previous reduction result (the accumulator), the current element, and the output from the combining function (the new value of the accumulator).</source>
+          <target state="translated">시퀀스의 각 요소에 대해 결합 기능과 개별 방출 기능을 모두 호출하십시오. 방출 기능은 이전 감소 결과 (누산기), 전류 요소 및 결합 기능의 출력 (누산기의 새로운 값)의 세 가지 매개 변수를 취합니다.</target>
+        </trans-unit>
+        <trans-unit id="edc5ee22beb2b82f4da41914d8d41cca9c53020f" translate="yes" xml:space="preserve">
+          <source>forEach</source>
+          <target state="translated">forEach</target>
+        </trans-unit>
+        <trans-unit id="96acf00f78ac6bb5cac1dec9c262de290a22dbb2" translate="yes" xml:space="preserve">
+          <source>function: the &lt;code&gt;interleave&lt;/code&gt; argument can take a function whose argument is the current row, and whose return value is a string to take as a field name, as with the &lt;code&gt;&quot;field_name&quot;&lt;/code&gt; setting described above.</source>
+          <target state="translated">function : &lt;code&gt;interleave&lt;/code&gt; 인수는 위에서 설명한 &lt;code&gt;&quot;field_name&quot;&lt;/code&gt; 설정과 같이 인수가 현재 행이고 반환 값이 필드 이름으로 사용할 문자열 인 함수를 사용할 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="1178524b8f7c675dffaa791ee5a7a1f951d8bb1d" translate="yes" xml:space="preserve">
+          <source>function: the &lt;code&gt;interleave&lt;/code&gt; argument can take a function whose argument is the current row, and whose return value is a value to perform a merge-sort on.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="a9060bd5525711459bfd3fbd9a5d9658cfa6338a" translate="yes" xml:space="preserve">
+          <source>ge</source>
+          <target state="translated">ge</target>
+        </trans-unit>
+        <trans-unit id="b582f58d189d192b7d2998328bbf22a0ed59b60d" translate="yes" xml:space="preserve">
+          <source>geojson</source>
+          <target state="translated">geojson</target>
+        </trans-unit>
+        <trans-unit id="65e4e3da890302538dd75ff31b491e3c7fef5d76" translate="yes" xml:space="preserve">
+          <source>geometry objects</source>
+          <target state="translated">지오메트리 객체</target>
+        </trans-unit>
+        <trans-unit id="783923e57ba5e8f1044632c31fd806ee24814bb5" translate="yes" xml:space="preserve">
+          <source>get</source>
+          <target state="translated">get</target>
+        </trans-unit>
+        <trans-unit id="159ecaec32b351286f1d86013ef0ed8ee1ad6934" translate="yes" xml:space="preserve">
+          <source>getAll</source>
+          <target state="translated">getAll</target>
+        </trans-unit>
+        <trans-unit id="a1f20c8f5186bb9d998515a2d95409450015f95f" translate="yes" xml:space="preserve">
+          <source>getField</source>
+          <target state="translated">getField</target>
+        </trans-unit>
+        <trans-unit id="9296baea6e69026f29ae352a59cfa8236933d146" translate="yes" xml:space="preserve">
+          <source>getIntersecting</source>
+          <target state="translated">getIntersecting</target>
+        </trans-unit>
+        <trans-unit id="84020c79c2c513336c8ad5755f06c427fc2a4fba" translate="yes" xml:space="preserve">
+          <source>getNearest</source>
+          <target state="translated">getNearest</target>
+        </trans-unit>
+        <trans-unit id="76a79d004b59f36904f2d5d78955777361f08271" translate="yes" xml:space="preserve">
+          <source>getWriteHook</source>
+          <target state="translated">getWriteHook</target>
+        </trans-unit>
         <trans-unit id="518e2efcb3be7cb63694c4198f0372128d551000" translate="yes" xml:space="preserve">
           <source>global (affecting all databases and the tables within)</source>
           <target state="translated">글로벌 (모든 데이터베이스 및 테이블 내의 영향)</target>
@@ -431,6 +1343,10 @@
           <source>setUnion</source>
           <target state="translated">setUnion</target>
         </trans-unit>
+        <trans-unit id="79440177fd314f31d24465b4535fe258936bd5d4" translate="yes" xml:space="preserve">
+          <source>setWriteHook</source>
+          <target state="translated">setWriteHook</target>
+        </trans-unit>
         <trans-unit id="789015ee7a3303dcc7c3f03c8639e624ac6674ce" translate="yes" xml:space="preserve">
           <source>should be sent as as if the argument to &lt;code&gt;db&lt;/code&gt; was &lt;code&gt;r.db(&quot;blog&quot;)&lt;/code&gt;:</source>
           <target state="translated">&lt;code&gt;db&lt;/code&gt; 에 대한 인수 가 &lt;code&gt;r.db(&quot;blog&quot;)&lt;/code&gt; 인 것처럼 보내야합니다 .</target>
@@ -510,6 +1426,14 @@
         <trans-unit id="3f333f8bddf72189f338956a26e3144dbd26f683" translate="yes" xml:space="preserve">
           <source>table_status</source>
           <target state="translated">table_status</target>
+        </trans-unit>
+        <trans-unit id="35c4a48aefd0a2675992cd42c43405b319e3bb77" translate="yes" xml:space="preserve">
+          <source>the author</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="8ed9d5c396bbd8c735a9f6aab5b54ab8e4df014d" translate="yes" xml:space="preserve">
+          <source>the publication time (range queries should be possible)</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="714eea0f4c980736bde0065fe73f573487f08e3a" translate="yes" xml:space="preserve">
           <source>time</source>

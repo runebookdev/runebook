@@ -3,6 +3,118 @@
   <file source-language="en" target-language="ja" datatype="htmlbody" original="redux">
     <body>
       <group id="redux">
+        <trans-unit id="f289628c32a4808458fe68440054d194866e8e5c" translate="yes" xml:space="preserve">
+          <source>Is there value to you in being able to restore this state to a given point in time (ie, time travel debugging)?</source>
+          <target state="translated">この状態を特定の時点に復元できることに価値がありますか?</target>
+        </trans-unit>
+        <trans-unit id="ea4cec2a5adc22a33671afe8c2442bda5e76ae5a" translate="yes" xml:space="preserve">
+          <source>Isolating Redux Sub-Apps</source>
+          <target state="translated">Reduxのサブアプリを分離する</target>
+        </trans-unit>
+        <trans-unit id="ce286d263926cfdb1859da7cb4876ed9e5c9ba84" translate="yes" xml:space="preserve">
+          <source>Isolating Subapps</source>
+          <target state="translated">サブアプリの分離</target>
+        </trans-unit>
+        <trans-unit id="b03cd03c1cbbbb49e2d53831a74d4f4cbf478570" translate="yes" xml:space="preserve">
+          <source>Isolating a Redux app as a component in a bigger application, in which case you might want to create a store per root component instance.</source>
+          <target state="translated">Reduxアプリを大きなアプリケーションのコンポーネントとして分離し、その場合はルートコンポーネントのインスタンスごとにストアを作成したいかもしれません。</target>
+        </trans-unit>
+        <trans-unit id="3e2da235921f2dc98b67a3405af6d4d8b66644a3" translate="yes" xml:space="preserve">
+          <source>It detects a change by keeping a reference to the root state object, and a reference to &lt;em&gt;each value&lt;/em&gt; in the props object that's returned from the &lt;code&gt;mapStateToProps&lt;/code&gt; function.</source>
+          <target state="translated">ルート状態オブジェクトへの参照と、 &lt;code&gt;mapStateToProps&lt;/code&gt; 関数から返されるpropsオブジェクトの&lt;em&gt;各値&lt;/em&gt;への参照を保持することにより、変更を検出します。</target>
+        </trans-unit>
+        <trans-unit id="0678b386548901ffe5796fba691a7dd7a055517b" translate="yes" xml:space="preserve">
+          <source>It does a bit of trickery to make sure that if you call &lt;code&gt;store.dispatch(action)&lt;/code&gt; from your middleware instead of &lt;code&gt;next(action)&lt;/code&gt;, the action will actually travel the whole middleware chain again, including the current middleware. This is useful for asynchronous middleware, as we have seen &lt;a href=&quot;asyncactions&quot;&gt;previously&lt;/a&gt;.</source>
+          <target state="translated">&lt;code&gt;next(action)&lt;/code&gt; ではなくミドルウェアから &lt;code&gt;store.dispatch(action)&lt;/code&gt; を呼び出す場合、アクションが実際に現在のミドルウェアを含むミドルウェアチェーン全体を再び移動することを確認するために、少し注意が必要です。これは、&lt;a href=&quot;asyncactions&quot;&gt;以前に&lt;/a&gt;見たように、非同期ミドルウェアに役立ちます。</target>
+        </trans-unit>
+        <trans-unit id="c838975ff8bc1485249cfc27d4ffd7a7c7eba961" translate="yes" xml:space="preserve">
+          <source>It does not require a build system or a view framework and exists to show the raw Redux API used with ES5.</source>
+          <target state="translated">ビルドシステムやビューフレームワークを必要とせず、ES5 で使用される生の Redux API を表示するために存在します。</target>
+        </trans-unit>
+        <trans-unit id="72186694410e16c516c9d596656e81807bdc0ee2" translate="yes" xml:space="preserve">
+          <source>It does so because the props object is actually a hash of prop names and their values (or selector functions that are used to retrieve or generate the values), such as in this example:</source>
+          <target state="translated">この例のように、propsオブジェクトは実際にはプロップ名とその値(または値を取得したり生成したりするために使用されるセレクタ関数)のハッシュであるため、このようになります。</target>
+        </trans-unit>
+        <trans-unit id="cd40f9379225350f73c28d7d8b350321206fccb5" translate="yes" xml:space="preserve">
+          <source>It does this by performing a shallow equality check on each value within the object individually, and will only trigger a re-render if one of those checks fails.</source>
+          <target state="translated">これは、オブジェクト内の各値に対して個別に浅い平等性チェックを実行することで行われ、それらのチェックの1つが失敗した場合にのみ再レンダリングをトリガします。</target>
+        </trans-unit>
+        <trans-unit id="cc8c262fccc1fd13b37e15839544d8f0e42b7f17" translate="yes" xml:space="preserve">
+          <source>It doesn't work because your action creator is just a function that &lt;em&gt;returns&lt;/em&gt; an action. It is up to you to actually dispatch it. We can't bind your action creators to a particular Store instance during the definition because apps that render on the server need a separate Redux store for every request.</source>
+          <target state="translated">アクションの作成者はアクションを&lt;em&gt;返す&lt;/em&gt;関数にすぎないため、機能しません。実際に発送するのはあなた次第です。サーバー上でレンダリングするアプリは、リクエストごとに個別のReduxストアを必要とするため、定義中にアクション作成者を特定のStoreインスタンスにバインドすることはできません。</target>
+        </trans-unit>
+        <trans-unit id="50bdebff8f75748e8eb5b1028b6f9e739d1e11eb" translate="yes" xml:space="preserve">
+          <source>It helps keep the naming consistent because all action types are gathered in a single place.</source>
+          <target state="translated">すべてのアクションタイプが一箇所に集められているので、名前の一貫性を保つのに役立ちます。</target>
+        </trans-unit>
+        <trans-unit id="79e39e70b7c42af694874a6eb695630593111193" translate="yes" xml:space="preserve">
+          <source>It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. On top of that, it provides a great developer experience, such as &lt;a href=&quot;https://github.com/gaearon/redux-devtools&quot;&gt;live code editing combined with a time traveling debugger&lt;/a&gt;.</source>
+          <target state="translated">一貫して動作し、さまざまな環境（クライアント、サーバー、ネイティブ）で実行され、テストが容易なアプリケーションを作成するのに役立ちます。さらに、&lt;a href=&quot;https://github.com/gaearon/redux-devtools&quot;&gt;ライブコード編集とタイムトラベルデバッガーの組み合わせ&lt;/a&gt;など、優れた開発者エクスペリエンスを提供します。</target>
+        </trans-unit>
+        <trans-unit id="94502169236559f86f242ead05d16d88d3912a58" translate="yes" xml:space="preserve">
+          <source>It is a common convention that actions have a constant type that helps reducers (or Stores in Flux) identify them. We recommend that you use strings and not &lt;a href=&quot;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Symbol&quot;&gt;Symbols&lt;/a&gt; for action types, because strings are serializable, and by using Symbols you make recording and replaying harder than it needs to be.</source>
+          <target state="translated">アクションには、レデューサー（またはStores in Flux）がアクションを識別するのに役立つ定数タイプがあるというのが一般的な慣例です。文字列はシリアライズ可能であるため、アクションタイプには&lt;a href=&quot;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Symbol&quot;&gt;シンボル&lt;/a&gt;ではなく文字列を使用することをお勧めします。また、シンボルを使用すると、記録と再生を必要以上に難しくします。</target>
+        </trans-unit>
+        <trans-unit id="61c76ff225751e91aabc5dfc794a50b75a44444c" translate="yes" xml:space="preserve">
+          <source>It is a low-level API. Most likely, instead of using it directly, you'll use React (or other) bindings. If you commonly use the callback as a hook to react to state changes, you might want to &lt;a href=&quot;https://github.com/reactjs/redux/issues/303#issuecomment-125184409&quot;&gt;write a custom &lt;code&gt;observeStore&lt;/code&gt; utility&lt;/a&gt;. The &lt;code&gt;Store&lt;/code&gt; is also an &lt;a href=&quot;https://github.com/zenparsing/es-observable&quot;&gt;&lt;code&gt;Observable&lt;/code&gt;&lt;/a&gt;, so you can &lt;code&gt;subscribe&lt;/code&gt; to changes with libraries like &lt;a href=&quot;https://github.com/ReactiveX/RxJS&quot;&gt;RxJS&lt;/a&gt;.</source>
+          <target state="translated">これは低レベルのAPIです。ほとんどの場合、直接使用する代わりに、React（またはその他の）バインディングを使用します。通常、コールバックをフックとして使用して状態の変化に対応する場合は&lt;a href=&quot;https://github.com/reactjs/redux/issues/303#issuecomment-125184409&quot;&gt;、カスタムの &lt;code&gt;observeStore&lt;/code&gt; ユーティリティ&lt;/a&gt;を作成することをお勧めします。 &lt;code&gt;Store&lt;/code&gt; また、ある&lt;a href=&quot;https://github.com/zenparsing/es-observable&quot;&gt; &lt;code&gt;Observable&lt;/code&gt; &lt;/a&gt;あなたができるので、 &lt;code&gt;subscribe&lt;/code&gt; のようなライブラリとの変化に&lt;a href=&quot;https://github.com/ReactiveX/RxJS&quot;&gt;RxJS&lt;/a&gt;。</target>
+        </trans-unit>
+        <trans-unit id="018b00e74a0acae9e7da52a47b45a777f33a4762" translate="yes" xml:space="preserve">
+          <source>It is a low-level API. Most likely, instead of using it directly, you'll use React (or other) bindings. If you commonly use the callback as a hook to react to state changes, you might want to &lt;a href=&quot;https://github.com/reduxjs/redux/issues/303#issuecomment-125184409&quot;&gt;write a custom &lt;code&gt;observeStore&lt;/code&gt; utility&lt;/a&gt;. The &lt;code&gt;Store&lt;/code&gt; is also an &lt;a href=&quot;https://github.com/zenparsing/es-observable&quot;&gt;&lt;code&gt;Observable&lt;/code&gt;&lt;/a&gt;, so you can &lt;code&gt;subscribe&lt;/code&gt; to changes with libraries like &lt;a href=&quot;https://github.com/ReactiveX/RxJS&quot;&gt;RxJS&lt;/a&gt;.</source>
+          <target state="translated">これは低レベルのAPIです。ほとんどの場合、直接使用する代わりに、React（または他の）バインディングを使用します。状態の変化に対応するためのフックとしてコールバックを一般的に使用する場合は&lt;a href=&quot;https://github.com/reduxjs/redux/issues/303#issuecomment-125184409&quot;&gt;、カスタムの &lt;code&gt;observeStore&lt;/code&gt; ユーティリティ&lt;/a&gt;を作成することをお勧めします。 &lt;code&gt;Store&lt;/code&gt; また、ある&lt;a href=&quot;https://github.com/zenparsing/es-observable&quot;&gt; &lt;code&gt;Observable&lt;/code&gt; &lt;/a&gt;あなたができるので、 &lt;code&gt;subscribe&lt;/code&gt; のようなライブラリとの変化に&lt;a href=&quot;https://github.com/ReactiveX/RxJS&quot;&gt;RxJS&lt;/a&gt;。</target>
+        </trans-unit>
+        <trans-unit id="3b86f7926b42042d8d9540bde7f55a9d1fbef0e9" translate="yes" xml:space="preserve">
+          <source>It is also possible to do the reverse and migrate from Redux to any of these libraries following the same steps.</source>
+          <target state="translated">また、同じ手順でReduxからこれらのライブラリのいずれかに逆の手順で移行することも可能です。</target>
+        </trans-unit>
+        <trans-unit id="f367ba512c5331d9b1a4dc415838a8c2dbcc6d80" translate="yes" xml:space="preserve">
+          <source>It is also up to us whether to keep a single top-level history:</source>
+          <target state="translated">また、トップレベルの歴史を1つにするかどうかは、私たち次第です。</target>
+        </trans-unit>
+        <trans-unit id="837f9f9a88a29e4f25a6eaa8ea75e703183100af" translate="yes" xml:space="preserve">
+          <source>It is an advanced API. You might need this if your app implements code splitting, and you want to load some of the reducers dynamically. You might also need this if you implement a hot reloading mechanism for Redux.</source>
+          <target state="translated">これは高度なAPIです。アプリがコード分割を実装していて、レデューサの一部を動的にロードしたい場合に必要になるかもしれません。また、Redux のホットリロード機構を実装する場合にも必要になるかもしれません。</target>
+        </trans-unit>
+        <trans-unit id="79971d102866cc7813eb74dfec64bdc730b286c2" translate="yes" xml:space="preserve">
+          <source>It is another common convention that, instead of creating action objects inline in the places where you dispatch the actions, you would create functions generating them.</source>
+          <target state="translated">アクションをディスパッチする場所にアクションオブジェクトをインラインで作成するのではなく、アクションオブジェクトを生成する関数を作成するというのも一般的な慣習です。</target>
+        </trans-unit>
+        <trans-unit id="249542e851b7d943285bfc44e6d5f0e85e9977ed" translate="yes" xml:space="preserve">
+          <source>It is equal to the last value returned by the store's reducer.</source>
+          <target state="translated">ストアのレデューサーが最後に返した値と同じです。</target>
+        </trans-unit>
+        <trans-unit id="312b7c808648f4df7cabafd144e579400360a08e" translate="yes" xml:space="preserve">
+          <source>It is essential to chaining middleware!</source>
+          <target state="translated">ミドルウェアのチェーン化には欠かせない!</target>
+        </trans-unit>
+        <trans-unit id="dda50451faae254a9269dbf26176ea6006fc9b9e" translate="yes" xml:space="preserve">
+          <source>It is highly recommended that you only put plain serializable objects, arrays, and primitives into your store. It's &lt;em&gt;technically&lt;/em&gt; possible to insert non-serializable items into the store, but doing so can break the ability to persist and rehydrate the contents of a store, as well as interfere with time-travel debugging.</source>
+          <target state="translated">プレーンなシリアル化可能なオブジェクト、配列、およびプリミティブのみをストアに配置することを強くお勧めします。シリアル化不可能なアイテムをストアに挿入することは&lt;em&gt;技術的には&lt;/em&gt;可能ですが、そうすると、ストアのコンテンツを保持および再水和する機能が損なわれ、時間旅行のデバッグが妨げられる可能性があります。</target>
+        </trans-unit>
+        <trans-unit id="0d99f22665bd7c5155d03f21570bcb486fa6b3cf" translate="yes" xml:space="preserve">
+          <source>It is important for it to be separate from &lt;code&gt;SELECT_SUBREDDIT&lt;/code&gt; or &lt;code&gt;INVALIDATE_SUBREDDIT&lt;/code&gt;. While they may occur one after another, as the app grows more complex, you might want to fetch some data independently of the user action (for example, to prefetch the most popular subreddits, or to refresh stale data once in a while). You may also want to fetch in response to a route change, so it's not wise to couple fetching to some particular UI event early on.</source>
+          <target state="translated">&lt;code&gt;SELECT_SUBREDDIT&lt;/code&gt; または &lt;code&gt;INVALIDATE_SUBREDDIT&lt;/code&gt; から分離することが重要です。これらは次々に発生する可能性がありますが、アプリがより複雑になるにつれて、ユーザーアクションとは無関係に一部のデータをフェッチする必要がある場合があります（たとえば、最も人気のあるサブレディットをプリフェッチしたり、古くなったデータをときどき更新したりする）。ルートの変更に応じてフェッチすることもできます。そのため、フェッチを特定のUIイベントに早い段階で結合することは賢明ではありません。</target>
+        </trans-unit>
+        <trans-unit id="22e208a1f7d32f64abf692053d9b4ade71eacca6" translate="yes" xml:space="preserve">
+          <source>It is reasonable to suggest that our state shape should change to answer these questions:</source>
+          <target state="translated">これらの質問に答えるために、私たちの状態の形を変えるべきだと提案するのは妥当なことです。</target>
+        </trans-unit>
+        <trans-unit id="2826728cd3002c85132f865368ccf2dfda1f035c" translate="yes" xml:space="preserve">
+          <source>It is tempting to modify the &lt;code&gt;state&lt;/code&gt; or &lt;code&gt;action&lt;/code&gt; passed to you by Redux. Don't do this!</source>
+          <target state="translated">Reduxから渡された &lt;code&gt;state&lt;/code&gt; または &lt;code&gt;action&lt;/code&gt; を変更するのは魅力的です。これを行わないでください！</target>
+        </trans-unit>
+        <trans-unit id="d8e2ea8d61178d3cf1c5299a500dca66ebcdf724" translate="yes" xml:space="preserve">
+          <source>It is tiny (2kB, including dependencies).</source>
+          <target state="translated">ちっちゃい(2kB、依存関係も含めて)。</target>
+        </trans-unit>
+        <trans-unit id="c1c823da484f24ab1a299266700f4f493b22a5d4" translate="yes" xml:space="preserve">
+          <source>It is up to you to choose the conventions for your project. You may start by using inline strings, and later transition to constants, and maybe later group them into a single file. Redux does not have any opinion here, so use your best judgment.</source>
+          <target state="translated">プロジェクトの規約を選択するのはあなた次第です。最初はインライン文字列を使って、後から定数に移行して、後から一つのファイルにまとめるかもしれません。Reduxはここでは何の意見も持っていませんので、最善の判断をしてください。</target>
+        </trans-unit>
+        <trans-unit id="05093663f45944f4c69e8ddf69de181df8a06f66" translate="yes" xml:space="preserve">
+          <source>It is up to you to choose the state format. You can use plain objects or something like &lt;a href=&quot;http://facebook.github.io/immutable-js/&quot;&gt;Immutable&lt;/a&gt;. If you're not sure, start with plain objects.</source>
+          <target state="translated">状態のフォーマットを選択するのはあなた次第です。プレーンオブジェクトまたは&lt;a href=&quot;http://facebook.github.io/immutable-js/&quot;&gt;Immutable&lt;/a&gt;などを使用できます。よくわからない場合は、単純なオブジェクトから始めてください。</target>
+        </trans-unit>
         <trans-unit id="40839b1c8a38e69ec4218f19c9a385d95915a832" translate="yes" xml:space="preserve">
           <source>It is up to you to try a few options, choose a convention you like, and follow it, whether with, or without the middleware.</source>
           <target state="translated">いくつかのオプションを試してみて、好きな規約を選び、ミドルウェアの有無にかかわらず、それに従うかどうかはあなた次第です。</target>
@@ -303,13 +415,25 @@
           <source>Middleware is not baked into &lt;a href=&quot;createstore&quot;&gt;&lt;code&gt;createStore&lt;/code&gt;&lt;/a&gt; and is not a fundamental part of the Redux architecture, but we consider it useful enough to be supported right in the core. This way, there is a single standard way to extend &lt;a href=&quot;store#dispatch&quot;&gt;&lt;code&gt;dispatch&lt;/code&gt;&lt;/a&gt; in the ecosystem, and different middleware may compete in expressiveness and utility.</source>
           <target state="translated">ミドルウェアは&lt;a href=&quot;createstore&quot;&gt; &lt;code&gt;createStore&lt;/code&gt; に&lt;/a&gt;組み込まれておらず、Reduxアーキテクチャの基本的な部分ではありませんが、コアで正しくサポートされるのに十分に役立つと考えています。このように、エコシステムでの&lt;a href=&quot;store#dispatch&quot;&gt; &lt;code&gt;dispatch&lt;/code&gt; &lt;/a&gt;を拡張する単一の標準的な方法があり、さまざまなミドルウェアが表現力と実用性を競い合う可能性があります。</target>
         </trans-unit>
+        <trans-unit id="44bb138a9d25525c5ea6b439a580ee67fd5a1ee9" translate="yes" xml:space="preserve">
+          <source>Middleware is not baked into &lt;a href=&quot;createstore&quot;&gt;&lt;code&gt;createStore&lt;/code&gt;&lt;/a&gt; and is not a fundamental part of the Redux architecture, but we consider it useful enough to be supported right in the core. This way, there is a single standard way to extend &lt;a href=&quot;store#dispatchaction&quot;&gt;&lt;code&gt;dispatch&lt;/code&gt;&lt;/a&gt; in the ecosystem, and different middleware may compete in expressiveness and utility.</source>
+          <target state="translated">ミドルウェアは&lt;a href=&quot;createstore&quot;&gt; &lt;code&gt;createStore&lt;/code&gt; に&lt;/a&gt;組み込まれておらず、Reduxアーキテクチャの基本的な部分ではありませんが、コアでサポートされるのに十分役立つと考えています。このように、エコシステムで&lt;a href=&quot;store#dispatchaction&quot;&gt; &lt;code&gt;dispatch&lt;/code&gt; &lt;/a&gt;を拡張する単一の標準的な方法があり、さまざまなミドルウェアが表現力と有用性で競合する可能性があります。</target>
+        </trans-unit>
         <trans-unit id="00c8a7e2c0f9e6b20fe14442f77d182a03eebb64" translate="yes" xml:space="preserve">
           <source>Middleware is the suggested way to extend Redux with custom functionality. Middleware lets you wrap the store's &lt;a href=&quot;store#dispatch&quot;&gt;&lt;code&gt;dispatch&lt;/code&gt;&lt;/a&gt; method for fun and profit. The key feature of middleware is that it is composable. Multiple middleware can be combined together, where each middleware requires no knowledge of what comes before or after it in the chain.</source>
           <target state="translated">ミドルウェアは、カスタム機能でReduxを拡張するための推奨方法です。ミドルウェアを使用すると、ストアの&lt;a href=&quot;store#dispatch&quot;&gt; &lt;code&gt;dispatch&lt;/code&gt; &lt;/a&gt;メソッドをラップして楽しさと利益を得ることができます。ミドルウェアの主要な機能は、それが構成可能であることです。複数のミドルウェアを組み合わせることができます。各ミドルウェアは、チェーンの前後にあるものについての知識を必要としません。</target>
         </trans-unit>
+        <trans-unit id="39238a8d7919adb7f2defae4e78aa73bb9a0fc2f" translate="yes" xml:space="preserve">
+          <source>Middleware is the suggested way to extend Redux with custom functionality. Middleware lets you wrap the store's &lt;a href=&quot;store#dispatchaction&quot;&gt;&lt;code&gt;dispatch&lt;/code&gt;&lt;/a&gt; method for fun and profit. The key feature of middleware is that it is composable. Multiple middleware can be combined together, where each middleware requires no knowledge of what comes before or after it in the chain.</source>
+          <target state="translated">ミドルウェアは、カスタム機能でReduxを拡張するための推奨される方法です。ミドルウェアを使用すると、ストアの&lt;a href=&quot;store#dispatchaction&quot;&gt; &lt;code&gt;dispatch&lt;/code&gt; &lt;/a&gt;方法をラップして、楽しみと利益を得ることができます。ミドルウェアの重要な機能は、構成可能であるということです。複数のミドルウェアを組み合わせることができます。各ミドルウェアは、チェーン内でミドルウェアの前後に何が来るかについての知識を必要としません。</target>
+        </trans-unit>
         <trans-unit id="9772321b9da9e355cae92c8995bc9b6d9b873c30" translate="yes" xml:space="preserve">
           <source>Middleware only wraps the store's &lt;a href=&quot;store#dispatch&quot;&gt;&lt;code&gt;dispatch&lt;/code&gt;&lt;/a&gt; function. Technically, anything a middleware can do, you can do manually by wrapping every &lt;code&gt;dispatch&lt;/code&gt; call, but it's easier to manage this in a single place and define action transformations on the scale of the whole project.</source>
           <target state="translated">ミドルウェアは、ストアの&lt;a href=&quot;store#dispatch&quot;&gt; &lt;code&gt;dispatch&lt;/code&gt; &lt;/a&gt;機能のみをラップします。技術的には、ミドルウェアでできることは何でも、すべての &lt;code&gt;dispatch&lt;/code&gt; 呼び出しをラップして手動で行うことができますが、これを1か所で管理し、プロジェクト全体の規模でアクション変換を定義する方が簡単です。</target>
+        </trans-unit>
+        <trans-unit id="da1c87b8d7e2336732bb5e2c32e20b95e5a52fd5" translate="yes" xml:space="preserve">
+          <source>Middleware only wraps the store's &lt;a href=&quot;store#dispatchaction&quot;&gt;&lt;code&gt;dispatch&lt;/code&gt;&lt;/a&gt; function. Technically, anything a middleware can do, you can do manually by wrapping every &lt;code&gt;dispatch&lt;/code&gt; call, but it's easier to manage this in a single place and define action transformations on the scale of the whole project.</source>
+          <target state="translated">ミドルウェアは、ストアの&lt;a href=&quot;store#dispatchaction&quot;&gt; &lt;code&gt;dispatch&lt;/code&gt; &lt;/a&gt;機能のみをラップします。技術的には、ミドルウェアで実行できることはすべて、すべての &lt;code&gt;dispatch&lt;/code&gt; 呼び出しをラップすることで手動で実行できますが、これを1か所で管理し、プロジェクト全体の規模でアクション変換を定義する方が簡単です。</target>
         </trans-unit>
         <trans-unit id="904b42b851f9aa103d834460d3e42948c262c785" translate="yes" xml:space="preserve">
           <source>Middleware sounds much more complicated than it really is. The only way to really understand middleware is to see how the existing middleware works, and try to write your own. The function nesting can be intimidating, but most of the middleware you'll find are, in fact, 10-liners, and the nesting and composability is what makes the middleware system powerful.</source>
@@ -470,6 +594,10 @@
         <trans-unit id="335b95f34a7df1f471d9e66d848a822638f18b4c" translate="yes" xml:space="preserve">
           <source>Normally you should just call &lt;a href=&quot;store#dispatch&quot;&gt;&lt;code&gt;dispatch&lt;/code&gt;&lt;/a&gt; directly on your &lt;a href=&quot;store&quot;&gt;&lt;code&gt;Store&lt;/code&gt;&lt;/a&gt; instance. If you use Redux with React, &lt;a href=&quot;https://github.com/gaearon/react-redux&quot;&gt;react-redux&lt;/a&gt; will provide you with the &lt;a href=&quot;store#dispatch&quot;&gt;&lt;code&gt;dispatch&lt;/code&gt;&lt;/a&gt; function so you can call it directly, too.</source>
           <target state="translated">通常は、&lt;a href=&quot;store&quot;&gt; &lt;code&gt;Store&lt;/code&gt; &lt;/a&gt;インスタンスで直接&lt;a href=&quot;store#dispatch&quot;&gt; &lt;code&gt;dispatch&lt;/code&gt; &lt;/a&gt;を呼び出す必要があります。ReactでReduxを使用する場合、&lt;a href=&quot;https://github.com/gaearon/react-redux&quot;&gt;react-redux&lt;/a&gt;は&lt;a href=&quot;store#dispatch&quot;&gt; &lt;code&gt;dispatch&lt;/code&gt; &lt;/a&gt;関数を提供するため、直接呼び出すこともできます。</target>
+        </trans-unit>
+        <trans-unit id="26c3f41f979e0141ba2295989bb6b08208506c7a" translate="yes" xml:space="preserve">
+          <source>Normally you should just call &lt;a href=&quot;store#dispatchaction&quot;&gt;&lt;code&gt;dispatch&lt;/code&gt;&lt;/a&gt; directly on your &lt;a href=&quot;store&quot;&gt;&lt;code&gt;Store&lt;/code&gt;&lt;/a&gt; instance. If you use Redux with React, &lt;a href=&quot;https://github.com/gaearon/react-redux&quot;&gt;react-redux&lt;/a&gt; will provide you with the &lt;a href=&quot;store#dispatchaction&quot;&gt;&lt;code&gt;dispatch&lt;/code&gt;&lt;/a&gt; function so you can call it directly, too.</source>
+          <target state="translated">通常は、&lt;a href=&quot;store&quot;&gt; &lt;code&gt;Store&lt;/code&gt; &lt;/a&gt;インスタンスで直接&lt;a href=&quot;store#dispatchaction&quot;&gt; &lt;code&gt;dispatch&lt;/code&gt; &lt;/a&gt;を呼び出す必要があります。ReactでReduxを使用する場合、&lt;a href=&quot;https://github.com/gaearon/react-redux&quot;&gt;react-redux&lt;/a&gt;は&lt;a href=&quot;store#dispatchaction&quot;&gt; &lt;code&gt;dispatch&lt;/code&gt; &lt;/a&gt;関数を提供するため、直接呼び出すこともできます。</target>
         </trans-unit>
         <trans-unit id="3c4e5332959aece0b47c0b738573f9bd470cb893" translate="yes" xml:space="preserve">
           <source>Normally, a Javascript array's contents are modified using mutative functions like &lt;code&gt;push&lt;/code&gt;, &lt;code&gt;unshift&lt;/code&gt;, and &lt;code&gt;splice&lt;/code&gt;. Since we don't want to mutate state directly in reducers, those should normally be avoided. Because of that, you might see &quot;insert&quot; or &quot;remove&quot; behavior written like this:</source>
@@ -1611,6 +1739,14 @@
           <source>Returns the current state tree of your application.</source>
           <target state="translated">アプリケーションの現在の状態ツリーを返します。</target>
         </trans-unit>
+        <trans-unit id="c935f384c6e4b3d5772f231b8837bf4689621ec3" translate="yes" xml:space="preserve">
+          <source>Returns the current state tree of your application. It is equal to the last value returned by the store's reducer.</source>
+          <target state="translated">アプリケーションの現在の状態ツリーを返します。これは、ストアのレデューサによって返された最後の値に等しくなります。</target>
+        </trans-unit>
+        <trans-unit id="be483740a1e90670b770a1abe4ce081d261c0d0a" translate="yes" xml:space="preserve">
+          <source>Returns&lt;a href=&quot;#returns-2&quot;&gt;#&lt;/a&gt;</source>
+          <target state="translated">Returns&lt;a href=&quot;#returns-2&quot;&gt;#&lt;/a&gt;</target>
+        </trans-unit>
         <trans-unit id="b78505f9e7ca9beb942dcc8131c9189c9eeb998a" translate="yes" xml:space="preserve">
           <source>Reusing Reducer Logic</source>
           <target state="translated">レデューサロジックの再利用</target>
@@ -2343,6 +2479,10 @@
           <source>The Redux API surface is tiny. Redux defines a set of contracts for you to implement (such as &lt;a href=&quot;../glossary#reducer&quot;&gt;reducers&lt;/a&gt;) and provides a few helper functions to tie these contracts together.</source>
           <target state="translated">Redux APIの表面は小さいです。Reduxは、実装する一連のコントラクト（&lt;a href=&quot;../glossary#reducer&quot;&gt;reducer&lt;/a&gt;など）を定義し、これらのコントラクトを結び付けるいくつかのヘルパー関数を提供します。</target>
         </trans-unit>
+        <trans-unit id="fb0e273e2c9f9b6f01da6a08131796d0f995d9f2" translate="yes" xml:space="preserve">
+          <source>The Redux API surface is tiny. Redux defines a set of contracts for you to implement (such as &lt;a href=&quot;https://redux.js.org/understanding/thinking-in-redux/glossary#reducer&quot;&gt;reducers&lt;/a&gt;) and provides a few helper functions to tie these contracts together.</source>
+          <target state="translated">ReduxAPIの表面は小さいです。Reduxは、実装する一連のコントラクト（&lt;a href=&quot;https://redux.js.org/understanding/thinking-in-redux/glossary#reducer&quot;&gt;レデューサー&lt;/a&gt;など）を定義し、これらのコントラクトを結び付けるためのいくつかのヘルパー関数を提供します。</target>
+        </trans-unit>
         <trans-unit id="a5c1e3f8c2dd5838d397dba36b04c9a62e93369f" translate="yes" xml:space="preserve">
           <source>The Redux reducer API is &lt;code&gt;(state, action) =&amp;gt; state&lt;/code&gt;, but how you create those reducers is up to you.</source>
           <target state="translated">ReduxレデューサーAPIは &lt;code&gt;(state, action) =&amp;gt; state&lt;/code&gt; ですが、これらのレデューサーを作成する方法は自由です。</target>
@@ -2491,9 +2631,17 @@
           <source>The listener should not expect to see all state changes, as the state might have been updated multiple times during a nested &lt;a href=&quot;#dispatch&quot;&gt;&lt;code&gt;dispatch()&lt;/code&gt;&lt;/a&gt; before the listener is called. It is, however, guaranteed that all subscribers registered before the &lt;a href=&quot;#dispatch&quot;&gt;&lt;code&gt;dispatch()&lt;/code&gt;&lt;/a&gt; started will be called with the latest state by the time it exits.</source>
           <target state="translated">ネスト&lt;a href=&quot;#dispatch&quot;&gt; &lt;code&gt;dispatch()&lt;/code&gt; &lt;/a&gt;れたdispatch（）中にリスナーが呼び出される前に状態が複数回更新された可能性があるため、リスナーはすべての状態変化を確認する必要はありません。ただし、&lt;a href=&quot;#dispatch&quot;&gt; &lt;code&gt;dispatch()&lt;/code&gt; &lt;/a&gt;が開始する前に登録されたすべてのサブスクライバーは、終了するまでに最新の状態で呼び出されることが保証されています。</target>
         </trans-unit>
+        <trans-unit id="c8d57f0dc666d6c5ce99071844c64516efa85351" translate="yes" xml:space="preserve">
+          <source>The listener should not expect to see all state changes, as the state might have been updated multiple times during a nested &lt;a href=&quot;#dispatchaction&quot;&gt;&lt;code&gt;dispatch()&lt;/code&gt;&lt;/a&gt; before the listener is called. It is, however, guaranteed that all subscribers registered before the &lt;a href=&quot;#dispatchaction&quot;&gt;&lt;code&gt;dispatch()&lt;/code&gt;&lt;/a&gt; started will be called with the latest state by the time it exits.</source>
+          <target state="translated">リスナーが呼び出される前にネスト&lt;a href=&quot;#dispatchaction&quot;&gt; &lt;code&gt;dispatch()&lt;/code&gt; &lt;/a&gt;れたdispatch（）中に状態が複数回更新された可能性があるため、リスナーはすべての状態変化を期待するべきではありません。ただし、&lt;a href=&quot;#dispatchaction&quot;&gt; &lt;code&gt;dispatch()&lt;/code&gt; &lt;/a&gt;が開始される前に登録されたすべてのサブスクライバーは、終了するまでに最新の状態で呼び出されることが保証されています。</target>
+        </trans-unit>
         <trans-unit id="dfc2ce49bb9fba9f11cb4c299cb527330ef38e0b" translate="yes" xml:space="preserve">
           <source>The listener should only call &lt;a href=&quot;#dispatch&quot;&gt;&lt;code&gt;dispatch()&lt;/code&gt;&lt;/a&gt; either in response to user actions or under specific conditions (e. g. dispatching an action when the store has a specific field). Calling &lt;a href=&quot;#dispatch&quot;&gt;&lt;code&gt;dispatch()&lt;/code&gt;&lt;/a&gt; without any conditions is technically possible, however it leads to an infinite loop as every &lt;a href=&quot;#dispatch&quot;&gt;&lt;code&gt;dispatch()&lt;/code&gt;&lt;/a&gt; call usually triggers the listener again.</source>
           <target state="translated">リスナーは、ユーザーアクションへの応答または特定の条件下（たとえば、ストアに特定のフィールドがある場合のアクションのディスパッチ&lt;a href=&quot;#dispatch&quot;&gt; &lt;code&gt;dispatch()&lt;/code&gt; &lt;/a&gt;のみdispatch（）を呼び出す必要があります。条件なしで&lt;a href=&quot;#dispatch&quot;&gt; &lt;code&gt;dispatch()&lt;/code&gt; &lt;/a&gt;を呼び出すことは技術的に可能ですが、通常、すべての&lt;a href=&quot;#dispatch&quot;&gt; &lt;code&gt;dispatch()&lt;/code&gt; &lt;/a&gt;呼び出しがリスナーを再びトリガーするため、無限ループにつながります。</target>
+        </trans-unit>
+        <trans-unit id="488cee853ee8f2ee1b7b34adadde5165f8f7a005" translate="yes" xml:space="preserve">
+          <source>The listener should only call &lt;a href=&quot;#dispatchaction&quot;&gt;&lt;code&gt;dispatch()&lt;/code&gt;&lt;/a&gt; either in response to user actions or under specific conditions (e. g. dispatching an action when the store has a specific field). Calling &lt;a href=&quot;#dispatchaction&quot;&gt;&lt;code&gt;dispatch()&lt;/code&gt;&lt;/a&gt; without any conditions is technically possible, however it leads to an infinite loop as every &lt;a href=&quot;#dispatchaction&quot;&gt;&lt;code&gt;dispatch()&lt;/code&gt;&lt;/a&gt; call usually triggers the listener again.</source>
+          <target state="translated">リスナーは、ユーザーアクションに応答するか、特定の条件下（たとえば、ストアに特定のフィールドがある場合にアクションをディスパッチする&lt;a href=&quot;#dispatchaction&quot;&gt; &lt;code&gt;dispatch()&lt;/code&gt; &lt;/a&gt;いずれかでのみdispatch（）を呼び出す必要があります。技術的には、無条件で&lt;a href=&quot;#dispatchaction&quot;&gt; &lt;code&gt;dispatch()&lt;/code&gt; &lt;/a&gt;を呼び出すことは可能ですが、&lt;a href=&quot;#dispatchaction&quot;&gt; &lt;code&gt;dispatch()&lt;/code&gt; を&lt;/a&gt;呼び出すたびに通常はリスナーが再度トリガーされるため、無限ループが発生します。</target>
         </trans-unit>
         <trans-unit id="f1a0911c22c72f7c2742cacaf4dc763e35a23b3f" translate="yes" xml:space="preserve">
           <source>The logic for retrieving or updating a given item is now fairly simple and consistent. Given an item's type and its ID, we can directly look it up in a couple simple steps, without having to dig through other objects to find it.</source>
@@ -2514,6 +2662,10 @@
         <trans-unit id="93bd18e049d16d78b6a4f2d8ab6b83aaccc924a2" translate="yes" xml:space="preserve">
           <source>The most common use case for middleware is to support asynchronous actions without much boilerplate code or a dependency on a library like &lt;a href=&quot;https://github.com/Reactive-Extensions/RxJS&quot;&gt;Rx&lt;/a&gt;. It does so by letting you dispatch &lt;a href=&quot;../glossary#async-action&quot;&gt;async actions&lt;/a&gt; in addition to normal actions.</source>
           <target state="translated">ミドルウェアの最も一般的な使用例は、ボイラープレートコードや&lt;a href=&quot;https://github.com/Reactive-Extensions/RxJS&quot;&gt;Rx&lt;/a&gt;などのライブラリに依存することなく、非同期アクションをサポートすることです。これは、通常のアクションに加えて&lt;a href=&quot;../glossary#async-action&quot;&gt;非同期アクション&lt;/a&gt;をディスパッチできるようにすることで実現します。</target>
+        </trans-unit>
+        <trans-unit id="eabd6d6748896987c05d969d3d0db08e988f3bce" translate="yes" xml:space="preserve">
+          <source>The most common use case for middleware is to support asynchronous actions without much boilerplate code or a dependency on a library like &lt;a href=&quot;https://github.com/Reactive-Extensions/RxJS&quot;&gt;Rx&lt;/a&gt;. It does so by letting you dispatch &lt;a href=&quot;https://redux.js.org/understanding/thinking-in-redux/glossary#async-action&quot;&gt;async actions&lt;/a&gt; in addition to normal actions.</source>
+          <target state="translated">ミドルウェアの最も一般的な使用例は、ボイラープレートコードをあまり使用せずに、または&lt;a href=&quot;https://github.com/Reactive-Extensions/RxJS&quot;&gt;Rx&lt;/a&gt;などのライブラリに依存せずに非同期アクションをサポートすることです。これは、通常のアクションに加えて&lt;a href=&quot;https://redux.js.org/understanding/thinking-in-redux/glossary#async-action&quot;&gt;非同期アクション&lt;/a&gt;をディスパッチできるようにすることで実現します。</target>
         </trans-unit>
         <trans-unit id="5ca5c9f8c9076592f848e34b0f4212ad6547c204" translate="yes" xml:space="preserve">
           <source>The most common use case for server-side rendering is to handle the &lt;em&gt;initial render&lt;/em&gt; when a user (or search engine crawler) first requests our app. When the server receives the request, it renders the required component(s) into an HTML string, and then sends it as a response to the client. From that point on, the client takes over rendering duties.</source>
@@ -2542,6 +2694,10 @@
         <trans-unit id="0f86933dcbbe66c8f04e7c9fc359e8fa49b3f7f3" translate="yes" xml:space="preserve">
           <source>The only use case for &lt;code&gt;bindActionCreators&lt;/code&gt; is when you want to pass some action creators down to a component that isn't aware of Redux, and you don't want to pass &lt;a href=&quot;store#dispatch&quot;&gt;&lt;code&gt;dispatch&lt;/code&gt;&lt;/a&gt; or the Redux store to it.</source>
           <target state="translated">&lt;code&gt;bindActionCreators&lt;/code&gt; の唯一の使用例は、一部のアクション作成者をReduxを認識しないコンポーネントに渡し、&lt;a href=&quot;store#dispatch&quot;&gt; &lt;code&gt;dispatch&lt;/code&gt; &lt;/a&gt;またはReduxストアをそれに渡さない場合です。</target>
+        </trans-unit>
+        <trans-unit id="11679d519383db9e97765680c1c087a4c5d58e4d" translate="yes" xml:space="preserve">
+          <source>The only use case for &lt;code&gt;bindActionCreators&lt;/code&gt; is when you want to pass some action creators down to a component that isn't aware of Redux, and you don't want to pass &lt;a href=&quot;store#dispatchaction&quot;&gt;&lt;code&gt;dispatch&lt;/code&gt;&lt;/a&gt; or the Redux store to it.</source>
+          <target state="translated">&lt;code&gt;bindActionCreators&lt;/code&gt; の唯一のユースケースは、Reduxを認識していないコンポーネントに一部のアクションクリエーターを渡したい場合で、&lt;a href=&quot;store#dispatchaction&quot;&gt; &lt;code&gt;dispatch&lt;/code&gt; &lt;/a&gt;またはReduxストアをコンポーネントに渡したくない場合です。</target>
         </trans-unit>
         <trans-unit id="66b4d49e553bb0efa470bbe85e68619297117596" translate="yes" xml:space="preserve">
           <source>The only way to change the state inside it is to dispatch an &lt;a href=&quot;../glossary#action&quot;&gt;action&lt;/a&gt; on it.</source>
@@ -2599,6 +2755,10 @@
           <source>The resulting reducer calls every child reducer, and gathers their results into a single state object. &lt;strong&gt;The shape of the state object matches the keys of the passed &lt;code&gt;reducers&lt;/code&gt;&lt;/strong&gt;.</source>
           <target state="translated">結果のレデューサーはすべての子レデューサーを呼び出し、その結果を単一の状態オブジェクトに収集します。&lt;strong&gt;状態オブジェクトの形状は、渡された &lt;code&gt;reducers&lt;/code&gt; &lt;/strong&gt;&lt;strong&gt;キーと一致します&lt;/strong&gt;。</target>
         </trans-unit>
+        <trans-unit id="bebc73dea03ed82f283ad8c04dfdcbf094d7911a" translate="yes" xml:space="preserve">
+          <source>The resulting reducer calls every child reducer, and gathers their results into a single state object. &lt;strong&gt;The state produced by &lt;code&gt;combineReducers()&lt;/code&gt; namespaces the states of each reducer under their keys as passed to &lt;code&gt;combineReducers()&lt;/code&gt;&lt;/strong&gt;</source>
+          <target state="translated">結果のレデューサーはすべての子レデューサーを呼び出し、その結果を単一の状態オブジェクトに収集します。&lt;strong&gt; &lt;code&gt;combineReducers()&lt;/code&gt; &lt;/strong&gt;&lt;strong&gt;によって生成された状態は、combineReducers（）に渡される &lt;code&gt;combineReducers()&lt;/code&gt; 、キーの下にある各レデューサーの状態に名前空間を付けます。&lt;/strong&gt;</target>
+        </trans-unit>
         <trans-unit id="191b4037dec326d03a76e5e3d99a324826c75a29" translate="yes" xml:space="preserve">
           <source>The shallow check of &lt;code&gt;param&lt;/code&gt; and &lt;code&gt;returnValue&lt;/code&gt; simply checks whether both variables reference the same object, which they do.&lt;code&gt;mutateObj()&lt;/code&gt; may return a mutated version of &lt;code&gt;obj&lt;/code&gt;, but it's still the same object as that passed in. The fact that its values have been changed within &lt;code&gt;mutateObj&lt;/code&gt; matters not at all to a shallow check.</source>
           <target state="translated">&lt;code&gt;param&lt;/code&gt; と &lt;code&gt;returnValue&lt;/code&gt; の浅いチェックは、両方の変数が同じオブジェクトを参照しているかどうかを単純にチェックします。 &lt;code&gt;mutateObj()&lt;/code&gt; は、変更されたバージョンの &lt;code&gt;obj&lt;/code&gt; を返す場合がありますが、それは渡されたものと同じオブジェクトです &lt;code&gt;mutateObj&lt;/code&gt; 内でその値が変更されているという事実は、浅いチェックにはまったく関係ありません。</target>
@@ -2634,6 +2794,10 @@
         <trans-unit id="375db8357be87b44ec99ec266964bcb0566ca944" translate="yes" xml:space="preserve">
           <source>The subscriptions are snapshotted just before every &lt;a href=&quot;#dispatch&quot;&gt;&lt;code&gt;dispatch()&lt;/code&gt;&lt;/a&gt; call. If you subscribe or unsubscribe while the listeners are being invoked, this will not have any effect on the &lt;a href=&quot;#dispatch&quot;&gt;&lt;code&gt;dispatch()&lt;/code&gt;&lt;/a&gt; that is currently in progress. However, the next &lt;a href=&quot;#dispatch&quot;&gt;&lt;code&gt;dispatch()&lt;/code&gt;&lt;/a&gt; call, whether nested or not, will use a more recent snapshot of the subscription list.</source>
           <target state="translated">サブスクリプションは、すべての&lt;a href=&quot;#dispatch&quot;&gt; &lt;code&gt;dispatch()&lt;/code&gt; &lt;/a&gt;呼び出しの直前にスナップショットされます。リスナーの呼び出し中にサブスクライブまたはサブスクライブを解除しても、現在進行中の&lt;a href=&quot;#dispatch&quot;&gt; &lt;code&gt;dispatch()&lt;/code&gt; &lt;/a&gt;には影響しません。ただし、次の&lt;a href=&quot;#dispatch&quot;&gt; &lt;code&gt;dispatch()&lt;/code&gt; &lt;/a&gt;呼び出しは、ネストされているかどうかに関係なく、サブスクリプションリストの最新のスナップショットを使用します。</target>
+        </trans-unit>
+        <trans-unit id="80feb06d33ae82b791c73d4ad38cfd11b702fe4b" translate="yes" xml:space="preserve">
+          <source>The subscriptions are snapshotted just before every &lt;a href=&quot;#dispatchaction&quot;&gt;&lt;code&gt;dispatch()&lt;/code&gt;&lt;/a&gt; call. If you subscribe or unsubscribe while the listeners are being invoked, this will not have any effect on the &lt;a href=&quot;#dispatchaction&quot;&gt;&lt;code&gt;dispatch()&lt;/code&gt;&lt;/a&gt; that is currently in progress. However, the next &lt;a href=&quot;#dispatchaction&quot;&gt;&lt;code&gt;dispatch()&lt;/code&gt;&lt;/a&gt; call, whether nested or not, will use a more recent snapshot of the subscription list.</source>
+          <target state="translated">サブスクリプションは、すべての&lt;a href=&quot;#dispatchaction&quot;&gt; &lt;code&gt;dispatch()&lt;/code&gt; &lt;/a&gt;呼び出しの直前にスナップショットが作成されます。リスナーの呼び出し中にサブスクライブまたはサブスクライブ解除した場合、これは現在進行中の&lt;a href=&quot;#dispatchaction&quot;&gt; &lt;code&gt;dispatch()&lt;/code&gt; &lt;/a&gt;には影響しません。ただし、ネストされているかどうかに関係なく、次の&lt;a href=&quot;#dispatchaction&quot;&gt; &lt;code&gt;dispatch()&lt;/code&gt; &lt;/a&gt;呼び出しでは、サブスクリプションリストの最新のスナップショットが使用されます。</target>
         </trans-unit>
         <trans-unit id="e3fcb31aa94b0e76b32e4908a5de1c115f3b15a7" translate="yes" xml:space="preserve">
           <source>The suggested structure for a Redux store is to split the state object into multiple &amp;ldquo;slices&amp;rdquo; or &amp;ldquo;domains&amp;rdquo; by key, and provide a separate reducer function to manage each individual data slice. This is similar to how the standard Flux pattern has multiple independent stores, and Redux provides the &lt;a href=&quot;../api/combinereducers&quot;&gt;&lt;code&gt;combineReducers&lt;/code&gt;&lt;/a&gt; utility function to make this pattern easier. However, it's important to note that &lt;code&gt;combineReducers&lt;/code&gt; is &lt;em&gt;not&lt;/em&gt; required&amp;mdash;it is simply a utility function for the common use case of having a single reducer function per state slice, with plain JavaScript objects for the data.</source>
@@ -2839,6 +3003,10 @@
           <source>This example demonstrates how to use &lt;code&gt;compose&lt;/code&gt; to enhance a &lt;a href=&quot;store&quot;&gt;store&lt;/a&gt; with &lt;a href=&quot;applymiddleware&quot;&gt;&lt;code&gt;applyMiddleware&lt;/code&gt;&lt;/a&gt; and a few developer tools from the &lt;a href=&quot;https://github.com/gaearon/redux-devtools&quot;&gt;redux-devtools&lt;/a&gt; package.</source>
           <target state="translated">この例は、 &lt;code&gt;compose&lt;/code&gt; を使用して、&lt;a href=&quot;applymiddleware&quot;&gt; &lt;code&gt;applyMiddleware&lt;/code&gt; &lt;/a&gt;と&lt;a href=&quot;https://github.com/gaearon/redux-devtools&quot;&gt;redux-devtools&lt;/a&gt;パッケージのいくつかの開発者ツールで&lt;a href=&quot;store&quot;&gt;ストア&lt;/a&gt;を拡張する方法を示しています。</target>
         </trans-unit>
+        <trans-unit id="370e39616b24bac8573bee9b7a0a5bf7ef9116fb" translate="yes" xml:space="preserve">
+          <source>This example demonstrates how to use &lt;code&gt;compose&lt;/code&gt; to enhance a &lt;a href=&quot;store&quot;&gt;store&lt;/a&gt; with &lt;a href=&quot;applymiddleware&quot;&gt;&lt;code&gt;applyMiddleware&lt;/code&gt;&lt;/a&gt; and a few developer tools from the &lt;a href=&quot;https://github.com/reduxjs/redux-devtools&quot;&gt;redux-devtools&lt;/a&gt; package.</source>
+          <target state="translated">この例は、 &lt;code&gt;compose&lt;/code&gt; を使用して、&lt;a href=&quot;applymiddleware&quot;&gt; &lt;code&gt;applyMiddleware&lt;/code&gt; &lt;/a&gt;と&lt;a href=&quot;https://github.com/reduxjs/redux-devtools&quot;&gt;redux-devtools&lt;/a&gt;パッケージのいくつかの開発ツールを使用して&lt;a href=&quot;store&quot;&gt;ストア&lt;/a&gt;を拡張する方法を示しています。</target>
+        </trans-unit>
         <trans-unit id="e6a4f9f87221d4ef2187fb40a3e81e24b1380c59" translate="yes" xml:space="preserve">
           <source>This example demonstrates rendering a deeply nested tree view and representing its state in a normalized form so it is easy to update from reducers. Good rendering performance is achieved by the container components granularly subscribing only to the tree nodes that they render.</source>
           <target state="translated">この例では、深い入れ子になったツリービューをレンダリングし、その状態を正規化された形で表現することで、レデューサーからの更新が容易になることを示しています。コンテナコンポーネントが、レンダリングするツリーノードのみをきめ細かくサブスクライブすることで、優れたレンダリングパフォーマンスを実現しています。</target>
@@ -2890,6 +3058,10 @@
         <trans-unit id="b54fe358811791887040e3628c693b0d5817b4bb" translate="yes" xml:space="preserve">
           <source>This is a functional programming utility, and is included in Redux as a convenience.</source>
           <target state="translated">これは機能的なプログラミングユーティリティで、便利なものとしてReduxに含まれています。</target>
+        </trans-unit>
+        <trans-unit id="70ffc3c7d398f7588925b4181068f9ae044df7c9" translate="yes" xml:space="preserve">
+          <source>This is a functional programming utility, and is included in Redux as a convenience. You might want to use it to apply several &lt;a href=&quot;https://redux.js.org/understanding/thinking-in-redux/glossary#store-enhancer&quot;&gt;store enhancers&lt;/a&gt; in a row.</source>
+          <target state="translated">これは関数型プログラミングユーティリティであり、便宜上Reduxに含まれています。これを使用して、複数の&lt;a href=&quot;https://redux.js.org/understanding/thinking-in-redux/glossary#store-enhancer&quot;&gt;ストアエンハンサー&lt;/a&gt;を連続して適用することをお勧めします。</target>
         </trans-unit>
         <trans-unit id="902e57be6eebfba5d7e76929983c6c6258e9c271" translate="yes" xml:space="preserve">
           <source>This is a glossary of the core terms in Redux, along with their type signatures. The types are documented using &lt;a href=&quot;http://flowtype.org/docs/quick-reference.html&quot;&gt;Flow notation&lt;/a&gt;.</source>
@@ -3238,6 +3410,10 @@
         <trans-unit id="72970471e5d1f5bed9e5c8dccde351d73710853a" translate="yes" xml:space="preserve">
           <source>Turns an object whose values are &lt;a href=&quot;../glossary#action-creator&quot;&gt;action creators&lt;/a&gt;, into an object with the same keys, but with every action creator wrapped into a &lt;a href=&quot;store#dispatch&quot;&gt;&lt;code&gt;dispatch&lt;/code&gt;&lt;/a&gt; call so they may be invoked directly.</source>
           <target state="translated">値が&lt;a href=&quot;../glossary#action-creator&quot;&gt;アクションクリエーター&lt;/a&gt;であるオブジェクトを、同じキーを持つオブジェクトに変換しますが、すべてのアクションクリエーターは&lt;a href=&quot;store#dispatch&quot;&gt; &lt;code&gt;dispatch&lt;/code&gt; &lt;/a&gt;コールにラップされているため、直接呼び出すことができます。</target>
+        </trans-unit>
+        <trans-unit id="8a7b143d4c5f841fa87b3ffa44b1a514a798acb9" translate="yes" xml:space="preserve">
+          <source>Turns an object whose values are &lt;a href=&quot;https://redux.js.org/understanding/thinking-in-redux/glossary#action-creator&quot;&gt;action creators&lt;/a&gt;, into an object with the same keys, but with every action creator wrapped into a &lt;a href=&quot;store#dispatchaction&quot;&gt;&lt;code&gt;dispatch&lt;/code&gt;&lt;/a&gt; call so they may be invoked directly.</source>
+          <target state="translated">値が&lt;a href=&quot;https://redux.js.org/understanding/thinking-in-redux/glossary#action-creator&quot;&gt;アクションクリエーター&lt;/a&gt;であるオブジェクトを同じキーを持つオブジェクトに変換しますが、すべてのアクションクリエーターが&lt;a href=&quot;store#dispatchaction&quot;&gt; &lt;code&gt;dispatch&lt;/code&gt; &lt;/a&gt;呼び出しにラップされているため、直接呼び出すことができます。</target>
         </trans-unit>
         <trans-unit id="e1733ad2a0216b6de85e1fcd35dfdee394e2afa0" translate="yes" xml:space="preserve">
           <source>Tutorials and Articles</source>
@@ -3826,182 +4002,6 @@
         <trans-unit id="d174eaad0823043371c5b288b8705217853f594b" translate="yes" xml:space="preserve">
           <source>While middleware can be used for a variety of things, including asynchronous API calls, it's really important that you understand where it comes from. We'll guide you through the thought process leading to middleware, by using logging and crash reporting as examples.</source>
           <target state="translated">ミドルウェアは非同期APIの呼び出しなど様々なことに利用できますが、それがどこから来ているのかを理解することは本当に重要です。ロギングやクラッシュレポートを例に挙げながら、ミドルウェアに至るまでの思考プロセスをご案内します。</target>
-        </trans-unit>
-        <trans-unit id="5ad63caddc89503ad9515ff6b17c9b9ddad8c44b" translate="yes" xml:space="preserve">
-          <source>While there's no single definitive answer to this, most of the time this should not be a concern in either case.</source>
-          <target state="translated">これに対する決定的な答えは一つではありませんが、ほとんどの場合、これはどちらのケースでも気にするべきではありません。</target>
-        </trans-unit>
-        <trans-unit id="baecaba85a30f210b6df40e0df3b4579a527b679" translate="yes" xml:space="preserve">
-          <source>Why do we even overwrite &lt;code&gt;dispatch&lt;/code&gt;? Of course, to be able to call it later, but there's also another reason: so that every middleware can access (and call) the previously wrapped &lt;code&gt;store.dispatch&lt;/code&gt;:</source>
-          <target state="translated">なぜ &lt;code&gt;dispatch&lt;/code&gt; を上書きするのですか？もちろん、後で呼び出すこともできますが、別の理由もあります。すべてのミドルウェアが、以前にラップされた &lt;code&gt;store.dispatch&lt;/code&gt; にアクセス（および呼び出し）できるようにするためです。</target>
-        </trans-unit>
-        <trans-unit id="8f16b35538e53672818a41ec6538a37dcb3ab3da" translate="yes" xml:space="preserve">
-          <source>Why does React-Redux shallowly check each value within the props object returned from &lt;code&gt;mapStateToProp&lt;/code&gt;?</source>
-          <target state="translated">React-Reduxが &lt;code&gt;mapStateToProp&lt;/code&gt; から返されたpropsオブジェクト内の各値を浅くチェックするのはなぜですか？</target>
-        </trans-unit>
-        <trans-unit id="94db3c68fc052fe95a3526f89400cbf7608c18b8" translate="yes" xml:space="preserve">
-          <source>Why does Redux&amp;rsquo;s use of shallow equality checking require immutability?</source>
-          <target state="translated">Reduxの浅い等価性チェックの使用に不変性が必要なのはなぜですか？</target>
-        </trans-unit>
-        <trans-unit id="1e3c854da8974033215e1fa6680270278cfeb926" translate="yes" xml:space="preserve">
-          <source>Why does a reducer mutating the state prevent React-Redux from re-rendering a wrapped component?</source>
-          <target state="translated">レデューサが状態を変異させると、React-Redux がラップされたコンポーネントを再レンダリングできなくなるのはなぜですか?</target>
-        </trans-unit>
-        <trans-unit id="8ee3c091a66db76035f8a4ca74463446e1e64e6a" translate="yes" xml:space="preserve">
-          <source>Why does a selector mutating and returning a persistent object to &lt;code&gt;mapStateToProps&lt;/code&gt; prevent React-Redux from re-rendering a wrapped component?</source>
-          <target state="translated">セレクターが変更して永続オブジェクトを &lt;code&gt;mapStateToProps&lt;/code&gt; に返すのはなぜReact-Reduxがラップされたコンポーネントを再レンダリングしないのですか？</target>
-        </trans-unit>
-        <trans-unit id="644fb85f7f965c72f4406c2ac164f794580f3172" translate="yes" xml:space="preserve">
-          <source>Why don't I have &lt;code&gt;this.props.dispatch&lt;/code&gt; available in my connected component?</source>
-          <target state="translated">接続コンポーネントで &lt;code&gt;this.props.dispatch&lt;/code&gt; を使用できないのはなぜですか？</target>
-        </trans-unit>
-        <trans-unit id="9070dbd8c65265905f9ee4a7b2376e7eafe21a53" translate="yes" xml:space="preserve">
-          <source>Why don't I have this.props.dispatch available in my connected component?</source>
-          <target state="translated">接続されているコンポーネントでthis.props.dispatchが利用できるようになっていないのはなぜですか?</target>
-        </trans-unit>
-        <trans-unit id="187fff4819a25361b7b72220761e6b7a66afabd9" translate="yes" xml:space="preserve">
-          <source>Why is immutability required by Redux?</source>
-          <target state="translated">なぜReduxでは不変性が必要なのか?</target>
-        </trans-unit>
-        <trans-unit id="ef930e2cf88a5db6b834d3fe1be3317cae525972" translate="yes" xml:space="preserve">
-          <source>Why is immutability required in Redux?</source>
-          <target state="translated">なぜReduxでは不変性が必要なのか?</target>
-        </trans-unit>
-        <trans-unit id="8bcdba5809f1620e1841e83e3768ab2d2842bcd2" translate="yes" xml:space="preserve">
-          <source>Why is it &lt;code&gt;42&lt;/code&gt;, and not &lt;code&gt;0&lt;/code&gt;, this time? Because &lt;code&gt;createStore&lt;/code&gt; was called with &lt;code&gt;42&lt;/code&gt; as the second argument. This argument becomes the &lt;code&gt;state&lt;/code&gt; passed to your reducer along with the dummy action. &lt;strong&gt;This time, &lt;code&gt;state&lt;/code&gt; is not undefined (it's &lt;code&gt;42&lt;/code&gt;!), so ES6 default argument syntax has no effect.&lt;/strong&gt; The &lt;code&gt;state&lt;/code&gt; is &lt;code&gt;42&lt;/code&gt;, and &lt;code&gt;42&lt;/code&gt; is returned from the reducer.</source>
-          <target state="translated">今回は &lt;code&gt;0&lt;/code&gt; ではなく &lt;code&gt;42&lt;/code&gt; になっているのはなぜですか？2番目の引数として &lt;code&gt;42&lt;/code&gt; を指定して &lt;code&gt;createStore&lt;/code&gt; が呼び出されたためです。この引数は、ダミーアクションとともにレデューサーに渡される &lt;code&gt;state&lt;/code&gt; なります。&lt;strong&gt;今回&lt;/strong&gt;&lt;strong&gt;は&lt;/strong&gt;&lt;strong&gt;、&lt;/strong&gt;&lt;strong&gt; &lt;code&gt;state&lt;/code&gt; &lt;/strong&gt;&lt;strong&gt;が未定義ではない（&lt;/strong&gt;&lt;strong&gt; &lt;code&gt;42&lt;/code&gt; である&lt;/strong&gt;&lt;strong&gt;）ため、ES6のデフォルトの引数構文は無効です。&lt;/strong&gt; &lt;code&gt;state&lt;/code&gt; ある &lt;code&gt;42&lt;/code&gt; 、および &lt;code&gt;42&lt;/code&gt; が減速から返されます。&lt;strong&gt;&lt;/strong&gt;</target>
-        </trans-unit>
-        <trans-unit id="6d09f931d0864d72b3013ba7e135c68d6b2c0d13" translate="yes" xml:space="preserve">
-          <source>Why is my component re-rendering too often?</source>
-          <target state="translated">コンポーネントの再レンダリングが頻繁に行われるのはなぜですか?</target>
-        </trans-unit>
-        <trans-unit id="77273d55a2a0fbeee2220902bad56163a526b540" translate="yes" xml:space="preserve">
-          <source>Why is this beneficial? &lt;strong&gt;It is often claimed that constants are unnecessary, and for small projects, this might be correct.&lt;/strong&gt; For larger projects, there are some benefits to defining action types as constants:</source>
-          <target state="translated">なぜこれが有益なのですか？&lt;strong&gt;定数は不要であるとよく言われます。小規模なプロジェクトの場合、これは正しいかもしれません。&lt;/strong&gt;大規模なプロジェクトの場合、アクションタイプを定数として定義することにはいくつかの利点があります。</target>
-        </trans-unit>
-        <trans-unit id="ff0296d28f6b024408ea92b7c1ed963cf8a64adf" translate="yes" xml:space="preserve">
-          <source>Why isn't my component re-rendering, or my mapStateToProps running?</source>
-          <target state="translated">コンポーネントが再レンダリングされない、または mapStateToProps が実行されないのはなぜですか?</target>
-        </trans-unit>
-        <trans-unit id="67ac165008f4be935481141e41f5ad4f0e445971" translate="yes" xml:space="preserve">
-          <source>Why should &lt;code&gt;type&lt;/code&gt; be a string, or at least serializable? Why should my action types be constants?</source>
-          <target state="translated">なぜ &lt;code&gt;type&lt;/code&gt; は文字列、または少なくともシリアライズ可能であるべきですか？アクションタイプが定数である必要があるのはなぜですか？</target>
-        </trans-unit>
-        <trans-unit id="6250d26c1c06d76575d238d1fd90a39d732b6647" translate="yes" xml:space="preserve">
-          <source>Why should I choose Immutable.JS as an immutable library?</source>
-          <target state="translated">Immutable.JSをイミュータブルなライブラリとして選ぶべき理由は?</target>
-        </trans-unit>
-        <trans-unit id="36a89fdc5d2eadc3e614ad18a6f439b16e06ba2e" translate="yes" xml:space="preserve">
-          <source>Why should I use an immutable-focused library such as Immutable.JS?</source>
-          <target state="translated">なぜImmutable.JSのようなイミュータブルに特化したライブラリを使うべきなのか?</target>
-        </trans-unit>
-        <trans-unit id="f9c9ff5d2aa97da2f3c187af80701dfecc789475" translate="yes" xml:space="preserve">
-          <source>Why should type be a string, or at least serializable? Why should my action types be constants?</source>
-          <target state="translated">なぜ型は文字列でなければならないのか、少なくともシリアライズ可能なものでなければならないのか?なぜアクションの型は定数でなければならないのですか?</target>
-        </trans-unit>
-        <trans-unit id="dab3df4bfeab70c04e3398ba91567702008bac36" translate="yes" xml:space="preserve">
-          <source>Why will shallow equality checking not work with mutable objects?</source>
-          <target state="translated">なぜ浅い等質性チェックは、ミュータブルオブジェクトでは機能しないのでしょうか?</target>
-        </trans-unit>
-        <trans-unit id="478cc11a21f0ce66c20e68a01399e12557bac4a6" translate="yes" xml:space="preserve">
-          <source>Wikipedia: Associative Entity</source>
-          <target state="translated">ウィキペディア 連想主体</target>
-        </trans-unit>
-        <trans-unit id="923fc7415b6af8016333316d63e41417d9181e99" translate="yes" xml:space="preserve">
-          <source>Will having &amp;ldquo;one state tree&amp;rdquo; cause memory problems? Will dispatching many actions take up memory?</source>
-          <target state="translated">「1つの状態ツリー」があると、メモリの問題が発生しますか？多くのアクションをディスパッチするとメモリが消費されますか？</target>
-        </trans-unit>
-        <trans-unit id="1ca4941ae83a69d23ea4d39fc06d98dc6f0b9802" translate="yes" xml:space="preserve">
-          <source>With &lt;a href=&quot;https://github.com/reactjs/react-redux&quot;&gt;React Redux&lt;/a&gt;, the wrapper classes generated by the &lt;code&gt;connect()&lt;/code&gt; function do actually look for &lt;code&gt;props.store&lt;/code&gt; if it exists, but it's best if you wrap your root component in &lt;code&gt;&amp;lt;Provider store={store}&amp;gt;&lt;/code&gt; and let React Redux worry about passing the store down. This way components don't need to worry about importing a store module, and isolating a Redux app or enabling server rendering is much easier to do later.</source>
-          <target state="translated">で&lt;a href=&quot;https://github.com/reactjs/react-redux&quot;&gt;Reduxのに反応&lt;/a&gt;によって生成されたラッパークラス &lt;code&gt;connect()&lt;/code&gt; 関数は、実際に探してください &lt;code&gt;props.store&lt;/code&gt; が存在する場合、しかし、あなたはあなたのルートコンポーネントをラップした場合には最適です &lt;code&gt;&amp;lt;Provider store={store}&amp;gt;&lt;/code&gt; と通過についてReduxの心配と反応させダウンストア。このようにして、コンポーネントはストアモジュールのインポートについて心配する必要がなく、Reduxアプリの分離やサーバーレンダリングの有効化は後で行う方がはるかに簡単です。</target>
-        </trans-unit>
-        <trans-unit id="fb5a653a3a5bc160a77a07e48c7fddec333e9161" translate="yes" xml:space="preserve">
-          <source>With &lt;code&gt;combineReducers()&lt;/code&gt; the behavior is more nuanced. Those reducers whose state is specified in &lt;code&gt;preloadedState&lt;/code&gt; will receive that state. Other reducers will receive &lt;code&gt;undefined&lt;/code&gt;&lt;em&gt;and because of that&lt;/em&gt; will fall back to the &lt;code&gt;state = ...&lt;/code&gt; default argument they specify.</source>
-          <target state="translated">&lt;code&gt;combineReducers()&lt;/code&gt; の挙動は、より微妙です。その状態で指定されたものレデューサー &lt;code&gt;preloadedState&lt;/code&gt; はその状態を受信します。他のレデューサーは &lt;code&gt;undefined&lt;/code&gt; を受け取り&lt;em&gt;、そのため、&lt;/em&gt;指定した &lt;code&gt;state = ...&lt;/code&gt; デフォルト引数にフォールバックします。</target>
-        </trans-unit>
-        <trans-unit id="dcb12ee583209b8bb9b311e92be2aa73c59c20e7" translate="yes" xml:space="preserve">
-          <source>With JavaScript, you can accidentally mutate an object (such as the Redux state tree) quite easily without realising it. For example, updating deeply nested properties, creating a new &lt;em&gt;reference&lt;/em&gt; to an object instead of a new object, or performing a shallow copy rather than a deep copy, can all lead to inadvertent object mutations, and can trip up even the most experienced JavaScript coder.</source>
-          <target state="translated">JavaScriptを使用すると、オブジェクト（Redux状態ツリーなど）を、気付かないうちに簡単に誤って変更してしまう可能性があります。たとえば、深くネストされたプロパティを更新したり、新しいオブジェクトではなくオブジェクトへの新しい&lt;em&gt;参照&lt;/em&gt;を作成したり、ディープコピーではなく浅いコピーを実行したりすると、不注意によるオブジェクトの変更につながり、最も経験豊富なJavaScriptコーダーでさえもトリップする可能性があります。 。</target>
-        </trans-unit>
-        <trans-unit id="c279bb3233aaa1e17c77c8a143b0f1883f9cd4d7" translate="yes" xml:space="preserve">
-          <source>With Redux, however, implementing undo history is a breeze. There are three reasons for this:</source>
-          <target state="translated">しかし、Reduxを使えば、undoの履歴を実装するのは簡単です。これには3つの理由があります。</target>
-        </trans-unit>
-        <trans-unit id="30a10f999841101d22cd135f2d787dcfd7a220dd" translate="yes" xml:space="preserve">
-          <source>With Redux, the same update logic can be described as a reducing function:</source>
-          <target state="translated">Reduxでは、同じ更新ロジックを還元関数として記述することができます。</target>
-        </trans-unit>
-        <trans-unit id="c60d5cf0665575903c5afa25eb7d3eed7b4fc200" translate="yes" xml:space="preserve">
-          <source>With this out of the way, let's start writing our reducer by gradually teaching it to understand the &lt;a href=&quot;actions&quot;&gt;actions&lt;/a&gt; we defined earlier.</source>
-          <target state="translated">これが邪魔にならないように、少し前に定義した&lt;a href=&quot;actions&quot;&gt;アクション&lt;/a&gt;を理解するように徐々に教えて、レデューサーを書き始めましょう。</target>
-        </trans-unit>
-        <trans-unit id="fee9030454f12e22bef2b8be7208f6154da76739" translate="yes" xml:space="preserve">
-          <source>Without &lt;a href=&quot;middleware&quot;&gt;middleware&lt;/a&gt;, Redux store only supports &lt;a href=&quot;../basics/dataflow&quot;&gt;synchronous data flow&lt;/a&gt;. This is what you get by default with &lt;a href=&quot;../api/createstore&quot;&gt;&lt;code&gt;createStore()&lt;/code&gt;&lt;/a&gt;.</source>
-          <target state="translated">&lt;a href=&quot;middleware&quot;&gt;ミドルウェアが&lt;/a&gt;ない場合、Reduxストアは&lt;a href=&quot;../basics/dataflow&quot;&gt;同期データフロー&lt;/a&gt;のみをサポートします。これは、デフォルトで&lt;a href=&quot;../api/createstore&quot;&gt; &lt;code&gt;createStore()&lt;/code&gt; &lt;/a&gt;で取得できるものです。</target>
-        </trans-unit>
-        <trans-unit id="b879db99111e27d801d9201a249f4ff8dadbc225" translate="yes" xml:space="preserve">
-          <source>Without &lt;code&gt;combineReducers()&lt;/code&gt; or similar manual code, &lt;code&gt;preloadedState&lt;/code&gt; always wins over &lt;code&gt;state = ...&lt;/code&gt; in the reducer because the &lt;code&gt;state&lt;/code&gt; passed to the reducer &lt;em&gt;is&lt;/em&gt;&lt;code&gt;preloadedState&lt;/code&gt; and &lt;em&gt;is not&lt;/em&gt;&lt;code&gt;undefined&lt;/code&gt;, so the ES6 argument syntax doesn't apply.</source>
-          <target state="translated">なければ &lt;code&gt;combineReducers()&lt;/code&gt; または同様のマニュアルコード、 &lt;code&gt;preloadedState&lt;/code&gt; はいつもに勝ち &lt;code&gt;state = ...&lt;/code&gt; ので、減速中 &lt;code&gt;state&lt;/code&gt; 減速に渡さが&lt;em&gt;ある&lt;/em&gt; &lt;code&gt;preloadedState&lt;/code&gt; と&lt;em&gt;されていない&lt;/em&gt; &lt;code&gt;undefined&lt;/code&gt; ES6引数の構文が適用されませんので、。</target>
-        </trans-unit>
-        <trans-unit id="93111501bb024fd914d89cdba95cef4a48a41268" translate="yes" xml:space="preserve">
-          <source>Without any middleware, &lt;a href=&quot;../api/store#dispatch&quot;&gt;&lt;code&gt;dispatch&lt;/code&gt;&lt;/a&gt; only accepts a plain object, so we have to perform AJAX calls inside our components:</source>
-          <target state="translated">ミドルウェアがない場合、&lt;a href=&quot;../api/store#dispatch&quot;&gt; &lt;code&gt;dispatch&lt;/code&gt; &lt;/a&gt;はプレーンオブジェクトのみを受け入れるため、コンポーネント内でAJAX呼び出しを実行する必要があります。</target>
-        </trans-unit>
-        <trans-unit id="3eaee8c6d91975cebb24c4050db09591d953bf58" translate="yes" xml:space="preserve">
-          <source>Won't calling &amp;ldquo;all my reducers&amp;rdquo; for each action be slow?</source>
-          <target state="translated">各アクションで「すべてのレデューサー」を呼び出すのが遅いのではないですか？</target>
-        </trans-unit>
-        <trans-unit id="6136c4a62a84feac2443e18a9f39e199c0a98340" translate="yes" xml:space="preserve">
-          <source>Wordpress's new admin page</source>
-          <target state="translated">ワードプレスの新しい管理画面</target>
-        </trans-unit>
-        <trans-unit id="69c79c2885e8ffba979a60fb509366f84a77cc7d" translate="yes" xml:space="preserve">
-          <source>Working with VK API (in Russian)</source>
-          <target state="translated">VK API での作業 (ロシア語)</target>
-        </trans-unit>
-        <trans-unit id="1a31d58278381294346a4e44a8fa95eea8b2e991" translate="yes" xml:space="preserve">
-          <source>Wouldn't it be nice if we logged every action that happens in the app, together with the state computed after it? When something goes wrong, we can look back at our log, and figure out which action corrupted the state.</source>
-          <target state="translated">アプリ内で発生したすべてのアクションを、その後に計算された状態とともにログに記録しておくといいと思いませんか?何か問題が発生したとき、ログを見返して、どのアクションがステートを破損させたかを把握できます。</target>
-        </trans-unit>
-        <trans-unit id="287cf4a678ff4e9d1ea3555ab140fc6d89ea8b80" translate="yes" xml:space="preserve">
-          <source>Wouldn't it be useful if, any time an error is thrown as a result of dispatching an action, we would send it to a crash reporting service like &lt;a href=&quot;https://getsentry.com/welcome/&quot;&gt;Sentry&lt;/a&gt; with the stack trace, the action that caused the error, and the current state? This way it's much easier to reproduce the error in development.</source>
-          <target state="translated">アクションのディスパッチの結果としてエラーがスローされるときはいつでも、スタックトレース、エラーの原因となったアクション、および現在の状態とともに、それを&lt;a href=&quot;https://getsentry.com/welcome/&quot;&gt;Sentry&lt;/a&gt;などのクラッシュレポートサービスに送信すると便利ではないでしょうか。これにより、開発中のエラーを再現するのがはるかに簡単になります。</target>
-        </trans-unit>
-        <trans-unit id="411ddc1bcac2f709ddb631f9805e03c11ac7e355" translate="yes" xml:space="preserve">
-          <source>Wrapping the Reducer</source>
-          <target state="translated">レジューサーを包む</target>
-        </trans-unit>
-        <trans-unit id="ba0e9312c8cb9cd6ef1a61e5d88575514a7ba12b" translate="yes" xml:space="preserve">
-          <source>Writing Tests</source>
-          <target state="translated">筆記試験</target>
-        </trans-unit>
-        <trans-unit id="e92ef945f3ed541f8b7064bd91824ad741ef1405" translate="yes" xml:space="preserve">
-          <source>Writing simple action creators can be tiresome and often ends up generating redundant boilerplate code:</source>
-          <target state="translated">シンプルなアクションクリエイターを書くのは疲れるし、多くの場合、冗長なボイラプレートコードを生成することになります。</target>
-        </trans-unit>
-        <trans-unit id="80dc0881b1c90b466a5ebf41c749b8683c142f76" translate="yes" xml:space="preserve">
-          <source>Ximedes</source>
-          <target state="translated">Ximedes</target>
-        </trans-unit>
-        <trans-unit id="5397e0583f14f6c88de06b1ef28f460a1fb5b0ae" translate="yes" xml:space="preserve">
-          <source>Yes</source>
-          <target state="translated">Yes</target>
-        </trans-unit>
-        <trans-unit id="885f3940d9ce7913d6e6d671fe072b2efd348d82" translate="yes" xml:space="preserve">
-          <source>Yes, lots of them! To name just a few:</source>
-          <target state="translated">そう、たくさん!いくつか挙げればキリがありません。</target>
-        </trans-unit>
-        <trans-unit id="677676d61dff082b230a183ba82de368a4fd2ae9" translate="yes" xml:space="preserve">
-          <source>You Might Not Need Redux</source>
-          <target state="translated">あなたはReduxを必要としないかもしれません</target>
-        </trans-unit>
-        <trans-unit id="b5debd85103d524869a8aafb925b357862c1933e" translate="yes" xml:space="preserve">
-          <source>You can also enable the &lt;a href=&quot;recipes/usingobjectspreadoperator&quot;&gt;object spread operator proposal&lt;/a&gt; for a more succinct syntax:</source>
-          <target state="translated">より簡潔な構文の&lt;a href=&quot;recipes/usingobjectspreadoperator&quot;&gt;オブジェクトスプレッドオペレーターの提案&lt;/a&gt;を有効にすることもできます。</target>
-        </trans-unit>
-        <trans-unit id="ea3d01095c6b6725a225b7568204932eba587586" translate="yes" xml:space="preserve">
-          <source>You can always write a function that generates an action creator:</source>
-          <target state="translated">アクションクリエーターを生成する関数は必ず書けます。</target>
         </trans-unit>
       </group>
     </body>

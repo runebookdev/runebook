@@ -3,6 +3,34 @@
   <file source-language="en" target-language="ja" datatype="htmlbody" original="go">
     <body>
       <group id="go">
+        <trans-unit id="a7394665dc5b3d21e6abc1566eec56cbff266f10" translate="yes" xml:space="preserve">
+          <source>Close closes the reader; subsequent writes to the write half of the pipe will return the error ErrClosedPipe.</source>
+          <target state="translated">Close はリーダーを閉じます。その後のパイプの書き込み半分への書き込みは ErrClosedPipe というエラーを返します。</target>
+        </trans-unit>
+        <trans-unit id="4bdc20107bf4231f79596e877811964979986697" translate="yes" xml:space="preserve">
+          <source>Close closes the statement.</source>
+          <target state="translated">クローズはステートメントを閉じます。</target>
+        </trans-unit>
+        <trans-unit id="106e9814bb640efe24e830aa126c2c54c6dc95c2" translate="yes" xml:space="preserve">
+          <source>Close closes the tar archive by flushing the padding, and writing the footer. If the current file (from a prior call to WriteHeader) is not fully written, then this returns an error.</source>
+          <target state="translated">Close は、パディングをフラッシュし、フッターを書き込むことで tar アーカイブを閉じます。現在のファイル (以前に WriteHeader を呼び出したときのもの)が完全に書き込まれていない場合は、エラーを返します。</target>
+        </trans-unit>
+        <trans-unit id="352516c54e1182715d16a990d5c36e2341135718" translate="yes" xml:space="preserve">
+          <source>Close closes the underlying Writer and returns its Close return value, if the Writer is also an io.Closer. Otherwise it returns nil.</source>
+          <target state="translated">Close は、ライターが io.Closer である場合は、そのライターを閉じ、その Close の戻り値を返します。それ以外の場合はnilを返します。</target>
+        </trans-unit>
+        <trans-unit id="52ed6590b2322e36c0e5bf1047b994dc45204fd3" translate="yes" xml:space="preserve">
+          <source>Close closes the writer; subsequent reads from the read half of the pipe will return no bytes and EOF.</source>
+          <target state="translated">Close はライタを閉じます。パイプのリード半分からのリードはノーバイトとEOFを返します。</target>
+        </trans-unit>
+        <trans-unit id="200b8523cd103f0c8cfd18d1f36d3268f60a35d8" translate="yes" xml:space="preserve">
+          <source>Close does not attempt to close (and does not even know about) any hijacked connections, such as WebSockets.</source>
+          <target state="translated">Close は、WebSockets のようなハイジャックされた接続を閉じようとはしません (また、そのことすら知りません)。</target>
+        </trans-unit>
+        <trans-unit id="6c8f276efb10d5e03a4e7e0b4c3a39470cd47092" translate="yes" xml:space="preserve">
+          <source>Close finishes the multipart message and writes the trailing boundary end line to the output.</source>
+          <target state="translated">Close はマルチパートメッセージを終了し、末尾の境界線を出力に書き込みます。</target>
+        </trans-unit>
         <trans-unit id="4729b3f8428d27fe7962c988912499dee821e961" translate="yes" xml:space="preserve">
           <source>Close finishes writing the zip file by writing the central directory. It does not close the underlying writer.</source>
           <target state="translated">Close は、中央ディレクトリを書き込んで zip ファイルの書き込みを終了します。下位のライタを閉じるわけではありません。</target>
@@ -1902,6 +1930,10 @@
         <trans-unit id="c22b6da18b15dfcb152711437d1c5b6b668025fa" translate="yes" xml:space="preserve">
           <source>Each Profile has a unique name. A few profiles are predefined:</source>
           <target state="translated">各プロファイルには固有の名前があります。いくつかのプロファイルは事前に定義されています。</target>
+        </trans-unit>
+        <trans-unit id="597849a2d39b0720e33ee0f49cbd2ee09976a78f" translate="yes" xml:space="preserve">
+          <source>Each Seed value is local to a single process and cannot be serialized or otherwise recreated in a different process.</source>
+          <target state="translated">各シード値は単一のプロセスにローカルであり、別のプロセスではシリアライズやその他の方法で再作成することはできません。</target>
         </trans-unit>
         <trans-unit id="d27822f6c94a0fc0349a0c96e70c540078b10e05" translate="yes" xml:space="preserve">
           <source>Each Time has associated with it a Location, consulted when computing the presentation form of the time, such as in the Format, Hour, and Year methods. The methods Local, UTC, and In return a Time with a specific location. Changing the location in this way changes only the presentation; it does not change the instant in time being denoted and therefore does not affect the computations described in earlier paragraphs.</source>
@@ -3970,38 +4002,6 @@
         <trans-unit id="5f1ac8df1f8e77c9fdc27bc0637f8b872484b6a1" translate="yes" xml:space="preserve">
           <source>For base 0, the number prefix determines the actual base: A prefix of &amp;ldquo;0b&amp;rdquo; or &amp;ldquo;0B&amp;rdquo; selects base 2, &amp;ldquo;0o&amp;rdquo; or &amp;ldquo;0O&amp;rdquo; selects base 8, and &amp;ldquo;0x&amp;rdquo; or &amp;ldquo;0X&amp;rdquo; selects base 16. Otherwise, the actual base is 10 and no prefix is accepted. The octal prefix &quot;0&quot; is not supported (a leading &quot;0&quot; is simply considered a &quot;0&quot;).</source>
           <target state="translated">基数0の場合、数値プレフィックスは実際の基数を決定します。「0b」または「0B」のプレフィックスは基数2を選択し、「0o」または「0O」は基数8を選択し、「0x」または「0X」は基数16を選択します。 、実際のベースは10であり、接頭辞は受け入れられません。8進数の接頭辞「0」はサポートされていません（先頭の「0」は単に「0」と見なされます）。</target>
-        </trans-unit>
-        <trans-unit id="8da96f7777bef60314c708eb513a45527fc86e1a" translate="yes" xml:space="preserve">
-          <source>For bases &amp;lt;= 36, lower and upper case letters are considered the same: The letters 'a' to 'z' and 'A' to 'Z' represent digit values 10 to 35. For bases &amp;gt; 36, the upper case letters 'A' to 'Z' represent the digit values 36 to 61.</source>
-          <target state="translated">基数が36以下の場合、小文字と大文字は同じと見なされます。文字「a」から「z」および「A」から「Z」は、10から35までの数字の値を表します。塩基&amp;gt; 36の場合は、大文字の「 AからZは、36から61までの数字の値を表します。</target>
-        </trans-unit>
-        <trans-unit id="1cda30f1e34e7fc3ab26bca0abe9bc827de94de0" translate="yes" xml:space="preserve">
-          <source>For calls ForCompiler with a new FileSet.</source>
-          <target state="translated">新しいFileSetでForCompilerを呼び出す場合。</target>
-        </trans-unit>
-        <trans-unit id="7777ccd24b8bd654eee8980ccc52774364f6122b" translate="yes" xml:space="preserve">
-          <source>For compatibility with Go 1.0, Symbols omits the null symbol at index 0. After retrieving the symbols as symtab, an externally supplied index x corresponds to symtab[x-1], not symtab[x].</source>
-          <target state="translated">Go 1.0との互換性のため、Symbolsはインデックス0のヌル記号を省略します。シンボルを symtab として取得した後、外部から与えられたインデックス x は symtab[x]ではなく symtab[x-1]に対応します。</target>
-        </trans-unit>
-        <trans-unit id="bd3f39afacd60fc39b35ccda1637af8ff2e8c205" translate="yes" xml:space="preserve">
-          <source>For compatibility with Symbols, DynamicSymbols omits the null symbol at index 0. After retrieving the symbols as symtab, an externally supplied index x corresponds to symtab[x-1], not symtab[x].</source>
-          <target state="translated">シンボルとの互換性のため、DynamicSymbols はインデックス 0 の NULL シンボルを省略します。シンボルを symtab として取得した後、外部から与えられたインデックス x は symtab[x]ではなく symtab[x-1]に対応します。</target>
-        </trans-unit>
-        <trans-unit id="ceff07027a0562aae7bcfc8fafd438b3054bb3ea" translate="yes" xml:space="preserve">
-          <source>For complex numbers, the width and precision apply to the two components independently and the result is parenthesized, so %f applied to 1.2+3.4i produces (1.200000+3.400000i).</source>
-          <target state="translated">複素数の場合、幅と精度は 2 つの成分に独立して適用され、結果は括弧で括られるので、%f を 1.2+3.4i に適用すると、(1.200000+3.400000i)となります。</target>
-        </trans-unit>
-        <trans-unit id="9b540b6ad368c9fd7ce41d2cd5a4983671593e81" translate="yes" xml:space="preserve">
-          <source>For compound objects, the elements are printed using these rules, recursively, laid out like this:</source>
-          <target state="translated">複合オブジェクトの場合は、これらのルールを使用して要素を再帰的に印刷し、このようにレイアウトします。</target>
-        </trans-unit>
-        <trans-unit id="33fb692c25f138c6447e3086029bcccc81bc7da5" translate="yes" xml:space="preserve">
-          <source>For compound operands such as slices and structs, the format applies to the elements of each operand, recursively, not to the operand as a whole. Thus %q will quote each element of a slice of strings, and %6.2f will control formatting for each element of a floating-point array.</source>
-          <target state="translated">スライスや構造体などの複合オペランドの場合、フォーマットは、オペランド全体ではなく、各オペランドの要素に再帰的に適用されます。したがって、%q は文字列のスライスの各要素を引用し、%6.2f は浮動小数点配列の各要素の書式設定を制御します。</target>
-        </trans-unit>
-        <trans-unit id="5cab5826d638fdbcb2ad7a5200731c473b3d7274" translate="yes" xml:space="preserve">
-          <source>For control over HTTP client headers, redirect policy, and other settings, create a Client:</source>
-          <target state="translated">HTTP クライアントヘッダ、リダイレクトポリシー、その他の設定を制御するには、Client を作成します。</target>
         </trans-unit>
       </group>
     </body>
