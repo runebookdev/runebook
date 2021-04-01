@@ -3,6 +3,526 @@
   <file source-language="en" target-language="ru" datatype="htmlbody" original="http">
     <body>
       <group id="http">
+        <trans-unit id="5cfd05af6cff4f10fa13fcdf1e53531e0f64c32a" translate="yes" xml:space="preserve">
+          <source>HTTP request message routing is determined by each client based on
+   the target resource, the client's proxy configuration, and
+   establishment or reuse of an inbound connection.  The corresponding
+   response routing follows the same connection chain back to the
+   client.</source>
+          <target state="translated">Маршрутизация сообщений HTTP-запросов определяется каждым клиентом на основе целевого ресурса,конфигурации клиентского прокси-сервера и установления или повторного использования входящего соединения.Соответствующая маршрутизация ответа следует той же цепочке соединений обратно к клиенту.</target>
+        </trans-unit>
+        <trans-unit id="2c8a5e9aaefc55ae6f8b58628a6a46daf09140bd" translate="yes" xml:space="preserve">
+          <source>HTTP request methods</source>
+          <target state="translated">методы HTTP-запроса</target>
+        </trans-unit>
+        <trans-unit id="13dd6cb8837a7e513f219955d516b3e87a62005c" translate="yes" xml:space="preserve">
+          <source>HTTP requests are messages sent by the client to initiate an action on the server. Their &lt;em&gt;start-line&lt;/em&gt; contain three elements:</source>
+          <target state="translated">HTTP-запросы - это сообщения, отправляемые клиентом для инициирования действия на сервере. Их &lt;em&gt;стартовая строка&lt;/em&gt; содержит три элемента:</target>
+        </trans-unit>
+        <trans-unit id="914464e25e17836661d23d43c1739c512c319a50" translate="yes" xml:space="preserve">
+          <source>HTTP requests, and responses, share similar structure and are composed of:</source>
+          <target state="translated">HTTP-запросы и ответы имеют схожую структуру и состоят из них:</target>
+        </trans-unit>
+        <trans-unit id="baed8872df40013bfa5b06f559f07e0a29344282" translate="yes" xml:space="preserve">
+          <source>HTTP response codes indicate whether a specific HTTP request has been successfully completed. Responses are grouped in five classes: informational responses, successful responses, redirections, client errors, and servers errors.</source>
+          <target state="translated">Коды ответа HTTP указывают,был ли конкретный запрос HTTP успешно завершен.Ответы сгруппированы в пять классов:информационные ответы,успешные ответы,перенаправления,ошибки клиентов и серверов.</target>
+        </trans-unit>
+        <trans-unit id="0e68989f0a2de628c6a35155870120ca03c2f18a" translate="yes" xml:space="preserve">
+          <source>HTTP response header field instructs the user agent to store reporting endpoints for an origin.</source>
+          <target state="translated">Поле заголовка ответа HTTP инструктирует пользовательского агента хранить отчетные конечные точки для источника.</target>
+        </trans-unit>
+        <trans-unit id="9bae5d05ad944fb1e294a99bcffd4e35229e257f" translate="yes" xml:space="preserve">
+          <source>HTTP response status codes</source>
+          <target state="translated">коды статуса ответа HTTP</target>
+        </trans-unit>
+        <trans-unit id="b57d1200b41d22a049735dbac8f54f4cf988cf0d" translate="yes" xml:space="preserve">
+          <source>HTTP response status codes indicate whether a specific &lt;a href=&quot;index&quot;&gt;HTTP&lt;/a&gt; request has been successfully completed. Responses are grouped in five classes:</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="0c76e508f304e725a4ab9639fbe06b8e54f58b4d" translate="yes" xml:space="preserve">
+          <source>HTTP response status codes indicate whether a specific &lt;a href=&quot;index&quot;&gt;HTTP&lt;/a&gt; request has been successfully completed. Responses are grouped in five classes: informational responses, successful responses, redirects, client errors, and servers errors. Status codes are defined by &lt;a href=&quot;https://tools.ietf.org/html/rfc2616#section-10&quot;&gt;section 10 of RFC 2616&lt;/a&gt;.</source>
+          <target state="translated">Коды состояния HTTP-ответа указывают, был ли успешно выполнен конкретный &lt;a href=&quot;index&quot;&gt;HTTP-&lt;/a&gt; запрос. Ответы сгруппированы в пять классов: информационные ответы, успешные ответы, перенаправления, ошибки клиента и ошибки серверов. Коды состояния определены в &lt;a href=&quot;https://tools.ietf.org/html/rfc2616#section-10&quot;&gt;разделе 10 RFC 2616&lt;/a&gt; .</target>
+        </trans-unit>
+        <trans-unit id="b5a6f42d4f42646541a1cb9ef004b15fc1e9d233" translate="yes" xml:space="preserve">
+          <source>HTTP retrieval requests using conditional or unconditional GET
+   methods MAY request one or more sub-ranges of the entity, instead of
+   the entire entity, using the Range request header, which applies to
+   the entity returned as the result of the request:
+
+      Range = &quot;Range&quot; &quot;:&quot; ranges-specifier 
+
+   A server MAY ignore the Range header. However, HTTP/1.1 origin
+   servers and intermediate caches ought to support byte ranges when
+   possible, since Range supports efficient recovery from partially
+   failed transfers, and supports efficient partial retrieval of large
+   entities.
+
+   If the server supports the Range header and the specified range or
+   ranges are appropriate for the entity:
+
+      - The presence of a Range header in an unconditional GET modifies
+        what is returned if the GET is otherwise successful. In other
+        words, the response carries a status code of 206 (Partial
+        Content) instead of 200 (OK).
+
+      - The presence of a Range header in a conditional GET (a request
+        using one or both of If-Modified-Since and If-None-Match, or
+        one or both of If-Unmodified-Since and If-Match) modifies what
+        is returned if the GET is otherwise successful and the
+        condition is true. It does not affect the 304 (Not Modified)
+        response returned if the conditional is false.
+
+   In some cases, it might be more appropriate to use the If-Range
+   header (see &lt;a href=&quot;#section-14.27&quot;&gt;section 14.27&lt;/a&gt;) in addition to the Range header.
+
+   If a proxy that supports ranges receives a Range request, forwards
+   the request to an inbound server, and receives an entire entity in
+   reply, it SHOULD only return the requested range to its client. It
+   SHOULD store the entire received response in its cache if that is
+   consistent with its cache allocation policies.</source>
+          <target state="translated">HTTP-запросы на извлечение с использованием условных или безусловных методов GET МОГУТ запрашивать один или несколько поддиапазонов объекта вместо всего объекта, используя заголовок запроса Range, который применяется к объекту, возвращенному в результате запроса: Range = &quot;Range &quot;&quot;: &quot;спецификатор диапазонов Сервер МОЖЕТ игнорировать заголовок диапазона. Однако исходные серверы HTTP / 1.1 и промежуточные кэши должны поддерживать байтовые диапазоны, когда это возможно, поскольку Range поддерживает эффективное восстановление после частично сбойных передач и поддерживает эффективное частичное извлечение больших объектов. Если сервер поддерживает заголовок Range и указанный диапазон или диапазоны подходят для объекта: - Наличие заголовка Range в безусловном GET изменяет то, что возвращается, если GET в противном случае успешно.Другими словами, ответ содержит код состояния 206 (частичное содержимое) вместо 200 (ОК). - Наличие заголовка Range в условном GET (запрос с использованием одного или обоих If-Modified-Since и If-None-Match, или одного или обоих If-Unmodified-Since и If-Match) изменяет то, что возвращается если в противном случае GET успешно и условие истинно. Это не влияет на ответ 304 (Not Modified), возвращаемый, если условие ложно. В некоторых случаях может быть более целесообразным использовать заголовок If-Range (см.или один или оба If-Unmodified-Since и If-Match) изменяют то, что возвращается, если GET в противном случае успешен и условие истинно. Это не влияет на ответ 304 (Not Modified), возвращаемый, если условие ложно. В некоторых случаях может быть более целесообразным использовать заголовок If-Range (см.или один или оба If-Unmodified-Since и If-Match) изменяют то, что возвращается, если GET в противном случае успешен и условие истинно. Это не влияет на ответ 304 (Not Modified), возвращаемый, если условие ложно. В некоторых случаях может быть более целесообразным использовать заголовок If-Range (см.&lt;a href=&quot;#section-14.27&quot;&gt;раздел 14.27&lt;/a&gt; ) в дополнение к заголовку Range. Если прокси-сервер, поддерживающий диапазоны, получает запрос диапазона, перенаправляет запрос на входящий сервер и получает в ответ весь объект, он ДОЛЖЕН возвращать только запрошенный диапазон своему клиенту. Ему СЛЕДУЕТ хранить весь полученный ответ в своем кэше, если это согласуется с его политиками выделения кеша.</target>
+        </trans-unit>
+        <trans-unit id="764bdb74b95275c85a8d7aa1fe3fe82d3d5e9d0f" translate="yes" xml:space="preserve">
+          <source>HTTP status: &lt;a href=&quot;../status/200&quot;&gt;&lt;code&gt;200&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;../status/202&quot;&gt;&lt;code&gt;202&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;../status/204&quot;&gt;&lt;code&gt;204&lt;/code&gt;&lt;/a&gt;</source>
+          <target state="translated">Статус HTTP: &lt;a href=&quot;../status/200&quot;&gt; &lt;code&gt;200&lt;/code&gt; &lt;/a&gt; , &lt;a href=&quot;../status/202&quot;&gt; &lt;code&gt;202&lt;/code&gt; &lt;/a&gt; , &lt;a href=&quot;../status/204&quot;&gt; &lt;code&gt;204&lt;/code&gt; &lt;/a&gt;</target>
+        </trans-unit>
+        <trans-unit id="96e2aaa2653ba0ee26b576dfaebf0854b040cb7a" translate="yes" xml:space="preserve">
+          <source>HTTP tunneling</source>
+          <target state="translated">HTTP-туннелирование</target>
+        </trans-unit>
+        <trans-unit id="269219e381ce4221eb783ce2498c82ac2c3eba0d" translate="yes" xml:space="preserve">
+          <source>HTTP uses Internet Media Types [&lt;a href=&quot;#ref-17&quot;&gt;17&lt;/a&gt;] in the Content-Type (&lt;a href=&quot;#section-14.17&quot;&gt;section&lt;/a&gt;&lt;a href=&quot;#section-14.17&quot;&gt;14.17&lt;/a&gt;) and Accept (&lt;a href=&quot;#section-14.1&quot;&gt;section 14.1&lt;/a&gt;) header fields in order to provide
+   open and extensible data typing and type negotiation.
+
+       media-type     = type &quot;/&quot; subtype *( &quot;;&quot; parameter )
+       type           = token
+       subtype        = token
+
+   Parameters MAY follow the type/subtype in the form of attribute/value
+   pairs (as defined in &lt;a href=&quot;#section-3.6&quot;&gt;section 3.6&lt;/a&gt;).
+
+   The type, subtype, and parameter attribute names are case-
+   insensitive. Parameter values might or might not be case-sensitive,
+   depending on the semantics of the parameter name. Linear white space
+   (LWS) MUST NOT be used between the type and subtype, nor between an
+   attribute and its value. The presence or absence of a parameter might
+   be significant to the processing of a media-type, depending on its
+   definition within the media type registry. 
+
+   Note that some older HTTP applications do not recognize media type
+   parameters. When sending data to older HTTP applications,
+   implementations SHOULD only use media type parameters when they are
+   required by that type/subtype definition.
+
+   Media-type values are registered with the Internet Assigned Number
+   Authority (IANA [&lt;a href=&quot;#ref-19&quot;&gt;19&lt;/a&gt;]). The media type registration process is
+   outlined in &lt;a href=&quot;https://tools.ietf.org/html/rfc1590&quot;&gt;RFC 1590&lt;/a&gt; [&lt;a href=&quot;#ref-17&quot;&gt;17&lt;/a&gt;]. Use of non-registered media types is
+   discouraged.</source>
+          <target state="translated">HTTP использует Internet Media Types [ &lt;a href=&quot;#ref-17&quot;&gt;17&lt;/a&gt; ] в полях заголовка Content-Type ( &lt;a href=&quot;#section-14.17&quot;&gt;раздел &lt;/a&gt;&lt;a href=&quot;#section-14.17&quot;&gt;14.17&lt;/a&gt; ) и Accept ( &lt;a href=&quot;#section-14.1&quot;&gt;раздел 14.1&lt;/a&gt; ) для обеспечения открытой и расширяемой типизации данных и согласования типов. media-type = type &quot;/&quot; subtype * (&quot;;&quot; параметр) type = token subtype = token Параметры МОГУТ следовать за типом / подтипом в форме пар атрибут / значение (как определено в &lt;a href=&quot;#section-3.6&quot;&gt;разделе 3.6.&lt;/a&gt;). В именах атрибутов типа, подтипа и параметра регистр не учитывается. Значения параметров могут или не могут быть чувствительны к регистру, в зависимости от семантики имени параметра. Линейные пробелы (LWS) НЕ ДОЛЖНЫ использоваться между типом и подтипом, а также между атрибутом и его значением. Наличие или отсутствие параметра может иметь значение для обработки типа носителя, в зависимости от его определения в реестре типов носителей. Обратите внимание, что некоторые старые приложения HTTP не распознают параметры типа мультимедиа. При отправке данных в более старые приложения HTTP реализации ДОЛЖНЫ использовать параметры типа носителя только тогда, когда они требуются определением этого типа / подтипа. Значения типа носителя регистрируются в Internet Assigned Number Authority (IANA [ &lt;a href=&quot;#ref-19&quot;&gt;19&lt;/a&gt;]). Процесс регистрации типа носителя описан в &lt;a href=&quot;https://tools.ietf.org/html/rfc1590&quot;&gt;RFC 1590&lt;/a&gt; [ &lt;a href=&quot;#ref-17&quot;&gt;17&lt;/a&gt; ]. Использование незарегистрированных типов носителей не рекомендуется.</target>
+        </trans-unit>
+        <trans-unit id="b80bb07a4e60213a6bb04971b80d505cc84d5109" translate="yes" xml:space="preserve">
+          <source>HTTP uses Internet media types [&lt;a href=&quot;https://tools.ietf.org/html/rfc2046&quot;&gt;RFC2046&lt;/a&gt;] in the Content-Type
+   (&lt;a href=&quot;#section-3.1.1.5&quot;&gt;Section 3.1.1.5&lt;/a&gt;) and Accept (&lt;a href=&quot;#section-5.3.2&quot;&gt;Section 5.3.2&lt;/a&gt;) header fields in order
+   to provide open and extensible data typing and type negotiation.
+   Media types define both a data format and various processing models:
+   how to process that data in accordance with each context in which it
+   is received.
+
+     media-type = type &quot;/&quot; subtype *( OWS &quot;;&quot; OWS parameter )
+     type       = token
+     subtype    = token
+
+   The type/subtype MAY be followed by parameters in the form of
+   name=value pairs.
+
+     parameter      = token &quot;=&quot; ( token / quoted-string ) 
+
+   The type, subtype, and parameter name tokens are case-insensitive.
+   Parameter values might or might not be case-sensitive, depending on
+   the semantics of the parameter name.  The presence or absence of a
+   parameter might be significant to the processing of a media-type,
+   depending on its definition within the media type registry.
+
+   A parameter value that matches the token production can be
+   transmitted either as a token or within a quoted-string.  The quoted
+   and unquoted values are equivalent.  For example, the following
+   examples are all equivalent, but the first is preferred for
+   consistency:
+
+     text/html;charset=utf-8
+     text/html;charset=UTF-8
+     Text/HTML;Charset=&quot;utf-8&quot;
+     text/html; charset=&quot;utf-8&quot;
+
+   Internet media types ought to be registered with IANA according to
+   the procedures defined in [&lt;a href=&quot;#ref-BCP13&quot;&gt;BCP13&lt;/a&gt;].
+
+      Note: Unlike some similar constructs in other header fields, media
+      type parameters do not allow whitespace (even &quot;bad&quot; whitespace)
+      around the &quot;=&quot; character.</source>
+          <target state="translated">HTTP использует типы Интернет-носителей [ &lt;a href=&quot;https://tools.ietf.org/html/rfc2046&quot;&gt;RFC2046&lt;/a&gt; ] в Content-Type ( &lt;a href=&quot;#section-3.1.1.5&quot;&gt;раздел 3.1.1.5&lt;/a&gt; ) и Accept ( &lt;a href=&quot;#section-5.3.2&quot;&gt;раздел 5.3.2).&lt;/a&gt;) поля заголовка, чтобы обеспечить открытую и расширяемую типизацию данных и согласование типов. Типы медиа определяют как формат данных, так и различные модели обработки: как обрабатывать эти данные в соответствии с каждым контекстом, в котором они получены. media-type = type &quot;/&quot; subtype * (OWS &quot;;&quot; OWS parameter) type = token subtype = token За типом / подтипом могут следовать параметры в форме пар имя = значение. параметр = токен &quot;=&quot; (токен / строка в кавычках) В токенах типа, подтипа и имени параметра регистр не учитывается. Значения параметров могут или не могут быть чувствительны к регистру, в зависимости от семантики имени параметра. Наличие или отсутствие параметра может иметь значение для обработки медиа-типа,в зависимости от его определения в реестре типов носителей. Значение параметра, соответствующее производству токена, может быть передано либо как токен, либо в строке в кавычках. Цитированные и некотируемые значения эквивалентны. Например, все следующие примеры эквивалентны, но первый предпочтительнее для согласованности: text / html; charset = utf-8 text / html; charset = UTF-8 Text / HTML; Charset = &quot;utf-8&quot; text / html ; charset = &quot;utf-8&quot; Типы Интернет-носителей должны быть зарегистрированы в IANA в соответствии с процедурами, определенными в [но для единообразия предпочтительнее первое: текст / html; charset = utf-8 text / html; charset = UTF-8 Text / HTML; Charset = &quot;utf-8&quot; text / html; charset = &quot;utf-8&quot; Типы Интернет-носителей должны быть зарегистрированы в IANA в соответствии с процедурами, определенными в [но для единообразия предпочтительнее первое: текст / html; charset = utf-8 text / html; charset = UTF-8 Text / HTML; Charset = &quot;utf-8&quot; text / html; charset = &quot;utf-8&quot; Типы Интернет-носителей должны быть зарегистрированы в IANA в соответствии с процедурами, определенными в [&lt;a href=&quot;#ref-BCP13&quot;&gt;BCP13&lt;/a&gt; ]. Примечание. В отличие от некоторых подобных конструкций в других полях заголовка, параметры типа мультимедиа не допускают пробелов (даже &amp;laquo;плохих&amp;raquo; пробелов) вокруг символа &amp;laquo;=&amp;raquo;.</target>
+        </trans-unit>
+        <trans-unit id="aa6f0f90fa306d4b1ed46d12bd83446d94bb910c" translate="yes" xml:space="preserve">
+          <source>HTTP uses a &quot;&amp;lt;major&amp;gt;.&amp;lt;minor&amp;gt;&quot; numbering scheme to indicate versions
+   of the protocol.  This specification defines version &quot;1.1&quot;.  The
+   protocol version as a whole indicates the sender's conformance with
+   the set of requirements laid out in that version's corresponding
+   specification of HTTP. 
+
+   The version of an HTTP message is indicated by an HTTP-version field
+   in the first line of the message.  HTTP-version is case-sensitive.
+
+     HTTP-version  = HTTP-name &quot;/&quot; DIGIT &quot;.&quot; DIGIT
+     HTTP-name     = %x48.54.54.50 ; &quot;HTTP&quot;, case-sensitive
+
+   The HTTP version number consists of two decimal digits separated by a
+   &quot;.&quot; (period or decimal point).  The first digit (&quot;major version&quot;)
+   indicates the HTTP messaging syntax, whereas the second digit (&quot;minor
+   version&quot;) indicates the highest minor version within that major
+   version to which the sender is conformant and able to understand for
+   future communication.  The minor version advertises the sender's
+   communication capabilities even when the sender is only using a
+   backwards-compatible subset of the protocol, thereby letting the
+   recipient know that more advanced features can be used in response
+   (by servers) or in future requests (by clients).
+
+   When an HTTP/1.1 message is sent to an HTTP/1.0 recipient [&lt;a href=&quot;https://tools.ietf.org/html/rfc1945&quot;&gt;RFC1945&lt;/a&gt;]
+   or a recipient whose version is unknown, the HTTP/1.1 message is
+   constructed such that it can be interpreted as a valid HTTP/1.0
+   message if all of the newer features are ignored.  This specification
+   places recipient-version requirements on some new features so that a
+   conformant sender will only use compatible features until it has
+   determined, through configuration or the receipt of a message, that
+   the recipient supports HTTP/1.1.
+
+   The interpretation of a header field does not change between minor
+   versions of the same major HTTP version, though the default behavior
+   of a recipient in the absence of such a field can change.  Unless
+   specified otherwise, header fields defined in HTTP/1.1 are defined
+   for all versions of HTTP/1.x.  In particular, the Host and Connection
+   header fields ought to be implemented by all HTTP/1.x implementations
+   whether or not they advertise conformance with HTTP/1.1.
+
+   New header fields can be introduced without changing the protocol
+   version if their defined semantics allow them to be safely ignored by
+   recipients that do not recognize them.  Header field extensibility is
+   discussed in &lt;a href=&quot;#section-3.2.1&quot;&gt;Section 3.2.1&lt;/a&gt;.
+
+   Intermediaries that process HTTP messages (i.e., all intermediaries
+   other than those acting as tunnels) MUST send their own HTTP-version
+   in forwarded messages.  In other words, they are not allowed to
+   blindly forward the first line of an HTTP message without ensuring
+   that the protocol version in that message matches a version to which
+   that intermediary is conformant for both the receiving and sending of
+   messages.  Forwarding an HTTP message without rewriting the 
+
+   HTTP-version might result in communication errors when downstream
+   recipients use the message sender's version to determine what
+   features are safe to use for later communication with that sender.
+
+   A client SHOULD send a request version equal to the highest version
+   to which the client is conformant and whose major version is no
+   higher than the highest version supported by the server, if this is
+   known.  A client MUST NOT send a version to which it is not
+   conformant.
+
+   A client MAY send a lower request version if it is known that the
+   server incorrectly implements the HTTP specification, but only after
+   the client has attempted at least one normal request and determined
+   from the response status code or header fields (e.g., Server) that
+   the server improperly handles higher request versions.
+
+   A server SHOULD send a response version equal to the highest version
+   to which the server is conformant that has a major version less than
+   or equal to the one received in the request.  A server MUST NOT send
+   a version to which it is not conformant.  A server can send a 505
+   (HTTP Version Not Supported) response if it wishes, for any reason,
+   to refuse service of the client's major protocol version.
+
+   A server MAY send an HTTP/1.0 response to a request if it is known or
+   suspected that the client incorrectly implements the HTTP
+   specification and is incapable of correctly processing later version
+   responses, such as when a client fails to parse the version number
+   correctly or when an intermediary is known to blindly forward the
+   HTTP-version even when it doesn't conform to the given minor version
+   of the protocol.  Such protocol downgrades SHOULD NOT be performed
+   unless triggered by specific client attributes, such as when one or
+   more of the request header fields (e.g., User-Agent) uniquely match
+   the values sent by a client known to be in error.
+
+   The intention of HTTP's versioning design is that the major number
+   will only be incremented if an incompatible message syntax is
+   introduced, and that the minor number will only be incremented when
+   changes made to the protocol have the effect of adding to the message
+   semantics or implying additional capabilities of the sender.
+   However, the minor version was not incremented for the changes
+   introduced between [&lt;a href=&quot;https://tools.ietf.org/html/rfc2068&quot;&gt;RFC2068&lt;/a&gt;] and [&lt;a href=&quot;https://tools.ietf.org/html/rfc2616&quot;&gt;RFC2616&lt;/a&gt;], and this revision has
+   specifically avoided any such changes to the protocol.
+
+   When an HTTP message is received with a major version number that the
+   recipient implements, but a higher minor version number than what the
+   recipient implements, the recipient SHOULD process the message as if
+   it were in the highest minor version within that major version to
+   which the recipient is conformant.  A recipient can assume that a 
+
+   message with a higher minor version, when sent to a recipient that
+   has not yet indicated support for that higher version, is
+   sufficiently backwards-compatible to be safely processed by any
+   implementation of the same major version.</source>
+          <target state="translated">HTTP использует схему нумерации &amp;laquo;&amp;lt;основной&amp;gt;. &amp;lt;Второстепенный&amp;gt;&amp;raquo; для обозначения версий протокола. Эта спецификация определяет версию &amp;laquo;1.1&amp;raquo;. Версия протокола в целом указывает на соответствие отправителя набору требований, изложенных в соответствующей спецификации HTTP для этой версии. Версия HTTP-сообщения указывается в поле HTTP-версия в первой строке сообщения. HTTP-версия чувствительна к регистру. HTTP-версия = HTTP-имя &quot;/&quot; ЦИФРА &quot;.&quot; ЦИФРОВОЕ HTTP-имя =% x48.54.54.50; &amp;laquo;HTTP&amp;raquo; с учетом регистра Номер версии HTTP состоит из двух десятичных цифр, разделенных знаком &amp;laquo;.&amp;raquo; (точка или десятичная точка). Первая цифра (&amp;laquo;основная версия&amp;raquo;) указывает синтаксис HTTP-сообщений,тогда как вторая цифра (&amp;laquo;дополнительная версия&amp;raquo;) указывает наивысшую дополнительную версию в этой основной версии, которой отправитель соответствует и способен понять для будущего общения. Младшая версия объявляет о коммуникационных возможностях отправителя, даже когда отправитель использует только обратно совместимое подмножество протокола, тем самым давая получателю знать, что более продвинутые функции могут использоваться в ответе (серверами) или в будущих запросах (клиентами). , Когда сообщение HTTP / 1.1 отправляется получателю HTTP / 1.0 [s возможности связи, даже когда отправитель использует только обратно совместимое подмножество протокола, тем самым давая получателю знать, что более продвинутые функции могут быть использованы в ответе (серверами) или в будущих запросах (клиентами). Когда сообщение HTTP / 1.1 отправляется получателю HTTP / 1.0 [s возможности связи, даже когда отправитель использует только обратно совместимое подмножество протокола, тем самым давая получателю знать, что более продвинутые функции могут быть использованы в ответе (серверами) или в будущих запросах (клиентами). Когда сообщение HTTP / 1.1 отправляется получателю HTTP / 1.0 [&lt;a href=&quot;https://tools.ietf.org/html/rfc1945&quot;&gt;RFC1945&lt;/a&gt;] или получателя, версия которого неизвестна, сообщение HTTP / 1.1 построено так, что его можно интерпретировать как действительное сообщение HTTP / 1.0, если все новые функции игнорируются. Эта спецификация устанавливает требования к версии получателя для некоторых новых функций, так что соответствующий отправитель будет использовать совместимые функции только до тех пор, пока он не определит посредством конфигурации или получения сообщения, что получатель поддерживает HTTP / 1.1. Интерпретация поля заголовка не меняется между дополнительными версиями одной и той же основной версии HTTP, хотя поведение получателя по умолчанию в отсутствие такого поля может измениться. Если не указано иное, поля заголовка, определенные в HTTP / 1.1, определены для всех версий HTTP / 1.x. В частности,поля заголовка Host и Connection должны быть реализованы всеми реализациями HTTP / 1.x, независимо от того, объявляют ли они соответствие с HTTP / 1.1. Новые поля заголовка могут быть введены без изменения версии протокола, если их определенная семантика позволяет безопасно игнорировать их получатели, которые их не распознают. Расширяемость поля заголовка обсуждается в&lt;a href=&quot;#section-3.2.1&quot;&gt;Раздел 3.2.1&lt;/a&gt;, Посредники, которые обрабатывают сообщения HTTP (т. Е. Все посредники, кроме тех, которые действуют как туннели), ДОЛЖНЫ отправлять свои собственные версии HTTP в пересылаемых сообщениях. Другими словами, им не разрешается вслепую пересылать первую строку HTTP-сообщения, не убедившись, что версия протокола в этом сообщении соответствует версии, которой этот посредник соответствует как для приема, так и для отправки сообщений. Пересылка HTTP-сообщения без перезаписи HTTP-версии может привести к ошибкам связи, когда нижестоящие получатели используют версию отправителя сообщения, чтобы определить, какие функции можно безопасно использовать для последующего обмена данными с этим отправителем.Клиенту СЛЕДУЕТ отправить версию запроса, равную наивысшей версии, которой соответствует клиент и чья основная версия не выше самой высокой версии, поддерживаемой сервером, если это известно. Клиент НЕ ДОЛЖЕН отправлять версию, которой он не соответствует. Клиент МОЖЕТ отправить более низкую версию запроса, если известно, что сервер неправильно реализует спецификацию HTTP, но только после того, как клиент попытался выполнить хотя бы один нормальный запрос и определил из кода состояния ответа или полей заголовка (например, Сервер), что сервер неправильно обрабатывает более высокие версии запросов. Серверу СЛЕДУЕТ отправлять версию ответа, равную наивысшей версии, которой соответствует сервер, которая имеет основную версию, меньшую или равную той, которая была получена в запросе.Сервер НЕ ДОЛЖЕН отправлять версию, которой он не соответствует. Сервер может отправить ответ 505 (версия HTTP не поддерживается), если он по какой-либо причине желает отказаться от обслуживания основной версии протокола клиента. Сервер МОЖЕТ отправить ответ HTTP / 1.0 на запрос, если известно или подозревается, что клиент неправильно реализует спецификацию HTTP и не может правильно обрабатывать ответы более поздних версий, например, когда клиенту не удается правильно проанализировать номер версии или когда известно, что посредник слепо пересылает HTTP-версию, даже если она не соответствует данной дополнительной версии протокола. Такое понижение версии протокола НЕ ДОЛЖНО выполняться, если только оно не инициировано конкретными атрибутами клиента, например, когда одно или несколько полей заголовка запроса (например,User-Agent) однозначно соответствуют значениям, отправленным клиентом, заведомо ошибочным. Цель дизайна управления версиями HTTP состоит в том, что старший номер будет увеличиваться только в том случае, если введен несовместимый синтаксис сообщения, а второстепенный номер будет увеличиваться только тогда, когда изменения, внесенные в протокол, повлияют на добавление к семантике сообщения или подразумевают дополнительные возможности отправителя. Однако дополнительная версия не была увеличена для изменений, внесенных между [и что младший номер будет увеличиваться только тогда, когда изменения, внесенные в протокол, повлекут за собой добавление к семантике сообщения или подразумевают дополнительные возможности отправителя. Однако дополнительная версия не была увеличена для изменений, внесенных между [и что младший номер будет увеличиваться только тогда, когда изменения, внесенные в протокол, повлекут за собой добавление к семантике сообщения или подразумевают дополнительные возможности отправителя. Однако дополнительная версия не была увеличена для изменений, внесенных между [&lt;a href=&quot;https://tools.ietf.org/html/rfc2068&quot;&gt;RFC2068&lt;/a&gt; ] и [ &lt;a href=&quot;https://tools.ietf.org/html/rfc2616&quot;&gt;RFC2616&lt;/a&gt; ], и эта редакция специально избегает любых таких изменений в протоколе. Когда получено сообщение HTTP с основным номером версии, который реализует получатель, но с более высоким второстепенным номером версии, чем то, что реализует получатель, получатель ДОЛЖЕН обработать сообщение так, как если бы оно было с наивысшей дополнительной версией в той основной версии, для которой получатель соответствует. Получатель может предположить, что сообщение с более высокой дополнительной версией, отправленное получателю, который еще не указал на поддержку этой более высокой версии, является достаточно обратно совместимым, чтобы его можно было безопасно обработать любой реализацией той же основной версии.</target>
+        </trans-unit>
+        <trans-unit id="d3a5b43c3101b03cd5693da68dc42b80224e0a29" translate="yes" xml:space="preserve">
+          <source>HTTP uses a &quot;&amp;lt;major&amp;gt;.&amp;lt;minor&amp;gt;&quot; numbering scheme to indicate versions
+   of the protocol. The protocol versioning policy is intended to allow
+   the sender to indicate the format of a message and its capacity for
+   understanding further HTTP communication, rather than the features
+   obtained via that communication. No change is made to the version
+   number for the addition of message components which do not affect
+   communication behavior or which only add to extensible field values.
+   The &amp;lt;minor&amp;gt; number is incremented when the changes made to the
+   protocol add features which do not change the general message parsing
+   algorithm, but which may add to the message semantics and imply
+   additional capabilities of the sender. The &amp;lt;major&amp;gt; number is
+   incremented when the format of a message within the protocol is
+   changed. See &lt;a href=&quot;https://tools.ietf.org/html/rfc2145&quot;&gt;RFC 2145&lt;/a&gt; [&lt;a href=&quot;#ref-36&quot;&gt;36&lt;/a&gt;] for a fuller explanation. 
+
+   The version of an HTTP message is indicated by an HTTP-Version field
+   in the first line of the message.
+
+       HTTP-Version   = &quot;HTTP&quot; &quot;/&quot; 1*DIGIT &quot;.&quot; 1*DIGIT
+
+   Note that the major and minor numbers MUST be treated as separate
+   integers and that each MAY be incremented higher than a single digit.
+   Thus, HTTP/2.4 is a lower version than HTTP/2.13, which in turn is
+   lower than HTTP/12.3. Leading zeros MUST be ignored by recipients and
+   MUST NOT be sent.
+
+   An application that sends a request or response message that includes
+   HTTP-Version of &quot;HTTP/1.1&quot; MUST be at least conditionally compliant
+   with this specification. Applications that are at least conditionally
+   compliant with this specification SHOULD use an HTTP-Version of
+   &quot;HTTP/1.1&quot; in their messages, and MUST do so for any message that is
+   not compatible with HTTP/1.0. For more details on when to send
+   specific HTTP-Version values, see &lt;a href=&quot;https://tools.ietf.org/html/rfc2145&quot;&gt;RFC 2145&lt;/a&gt; [&lt;a href=&quot;#ref-36&quot;&gt;36&lt;/a&gt;].
+
+   The HTTP version of an application is the highest HTTP version for
+   which the application is at least conditionally compliant.
+
+   Proxy and gateway applications need to be careful when forwarding
+   messages in protocol versions different from that of the application.
+   Since the protocol version indicates the protocol capability of the
+   sender, a proxy/gateway MUST NOT send a message with a version
+   indicator which is greater than its actual version. If a higher
+   version request is received, the proxy/gateway MUST either downgrade
+   the request version, or respond with an error, or switch to tunnel
+   behavior.
+
+   Due to interoperability problems with HTTP/1.0 proxies discovered
+   since the publication of &lt;a href=&quot;https://tools.ietf.org/html/rfc2068&quot;&gt;RFC 2068&lt;/a&gt;[&lt;a href=&quot;#ref-33&quot;&gt;33&lt;/a&gt;], caching proxies MUST, gateways
+   MAY, and tunnels MUST NOT upgrade the request to the highest version
+   they support. The proxy/gateway's response to that request MUST be in
+   the same major version as the request.
+
+      Note: Converting between versions of HTTP may involve modification
+      of header fields required or forbidden by the versions involved.</source>
+          <target state="translated">HTTP использует схему нумерации &amp;laquo;&amp;lt;основной&amp;gt;. &amp;lt;Второстепенный&amp;gt;&amp;raquo; для обозначения версий протокола. Политика управления версиями протокола предназначена для того, чтобы позволить отправителю указывать формат сообщения и его способность понимать дальнейшую связь HTTP, а не функции, полученные посредством этой связи. В номер версии не вносятся изменения для добавления компонентов сообщения, которые не влияют на поведение связи или которые только добавляют к расширяемым значениям полей. Число &amp;lt;minor&amp;gt; увеличивается, когда изменения, внесенные в протокол, добавляют функции, которые не изменяют общий алгоритм синтаксического анализа сообщения, но которые могут добавить к семантике сообщения и предполагать дополнительные возможности отправителя. &amp;lt;Майор&amp;gt;Число увеличивается при изменении формата сообщения в протоколе. Видеть&lt;a href=&quot;https://tools.ietf.org/html/rfc2145&quot;&gt;RFC 2145&lt;/a&gt; [ &lt;a href=&quot;#ref-36&quot;&gt;36&lt;/a&gt;] для более полного объяснения. Версия сообщения HTTP указывается в поле HTTP-Version в первой строке сообщения. HTTP-Version = &quot;HTTP&quot; &quot;/&quot; 1 * ЦИФРА &quot;.&quot; 1 * ЦИФРА Обратите внимание, что старший и младший числа ДОЛЖНЫ обрабатываться как отдельные целые числа и что каждое МОЖЕТ быть увеличено более чем на одну цифру. Таким образом, HTTP / 2.4 является более ранней версией, чем HTTP / 2.13, которая, в свою очередь, ниже, чем HTTP / 12.3. Начальные нули ДОЛЖНЫ игнорироваться получателями и НЕ ДОЛЖНЫ отправляться. Приложение, которое отправляет сообщение запроса или ответа, которое включает HTTP-версию &amp;laquo;HTTP / 1.1&amp;raquo;, ДОЛЖНО хотя бы условно соответствовать этой спецификации. Приложения, которые хотя бы условно соответствуют этой спецификации, ДОЛЖНЫ использовать HTTP-версию &amp;laquo;HTTP / 1.1&amp;raquo;.в своих сообщениях, и ДОЛЖЕН делать это для любого сообщения, несовместимого с HTTP / 1.0. Для получения дополнительной информации о том, когда отправлять определенные значения HTTP-версии, см.&lt;a href=&quot;https://tools.ietf.org/html/rfc2145&quot;&gt;RFC 2145&lt;/a&gt; [ &lt;a href=&quot;#ref-36&quot;&gt;36&lt;/a&gt; ]. Версия HTTP приложения - это самая высокая версия HTTP, которой приложение соответствует хотя бы условно. Приложениям прокси и шлюза следует соблюдать осторожность при пересылке сообщений в версиях протокола, отличных от версии приложения. Поскольку версия протокола указывает возможности протокола отправителя, прокси-сервер / шлюз НЕ ДОЛЖЕН отправлять сообщение с индикатором версии, превышающим его фактическую версию. Если получен запрос более высокой версии, прокси / шлюз ДОЛЖЕН либо понизить версию запроса, либо ответить с ошибкой, либо переключиться на поведение туннеля. Из-за проблем взаимодействия с прокси HTTP / 1.0, обнаруженных после публикации &lt;a href=&quot;https://tools.ietf.org/html/rfc2068&quot;&gt;RFC 2068&lt;/a&gt; [ &lt;a href=&quot;#ref-33&quot;&gt;33&lt;/a&gt;], кэширующие прокси ДОЛЖНЫ, шлюзы МОГУТ, а туннели НЕ ДОЛЖНЫ обновлять запрос до самой высокой версии, которую они поддерживают. Ответ прокси / шлюза на этот запрос ДОЛЖЕН быть той же основной версии, что и запрос. Примечание. Преобразование между версиями HTTP может включать изменение полей заголовков, требуемых или запрещенных соответствующими версиями.</target>
+        </trans-unit>
+        <trans-unit id="de9ea4b9303de1ca70c1a8e05822b3b34b2bc2c1" translate="yes" xml:space="preserve">
+          <source>HTTP uses charset names to indicate or negotiate the character
+   encoding scheme of a textual representation [&lt;a href=&quot;https://tools.ietf.org/html/rfc6365&quot;&gt;RFC6365&lt;/a&gt;].  A charset is
+   identified by a case-insensitive token.
+
+     charset = token
+
+   Charset names ought to be registered in the IANA &quot;Character Sets&quot;
+   registry (&amp;lt;&lt;a href=&quot;http://www.iana.org/assignments/character-sets&quot;&gt;http://www.iana.org/assignments/character-sets&lt;/a&gt;&amp;gt;) according
+   to the procedures defined in [&lt;a href=&quot;https://tools.ietf.org/html/rfc2978&quot;&gt;RFC2978&lt;/a&gt;].</source>
+          <target state="translated">HTTP использует имена кодировок, чтобы указать или согласовать схему кодировки символов текстового представления [ &lt;a href=&quot;https://tools.ietf.org/html/rfc6365&quot;&gt;RFC6365&lt;/a&gt; ]. Кодировка идентифицируется токеном без учета регистра. charset = token Имена кодировок должны быть зарегистрированы в реестре &amp;laquo;Наборы символов&amp;raquo; IANA (&amp;lt; &lt;a href=&quot;http://www.iana.org/assignments/character-sets&quot;&gt;http://www.iana.org/assignments/character-sets&lt;/a&gt; &amp;gt;) в соответствии с процедурами, определенными в [ &lt;a href=&quot;https://tools.ietf.org/html/rfc2978&quot;&gt;RFC2978&lt;/a&gt; ].</target>
+        </trans-unit>
+        <trans-unit id="2330a27b61138a413c157df509aff0321f0a951a" translate="yes" xml:space="preserve">
+          <source>HTTP uses charset names to indicate or negotiate the character
+   encoding scheme of a textual representation [&lt;a href=&quot;https://tools.ietf.org/html/rfc6365&quot;&gt;RFC6365&lt;/a&gt;].  A charset is
+   identified by a case-insensitive token.
+
+     charset = token
+
+   Charset names ought to be registered in the IANA &quot;Character Sets&quot;
+   registry (&amp;lt;&lt;a href=&quot;https://www.iana.org/assignments/character-sets&quot;&gt;http://www.iana.org/assignments/character-sets&lt;/a&gt;&amp;gt;) according
+   to the procedures defined in [&lt;a href=&quot;https://tools.ietf.org/html/rfc2978&quot;&gt;RFC2978&lt;/a&gt;].</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="f64b344cb46f8dc4aefac27a98f9f8e7568e4d7b" translate="yes" xml:space="preserve">
+          <source>HTTP uses the same definition of the term &quot;character set&quot; as that
+   described for MIME: 
+
+   The term &quot;character set&quot; is used in this document to refer to a
+   method used with one or more tables to convert a sequence of octets
+   into a sequence of characters. Note that unconditional conversion in
+   the other direction is not required, in that not all characters may
+   be available in a given character set and a character set may provide
+   more than one sequence of octets to represent a particular character.
+   This definition is intended to allow various kinds of character
+   encoding, from simple single-table mappings such as US-ASCII to
+   complex table switching methods such as those that use ISO-2022's
+   techniques. However, the definition associated with a MIME character
+   set name MUST fully specify the mapping to be performed from octets
+   to characters. In particular, use of external profiling information
+   to determine the exact mapping is not permitted.
+
+      Note: This use of the term &quot;character set&quot; is more commonly
+      referred to as a &quot;character encoding.&quot; However, since HTTP and
+      MIME share the same registry, it is important that the terminology
+      also be shared.
+
+   HTTP character sets are identified by case-insensitive tokens. The
+   complete set of tokens is defined by the IANA Character Set registry
+   [&lt;a href=&quot;#ref-19&quot;&gt;19&lt;/a&gt;].
+
+       charset = token
+
+   Although HTTP allows an arbitrary token to be used as a charset
+   value, any token that has a predefined value within the IANA
+   Character Set registry [&lt;a href=&quot;#ref-19&quot;&gt;19&lt;/a&gt;] MUST represent the character set defined
+   by that registry. Applications SHOULD limit their use of character
+   sets to those defined by the IANA registry.
+
+   Implementors should be aware of IETF character set requirements [&lt;a href=&quot;#ref-38&quot;&gt;38&lt;/a&gt;]
+   [&lt;a href=&quot;#ref-41&quot;&gt;41&lt;/a&gt;].</source>
+          <target state="translated">HTTP использует то же определение термина &amp;laquo;набор символов&amp;raquo;, что и для MIME: термин &amp;laquo;набор символов&amp;raquo; используется в этом документе для обозначения метода, используемого с одной или несколькими таблицами для преобразования последовательности октетов в последовательность персонажи. Обратите внимание, что безусловное преобразование в обратном направлении не требуется, поскольку не все символы могут быть доступны в данном наборе символов, а набор символов может обеспечивать более одной последовательности октетов для представления конкретного символа. Это определение предназначено для обеспечения различных видов кодировки символов, от простых отображений одной таблицы, таких как US-ASCII, до сложных методов переключения таблиц, таких как методы, использующие методы ISO-2022. Тем не мение,определение, связанное с именем набора символов MIME, ДОЛЖНО полностью определять отображение, которое должно выполняться от октетов к символам. В частности, использование информации внешнего профилирования для определения точного сопоставления не допускается. Примечание. Такое использование термина &amp;laquo;набор символов&amp;raquo; чаще называют &amp;laquo;кодировкой символов&amp;raquo;. Однако, поскольку HTTP и MIME используют один и тот же реестр, важно, чтобы терминология также была общей. Наборы символов HTTP идентифицируются токенами без учета регистра. Полный набор токенов определяется реестром набора символов IANA [чаще называют &amp;laquo;кодировкой символов&amp;raquo;. Однако, поскольку HTTP и MIME используют один и тот же реестр, важно, чтобы терминология также была общей. Наборы символов HTTP идентифицируются токенами без учета регистра. Полный набор токенов определяется реестром набора символов IANA [чаще называют &amp;laquo;кодировкой символов&amp;raquo;. Однако, поскольку HTTP и MIME используют один и тот же реестр, важно, чтобы терминология также была общей. Наборы символов HTTP идентифицируются токенами без учета регистра. Полный набор токенов определяется реестром набора символов IANA [&lt;a href=&quot;#ref-19&quot;&gt;19&lt;/a&gt; ]. charset = token Хотя HTTP позволяет использовать произвольный токен в качестве значения кодировки, любой токен, имеющий предопределенное значение в реестре набора символов IANA [ &lt;a href=&quot;#ref-19&quot;&gt;19&lt;/a&gt; ], ДОЛЖЕН представлять набор символов, определенный этим реестром. Приложениям СЛЕДУЕТ ограничивать использование наборов символов теми, которые определены в реестре IANA. Разработчики должны знать требования к набору символов IETF [ &lt;a href=&quot;#ref-38&quot;&gt;38&lt;/a&gt; ] [ &lt;a href=&quot;#ref-41&quot;&gt;41&lt;/a&gt; ].</target>
+        </trans-unit>
+        <trans-unit id="4998cbc56519b60012d9ddef5a93ab40ac390988" translate="yes" xml:space="preserve">
+          <source>HTTP was created for the World Wide Web (WWW) architecture and has
+   evolved over time to support the scalability needs of a worldwide
+   hypertext system.  Much of that architecture is reflected in the
+   terminology and syntax productions used to define HTTP.</source>
+          <target state="translated">HTTP был создан для архитектуры World Wide Web (WWW)и со временем развивался для поддержки потребностей в масштабируемости всемирной гипертекстовой системы.Большая часть этой архитектуры отражена в терминологии и синтаксисе,используемом для определения HTTP.</target>
+        </trans-unit>
+        <trans-unit id="40aed2983145eadb2c78a80757cda404bbec1b9e" translate="yes" xml:space="preserve">
+          <source>HTTP was created in the early 1990s and has been extended several times. This article goes through its history and describes HTTP/0.9, HTTP/1.0, HTTP/1.1, and the modern HTTP/2 as well as minor novelties introduced over the years.</source>
+          <target state="translated">HTTP был создан в начале 1990-х годов и неоднократно продлевался.Данная статья проходит через свою историю и описывает HTTP/0.9,HTTP/1.0,HTTP/1.1 и современный HTTP/2,а также небольшие новшества,появившиеся за эти годы.</target>
+        </trans-unit>
+        <trans-unit id="6691219872cf8222b135471124cba8cce6315df4" translate="yes" xml:space="preserve">
+          <source>HTTP was created in the early 1990s and has been extended several times. This article goes through its history and describes HTTP/0.9, HTTP/1.0, HTTP/1.1, and the modern HTTP/2, as well as novelties introduced over the years.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="8847a48bfa3a8070b11a550d8e6423fe9a938e29" translate="yes" xml:space="preserve">
+          <source>HTTP was first specified in the early 1990s. Designed with extensibility in mind, it has seen numerous additions over the years; this lead to its specification being scattered through numerous specification documents (in the midst of experimental abandoned extensions). This page lists relevant resources about HTTP.</source>
+          <target state="translated">Впервые HTTP был указан в начале 1990-х годов.Разработанный с учетом расширяемости,он видел многочисленные дополнения на протяжении многих лет;это привело к тому,что его спецификация была разбросана по многочисленным спецификационным документам (в разгар экспериментальных заброшенных расширений).На этой странице перечислены соответствующие ресурсы о HTTP.</target>
+        </trans-unit>
+        <trans-unit id="c36d6fae868bc13b893908c5f64cbe8e452543ec" translate="yes" xml:space="preserve">
+          <source>HTTP's approach to error handling has been explained.  (&lt;a href=&quot;#section-2.5&quot;&gt;Section 2.5&lt;/a&gt;)
+
+   The HTTP-version ABNF production has been clarified to be case-
+   sensitive.  Additionally, version numbers have been restricted to
+   single digits, due to the fact that implementations are known to
+   handle multi-digit version numbers incorrectly.  (&lt;a href=&quot;#section-2.6&quot;&gt;Section 2.6&lt;/a&gt;)
+
+   Userinfo (i.e., username and password) are now disallowed in HTTP and
+   HTTPS URIs, because of security issues related to their transmission
+   on the wire.  (&lt;a href=&quot;#section-2.7.1&quot;&gt;Section 2.7.1&lt;/a&gt;)
+
+   The HTTPS URI scheme is now defined by this specification;
+   previously, it was done in &lt;a href=&quot;https://tools.ietf.org/html/rfc2818#section-2.4&quot;&gt;Section&amp;nbsp;2.4 of [RFC2818]&lt;/a&gt;.  Furthermore, it
+   implies end-to-end security.  (&lt;a href=&quot;#section-2.7.2&quot;&gt;Section 2.7.2&lt;/a&gt;)
+
+   HTTP messages can be (and often are) buffered by implementations;
+   despite it sometimes being available as a stream, HTTP is
+   fundamentally a message-oriented protocol.  Minimum supported sizes
+   for various protocol elements have been suggested, to improve
+   interoperability.  (&lt;a href=&quot;#section-3&quot;&gt;Section 3&lt;/a&gt;)
+
+   Invalid whitespace around field-names is now required to be rejected,
+   because accepting it represents a security vulnerability.  The ABNF
+   productions defining header fields now only list the field value.
+   (&lt;a href=&quot;#section-3.2&quot;&gt;Section 3.2&lt;/a&gt;)
+
+   Rules about implicit linear whitespace between certain grammar
+   productions have been removed; now whitespace is only allowed where
+   specifically defined in the ABNF.  (&lt;a href=&quot;#section-3.2.3&quot;&gt;Section 3.2.3&lt;/a&gt;)
+
+   Header fields that span multiple lines (&quot;line folding&quot;) are
+   deprecated.  (&lt;a href=&quot;#section-3.2.4&quot;&gt;Section 3.2.4&lt;/a&gt;)
+
+   The NUL octet is no longer allowed in comment and quoted-string text,
+   and handling of backslash-escaping in them has been clarified.  The
+   quoted-pair rule no longer allows escaping control characters other
+   than HTAB.  Non-US-ASCII content in header fields and the reason
+   phrase has been obsoleted and made opaque (the TEXT rule was
+   removed).  (&lt;a href=&quot;#section-3.2.6&quot;&gt;Section 3.2.6&lt;/a&gt;)
+
+   Bogus Content-Length header fields are now required to be handled as
+   errors by recipients.  (&lt;a href=&quot;#section-3.3.2&quot;&gt;Section 3.3.2&lt;/a&gt;)
+
+   The algorithm for determining the message body length has been
+   clarified to indicate all of the special cases (e.g., driven by
+   methods or status codes) that affect it, and that new protocol 
+
+   elements cannot define such special cases.  CONNECT is a new, special
+   case in determining message body length. &quot;multipart/byteranges&quot; is no
+   longer a way of determining message body length detection.
+   (&lt;a href=&quot;#section-3.3.3&quot;&gt;Section 3.3.3&lt;/a&gt;)
+
+   The &quot;identity&quot; transfer coding token has been removed.  (Sections &lt;a href=&quot;#section-3.3&quot;&gt;3.3&lt;/a&gt;
+   and 4)
+
+   Chunk length does not include the count of the octets in the chunk
+   header and trailer.  Line folding in chunk extensions is disallowed.
+   (&lt;a href=&quot;#section-4.1&quot;&gt;Section 4.1&lt;/a&gt;)
+
+   The meaning of the &quot;deflate&quot; content coding has been clarified.
+   (&lt;a href=&quot;#section-4.2.2&quot;&gt;Section 4.2.2&lt;/a&gt;)
+
+   The segment + query components of &lt;a href=&quot;https://tools.ietf.org/html/rfc3986&quot;&gt;RFC 3986&lt;/a&gt; have been used to define
+   the request-target, instead of abs_path from &lt;a href=&quot;https://tools.ietf.org/html/rfc1808&quot;&gt;RFC 1808&lt;/a&gt;.  The
+   asterisk-form of the request-target is only allowed with the OPTIONS
+   method.  (&lt;a href=&quot;#section-5.3&quot;&gt;Section 5.3&lt;/a&gt;)
+
+   The term &quot;Effective Request URI&quot; has been introduced.  (&lt;a href=&quot;#section-5.5&quot;&gt;Section 5.5&lt;/a&gt;)
+
+   Gateways do not need to generate Via header fields anymore.
+   (&lt;a href=&quot;#section-5.7.1&quot;&gt;Section 5.7.1&lt;/a&gt;)
+
+   Exactly when &quot;close&quot; connection options have to be sent has been
+   clarified.  Also, &quot;hop-by-hop&quot; header fields are required to appear
+   in the Connection header field; just because they're defined as hop-
+   by-hop in this specification doesn't exempt them.  (&lt;a href=&quot;#section-6.1&quot;&gt;Section 6.1&lt;/a&gt;)
+
+   The limit of two connections per server has been removed.  An
+   idempotent sequence of requests is no longer required to be retried.
+   The requirement to retry requests under certain circumstances when
+   the server prematurely closes the connection has been removed.  Also,
+   some extraneous requirements about when servers are allowed to close
+   connections prematurely have been removed.  (&lt;a href=&quot;#section-6.3&quot;&gt;Section 6.3&lt;/a&gt;)
+
+   The semantics of the Upgrade header field is now defined in responses
+   other than 101 (this was incorporated from [&lt;a href=&quot;https://tools.ietf.org/html/rfc2817&quot;&gt;RFC2817&lt;/a&gt;]).  Furthermore,
+   the ordering in the field value is now significant.  (&lt;a href=&quot;#section-6.7&quot;&gt;Section 6.7&lt;/a&gt;)
+
+   Empty list elements in list productions (e.g., a list header field
+   containing &quot;, ,&quot;) have been deprecated.  (&lt;a href=&quot;#section-7&quot;&gt;Section 7&lt;/a&gt;)
+
+   Registration of Transfer Codings now requires IETF Review
+   (&lt;a href=&quot;#section-8.4&quot;&gt;Section 8.4&lt;/a&gt;) 
+
+   This specification now defines the Upgrade Token Registry, previously
+   defined in &lt;a href=&quot;https://tools.ietf.org/html/rfc2817#section-7.2&quot;&gt;Section&amp;nbsp;7.2 of [RFC2817]&lt;/a&gt;.  (&lt;a href=&quot;#section-8.6&quot;&gt;Section 8.6&lt;/a&gt;)
+
+   The expectation to support HTTP/0.9 requests has been removed.
+   (Appendix A)
+
+   Issues with the Keep-Alive and Proxy-Connection header fields in
+   requests are pointed out, with use of the latter being discouraged
+   altogether.  (Appendix A.1.2)</source>
+          <target state="translated">Был объяснен подход HTTP к обработке ошибок. ( &lt;a href=&quot;#section-2.5&quot;&gt;Раздел 2.5&lt;/a&gt; ) Уточнено, что производство ABNF в HTTP-версии учитывает регистр. Кроме того, номера версий были ограничены однозначными числами из-за того, что реализации, как известно, неправильно обрабатывают многозначные номера версий. ( &lt;a href=&quot;#section-2.6&quot;&gt;Раздел 2.6&lt;/a&gt; ) Userinfo (то есть имя пользователя и пароль) теперь запрещены в URI HTTP и HTTPS из-за проблем с безопасностью, связанных с их передачей по сети. ( &lt;a href=&quot;#section-2.7.1&quot;&gt;Раздел 2.7.1&lt;/a&gt; ) Схема HTTPS URI теперь определяется этой спецификацией; ранее это было сделано в &lt;a href=&quot;https://tools.ietf.org/html/rfc2818#section-2.4&quot;&gt;разделе 2.4 [RFC2818]&lt;/a&gt; . Кроме того, это подразумевает сквозную безопасность. ( &lt;a href=&quot;#section-2.7.2&quot;&gt;Раздел 2.7.2&lt;/a&gt;) Сообщения HTTP могут быть (и часто) буферизуются реализациями; Несмотря на то, что иногда он доступен в виде потока, HTTP по сути является протоколом, ориентированным на сообщения. Были предложены минимальные поддерживаемые размеры для различных элементов протокола, чтобы улучшить взаимодействие. ( &lt;a href=&quot;#section-3&quot;&gt;Раздел 3&lt;/a&gt; ) Недействительные пробелы вокруг имен полей теперь необходимо отклонять, поскольку их принятие представляет собой уязвимость системы безопасности. В продуктах ABNF, определяющих поля заголовка, теперь указывается только значение поля. ( &lt;a href=&quot;#section-3.2&quot;&gt;Раздел 3.2&lt;/a&gt; ) Были удалены правила о неявных линейных пробелах между некоторыми грамматическими произведениями; теперь пробелы разрешены только там, где это специально определено в ABNF. ( &lt;a href=&quot;#section-3.2.3&quot;&gt;Раздел 3.2.3&lt;/a&gt;) Поля заголовка, занимающие несколько строк (&amp;laquo;перенос строк&amp;raquo;), устарели. ( &lt;a href=&quot;#section-3.2.4&quot;&gt;Раздел 3.2.4&lt;/a&gt; ) Октет NUL больше не разрешен в комментариях и текстах в кавычках, и была уточнена обработка в них обратного слэша. Правило пары кавычек больше не позволяет экранировать управляющие символы, кроме HTAB. Содержимое не в формате US-ASCII в полях заголовка и фраза причины устарели и сделаны непрозрачными (правило TEXT было удалено). ( &lt;a href=&quot;#section-3.2.6&quot;&gt;Раздел 3.2.6&lt;/a&gt; ) Поля заголовка Bogus Content-Length теперь должны обрабатываться получателями как ошибки. ( &lt;a href=&quot;#section-3.3.2&quot;&gt;Раздел 3.3.2&lt;/a&gt;) Алгоритм определения длины тела сообщения был уточнен, чтобы указать все особые случаи (например, управляемые методами или кодами состояния), которые влияют на него, и что новые элементы протокола не могут определять такие особые случаи. CONNECT - это новый особый случай определения длины тела сообщения. &quot;multipart / byteranges&quot; больше не является способом определения длины тела сообщения. ( &lt;a href=&quot;#section-3.3.3&quot;&gt;Раздел 3.3.3&lt;/a&gt; ) Маркер кодирования передачи &quot;identity&quot; был удален. (Разделы &lt;a href=&quot;#section-3.3&quot;&gt;3.3&lt;/a&gt; и 4) Длина блока не включает количество октетов в заголовке и конце блока. Сворачивание строк в расширениях фрагментов запрещено. ( &lt;a href=&quot;#section-4.1&quot;&gt;Раздел 4.1&lt;/a&gt; ) Уточнено значение кодирования содержимого &quot;deflate&quot;. (&lt;a href=&quot;#section-4.2.2&quot;&gt;Раздел 4.2.2&lt;/a&gt; ). Для определения цели запроса использовались компоненты сегмента + запроса из &lt;a href=&quot;https://tools.ietf.org/html/rfc3986&quot;&gt;RFC 3986&lt;/a&gt; вместо abs_path из &lt;a href=&quot;https://tools.ietf.org/html/rfc1808&quot;&gt;RFC 1808&lt;/a&gt; . Форма звездочки для цели запроса разрешена только с методом OPTIONS. ( &lt;a href=&quot;#section-5.3&quot;&gt;Раздел 5.3&lt;/a&gt; ) Был введен термин &amp;laquo;действующий URI запроса&amp;raquo;. ( &lt;a href=&quot;#section-5.5&quot;&gt;Раздел 5.5&lt;/a&gt; ) Шлюзы больше не должны создавать поля заголовка Via. ( &lt;a href=&quot;#section-5.7.1&quot;&gt;Раздел 5.7.1&lt;/a&gt; ) Было уточнено, когда именно нужно отправлять параметры &amp;laquo;закрытия&amp;raquo;. Кроме того, в поле заголовка соединения должны отображаться поля заголовка &amp;laquo;шаг за шагом&amp;raquo;; то, что они определены в этой спецификации как поэтапные, не освобождает их.( &lt;a href=&quot;#section-6.1&quot;&gt;Раздел 6.1&lt;/a&gt;) Ограничение двух подключений на сервер было снято. Идемпотентная последовательность запросов больше не требуется повторять. Требование повторять запросы при определенных обстоятельствах, когда сервер преждевременно закрывает соединение, было удалено. Также были удалены некоторые посторонние требования о том, когда серверам разрешено преждевременно закрывать соединения. ( &lt;a href=&quot;#section-6.3&quot;&gt;Раздел 6.3&lt;/a&gt; ) Семантика поля заголовка Upgrade теперь определяется в ответах, отличных от 101 (это было включено из [ &lt;a href=&quot;https://tools.ietf.org/html/rfc2817&quot;&gt;RFC2817&lt;/a&gt; ]). Кроме того, теперь важен порядок значений поля. ( &lt;a href=&quot;#section-6.7&quot;&gt;Раздел 6.7&lt;/a&gt; ) Пустые элементы списка в продуктах списка (например, поле заголовка списка, содержащее &quot;,&quot;) устарели. (&lt;a href=&quot;#section-7&quot;&gt;Раздел 7&lt;/a&gt; ) Для регистрации кодов передачи теперь требуется проверка IETF ( &lt;a href=&quot;#section-8.4&quot;&gt;раздел 8.4&lt;/a&gt; ). Эта спецификация теперь определяет реестр токенов обновления, ранее определенный в &lt;a href=&quot;https://tools.ietf.org/html/rfc2817#section-7.2&quot;&gt;разделе 7.2 [RFC2817]&lt;/a&gt; . ( &lt;a href=&quot;#section-8.6&quot;&gt;Раздел 8.6&lt;/a&gt; ) Ожидание поддержки запросов HTTP / 0.9 было удалено. (Приложение A) Отмечены проблемы с полями заголовка Keep-Alive и Proxy-Connection в запросах, при этом использование последнего не рекомендуется. (Приложение A.1.2)</target>
+        </trans-unit>
+        <trans-unit id="e75786a71ce66c44187c7d3570685182eb4f5400" translate="yes" xml:space="preserve">
+          <source>HTTP-only cookies aren't accessible via JavaScript through the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie&quot;&gt;&lt;code&gt;Document.cookie&lt;/code&gt;&lt;/a&gt; property, the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest&quot;&gt;&lt;code&gt;XMLHttpRequest&lt;/code&gt;&lt;/a&gt; API, or the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Request&quot;&gt;&lt;code&gt;Request&lt;/code&gt;&lt;/a&gt; API to mitigate attacks against cross-site scripting (&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/XSS&quot;&gt;XSS&lt;/a&gt;).</source>
+          <target state="translated">&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie&quot;&gt; &lt;code&gt;Document.cookie&lt;/code&gt; &lt;/a&gt; cookie только для HTTP недоступны через JavaScript через свойство Document.cookie , API &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest&quot;&gt; &lt;code&gt;XMLHttpRequest&lt;/code&gt; &lt;/a&gt; или API &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Request&quot;&gt; &lt;code&gt;Request&lt;/code&gt; &lt;/a&gt; для смягчения атак на межсайтовый скриптинг ( &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/XSS&quot;&gt;XSS&lt;/a&gt; ).</target>
+        </trans-unit>
+        <trans-unit id="645478239b71d9e2120cd5c5e2c81c2c7e39f857" translate="yes" xml:space="preserve">
+          <source>HTTP/0.9 &amp;ndash; The one-line protocol</source>
+          <target state="translated">HTTP / 0.9 - однострочный протокол</target>
+        </trans-unit>
         <trans-unit id="44cba524f054d5d6640a40b11e1c3c0dd2b2e81c" translate="yes" xml:space="preserve">
           <source>HTTP/0.9 was very limited and both browsers and servers quickly extended it to be more versatile:</source>
           <target state="translated">HTTP/0.9 был очень ограничен,и браузеры и серверы быстро расширили его,чтобы он стал более универсальным:</target>
@@ -1199,6 +1719,10 @@
           <source>IANA is the official registry of MIME media types and maintains a &lt;a href=&quot;http://www.iana.org/assignments/media-types/media-types.xhtml&quot;&gt;list of all the official MIME types&lt;/a&gt;. This table lists some important MIME types for the Web:</source>
           <target state="translated">IANA - это официальный реестр типов носителей MIME, который ведет &lt;a href=&quot;http://www.iana.org/assignments/media-types/media-types.xhtml&quot;&gt;список всех официальных типов MIME&lt;/a&gt; . В этой таблице перечислены некоторые важные типы MIME для Интернета:</target>
         </trans-unit>
+        <trans-unit id="b9dda3057745eb62f8e6e36a979a88f9f81e3906" translate="yes" xml:space="preserve">
+          <source>IANA is the official registry of MIME media types and maintains a &lt;a href=&quot;https://www.iana.org/assignments/media-types/media-types.xhtml&quot;&gt;list of all the official MIME types&lt;/a&gt;. This table lists some important MIME types for the Web:</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="89c07cdbd61e19ece57d06075ba79aecfe00c78b" translate="yes" xml:space="preserve">
           <source>IANA list of URI schemes</source>
           <target state="translated">список схем ИАНА</target>
@@ -1223,6 +1747,26 @@
    +------------+--------------------------------------+---------------+</source>
           <target state="translated">IANA ведет &amp;laquo;Реестр кодирования содержимого HTTP&amp;raquo; по адресу &amp;lt; &lt;a href=&quot;http://www.iana.org/assignments/http-parameters&quot;&gt;http://www.iana.org/assignments/http-parameters&lt;/a&gt; &amp;gt;. В &amp;laquo;Реестр кодирования содержимого HTTP&amp;raquo; добавлены следующие регистрации: + ------------ + --------------------- ----------------- + --------------- + | Имя | Описание | Справка | + ------------ + ------------------------------------ - + --------------- + | сжать | UNIX &quot;сжимает&quot; формат данных [ &lt;a href=&quot;#ref-Welch&quot;&gt;Велч&lt;/a&gt; ] | &lt;a href=&quot;#section-4.2.1&quot;&gt;Раздел 4.2.1&lt;/a&gt; | | сдуть | &quot;сдуть&quot; сжатые данные | &lt;a href=&quot;#section-4.2.2&quot;&gt;Раздел 4.2.2&lt;/a&gt; | | | ([ &lt;a href=&quot;https://tools.ietf.org/html/rfc1951&quot;&gt;RFC1951&lt;/a&gt; ]) внутри данных &quot;zlib&quot; | | | | формат ([ &lt;a href=&quot;https://tools.ietf.org/html/rfc1950&quot;&gt;RFC1950&lt;/a&gt;]) | | | gzip | Формат файла GZIP [ &lt;a href=&quot;https://tools.ietf.org/html/rfc1952&quot;&gt;RFC1952&lt;/a&gt; ] | &lt;a href=&quot;#section-4.2.3&quot;&gt;Раздел 4.2.3&lt;/a&gt; | | x-compress | Устарело (псевдоним для сжатия) | &lt;a href=&quot;#section-4.2.1&quot;&gt;Раздел 4.2.1&lt;/a&gt; | | x-gzip | Устарело (псевдоним для gzip) | &lt;a href=&quot;#section-4.2.3&quot;&gt;Раздел 4.2.3&lt;/a&gt; | + ------------ + ------------------------------------ - + --------------- +</target>
         </trans-unit>
+        <trans-unit id="84da78a91edf6572fec7b32c2d1eaff20d705c9b" translate="yes" xml:space="preserve">
+          <source>IANA maintains the &quot;HTTP Content Coding Registry&quot; at
+   &amp;lt;&lt;a href=&quot;https://www.iana.org/assignments/http-parameters&quot;&gt;http://www.iana.org/assignments/http-parameters&lt;/a&gt;&amp;gt;.
+
+   The &quot;HTTP Content Coding Registry&quot; has been updated with the
+   registrations below:
+
+   +------------+--------------------------------------+---------------+
+   | Name       | Description                          | Reference     |
+   +------------+--------------------------------------+---------------+
+   | compress   | UNIX &quot;compress&quot; data format [&lt;a href=&quot;#ref-Welch&quot;&gt;Welch&lt;/a&gt;]  | &lt;a href=&quot;#section-4.2.1&quot;&gt;Section 4.2.1&lt;/a&gt; |
+   | deflate    | &quot;deflate&quot; compressed data            | &lt;a href=&quot;#section-4.2.2&quot;&gt;Section 4.2.2&lt;/a&gt; |
+   |            | ([&lt;a href=&quot;https://tools.ietf.org/html/rfc1951&quot;&gt;RFC1951&lt;/a&gt;]) inside the &quot;zlib&quot; data   |               |
+   |            | format ([&lt;a href=&quot;https://tools.ietf.org/html/rfc1950&quot;&gt;RFC1950&lt;/a&gt;])                   |               |
+   | gzip       | GZIP file format [&lt;a href=&quot;https://tools.ietf.org/html/rfc1952&quot;&gt;RFC1952&lt;/a&gt;]           | &lt;a href=&quot;#section-4.2.3&quot;&gt;Section 4.2.3&lt;/a&gt; |
+   | x-compress | Deprecated (alias for compress)      | &lt;a href=&quot;#section-4.2.1&quot;&gt;Section 4.2.1&lt;/a&gt; |
+   | x-gzip     | Deprecated (alias for gzip)          | &lt;a href=&quot;#section-4.2.3&quot;&gt;Section 4.2.3&lt;/a&gt; |
+   +------------+--------------------------------------+---------------+</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="2f3aef98e61cefd59e70d51a0d54a7f7880c7e4d" translate="yes" xml:space="preserve">
           <source>IANA maintains the registry of Internet media types [&lt;a href=&quot;#ref-BCP13&quot;&gt;BCP13&lt;/a&gt;] at
    &amp;lt;&lt;a href=&quot;http://www.iana.org/assignments/media-types&quot;&gt;http://www.iana.org/assignments/media-types&lt;/a&gt;&amp;gt;.
@@ -1240,6 +1784,23 @@
    &quot;multipart/byteranges&quot;.  The following has been registered with IANA.</source>
           <target state="translated">IANA ведет реестр типов Интернет-носителей [ &lt;a href=&quot;#ref-BCP13&quot;&gt;BCP13&lt;/a&gt; ] по адресу &amp;lt; &lt;a href=&quot;http://www.iana.org/assignments/media-types&quot;&gt;http://www.iana.org/assignments/media-types&lt;/a&gt; &amp;gt;. Этот документ служит спецификацией для типа Интернет-носителя &quot;multipart / byteranges&quot;. Следующее было зарегистрировано в IANA.</target>
         </trans-unit>
+        <trans-unit id="ab128dcbdb2ebebc35788dc3821bf42469b226aa" translate="yes" xml:space="preserve">
+          <source>IANA maintains the registry of Internet media types [&lt;a href=&quot;#ref-BCP13&quot;&gt;BCP13&lt;/a&gt;] at
+   &amp;lt;&lt;a href=&quot;https://www.iana.org/assignments/media-types&quot;&gt;http://www.iana.org/assignments/media-types&lt;/a&gt;&amp;gt;.
+
+   This document serves as the specification for the Internet media
+   types &quot;message/http&quot; and &quot;application/http&quot;.  The following has been
+   registered with IANA.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="357bae4af7b5b87d000bfe81726ab37f502a946a" translate="yes" xml:space="preserve">
+          <source>IANA maintains the registry of Internet media types [&lt;a href=&quot;#ref-BCP13&quot;&gt;BCP13&lt;/a&gt;] at
+   &amp;lt;&lt;a href=&quot;https://www.iana.org/assignments/media-types&quot;&gt;http://www.iana.org/assignments/media-types&lt;/a&gt;&amp;gt;.
+
+   This document serves as the specification for the Internet media type
+   &quot;multipart/byteranges&quot;.  The following has been registered with IANA.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="2f25bf5a2ef40ce000fcbfb953c618138d7e6d92" translate="yes" xml:space="preserve">
           <source>IANA maintains the registry of URI Schemes [&lt;a href=&quot;#ref-BCP115&quot;&gt;BCP115&lt;/a&gt;] at
    &amp;lt;&lt;a href=&quot;http://www.iana.org/assignments/uri-schemes/&quot;&gt;http://www.iana.org/assignments/uri-schemes/&lt;/a&gt;&amp;gt;.
@@ -1254,6 +1815,21 @@
    | https      | Hypertext Transfer Protocol Secure | &lt;a href=&quot;#section-2.7.2&quot;&gt;Section 2.7.2&lt;/a&gt; |
    +------------+------------------------------------+---------------+</source>
           <target state="translated">IANA ведет реестр схем URI [ &lt;a href=&quot;#ref-BCP115&quot;&gt;BCP115&lt;/a&gt; ] по адресу &amp;lt; &lt;a href=&quot;http://www.iana.org/assignments/uri-schemes/&quot;&gt;http://www.iana.org/assignments/uri-schemes/&lt;/a&gt; &amp;gt;. В этом документе определены следующие схемы URI, поэтому реестр &amp;laquo;Постоянных схем URI&amp;raquo; был обновлен соответствующим образом. + ------------ + ------------------------------------ + --------------- + | Схема URI | Описание | Справка | + ------------ + ------------------------------------ + --------------- + | http | Протокол передачи гипертекста | &lt;a href=&quot;#section-2.7.1&quot;&gt;Раздел 2.7.1&lt;/a&gt; | | https | Безопасный протокол передачи гипертекста | &lt;a href=&quot;#section-2.7.2&quot;&gt;Раздел 2.7.2&lt;/a&gt; | + ------------ + ------------------------------------ + --------------- +</target>
+        </trans-unit>
+        <trans-unit id="e1ea21615883709c31afd1e3ffefa6a9abd86a33" translate="yes" xml:space="preserve">
+          <source>IANA maintains the registry of URI Schemes [&lt;a href=&quot;#ref-BCP115&quot;&gt;BCP115&lt;/a&gt;] at
+   &amp;lt;&lt;a href=&quot;https://www.iana.org/assignments/uri-schemes/&quot;&gt;http://www.iana.org/assignments/uri-schemes/&lt;/a&gt;&amp;gt;.
+
+   This document defines the following URI schemes, so the &quot;Permanent
+   URI Schemes&quot; registry has been updated accordingly.
+
+   +------------+------------------------------------+---------------+
+   | URI Scheme | Description                        | Reference     |
+   +------------+------------------------------------+---------------+
+   | http       | Hypertext Transfer Protocol        | &lt;a href=&quot;#section-2.7.1&quot;&gt;Section 2.7.1&lt;/a&gt; |
+   | https      | Hypertext Transfer Protocol Secure | &lt;a href=&quot;#section-2.7.2&quot;&gt;Section 2.7.2&lt;/a&gt; |
+   +------------+------------------------------------+---------------+</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="70d5ce962c5520d83534599071460204e3f79a4c" translate="yes" xml:space="preserve">
           <source>IANA official registry of HTTP status codes</source>
@@ -2444,6 +3020,10 @@
         </trans-unit>
         <trans-unit id="14de70e40c9e2cf5302c938ea374541877e07084" translate="yes" xml:space="preserve">
           <source>In &lt;em&gt;server-driven content negotiation&lt;/em&gt;, or proactive content negotiation, the browser (or any other kind of user-agent) sends several HTTP headers along with the URL. These headers describe the preferred choice of the user. The server uses them as hints and an internal algorithm chooses the best content to serve to the client. If it cannot provide a suitable resource, as a fallback it might respond with &lt;a href=&quot;status/406&quot;&gt;&lt;code&gt;406&lt;/code&gt;&lt;/a&gt; (Not Acceptable) or &lt;a href=&quot;status/415&quot;&gt;&lt;code&gt;415&lt;/code&gt;&lt;/a&gt; (Unsupported Media Type) and set headers for the types of media that it does support (e.g. using the &lt;a href=&quot;headers/accept-post&quot;&gt;&lt;code&gt;Accept-Post&lt;/code&gt;&lt;/a&gt; or &lt;a href=&quot;headers/accept-patch&quot;&gt;&lt;code&gt;Accept-Patch&lt;/code&gt;&lt;/a&gt; for POST and PATCH requests, respectively). The algorithm is server-specific and not defined in the standard. See, for example, the &lt;a href=&quot;http://httpd.apache.org/docs/current/en/content-negotiation.html#algorithm&quot;&gt;Apache negotiation algorithm&lt;/a&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="0b2cc0cdd9eebe0ffa83a9c0ecef388a60a0a8d4" translate="yes" xml:space="preserve">
+          <source>In &lt;em&gt;server-driven content negotiation&lt;/em&gt;, or proactive content negotiation, the browser (or any other kind of user-agent) sends several HTTP headers along with the URL. These headers describe the preferred choice of the user. The server uses them as hints and an internal algorithm chooses the best content to serve to the client. If it cannot provide a suitable resource, as a fallback it might respond with &lt;a href=&quot;status/406&quot;&gt;&lt;code&gt;406&lt;/code&gt;&lt;/a&gt; (Not Acceptable) or &lt;a href=&quot;status/415&quot;&gt;&lt;code&gt;415&lt;/code&gt;&lt;/a&gt; (Unsupported Media Type) and set headers for the types of media that it does support (e.g. using the &lt;a href=&quot;headers/accept-post&quot;&gt;&lt;code&gt;Accept-Post&lt;/code&gt;&lt;/a&gt; or &lt;a href=&quot;headers/accept-patch&quot;&gt;&lt;code&gt;Accept-Patch&lt;/code&gt;&lt;/a&gt; for POST and PATCH requests, respectively). The algorithm is server-specific and not defined in the standard. See, for example, the &lt;a href=&quot;https://httpd.apache.org/docs/current/en/content-negotiation.html#algorithm&quot;&gt;Apache negotiation algorithm&lt;/a&gt;.</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="6df737fe0a6a8b38fe1752df0541af98393864b5" translate="yes" xml:space="preserve">
@@ -4074,6 +4654,180 @@ Authors' Addresses
 
 Fielding, et al.             Standards Track                   [Page 43]</source>
           <target state="translated">В собранном ниже ABNF правила списка расширены в соответствии с &lt;a href=&quot;https://tools.ietf.org/html/rfc7230#section-1.2&quot;&gt;разделом &lt;/a&gt;&lt;a href=&quot;https://tools.ietf.org/html/rfc7230#section-1.2&quot;&gt;1.2 [RFC7230]&lt;/a&gt; . Возраст = дельта-секунды Cache-Control = * (&quot;,&quot; OWS) cache-directive * (OWS &quot;,&quot; [OWS cache-directive]) Expires = HTTP-date HTTP-date = &amp;lt;HTTP-date, см. &lt;a href=&quot;https://tools.ietf.org/html/rfc7231#section-7.1.1.1&quot;&gt;[RFC7231] , Раздел 7.1.1.1&lt;/a&gt; &amp;gt; OWS = &amp;lt;OWS, см. &lt;a href=&quot;https://tools.ietf.org/html/rfc7230#section-3.2.3&quot;&gt;[RFC7230], Раздел 3.2.3&lt;/a&gt; &amp;gt; Pragma = * (&quot;,&quot; OWS) pragma-directive * (OWS &quot;,&quot; [OWS pragma-directive]) Предупреждение = * ( &quot;,&quot; OWS) значение-предупреждения * (OWS &quot;,&quot; [OWS-предупреждение-значение]) cache-directive = token [&quot;=&quot; (токен / строка-кавычки)] delta-seconds = 1 * DIGIT extension-pragma = token [&quot;=&quot; (токен / строка в кавычках)] имя-поля = &amp;lt;имя-поля,см. &lt;a href=&quot;https://tools.ietf.org/html/rfc7230#section-3.2&quot;&gt;[RFC7230], раздел 3.2&lt;/a&gt; &amp;gt; порт = &amp;lt;порт, см.&lt;a href=&quot;https://tools.ietf.org/html/rfc7230#section-2.7&quot;&gt;[RFC7230], раздел 2.7&lt;/a&gt; &amp;gt; pragma-directive = &quot;no-cache&quot; / extension-pragma pseudonym = &amp;lt;псевдоним, см. &lt;a href=&quot;https://tools.ietf.org/html/rfc7230#section-5.7.1&quot;&gt;[RFC7230], раздел 5.7.1&lt;/a&gt; &amp;gt; quoted-string = &amp;lt;quoted-string, см. &lt;a href=&quot;https://tools.ietf.org/html/rfc7230#section-3.2.6&quot;&gt;[RFC7230], раздел 3.2.6&lt;/a&gt; &amp;gt; token = &amp;lt;токен, см. &lt;a href=&quot;https://tools.ietf.org/html/rfc7230#section-3.2.6&quot;&gt;[RFC7230], раздел 3.2.6&lt;/a&gt; &amp;gt; uri-host = &amp;lt;uri-host, см. &lt;a href=&quot;https://tools.ietf.org/html/rfc7230#section-2.7&quot;&gt;[RFC7230], раздел 2.7&lt;/a&gt;&amp;gt; warn-agent = (uri-host [&quot;:&quot;порт]) / псевдоним warn-code = 3DIGIT warn-date = DQUOTE HTTP-date DQUOTE warn-text = строка в кавычках значение-предупреждения = код-предупреждения SP warn-agent SP warn-text [SP warn-date] Индекс 1 110 (код предупреждения) 31 111 (код предупреждения) 31 112 (код предупреждения) 31 113 (код предупреждения) 31 199 (код предупреждения) 32 2 214 (код предупреждения) 32 299 (код предупреждения) 32 A age 11 Поле заголовка Age 21 C cache 4 запись кеша 5 ключ кеша 5-6 Поле заголовка Cache-Control 21 D Disconnected Operation (warn-text) 31 E Expires header field 28 явное время истечения 11 F fresh 11 freshness life 11 Grammar Age 21 Cache-Control 22 директива cache 22 дельта-секунды 5 Истекает 28extension-pragma 29 Pragma 29 pragma-directive 29 warn-agent 29 warn-code 29 warn-date 29 warn-text 29 Warning 29 warning-value 29 H Heuristic Expiration (warn-text) 31 эвристическое время истечения 11 M max-age ( директива cache) 22, 26 max-stale (директива cache) 22 min-fresh (директива cache) 22 Miscellaneous Persistent Warning (warn-text) 32 Miscellaneous Warning (warn-text) 32 must-revalidate (директива cache) 24 N no- cache (директива cache) 23, 25 no-store (директива cache) 23, 24 no-transform (директива cache) 23,25 O only-if-cached (директива cache) 23 P Поле заголовка Pragma 29 private (директива cache) 25 приватный кеш 4 proxy-revalidate (директива cache) 26 public (директива cache) 25 R Ответ устарел (текст предупреждения) 30 Ошибка повторной проверки (текст предупреждения) 31 S s-maxage (директива кеширования) 27 общий кеш 4 устаревший 11 строгий валидатор 18 T Применено преобразование (текст предупреждения) 32 В валидатор 16 Вт Поле заголовка предупреждения 29 Адреса авторов Рой Т. Филдинг ( редактор) Adobe Systems Incorporated 345 Park Ave San Jose, CA 95110 USA Электронная почта: fielding@gbiv.com URI:Филдинг (редактор) Adobe Systems Incorporated 345 Park Ave San Jose, CA 95110 USA Электронная почта: fielding@gbiv.com URI:Филдинг (редактор) Adobe Systems Incorporated 345 Park Ave San Jose, CA 95110 USA Электронная почта: fielding@gbiv.com URI: &lt;a href=&quot;http://roy.gbiv.com/&quot;&gt;http://roy.gbiv.com/&lt;/a&gt; Марк Ноттингем (редактор) Akamai EMail: mnot@mnot.net URI: &lt;a href=&quot;http://www.mnot.net/&quot;&gt;http://www.mnot.net/&lt;/a&gt; Джулиан Ф. Решке (редактор) greenbytes GmbH Hafenweg 16 Muenster, NW 48155 Электронная почта Германии: julian.reschke@greenbytes.de URI: &lt;a href=&quot;http://greenbytes.de/tech/webdav/&quot;&gt;http://greenbytes.de/tech/webdav/&lt;/a&gt; Fielding, et al. Standards Track [Страница 43]</target>
+        </trans-unit>
+        <trans-unit id="161932215fd5630ce654b9fd942cca7efbb170ac" translate="yes" xml:space="preserve">
+          <source>In the collected ABNF below, list rules are expanded as per &lt;a href=&quot;https://tools.ietf.org/html/rfc7230#section-1.2&quot;&gt;Section&lt;/a&gt;&lt;a href=&quot;https://tools.ietf.org/html/rfc7230#section-1.2&quot;&gt;1.2 of [RFC7230]&lt;/a&gt;.
+
+   Age = delta-seconds
+
+   Cache-Control = *( &quot;,&quot; OWS ) cache-directive *( OWS &quot;,&quot; [ OWS
+    cache-directive ] )
+
+   Expires = HTTP-date
+
+   HTTP-date = &amp;lt;HTTP-date, see &lt;a href=&quot;https://tools.ietf.org/html/rfc7231#section-7.1.1.1&quot;&gt;[RFC7231], Section&amp;nbsp;7.1.1.1&lt;/a&gt;&amp;gt;
+
+   OWS = &amp;lt;OWS, see &lt;a href=&quot;https://tools.ietf.org/html/rfc7230#section-3.2.3&quot;&gt;[RFC7230], Section&amp;nbsp;3.2.3&lt;/a&gt;&amp;gt;
+
+   Pragma = *( &quot;,&quot; OWS ) pragma-directive *( OWS &quot;,&quot; [ OWS
+    pragma-directive ] )
+
+   Warning = *( &quot;,&quot; OWS ) warning-value *( OWS &quot;,&quot; [ OWS warning-value ]
+    )
+
+   cache-directive = token [ &quot;=&quot; ( token / quoted-string ) ]
+
+   delta-seconds = 1*DIGIT
+
+   extension-pragma = token [ &quot;=&quot; ( token / quoted-string ) ]
+
+   field-name = &amp;lt;field-name, see &lt;a href=&quot;https://tools.ietf.org/html/rfc7230#section-3.2&quot;&gt;[RFC7230], Section&amp;nbsp;3.2&lt;/a&gt;&amp;gt;
+
+   port = &amp;lt;port, see &lt;a href=&quot;https://tools.ietf.org/html/rfc7230#section-2.7&quot;&gt;[RFC7230], Section&amp;nbsp;2.7&lt;/a&gt;&amp;gt;
+   pragma-directive = &quot;no-cache&quot; / extension-pragma
+   pseudonym = &amp;lt;pseudonym, see &lt;a href=&quot;https://tools.ietf.org/html/rfc7230#section-5.7.1&quot;&gt;[RFC7230], Section&amp;nbsp;5.7.1&lt;/a&gt;&amp;gt;
+
+   quoted-string = &amp;lt;quoted-string, see &lt;a href=&quot;https://tools.ietf.org/html/rfc7230#section-3.2.6&quot;&gt;[RFC7230], Section&amp;nbsp;3.2.6&lt;/a&gt;&amp;gt;
+
+   token = &amp;lt;token, see &lt;a href=&quot;https://tools.ietf.org/html/rfc7230#section-3.2.6&quot;&gt;[RFC7230], Section&amp;nbsp;3.2.6&lt;/a&gt;&amp;gt;
+
+   uri-host = &amp;lt;uri-host, see &lt;a href=&quot;https://tools.ietf.org/html/rfc7230#section-2.7&quot;&gt;[RFC7230], Section&amp;nbsp;2.7&lt;/a&gt;&amp;gt;
+
+   warn-agent = ( uri-host [ &quot;:&quot; port ] ) / pseudonym
+   warn-code = 3DIGIT
+   warn-date = DQUOTE HTTP-date DQUOTE
+   warn-text = quoted-string
+   warning-value = warn-code SP warn-agent SP warn-text [ SP warn-date
+    ] 
+
+Index
+
+   1
+      110 (warn-code)  31
+      111 (warn-code)  31
+      112 (warn-code)  31
+      113 (warn-code)  31
+      199 (warn-code)  32
+
+   2
+      214 (warn-code)  32
+      299 (warn-code)  32
+
+   A
+      age  11
+      Age header field  21
+
+   C
+      cache  4
+      cache entry  5
+      cache key  5-6
+      Cache-Control header field  21
+
+   D
+      Disconnected Operation (warn-text)  31
+
+   E
+      Expires header field  28
+      explicit expiration time  11
+
+   F
+      fresh  11
+      freshness lifetime  11
+
+   G
+      Grammar
+         Age  21
+         Cache-Control  22
+         cache-directive  22
+         delta-seconds  5
+         Expires  28
+         extension-pragma  29
+         Pragma  29
+         pragma-directive  29
+         warn-agent  29
+         warn-code  29
+         warn-date  29
+         warn-text  29 
+
+         Warning  29
+         warning-value  29
+
+   H
+      Heuristic Expiration (warn-text)  31
+      heuristic expiration time  11
+   M
+      max-age (cache directive)  22, 26
+      max-stale (cache directive)  22
+      min-fresh (cache directive)  22
+      Miscellaneous Persistent Warning (warn-text)  32
+      Miscellaneous Warning (warn-text)  32
+      must-revalidate (cache directive)  24
+
+   N
+      no-cache (cache directive)  23, 25
+      no-store (cache directive)  23, 24
+      no-transform (cache directive)  23, 25
+
+   O
+      only-if-cached (cache directive)  23
+
+   P
+      Pragma header field  29
+      private (cache directive)  25
+      private cache  4
+      proxy-revalidate (cache directive)  26
+      public (cache directive)  25
+
+   R
+      Response is Stale (warn-text)  30
+      Revalidation Failed (warn-text)  31
+
+   S
+      s-maxage (cache directive)  27
+      shared cache  4
+      stale  11
+      strong validator  18
+
+   T
+      Transformation Applied (warn-text)  32
+
+   V
+      validator  16
+
+   W
+      Warning header field  29 
+
+Authors' Addresses
+
+   Roy T. Fielding (editor)
+   Adobe Systems Incorporated
+   345 Park Ave
+   San Jose, CA  95110
+   USA
+
+   EMail: fielding@gbiv.com
+   URI:   &lt;a href=&quot;http://roy.gbiv.com/&quot;&gt;http://roy.gbiv.com/&lt;/a&gt;
+
+
+   Mark Nottingham (editor)
+   Akamai
+
+   EMail: mnot@mnot.net
+   URI:   &lt;a href=&quot;https://www.mnot.net/&quot;&gt;http://www.mnot.net/&lt;/a&gt;
+
+
+   Julian F. Reschke (editor)
+   greenbytes GmbH
+   Hafenweg 16
+   Muenster, NW  48155
+   Germany
+
+   EMail: julian.reschke@greenbytes.de
+   URI:   &lt;a href=&quot;http://greenbytes.de/tech/webdav/&quot;&gt;http://greenbytes.de/tech/webdav/&lt;/a&gt;
+
+
+Fielding, et al.             Standards Track                   [Page 43]</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="847bccd23d1c7feafc0bf9bbe4823064cad9878a" translate="yes" xml:space="preserve">
           <source>In the collected ABNF below, list rules are expanded as per &lt;a href=&quot;https://tools.ietf.org/html/rfc7230#section-1.2&quot;&gt;Section&lt;/a&gt;&lt;a href=&quot;https://tools.ietf.org/html/rfc7230#section-1.2&quot;&gt;1.2 of [RFC7230]&lt;/a&gt;.
@@ -7495,183 +8249,6 @@ ISSN: 2070-1721</source>
         <trans-unit id="3d7680d3ffd85eebd63677687a9aa06b50aefc80" translate="yes" xml:space="preserve">
           <source>Navigation directives govern to which location a user can navigate to or submit a form to, for example.</source>
           <target state="translated">Навигационные директивы определяют,в какое место пользователь может перейти,например,или отправить форму.</target>
-        </trans-unit>
-        <trans-unit id="b8f17a51486a6c93c18c623fe00bac1bdf6887b8" translate="yes" xml:space="preserve">
-          <source>Navigation directives govern to which locations a user can navigate or submit a form, for example.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="7d198c1bf717002743411eff6ca257f87f502017" translate="yes" xml:space="preserve">
-          <source>Navigation to</source>
-          <target state="translated">Навигация к</target>
-        </trans-unit>
-        <trans-unit id="4fd5b390b406ef3a192cb33756658713f813cdd9" translate="yes" xml:space="preserve">
-          <source>Navigational upgrades to third-party resources brings a significantly higher potential for breakage, these are not upgraded:</source>
-          <target state="translated">Модернизация навигационных систем на сторонних ресурсах значительно повышает вероятность поломки,они не обновляются:</target>
-        </trans-unit>
-        <trans-unit id="1fd128a511cf81f2a11a5b15d991245ba541495b" translate="yes" xml:space="preserve">
-          <source>Negotiating an HTTP version</source>
-          <target state="translated">Ведение переговоров по HTTP-версии</target>
-        </trans-unit>
-        <trans-unit id="ed456a86e768ff867a28fdf6f5a786b103d3075c" translate="yes" xml:space="preserve">
-          <source>Network Error Logging</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="dbc524ee8191a3484608469f9bf18ce746009948" translate="yes" xml:space="preserve">
-          <source>Network Error Logging (NEL) explainer</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="b3085195686e3cf306470fa36a147b8507888942" translate="yes" xml:space="preserve">
-          <source>Network Error Logging is a mechanism that can be configured via the &lt;a href=&quot;headers/nel&quot;&gt;&lt;code&gt;NEL&lt;/code&gt;&lt;/a&gt; HTTP &lt;em&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/Response_header&quot;&gt;response header&lt;/a&gt;&lt;/em&gt;. This experimental header allows web sites and applications to opt-in to receive reports about failed (and, if desired, successful) network fetches from supporting browsers.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="9359b43b3679ffebf30c6ff7f3222f0b6df7956c" translate="yes" xml:space="preserve">
-          <source>Network Working Group                                      R. Fielding
-Request for Comments: 2616                                   UC Irvine
-Obsoletes: &lt;a href=&quot;https://tools.ietf.org/html/rfc2068&quot;&gt;2068&lt;/a&gt;                                              J. Gettys
-Category: Standards Track                                   Compaq/W3C
-                                                              J. Mogul
-                                                                Compaq
-                                                            H. Frystyk
-                                                               W3C/MIT
-                                                           L. Masinter
-                                                                 Xerox
-                                                              P. Leach
-                                                             Microsoft
-                                                        T. Berners-Lee
-                                                               W3C/MIT
-                                                             June 1999</source>
-          <target state="translated">Сетевая рабочая группа Р. Филдинг Запрос на комментарии: 2616 UC Irvine Устарело: &lt;a href=&quot;https://tools.ietf.org/html/rfc2068&quot;&gt;2068&lt;/a&gt; Дж. Геттис Категория: Стандарты Отслеживание Compaq / W3C Дж. Могул Compaq Х. Фристик W3C / MIT Л. Масинтер Ксерокс П. Лич Microsoft T.Бернерс-Ли, W3C / MIT, июнь 1999 г.</target>
-        </trans-unit>
-        <trans-unit id="5428bbcea03dea51ffb7eb6864dea642db9e9245" translate="yes" xml:space="preserve">
-          <source>Network Working Group                                   J. Gregorio, Ed.
-Request for Comments: 5023                                        Google
-Category: Standards Track                                B. de hOra, Ed.
-                                                         NewBay Software
-                                                            October 2007</source>
-          <target state="translated">Сетевая рабочая группа Х.Грегорио,Ред.Запрос комментариев:5023 Категория Google:Стандарты Трек Б.де Ора,Ред.NewBay Software октябрь 2007</target>
-        </trans-unit>
-        <trans-unit id="4d8ae710cb99c4a7621dd240f2f410770ca46d77" translate="yes" xml:space="preserve">
-          <source>Network Working Group                                  L. Dusseault, Ed.
-Request for Comments: 4918                                   CommerceNet
-Obsoletes: &lt;a href=&quot;https://tools.ietf.org/html/rfc2518&quot;&gt;2518&lt;/a&gt;                                                June 2007
-Category: Standards Track</source>
-          <target state="translated">Сетевая рабочая группа Л. Дюссо, Под ред. Запрос комментариев: 4918 CommerceNet Устарело: &lt;a href=&quot;https://tools.ietf.org/html/rfc2518&quot;&gt;2518&lt;/a&gt; июня 2007 г. Категория: Standards Track</target>
-        </trans-unit>
-        <trans-unit id="e3623b4b3820bb728eda2dde15946a4290819387" translate="yes" xml:space="preserve">
-          <source>Network monitor</source>
-          <target state="translated">Сетевой монитор</target>
-        </trans-unit>
-        <trans-unit id="e50032eb35aad47bed9d5ff741f087c1986c82ba" translate="yes" xml:space="preserve">
-          <source>Network operators sometimes require some authentication, acceptance of terms, or other user interaction before granting access (for example in an internet caf&amp;eacute; or at an airport). They often identify clients who have not done so using their Media Access Control (&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/MAC&quot;&gt;MAC&lt;/a&gt;) addresses.</source>
-          <target state="translated">Сетевые операторы иногда требуют некоторой аутентификации, принятия условий или другого взаимодействия с пользователем перед предоставлением доступа (например, в интернет-кафе или в аэропорту). Они часто идентифицируют клиентов, которые этого не сделали, используя свои адреса управления доступом к среде ( &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/MAC&quot;&gt;MAC&lt;/a&gt; ).</target>
-        </trans-unit>
-        <trans-unit id="6b43fa182a48c949aed212293ef54b74e65782bb" translate="yes" xml:space="preserve">
-          <source>Never assume that a browser or a rendering engine only runs on one type of device. Especially don't make different defaults for different browsers or rendering engines.</source>
-          <target state="translated">Никогда не думайте,что браузер или рендер-движок работает только на одном типе устройств.Особенно не делайте разные настройки по умолчанию для разных браузеров или рендер-движков.</target>
-        </trans-unit>
-        <trans-unit id="2ec7bc9b9c4ccaf3179748dcdf8d87e35784c21d" translate="yes" xml:space="preserve">
-          <source>Never use the OS token to define if a browser is on mobile, tablet or desktop. The OS may run on more than one type of (for example, Android runs on tablets as well as phones).</source>
-          <target state="translated">Никогда не используйте маркер операционной системы,чтобы определить,находится ли браузер на мобильном,планшетном или настольном компьютере.ОС может работать на нескольких типах (например,Android работает как на планшетах,так и на телефонах).</target>
-        </trans-unit>
-        <trans-unit id="9f77f8caaa3035ec127bade7a0545aa68e91b610" translate="yes" xml:space="preserve">
-          <source>New cookies can also be created via JavaScript using the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie&quot;&gt;&lt;code&gt;Document.cookie&lt;/code&gt;&lt;/a&gt; property, and if the &lt;code&gt;HttpOnly&lt;/code&gt; flag is not set, existing cookies can be accessed from JavaScript as well.</source>
-          <target state="translated">Новые файлы cookie также можно создавать с помощью JavaScript с помощью свойства &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie&quot;&gt; &lt;code&gt;Document.cookie&lt;/code&gt; &lt;/a&gt; , и если флаг &lt;code&gt;HttpOnly&lt;/code&gt; не установлен, доступ к существующим файлам cookie также можно получить из JavaScript.</target>
-        </trans-unit>
-        <trans-unit id="cabdce1954a6f407085d2e37f45b2e105f92b4ef" translate="yes" xml:space="preserve">
-          <source>New cookies can be created via JavaScript using the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie&quot;&gt;&lt;code&gt;Document.cookie&lt;/code&gt;&lt;/a&gt; property, and existing cookies can be accessed from JavaScript as well, if the &lt;code&gt;HttpOnly&lt;/code&gt; flag is not set.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="d5dfd3e32cc719743d36b551e2cc31f5efa09bb4" translate="yes" xml:space="preserve">
-          <source>New definition; supplants &lt;a href=&quot;https://www.w3.org/TR/cors/&quot;&gt;W3C CORS&lt;/a&gt; specification.</source>
-          <target state="translated">Новое определение; заменяет &lt;a href=&quot;https://www.w3.org/TR/cors/&quot;&gt;спецификацию W3C CORS&lt;/a&gt; .</target>
-        </trans-unit>
-        <trans-unit id="07349da357d41ca5084e50db9d4b1c35940a7768" translate="yes" xml:space="preserve">
-          <source>New extension directives ought to consider defining:
-
-   o  What it means for a directive to be specified multiple times,
-
-   o  When the directive does not take an argument, what it means when
-      an argument is present,
-
-   o  When the directive requires an argument, what it means when it is
-      missing,
-
-   o  Whether the directive is specific to requests, responses, or able
-      to be used in either.
-
-   See also &lt;a href=&quot;#section-5.2.3&quot;&gt;Section 5.2.3&lt;/a&gt;.</source>
-          <target state="translated">Новые директивы расширения должны учитывать определение: o Что означает указание директивы несколько раз, o Когда директива не принимает аргумент, что это означает, когда аргумент присутствует, o Когда директива требует аргумента, что он означает, когда он отсутствует, o относится ли директива к запросам, ответам или может ли она использоваться в любом из них. См. Также &lt;a href=&quot;#section-5.2.3&quot;&gt;Раздел 5.2.3&lt;/a&gt; .</target>
-        </trans-unit>
-        <trans-unit id="e03ab58c9bd12196de6bace27f6b044aff80f31c" translate="yes" xml:space="preserve">
-          <source>New specifications MAY require that the &quot;type&quot; parameter be used to
-   identify the Atom Document type.  Producers of Atom Entry Documents
-   SHOULD use the &quot;type&quot; parameter regardless of whether or not it is
-   mandatory.  Producers of Atom Feed Documents MAY use the parameter.
-
-   Atom processors that do not recognize the &quot;type&quot; parameter MUST
-   ignore its value and examine the root element to determine the
-   document type.
-
-   Atom processors that do recognize the &quot;type&quot; parameter SHOULD detect
-   and report inconsistencies between the parameter's value and the
-   actual type of the document's root element.</source>
-          <target state="translated">Новые спецификации MAY требуют использования параметра &quot;тип&quot; для идентификации типа Атомного документа.Производители Atom Entry Documents ДОЛЖНЫ использовать параметр &quot;type&quot; независимо от того,является ли он обязательным или нет.Производители Atom Feed Documents МАЙЯ используют этот параметр.Атомные процессоры,не распознающие параметр &quot;type&quot; ДОЛЖНЫ игнорировать его значение и проверять корневой элемент на определение типа документа.Атомные процессоры,распознающие параметр &quot;type&quot; ДОЛЖНЫ обнаружить и сообщить о несоответствии значения параметра фактическому типу корневого элемента документа.</target>
-        </trans-unit>
-        <trans-unit id="e6f86f1d136025273b58141bacfbb27f4d328e53" translate="yes" xml:space="preserve">
-          <source>Next, always make your code dynamic. The user can flip their mobile device on its side, changing the width and height of the page. Or, there might be some weird flip-phone-like device thing in the future where flipping it out extends the screen. Do not be the developer having a headache over how to deal with the flip-phone-like device thing. Never be satisfied with your webpage until you can open up the dev tools side panel and resize the screen while the webpage looks smooth, fluid, and dynamically resized. The simplest way to do this is to separate all the code that moves content around based on screen size to a single function that is called when the page is loaded and at each &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Window/resize_event&quot;&gt;resize&lt;/a&gt; event thereafter. If there is a lot calculated by this layout function before it determines the new layout of the page, then consider debouncing the event listener such that it is not called as often. Also note that there is a huge difference between the media queries &lt;code&gt;(max-width: 25em)&lt;/code&gt;, &lt;code&gt;not all and (min-width: 25em)&lt;/code&gt;, and &lt;code&gt;(max-width: 24.99em)&lt;/code&gt;: &lt;code&gt;(max-width: 25em)&lt;/code&gt; excludes &lt;code&gt;(max-width: 25em)&lt;/code&gt;, whereas &lt;code&gt;not all and (min-width: 25em)&lt;/code&gt; includes &lt;code&gt;(max-width: 25em)&lt;/code&gt;. &lt;code&gt;(max-width: 24.99em)&lt;/code&gt; is simply a poor man's version of &lt;code&gt;not all and&amp;nbsp;(min-width: 25em)&lt;/code&gt;: do not use &lt;code&gt;(max-width: 24.99em)&lt;/code&gt; because the layout &lt;em&gt;might&lt;/em&gt; break on very high font sizes on very high definition devices in the future. Always be very deliberate about choosing the right media query and choosing the right &amp;gt;=, &amp;lt;=, &amp;gt;, or &amp;lt; in any corresponding JavaScript because it is very easy to get these mixed up, resulting in the website looking wonking right at the screen size where the layout changes. Thus, thoroughly test the website at the exact widths/heights where layout changes occur to ensure that the layout changes occur properly.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="a7b12052c0895e1742c7c3344db204110106e883" translate="yes" xml:space="preserve">
-          <source>Next, you should configure your server to map the .pac filename extension to the MIME type.</source>
-          <target state="translated">Далее,вы должны настроить свой сервер на сопоставление расширения имени файла .pac с MIME типом.</target>
-        </trans-unit>
-        <trans-unit id="f2560cbce63028d4ce27fdd2ae2588b9ae69ca1e" translate="yes" xml:space="preserve">
-          <source>Nginx</source>
-          <target state="translated">Nginx</target>
-        </trans-unit>
-        <trans-unit id="cec384f7e83e464f4943c72ce6f108fdb5f1b9ed" translate="yes" xml:space="preserve">
-          <source>Nginx configuration</source>
-          <target state="translated">конфигурация Nginx</target>
-        </trans-unit>
-        <trans-unit id="4f024b156ff549e7822c3e7d3365e8b43d1fb094" translate="yes" xml:space="preserve">
-          <source>Nicholas Zakas article on cookies</source>
-          <target state="translated">Николас Закас статья о куки-файлах</target>
-        </trans-unit>
-        <trans-unit id="d49005ff40f6342035c0b550381a16bf3992b810" translate="yes" xml:space="preserve">
-          <source>Nicholas Zakas article on cookies and security</source>
-          <target state="translated">Николас Закас статья о кукисах и безопасности</target>
-        </trans-unit>
-        <trans-unit id="816c52fd2bdd94a63cd0944823a6c0aa9384c103" translate="yes" xml:space="preserve">
-          <source>No</source>
-          <target state="translated">No</target>
-        </trans-unit>
-        <trans-unit id="2e029a8ccab5f30d2a37a9fb7c59617e13c16abc" translate="yes" xml:space="preserve">
-          <source>No &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream&quot;&gt;&lt;code&gt;ReadableStream&lt;/code&gt;&lt;/a&gt; object is used in the request.</source>
-          <target state="translated">В запросе не используется объект &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream&quot;&gt; &lt;code&gt;ReadableStream&lt;/code&gt; &lt;/a&gt; .</target>
-        </trans-unit>
-        <trans-unit id="17a7d28f373846b5f71d72172ff5a2f4594ba504" translate="yes" xml:space="preserve">
-          <source>No cache storage at all</source>
-          <target state="translated">Кэш-память вообще не хранится</target>
-        </trans-unit>
-        <trans-unit id="c55e5b38338e0330c22fc379f2150b6de3dd84ba" translate="yes" xml:space="preserve">
-          <source>No caching</source>
-          <target state="translated">Нет кэширования</target>
-        </trans-unit>
-        <trans-unit id="9b1fcbda693f085c4d6d33acbf333e420ba23fca" translate="yes" xml:space="preserve">
-          <source>No changes.</source>
-          <target state="translated">Никаких изменений.</target>
-        </trans-unit>
-        <trans-unit id="d4c0e9228f3e84fb358ddccd2e00420664a85404" translate="yes" xml:space="preserve">
-          <source>No common browsers send the &lt;code&gt;Expect&lt;/code&gt; header, but some other clients such as cURL do so by default.</source>
-          <target state="translated">Обычные браузеры не отправляют заголовок &lt;code&gt;Expect&lt;/code&gt; , но некоторые другие клиенты, такие как cURL, делают это по умолчанию.</target>
-        </trans-unit>
-        <trans-unit id="cdd99c30977facc38dbb4433f72792cc98e7b957" translate="yes" xml:space="preserve">
-          <source>No compatibility data found. Please contribute data for &quot;http.headers.Alt-Svc&quot; (depth: 1) to the &lt;a href=&quot;https://github.com/mdn/browser-compat-data&quot;&gt;MDN compatibility data repository&lt;/a&gt;.</source>
-          <target state="translated">Данных о совместимости не найдено. Пожалуйста, внесите данные для http.headers.Alt-Svc (глубина: 1) в &lt;a href=&quot;https://github.com/mdn/browser-compat-data&quot;&gt;репозиторий данных совместимости MDN&lt;/a&gt; .</target>
-        </trans-unit>
-        <trans-unit id="0f9ea7be16970fe67508438505a3982b349d0124" translate="yes" xml:space="preserve">
-          <source>No compatibility data found. Please contribute data for &quot;http.headers.Feature-Policy.document-domain&quot; (depth: 1) to the &lt;a href=&quot;https://github.com/mdn/browser-compat-data&quot;&gt;MDN compatibility data repository&lt;/a&gt;.</source>
-          <target state="translated">Данных о совместимости не найдено. Пожалуйста, внесите данные для http.headers.Feature-Policy.document-domain (глубина: 1) в &lt;a href=&quot;https://github.com/mdn/browser-compat-data&quot;&gt;репозиторий данных совместимости MDN&lt;/a&gt; .</target>
         </trans-unit>
       </group>
     </body>

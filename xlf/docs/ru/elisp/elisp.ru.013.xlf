@@ -3,6 +3,370 @@
   <file source-language="en" target-language="ru" datatype="htmlbody" original="elisp">
     <body>
       <group id="elisp">
+        <trans-unit id="b5f5818990ffb371882dce4537255efe1cd466f7" translate="yes" xml:space="preserve">
+          <source>Predicates for Strings</source>
+          <target state="translated">Предсказания для струн</target>
+        </trans-unit>
+        <trans-unit id="442ffe2a26e139b52c8f550f48e68a7ff0384a94" translate="yes" xml:space="preserve">
+          <source>Predicates on Lists</source>
+          <target state="translated">Предсказания на списках</target>
+        </trans-unit>
+        <trans-unit id="d49b8773d143e9fa0eb02a21089beeae242b1962" translate="yes" xml:space="preserve">
+          <source>Predicates on Markers</source>
+          <target state="translated">Предсказания на маркерах</target>
+        </trans-unit>
+        <trans-unit id="46f7b3c414e7e9b45a8f34a40c695f3aa31c75d5" translate="yes" xml:space="preserve">
+          <source>Prefer &lt;code&gt;bool&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt; and &lt;code&gt;true&lt;/code&gt; for booleans. Using &lt;code&gt;bool&lt;/code&gt; can make programs easier to read and a bit faster than using &lt;code&gt;int&lt;/code&gt;. Although it is also OK to use &lt;code&gt;int&lt;/code&gt;, &lt;code&gt;0&lt;/code&gt; and &lt;code&gt;1&lt;/code&gt;, this older style is gradually being phased out. When using &lt;code&gt;bool&lt;/code&gt;, respect the limitations of the replacement implementation of &lt;code&gt;bool&lt;/code&gt;, as documented in the source file</source>
+          <target state="translated">Предпочитайте &lt;code&gt;bool&lt;/code&gt; , &lt;code&gt;false&lt;/code&gt; и &lt;code&gt;true&lt;/code&gt; для логических значений. Использование &lt;code&gt;bool&lt;/code&gt; может сделать программы более легкими для чтения и немного быстрее, чем использование &lt;code&gt;int&lt;/code&gt; . Хотя также можно использовать &lt;code&gt;int&lt;/code&gt; , &lt;code&gt;0&lt;/code&gt; и &lt;code&gt;1&lt;/code&gt; , этот старый стиль постепенно отменяется. При использовании &lt;code&gt;bool&lt;/code&gt; соблюдайте ограничения реализации замены &lt;code&gt;bool&lt;/code&gt; , как описано в исходном файле.</target>
+        </trans-unit>
+        <trans-unit id="e90dac2bef91521c9b188ca145887974636ecc63" translate="yes" xml:space="preserve">
+          <source>Prefer &lt;code&gt;int&lt;/code&gt; for Emacs character codes, in the range 0 .. 0x3FFFFF. More generally, prefer &lt;code&gt;int&lt;/code&gt; for integers known to be in &lt;code&gt;int&lt;/code&gt; range, e.g., screen column counts.</source>
+          <target state="translated">Для кодов символов Emacs предпочитайте &lt;code&gt;int&lt;/code&gt; в диапазоне 0 .. 0x3FFFFF. В более общем смысле, предпочитайте &lt;code&gt;int&lt;/code&gt; для целых чисел, которые, как известно, находятся в диапазоне &lt;code&gt;int&lt;/code&gt; , например, счетчиков экранных столбцов.</target>
+        </trans-unit>
+        <trans-unit id="6abf985b52c94873bd501a840ff79256f37b786f" translate="yes" xml:space="preserve">
+          <source>Prefer &lt;code&gt;intmax_t&lt;/code&gt; for representing values that might be any signed integer value. A &lt;code&gt;printf&lt;/code&gt;-family function can print such a value via a format like &lt;code&gt;&quot;%&quot;PRIdMAX&lt;/code&gt;.</source>
+          <target state="translated">Предпочитайте &lt;code&gt;intmax_t&lt;/code&gt; для представления значений, которые могут быть любым целым числом со знаком . Функция &lt;code&gt;printf&lt;/code&gt; -family может распечатать такое значение в формате, например, &lt;code&gt;&quot;%&quot;PRIdMAX&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="5aba5324ce8cab9dcb20a85c6046cc14468964db" translate="yes" xml:space="preserve">
+          <source>Prefer &lt;code&gt;ptrdiff_t&lt;/code&gt; for sizes, i.e., for integers bounded by the maximum size of any individual C object or by the maximum number of elements in any C array. This is part of Emacs&amp;rsquo;s general preference for signed types. Using &lt;code&gt;ptrdiff_t&lt;/code&gt; limits objects to &lt;code&gt;PTRDIFF_MAX&lt;/code&gt; bytes, but larger objects would cause trouble anyway since they would break pointer subtraction, so this does not impose an arbitrary limit.</source>
+          <target state="translated">Предпочитайте &lt;code&gt;ptrdiff_t&lt;/code&gt; для размеров, т. Е. Для целых чисел, ограниченных максимальным размером любого отдельного объекта C или максимальным количеством элементов в любом массиве C. Это часть общего предпочтения Emacs для подписанных типов. Использование &lt;code&gt;ptrdiff_t&lt;/code&gt; ограничивает объекты байтами &lt;code&gt;PTRDIFF_MAX&lt;/code&gt; , но более крупные объекты в любом случае вызовут проблемы, поскольку они нарушат вычитание указателя, поэтому это не налагает произвольного ограничения.</target>
+        </trans-unit>
+        <trans-unit id="8e94bb20236e0858945d4668328a5de11ef32384" translate="yes" xml:space="preserve">
+          <source>Prefer signed types to unsigned, as code gets confusing when signed and unsigned types are combined. Many other guidelines assume that types are signed; in the rarer cases where unsigned types are needed, similar advice may apply to the unsigned counterparts (e.g., &lt;code&gt;size_t&lt;/code&gt; instead of &lt;code&gt;ptrdiff_t&lt;/code&gt;, or &lt;code&gt;uintptr_t&lt;/code&gt; instead of &lt;code&gt;intptr_t&lt;/code&gt;).</source>
+          <target state="translated">Предпочитайте подписанные типы беззнаковым, так как код сбивает с толку при объединении подписанных и неподписанных типов. Многие другие руководящие принципы предполагают, что типы подписаны; в более редких случаях, когда требуются беззнаковые типы, аналогичный совет может применяться к беззнаковым аналогам (например, &lt;code&gt;size_t&lt;/code&gt; вместо &lt;code&gt;ptrdiff_t&lt;/code&gt; или &lt;code&gt;uintptr_t&lt;/code&gt; вместо &lt;code&gt;intptr_t&lt;/code&gt; ).</target>
+        </trans-unit>
+        <trans-unit id="eb7db6d9838695e18c3cfbbb520e7db0376d0493" translate="yes" xml:space="preserve">
+          <source>Prefer the Emacs-defined type &lt;code&gt;EMACS_INT&lt;/code&gt; for representing values converted to or from Emacs Lisp fixnums, as fixnum arithmetic is based on &lt;code&gt;EMACS_INT&lt;/code&gt;.</source>
+          <target state="translated">Предпочитайте определяемый Emacs тип &lt;code&gt;EMACS_INT&lt;/code&gt; для представления значений, преобразованных в или из Emacs Lisp fixnums, поскольку арифметика fixnum основана на &lt;code&gt;EMACS_INT&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="90eceb016c51a762f15c7287008c113f6f37296c" translate="yes" xml:space="preserve">
+          <source>Prefix</source>
+          <target state="translated">Prefix</target>
+        </trans-unit>
+        <trans-unit id="f2dde8bb9369c48db82506a473e93f7ed3d5942d" translate="yes" xml:space="preserve">
+          <source>Prefix Command Arguments</source>
+          <target state="translated">Префиксная команда Аргументы</target>
+        </trans-unit>
+        <trans-unit id="fc822d5fffcf943b9b68bade876c53fa39133517" translate="yes" xml:space="preserve">
+          <source>Prefix Command: &lt;strong&gt;help-command&lt;/strong&gt;</source>
+          <target state="translated">Команда префикса: &lt;strong&gt;help-command&lt;/strong&gt;</target>
+        </trans-unit>
+        <trans-unit id="8127e5cff40d331d2889508db678ae3da7edce03" translate="yes" xml:space="preserve">
+          <source>Prefix Keys</source>
+          <target state="translated">Префиксные ключи</target>
+        </trans-unit>
+        <trans-unit id="817021ee105a177dc2b7d088adcd2a6072b0d3fc" translate="yes" xml:space="preserve">
+          <source>Prefix key definitions can appear in any active keymap. The definitions of</source>
+          <target state="translated">Префиксные определения клавиш могут появиться в любой активной клавиатурной карте.Определения</target>
+        </trans-unit>
+        <trans-unit id="5836ac851edf7d470c1d5663cc48d0f741b10afb" translate="yes" xml:space="preserve">
+          <source>Prefix keys are not supported; each key binding must be for a single-event key sequence. This is because the functions don&amp;rsquo;t use &lt;code&gt;read-key-sequence&lt;/code&gt; to get the input; instead, they read a single event and look it up &amp;ldquo;by hand&amp;rdquo;.</source>
+          <target state="translated">Префиксные ключи не поддерживаются; каждая привязка клавиш должна быть для последовательности клавиш с одним событием. Это потому, что функции не используют &lt;code&gt;read-key-sequence&lt;/code&gt; для получения ввода; вместо этого они читают одно событие и ищут его &amp;laquo;вручную&amp;raquo;.</target>
+        </trans-unit>
+        <trans-unit id="c4ae4b776a504ab9c3984d5b960e50114372390f" translate="yes" xml:space="preserve">
+          <source>Preparing Lisp code for distribution</source>
+          <target state="translated">Подготовка кода на языке Lisp к распространению</target>
+        </trans-unit>
+        <trans-unit id="10350ff9d1e72d872a5f8f9d7298748467902f2b" translate="yes" xml:space="preserve">
+          <source>Preparing Lisp code for distribution.</source>
+          <target state="translated">Подготовка кода на Лисп к распространению.</target>
+        </trans-unit>
+        <trans-unit id="3fbbb867e77ea91146750aea189a6cf551e1e134" translate="yes" xml:space="preserve">
+          <source>Preserving Window Sizes</source>
+          <target state="translated">Сохранение размеров окна</target>
+        </trans-unit>
+        <trans-unit id="0c99adaa60348b0a7126fde1061a297dc36572d3" translate="yes" xml:space="preserve">
+          <source>Preserving parts of the window layout.</source>
+          <target state="translated">Сохранение частей макета окна.</target>
+        </trans-unit>
+        <trans-unit id="6a0869815cba064e511a1c537e094bcd0e750151" translate="yes" xml:space="preserve">
+          <source>Preserving the frame layout when splitting and deleting windows.</source>
+          <target state="translated">Сохранение макета рамки при разделении и удалении окон.</target>
+        </trans-unit>
+        <trans-unit id="9c0038945c8e114f3f1807b0a52d587b5b1bd28c" translate="yes" xml:space="preserve">
+          <source>Preserving the size of windows.</source>
+          <target state="translated">Сохраняя размер окон.</target>
+        </trans-unit>
+        <trans-unit id="ea683ad616063b7347bdddeee7203a82e1a3805b" translate="yes" xml:space="preserve">
+          <source>Press</source>
+          <target state="translated">Press</target>
+        </trans-unit>
+        <trans-unit id="077d78d93e37589dfda68a661edba7765c9a96eb" translate="yes" xml:space="preserve">
+          <source>Pretty name of the major mode, e.g., &lt;code&gt;&quot;Lisp&quot;&lt;/code&gt;.</source>
+          <target state="translated">Красивое название основного режима, например, &lt;code&gt;&quot;Lisp&quot;&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="531715daf7ebc8ef98855e02895358381e85f316" translate="yes" xml:space="preserve">
+          <source>Pretty-print &lt;var&gt;dom&lt;/var&gt; at point. If &lt;var&gt;remove-empty&lt;/var&gt;, don&amp;rsquo;t print textual nodes that just contain white-space.</source>
+          <target state="translated">Довольно-напечатанный &lt;var&gt;dom&lt;/var&gt; в точке. Если &lt;var&gt;remove-empty&lt;/var&gt; , не печатайте текстовые узлы, которые просто содержат пробелы.</target>
+        </trans-unit>
+        <trans-unit id="e9e155626bd628166db4aa789fdecee502d51e80" translate="yes" xml:space="preserve">
+          <source>Primitive Function Type</source>
+          <target state="translated">Примитивный тип функции</target>
+        </trans-unit>
+        <trans-unit id="d4b920e2aa288558fd4452eaffcbabb2af4ae49b" translate="yes" xml:space="preserve">
+          <source>Primitive functions have no read syntax and print in hash notation with the name of the subroutine.</source>
+          <target state="translated">Примитивные функции не имеют синтаксиса чтения и выводят в хэш-нотации с именем подпрограммы.</target>
+        </trans-unit>
+        <trans-unit id="6a9fe8615a701b97218da662f3a8ac14d6a4e2e2" translate="yes" xml:space="preserve">
+          <source>Primitives to manipulate advice.</source>
+          <target state="translated">Примитивные,чтобы манипулировать советами.</target>
+        </trans-unit>
+        <trans-unit id="6fe4360c793f86fad27a09cbb948550825d8306d" translate="yes" xml:space="preserve">
+          <source>Primitives to manipulate advices</source>
+          <target state="translated">Примитивисты для манипулирования советами</target>
+        </trans-unit>
+        <trans-unit id="06e0d7c66571d0f6d87aa8043cbfa0b78303b0e0" translate="yes" xml:space="preserve">
+          <source>Print name</source>
+          <target state="translated">Название для печати</target>
+        </trans-unit>
+        <trans-unit id="69544e79a072d0314baaf9607247e3926667f4b3" translate="yes" xml:space="preserve">
+          <source>Printed Representation and Read Syntax</source>
+          <target state="translated">Печатное представление и синтаксис для чтения</target>
+        </trans-unit>
+        <trans-unit id="8ccedf5a8ea780671c6a52974e6be904b03133b1" translate="yes" xml:space="preserve">
+          <source>Printing Notation</source>
+          <target state="translated">Печатная запись</target>
+        </trans-unit>
+        <trans-unit id="7312416c2b8010e4c72ab0d5fa97039ad88c9d67" translate="yes" xml:space="preserve">
+          <source>Printing can produce text that cannot be read. For example, buffers, windows, frames, subprocesses and markers print as text that starts with &amp;lsquo;</source>
+          <target state="translated">Печать может производить текст, который невозможно прочитать. Например, буферы, окна, фреймы, подпроцессы и маркеры печатаются как текст, начинающийся с '</target>
+        </trans-unit>
+        <trans-unit id="a49547abb517cf476f465ac950cd09fc7cf42082" translate="yes" xml:space="preserve">
+          <source>Printing in Edebug</source>
+          <target state="translated">Печать в Эдебаге</target>
+        </trans-unit>
+        <trans-unit id="1478d8b6646a5b6c28fcb2c26cdab0af796a34c6" translate="yes" xml:space="preserve">
+          <source>Prior to executing the command, Emacs runs &lt;code&gt;undo-boundary&lt;/code&gt; to create an undo boundary. See &lt;a href=&quot;maintaining-undo#Maintaining-Undo&quot;&gt;Maintaining Undo&lt;/a&gt;.</source>
+          <target state="translated">Перед выполнением команды Emacs запускает &lt;code&gt;undo-boundary&lt;/code&gt; чтобы создать границу отмены. См. &lt;a href=&quot;maintaining-undo#Maintaining-Undo&quot;&gt;Сохранение отмены&lt;/a&gt; .</target>
+        </trans-unit>
+        <trans-unit id="c9730a0155bb21c8af306ff2d9e1e2ca1ea11f5a" translate="yes" xml:space="preserve">
+          <source>Prior to installation, a multi-file package is stored in a package archive as a tar file. The tar file must be named</source>
+          <target state="translated">Перед установкой многофайловый пакет хранится в архиве пакета в виде tar-файла.Тар-файл должен иметь имя</target>
+        </trans-unit>
+        <trans-unit id="ce845e6b0aa275c28de44782dd6ee706a0038583" translate="yes" xml:space="preserve">
+          <source>Proceed to the stop point near where point is (&lt;code&gt;edebug-goto-here&lt;/code&gt;).</source>
+          <target state="translated">Подойдите к остановке рядом с точкой ( &lt;code&gt;edebug-goto-here&lt;/code&gt; ).</target>
+        </trans-unit>
+        <trans-unit id="a7ddba4cc1f556ac8301507aef95c2eb40133e9b" translate="yes" xml:space="preserve">
+          <source>Process &lt;var&gt;spec-name&lt;/var&gt; as a sub-specification. This describes a structure nested within another structure.</source>
+          <target state="translated">&lt;var&gt;spec-name&lt;/var&gt; процесса в качестве дополнительной спецификации. Это описывает структуру, вложенную в другую структуру.</target>
+        </trans-unit>
+        <trans-unit id="b61ce7d62891ad9c77d8356faa4d21e99475b062" translate="yes" xml:space="preserve">
+          <source>Process Buffers</source>
+          <target state="translated">Технологические буферы</target>
+        </trans-unit>
+        <trans-unit id="388a07565282836943b234cb56d32f5aaedadf4d" translate="yes" xml:space="preserve">
+          <source>Process Filter Functions</source>
+          <target state="translated">Функции фильтра процесса</target>
+        </trans-unit>
+        <trans-unit id="82bbfe85a5064f53c30df0b409969f7286c3ee10" translate="yes" xml:space="preserve">
+          <source>Process Information</source>
+          <target state="translated">Информация о процессе</target>
+        </trans-unit>
+        <trans-unit id="47289f1e56f217b7b80a0cc10d8010bd99f47a6f" translate="yes" xml:space="preserve">
+          <source>Process Internals</source>
+          <target state="translated">Интернэшнл процесса</target>
+        </trans-unit>
+        <trans-unit id="a3ecc75c0ef59a79b8629845db769dd698d63aee" translate="yes" xml:space="preserve">
+          <source>Process Type</source>
+          <target state="translated">Тип процесса</target>
+        </trans-unit>
+        <trans-unit id="eb5f5e6bcdf5acb4a18fe835289e7deaa3131609" translate="yes" xml:space="preserve">
+          <source>Process objects have no read syntax. They print in hash notation, giving the name of the process:</source>
+          <target state="translated">Объекты процесса не имеют синтаксиса на чтение.Они печатают в хэш-нотации,указывая имя процесса:</target>
+        </trans-unit>
+        <trans-unit id="7b2a6ac8c2aedf47a7dc723aeee816d7cb51bcb1" translate="yes" xml:space="preserve">
+          <source>Process the &lt;var&gt;field-specs&lt;/var&gt; recursively, in order, then repeat starting from the first one, processing all the specifications &lt;var&gt;count&lt;/var&gt; times overall. The &lt;var&gt;count&lt;/var&gt; is given using the same formats as a field length&amp;mdash;if an &lt;code&gt;eval&lt;/code&gt; form is used, it is evaluated just once. For correct operation, each specification in &lt;var&gt;field-specs&lt;/var&gt; must include a name.</source>
+          <target state="translated">Обработать &lt;var&gt;field-specs&lt;/var&gt; рекурсивно, в порядке, а затем повторить , начиная с первого, обработки все спецификации &lt;var&gt;count&lt;/var&gt; раз в целом. &lt;var&gt;count&lt;/var&gt; задаются с использованием тех же форматов , как поле длиной , если &lt;code&gt;eval&lt;/code&gt; форма используется, она вычисляется только один раз. Для правильной работы каждая спецификация в &lt;var&gt;field-specs&lt;/var&gt; должна включать имя.</target>
+        </trans-unit>
+        <trans-unit id="ce0e1a372c609efa3318c56c4f9bd77418472459" translate="yes" xml:space="preserve">
+          <source>Process-based JSONRPC connections</source>
+          <target state="translated">Процессно-ориентированные соединения JSONRPC</target>
+        </trans-unit>
+        <trans-unit id="ed7308bb59f2876220e45299939d241199595df2" translate="yes" xml:space="preserve">
+          <source>Processes</source>
+          <target state="translated">Processes</target>
+        </trans-unit>
+        <trans-unit id="5f86fd596bc409e1c58d5c382f46bf1605423851" translate="yes" xml:space="preserve">
+          <source>Processes and Threads</source>
+          <target state="translated">Процессы и Нити</target>
+        </trans-unit>
+        <trans-unit id="14f958f6abd050bdccac455398bea4f88719fe76" translate="yes" xml:space="preserve">
+          <source>Processor Run time</source>
+          <target state="translated">Время работы процессора</target>
+        </trans-unit>
+        <trans-unit id="7ca6cefa03b4cc37b1ca7248c4b3124ef11af957" translate="yes" xml:space="preserve">
+          <source>Produces a literal &amp;lsquo;</source>
+          <target state="translated">Производит буквальное '</target>
+        </trans-unit>
+        <trans-unit id="cea5295b78ec1b99a624dda73a7e6d10f18cdf3f" translate="yes" xml:space="preserve">
+          <source>Profiling</source>
+          <target state="translated">Profiling</target>
+        </trans-unit>
+        <trans-unit id="c154c3adc3938975f05131376f2e5436e405861f" translate="yes" xml:space="preserve">
+          <source>Prog mode binds &lt;code&gt;parse-sexp-ignore-comments&lt;/code&gt; to &lt;code&gt;t&lt;/code&gt; (see &lt;a href=&quot;motion-via-parsing#Motion-via-Parsing&quot;&gt;Motion via Parsing&lt;/a&gt;) and &lt;code&gt;bidi-paragraph-direction&lt;/code&gt; to &lt;code&gt;left-to-right&lt;/code&gt; (see &lt;a href=&quot;bidirectional-display#Bidirectional-Display&quot;&gt;Bidirectional Display&lt;/a&gt;).</source>
+          <target state="translated">Связывает режим Prog &lt;code&gt;parse-sexp-ignore-comments&lt;/code&gt; к &lt;code&gt;t&lt;/code&gt; (см &lt;a href=&quot;motion-via-parsing#Motion-via-Parsing&quot;&gt;Motion через Парсинг&lt;/a&gt; ) и &lt;code&gt;bidi-paragraph-direction&lt;/code&gt; в &lt;code&gt;left-to-right&lt;/code&gt; (см &lt;a href=&quot;bidirectional-display#Bidirectional-Display&quot;&gt;Дисплей двунаправленного&lt;/a&gt; ).</target>
+        </trans-unit>
+        <trans-unit id="668caef4152238abda5f1efa569224f231dac599" translate="yes" xml:space="preserve">
+          <source>Prog mode is a basic major mode for buffers containing programming language source code. Most of the programming language major modes built into Emacs are derived from it.</source>
+          <target state="translated">Прог-режим является основным основным режимом для буферов,содержащих исходный код языка программирования.Большинство основных режимов языка программирования,встроенных в Emacs,являются производными от него.</target>
+        </trans-unit>
+        <trans-unit id="4cea4cfeb3712ea10092eb76342518fae1684ff9" translate="yes" xml:space="preserve">
+          <source>Programmed Completion</source>
+          <target state="translated">Программное завершение</target>
+        </trans-unit>
+        <trans-unit id="73ceda4e78259dd722c11f42a884506b0642dcb8" translate="yes" xml:space="preserve">
+          <source>Programming Types</source>
+          <target state="translated">Типы программирования</target>
+        </trans-unit>
+        <trans-unit id="e4ad9d4a698f953901838f2b945f06a3bc720785" translate="yes" xml:space="preserve">
+          <source>Programs can bind this variable to &lt;code&gt;t&lt;/code&gt; to say that the next warning should begin a series. When several warnings form a series, that means to leave point on the first warning of the series, rather than keep moving it for each warning so that it appears on the last one. The series ends when the local binding is unbound and &lt;code&gt;warning-series&lt;/code&gt; becomes &lt;code&gt;nil&lt;/code&gt; again.</source>
+          <target state="translated">Программы могут привязать эту переменную к &lt;code&gt;t&lt;/code&gt; , чтобы сказать, что следующее предупреждение должно начать серию. Когда несколько предупреждений образуют серию, это означает, что точка остается на первом предупреждении в серии, а не перемещать ее для каждого предупреждения, чтобы она отображалась на последнем. Серии завершаются, когда локальная привязка не связана, и &lt;code&gt;warning-series&lt;/code&gt; снова становится &lt;code&gt;nil&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="92cd77ba5036da4c83c813bc771dc65c0e2a2e16" translate="yes" xml:space="preserve">
+          <source>Programs can customize how their warnings appear by binding the variables described in this section.</source>
+          <target state="translated">Программы могут настроить отображение своих предупреждений,привязав описанные в этом разделе переменные.</target>
+        </trans-unit>
+        <trans-unit id="28306873004163f1c54815ba67d6f6a02d437add" translate="yes" xml:space="preserve">
+          <source>Programs which need to further customize the delayed warnings mechanism can change the variable &lt;code&gt;delayed-warnings-hook&lt;/code&gt;:</source>
+          <target state="translated">Программы, которым необходимо дополнительно настроить механизм отложенных предупреждений, могут изменить переменную &lt;code&gt;delayed-warnings-hook&lt;/code&gt; :</target>
+        </trans-unit>
+        <trans-unit id="2b0e9946d875afe68c7ebbc29fc31bfb38e35193" translate="yes" xml:space="preserve">
+          <source>Prompts the user whether to allow switching.</source>
+          <target state="translated">Подскажет пользователю,разрешать ли переключение.</target>
+        </trans-unit>
+        <trans-unit id="452b9037bada9b0c89432df65970439b3d0e924a" translate="yes" xml:space="preserve">
+          <source>Properly speaking, strings cannot hold meta characters; but when a string is to be used as a key sequence, there is a special convention that provides a way to represent meta versions of</source>
+          <target state="translated">Правильно говоря,строки не могут содержать мета-символов;но когда строка должна быть использована в качестве последовательности ключей,существует специальная конвенция,которая предоставляет способ представления мета-версий</target>
+        </trans-unit>
+        <trans-unit id="27be843b2a0060fe359278ced4660e8808d9feaf" translate="yes" xml:space="preserve">
+          <source>Properties for representing formatting of text.</source>
+          <target state="translated">Свойства для представления форматирования текста.</target>
+        </trans-unit>
+        <trans-unit id="28fda1d29c479301b92b1d646a01dabebf2e9ec4" translate="yes" xml:space="preserve">
+          <source>Properties in the Mode Line</source>
+          <target state="translated">Свойства в линии режима</target>
+        </trans-unit>
+        <trans-unit id="213490567ef858f9bf66730bcc80eb0c08256c1b" translate="yes" xml:space="preserve">
+          <source>Properties with Special Meanings</source>
+          <target state="translated">Свойства с особыми значениями</target>
+        </trans-unit>
+        <trans-unit id="1e89be5f8e0cde7710ce257bc0ca4618ccdceedb" translate="yes" xml:space="preserve">
+          <source>Property Lists</source>
+          <target state="translated">Списки объектов недвижимости</target>
+        </trans-unit>
+        <trans-unit id="612e4b2e166639467285e39b4ed1d8fd99f87210" translate="yes" xml:space="preserve">
+          <source>Property Lists Outside Symbols</source>
+          <target state="translated">Списки имущества Вне помещений Символы</target>
+        </trans-unit>
+        <trans-unit id="71dffa635be8196fa84e899f671cf85d7edd9bfd" translate="yes" xml:space="preserve">
+          <source>Property Lists and Association Lists</source>
+          <target state="translated">Списки имущества и списки ассоциаций</target>
+        </trans-unit>
+        <trans-unit id="ff82d5b6b42140b1216123af4c6a6d9b5f0855c2" translate="yes" xml:space="preserve">
+          <source>Property list</source>
+          <target state="translated">Список недвижимости</target>
+        </trans-unit>
+        <trans-unit id="46b689e66f80f0841016c7872d607ebdbd67532f" translate="yes" xml:space="preserve">
+          <source>Property lists are better than association lists for attaching information to various Lisp function names or variables. If your program keeps all such information in one association list, it will typically need to search that entire list each time it checks for an association for a particular Lisp function name or variable, which could be slow. By contrast, if you keep the same information in the property lists of the function names or variables themselves, each search will scan only the length of one property list, which is usually short. This is why the documentation for a variable is recorded in a property named &lt;code&gt;variable-documentation&lt;/code&gt;. The byte compiler likewise uses properties to record those functions needing special treatment.</source>
+          <target state="translated">Списки свойств лучше, чем списки ассоциаций, для присоединения информации к различным именам функций или переменным Lisp. Если ваша программа хранит всю такую ​​информацию в одном списке ассоциаций, ей, как правило, необходимо будет выполнять поиск по всему списку каждый раз, когда она проверяет ассоциацию для конкретного имени функции или переменной Lisp, что может быть медленным. Напротив, если вы сохраняете ту же информацию в списках свойств имен функций или самих переменных, каждый поиск будет сканировать только длину одного списка свойств, который обычно короткий. Вот почему документация для переменной записана в свойстве с именем &lt;code&gt;variable-documentation&lt;/code&gt; . Байт-компилятор также использует свойства для записи тех функций, которые требуют особой обработки.</target>
+        </trans-unit>
+        <trans-unit id="b7b650cedbe6931fc274d356229231f9ce6992b0" translate="yes" xml:space="preserve">
+          <source>Property lists are used in several contexts. For instance, the function &lt;code&gt;put-text-property&lt;/code&gt; takes an argument which is a property list, specifying text properties and associated values which are to be applied to text in a string or buffer. See &lt;a href=&quot;text-properties#Text-Properties&quot;&gt;Text Properties&lt;/a&gt;.</source>
+          <target state="translated">Списки свойств используются в нескольких контекстах. Например, функция &lt;code&gt;put-text-property&lt;/code&gt; принимает аргумент, который является списком свойств, определяя свойства текста и связанные значения, которые должны применяться к тексту в строке или буфере. См. &lt;a href=&quot;text-properties#Text-Properties&quot;&gt;Свойства текста&lt;/a&gt; .</target>
+        </trans-unit>
+        <trans-unit id="26c9c2b245fd32a1d270268516bccb5c02599371" translate="yes" xml:space="preserve">
+          <source>Provide a default value.</source>
+          <target state="translated">Предоставьте значение по умолчанию.</target>
+        </trans-unit>
+        <trans-unit id="c25a562aa1564b018459df8c958d13043bf1493a" translate="yes" xml:space="preserve">
+          <source>Provide completion.</source>
+          <target state="translated">Обеспечьте завершение.</target>
+        </trans-unit>
+        <trans-unit id="69ca381250c3c3006fc14df7ced71bab7380a5f9" translate="yes" xml:space="preserve">
+          <source>Providing a menu of definitions made in a buffer.</source>
+          <target state="translated">Предоставление меню определений,сделанных в буфере.</target>
+        </trans-unit>
+        <trans-unit id="7eb3824960aa38aac0253d4e86d70f62d6bf4d05" translate="yes" xml:space="preserve">
+          <source>Providing code to be run when particular libraries are loaded.</source>
+          <target state="translated">Предоставление кода для запуска при загрузке определенных библиотек.</target>
+        </trans-unit>
+        <trans-unit id="645ce7ff3a9e362d4f39d88c21ee1a9e243a4dba" translate="yes" xml:space="preserve">
+          <source>Providing point or the mark as an argument value is also common, but if you do this &lt;em&gt;and&lt;/em&gt; read input (whether using the minibuffer or not), be sure to get the integer values of point or the mark after reading. The current buffer may be receiving subprocess output; if subprocess output arrives while the command is waiting for input, it could relocate point and the mark.</source>
+          <target state="translated">Предоставление точки или метки в качестве значения аргумента также является обычным явлением, но если вы делаете это &lt;em&gt;и&lt;/em&gt; читаете ввод (независимо от того, используете ли минибуфер или нет), убедитесь, что вы получили целые значения точки или метки после чтения. Текущий буфер может получать выходные данные подпроцесса; если выходные данные подпроцесса поступают, пока команда ожидает ввода, он может переместить точку и метку.</target>
+        </trans-unit>
+        <trans-unit id="b8f35d8fc2ec94eb3ae367995ce77a849bd095af" translate="yes" xml:space="preserve">
+          <source>Pseudo-random numbers are generated from a &lt;em&gt;seed value&lt;/em&gt;. Starting from any given seed, the &lt;code&gt;random&lt;/code&gt; function always generates the same sequence of numbers. By default, Emacs initializes the random seed at startup, in such a way that the sequence of values of &lt;code&gt;random&lt;/code&gt; (with overwhelming likelihood) differs in each Emacs run.</source>
+          <target state="translated">Псевдослучайные числа генерируются из &lt;em&gt;начального значения&lt;/em&gt; . Начиная с любого заданного начального числа, &lt;code&gt;random&lt;/code&gt; функция всегда генерирует одну и ту же последовательность чисел. По умолчанию Emacs инициализирует случайное начальное число при запуске таким образом, что последовательность значений &lt;code&gt;random&lt;/code&gt; (с подавляющей вероятностью) различается при каждом запуске Emacs.</target>
+        </trans-unit>
+        <trans-unit id="2eb80e35d971a935837f24f84a6852b12c75cb7f" translate="yes" xml:space="preserve">
+          <source>Punctuation characters: &amp;lsquo;</source>
+          <target state="translated">Знаки пунктуации: '</target>
+        </trans-unit>
+        <trans-unit id="4b4cb70ba2cfe639a8da865361774dfa2c376cc9" translate="yes" xml:space="preserve">
+          <source>Pure Storage</source>
+          <target state="translated">Чистое хранение</target>
+        </trans-unit>
+        <trans-unit id="90aba799522d2d020ebb6ae6c41c3b9be6c0e7f6" translate="yes" xml:space="preserve">
+          <source>Pure storage is allocated only while &lt;code&gt;temacs&lt;/code&gt; is loading the standard preloaded Lisp libraries. In the file</source>
+          <target state="translated">Чистое хранилище выделяется только тогда, когда &lt;code&gt;temacs&lt;/code&gt; загружает стандартные предварительно загруженные библиотеки Lisp. В файле</target>
+        </trans-unit>
+        <trans-unit id="307d0e8cf258958b59c555f09777515eed5854cd" translate="yes" xml:space="preserve">
+          <source>Pushing and releasing a mouse button.</source>
+          <target state="translated">Нажатие и отпускание кнопки мыши.</target>
+        </trans-unit>
+        <trans-unit id="b5742a72c0db888525b18c87e0c62d02e0e4ea94" translate="yes" xml:space="preserve">
+          <source>Put a string with a text property directly into the mode line data structure.</source>
+          <target state="translated">Положите строку с текстовым свойством непосредственно в структуру данных строки режима.</target>
+        </trans-unit>
+        <trans-unit id="0cd76f5f4d006c099b898a42926b589b7c1b8288" translate="yes" xml:space="preserve">
+          <source>Put a text property on a mode line %-construct such as &amp;lsquo;</source>
+          <target state="translated">Поместите текстовое свойство в строку режима% -construct, например '</target>
+        </trans-unit>
+        <trans-unit id="4dc0318a27df4bbd3819a2ae0650102cbfcad405" translate="yes" xml:space="preserve">
+          <source>Put this customization item in group &lt;var&gt;group&lt;/var&gt;. If this keyword is missing from a customization item, it&amp;rsquo;ll be placed in the same group that was last defined (in the current file).</source>
+          <target state="translated">Поместите этот элемент настройки в группу &lt;var&gt;group&lt;/var&gt; . Если это ключевое слово отсутствует в элементе настройки, оно будет помещено в ту же группу, которая была определена последней (в текущем файле).</target>
+        </trans-unit>
+        <trans-unit id="5d0aee0599747fe1cef238e007941d3d3ff80b55" translate="yes" xml:space="preserve">
+          <source>Putting Keyboard Events in Strings</source>
+          <target state="translated">Помещение событий клавиатуры в строки</target>
+        </trans-unit>
+        <trans-unit id="573506225dbcbd9461c05f97b5cbb6e9b7ea4b2e" translate="yes" xml:space="preserve">
+          <source>Putting information into a mode line.</source>
+          <target state="translated">Помещение информации в строку режима.</target>
+        </trans-unit>
+        <trans-unit id="2e23fbce1e64b75a823c48bd07eb8cffd6a4db53" translate="yes" xml:space="preserve">
+          <source>Putting so much code in the &lt;code&gt;defvar&lt;/code&gt; form has one disadvantage: it puts the documentation string far away from the line which names the variable. Here&amp;rsquo;s a safe way to avoid that:</source>
+          <target state="translated">Помещение такого большого количества кода в форму &lt;code&gt;defvar&lt;/code&gt; имеет один недостаток: он помещает строку документации далеко от строки, которая называет переменную. Вот безопасный способ избежать этого:</target>
+        </trans-unit>
+        <trans-unit id="c3156e00d3c2588c639e0d3cf6821258b05761c7" translate="yes" xml:space="preserve">
+          <source>Q</source>
+          <target state="translated">Q</target>
+        </trans-unit>
+        <trans-unit id="464d9993abd4ae2c2c7c9e7b26a5f83fd64b3caa" translate="yes" xml:space="preserve">
+          <source>Query (once) about all the variables.</source>
+          <target state="translated">Запрос (один раз)обо всех переменных.</target>
+        </trans-unit>
+        <trans-unit id="cd271b4ec3efd977479f9516f661f6689767b2d4" translate="yes" xml:space="preserve">
+          <source>Querying Before Exit</source>
+          <target state="translated">Запрос перед выходом</target>
+        </trans-unit>
+        <trans-unit id="002ff598115d84595ffeee6219cb5c03d3a1d4a6" translate="yes" xml:space="preserve">
+          <source>Question</source>
+          <target state="translated">Question</target>
+        </trans-unit>
+        <trans-unit id="1a2285d8881f226e13430515a9dd2b9fb6294200" translate="yes" xml:space="preserve">
+          <source>Quit</source>
+          <target state="translated">Quit</target>
+        </trans-unit>
+        <trans-unit id="d67020addf987d4f125096bc76d55fb8b1a84640" translate="yes" xml:space="preserve">
+          <source>Quitting</source>
+          <target state="translated">Quitting</target>
+        </trans-unit>
+        <trans-unit id="4db027af27fca0bea2af0a68a56488a1c5b9de06" translate="yes" xml:space="preserve">
+          <source>Quitting Windows</source>
+          <target state="translated">Выход из Windows</target>
+        </trans-unit>
         <trans-unit id="a3cc802195680348f44cbb231be84a5dc54879b0" translate="yes" xml:space="preserve">
           <source>Quitting is normally inhibited within a filter function&amp;mdash;otherwise, the effect of typing</source>
           <target state="translated">Выход обычно запрещается функцией фильтра - в противном случае эффект ввода</target>
@@ -1553,9 +1917,29 @@ T2 ...&lt;/code&gt; then that should be parsed as &lt;code&gt;... T1 (something 
           <source>See &lt;a href=&quot;http://www.gnu.org/software/libc/manual/html_node/Elapsed-Time.html#Elapsed-Time&quot;&gt;(libc)Elapsed Time&lt;/a&gt;.</source>
           <target state="translated">См. &lt;a href=&quot;http://www.gnu.org/software/libc/manual/html_node/Elapsed-Time.html#Elapsed-Time&quot;&gt;(Libc) Истекшее время&lt;/a&gt; .</target>
         </trans-unit>
+        <trans-unit id="f0dbc37815e1df1ca0c1df291e2bd9be66bc1ba2" translate="yes" xml:space="preserve">
+          <source>See &lt;a href=&quot;https://www.gnu.org/software/coreutils/manual/html_node/File-permissions.html#File-permissions&quot;&gt;File permissions&lt;/a&gt; in</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="02b29dba133a767f7e68dec0815a95bee4b1ee6a" translate="yes" xml:space="preserve">
           <source>See &lt;a href=&quot;https://www.gnu.org/software/emacs/manual/html_node/elisp/Comment-Tips.html#Comment-Tips&quot;&gt;Comment Tips&lt;/a&gt;, for conventions for formatting comments.</source>
           <target state="translated">См. Раздел &amp;laquo; &lt;a href=&quot;https://www.gnu.org/software/emacs/manual/html_node/elisp/Comment-Tips.html#Comment-Tips&quot;&gt;Советы по комментариям&amp;raquo;&lt;/a&gt; , где приведены соглашения о форматировании комментариев.</target>
+        </trans-unit>
+        <trans-unit id="03f85301c5de0ee4867faf5c21fa45194ab6182b" translate="yes" xml:space="preserve">
+          <source>See &lt;a href=&quot;https://www.gnu.org/software/emacs/manual/html_node/emacs/Completion-Styles.html#Completion-Styles&quot;&gt;Completion Styles&lt;/a&gt; in</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="223e7e5bf8a41c6ab8fe23bb98fe30cf596a637c" translate="yes" xml:space="preserve">
+          <source>See &lt;a href=&quot;https://www.gnu.org/software/emacs/manual/html_node/emacs/Disabling.html#Disabling&quot;&gt;Disabling&lt;/a&gt; in</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="16bf050f1b519a2a73f7d226bd99b2df3d91ff3b" translate="yes" xml:space="preserve">
+          <source>See &lt;a href=&quot;https://www.gnu.org/software/emacs/manual/html_node/emacs/Init-Examples.html#Init-Examples&quot;&gt;Init File Examples&lt;/a&gt; in</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="1ccd3b399e79be44ae95517c1f8a0ce72f527afd" translate="yes" xml:space="preserve">
+          <source>See &lt;a href=&quot;https://www.gnu.org/software/libc/manual/html_node/Elapsed-Time.html#Elapsed-Time&quot;&gt;(libc)Elapsed Time&lt;/a&gt;.</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="ae5d175468f961072b0ba8eee4f48c07cf021bc7" translate="yes" xml:space="preserve">
           <source>See &lt;a href=&quot;init-file#Init-File&quot;&gt;Init File&lt;/a&gt;.</source>
@@ -2817,6 +3201,10 @@ T2 ...&lt;/code&gt; then that should be parsed as &lt;code&gt;... T1 (something 
           <source>Some major modes offer three different levels of fontification. You can define multiple levels by using a list of symbols for &lt;var&gt;keywords&lt;/var&gt; in &lt;code&gt;font-lock-defaults&lt;/code&gt;. Each symbol specifies one level of fontification; it is up to the user to choose one of these levels, normally by setting &lt;code&gt;font-lock-maximum-decoration&lt;/code&gt; (see &lt;a href=&quot;http://www.gnu.org/software/emacs/manual/html_node/emacs/Font-Lock.html#Font-Lock&quot;&gt;Font Lock&lt;/a&gt; in</source>
           <target state="translated">Некоторые основные режимы предлагают три разных уровня фонификации. Вы можете определить несколько уровней, используя список символов для &lt;var&gt;keywords&lt;/var&gt; в &lt;code&gt;font-lock-defaults&lt;/code&gt; . Каждый символ обозначает один уровень фонификации; пользователь может выбрать один из этих уровней, обычно устанавливая &lt;code&gt;font-lock-maximum-decoration&lt;/code&gt; (см. &lt;a href=&quot;http://www.gnu.org/software/emacs/manual/html_node/emacs/Font-Lock.html#Font-Lock&quot;&gt;Font Lock&lt;/a&gt; в</target>
         </trans-unit>
+        <trans-unit id="97d2b770fbdf897915f92e43c0fb73238f56e11e" translate="yes" xml:space="preserve">
+          <source>Some major modes offer three different levels of fontification. You can define multiple levels by using a list of symbols for &lt;var&gt;keywords&lt;/var&gt; in &lt;code&gt;font-lock-defaults&lt;/code&gt;. Each symbol specifies one level of fontification; it is up to the user to choose one of these levels, normally by setting &lt;code&gt;font-lock-maximum-decoration&lt;/code&gt; (see &lt;a href=&quot;https://www.gnu.org/software/emacs/manual/html_node/emacs/Font-Lock.html#Font-Lock&quot;&gt;Font Lock&lt;/a&gt; in</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="808993400021c891fd4d2de8ebf442fd98c93191" translate="yes" xml:space="preserve">
           <source>Some major modes such as &lt;code&gt;list-buffers&lt;/code&gt; and &lt;code&gt;occur&lt;/code&gt; construct the buffer text programmatically. The easiest way for them to support Font Lock mode is to specify the faces of text when they insert the text in the buffer.</source>
           <target state="translated">Некоторые основные режимы, такие как &lt;code&gt;list-buffers&lt;/code&gt; и &lt;code&gt;occur&lt;/code&gt; создают текст буфера программно. Самый простой способ поддержать режим Font Lock - указать лицевую сторону текста при вставке текста в буфер.</target>
@@ -3020,6 +3408,10 @@ T2 ...&lt;/code&gt; then that should be parsed as &lt;code&gt;... T1 (something 
         <trans-unit id="168d5659574624113fee9e26d692c1e074302898" translate="yes" xml:space="preserve">
           <source>Sometimes several windows collectively and cooperatively display a buffer, for example, under the management of Follow Mode (see &lt;a href=&quot;http://www.gnu.org/software/emacs/manual/html_node/emacs/Follow-Mode.html#Follow-Mode&quot;&gt;(emacs)Follow Mode&lt;/a&gt;), where the windows together display a bigger portion of the buffer than one window could alone. It is often useful to consider such a &lt;em&gt;window group&lt;/em&gt; as a single entity. Several functions such as &lt;code&gt;window-group-start&lt;/code&gt; (see &lt;a href=&quot;window-start-and-end#Window-Start-and-End&quot;&gt;Window Start and End&lt;/a&gt;) allow you to do this by supplying, as an argument, one of the windows as a stand in for the whole group.</source>
           <target state="translated">Иногда несколько окон вместе и совместно отображают буфер, например, под управлением Режима следования (см. &lt;a href=&quot;http://www.gnu.org/software/emacs/manual/html_node/emacs/Follow-Mode.html#Follow-Mode&quot;&gt;(Emacs) Режим следования&lt;/a&gt; ), где окна вместе отображают большую часть буфера, чем одно окно могло бы по отдельности. Часто бывает полезно рассматривать такую &lt;em&gt;группу окон&lt;/em&gt; как единый объект. Некоторые функции, такие как &lt;code&gt;window-group-start&lt;/code&gt; (см. &lt;a href=&quot;window-start-and-end#Window-Start-and-End&quot;&gt;Window Start and End&lt;/a&gt; ), позволяют вам сделать это, указав в качестве аргумента одно из окон в качестве замены для всей группы.</target>
+        </trans-unit>
+        <trans-unit id="34265f15698262a19379f3da05738e0d3bea720a" translate="yes" xml:space="preserve">
+          <source>Sometimes several windows collectively and cooperatively display a buffer, for example, under the management of Follow Mode (see &lt;a href=&quot;https://www.gnu.org/software/emacs/manual/html_node/emacs/Follow-Mode.html#Follow-Mode&quot;&gt;(emacs)Follow Mode&lt;/a&gt;), where the windows together display a bigger portion of the buffer than one window could alone. It is often useful to consider such a &lt;em&gt;window group&lt;/em&gt; as a single entity. Several functions such as &lt;code&gt;window-group-start&lt;/code&gt; (see &lt;a href=&quot;window-start-and-end#Window-Start-and-End&quot;&gt;Window Start and End&lt;/a&gt;) allow you to do this by supplying, as an argument, one of the windows as a stand in for the whole group.</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="2706feee5cfa5f6473ab14809e7e889158920d0e" translate="yes" xml:space="preserve">
           <source>Sometimes the system is unable to accept input for that process, because the input buffer is full. When this happens, the send functions wait a short while, accepting output from subprocesses, and then try again. This gives the subprocess a chance to read more of its pending input and make space in the buffer. It also allows filters (including the one currently running), sentinels and timers to run&amp;mdash;so take account of that in writing your code.</source>
@@ -3612,398 +4004,6 @@ T2 ...&lt;/code&gt; then that should be parsed as &lt;code&gt;... T1 (something 
         <trans-unit id="bf3db823911d97a04808ac8d71fb80673237f37f" translate="yes" xml:space="preserve">
           <source>Stickiness of Text Properties</source>
           <target state="translated">Прилипаемость текстовых свойств</target>
-        </trans-unit>
-        <trans-unit id="73a56401445bf48bbc580b621365416dd5662059" translate="yes" xml:space="preserve">
-          <source>Stop when a specified condition is true (the global break event).</source>
-          <target state="translated">Остановка,когда указанное условие истинно (событие глобального перерыва).</target>
-        </trans-unit>
-        <trans-unit id="ee49906b307cd7d777db69d53725648eb42851a9" translate="yes" xml:space="preserve">
-          <source>Stop when an error occurs.</source>
-          <target state="translated">Остановитесь при возникновении ошибки.</target>
-        </trans-unit>
-        <trans-unit id="487685a4dbd79e7200d063c4be4f49604475cadc" translate="yes" xml:space="preserve">
-          <source>Stop: don&amp;rsquo;t execute any more of the program, but wait for more Edebug commands (&lt;code&gt;edebug-stop&lt;/code&gt;).</source>
-          <target state="translated">Стоп: больше не выполнять программу, а дождаться новых команд &lt;code&gt;edebug-stop&lt;/code&gt; ( edebug-stop ).</target>
-        </trans-unit>
-        <trans-unit id="31f0273c76fb8be29e34541d1b84b455e0a57940" translate="yes" xml:space="preserve">
-          <source>Stopping and debugging a program that doesn&amp;rsquo;t exit.</source>
-          <target state="translated">Остановка и отладка программы, которая не завершается.</target>
-        </trans-unit>
-        <trans-unit id="c2ee59e3c13e44a75eea6b735a0def36a7fbb9cf" translate="yes" xml:space="preserve">
-          <source>Stopping, continuing or interrupting an asynchronous subprocess.</source>
-          <target state="translated">Остановка,продолжение или прерывание асинхронного подпроцесса.</target>
-        </trans-unit>
-        <trans-unit id="6e58999d67176d7d4be41cd3d7406dfa152c9698" translate="yes" xml:space="preserve">
-          <source>Storing a new element into the copy does not affect the original &lt;var&gt;seqr&lt;/var&gt;, and vice versa. However, the elements of the copy are not copies; they are identical (&lt;code&gt;eq&lt;/code&gt;) to the elements of the original. Therefore, changes made within these elements, as found via the copy, are also visible in the original.</source>
-          <target state="translated">Сохранение нового элемента в копии не влияет на исходный &lt;var&gt;seqr&lt;/var&gt; , и наоборот. Однако элементы копии не являются копиями; они идентичны ( &lt;code&gt;eq&lt;/code&gt; ) элементам оригинала. Следовательно, изменения, сделанные в этих элементах, обнаруженные в копии, также видны в оригинале.</target>
-        </trans-unit>
-        <trans-unit id="acba2590adbad867e7ee32a30a64baa23a3ddda6" translate="yes" xml:space="preserve">
-          <source>Storing new pieces into an existing list.</source>
-          <target state="translated">Хранение новых частей в существующем списке.</target>
-        </trans-unit>
-        <trans-unit id="f4ae959bbae79653cf7482860a25946d20203a39" translate="yes" xml:space="preserve">
-          <source>Storing new values in variables.</source>
-          <target state="translated">Хранение новых значений в переменных.</target>
-        </trans-unit>
-        <trans-unit id="36b771ea78f36aaca88615f92f79a496fa5014ae" translate="yes" xml:space="preserve">
-          <source>Stream Type</source>
-          <target state="translated">Тип потока</target>
-        </trans-unit>
-        <trans-unit id="91053c026e89853b3b1fc9031a5540a7ba017708" translate="yes" xml:space="preserve">
-          <source>Streams have no special printed representation or read syntax, and print as whatever primitive type they are.</source>
-          <target state="translated">Потоки не имеют специального печатного представления или читаемого синтаксиса,и печатают как примитивный тип.</target>
-        </trans-unit>
-        <trans-unit id="f108e8c4c424f1f568b49ce8bb536a0308984959" translate="yes" xml:space="preserve">
-          <source>String Type</source>
-          <target state="translated">Тип струны</target>
-        </trans-unit>
-        <trans-unit id="cb59712335f80b3ad9d8b0d93ccf243b5c3a20f8" translate="yes" xml:space="preserve">
-          <source>String and Character Basics</source>
-          <target state="translated">Основы струн и характера</target>
-        </trans-unit>
-        <trans-unit id="8fe42618d7b6cfa52c808fbe217b818fa40a6415" translate="yes" xml:space="preserve">
-          <source>String of length &lt;var&gt;len&lt;/var&gt;.</source>
-          <target state="translated">Строка длиной &lt;var&gt;len&lt;/var&gt; .</target>
-        </trans-unit>
-        <trans-unit id="7d603b9285c023b2f4395052cd47592c7d8ccbdc" translate="yes" xml:space="preserve">
-          <source>String quotes: &amp;lsquo;</source>
-          <target state="translated">Строковые кавычки: '</target>
-        </trans-unit>
-        <trans-unit id="6abd0fa70f27d8c99f6685f793aa1f5d8b32f68c" translate="yes" xml:space="preserve">
-          <source>String text properties (see &lt;a href=&quot;text-props-and-strings#Text-Props-and-Strings&quot;&gt;Text Props and Strings&lt;/a&gt;).</source>
-          <target state="translated">Свойства текста строки (см. &lt;a href=&quot;text-props-and-strings#Text-Props-and-Strings&quot;&gt;Текстовые&lt;/a&gt; свойства и строки ).</target>
-        </trans-unit>
-        <trans-unit id="0d74347fc75698be024347e47807ce08d6bc74cb" translate="yes" xml:space="preserve">
-          <source>String, the basic object to represent a sequence of characters.</source>
-          <target state="translated">Строка,базовый объект для представления последовательности символов.</target>
-        </trans-unit>
-        <trans-unit id="38234af461af7877a358d129bf9921b0686f9d7b" translate="yes" xml:space="preserve">
-          <source>Strings and Characters</source>
-          <target state="translated">Строки и символы</target>
-        </trans-unit>
-        <trans-unit id="a04879cafada11859b38ec71a34a65c779b124cf" translate="yes" xml:space="preserve">
-          <source>Strings are printed in a way that shows the contents more clearly as text.</source>
-          <target state="translated">Строки распечатываются таким образом,чтобы их содержимое было более наглядно представлено в виде текста.</target>
-        </trans-unit>
-        <trans-unit id="312a31ffe0a95b40adfad3ecca2362f2bcbf4737" translate="yes" xml:space="preserve">
-          <source>Strings are useful for holding regular expressions. You can also match regular expressions against strings with &lt;code&gt;string-match&lt;/code&gt; (see &lt;a href=&quot;regexp-search#Regexp-Search&quot;&gt;Regexp Search&lt;/a&gt;). The functions &lt;code&gt;match-string&lt;/code&gt; (see &lt;a href=&quot;simple-match-data#Simple-Match-Data&quot;&gt;Simple Match Data&lt;/a&gt;) and &lt;code&gt;replace-match&lt;/code&gt; (see &lt;a href=&quot;replacing-match#Replacing-Match&quot;&gt;Replacing Match&lt;/a&gt;) are useful for decomposing and modifying strings after matching regular expressions against them.</source>
-          <target state="translated">Строки полезны для хранения регулярных выражений. Вы также можете сопоставить регулярные выражения со строками с &lt;code&gt;string-match&lt;/code&gt; (см. &lt;a href=&quot;regexp-search#Regexp-Search&quot;&gt;Поиск&lt;/a&gt; регулярных выражений ). Функции &lt;code&gt;match-string&lt;/code&gt; (см. &lt;a href=&quot;simple-match-data#Simple-Match-Data&quot;&gt;Простые данные &lt;/a&gt; &lt;code&gt;replace-match&lt;/code&gt; ) и replace-match (см. &lt;a href=&quot;replacing-match#Replacing-Match&quot;&gt;Замена&lt;/a&gt; сопоставления) полезны для декомпозиции и изменения строк после сопоставления с ними регулярных выражений.</target>
-        </trans-unit>
-        <trans-unit id="adc7fc82d0441f5290d940cd2f39dfabb2bc48ca" translate="yes" xml:space="preserve">
-          <source>Strings can hold text properties. See &lt;a href=&quot;text-properties#Text-Properties&quot;&gt;Text Properties&lt;/a&gt;.</source>
-          <target state="translated">Строки могут содержать свойства текста. См. &lt;a href=&quot;text-properties#Text-Properties&quot;&gt;Свойства текста&lt;/a&gt; .</target>
-        </trans-unit>
-        <trans-unit id="4eaa0362c84fce49db7e597e423a36c588e53c10" translate="yes" xml:space="preserve">
-          <source>Strings cannot hold characters that have the hyper, super, or alt modifiers.</source>
-          <target state="translated">Строки не могут содержать символы с гипер-,супер-или модификаторами.</target>
-        </trans-unit>
-        <trans-unit id="93e954389aa2437836be9750f15e9989fcad0f41" translate="yes" xml:space="preserve">
-          <source>Strings used as mode line constructs can use certain &lt;code&gt;%&lt;/code&gt;-constructs to substitute various kinds of data. The following is a list of the defined &lt;code&gt;%&lt;/code&gt;-constructs, and what they mean.</source>
-          <target state="translated">Строки, используемые как конструкции строки режима, могут использовать определенные &lt;code&gt;%&lt;/code&gt; -конструкции для замены различных типов данных. Ниже приводится список определенных &lt;code&gt;%&lt;/code&gt; -конструкций и их значение.</target>
-        </trans-unit>
-        <trans-unit id="b653bd81ca3912b224baeff0926b4e03095893ef" translate="yes" xml:space="preserve">
-          <source>Strings with text properties.</source>
-          <target state="translated">Строки с текстовыми свойствами.</target>
-        </trans-unit>
-        <trans-unit id="2cce0fb0a511beb01dea38408de31586ec24e3ac" translate="yes" xml:space="preserve">
-          <source>Strings, and functions that work on them.</source>
-          <target state="translated">Строки,и функции,которые на них работают.</target>
-        </trans-unit>
-        <trans-unit id="6a88e785478716116bb427043ee234db36f433e0" translate="yes" xml:space="preserve">
-          <source>Structural patterns matching.</source>
-          <target state="translated">Соответствие структурных структур.</target>
-        </trans-unit>
-        <trans-unit id="1d89e3a40a37f901d436745151d243ec2fe344eb" translate="yes" xml:space="preserve">
-          <source>Subprocess input is normally encoded using a coding system before the subprocess receives it, much like text written into a file. You can use &lt;code&gt;set-process-coding-system&lt;/code&gt; to specify which coding system to use (see &lt;a href=&quot;process-information#Process-Information&quot;&gt;Process Information&lt;/a&gt;). Otherwise, the coding system comes from &lt;code&gt;coding-system-for-write&lt;/code&gt;, if that is non-&lt;code&gt;nil&lt;/code&gt;; or else from the defaulting mechanism (see &lt;a href=&quot;default-coding-systems#Default-Coding-Systems&quot;&gt;Default Coding Systems&lt;/a&gt;).</source>
-          <target state="translated">Вход подпроцесса обычно кодируется с использованием системы кодирования до того, как подпроцесс получает его, как текст, записанный в файл. Вы можете использовать &lt;code&gt;set-process-coding-system&lt;/code&gt; , чтобы указать, какую систему кодирования использовать (см. &lt;a href=&quot;process-information#Process-Information&quot;&gt;Информацию о процессе&lt;/a&gt; ). В противном случае система кодирования происходит от системы &lt;code&gt;coding-system-for-write&lt;/code&gt; , если она не равна &lt;code&gt;nil&lt;/code&gt; ; или иначе из механизма по &lt;a href=&quot;default-coding-systems#Default-Coding-Systems&quot;&gt;умолчанию&lt;/a&gt; (см. Системы кодирования по умолчанию ).</target>
-        </trans-unit>
-        <trans-unit id="7b080c9447a1ecf41b75077528dfec8eb853f0f9" translate="yes" xml:space="preserve">
-          <source>Subroutines of Visiting</source>
-          <target state="translated">Подпрограммы посещения</target>
-        </trans-unit>
-        <trans-unit id="093eff7403b55d58228ccc595fbcabc5c85608d7" translate="yes" xml:space="preserve">
-          <source>Subroutines of the debugger, and global variables.</source>
-          <target state="translated">Подпрограммы отладчика и глобальные переменные.</target>
-        </trans-unit>
-        <trans-unit id="25e0b48656a6b164628b6c6b6d82df48078872d3" translate="yes" xml:space="preserve">
-          <source>Subroutines used by Emacs help facilities.</source>
-          <target state="translated">Подпрограммы,используемые Emacs помогают учреждениям.</target>
-        </trans-unit>
-        <trans-unit id="67dd770dfb2f7ffde16df8bb49d2263954a8cf45" translate="yes" xml:space="preserve">
-          <source>Subsequently, when the session manager restarts Emacs, it loads the session file automatically (see &lt;a href=&quot;loading#Loading&quot;&gt;Loading&lt;/a&gt;). This is performed by a function named &lt;code&gt;emacs-session-restore&lt;/code&gt;, which is called during startup. See &lt;a href=&quot;startup-summary#Startup-Summary&quot;&gt;Startup Summary&lt;/a&gt;.</source>
-          <target state="translated">Впоследствии, когда менеджер сеанса перезапускает Emacs, он автоматически загружает файл сеанса (см. &lt;a href=&quot;loading#Loading&quot;&gt;Загрузка&lt;/a&gt; ). Это выполняется функцией &lt;code&gt;emacs-session-restore&lt;/code&gt; , которая вызывается при запуске. См. &lt;a href=&quot;startup-summary#Startup-Summary&quot;&gt;Сводка запуска&lt;/a&gt; .</target>
-        </trans-unit>
-        <trans-unit id="a73c2ab3e4626d37cb5af186dd9f2e2601f31a0a" translate="yes" xml:space="preserve">
-          <source>Substitute the item&amp;rsquo;s documentation string.</source>
-          <target state="translated">Подставьте строку документации элемента.</target>
-        </trans-unit>
-        <trans-unit id="3ca7315f402b0309eb0c3a55ef4de7844f341637" translate="yes" xml:space="preserve">
-          <source>Substitute the item&amp;rsquo;s value. How the value is represented depends on the kind of item, and (for variables) on the customization type.</source>
-          <target state="translated">Подставьте значение предмета. Способ представления значения зависит от типа элемента и (для переменных) от типа настройки.</target>
-        </trans-unit>
-        <trans-unit id="007b30ab1586036ff160691f2ccfd70ad240895d" translate="yes" xml:space="preserve">
-          <source>Substitute the tag here. You specify the tag with the &lt;code&gt;:tag&lt;/code&gt; keyword.</source>
-          <target state="translated">Подставьте сюда тег. Вы указываете тег с ключевым словом &lt;code&gt;:tag&lt;/code&gt; .</target>
-        </trans-unit>
-        <trans-unit id="0e4fa6c66312836e51f8ea059b021e941801d463" translate="yes" xml:space="preserve">
-          <source>Substituting Key Bindings in Documentation</source>
-          <target state="translated">Замена ключевых связок в документации</target>
-        </trans-unit>
-        <trans-unit id="abdc864d36ff8fc40c8546b4a8bc357cc605fc0f" translate="yes" xml:space="preserve">
-          <source>Substituting current key bindings.</source>
-          <target state="translated">Замена текущих привязок к ключам.</target>
-        </trans-unit>
-        <trans-unit id="c1abe833a18689a680b16c7b259b625606a4e535" translate="yes" xml:space="preserve">
-          <source>Substituting for a Character Code</source>
-          <target state="translated">Замена кода символов</target>
-        </trans-unit>
-        <trans-unit id="b2eacbf17e876f3b3299eb6ed0ee358ba7866c3f" translate="yes" xml:space="preserve">
-          <source>Substitution with &amp;lsquo;</source>
-          <target state="translated">Замена на '</target>
-        </trans-unit>
-        <trans-unit id="5f025a7aa71e06047c91fc6b6f430170e62e7631" translate="yes" xml:space="preserve">
-          <source>Subtracting 4 from -1 returns the negative integer -5. In binary, the decimal integer 4 is 100. Consequently, -5 looks like this:</source>
-          <target state="translated">Вычитание 4 из -1 возвращает отрицательное целое число -5.В двоичной системе десятичное число 4 равно 100.Следовательно,-5 выглядит так:</target>
-        </trans-unit>
-        <trans-unit id="b60ed248bac24498f595b73037a78877ce7bb18a" translate="yes" xml:space="preserve">
-          <source>Such a &lt;code&gt;setf&lt;/code&gt; call is documented to return &lt;var&gt;value&lt;/var&gt;. This is no problem with, e.g., &lt;code&gt;car&lt;/code&gt; and &lt;code&gt;setcar&lt;/code&gt;, because &lt;code&gt;setcar&lt;/code&gt; returns the value that it set. If your &lt;var&gt;setter&lt;/var&gt; function does not return &lt;var&gt;value&lt;/var&gt;, use a non-&lt;code&gt;nil&lt;/code&gt; value for the &lt;var&gt;fix-return&lt;/var&gt; argument of &lt;code&gt;gv-define-simple-setter&lt;/code&gt;. This expands into something equivalent to</source>
-          <target state="translated">Такой вызов &lt;code&gt;setf&lt;/code&gt; задокументирован для возврата &lt;var&gt;value&lt;/var&gt; . Это не проблема, например, с &lt;code&gt;car&lt;/code&gt; и &lt;code&gt;setcar&lt;/code&gt; , потому что &lt;code&gt;setcar&lt;/code&gt; возвращает установленное значение. Если &lt;var&gt;setter&lt;/var&gt; функция не возвращает &lt;var&gt;value&lt;/var&gt; , использовать не &lt;code&gt;nil&lt;/code&gt; значение для &lt;var&gt;fix-return&lt;/var&gt; аргумента &lt;code&gt;gv-define-simple-setter&lt;/code&gt; . Это расширяется до чего-то эквивалентного</target>
-        </trans-unit>
-        <trans-unit id="f8f63383c2f4d857013ba4e80a7ed237472ac989" translate="yes" xml:space="preserve">
-          <source>Such a derived mode should use &lt;code&gt;define-derived-mode&lt;/code&gt; in the usual way, specifying &lt;code&gt;tabulated-list-mode&lt;/code&gt; as the second argument (see &lt;a href=&quot;derived-modes#Derived-Modes&quot;&gt;Derived Modes&lt;/a&gt;). The body of the &lt;code&gt;define-derived-mode&lt;/code&gt; form should specify the format of the tabulated data, by assigning values to the variables documented below; optionally, it can then call the function &lt;code&gt;tabulated-list-init-header&lt;/code&gt;, which will populate a header with the names of the columns.</source>
-          <target state="translated">Такой производный режим должен использовать &lt;code&gt;define-derived-mode&lt;/code&gt; обычным способом, указав &lt;code&gt;tabulated-list-mode&lt;/code&gt; в качестве второго аргумента (см. &lt;a href=&quot;derived-modes#Derived-Modes&quot;&gt;Производные режимы&lt;/a&gt; ). В теле формы &lt;code&gt;define-derived-mode&lt;/code&gt; должен быть указан формат табличных данных путем присвоения значений переменным, описанным ниже; при желании он может затем вызвать функцию &lt;code&gt;tabulated-list-init-header&lt;/code&gt; , которая заполнит заголовок именами столбцов.</target>
-        </trans-unit>
-        <trans-unit id="b6df4c00806252d0a6d6afb58ce616ca3c7105b0" translate="yes" xml:space="preserve">
-          <source>Such a token is expected to have an associative syntax and be closely tied to its syntactic parent. Typical examples are &lt;code&gt;&quot;,&quot;&lt;/code&gt; in lists of arguments (enclosed inside parentheses), or &lt;code&gt;&quot;;&quot;&lt;/code&gt; in sequences of instructions (enclosed in a &lt;code&gt;{...}&lt;/code&gt; or &lt;code&gt;begin...end&lt;/code&gt; block).</source>
-          <target state="translated">Ожидается, что такой токен будет иметь ассоциативный синтаксис и будет тесно связан со своим синтаксическим родителем. Типичные примеры: &lt;code&gt;&quot;,&quot;&lt;/code&gt; в списках аргументов (заключенных в круглые скобки) или &lt;code&gt;&quot;;&quot;&lt;/code&gt; в последовательностях инструкций (заключенных в блок &lt;code&gt;{...}&lt;/code&gt; или &lt;code&gt;begin...end&lt;/code&gt; ).</target>
-        </trans-unit>
-        <trans-unit id="4140942d94a16976c754d818601c78652208ca0e" translate="yes" xml:space="preserve">
-          <source>Summary: Sequence of Actions at Startup</source>
-          <target state="translated">Резюме:Последовательность действий при запуске</target>
-        </trans-unit>
-        <trans-unit id="08464d171e5fdd753bc5fb2c51634ef09a932c8e" translate="yes" xml:space="preserve">
-          <source>Super-fast lookup tables.</source>
-          <target state="translated">Супер-быстрые поисковые столы.</target>
-        </trans-unit>
-        <trans-unit id="05c7d1a2ae021142c75d72d53554c700ba31b094" translate="yes" xml:space="preserve">
-          <source>Supplying functions to be run when text is changed.</source>
-          <target state="translated">Поставка функций,которые должны выполняться при изменении текста.</target>
-        </trans-unit>
-        <trans-unit id="b6b3070fa58330bf1fdabab1211f527dffa367e9" translate="yes" xml:space="preserve">
-          <source>Support functions for buffer display.</source>
-          <target state="translated">Функции поддержки буферной индикации.</target>
-        </trans-unit>
-        <trans-unit id="f4078c217273780eedae505847867aeab6c0b5a2" translate="yes" xml:space="preserve">
-          <source>Supported image formats (and the required support libraries) include PBM and XBM (which do not depend on support libraries and are always available), XPM (&lt;code&gt;libXpm&lt;/code&gt;), GIF (&lt;code&gt;libgif&lt;/code&gt; or &lt;code&gt;libungif&lt;/code&gt;), JPEG (&lt;code&gt;libjpeg&lt;/code&gt;), TIFF (&lt;code&gt;libtiff&lt;/code&gt;), PNG (&lt;code&gt;libpng&lt;/code&gt;), and SVG (&lt;code&gt;librsvg&lt;/code&gt;).</source>
-          <target state="translated">Поддерживаемые форматы изображений (и необходимые библиотеки поддержки) включают PBM и XBM (которые не зависят от поддерживаемых библиотек и всегда доступны), XPM ( &lt;code&gt;libXpm&lt;/code&gt; ), GIF ( &lt;code&gt;libgif&lt;/code&gt; или &lt;code&gt;libungif&lt;/code&gt; ), JPEG ( &lt;code&gt;libjpeg&lt;/code&gt; ), TIFF ( &lt;code&gt;libtiff&lt;/code&gt; ), PNG ( &lt;code&gt;libpng&lt;/code&gt; ) и SVG ( &lt;code&gt;librsvg&lt;/code&gt; ).</target>
-        </trans-unit>
-        <trans-unit id="04bb7e493ad9cbc8a10573a514fcacb2acaa12c5" translate="yes" xml:space="preserve">
-          <source>Supported image formats.</source>
-          <target state="translated">Поддерживаемые форматы изображений.</target>
-        </trans-unit>
-        <trans-unit id="e8997d9f3adf251389a6fbfcc32f8bb33cb4b85f" translate="yes" xml:space="preserve">
-          <source>Supports body text.</source>
-          <target state="translated">Поддерживает основной текст.</target>
-        </trans-unit>
-        <trans-unit id="42b5543e20fb801faa0dbcdef65661291606f752" translate="yes" xml:space="preserve">
-          <source>Supports display of exactly 1 frame of any given image array. This value is mutually exclusive with &lt;code&gt;:icon-multi&lt;/code&gt;.</source>
-          <target state="translated">Поддерживает отображение ровно 1 кадра любого заданного массива изображений. Это значение является взаимоисключающим с &lt;code&gt;:icon-multi&lt;/code&gt; .</target>
-        </trans-unit>
-        <trans-unit id="8ca0d2ae7e298231a07cee235b1817de8483e1c3" translate="yes" xml:space="preserve">
-          <source>Supports markup in the body text.</source>
-          <target state="translated">Поддерживает разметку в тексте тела.</target>
-        </trans-unit>
-        <trans-unit id="b51d9c26e03bbfcbdc6367abc6918bc8e31a705d" translate="yes" xml:space="preserve">
-          <source>Suppose an application wants to display</source>
-          <target state="translated">Предположим,что приложение хочет отобразить</target>
-        </trans-unit>
-        <trans-unit id="bcaf8bc0f48ac72f7484ebf07b7b56ba0df49250" translate="yes" xml:space="preserve">
-          <source>Suppose now that, before evaluating the new form, you have made the selected window as small as possible, for example, by evaluating the form &lt;code&gt;(fit-window-to-buffer)&lt;/code&gt; in that window. In that case, &lt;code&gt;display-buffer&lt;/code&gt; would have failed to split the selected window and would have split the frame&amp;rsquo;s root window instead, effectively displaying</source>
-          <target state="translated">Предположим теперь, что перед оценкой новой формы вы сделали выбранное окно как можно меньше, например, оценив форму &lt;code&gt;(fit-window-to-buffer)&lt;/code&gt; в этом окне. В этом случае &lt;code&gt;display-buffer&lt;/code&gt; не смог бы разделить выбранное окно и вместо этого разделил бы корневое окно фрейма, эффективно отображая</target>
-        </trans-unit>
-        <trans-unit id="df559b92a7d2233e611ca09f4b9a811772b2f4c8" translate="yes" xml:space="preserve">
-          <source>Suppose that you visit a file and make changes in its buffer, and meanwhile the file itself is changed on disk. At this point, saving the buffer would overwrite the changes in the file. Occasionally this may be what you want, but usually it would lose valuable information. Emacs therefore checks the file&amp;rsquo;s modification time using the functions described below before saving the file. (See &lt;a href=&quot;file-attributes#File-Attributes&quot;&gt;File Attributes&lt;/a&gt;, for how to examine a file&amp;rsquo;s modification time.)</source>
-          <target state="translated">Предположим, вы посещаете файл и вносите изменения в его буфер, а при этом сам файл изменяется на диске. На этом этапе сохранение буфера перезапишет изменения в файле. Иногда это может быть то, что вам нужно, но обычно это приводит к потере ценной информации. Поэтому Emacs проверяет время модификации файла, используя функции, описанные ниже, перед сохранением файла. (См. &lt;a href=&quot;file-attributes#File-Attributes&quot;&gt;Атрибуты файла&lt;/a&gt; , чтобы узнать, как проверить время изменения файла.)</target>
-        </trans-unit>
-        <trans-unit id="219eb5ac71cca83cb58c14a2b0425a61a20f66fd" translate="yes" xml:space="preserve">
-          <source>Suppose we attempt to fix this problem by coalescing the two intervals when the text is inserted. That works fine if the buffer originally was a single interval. But suppose instead that we have two adjacent intervals with the same properties, and we kill the text of one interval and yank it back. The same interval-coalescence feature that rescues the other case causes trouble in this one: after yanking, we have just one interval. Once again, editing does not preserve the distinction between one interval and two.</source>
-          <target state="translated">Предположим,что мы попытаемся исправить эту проблему путем объединения двух интервалов при вставке текста.Это хорошо работает,если буфер изначально был одним интервалом.Но предположим,что вместо этого мы имеем два смежных интервала с одинаковыми свойствами,и мы убиваем текст одного интервала и вытаскиваем его обратно.Та же самая функция interval-coalescence,которая спасает другой случай,вызывает проблемы в этом случае:после того,как мы дёрнем,у нас есть только один интервал.Опять же,редактирование не сохраняет различия между одним интервалом и двумя.</target>
-        </trans-unit>
-        <trans-unit id="af47e3ccfe9130dd6fcb9fc8114f35373a9a41be" translate="yes" xml:space="preserve">
-          <source>Suppose we would like to define a Lisp construct to increment a variable value, much like the &lt;code&gt;++&lt;/code&gt; operator in C. We would like to write &lt;code&gt;(inc x)&lt;/code&gt; and have the effect of &lt;code&gt;(setq x (1+ x))&lt;/code&gt;. Here&amp;rsquo;s a macro definition that does the job:</source>
-          <target state="translated">Предположим, мы хотели бы определить конструкцию Лиспа для увеличения значения переменной, во многом как оператор &lt;code&gt;++&lt;/code&gt; в C. Мы хотели бы написать &lt;code&gt;(inc x)&lt;/code&gt; и получить эффект &lt;code&gt;(setq x (1+ x))&lt;/code&gt; . Вот определение макроса, который выполняет свою работу:</target>
-        </trans-unit>
-        <trans-unit id="26931a48564f94873900bd9220bea0cbb44b7764" translate="yes" xml:space="preserve">
-          <source>Suppose you have the text &amp;lsquo;</source>
-          <target state="translated">Предположим, у вас есть текст '</target>
-        </trans-unit>
-        <trans-unit id="9b270516053d0053aba4f69eadf03f5c450b89da" translate="yes" xml:space="preserve">
-          <source>Suppose you take the buffer with just one interval and kill part of the text. The text remaining in the buffer is one interval, and the copy in the kill ring (and the undo list) becomes a separate interval. Then if you yank back the killed text, you get two intervals with the same properties. Thus, editing does not preserve the distinction between one interval and two.</source>
-          <target state="translated">Предположим,вы берете буфер с одним интервалом и убиваете часть текста.Текст,оставшийся в буфере-один интервал,а копия в убийственном кольце (и список отказов)становится отдельным интервалом.Затем,если вы отбросите убитый текст назад,вы получите два интервала с одинаковыми свойствами.Таким образом,редактирование не сохраняет различия между одним интервалом и двумя.</target>
-        </trans-unit>
-        <trans-unit id="a109b035fd9deb6e7df0a207b931c1581854bda8" translate="yes" xml:space="preserve">
-          <source>Surviving power and media failures</source>
-          <target state="translated">Пережившие сбои в электроснабжении и средствах массовой информации</target>
-        </trans-unit>
-        <trans-unit id="5bff6745b282307e07875a064490d9c4687f8835" translate="yes" xml:space="preserve">
-          <source>Suspending Emacs</source>
-          <target state="translated">Подвеска Имака</target>
-        </trans-unit>
-        <trans-unit id="08973290af86b405251120bf5a29b78c688529fc" translate="yes" xml:space="preserve">
-          <source>Suspending works only on a terminal device from which the Emacs session was started. We call that device the &lt;em&gt;controlling terminal&lt;/em&gt; of the session. Suspending is not allowed if the controlling terminal is a graphical terminal. Suspending is usually not relevant in graphical environments, since you can simply switch to another application without doing anything special to Emacs.</source>
-          <target state="translated">Приостановка работает только на оконечном устройстве, с которого был запущен сеанс Emacs. Мы называем это устройство &lt;em&gt;управляющим терминалом&lt;/em&gt; сеанса. Приостановка не допускается, если управляющий терминал является графическим. Приостановка обычно не актуальна в графических средах, поскольку вы можете просто переключиться на другое приложение, не делая ничего особенного с Emacs.</target>
-        </trans-unit>
-        <trans-unit id="32ee44a8262f0fae64d7177c1505204bc370319c" translate="yes" xml:space="preserve">
-          <source>Swapping Text Between Two Buffers</source>
-          <target state="translated">Смена текста между двумя буферами</target>
-        </trans-unit>
-        <trans-unit id="4a82b9c20c7aff7e3ee725f664f63e978d0cc1b3" translate="yes" xml:space="preserve">
-          <source>Swapping text between two buffers.</source>
-          <target state="translated">Смена текста между двумя буферами.</target>
-        </trans-unit>
-        <trans-unit id="2a5ed02098c384c5cf06378259a39ba740888593" translate="yes" xml:space="preserve">
-          <source>Swapping two portions of a buffer.</source>
-          <target state="translated">Замена двух порций буфера.</target>
-        </trans-unit>
-        <trans-unit id="2b23aaf510c9fd8add454744ad9210224c42cc09" translate="yes" xml:space="preserve">
-          <source>Switch &lt;var&gt;stream&lt;/var&gt; into binary or text I/O mode. If &lt;var&gt;mode&lt;/var&gt; is non-&lt;code&gt;nil&lt;/code&gt;, switch to binary mode, otherwise switch to text mode. The value of &lt;var&gt;stream&lt;/var&gt; can be one of &lt;code&gt;stdin&lt;/code&gt;, &lt;code&gt;stdout&lt;/code&gt;, or &lt;code&gt;stderr&lt;/code&gt;. This function flushes any pending output data of &lt;var&gt;stream&lt;/var&gt; as a side effect, and returns the previous value of I/O mode for &lt;var&gt;stream&lt;/var&gt;. On POSIX hosts, it always returns a non-&lt;code&gt;nil&lt;/code&gt; value and does nothing except flushing pending output.</source>
-          <target state="translated">Переключить &lt;var&gt;stream&lt;/var&gt; в двоичный или текстовый режим ввода-вывода. Если &lt;var&gt;mode&lt;/var&gt; равен &lt;code&gt;nil&lt;/code&gt; , переключитесь в двоичный режим, в противном случае переключитесь в текстовый режим. Значение &lt;var&gt;stream&lt;/var&gt; может быть одним из &lt;code&gt;stdin&lt;/code&gt; , &lt;code&gt;stdout&lt;/code&gt; или &lt;code&gt;stderr&lt;/code&gt; . Эта функция сбрасывает все ожидающие выходные данные &lt;var&gt;stream&lt;/var&gt; в качестве побочного эффекта и возвращает предыдущее значение режима ввода-вывода для &lt;var&gt;stream&lt;/var&gt; . На хостах POSIX он всегда возвращает &lt;code&gt;nil&lt;/code&gt; значение и ничего не делает, кроме сброса ожидающих выходных данных.</target>
-        </trans-unit>
-        <trans-unit id="f5b63f4c6d1c4a0f979dc1b0cbbbc282162114e7" translate="yes" xml:space="preserve">
-          <source>Switch back to the source code buffer at the current stop point (&lt;code&gt;edebug-where&lt;/code&gt;).</source>
-          <target state="translated">Вернитесь к буферу исходного кода в текущей точке остановки ( &lt;code&gt;edebug-where&lt;/code&gt; ).</target>
-        </trans-unit>
-        <trans-unit id="f586660ad8d54cdb75535156a0f4b842ca132c55" translate="yes" xml:space="preserve">
-          <source>Switch to the evaluation list buffer</source>
-          <target state="translated">Переключиться в буфер оценочного списка</target>
-        </trans-unit>
-        <trans-unit id="4f0d1ac6a5d7673289fabb4985e0dcb3d367c9e9" translate="yes" xml:space="preserve">
-          <source>Switch to viewing the outside window configuration (&lt;code&gt;edebug-view-outside&lt;/code&gt;). Type</source>
-          <target state="translated">Переключитесь на просмотр конфигурации внешнего окна ( &lt;code&gt;edebug-view-outside&lt;/code&gt; ). Тип</target>
-        </trans-unit>
-        <trans-unit id="ee08222dab072e2ba45c2d93ff5498dc94aa9d8c" translate="yes" xml:space="preserve">
-          <source>Switching to a Buffer in a Window</source>
-          <target state="translated">Переключение на буфер в окне</target>
-        </trans-unit>
-        <trans-unit id="bfba63bf401b528b76ba63345eca345bc4c4a916" translate="yes" xml:space="preserve">
-          <source>Symbol Components</source>
-          <target state="translated">Символ Компоненты</target>
-        </trans-unit>
-        <trans-unit id="becbc5b150a14bf0d37ff1283d10752a85b77632" translate="yes" xml:space="preserve">
-          <source>Symbol Forms</source>
-          <target state="translated">Формы символов</target>
-        </trans-unit>
-        <trans-unit id="85c733cfed2393c082c81f9b72f24cd68d3b4b75" translate="yes" xml:space="preserve">
-          <source>Symbol Function Indirection</source>
-          <target state="translated">Символ Функция Идентификация</target>
-        </trans-unit>
-        <trans-unit id="bb1d81a996278dfb44badfa347a592f8f2e99409" translate="yes" xml:space="preserve">
-          <source>Symbol Properties</source>
-          <target state="translated">Символ Свойства</target>
-        </trans-unit>
-        <trans-unit id="4ab0d35e382f128b8ce0cc2aec957f7bbcc05b64" translate="yes" xml:space="preserve">
-          <source>Symbol Type</source>
-          <target state="translated">Символ Тип</target>
-        </trans-unit>
-        <trans-unit id="7cd436f2065e9faa118202e9bec3302aac2eac0c" translate="yes" xml:space="preserve">
-          <source>Symbol constituents: &amp;lsquo;</source>
-          <target state="translated">Составляющие символа: '</target>
-        </trans-unit>
-        <trans-unit id="9a5aaaaaada89b273110c8fa61f6062a5f48a149" translate="yes" xml:space="preserve">
-          <source>Symbol indicating the type of process: &lt;code&gt;real&lt;/code&gt;, &lt;code&gt;network&lt;/code&gt;, &lt;code&gt;serial&lt;/code&gt;.</source>
-          <target state="translated">Символ, обозначающий тип процесса: &lt;code&gt;real&lt;/code&gt; , &lt;code&gt;network&lt;/code&gt; , &lt;code&gt;serial&lt;/code&gt; .</target>
-        </trans-unit>
-        <trans-unit id="c64ee34f48f20a70545ff076095a22e58c3cc7c4" translate="yes" xml:space="preserve">
-          <source>Symbol naming the major mode of this buffer, e.g., &lt;code&gt;lisp-mode&lt;/code&gt;.</source>
-          <target state="translated">Символ, обозначающий основной режим этого буфера, например &lt;code&gt;lisp-mode&lt;/code&gt; .</target>
-        </trans-unit>
-        <trans-unit id="b25692bcd921e1b89def4ec4d805f79777909d1b" translate="yes" xml:space="preserve">
-          <source>Symbol's chain of function indirections contains a loop</source>
-          <target state="translated">Символьная цепь функциональных инициалов содержит цикл</target>
-        </trans-unit>
-        <trans-unit id="fbc050be35f0f5c2ba873db3d0f0115dc1f98083" translate="yes" xml:space="preserve">
-          <source>Symbol's chain of variable indirections contains a loop</source>
-          <target state="translated">Символьная цепочка переменных индирекций содержит цикл</target>
-        </trans-unit>
-        <trans-unit id="d3a30e40b8d6ba425ac86d47d16836dcbff02259" translate="yes" xml:space="preserve">
-          <source>Symbol's function definition is void</source>
-          <target state="translated">Определение функции символа является недействительным</target>
-        </trans-unit>
-        <trans-unit id="470f057f97d94113254493aa56be6e21748f90c9" translate="yes" xml:space="preserve">
-          <source>Symbol's value as variable is void</source>
-          <target state="translated">Значение символа как переменной является пустым</target>
-        </trans-unit>
-        <trans-unit id="7f50e4f3efa15fc4c958e89b9123d9e3075a04a8" translate="yes" xml:space="preserve">
-          <source>Symbol, the unique-named entity commonly used as an identifier.</source>
-          <target state="translated">Символ-одноименная сущность,обычно используемая в качестве идентификатора.</target>
-        </trans-unit>
-        <trans-unit id="ca337136fcbfb609d22bd9c944aa1bc1014b634a" translate="yes" xml:space="preserve">
-          <source>Symbolic links are ordinarily followed wherever they appear. For example, to interpret the file name</source>
-          <target state="translated">Символические ссылки обычно следуют везде,где они появляются.Например,для интерпретации имени файла</target>
-        </trans-unit>
-        <trans-unit id="3781b4ea1ae4969c3f5f44015d1551029fb94853" translate="yes" xml:space="preserve">
-          <source>Symbolic links to subdirectories are not followed by default, but if &lt;var&gt;follow-symlinks&lt;/var&gt; is non-&lt;code&gt;nil&lt;/code&gt;, they are followed.</source>
-          <target state="translated">По умолчанию символические ссылки на подкаталоги не сопровождаются, но если &lt;var&gt;follow-symlinks&lt;/var&gt; не &lt;code&gt;nil&lt;/code&gt; , они отслеживаются.</target>
-        </trans-unit>
-        <trans-unit id="22ad664e9eb98b75a73333b2b2395fc4b52e6fc9" translate="yes" xml:space="preserve">
-          <source>Symbols</source>
-          <target state="translated">Symbols</target>
-        </trans-unit>
-        <trans-unit id="253a36568b141d5436a9968a78875644e83ca0ed" translate="yes" xml:space="preserve">
-          <source>Symbols are also allowed as arguments, in which case their print names are compared.</source>
-          <target state="translated">В качестве аргументов допускаются также символы,в этом случае сравниваются их печатные имена.</target>
-        </trans-unit>
-        <trans-unit id="8ea13201df27e4d4e9cddf6d7c9946cee693eb3a" translate="yes" xml:space="preserve">
-          <source>Symbols evaluate as variables.</source>
-          <target state="translated">Символы оцениваются как переменные.</target>
-        </trans-unit>
-        <trans-unit id="2d3e783cbacd15ebf4acb2ac664aa700b758f629" translate="yes" xml:space="preserve">
-          <source>Symbols have names, values, function definitions and property lists.</source>
-          <target state="translated">Символы имеют имена,значения,определения функций и списки свойств.</target>
-        </trans-unit>
-        <trans-unit id="2005a7cdc65f99cd1c81be057bafd19d16443047" translate="yes" xml:space="preserve">
-          <source>Symbols represent names, uniquely.</source>
-          <target state="translated">Символы представляют имена,уникальные.</target>
-        </trans-unit>
-        <trans-unit id="9cf76066050b13afaf6a6ee2ee11b9e91b21d169" translate="yes" xml:space="preserve">
-          <source>Symbols that lack values.</source>
-          <target state="translated">Символы,которым не хватает ценностей.</target>
-        </trans-unit>
-        <trans-unit id="5228d3c63616eb47155239a34e8e4de5e26d17d6" translate="yes" xml:space="preserve">
-          <source>Synchronous and asynchronous processes are explained in the following sections. Since the three functions are all called in a similar fashion, their common arguments are described here.</source>
-          <target state="translated">Синхронные и асинхронные процессы объясняются в следующих разделах.Поскольку все три функции вызываются одинаково,здесь описываются их общие аргументы.</target>
-        </trans-unit>
-        <trans-unit id="18904873557fd40dba5c5b9fc88f48fe871bf6ff" translate="yes" xml:space="preserve">
-          <source>Syntactic Font Lock</source>
-          <target state="translated">Синтаксический шрифтовой замок</target>
-        </trans-unit>
-        <trans-unit id="bbcd90388ee12409d01b117e198759bcd22bd762" translate="yes" xml:space="preserve">
-          <source>Syntactic fontification uses a syntax table (see &lt;a href=&quot;syntax-tables#Syntax-Tables&quot;&gt;Syntax Tables&lt;/a&gt;) to find and highlight syntactically relevant text. If enabled, it runs prior to search-based fontification. The variable &lt;code&gt;font-lock-syntactic-face-function&lt;/code&gt;, documented below, determines which syntactic constructs to highlight. There are several variables that affect syntactic fontification; you should set them by means of &lt;code&gt;font-lock-defaults&lt;/code&gt; (see &lt;a href=&quot;font-lock-basics#Font-Lock-Basics&quot;&gt;Font Lock Basics&lt;/a&gt;).</source>
-          <target state="translated">Синтаксическое оформление использует таблицу синтаксиса (см. &lt;a href=&quot;syntax-tables#Syntax-Tables&quot;&gt;Таблицы синтаксиса&lt;/a&gt; ) для поиска и выделения синтаксически релевантного текста. Если этот параметр включен, он запускается перед фонтификацией на основе поиска. Переменная &lt;code&gt;font-lock-syntactic-face-function&lt;/code&gt; , задокументированная ниже, определяет, какие синтаксические конструкции следует выделить. Есть несколько переменных, которые влияют на синтаксическое оформление; вы должны установить их с помощью &lt;code&gt;font-lock-defaults&lt;/code&gt; (см. &lt;a href=&quot;font-lock-basics#Font-Lock-Basics&quot;&gt;Основы Font Lock&lt;/a&gt; ).</target>
-        </trans-unit>
-        <trans-unit id="93fb6914261c7fea096ef56ee0bc0ee83807bbaa" translate="yes" xml:space="preserve">
-          <source>Syntax Descriptors</source>
-          <target state="translated">Синтаксические дескрипторы</target>
-        </trans-unit>
-        <trans-unit id="c8ace64cb389fc03ac6b00c6a21c0cf0115f3976" translate="yes" xml:space="preserve">
-          <source>Syntax Flags</source>
-          <target state="translated">Флаги синтаксиса</target>
-        </trans-unit>
-        <trans-unit id="447b54e6de1c4303a108d0f6ff947b2836f77ba0" translate="yes" xml:space="preserve">
-          <source>Syntax Properties</source>
-          <target state="translated">Синтаксические свойства</target>
-        </trans-unit>
-        <trans-unit id="a149c5cd6e0b85694e66ae83a17367f6e4f00f2b" translate="yes" xml:space="preserve">
-          <source>Syntax Table Concepts</source>
-          <target state="translated">Концепции таблицы синтаксиса</target>
-        </trans-unit>
-        <trans-unit id="f342e58e142aca43d18943035e2f00a54ffc1141" translate="yes" xml:space="preserve">
-          <source>Syntax Table Functions</source>
-          <target state="translated">Функции таблицы синтаксиса</target>
-        </trans-unit>
-        <trans-unit id="45b8f6a0d80faeaa345e6ea9503e6338a8045917" translate="yes" xml:space="preserve">
-          <source>Syntax Table Internals</source>
-          <target state="translated">Синтаксис таблицы Интернэшнл</target>
         </trans-unit>
       </group>
     </body>

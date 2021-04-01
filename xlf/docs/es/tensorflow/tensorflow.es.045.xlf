@@ -3,6 +3,314 @@
   <file source-language="en" target-language="es" datatype="htmlbody" original="tensorflow">
     <body>
       <group id="tensorflow">
+        <trans-unit id="1b1bfc6a48ac2d542db9ef59ddc8a95cf6aeb7ed" translate="yes" xml:space="preserve">
+          <source>produce moments with the same dimensionality as the input.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="0699e063fb556ca4839a28338fcd1e47660cfb94" translate="yes" xml:space="preserve">
+          <source>produce statistics with the same dimensionality as the input.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="0f5aa39f1449421d2beeca37812e3dc8fffd8a98" translate="yes" xml:space="preserve">
+          <source>produces the same output as</source>
+          <target state="translated">produce el mismo rendimiento que</target>
+        </trans-unit>
+        <trans-unit id="adabfed444928e2f0a9e9699928e13cf5736a50b" translate="yes" xml:space="preserve">
+          <source>profile data will save to this directory.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="62cc4e4c5b2f6718473e2a922972f01e2b133d60" translate="yes" xml:space="preserve">
+          <source>profiler.experimental.ProfilerOptions namedtuple for miscellaneous profiler options.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="e845e7678efd89943e3990f8e48e367772abf573" translate="yes" xml:space="preserve">
+          <source>proto message in original or ascii form.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="6c836c79e2e7c9facf33796b1ea251c768fb7eec" translate="yes" xml:space="preserve">
+          <source>prox_v = var - alpha * delta var = sign(prox_v)/(1+alpha*l2) * max{|prox_v|-alpha*l1,0}</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="593a657d2c9adee40e9361139dab15d3a998c5a6" translate="yes" xml:space="preserve">
+          <source>pruning away boxes that have high intersection-over-union (IOU) overlap with previously selected boxes. Bounding boxes are supplied as [y1, x1, y2, x2], where (y1, x1) and (y2, x2) are the coordinates of any diagonal pair of box corners and the coordinates can be provided as normalized (i.e., lying in the interval [0, 1]) or absolute. Note that this algorithm is agnostic to where the origin is in the coordinate system. Note that this algorithm is invariant to orthogonal transformations and translations of the coordinate system; thus translating or reflections of the coordinate system result in the same boxes being selected by the algorithm.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="e694dceae31e078ddb8809dafcc06aac2cda4c9a" translate="yes" xml:space="preserve">
+          <source>pruning away boxes that have high intersection-over-union (IOU) overlap with previously selected boxes. Bounding boxes are supplied as [y1, x1, y2, x2], where (y1, x1) and (y2, x2) are the coordinates of any diagonal pair of box corners and the coordinates can be provided as normalized (i.e., lying in the interval [0, 1]) or absolute. Note that this algorithm is agnostic to where the origin is in the coordinate system. Note that this algorithm is invariant to orthogonal transformations and translations of the coordinate system; thus translating or reflections of the coordinate system result in the same boxes being selected by the algorithm. The output of this operation is a set of integers indexing into the input collection of bounding boxes representing the selected boxes. The bounding box coordinates corresponding to the selected indices can then be obtained using the &lt;code&gt;tf.gather operation&lt;/code&gt;. For example: selected_indices = tf.image.non_max_suppression( boxes, scores, max_output_size, iou_threshold) selected_boxes = tf.gather(boxes, selected_indices)</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="15d8a1c25b7314e5ba6755747734b19ab3b8f89d" translate="yes" xml:space="preserve">
+          <source>pruning away boxes that have high intersection-over-union (IOU) overlap with previously selected boxes. Bounding boxes with score less than &lt;code&gt;score_threshold&lt;/code&gt; are removed. Bounding boxes are supplied as [y1, x1, y2, x2], where (y1, x1) and (y2, x2) are the coordinates of any diagonal pair of box corners and the coordinates can be provided as normalized (i.e., lying in the interval [0, 1]) or absolute. Note that this algorithm is agnostic to where the origin is in the coordinate system and more generally is invariant to orthogonal transformations and translations of the coordinate system; thus translating or reflections of the coordinate system result in the same boxes being selected by the algorithm. The output of this operation is a set of integers indexing into the input collection of bounding boxes representing the selected boxes. The bounding box coordinates corresponding to the selected indices can then be obtained using the &lt;code&gt;tf.gather operation&lt;/code&gt;. For example: selected_indices = tf.image.non_max_suppression_v2( boxes, scores, max_output_size, iou_threshold, score_threshold) selected_boxes = tf.gather(boxes, selected_indices)</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="450016572dc5235d8f8db5e9c76e341fa8971c08" translate="yes" xml:space="preserve">
+          <source>pruning away boxes that have high intersection-over-union (IOU) overlap with previously selected boxes. Bounding boxes with score less than &lt;code&gt;score_threshold&lt;/code&gt; are removed. Bounding boxes are supplied as [y1, x1, y2, x2], where (y1, x1) and (y2, x2) are the coordinates of any diagonal pair of box corners and the coordinates can be provided as normalized (i.e., lying in the interval [0, 1]) or absolute. Note that this algorithm is agnostic to where the origin is in the coordinate system and more generally is invariant to orthogonal transformations and translations of the coordinate system; thus translating or reflections of the coordinate system result in the same boxes being selected by the algorithm. The output of this operation is a set of integers indexing into the input collection of bounding boxes representing the selected boxes. The bounding box coordinates corresponding to the selected indices can then be obtained using the &lt;code&gt;tf.gather operation&lt;/code&gt;. For example: selected_indices = tf.image.non_max_suppression_v2( boxes, scores, max_output_size, iou_threshold, score_threshold) selected_boxes = tf.gather(boxes, selected_indices) This op also supports a Soft-NMS (with Gaussian weighting) mode (c.f. Bodla et al, &lt;a href=&quot;https://arxiv.org/abs/1704.04503&quot;&gt;https://arxiv.org/abs/1704.04503&lt;/a&gt;) where boxes reduce the score of other overlapping boxes instead of directly causing them to be pruned. To enable this Soft-NMS mode, set the &lt;code&gt;soft_nms_sigma&lt;/code&gt; parameter to be larger than 0.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="e0332b9cecb3347954bae39093ae055fc3f74f61" translate="yes" xml:space="preserve">
+          <source>pruning away boxes that have high overlaps with previously selected boxes. Bounding boxes with score less than &lt;code&gt;score_threshold&lt;/code&gt; are removed. N-by-n overlap values are supplied as square matrix, which allows for defining a custom overlap criterium (eg. intersection over union, intersection over area, etc.).</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="26a02b01e6c71a1282bc9eb0ec7e4e2a04b6a71b" translate="yes" xml:space="preserve">
+          <source>pseudorandomly.</source>
+          <target state="translated">pseudorandomly.</target>
+        </trans-unit>
+        <trans-unit id="04ab52557c87382099dd62ce1b1fc8a17019adcd" translate="yes" xml:space="preserve">
+          <source>pylint: disable=line-too-long</source>
+          <target state="translated">pylint:disable=line-too-long</target>
+        </trans-unit>
+        <trans-unit id="1f2375b3373da432fed38eb09b4ad050725534d1" translate="yes" xml:space="preserve">
+          <source>python function to be wrapped</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="b0ff869df67d72a2c7a982321b5c0343cea3a01d" translate="yes" xml:space="preserve">
+          <source>quality must be in [0,100]</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="c149c463a63b92c21330a415b262efcec72e7e87" translate="yes" xml:space="preserve">
+          <source>quantity to be monitored.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="1c2fd0cd1d0804a30ea46b17a11af066e38af65c" translate="yes" xml:space="preserve">
+          <source>quantity to monitor.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="787fb2efed06eaec76aeca89412b1b481b4fc2a8" translate="yes" xml:space="preserve">
+          <source>query: Query &lt;code&gt;Tensor&lt;/code&gt; of shape &lt;code&gt;[batch_size, Tq, dim]&lt;/code&gt;.</source>
+          <target state="translated">consulta: &lt;code&gt;Tensor&lt;/code&gt; de consulta de forma &lt;code&gt;[batch_size, Tq, dim]&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="0a21ec2522ccb6ed671ded21cdb008d6fde237c2" translate="yes" xml:space="preserve">
+          <source>query_mask: A boolean mask &lt;code&gt;Tensor&lt;/code&gt; of shape &lt;code&gt;[batch_size, Tq]&lt;/code&gt;. If given, the output will be zero at the positions where &lt;code&gt;mask==False&lt;/code&gt;.</source>
+          <target state="translated">query_mask: Un &lt;code&gt;Tensor&lt;/code&gt; de m&amp;aacute;scara booleana de forma &lt;code&gt;[batch_size, Tq]&lt;/code&gt; . Si se da, la salida ser&amp;aacute; cero en las posiciones donde &lt;code&gt;mask==False&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="534d50be9952f01d926360dadefaea2a149fd5e0" translate="yes" xml:space="preserve">
+          <source>queue size (when full, workers could block on &lt;code&gt;put()&lt;/code&gt;)</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="07229cd287095c17c3682b3836ecf0311c09132d" translate="yes" xml:space="preserve">
+          <source>r: A rank-1 &lt;code&gt;Tensor&lt;/code&gt; of shape &lt;code&gt;[.., M]&lt;/code&gt; containing the residual vector.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="6d5efc24bbcc70db24ce0aa347bb4dbeb364aba7" translate="yes" xml:space="preserve">
+          <source>random seed for candidate sampling. Default to None, which doesn't set the op-level random seed for candidate sampling.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="9189ff84071d472a8f167150989e48f1c95a6c5f" translate="yes" xml:space="preserve">
+          <source>random seed to ensure determinism.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="49f8edbdff757c5671baab2d00bbef0b43fe5eb9" translate="yes" xml:space="preserve">
+          <source>rate for enforcing the constraint: weights will be rescaled to yield &lt;code&gt;(1 - rate) * norm + rate * norm.clip(min_value, max_value)&lt;/code&gt;. Effectively, this means that rate=1.0 stands for strict enforcement of the constraint, while rate&amp;lt;1.0 means that weights will be rescaled at each step to slowly move towards a value inside the desired interval.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="639da06088c59ce48071fc042e1d1506504ba4f2" translate="yes" xml:space="preserve">
+          <source>recombine substrings into tokens (usually ngrams)</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="31547518deedc2237f71d9f9d5bde14dd688b8d9" translate="yes" xml:space="preserve">
+          <source>regularization factor to penalize trees with more leaves.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="eeabfc18263faf44c1a61def004fd56ccfc15191" translate="yes" xml:space="preserve">
+          <source>regularization multiplier applied to the absolute weights of the tree leafs.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="4b5f49f67d6a2b691864ab076c337e6e33e37988" translate="yes" xml:space="preserve">
+          <source>regularization multiplier applied to the square weights of the tree leafs.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="309bbeb30f4bf7bc003afbba098d535cce6902a5" translate="yes" xml:space="preserve">
+          <source>regularizer = tf.keras.regularizers.L2(2.) tensor = tf.ones(shape=(5, 5)) regularizer(tensor)</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="49b8b7881108edabc49b87fd215143cd4511d7db" translate="yes" xml:space="preserve">
+          <source>regularizer = tf.keras.regularizers.l2(2.) tensor = tf.ones(shape=(5, 5)) regularizer(tensor)</source>
+          <target state="translated">regularizador=tf.keras.regularizadores.l2(2.)tensor=tf.ones(shape=(5,5))regularizador(tensor)</target>
+        </trans-unit>
+        <trans-unit id="59e1cf543b454900661bf9faea4e051544d6b296" translate="yes" xml:space="preserve">
+          <source>regularizer for bias vector.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="2789a235ac17e7ac79312aa83992961425d727c6" translate="yes" xml:space="preserve">
+          <source>regularizer for kernel vectors.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="99b64a3921a503c7ed1f3fed59c79f4ec577942c" translate="yes" xml:space="preserve">
+          <source>relative tolerance for bfloat16.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="02eb9f8d34ac73245e97107e07c27541d11a74d4" translate="yes" xml:space="preserve">
+          <source>relative tolerance for float16.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="6540d374295c7a2997b964d81dccaafcb781f31d" translate="yes" xml:space="preserve">
+          <source>relative tolerance for float32.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="d02729d523aa837a7d004f75ae00f8448f91b655" translate="yes" xml:space="preserve">
+          <source>relative tolerance.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="07e7a6bc925c03aa66228ca36d00950548a3685f" translate="yes" xml:space="preserve">
+          <source>remapping: Remap subgraphs onto more efficient implementations.</source>
+          <target state="translated">reajustes:Remapear subgráficos en implementaciones más eficientes.</target>
+        </trans-unit>
+        <trans-unit id="c60ee09390a6e35d97e520a2197948df73ce6a4d" translate="yes" xml:space="preserve">
+          <source>remove variable names, brackets, and commas, (&lt;code&gt;ik = sum_j ij * jk&lt;/code&gt;)</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="0b9b1dd0a1526b75553de00d888b17ad12a44877" translate="yes" xml:space="preserve">
+          <source>remove(self: tensorflow.python._tf_stack.StackSummary, x: tensorflow.python._tf_stack.FrameSummary) -&amp;gt; None</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="1f0dfe2c2e0f677a40e93bbdae8e093f909e1910" translate="yes" xml:space="preserve">
+          <source>replace &quot;*&quot; with &quot;,&quot;, (&lt;code&gt;ik = sum_j ij , jk&lt;/code&gt;)</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="1c3dd4205ba114888ed31b5058ee33c9f732743f" translate="yes" xml:space="preserve">
+          <source>replacement string provided in &lt;code&gt;rewrite&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="60390a3a9e0edba825c550f7c32449a747e071f9" translate="yes" xml:space="preserve">
+          <source>replica 0's output: &lt;code&gt;[[A], [C]]&lt;/code&gt; replica 1's output: &lt;code&gt;[[B], [D]]&lt;/code&gt;</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="353fc99f7d38352410ced6251d064e4a6052dd9e" translate="yes" xml:space="preserve">
+          <source>represents the dense tensor</source>
+          <target state="translated">representa el tensor denso</target>
+        </trans-unit>
+        <trans-unit id="8034408843fdf51f85fc2a50941fc50f31b15cfd" translate="yes" xml:space="preserve">
+          <source>rescaling factor. Defaults to None. If None or 0, no rescaling is applied, otherwise we multiply the data by the value provided (after applying all other transformations).</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="c015d4668b73fe4b03ca29a641d3ef8b9e81bfb6" translate="yes" xml:space="preserve">
+          <source>resource_apply_dense (update variable given gradient tensor is dense)</source>
+          <target state="translated">resource_apply_dense (actualizar variable dado que el tensor de gradiente es denso)</target>
+        </trans-unit>
+        <trans-unit id="39693de5ec1c6562ec40db8fcb7c5a5cce34bae0" translate="yes" xml:space="preserve">
+          <source>resource_apply_sparse (update variable given gradient tensor is sparse)</source>
+          <target state="translated">resource_apply_sparse (la variable de actualización dado el tensor de gradiente es escasa)</target>
+        </trans-unit>
+        <trans-unit id="01c5c9df34b5137648c4ee6874385933a85453c2" translate="yes" xml:space="preserve">
+          <source>restores variables if a checkpoint exists</source>
+          <target state="translated">restaura las variables si existe un punto de control</target>
+        </trans-unit>
+        <trans-unit id="8a30e1d6ee2e32285fef08eb641cbddf5b83e06f" translate="yes" xml:space="preserve">
+          <source>result = LowerBound(sorted_sequence, values)</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="d3478a240ddba140c0b8959d3cef0c127286175e" translate="yes" xml:space="preserve">
+          <source>result = UpperBound(sorted_sequence, values)</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="f1af01a57a03db19010f3e9c90a5242a10ef8e3d" translate="yes" xml:space="preserve">
+          <source>result == [[1, 2, 2], [0, 1, 5]]</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="999fe0799450a768de4b501b06b9bf7eb6837b84" translate="yes" xml:space="preserve">
+          <source>result == [[1, 2, 4], [0, 2, 5]]</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="7759b67f1396ab7164410cf112e6dbc6f65f9831" translate="yes" xml:space="preserve">
+          <source>result is one logical checkpoint, with one physical metadata file and renamed data files.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="3a39fc740b7a0a7e3c1bbfc1848bd2ec812c9d77" translate="yes" xml:space="preserve">
+          <source>return a list of input tensors</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="a82243045092732f574e638bcaae47122cc9193f" translate="yes" xml:space="preserve">
+          <source>returns &lt;code&gt;f(inputs)&lt;/code&gt;, where &lt;code&gt;f&lt;/code&gt;'s body is placed and partitioned.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="a26823405302e841464ab5d81bf62da8dba9e94b" translate="yes" xml:space="preserve">
+          <source>returns None</source>
+          <target state="translated">regresa Ninguno</target>
+        </trans-unit>
+        <trans-unit id="01de8257caa02c520182ae5bfbef7a2ea2a5f22d" translate="yes" xml:space="preserve">
+          <source>returns result of &lt;code&gt;session.run()&lt;/code&gt; asked by user</source>
+          <target state="translated">devuelve el resultado de &lt;code&gt;session.run()&lt;/code&gt; solicitado por el usuario</target>
+        </trans-unit>
+        <trans-unit id="ffcf538e172a2e4fa64b41b07c1f6fefeb67c379" translate="yes" xml:space="preserve">
+          <source>rnn_mode: Indicates the type of the RNN model. input_mode: Indicate whether there is a linear projection between the input and the actual computation before the first layer. 'skip_input' is only allowed when input_size == num_units; 'auto_select' implies 'skip_input' when input_size == num_units; otherwise, it implies 'linear_input'. direction: Indicates whether a bidirectional model will be used. Should be &quot;unidirectional&quot; or &quot;bidirectional&quot;. dropout: Dropout probability. When set to 0., dropout is disabled. seed: The 1st part of a seed to initialize dropout. seed2: The 2nd part of a seed to initialize dropout. input: A 3-D tensor with the shape of [seq_length, batch_size, input_size]. input_h: A 3-D tensor with the shape of [num_layer * dir, batch_size, num_units]. input_c: For LSTM, a 3-D tensor with the shape of [num_layer * dir, batch, num_units]. For other models, it is ignored. params: A 1-D tensor that contains the weights and biases in an opaque layout. The size must be created through CudnnRNNParamsSize, and initialized separately. Note that they might not be compatible across different generations. So it is a good idea to save and restore output: A 3-D tensor with the shape of [seq_length, batch_size, dir * num_units]. output_h: The same shape has input_h. output_c: The same shape as input_c for LSTM. An empty tensor for other models. is_training: Indicates whether this operation is used for inference or training. reserve_space: An opaque tensor that can be used in backprop calculation. It is only produced if is_training is false.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="e01f3687a592f539f2e61c8b0888a13d4250c1f4" translate="yes" xml:space="preserve">
+          <source>rnn_mode: Indicates the type of the RNN model. input_mode: Indicate whether there is a linear projection between the input and the actual computation before the first layer. 'skip_input' is only allowed when input_size == num_units; 'auto_select' implies 'skip_input' when input_size == num_units; otherwise, it implies 'linear_input'. direction: Indicates whether a bidirectional model will be used. Should be &quot;unidirectional&quot; or &quot;bidirectional&quot;. dropout: Dropout probability. When set to 0., dropout is disabled. seed: The 1st part of a seed to initialize dropout. seed2: The 2nd part of a seed to initialize dropout. input: A 3-D tensor with the shape of [seq_length, batch_size, input_size]. input_h: A 3-D tensor with the shape of [num_layer * dir, batch_size, num_units]. input_c: For LSTM, a 3-D tensor with the shape of [num_layer * dir, batch, num_units]. For other models, it is ignored. params: A 1-D tensor that contains the weights and biases in an opaque layout. The size must be created through CudnnRNNParamsSize, and initialized separately. Note that they might not be compatible across different generations. So it is a good idea to save and restore output: A 3-D tensor with the shape of [seq_length, batch_size, dir * num_units]. output_h: The same shape has input_h. output_c: The same shape as input_c for LSTM. An empty tensor for other models. output_backprop: A 3-D tensor with the same shape as output in the forward pass. output_h_backprop: A 3-D tensor with the same shape as output_h in the forward pass. output_c_backprop: A 3-D tensor with the same shape as output_c in the forward pass. reserve_space: The same reserve_space produced in for forward operation. input_backprop: The backprop to input in the forward pass. Has the same shape as input. input_h_backprop: The backprop to input_h in the forward pass. Has the same shape as input_h. input_c_backprop: The backprop to input_c in the forward pass. Has the same shape as input_c. params_backprop: The backprop to the params buffer in the forward pass. Has the same shape as params.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="ec2c1e58f5f3cb3576bbc5871cbbd89c555d2a05" translate="yes" xml:space="preserve">
+          <source>rnn_mode: Indicates the type of the RNN model. input_mode: Indicates whether there is a linear projection between the input and the actual computation before the first layer. 'skip_input' is only allowed when input_size == num_units; 'auto_select' implies 'skip_input' when input_size == num_units; otherwise, it implies 'linear_input'. direction: Indicates whether a bidirectional model will be used. Should be &quot;unidirectional&quot; or &quot;bidirectional&quot;. dropout: Dropout probability. When set to 0., dropout is disabled. seed: The 1st part of a seed to initialize dropout. seed2: The 2nd part of a seed to initialize dropout. input: A 3-D tensor with the shape of [seq_length, batch_size, input_size]. input_h: A 3-D tensor with the shape of [num_layer * dir, batch_size, num_units]. input_c: For LSTM, a 3-D tensor with the shape of [num_layer * dir, batch, num_units]. For other models, it is ignored. params: A 1-D tensor that contains the weights and biases in an opaque layout. The size must be created through CudnnRNNParamsSize, and initialized separately. Note that they might not be compatible across different generations. So it is a good idea to save and restore output: A 3-D tensor with the shape of [seq_length, batch_size, dir * num_units]. output_h: The same shape has input_h. output_c: The same shape as input_c for LSTM. An empty tensor for other models. is_training: Indicates whether this operation is used for inference or training. reserve_space: An opaque tensor that can be used in backprop calculation. It is only produced if is_training is true. host_reserved: An opaque tensor that can be used in backprop calculation. It is only produced if is_training is true. It is output on host memory rather than device memory.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="70665fcc9ce3d71d359c3bddbe89588b563a31cd" translate="yes" xml:space="preserve">
+          <source>rnn_mode: Indicates the type of the RNN model. input_mode: Indicates whether there is a linear projection between the input and the actual computation before the first layer. 'skip_input' is only allowed when input_size == num_units; 'auto_select' implies 'skip_input' when input_size == num_units; otherwise, it implies 'linear_input'. direction: Indicates whether a bidirectional model will be used. Should be &quot;unidirectional&quot; or &quot;bidirectional&quot;. dropout: Dropout probability. When set to 0., dropout is disabled. seed: The 1st part of a seed to initialize dropout. seed2: The 2nd part of a seed to initialize dropout. input: A 3-D tensor with the shape of [seq_length, batch_size, input_size]. input_h: A 3-D tensor with the shape of [num_layer * dir, batch_size, num_units]. input_c: For LSTM, a 3-D tensor with the shape of [num_layer * dir, batch, num_units]. For other models, it is ignored. params: A 1-D tensor that contains the weights and biases in an opaque layout. The size must be created through CudnnRNNParamsSize, and initialized separately. Note that they might not be compatible across different generations. So it is a good idea to save and restore output: A 3-D tensor with the shape of [seq_length, batch_size, dir * num_units]. output_h: The same shape has input_h. output_c: The same shape as input_c for LSTM. An empty tensor for other models. output_backprop: A 3-D tensor with the same shape as output in the forward pass. output_h_backprop: A 3-D tensor with the same shape as output_h in the forward pass. output_c_backprop: A 3-D tensor with the same shape as output_c in the forward pass. reserve_space: The same reserve_space produced in the forward operation. host_reserved: The same host_reserved produced in the forward operation. input_backprop: The backprop to input in the forward pass. Has the same shape as input. input_h_backprop: The backprop to input_h in the forward pass. Has the same shape as input_h. input_c_backprop: The backprop to input_c in the forward pass. Has the same shape as input_c. params_backprop: The backprop to the params buffer in the forward pass. Has the same shape as params.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="2e5a199bd5189e7f2bd9fadb25180fb6b7791e77" translate="yes" xml:space="preserve">
+          <source>rnn_mode: Indicates the type of the RNN model. input_mode: Indicates whether there is a linear projection between the input and the actual computation before the first layer. 'skip_input' is only allowed when input_size == num_units; 'auto_select' implies 'skip_input' when input_size == num_units; otherwise, it implies 'linear_input'. direction: Indicates whether a bidirectional model will be used. Should be &quot;unidirectional&quot; or &quot;bidirectional&quot;. dropout: Dropout probability. When set to 0., dropout is disabled. seed: The 1st part of a seed to initialize dropout. seed2: The 2nd part of a seed to initialize dropout. input: If time_major is true, this is a 3-D tensor with the shape of [seq_length, batch_size, input_size]. If time_major is false, the shape is [batch_size, seq_length, input_size]. input_h: If time_major is true, this is a 3-D tensor with the shape of [num_layer * dir, batch_size, num_units]. If time_major is false, the shape is [batch_size, num_layer * dir, num_units]. input_c: For LSTM, a 3-D tensor with the shape of [num_layer * dir, batch, num_units]. For other models, it is ignored. params: A 1-D tensor that contains the weights and biases in an opaque layout. The size must be created through CudnnRNNParamsSize, and initialized separately. Note that they might not be compatible across different generations. So it is a good idea to save and restore sequence_lengths: a vector of lengths of each input sequence. output: If time_major is true, this is a 3-D tensor with the shape of [seq_length, batch_size, dir * num_units]. If time_major is false, the shape is [batch_size, seq_length, dir * num_units]. output_h: The same shape has input_h. output_c: The same shape as input_c for LSTM. An empty tensor for other models. is_training: Indicates whether this operation is used for inference or training. time_major: Indicates whether the input/output format is time major or batch major. reserve_space: An opaque tensor that can be used in backprop calculation. It is only produced if is_training is true.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="0218ec339f21ee15a68915046b4d9ea049ea77c5" translate="yes" xml:space="preserve">
+          <source>rnn_mode: Indicates the type of the RNN model. input_mode: Indicates whether there is a linear projection between the input and the actual computation before the first layer. 'skip_input' is only allowed when input_size == num_units; 'auto_select' implies 'skip_input' when input_size == num_units; otherwise, it implies 'linear_input'. direction: Indicates whether a bidirectional model will be used. Should be &quot;unidirectional&quot; or &quot;bidirectional&quot;. dropout: Dropout probability. When set to 0., dropout is disabled. seed: The 1st part of a seed to initialize dropout. seed2: The 2nd part of a seed to initialize dropout. input: If time_major is true, this is a 3-D tensor with the shape of [seq_length, batch_size, input_size]. If time_major is false, the shape is [batch_size, seq_length, input_size]. input_h: If time_major is true, this is a 3-D tensor with the shape of [num_layer * dir, batch_size, num_units]. If time_major is false, the shape is [batch_size, num_layer * dir, num_units]. input_c: For LSTM, a 3-D tensor with the shape of [num_layer * dir, batch, num_units]. For other models, it is ignored. params: A 1-D tensor that contains the weights and biases in an opaque layout. The size must be created through CudnnRNNParamsSize, and initialized separately. Note that they might not be compatible across different generations. So it is a good idea to save and restore sequence_lengths: a vector of lengths of each input sequence. output: If time_major is true, this is a 3-D tensor with the shape of [seq_length, batch_size, dir * num_units]. If time_major is false, the shape is [batch_size, seq_length, dir * num_units]. output_h: The same shape has input_h. output_c: The same shape as input_c for LSTM. An empty tensor for other models. output_backprop: A 3-D tensor with the same shape as output in the forward pass. output_h_backprop: A 3-D tensor with the same shape as output_h in the forward pass. output_c_backprop: A 3-D tensor with the same shape as output_c in the forward pass. time_major: Indicates whether the input/output format is time major or batch major. reserve_space: The same reserve_space produced in the forward operation. input_backprop: The backprop to input in the forward pass. Has the same shape as input. input_h_backprop: The backprop to input_h in the forward pass. Has the same shape as input_h. input_c_backprop: The backprop to input_c in the forward pass. Has the same shape as input_c. params_backprop: The backprop to the params buffer in the forward pass. Has the same shape as params.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="41ab6ffc68e5c44d88d50d4a9f9d217a8753e60b" translate="yes" xml:space="preserve">
+          <source>row_pooling_sequence : this is the result list of pool boundary rows</source>
+          <target state="translated">row_pooling_sequence:esta es la lista de resultados de las filas del límite de la piscina</target>
+        </trans-unit>
+        <trans-unit id="275edb19dd7f1f99d15343aafde231f9060022ce" translate="yes" xml:space="preserve">
+          <source>rpc_layer - (Optional) Override value for the RPC layer used by TensorFlow. task_type - (Optional) Override value for the current task type. task_id - (Optional) Override value for the current task index.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="12fe9d93f3e47df8d9c783fcf6cb077917e56b29" translate="yes" xml:space="preserve">
+          <source>rpc_layer is the protocol used by TensorFlow to communicate with other TensorFlow servers in a distributed environment.</source>
+          <target state="translated">rpc_layer es el protocolo utilizado por TensorFlow para comunicarse con otros servidores de TensorFlow en un entorno distribuido.</target>
+        </trans-unit>
+        <trans-unit id="2dfdb61fd455fa837cc24b301c2eb99b8b1a3140" translate="yes" xml:space="preserve">
+          <source>run_op: An op that runs &lt;code&gt;fn&lt;/code&gt;&lt;code&gt;iterations&lt;/code&gt; times.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="7e6fc3775c4d72155b8a971612b98e7bbc36f85f" translate="yes" xml:space="preserve">
+          <source>same meaning as preferred_dtype, and overrides it.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="0408801394dbcad00a9b6e0b2e3cb1c994071969" translate="yes" xml:space="preserve">
+          <source>same value for all the internal fields.</source>
+          <target state="translated">el mismo valor para todos los campos internos.</target>
+        </trans-unit>
+        <trans-unit id="0006b4ffc1019a531f2deae89d1185661520bd28" translate="yes" xml:space="preserve">
+          <source>sample_indices[i], embedding_indices[i] and aggregation_weights[i] correspond to the ith feature. table_ids[i] indicates which embedding table to look up ith feature.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="9e6d5f695cc7595fedbbc1d6559a1ff9e986d1b4" translate="yes" xml:space="preserve">
+          <source>sample_splits[i], embedding_indices[i] and aggregation_weights[i] correspond to the ith feature. table_ids[i] indicates which embedding table to look up ith feature.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="b2707d34c06fb1d7676cac65aca74dc8a1d98d6a" translate="yes" xml:space="preserve">
+          <source>scalar integer tensor, size of last dimension of returned tensor. Default is the maximum value in &lt;code&gt;lengths&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="56511ccc6863b48ca791184fcfd93368726efd9c" translate="yes" xml:space="preserve">
+          <source>scalar which applies to the entire output, or a vector of length shape[0] which stores the parameters for each batch.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="d5361389569374b99a8dc019695bccde2e4f3068" translate="yes" xml:space="preserve">
+          <source>scalar, or tuple or dict or list of constructed scalars and/or other tuples/lists, or scalars. Note: numpy arrays are considered as scalars.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="985f0803f47344f05bfd41072710af4dcfef9530" translate="yes" xml:space="preserve">
+          <source>scan on the list of tensors unpacked from &lt;code&gt;elems&lt;/code&gt; on dimension 0.</source>
+          <target state="translated">escanee la lista de tensores desempaquetados de &lt;code&gt;elems&lt;/code&gt; en dimensi&amp;oacute;n 0.</target>
+        </trans-unit>
+        <trans-unit id="8096c4f51922d03acd87a51f1a8040b5de459843" translate="yes" xml:space="preserve">
+          <source>scan on the list of tensors unpacked from &lt;code&gt;elems&lt;/code&gt; on dimension 0. (deprecated argument values)</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="748611751799fccdd19a378206b3fe8f19e36e1c" translate="yes" xml:space="preserve">
+          <source>scoped_allocator_optimization: Try to allocate some independent Op outputs contiguously in order to merge or eliminate downstream Ops.</source>
+          <target state="translated">optimización_de_asignación_de_espacio:Intenta asignar algunas salidas de operaciones independientes de forma contigua para fusionar o eliminar operaciones posteriores.</target>
+        </trans-unit>
         <trans-unit id="583cf791de63e8c90b16ccdf6e729c6194d10b88" translate="yes" xml:space="preserve">
           <source>scores of the ROI boxes in the ROIs' tensor.</source>
           <target state="new"/>
@@ -3694,314 +4002,6 @@
         <trans-unit id="1789ba906975b924a9a6cf803d95b63304c5cc7e" translate="yes" xml:space="preserve">
           <source>tf.compat.v1.tables_initializer</source>
           <target state="translated">tf.compat.v1.tables_initializer</target>
-        </trans-unit>
-        <trans-unit id="3d4757827606743b3e81014c488b8687104f7ae5" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.test.StubOutForTesting</source>
-          <target state="translated">tf.compat.v1.test.StubOutForTesting</target>
-        </trans-unit>
-        <trans-unit id="c76ce57563597c7c06e23354be3036e0f4d40857" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.test.assert_equal_graph_def</source>
-          <target state="translated">tf.compat.v1.test.assert_equal_graph_def</target>
-        </trans-unit>
-        <trans-unit id="7cbfb3ff5e57adf1c8277a3279948d7662aa0bea" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.test.compute_gradient</source>
-          <target state="translated">tf.compat.v1.test.compute_gradient</target>
-        </trans-unit>
-        <trans-unit id="825b0b5cdeeeb1fa7fa3b9d084f4f72d0231db0b" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.test.compute_gradient_error</source>
-          <target state="translated">tf.compat.v1.test.compute_gradient_error</target>
-        </trans-unit>
-        <trans-unit id="ff8a7ca492b028504bf45e676d99df90bc898258" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.test.get_temp_dir</source>
-          <target state="translated">tf.compat.v1.test.get_temp_dir</target>
-        </trans-unit>
-        <trans-unit id="6ccc3f9919b98a5769a937107531713164886b27" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.test.test_src_dir_path</source>
-          <target state="translated">tf.compat.v1.test.test_src_dir_path</target>
-        </trans-unit>
-        <trans-unit id="76f45f6f54a1786964b72e589d21d0e1497e70d2" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.to_bfloat16</source>
-          <target state="translated">tf.compat.v1.to_bfloat16</target>
-        </trans-unit>
-        <trans-unit id="b69107ccf06d7eb104dbe56f35bd60bb04d82e1c" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.to_complex128</source>
-          <target state="translated">tf.compat.v1.to_complex128</target>
-        </trans-unit>
-        <trans-unit id="a71cb695b37f16a695a5bdfea7a69156fff1d7e9" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.to_complex64</source>
-          <target state="translated">tf.compat.v1.to_complex64</target>
-        </trans-unit>
-        <trans-unit id="dcb58d659c4b84961a15cf25ed5262f35d836d2a" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.to_double</source>
-          <target state="translated">tf.compat.v1.to_double</target>
-        </trans-unit>
-        <trans-unit id="8b2dee3a82eb42cebecbcdc9e56dff932ecc73b7" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.to_float</source>
-          <target state="translated">tf.compat.v1.to_float</target>
-        </trans-unit>
-        <trans-unit id="545c7d075764145da820d49853a791a88f726a9a" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.to_int32</source>
-          <target state="translated">tf.compat.v1.to_int32</target>
-        </trans-unit>
-        <trans-unit id="e78da91e1efe34ee340a9451f0376bad894ebde9" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.to_int64</source>
-          <target state="translated">tf.compat.v1.to_int64</target>
-        </trans-unit>
-        <trans-unit id="580ce0be45d6b7197c00dfa7e012b3ca8c8143a6" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.tpu.CrossShardOptimizer</source>
-          <target state="translated">tf.compat.v1.tpu.CrossShardOptimizer</target>
-        </trans-unit>
-        <trans-unit id="7b0667eb385d1197eb18e0ac02ec7d70530709f3" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.tpu.PaddingSpec</source>
-          <target state="translated">tf.compat.v1.tpu.PaddingSpec</target>
-        </trans-unit>
-        <trans-unit id="0390f6a41d984a5102ebc2a73930d5c85b3e2dab" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.tpu.batch_parallel</source>
-          <target state="translated">tf.compat.v1.tpu.batch_parallel</target>
-        </trans-unit>
-        <trans-unit id="2f53f6d5af38f9c582d4d1a816aca762dbea1987" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.tpu.bfloat16_scope</source>
-          <target state="translated">tf.compat.v1.tpu.bfloat16_scope</target>
-        </trans-unit>
-        <trans-unit id="07390123282a5908942da46e450e5ae65929a9fd" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.tpu.core</source>
-          <target state="translated">tf.compat.v1.tpu.core</target>
-        </trans-unit>
-        <trans-unit id="e7cc12fc05bdc524817491f518d08de12a9001d2" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.tpu.cross_replica_sum</source>
-          <target state="translated">tf.compat.v1.tpu.cross_replica_sum</target>
-        </trans-unit>
-        <trans-unit id="49e485fef3009d1a8d37e5e90f736bb07297f228" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.tpu.experimental.AdagradParameters</source>
-          <target state="translated">tf.compat.v1.tpu.experimental.AdagradParameters</target>
-        </trans-unit>
-        <trans-unit id="7c4be63d68226674d1c2bf21d65d90869b87f6ec" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.tpu.experimental.AdamParameters</source>
-          <target state="translated">tf.compat.v1.tpu.experimental.AdamParameters</target>
-        </trans-unit>
-        <trans-unit id="25b6cbbb045d0ec60ed8d3c81bc78e6ef705290d" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.tpu.experimental.FtrlParameters</source>
-          <target state="translated">tf.compat.v1.tpu.experimental.FtrlParameters</target>
-        </trans-unit>
-        <trans-unit id="472a9d22a990bf61e2fbe2e6d8670000125f7a78" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.tpu.experimental.StochasticGradientDescentParameters</source>
-          <target state="translated">tf.compat.v1.tpu.experimental.StochasticGradientDescentParameters</target>
-        </trans-unit>
-        <trans-unit id="bf66a3374c9b7fca0e972e14a00e24c8bb879cd3" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.tpu.experimental.embedding_column</source>
-          <target state="translated">tf.compat.v1.tpu.experimental.embedding_column</target>
-        </trans-unit>
-        <trans-unit id="d20d7612d523709459f499f5f668119c80e505af" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.tpu.experimental.shared_embedding_columns</source>
-          <target state="translated">tf.compat.v1.tpu.experimental.shared_embedding_columns</target>
-        </trans-unit>
-        <trans-unit id="95fda3a9b44ef873c6a083b2f29f4a0aa8bc36b3" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.tpu.initialize_system</source>
-          <target state="translated">tf.compat.v1.tpu.initialize_system</target>
-        </trans-unit>
-        <trans-unit id="9ab2d00f965ee545782fa7601175f27b015c65ca" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.tpu.outside_compilation</source>
-          <target state="translated">tf.compat.v1.tpu.outside_compilation</target>
-        </trans-unit>
-        <trans-unit id="54a9814b8913be0f60c6a7d28efee3df1cd8855d" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.tpu.replicate</source>
-          <target state="translated">tf.compat.v1.tpu.replicate</target>
-        </trans-unit>
-        <trans-unit id="a2c8ff1733f5ddb8ed4ce125dbafec871870b7df" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.tpu.rewrite</source>
-          <target state="translated">tf.compat.v1.tpu.rewrite</target>
-        </trans-unit>
-        <trans-unit id="a6460f26f75a33184ab729414eaa1a1b17f2a025" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.tpu.shard</source>
-          <target state="translated">tf.compat.v1.tpu.shard</target>
-        </trans-unit>
-        <trans-unit id="83049fa783422f8b8588cfba2e51df876f5f9349" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.tpu.shutdown_system</source>
-          <target state="translated">tf.compat.v1.tpu.shutdown_system</target>
-        </trans-unit>
-        <trans-unit id="50b6f05c224114d9b410f762151824b1e8a7f878" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.AdadeltaOptimizer</source>
-          <target state="translated">tf.compat.v1.train.AdadeltaOptimizer</target>
-        </trans-unit>
-        <trans-unit id="228ca217e600fc03951abc67ffeef454cdc60e8b" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.AdagradDAOptimizer</source>
-          <target state="translated">tf.compat.v1.train.AdagradDAOptimizer</target>
-        </trans-unit>
-        <trans-unit id="2c40bea8e7f39b13feee1b14836c965ae0d26dc6" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.AdagradOptimizer</source>
-          <target state="translated">tf.compat.v1.train.AdagradOptimizer</target>
-        </trans-unit>
-        <trans-unit id="2cf0066e55a01b28caa932ccda232044247b3020" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.AdamOptimizer</source>
-          <target state="translated">tf.compat.v1.train.AdamOptimizer</target>
-        </trans-unit>
-        <trans-unit id="042521d78a2e3f68cc982d752129455ad34b172c" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.Checkpoint</source>
-          <target state="translated">tf.compat.v1.train.Checkpoint</target>
-        </trans-unit>
-        <trans-unit id="ca4bd58263c8909357d418f4b177f91c192d487c" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.ChiefSessionCreator</source>
-          <target state="translated">tf.compat.v1.train.ChiefSessionCreator</target>
-        </trans-unit>
-        <trans-unit id="5cff0f13b2a3a4eedb2a647ed4f249b843f0e2fd" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.FtrlOptimizer</source>
-          <target state="translated">tf.compat.v1.train.FtrlOptimizer</target>
-        </trans-unit>
-        <trans-unit id="f6db05670019f7b33bb152413c55a1d3f1d729d0" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.GradientDescentOptimizer</source>
-          <target state="translated">tf.compat.v1.train.GradientDescentOptimizer</target>
-        </trans-unit>
-        <trans-unit id="39f449c00b065cd207c0c5a2121250173e7ede89" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.LooperThread</source>
-          <target state="translated">tf.compat.v1.train.LooperThread</target>
-        </trans-unit>
-        <trans-unit id="7bf3980ae2298863dc457ee4d99711598e4afa67" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.MomentumOptimizer</source>
-          <target state="translated">tf.compat.v1.train.MomentumOptimizer</target>
-        </trans-unit>
-        <trans-unit id="c276c21d449b7ee9ee795b354ebdb93f893e320d" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.MonitoredSession</source>
-          <target state="translated">tf.compat.v1.train.MonitoredSession</target>
-        </trans-unit>
-        <trans-unit id="fa35d733a3e48c212166f23881968c9202c951eb" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.MonitoredSession.StepContext</source>
-          <target state="translated">tf.compat.v1.train.MonitoredSession.StepContext</target>
-        </trans-unit>
-        <trans-unit id="4d6edaabd4a2f0f807f3df3a62453b4ca02dc761" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.MonitoredTrainingSession</source>
-          <target state="translated">tf.compat.v1.train.MonitoredTrainingSession</target>
-        </trans-unit>
-        <trans-unit id="759770d164756313ab7fa81ee5193fcd8e51c9d7" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.NewCheckpointReader</source>
-          <target state="translated">tf.compat.v1.train.NewCheckpointReader</target>
-        </trans-unit>
-        <trans-unit id="7dcb60f733dfd3d294957dbbabe088083d1bafe0" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.Optimizer</source>
-          <target state="translated">tf.compat.v1.train.Optimizer</target>
-        </trans-unit>
-        <trans-unit id="0b3a10cdf0fdb1141ce3f147d131a036abea622e" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.ProximalAdagradOptimizer</source>
-          <target state="translated">tf.compat.v1.train.ProximalAdagradOptimizer</target>
-        </trans-unit>
-        <trans-unit id="7fd69be6c71cc3ac20f4645f570ab4b3f9239d79" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.ProximalGradientDescentOptimizer</source>
-          <target state="translated">tf.compat.v1.train.ProximalGradientDescentOptimizer</target>
-        </trans-unit>
-        <trans-unit id="fc2b6cebd0afb373eb361c6b70a193063b0ca5a5" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.QueueRunner</source>
-          <target state="translated">tf.compat.v1.train.QueueRunner</target>
-        </trans-unit>
-        <trans-unit id="1112219769251257fbec93a13cb4cb46775cc18d" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.RMSPropOptimizer</source>
-          <target state="translated">tf.compat.v1.train.RMSPropOptimizer</target>
-        </trans-unit>
-        <trans-unit id="fec4eaabda2665d4e6fb85c7288f0cb4e66f0aa9" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.Saver</source>
-          <target state="translated">tf.compat.v1.train.Saver</target>
-        </trans-unit>
-        <trans-unit id="dbd40d5b3587af9cf1ca52bf771e3ba1e3187daf" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.SaverDef</source>
-          <target state="translated">tf.compat.v1.train.SaverDef</target>
-        </trans-unit>
-        <trans-unit id="dc1b05edbb0273b1b203099a7a4c8959a2e0dc19" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.Scaffold</source>
-          <target state="translated">tf.compat.v1.train.Scaffold</target>
-        </trans-unit>
-        <trans-unit id="734e72c334012f0beda20c26af171223dfff52e0" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.SessionCreator</source>
-          <target state="translated">tf.compat.v1.train.SessionCreator</target>
-        </trans-unit>
-        <trans-unit id="e017cf8c9c482aefd75d11889f579dab339bbb19" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.SessionManager</source>
-          <target state="translated">tf.compat.v1.train.SessionManager</target>
-        </trans-unit>
-        <trans-unit id="93486f2c185526e1042051f1e007803d9d5240ac" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.SingularMonitoredSession</source>
-          <target state="translated">tf.compat.v1.train.SingularMonitoredSession</target>
-        </trans-unit>
-        <trans-unit id="aefc761d747c58463cf6477ca67934be1267f50d" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.Supervisor</source>
-          <target state="translated">tf.compat.v1.train.Supervisor</target>
-        </trans-unit>
-        <trans-unit id="91a660c31393d3ee0a7e12070066a0d8139918d3" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.SyncReplicasOptimizer</source>
-          <target state="translated">tf.compat.v1.train.SyncReplicasOptimizer</target>
-        </trans-unit>
-        <trans-unit id="0e24f39b9a680176e4a3c8db32b12fbffb0fe571" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.WorkerSessionCreator</source>
-          <target state="translated">tf.compat.v1.train.WorkerSessionCreator</target>
-        </trans-unit>
-        <trans-unit id="97f57c760ba963cbbc0688dd65b58846a64ce00a" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.add_queue_runner</source>
-          <target state="translated">tf.compat.v1.train.add_queue_runner</target>
-        </trans-unit>
-        <trans-unit id="ad11d4eb7100a3ae25afa2b40bf756d631797c27" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.assert_global_step</source>
-          <target state="translated">tf.compat.v1.train.assert_global_step</target>
-        </trans-unit>
-        <trans-unit id="aa1152c9fb574a93cabb12eed9f40b15578c4b47" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.basic_train_loop</source>
-          <target state="translated">tf.compat.v1.train.basic_train_loop</target>
-        </trans-unit>
-        <trans-unit id="15cf5c74ee59992317e8e35ef2cf65595b7e035a" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.batch</source>
-          <target state="translated">tf.compat.v1.train.batch</target>
-        </trans-unit>
-        <trans-unit id="51d1aa942547577ec00e3fdfd24e2ba8d3b823e3" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.batch_join</source>
-          <target state="translated">tf.compat.v1.train.batch_join</target>
-        </trans-unit>
-        <trans-unit id="45ac34de184daac158284fb1592a367175683898" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.checkpoint_exists</source>
-          <target state="translated">tf.compat.v1.train.checkpoint_exists</target>
-        </trans-unit>
-        <trans-unit id="cacc07b76ac1acc4ac14bedcc9560240b97af829" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.cosine_decay</source>
-          <target state="translated">tf.compat.v1.train.cosine_decay</target>
-        </trans-unit>
-        <trans-unit id="98abf4bec1f847caf485090b373b2b591bd316b3" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.cosine_decay_restarts</source>
-          <target state="translated">tf.compat.v1.train.cosine_decay_restarts</target>
-        </trans-unit>
-        <trans-unit id="1b062b47e331cea20512f9a8e715190fab1d6a54" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.create_global_step</source>
-          <target state="translated">tf.compat.v1.train.create_global_step</target>
-        </trans-unit>
-        <trans-unit id="2b448bafe6f1ae4702db9445cabc962083926905" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.do_quantize_training_on_graphdef</source>
-          <target state="translated">tf.compat.v1.train.do_quantize_training_on_graphdef</target>
-        </trans-unit>
-        <trans-unit id="828dbd8b68dc1e19deb5fef809a1aa43636609df" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.experimental.MixedPrecisionLossScaleOptimizer</source>
-          <target state="translated">tf.compat.v1.train.experimental.MixedPrecisionLossScaleOptimizer</target>
-        </trans-unit>
-        <trans-unit id="c356c82b3d18f8267096e6ed7d13bfa55b011266" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.experimental.disable_mixed_precision_graph_rewrite</source>
-          <target state="translated">tf.compat.v1.train.experimental.disable_mixed_precision_graph_rewrite</target>
-        </trans-unit>
-        <trans-unit id="aeb4ceccbe6624826c9b53e22aaf3ff8cad3c78a" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.experimental.enable_mixed_precision_graph_rewrite</source>
-          <target state="translated">tf.compat.v1.train.experimental.enable_mixed_precision_graph_rewrite</target>
-        </trans-unit>
-        <trans-unit id="eaa98499ba385e027c8ba27a5cea93847ce67a4e" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.exponential_decay</source>
-          <target state="translated">tf.compat.v1.train.exponential_decay</target>
-        </trans-unit>
-        <trans-unit id="e28355725b3468e564538b06e7063f00bd901196" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.export_meta_graph</source>
-          <target state="translated">tf.compat.v1.train.export_meta_graph</target>
-        </trans-unit>
-        <trans-unit id="13f0b2726af2eabda0228c47038ced79e0894651" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.generate_checkpoint_state_proto</source>
-          <target state="translated">tf.compat.v1.train.generate_checkpoint_state_proto</target>
-        </trans-unit>
-        <trans-unit id="a5d67e59fd28d1d39da74b7b37770ca41d5d6dd0" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.get_checkpoint_mtimes</source>
-          <target state="translated">tf.compat.v1.train.get_checkpoint_mtimes</target>
-        </trans-unit>
-        <trans-unit id="f01d8d16b4e8d8d785bdfc6ad648c88ad218c95b" translate="yes" xml:space="preserve">
-          <source>tf.compat.v1.train.get_global_step</source>
-          <target state="translated">tf.compat.v1.train.get_global_step</target>
         </trans-unit>
       </group>
     </body>

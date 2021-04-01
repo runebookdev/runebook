@@ -3,6 +3,183 @@
   <file source-language="en" target-language="ru" datatype="htmlbody" original="perl">
     <body>
       <group id="perl">
+        <trans-unit id="883c9501bfde5d52c5604a1b12447c3d9a8fe23c" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;flags&lt;/code&gt; has the bit &lt;code&gt;RV2CVOPCV_MARK_EARLY&lt;/code&gt; set, then the handling of a GV reference is modified. If a GV was examined and its CV slot was found to be empty, then the &lt;code&gt;gv&lt;/code&gt; op has the &lt;code&gt;OPpEARLY_CV&lt;/code&gt; flag set. If the op is not optimised away, and the CV slot is later populated with a subroutine having a prototype, that flag eventually triggers the warning &quot;called too early to check prototype&quot;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="94ba87252f4445bc6642c895685a2b0c13a4c9f3" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;flags&lt;/code&gt; has the bit &lt;code&gt;RV2CVOPCV_RETURN_NAME_GV&lt;/code&gt; set, then instead of returning a pointer to the subroutine it returns a pointer to the GV giving the most appropriate name for the subroutine in this context. Normally this is just the &lt;code&gt;CvGV&lt;/code&gt; of the subroutine, but for an anonymous (&lt;code&gt;CvANON&lt;/code&gt;) subroutine that is referenced through a GV it will be the referencing GV. The resulting &lt;code&gt;GV*&lt;/code&gt; is cast to &lt;code&gt;CV*&lt;/code&gt; to be returned. A null pointer is returned as usual if there is no statically-determinable subroutine.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="242a2d0b6758ae9991c2578558a99b10e3dde258" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;flags&lt;/code&gt; in non-zero, it can be any combination of the &lt;code&gt;UTF8_DISALLOW_&lt;i&gt;foo&lt;/i&gt;&lt;/code&gt; flags accepted by &lt;code&gt;&lt;a href=&quot;#utf8n_to_uvchr&quot;&gt;&quot;utf8n_to_uvchr&quot;&lt;/a&gt;&lt;/code&gt;, and with the same meanings.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="16ac1f6f577ac784401bb8130dc871e9c34ad1b9" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;flags&lt;/code&gt; is 0, any well-formed UTF-8, as extended by Perl, is accepted without restriction. If the final few bytes of the buffer do not form a complete code point, this will return TRUE anyway, provided that &lt;code&gt;&lt;a href=&quot;#is_utf8_valid_partial_char_flags&quot;&gt;&quot;is_utf8_valid_partial_char_flags&quot;&lt;/a&gt;&lt;/code&gt; returns TRUE for them.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="23848029d478b456b26bba2286d77574bebc75c1" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;flags&lt;/code&gt; is 0, this behaves identically to &lt;code&gt;&lt;a href=&quot;#is_utf8_valid_partial_char&quot;&gt;&quot;is_utf8_valid_partial_char&quot;&lt;/a&gt;&lt;/code&gt;. Otherwise &lt;code&gt;flags&lt;/code&gt; can be any combination of the &lt;code&gt;UTF8_DISALLOW_&lt;i&gt;foo&lt;/i&gt;&lt;/code&gt; flags accepted by &lt;code&gt;&lt;a href=&quot;#utf8n_to_uvchr&quot;&gt;&quot;utf8n_to_uvchr&quot;&lt;/a&gt;&lt;/code&gt;. If there is any sequence of bytes that can complete the input partial character in such a way that a non-prohibited character is formed, the function returns TRUE; otherwise FALSE. Non character code points cannot be determined based on partial character input. But many of the other possible excluded types can be determined from just the first one or two bytes.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="7776c59483454fdc128e37c2b654f9e899314281" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;flags&lt;/code&gt; is 0, this function accepts any code point from 0..&lt;code&gt;IV_MAX&lt;/code&gt; as input. &lt;code&gt;IV_MAX&lt;/code&gt; is typically 0x7FFF_FFFF in a 32-bit word.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="10e5eab05bd09c8fe9f56a01b844bac5e3765d28" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;flags&lt;/code&gt; is 0, this gives the same results as &lt;code&gt;&lt;a href=&quot;#isUTF8_CHAR&quot;&gt;&quot;isUTF8_CHAR&quot;&lt;/a&gt;&lt;/code&gt;; if &lt;code&gt;flags&lt;/code&gt; is &lt;code&gt;UTF8_DISALLOW_ILLEGAL_INTERCHANGE&lt;/code&gt;, this gives the same results as &lt;code&gt;&lt;a href=&quot;#isSTRICT_UTF8_CHAR&quot;&gt;&quot;isSTRICT_UTF8_CHAR&quot;&lt;/a&gt;&lt;/code&gt;; and if &lt;code&gt;flags&lt;/code&gt; is &lt;code&gt;UTF8_DISALLOW_ILLEGAL_C9_INTERCHANGE&lt;/code&gt;, this gives the same results as &lt;code&gt;&lt;a href=&quot;#isC9_STRICT_UTF8_CHAR&quot;&gt;&quot;isC9_STRICT_UTF8_CHAR&quot;&lt;/a&gt;&lt;/code&gt;. Otherwise &lt;code&gt;flags&lt;/code&gt; may be any combination of the &lt;code&gt;UTF8_DISALLOW_&lt;i&gt;foo&lt;/i&gt;&lt;/code&gt; flags understood by &lt;code&gt;&lt;a href=&quot;#utf8n_to_uvchr&quot;&gt;&quot;utf8n_to_uvchr&quot;&lt;/a&gt;&lt;/code&gt;, with the same meanings.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="c01ee327fde250472c539a32455541306b4bc120" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;flags&lt;/code&gt; is 0, this gives the same results as &lt;code&gt;&lt;a href=&quot;#is_utf8_string&quot;&gt;&quot;is_utf8_string&quot;&lt;/a&gt;&lt;/code&gt;; if &lt;code&gt;flags&lt;/code&gt; is &lt;code&gt;UTF8_DISALLOW_ILLEGAL_INTERCHANGE&lt;/code&gt;, this gives the same results as &lt;code&gt;&lt;a href=&quot;#is_strict_utf8_string&quot;&gt;&quot;is_strict_utf8_string&quot;&lt;/a&gt;&lt;/code&gt;; and if &lt;code&gt;flags&lt;/code&gt; is &lt;code&gt;UTF8_DISALLOW_ILLEGAL_C9_INTERCHANGE&lt;/code&gt;, this gives the same results as &lt;code&gt;&lt;a href=&quot;#is_c9strict_utf8_string&quot;&gt;&quot;is_c9strict_utf8_string&quot;&lt;/a&gt;&lt;/code&gt;. Otherwise &lt;code&gt;flags&lt;/code&gt; may be any combination of the &lt;code&gt;UTF8_DISALLOW_&lt;i&gt;foo&lt;/i&gt;&lt;/code&gt; flags understood by &lt;code&gt;&lt;a href=&quot;#utf8n_to_uvchr&quot;&gt;&quot;utf8n_to_uvchr&quot;&lt;/a&gt;&lt;/code&gt;, with the same meanings.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="3ef48bc44bf4f8b7aeee22cccd386b0d4dcfb8f9" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;frame &amp;amp; 4&lt;/code&gt; , arguments to functions are printed, plus context and caller info. If &lt;code&gt;frame &amp;amp; 8&lt;/code&gt; , overloaded &lt;code&gt;stringify&lt;/code&gt; and &lt;code&gt;&lt;a href=&quot;functions/tie&quot;&gt;tie&lt;/a&gt;&lt;/code&gt;d &lt;code&gt;FETCH&lt;/code&gt; is enabled on the printed arguments. If &lt;code&gt;frame
+&amp;amp; 16&lt;/code&gt; , the return value from the subroutine is printed.</source>
+          <target state="translated">Если &lt;code&gt;frame &amp;amp; 4&lt;/code&gt; , выводятся аргументы функций, а также контекст и информация о вызывающем. Если &lt;code&gt;frame &amp;amp; 8&lt;/code&gt; , для напечатанных аргументов включен перегруженный &lt;code&gt;stringify&lt;/code&gt; и &lt;code&gt;&lt;a href=&quot;functions/tie&quot;&gt;tie&lt;/a&gt;&lt;/code&gt; d &lt;code&gt;FETCH&lt;/code&gt; . Если &lt;code&gt;frame &amp;amp; 16&lt;/code&gt; , печатается возвращаемое значение из подпрограммы.</target>
+        </trans-unit>
+        <trans-unit id="f6ef7c333faaf2cb26f8747450c37161f8d75370" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;frame &amp;amp; 4&lt;/code&gt;, arguments to functions are printed, plus context and caller info. If &lt;code&gt;frame &amp;amp; 8&lt;/code&gt;, overloaded &lt;code&gt;stringify&lt;/code&gt; and &lt;code&gt;tie&lt;/code&gt;d &lt;code&gt;FETCH&lt;/code&gt; is enabled on the printed arguments. If &lt;code&gt;frame &amp;amp; 16&lt;/code&gt;, the return value from the subroutine is printed.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="b54e3981c02655a1fab1a806eaa02120a0c9bfed" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;function&lt;/code&gt; was the name of a function, then &lt;code&gt;memoize&lt;/code&gt; hides the old version and installs the new memoized version under the old name, so that &lt;code&gt;&amp;amp;function(...)&lt;/code&gt; actually invokes the memoized version.</source>
+          <target state="translated">Если &lt;code&gt;function&lt;/code&gt; была именем функции, то &lt;code&gt;memoize&lt;/code&gt; скрывает старую версию и устанавливает новую мемоизированную версию под старым именем, так что &lt;code&gt;&amp;amp;function(...)&lt;/code&gt; фактически вызывает мемоизированную версию.</target>
+        </trans-unit>
+        <trans-unit id="4823580da2e2f493ed7ea495228a6fb43531c2a7" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;get_handle&lt;/code&gt; senses that it's running in program that was invoked as a CGI, then it tries to get language-tags out of the environment variable &quot;HTTP_ACCEPT_LANGUAGE&quot;, and it pretends that those were the languages passed as parameters to &lt;code&gt;get_handle&lt;/code&gt; .</source>
+          <target state="translated">Если &lt;code&gt;get_handle&lt;/code&gt; определяет, что он запущен в программе, которая была вызвана как CGI, тогда он пытается получить языковые теги из переменной среды &amp;laquo;HTTP_ACCEPT_LANGUAGE&amp;raquo; и делает вид, что это были языки, переданные в качестве параметров для &lt;code&gt;get_handle&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="7b8f1bd59bcb9836018bddcc2b5f32a734b99099" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;get_handle&lt;/code&gt; senses that it's running in program that was invoked as a CGI, then it tries to get language-tags out of the environment variable &quot;HTTP_ACCEPT_LANGUAGE&quot;, and it pretends that those were the languages passed as parameters to &lt;code&gt;get_handle&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="0a5501c614e6eee43f2f2b50112bdb8a824a2fea" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;gv&lt;/code&gt; is a completely empty typeglob, it is deleted from the stash.</source>
+          <target state="translated">Если &lt;code&gt;gv&lt;/code&gt; - полностью пустой typeglob, он удаляется из тайника.</target>
+        </trans-unit>
+        <trans-unit id="171c792393c3bd16ce8492fbf51df1d34df47fa3" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;gv&lt;/code&gt; is a typeglob containing only a sufficiently-ordinary constant sub, the typeglob is replaced with a scalar-reference placeholder that more compactly represents the same thing.</source>
+          <target state="translated">Если &lt;code&gt;gv&lt;/code&gt; - это typeglob, содержащий только достаточно обычный константный sub, typeglob заменяется заполнителем скалярной ссылки, который более компактно представляет то же самое.</target>
+        </trans-unit>
+        <trans-unit id="91c336e511b07c506517b1f2fbdfac89a7b69625" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;gv&lt;/code&gt; is a typeglob whose subroutine entry is a constant sub eligible for inlining, or &lt;code&gt;gv&lt;/code&gt; is a placeholder reference that would be promoted to such a typeglob, then returns the value returned by the sub. Otherwise, returns &lt;code&gt;NULL&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="15863e2e3bcfe9bf34415295eb886e40c8b84a73" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;gv&lt;/code&gt; is a typeglob whose subroutine entry is a constant sub eligible for inlining, or &lt;code&gt;gv&lt;/code&gt; is a placeholder reference that would be promoted to such a typeglob, then returns the value returned by the sub. Otherwise, returns NULL.</source>
+          <target state="translated">Если &lt;code&gt;gv&lt;/code&gt; - это typeglob, запись подпрограммы которого является константой sub, подходящей для встраивания, или &lt;code&gt;gv&lt;/code&gt; - это ссылка-заполнитель, которая будет повышена до такого typeglob, то возвращает значение, возвращаемое подпрограммой. В противном случае возвращает NULL.</target>
+        </trans-unit>
+        <trans-unit id="5b76926b7fe43456ac634077129deadebe6d1749" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;ignoreName&lt;/code&gt; or &lt;code&gt;undefName&lt;/code&gt; is used, character names should be specified as a comment (following &lt;code&gt;#&lt;/code&gt; ) on each line.</source>
+          <target state="translated">Если используется &lt;code&gt;ignoreName&lt;/code&gt; или &lt;code&gt;undefName&lt;/code&gt; , имена символов должны быть указаны в виде комментария (после &lt;code&gt;#&lt;/code&gt; ) в каждой строке.</target>
+        </trans-unit>
+        <trans-unit id="c67ec45488470986d50d9732fc06ac7df6e89db8" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;ignoreName&lt;/code&gt; or &lt;code&gt;undefName&lt;/code&gt; is used, character names should be specified as a comment (following &lt;code&gt;#&lt;/code&gt;) on each line.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="606bfb04b8810dddbc165299090455517c6f31d2" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;len&lt;/code&gt; is 0, it will be calculated using &lt;code&gt;strlen(s)&lt;/code&gt; , (which means if you use this option, that &lt;code&gt;&lt;a href=&quot;functions/s&quot;&gt;s&lt;/a&gt;&lt;/code&gt; can't have embedded &lt;code&gt;NUL&lt;/code&gt; characters and has to have a terminating &lt;code&gt;NUL&lt;/code&gt; byte).</source>
+          <target state="translated">Если &lt;code&gt;len&lt;/code&gt; является 0, то будет рассчитываться с использованием &lt;code&gt;strlen(s)&lt;/code&gt; , (что означает , если вы используете эту опцию, то &lt;code&gt;&lt;a href=&quot;functions/s&quot;&gt;s&lt;/a&gt;&lt;/code&gt; не может иметь встроенную &lt;code&gt;NUL&lt;/code&gt; символов и должен иметь завершающее &lt;code&gt;NUL&lt;/code&gt; байт).</target>
+        </trans-unit>
+        <trans-unit id="35a8aa529d970b1105047bbf5eb8254c1640c25a" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;len&lt;/code&gt; is 0, it will be calculated using &lt;code&gt;strlen(s)&lt;/code&gt;, (which means if you use this option, that &lt;code&gt;s&lt;/code&gt; can't have embedded &lt;code&gt;NUL&lt;/code&gt; characters and has to have a terminating &lt;code&gt;NUL&lt;/code&gt; byte).</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="564f6927aa67faeb8390b79eb296fc0609382f07" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;list_archive()&lt;/code&gt; is passed an array reference as its third argument it returns a list of hash references containing the requested properties of each file. The following list of properties is supported: full_path, name, size, mtime (last modified date), mode, uid, gid, linkname, uname, gname, devmajor, devminor, prefix, type.</source>
+          <target state="translated">Если &lt;code&gt;list_archive()&lt;/code&gt; передается ссылка на массив в качестве третьего аргумента, он возвращает список хеш-ссылок, содержащих запрошенные свойства каждого файла. Поддерживается следующий список свойств: full_path, name, size, mtime (дата последнего изменения), mode, uid, gid, linkname, uname, gname, devmajor, devminor, prefix, type.</target>
+        </trans-unit>
+        <trans-unit id="30b6892ba87f6c10d6419b32b55f7a86419b6ce9" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;list_files()&lt;/code&gt; is passed an array reference as its first argument it returns a list of hash references containing the requested properties of each file. The following list of properties is supported: name, size, mtime (last modified date), mode, uid, gid, linkname, uname, gname, devmajor, devminor, prefix.</source>
+          <target state="translated">Если &lt;code&gt;list_files()&lt;/code&gt; передается ссылка на массив в качестве первого аргумента, он возвращает список хеш-ссылок, содержащий запрошенные свойства каждого файла. Поддерживается следующий список свойств: name, size, mtime (дата последнего изменения), mode, uid, gid, linkname, uname, gname, devmajor, devminor, prefix.</target>
+        </trans-unit>
+        <trans-unit id="6b6ca16484970453642612331b9f95d68983da46" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;make_path&lt;/code&gt; or &lt;code&gt;remove_tree&lt;/code&gt; encounter an error, a diagnostic message will be printed to &lt;code&gt;STDERR&lt;/code&gt; via &lt;code&gt;carp&lt;/code&gt; (for non-fatal errors), or via &lt;code&gt;croak&lt;/code&gt; (for fatal errors).</source>
+          <target state="translated">Если &lt;code&gt;make_path&lt;/code&gt; или &lt;code&gt;remove_tree&lt;/code&gt; обнаруживают ошибку, диагностическое сообщение будет напечатано в &lt;code&gt;STDERR&lt;/code&gt; через &lt;code&gt;carp&lt;/code&gt; (для нефатальных ошибок) или через &lt;code&gt;croak&lt;/code&gt; (для фатальных ошибок).</target>
+        </trans-unit>
+        <trans-unit id="c1dea29744b11722e865e983de60cdb68d486715" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;make_path&lt;/code&gt; or &lt;code&gt;remove_tree&lt;/code&gt; encounters an error, a diagnostic message will be printed to &lt;code&gt;STDERR&lt;/code&gt; via &lt;code&gt;carp&lt;/code&gt; (for non-fatal errors) or via &lt;code&gt;croak&lt;/code&gt; (for fatal errors).</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="e12005256b82b7dbf15e43b617aa6446b9ea3caa" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;merge&lt;/code&gt; is true the harness will create parsers that merge STDOUT and STDERR together for any processes they start.</source>
+          <target state="translated">Если &lt;code&gt;merge&lt;/code&gt; истинно, жгут создаст парсеры, которые объединяют STDOUT и STDERR вместе для любых процессов, которые они запускают.</target>
+        </trans-unit>
+        <trans-unit id="a65b7746a43b203ecde7cf3199ef2365227c5212" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;name&lt;/code&gt; is null then the subroutine will be anonymous, with its &lt;code&gt;CvGV&lt;/code&gt; referring to an &lt;code&gt;__ANON__&lt;/code&gt; glob. If &lt;code&gt;name&lt;/code&gt; is non-null then the subroutine will be named accordingly, referenced by the appropriate glob. &lt;code&gt;name&lt;/code&gt; is a string of length &lt;code&gt;len&lt;/code&gt; bytes giving a sigilless symbol name, in UTF-8 if &lt;code&gt;flags&lt;/code&gt; has the &lt;code&gt;SVf_UTF8&lt;/code&gt; bit set and in Latin-1 otherwise. The name may be either qualified or unqualified, with the stash defaulting in the same manner as for &lt;code&gt;gv_fetchpvn_flags&lt;/code&gt;. &lt;code&gt;flags&lt;/code&gt; may contain flag bits understood by &lt;code&gt;gv_fetchpvn_flags&lt;/code&gt; with the same meaning as they have there, such as &lt;code&gt;GV_ADDWARN&lt;/code&gt;. The symbol is always added to the stash if necessary, with &lt;code&gt;GV_ADDMULTI&lt;/code&gt; semantics.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="8ab07e7506173a92d684e99bcaa1a4031e98f0c7" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;name&lt;/code&gt; is null then the subroutine will be anonymous, with its &lt;code&gt;CvGV&lt;/code&gt; referring to an &lt;code&gt;__ANON__&lt;/code&gt; glob. If &lt;code&gt;name&lt;/code&gt; is non-null then the subroutine will be named accordingly, referenced by the appropriate glob. &lt;code&gt;name&lt;/code&gt; is a string of length &lt;code&gt;len&lt;/code&gt; bytes giving a sigilless symbol name, in UTF-8 if &lt;code&gt;flags&lt;/code&gt; has the &lt;code&gt;SVf_UTF8&lt;/code&gt; bit set and in Latin-1 otherwise. The name may be either qualified or unqualified. If the name is unqualified then it defaults to being in the stash specified by &lt;code&gt;stash&lt;/code&gt; if that is non-null, or to &lt;code&gt;PL_curstash&lt;/code&gt; if &lt;code&gt;stash&lt;/code&gt; is null. The symbol is always added to the stash if necessary, with &lt;code&gt;GV_ADDMULTI&lt;/code&gt; semantics.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="a5a417a1f8bba03650439d46556e6b5e2f42cdc6" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;namlen&lt;/code&gt; is greater than zero then a &lt;code&gt;savepvn&lt;/code&gt;</source>
+          <target state="translated">Если &lt;code&gt;namlen&lt;/code&gt; больше нуля, тогда &lt;code&gt;savepvn&lt;/code&gt;</target>
+        </trans-unit>
+        <trans-unit id="a5b4f60a5261a12c3ad5e79f21f3b4cceb3007ea" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;new()&lt;/code&gt; is invoked with arguments and the &lt;code&gt;&lt;a href=&quot;../functions/read&quot;&gt;read()&lt;/a&gt;&lt;/code&gt; method fails for any reason, &lt;code&gt;new()&lt;/code&gt; returns undef.</source>
+          <target state="translated">Если &lt;code&gt;new()&lt;/code&gt; вызывается с аргументами, а метод &lt;code&gt;&lt;a href=&quot;../functions/read&quot;&gt;read()&lt;/a&gt;&lt;/code&gt; не работает по какой-либо причине, &lt;code&gt;new()&lt;/code&gt; возвращает undef.</target>
+        </trans-unit>
+        <trans-unit id="7cef9a9221becdc1b22f8b33e94c433da6581c20" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;new()&lt;/code&gt; is invoked with arguments and the &lt;code&gt;read()&lt;/code&gt; method fails for any reason, &lt;code&gt;new()&lt;/code&gt; returns undef.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="33de51c2b233ea7368e7ccccf568c1e624835ecc" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;o&lt;/code&gt; is null, the state op is returned. Otherwise the state op is combined with &lt;code&gt;o&lt;/code&gt; into a &lt;code&gt;lineseq&lt;/code&gt; list op, which is returned. &lt;code&gt;o&lt;/code&gt; is consumed by this function and becomes part of the returned op tree.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="d5c8f13fd0a4ec2abf65b26b0dde9b71cbc468dc" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;o_is_gv&lt;/code&gt; is false and &lt;code&gt;o&lt;/code&gt; is null, then the subroutine will be anonymous. If &lt;code&gt;o_is_gv&lt;/code&gt; is false and &lt;code&gt;o&lt;/code&gt; is non-null, then &lt;code&gt;o&lt;/code&gt; must point to a &lt;code&gt;const&lt;/code&gt; op, which will be consumed by this function, and its string value supplies a name for the subroutine. The name may be qualified or unqualified, and if it is unqualified then a default stash will be selected in some manner. If &lt;code&gt;o_is_gv&lt;/code&gt; is true, then &lt;code&gt;o&lt;/code&gt; doesn't point to an &lt;code&gt;OP&lt;/code&gt; at all, but is instead a cast pointer to a &lt;code&gt;GV&lt;/code&gt; by which the subroutine will be named.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="dcf32c805e2ddc81931fd2560a08109645dce7e6" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;optype&lt;/code&gt; is &lt;code&gt;OP_ANDASSIGN&lt;/code&gt;, &lt;code&gt;OP_ORASSIGN&lt;/code&gt;, or &lt;code&gt;OP_DORASSIGN&lt;/code&gt;, then a suitable conditional optree is constructed. If &lt;code&gt;optype&lt;/code&gt; is the opcode of a binary operator, such as &lt;code&gt;OP_BIT_OR&lt;/code&gt;, then an op is constructed that performs the binary operation and assigns the result to the left argument. Either way, if &lt;code&gt;optype&lt;/code&gt; is non-zero then &lt;code&gt;flags&lt;/code&gt; has no effect.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="35ecad3c0cc7408f92e26472fcb7141e48a993e8" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;optype&lt;/code&gt; is zero, then a plain scalar or list assignment is constructed. Which type of assignment it is is automatically determined. &lt;code&gt;flags&lt;/code&gt; gives the eight bits of &lt;code&gt;op_flags&lt;/code&gt;, except that &lt;code&gt;OPf_KIDS&lt;/code&gt; will be set automatically, and, shifted up eight bits, the eight bits of &lt;code&gt;op_private&lt;/code&gt;, except that the bit with value 1 or 2 is automatically set as required.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="14b4ce4ab1caa8905ea03f71030c64a0c404abbc" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;pass_through&lt;/code&gt; is also enabled, options processing will terminate at the first unrecognized option, or non-option, whichever comes first.</source>
+          <target state="translated">Если &lt;code&gt;pass_through&lt;/code&gt; также включен, обработка параметров будет прекращена при первом нераспознанном параметре или при отсутствии параметра, в зависимости от того, что наступит раньше.</target>
+        </trans-unit>
+        <trans-unit id="9243fb188fd78661a99b6e8ffc13a07c0c193e45" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;pe1&lt;/code&gt; is non-&lt;code&gt;NULL&lt;/code&gt; and the pointer it points to is not &lt;code&gt;NULL&lt;/code&gt;, that pointer is considered an end pointer to the position 1 byte past the maximum point in &lt;code&gt;s1&lt;/code&gt; beyond which scanning will not continue under any circumstances. (This routine assumes that UTF-8 encoded input strings are not malformed; malformed input can cause it to read past &lt;code&gt;pe1&lt;/code&gt;). This means that if both &lt;code&gt;l1&lt;/code&gt; and &lt;code&gt;pe1&lt;/code&gt; are specified, and &lt;code&gt;pe1&lt;/code&gt; is less than &lt;code&gt;s1&lt;/code&gt;+&lt;code&gt;l1&lt;/code&gt;, the match will never be successful because it can never get as far as its goal (and in fact is asserted against). Correspondingly for &lt;code&gt;pe2&lt;/code&gt; with respect to &lt;code&gt;s2&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="c02b449190a1b90198a28e96aea10bbc105c7788" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;pe1&lt;/code&gt; is non-NULL and the pointer it points to is not NULL, that pointer is considered an end pointer to the position 1 byte past the maximum point in &lt;code&gt;s1&lt;/code&gt; beyond which scanning will not continue under any circumstances. (This routine assumes that UTF-8 encoded input strings are not malformed; malformed input can cause it to read past &lt;code&gt;pe1&lt;/code&gt; ). This means that if both &lt;code&gt;l1&lt;/code&gt; and &lt;code&gt;pe1&lt;/code&gt; are specified, and &lt;code&gt;pe1&lt;/code&gt; is less than &lt;code&gt;s1&lt;/code&gt; +&lt;code&gt;l1&lt;/code&gt; , the match will never be successful because it can never get as far as its goal (and in fact is asserted against). Correspondingly for &lt;code&gt;pe2&lt;/code&gt; with respect to &lt;code&gt;s2&lt;/code&gt; .</source>
+          <target state="translated">Если &lt;code&gt;pe1&lt;/code&gt; не равно NULL и указатель, на который он указывает, не равен NULL, этот указатель считается конечным указателем на позицию на 1 байт после максимальной точки в &lt;code&gt;s1&lt;/code&gt; , после которой сканирование не будет продолжено ни при каких обстоятельствах. (В этой подпрограмме предполагается, что входные строки в кодировке UTF-8 не имеют неправильного формата; искаженный ввод может привести к тому, что они будут читать после &lt;code&gt;pe1&lt;/code&gt; ). Это означает, что если указаны как &lt;code&gt;l1&lt;/code&gt; ,так и &lt;code&gt;pe1&lt;/code&gt; , а &lt;code&gt;pe1&lt;/code&gt; меньше &lt;code&gt;s1&lt;/code&gt; + &lt;code&gt;l1&lt;/code&gt; , совпадение никогда не будет успешным, потому что оно никогда не сможет достичь своей цели (и фактически утверждается против). Соответственно для &lt;code&gt;pe2&lt;/code&gt; по &lt;code&gt;s2&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="e5414852c94de9d937514c7b2ffd918737261abd" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;permute&lt;/code&gt; is enabled, this means that</source>
+          <target state="translated">Если &lt;code&gt;permute&lt;/code&gt; включена, это означает, что</target>
+        </trans-unit>
+        <trans-unit id="e47709e624b959c659a6f5424e397b7429bd08c4" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;preprocess&lt;/code&gt; and/or &lt;code&gt;normalization&lt;/code&gt; is applied, the code points of the string after them (in NFD by default) are used.</source>
+          <target state="translated">Если применяется &lt;code&gt;preprocess&lt;/code&gt; и / или &lt;code&gt;normalization&lt;/code&gt; , используются кодовые точки строки после них (в NFD по умолчанию).</target>
+        </trans-unit>
+        <trans-unit id="c7a3e0b813ddb5c552aec4199fd49e48847ff2c2" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;prompt()&lt;/code&gt; detects that it is not running interactively and there is nothing on STDIN or if the PERL_MM_USE_DEFAULT environment variable is set to true, the $default will be used without prompting. This prevents automated processes from blocking on user input.</source>
+          <target state="translated">Если &lt;code&gt;prompt()&lt;/code&gt; обнаруживает, что он не работает в интерактивном режиме и на STDIN ничего нет, или если для переменной среды PERL_MM_USE_DEFAULT установлено значение true, значение $ default будет использоваться без запроса. Это предотвращает блокировку автоматизированных процессов при вводе пользователем.</target>
+        </trans-unit>
+        <trans-unit id="9d8185228e8e06faca877b9d0926aab5904e951a" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;require_order&lt;/code&gt; is enabled, options processing terminates when the first non-option is encountered.</source>
+          <target state="translated">Если &lt;code&gt;require_order&lt;/code&gt; включен, обработка опций прекращается при обнаружении первой опции, не являющейся опцией.</target>
+        </trans-unit>
+        <trans-unit id="7ec89b0e13a7db5b1125011c45839f2c6cfb36ba" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;require_order&lt;/code&gt; is enabled, options processing will terminate at the first unrecognized option, or non-option, whichever comes first and all remaining arguments are passed to &lt;code&gt;@ARGV&lt;/code&gt; instead of the catchall &lt;code&gt;&amp;lt;&amp;gt;&lt;/code&gt; if present. However, if &lt;code&gt;permute&lt;/code&gt; is enabled instead, results can become confusing.</source>
+          <target state="translated">Если &lt;code&gt;require_order&lt;/code&gt; включен, обработка параметров будет завершена при первом нераспознанном параметре или при отсутствии параметра, в зависимости от того, что наступит раньше, а все остальные аргументы передаются в &lt;code&gt;@ARGV&lt;/code&gt; вместо catchall &lt;code&gt;&amp;lt;&amp;gt;&lt;/code&gt; , если он присутствует. Однако, если вместо этого включена &lt;code&gt;permute&lt;/code&gt; , результаты могут быть запутанными.</target>
+        </trans-unit>
+        <trans-unit id="6e12b0dc8bb5978452519b2af8436776d186cd58" translate="yes" xml:space="preserve">
+          <source>If &lt;code&gt;s&lt;/code&gt; does not point to a well-formed UTF-8 character and UTF8 warnings are enabled, zero is returned and &lt;code&gt;*retlen&lt;/code&gt; is set (if &lt;code&gt;retlen&lt;/code&gt; isn't &lt;code&gt;NULL&lt;/code&gt;) to -1. If those warnings are off, the computed value, if well-defined (or the Unicode REPLACEMENT CHARACTER if not), is silently returned, and &lt;code&gt;*retlen&lt;/code&gt; is set (if &lt;code&gt;retlen&lt;/code&gt; isn't &lt;code&gt;NULL&lt;/code&gt;) so that (&lt;code&gt;s&lt;/code&gt; + &lt;code&gt;*retlen&lt;/code&gt;) is the next possible position in &lt;code&gt;s&lt;/code&gt; that could begin a non-malformed character. See &lt;a href=&quot;#utf8n_to_uvchr&quot;&gt;&quot;utf8n_to_uvchr&quot;&lt;/a&gt; for details on when the REPLACEMENT CHARACTER is returned.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="0e07d4919d304923f37fe1dc7b33e0707c964ce0" translate="yes" xml:space="preserve">
           <source>If &lt;code&gt;s&lt;/code&gt; does not point to a well-formed UTF-8 character and UTF8 warnings are enabled, zero is returned and &lt;code&gt;*retlen&lt;/code&gt; is set (if &lt;code&gt;retlen&lt;/code&gt; isn't NULL) to -1. If those warnings are off, the computed value if well-defined (or the Unicode REPLACEMENT CHARACTER, if not) is silently returned, and &lt;code&gt;*retlen&lt;/code&gt; is set (if &lt;code&gt;retlen&lt;/code&gt; isn't NULL) so that (&lt;code&gt;s&lt;/code&gt; + &lt;code&gt;*retlen&lt;/code&gt;) is the next possible position in &lt;code&gt;s&lt;/code&gt; that could begin a non-malformed character. See &lt;a href=&quot;perlapi#utf8n_to_uvchr&quot;&gt;&quot;utf8n_to_uvchr&quot; in perlapi&lt;/a&gt; for details on when the REPLACEMENT CHARACTER is returned.</source>
           <target state="new"/>
@@ -3830,182 +4007,6 @@ $var&lt;/code&gt; ) holding a reference is used to access a hash element and a p
         <trans-unit id="ddc80dbef3fa7a98447bcda86b6b6a922737dbbf" translate="yes" xml:space="preserve">
           <source>If the child process dies for any reason, the next write to CHLD_IN is likely to generate a SIGPIPE in the parent, which is fatal by default. So you may wish to handle this signal.</source>
           <target state="translated">Если дочерний процесс умирает по какой-либо причине,то при следующей записи в CHLD_IN в родительском процессе,скорее всего,будет сгенерирован SIGPIPE,который по умолчанию является фатальным.Поэтому вы,возможно,захотите обработать этот сигнал.</target>
-        </trans-unit>
-        <trans-unit id="dbd5594c7134763067cde3b54f3bfaeaa68b552a" translate="yes" xml:space="preserve">
-          <source>If the child process follows the convention of C programs compiled with the _POSIX_EXIT macro set, the status value will contain the actual value of 0 to 255 returned by that program on a normal exit.</source>
-          <target state="translated">Если дочерний процесс следует условию программ на языке С,скомпилированных с набором макросов _POSIX_EXIT,то значение статуса будет содержать фактическое значение от 0 до 255,возвращаемое этой программой при нормальном выходе.</target>
-        </trans-unit>
-        <trans-unit id="ba30380d4c3fff1189949a912a23e2f3c323237f" translate="yes" xml:space="preserve">
-          <source>If the class shown in &lt;a href=&quot;#SYNOPSIS&quot;&gt;&quot;SYNOPSIS&quot;&lt;/a&gt; were placed in the MyClass.pm module, then the following code:</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="3a2359effbd1215640880aada1292b5fa0877c9a" translate="yes" xml:space="preserve">
-          <source>If the class shown in &lt;a href=&quot;#SYNOPSIS&quot;&gt;SYNOPSIS&lt;/a&gt; were placed in the MyClass.pm module, then the following code:</source>
-          <target state="translated">Если класс, показанный в &lt;a href=&quot;#SYNOPSIS&quot;&gt;СИНОПСИСЕ,&lt;/a&gt; был помещен в модуль MyClass.pm, то следующий код:</target>
-        </trans-unit>
-        <trans-unit id="2f9ec72ad3a19d5c4b84af5eba887a50b7eef9b5" translate="yes" xml:space="preserve">
-          <source>If the client asks for &quot;fr&quot;, that will look up successfully in %greetings, to the value &quot;Bonjour&quot;. And if the client asks for &quot;i-mingo&quot;, that will look up successfully in %greetings, to the value &quot;Hau'&quot;.</source>
-          <target state="translated">Если клиент попросит &quot;fr&quot;,что будет успешно искать в %greetings,к значению &quot;Bonjour&quot;.А если клиент попросит &quot;i-mingo&quot;,что будет успешно искать в %greetings,к значению &quot;Hau'&quot;.</target>
-        </trans-unit>
-        <trans-unit id="1e012fb4a0052bc107066983e24cd424b0582af0" translate="yes" xml:space="preserve">
-          <source>If the code point is unassigned, this returns the block it would belong to if it were assigned. (If the Unicode version being used is so early as to not have blocks, all code points are considered to be in &lt;code&gt;No_Block&lt;/code&gt; .)</source>
-          <target state="translated">Если кодовая точка не назначена, возвращается блок, которому она принадлежала бы, если бы была назначена. (Если используемая версия Unicode настолько ранняя, что не имеет блоков, все кодовые точки считаются находящимися в &lt;code&gt;No_Block&lt;/code&gt; .)</target>
-        </trans-unit>
-        <trans-unit id="318dcf1cce3429cb8c9fd8f8fb72e309dc55b11b" translate="yes" xml:space="preserve">
-          <source>If the code point is unassigned, this returns the block it would belong to if it were assigned. (If the Unicode version being used is so early as to not have blocks, all code points are considered to be in &lt;code&gt;No_Block&lt;/code&gt;.)</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="46675f67eada0291c64ffce7fc8980b9b58c2b77" translate="yes" xml:space="preserve">
-          <source>If the code to be executed doesn't vary, you may use the eval-BLOCK form to trap run-time errors without incurring the penalty of recompiling each time. The error, if any, is still returned in &lt;a href=&quot;perlvar#%24%40&quot;&gt;&lt;code&gt;$@&lt;/code&gt;&lt;/a&gt;. Examples:</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="ced2db748e9e7079888c75fca8f7175caebcea61" translate="yes" xml:space="preserve">
-          <source>If the code to be executed doesn't vary, you may use the eval-BLOCK form to trap run-time errors without incurring the penalty of recompiling each time. The error, if any, is still returned in &lt;code&gt;$@&lt;/code&gt; . Examples:</source>
-          <target state="translated">Если код, который нужно выполнить, не меняется, вы можете использовать форму eval-BLOCK для перехвата ошибок времени выполнения, не подвергаясь каждый раз повторной компиляции. Ошибка, если таковая имеется, по-прежнему возвращается в &lt;code&gt;$@&lt;/code&gt; . Примеры:</target>
-        </trans-unit>
-        <trans-unit id="2bd498c74c7384947431c9fbfc4c96437164ae53" translate="yes" xml:space="preserve">
-          <source>If the code to execute had been passed in as a string, &lt;code&gt;'$line = &amp;lt;STDIN&amp;gt;'&lt;/code&gt; , there would have been no way for the hypothetical timeout() function to access the lexical variable $line back in its caller's scope.</source>
-          <target state="translated">Если бы код для выполнения был передан в виде строки &lt;code&gt;'$line = &amp;lt;STDIN&amp;gt;'&lt;/code&gt; , у гипотетической функции timeout () не было бы возможности получить доступ к лексической переменной $ line обратно в область действия вызывающего объекта.</target>
-        </trans-unit>
-        <trans-unit id="c1827c22ec543702fffafe0a0fe1de8c30879660" translate="yes" xml:space="preserve">
-          <source>If the code to execute had been passed in as a string, &lt;code&gt;'$line = &amp;lt;STDIN&amp;gt;'&lt;/code&gt;, there would have been no way for the hypothetical timeout() function to access the lexical variable $line back in its caller's scope.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="68179989040030e944377fc50f5fa69dee822170" translate="yes" xml:space="preserve">
-          <source>If the command works, you can move to the next step, but beware: &lt;b&gt;You'll have to remove the directory from the device once you are done! Unlike &lt;i&gt;/mnt/asec&lt;/i&gt;, &lt;i&gt;/data/local/tmp&lt;/i&gt; may not get automatically garbage collected once you shut off the phone&lt;/b&gt;.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="9c340c9bb0fb834396be0e28dd3dddd81bf15437" translate="yes" xml:space="preserve">
-          <source>If the condition expression of a &lt;code&gt;while&lt;/code&gt; statement is based on any of a group of iterative expression types then it gets some magic treatment. The affected iterative expression types are &lt;a href=&quot;perlfunc#readline-EXPR&quot;&gt;&lt;code&gt;readline&lt;/code&gt;&lt;/a&gt;, the &lt;a href=&quot;perlop#I%2FO-Operators&quot;&gt;&lt;code&gt;&amp;lt;FILEHANDLE&amp;gt;&lt;/code&gt;&lt;/a&gt; input operator, &lt;a href=&quot;perlfunc#readdir-DIRHANDLE&quot;&gt;&lt;code&gt;readdir&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;perlfunc#glob-EXPR&quot;&gt;&lt;code&gt;glob&lt;/code&gt;&lt;/a&gt;, the &lt;a href=&quot;perlop#I%2FO-Operators&quot;&gt;&lt;code&gt;&amp;lt;PATTERN&amp;gt;&lt;/code&gt;&lt;/a&gt; globbing operator, and &lt;a href=&quot;perlfunc#each-HASH&quot;&gt;&lt;code&gt;each&lt;/code&gt;&lt;/a&gt;. If the condition expression is one of these expression types, then the value yielded by the iterative operator will be implicitly assigned to &lt;code&gt;$_&lt;/code&gt;. If the condition expression is one of these expression types or an explicit assignment of one of them to a scalar, then the condition actually tests for definedness of the expression's value, not for its regular truth value.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="c5dcda0eb63d695c2273d9f58a5b27fc7e844c60" translate="yes" xml:space="preserve">
-          <source>If the configurations variable &lt;code&gt;build_dir_reuse&lt;/code&gt; is set to a true value, then CPAN.pm reads the collected YAML files. If the stored signature matches the currently running perl, the stored state is loaded into memory such that persistence between sessions is effectively established.</source>
-          <target state="translated">Если для переменной конфигурации &lt;code&gt;build_dir_reuse&lt;/code&gt; задано истинное значение, то CPAN.pm читает собранные файлы YAML. Если сохраненная подпись совпадает с текущим запущенным perl, сохраненное состояние загружается в память, так что сохраняется постоянство между сеансами.</target>
-        </trans-unit>
-        <trans-unit id="a91d44bc473043f072a494275450d9c876250d17" translate="yes" xml:space="preserve">
-          <source>If the connection is via a firewall then the &lt;code&gt;authorize&lt;/code&gt; method will be called with no arguments.</source>
-          <target state="translated">Если соединение осуществляется через брандмауэр, то метод &lt;code&gt;authorize&lt;/code&gt; будет вызываться без аргументов.</target>
-        </trans-unit>
-        <trans-unit id="880ff18ec98ddcf514d383275dae13c355bbcadf" translate="yes" xml:space="preserve">
-          <source>If the construct is a here-doc, the ending delimiter is a line that has a terminating string as the content. Therefore &lt;code&gt;&amp;lt;&amp;lt;EOF&lt;/code&gt; is terminated by &lt;code&gt;EOF&lt;/code&gt; immediately followed by &lt;code&gt;&quot;\n&quot;&lt;/code&gt; and starting from the first column of the terminating line. When searching for the terminating line of a here-doc, nothing is skipped. In other words, lines after the here-doc syntax are compared with the terminating string line by line.</source>
-          <target state="translated">Если конструкция представляет собой документ-документ, конечный разделитель - это строка, содержащая завершающую строку в качестве содержимого. Поэтому &lt;code&gt;&amp;lt;&amp;lt;EOF&lt;/code&gt; завершается символом &lt;code&gt;EOF&lt;/code&gt; , за которым сразу следует &lt;code&gt;&quot;\n&quot;&lt;/code&gt; начиная с первого столбца завершающей строки. При поиске завершающей строки документа здесь ничего не пропускается. Другими словами, строки после синтаксиса here-doc сравниваются с завершающей строкой построчно.</target>
-        </trans-unit>
-        <trans-unit id="e1f5405c8fb7cef756ea27523f26d6d391697258" translate="yes" xml:space="preserve">
-          <source>If the constructor fails undef will be returned and an error message will be in $@</source>
-          <target state="translated">Если конструктор откажет undef,то будет возвращено сообщение об ошибке в $@@</target>
-        </trans-unit>
-        <trans-unit id="fd68f60bc1a46c89ed70417ef132417733df0aab" translate="yes" xml:space="preserve">
-          <source>If the constructor fails, it will set &lt;code&gt;$@&lt;/code&gt; to an appropriate error message; this may be from &lt;code&gt;$!&lt;/code&gt; or it may be some other string; not every failure necessarily has an associated &lt;code&gt;errno&lt;/code&gt; value.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="a03d6a855f28c1f0fcb373d36da3e2b752b1b618" translate="yes" xml:space="preserve">
-          <source>If the constructor is only passed a single argument, it is assumed to be a &lt;code&gt;Peer&lt;/code&gt; specification.</source>
-          <target state="translated">Если конструктору передается только один аргумент, предполагается, что это спецификация &lt;code&gt;Peer&lt;/code&gt; узла.</target>
-        </trans-unit>
-        <trans-unit id="59d6c514d80580b526f459658680b5bcb3039600" translate="yes" xml:space="preserve">
-          <source>If the constructor is only passed a single argument, it is assumed to be a &lt;code&gt;PeerAddr&lt;/code&gt; specification.</source>
-          <target state="translated">Если конструктору передается только один аргумент, предполагается, что это спецификация &lt;code&gt;PeerAddr&lt;/code&gt; .</target>
-        </trans-unit>
-        <trans-unit id="253c66bbe032a626b97c6e706376db98b636ddae" translate="yes" xml:space="preserve">
-          <source>If the constructor is passed a defined but false value for the &lt;code&gt;Blocking&lt;/code&gt; argument then the socket is put into non-blocking mode. When in non-blocking mode, the socket will not be set up by the time the constructor returns, because the underlying &lt;code&gt;connect(2)&lt;/code&gt; syscall would otherwise have to block.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="2c1d4da7e238174b01de906293d93c6822b7ffed" translate="yes" xml:space="preserve">
-          <source>If the count doesn't impress your friends, then the code might. :-)</source>
-          <target state="translated">Если граф не впечатлит твоих друзей,то код может.:-)</target>
-        </trans-unit>
-        <trans-unit id="e2812a31f32729d7d8acbab2252b618f1597089e" translate="yes" xml:space="preserve">
-          <source>If the current directory is not writable, file is created using modified &lt;code&gt;tmpnam&lt;/code&gt; , so there may be a race condition.</source>
-          <target state="translated">Если текущий каталог недоступен для записи, файл создается с использованием модифицированного &lt;code&gt;tmpnam&lt;/code&gt; , поэтому может быть состояние гонки.</target>
-        </trans-unit>
-        <trans-unit id="58341845d1b46d579ba494b307ff64132940c287" translate="yes" xml:space="preserve">
-          <source>If the current directory is not writable, file is created using modified &lt;code&gt;tmpnam&lt;/code&gt;, so there may be a race condition.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="494e23aba89eecf5e12f5237686e230eddf4cf1f" translate="yes" xml:space="preserve">
-          <source>If the current tests are considered &quot;TODO&quot; it will return the reason, if any. This reason can come from a &lt;code&gt;$TODO&lt;/code&gt; variable or the last call to &lt;code&gt;todo_start()&lt;/code&gt; .</source>
-          <target state="translated">Если текущие тесты считаются &amp;laquo;TODO&amp;raquo;, он вернет причину, если таковая имеется. Причина может исходить из переменной &lt;code&gt;$TODO&lt;/code&gt; или последнего вызова &lt;code&gt;todo_start()&lt;/code&gt; .</target>
-        </trans-unit>
-        <trans-unit id="33c537a42d68a9fab37456220c53df0c1404714b" translate="yes" xml:space="preserve">
-          <source>If the current tests are considered &quot;TODO&quot; it will return the reason, if any. This reason can come from a &lt;code&gt;$TODO&lt;/code&gt; variable or the last call to &lt;code&gt;todo_start()&lt;/code&gt;.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="d07a75af0e09b32f52321893f3368ffdcf3680ce" translate="yes" xml:space="preserve">
-          <source>If the data the &lt;code&gt;info&lt;/code&gt; facet needs to convey can be represented as a table then the data may be placed in this attribute in a more raw form for better display. The data must also be represented in the &lt;code&gt;details&lt;/code&gt; attribute for renderers which do not support rendering tables directly.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="4dc2b173d8d4940a748b9c83e49e0862799d41a0" translate="yes" xml:space="preserve">
-          <source>If the debugging output of &lt;code&gt;-D&lt;/code&gt; doesn't help you, it's time to step through perl's execution with a source-level debugger.</source>
-          <target state="translated">Если отладочные данные &lt;code&gt;-D&lt;/code&gt; вам не помогают, пора пошагово выполнить выполнение perl с помощью отладчика исходного уровня.</target>
-        </trans-unit>
-        <trans-unit id="e01dfde61dfe31eebc6c4d98caf34437480ee91e" translate="yes" xml:space="preserve">
-          <source>If the default collation sequence is used, and the BASE is less than or equal to 36, the letter case in STR is ignored.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="5d9b61b179e59a5faa76c718b44a80bf30b29231" translate="yes" xml:space="preserve">
-          <source>If the deferred-write buffer isn't yet full, but the total size of the buffer and the read cache would exceed the &lt;code&gt;memory&lt;/code&gt; limit, the oldest records will be expired from the read cache until the total size is under the limit.</source>
-          <target state="translated">Если буфер отложенной записи еще не заполнен, но общий размер буфера и кеша чтения превысит предел &lt;code&gt;memory&lt;/code&gt; , самые старые записи будут удалены из кэша чтения до тех пор, пока общий размер не станет ниже ограничения.</target>
-        </trans-unit>
-        <trans-unit id="2d787ba93d433e8611c0010f5b5125e21c2fae5b" translate="yes" xml:space="preserve">
-          <source>If the delimiter chosen is a single quote, no interpolation is done on either the</source>
-          <target state="translated">Если выбранный разделитель является единственной кавычкой,то интерполяция не выполняется ни на одной из кавычек</target>
-        </trans-unit>
-        <trans-unit id="938284088206ea35ed759b0277c2738a57db55da" translate="yes" xml:space="preserve">
-          <source>If the delimiter chosen is a single quote, no variable interpolation is done on either the</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="fd691ad27529116a3a5593dc1f80d4b01d408999" translate="yes" xml:space="preserve">
-          <source>If the destination (second argument) already exists and is a directory, and the source (first argument) is not a filehandle, then the source file will be copied into the directory specified by the destination, using the same base name as the source file. It's a failure to have a filehandle as the source when the destination is a directory.</source>
-          <target state="translated">Если назначение (второй аргумент)уже существует и является каталогом,а исходный файл (первый аргумент)не является файловой рукояткой,то исходный файл будет скопирован в каталог,указанный назначением,с тем же базовым именем,что и исходный файл.Это неспособность иметь файловую папку в качестве источника,когда целевой каталог является каталогом.</target>
-        </trans-unit>
-        <trans-unit id="bf967ef029273cc2d212ca164cc9a8a6a20b4430" translate="yes" xml:space="preserve">
-          <source>If the element type does not start with a &lt;code&gt;'*'&lt;/code&gt; , the accessor returns the element value (after assignment). If the element type starts with a &lt;code&gt;'*'&lt;/code&gt; , a reference to the element itself is returned.</source>
-          <target state="translated">Если тип элемента не начинается с &lt;code&gt;'*'&lt;/code&gt; , метод доступа возвращает значение элемента (после присвоения). Если тип элемента начинается с &lt;code&gt;'*'&lt;/code&gt; , возвращается ссылка на сам элемент.</target>
-        </trans-unit>
-        <trans-unit id="087f6b4ba4b4848e4cef927f8a6659e4cd63651c" translate="yes" xml:space="preserve">
-          <source>If the element type does not start with a &lt;code&gt;'*'&lt;/code&gt;, the accessor returns the element value (after assignment). If the element type starts with a &lt;code&gt;'*'&lt;/code&gt;, a reference to the element itself is returned.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="4e23930732591461e14ec21d8b1f90dcd530ad74" translate="yes" xml:space="preserve">
-          <source>If the element type is &lt;code&gt;'$'&lt;/code&gt; , the value of the element (after assignment) is returned. If the element type is &lt;code&gt;'*$'&lt;/code&gt; , a reference to the element is returned.</source>
-          <target state="translated">Если тип элемента - &lt;code&gt;'$'&lt;/code&gt; , возвращается значение элемента (после присвоения). Если тип элемента - &lt;code&gt;'*$'&lt;/code&gt; , возвращается ссылка на элемент.</target>
-        </trans-unit>
-        <trans-unit id="416316907f2cce96ccc209eeb130ba72299c8e3b" translate="yes" xml:space="preserve">
-          <source>If the element type is &lt;code&gt;'$'&lt;/code&gt;, the value of the element (after assignment) is returned. If the element type is &lt;code&gt;'*$'&lt;/code&gt;, a reference to the element is returned.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="1bac597df37b35f3a7dd05dd8ec187e68ab2f23b" translate="yes" xml:space="preserve">
-          <source>If the empty regex &lt;code&gt;//&lt;/code&gt; is used, the string is split into individual characters. If the regex has groupings, then the list produced contains the matched substrings from the groupings as well:</source>
-          <target state="translated">Если используется пустое регулярное выражение &lt;code&gt;//&lt;/code&gt; , строка разбивается на отдельные символы. Если в регулярном выражении есть группировки, то созданный список также содержит совпадающие подстроки из групп:</target>
-        </trans-unit>
-        <trans-unit id="8e04e07bd20c824f00e23be10a97b35d7d8bdaf8" translate="yes" xml:space="preserve">
-          <source>If the empty regexp &lt;code&gt;//&lt;/code&gt; is used, the regexp always matches and the string is split into individual characters. If the regexp has groupings, then the resulting list contains the matched substrings from the groupings as well. For instance,</source>
-          <target state="translated">Если используется пустое регулярное выражение &lt;code&gt;//&lt;/code&gt; , регулярное выражение всегда совпадает, и строка разбивается на отдельные символы. Если в регулярном выражении есть группировки, то результирующий список также будет содержать совпавшие подстроки из группировок. Например,</target>
-        </trans-unit>
-        <trans-unit id="9160efcd7b61ecdb5eab89bb5f1048b8690bd897" translate="yes" xml:space="preserve">
-          <source>If the entereval op is permitted then the code can use eval &quot;...&quot; to 'hide' code which might use denied ops. This is not a major problem since when the code tries to execute the eval it will fail because the opmask is still in effect. However this technique would allow clever, and possibly harmful, code to 'probe' the boundaries of what is possible.</source>
-          <target state="translated">Если опция entereval разрешена,то код может использовать eval &quot;...&quot; для &quot;скрытия&quot; кода,который может использовать запрещенные опции.Это не является серьезной проблемой,так как когда код попытается выполнить eval,он не справится,так как оптическая маска все еще в действии.Однако эта методика позволит умному и,возможно,вредному коду 'прощупать' границы возможного.</target>
-        </trans-unit>
-        <trans-unit id="a6dd91d8fc44e261add22f788040f3b0d9653b9a" translate="yes" xml:space="preserve">
-          <source>If the environment variable &lt;code&gt;PERL_TEST_HARNESS_DUMP_TAP&lt;/code&gt; is defined it should name a directory into which a copy of the raw TAP for each test will be written. TAP is written to files named for each test. Subdirectories will be created as needed.</source>
-          <target state="translated">Если переменная среды &lt;code&gt;PERL_TEST_HARNESS_DUMP_TAP&lt;/code&gt; определена, она должна указать имя каталога, в который будет записана копия необработанного TAP для каждого теста. TAP записывается в файлы, названные для каждого теста. Подкаталоги будут созданы по мере необходимости.</target>
-        </trans-unit>
-        <trans-unit id="1677cef1b7d08b33d16cc5ab5e637dae11805c4b" translate="yes" xml:space="preserve">
-          <source>If the environment variable &lt;code&gt;SSL_CERT_FILE&lt;/code&gt; is present, HTTP::Tiny will try to find a CA certificate file in that location.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="85e9e60a253e04ba9480e07ca8d4f04ff80b74d6" translate="yes" xml:space="preserve">
-          <source>If the event is a final subtest event, this should contain the subtest ID.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="2d65844b53fa3e967e642960ca12717bb316d545" translate="yes" xml:space="preserve">
-          <source>If the event is inside a subtest this should have the subtest ID.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="9e66c1c6198ecf06cc2142e9e5e1dd957bf8c18d" translate="yes" xml:space="preserve">
-          <source>If the executable called by system()/exec()/pipe-open()/&lt;code&gt;``&lt;/code&gt; is a script with the &quot;magic&quot; &lt;code&gt;#!&lt;/code&gt; line or &lt;code&gt;extproc&lt;/code&gt; line which specifies shell;</source>
-          <target state="translated">Если исполняемый файл, вызываемый system () / exec () / pipe-open () / &lt;code&gt;``&lt;/code&gt; , является сценарием с &quot;волшебным&quot; &lt;code&gt;#!&lt;/code&gt; line или &lt;code&gt;extproc&lt;/code&gt; строка, определяющая оболочку;</target>
         </trans-unit>
       </group>
     </body>

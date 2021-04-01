@@ -23,6 +23,46 @@
           <source>'Root-relative' URLs</source>
           <target state="new"/>
         </trans-unit>
+        <trans-unit id="5a42530deec511f778a481ebaeb7a84754096d7f" translate="yes" xml:space="preserve">
+          <source>(1) &lt;code&gt;electron&lt;/code&gt;, &lt;code&gt;worker&lt;/code&gt; and &lt;code&gt;worklet&lt;/code&gt; comes combined with either &lt;code&gt;node&lt;/code&gt; or &lt;code&gt;browser&lt;/code&gt;, depending on the context.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="155c57beffe2e6cea927d0c7373e6b4b9c9bb0dc" translate="yes" xml:space="preserve">
+          <source>(1) &lt;code&gt;import&lt;/code&gt; and &lt;code&gt;require&lt;/code&gt; are both set independent of referencing syntax. &lt;code&gt;require&lt;/code&gt; has always lower priority.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="35d43d6dc582e5f7a3415cdaffaeef1797d7b559" translate="yes" xml:space="preserve">
+          <source>(1) deprecated in Node.js, &lt;code&gt;*&lt;/code&gt; should be preferred.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="7db9e8aeb906e6c974f3d3284311961e892f47b0" translate="yes" xml:space="preserve">
+          <source>(2) &lt;code&gt;&quot;./&quot;&lt;/code&gt; is intentionally ignored as key.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="d65bf9ecf10b77cf27c5d791f2c6adc75a6079c1" translate="yes" xml:space="preserve">
+          <source>(2) This is set for browser target environment.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="1df571eb0a87a45c64342d2c862a55f2b4ff39b1" translate="yes" xml:space="preserve">
+          <source>(3) The property value is ignored and property key is used as target. Effectively only allowing mappings with key and value are identical.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="7cab3621d00cfdccb864840094ca1869b44373f3" translate="yes" xml:space="preserve">
+          <source>(4) The syntax is supported, but always the first entry is used, which makes it unusable for any practical use case.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="ffed151df1c8d3aa089da3ee213502a98357ee53" translate="yes" xml:space="preserve">
+          <source>(5) Fallback to alternative sibling parent conditions is handling incorrectly.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="c4510f2eb485ade85024bc1bba38dc8b04374ba0" translate="yes" xml:space="preserve">
+          <source>(6) For the &lt;code&gt;require&lt;/code&gt; condition object order is handled incorrectly. This is intentionally as wmr doesn't differ between referencing syntax.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="912f96714dcf7e2d5459cb9cc7f5896fe1efcb50" translate="yes" xml:space="preserve">
+          <source>(7) When using &lt;code&gt;&quot;exports&quot;: &quot;./file.js&quot;&lt;/code&gt; abbreviation, any request e. g. &lt;code&gt;package/not-existing&lt;/code&gt; will resolve to that. When not using the abbreviation, direct file access e. g. &lt;code&gt;package/file.js&lt;/code&gt; will not lead to an error.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="7e3550cac5d8175ae22a407324a9418b3751380a" translate="yes" xml:space="preserve">
           <source>(Loaders options left out for clarity, adapt accordingly to your needs.)</source>
           <target state="translated">(Las opciones de cargadores quedan fuera para mayor claridad, ad&amp;aacute;ptese de acuerdo a sus necesidades).</target>
@@ -743,6 +783,14 @@
           <source>&lt;a href=&quot;val-loader&quot;&gt;&lt;code&gt;val-loader&lt;/code&gt;&lt;/a&gt; Executes code as module and consider exports as JS code</source>
           <target state="translated">&lt;a href=&quot;val-loader&quot;&gt; &lt;code&gt;val-loader&lt;/code&gt; &lt;/a&gt; Ejecuta c&amp;oacute;digo como m&amp;oacute;dulo y considera las exportaciones como c&amp;oacute;digo JS</target>
         </trans-unit>
+        <trans-unit id="ab7d6779836500af158972526bf25c415b871e86" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;&quot;.&quot;&lt;/code&gt; property</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="d2bd56a06c773957a6dd0637de4971a1da775004" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;&quot;default&quot;&lt;/code&gt; condition</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="5c9869a8aa628f926d7fd7328c69d39c4b894eb3" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&quot;eager&quot;&lt;/code&gt;: Generates no extra chunk. All modules are included in the current chunk and no additional network requests are made. A &lt;code&gt;Promise&lt;/code&gt; is still returned but is already resolved. In contrast to a static import, the module isn't executed until the call to &lt;code&gt;import()&lt;/code&gt; is made.</source>
           <target state="translated">&lt;code&gt;&quot;eager&quot;&lt;/code&gt; : no genera ning&amp;uacute;n fragmento adicional. Todos los m&amp;oacute;dulos est&amp;aacute;n incluidos en el bloque actual y no se realizan solicitudes de red adicionales. A&amp;uacute;n se devuelve una &lt;code&gt;Promise&lt;/code&gt; pero ya est&amp;aacute; resuelta. A diferencia de una importaci&amp;oacute;n est&amp;aacute;tica, el m&amp;oacute;dulo no se ejecuta hasta que se realiza la llamada a &lt;code&gt;import()&lt;/code&gt; .</target>
@@ -975,6 +1023,10 @@
           <source>&lt;code&gt;'ws'&lt;/code&gt; mode will become the default mode in the next major &lt;code&gt;devServer&lt;/code&gt; version. This mode uses &lt;a href=&quot;https://www.npmjs.com/package/ws&quot;&gt;ws&lt;/a&gt; as a server, and native WebSockets on the client.</source>
           <target state="new"/>
         </trans-unit>
+        <trans-unit id="aa02df8659aa48962e047c0b458350f4258cb54d" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;(assets) =&amp;gt; {}&lt;/code&gt; - Run this specified callback against assets added later by plugins.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="562d5b4054a0c406f5fd98f86eff0da3f6af8ed4" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;(lines only)&lt;/code&gt; - Source Maps are simplified to a single mapping per line. This usually means a single mapping per statement (assuming you author is this way). This prevents you from debugging execution on statement level and from settings breakpoints on columns of a line. Combining with minimizing is not possible as minimizers usually only emit a single line.</source>
           <target state="translated">&lt;code&gt;(lines only)&lt;/code&gt; : los mapas de origen se simplifican a un solo mapa por l&amp;iacute;nea. Por lo general, esto significa un &amp;uacute;nico mapeo por declaraci&amp;oacute;n (suponiendo que su autor sea as&amp;iacute;). Esto le impide depurar la ejecuci&amp;oacute;n a nivel de instrucci&amp;oacute;n y configurar puntos de interrupci&amp;oacute;n en columnas de una l&amp;iacute;nea. La combinaci&amp;oacute;n con minimizaci&amp;oacute;n no es posible ya que los minimizadores generalmente solo emiten una sola l&amp;iacute;nea.</target>
@@ -1159,6 +1211,14 @@
           <source>&lt;code&gt;PROCESS_ASSETS_STAGE_OPTIMIZE_COUNT&lt;/code&gt; - Optimize the count of existing assets, e.g. by merging them.</source>
           <target state="new"/>
         </trans-unit>
+        <trans-unit id="5405d82941bb9ddcee5a79b66358a5dcbacb0398" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;PROCESS_ASSETS_STAGE_OPTIMIZE_HASH&lt;/code&gt; - Optimize the hashes of the assets, e.g. by generating real hashes of the asset content.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="d61015295faa4f227352c46aad3c0bc15798a01a" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;PROCESS_ASSETS_STAGE_OPTIMIZE_INLINE&lt;/code&gt;5.8.0+ - Optimize the numbers of existing assets, e.g. by inlining assets into other assets.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="49f014d23ebe2769526413d403a729768b692926" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;PROCESS_ASSETS_STAGE_OPTIMIZE_SIZE&lt;/code&gt; - Optimize the size of existing assets, e.g. by minimizing or omitting whitespace.</source>
           <target state="new"/>
@@ -1183,6 +1243,10 @@
           <source>&lt;code&gt;ProgressPlugin&lt;/code&gt; source</source>
           <target state="new"/>
         </trans-unit>
+        <trans-unit id="f1fc679484548dec605995f258e99d27b17f6d89" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;RealContentHashPlugin&lt;/code&gt; provides a &lt;code&gt;updateHash&lt;/code&gt;5.8.0+ hook for customizing hash updating:</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="6a13be8800195b1ae247613979b7334865afb5a9" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;RegExp | [RegExp] | function&lt;/code&gt; (since webpack 3.0.0)</source>
           <target state="translated">&lt;code&gt;RegExp | [RegExp] | function&lt;/code&gt; (desde webpack 3.0.0)</target>
@@ -1202,6 +1266,10 @@
         <trans-unit id="fc38572e21980590f9673b16cdaf58afe4dedab8" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;RegExp&lt;/code&gt;&lt;code&gt;string&lt;/code&gt;&lt;code&gt;[string]&lt;/code&gt;</source>
           <target state="translated">&lt;code&gt;RegExp&lt;/code&gt;&lt;code&gt;string&lt;/code&gt;&lt;code&gt;[string]&lt;/code&gt;</target>
+        </trans-unit>
+        <trans-unit id="4c3d0e31ea226eccabd534aff3dbd74376a0ea25" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;RegExp&lt;/code&gt;&lt;code&gt;string&lt;/code&gt;&lt;code&gt;function&lt;/code&gt;</source>
+          <target state="translated">&lt;code&gt;RegExp&lt;/code&gt;&lt;code&gt;string&lt;/code&gt;&lt;code&gt;function&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="18c1df279d61390f1fd1a1019564542c6252ad8d" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;Rule.exclude&lt;/code&gt; is a shortcut to &lt;code&gt;Rule.resource.exclude&lt;/code&gt;. If you supply a &lt;code&gt;Rule.exclude&lt;/code&gt; option, you cannot also supply a &lt;code&gt;Rule.resource&lt;/code&gt;. See &lt;a href=&quot;#rule-resource&quot;&gt;&lt;code&gt;Rule.resource&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;#condition&quot;&gt;&lt;code&gt;Condition.exclude&lt;/code&gt;&lt;/a&gt; for details.</source>
@@ -1515,6 +1583,10 @@
           <source>&lt;code&gt;__webpack_hash__&lt;/code&gt; (webpack-specific)</source>
           <target state="translated">&lt;code&gt;__webpack_hash__&lt;/code&gt; (espec&amp;iacute;fico del paquete web)</target>
         </trans-unit>
+        <trans-unit id="79263deede02323cd9297eb6ce4086a316f554df" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;__webpack_is_included__&lt;/code&gt; (webpack-specific)</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="961764c1c9b528db09e0bc0e9ab6b705ee542acd" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;__webpack_modules__&lt;/code&gt; (webpack-specific)</source>
           <target state="translated">&lt;code&gt;__webpack_modules__&lt;/code&gt; (espec&amp;iacute;fico del paquete web)</target>
@@ -1539,8 +1611,16 @@
           <source>&lt;code&gt;additionalChunkAssets&lt;/code&gt; is deprecated (use the &lt;a href=&quot;#processassets&quot;&gt;Compilation.hook.processAssets&lt;/a&gt; instead and use one of the Compilation.PROCESS&lt;em&gt;ASSETS_STAGE&lt;/em&gt;* as a stage option)</source>
           <target state="new"/>
         </trans-unit>
+        <trans-unit id="fb40784a33ba7b9189d3a29e8630980621e1faa8" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;additionalChunkAssets&lt;/code&gt; is deprecated (use the &lt;a href=&quot;#processassets&quot;&gt;Compilation.hook.processAssets&lt;/a&gt; instead and use one of the Compilation.PROCESS_ASSETS_STAGE_* as a stage option)</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="6cdc8496bc960e7026fe4cef90de98fb07953ce8" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;afterOptimizeChunkAssets&lt;/code&gt; is deprecated (use the &lt;a href=&quot;#processassets&quot;&gt;Compilation.hook.processAssets&lt;/a&gt; instead and use one of the Compilation.PROCESS&lt;em&gt;ASSETS_STAGE&lt;/em&gt;* as a stage option)</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="27efec66da2960f0c0aaff05814a359788360bb9" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;afterOptimizeChunkAssets&lt;/code&gt; is deprecated (use the &lt;a href=&quot;#processassets&quot;&gt;Compilation.hook.processAssets&lt;/a&gt; instead and use one of the Compilation.PROCESS_ASSETS_STAGE_* as a stage option)</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="3e4d5530df28aa0ffc75efa29576baf6c219894d" translate="yes" xml:space="preserve">
@@ -1631,6 +1711,10 @@
           <source>&lt;code&gt;babelrc&lt;/code&gt;: Default &lt;code&gt;true&lt;/code&gt;. When &lt;code&gt;false&lt;/code&gt;, no options from &lt;code&gt;.babelrc&lt;/code&gt; files will be used; only the options passed to &lt;code&gt;babel-loader&lt;/code&gt; will be used.</source>
           <target state="translated">&lt;code&gt;babelrc&lt;/code&gt; : valor predeterminado &lt;code&gt;true&lt;/code&gt; . Cuando es &lt;code&gt;false&lt;/code&gt; , no se utilizar&amp;aacute;n opciones de archivos &lt;code&gt;.babelrc&lt;/code&gt; ; solo se utilizar&amp;aacute;n las opciones pasadas a &lt;code&gt;babel-loader&lt;/code&gt; .</target>
         </trans-unit>
+        <trans-unit id="6bc28bfcc57fe3d265083e5a9d5176f914bf6cf4" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;backend&lt;/code&gt;: Customize the backend, defaults to &lt;code&gt;webpack/lib/hmr/lazyCompilationBackend&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="7642382d960d2d2b09122b1fe5753801121a1120" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;bail&lt;/code&gt; - whether to bail or not when an error occurs.</source>
           <target state="new"/>
@@ -1683,6 +1767,10 @@
           <source>&lt;code&gt;boolean = false&lt;/code&gt;&lt;code&gt;string: 'natural' | 'named' | 'size' | 'total-size' | 'deterministic' &lt;/code&gt;</source>
           <target state="new"/>
         </trans-unit>
+        <trans-unit id="2ad5fb885c03a7700f7b08cff50172c72c54b469" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;boolean = false&lt;/code&gt;&lt;code&gt;string: 'natural' | 'named' | 'size' | 'total-size' | 'deterministic'&lt;/code&gt;</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="330c087d84e3902b1076a54c734bb13b049ad794" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;boolean = false&lt;/code&gt;&lt;code&gt;string&lt;/code&gt;</source>
           <target state="new"/>
@@ -1731,6 +1819,10 @@
           <source>&lt;code&gt;boolean&lt;/code&gt;&lt;code&gt;object&lt;/code&gt;</source>
           <target state="translated">&lt;code&gt;boolean&lt;/code&gt;&lt;code&gt;object&lt;/code&gt;</target>
         </trans-unit>
+        <trans-unit id="bec3919ac51ad4b9a3a65a4e3c4694d1c22f7807" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;boolean&lt;/code&gt;&lt;code&gt;string = &quot;auto&quot;&lt;/code&gt;</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="af7d3fab5372b829d1691b4f3b4352ac58730da3" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;boolean&lt;/code&gt;&lt;code&gt;string: 'deterministic' | 'size'&lt;/code&gt;</source>
           <target state="new"/>
@@ -1746,6 +1838,14 @@
         <trans-unit id="437c4090ec82119c0eb95098c2d8c950be0c5114" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;boolean&lt;/code&gt;&lt;code&gt;string&lt;/code&gt;&lt;code&gt;array&lt;/code&gt;</source>
           <target state="translated">&lt;code&gt;boolean&lt;/code&gt;&lt;code&gt;string&lt;/code&gt;&lt;code&gt;array&lt;/code&gt;</target>
+        </trans-unit>
+        <trans-unit id="67b97847bcd6b9637ed909772802d29a33a0cbe1" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;boolean&lt;/code&gt;&lt;code&gt;{ dry?: boolean, keep?: RegExp | string | ((filename: string) =&amp;gt; boolean) }&lt;/code&gt;</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="9390d54bb9906cf4784a018e4cab407ff614f199" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;boolean=true&lt;/code&gt;&lt;code&gt;string: 'verbose'&lt;/code&gt;</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="51288f849bc5342c30f5661bc700fad511b54b21" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;browser&lt;/code&gt;: Compatible with current Spec and stage 4 proposals at time of publishing the package. Polyfilling resp. transpiling must be handled on consumer side.</source>
@@ -1899,6 +1999,10 @@
           <source>&lt;code&gt;callback&lt;/code&gt; - the function to be invoked.</source>
           <target state="new"/>
         </trans-unit>
+        <trans-unit id="f288048e33b77b3a315e88c8f02ad343c1a8ed59" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;callback&lt;/code&gt; is a normal Node.js-style callback function giving the resolved path.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="5bb6b1e711dd26e7d133f3b17e1b2dd21bb7f0b0" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;callback&lt;/code&gt;: A function that webpack will execute once the dependencies are loaded. An implementation of the &lt;code&gt;require&lt;/code&gt; function is sent as a parameter to this function. The function body can use this to further &lt;code&gt;require()&lt;/code&gt; modules it needs for execution.</source>
           <target state="translated">&lt;code&gt;callback&lt;/code&gt; : una funci&amp;oacute;n que el paquete web ejecutar&amp;aacute; una vez que se carguen las dependencias. Una implementaci&amp;oacute;n de la funci&amp;oacute;n &lt;code&gt;require&lt;/code&gt; se env&amp;iacute;a como par&amp;aacute;metro a esta funci&amp;oacute;n. El cuerpo de la funci&amp;oacute;n puede usar esto para &lt;code&gt;require()&lt;/code&gt; m&amp;aacute;s m&amp;oacute;dulos () que necesita para su ejecuci&amp;oacute;n.</target>
@@ -1946,6 +2050,10 @@
         <trans-unit id="0ff26499361a89f435e8639ba5141eeba0a7b005" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;chunkName&lt;/code&gt;: A name given to the chunk created by this particular &lt;code&gt;require.ensure()&lt;/code&gt;. By passing the same &lt;code&gt;chunkName&lt;/code&gt; to various &lt;code&gt;require.ensure()&lt;/code&gt; calls, we can combine their code into a single chunk, resulting in only one bundle that the browser must load.</source>
           <target state="translated">&lt;code&gt;chunkName&lt;/code&gt; : un nombre dado al fragmento creado por este &lt;code&gt;require.ensure()&lt;/code&gt; particular . Al pasar el mismo &lt;code&gt;chunkName&lt;/code&gt; a varias llamadas require.ensure &lt;code&gt;require.ensure()&lt;/code&gt; , podemos combinar su c&amp;oacute;digo en un solo fragmento, lo que da como resultado un solo paquete que el navegador debe cargar.</target>
+        </trans-unit>
+        <trans-unit id="95f8b5fd9b756185dd294195a96b20006571276f" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;client&lt;/code&gt;: Path to a custom client, defaults to &lt;code&gt;webpack/hot/lazy-compilation-{node|web}.js&lt;/code&gt;.</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="e9dba8a3205d94acdf36605f745791765e28402d" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;columns = true&lt;/code&gt; (&lt;code&gt;boolean&lt;/code&gt;): Indicates whether column mappings should be used.</source>
@@ -2019,6 +2127,10 @@
           <source>&lt;code&gt;context&lt;/code&gt; - context path.</source>
           <target state="new"/>
         </trans-unit>
+        <trans-unit id="7ceec39829e785dddfac71f2cce203f13c350e1a" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;context&lt;/code&gt; must be an absolute path to a directory. This directory is used as the starting location for the resolving.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="43092c58c78f3eaea0490242c33f506f0f579076" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;context&lt;/code&gt;: (&lt;strong&gt;absolute path&lt;/strong&gt;) context of requests in the manifest (or content property)</source>
           <target state="translated">&lt;code&gt;context&lt;/code&gt; o : ( &lt;strong&gt;ruta absoluta&lt;/strong&gt; ) contexto de solicitudes en el manifiesto (o propiedad de contenido)</target>
@@ -2063,6 +2175,26 @@
           <source>&lt;code&gt;cson-loader&lt;/code&gt; Loads and transpiles a &lt;a href=&quot;https://github.com/bevry/cson#what-is-cson&quot;&gt;CSON&lt;/a&gt; file</source>
           <target state="translated">&lt;code&gt;cson-loader&lt;/code&gt; Carga y transpila un archivo &lt;a href=&quot;https://github.com/bevry/cson#what-is-cson&quot;&gt;CSON&lt;/a&gt;</target>
         </trans-unit>
+        <trans-unit id="a7b8282a3f16edb4ce2f2575c4dd33c8e1a2a87d" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;ctx.context&lt;/code&gt; (&lt;code&gt;string&lt;/code&gt;): The directory of the file which contains the import.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="8c91eedf922e09e3574e019e38e23d2649b621e4" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;ctx.contextInfo&lt;/code&gt; (&lt;code&gt;string&lt;/code&gt;): Contains information about the issuer (e.g. the layer).</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="debd2e0a6810e3849f522f69991c028bc9c2310a" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;ctx.getResolve&lt;/code&gt;5.15.0+: Get a resolve function with the current resolver options.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="965fdc873d1f1f8806f50c5c68138d33d401e757" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;ctx.request&lt;/code&gt; (&lt;code&gt;string&lt;/code&gt;): The import path being requested.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="d2ce2e18436669a1e16af18023cc55557020d748" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;ctx&lt;/code&gt; (&lt;code&gt;object&lt;/code&gt;): Object containing details of the file.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="d3c6be9ed50d5554c3890cb65f9767ed8dcae260" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;customize&lt;/code&gt;: Default &lt;code&gt;null&lt;/code&gt;. The path of a module that exports a &lt;code&gt;custom&lt;/code&gt; callback &lt;a href=&quot;#customized-loader&quot;&gt;like the one that you'd pass to &lt;code&gt;.custom()&lt;/code&gt;&lt;/a&gt;. Since you already have to make a new file to use this, it is recommended that you instead use &lt;code&gt;.custom&lt;/code&gt; to create a wrapper loader. Only use this if you &lt;em&gt;must&lt;/em&gt; continue using &lt;code&gt;babel-loader&lt;/code&gt; directly, but still want to customize.</source>
           <target state="new"/>
@@ -2097,6 +2229,14 @@
         </trans-unit>
         <trans-unit id="558e3a4face7980fb6b3f3635b8c8370d7d05d8a" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;deno&lt;/code&gt;: TBD</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="0b85e304c14e3b38dc4b466ffc4218820d9bc259" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;dependOn&lt;/code&gt; option can also accept an array of strings:</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="39e09cfc6fa2d42214fc29a0202525a49f80cb8b" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;dependOn&lt;/code&gt;: The entry points that the current entry point depends on. They must be loaded before this entry point is loaded.</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="648ae8b28eb7ce825aa25328fd8752aa6e20db02" translate="yes" xml:space="preserve">
@@ -2211,6 +2351,10 @@
           <source>&lt;code&gt;entries&lt;/code&gt; (&lt;code&gt;boolean = true&lt;/code&gt;): Shows entries count in progress message.</source>
           <target state="new"/>
         </trans-unit>
+        <trans-unit id="762b87424e8ed75c18e0a7fb66f943bb1d1e85d0" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;entries&lt;/code&gt;: Enable lazy compilation for entries.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="4dd6de60dd37598ff3eecc464b633751ec48291b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;entry&lt;/code&gt; - entry dependency.</source>
           <target state="new"/>
@@ -2230,6 +2374,10 @@
         <trans-unit id="5eb56a370e1c89773bafad3f2726382d8376b602" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;eslintPath&lt;/code&gt; (default: &quot;eslint&quot;)</source>
           <target state="translated">&lt;code&gt;eslintPath&lt;/code&gt; (predeterminado: &quot;eslint&quot;)</target>
+        </trans-unit>
+        <trans-unit id="b101a35d85583654d32824a315832c7ccaf45543" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;eval-*&lt;/code&gt; addition</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="aaf268832245a31155d3ac22bdd65e8bfb68cae3" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;eval-cheap-module-source-map&lt;/code&gt; - Similar to &lt;code&gt;eval-cheap-source-map&lt;/code&gt;, however, in this case Source Maps from Loaders are processed for better results. However Loader Source Maps are simplified to a single mapping per line.</source>
@@ -2321,6 +2469,10 @@
         </trans-unit>
         <trans-unit id="d5f7de33727ad14b2513c45d9e8195b27eac7f2f" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;false&lt;/code&gt; - disable css modules</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="af07a8ea95a418aa9dc1bd47834501d4ee724d1a" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;false&lt;/code&gt; - disables CSS modules or interoperable CSS format based on filename</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="e519e61254043ad24c0e84519cfce2a1f6511511" translate="yes" xml:space="preserve">
@@ -2427,6 +2579,10 @@
           <source>&lt;code&gt;filename&lt;/code&gt;: A &lt;code&gt;function(asset)&lt;/code&gt; which receives the asset name (after processing &lt;code&gt;asset&lt;/code&gt; option) and returns the new asset name. Defaults to &lt;code&gt;false&lt;/code&gt;.</source>
           <target state="translated">&lt;code&gt;filename&lt;/code&gt; : una &lt;code&gt;function(asset)&lt;/code&gt; que recibe el nombre del activo (despu&amp;eacute;s de procesar la opci&amp;oacute;n del &lt;code&gt;asset&lt;/code&gt; ) y devuelve el nuevo nombre del activo. El valor predeterminado es &lt;code&gt;false&lt;/code&gt; .</target>
         </trans-unit>
+        <trans-unit id="ad2dac3efafd94e5e389a6287e1585e14e79b563" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;filename&lt;/code&gt;: Specifies the name of each output file on disk.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="d2bc4a194fc83f7a6749646ca671a9f8f7695868" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;fix&lt;/code&gt; (default: false)</source>
           <target state="translated">&lt;code&gt;fix&lt;/code&gt; (predeterminado: falso)</target>
@@ -2447,9 +2603,17 @@
           <source>&lt;code&gt;function (module, chunk) =&amp;gt; boolean&lt;/code&gt;&lt;code&gt;RegExp&lt;/code&gt;&lt;code&gt;string&lt;/code&gt;</source>
           <target state="new"/>
         </trans-unit>
+        <trans-unit id="6794b036f11e360ac7db17416fbac3804b8158ca" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;function ({ context, request, contextInfo, getResolve }) =&amp;gt; promise&lt;/code&gt;5.15.0+</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="47d34e30a87e3be5eb5161040ecd2a2bb23b703a" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;function&lt;/code&gt;&lt;code&gt;RegExp&lt;/code&gt;&lt;code&gt;string&lt;/code&gt;</source>
           <target state="translated">&lt;code&gt;function&lt;/code&gt;&lt;code&gt;RegExp&lt;/code&gt;&lt;code&gt;string&lt;/code&gt;</target>
+        </trans-unit>
+        <trans-unit id="48a5c6ca4d8d1edebe70695e36a5c59f7f3f95ae" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;function&lt;/code&gt;&lt;code&gt;object&lt;/code&gt;</source>
+          <target state="translated">&lt;code&gt;function&lt;/code&gt;&lt;code&gt;object&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="e4589f0ac562c55f575e62b73c508056a77a41ce" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;function&lt;/code&gt;&lt;code&gt;string&lt;/code&gt;</source>
@@ -2499,6 +2663,10 @@
           <source>&lt;code&gt;hashFunction&lt;/code&gt;: The hashing algorithm to use, defaults to &lt;code&gt;'md4'&lt;/code&gt;. All functions from Node.JS' &lt;a href=&quot;https://nodejs.org/api/crypto.html#crypto_crypto_createhash_algorithm_options&quot;&gt;&lt;code&gt;crypto.createHash&lt;/code&gt;&lt;/a&gt; are supported.</source>
           <target state="translated">&lt;code&gt;hashFunction&lt;/code&gt; : el algoritmo hash que se debe usar, por defecto es &lt;code&gt;'md4'&lt;/code&gt; . Todas las funciones de crypto.createHash de &lt;a href=&quot;https://nodejs.org/api/crypto.html#crypto_crypto_createhash_algorithm_options&quot;&gt; &lt;code&gt;crypto.createHash&lt;/code&gt; &lt;/a&gt; son compatibles.</target>
         </trans-unit>
+        <trans-unit id="ec2c403630a153989c53652db244140e5ec9b62d" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;hidden-*&lt;/code&gt; addition</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="bcfb92f020d3ff4f5a6de94d5e76f8ba044511af" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;hidden-source-map&lt;/code&gt; - Same as &lt;code&gt;source-map&lt;/code&gt;, but doesn't add a reference comment to the bundle. Useful if you only want SourceMaps to map error stack traces from error reports, but don't want to expose your SourceMap for the browser development tools.</source>
           <target state="translated">&lt;code&gt;hidden-source-map&lt;/code&gt; : Igual que &lt;code&gt;source-map&lt;/code&gt; , pero no agrega un comentario de referencia al paquete. &amp;Uacute;til si solo desea que SourceMaps mapee los rastros de pila de errores de los informes de error, pero no desea exponer su SourceMap para las herramientas de desarrollo del navegador.</target>
@@ -2534,6 +2702,14 @@
         <trans-unit id="5cff04bb24eeb14c4d0754d5aec2d166a71b9ded" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;import()&lt;/code&gt; calls use &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise&quot;&gt;promises&lt;/a&gt; internally. If you use &lt;code&gt;import()&lt;/code&gt; with older browsers, remember to shim &lt;code&gt;Promise&lt;/code&gt; using a polyfill such as &lt;a href=&quot;https://github.com/stefanpenner/es6-promise&quot;&gt;es6-promise&lt;/a&gt; or &lt;a href=&quot;https://github.com/taylorhakes/promise-polyfill&quot;&gt;promise-polyfill&lt;/a&gt;.</source>
           <target state="translated">&lt;code&gt;import()&lt;/code&gt; llamadas a import () usan &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise&quot;&gt;promesas&lt;/a&gt; internamente. Si usa &lt;code&gt;import()&lt;/code&gt; con navegadores m&amp;aacute;s antiguos, recuerde ajustar &lt;code&gt;Promise&lt;/code&gt; usando un polyfill como &lt;a href=&quot;https://github.com/stefanpenner/es6-promise&quot;&gt;es6-promise&lt;/a&gt; o &lt;a href=&quot;https://github.com/taylorhakes/promise-polyfill&quot;&gt;promise-polyfill&lt;/a&gt; .</target>
+        </trans-unit>
+        <trans-unit id="1e19124cb71c5d8716300184c34b45038b521c21" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;import&lt;/code&gt;: Module(s) that are loaded upon startup.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="9c449ada767de015a9f5303f4f130a02f5fa0db3" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;imports&lt;/code&gt;5.20.0+: Enable lazy compilation for dynamic imports.</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="fecc3b311c15a00f98d2b1422ff93a8179ac7e9b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;include&lt;/code&gt; (&lt;code&gt;string&lt;/code&gt;&lt;code&gt;RegExp&lt;/code&gt;&lt;code&gt;[string, RegExp]&lt;/code&gt;): Include source maps for module paths that match the given value.</source>
@@ -2571,6 +2747,10 @@
           <source>&lt;code&gt;initial&lt;/code&gt; is the main chunk for the entry point. This chunk contains all the modules and its dependencies that you specify for an entry point.</source>
           <target state="new"/>
         </trans-unit>
+        <trans-unit id="40b7cf0d52e54ff5ebd71fa0205244c48f4a4b16" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;inline-*&lt;/code&gt; addition</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="626340da5926d6b6e2a55b1a05bc430130dc7e0b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;inline-cheap-module-source-map&lt;/code&gt; - Similar to &lt;code&gt;cheap-module-source-map&lt;/code&gt; but SourceMap is added as a DataUrl to the bundle.</source>
           <target state="translated">&lt;code&gt;inline-cheap-module-source-map&lt;/code&gt; : similar a &lt;code&gt;cheap-module-source-map&lt;/code&gt; pero SourceMap se agrega como DataUrl al paquete.</target>
@@ -2602,6 +2782,18 @@
         <trans-unit id="e6861b9ba05a4e498561c80af8f072cc57f690ba" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;keys&lt;/code&gt; is a function that returns an array of all possible requests that the context module can handle.</source>
           <target state="translated">&lt;code&gt;keys&lt;/code&gt; es una funci&amp;oacute;n que devuelve una matriz de todas las solicitudes posibles que el m&amp;oacute;dulo de contexto puede manejar.</target>
+        </trans-unit>
+        <trans-unit id="1f7a217f331e5581f37b76b73345a98d9bcbbb35" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;layers&lt;/code&gt;: Enable module and chunk layers.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="17df494c22c5daf656cf31c874b858c2bbb6c5b4" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;lazyCompilation&lt;/code&gt;: Compile entrypoints and dynamic &lt;code&gt;import&lt;/code&gt;s only when they are in use.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="6d9e53e6ffbdef22ac4a32e87d94e15fc52e122e" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;library&lt;/code&gt;: Options for library.</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="9fcaa4825d5563a32a8a73627e94fce9f34af922" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;libraryExport: &quot;MyModule&quot;&lt;/code&gt; - The &lt;strong&gt;specified module&lt;/strong&gt; will be assigned to the library target:</source>
@@ -2677,6 +2869,10 @@
         </trans-unit>
         <trans-unit id="0583ac9161d0a2bc58c2a4c9039f3930be85f4ba" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;libraryTarget: 'assign'&lt;/code&gt; - This will generate an implied global which has the potential to reassign an existing value (use with caution).</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="3b2830f0ce609069a28d766e090a96eed891289e" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;libraryTarget: 'assign-properties'&lt;/code&gt;5.16.0+</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="3efb1285d4b511f7a3424e56a568dc1f3a173ff7" translate="yes" xml:space="preserve">
@@ -3075,6 +3271,10 @@
           <source>&lt;code&gt;normal&lt;/code&gt;: Resolves a module via an absolute or relative path.</source>
           <target state="new"/>
         </trans-unit>
+        <trans-unit id="702fc78632a6a48e0677e8cfa511cfe9bbdff611" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;nosources-*&lt;/code&gt; addition</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="e1edbe16091eb9f13925f630d6107241c8015cc6" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;nosources-source-map&lt;/code&gt; - A SourceMap is created without the &lt;code&gt;sourcesContent&lt;/code&gt; in it. It can be used to map stack traces on the client without exposing all of the source code. You can deploy the Source Map file to the webserver.</source>
           <target state="translated">&lt;code&gt;nosources-source-map&lt;/code&gt; : se crea un SourceMap sin el contenido de las &lt;code&gt;sourcesContent&lt;/code&gt; en &amp;eacute;l. Se puede utilizar para mapear seguimientos de pila en el cliente sin exponer todo el c&amp;oacute;digo fuente. Puede implementar el archivo de mapa de origen en el servidor web.</target>
@@ -3163,8 +3363,16 @@
           <source>&lt;code&gt;optimization.sideEffects&lt;/code&gt; depends on &lt;a href=&quot;#optimizationprovidedexports&quot;&gt;&lt;code&gt;optimization.providedExports&lt;/code&gt;&lt;/a&gt; to be enabled. This dependency has a build time cost, but eliminating modules has positive impact on performance because of less code generation. Effect of this optimization depends on your codebase, try it for possible performance wins.</source>
           <target state="new"/>
         </trans-unit>
+        <trans-unit id="196a6f136eeb6567dded5445eba090c0c17eae09" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;optimization.sideEffects&lt;/code&gt; will also flag modules as side effect free when they contain only side effect free statements.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="179d1a00fa0a89293c426d6554799e1a620fbe9c" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;optimizeChunkAssets&lt;/code&gt; is deprecated (use the &lt;a href=&quot;#processassets&quot;&gt;Compilation.hook.processAssets&lt;/a&gt; instead and use one of the Compilation.PROCESS&lt;em&gt;ASSETS_STAGE&lt;/em&gt;* as a stage option)</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="c3b805ab82081162564f88005fdd4b02f058c3c2" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;optimizeChunkAssets&lt;/code&gt; is deprecated (use the &lt;a href=&quot;#processassets&quot;&gt;Compilation.hook.processAssets&lt;/a&gt; instead and use one of the Compilation.PROCESS_ASSETS_STAGE_* as a stage option)</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="03fe573a252122f57150ee1fa3d2dc5c2da4f246" translate="yes" xml:space="preserve">
@@ -3178,6 +3386,10 @@
         <trans-unit id="5876235af438fa796c9997d5dd5a4c97501f7a60" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;options.debug&lt;/code&gt; (&lt;code&gt;boolean&lt;/code&gt;): Whether loaders should be in &lt;code&gt;debug&lt;/code&gt; mode or not. &lt;code&gt;debug&lt;/code&gt; will be removed as of webpack 3.</source>
           <target state="translated">&lt;code&gt;options.debug&lt;/code&gt; ( &lt;code&gt;boolean&lt;/code&gt; o ): si los cargadores deben estar en modo de &lt;code&gt;debug&lt;/code&gt; o no. &lt;code&gt;debug&lt;/code&gt; se eliminar&amp;aacute; a partir del paquete web 3.</target>
+        </trans-unit>
+        <trans-unit id="c76b5cfbc3a1ce195bbef21e9b105d9c1366025c" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;options.dependencyType&lt;/code&gt; is an additional option. It allows us to specify the type of dependency, which is used to resolve &lt;code&gt;byDependency&lt;/code&gt; from the &lt;code&gt;resolve&lt;/code&gt; options.</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="9ab67f8227d2d87511d82dd32837d16269c6d253" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;options.hotUpdateChunkFilename&lt;/code&gt; the filename for hot update chunks.</source>
@@ -3265,6 +3477,14 @@
         </trans-unit>
         <trans-unit id="ebede2b81519f9ba054ba77b5ea514dd1cd3e627" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;output.module&lt;/code&gt; is an experimental feature and can be enabled by setting &lt;a href=&quot;experiments#experiments&quot;&gt;&lt;code&gt;experiments.outputModule&lt;/code&gt;&lt;/a&gt; to &lt;code&gt;true&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="c42d4ee39484b57ac63ffa7a53459a9bd21c2650" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;output.module&lt;/code&gt; is an experimental feature and can only be enabled by setting &lt;a href=&quot;experiments#experiments&quot;&gt;&lt;code&gt;experiments.outputModule&lt;/code&gt;&lt;/a&gt; to &lt;code&gt;true&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="2428a51881bb9ec91f32a88a971430b121bb900a" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;output.publicPath&lt;/code&gt; defaults to &lt;code&gt;'auto'&lt;/code&gt; with &lt;code&gt;web&lt;/code&gt; and &lt;code&gt;web-worker&lt;/code&gt; targets.</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="de7fd655dfab6cb2bba79f8ea5319af8c3f1c330" translate="yes" xml:space="preserve">
@@ -3395,6 +3615,10 @@
           <source>&lt;code&gt;request&lt;/code&gt; - the request from which the chunk group is referenced.</source>
           <target state="new"/>
         </trans-unit>
+        <trans-unit id="d00e2245ca0390275c976c44248ade3ea9c5fb1b" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;request&lt;/code&gt; is the request to be resolved. Usually either relative requests like &lt;code&gt;./relative&lt;/code&gt; or module requests like &lt;code&gt;module/path&lt;/code&gt; are used, but absolute paths like &lt;code&gt;/some/path&lt;/code&gt; are also possible as requests.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="b0a0a0ef29e0d7aea76c73b706a9ad1020aa0e4d" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;request&lt;/code&gt;: A request string for a normal module</source>
           <target state="translated">&lt;code&gt;request&lt;/code&gt; : una cadena de solicitud para un m&amp;oacute;dulo normal</target>
@@ -3473,6 +3697,14 @@
         </trans-unit>
         <trans-unit id="2b230099140cf24b2139d9073e232c76a8ef365d" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;result&lt;/code&gt; (&lt;code&gt;string&lt;/code&gt;&lt;code&gt;[string]&lt;/code&gt;&lt;code&gt;object&lt;/code&gt;): Describes the external module. Can accept a string in the format &lt;code&gt;${type} ${path}&lt;/code&gt;, or one of the other standard external formats (&lt;a href=&quot;#string&quot;&gt;&lt;code&gt;string&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;#string-1&quot;&gt;&lt;code&gt;[string]&lt;/code&gt;&lt;/a&gt;, or &lt;a href=&quot;#object&quot;&gt;&lt;code&gt;object&lt;/code&gt;&lt;/a&gt;)</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="98e6a1ba0aeb19a1ad184f7a9df0d3bbbd0f3d8c" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;runtime&lt;/code&gt; and &lt;code&gt;dependOn&lt;/code&gt; should not be used together on a single entry, so the following config is invalid and would throw an error:</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="5f04337c3738a7b9c855904e319d86ddd36809cc" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;runtime&lt;/code&gt;: The name of the runtime chunk. If set, a runtime chunk with this name is created otherwise an existing entry point is used as runtime.</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="550e8bd1db46d7f41f1ca66a4a150d54b0bbb832" translate="yes" xml:space="preserve">
@@ -3567,6 +3799,10 @@
           <source>&lt;code&gt;string = '[id].js'&lt;/code&gt;&lt;code&gt;function (pathData, assetInfo) =&amp;gt; string&lt;/code&gt;</source>
           <target state="new"/>
         </trans-unit>
+        <trans-unit id="38f41f63d8aaac76d2c5368c0a50c2c38d87ea85" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;string = '[runtime].[fullhash].hot-update.json'&lt;/code&gt;&lt;code&gt;function&lt;/code&gt;</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="314ac5128fd7e25096c948dc2425923bde207baa" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;string = 'async'&lt;/code&gt;&lt;code&gt;function (chunk)&lt;/code&gt;</source>
           <target state="new"/>
@@ -3633,6 +3869,10 @@
         </trans-unit>
         <trans-unit id="9cf95a5883f964602d22c2ba7935cecec61c3628" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;string&lt;/code&gt;&lt;code&gt;[string]&lt;/code&gt;&lt;code&gt;object = { &amp;lt;key&amp;gt; string | [string] | object = { import string | [string], dependOn string | [string], filename string }}&lt;/code&gt;&lt;code&gt;(function() =&amp;gt; string | [string] | object = { &amp;lt;key&amp;gt; string | [string] } | object = { import string | [string], dependOn string | [string], filename string })&lt;/code&gt;</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="b2abda8660ef8aec0c9134673a42449e3e91107c" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;string&lt;/code&gt;&lt;code&gt;[string]&lt;/code&gt;&lt;code&gt;object = { &amp;lt;key&amp;gt; string | [string] | object = { import string | [string], dependOn string | [string], filename string, layer string }}&lt;/code&gt;&lt;code&gt;(function() =&amp;gt; string | [string] | object = { &amp;lt;key&amp;gt; string | [string] } | object = { import string | [string], dependOn string | [string], filename string })&lt;/code&gt;</source>
           <target state="new"/>
         </trans-unit>
         <trans-unit id="8ad1a2dc00e34a34c7a6d210410781b34b558d96" translate="yes" xml:space="preserve">
@@ -3719,6 +3959,10 @@
           <source>&lt;code&gt;test&lt;/code&gt; (&lt;code&gt;string|regex|array&lt;/code&gt;): Include source maps for modules based on their extension (defaults to &lt;code&gt;.js&lt;/code&gt; and &lt;code&gt;.css&lt;/code&gt;).</source>
           <target state="translated">&lt;code&gt;test&lt;/code&gt; ( &lt;code&gt;string|regex|array&lt;/code&gt; ): incluye mapas de origen para los m&amp;oacute;dulos seg&amp;uacute;n su extensi&amp;oacute;n (los valores predeterminados son &lt;code&gt;.js&lt;/code&gt; y &lt;code&gt;.css&lt;/code&gt; ).</target>
         </trans-unit>
+        <trans-unit id="9ae4c3827bbd51d3886a6272aa9ffc56c93698bf" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;test&lt;/code&gt;5.20.0+: Specify which imported modules should be lazily compiled.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="ea7a69f461af7cf49567ec7d870f273a16ea0c62" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;test&lt;/code&gt;: All assets matching this RegExp are processed. Defaults to every asset.</source>
           <target state="translated">&lt;code&gt;test&lt;/code&gt; : se procesan todos los activos que coinciden con esta RegExp. Valores predeterminados para todos los activos.</target>
@@ -3758,250 +4002,6 @@
         <trans-unit id="9c019ab9945eb2edb2bbdb025c3d70fc6238dc0f" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;transportMode&lt;/code&gt; is an experimental option, meaning its usage could potentially change without warning.</source>
           <target state="new"/>
-        </trans-unit>
-        <trans-unit id="5a151d18c94d7d20df76ca1949d23accfb929f34" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;true&lt;/code&gt; - enable css modules for all files for which &lt;code&gt;/\.module\.\w+$/i.test(filename)&lt;/code&gt; return true</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="de98a951f83f62f3e3d59b4037088dc535944010" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;true&lt;/code&gt; if &lt;a href=&quot;other-options#cache&quot;&gt;&lt;code&gt;cache&lt;/code&gt;&lt;/a&gt; is enabled and the module appears to come from node modules, &lt;code&gt;false&lt;/code&gt; otherwise.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="9323744cb8ac7139e49af0ed74011c26e86e02da" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;true&lt;/code&gt; in production mode, otherwise &lt;code&gt;false&lt;/code&gt;</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="ddb9170aed3a3111fb409ce77527a3fd14bbdf5e" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;true&lt;/code&gt; or &lt;code&gt;'consume'&lt;/code&gt; - consume the source map and remove &lt;code&gt;SourceMappingURL&lt;/code&gt; comment (default behavior)</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="ceafe490e1786925e621aeec40c9738c254b5aa6" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;true&lt;/code&gt; or &lt;code&gt;'error'&lt;/code&gt; - emit errors</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="d0288af2358444925fc81270e1fc3163c72f7b85" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;true&lt;/code&gt; when the export is known to be provided</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="2f711912f6e866c879d48f7bb251d7bf92701921" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;true&lt;/code&gt; when the export is known to be used</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="012db9b603748727a1c9b7301f95d8296a49f17f" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;true&lt;/code&gt;: &lt;a href=&quot;https://nodejs.org/api/globals.html#globals_dirname&quot;&gt;node.js __dirname&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; : &lt;a href=&quot;https://nodejs.org/api/globals.html#globals_dirname&quot;&gt;node.js __dirname&lt;/a&gt;</target>
-        </trans-unit>
-        <trans-unit id="17bfb6cbf31d4dd8dd245704ed225e3f2794d4e4" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;true&lt;/code&gt;: &lt;a href=&quot;https://nodejs.org/api/globals.html#globals_filename&quot;&gt;node.js __filename&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; : &lt;a href=&quot;https://nodejs.org/api/globals.html#globals_filename&quot;&gt;node.js __filename&lt;/a&gt;</target>
-        </trans-unit>
-        <trans-unit id="c95768a65d2226e5ef97c1713f0a1edd64cc0c10" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;true&lt;/code&gt;: Provide a polyfill.</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; : Proporcione un polyfill.</target>
-        </trans-unit>
-        <trans-unit id="d84297f404c009aec076d1b4bc72cce01d5d88f1" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;true&lt;/code&gt;: The dirname of the &lt;strong&gt;input&lt;/strong&gt; file relative to the &lt;a href=&quot;entry-context#context&quot;&gt;&lt;code&gt;context&lt;/code&gt; option&lt;/a&gt;.</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; : el nombre de directorio del archivo de &lt;strong&gt;entrada&lt;/strong&gt; relativo a la &lt;a href=&quot;entry-context#context&quot;&gt;opci&amp;oacute;n de &lt;/a&gt; &lt;code&gt;context&lt;/code&gt; o .</target>
-        </trans-unit>
-        <trans-unit id="4e1370b229d33beb17d07fa4071fa59a5201df82" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;true&lt;/code&gt;: The filename of the &lt;strong&gt;input&lt;/strong&gt; file relative to the &lt;a href=&quot;entry-context#context&quot;&gt;&lt;code&gt;context&lt;/code&gt; option&lt;/a&gt;.</source>
-          <target state="translated">&lt;code&gt;true&lt;/code&gt; : el nombre de archivo del archivo de &lt;strong&gt;entrada&lt;/strong&gt; relativo a la &lt;a href=&quot;entry-context#context&quot;&gt;opci&amp;oacute;n de &lt;/a&gt; &lt;code&gt;context&lt;/code&gt; o .</target>
-        </trans-unit>
-        <trans-unit id="186601a45368572928e31b06a0b4aa47252e3788" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;ts-loader&lt;/code&gt; uses &lt;code&gt;tsc&lt;/code&gt;, the TypeScript compiler, and relies on your &lt;code&gt;tsconfig.json&lt;/code&gt; configuration. Make sure to avoid setting &lt;a href=&quot;https://www.typescriptlang.org/tsconfig#module&quot;&gt;&lt;code&gt;module&lt;/code&gt;&lt;/a&gt; to &quot;CommonJS&quot;, or webpack won't be able to &lt;a href=&quot;tree-shaking&quot;&gt;tree-shake your code&lt;/a&gt;.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="411297fd0d9e48cf0318b75bb59dd2541165f2ce" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;ts-node&lt;/code&gt; can resolve a &lt;code&gt;tsconfig.json&lt;/code&gt; file using the environment variable provided by &lt;code&gt;tsconfig-path&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;ts-node&lt;/code&gt; puede resolver un archivo &lt;code&gt;tsconfig.json&lt;/code&gt; utilizando la variable de entorno proporcionada por &lt;code&gt;tsconfig-path&lt;/code&gt; .</target>
-        </trans-unit>
-        <trans-unit id="7b23bffc701ddfcf344c6fbf18b1b7e6bd4d5104" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;ts-node&lt;/code&gt; can resolve a &lt;code&gt;tsconfig.json&lt;/code&gt; file using the environment variable provided by &lt;code&gt;tsconfig-paths&lt;/code&gt;.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="ab5572106a01d57f72645d2dec96fde1de487fcb" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;type&lt;/code&gt; (&lt;code&gt;string&lt;/code&gt;): Optional parameter that indicates the module type (if it has not already been indicated in the &lt;code&gt;result&lt;/code&gt; parameter).</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="dcb6780ca784733058629f49b976e60432679c4f" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;type&lt;/code&gt; = &lt;code&gt;asset&lt;/code&gt; - Message type (require, should be equal &lt;code&gt;asset&lt;/code&gt;)</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="58cb3db3d5fbe96fd71baaf0172c391eb586e826" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;type&lt;/code&gt; = &lt;code&gt;dependency&lt;/code&gt; - Message type (require, should be equal &lt;code&gt;dependency&lt;/code&gt;)</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="0eb18b626f26eb10160eb4e896afb68c219f76e9" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;type&lt;/code&gt;: type of the dll bundle</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="93b1d5f002c10aee19cb7f1f68c329028f191a8f" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;types/index.js&lt;/code&gt;: No export is used, not flagged with sideEffects -&amp;gt; exclude it</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="036e6b857ec96c7c98e8446bffdb94eaeb1fb21c" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;uglify&lt;/code&gt;&lt;a href=&quot;https://github.com/mishoo/UglifyJS2/tree/harmony#minify-options&quot;&gt;Options&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;uglify&lt;/code&gt;&lt;a href=&quot;https://github.com/mishoo/UglifyJS2/tree/harmony#minify-options&quot;&gt;Options&lt;/a&gt;</target>
-        </trans-unit>
-        <trans-unit id="766fcc3d2996e1ae26fe654f28a6c555a67bbd3f" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;undefined&lt;/code&gt; when no info is available</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="155877b3d6c8391c8bb1a62c80a5d452d75206ee" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;url()&lt;/code&gt; Resolving</source>
-          <target state="translated">&lt;code&gt;url()&lt;/code&gt; Resolviendo</target>
-        </trans-unit>
-        <trans-unit id="c6cc0473192886a53774fdb59836050038f7e982" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;url()&lt;/code&gt; URLs in block scoped (&lt;code&gt;:local .abc&lt;/code&gt;) rules behave like requests in modules.</source>
-          <target state="translated">&lt;code&gt;url()&lt;/code&gt; URL en reglas de &amp;aacute;mbito de bloque ( &lt;code&gt;:local .abc&lt;/code&gt; ) se comportan como solicitudes en m&amp;oacute;dulos.</target>
-        </trans-unit>
-        <trans-unit id="16facf2f984ae69a93e3b4a17ba8474e6eee6ce9" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;url-loader&lt;/code&gt; works like &lt;a href=&quot;file-loader&quot;&gt;&lt;code&gt;file-loader&lt;/code&gt;&lt;/a&gt;, but can return a DataURL if the file is smaller than a byte limit.</source>
-          <target state="translated">&lt;code&gt;url-loader&lt;/code&gt; funciona como &lt;a href=&quot;file-loader&quot;&gt; &lt;code&gt;file-loader&lt;/code&gt; &lt;/a&gt; , pero puede devolver un DataURL si el archivo es menor que un l&amp;iacute;mite de bytes.</target>
-        </trans-unit>
-        <trans-unit id="0e014789d39fa45e3965a8e35d8c798bbf5b5ca8" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;usedExports&lt;/code&gt; relies on &lt;a href=&quot;https://github.com/terser-js/terser&quot;&gt;terser&lt;/a&gt; to detect side effects in statements. It is a difficult task in JavaScript and not as effective as straightforward &lt;code&gt;sideEffects&lt;/code&gt; flag. It also can't skip subtree/dependencies since the spec says that side effects need to be evaluated. While exporting function works fine, React's Higher Order Components (HOC) are problematic in this regard.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="f9d8c9bb21c138ea224b0af8f39062d23f16df31" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;vue-loader&lt;/code&gt; Loads and compiles &lt;a href=&quot;https://vuejs.org/v2/guide/components.html&quot;&gt;Vue Components&lt;/a&gt;</source>
-          <target state="translated">&lt;code&gt;vue-loader&lt;/code&gt; Carga y compila &lt;a href=&quot;https://vuejs.org/v2/guide/components.html&quot;&gt;componentes de Vue&lt;/a&gt;</target>
-        </trans-unit>
-        <trans-unit id="f90904487720d5f99586e98712fc3a7741fb2f70" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;watchOptions&lt;/code&gt; will have no effect when used with &lt;strong&gt;lazy mode&lt;/strong&gt;.</source>
-          <target state="translated">&lt;code&gt;watchOptions&lt;/code&gt; no tendr&amp;aacute; ning&amp;uacute;n efecto cuando se use con el &lt;strong&gt;modo &lt;/strong&gt;Lazy .</target>
-        </trans-unit>
-        <trans-unit id="00e4de52b4363de92d66db4a7d3299b520a1dbdb" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;webpack-cli&lt;/code&gt; offers an interactive experience to customize the output accordingly. For example asking questions like: &quot;What is your entry point?&quot;.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="f709436d1d4bfae48cd8d48f2c914d0782a61fa0" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;webpack-cli&lt;/code&gt; provides any CLI flags prefixed with &lt;code&gt;--env&lt;/code&gt; as a single object in the &lt;code&gt;env&lt;/code&gt; parameter, which is an unnecessary feature. &lt;a href=&quot;https://en.wikipedia.org/wiki/Environment_variable#Syntax&quot;&gt;Environment Variables&lt;/a&gt; have long served the same purpose, and are easily accessible within a &lt;a href=&quot;https://nodejs.org/api/process.html#process_process_env&quot;&gt;Node environment&lt;/a&gt;.</source>
-          <target state="translated">&lt;code&gt;webpack-cli&lt;/code&gt; proporciona cualquier indicador CLI con el prefijo &lt;code&gt;--env&lt;/code&gt; como un solo objeto en el par&amp;aacute;metro &lt;code&gt;env&lt;/code&gt; , que es una caracter&amp;iacute;stica innecesaria. &lt;a href=&quot;https://en.wikipedia.org/wiki/Environment_variable#Syntax&quot;&gt;Las variables de entorno&lt;/a&gt; han servido durante mucho tiempo para el mismo prop&amp;oacute;sito y son f&amp;aacute;cilmente accesibles dentro de un &lt;a href=&quot;https://nodejs.org/api/process.html#process_process_env&quot;&gt;entorno de nodo&lt;/a&gt; .</target>
-        </trans-unit>
-        <trans-unit id="2f65e8b78a6a857698d26e2fbab4907e89d75f0b" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;webpack-dev-middleware&lt;/code&gt; is a wrapper that will emit files processed by webpack to a server. This is used in &lt;code&gt;webpack-dev-server&lt;/code&gt; internally, however it's available as a separate package to allow more custom setups if desired. We'll take a look at an example that combines &lt;code&gt;webpack-dev-middleware&lt;/code&gt; with an express server.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="10b7513c0fb3bc3d048c9e96e397f93aeeab3291" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;webpack-dev-middleware&lt;/code&gt; is a wrapper that will emit files processed by webpack to a server. This is used in &lt;code&gt;webpack-dev-server&lt;/code&gt; internally, however it's available as a separate package to allow more custom setups if desired. We'll take a look at an example that combines webpack-dev-middleware with an express server.</source>
-          <target state="translated">&lt;code&gt;webpack-dev-middleware&lt;/code&gt; es un contenedor que emitir&amp;aacute; archivos procesados ​​por webpack a un servidor. Esto se usa en &lt;code&gt;webpack-dev-server&lt;/code&gt; internamente, sin embargo, est&amp;aacute; disponible como un paquete separado para permitir configuraciones m&amp;aacute;s personalizadas si lo desea. Veremos un ejemplo que combina webpack-dev-middleware con un servidor express.</target>
-        </trans-unit>
-        <trans-unit id="125f762d464b2dd4239d0527e15afb33ec748279" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;webpack-dev-server&lt;/code&gt; will include a script in your bundle that connects to a WebSocket to reload when a change in any of your files occurs. The &lt;code&gt;--public&lt;/code&gt; flag makes sure the script knows where to look for the WebSocket. The server will use port &lt;code&gt;8080&lt;/code&gt; by default, so we should also specify that here.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="e21329044f1c10bf1cf61f3721f6b39ab4c29eb4" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;webpack-scaffold&lt;/code&gt; is a utility suite for creating scaffolds. It contains functions that could be used to create a scaffold.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="ee7430a82cd9438db2844f0d9e8528eb3a0908b9" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;webpackChunkName&lt;/code&gt;: A name for the new chunk. Since webpack 2.6.0, the placeholders &lt;code&gt;[index]&lt;/code&gt; and &lt;code&gt;[request]&lt;/code&gt; are supported within the given string to an incremented number or the actual resolved filename respectively.</source>
-          <target state="translated">&lt;code&gt;webpackChunkName&lt;/code&gt; : un nombre para el nuevo fragmento. Desde el paquete web 2.6.0, los marcadores de posici&amp;oacute;n &lt;code&gt;[index]&lt;/code&gt; y &lt;code&gt;[request]&lt;/code&gt; se admiten dentro de la cadena dada a un n&amp;uacute;mero incrementado o al nombre de archivo resuelto real respectivamente.</target>
-        </trans-unit>
-        <trans-unit id="0a4cb342598ee8f97f3efb898d379bd420a57783" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;webpackChunkName&lt;/code&gt;: A name for the new chunk. Since webpack 2.6.0, the placeholders &lt;code&gt;[index]&lt;/code&gt; and &lt;code&gt;[request]&lt;/code&gt; are supported within the given string to an incremented number or the actual resolved filename respectively. Adding this comment will cause our separate chunk to be named [my-chunk-name].js instead of [id].js.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="62403ff937542105590bfa90f6cd67cc929cf289" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;webpackExclude&lt;/code&gt;: A regular expression that will be matched against during import resolution. Any module that matches &lt;strong&gt;will not be bundled&lt;/strong&gt;.</source>
-          <target state="translated">&lt;code&gt;webpackExclude&lt;/code&gt; : una expresi&amp;oacute;n regular con la que se comparar&amp;aacute; durante la resoluci&amp;oacute;n de importaci&amp;oacute;n. &lt;strong&gt;No se incluir&amp;aacute; ning&amp;uacute;n&lt;/strong&gt; m&amp;oacute;dulo que coincida .</target>
-        </trans-unit>
-        <trans-unit id="7a42f890173beda1c816daf061536a8e2993628c" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;webpackExports&lt;/code&gt;: tells webpack to only bundle the specified exports of a dynamically &lt;code&gt;import()&lt;/code&gt;ed module. It can decrease the output size of a chunk. Available since &lt;a href=&quot;https://github.com/webpack/webpack/releases/tag/v5.0.0-beta.18&quot;&gt;webpack 5.0.0-beta.18&lt;/a&gt;.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="2ec28296469af8791a6306238dfec58f977543f7" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;webpackIgnore&lt;/code&gt;: Disables dynamic import parsing when set to &lt;code&gt;true&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;webpackIgnore&lt;/code&gt; : deshabilita el an&amp;aacute;lisis de importaci&amp;oacute;n din&amp;aacute;mica cuando se establece en &lt;code&gt;true&lt;/code&gt; .</target>
-        </trans-unit>
-        <trans-unit id="a0493ac773b4d4464b25374677c646099b12972f" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;webpackInclude&lt;/code&gt;: A regular expression that will be matched against during import resolution. Only modules that match &lt;strong&gt;will be bundled&lt;/strong&gt;.</source>
-          <target state="translated">&lt;code&gt;webpackInclude&lt;/code&gt; : una expresi&amp;oacute;n regular con la que se comparar&amp;aacute; durante la resoluci&amp;oacute;n de importaci&amp;oacute;n. Solo se &lt;strong&gt;incluir&amp;aacute;n los&lt;/strong&gt; m&amp;oacute;dulos que coincidan .</target>
-        </trans-unit>
-        <trans-unit id="91363cd23f49199195806a1f0740430690c3d557" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;webpackMode&lt;/code&gt;: Since webpack 2.6.0, different modes for resolving dynamic imports can be specified. The following options are supported:</source>
-          <target state="translated">&lt;code&gt;webpackMode&lt;/code&gt; : desde webpack 2.6.0, se pueden especificar diferentes modos para resolver importaciones din&amp;aacute;micas. Se admiten las siguientes opciones:</target>
-        </trans-unit>
-        <trans-unit id="36304c61229b8fccf7e258b12a4579e92fa5524b" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;webpackPrefetch&lt;/code&gt;: Tells the browser that the resource is probably needed for some navigation in the future. Check out the guide for more information on &lt;a href=&quot;../guides/code-splitting#prefetchingpreloading-modules&quot;&gt;how webpackPrefetch works&lt;/a&gt;.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="d2b3a3063b83d20ff043ef07f2ca0a5e8d051309" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;webpackPreload&lt;/code&gt;: Tells the browser that the resource might be needed during the current navigation. Check out the guide for more information on &lt;a href=&quot;../guides/code-splitting#prefetchingpreloading-modules&quot;&gt;how webpackPreload works&lt;/a&gt;.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="3ed3286033c8de4421efb0ca4a1025290aa9c6d0" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;without source content&lt;/code&gt; - Contents for the sources are not included in the Source Maps. Browsers usually try to load the source from the webserver or filesystem. You have to make sure to set &lt;a href=&quot;output#output-devtoolmodulefilenametemplate&quot;&gt;&lt;code&gt;output.devtoolModuleFilenameTemplate&lt;/code&gt;&lt;/a&gt; correctly to match source urls.</source>
-          <target state="translated">&lt;code&gt;without source content&lt;/code&gt; : el contenido de las fuentes no se incluye en los mapas fuente. Los navegadores suelen intentar cargar la fuente desde el servidor web o el sistema de archivos. &lt;a href=&quot;output#output-devtoolmodulefilenametemplate&quot;&gt; &lt;code&gt;output.devtoolModuleFilenameTemplate&lt;/code&gt; &lt;/a&gt; asegurarse de configurar output.devtoolModuleFilenameTemplate correctamente para que coincida con las URL de origen.</target>
-        </trans-unit>
-        <trans-unit id="da43b4464b1b0f222b04394fd6f47709fac0c50b" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;without source content&lt;/code&gt; - Contents for the sources are not included in the Source Maps. Browsers usually try to load the source from the webserver or filesystem. You have to make sure to set &lt;a href=&quot;output#outputdevtoolmodulefilenametemplate&quot;&gt;&lt;code&gt;output.devtoolModuleFilenameTemplate&lt;/code&gt;&lt;/a&gt; correctly to match source urls.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="690f9ad8b7be7a2ddd6ab6fe3958fa4868e240d9" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;writing&lt;/code&gt; (required)</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="2f7b31f5ff14aed548e6c1408fbc9dd8251463da" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;{ and: [Condition] }&lt;/code&gt;: All Conditions must match.</source>
-          <target state="translated">&lt;code&gt;{ and: [Condition] }&lt;/code&gt; : Todas las condiciones deben coincidir.</target>
-        </trans-unit>
-        <trans-unit id="6d784305461df877e12832ebc84e603c231c5636" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;{ exclude: Condition }&lt;/code&gt;: The Condition must NOT match. The convention is to provide a string or array of strings here, but it's not enforced.</source>
-          <target state="translated">&lt;code&gt;{ exclude: Condition }&lt;/code&gt; : la condici&amp;oacute;n NO debe coincidir. La convenci&amp;oacute;n es proporcionar una cadena o matriz de cadenas aqu&amp;iacute;, pero no se aplica.</target>
-        </trans-unit>
-        <trans-unit id="3bbc3cd808848c0ca05eaa782b3b99ce0a27b58f" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;{ hash: true }&lt;/code&gt;: Good for CI caching with a fresh checkout which doesn't keep timestamps and uses hashes.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="1f27ae689111da8f5f4bf9007353d07970363cf4" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;{ include: Condition }&lt;/code&gt;: The Condition must match. The convention is to provide a string or array of strings here, but it's not enforced.</source>
-          <target state="translated">&lt;code&gt;{ include: Condition }&lt;/code&gt; : la condici&amp;oacute;n debe coincidir. La convenci&amp;oacute;n es proporcionar una cadena o matriz de cadenas aqu&amp;iacute;, pero no se aplica.</target>
-        </trans-unit>
-        <trans-unit id="30fbde99e26968f936462b0d50f91723cfe0e298" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;{ not: [Condition] }&lt;/code&gt;: All Conditions must NOT match.</source>
-          <target state="translated">&lt;code&gt;{ not: [Condition] }&lt;/code&gt; : Todas las condiciones NO deben coincidir.</target>
-        </trans-unit>
-        <trans-unit id="49d12524ccd0029f3148e77b1dbceead599e6586" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;{ or: [Condition] }&lt;/code&gt;: Any Condition must match.</source>
-          <target state="translated">&lt;code&gt;{ or: [Condition] }&lt;/code&gt; : Cualquier condici&amp;oacute;n debe coincidir.</target>
-        </trans-unit>
-        <trans-unit id="d8d42028ab382f8083c19eea406f46051dc7031b" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;{ test: Condition }&lt;/code&gt;: The Condition must match. The convention is to provide a RegExp or array of RegExps here, but it's not enforced.</source>
-          <target state="translated">&lt;code&gt;{ test: Condition }&lt;/code&gt; : la condici&amp;oacute;n debe coincidir. La convenci&amp;oacute;n es proporcionar una expresi&amp;oacute;n regular o una matriz de expresiones regulares aqu&amp;iacute;, pero no se aplica.</target>
-        </trans-unit>
-        <trans-unit id="d757a1df5ac7230d4e91839ac3b2c129c2cf7dce" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;{ timestamp: true }&lt;/code&gt;: Good for local development caching.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="1286fb125861e975a32e9fda59148324bad077af" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;{ timestamp: true, hash: true }&lt;/code&gt;: Good for both cases mentioned above. Timestamps are compared first, which is cheap because webpack doesn't need to read files to compute their hashes. Content hashes will be compared only when timestamps are the same, which leads to a small performance hit for the initial build.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="d3c55108c6b63ef42f3053cb354dfecb62131d81" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;{RegExp|String}&lt;/code&gt; or &lt;code&gt;{Function&amp;lt;(node, comment) -&amp;gt; {Boolean}&amp;gt;}&lt;/code&gt;</source>
-          <target state="translated">&lt;code&gt;{RegExp|String}&lt;/code&gt; o &lt;code&gt;{Function&amp;lt;(node, comment) -&amp;gt; {Boolean}&amp;gt;}&lt;/code&gt;</target>
-        </trans-unit>
-        <trans-unit id="8641add3bfe7a6fcffe9e76aa31749cee408728c" translate="yes" xml:space="preserve">
-          <source>&lt;code&gt;{String}&lt;/code&gt;/&lt;code&gt;{Array}&lt;/code&gt;/&lt;code&gt;{Object}&lt;/code&gt;</source>
-          <target state="translated">&lt;code&gt;{String}&lt;/code&gt;/&lt;code&gt;{Array}&lt;/code&gt;/&lt;code&gt;{Object}&lt;/code&gt;</target>
-        </trans-unit>
-        <trans-unit id="0e688754a49c93a357ee5043361f403501796f5e" translate="yes" xml:space="preserve">
-          <source>&lt;del&gt;&lt;code&gt;atom&lt;/code&gt;&lt;/del&gt;</source>
-          <target state="translated">&lt;del&gt;&lt;code&gt;atom&lt;/code&gt;&lt;/del&gt;</target>
-        </trans-unit>
-        <trans-unit id="fe4dc4151f257f2ac217cd75f5c8b52233b5a9b7" translate="yes" xml:space="preserve">
-          <source>&lt;del&gt;&lt;code&gt;electron&lt;/code&gt;&lt;/del&gt;</source>
-          <target state="translated">&lt;del&gt;&lt;code&gt;electron&lt;/code&gt;&lt;/del&gt;</target>
-        </trans-unit>
-        <trans-unit id="73152594f28665cd472c0773a261fe430b9c800a" translate="yes" xml:space="preserve">
-          <source>&lt;em&gt;Context&lt;/em&gt; refers to a &lt;a href=&quot;../guides/dependency-management#require-with-expression&quot;&gt;require with an expression&lt;/a&gt; such as &lt;code&gt;require('./locale/' + name + '.json')&lt;/code&gt;.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="4e7ede31d64fdb3c676aa638a17b15fde197d9f0" translate="yes" xml:space="preserve">
-          <source>&lt;em&gt;Context&lt;/em&gt; refers to a &lt;a href=&quot;../guides/dependency-management#require-with-expression&quot;&gt;require with an expression&lt;/a&gt; such as &lt;code&gt;require('./locale/' + name + '.json')&lt;/code&gt;. When encountering such an expression, webpack infers the directory (&lt;code&gt;'./locale/'&lt;/code&gt;) and a regular expression (&lt;code&gt;/^.*\.json$/&lt;/code&gt;). Since the &lt;code&gt;name&lt;/code&gt; is not known at compile time, webpack includes every file as module in the bundle.</source>
-          <target state="translated">&lt;em&gt;El contexto se&lt;/em&gt; refiere a un &lt;a href=&quot;../guides/dependency-management#require-with-expression&quot;&gt;requisito con una expresi&amp;oacute;n&lt;/a&gt; como &lt;code&gt;require('./locale/' + name + '.json')&lt;/code&gt; . Cuando se encuentra con una expresi&amp;oacute;n de este tipo, webpack infiere el directorio ( &lt;code&gt;'./locale/'&lt;/code&gt; ) y una expresi&amp;oacute;n regular ( &lt;code&gt;/^.*\.json$/&lt;/code&gt; ). Dado que el &lt;code&gt;name&lt;/code&gt; no se conoce en el momento de la compilaci&amp;oacute;n, el paquete web incluye cada archivo como m&amp;oacute;dulo en el paquete.</target>
         </trans-unit>
       </group>
     </body>

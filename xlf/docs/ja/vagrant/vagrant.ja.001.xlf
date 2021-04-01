@@ -83,6 +83,10 @@
           <source>&lt;a href=&quot;#ask_become_pass&quot;&gt;&lt;code&gt;ask_become_pass&lt;/code&gt;&lt;/a&gt; (boolean) - require Ansible to &lt;a href=&quot;https://docs.ansible.com/intro_getting_started.html#remote-connection-information&quot;&gt;prompt for a password&lt;/a&gt; when switching to another user with the &lt;a href=&quot;http://docs.ansible.com/ansible/become.html&quot;&gt;become/sudo mechanism&lt;/a&gt;.</source>
           <target state="translated">&lt;a href=&quot;#ask_become_pass&quot;&gt; &lt;code&gt;ask_become_pass&lt;/code&gt; &lt;/a&gt;（ブール） -Become / Sudo&lt;a href=&quot;http://docs.ansible.com/ansible/become.html&quot;&gt;メカニズムを&lt;/a&gt;使用して別のユーザーに切り替えるとき&lt;a href=&quot;https://docs.ansible.com/intro_getting_started.html#remote-connection-information&quot;&gt;に、&lt;/a&gt; Ansibleにパスワードの入力を求めるように要求します。</target>
         </trans-unit>
+        <trans-unit id="e481da63a447601806cb42b94acda95fa7696c19" translate="yes" xml:space="preserve">
+          <source>&lt;a href=&quot;#ask_become_pass&quot;&gt;&lt;code&gt;ask_become_pass&lt;/code&gt;&lt;/a&gt; (boolean) - require Ansible to &lt;a href=&quot;https://docs.ansible.com/intro_getting_started.html#remote-connection-information&quot;&gt;prompt for a password&lt;/a&gt; when switching to another user with the &lt;a href=&quot;https://docs.ansible.com/ansible/become.html&quot;&gt;become/sudo mechanism&lt;/a&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="2fd081307ddf792450857abd4aaa987c3af52d96" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;#ask_sudo_pass&quot;&gt;&lt;code&gt;ask_sudo_pass&lt;/code&gt;&lt;/a&gt; (boolean) - Backwards compatible alias for the &lt;a href=&quot;#ask_become_pass&quot;&gt;ask_become_pass&lt;/a&gt; option.</source>
           <target state="translated">&lt;a href=&quot;#ask_sudo_pass&quot;&gt; &lt;code&gt;ask_sudo_pass&lt;/code&gt; &lt;/a&gt;（boolean）&lt;a href=&quot;#ask_become_pass&quot;&gt; -ask_become_pass&lt;/a&gt;オプションの下位互換性のあるエイリアス。</target>
@@ -123,9 +127,17 @@
           <source>&lt;a href=&quot;#become&quot;&gt;&lt;code&gt;become&lt;/code&gt;&lt;/a&gt; (boolean) - Perform all the Ansible playbook tasks &lt;a href=&quot;http://docs.ansible.com/ansible/become.html&quot;&gt;as another user&lt;/a&gt;, different from the user used to log into the guest system.</source>
           <target state="translated">&lt;a href=&quot;#become&quot;&gt; &lt;code&gt;become&lt;/code&gt; &lt;/a&gt;（ブール値） -すべてのAnsible脚本のタスクを実行し&lt;a href=&quot;http://docs.ansible.com/ansible/become.html&quot;&gt;、別のユーザーとして&lt;/a&gt;、お客様のシステムにログインするために使用するユーザーは異なります。</target>
         </trans-unit>
+        <trans-unit id="26003bc9e669853c8015aff48fb2a622c5a1e002" translate="yes" xml:space="preserve">
+          <source>&lt;a href=&quot;#become&quot;&gt;&lt;code&gt;become&lt;/code&gt;&lt;/a&gt; (boolean) - Perform all the Ansible playbook tasks &lt;a href=&quot;https://docs.ansible.com/ansible/become.html&quot;&gt;as another user&lt;/a&gt;, different from the user used to log into the guest system.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="7dc39d6cc39c56e055be617b797fc7ad7739340f" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;#become_user&quot;&gt;&lt;code&gt;become_user&lt;/code&gt;&lt;/a&gt; (string) - Set the default username to be used by the Ansible &lt;code&gt;become&lt;/code&gt;&lt;a href=&quot;http://docs.ansible.com/ansible/become.html&quot;&gt;privilege escalation&lt;/a&gt; mechanism.</source>
           <target state="translated">&lt;a href=&quot;#become_user&quot;&gt; &lt;code&gt;become_user&lt;/code&gt; &lt;/a&gt;（文字列） -Ansibleに &lt;code&gt;become&lt;/code&gt; &lt;a href=&quot;http://docs.ansible.com/ansible/become.html&quot;&gt;特権昇格&lt;/a&gt;メカニズムが使用するデフォルトのユーザー名を設定します。</target>
+        </trans-unit>
+        <trans-unit id="291b30f7260d58fc36389758fa4a3169a2ce9a16" translate="yes" xml:space="preserve">
+          <source>&lt;a href=&quot;#become_user&quot;&gt;&lt;code&gt;become_user&lt;/code&gt;&lt;/a&gt; (string) - Set the default username to be used by the Ansible &lt;code&gt;become&lt;/code&gt;&lt;a href=&quot;https://docs.ansible.com/ansible/become.html&quot;&gt;privilege escalation&lt;/a&gt; mechanism.</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="7b80e40a39403b516ecc8590526aa5c276d57070" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;#binary&quot;&gt;&lt;code&gt;binary&lt;/code&gt;&lt;/a&gt; (boolean) - Vagrant automatically replaces Windows line endings with Unix line endings. If this is false, then Vagrant will not do this. By default this is &quot;false&quot;. If the shell provisioner is communicating over WinRM, this defaults to &quot;true&quot;.</source>
@@ -1544,6 +1556,10 @@ $(lsb_release -cs) main&quot;&lt;/code&gt;) specifies the repository to use for 
           <source>&lt;a href=&quot;#provisioning_path&quot;&gt;&lt;code&gt;provisioning_path&lt;/code&gt;&lt;/a&gt; (string) - An absolute path on the guest machine where the Ansible files are stored. The &lt;code&gt;ansible-galaxy&lt;/code&gt; and &lt;code&gt;ansible-playbook&lt;/code&gt; commands are executed from this directory. This is the location to place an &lt;a href=&quot;http://docs.ansible.com/ansible/intro_configuration.html&quot;&gt;ansible.cfg&lt;/a&gt; file, in case you need it.</source>
           <target state="translated">&lt;a href=&quot;#provisioning_path&quot;&gt; &lt;code&gt;provisioning_path&lt;/code&gt; &lt;/a&gt;（文字列）-Ansibleファイルが保存されているゲストマシン上の絶対パス。 &lt;code&gt;ansible-galaxy&lt;/code&gt; と &lt;code&gt;ansible-playbook&lt;/code&gt; のコマンドは、このディレクトリから実行されています。これは、必要に応じて、&lt;a href=&quot;http://docs.ansible.com/ansible/intro_configuration.html&quot;&gt; ansible.cfg&lt;/a&gt;ファイルを配置する場所です。</target>
         </trans-unit>
+        <trans-unit id="07905b1a8af34b2b6fb1c99a70b514b5d51771bb" translate="yes" xml:space="preserve">
+          <source>&lt;a href=&quot;#provisioning_path&quot;&gt;&lt;code&gt;provisioning_path&lt;/code&gt;&lt;/a&gt; (string) - An absolute path on the guest machine where the Ansible files are stored. The &lt;code&gt;ansible-galaxy&lt;/code&gt; and &lt;code&gt;ansible-playbook&lt;/code&gt; commands are executed from this directory. This is the location to place an &lt;a href=&quot;https://docs.ansible.com/ansible/intro_configuration.html&quot;&gt;ansible.cfg&lt;/a&gt; file, in case you need it.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="45d8cb48687203a1c18c9cf38d7140a55145d6de" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;#provisioning_path&quot;&gt;&lt;code&gt;provisioning_path&lt;/code&gt;&lt;/a&gt; (string) - The path on the remote machine where Vagrant will store all necessary files for provisioning such as cookbooks, configurations, etc. This path must be world writable. By default this is &lt;code&gt;/tmp/vagrant-chef-#&lt;/code&gt; where &quot;#&quot; is replaced by a unique counter.</source>
           <target state="translated">&lt;a href=&quot;#provisioning_path&quot;&gt; &lt;code&gt;provisioning_path&lt;/code&gt; &lt;/a&gt;（文字列）-Vagrantがクックブック、設定などのプロビジョニングに必要なすべてのファイルを格納するリモートマシン上のパス。このパスは誰でも書き込み可能でなければなりません。デフォルトでは、これは &lt;code&gt;/tmp/vagrant-chef-#&lt;/code&gt; で、「＃」は一意のカウンターに置き換えられます。</target>
@@ -2788,6 +2804,10 @@ $(lsb_release -cs) main&quot;&lt;/code&gt;) specifies the repository to use for 
           <source>&lt;strong&gt;Warning:&lt;/strong&gt; Enabling Hyper-V will cause VirtualBox, VMware, and any other virtualization technology to no longer work. See &lt;a href=&quot;http://www.hanselman.com/blog/SwitchEasilyBetweenVirtualBoxAndHyperVWithABCDEditBootEntryInWindows81.aspx&quot;&gt;this blog post&lt;/a&gt; for an easy way to create a boot entry to boot Windows without Hyper-V enabled, if there will be times you will need other hypervisors.</source>
           <target state="translated">&lt;strong&gt;警告：&lt;/strong&gt; Hyper-Vを有効にすると、VirtualBox、VMware、およびその他の仮想化テクノロジーが機能しなくなります。他のハイパーバイザーが必要になる場合がある場合に、Hyper-Vを有効にせずにWindowsを起動するための起動エントリを作成する簡単な方法については、&lt;a href=&quot;http://www.hanselman.com/blog/SwitchEasilyBetweenVirtualBoxAndHyperVWithABCDEditBootEntryInWindows81.aspx&quot;&gt;このブログ投稿&lt;/a&gt;を参照してください。</target>
         </trans-unit>
+        <trans-unit id="6aee05b1104a55ab7111123c88faf4ff410e3293" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Warning:&lt;/strong&gt; Enabling Hyper-V will cause VirtualBox, VMware, and any other virtualization technology to no longer work. See &lt;a href=&quot;https://www.hanselman.com/blog/SwitchEasilyBetweenVirtualBoxAndHyperVWithABCDEditBootEntryInWindows81.aspx&quot;&gt;this blog post&lt;/a&gt; for an easy way to create a boot entry to boot Windows without Hyper-V enabled, if there will be times you will need other hypervisors.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="60dcb55b34ff0b97c436a6d0700b0bddb2797aea" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Warning:&lt;/strong&gt; If you are not familiar with Ansible and Vagrant already, I recommend starting with the &lt;a href=&quot;shell&quot;&gt;shell provisioner&lt;/a&gt;. However, if you are comfortable with Vagrant already, Vagrant is a great way to learn Ansible.</source>
           <target state="translated">&lt;strong&gt;警告：&lt;/strong&gt; AnsibleとVagrantにまだ慣れていない場合は、&lt;a href=&quot;shell&quot;&gt;シェルプロビジョニング&lt;/a&gt;ツールから始めることをお勧めします。ただし、Vagrantに慣れている場合は、Vagrantを使用してAnsibleを学ぶことができます。</target>
@@ -3616,6 +3636,10 @@ $(lsb_release -cs) main&quot;&lt;/code&gt;) specifies the repository to use for 
           <source>By using &lt;a href=&quot;http://bundler.io&quot;&gt;Bundler&lt;/a&gt; and Rake, building a new vagrant-aws package is easy. By simply calling &lt;code&gt;rake package&lt;/code&gt;, a &lt;code&gt;gem&lt;/code&gt; file is dropped into the directory. By calling &lt;code&gt;rake release&lt;/code&gt;, the gem is built and it is uploaded to the central &lt;a href=&quot;https://rubygems.org&quot;&gt;RubyGems&lt;/a&gt; repository so that it can be installed using &lt;code&gt;vagrant plugin install&lt;/code&gt;.</source>
           <target state="translated">&lt;a href=&quot;http://bundler.io&quot;&gt;Bundler&lt;/a&gt;とRake を使用すると、新しいvagrant-awsパッケージを簡単に作成できます。 &lt;code&gt;rake package&lt;/code&gt; を呼び出すだけで、 &lt;code&gt;gem&lt;/code&gt; ファイルがディレクトリにドロップされます。 &lt;code&gt;rake release&lt;/code&gt; を呼び出すことにより、gemが構築され、中央の&lt;a href=&quot;https://rubygems.org&quot;&gt;RubyGems&lt;/a&gt;リポジトリにアップロードされるので、 &lt;code&gt;vagrant plugin install&lt;/code&gt; を使用してインストールできます。</target>
         </trans-unit>
+        <trans-unit id="96d99d2b0e4be92f5323407f68fcbcc369c3a5bf" translate="yes" xml:space="preserve">
+          <source>By using &lt;a href=&quot;https://bundler.io&quot;&gt;Bundler&lt;/a&gt; and Rake, building a new vagrant-aws package is easy. By simply calling &lt;code&gt;rake package&lt;/code&gt;, a &lt;code&gt;gem&lt;/code&gt; file is dropped into the directory. By calling &lt;code&gt;rake release&lt;/code&gt;, the gem is built and it is uploaded to the central &lt;a href=&quot;https://rubygems.org&quot;&gt;RubyGems&lt;/a&gt; repository so that it can be installed using &lt;code&gt;vagrant plugin install&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="efa8efc93d14f69bc37f695546d625f9a3c4e4ec" translate="yes" xml:space="preserve">
           <source>C:\ProgramData\HashiCorp\vagrant-vmware-desktop\certificates</source>
           <target state="translated">C:\ProgramData\HashiCorp\vagrant-vmware-desktop\certificates</target>
@@ -3979,30 +4003,6 @@ $(lsb_release -cs) main&quot;&lt;/code&gt;) specifies the repository to use for 
         <trans-unit id="4c160e03e050db89433f0d83a84d912da598701b" translate="yes" xml:space="preserve">
           <source>Customize &lt;code&gt;/etc/default/docker&lt;/code&gt;</source>
           <target state="translated">&lt;code&gt;/etc/default/docker&lt;/code&gt; をカスタマイズします</target>
-        </trans-unit>
-        <trans-unit id="a73114ea8476250a5278171bdfa0174ef4844d3e" translate="yes" xml:space="preserve">
-          <source>DHCP</source>
-          <target state="translated">DHCP</target>
-        </trans-unit>
-        <trans-unit id="2060a0a708f20faa764025cdb75c574ac61a1aa9" translate="yes" xml:space="preserve">
-          <source>DNS Not Working</source>
-          <target state="translated">DNSが動作しない</target>
-        </trans-unit>
-        <trans-unit id="437a50fecd337f4568693e155281aa4f828dd98e" translate="yes" xml:space="preserve">
-          <source>Data Bags</source>
-          <target state="translated">データバッグ</target>
-        </trans-unit>
-        <trans-unit id="895b27c88016513d278a0ce3dc0663fae3829d58" translate="yes" xml:space="preserve">
-          <source>Debugging</source>
-          <target state="translated">Debugging</target>
-        </trans-unit>
-        <trans-unit id="ab3bedcdbdf526c0d1dd50a16fce89d57ed49d7e" translate="yes" xml:space="preserve">
-          <source>Default Network Interface</source>
-          <target state="translated">デフォルトのネットワークインタフェース</target>
-        </trans-unit>
-        <trans-unit id="8e0f3560b7b7c578e60d37c8cb0428d65a8858ee" translate="yes" xml:space="preserve">
-          <source>Default Provider</source>
-          <target state="translated">デフォルトのプロバイダ</target>
         </trans-unit>
       </group>
     </body>

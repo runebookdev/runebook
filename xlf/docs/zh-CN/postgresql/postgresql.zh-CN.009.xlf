@@ -9,7 +9,7 @@
         </trans-unit>
         <trans-unit id="d5d88441c9f02c86f8bfc47e2413965c87d4afdf" translate="yes" xml:space="preserve">
           <source>All queries in the &lt;code&gt;WITH&lt;/code&gt; list are computed. These effectively serve as temporary tables that can be referenced in the &lt;code&gt;FROM&lt;/code&gt; list. A &lt;code&gt;WITH&lt;/code&gt; query that is referenced more than once in &lt;code&gt;FROM&lt;/code&gt; is computed only once, unless specified otherwise with &lt;code&gt;NOT MATERIALIZED&lt;/code&gt;. (See &lt;a href=&quot;sql-select#SQL-WITH&quot;&gt;WITH Clause&lt;/a&gt; below.)</source>
-          <target state="new"/>
+          <target state="translated">将计算 &lt;code&gt;WITH&lt;/code&gt; 列表中的所有查询。这些有效地用作可以在 &lt;code&gt;FROM&lt;/code&gt; 列表中引用的临时表。一个 &lt;code&gt;WITH&lt;/code&gt; 被不止一次地引用了查询 &lt;code&gt;FROM&lt;/code&gt; 只计算一次，除非另有说明 &lt;code&gt;NOT MATERIALIZED&lt;/code&gt; 。 （请参阅下面的&lt;a href=&quot;sql-select#SQL-WITH&quot;&gt;WITH子句&lt;/a&gt;。）</target>
         </trans-unit>
         <trans-unit id="f087ce49a12f5467c1e1d2b10a821f36bb151962" translate="yes" xml:space="preserve">
           <source>All rows in the temporary table will be deleted at the end of each transaction block. Essentially, an automatic &lt;a href=&quot;sql-truncate&quot;&gt;TRUNCATE&lt;/a&gt; is done at each commit.</source>
@@ -29,7 +29,7 @@
         </trans-unit>
         <trans-unit id="25b4cbd01fbf767d95283abe0881812c05362a17" translate="yes" xml:space="preserve">
           <source>All standard and predefined collations are deterministic, all user-defined collations are deterministic by default. While nondeterministic collations give a more &amp;ldquo;correct&amp;rdquo; behavior, especially when considering the full power of Unicode and its many special cases, they also have some drawbacks. Foremost, their use leads to a performance penalty. Note, in particular, that B-tree cannot use deduplication with indexes that use a nondeterministic collation. Also, certain operations are not possible with nondeterministic collations, such as pattern matching operations. Therefore, they should be used only in cases where they are specifically wanted.</source>
-          <target state="new"/>
+          <target state="translated">默认情况下，所有标准归类和预定义归类都是确定性的，所有用户定义归类都是确定性的。尽管不确定性排序规则提供了更&amp;ldquo;正确&amp;rdquo;的行为，尤其是考虑到Unicode及其许多特殊情况的全部功能时，它们也有一些缺点。首先，它们的使用会导致性能下降。特别要注意的是，B树不能将重复数据删除与使用不确定性排序规则的索引一起使用。另外，某些不确定的归类操作是不可能的，例如模式匹配操作。因此，仅在特别需要它们的情况下才应使用它们。</target>
         </trans-unit>
         <trans-unit id="33701db90942013a1dfc5834530a8ecffe185cf9" translate="yes" xml:space="preserve">
           <source>All statements of the current transaction can only see rows committed before the first query or data-modification statement was executed in this transaction.</source>
@@ -41,7 +41,7 @@
         </trans-unit>
         <trans-unit id="333b8b7d294d7e593e47c576e136baad90efa83c" translate="yes" xml:space="preserve">
           <source>All system-defined SQL objects reside in schema &lt;code&gt;pg_catalog&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">所有系统定义的SQL对象都驻留在模式 &lt;code&gt;pg_catalog&lt;/code&gt; 中。</target>
         </trans-unit>
         <trans-unit id="fd69152cf9c28ea6bdb8489a69a762ca6be86225" translate="yes" xml:space="preserve">
           <source>All systems would have the same &lt;code&gt;shared.conf&lt;/code&gt;. Each server with a particular amount of memory could share the same &lt;code&gt;memory.conf&lt;/code&gt;; you might have one for all servers with 8GB of RAM, another for those having 16GB. And finally &lt;code&gt;server.conf&lt;/code&gt; could have truly server-specific configuration information in it.</source>
@@ -117,7 +117,7 @@
         </trans-unit>
         <trans-unit id="b94dc0adfca08e05341c41a7517a1ba1c57ee9cc" translate="yes" xml:space="preserve">
           <source>All these functions are intended to be used to lock application-defined resources, which can be identified either by a single 64-bit key value or two 32-bit key values (note that these two key spaces do not overlap). If another session already holds a conflicting lock on the same resource identifier, the functions will either wait until the resource becomes available, or return a &lt;code&gt;false&lt;/code&gt; result, as appropriate for the function. Locks can be either shared or exclusive: a shared lock does not conflict with other shared locks on the same resource, only with exclusive locks. Locks can be taken at session level (so that they are held until released or the session ends) or at transaction level (so that they are held until the current transaction ends; there is no provision for manual release). Multiple session-level lock requests stack, so that if the same resource identifier is locked three times there must then be three unlock requests to release the resource in advance of session end.</source>
-          <target state="new"/>
+          <target state="translated">所有这些功能都旨在用于锁定应用程序定义的资源，这些资源可以由单个64位键值或两个32位键值标识（请注意，这两个键空间不重叠）。如果另一个会话已经在同一资源标识符上持有冲突的锁，则这些函数将等待直到资源可用为止，或者返回 &lt;code&gt;false&lt;/code&gt; 结果，视功能而定。锁可以是共享锁，也可以是排他锁：共享锁不与同一资源上的其他共享锁冲突，而仅与排他锁冲突。锁可以在会话级别（使它们保持到释放或会话结束）或事务级别（使它们保持到当前事务结束；没有手动释放的准备）。多个会话级锁定请求堆栈，因此，如果同一资源标识符被锁定三次，则必须有三个解锁请求才能在会话结束之前释放资源。</target>
         </trans-unit>
         <trans-unit id="fddab2dff735a90badf611e7a98983fea7c65273" translate="yes" xml:space="preserve">
           <source>All these functions require object OIDs to identify the object to be checked. If you want to test an object by name, it is convenient to use the OID alias types (&lt;code&gt;regclass&lt;/code&gt;, &lt;code&gt;regtype&lt;/code&gt;, &lt;code&gt;regprocedure&lt;/code&gt;, &lt;code&gt;regoperator&lt;/code&gt;, &lt;code&gt;regconfig&lt;/code&gt;, or &lt;code&gt;regdictionary&lt;/code&gt;), for example:</source>
@@ -229,7 +229,7 @@
         </trans-unit>
         <trans-unit id="d221a1c104e0d63607ae68533525fac6cb3d90ab" translate="yes" xml:space="preserve">
           <source>Allows definition of user-visible parameters that control operator class behavior.</source>
-          <target state="new"/>
+          <target state="translated">允许定义用户可见的参数,以控制操作员类的行为。</target>
         </trans-unit>
         <trans-unit id="3cd1d90a2a8e348dc3397a5abdad6812b9706afc" translate="yes" xml:space="preserve">
           <source>Allows for mapping between system and database user names. See &lt;a href=&quot;auth-username-maps&quot;&gt;Section 20.2&lt;/a&gt; for details.</source>
@@ -245,7 +245,7 @@
         </trans-unit>
         <trans-unit id="20552df65c50fc0052b6d2499b3762b86d6eff44" translate="yes" xml:space="preserve">
           <source>Allows modification of the structure of system tables as well as certain other risky actions on system tables. This is otherwise not allowed even for superusers. Ill-advised use of this setting can cause irretrievable data loss or seriously corrupt the database system. Only superusers can change this setting.</source>
-          <target state="new"/>
+          <target state="translated">允许修改系统表的结构,以及对系统表进行某些其他风险操作。否则即使是超级用户也不允许这样做。不慎使用此设置会造成不可挽回的数据丢失或严重破坏数据库系统。只有超级用户才能更改此设置。</target>
         </trans-unit>
         <trans-unit id="b64278e6ff1ecca0c4404ebfb33c1f4ece933ea1" translate="yes" xml:space="preserve">
           <source>Allows modification of the structure of system tables. This is used by &lt;code&gt;initdb&lt;/code&gt;. This parameter can only be set at server start.</source>
@@ -261,7 +261,7 @@
         </trans-unit>
         <trans-unit id="003e89305b8189195bfe70e6a4f7ecd0e58a566e" translate="yes" xml:space="preserve">
           <source>Allows sampling the duration of completed statements that ran for at least the specified amount of time. This produces the same kind of log entries as &lt;a href=&quot;runtime-config-logging#GUC-LOG-MIN-DURATION-STATEMENT&quot;&gt;log_min_duration_statement&lt;/a&gt;, but only for a subset of the executed statements, with sample rate controlled by &lt;a href=&quot;runtime-config-logging#GUC-LOG-STATEMENT-SAMPLE-RATE&quot;&gt;log_statement_sample_rate&lt;/a&gt;. For example, if you set it to &lt;code&gt;100ms&lt;/code&gt; then all SQL statements that run 100ms or longer will be considered for sampling. Enabling this parameter can be helpful when the traffic is too high to log all queries. If this value is specified without units, it is taken as milliseconds. Setting this to zero samples all statement durations. &lt;code&gt;-1&lt;/code&gt; (the default) disables sampling statement durations. Only superusers can change this setting.</source>
-          <target state="new"/>
+          <target state="translated">允许对至少运行指定时间的已完成语句的持续时间进行采样。这将产生与&lt;a href=&quot;runtime-config-logging#GUC-LOG-MIN-DURATION-STATEMENT&quot;&gt;log_min_duration_statement&lt;/a&gt;相同类型的日志条目，但仅针对已执行语句的子集，其采样率由&lt;a href=&quot;runtime-config-logging#GUC-LOG-STATEMENT-SAMPLE-RATE&quot;&gt;log_statement_sample_rate&lt;/a&gt;控制。例如，如果将其设置为 &lt;code&gt;100ms&lt;/code&gt; ,则将考虑所有运行100ms或更长时间的SQL语句进行采样。当流量太高而无法记录所有查询时，启用此参数将很有帮助。如果指定的该值不带单位，则以毫秒为单位。将此设置为零会采样所有语句持续时间。 &lt;code&gt;-1&lt;/code&gt; （默认值）禁用采样语句的持续时间。仅超级用户可以更改此设置。</target>
         </trans-unit>
         <trans-unit id="63eeac10a55f83f249e5c5462559d1f7da0f93f8" translate="yes" xml:space="preserve">
           <source>Allows temporary tables to be created while using the database.</source>
@@ -301,7 +301,7 @@
         </trans-unit>
         <trans-unit id="1310f648148c138c431f0390dd1598c9ea4cf18b" translate="yes" xml:space="preserve">
           <source>Also known as &lt;em&gt;WAL segment&lt;/em&gt; or &lt;em&gt;WAL segment file&lt;/em&gt;. Each of the sequentially-numbered files that provide storage space for &lt;a href=&quot;glossary#GLOSSARY-WAL&quot;&gt;WAL&lt;/a&gt;. The files are all of the same predefined size and are written in sequential order, interspersing changes as they occur in multiple simultaneous sessions. If the system crashes, the files are read in order, and each of the changes is replayed to restore the system to the state it was in before the crash.</source>
-          <target state="new"/>
+          <target state="translated">也称为&lt;em&gt;WAL段&lt;/em&gt;或&lt;em&gt;WAL段文件&lt;/em&gt;。为&lt;a href=&quot;glossary#GLOSSARY-WAL&quot;&gt;WAL&lt;/a&gt;提供存储空间的每个顺序编号的文件。这些文件都具有相同的预定义大小，并按顺序写入，散布在多个同时会话中发生的更改。如果系统崩溃，则会按顺序读取文件，并重播每个更改，以将系统恢复到崩溃前的状态。</target>
         </trans-unit>
         <trans-unit id="7f5b262e2738c5ae943ae295de4ef09eb42b98a8" translate="yes" xml:space="preserve">
           <source>Also note that some element types, such as &lt;code&gt;timestamp&lt;/code&gt;, have a notion of &quot;infinity&quot;, which is just another value that can be stored. This is different from &lt;code&gt;MINVALUE&lt;/code&gt; and &lt;code&gt;MAXVALUE&lt;/code&gt;, which are not real values that can be stored, but rather they are ways of saying that the value is unbounded. &lt;code&gt;MAXVALUE&lt;/code&gt; can be thought of as being greater than any other value, including &quot;infinity&quot; and &lt;code&gt;MINVALUE&lt;/code&gt; as being less than any other value, including &quot;minus infinity&quot;. Thus the range &lt;code&gt;FROM ('infinity') TO (MAXVALUE)&lt;/code&gt; is not an empty range; it allows precisely one value to be stored &amp;mdash; &quot;infinity&quot;.</source>
@@ -313,7 +313,7 @@
         </trans-unit>
         <trans-unit id="89140b7833f6956c6f82e686c2158ff1b251e443" translate="yes" xml:space="preserve">
           <source>Also see the prefix operator &lt;code&gt;^@&lt;/code&gt; and corresponding &lt;code&gt;starts_with&lt;/code&gt; function, which are useful in cases where simply matching the beginning of a string is needed.</source>
-          <target state="new"/>
+          <target state="translated">另请参见前缀运算符 &lt;code&gt;^@&lt;/code&gt; 和相应的 &lt;code&gt;starts_with&lt;/code&gt; 函数，在仅需要匹配字符串开头的情况下很有用。</target>
         </trans-unit>
         <trans-unit id="43ae5053feb0121ca9119b68bf8c270c3a3bfe40" translate="yes" xml:space="preserve">
           <source>Also unlike &lt;code&gt;INHERITS&lt;/code&gt;, columns and constraints copied by &lt;code&gt;LIKE&lt;/code&gt; are not merged with similarly named columns and constraints. If the same name is specified explicitly or in another &lt;code&gt;LIKE&lt;/code&gt; clause, an error is signaled.</source>
@@ -385,7 +385,7 @@
         </trans-unit>
         <trans-unit id="e584a70e0fd9b688e02349b1f5470dd3aa568b45" translate="yes" xml:space="preserve">
           <source>Also, these output format options can be set for just one query by using &lt;code&gt;\g&lt;/code&gt;:</source>
-          <target state="new"/>
+          <target state="translated">此外，可以使用 &lt;code&gt;\g&lt;/code&gt; 仅针对一个查询设置这些输出格式选项：</target>
         </trans-unit>
         <trans-unit id="cae58275d441413bb378869b203fcfca0525ccf0" translate="yes" xml:space="preserve">
           <source>Also, unlike a regular &lt;code&gt;Append&lt;/code&gt; node, which can only have partial children when used within a parallel plan, a &lt;code&gt;Parallel Append&lt;/code&gt; node can have both partial and non-partial child plans. Non-partial children will be scanned by only a single process, since scanning them more than once would produce duplicate results. Plans that involve appending multiple results sets can therefore achieve coarse-grained parallelism even when efficient partial plans are not available. For example, consider a query against a partitioned table which can be only be implemented efficiently by using an index that does not support parallel scans. The planner might choose a &lt;code&gt;Parallel Append&lt;/code&gt; of regular &lt;code&gt;Index Scan&lt;/code&gt; plans; each individual index scan would have to be executed to completion by a single process, but different scans could be performed at the same time by different processes.</source>
@@ -393,7 +393,7 @@
         </trans-unit>
         <trans-unit id="b84c371dd525a0259c19e76190985b0466e52c07" translate="yes" xml:space="preserve">
           <source>Also, unlike a regular &lt;code&gt;Append&lt;/code&gt; node, which can only have partial children when used within a parallel plan, a &lt;code&gt;Parallel Append&lt;/code&gt; node can have both partial and non-partial child plans. Non-partial children will be scanned by only a single process, since scanning them more than once would produce duplicate results. Plans that involve appending multiple results sets can therefore achieve coarse-grained parallelism even when efficient partial plans are not available. For example, consider a query against a partitioned table which can only be implemented efficiently by using an index that does not support parallel scans. The planner might choose a &lt;code&gt;Parallel Append&lt;/code&gt; of regular &lt;code&gt;Index Scan&lt;/code&gt; plans; each individual index scan would have to be executed to completion by a single process, but different scans could be performed at the same time by different processes.</source>
-          <target state="new"/>
+          <target state="translated">此外，与常规 &lt;code&gt;Append&lt;/code&gt; 节点不同，常规追加节点在并行计划中使用时只能具有部分子项，而 &lt;code&gt;Parallel Append&lt;/code&gt; 节点可以同时具有部分和非部分子计划。非局部子项将仅通过单个过程进行扫描，因为多次扫描它们会产生重复的结果。因此，即使没有有效的局部计划，涉及附加多个结果集的计划也可以实现粗粒度的并行性。例如，考虑对分区表的查询，该查询只能通过使用不支持并行扫描的索引来有效地实现。计划者可以选择定期 &lt;code&gt;Index Scan&lt;/code&gt; 的 &lt;code&gt;Parallel Append&lt;/code&gt; 计划; 每个单独的索引扫描都必须由一个进程执行才能完成，但是不同的进程可以同时执行不同的扫描。</target>
         </trans-unit>
         <trans-unit id="e805152c6a1ae1d9757b9c8152236b48ab4b4867" translate="yes" xml:space="preserve">
           <source>Also, you can force a segment switch manually with &lt;code&gt;pg_switch_wal&lt;/code&gt; if you want to ensure that a just-finished transaction is archived as soon as possible. Other utility functions related to WAL management are listed in &lt;a href=&quot;functions-admin#FUNCTIONS-ADMIN-BACKUP-TABLE&quot;&gt;Table 9.84&lt;/a&gt;.</source>
@@ -401,7 +401,7 @@
         </trans-unit>
         <trans-unit id="68eb2f93808c112d45a946f93f2d0964eca95823" translate="yes" xml:space="preserve">
           <source>Also, you can force a segment switch manually with &lt;code&gt;pg_switch_wal&lt;/code&gt; if you want to ensure that a just-finished transaction is archived as soon as possible. Other utility functions related to WAL management are listed in &lt;a href=&quot;functions-admin#FUNCTIONS-ADMIN-BACKUP-TABLE&quot;&gt;Table 9.85&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">另外，如果您要确保尽快完成刚刚完成的交易，则可以使用 &lt;code&gt;pg_switch_wal&lt;/code&gt; 手动强制执行段切换。&lt;a href=&quot;functions-admin#FUNCTIONS-ADMIN-BACKUP-TABLE&quot;&gt;表9.85&lt;/a&gt;列出了与WAL管理相关的其他实用程序功能。</target>
         </trans-unit>
         <trans-unit id="bfbace446db7c85291e8910dc869f82f6687c559" translate="yes" xml:space="preserve">
           <source>Also, you can write several possibly-modified labels separated with &lt;code&gt;|&lt;/code&gt; (OR) to match any of those labels, and you can put &lt;code&gt;!&lt;/code&gt; (NOT) at the start to match any label that doesn't match any of the alternatives.</source>
@@ -409,7 +409,7 @@
         </trans-unit>
         <trans-unit id="71f210fdceeda15fb7f9067d7b92e4afb40e583b" translate="yes" xml:space="preserve">
           <source>Also, you can write several possibly-modified non-star items separated with &lt;code&gt;|&lt;/code&gt; (OR) to match any of those items, and you can put &lt;code&gt;!&lt;/code&gt; (NOT) at the start of a non-star group to match any label that doesn't match any of the alternatives. A quantifier, if any, goes at the end of the group; it means some number of matches for the group as a whole (that is, some number of labels matching or not matching any of the alternatives).</source>
-          <target state="new"/>
+          <target state="translated">另外，您可以编写一些可能的已修改的非星号项目，并用 &lt;code&gt;|&lt;/code&gt; 分隔。（OR）来匹配这些项目中的任何一项，然后您就可以输入 &lt;code&gt;!&lt;/code&gt; （NOT）在非星标组的开头，以匹配与任何替代方案都不匹配的任何标签。量词（如果有的话）排在组的末尾。它表示整个组中有一定数量的匹配项（也就是说，有一些标签匹配或不匹配任何替代项）。</target>
         </trans-unit>
         <trans-unit id="8b36099e7952ab489f13b56454238da5e639dbc6" translate="yes" xml:space="preserve">
           <source>Alter server &lt;code&gt;foo&lt;/code&gt;, add connection options:</source>
@@ -565,7 +565,7 @@
         </trans-unit>
         <trans-unit id="9f2cb95ff60fc4e9f012557faa268bb5d908ed75" translate="yes" xml:space="preserve">
           <source>Although most forms of &lt;code&gt;ADD table_constraint&lt;/code&gt; require an &lt;code&gt;ACCESS EXCLUSIVE&lt;/code&gt; lock, &lt;code&gt;ADD FOREIGN KEY&lt;/code&gt; requires only a &lt;code&gt;SHARE ROW EXCLUSIVE&lt;/code&gt; lock. Note that &lt;code&gt;ADD FOREIGN KEY&lt;/code&gt; also acquires a &lt;code&gt;SHARE ROW EXCLUSIVE&lt;/code&gt; lock on the referenced table, in addition to the lock on the table on which the constraint is declared.</source>
-          <target state="new"/>
+          <target state="translated">尽管大多数形式的 &lt;code&gt;ADD table_constraint&lt;/code&gt; 形式都需要 &lt;code&gt;ACCESS EXCLUSIVE&lt;/code&gt; 锁，但 &lt;code&gt;ADD FOREIGN KEY&lt;/code&gt; 仅需要 &lt;code&gt;SHARE ROW EXCLUSIVE&lt;/code&gt; 锁。请注意，除了声明约束的表上的锁之外， &lt;code&gt;ADD FOREIGN KEY&lt;/code&gt; 还获得对引用表的 &lt;code&gt;SHARE ROW EXCLUSIVE&lt;/code&gt; 锁。</target>
         </trans-unit>
         <trans-unit id="1f7a4620dd953ee89678c8af93ba6b1281ecf21b" translate="yes" xml:space="preserve">
           <source>Although per-column tweaking of &lt;code&gt;ANALYZE&lt;/code&gt; frequency might not be very productive, you might find it worthwhile to do per-column adjustment of the level of detail of the statistics collected by &lt;code&gt;ANALYZE&lt;/code&gt;. Columns that are heavily used in &lt;code&gt;WHERE&lt;/code&gt; clauses and have highly irregular data distributions might require a finer-grain data histogram than other columns. See &lt;code&gt;ALTER TABLE SET STATISTICS&lt;/code&gt;, or change the database-wide default using the &lt;a href=&quot;runtime-config-query#GUC-DEFAULT-STATISTICS-TARGET&quot;&gt;default_statistics_target&lt;/a&gt; configuration parameter.</source>
@@ -605,7 +605,7 @@
         </trans-unit>
         <trans-unit id="a490262673b6e67e6cc0b4de26fba601b493618f" translate="yes" xml:space="preserve">
           <source>Although this query runs much faster than with either of the single indexes, we pay a penalty in index size. Each of the single-column btree indexes occupies 2 MB, so the total space needed is 12 MB, eight times the space used by the bloom index.</source>
-          <target state="new"/>
+          <target state="translated">虽然这个查询的运行速度要比使用任何一个单索引快得多,但我们在索引大小上付出了代价。每一个单列btree索引占用2 MB,所以总的需要空间是12 MB,是bloom索引所用空间的8倍。</target>
         </trans-unit>
         <trans-unit id="1200f8928e7bfeba98e8bc2cff21bdd8b6159a1f" translate="yes" xml:space="preserve">
           <source>Although this query's restrictions are superficially similar to the previous example, the semantics are different because a row must be emitted for each row of A that has no matching row in the join of B and C. Therefore the planner has no choice of join order here: it must join B to C and then join A to that result. Accordingly, this query takes less time to plan than the previous query. In other cases, the planner might be able to determine that more than one join order is safe. For example, given:</source>
@@ -649,7 +649,7 @@
         </trans-unit>
         <trans-unit id="a06f60f435b117a486b4b9306faa4f936e74dfd4" translate="yes" xml:space="preserve">
           <source>Amount of data streamed. This counter only advances when the phase is &lt;code&gt;streaming database files&lt;/code&gt; or &lt;code&gt;transferring wal files&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">流式传输的数据量。仅当该阶段正在 &lt;code&gt;streaming database files&lt;/code&gt; 或 &lt;code&gt;transferring wal files&lt;/code&gt; 时，此计数器才会前进。</target>
         </trans-unit>
         <trans-unit id="cb98c34253bd6741e222de32790839f4b0bbf938" translate="yes" xml:space="preserve">
           <source>An &amp;ldquo;ordering&amp;rdquo; operator entry indicates that an index of this operator family can be scanned to return rows in the order represented by &lt;code&gt;ORDER BY&lt;/code&gt;&lt;code&gt;indexed_column&lt;/code&gt;&lt;code&gt;operator&lt;/code&gt;&lt;code&gt;constant&lt;/code&gt;. Such an operator could return any sortable data type, though again its left-hand input type must match the index's column data type. The exact semantics of the &lt;code&gt;ORDER BY&lt;/code&gt; are specified by the &lt;code&gt;amopsortfamily&lt;/code&gt; column, which must reference a B-tree operator family for the operator's result type.</source>
@@ -657,7 +657,7 @@
         </trans-unit>
         <trans-unit id="6d377056771f89a3a21b9faebc41fe3335e17744" translate="yes" xml:space="preserve">
           <source>An &lt;a href=&quot;glossary#GLOSSARY-ATTRIBUTE&quot;&gt;attribute&lt;/a&gt; found in a &lt;a href=&quot;glossary#GLOSSARY-TABLE&quot;&gt;table&lt;/a&gt; or &lt;a href=&quot;glossary#GLOSSARY-VIEW&quot;&gt;view&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">在&lt;a href=&quot;glossary#GLOSSARY-TABLE&quot;&gt;表&lt;/a&gt;或&lt;a href=&quot;glossary#GLOSSARY-VIEW&quot;&gt;视图中&lt;/a&gt;找到的&lt;a href=&quot;glossary#GLOSSARY-ATTRIBUTE&quot;&gt;属性&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="ef1279b86476578e5585aff75989181f73dcffd4" translate="yes" xml:space="preserve">
           <source>An &lt;code&gt;=&lt;/code&gt; operator must be an equivalence relation; that is, for all non-null values &lt;code&gt;A&lt;/code&gt;, &lt;code&gt;B&lt;/code&gt;, &lt;code&gt;C&lt;/code&gt; of the data type:</source>
@@ -665,7 +665,7 @@
         </trans-unit>
         <trans-unit id="c4237e342da22e5fcef0feed597ee14805fa3aa4" translate="yes" xml:space="preserve">
           <source>An &lt;code&gt;equalimage&lt;/code&gt; function must have the signature</source>
-          <target state="new"/>
+          <target state="translated">一个 &lt;code&gt;equalimage&lt;/code&gt; 函数必须有签名</target>
         </trans-unit>
         <trans-unit id="009a293231558c68203740163c433bc30d08defc" translate="yes" xml:space="preserve">
           <source>An &lt;code&gt;in_range&lt;/code&gt; function must have the signature</source>
@@ -673,7 +673,7 @@
         </trans-unit>
         <trans-unit id="89039523af081d32fe0dcce5afd61336bd5c01d2" translate="yes" xml:space="preserve">
           <source>An &lt;code&gt;options&lt;/code&gt; support function must have the signature</source>
-          <target state="new"/>
+          <target state="translated">一个 &lt;code&gt;options&lt;/code&gt; 支持函数必须有签名</target>
         </trans-unit>
         <trans-unit id="857fc13a44d4059f0989bb54c261a11965498b57" translate="yes" xml:space="preserve">
           <source>An &lt;code&gt;unaccent&lt;/code&gt; dictionary accepts the following options:</source>
@@ -689,7 +689,7 @@
         </trans-unit>
         <trans-unit id="1cd3ddc4485e8a07b58b1b313130fa7a0d1e8729" translate="yes" xml:space="preserve">
           <source>An &lt;em&gt;operator class&lt;/em&gt; with optional parameters can be specified for each column of an index. The operator class identifies the operators to be used by the index for that column. For example, a B-tree index on four-byte integers would use the &lt;code&gt;int4_ops&lt;/code&gt; class; this operator class includes comparison functions for four-byte integers. In practice the default operator class for the column's data type is usually sufficient. The main point of having operator classes is that for some data types, there could be more than one meaningful ordering. For example, we might want to sort a complex-number data type either by absolute value or by real part. We could do this by defining two operator classes for the data type and then selecting the proper class when creating an index. More information about operator classes is in &lt;a href=&quot;indexes-opclass&quot;&gt;Section 11.10&lt;/a&gt; and in &lt;a href=&quot;https://www.postgresql.org/docs/13/xindex.html&quot;&gt;Section 37.16&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">可以为索引的每一列指定带有可选参数的&lt;em&gt;运算符类&lt;/em&gt;。operator类标识该列的索引要使用的运算符。例如，对四字节整数的B树索引将使用 &lt;code&gt;int4_ops&lt;/code&gt; 班级;此运算符类包含用于四字节整数的比较函数。实际上，列数据类型的默认运算符类通常就足够了。拥有运算符类的要点是，对于某些数据类型，可能会有不止一种有意义的排序。例如，我们可能想按绝对值或实数对复数数据类型进行排序。为此，我们可以为数据类型定义两个运算符类，然后在创建索引时选择适当的类。有关运算符类的更多信息，请参见&lt;a href=&quot;indexes-opclass&quot;&gt;第11.10节&lt;/a&gt;和&lt;a href=&quot;https://www.postgresql.org/docs/13/xindex.html&quot;&gt;第37.16节&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="48d61fa80ff015b13be4db7ffab694d479aec5c7" translate="yes" xml:space="preserve">
           <source>An ARE can begin with &lt;em&gt;embedded options&lt;/em&gt;: a sequence &lt;code&gt;(?&lt;/code&gt;&lt;code&gt;xyz&lt;/code&gt;&lt;code&gt;)&lt;/code&gt; (where &lt;code&gt;xyz&lt;/code&gt; is one or more alphabetic characters) specifies options affecting the rest of the RE. These options override any previously determined options &amp;mdash; in particular, they can override the case-sensitivity behavior implied by a regex operator, or the &lt;code&gt;flags&lt;/code&gt; parameter to a regex function. The available option letters are shown in &lt;a href=&quot;functions-matching#POSIX-EMBEDDED-OPTIONS-TABLE&quot;&gt;Table 9.23&lt;/a&gt;. Note that these same option letters are used in the &lt;code&gt;flags&lt;/code&gt; parameters of regex functions.</source>
@@ -697,7 +697,7 @@
         </trans-unit>
         <trans-unit id="451a7edefd1d33d9d12316f5963ee8b77dc6c002" translate="yes" xml:space="preserve">
           <source>An ARE can begin with &lt;em&gt;embedded options&lt;/em&gt;: a sequence &lt;code&gt;(?&lt;/code&gt;&lt;code&gt;xyz&lt;/code&gt;&lt;code&gt;)&lt;/code&gt; (where &lt;code&gt;xyz&lt;/code&gt; is one or more alphabetic characters) specifies options affecting the rest of the RE. These options override any previously determined options &amp;mdash; in particular, they can override the case-sensitivity behavior implied by a regex operator, or the &lt;code&gt;flags&lt;/code&gt; parameter to a regex function. The available option letters are shown in &lt;a href=&quot;functions-matching#POSIX-EMBEDDED-OPTIONS-TABLE&quot;&gt;Table 9.24&lt;/a&gt;. Note that these same option letters are used in the &lt;code&gt;flags&lt;/code&gt; parameters of regex functions.</source>
-          <target state="new"/>
+          <target state="translated">ARE可以从&lt;em&gt;嵌入选项&lt;/em&gt;开始：序列 &lt;code&gt;(?&lt;/code&gt; &lt;code&gt;xyz&lt;/code&gt; &lt;code&gt;)&lt;/code&gt; （其中 &lt;code&gt;xyz&lt;/code&gt; 是一个或多个字母字符）指定影响其余RE的选项。这些选项将覆盖所有先前确定的选项-特别是，它们可以覆盖正则表达式运算符或正则表达式函数的 &lt;code&gt;flags&lt;/code&gt; 参数所隐含的区分大小写行为。可用的选项字母如&lt;a href=&quot;functions-matching#POSIX-EMBEDDED-OPTIONS-TABLE&quot;&gt;表9.24&lt;/a&gt;所示。请注意，在正则表达式函数的 &lt;code&gt;flags&lt;/code&gt; 参数中使用了相同的选项字母。</target>
         </trans-unit>
         <trans-unit id="8303919571de789ee40617113cb585782a02b887" translate="yes" xml:space="preserve">
           <source>An IP address range is specified using standard numeric notation for the range's starting address, then a slash (&lt;code&gt;/&lt;/code&gt;) and a CIDR mask length. The mask length indicates the number of high-order bits of the client IP address that must match. Bits to the right of this should be zero in the given IP address. There must not be any white space between the IP address, the &lt;code&gt;/&lt;/code&gt;, and the CIDR mask length.</source>
@@ -725,19 +725,19 @@
         </trans-unit>
         <trans-unit id="c3a965fc350f5f7dc5c4c1f8d246e2c0ef7db3f8" translate="yes" xml:space="preserve">
           <source>An SQL command that is used to allow a &lt;a href=&quot;glossary#GLOSSARY-USER&quot;&gt;user&lt;/a&gt; or &lt;a href=&quot;glossary#GLOSSARY-ROLE&quot;&gt;role&lt;/a&gt; to access specific objects within the &lt;a href=&quot;glossary#GLOSSARY-DATABASE&quot;&gt;database&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">一个SQL命令，用于允许&lt;a href=&quot;glossary#GLOSSARY-USER&quot;&gt;用户&lt;/a&gt;或&lt;a href=&quot;glossary#GLOSSARY-ROLE&quot;&gt;角色&lt;/a&gt;访问&lt;a href=&quot;glossary#GLOSSARY-DATABASE&quot;&gt;数据库中的&lt;/a&gt;特定对象。</target>
         </trans-unit>
         <trans-unit id="b6dc35165836f5ddf8c81146786e84d00be18739" translate="yes" xml:space="preserve">
           <source>An SQL command used to add new data into a &lt;a href=&quot;glossary#GLOSSARY-TABLE&quot;&gt;table&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">一个用于将新数据添加到&lt;a href=&quot;glossary#GLOSSARY-TABLE&quot;&gt;表中&lt;/a&gt;的SQL命令。</target>
         </trans-unit>
         <trans-unit id="8802fb5ebf1fb183b8afc9517e0fb8a334aaa1ec" translate="yes" xml:space="preserve">
           <source>An SQL command used to modify &lt;a href=&quot;glossary#GLOSSARY-TUPLE&quot;&gt;rows&lt;/a&gt; that may already exist in a specified &lt;a href=&quot;glossary#GLOSSARY-TABLE&quot;&gt;table&lt;/a&gt;. It cannot create or remove rows.</source>
-          <target state="new"/>
+          <target state="translated">一个SQL命令，用于修改指定&lt;a href=&quot;glossary#GLOSSARY-TABLE&quot;&gt;表&lt;/a&gt;中可能已经存在的&lt;a href=&quot;glossary#GLOSSARY-TUPLE&quot;&gt;行&lt;/a&gt;。它不能创建或删除行。</target>
         </trans-unit>
         <trans-unit id="c2cced83fa51a6d9077bcc4256624ffa5277885e" translate="yes" xml:space="preserve">
           <source>An SQL command which removes &lt;a href=&quot;glossary#GLOSSARY-TUPLE&quot;&gt;rows&lt;/a&gt; from a given &lt;a href=&quot;glossary#GLOSSARY-TABLE&quot;&gt;table&lt;/a&gt; or &lt;a href=&quot;glossary#GLOSSARY-RELATION&quot;&gt;relation&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">一个SQL命令，该命令从给定的&lt;a href=&quot;glossary#GLOSSARY-TABLE&quot;&gt;表&lt;/a&gt;或&lt;a href=&quot;glossary#GLOSSARY-RELATION&quot;&gt;关系中&lt;/a&gt;删除&lt;a href=&quot;glossary#GLOSSARY-TUPLE&quot;&gt;行&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="f0fe55953856dbcea542a9b75d2a05e987bd7029" translate="yes" xml:space="preserve">
           <source>An SQL statement defining an object to be created within the schema. Currently, only &lt;code&gt;CREATE TABLE&lt;/code&gt;, &lt;code&gt;CREATE VIEW&lt;/code&gt;, &lt;code&gt;CREATE INDEX&lt;/code&gt;, &lt;code&gt;CREATE SEQUENCE&lt;/code&gt;, &lt;code&gt;CREATE TRIGGER&lt;/code&gt; and &lt;code&gt;GRANT&lt;/code&gt; are accepted as clauses within &lt;code&gt;CREATE SCHEMA&lt;/code&gt;. Other kinds of objects may be created in separate commands after the schema is created.</source>
@@ -757,7 +757,7 @@
         </trans-unit>
         <trans-unit id="eb253cb4aa708d5943b4ee75823919dac326e149" translate="yes" xml:space="preserve">
           <source>An additional heuristic provided by the parser allows improved determination of the proper casting behavior among groups of types that have implicit casts. Data types are divided into several basic &lt;em&gt;type categories&lt;/em&gt;, including &lt;code&gt;boolean&lt;/code&gt;, &lt;code&gt;numeric&lt;/code&gt;, &lt;code&gt;string&lt;/code&gt;, &lt;code&gt;bitstring&lt;/code&gt;, &lt;code&gt;datetime&lt;/code&gt;, &lt;code&gt;timespan&lt;/code&gt;, &lt;code&gt;geometric&lt;/code&gt;, &lt;code&gt;network&lt;/code&gt;, and user-defined. (For a list see &lt;a href=&quot;catalog-pg-type#CATALOG-TYPCATEGORY-TABLE&quot;&gt;Table 51.63&lt;/a&gt;; but note it is also possible to create custom type categories.) Within each category there can be one or more &lt;em&gt;preferred types&lt;/em&gt;, which are preferred when there is a choice of possible types. With careful selection of preferred types and available implicit casts, it is possible to ensure that ambiguous expressions (those with multiple candidate parsing solutions) can be resolved in a useful way.</source>
-          <target state="new"/>
+          <target state="translated">解析器提供的其他启发式方法可以改进对具有隐式强制类型转换的类型组之间正确强制转换行为的确定。数据类型分为几个基本&lt;em&gt;类型类别&lt;/em&gt;，包括 &lt;code&gt;boolean&lt;/code&gt; ， &lt;code&gt;numeric&lt;/code&gt; ， &lt;code&gt;string&lt;/code&gt; ， &lt;code&gt;bitstring&lt;/code&gt; ， &lt;code&gt;datetime&lt;/code&gt; ， &lt;code&gt;timespan&lt;/code&gt; ， &lt;code&gt;geometric&lt;/code&gt; ， &lt;code&gt;network&lt;/code&gt; 和用户定义的。 （有关列表，请参阅&lt;a href=&quot;catalog-pg-type#CATALOG-TYPCATEGORY-TABLE&quot;&gt;表51.63&lt;/a&gt;；但是请注意，也可以创建自定义类型类别。）在每个类别中，可以有一个或多个&lt;em&gt;首选类型。&lt;/em&gt;，当可以选择可能的类型时，首选使用。通过仔细选择首选类型和可用的隐式强制转换，可以确保可以用一种有用的方法来解决歧义表达式（具有多个候选解析解的表达式）。</target>
         </trans-unit>
         <trans-unit id="534defd7e745925ed14ebff65872ea3017b9134a" translate="yes" xml:space="preserve">
           <source>An additional heuristic provided by the parser allows improved determination of the proper casting behavior among groups of types that have implicit casts. Data types are divided into several basic &lt;em&gt;type categories&lt;/em&gt;, including &lt;code&gt;boolean&lt;/code&gt;, &lt;code&gt;numeric&lt;/code&gt;, &lt;code&gt;string&lt;/code&gt;, &lt;code&gt;bitstring&lt;/code&gt;, &lt;code&gt;datetime&lt;/code&gt;, &lt;code&gt;timespan&lt;/code&gt;, &lt;code&gt;geometric&lt;/code&gt;, &lt;code&gt;network&lt;/code&gt;, and user-defined. (For a list see &lt;a href=&quot;catalog-pg-type#CATALOG-TYPCATEGORY-TABLE&quot;&gt;Table 51.64&lt;/a&gt;; but note it is also possible to create custom type categories.) Within each category there can be one or more &lt;em&gt;preferred types&lt;/em&gt;, which are preferred when there is a choice of possible types. With careful selection of preferred types and available implicit casts, it is possible to ensure that ambiguous expressions (those with multiple candidate parsing solutions) can be resolved in a useful way.</source>
@@ -773,7 +773,7 @@
         </trans-unit>
         <trans-unit id="29fb09a88b1e0b362734b37fcd73ac91f7b1c450" translate="yes" xml:space="preserve">
           <source>An aggregate can optionally support &lt;em&gt;moving-aggregate mode&lt;/em&gt;, as described in &lt;a href=&quot;https://www.postgresql.org/docs/13/xaggr.html#XAGGR-MOVING-AGGREGATES&quot;&gt;Section 37.12.1&lt;/a&gt;. This requires specifying the &lt;code&gt;MSFUNC&lt;/code&gt;, &lt;code&gt;MINVFUNC&lt;/code&gt;, and &lt;code&gt;MSTYPE&lt;/code&gt; parameters, and optionally the &lt;code&gt;MSSPACE&lt;/code&gt;, &lt;code&gt;MFINALFUNC&lt;/code&gt;, &lt;code&gt;MFINALFUNC_EXTRA&lt;/code&gt;, &lt;code&gt;MFINALFUNC_MODIFY&lt;/code&gt;, and &lt;code&gt;MINITCOND&lt;/code&gt; parameters. Except for &lt;code&gt;MINVFUNC&lt;/code&gt;, these parameters work like the corresponding simple-aggregate parameters without &lt;code&gt;M&lt;/code&gt;; they define a separate implementation of the aggregate that includes an inverse transition function.</source>
-          <target state="new"/>
+          <target state="translated">聚合可以选择支持&lt;em&gt;移动聚合模式&lt;/em&gt;，如&lt;a href=&quot;https://www.postgresql.org/docs/13/xaggr.html#XAGGR-MOVING-AGGREGATES&quot;&gt;第37.12.1节中所述&lt;/a&gt;。这需要指定 &lt;code&gt;MSFUNC&lt;/code&gt; ， &lt;code&gt;MINVFUNC&lt;/code&gt; 和 &lt;code&gt;MSTYPE&lt;/code&gt; 参数，以及可选的 &lt;code&gt;MSSPACE&lt;/code&gt; ， &lt;code&gt;MFINALFUNC&lt;/code&gt; ， &lt;code&gt;MFINALFUNC_EXTRA&lt;/code&gt; ， &lt;code&gt;MFINALFUNC_MODIFY&lt;/code&gt; 和 &lt;code&gt;MINITCOND&lt;/code&gt; 参数。除了 &lt;code&gt;MINVFUNC&lt;/code&gt; 之外，这些参数的工作方式与不带 &lt;code&gt;M&lt;/code&gt; 的相应简单聚集参数相同；它们定义了包含反向转换函数的聚合的单独实现。</target>
         </trans-unit>
         <trans-unit id="4d679ad2d9aaa3f73ccadb1adf16347c9d1df070" translate="yes" xml:space="preserve">
           <source>An aggregate can optionally support &lt;em&gt;partial aggregation&lt;/em&gt;, as described in &lt;a href=&quot;https://www.postgresql.org/docs/12/xaggr.html#XAGGR-PARTIAL-AGGREGATES&quot;&gt;Section 37.12.4&lt;/a&gt;. This requires specifying the &lt;code&gt;COMBINEFUNC&lt;/code&gt; parameter. If the &lt;code&gt;state_data_type&lt;/code&gt; is &lt;code&gt;internal&lt;/code&gt;, it's usually also appropriate to provide the &lt;code&gt;SERIALFUNC&lt;/code&gt; and &lt;code&gt;DESERIALFUNC&lt;/code&gt; parameters so that parallel aggregation is possible. Note that the aggregate must also be marked &lt;code&gt;PARALLEL SAFE&lt;/code&gt; to enable parallel aggregation.</source>
@@ -781,7 +781,7 @@
         </trans-unit>
         <trans-unit id="f7e84609c5356ef9572b92f634b5a8669d5cf54b" translate="yes" xml:space="preserve">
           <source>An aggregate can optionally support &lt;em&gt;partial aggregation&lt;/em&gt;, as described in &lt;a href=&quot;https://www.postgresql.org/docs/13/xaggr.html#XAGGR-PARTIAL-AGGREGATES&quot;&gt;Section 37.12.4&lt;/a&gt;. This requires specifying the &lt;code&gt;COMBINEFUNC&lt;/code&gt; parameter. If the &lt;code&gt;state_data_type&lt;/code&gt; is &lt;code&gt;internal&lt;/code&gt;, it's usually also appropriate to provide the &lt;code&gt;SERIALFUNC&lt;/code&gt; and &lt;code&gt;DESERIALFUNC&lt;/code&gt; parameters so that parallel aggregation is possible. Note that the aggregate must also be marked &lt;code&gt;PARALLEL SAFE&lt;/code&gt; to enable parallel aggregation.</source>
-          <target state="new"/>
+          <target state="translated">聚合可以选择支持&lt;em&gt;部分聚合&lt;/em&gt;，如&lt;a href=&quot;https://www.postgresql.org/docs/13/xaggr.html#XAGGR-PARTIAL-AGGREGATES&quot;&gt;第37.12.4节中所述&lt;/a&gt;。这需要指定 &lt;code&gt;COMBINEFUNC&lt;/code&gt; 参数。如果 &lt;code&gt;state_data_type&lt;/code&gt; 是 &lt;code&gt;internal&lt;/code&gt; ，则通常还应该提供 &lt;code&gt;SERIALFUNC&lt;/code&gt; 和 &lt;code&gt;DESERIALFUNC&lt;/code&gt; 参数，以便可以进行并行聚合。请注意，还必须将聚合标记为 &lt;code&gt;PARALLEL SAFE&lt;/code&gt; 才能启用并行聚合。</target>
         </trans-unit>
         <trans-unit id="2dfc7ac5613e772bc99452f1945c3b220614eb51" translate="yes" xml:space="preserve">
           <source>An aggregate expression</source>
@@ -825,7 +825,7 @@
         </trans-unit>
         <trans-unit id="a8b7165adb636504ac5f79579ceffb000f734741" translate="yes" xml:space="preserve">
           <source>An alternative to the built-in standby mode described in the previous sections is to use a &lt;code&gt;restore_command&lt;/code&gt; that polls the archive location. This was the only option available in versions 8.4 and below. See the &lt;a href=&quot;https://www.postgresql.org/docs/13/pgstandby.html&quot;&gt;pg_standby&lt;/a&gt; module for a reference implementation of this.</source>
-          <target state="new"/>
+          <target state="translated">前面各节中描述的内置备用模式的替代方法是使用 &lt;code&gt;restore_command&lt;/code&gt; 来轮询存档位置。这是8.4及以下版本中唯一可用的选项。有关此&lt;a href=&quot;https://www.postgresql.org/docs/13/pgstandby.html&quot;&gt;方法&lt;/a&gt;的参考实现，请参见pg_standby模块。</target>
         </trans-unit>
         <trans-unit id="fa59772716d4044140c10df2d8b7a5924c081417" translate="yes" xml:space="preserve">
           <source>An alternative way to specify connection parameters is in a &lt;em&gt;&lt;code&gt;conninfo&lt;/code&gt;&lt;/em&gt; string or a URI, which is used instead of a database name. This mechanism give you very wide control over the connection. For example:</source>
@@ -905,7 +905,7 @@
         </trans-unit>
         <trans-unit id="e72cb7e6b41938a2b612c62d6738c18d8f8e1034" translate="yes" xml:space="preserve">
           <source>An element with a certain name and data type found within a &lt;a href=&quot;glossary#GLOSSARY-TUPLE&quot;&gt;tuple&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">在&lt;a href=&quot;glossary#GLOSSARY-TUPLE&quot;&gt;元组中&lt;/a&gt;找到具有特定名称和数据类型的元素。</target>
         </trans-unit>
         <trans-unit id="13229daa72676e5cc65b4f01d9a20d25d5a2a7d0" translate="yes" xml:space="preserve">
           <source>An encrypted PGP message consists of 2 parts, or &lt;em&gt;packets&lt;/em&gt;:</source>
@@ -929,7 +929,7 @@
         </trans-unit>
         <trans-unit id="1642e5d8f757211902e7fce377a379427b2967a5" translate="yes" xml:space="preserve">
           <source>An established line of communication between a client process and a &lt;a href=&quot;glossary#GLOSSARY-BACKEND&quot;&gt;backend&lt;/a&gt; process, usually over a network, supporting a &lt;a href=&quot;glossary#GLOSSARY-SESSION&quot;&gt;session&lt;/a&gt;. This term is sometimes used as a synonym for session.</source>
-          <target state="new"/>
+          <target state="translated">客户端进程和&lt;a href=&quot;glossary#GLOSSARY-BACKEND&quot;&gt;后端&lt;/a&gt;进程之间通常通过网络支持&lt;a href=&quot;glossary#GLOSSARY-SESSION&quot;&gt;会话&lt;/a&gt;的已建立的通信线路。该术语有时用作会话的同义词。</target>
         </trans-unit>
         <trans-unit id="73f7ed75cabe931d593b5e23922ed970c7f9a2c6" translate="yes" xml:space="preserve">
           <source>An event trigger function is declared to return &lt;code&gt;event_trigger.&lt;/code&gt;</source>
@@ -941,7 +941,7 @@
         </trans-unit>
         <trans-unit id="d3e47d13cc2aa85cb2cac79171bd5ba58c06a033" translate="yes" xml:space="preserve">
           <source>An example implementation of my_options() and parameters use from other support functions are given below:</source>
-          <target state="new"/>
+          <target state="translated">下面给出了my_options()和其他支持函数的参数使用示例。</target>
         </trans-unit>
         <trans-unit id="77db1d337bb2340f6b1a45dac50171d5552245cf" translate="yes" xml:space="preserve">
           <source>An example is:</source>
@@ -1009,7 +1009,7 @@
         </trans-unit>
         <trans-unit id="b2f105d127b4d4c78a65c31c4341d9a688ca047d" translate="yes" xml:space="preserve">
           <source>An expression or integer constant indicating how to sort the result rows. This expression can refer to the columns of the &lt;code&gt;VALUES&lt;/code&gt; result as &lt;code&gt;column1&lt;/code&gt;, &lt;code&gt;column2&lt;/code&gt;, etc. For more details see &lt;a href=&quot;sql-select#SQL-ORDERBY&quot;&gt;ORDER BY Clause&lt;/a&gt; in the &lt;a href=&quot;sql-select&quot;&gt;SELECT&lt;/a&gt; documentation.</source>
-          <target state="new"/>
+          <target state="translated">表示如何对结果行进行排序的表达式或整数常量。该表达式可以将 &lt;code&gt;VALUES&lt;/code&gt; 结果的列称为 &lt;code&gt;column1&lt;/code&gt; ， &lt;code&gt;column2&lt;/code&gt; 等。有关更多详细信息，请参见&lt;a href=&quot;sql-select&quot;&gt;SELECT&lt;/a&gt;文档中的&lt;a href=&quot;sql-select#SQL-ORDERBY&quot;&gt;ORDER BY子句&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="bf2a060cd8aff34f17e0e2630c016f3f2cecf035" translate="yes" xml:space="preserve">
           <source>An expression or value to assign to the corresponding column.</source>
@@ -1057,7 +1057,7 @@
         </trans-unit>
         <trans-unit id="e349b01fb7be05aa32f87d20348ac32cf9165b0a" translate="yes" xml:space="preserve">
           <source>An external program can call the &lt;code&gt;pg_walfile_name_offset()&lt;/code&gt; function (see &lt;a href=&quot;functions-admin&quot;&gt;Section 9.27&lt;/a&gt;) to find out the file name and the exact byte offset within it of the current end of WAL. It can then access the WAL file directly and copy the data from the last known end of WAL through the current end over to the standby servers. With this approach, the window for data loss is the polling cycle time of the copying program, which can be very small, and there is no wasted bandwidth from forcing partially-used segment files to be archived. Note that the standby servers' &lt;code&gt;restore_command&lt;/code&gt; scripts can only deal with whole WAL files, so the incrementally copied data is not ordinarily made available to the standby servers. It is of use only when the primary dies &amp;mdash; then the last partial WAL file is fed to the standby before allowing it to come up. The correct implementation of this process requires cooperation of the &lt;code&gt;restore_command&lt;/code&gt; script with the data copying program.</source>
-          <target state="new"/>
+          <target state="translated">外部程序可以调用 &lt;code&gt;pg_walfile_name_offset()&lt;/code&gt; 函数（请参见&lt;a href=&quot;functions-admin&quot;&gt;第9.27节&lt;/a&gt;）以找出文件名以及WAL当前末尾中的确切字节偏移量。然后，它可以直接访问WAL文件，并将数据从WAL的最后一个已知端到当前端复制到备用服务器。使用这种方法，数据丢失的时间就是复制程序的轮询周期时间，该时间可能非常小，并且不会因为强制使用部分使用的段文件而浪费带宽。请注意，备用服务器的 &lt;code&gt;restore_command&lt;/code&gt; 脚本只能处理整个WAL文件，因此增量复制的数据通常不可供备用服务器使用。它仅在主节点失效时才使用-然后，最后的部分WAL文件在允许其出现之前被馈送到备用数据库。要正确执行此过程，需要 &lt;code&gt;restore_command&lt;/code&gt; 脚本与数据复制程序的配合。</target>
         </trans-unit>
         <trans-unit id="94b6e6917365cf5b071c6d2030b18320b138edde" translate="yes" xml:space="preserve">
           <source>An immediate-mode shutdown is equivalent to a server crash, and will therefore cause loss of any unflushed asynchronous commits.</source>
@@ -1073,7 +1073,7 @@
         </trans-unit>
         <trans-unit id="5e354ee44c574fe1a74c62c071de207a2e99bd9d" translate="yes" xml:space="preserve">
           <source>An important health indicator of streaming replication is the amount of WAL records generated in the primary, but not yet applied in the standby. You can calculate this lag by comparing the current WAL write location on the primary with the last WAL location received by the standby. These locations can be retrieved using &lt;code&gt;pg_current_wal_lsn&lt;/code&gt; on the primary and &lt;code&gt;pg_last_wal_receive_lsn&lt;/code&gt; on the standby, respectively (see &lt;a href=&quot;functions-admin#FUNCTIONS-ADMIN-BACKUP-TABLE&quot;&gt;Table 9.85&lt;/a&gt; and &lt;a href=&quot;functions-admin#FUNCTIONS-RECOVERY-INFO-TABLE&quot;&gt;Table 9.86&lt;/a&gt; for details). The last WAL receive location in the standby is also displayed in the process status of the WAL receiver process, displayed using the &lt;code&gt;ps&lt;/code&gt; command (see &lt;a href=&quot;monitoring-ps&quot;&gt;Section 27.1&lt;/a&gt; for details).</source>
-          <target state="new"/>
+          <target state="translated">流复制的重要健康指标是在主数据库中生成但尚未在备用数据库中应用的WAL记录的数量。您可以通过将主数据库上的当前WAL写入位置与备用数据库收到的最后一个WAL位置进行比较来计算此延迟。可以分别使用主 &lt;code&gt;pg_current_wal_lsn&lt;/code&gt; 上的pg_current_wal_lsn和备用数据库上的 &lt;code&gt;pg_last_wal_receive_lsn&lt;/code&gt; 来检索这些位置（有关详细信息，请&lt;a href=&quot;functions-admin#FUNCTIONS-ADMIN-BACKUP-TABLE&quot;&gt;参见表9.85&lt;/a&gt;和&lt;a href=&quot;functions-admin#FUNCTIONS-RECOVERY-INFO-TABLE&quot;&gt;表9.86&lt;/a&gt;）。备用数据库中最后一个WAL接收位置也显示在WAL接收器进程的进程状态中，使用 &lt;code&gt;ps&lt;/code&gt; 命令显示（有关详细信息，请参见&lt;a href=&quot;monitoring-ps&quot;&gt;27.1节&lt;/a&gt;）。</target>
         </trans-unit>
         <trans-unit id="8738ccf906ae7704aa616ed666eef87dd66384c2" translate="yes" xml:space="preserve">
           <source>An important restriction, however, is that each database's character set must be compatible with the database's &lt;code&gt;LC_CTYPE&lt;/code&gt; (character classification) and &lt;code&gt;LC_COLLATE&lt;/code&gt; (string sort order) locale settings. For &lt;code&gt;C&lt;/code&gt; or &lt;code&gt;POSIX&lt;/code&gt; locale, any character set is allowed, but for other libc-provided locales there is only one character set that will work correctly. (On Windows, however, UTF-8 encoding can be used with any locale.) If you have ICU support configured, ICU-provided locales can be used with most but not all server-side encodings.</source>
@@ -1153,7 +1153,7 @@
         </trans-unit>
         <trans-unit id="261a27538e7f1d6cc0124e706ea14d5684e6fe5c" translate="yes" xml:space="preserve">
           <source>An object's owner can choose to revoke their own ordinary privileges, for example to make a table read-only for themselves as well as others. But owners are always treated as holding all grant options, so they can always re-grant their own privileges.</source>
-          <target state="new"/>
+          <target state="translated">对象的所有者可以选择撤销他们自己的普通权限,例如将一个表变成只对自己以及其他人只读。但所有者总是被视为拥有所有的授予选项,所以他们总是可以重新授予自己的特权。</target>
         </trans-unit>
         <trans-unit id="cd7347c4e72d5111690a2e6b553a4bb95eecefbe" translate="yes" xml:space="preserve">
           <source>An obsolete type name that formerly served many of the above purposes.</source>
@@ -1169,15 +1169,15 @@
         </trans-unit>
         <trans-unit id="fdaf617bcf458038608559aa52135b2d0fb280c4" translate="yes" xml:space="preserve">
           <source>An operation and SQL keyword used in &lt;a href=&quot;glossary#GLOSSARY-QUERY&quot;&gt;queries&lt;/a&gt; for combining data from multiple &lt;a href=&quot;glossary#GLOSSARY-RELATION&quot;&gt;relations&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;glossary#GLOSSARY-QUERY&quot;&gt;查询中&lt;/a&gt;使用的一种操作和SQL关键字，用于合并来自多个&lt;a href=&quot;glossary#GLOSSARY-RELATION&quot;&gt;关系的&lt;/a&gt;数据。</target>
         </trans-unit>
         <trans-unit id="907b1845a90ba08c2bd64d8aae44246179e07fc0" translate="yes" xml:space="preserve">
           <source>An operator class for BRIN can optionally specify the following method:</source>
-          <target state="new"/>
+          <target state="translated">BRIN的操作者类可以选择性地指定以下方法。</target>
         </trans-unit>
         <trans-unit id="a82dcbae2eb28872acc9a82bc62d7f28fc52dc06" translate="yes" xml:space="preserve">
           <source>An operator class for GIN can optionally supply the following methods:</source>
-          <target state="new"/>
+          <target state="translated">GIN的运算符类可以选择性地提供以下方法。</target>
         </trans-unit>
         <trans-unit id="56d15480825e451d724a77515f8cbd596240aa64" translate="yes" xml:space="preserve">
           <source>An operator class for bloom indexes requires only a hash function for the indexed data type and an equality operator for searching. This example shows the operator class definition for the &lt;code&gt;text&lt;/code&gt; data type:</source>
@@ -1249,11 +1249,11 @@
         </trans-unit>
         <trans-unit id="8e26143bf38a350af73fba34493a3e7479767511" translate="yes" xml:space="preserve">
           <source>Analytic function</source>
-          <target state="new"/>
+          <target state="translated">分析功能</target>
         </trans-unit>
         <trans-unit id="4f0e68d1e2fd04310f44d64aff40ca304bd44245" translate="yes" xml:space="preserve">
           <source>Analyze (operation)</source>
-          <target state="new"/>
+          <target state="translated">分析</target>
         </trans-unit>
         <trans-unit id="5c83db21cadbb2756e96e53b9c14b7e7a2b514a6" translate="yes" xml:space="preserve">
           <source>Ancient distributions might not have the &lt;code&gt;sysctl&lt;/code&gt; program, but equivalent changes can be made by manipulating the &lt;code&gt;/proc&lt;/code&gt; file system:</source>
@@ -1293,7 +1293,7 @@
         </trans-unit>
         <trans-unit id="7848b33d4bfc790590d465569216a9f6ae690895" translate="yes" xml:space="preserve">
           <source>Anonymous allocations are allocations that have been made with &lt;code&gt;ShmemAlloc()&lt;/code&gt; directly, rather than via &lt;code&gt;ShmemInitStruct()&lt;/code&gt; or &lt;code&gt;ShmemInitHash()&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">匿名分配是直接由 &lt;code&gt;ShmemAlloc()&lt;/code&gt; 进行的分配，而不是通过 &lt;code&gt;ShmemInitStruct()&lt;/code&gt; 或 &lt;code&gt;ShmemInitHash()&lt;/code&gt; 进行的分配。</target>
         </trans-unit>
         <trans-unit id="20ab5b725ed73e7635d9823c37915d8903343a0f" translate="yes" xml:space="preserve">
           <source>Another alternative worth considering is to use &lt;code&gt;INSTEAD OF&lt;/code&gt; triggers (see &lt;a href=&quot;sql-createtrigger&quot;&gt;CREATE TRIGGER&lt;/a&gt;) in place of rules.</source>
@@ -1369,7 +1369,7 @@
         </trans-unit>
         <trans-unit id="0e130eb29a636a2e4db63836c537e80b5eb47453" translate="yes" xml:space="preserve">
           <source>Another nonstandard extension is that following the escape character with a letter or digit provides access to the escape sequences defined for POSIX regular expressions; see &lt;a href=&quot;functions-matching#POSIX-CHARACTER-ENTRY-ESCAPES-TABLE&quot;&gt;Table 9.20&lt;/a&gt;, &lt;a href=&quot;functions-matching#POSIX-CLASS-SHORTHAND-ESCAPES-TABLE&quot;&gt;Table 9.21&lt;/a&gt;, and &lt;a href=&quot;functions-matching#POSIX-CONSTRAINT-ESCAPES-TABLE&quot;&gt;Table 9.22&lt;/a&gt; below.</source>
-          <target state="new"/>
+          <target state="translated">另一个非标准扩展是，在转义字符后加上字母或数字，可以访问为POSIX正则表达式定义的转义序列。请参阅下面的&lt;a href=&quot;functions-matching#POSIX-CHARACTER-ENTRY-ESCAPES-TABLE&quot;&gt;表9.20&lt;/a&gt;，&lt;a href=&quot;functions-matching#POSIX-CLASS-SHORTHAND-ESCAPES-TABLE&quot;&gt;表9.21&lt;/a&gt;和&lt;a href=&quot;functions-matching#POSIX-CONSTRAINT-ESCAPES-TABLE&quot;&gt;表9.22&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="7a59e6837fb64d2b0ae7bbcb08e5b72fd153fb2c" translate="yes" xml:space="preserve">
           <source>Another option for &lt;code&gt;local&lt;/code&gt; connections is for clients to use &lt;a href=&quot;https://www.postgresql.org/docs/12/libpq-connect.html#LIBPQ-CONNECT-REQUIREPEER&quot;&gt;&lt;code&gt;requirepeer&lt;/code&gt;&lt;/a&gt; to specify the required owner of the server process connected to the socket.</source>
@@ -1377,7 +1377,7 @@
         </trans-unit>
         <trans-unit id="306459cbdd31101692b05f06a566b18b0bdf0e20" translate="yes" xml:space="preserve">
           <source>Another option for &lt;code&gt;local&lt;/code&gt; connections is for clients to use &lt;a href=&quot;https://www.postgresql.org/docs/13/libpq-connect.html#LIBPQ-CONNECT-REQUIREPEER&quot;&gt;&lt;code&gt;requirepeer&lt;/code&gt;&lt;/a&gt; to specify the required owner of the server process connected to the socket.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;local&lt;/code&gt; 连接的另一种选择是让客户端使用&lt;a href=&quot;https://www.postgresql.org/docs/13/libpq-connect.html#LIBPQ-CONNECT-REQUIREPEER&quot;&gt; &lt;code&gt;requirepeer&lt;/code&gt; &lt;/a&gt;来指定连接到套接字的服务器进程的必需所有者。</target>
         </trans-unit>
         <trans-unit id="cb5714af00c74e15b8a5da4136ed86aaafa447c5" translate="yes" xml:space="preserve">
           <source>Another option is to increase &lt;a href=&quot;runtime-config-replication#GUC-VACUUM-DEFER-CLEANUP-AGE&quot;&gt;vacuum_defer_cleanup_age&lt;/a&gt; on the primary server, so that dead rows will not be cleaned up as quickly as they normally would be. This will allow more time for queries to execute before they are canceled on the standby, without having to set a high &lt;code&gt;max_standby_streaming_delay&lt;/code&gt;. However it is difficult to guarantee any specific execution-time window with this approach, since &lt;code&gt;vacuum_defer_cleanup_age&lt;/code&gt; is measured in transactions executed on the primary server.</source>
@@ -1457,7 +1457,7 @@
         </trans-unit>
         <trans-unit id="6edaee98c73d284626179be9ad3ba0277589e38b" translate="yes" xml:space="preserve">
           <source>Another way to accomplish the same thing:</source>
-          <target state="new"/>
+          <target state="translated">另一种方式来完成同样的事情。</target>
         </trans-unit>
         <trans-unit id="7a50bf5d6a0c79646db228f587b35fc8dbea931f" translate="yes" xml:space="preserve">
           <source>Another way to do it is:</source>
@@ -1497,7 +1497,7 @@
         </trans-unit>
         <trans-unit id="8208175702ffb5cdd4ede5051892cf19b0e69014" translate="yes" xml:space="preserve">
           <source>Any &lt;code&gt;cidr&lt;/code&gt; value can be cast to &lt;code&gt;inet&lt;/code&gt; implicitly; therefore, the operators and functions shown below as operating on &lt;code&gt;inet&lt;/code&gt; also work on &lt;code&gt;cidr&lt;/code&gt; values. (Where there are separate functions for &lt;code&gt;inet&lt;/code&gt; and &lt;code&gt;cidr&lt;/code&gt;, it is because the behavior should be different for the two cases.) Also, it is permitted to cast an &lt;code&gt;inet&lt;/code&gt; value to &lt;code&gt;cidr&lt;/code&gt;. When this is done, any bits to the right of the netmask are silently zeroed to create a valid &lt;code&gt;cidr&lt;/code&gt; value.</source>
-          <target state="new"/>
+          <target state="translated">任何 &lt;code&gt;cidr&lt;/code&gt; 值都可以隐式转换为 &lt;code&gt;inet&lt;/code&gt; ；因此，下面显示为对 &lt;code&gt;inet&lt;/code&gt; 进行操作的运算符和功能也可以对 &lt;code&gt;cidr&lt;/code&gt; 值起作用。（在 &lt;code&gt;inet&lt;/code&gt; 和 &lt;code&gt;cidr&lt;/code&gt; 有单独的函数的地方，这是因为这两种情况的行为应有所不同。）而且，允许将 &lt;code&gt;inet&lt;/code&gt; 值 &lt;code&gt;cidr&lt;/code&gt; 为cidr。完成此操作后，网络掩码右侧的任何位都将被静默清零以创建有效的 &lt;code&gt;cidr&lt;/code&gt; 值。</target>
         </trans-unit>
         <trans-unit id="97a5e9f25fdf2d6789317985300af494edaa42f6" translate="yes" xml:space="preserve">
           <source>Any SQL conditional expression (returning &lt;code&gt;boolean&lt;/code&gt;). The condition expression cannot refer to any tables except &lt;code&gt;NEW&lt;/code&gt; and &lt;code&gt;OLD&lt;/code&gt;, and cannot contain aggregate functions.</source>
@@ -1541,7 +1541,7 @@
         </trans-unit>
         <trans-unit id="13a56d22fdbd5ea4aa4d99bf869d62836d2a9dbc" translate="yes" xml:space="preserve">
           <source>Any object that can be created with a &lt;code&gt;CREATE&lt;/code&gt; command. Most objects are specific to one database, and are commonly known as &lt;em&gt;local objects&lt;/em&gt;.</source>
-          <target state="new"/>
+          <target state="translated">可以使用 &lt;code&gt;CREATE&lt;/code&gt; 命令创建的任何对象。大多数对象特定于一个数据库，通常称为&lt;em&gt;本地对象&lt;/em&gt;。</target>
         </trans-unit>
         <trans-unit id="f42a74d5d4ceddfdc2731676cd56c9941e931e10" translate="yes" xml:space="preserve">
           <source>Any other backslashed character that is not mentioned in the above table will be taken to represent itself. However, beware of adding backslashes unnecessarily, since that might accidentally produce a string matching the end-of-data marker (&lt;code&gt;\.&lt;/code&gt;) or the null string (&lt;code&gt;\N&lt;/code&gt; by default). These strings will be recognized before any other backslash processing is done.</source>
@@ -1553,7 +1553,7 @@
         </trans-unit>
         <trans-unit id="deecfecd8837d0982d5dc84b37df7cbf1f0b77cf" translate="yes" xml:space="preserve">
           <source>Any process, possibly remote, that establishes a &lt;a href=&quot;glossary#GLOSSARY-SESSION&quot;&gt;session&lt;/a&gt; by &lt;a href=&quot;glossary#GLOSSARY-CONNECTION&quot;&gt;connecting&lt;/a&gt; to an &lt;a href=&quot;glossary#GLOSSARY-INSTANCE&quot;&gt;instance&lt;/a&gt; to interact with a &lt;a href=&quot;glossary#GLOSSARY-DATABASE&quot;&gt;database&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">通过&lt;a href=&quot;glossary#GLOSSARY-CONNECTION&quot;&gt;连接&lt;/a&gt;到&lt;a href=&quot;glossary#GLOSSARY-INSTANCE&quot;&gt;实例&lt;/a&gt;与&lt;a href=&quot;glossary#GLOSSARY-DATABASE&quot;&gt;数据库&lt;/a&gt;进行交互来建立&lt;a href=&quot;glossary#GLOSSARY-SESSION&quot;&gt;会话&lt;/a&gt;的任何进程（可能是远程的）。</target>
         </trans-unit>
         <trans-unit id="6176992a355fd17e3c78216ef8246e171f7a7f5d" translate="yes" xml:space="preserve">
           <source>Any rows whose updated values do not pass the &lt;code&gt;WITH CHECK&lt;/code&gt; expression will cause an error, and the entire command will be aborted. If only a &lt;code&gt;USING&lt;/code&gt; clause is specified, then that clause will be used for both &lt;code&gt;USING&lt;/code&gt; and &lt;code&gt;WITH CHECK&lt;/code&gt; cases.</source>
@@ -1613,11 +1613,11 @@
         </trans-unit>
         <trans-unit id="f60b3f6b35cf4c13bfaa5fa9f25882503add453a" translate="yes" xml:space="preserve">
           <source>Appendix M. Glossary</source>
-          <target state="new"/>
+          <target state="translated">附录M.词汇表</target>
         </trans-unit>
         <trans-unit id="ea37fd5c2add8dc11cd4eac4e99886acbe263edc" translate="yes" xml:space="preserve">
           <source>Appendix N. Color Support</source>
-          <target state="new"/>
+          <target state="translated">附录N.色彩支持</target>
         </trans-unit>
         <trans-unit id="5e2daf479a3e3b6ca8645aabab30691c459271fc" translate="yes" xml:space="preserve">
           <source>Appendix: Additional Supplied Modules</source>
@@ -1625,7 +1625,7 @@
         </trans-unit>
         <trans-unit id="212a37d7af38255a5010be41cf96e1919f1f65fe" translate="yes" xml:space="preserve">
           <source>Appendix: Color Support</source>
-          <target state="new"/>
+          <target state="translated">附录。颜色支持</target>
         </trans-unit>
         <trans-unit id="5fe175a1da37b9c50cabd865124df334aa3597f0" translate="yes" xml:space="preserve">
           <source>Appendix: Date/Time Support</source>
@@ -1641,7 +1641,7 @@
         </trans-unit>
         <trans-unit id="2fc28e50f7d7e95a87ebbb410bfe469fb51248d4" translate="yes" xml:space="preserve">
           <source>Appends an element to the end of an array (same as the &lt;code&gt;anyarray&lt;/code&gt;&lt;code&gt;||&lt;/code&gt;&lt;code&gt;anyelement&lt;/code&gt; operator).</source>
-          <target state="new"/>
+          <target state="translated">将元素追加到数组的末尾（与 &lt;code&gt;anyarray&lt;/code&gt; &lt;code&gt;||&lt;/code&gt; &lt;code&gt;anyelement&lt;/code&gt; 运算符相同）。</target>
         </trans-unit>
         <trans-unit id="99005fc867cd3e54c80bd91ee175bcce277708d9" translate="yes" xml:space="preserve">
           <source>Applicable Object Types</source>
@@ -1701,7 +1701,7 @@
         </trans-unit>
         <trans-unit id="753bf6e471b3480498401484488505d0888a0767" translate="yes" xml:space="preserve">
           <source>Approximate floating-point number converted from a JSON number or string</source>
-          <target state="new"/>
+          <target state="translated">由JSON数字或字符串转换而来的近似浮点数。</target>
         </trans-unit>
         <trans-unit id="d737059a7023272b67d00f7bdeb9dfcc94048eda" translate="yes" xml:space="preserve">
           <source>Approximate floating-point number converted from an SQL/JSON number or a string</source>
@@ -1709,7 +1709,7 @@
         </trans-unit>
         <trans-unit id="c0b0f0e736e61c866d8d2ac574b894e925e89613" translate="yes" xml:space="preserve">
           <source>Approximate value of &amp;pi;</source>
-          <target state="new"/>
+          <target state="translated">&amp;pi;的近似值</target>
         </trans-unit>
         <trans-unit id="befde54a108cb9dc6ad6e0ebd28720531a6855e6" translate="yes" xml:space="preserve">
           <source>Apr</source>
@@ -1729,7 +1729,7 @@
         </trans-unit>
         <trans-unit id="a4183b8dc44cf7f7f1da3bacb0f01f6cc6331a8b" translate="yes" xml:space="preserve">
           <source>Archaic term for a &lt;a href=&quot;glossary#GLOSSARY-WAL-RECORD&quot;&gt;WAL record&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;glossary#GLOSSARY-WAL-RECORD&quot;&gt;WAL记录&lt;/a&gt;的古语。</target>
         </trans-unit>
         <trans-unit id="b040b4179b8b00702858fdb4c1afec3d6d284509" translate="yes" xml:space="preserve">
           <source>Architecture</source>
@@ -1741,7 +1741,7 @@
         </trans-unit>
         <trans-unit id="a57a286a92ae143de1dc965b902d9ecc2dfd66af" translate="yes" xml:space="preserve">
           <source>Are &lt;code&gt;aclitem&lt;/code&gt;s equal? (Notice that type &lt;code&gt;aclitem&lt;/code&gt; lacks the usual set of comparison operators; it has only equality. In turn, &lt;code&gt;aclitem&lt;/code&gt; arrays can only be compared for equality.)</source>
-          <target state="new"/>
+          <target state="translated">是 &lt;code&gt;aclitem&lt;/code&gt; 享有平等？（请注意，类型 &lt;code&gt;aclitem&lt;/code&gt; 缺少通常的比较运算符集；它只有相等。反过来，只能比较 &lt;code&gt;aclitem&lt;/code&gt; 数组的相等性。）</target>
         </trans-unit>
         <trans-unit id="67a9118149c6042fe6daa560647e16f79a2d3d97" translate="yes" xml:space="preserve">
           <source>Are horizontally aligned?</source>
@@ -1749,11 +1749,11 @@
         </trans-unit>
         <trans-unit id="0277a553173b27be90f022d132a83d4b3aaf7ebc" translate="yes" xml:space="preserve">
           <source>Are lines parallel?</source>
-          <target state="new"/>
+          <target state="translated">线条是否平行?</target>
         </trans-unit>
         <trans-unit id="ae62863d19a1f09ae83d96496ecb5be1da1e9570" translate="yes" xml:space="preserve">
           <source>Are lines perpendicular?</source>
-          <target state="new"/>
+          <target state="translated">线条是否垂直?</target>
         </trans-unit>
         <trans-unit id="8897c493ba700783f2c64a4d0f20f14b01d7b1e3" translate="yes" xml:space="preserve">
           <source>Are parallel?</source>
@@ -1761,11 +1761,11 @@
         </trans-unit>
         <trans-unit id="b0f274d71a2fb179ee895325d1f8e8eba6d7eaf4" translate="yes" xml:space="preserve">
           <source>Are points horizontally aligned (that is, have same y coordinate)?</source>
-          <target state="new"/>
+          <target state="translated">各点是否水平对齐(即具有相同的y坐标)?</target>
         </trans-unit>
         <trans-unit id="4fd10598c5b40d1cb91d9f056ebf89eb9d7aa121" translate="yes" xml:space="preserve">
           <source>Are points vertically aligned (that is, have same x coordinate)?</source>
-          <target state="new"/>
+          <target state="translated">点是否垂直对齐(即具有相同的X坐标)?</target>
         </trans-unit>
         <trans-unit id="5cba229ff1c565c58441b7f5908ac5643aeb85b7" translate="yes" xml:space="preserve">
           <source>Are the left JSON path/value entries contained at the top level within the right JSON value?</source>
@@ -1773,15 +1773,15 @@
         </trans-unit>
         <trans-unit id="7f5f796f9f81b0556b03d7a49d7711d325d01584" translate="yes" xml:space="preserve">
           <source>Are the ranges adjacent?</source>
-          <target state="new"/>
+          <target state="translated">范围是否相邻?</target>
         </trans-unit>
         <trans-unit id="95ac96b9bb2b90c235c16c3c150acca2ceb1786a" translate="yes" xml:space="preserve">
           <source>Are the two &lt;code&gt;seg&lt;/code&gt;s equal?</source>
-          <target state="new"/>
+          <target state="translated">两个 &lt;code&gt;seg&lt;/code&gt; 是否相等？</target>
         </trans-unit>
         <trans-unit id="fdbf4786edf9f977d2039f0d91270c27aa5a8043" translate="yes" xml:space="preserve">
           <source>Are these objects the same? Available for &lt;code&gt;point&lt;/code&gt;, &lt;code&gt;box&lt;/code&gt;, &lt;code&gt;polygon&lt;/code&gt;, &lt;code&gt;circle&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">这些对象是相同的吗？可用于 &lt;code&gt;point&lt;/code&gt; ， &lt;code&gt;box&lt;/code&gt; ， &lt;code&gt;polygon&lt;/code&gt; ， &lt;code&gt;circle&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="6ea55540eda7f3ae150bdf50ff88e357b0470bd4" translate="yes" xml:space="preserve">
           <source>Are vertically aligned?</source>
@@ -1885,7 +1885,7 @@
         </trans-unit>
         <trans-unit id="3fe38b2f63794530437e3485d0c38785ad75e487" translate="yes" xml:space="preserve">
           <source>Array: 1</source>
-          <target state="new"/>
+          <target state="translated">阵列。1</target>
         </trans-unit>
         <trans-unit id="d7d17f1eb33a5388e6bfb317a245a8c37e5b460a" translate="yes" xml:space="preserve">
           <source>Array: =</source>
@@ -1897,27 +1897,27 @@
         </trans-unit>
         <trans-unit id="150a65359d97d4ee8b8c087554e227e4e463443a" translate="yes" xml:space="preserve">
           <source>Array: ARRAY</source>
-          <target state="new"/>
+          <target state="translated">阵列。ARRAY</target>
         </trans-unit>
         <trans-unit id="4dcd3d1ce93d0ca2cb3e60332e931604f93cc026" translate="yes" xml:space="preserve">
           <source>Array: ARRAY &amp;amp;&amp;amp; ARRAY</source>
-          <target state="new"/>
+          <target state="translated">数组：阵列&amp;amp;&amp;amp;阵列</target>
         </trans-unit>
         <trans-unit id="64b37c182a6bd42ba7b5eb841ce25916a3a3c807" translate="yes" xml:space="preserve">
           <source>Array: ARRAY &amp;lt;@ ARRAY</source>
-          <target state="new"/>
+          <target state="translated">数组：ARRAY &amp;lt;@ ARRAY</target>
         </trans-unit>
         <trans-unit id="78d1bb5bc6001f266e8878cdac676402e49a8545" translate="yes" xml:space="preserve">
           <source>Array: ARRAY @&amp;gt; ARRAY</source>
-          <target state="new"/>
+          <target state="translated">数组：ARRAY @&amp;gt; ARRAY</target>
         </trans-unit>
         <trans-unit id="5c09f59eadf2bb3b4328b3f453d0a6c85ef136cb" translate="yes" xml:space="preserve">
           <source>Array: IS NOT DISTINCT FROM</source>
-          <target state="new"/>
+          <target state="translated">阵列:不与</target>
         </trans-unit>
         <trans-unit id="4bc80d05bcc1cb0f4e5e941af2a29b9db0657f22" translate="yes" xml:space="preserve">
           <source>Array: NULL</source>
-          <target state="new"/>
+          <target state="translated">阵列:NULL</target>
         </trans-unit>
         <trans-unit id="d9bbda7ebf850fa729d9606dbdfd7d1f3599ec47" translate="yes" xml:space="preserve">
           <source>Array: array_append</source>
@@ -1981,7 +1981,7 @@
         </trans-unit>
         <trans-unit id="4d56c61f6754af386d1ad55522ee718a6d173e5b" translate="yes" xml:space="preserve">
           <source>Array: select * from unnest as x</source>
-          <target state="new"/>
+          <target state="translated">阵列:从unnest中选择*作为x。</target>
         </trans-unit>
         <trans-unit id="b45177789238b533ec64ce75c721f78be3e3490d" translate="yes" xml:space="preserve">
           <source>Array: string_to_array</source>
@@ -2021,7 +2021,7 @@
         </trans-unit>
         <trans-unit id="95a9f6ed53fa85650318ffc030c2493caa298423" translate="yes" xml:space="preserve">
           <source>As a partial guard against this type of error, variable-length or nullable fields should not be made directly visible to the C compiler. This is accomplished by wrapping them in &lt;code&gt;#ifdef CATALOG_VARLEN&lt;/code&gt; ... &lt;code&gt;#endif&lt;/code&gt; (where &lt;code&gt;CATALOG_VARLEN&lt;/code&gt; is a symbol that is never defined). This prevents C code from carelessly trying to access fields that might not be there or might be at some other offset. As an independent guard against creating incorrect rows, we require all columns that should be non-nullable to be marked so in &lt;code&gt;pg_attribute&lt;/code&gt;. The bootstrap code will automatically mark catalog columns as &lt;code&gt;NOT NULL&lt;/code&gt; if they are fixed-width and are not preceded by any nullable column. Where this rule is inadequate, you can force correct marking by using &lt;code&gt;BKI_FORCE_NOT_NULL&lt;/code&gt; and &lt;code&gt;BKI_FORCE_NULL&lt;/code&gt; annotations as needed.</source>
-          <target state="new"/>
+          <target state="translated">作为防止此类错误的部分保护措施，可变长度或可为空的字段不应对C编译器直接可见。这可以通过将它们包装在 &lt;code&gt;#ifdef CATALOG_VARLEN&lt;/code&gt; ... &lt;code&gt;#endif&lt;/code&gt; （其中 &lt;code&gt;CATALOG_VARLEN&lt;/code&gt; 是从未定义的符号）中来完成。这样可以防止C代码粗心地尝试访问可能不存在或处于其他偏移量的字段。为了防止创建不正确的行，我们要求将所有不可为空的列都标记为 &lt;code&gt;pg_attribute&lt;/code&gt; 。引导程序代码将自动将目录列标记为 &lt;code&gt;NOT NULL&lt;/code&gt; 如果它们是固定宽度的，并且没有任何可为空的列。如果此规则不足，则可以根据需要使用 &lt;code&gt;BKI_FORCE_NOT_NULL&lt;/code&gt; 和 &lt;code&gt;BKI_FORCE_NULL&lt;/code&gt; 批注来强制进行正确的标记。</target>
         </trans-unit>
         <trans-unit id="2a80a71669f88eae465ab66545f1b21816ccdfcd" translate="yes" xml:space="preserve">
           <source>As a partial guard against this type of error, variable-length or nullable fields should not be made directly visible to the C compiler. This is accomplished by wrapping them in &lt;code&gt;#ifdef CATALOG_VARLEN&lt;/code&gt; ... &lt;code&gt;#endif&lt;/code&gt; (where &lt;code&gt;CATALOG_VARLEN&lt;/code&gt; is a symbol that is never defined). This prevents C code from carelessly trying to access fields that might not be there or might be at some other offset. As an independent guard against creating incorrect rows, we require all columns that should be non-nullable to be marked so in &lt;code&gt;pg_attribute&lt;/code&gt;. The bootstrap code will automatically mark catalog columns as &lt;code&gt;NOT NULL&lt;/code&gt; if they are fixed-width and are not preceded by any nullable column. Where this rule is inadequate, you can force correct marking by using &lt;code&gt;BKI_FORCE_NOT_NULL&lt;/code&gt; and &lt;code&gt;BKI_FORCE_NULL&lt;/code&gt; annotations as needed. But note that &lt;code&gt;NOT NULL&lt;/code&gt; constraints are only enforced in the executor, not against tuples that are generated by random C code, so care is still needed when manually creating or updating catalog rows.</source>
@@ -2073,7 +2073,7 @@
         </trans-unit>
         <trans-unit id="dbbe816df8235daf5a726cf6177c485cd14e8ef4" translate="yes" xml:space="preserve">
           <source>As an example of using the output produced by these functions, &lt;a href=&quot;functions-xml#XSLT-XML-HTML&quot;&gt;Example 9.1&lt;/a&gt; shows an XSLT stylesheet that converts the output of &lt;code&gt;table_to_xml_and_xmlschema&lt;/code&gt; to an HTML document containing a tabular rendition of the table data. In a similar manner, the results from these functions can be converted into other XML-based formats.</source>
-          <target state="new"/>
+          <target state="translated">作为使用这些函数产生的输出的示例，&lt;a href=&quot;functions-xml#XSLT-XML-HTML&quot;&gt;示例9.1&lt;/a&gt;展示了一个XSLT样式表，该表将 &lt;code&gt;table_to_xml_and_xmlschema&lt;/code&gt; 的输出转换为包含表数据表格格式表示的HTML文档。以类似的方式，这些函数的结果可以转换为其他基于XML的格式。</target>
         </trans-unit>
         <trans-unit id="d0e3b2ce01a4421ab4c72defc488724bdaa1c1a4" translate="yes" xml:space="preserve">
           <source>As an example of using the output produced by these functions, &lt;a href=&quot;functions-xml#XSLT-XML-HTML&quot;&gt;Figure 9.1&lt;/a&gt; shows an XSLT stylesheet that converts the output of &lt;code&gt;table_to_xml_and_xmlschema&lt;/code&gt; to an HTML document containing a tabular rendition of the table data. In a similar manner, the results from these functions can be converted into other XML-based formats.</source>
@@ -2085,7 +2085,7 @@
         </trans-unit>
         <trans-unit id="faf1ed368ea36c292232738719a6fc50ce56d002" translate="yes" xml:space="preserve">
           <source>As an example, &lt;code&gt;CET-1CEST,M3.5.0,M10.5.0/3&lt;/code&gt; describes current (as of 2020) timekeeping practice in Paris. This specification says that standard time has the abbreviation &lt;code&gt;CET&lt;/code&gt; and is one hour ahead (east) of UTC; daylight savings time has the abbreviation &lt;code&gt;CEST&lt;/code&gt; and is implicitly two hours ahead of UTC; daylight savings time begins on the last Sunday in March at 2AM CET and ends on the last Sunday in October at 3AM CEST.</source>
-          <target state="new"/>
+          <target state="translated">例如， &lt;code&gt;CET-1CEST,M3.5.0,M10.5.0/3&lt;/code&gt; 描述了巴黎当前（截至2020年）的计时惯例。该规范表示标准时间的缩写为 &lt;code&gt;CET&lt;/code&gt; ，比UTC（东部）早1小时。夏令时的缩写为 &lt;code&gt;CEST&lt;/code&gt; ，比UTC提前了两个小时；夏令时开始于3月3日的最后一个星期日（欧洲中部时间），结束于10月的最后一个星期日的美国东部标准时间3AM。</target>
         </trans-unit>
         <trans-unit id="75dd3c213ab262bc0285b838849480821b38de49" translate="yes" xml:space="preserve">
           <source>As an example, consider a table &lt;code&gt;mytab&lt;/code&gt;, initially containing:</source>
@@ -2153,7 +2153,7 @@
         </trans-unit>
         <trans-unit id="39801241473f144107571af31829d77f27364c9d" translate="yes" xml:space="preserve">
           <source>As far as the operator class is concerned, returning &lt;code&gt;true&lt;/code&gt; indicates that deduplication is safe (or safe for the collation whose OID was passed to its &lt;code&gt;equalimage&lt;/code&gt; function). However, the core code will only deem deduplication safe for an index when &lt;em&gt;every&lt;/em&gt; indexed column uses an operator class that registers an &lt;code&gt;equalimage&lt;/code&gt; function, and each function actually returns &lt;code&gt;true&lt;/code&gt; when called.</source>
-          <target state="new"/>
+          <target state="translated">就运算符类而言，返回 &lt;code&gt;true&lt;/code&gt; 表示重复数据删除是安全的（或对于将OID传递到其 &lt;code&gt;equalimage&lt;/code&gt; 函数的归类而言是安全的）。但是，只有在&lt;em&gt;每个&lt;/em&gt;索引列都使用注册了 &lt;code&gt;equalimage&lt;/code&gt; 函数的运算符类且每个函数在调用时实际上返回 &lt;code&gt;true&lt;/code&gt; 时，核心代码才会认为对索引重复数据删除安全。</target>
         </trans-unit>
         <trans-unit id="149ce91ff7ffadae424c16cab2b4c0512100eae4" translate="yes" xml:space="preserve">
           <source>As in basic &lt;code&gt;tsquery&lt;/code&gt; input, weight(s) can be attached to each lexeme to restrict it to match only &lt;code&gt;tsvector&lt;/code&gt; lexemes of those weight(s). For example:</source>
@@ -2181,7 +2181,7 @@
         </trans-unit>
         <trans-unit id="820f9f6df5cbde09a17525e7847d0d2dfe09b2c4" translate="yes" xml:space="preserve">
           <source>As mentioned, there are multiple types of TOAST pointer datums. The oldest and most common type is a pointer to out-of-line data stored in a &lt;em&gt;TOAST table&lt;/em&gt; that is separate from, but associated with, the table containing the TOAST pointer datum itself. These &lt;em&gt;on-disk&lt;/em&gt; pointer datums are created by the TOAST management code (in &lt;code&gt;access/common/toast_internals.c&lt;/code&gt;) when a tuple to be stored on disk is too large to be stored as-is. Further details appear in &lt;a href=&quot;storage-toast#STORAGE-TOAST-ONDISK&quot;&gt;Section 68.2.1&lt;/a&gt;. Alternatively, a TOAST pointer datum can contain a pointer to out-of-line data that appears elsewhere in memory. Such datums are necessarily short-lived, and will never appear on-disk, but they are very useful for avoiding copying and redundant processing of large data values. Further details appear in &lt;a href=&quot;storage-toast#STORAGE-TOAST-INMEMORY&quot;&gt;Section 68.2.2&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">如前所述，有多种类型的TOAST指针基准。最古老和最常见的类型是指向存储在&lt;em&gt;TOAST&lt;/em&gt;表中的脱机数据的指针，该表与包含TOAST指针数据本身的表独立但相关联。当要存储在磁盘上的元组太大而无法按原样存储时，这些&lt;em&gt;磁盘&lt;/em&gt;指针数据由TOAST管理代码（在 &lt;code&gt;access/common/toast_internals.c&lt;/code&gt; 中）创建。更多详细信息，请参见&lt;a href=&quot;storage-toast#STORAGE-TOAST-ONDISK&quot;&gt;第68.2.1节。&lt;/a&gt;。或者，TOAST指针数据可包含指向内存中其他位置出现的离线数据的指针。这样的数据必然是短暂的，并且永远不会出现在磁盘上，但是它们对于避免复制和冗余处理大数据值非常有用。更多详细信息，请参见&lt;a href=&quot;storage-toast#STORAGE-TOAST-INMEMORY&quot;&gt;第68.2.2节&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="d7967f9ae1b2dfb5df2376dc5e14f007c840b5d2" translate="yes" xml:space="preserve">
           <source>As mentioned, there are multiple types of TOAST pointer datums. The oldest and most common type is a pointer to out-of-line data stored in a &lt;em&gt;TOAST table&lt;/em&gt; that is separate from, but associated with, the table containing the TOAST pointer datum itself. These &lt;em&gt;on-disk&lt;/em&gt; pointer datums are created by the TOAST management code (in &lt;code&gt;access/heap/tuptoaster.c&lt;/code&gt;) when a tuple to be stored on disk is too large to be stored as-is. Further details appear in &lt;a href=&quot;storage-toast#STORAGE-TOAST-ONDISK&quot;&gt;Section 68.2.1&lt;/a&gt;. Alternatively, a TOAST pointer datum can contain a pointer to out-of-line data that appears elsewhere in memory. Such datums are necessarily short-lived, and will never appear on-disk, but they are very useful for avoiding copying and redundant processing of large data values. Further details appear in &lt;a href=&quot;storage-toast#STORAGE-TOAST-INMEMORY&quot;&gt;Section 68.2.2&lt;/a&gt;.</source>
@@ -2221,7 +2221,7 @@
         </trans-unit>
         <trans-unit id="9cdab33dd907fd023cacb62f21aa10cc62e305ca" translate="yes" xml:space="preserve">
           <source>As pg_rewind copies configuration files entirely from the source, it may be required to correct the configuration used for recovery before restarting the target server, especially if the target is reintroduced as a standby of the source. If you restart the server after the rewind operation has finished but without configuring recovery, the target may again diverge from the primary.</source>
-          <target state="new"/>
+          <target state="translated">由于pg_rewind完全从源端复制配置文件,所以在重启目标服务器之前,可能需要修正用于恢复的配置,特别是当目标作为源端的备用时,重新引入。如果在倒带操作完成后,但没有配置恢复的情况下重新启动服务器,目标服务器可能会再次与主服务器发生分歧。</target>
         </trans-unit>
         <trans-unit id="df8c2a751dfbd5be0d7c157dabee58d14e6c8985" translate="yes" xml:space="preserve">
           <source>As previously stated, when a JSON value is input and then printed without any additional processing, &lt;code&gt;json&lt;/code&gt; outputs the same text that was input, while &lt;code&gt;jsonb&lt;/code&gt; does not preserve semantically-insignificant details such as whitespace. For example, note the differences here:</source>
@@ -2237,7 +2237,7 @@
         </trans-unit>
         <trans-unit id="c1072787f6d22b0aaf6039c0a8fa7f37aca0290a" translate="yes" xml:space="preserve">
           <source>As shown above, all comparison operators are binary operators that return values of type &lt;code&gt;boolean&lt;/code&gt;. Thus, expressions like &lt;code&gt;1 &amp;lt; 2 &amp;lt; 3&lt;/code&gt; are not valid (because there is no &lt;code&gt;&amp;lt;&lt;/code&gt; operator to compare a Boolean value with &lt;code&gt;3&lt;/code&gt;). Use the &lt;code&gt;BETWEEN&lt;/code&gt; predicates shown below to perform range tests.</source>
-          <target state="new"/>
+          <target state="translated">如上所示，所有比较运算符都是二进制运算符，它们返回 &lt;code&gt;boolean&lt;/code&gt; 类型的值。因此，像 &lt;code&gt;1 &amp;lt; 2 &amp;lt; 3&lt;/code&gt; 这样的表达式是无效的（因为没有 &lt;code&gt;&amp;lt;&lt;/code&gt; 运算符将布尔值与 &lt;code&gt;3&lt;/code&gt; 进行比较）。使用下面显示的 &lt;code&gt;BETWEEN&lt;/code&gt; 谓词执行范围测试。</target>
         </trans-unit>
         <trans-unit id="299b9141677294c0e2aa3b93c3483b8a98e2f995" translate="yes" xml:space="preserve">
           <source>As shown above, the &lt;code&gt;union&lt;/code&gt; function's first &lt;code&gt;internal&lt;/code&gt; argument is actually a &lt;code&gt;GistEntryVector&lt;/code&gt; pointer. The second argument is a pointer to an integer variable, which can be ignored. (It used to be required that the &lt;code&gt;union&lt;/code&gt; function store the size of its result value into that variable, but this is no longer necessary.)</source>
@@ -2257,11 +2257,11 @@
         </trans-unit>
         <trans-unit id="e2e2d713a7e1c4b73e9dae4d9b294d20af0dfdbd" translate="yes" xml:space="preserve">
           <source>As shown in &lt;a href=&quot;https://www.postgresql.org/docs/13/xindex.html#XINDEX-BTREE-STRAT-TABLE&quot;&gt;Table 37.3&lt;/a&gt;, a btree operator class must provide five comparison operators, &lt;code&gt;&amp;lt;&lt;/code&gt;, &lt;code&gt;&amp;lt;=&lt;/code&gt;, &lt;code&gt;=&lt;/code&gt;, &lt;code&gt;&amp;gt;=&lt;/code&gt; and &lt;code&gt;&amp;gt;&lt;/code&gt;. One might expect that &lt;code&gt;&amp;lt;&amp;gt;&lt;/code&gt; should also be part of the operator class, but it is not, because it would almost never be useful to use a &lt;code&gt;&amp;lt;&amp;gt;&lt;/code&gt; WHERE clause in an index search. (For some purposes, the planner treats &lt;code&gt;&amp;lt;&amp;gt;&lt;/code&gt; as associated with a btree operator class; but it finds that operator via the &lt;code&gt;=&lt;/code&gt; operator's negator link, rather than from &lt;code&gt;pg_amop&lt;/code&gt;.)</source>
-          <target state="new"/>
+          <target state="translated">如&lt;a href=&quot;https://www.postgresql.org/docs/13/xindex.html#XINDEX-BTREE-STRAT-TABLE&quot;&gt;表37.3&lt;/a&gt;所示，btree运算符类必须提供五个比较运算符 &lt;code&gt;&amp;lt;&lt;/code&gt; ， &lt;code&gt;&amp;lt;=&lt;/code&gt; ， &lt;code&gt;=&lt;/code&gt; ， &lt;code&gt;&amp;gt;=&lt;/code&gt; 和 &lt;code&gt;&amp;gt;&lt;/code&gt; 。可能希望 &lt;code&gt;&amp;lt;&amp;gt;&lt;/code&gt; 也应该属于运算符类，但事实并非如此，因为在索引搜索中使用 &lt;code&gt;&amp;lt;&amp;gt;&lt;/code&gt; WHERE子句几乎永远不会有用。 （出于某些目的，计划者将 &lt;code&gt;&amp;lt;&amp;gt;&lt;/code&gt; 视为与btree运算符类相关联；但它通过 &lt;code&gt;=&lt;/code&gt; 运算符的否定符链接而不是从 &lt;code&gt;pg_amop&lt;/code&gt; 找到该运算符。）</target>
         </trans-unit>
         <trans-unit id="fd9a67840a67dabf7761754a18fc846d1c2e26f5" translate="yes" xml:space="preserve">
           <source>As shown in &lt;a href=&quot;https://www.postgresql.org/docs/13/xindex.html#XINDEX-BTREE-SUPPORT-TABLE&quot;&gt;Table 37.9&lt;/a&gt;, btree defines one required and four optional support functions. The five user-defined methods are:</source>
-          <target state="new"/>
+          <target state="translated">如&lt;a href=&quot;https://www.postgresql.org/docs/13/xindex.html#XINDEX-BTREE-SUPPORT-TABLE&quot;&gt;表37.9&lt;/a&gt;所示，btree定义了一个必需的功能和四个可选的支持功能。用户定义的五个方法是：</target>
         </trans-unit>
         <trans-unit id="01827ef18402ec5bd4e9a302a910b59d06b2ca2b" translate="yes" xml:space="preserve">
           <source>As shown in the previous section, the table expression in the &lt;code&gt;SELECT&lt;/code&gt; command constructs an intermediate virtual table by possibly combining tables, views, eliminating rows, grouping, etc. This table is finally passed on to processing by the &lt;em&gt;select list&lt;/em&gt;. The select list determines which &lt;em&gt;columns&lt;/em&gt; of the intermediate table are actually output.</source>
@@ -2309,7 +2309,7 @@
         </trans-unit>
         <trans-unit id="6a378a5df8689a29e440cf7e593b2b7b017debb3" translate="yes" xml:space="preserve">
           <source>As well as tables, this option can be used to dump the definition of matching views, materialized views, foreign tables, and sequences. It will not dump the contents of views or materialized views, and the contents of foreign tables will only be dumped if the corresponding foreign server is specified with &lt;code&gt;--include-foreign-data&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">与表一样，此选项可用于转储匹配视图，实例化视图，外部表和序列的定义。它不会转储视图或实例化视图的内容，并且仅当通过 &lt;code&gt;--include-foreign-data&lt;/code&gt; 指定了相应的外部服务器时，才会转储外部表的内容。</target>
         </trans-unit>
         <trans-unit id="e28715fe2eadf5afacb168abae8c272e3eef5af1" translate="yes" xml:space="preserve">
           <source>As with &lt;code&gt;EXISTS&lt;/code&gt;, it's unwise to assume that the subquery will be evaluated completely.</source>
@@ -2317,7 +2317,7 @@
         </trans-unit>
         <trans-unit id="22733a70e9587403334559bc9fffe583566e0a7a" translate="yes" xml:space="preserve">
           <source>As with &lt;code&gt;LIKE&lt;/code&gt;, a backslash disables the special meaning of any of these metacharacters. A different escape character can be specified with &lt;code&gt;ESCAPE&lt;/code&gt;, or the escape capability can be disabled by writing &lt;code&gt;ESCAPE ''&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">与 &lt;code&gt;LIKE&lt;/code&gt; 一样，反斜杠会禁用所有这些元字符的特殊含义。可以使用 &lt;code&gt;ESCAPE&lt;/code&gt; 指定不同的转义字符，或者可以通过编写 &lt;code&gt;ESCAPE ''&lt;/code&gt; 来禁用转义功能。</target>
         </trans-unit>
         <trans-unit id="181bd891b583b10919f382d152707212af1347e4" translate="yes" xml:space="preserve">
           <source>As with &lt;code&gt;LIKE&lt;/code&gt;, a backslash disables the special meaning of any of these metacharacters; or a different escape character can be specified with &lt;code&gt;ESCAPE&lt;/code&gt;.</source>
@@ -2337,7 +2337,7 @@
         </trans-unit>
         <trans-unit id="f8169958f7a4429a1d75d6cb1d9f2e4af52ed1d2" translate="yes" xml:space="preserve">
           <source>As with any server daemon that is accessible to the outside world, it is advisable to run PostgreSQL under a separate user account. This user account should only own the data that is managed by the server, and should not be shared with other daemons. (For example, using the user &lt;code&gt;nobody&lt;/code&gt; is a bad idea.) In particular, it is advisable that this user account not own the PostgreSQL executable files, to ensure that a compromised server process could not modify those executables.</source>
-          <target state="new"/>
+          <target state="translated">与外界可以访问的任何服务器守护程序一样，建议在一个单独的用户帐户下运行PostgreSQL。该用户帐户应仅拥有服务器管理的数据，而不应与其他守护程序共享。 （例如，使用 &lt;code&gt;nobody&lt;/code&gt; 用户不是一个好主意。）尤其是，建议该用户帐户不拥有PostgreSQL可执行文件，以确保受感染的服务器进程无法修改这些可执行文件。</target>
         </trans-unit>
         <trans-unit id="5f9153f6ce7772c623a80d637e2a8064efd48ff4" translate="yes" xml:space="preserve">
           <source>As with any server daemon that is accessible to the outside world, it is advisable to run PostgreSQL under a separate user account. This user account should only own the data that is managed by the server, and should not be shared with other daemons. (For example, using the user &lt;code&gt;nobody&lt;/code&gt; is a bad idea.) It is not advisable to install executables owned by this user because compromised systems could then modify their own binaries.</source>
@@ -2381,7 +2381,7 @@
         </trans-unit>
         <trans-unit id="439358cf5e5d4c690518e4e11abfb19b1e44a30e" translate="yes" xml:space="preserve">
           <source>As you see, the expression for the new value can refer to the existing value(s) in the row. We also left out the &lt;code&gt;WHERE&lt;/code&gt; clause. If it is omitted, it means that all rows in the table are updated. If it is present, only those rows that match the &lt;code&gt;WHERE&lt;/code&gt; condition are updated. Note that the equals sign in the &lt;code&gt;SET&lt;/code&gt; clause is an assignment while the one in the &lt;code&gt;WHERE&lt;/code&gt; clause is a comparison, but this does not create any ambiguity. Of course, the &lt;code&gt;WHERE&lt;/code&gt; condition does not have to be an equality test. Many other operators are available (see &lt;a href=&quot;https://www.postgresql.org/docs/13/functions.html&quot;&gt;Chapter 9&lt;/a&gt;). But the expression needs to evaluate to a Boolean result.</source>
-          <target state="new"/>
+          <target state="translated">如您所见，新值的表达式可以引用行中的现有值。我们还省略了 &lt;code&gt;WHERE&lt;/code&gt; 子句。如果省略，则表示表中的所有行均已更新。如果存在，则仅更新那些与 &lt;code&gt;WHERE&lt;/code&gt; 条件匹配的行。请注意， &lt;code&gt;SET&lt;/code&gt; 子句中的等号是一个赋值，而 &lt;code&gt;WHERE&lt;/code&gt; 子句中的等号是一个比较，但这不会造成任何歧义。当然， &lt;code&gt;WHERE&lt;/code&gt; 条件不一定要进行相等性测试。还有许多其他运算符可用（请参阅&lt;a href=&quot;https://www.postgresql.org/docs/13/functions.html&quot;&gt;第9章&lt;/a&gt;）。但是表达式需要计算为布尔结果。</target>
         </trans-unit>
         <trans-unit id="313a697ffb23a7210631919b2999246578e93b67" translate="yes" xml:space="preserve">
           <source>Aside from avoiding the time for the archiver or WAL sender to process the WAL data, doing this will actually make certain commands faster, because they are designed not to write WAL at all if &lt;code&gt;wal_level&lt;/code&gt; is &lt;code&gt;minimal&lt;/code&gt;. (They can guarantee crash safety more cheaply by doing an &lt;code&gt;fsync&lt;/code&gt; at the end than by writing WAL.) This applies to the following commands:</source>
@@ -2389,7 +2389,7 @@
         </trans-unit>
         <trans-unit id="b1744fb0dcc66faea0f0e11e29ee96bb68e2530a" translate="yes" xml:space="preserve">
           <source>Aside from avoiding the time for the archiver or WAL sender to process the WAL data, doing this will actually make certain commands faster, because they do not to write WAL at all if &lt;code&gt;wal_level&lt;/code&gt; is &lt;code&gt;minimal&lt;/code&gt; and the current subtransaction (or top-level transaction) created or truncated the table or index they change. (They can guarantee crash safety more cheaply by doing an &lt;code&gt;fsync&lt;/code&gt; at the end than by writing WAL.)</source>
-          <target state="new"/>
+          <target state="translated">除了避免时间存档或WAL发送处理WAL数据，这样做实际上会使某些命令更快，因为他们没有在所有写WAL如果 &lt;code&gt;wal_level&lt;/code&gt; 是 &lt;code&gt;minimal&lt;/code&gt; 和当前的子事务（或顶层事务）创建或截断它们更改的表或索引。（与编写WAL相比，通过在最后进行 &lt;code&gt;fsync&lt;/code&gt; 可以更廉价地保证碰撞安全性。）</target>
         </trans-unit>
         <trans-unit id="ba62da50a0cd807fd06ac3427894951fdffc554f" translate="yes" xml:space="preserve">
           <source>Aside from preventing cycles, the array value is often useful in its own right as representing the &amp;ldquo;path&amp;rdquo; taken to reach any particular row.</source>
@@ -2405,11 +2405,11 @@
         </trans-unit>
         <trans-unit id="1bfbe2935df02c420c8e520ec3e42a7fba80f23c" translate="yes" xml:space="preserve">
           <source>Assigns the specified &lt;em&gt;&lt;code&gt;weight&lt;/code&gt;&lt;/em&gt; to each element of the &lt;em&gt;&lt;code&gt;vector&lt;/code&gt;&lt;/em&gt;.</source>
-          <target state="new"/>
+          <target state="translated">将指定的&lt;em&gt; &lt;code&gt;weight&lt;/code&gt; &lt;/em&gt;分配给&lt;em&gt; &lt;code&gt;vector&lt;/code&gt; 的&lt;/em&gt;每个元素。</target>
         </trans-unit>
         <trans-unit id="75a4d3134c8b9723881f294a52dd576fc9852c4b" translate="yes" xml:space="preserve">
           <source>Assigns the specified &lt;em&gt;&lt;code&gt;weight&lt;/code&gt;&lt;/em&gt; to elements of the &lt;em&gt;&lt;code&gt;vector&lt;/code&gt;&lt;/em&gt; that are listed in &lt;em&gt;&lt;code&gt;lexemes&lt;/code&gt;&lt;/em&gt;.</source>
-          <target state="new"/>
+          <target state="translated">将指定的&lt;em&gt; &lt;code&gt;weight&lt;/code&gt; &lt;/em&gt;分配给&lt;em&gt; &lt;code&gt;lexemes&lt;/code&gt; &lt;/em&gt;中列出的&lt;em&gt; &lt;code&gt;vector&lt;/code&gt; &lt;/em&gt;元素。&lt;em&gt;&lt;/em&gt;</target>
         </trans-unit>
         <trans-unit id="f079970016568a6988faea4629841a26d4520b05" translate="yes" xml:space="preserve">
           <source>Associated sort operator (zero if none)</source>
@@ -2433,7 +2433,7 @@
         </trans-unit>
         <trans-unit id="89e7e252c06bfdf34cb9f5a168b455ee141acee7" translate="yes" xml:space="preserve">
           <source>Async. MM Repl.</source>
-          <target state="new"/>
+          <target state="translated">Async.MM Repl.</target>
         </trans-unit>
         <trans-unit id="a6a8e2732fbce126a0a797cdd1e90b4272d9f93c" translate="yes" xml:space="preserve">
           <source>Asynchronous Commit</source>
@@ -2485,7 +2485,7 @@
         </trans-unit>
         <trans-unit id="1571c46302d3bf43b10096af00c294a218c61c85" translate="yes" xml:space="preserve">
           <source>At least one row per subscription, showing information about the subscription workers. See &lt;a href=&quot;monitoring-stats#MONITORING-PG-STAT-SUBSCRIPTION&quot;&gt;&lt;code&gt;pg_stat_subscription&lt;/code&gt;&lt;/a&gt; for details.</source>
-          <target state="new"/>
+          <target state="translated">每个订阅至少有一行，显示有关订阅工作程序的信息。有关详细信息，请参见&lt;a href=&quot;monitoring-stats#MONITORING-PG-STAT-SUBSCRIPTION&quot;&gt; &lt;code&gt;pg_stat_subscription&lt;/code&gt; &lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="d8eaf93cff7d6986839d33f973b6b2eb6f3e3612" translate="yes" xml:space="preserve">
           <source>At least one row per subscription, showing information about the subscription workers. See &lt;a href=&quot;monitoring-stats#PG-STAT-SUBSCRIPTION&quot;&gt;pg_stat_subscription&lt;/a&gt; for details.</source>
@@ -2517,7 +2517,7 @@
         </trans-unit>
         <trans-unit id="f4f71998c9c0aa9a84a8100c70ee8a9266c4e5a9" translate="yes" xml:space="preserve">
           <source>At the beginning of the backup, a checkpoint needs to be performed on the source server. This can take some time (especially if the option &lt;code&gt;--checkpoint=fast&lt;/code&gt; is not used), during which pg_basebackup will appear to be idle.</source>
-          <target state="new"/>
+          <target state="translated">在备份开始时，需要在源服务器上执行检查点。这可能会花费一些时间（尤其是如果不使用 &lt;code&gt;--checkpoint=fast&lt;/code&gt; 选项），在此期间pg_basebackup似乎是空闲的。</target>
         </trans-unit>
         <trans-unit id="d9934a1c03bcddc43aaddd8a50e8957f0b10bf33" translate="yes" xml:space="preserve">
           <source>At the beginning of the backup, a checkpoint needs to be written on the server the backup is taken from. Especially if the option &lt;code&gt;--checkpoint=fast&lt;/code&gt; is not used, this can take some time during which pg_basebackup will be appear to be idle.</source>
@@ -2545,7 +2545,7 @@
         </trans-unit>
         <trans-unit id="d1227060ad6250b9807827bf5fbb82f644935b87" translate="yes" xml:space="preserve">
           <source>At the same time, &lt;code&gt;strict_word_similarity&lt;/code&gt; selects an extent of words in the second string. In the example above, &lt;code&gt;strict_word_similarity&lt;/code&gt; would select the extent of a single word &lt;code&gt;'words'&lt;/code&gt;, whose set of trigrams is &lt;code&gt;{&quot; w&quot;,&quot; wo&quot;,&quot;wor&quot;,&quot;ord&quot;,&quot;rds&quot;,&quot;ds &quot;}&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">同时， &lt;code&gt;strict_word_similarity&lt;/code&gt; 选择第二个字符串中的单词范围。在上面的示例中， &lt;code&gt;strict_word_similarity&lt;/code&gt; 将选择单个单词 &lt;code&gt;'words'&lt;/code&gt; 的范围，该单词的字母组合为 &lt;code&gt;{&quot; w&quot;,&quot; wo&quot;,&quot;wor&quot;,&quot;ord&quot;,&quot;rds&quot;,&quot;ds &quot;}&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="416a07de78793e22bb0ac6ecdc4a78f4b476ae54" translate="yes" xml:space="preserve">
           <source>At the time of creation, all existing heap pages are scanned and a summary index tuple is created for each range, including the possibly-incomplete range at the end. As new pages are filled with data, page ranges that are already summarized will cause the summary information to be updated with data from the new tuples. When a new page is created that does not fall within the last summarized range, that range does not automatically acquire a summary tuple; those tuples remain unsummarized until a summarization run is invoked later, creating initial summaries. This process can be invoked manually using the &lt;code&gt;brin_summarize_range(regclass, bigint)&lt;/code&gt; or &lt;code&gt;brin_summarize_new_values(regclass)&lt;/code&gt; functions; automatically when &lt;code&gt;VACUUM&lt;/code&gt; processes the table; or by automatic summarization executed by autovacuum, as insertions occur. (This last trigger is disabled by default and can be enabled with the &lt;code&gt;autosummarize&lt;/code&gt; parameter.) Conversely, a range can be de-summarized using the &lt;code&gt;brin_desummarize_range(regclass, bigint)&lt;/code&gt; function, which is useful when the index tuple is no longer a very good representation because the existing values have changed.</source>
@@ -2593,11 +2593,11 @@
         </trans-unit>
         <trans-unit id="77a267ab017550f3c7b55ed8bceaa27e998a453f" translate="yes" xml:space="preserve">
           <source>Attempt to terminate all existing connections to the target database before dropping it. See &lt;a href=&quot;sql-dropdatabase&quot;&gt;DROP DATABASE&lt;/a&gt; for more information on this option.</source>
-          <target state="new"/>
+          <target state="translated">在删除目标数据库之前，尝试终止与该目标数据库的所有现有连接。有关此选项的更多信息，请参见&lt;a href=&quot;sql-dropdatabase&quot;&gt;DROP DATABASE&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="918622fae6a483ce282b6f622cf8bcadbed1c7e1" translate="yes" xml:space="preserve">
           <source>Attempt to terminate all existing connections to the target database. It doesn't terminate if prepared transactions, active logical replication slots or subscriptions are present in the target database.</source>
-          <target state="new"/>
+          <target state="translated">试图终止与目标数据库的所有现有连接。如果目标数据库中存在准备好的事务、活动的逻辑复制槽或订阅,则不会终止。</target>
         </trans-unit>
         <trans-unit id="76eb27398e988091546915b412edd431f3061249" translate="yes" xml:space="preserve">
           <source>Attempting to drop a table that does not exist is an error. Nevertheless, it is common in SQL script files to unconditionally try to drop each table before creating it, ignoring any error messages, so that the script works whether or not the table exists. (If you like, you can use the &lt;code&gt;DROP TABLE IF EXISTS&lt;/code&gt; variant to avoid the error messages, but this is not standard SQL.)</source>
@@ -2681,7 +2681,7 @@
         </trans-unit>
         <trans-unit id="dd9a137c5bedfde09ac590ac67aee8327d8ab3c7" translate="yes" xml:space="preserve">
           <source>Automatic verification of the structural integrity of indexes plays a role in the general testing of new or proposed PostgreSQL features that could plausibly allow a logical inconsistency to be introduced. Verification of table structure and associated visibility and transaction status information plays a similar role. One obvious testing strategy is to call &lt;code&gt;amcheck&lt;/code&gt; functions continuously when running the standard regression tests. See &lt;a href=&quot;https://www.postgresql.org/docs/13/regress-run.html&quot;&gt;Section 32.1&lt;/a&gt; for details on running the tests.</source>
-          <target state="new"/>
+          <target state="translated">索引结构完整性的自动验证在新的或提议的PostgreSQL功能的常规测试中扮演着重要的角色，这些功能可能似乎允许引入逻辑上的不一致。验证表结构以及相关的可见性和交易状态信息的作用相似。一种明显的测试策略是在运行标准回归测试时连续调用 &lt;code&gt;amcheck&lt;/code&gt; 函数。有关运行测试的详细信息，请参见&lt;a href=&quot;https://www.postgresql.org/docs/13/regress-run.html&quot;&gt;第32.1节&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="820a99cec2958e050680c6f99db97b790304fa53" translate="yes" xml:space="preserve">
           <source>Automatically drop objects (tables, functions, etc.) that are contained in the schema, and in turn all objects that depend on those objects (see &lt;a href=&quot;ddl-depend&quot;&gt;Section 5.14&lt;/a&gt;).</source>
@@ -2833,7 +2833,7 @@
         </trans-unit>
         <trans-unit id="1e085180a439697544c8e28954b594a79f078a9d" translate="yes" xml:space="preserve">
           <source>Autovacuum (process)</source>
-          <target state="new"/>
+          <target state="translated">自动真空(工艺)</target>
         </trans-unit>
         <trans-unit id="63b02d90144047f7b0ae09ab6bb39285e944deab" translate="yes" xml:space="preserve">
           <source>Autovacuum is not active during recovery. It will start normally at the end of recovery.</source>
@@ -2849,7 +2849,7 @@
         </trans-unit>
         <trans-unit id="0edc11f659c78d515f96650dad0f6708f4c07fcc" translate="yes" xml:space="preserve">
           <source>Availability of WAL files claimed by this slot. Possible values are:</source>
-          <target state="new"/>
+          <target state="translated">本槽要求的WAL文件的可用性。可能的值是:</target>
         </trans-unit>
         <trans-unit id="df5a7bec123e69676856b9a816b4c6aef10e3a78" translate="yes" xml:space="preserve">
           <source>Available Client Character Sets</source>
@@ -2865,7 +2865,7 @@
         </trans-unit>
         <trans-unit id="f099162f6d15d176bb9a41f82a80ea2cb1d18cf4" translate="yes" xml:space="preserve">
           <source>Average number of transactions that are executed per second, totaled across all sessions active for a measured run. This is used as a measure of the performance characteristics of an instance.</source>
-          <target state="new"/>
+          <target state="translated">每秒钟执行的交易的平均数量,在测量运行的所有会话中的总和。用于衡量一个实例的性能特点。</target>
         </trans-unit>
         <trans-unit id="4903dacf2f00d069a2643728e3f02486ff810d77" translate="yes" xml:space="preserve">
           <source>Average width in bytes of column's entries</source>
@@ -2881,11 +2881,11 @@
         </trans-unit>
         <trans-unit id="717b6f33b42cc7559340881ecec59b687e47a41c" translate="yes" xml:space="preserve">
           <source>B-Tree deduplication is just as effective with &amp;ldquo;duplicates&amp;rdquo; that contain a NULL value, even though NULL values are never equal to each other according to the &lt;code&gt;=&lt;/code&gt; member of any B-Tree operator class. As far as any part of the implementation that understands the on-disk B-Tree structure is concerned, NULL is just another value from the domain of indexed values.</source>
-          <target state="new"/>
+          <target state="translated">B-Tree重复数据删除与包含NULL值的&amp;ldquo;重复项&amp;rdquo;同样有效，即使根据任何B-Tree运算符类的 &lt;code&gt;=&lt;/code&gt; 成员，NULL值从不彼此相等。就了解磁盘上的B-Tree结构的实现的任何部分而言，NULL只是索引值域中的另一个值。</target>
         </trans-unit>
         <trans-unit id="1bea9fad8fb62f91da10ba766f66a246a745ab74" translate="yes" xml:space="preserve">
           <source>B-Tree indexes are not directly aware that under MVCC, there might be multiple extant versions of the same logical table row; to an index, each tuple is an independent object that needs its own index entry. &amp;ldquo;Version duplicates&amp;rdquo; may sometimes accumulate and adversely affect query latency and throughput. This typically occurs with &lt;code&gt;UPDATE&lt;/code&gt;-heavy workloads where most individual updates cannot apply the HOT optimization (often because at least one indexed column gets modified, necessitating a new set of index tuple versions &amp;mdash; one new tuple for &lt;em&gt;each and every&lt;/em&gt; index). In effect, B-Tree deduplication ameliorates index bloat caused by version churn. Note that even the tuples from a unique index are not necessarily &lt;em&gt;physically&lt;/em&gt; unique when stored on disk due to version churn. The deduplication optimization is selectively applied within unique indexes. It targets those pages that appear to have version duplicates. The high level goal is to give &lt;code&gt;VACUUM&lt;/code&gt; more time to run before an &amp;ldquo;unnecessary&amp;rdquo; page split caused by version churn can take place.</source>
-          <target state="new"/>
+          <target state="translated">B-Tree索引不能直接意识到在MVCC下，同一逻辑表行可能存在多个现存版本。对于一个索引，每个元组都是一个独立的对象，需要它自己的索引条目。 &amp;ldquo;版本重复&amp;rdquo;有时可能会累积，并会对查询延迟和吞吐量产生不利影响。这通常发生在 &lt;code&gt;UPDATE&lt;/code&gt; 繁重的工作负载上，其中大多数单独的更新无法应用HOT优化（通常是因为至少修改了一个索引列，这需要一组新的索引元组版本-&lt;em&gt;每个&lt;/em&gt;索引一个新的元组）。实际上，B-Tree重复数据消除可缓解由版本搅动引起的索引膨胀。请注意，即使来自唯一索引的元组也不一定在&lt;em&gt;物理上&lt;/em&gt;由于版本搅动而存储在磁盘上时唯一。重复数据删除优化可选择性地应用于唯一索引中。它针对那些似乎具有版本重复的页面。高级别的目标是给 &lt;code&gt;VACUUM&lt;/code&gt; 更多的运行时间，然后才可以进行由版本搅动引起的&amp;ldquo;不必要的&amp;rdquo;页面拆分。</target>
         </trans-unit>
         <trans-unit id="9504ad9e3e7718bba2e8ff2d49bd5578d047ea98" translate="yes" xml:space="preserve">
           <source>B-tree equivalent functionality for several data types</source>
@@ -2905,7 +2905,7 @@
         </trans-unit>
         <trans-unit id="4e65573a03a3b33fe194962539e298b25562884c" translate="yes" xml:space="preserve">
           <source>B-tree indexes also accept these parameters:</source>
-          <target state="new"/>
+          <target state="translated">B树索引也接受这些参数。</target>
         </trans-unit>
         <trans-unit id="b33f3c038c507d02cde94014e083413eba3062f2" translate="yes" xml:space="preserve">
           <source>B-tree indexes can also be used to retrieve data in sorted order. This is not always faster than a simple scan and sort, but it is often helpful.</source>
@@ -2945,11 +2945,11 @@
         </trans-unit>
         <trans-unit id="9355cc4eed5770d5dfbba1271ff86061632e7258" translate="yes" xml:space="preserve">
           <source>B.5. POSIX Time Zone Specifications</source>
-          <target state="new"/>
+          <target state="translated">B.5.POSIX时区规格</target>
         </trans-unit>
         <trans-unit id="ebc2d5b79639788bc98e2a3a622f6560e3933f91" translate="yes" xml:space="preserve">
           <source>B.6. History of Units</source>
-          <target state="new"/>
+          <target state="translated">B.6.单位的历史</target>
         </trans-unit>
         <trans-unit id="3598517c826f1480a241800ce73f781ae2b1cd6a" translate="yes" xml:space="preserve">
           <source>BEGIN</source>
@@ -3005,7 +3005,7 @@
         </trans-unit>
         <trans-unit id="eebf5442eb861b0130ab1dbae1411845a2d52d61" translate="yes" xml:space="preserve">
           <source>Backend (process)</source>
-          <target state="new"/>
+          <target state="translated">后端(流程)</target>
         </trans-unit>
         <trans-unit id="99affebb8bc98ca77c8c04882ebec0dea90a3114" translate="yes" xml:space="preserve">
           <source>Backend Interface</source>
@@ -3013,15 +3013,15 @@
         </trans-unit>
         <trans-unit id="328769872d8232ec584540b9757369093134e160" translate="yes" xml:space="preserve">
           <source>Backend type</source>
-          <target state="new"/>
+          <target state="translated">后台类型</target>
         </trans-unit>
         <trans-unit id="dc32da7c82d0789e65952daa2c9def14b3058549" translate="yes" xml:space="preserve">
           <source>Background worker (process)</source>
-          <target state="new"/>
+          <target state="translated">背景工作者(流程)</target>
         </trans-unit>
         <trans-unit id="b848315d26f8ea5458744e8623f2ff6b2080f8c1" translate="yes" xml:space="preserve">
           <source>Background writer (process)</source>
-          <target state="new"/>
+          <target state="translated">背景作家(流程)</target>
         </trans-unit>
         <trans-unit id="60f8490b7625580e80d17d5a1df23b1d4de6ebc4" translate="yes" xml:space="preserve">
           <source>Backslash &lt;code&gt;x&lt;/code&gt; followed by one or two hex digits specifies the character with that numeric code</source>
@@ -3049,23 +3049,23 @@
         </trans-unit>
         <trans-unit id="ee100250b3b61b298848fb969f8f888fd07a7761" translate="yes" xml:space="preserve">
           <source>Backtrace support is not available on all platforms, and the quality of the backtraces depends on compilation options.</source>
-          <target state="new"/>
+          <target state="translated">并非所有平台都支持回溯,回溯的质量取决于编译选项。</target>
         </trans-unit>
         <trans-unit id="d331ac3f1a6cac9c6991fe1fa25efc25e1bcefe8" translate="yes" xml:space="preserve">
           <source>Backup Manifest File Object</source>
-          <target state="new"/>
+          <target state="translated">备份清单文件对象</target>
         </trans-unit>
         <trans-unit id="379196baf790f4b6fa0825b0de670c43e08df23a" translate="yes" xml:space="preserve">
           <source>Backup Manifest Format</source>
-          <target state="new"/>
+          <target state="translated">备份清单格式</target>
         </trans-unit>
         <trans-unit id="22c6cad75143d38691a0caaf6de1d84dce170459" translate="yes" xml:space="preserve">
           <source>Backup Manifest Top-level Object</source>
-          <target state="new"/>
+          <target state="translated">备份清单顶层对象</target>
         </trans-unit>
         <trans-unit id="e141d2d8691eaa6fba3c4489c0fc0d8b0d463b66" translate="yes" xml:space="preserve">
           <source>Backup Manifest WAL Range Object</source>
-          <target state="new"/>
+          <target state="translated">备份清单WAL范围对象</target>
         </trans-unit>
         <trans-unit id="a5932464fe7ee7685cdde1f28a54e89455da1784" translate="yes" xml:space="preserve">
           <source>Backup and Restore</source>
@@ -3073,7 +3073,7 @@
         </trans-unit>
         <trans-unit id="171ec47bee8f29611873a226142872b637cc0954" translate="yes" xml:space="preserve">
           <source>Backup verification proceeds in four stages. First, &lt;code&gt;pg_verifybackup&lt;/code&gt; reads the &lt;code&gt;backup_manifest&lt;/code&gt; file. If that file does not exist, cannot be read, is malformed, or fails verification against its own internal checksum, &lt;code&gt;pg_verifybackup&lt;/code&gt; will terminate with a fatal error.</source>
-          <target state="new"/>
+          <target state="translated">备份验证分四个阶段进行。首先， &lt;code&gt;pg_verifybackup&lt;/code&gt; 读取 &lt;code&gt;backup_manifest&lt;/code&gt; 文件。如果该文件不存在，无法读取，格式错误或无法通过其内部校验和进行验证，则 &lt;code&gt;pg_verifybackup&lt;/code&gt; 将终止，并显示致命错误。</target>
         </trans-unit>
         <trans-unit id="86e2f1a9ee8c86cb8243f522b50b65e6423c34d6" translate="yes" xml:space="preserve">
           <source>Backward compatibility syntax for removing the &lt;code&gt;oid&lt;/code&gt; system column. As &lt;code&gt;oid&lt;/code&gt; system columns cannot be added anymore, this never has an effect.</source>
@@ -3093,11 +3093,11 @@
         </trans-unit>
         <trans-unit id="485c014f257e394c215c16b50018b7e0c80f4130" translate="yes" xml:space="preserve">
           <source>Base 10 logarithm</source>
-          <target state="new"/>
+          <target state="translated">基数10对数</target>
         </trans-unit>
         <trans-unit id="3b9f28dd05a6a2df955f43acccdc39e58fea4d0c" translate="yes" xml:space="preserve">
           <source>Base 10 logarithm (same as &lt;code&gt;log&lt;/code&gt;)</source>
-          <target state="new"/>
+          <target state="translated">以10为底的对数（与 &lt;code&gt;log&lt;/code&gt; 相同）</target>
         </trans-unit>
         <trans-unit id="fb6d805e2be11428f917d98dd4e9cac7ed971f88" translate="yes" xml:space="preserve">
           <source>Base Types</source>
@@ -3137,7 +3137,7 @@
         </trans-unit>
         <trans-unit id="1cca2cb275ffb0ac1d90a9275a182dd9576c7cb7" translate="yes" xml:space="preserve">
           <source>Because &lt;a href=&quot;glossary#GLOSSARY-NULL&quot;&gt;null values&lt;/a&gt; are not considered equal to each other, multiple rows with null values are allowed to exist without violating the unique constraint.</source>
-          <target state="new"/>
+          <target state="translated">因为不认为&lt;a href=&quot;glossary#GLOSSARY-NULL&quot;&gt;空值&lt;/a&gt;彼此相等，所以允许存在多个具有空值的行而不会违反唯一约束。</target>
         </trans-unit>
         <trans-unit id="8050bf055d69a2c17aebfa6f23142af8cc972e31" translate="yes" xml:space="preserve">
           <source>Because &lt;code&gt;...&lt;/code&gt; is widely used in data sources, it is allowed as an alternative spelling of &lt;code&gt;..&lt;/code&gt;. Unfortunately, this creates a parsing ambiguity: it is not clear whether the upper bound in &lt;code&gt;0...23&lt;/code&gt; is meant to be &lt;code&gt;23&lt;/code&gt; or &lt;code&gt;0.23&lt;/code&gt;. This is resolved by requiring at least one digit before the decimal point in all numbers in &lt;code&gt;seg&lt;/code&gt; input.</source>
@@ -3161,7 +3161,7 @@
         </trans-unit>
         <trans-unit id="3bffe320d485976bda24d70a1ca1896c9923ad97" translate="yes" xml:space="preserve">
           <source>Because &lt;code&gt;smallserial&lt;/code&gt;, &lt;code&gt;serial&lt;/code&gt; and &lt;code&gt;bigserial&lt;/code&gt; are implemented using sequences, there may be &quot;holes&quot; or gaps in the sequence of values which appears in the column, even if no rows are ever deleted. A value allocated from the sequence is still &quot;used up&quot; even if a row containing that value is never successfully inserted into the table column. This may happen, for example, if the inserting transaction rolls back. See &lt;code&gt;nextval()&lt;/code&gt; in &lt;a href=&quot;functions-sequence&quot;&gt;Section 9.17&lt;/a&gt; for details.</source>
-          <target state="new"/>
+          <target state="translated">因为 &lt;code&gt;smallserial&lt;/code&gt; ， &lt;code&gt;serial&lt;/code&gt; 和 &lt;code&gt;bigserial&lt;/code&gt; 是使用序列实现的，所以即使没有删除任何行，在列中出现的值序列中也可能存在&amp;ldquo;空洞&amp;rdquo;或缺口。即使从未成功将包含该值的行插入表列，也仍会&amp;ldquo;用完&amp;rdquo;从序列中分配的值。例如，如果插入事务回滚，则可能会发生这种情况。见 &lt;code&gt;nextval()&lt;/code&gt; 会在&lt;a href=&quot;functions-sequence&quot;&gt;第9.17节&lt;/a&gt;了解详情。</target>
         </trans-unit>
         <trans-unit id="2055271ae8273a98d1c3120c9ad69e5bbb4dabd7" translate="yes" xml:space="preserve">
           <source>Because &lt;code&gt;to_tsvector&lt;/code&gt;(&lt;code&gt;NULL&lt;/code&gt;) will return &lt;code&gt;NULL&lt;/code&gt;, it is recommended to use &lt;code&gt;coalesce&lt;/code&gt; whenever a field might be null. Here is the recommended method for creating a &lt;code&gt;tsvector&lt;/code&gt; from a structured document:</source>
@@ -3189,7 +3189,7 @@
         </trans-unit>
         <trans-unit id="8e8b8c9914b76b9dd74e86a1ad52e4f86cc8bc3d" translate="yes" xml:space="preserve">
           <source>Because WAL restores database file contents after a crash, journaled file systems are not necessary for reliable storage of the data files or WAL files. In fact, journaling overhead can reduce performance, especially if journaling causes file system &lt;em&gt;data&lt;/em&gt; to be flushed to disk. Fortunately, data flushing during journaling can often be disabled with a file system mount option, e.g., &lt;code&gt;data=writeback&lt;/code&gt; on a Linux ext3 file system. Journaled file systems do improve boot speed after a crash.</source>
-          <target state="new"/>
+          <target state="translated">由于WAL在崩溃后会还原数据库文件的内容，因此日记文件系统对于可靠地存储数据文件或WAL文件不是必需的。实际上，日志记录开销可能会降低性能，尤其是如果日志记录导致文件系统&lt;em&gt;数据&lt;/em&gt;刷新到磁盘上，则尤其如此。幸运的是，日志记录期间的数据刷新通常可以使用文件系统挂载选项来禁用，例如，Linux ext3文件系统上的 &lt;code&gt;data=writeback&lt;/code&gt; 。日志文件系统确实可以提高崩溃后的启动速度。</target>
         </trans-unit>
         <trans-unit id="af002f2ced30c87d8ca2cfc786b9d6c148a8b054" translate="yes" xml:space="preserve">
           <source>Because a &lt;code&gt;SECURITY DEFINER&lt;/code&gt; function is executed with the privileges of the user that owns it, care is needed to ensure that the function cannot be misused. For security, &lt;a href=&quot;runtime-config-client#GUC-SEARCH-PATH&quot;&gt;search_path&lt;/a&gt; should be set to exclude any schemas writable by untrusted users. This prevents malicious users from creating objects (e.g., tables, functions, and operators) that mask objects intended to be used by the function. Particularly important in this regard is the temporary-table schema, which is searched first by default, and is normally writable by anyone. A secure arrangement can be obtained by forcing the temporary schema to be searched last. To do this, write &lt;code&gt;pg_temp&lt;/code&gt; as the last entry in &lt;code&gt;search_path&lt;/code&gt;. This function illustrates safe usage:</source>
@@ -3269,7 +3269,7 @@
         </trans-unit>
         <trans-unit id="f0a1c41a7fd794b4e227af5602d5ab126f9a65b2" translate="yes" xml:space="preserve">
           <source>Because the &lt;code&gt;...&lt;/code&gt; operator is widely used in data sources, it is allowed as an alternative spelling of the &lt;code&gt;..&lt;/code&gt; operator. Unfortunately, this creates a parsing ambiguity: it is not clear whether the upper bound in &lt;code&gt;0...23&lt;/code&gt; is meant to be &lt;code&gt;23&lt;/code&gt; or &lt;code&gt;0.23&lt;/code&gt;. This is resolved by requiring at least one digit before the decimal point in all numbers in &lt;code&gt;seg&lt;/code&gt; input.</source>
-          <target state="new"/>
+          <target state="translated">由于 &lt;code&gt;...&lt;/code&gt; 运算符在数据源中得到了广泛使用，因此它可以用作 &lt;code&gt;..&lt;/code&gt; 运算符的替代拼写。不幸的是，这造成了解析的歧义：尚不清楚 &lt;code&gt;0...23&lt;/code&gt; 的上限是 &lt;code&gt;23&lt;/code&gt; 还是 &lt;code&gt;0.23&lt;/code&gt; 。通过在 &lt;code&gt;seg&lt;/code&gt; 输入中所有数字中的小数点前至少需要一位数字来解决。</target>
         </trans-unit>
         <trans-unit id="a4c15eb3326253a984503903ababbb5a012e0e63" translate="yes" xml:space="preserve">
           <source>Because the &lt;code&gt;Finalize Aggregate&lt;/code&gt; node runs on the leader process, queries which produce a relatively large number of groups in comparison to the number of input rows will appear less favorable to the query planner. For example, in the worst-case scenario the number of groups seen by the &lt;code&gt;Finalize Aggregate&lt;/code&gt; node could be as many as the number of input rows which were seen by all worker processes in the &lt;code&gt;Partial Aggregate&lt;/code&gt; stage. For such cases, there is clearly going to be no performance benefit to using parallel aggregation. The query planner takes this into account during the planning process and is unlikely to choose parallel aggregate in this scenario.</source>
@@ -3377,7 +3377,7 @@
         </trans-unit>
         <trans-unit id="6cde500737c3794e75266509d120c3f451ce96fd" translate="yes" xml:space="preserve">
           <source>Before anyone can access the database, you must start the database server. The database server program is called &lt;code&gt;postgres&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">在任何人都可以访问数据库之前，您必须启动数据库服务器。数据库服务器程序称为 &lt;code&gt;postgres&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="96a33375376d06d4d560a6a1c1041e7d31e19935" translate="yes" xml:space="preserve">
           <source>Before anyone can access the database, you must start the database server. The database server program is called &lt;code&gt;postgres&lt;/code&gt;. The &lt;code&gt;postgres&lt;/code&gt; program must know where to find the data it is supposed to use. This is done with the &lt;code&gt;-D&lt;/code&gt; option. Thus, the simplest way to start the server is:</source>
@@ -3397,7 +3397,7 @@
         </trans-unit>
         <trans-unit id="0534112e08b3f377dcff7dae34fa42dedf03836d" translate="yes" xml:space="preserve">
           <source>Before running the &lt;code&gt;ATTACH PARTITION&lt;/code&gt; command, it is recommended to create a &lt;code&gt;CHECK&lt;/code&gt; constraint on the table to be attached matching the desired partition constraint. That way, the system will be able to skip the scan which is otherwise needed to validate the implicit partition constraint. Without the &lt;code&gt;CHECK&lt;/code&gt; constraint, the table will be scanned to validate the partition constraint while holding an &lt;code&gt;ACCESS EXCLUSIVE&lt;/code&gt; lock on that partition and a &lt;code&gt;SHARE UPDATE EXCLUSIVE&lt;/code&gt; lock on the parent table. It may be desired to drop the redundant &lt;code&gt;CHECK&lt;/code&gt; constraint after &lt;code&gt;ATTACH PARTITION&lt;/code&gt; is finished.</source>
-          <target state="new"/>
+          <target state="translated">在运行 &lt;code&gt;ATTACH PARTITION&lt;/code&gt; 命令之前，建议在要附加的表上创建与所需分区约束匹配的 &lt;code&gt;CHECK&lt;/code&gt; 约束。这样，系统将能够跳过扫描，否则该扫描将需要验证隐式分区约束。如果没有 &lt;code&gt;CHECK&lt;/code&gt; 约束，则将扫描表以验证分区约束，同时在该分区上保留 &lt;code&gt;ACCESS EXCLUSIVE&lt;/code&gt; 锁，并在父表上保持 &lt;code&gt;SHARE UPDATE EXCLUSIVE&lt;/code&gt; 锁。在 &lt;code&gt;ATTACH PARTITION&lt;/code&gt; 完成后，可能需要删除冗余的 &lt;code&gt;CHECK&lt;/code&gt; 约束。</target>
         </trans-unit>
         <trans-unit id="6cd8ecaf3b3090d8469e126e6ec0aadfd531ece9" translate="yes" xml:space="preserve">
           <source>Before we proceed, you should understand the basic PostgreSQL system architecture. Understanding how the parts of PostgreSQL interact will make this chapter somewhat clearer.</source>
@@ -3409,7 +3409,7 @@
         </trans-unit>
         <trans-unit id="80b6d48dacb8cea98d5f49fb8a5fb0ff5e17a88f" translate="yes" xml:space="preserve">
           <source>Before you can do anything, you must initialize a database storage area on disk. We call this a &lt;em&gt;database cluster&lt;/em&gt;. (The SQL standard uses the term catalog cluster.) A database cluster is a collection of databases that is managed by a single instance of a running database server. After initialization, a database cluster will contain a database named &lt;code&gt;postgres&lt;/code&gt;, which is meant as a default database for use by utilities, users and third party applications. The database server itself does not require the &lt;code&gt;postgres&lt;/code&gt; database to exist, but many external utility programs assume it exists. Another database created within each cluster during initialization is called &lt;code&gt;template1&lt;/code&gt;. As the name suggests, this will be used as a template for subsequently created databases; it should not be used for actual work. (See &lt;a href=&quot;https://www.postgresql.org/docs/13/managing-databases.html&quot;&gt;Chapter 22&lt;/a&gt; for information about creating new databases within a cluster.)</source>
-          <target state="new"/>
+          <target state="translated">在执行任何操作之前，必须初始化磁盘上的数据库存储区域。我们称其为&lt;em&gt;数据库集群&lt;/em&gt;。 （SQL标准使用术语目录集群。）数据库集群是由运行中的数据库服务器的单个实例管理的数据库的集合。初始化后，数据库集群将包含一个名为 &lt;code&gt;postgres&lt;/code&gt; 的数据库，这是公用程序，用户和第三方应用程序使用的默认数据库。数据库服务器本身不需要 &lt;code&gt;postgres&lt;/code&gt; 数据库存在，但是许多外部实用程序都假定它存在。在初始化期间在每个集群中创建的另一个数据库称为 &lt;code&gt;template1&lt;/code&gt; 。顾名思义，它将用作后续创建的数据库的模板；它不应用于实际工作。（有关在集群中创建新数据库的信息，请参见&lt;a href=&quot;https://www.postgresql.org/docs/13/managing-databases.html&quot;&gt;第22章&lt;/a&gt;。）</target>
         </trans-unit>
         <trans-unit id="c5021e6ec2c149bc593346cdbced55fdf083dae8" translate="yes" xml:space="preserve">
           <source>Before you can use &lt;code&gt;CREATE EXTENSION&lt;/code&gt; to load an extension into a database, the extension's supporting files must be installed. Information about installing the extensions supplied with PostgreSQL can be found in &lt;a href=&quot;https://www.postgresql.org/docs/12/contrib.html&quot;&gt;Additional Supplied Modules&lt;/a&gt;.</source>
@@ -3417,7 +3417,7 @@
         </trans-unit>
         <trans-unit id="083511ee8f3db20d9fdeeef0f34879a74ab033ad" translate="yes" xml:space="preserve">
           <source>Before you can use &lt;code&gt;CREATE EXTENSION&lt;/code&gt; to load an extension into a database, the extension's supporting files must be installed. Information about installing the extensions supplied with PostgreSQL can be found in &lt;a href=&quot;https://www.postgresql.org/docs/13/contrib.html&quot;&gt;Additional Supplied Modules&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">必须先安装扩展的支持文件，然后才能使用 &lt;code&gt;CREATE EXTENSION&lt;/code&gt; 将扩展加载到数据库中。有关安装PostgreSQL附带的扩展的信息，可以在&amp;ldquo;&lt;a href=&quot;https://www.postgresql.org/docs/13/contrib.html&quot;&gt;其他提供的模块&amp;rdquo;中&lt;/a&gt;找到。</target>
         </trans-unit>
         <trans-unit id="b42b034c7e4f7289aaf07ce4a58233afbf01dc95" translate="yes" xml:space="preserve">
           <source>Before you can use PostgreSQL you need to install it, of course. It is possible that PostgreSQL is already installed at your site, either because it was included in your operating system distribution or because the system administrator already installed it. If that is the case, you should obtain information from the operating system documentation or your system administrator about how to access PostgreSQL.</source>
@@ -3457,7 +3457,7 @@
         </trans-unit>
         <trans-unit id="52757979ec3d8a6995e55b22d0069c2c9da4e33a" translate="yes" xml:space="preserve">
           <source>Behaves just like the &lt;code&gt;pg_logical_slot_peek_changes()&lt;/code&gt; function, except that changes are returned as &lt;code&gt;bytea&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">行为类似于 &lt;code&gt;pg_logical_slot_peek_changes()&lt;/code&gt; 函数，除了更改以 &lt;code&gt;bytea&lt;/code&gt; 返回。</target>
         </trans-unit>
         <trans-unit id="10e28951f118886fb1db9aad1518cc8230f657d1" translate="yes" xml:space="preserve">
           <source>Behaves similarly to &lt;code&gt;FOR NO KEY UPDATE&lt;/code&gt;, except that it acquires a shared lock rather than exclusive lock on each retrieved row. A shared lock blocks other transactions from performing &lt;code&gt;UPDATE&lt;/code&gt;, &lt;code&gt;DELETE&lt;/code&gt;, &lt;code&gt;SELECT FOR UPDATE&lt;/code&gt; or &lt;code&gt;SELECT FOR NO KEY UPDATE&lt;/code&gt; on these rows, but it does not prevent them from performing &lt;code&gt;SELECT FOR SHARE&lt;/code&gt; or &lt;code&gt;SELECT FOR KEY SHARE&lt;/code&gt;.</source>
@@ -3493,15 +3493,15 @@
         </trans-unit>
         <trans-unit id="ef6d7a0bd27a4a7a7898b15686b3e50c0c08dc1a" translate="yes" xml:space="preserve">
           <source>Besides the configuration parameters documented in &lt;a href=&quot;https://www.postgresql.org/docs/13/runtime-config.html&quot;&gt;Chapter 19&lt;/a&gt;, there are a few that can only be adjusted using the &lt;code&gt;SET&lt;/code&gt; command or that have a special syntax:</source>
-          <target state="new"/>
+          <target state="translated">除了&lt;a href=&quot;https://www.postgresql.org/docs/13/runtime-config.html&quot;&gt;第19章中介绍&lt;/a&gt;的配置参数外，还有一些只能使用 &lt;code&gt;SET&lt;/code&gt; 命令进行调整或具有特殊语法的参数：</target>
         </trans-unit>
         <trans-unit id="dcdcdb56c299825a17bc63b94d508dafd4fc2a95" translate="yes" xml:space="preserve">
           <source>Between (inclusive of the range endpoints).</source>
-          <target state="new"/>
+          <target state="translated">之间(包括范围端点)。</target>
         </trans-unit>
         <trans-unit id="e6c66d70ecd66ce14264e1d077f56c53c9c3ae8a" translate="yes" xml:space="preserve">
           <source>Between, after sorting the two endpoint values.</source>
-          <target state="new"/>
+          <target state="translated">间,对两个端点值进行排序后。</target>
         </trans-unit>
         <trans-unit id="60abe3d5ae299760f0dd57db1ab7b6b69b7cc66b" translate="yes" xml:space="preserve">
           <source>Beware that recent releases of macOS ignore attempts to set &lt;code&gt;SHMMAX&lt;/code&gt; to a value that isn't an exact multiple of 4096.</source>
@@ -3541,7 +3541,7 @@
         </trans-unit>
         <trans-unit id="cbcfd399e3b6e28f48b32806c48d9294b5084ef2" translate="yes" xml:space="preserve">
           <source>Binary String: bit_length</source>
-          <target state="new"/>
+          <target state="translated">二进制字符串:bit_length</target>
         </trans-unit>
         <trans-unit id="b8dff4368de0e3c40124e448acd2ca6783cd44df" translate="yes" xml:space="preserve">
           <source>Binary String: btrim</source>
@@ -3549,15 +3549,15 @@
         </trans-unit>
         <trans-unit id="3d3110a88c097ff95d0ceb59cb2d12b59b1aeb9f" translate="yes" xml:space="preserve">
           <source>Binary String: convert</source>
-          <target state="new"/>
+          <target state="translated">二进制字符串:转换</target>
         </trans-unit>
         <trans-unit id="af8938914c9b70ca934924b934ba9839025c7024" translate="yes" xml:space="preserve">
           <source>Binary String: convert_from</source>
-          <target state="new"/>
+          <target state="translated">二进制字符串:convert_from</target>
         </trans-unit>
         <trans-unit id="e921f5d76c05cb18ae66971b494afa6830c1fe08" translate="yes" xml:space="preserve">
           <source>Binary String: convert_to</source>
-          <target state="new"/>
+          <target state="translated">二进制字符串:convert_to</target>
         </trans-unit>
         <trans-unit id="dab4683aaea619005a4200cd9a5215872f4f193a" translate="yes" xml:space="preserve">
           <source>Binary String: decode</source>
@@ -3621,7 +3621,7 @@
         </trans-unit>
         <trans-unit id="138398c9ed1548fd9d09e373d02441ec780c3dba" translate="yes" xml:space="preserve">
           <source>Binary String: substr</source>
-          <target state="new"/>
+          <target state="translated">二进制字符串:substr</target>
         </trans-unit>
         <trans-unit id="eb754287eb3b8d22b0752ef54dea23d275538097" translate="yes" xml:space="preserve">
           <source>Binary String: substring</source>
@@ -3673,55 +3673,55 @@
         </trans-unit>
         <trans-unit id="698c5053f7fb4235a075904b83c81d0e7f75e767" translate="yes" xml:space="preserve">
           <source>Bit String: B&amp;#x27;10001&amp;#x27; # B&amp;#x27;01101&amp;#x27;</source>
-          <target state="new"/>
+          <target state="translated">位字符串：B'10001'＃B'01101'</target>
         </trans-unit>
         <trans-unit id="4fec3321c838e2393b12b6d782dae5847bd67b84" translate="yes" xml:space="preserve">
           <source>Bit String: B&amp;#x27;10001&amp;#x27; &amp;amp; B&amp;#x27;01101&amp;#x27;</source>
-          <target state="new"/>
+          <target state="translated">位字符串：B'10001'和B'01101'</target>
         </trans-unit>
         <trans-unit id="f80854d98441f5f666a756550418ab3915bb0869" translate="yes" xml:space="preserve">
           <source>Bit String: B&amp;#x27;10001&amp;#x27; &amp;gt;&amp;gt; 2</source>
-          <target state="new"/>
+          <target state="translated">位字符串：B'10001'&amp;gt;&amp;gt; 2</target>
         </trans-unit>
         <trans-unit id="020f62b450e6a960545b1de75bca157ae03bc7a2" translate="yes" xml:space="preserve">
           <source>Bit String: B&amp;#x27;10001&amp;#x27; &amp;lt;&amp;lt; 3</source>
-          <target state="new"/>
+          <target state="translated">位字符串：B'10001'&amp;lt;&amp;lt; 3</target>
         </trans-unit>
         <trans-unit id="edcb968f9fd9173bd5d0d4f8617eb3f6d27f69c3" translate="yes" xml:space="preserve">
           <source>Bit String: B&amp;#x27;10001&amp;#x27; | B&amp;#x27;01101&amp;#x27;</source>
-          <target state="new"/>
+          <target state="translated">位字符串：B'10001'| B'01101'</target>
         </trans-unit>
         <trans-unit id="292bdc723b3de75f45f35aaf3b8989a7fc5eb2b2" translate="yes" xml:space="preserve">
           <source>Bit String: bit_length</source>
-          <target state="new"/>
+          <target state="translated">Bit String:bit_length</target>
         </trans-unit>
         <trans-unit id="918db4fa99e0649c8060902f9a3e94ba75c279e0" translate="yes" xml:space="preserve">
           <source>Bit String: get_bit</source>
-          <target state="new"/>
+          <target state="translated">Bit String:get_bit</target>
         </trans-unit>
         <trans-unit id="6891e5dceae12938ae30b567970719872fccde2c" translate="yes" xml:space="preserve">
           <source>Bit String: length</source>
-          <target state="new"/>
+          <target state="translated">位串:长度</target>
         </trans-unit>
         <trans-unit id="4f5f6f7cb2e1bc80a507138569c25bed2001e0f1" translate="yes" xml:space="preserve">
           <source>Bit String: octet_length</source>
-          <target state="new"/>
+          <target state="translated">Bit String:octet_length</target>
         </trans-unit>
         <trans-unit id="00634ec6386463ae42b1b7bb26891e1338c4b35c" translate="yes" xml:space="preserve">
           <source>Bit String: overlay</source>
-          <target state="new"/>
+          <target state="translated">位串:覆盖</target>
         </trans-unit>
         <trans-unit id="1a0d8c1cd0116787005f4bee7aff429712b20961" translate="yes" xml:space="preserve">
           <source>Bit String: position</source>
-          <target state="new"/>
+          <target state="translated">位串:位置</target>
         </trans-unit>
         <trans-unit id="38f3120e8f7e91a683313ad8017d180967d09509" translate="yes" xml:space="preserve">
           <source>Bit String: set_bit</source>
-          <target state="new"/>
+          <target state="translated">位串:set_bit</target>
         </trans-unit>
         <trans-unit id="eb70e33ea681844ee935ae674a0a87b670e898dd" translate="yes" xml:space="preserve">
           <source>Bit String: substring</source>
-          <target state="new"/>
+          <target state="translated">位串:子串</target>
         </trans-unit>
         <trans-unit id="4e47fbeeacb2ccb2058a0e13885d27607dc2ff89" translate="yes" xml:space="preserve">
           <source>Bit String: |</source>
@@ -3737,7 +3737,7 @@
         </trans-unit>
         <trans-unit id="91c158702eba7e22d8c0b8480c6181f06bc8d6e5" translate="yes" xml:space="preserve">
           <source>Bit String: ~ B&amp;#x27;10001&amp;#x27;</source>
-          <target state="new"/>
+          <target state="translated">位字符串：〜B'10001'</target>
         </trans-unit>
         <trans-unit id="2efae331bc5aa821406a784a6e78c0b9daf6c7df" translate="yes" xml:space="preserve">
           <source>Bit mask identifying trigger firing conditions</source>
@@ -3761,51 +3761,51 @@
         </trans-unit>
         <trans-unit id="17e80e5f71e9b85954b350f117d4dfeb3c5cf70a" translate="yes" xml:space="preserve">
           <source>Bitwise AND</source>
-          <target state="new"/>
+          <target state="translated">位元 AND</target>
         </trans-unit>
         <trans-unit id="2461564dd1b0dd1dfe10a6e27226bb4f00cb800c" translate="yes" xml:space="preserve">
           <source>Bitwise AND (inputs must be of equal length)</source>
-          <target state="new"/>
+          <target state="translated">位元 AND (输入必须是等长的)</target>
         </trans-unit>
         <trans-unit id="136c3a93310929e09124297eaf66ab9f3782d009" translate="yes" xml:space="preserve">
           <source>Bitwise NOT</source>
-          <target state="new"/>
+          <target state="translated">位智不</target>
         </trans-unit>
         <trans-unit id="f4be0adcfa81c37e1e7bbf2e23630f30974d164f" translate="yes" xml:space="preserve">
           <source>Bitwise OR</source>
-          <target state="new"/>
+          <target state="translated">位式OR</target>
         </trans-unit>
         <trans-unit id="b3a7a98dcaae40a13757076e24af311dfee77860" translate="yes" xml:space="preserve">
           <source>Bitwise OR (inputs must be of equal length)</source>
-          <target state="new"/>
+          <target state="translated">位式OR(输入必须是等长的)。</target>
         </trans-unit>
         <trans-unit id="74269e9a4eb117ac43a93ed74bc3c8cd96fd4ff4" translate="yes" xml:space="preserve">
           <source>Bitwise XOR</source>
-          <target state="new"/>
+          <target state="translated">位向XOR</target>
         </trans-unit>
         <trans-unit id="3ba80ac4bf1c4bbad0f4a7d6ddfd25841835e177" translate="yes" xml:space="preserve">
           <source>Bitwise exclusive OR</source>
-          <target state="new"/>
+          <target state="translated">位独占OR</target>
         </trans-unit>
         <trans-unit id="d16eb5b05790cd70e7dd8947da148a14b1c3b585" translate="yes" xml:space="preserve">
           <source>Bitwise exclusive OR (inputs must be of equal length)</source>
-          <target state="new"/>
+          <target state="translated">位独占OR(输入必须是等长的)。</target>
         </trans-unit>
         <trans-unit id="c8659c0b8789aa4ee715f09528a9e4eecaaa826e" translate="yes" xml:space="preserve">
           <source>Bitwise shift left</source>
-          <target state="new"/>
+          <target state="translated">左移位</target>
         </trans-unit>
         <trans-unit id="5b90f67d593a4af9275c5c94d26eb0e231cb737a" translate="yes" xml:space="preserve">
           <source>Bitwise shift left (string length is preserved)</source>
-          <target state="new"/>
+          <target state="translated">向左移位(保留字符串长度)</target>
         </trans-unit>
         <trans-unit id="50231ce6a71d579851db8fdf27b3184364b82e41" translate="yes" xml:space="preserve">
           <source>Bitwise shift right</source>
-          <target state="new"/>
+          <target state="translated">右移位</target>
         </trans-unit>
         <trans-unit id="2b8813dffcb464fd01e7635b2efefa7c701a1bc5" translate="yes" xml:space="preserve">
           <source>Bitwise shift right (string length is preserved)</source>
-          <target state="new"/>
+          <target state="translated">向右移位(保留字符串长度)</target>
         </trans-unit>
         <trans-unit id="8bfd5b423062918623ca47aa91c65abf2e858720" translate="yes" xml:space="preserve">
           <source>Bloat</source>
@@ -3865,7 +3865,7 @@
         </trans-unit>
         <trans-unit id="fa793a8aacedef81b06cc550c19f522284580fd4" translate="yes" xml:space="preserve">
           <source>Boolean value tests</source>
-          <target state="new"/>
+          <target state="translated">布尔值测试</target>
         </trans-unit>
         <trans-unit id="ec240e7050d6f871548eb16c80190949f2f4c3c5" translate="yes" xml:space="preserve">
           <source>Boolean values can also be tested using the predicates</source>
@@ -3893,7 +3893,7 @@
         </trans-unit>
         <trans-unit id="d935d6e4440b7d13db8dea9774a168802ac598e0" translate="yes" xml:space="preserve">
           <source>Both star symbols and simple words can be quantified to restrict how many labels they can match:</source>
-          <target state="new"/>
+          <target state="translated">无论是明星符号还是简单的文字,都可以通过量化来限制其匹配的标签数量。</target>
         </trans-unit>
         <trans-unit id="7b6bb44fe8014c95fc406791cc963af10b33bb29" translate="yes" xml:space="preserve">
           <source>Both the maximum precision and the maximum scale of a &lt;code&gt;numeric&lt;/code&gt; column can be configured. To declare a column of type &lt;code&gt;numeric&lt;/code&gt; use the syntax:</source>
@@ -3969,7 +3969,7 @@
         </trans-unit>
         <trans-unit id="12655969a97b05cc10e81a0f90560ca3e925543c" translate="yes" xml:space="preserve">
           <source>Builds a JSON object out of a text array. The array must have either exactly one dimension with an even number of members, in which case they are taken as alternating key/value pairs, or two dimensions such that each inner array has exactly two elements, which are taken as a key/value pair. All values are converted to JSON strings.</source>
-          <target state="new"/>
+          <target state="translated">从一个文本数组中建立一个JSON对象。数组必须有一个维度,成员数为偶数,在这种情况下,它们被当作键/值对交替使用,或者有两个维度,每个内部数组有两个元素,被当作键/值对使用。所有的值都转换为JSON字符串。</target>
         </trans-unit>
         <trans-unit id="f2aecbff08d9f05062e48cef54ff41a7deab5245" translate="yes" xml:space="preserve">
           <source>Builds a JSON object out of a variadic argument list. By convention, the argument list consists of alternating keys and values.</source>
@@ -3977,7 +3977,7 @@
         </trans-unit>
         <trans-unit id="3f46fcc8bccbe3831f46147a1da2fc888d15802b" translate="yes" xml:space="preserve">
           <source>Builds a JSON object out of a variadic argument list. By convention, the argument list consists of alternating keys and values. Key arguments are coerced to text; value arguments are converted as per &lt;code&gt;to_json&lt;/code&gt; or &lt;code&gt;to_jsonb&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">从可变参数列表中构建JSON对象。按照惯例，参数列表由交替的键和值组成。关键参数被强制转换为文本；值参数根据 &lt;code&gt;to_json&lt;/code&gt; 或 &lt;code&gt;to_jsonb&lt;/code&gt; 进行转换。</target>
         </trans-unit>
         <trans-unit id="ad91ede47a5280dfb0e7c89b0ab06f2bb7e0630d" translate="yes" xml:space="preserve">
           <source>Builds a possibly-heterogeneously-typed JSON array out of a variadic argument list.</source>
@@ -3985,7 +3985,7 @@
         </trans-unit>
         <trans-unit id="fc07e20c2337d94398080bc4db916907237b8429" translate="yes" xml:space="preserve">
           <source>Builds a possibly-heterogeneously-typed JSON array out of a variadic argument list. Each argument is converted as per &lt;code&gt;to_json&lt;/code&gt; or &lt;code&gt;to_jsonb&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">根据可变参数列表构建一个可能是异构类型的JSON数组。每个参数根据 &lt;code&gt;to_json&lt;/code&gt; 或 &lt;code&gt;to_jsonb&lt;/code&gt; 进行转换。</target>
         </trans-unit>
         <trans-unit id="6b5998f67810590d9a53e6c46c1e94143e2a8d11" translate="yes" xml:space="preserve">
           <source>Builds an arbitrary record from a JSON object (see note below). As with all functions returning &lt;code&gt;record&lt;/code&gt;, the caller must explicitly define the structure of the record with an &lt;code&gt;AS&lt;/code&gt; clause.</source>

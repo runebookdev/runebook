@@ -37,7 +37,7 @@
         </trans-unit>
         <trans-unit id="bd1e801996f18e878c7421f7a76634808df68609" translate="yes" xml:space="preserve">
           <source>This option can only be used together with &lt;code&gt;-X stream&lt;/code&gt;. It causes WAL streaming to use the specified replication slot. If the base backup is intended to be used as a streaming-replication standby using a replication slot, the standby should then use the same replication slot name as &lt;a href=&quot;runtime-config-replication#GUC-PRIMARY-SLOT-NAME&quot;&gt;primary_slot_name&lt;/a&gt;. This ensures that the primary server does not remove any necessary WAL data in the time between the end of the base backup and the start of streaming replication on the new standby.</source>
-          <target state="new"/>
+          <target state="translated">该选项只能与 &lt;code&gt;-X stream&lt;/code&gt; 一起使用。这将导致WAL流使用指定的复制插槽。如果要将基本备份用作使用复制插槽的流复制备用数据库，则备用数据库应使用与&lt;a href=&quot;runtime-config-replication#GUC-PRIMARY-SLOT-NAME&quot;&gt;primary_slot_name&lt;/a&gt;相同的复制插槽名称。这样可以确保在基本备份结束到新备用数据库上开始流复制之间的时间内，主服务器不会删除任何必要的WAL数据。</target>
         </trans-unit>
         <trans-unit id="4af26bb42d56efbdd77ea30d507197b50c1c0a6e" translate="yes" xml:space="preserve">
           <source>This option can only be used together with &lt;code&gt;-X stream&lt;/code&gt;. It causes the WAL streaming to use the specified replication slot. If the base backup is intended to be used as a streaming replication standby using replication slots, it should then use the same replication slot name in &lt;a href=&quot;runtime-config-replication#GUC-PRIMARY-SLOT-NAME&quot;&gt;primary_slot_name&lt;/a&gt;. That way, it is ensured that the server does not remove any necessary WAL data in the time between the end of the base backup and the start of streaming replication.</source>
@@ -185,7 +185,7 @@
         </trans-unit>
         <trans-unit id="dda9882d48af54bf77af6c2ab2fac746520d065c" translate="yes" xml:space="preserve">
           <source>This option is not allowed when using &lt;code&gt;--progress&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">使用 &lt;code&gt;--progress&lt;/code&gt; 时不允许使用此选项。</target>
         </trans-unit>
         <trans-unit id="cdca7882144557a657e3bff6adae96d14c901833" translate="yes" xml:space="preserve">
           <source>This option is not beneficial for a dump which is intended only for disaster recovery. It could be useful for a dump used to load a copy of the database for reporting or other read-only load sharing while the original database continues to be updated. Without it the dump may reflect a state which is not consistent with any serial execution of the transactions eventually committed. For example, if batch processing techniques are used, a batch may show as closed in the dump without all of the items which are in the batch appearing.</source>
@@ -209,7 +209,7 @@
         </trans-unit>
         <trans-unit id="e60792d332e761d9c0448cb84d4e71c131b9f16f" translate="yes" xml:space="preserve">
           <source>This option is only available for servers running PostgreSQL 13 and later.</source>
-          <target state="new"/>
+          <target state="translated">这个选项只适用于运行PostgreSQL 13及以后版本的服务器。</target>
         </trans-unit>
         <trans-unit id="b30b52665fa2ce02b72d1a4b69125f19a948988b" translate="yes" xml:space="preserve">
           <source>This option is only available for servers running PostgreSQL 9.6 and later.</source>
@@ -261,7 +261,7 @@
         </trans-unit>
         <trans-unit id="7de6209f5a71b1972a88650d25f0745aff575b91" translate="yes" xml:space="preserve">
           <source>This option is useful when needing to synchronize the dump with a logical replication slot (see &lt;a href=&quot;https://www.postgresql.org/docs/13/logicaldecoding.html&quot;&gt;Chapter 48&lt;/a&gt;) or with a concurrent session.</source>
-          <target state="new"/>
+          <target state="translated">当需要将转储与逻辑复制插槽（请参见&lt;a href=&quot;https://www.postgresql.org/docs/13/logicaldecoding.html&quot;&gt;第48章&lt;/a&gt;）或并发会话同步时，此选项很有用。</target>
         </trans-unit>
         <trans-unit id="3633c4f24d10d4cb48c93fba1de68cf9fa92f151" translate="yes" xml:space="preserve">
           <source>This option may not be used when the materialized view is not already populated.</source>
@@ -349,7 +349,7 @@
         </trans-unit>
         <trans-unit id="a1986f363d2c74bd434d8d6240e4cfb3cd3d030a" translate="yes" xml:space="preserve">
           <source>This overrides &lt;a href=&quot;runtime-config-logging#GUC-LOG-MIN-DURATION-SAMPLE&quot;&gt;log_min_duration_sample&lt;/a&gt;, meaning that queries with duration exceeding this setting are not subject to sampling and are always logged.</source>
-          <target state="new"/>
+          <target state="translated">这将覆盖&lt;a href=&quot;runtime-config-logging#GUC-LOG-MIN-DURATION-SAMPLE&quot;&gt;log_min_duration_sample&lt;/a&gt;，这意味着持续时间超过此设置的查询将不进行采样，并且始终被记录。</target>
         </trans-unit>
         <trans-unit id="a73490037361c0f29250fb41ec57cf1fa01ef705" translate="yes" xml:space="preserve">
           <source>This package has applications to astronomical databases as well. Astronomers will probably want to change &lt;code&gt;earth()&lt;/code&gt; to return a radius of &lt;code&gt;180/pi()&lt;/code&gt; so that distances are in degrees.</source>
@@ -365,11 +365,11 @@
         </trans-unit>
         <trans-unit id="547b9cb1aa4d24d0c574063f39b87dc0659b1ba0" translate="yes" xml:space="preserve">
           <source>This page describes usage of cursors at the SQL command level. If you are trying to use cursors inside a PL/pgSQL function, the rules are different &amp;mdash; see &lt;a href=&quot;https://www.postgresql.org/docs/13/plpgsql-cursors.html&quot;&gt;Section 42.7&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">本页在SQL命令级别描述游标的用法。如果您试图在PL / pgSQL函数中使用游标，则规则是不同的&amp;mdash;请参见&lt;a href=&quot;https://www.postgresql.org/docs/13/plpgsql-cursors.html&quot;&gt;第42.7节&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="4868f00986f7826fff46f8caaf65132226af2073" translate="yes" xml:space="preserve">
           <source>This page describes usage of cursors at the SQL command level. If you are trying to use cursors inside a PL/pgSQL function, the rules are different &amp;mdash; see &lt;a href=&quot;https://www.postgresql.org/docs/13/plpgsql-cursors.html#PLPGSQL-CURSOR-USING&quot;&gt;Section 42.7.3&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">本页在SQL命令级别描述游标的用法。如果您尝试在PL / pgSQL函数中使用游标，则规则有所不同-请参见&lt;a href=&quot;https://www.postgresql.org/docs/13/plpgsql-cursors.html#PLPGSQL-CURSOR-USING&quot;&gt;第42.7.3节&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="f12b1cf7624fdc2fc587dd45a6d547cd93a31157" translate="yes" xml:space="preserve">
           <source>This parameter adjusts the number of digits used for textual output of floating-point values, including &lt;code&gt;float4&lt;/code&gt;, &lt;code&gt;float8&lt;/code&gt;, and geometric data types.</source>
@@ -397,7 +397,7 @@
         </trans-unit>
         <trans-unit id="01ece1ab64d1d476c41b0db27bab26dffaa5d23d" translate="yes" xml:space="preserve">
           <source>This parameter can only be set by superusers.</source>
-          <target state="new"/>
+          <target state="translated">此参数只能由超级用户设置。</target>
         </trans-unit>
         <trans-unit id="aea2a5594193af5a590a3ea36df84b74060812a5" translate="yes" xml:space="preserve">
           <source>This parameter can only be set in the &lt;code&gt;postgresql.conf&lt;/code&gt; file or on the server command line.</source>
@@ -405,7 +405,7 @@
         </trans-unit>
         <trans-unit id="fcd4c1beac4f16c5f89019faf29b34c84fa4d317" translate="yes" xml:space="preserve">
           <source>This parameter can only be set in the &lt;code&gt;postgresql.conf&lt;/code&gt; file or on the server command line. If this parameter is changed while the WAL receiver process is running, that process is signaled to shut down and expected to restart with the new setting (except if &lt;code&gt;primary_conninfo&lt;/code&gt; is an empty string). This setting has no effect if the server is not in standby mode.</source>
-          <target state="new"/>
+          <target state="translated">此参数只能在 &lt;code&gt;postgresql.conf&lt;/code&gt; 文件或服务器命令行中设置。如果在运行WAL接收器进程时更改了此参数，则该进程将发出信号，表明已关闭，并有望以新设置重新启动（除非 &lt;code&gt;primary_conninfo&lt;/code&gt; 为空字符串）。如果服务器未处于待机模式，则此设置无效。</target>
         </trans-unit>
         <trans-unit id="fc5df5bbc83b51e3d05d700128363b10537046bc" translate="yes" xml:space="preserve">
           <source>This parameter can only be set in the &lt;code&gt;postgresql.conf&lt;/code&gt; file or on the server command line. It is ignored unless &lt;code&gt;archive_mode&lt;/code&gt; was enabled at server start. If &lt;code&gt;archive_command&lt;/code&gt; is an empty string (the default) while &lt;code&gt;archive_mode&lt;/code&gt; is enabled, WAL archiving is temporarily disabled, but the server continues to accumulate WAL segment files in the expectation that a command will soon be provided. Setting &lt;code&gt;archive_command&lt;/code&gt; to a command that does nothing but return true, e.g. &lt;code&gt;/bin/true&lt;/code&gt; (&lt;code&gt;REM&lt;/code&gt; on Windows), effectively disables archiving, but also breaks the chain of WAL files needed for archive recovery, so it should only be used in unusual circumstances.</source>
@@ -413,11 +413,11 @@
         </trans-unit>
         <trans-unit id="c874dee97d89cfa2b94fc70ed86e608ff9b3dc48" translate="yes" xml:space="preserve">
           <source>This parameter can only be set in the &lt;code&gt;postgresql.conf&lt;/code&gt; file or on the server command line. It is ignored unless &lt;code&gt;archive_mode&lt;/code&gt; was enabled at server start. If &lt;code&gt;archive_command&lt;/code&gt; is an empty string (the default) while &lt;code&gt;archive_mode&lt;/code&gt; is enabled, WAL archiving is temporarily disabled, but the server continues to accumulate WAL segment files in the expectation that a command will soon be provided. Setting &lt;code&gt;archive_command&lt;/code&gt; to a command that does nothing but return true, e.g., &lt;code&gt;/bin/true&lt;/code&gt; (&lt;code&gt;REM&lt;/code&gt; on Windows), effectively disables archiving, but also breaks the chain of WAL files needed for archive recovery, so it should only be used in unusual circumstances.</source>
-          <target state="new"/>
+          <target state="translated">此参数只能在 &lt;code&gt;postgresql.conf&lt;/code&gt; 文件或服务器命令行中设置。除非在服务器启动时启用了 &lt;code&gt;archive_mode&lt;/code&gt; ，否则它将被忽略。如果在启用 &lt;code&gt;archive_mode&lt;/code&gt; 的情况下 &lt;code&gt;archive_command&lt;/code&gt; 是空字符串（默认值），则将暂时禁用WAL归档，但是服务器将继续累积WAL段文件，以期将很快提供命令。将 &lt;code&gt;archive_command&lt;/code&gt; 设置为除了返回true以外什么都不做的命令，例如 &lt;code&gt;/bin/true&lt;/code&gt; （在Windows上为 &lt;code&gt;REM&lt;/code&gt; ），可以有效地禁用归档，但也会破坏归档恢复所需的WAL文件链，因此仅应在特殊情况下使用。</target>
         </trans-unit>
         <trans-unit id="a0a1a0889c9528b4413a436f9a00fb8ec805219f" translate="yes" xml:space="preserve">
           <source>This parameter can only be set in the &lt;code&gt;postgresql.conf&lt;/code&gt; file or on the server command line. The default is &lt;code&gt;'%m [%p] '&lt;/code&gt; which logs a time stamp and the process ID.</source>
-          <target state="new"/>
+          <target state="translated">此参数只能在 &lt;code&gt;postgresql.conf&lt;/code&gt; 文件或服务器命令行中设置。默认值为 &lt;code&gt;'%m [%p] '&lt;/code&gt; ，它记录时间戳记和进程ID。</target>
         </trans-unit>
         <trans-unit id="e07235f8bb7f2137e8d29b1c48712e024bfd7c79" translate="yes" xml:space="preserve">
           <source>This parameter can only be set in the &lt;code&gt;postgresql.conf&lt;/code&gt; file or on the server command line. The default is &lt;code&gt;on&lt;/code&gt;.</source>
@@ -425,7 +425,7 @@
         </trans-unit>
         <trans-unit id="fb9c9e485e73ed5f7ad6e8a64043056d9f542ea8" translate="yes" xml:space="preserve">
           <source>This parameter contains a comma-separated list of C function names. If an error is raised and the name of the internal C function where the error happens matches a value in the list, then a backtrace is written to the server log together with the error message. This can be used to debug specific areas of the source code.</source>
-          <target state="new"/>
+          <target state="translated">这个参数包含一个以逗号分隔的C函数名称列表。如果发生错误,并且发生错误的内部C函数的名称与列表中的值相匹配,那么一个回溯将与错误信息一起写入服务器日志。这可以用来调试源代码的特定区域。</target>
         </trans-unit>
         <trans-unit id="ab121fa8e3ea34fd830e0e6103b67d7f977831b1" translate="yes" xml:space="preserve">
           <source>This parameter controls the default deferrable status of each new transaction. It currently has no effect on read-write transactions or those operating at isolation levels lower than &lt;code&gt;serializable&lt;/code&gt;. The default is &lt;code&gt;off&lt;/code&gt;.</source>
@@ -433,7 +433,7 @@
         </trans-unit>
         <trans-unit id="86c77e7afe5c211d78ef603e06178e261dcf6c72" translate="yes" xml:space="preserve">
           <source>This parameter determines whether changes in a partitioned table (or on its partitions) contained in the publication will be published using the identity and schema of the partitioned table rather than that of the individual partitions that are actually changed; the latter is the default. Enabling this allows the changes to be replicated into a non-partitioned table or a partitioned table consisting of a different set of partitions.</source>
-          <target state="new"/>
+          <target state="translated">此参数决定是否使用分区表(或其分区上)的身份和模式,而不是实际更改的各个分区的身份和模式来发布发布发布中包含的分区表(或其分区上)的更改;后者是默认值。启用此功能可以将更改复制到非分区表或由不同分区集组成的分区表中。</target>
         </trans-unit>
         <trans-unit id="a4b6ea430b61a904ec5971253ee54b2fa2eddfa5" translate="yes" xml:space="preserve">
           <source>This parameter determines whether the passphrase command set by &lt;code&gt;ssl_passphrase_command&lt;/code&gt; will also be called during a configuration reload if a key file needs a passphrase. If this parameter is off (the default), then &lt;code&gt;ssl_passphrase_command&lt;/code&gt; will be ignored during a reload and the SSL configuration will not be reloaded if a passphrase is needed. That setting is appropriate for a command that requires a TTY for prompting, which might not be available when the server is running. Setting this parameter to on might be appropriate if the passphrase is obtained from a file, for example.</source>
@@ -477,7 +477,7 @@
         </trans-unit>
         <trans-unit id="1f6a521703b967c04e55a5a7440712a5d7f90432" translate="yes" xml:space="preserve">
           <source>This parameter is irrelevant on systems, notably Solaris as of Solaris 10, that ignore socket permissions entirely. There, one can achieve a similar effect by pointing &lt;code&gt;unix_socket_directories&lt;/code&gt; to a directory having search permission limited to the desired audience.</source>
-          <target state="new"/>
+          <target state="translated">此参数与完全忽略套接字许可权的系统（尤其是Solaris 10或更高版本的Solaris）无关。在那里，通过将 &lt;code&gt;unix_socket_directories&lt;/code&gt; 指向具有仅限于所需受众的搜索权限的目录，可以达到类似的效果。</target>
         </trans-unit>
         <trans-unit id="0d64ae81fa444da28c76340e9acb4f864a787cd0" translate="yes" xml:space="preserve">
           <source>This parameter is irrelevant on systems, notably Solaris as of Solaris 10, that ignore socket permissions entirely. There, one can achieve a similar effect by pointing &lt;code&gt;unix_socket_directories&lt;/code&gt; to a directory having search permission limited to the desired audience. This parameter is also irrelevant on Windows, which does not have Unix-domain sockets.</source>
@@ -493,7 +493,7 @@
         </trans-unit>
         <trans-unit id="de5a8a2ca644671b2bea31a3c7534d0ee40e2165" translate="yes" xml:space="preserve">
           <source>This parameter is not supported on Windows. Any setting will be ignored.</source>
-          <target state="new"/>
+          <target state="translated">Windows上不支持此参数。任何设置都将被忽略。</target>
         </trans-unit>
         <trans-unit id="b2763e8b9da5e6a86b4f3be45fa54afbb6338381" translate="yes" xml:space="preserve">
           <source>This parameter is only available if the &lt;code&gt;BTREE_BUILD_STATS&lt;/code&gt; macro was defined when PostgreSQL was compiled.</source>
@@ -529,7 +529,7 @@
         </trans-unit>
         <trans-unit id="4aaac74b096ffa8fd2b689ffdb61db6bf8bb5409" translate="yes" xml:space="preserve">
           <source>This parameter specifies that recovery should end as soon as a consistent state is reached, i.e., as early as possible. When restoring from an online backup, this means the point where taking the backup ended.</source>
-          <target state="new"/>
+          <target state="translated">此参数指定恢复应在达到一致状态后尽快结束,即尽早结束。当从在线备份中恢复时,指的是采取备份的结束点。</target>
         </trans-unit>
         <trans-unit id="038ead23d053aaeb92ffc414e5b17ac7f1401e33" translate="yes" xml:space="preserve">
           <source>This parameter specifies the LSN of the write-ahead log location up to which recovery will proceed. The precise stopping point is also influenced by &lt;a href=&quot;runtime-config-wal#GUC-RECOVERY-TARGET-INCLUSIVE&quot;&gt;recovery_target_inclusive&lt;/a&gt;. This parameter is parsed using the system data type &lt;a href=&quot;datatype-pg-lsn&quot;&gt;&lt;code&gt;pg_lsn&lt;/code&gt;&lt;/a&gt;.</source>
@@ -561,7 +561,7 @@
         </trans-unit>
         <trans-unit id="ed38ced0d51c221c24b167e4e04cc1cf521a37be" translate="yes" xml:space="preserve">
           <source>This process collects statistical information about the &lt;a href=&quot;glossary#GLOSSARY-INSTANCE&quot;&gt;instance&lt;/a&gt;'s activities.</source>
-          <target state="new"/>
+          <target state="translated">此过程收集有关&lt;a href=&quot;glossary#GLOSSARY-INSTANCE&quot;&gt;实例&lt;/a&gt;活动的统计信息。</target>
         </trans-unit>
         <trans-unit id="fc382ec8b1a79d496a545a65f41a47da71a48e61" translate="yes" xml:space="preserve">
           <source>This process is inherently nondeterministic, because of the randomized choices made during both the initial population selection and subsequent &amp;ldquo;mutation&amp;rdquo; of the best candidates. To avoid surprising changes of the selected plan, each run of the GEQO algorithm restarts its random number generator with the current &lt;a href=&quot;runtime-config-query#GUC-GEQO-SEED&quot;&gt;geqo_seed&lt;/a&gt; parameter setting. As long as &lt;code&gt;geqo_seed&lt;/code&gt; and the other GEQO parameters are kept fixed, the same plan will be generated for a given query (and other planner inputs such as statistics). To experiment with different search paths, try changing &lt;code&gt;geqo_seed&lt;/code&gt;.</source>
@@ -577,7 +577,7 @@
         </trans-unit>
         <trans-unit id="5e8d60ba924f5d2eca90b070e9581aa9a0f1247c" translate="yes" xml:space="preserve">
           <source>This provides the full power of the SQL query mechanism (&lt;a href=&quot;https://www.postgresql.org/docs/13/queries.html&quot;&gt;Chapter 7&lt;/a&gt;) for computing the rows to be inserted.</source>
-          <target state="new"/>
+          <target state="translated">这提供了SQL查询机制（&lt;a href=&quot;https://www.postgresql.org/docs/13/queries.html&quot;&gt;第7章&lt;/a&gt;）的全部功能，用于计算要插入的行。</target>
         </trans-unit>
         <trans-unit id="d9d073846645e6925e79e0c3d11f6f147a90ca99" translate="yes" xml:space="preserve">
           <source>This query can use an index if one has been defined on the result of the &lt;code&gt;lower(col1)&lt;/code&gt; function:</source>
@@ -661,7 +661,7 @@
         </trans-unit>
         <trans-unit id="d3fc02a75c04d8edd3f600f6578a82bc3af1af4c" translate="yes" xml:space="preserve">
           <source>This reference page does not describe the embedded SQL language. See &lt;a href=&quot;https://www.postgresql.org/docs/13/ecpg.html&quot;&gt;Chapter 35&lt;/a&gt; for more information on that topic.</source>
-          <target state="new"/>
+          <target state="translated">该参考页未介绍嵌入式SQL语言。有关该主题的更多信息，请参见&lt;a href=&quot;https://www.postgresql.org/docs/13/ecpg.html&quot;&gt;第35章&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="9455758ac29d288f9d863b3b9a52a001aafdf9d3" translate="yes" xml:space="preserve">
           <source>This references a function that is responsible for executing &amp;ldquo;inline&amp;rdquo; anonymous code blocks (&lt;a href=&quot;sql-do&quot;&gt;DO&lt;/a&gt; blocks). Zero if inline blocks are not supported.</source>
@@ -713,7 +713,7 @@
         </trans-unit>
         <trans-unit id="4e94a4091d1abb9ffbdb35b9bc5912877ddcba29" translate="yes" xml:space="preserve">
           <source>This section covers B-Tree index implementation details that may be of use to advanced users. See &lt;code&gt;src/backend/access/nbtree/README&lt;/code&gt; in the source distribution for a much more detailed, internals-focused description of the B-Tree implementation.</source>
-          <target state="new"/>
+          <target state="translated">本节介绍了B-Tree索引实现的详细信息，这些细节可能对高级用户有用。请参阅源代码发行版中的 &lt;code&gt;src/backend/access/nbtree/README&lt;/code&gt; ，以获取有关B树实现的更详细的，内部关注的描述。</target>
         </trans-unit>
         <trans-unit id="a9c2d04552ba91a05718611a7d18eeefc7243226" translate="yes" xml:space="preserve">
           <source>This section covers implementation details and other tricks that are useful for implementers of SP-GiST operator classes to know.</source>
@@ -733,11 +733,11 @@
         </trans-unit>
         <trans-unit id="c2ae13af2d3ddf62ac5901d20f9f9c54bb6f2eab" translate="yes" xml:space="preserve">
           <source>This section describes functions and operators for examining and manipulating binary strings, that is values of type &lt;code&gt;bytea&lt;/code&gt;. Many of these are equivalent, in purpose and syntax, to the text-string functions described in the previous section.</source>
-          <target state="new"/>
+          <target state="translated">本节介绍用于检查和操作二进制字符串（即 &lt;code&gt;bytea&lt;/code&gt; 类型的值）的函数和运算符。在目的和语法上，这些功能中的许多功能等同于上一节中描述的文本字符串功能。</target>
         </trans-unit>
         <trans-unit id="b2cbf42b02f5c651095d7686f2a3413bfe1a3d1d" translate="yes" xml:space="preserve">
           <source>This section describes functions and operators for examining and manipulating bit strings, that is values of the types &lt;code&gt;bit&lt;/code&gt; and &lt;code&gt;bit varying&lt;/code&gt;. (While only type &lt;code&gt;bit&lt;/code&gt; is mentioned in these tables, values of type &lt;code&gt;bit varying&lt;/code&gt; can be used interchangeably.) Bit strings support the usual comparison operators shown in &lt;a href=&quot;functions-comparison#FUNCTIONS-COMPARISON-OP-TABLE&quot;&gt;Table 9.1&lt;/a&gt;, as well as the operators shown in &lt;a href=&quot;functions-bitstring#FUNCTIONS-BIT-STRING-OP-TABLE&quot;&gt;Table 9.14&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">本节介绍了用于检查和操作位字符串的函数和运算符，这些位字符串是 &lt;code&gt;bit&lt;/code&gt; 和 &lt;code&gt;bit varying&lt;/code&gt; 类型的值。（虽然仅类型 &lt;code&gt;bit&lt;/code&gt; 是在这些表中所提及的，类型的值 &lt;code&gt;bit varying&lt;/code&gt; 可以互换使用。）位串支持中示出的通常的比较操作符&lt;a href=&quot;functions-comparison#FUNCTIONS-COMPARISON-OP-TABLE&quot;&gt;表9.1&lt;/a&gt;，以及在示出的操作员&lt;a href=&quot;functions-bitstring#FUNCTIONS-BIT-STRING-OP-TABLE&quot;&gt;表9.14&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="4a4f8d994f18d2a21002c3a9cf18de77dd441569" translate="yes" xml:space="preserve">
           <source>This section describes functions and operators for examining and manipulating bit strings, that is values of the types &lt;code&gt;bit&lt;/code&gt; and &lt;code&gt;bit varying&lt;/code&gt;. Aside from the usual comparison operators, the operators shown in &lt;a href=&quot;functions-bitstring#FUNCTIONS-BIT-STRING-OP-TABLE&quot;&gt;Table 9.14&lt;/a&gt; can be used. Bit string operands of &lt;code&gt;&amp;amp;&lt;/code&gt;, &lt;code&gt;|&lt;/code&gt;, and &lt;code&gt;#&lt;/code&gt; must be of equal length. When bit shifting, the original length of the string is preserved, as shown in the examples.</source>
@@ -745,7 +745,7 @@
         </trans-unit>
         <trans-unit id="4e0fe72449b8f5ee00166f169b410f0184155751" translate="yes" xml:space="preserve">
           <source>This section describes functions and operators for examining and manipulating string values. Strings in this context include values of the types &lt;code&gt;character&lt;/code&gt;, &lt;code&gt;character varying&lt;/code&gt;, and &lt;code&gt;text&lt;/code&gt;. Except where noted, these functions and operators are declared to accept and return type &lt;code&gt;text&lt;/code&gt;. They will interchangeably accept &lt;code&gt;character varying&lt;/code&gt; arguments. Values of type &lt;code&gt;character&lt;/code&gt; will be converted to &lt;code&gt;text&lt;/code&gt; before the function or operator is applied, resulting in stripping any trailing spaces in the &lt;code&gt;character&lt;/code&gt; value.</source>
-          <target state="new"/>
+          <target state="translated">本节介绍用于检查和操作字符串值的函数和运算符。在这种情况下，字符串包括 &lt;code&gt;character&lt;/code&gt; ， &lt;code&gt;character varying&lt;/code&gt; 和 &lt;code&gt;text&lt;/code&gt; 类型的值。除非另有说明，否则将这些函数和运算符声明为接受并返回type &lt;code&gt;text&lt;/code&gt; 。他们将互换接受 &lt;code&gt;character varying&lt;/code&gt; 论点。在应用函数或运算符之前， &lt;code&gt;character&lt;/code&gt; 类型的值将转换为 &lt;code&gt;text&lt;/code&gt; ，从而导致去除 &lt;code&gt;character&lt;/code&gt; 值中的任何尾随空格。</target>
         </trans-unit>
         <trans-unit id="87c3af132af71e9d06f2e69bc9cb2fabb82cfdae" translate="yes" xml:space="preserve">
           <source>This section describes functions and operators for examining and manipulating string values. Strings in this context include values of the types &lt;code&gt;character&lt;/code&gt;, &lt;code&gt;character varying&lt;/code&gt;, and &lt;code&gt;text&lt;/code&gt;. Unless otherwise noted, all of the functions listed below work on all of these types, but be wary of potential effects of automatic space-padding when using the &lt;code&gt;character&lt;/code&gt; type. Some functions also exist natively for the bit-string types.</source>
@@ -813,7 +813,7 @@
         </trans-unit>
         <trans-unit id="60c40705443d693c37c2a4350a7f0525d8e96e6c" translate="yes" xml:space="preserve">
           <source>This sets only the minimum size of segments retained in &lt;code&gt;pg_wal&lt;/code&gt;; the system might need to retain more segments for WAL archival or to recover from a checkpoint. If &lt;code&gt;wal_keep_size&lt;/code&gt; is zero (the default), the system doesn't keep any extra segments for standby purposes, so the number of old WAL segments available to standby servers is a function of the location of the previous checkpoint and status of WAL archiving. If this value is specified without units, it is taken as megabytes. This parameter can only be set in the &lt;code&gt;postgresql.conf&lt;/code&gt; file or on the server command line.</source>
-          <target state="new"/>
+          <target state="translated">这仅设置了保留在 &lt;code&gt;pg_wal&lt;/code&gt; 中的段的最小大小；系统可能需要保留更多的段以进行WAL归档或从检查点恢复。如果 &lt;code&gt;wal_keep_size&lt;/code&gt; 为零（默认值），则系统不会为备用目的保留任何额外的段，因此备用服务器可用的旧WAL段的数量取决于先前检查点的位置和WAL归档状态的函数。如果指定的该值不带单位，则以兆字节为单位。此参数只能在 &lt;code&gt;postgresql.conf&lt;/code&gt; 文件或服务器命令行中设置。</target>
         </trans-unit>
         <trans-unit id="52a9b5608610577ceec8bb54f78e5c4867056fa3" translate="yes" xml:space="preserve">
           <source>This sets the number of workers that should be used to assist a parallel scan of this table. If not set, the system will determine a value based on the relation size. The actual number of workers chosen by the planner or by utility statements that use parallel scans may be less, for example due to the setting of &lt;a href=&quot;runtime-config-resource#GUC-MAX-WORKER-PROCESSES&quot;&gt;max_worker_processes&lt;/a&gt;.</source>
@@ -829,7 +829,7 @@
         </trans-unit>
         <trans-unit id="cf3f9cd2ec6037cc1a1e53b4e2acfa5803c6cdf6" translate="yes" xml:space="preserve">
           <source>This setting controls usage of the fast update technique described in &lt;a href=&quot;gin-implementation#GIN-FAST-UPDATE&quot;&gt;Section 66.4.1&lt;/a&gt;. It is a Boolean parameter: &lt;code&gt;ON&lt;/code&gt; enables fast update, &lt;code&gt;OFF&lt;/code&gt; disables it. The default is &lt;code&gt;ON&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">此设置控制&lt;a href=&quot;gin-implementation#GIN-FAST-UPDATE&quot;&gt;第66.4.1节中&lt;/a&gt;描述的快速更新技术的使用。它是一个布尔参数： &lt;code&gt;ON&lt;/code&gt; 启用快速更新， &lt;code&gt;OFF&lt;/code&gt; 禁用它。默认值为 &lt;code&gt;ON&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="88c5ee85f398c9445f5170ac51b66b98052f302e" translate="yes" xml:space="preserve">
           <source>This setting does not attempt to guarantee that an error will be generated under any particular circumstances. In fact, if the correct results can be generated from (for example) a cursor which has materialized a result set, no error will be generated even if the underlying rows in the referenced table have been vacuumed away. Some tables cannot safely be vacuumed early, and so will not be affected by this setting, such as system catalogs. For such tables this setting will neither reduce bloat nor create a possibility of a &amp;ldquo;snapshot too old&amp;rdquo; error on scanning.</source>
@@ -841,11 +841,11 @@
         </trans-unit>
         <trans-unit id="75e909e2915702b5ef44ed6b9bc45b154af3c719" translate="yes" xml:space="preserve">
           <source>This setting has lower priority than &lt;code&gt;log_min_duration_statement&lt;/code&gt;, meaning that statements with durations exceeding &lt;code&gt;log_min_duration_statement&lt;/code&gt; are not subject to sampling and are always logged.</source>
-          <target state="new"/>
+          <target state="translated">此设置的优先级低于 &lt;code&gt;log_min_duration_statement&lt;/code&gt; ，这意味着持续时间超过 &lt;code&gt;log_min_duration_statement&lt;/code&gt; 的语句不会进行采样，并且始终会被记录。</target>
         </trans-unit>
         <trans-unit id="30bbbf8d25fa89c91c122a573c367986c6688ee4" translate="yes" xml:space="preserve">
           <source>This setting has no effect if &lt;code&gt;G&lt;/code&gt; is specified in &lt;code&gt;-I&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">如果在 &lt;code&gt;-I&lt;/code&gt; 中指定 &lt;code&gt;G&lt;/code&gt; ,则此设置无效。</target>
         </trans-unit>
         <trans-unit id="9fcceaeb0992bcd64acc1981c44ad2c4975f0743" translate="yes" xml:space="preserve">
           <source>This setting has no effect if no recovery target is set. If &lt;a href=&quot;runtime-config-replication#GUC-HOT-STANDBY&quot;&gt;hot_standby&lt;/a&gt; is not enabled, a setting of &lt;code&gt;pause&lt;/code&gt; will act the same as &lt;code&gt;shutdown&lt;/code&gt;.</source>
@@ -853,11 +853,11 @@
         </trans-unit>
         <trans-unit id="b54b0267f4e95220b4cbe85438dae82b1b7a7e5d" translate="yes" xml:space="preserve">
           <source>This setting has no effect if no recovery target is set. If &lt;a href=&quot;runtime-config-replication#GUC-HOT-STANDBY&quot;&gt;hot_standby&lt;/a&gt; is not enabled, a setting of &lt;code&gt;pause&lt;/code&gt; will act the same as &lt;code&gt;shutdown&lt;/code&gt;. If the recovery target is reached while a promotion is ongoing, a setting of &lt;code&gt;pause&lt;/code&gt; will act the same as &lt;code&gt;promote&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">如果未设置恢复目标，则此设置无效。如果未启用&lt;a href=&quot;runtime-config-replication#GUC-HOT-STANDBY&quot;&gt;hot_standby，&lt;/a&gt;则 &lt;code&gt;pause&lt;/code&gt; 的设置将与 &lt;code&gt;shutdown&lt;/code&gt; 相同。如果达到恢复目标，而促销正在进行中，设置为 &lt;code&gt;pause&lt;/code&gt; 将采取同样的 &lt;code&gt;promote&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="aff67729130b72538eec21d5c35d1c92d507ac67" translate="yes" xml:space="preserve">
           <source>This setting only affects log messages printed as a result of &lt;a href=&quot;runtime-config-logging#GUC-LOG-STATEMENT&quot;&gt;log_statement&lt;/a&gt;, &lt;a href=&quot;runtime-config-logging#GUC-LOG-DURATION&quot;&gt;log_duration&lt;/a&gt;, and related settings. Non-zero values of this setting add some overhead, particularly if parameters are sent in binary form, since then conversion to text is required.</source>
-          <target state="new"/>
+          <target state="translated">此设置仅影响由于&lt;a href=&quot;runtime-config-logging#GUC-LOG-STATEMENT&quot;&gt;log_statement&lt;/a&gt;，&lt;a href=&quot;runtime-config-logging#GUC-LOG-DURATION&quot;&gt;log_duration&lt;/a&gt;和相关设置而打印的日志消息。此设置的非零值会增加一些开销，尤其是如果参数以二进制形式发送时，因为这之后需要转换为文本。</target>
         </trans-unit>
         <trans-unit id="243a6a2a0cf02294a9fc7bce185732812dc50642" translate="yes" xml:space="preserve">
           <source>This shell syntax can get tedious quickly. Therefore the wrapper program &lt;a href=&quot;app-pg-ctl&quot;&gt;pg_ctl&lt;/a&gt; is provided to simplify some tasks. For example:</source>
@@ -873,7 +873,7 @@
         </trans-unit>
         <trans-unit id="ba8bb8c29738e1638f51e3c6948a3404fcdfbaa0" translate="yes" xml:space="preserve">
           <source>This should be used if the view is intended to provide row-level security. See &lt;a href=&quot;https://www.postgresql.org/docs/13/rules-privileges.html&quot;&gt;Section 40.5&lt;/a&gt; for full details.</source>
-          <target state="new"/>
+          <target state="translated">如果视图旨在提供行级安全性，则应使用此方法。有关完整详细信息，请参见&lt;a href=&quot;https://www.postgresql.org/docs/13/rules-privileges.html&quot;&gt;第40.5节&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="207a8bf754b11f0d0bc92abd250767a3408a12a5" translate="yes" xml:space="preserve">
           <source>This should give:</source>
@@ -945,15 +945,15 @@
         </trans-unit>
         <trans-unit id="72d8bd7d6c5c610d060a644d5f6d4b8415bd748f" translate="yes" xml:space="preserve">
           <source>This term is also used to refer to some multi-step queries to mean that the data resulting from executing a given step is stored in memory (with the possibility of spilling to disk), so that it can be read multiple times by another step.</source>
-          <target state="new"/>
+          <target state="translated">这个词也用来指一些多步查询,意思是执行某一步所产生的数据被存储在内存中(有可能溢出到磁盘上),这样就可以被另一步多次读取。</target>
         </trans-unit>
         <trans-unit id="42eb8ea69f4fadfd409e3ec9f1c7e2ee2c91d332" translate="yes" xml:space="preserve">
           <source>This term is sometimes used to refer to an instance or to a host.</source>
-          <target state="new"/>
+          <target state="translated">这个术语有时用来指一个实例或一个主机。</target>
         </trans-unit>
         <trans-unit id="1dac95036f8bd7557b8674ac649d38c8259cd51f" translate="yes" xml:space="preserve">
           <source>This term is used in &lt;a href=&quot;glossary#GLOSSARY-MATERIALIZED-VIEW&quot;&gt;materialized view&lt;/a&gt;, to mean that the data derived from the view's query is stored on disk separately from the sources of that data.</source>
-          <target state="new"/>
+          <target state="translated">该术语在&lt;a href=&quot;glossary#GLOSSARY-MATERIALIZED-VIEW&quot;&gt;物化视图中使用&lt;/a&gt;，表示从视图的查询派生的数据与该数据的源分开存储在磁盘上。</target>
         </trans-unit>
         <trans-unit id="952d3091870b548dd58edb38d79a5b0fc4d8774a" translate="yes" xml:space="preserve">
           <source>This terminates backup mode. On a primary, it also performs an automatic switch to the next WAL segment. On a standby, it is not possible to automatically switch WAL segments, so you may wish to run &lt;code&gt;pg_switch_wal&lt;/code&gt; on the primary to perform a manual switch. The reason for the switch is to arrange for the last WAL segment file written during the backup interval to be ready to archive.</source>
@@ -997,11 +997,11 @@
         </trans-unit>
         <trans-unit id="6ebba67bddc3774511062564b5b840a56795391c" translate="yes" xml:space="preserve">
           <source>This utility, like most other PostgreSQL utilities, also uses the environment variables supported by libpq (see &lt;a href=&quot;https://www.postgresql.org/docs/13/libpq-envars.html&quot;&gt;Section 33.14&lt;/a&gt;).</source>
-          <target state="new"/>
+          <target state="translated">与大多数其他PostgreSQL实用程序一样，该实用程序也使用libpq支持的环境变量（请参见&lt;a href=&quot;https://www.postgresql.org/docs/13/libpq-envars.html&quot;&gt;第33.14节&lt;/a&gt;）。</target>
         </trans-unit>
         <trans-unit id="ba59d34f5f61746151b52a91611a5ea9de2d786e" translate="yes" xml:space="preserve">
           <source>This utility, like most other PostgreSQL utilities, also uses the environment variables supported by libpq (see &lt;a href=&quot;https://www.postgresql.org/docs/13/libpq-envars.html&quot;&gt;Section 33.14&lt;/a&gt;). However, it does not read &lt;code&gt;PGDATABASE&lt;/code&gt; when a database name is not supplied.</source>
-          <target state="new"/>
+          <target state="translated">与大多数其他PostgreSQL实用程序一样，该实用程序也使用libpq支持的环境变量（请参见&lt;a href=&quot;https://www.postgresql.org/docs/13/libpq-envars.html&quot;&gt;第33.14节&lt;/a&gt;）。但是，当未提供数据库名称时，它不会读取 &lt;code&gt;PGDATABASE&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="9f64ddd714f65036056a8efca366deffd5cb8370" translate="yes" xml:space="preserve">
           <source>This utility, like most other PostgreSQL utilities, uses the environment variables supported by libpq (see &lt;a href=&quot;https://www.postgresql.org/docs/12/libpq-envars.html&quot;&gt;Section 33.14&lt;/a&gt;).</source>
@@ -1009,7 +1009,7 @@
         </trans-unit>
         <trans-unit id="6a43c517a861a8d1e9432380381094a29b0e1db6" translate="yes" xml:space="preserve">
           <source>This utility, like most other PostgreSQL utilities, uses the environment variables supported by libpq (see &lt;a href=&quot;https://www.postgresql.org/docs/13/libpq-envars.html&quot;&gt;Section 33.14&lt;/a&gt;).</source>
-          <target state="new"/>
+          <target state="translated">与大多数其他PostgreSQL实用程序一样，该实用程序使用libpq支持的环境变量（请参见&lt;a href=&quot;https://www.postgresql.org/docs/13/libpq-envars.html&quot;&gt;第33.14节&lt;/a&gt;）。</target>
         </trans-unit>
         <trans-unit id="891e0f3b431a5b76a5e7675d6f5b4cfd398567dc" translate="yes" xml:space="preserve">
           <source>This value is the default.</source>
@@ -1089,7 +1089,7 @@
         </trans-unit>
         <trans-unit id="b22d5c1a856e76f215fc30c2a78dfdff1f3c75c1" translate="yes" xml:space="preserve">
           <source>This way you can also use LDAP for connection parameter lookup as described in &lt;a href=&quot;https://www.postgresql.org/docs/13/libpq-ldap.html&quot;&gt;Section 33.17&lt;/a&gt;. See &lt;a href=&quot;https://www.postgresql.org/docs/13/libpq-connect.html#LIBPQ-PARAMKEYWORDS&quot;&gt;Section 33.1.2&lt;/a&gt; for more information on all the available connection options.</source>
-          <target state="new"/>
+          <target state="translated">这样，您还可以使用LDAP进行连接参数查找，如&lt;a href=&quot;https://www.postgresql.org/docs/13/libpq-ldap.html&quot;&gt;第33.17节中&lt;/a&gt;所述。有关所有可用连接选项的更多信息，请参见&lt;a href=&quot;https://www.postgresql.org/docs/13/libpq-connect.html#LIBPQ-PARAMKEYWORDS&quot;&gt;第33.1.2节&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="7fc85cb1dbf306614c53ff81c420fe96724ef4bd" translate="yes" xml:space="preserve">
           <source>This wiki page provides a brief overview, security design, architecture, administration and upcoming features.</source>
@@ -1121,7 +1121,7 @@
         </trans-unit>
         <trans-unit id="80307af5f039905f035882871ac20bb16cdaf4a5" translate="yes" xml:space="preserve">
           <source>This will fail if the current user has no permissions to terminate other connections. Required permissions are the same as with &lt;code&gt;pg_terminate_backend&lt;/code&gt;, described in &lt;a href=&quot;functions-admin#FUNCTIONS-ADMIN-SIGNAL&quot;&gt;Section 9.27.2&lt;/a&gt;. This will also fail if we are not able to terminate connections.</source>
-          <target state="new"/>
+          <target state="translated">如果当前用户无权终止其他连接，则此操作将失败。所需的权限与 &lt;code&gt;pg_terminate_backend&lt;/code&gt; &lt;a href=&quot;functions-admin#FUNCTIONS-ADMIN-SIGNAL&quot;&gt;节中&lt;/a&gt;描述的pg_terminate_backend相同。如果我们无法终止连接，这也会失败。</target>
         </trans-unit>
         <trans-unit id="d4e6c3b1ee3c6ae0ce592e53fe304140df76442d" translate="yes" xml:space="preserve">
           <source>This will match paths that contain the label &lt;code&gt;Europe&lt;/code&gt; and any label beginning with &lt;code&gt;Russia&lt;/code&gt; (case-insensitive), but not paths containing the label &lt;code&gt;Transportation&lt;/code&gt;. The location of these words within the path is not important. Also, when &lt;code&gt;%&lt;/code&gt; is used, the word can be matched to any underscore-separated word within a label, regardless of position.</source>
@@ -1213,7 +1213,7 @@
         </trans-unit>
         <trans-unit id="55c41901b0118a14f05a3e31103cd618a4a206c3" translate="yes" xml:space="preserve">
           <source>Through simulation of the evolutionary operations &lt;em&gt;recombination&lt;/em&gt;, &lt;em&gt;mutation&lt;/em&gt;, and &lt;em&gt;selection&lt;/em&gt; new generations of search points are found that show a higher average fitness than their ancestors. &lt;a href=&quot;geqo-intro2#GEQO-FIGURE&quot;&gt;Figure 59.1&lt;/a&gt; illustrates these steps.</source>
-          <target state="new"/>
+          <target state="translated">通过对进化操作的&lt;em&gt;重组&lt;/em&gt;，&lt;em&gt;突变&lt;/em&gt;和&lt;em&gt;选择进行&lt;/em&gt;仿真，发现了新一代搜索点，它们的平均适应度高于其祖先。&lt;a href=&quot;geqo-intro2#GEQO-FIGURE&quot;&gt;图59.1&lt;/a&gt;说明了这些步骤。</target>
         </trans-unit>
         <trans-unit id="c27dce1f6609095e9fe5fc64a23bbb9715cf9868" translate="yes" xml:space="preserve">
           <source>Throughout running a transaction, a server process holds an exclusive lock on the transaction's virtual transaction ID. If a permanent ID is assigned to the transaction (which normally happens only if the transaction changes the state of the database), it also holds an exclusive lock on the transaction's permanent transaction ID until it ends. When a process finds it necessary to wait specifically for another transaction to end, it does so by attempting to acquire share lock on the other transaction's ID (either virtual or permanent ID depending on the situation). That will succeed only when the other transaction terminates and releases its locks.</source>
@@ -1237,7 +1237,7 @@
         </trans-unit>
         <trans-unit id="6c9c074c03b31acd5f7a7e20ed6e667b03762dad" translate="yes" xml:space="preserve">
           <source>Thus, the &lt;code&gt;strict_word_similarity&lt;/code&gt; function is useful for finding the similarity to whole words, while &lt;code&gt;word_similarity&lt;/code&gt; is more suitable for finding the similarity for parts of words.</source>
-          <target state="new"/>
+          <target state="translated">因此， &lt;code&gt;strict_word_similarity&lt;/code&gt; 函数对于查找与整个单词的相似性非常有用，而 &lt;code&gt;word_similarity&lt;/code&gt; 更适合于查找单词各部分的相似性。</target>
         </trans-unit>
         <trans-unit id="ae8d95556da752362e5bc888aa863b02957f8964" translate="yes" xml:space="preserve">
           <source>Thus, these functions can be used directly when the input query produces &lt;code&gt;row_name&lt;/code&gt; and &lt;code&gt;value&lt;/code&gt; columns of type &lt;code&gt;text&lt;/code&gt;, and you want 2, 3, or 4 output values columns. In all other ways they behave exactly as described above for the general &lt;code&gt;crosstab&lt;/code&gt; function.</source>
@@ -1297,7 +1297,7 @@
         </trans-unit>
         <trans-unit id="9cb2109efc7cd77762a155d13e3d4c7d5ccbfbcd" translate="yes" xml:space="preserve">
           <source>Time spent reading data file blocks by backends in this database, in milliseconds (if &lt;a href=&quot;runtime-config-statistics#GUC-TRACK-IO-TIMING&quot;&gt;track_io_timing&lt;/a&gt; is enabled, otherwise zero)</source>
-          <target state="new"/>
+          <target state="translated">后端在此数据库中读取数据文件块所花费的时间（以毫秒为单位）（如果启用了&lt;a href=&quot;runtime-config-statistics#GUC-TRACK-IO-TIMING&quot;&gt;track_io_timing&lt;/a&gt;，否则为零）</target>
         </trans-unit>
         <trans-unit id="555585fed0e713bf1b368cbbf5bba5754318a952" translate="yes" xml:space="preserve">
           <source>Time spent writing data file blocks by backends in this database, in milliseconds</source>
@@ -1305,7 +1305,7 @@
         </trans-unit>
         <trans-unit id="f85753033657b7d08aa205efa2bc11551bdaa55d" translate="yes" xml:space="preserve">
           <source>Time spent writing data file blocks by backends in this database, in milliseconds (if &lt;a href=&quot;runtime-config-statistics#GUC-TRACK-IO-TIMING&quot;&gt;track_io_timing&lt;/a&gt; is enabled, otherwise zero)</source>
-          <target state="new"/>
+          <target state="translated">后端在此数据库中写入数据文件块所花费的时间（以毫秒为单位）（如果启用了&lt;a href=&quot;runtime-config-statistics#GUC-TRACK-IO-TIMING&quot;&gt;track_io_timing&lt;/a&gt;，否则为零）</target>
         </trans-unit>
         <trans-unit id="f7c6e9c6e492ee3767af155479b912c5dbab4797" translate="yes" xml:space="preserve">
           <source>Time stamp with milliseconds</source>
@@ -1433,7 +1433,7 @@
         </trans-unit>
         <trans-unit id="18521a2d32e7178b56eb305ab469851b96ca3009" translate="yes" xml:space="preserve">
           <source>To add a column and fill it with a value different from the default to be used later:</source>
-          <target state="new"/>
+          <target state="translated">要添加一列,并将其填入与默认值不同的值,以便以后使用。</target>
         </trans-unit>
         <trans-unit id="174131dc66d4970ba5125ca4661ff1a19109b4b9" translate="yes" xml:space="preserve">
           <source>To add a column of type &lt;code&gt;varchar&lt;/code&gt; to a table:</source>
@@ -1441,7 +1441,7 @@
         </trans-unit>
         <trans-unit id="9b1aeaa1dc1643fc190e738e9d094e62f17c2e7e" translate="yes" xml:space="preserve">
           <source>To add a column with a non-null default:</source>
-          <target state="new"/>
+          <target state="translated">要添加一个默认值为非空的列。</target>
         </trans-unit>
         <trans-unit id="a1c2f4fa0ab2023d587d3b98db8f6427264ba706" translate="yes" xml:space="preserve">
           <source>To add a column, use a command like:</source>
@@ -1461,7 +1461,7 @@
         </trans-unit>
         <trans-unit id="d58a827d4f546e75e64876a110b2a9ae7702ffe0" translate="yes" xml:space="preserve">
           <source>To add a new attribute to a composite type:</source>
-          <target state="new"/>
+          <target state="translated">要向复合类型添加新属性。</target>
         </trans-unit>
         <trans-unit id="3411926179ac8624e69940712a6f3380af5e790a" translate="yes" xml:space="preserve">
           <source>To add a new attribute to a type:</source>
@@ -1633,7 +1633,7 @@
         </trans-unit>
         <trans-unit id="3c0d2058fa7ce3c9ef9d1a489e052901ecfbd7ee" translate="yes" xml:space="preserve">
           <source>To be useful, an index access method must also have one or more &lt;em&gt;operator families&lt;/em&gt; and &lt;em&gt;operator classes&lt;/em&gt; defined in &lt;a href=&quot;catalog-pg-opfamily&quot;&gt;&lt;code&gt;pg_opfamily&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;catalog-pg-opclass&quot;&gt;&lt;code&gt;pg_opclass&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;catalog-pg-amop&quot;&gt;&lt;code&gt;pg_amop&lt;/code&gt;&lt;/a&gt;, and &lt;a href=&quot;catalog-pg-amproc&quot;&gt;&lt;code&gt;pg_amproc&lt;/code&gt;&lt;/a&gt;. These entries allow the planner to determine what kinds of query qualifications can be used with indexes of this access method. Operator families and classes are described in &lt;a href=&quot;https://www.postgresql.org/docs/13/xindex.html&quot;&gt;Section 37.16&lt;/a&gt;, which is prerequisite material for reading this chapter.</source>
-          <target state="new"/>
+          <target state="translated">为了有用，索引访问方法还必须具有在&lt;a href=&quot;catalog-pg-opfamily&quot;&gt; &lt;code&gt;pg_opfamily&lt;/code&gt; &lt;/a&gt;，&lt;a href=&quot;catalog-pg-opclass&quot;&gt; &lt;code&gt;pg_opclass&lt;/code&gt; &lt;/a&gt;，&lt;a href=&quot;catalog-pg-amop&quot;&gt; &lt;code&gt;pg_amop&lt;/code&gt; &lt;/a&gt;和&lt;a href=&quot;catalog-pg-amproc&quot;&gt; &lt;code&gt;pg_amproc&lt;/code&gt; 中&lt;/a&gt;定义的一个或多个&lt;em&gt;运算符系列&lt;/em&gt;和&lt;em&gt;运算符类&lt;/em&gt;。这些条目使计划者可以确定可以与该访问方法的索引一起使用的查询资格类型。在&lt;a href=&quot;https://www.postgresql.org/docs/13/xindex.html&quot;&gt;第37.16节&lt;/a&gt;中介绍了操作符族和类，这是阅读本章的前提材料。</target>
         </trans-unit>
         <trans-unit id="20a4c4c99064dacb5bf122b1b529d83437bd93dc" translate="yes" xml:space="preserve">
           <source>To begin a SASL authentication exchange, the server sends an AuthenticationSASL message. It includes a list of SASL authentication mechanisms that the server can accept, in the server's preferred order.</source>
@@ -1661,7 +1661,7 @@
         </trans-unit>
         <trans-unit id="afc70d4ddd1752f4bd9d1625d9e107d9520e6ba4" translate="yes" xml:space="preserve">
           <source>To cancel a running query, send the &lt;code&gt;SIGINT&lt;/code&gt; signal to the process running that command. To terminate a backend process cleanly, send &lt;code&gt;SIGTERM&lt;/code&gt; to that process. See also &lt;code&gt;pg_cancel_backend&lt;/code&gt; and &lt;code&gt;pg_terminate_backend&lt;/code&gt; in &lt;a href=&quot;functions-admin#FUNCTIONS-ADMIN-SIGNAL&quot;&gt;Section 9.27.2&lt;/a&gt; for the SQL-callable equivalents of these two actions.</source>
-          <target state="new"/>
+          <target state="translated">要取消正在运行的查询，请将 &lt;code&gt;SIGINT&lt;/code&gt; 信号发送到运行该命令的进程。要干净地终止后端进程，请将 &lt;code&gt;SIGTERM&lt;/code&gt; 发送到该进程。另请参见 &lt;code&gt;pg_cancel_backend&lt;/code&gt; &lt;a href=&quot;functions-admin#FUNCTIONS-ADMIN-SIGNAL&quot;&gt;节中的&lt;/a&gt;pg_cancel_backend和 &lt;code&gt;pg_terminate_backend&lt;/code&gt; ，以获取这两个动作的SQL调用等效项。</target>
         </trans-unit>
         <trans-unit id="7124694e949a1f4440b60306713bd6c20059c689" translate="yes" xml:space="preserve">
           <source>To change an index's fill factor (assuming that the index method supports it):</source>
@@ -1785,7 +1785,7 @@
         </trans-unit>
         <trans-unit id="301edb0319104a266e632783cd094629d966049a" translate="yes" xml:space="preserve">
           <source>To convert a JSON value to the SQL type of an output column, the following rules are applied in sequence:</source>
-          <target state="new"/>
+          <target state="translated">要将JSON值转换为输出列的SQL类型,需要依次应用以下规则。</target>
         </trans-unit>
         <trans-unit id="4410b5e31b45b8b22ca1d9903ef6943e81eb2ac0" translate="yes" xml:space="preserve">
           <source>To convert a column to a different data type, use a command like:</source>
@@ -1793,7 +1793,7 @@
         </trans-unit>
         <trans-unit id="54f9ec7b4c57109e2602a2ff40352802cb0d1e0f" translate="yes" xml:space="preserve">
           <source>To convert a traditional 48 bit MAC address in EUI-48 format to modified EUI-64 format to be included as the host portion of an IPv6 address, use &lt;code&gt;macaddr8_set7bit&lt;/code&gt; as shown:</source>
-          <target state="new"/>
+          <target state="translated">要将EUI-48格式的传统48位MAC地址转换为修改后的EUI-64格式以包含为IPv6地址的主机部分，请使用 &lt;code&gt;macaddr8_set7bit&lt;/code&gt; ，如下所示：</target>
         </trans-unit>
         <trans-unit id="fef5624a1d1e08c22d86e5fbc6f1e0129dd604df" translate="yes" xml:space="preserve">
           <source>To copy a table completely, the short form using the &lt;code&gt;TABLE&lt;/code&gt; command can also be used:</source>
@@ -1813,7 +1813,7 @@
         </trans-unit>
         <trans-unit id="c81ceaa4f7c9941558ec032310e1d81872cc8cae" translate="yes" xml:space="preserve">
           <source>To create a B-Tree index with deduplication disabled:</source>
-          <target state="new"/>
+          <target state="translated">要在禁用重复数据删除的情况下创建一个B-Tree索引。</target>
         </trans-unit>
         <trans-unit id="9938c28d5e04efe3b2ed6d4b9e038b44b264feb1" translate="yes" xml:space="preserve">
           <source>To create a GIN index with fast updates disabled:</source>
@@ -1841,11 +1841,11 @@
         </trans-unit>
         <trans-unit id="eb53f87e549c2e3131e5b7c882b46686f7575ac8" translate="yes" xml:space="preserve">
           <source>To create a base backup of the server at &lt;code&gt;mydbserver&lt;/code&gt; and verify the integrity of the backup:</source>
-          <target state="new"/>
+          <target state="translated">要在 &lt;code&gt;mydbserver&lt;/code&gt; 上创建服务器的基本备份并验证备份的完整性，请执行以下操作：</target>
         </trans-unit>
         <trans-unit id="bb0df0e57b686171379ea519fb078ba09100debf" translate="yes" xml:space="preserve">
           <source>To create a base backup of the server at &lt;code&gt;mydbserver&lt;/code&gt;, move the manifest somewhere outside the backup directory, and verify the backup:</source>
-          <target state="new"/>
+          <target state="translated">要在 &lt;code&gt;mydbserver&lt;/code&gt; 上创建服务器的基本备份，请将清单移动到备份目录之外的某个位置，然后验证备份：</target>
         </trans-unit>
         <trans-unit id="1dd9c8299d9f5843b300e409173ef3b9254191b7" translate="yes" xml:space="preserve">
           <source>To create a collation from an existing collation:</source>
@@ -1901,7 +1901,7 @@
         </trans-unit>
         <trans-unit id="0b0381516c88992d8b9c8e464528fb80a6968228" translate="yes" xml:space="preserve">
           <source>To create a new row, use the &lt;a href=&quot;sql-insert&quot;&gt;INSERT&lt;/a&gt; command. The command requires the table name and column values. For example, consider the products table from &lt;a href=&quot;https://www.postgresql.org/docs/13/ddl.html&quot;&gt;Chapter 5&lt;/a&gt;:</source>
-          <target state="new"/>
+          <target state="translated">要创建新行，请使用&lt;a href=&quot;sql-insert&quot;&gt;INSERT&lt;/a&gt;命令。该命令需要表名和列值。例如，考虑&lt;a href=&quot;https://www.postgresql.org/docs/13/ddl.html&quot;&gt;第5章中&lt;/a&gt;的产品表：</target>
         </trans-unit>
         <trans-unit id="8e4a9625799af4fa2c817e41733ba1818843f4bc" translate="yes" xml:space="preserve">
           <source>To create a nondeterministic collation, specify the property &lt;code&gt;deterministic = false&lt;/code&gt; to &lt;code&gt;CREATE COLLATION&lt;/code&gt;, for example:</source>
@@ -2013,7 +2013,7 @@
         </trans-unit>
         <trans-unit id="5c56e64ec1ccb1bef0256a294be67b1b84c00ee6" translate="yes" xml:space="preserve">
           <source>To create binary I/O functions for an existing base type:</source>
-          <target state="new"/>
+          <target state="translated">为现有基础类型创建二进制I/O函数。</target>
         </trans-unit>
         <trans-unit id="d53339e9d8aae8b8d5f4abfe2e3853a4dcdbc60c" translate="yes" xml:space="preserve">
           <source>To create functions in a procedural language, a user must have the &lt;code&gt;USAGE&lt;/code&gt; privilege for the language. By default, &lt;code&gt;USAGE&lt;/code&gt; is granted to &lt;code&gt;PUBLIC&lt;/code&gt; (i.e., everyone) for trusted languages. This can be revoked if desired.</source>
@@ -2045,7 +2045,7 @@
         </trans-unit>
         <trans-unit id="344821e66e6da00575ec49ea28e499cd7bece96a" translate="yes" xml:space="preserve">
           <source>To deal with text in different Unicode normalization forms, it is also an option to use the functions/expressions &lt;code&gt;normalize&lt;/code&gt; and &lt;code&gt;is normalized&lt;/code&gt; to preprocess or check the strings, instead of using nondeterministic collations. There are different trade-offs for each approach.</source>
-          <target state="new"/>
+          <target state="translated">要处理不同的Unicode规范化形式的文本，也可以选择使用功能/表达式 &lt;code&gt;normalize&lt;/code&gt; 并 &lt;code&gt;is normalized&lt;/code&gt; 以预处理或检查字符串，而不是使用不确定性归类。每种方法都有不同的权衡。</target>
         </trans-unit>
         <trans-unit id="dd9e4512d47fc711a9256823ffecbf1d45d4bd71" translate="yes" xml:space="preserve">
           <source>To deal with the case where &lt;code&gt;pg_control&lt;/code&gt; is corrupt, we should support the possibility of scanning existing log segments in reverse order &amp;mdash; newest to oldest &amp;mdash; in order to find the latest checkpoint. This has not been implemented yet. &lt;code&gt;pg_control&lt;/code&gt; is small enough (less than one disk page) that it is not subject to partial-write problems, and as of this writing there have been no reports of database failures due solely to the inability to read &lt;code&gt;pg_control&lt;/code&gt; itself. So while it is theoretically a weak spot, &lt;code&gt;pg_control&lt;/code&gt; does not seem to be a problem in practice.</source>
@@ -2121,7 +2121,7 @@
         </trans-unit>
         <trans-unit id="fd4e4acd3d33ab5ee068584350285b4aee8a5f68" translate="yes" xml:space="preserve">
           <source>To determine whether JIT compilation should be used, the total estimated cost of a query (see &lt;a href=&quot;https://www.postgresql.org/docs/13/planner-stats-details.html&quot;&gt;Chapter 70&lt;/a&gt; and &lt;a href=&quot;runtime-config-query#RUNTIME-CONFIG-QUERY-CONSTANTS&quot;&gt;Section 19.7.2&lt;/a&gt;) is used. The estimated cost of the query will be compared with the setting of &lt;a href=&quot;runtime-config-query#GUC-JIT-ABOVE-COST&quot;&gt;jit_above_cost&lt;/a&gt;. If the cost is higher, JIT compilation will be performed. Two further decisions are then needed. Firstly, if the estimated cost is more than the setting of &lt;a href=&quot;runtime-config-query#GUC-JIT-INLINE-ABOVE-COST&quot;&gt;jit_inline_above_cost&lt;/a&gt;, short functions and operators used in the query will be inlined. Secondly, if the estimated cost is more than the setting of &lt;a href=&quot;runtime-config-query#GUC-JIT-OPTIMIZE-ABOVE-COST&quot;&gt;jit_optimize_above_cost&lt;/a&gt;, expensive optimizations are applied to improve the generated code. Each of these options increases the JIT compilation overhead, but can reduce query execution time considerably.</source>
-          <target state="new"/>
+          <target state="translated">要确定JIT编译是否应该被使用，查询的总费用估计（见&lt;a href=&quot;https://www.postgresql.org/docs/13/planner-stats-details.html&quot;&gt;第70&lt;/a&gt;和&lt;a href=&quot;runtime-config-query#RUNTIME-CONFIG-QUERY-CONSTANTS&quot;&gt;第19.7.2&lt;/a&gt;）被使用。查询的估计成本将与&lt;a href=&quot;runtime-config-query#GUC-JIT-ABOVE-COST&quot;&gt;jit_above_cost&lt;/a&gt;的设置进行比较。如果成本较高，将执行JIT编译。然后需要做出两个进一步的决定。首先，如果估计成本大于&lt;a href=&quot;runtime-config-query#GUC-JIT-INLINE-ABOVE-COST&quot;&gt;jit_inline_above_cost&lt;/a&gt;的设置，则将内联查询中使用的短函数和运算符。其次，如果估算成本大于&lt;a href=&quot;runtime-config-query#GUC-JIT-OPTIMIZE-ABOVE-COST&quot;&gt;jit_optimize_above_cost&lt;/a&gt;的设置，应用了昂贵的优化来改进生成的代码。这些选项中的每一个都增加了JIT编译的开销，但是可以大大减少查询的执行时间。</target>
         </trans-unit>
         <trans-unit id="ff46a0305932a1f3445ee6313f1d0daf52062e57" translate="yes" xml:space="preserve">
           <source>To disable automatic setting of &lt;code&gt;search_path&lt;/code&gt; for a function:</source>
@@ -2261,7 +2261,7 @@
         </trans-unit>
         <trans-unit id="4fad6ad49ad4e437a0cb62af93e6ae25b097ac33" translate="yes" xml:space="preserve">
           <source>To examine a list of the currently outstanding locks in a database server, use the &lt;a href=&quot;view-pg-locks&quot;&gt;&lt;code&gt;pg_locks&lt;/code&gt;&lt;/a&gt; system view. For more information on monitoring the status of the lock manager subsystem, refer to &lt;a href=&quot;https://www.postgresql.org/docs/13/monitoring.html&quot;&gt;Chapter 27&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">要检查数据库服务器中当前未完成的锁的列表，请使用&lt;a href=&quot;view-pg-locks&quot;&gt; &lt;code&gt;pg_locks&lt;/code&gt; &lt;/a&gt;系统视图。有关监视锁管理器子系统状态的更多信息，请参阅&lt;a href=&quot;https://www.postgresql.org/docs/13/monitoring.html&quot;&gt;第27章&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="ee179a7e650337f5be46128f8c744f60566325a2" translate="yes" xml:space="preserve">
           <source>To examine the query plan PostgreSQL is using for a prepared statement, use &lt;a href=&quot;sql-explain&quot;&gt;EXPLAIN&lt;/a&gt;, for example</source>
@@ -2293,7 +2293,7 @@
         </trans-unit>
         <trans-unit id="83324513227c6e220838375b162eb3efe60ff368" translate="yes" xml:space="preserve">
           <source>To find an available OID for a new pre-loaded row, run the script &lt;code&gt;src/include/catalog/unused_oids&lt;/code&gt;. It prints inclusive ranges of unused OIDs (e.g., the output line &lt;code&gt;45-900&lt;/code&gt; means OIDs 45 through 900 have not been allocated yet). Currently, OIDs 1&amp;ndash;9999 are reserved for manual assignment; the &lt;code&gt;unused_oids&lt;/code&gt; script simply looks through the catalog headers and &lt;code&gt;.dat&lt;/code&gt; files to see which ones do not appear. You can also use the &lt;code&gt;duplicate_oids&lt;/code&gt; script to check for mistakes. (&lt;code&gt;genbki.pl&lt;/code&gt; will assign OIDs for any rows that didn't get one hand-assigned to them, and it will also detect duplicate OIDs at compile time.)</source>
-          <target state="new"/>
+          <target state="translated">要为新的预加载行找到可用的OID，请运行脚本 &lt;code&gt;src/include/catalog/unused_oids&lt;/code&gt; 。它打印未使用的OID的范围（例如，输出行 &lt;code&gt;45-900&lt;/code&gt; 表示尚未分配OID 45至900）。当前，OID 1&amp;ndash;9999保留用于手动分配。该 &lt;code&gt;unused_oids&lt;/code&gt; 脚本只是看起来通过目录标题和 &lt;code&gt;.dat&lt;/code&gt; 文件，看看哪些不会出现的。您也可以使用 &lt;code&gt;duplicate_oids&lt;/code&gt; 脚本检查错误。（ &lt;code&gt;genbki.pl&lt;/code&gt; 将为没有手动分配给它们的任何行分配OID，并且还将在编译时检测到重复的OID。）</target>
         </trans-unit>
         <trans-unit id="e7b4d89e57b00cb717b3a45dca9a44135790f4f2" translate="yes" xml:space="preserve">
           <source>To force immediate reclamation of space occupied by a dropped column, you can execute one of the forms of &lt;code&gt;ALTER TABLE&lt;/code&gt; that performs a rewrite of the whole table. This results in reconstructing each row with the dropped column replaced by a null value.</source>
@@ -2321,7 +2321,7 @@
         </trans-unit>
         <trans-unit id="a23cfe85547c2cef9463af3fca5fe0719f145cc1" translate="yes" xml:space="preserve">
           <source>To get the start times of segments with such values, you have to filter out irrelevant segments before returning the start times, so the filter expression is applied to the previous step, and the path used in the condition is different:</source>
-          <target state="new"/>
+          <target state="translated">要想得到具有这种值的段的起始时间,就必须在返回起始时间之前过滤掉不相关的段,所以过滤表达式应用于上一步,条件中使用的路径也不同。</target>
         </trans-unit>
         <trans-unit id="c348e1fb7d6b60d5bb3b8782cdcf8ec28351c7b2" translate="yes" xml:space="preserve">
           <source>To give a schema-qualified operator name in &lt;code&gt;com_op&lt;/code&gt; or the other optional arguments, use the &lt;code&gt;OPERATOR()&lt;/code&gt; syntax, for example:</source>
@@ -2405,7 +2405,7 @@
         </trans-unit>
         <trans-unit id="5d0fceb23b95d26529865353175f08c16f67334c" translate="yes" xml:space="preserve">
           <source>To initialize a database cluster manually, run &lt;code&gt;initdb&lt;/code&gt; and specify the desired file system location of the database cluster with the &lt;code&gt;-D&lt;/code&gt; option, for example:</source>
-          <target state="new"/>
+          <target state="translated">要手动初始化数据库集群，请运行 &lt;code&gt;initdb&lt;/code&gt; 并使用 &lt;code&gt;-D&lt;/code&gt; 选项指定数据库集群的所需文件系统位置，例如：</target>
         </trans-unit>
         <trans-unit id="40cf525f7b3d73ebe89741dbac88fd30351f8be3" translate="yes" xml:space="preserve">
           <source>To insert a percent sign into your prompt, write &lt;code&gt;%%&lt;/code&gt;. The default prompts are &lt;code&gt;'%/%R%# '&lt;/code&gt; for prompts 1 and 2, and &lt;code&gt;'&amp;gt;&amp;gt; '&lt;/code&gt; for prompt 3.</source>
@@ -2413,7 +2413,7 @@
         </trans-unit>
         <trans-unit id="f6d883ec7d3bf5a2c0cbb45370c83314d637adfd" translate="yes" xml:space="preserve">
           <source>To insert a percent sign into your prompt, write &lt;code&gt;%%&lt;/code&gt;. The default prompts are &lt;code&gt;'%/%R%x%# '&lt;/code&gt; for prompts 1 and 2, and &lt;code&gt;'&amp;gt;&amp;gt; '&lt;/code&gt; for prompt 3.</source>
-          <target state="new"/>
+          <target state="translated">要将百分号插入提示中，请输入 &lt;code&gt;%%&lt;/code&gt; 。对于提示1和2，默认提示为 &lt;code&gt;'%/%R%x%# '&lt;/code&gt; 对于提示3，默认提示为' &lt;code&gt;'&amp;gt;&amp;gt; '&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="e1ee9bbe110857fcf2f7841b805a4e345fe77366" translate="yes" xml:space="preserve">
           <source>To insert a row consisting entirely of default values:</source>
@@ -2445,7 +2445,7 @@
         </trans-unit>
         <trans-unit id="fa2a7ac21257e516bad1e8308a714c724e5e994e" translate="yes" xml:space="preserve">
           <source>To learn more about the SQL/JSON standard, see &lt;a href=&quot;https://www.postgresql.org/docs/13/biblio.html#SQLTR-19075-6&quot;&gt;[sqltr-19075-6]&lt;/a&gt;. For details on JSON types supported in PostgreSQL, see &lt;a href=&quot;datatype-json&quot;&gt;Section 8.14&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">要了解有关SQL / JSON标准的更多信息，请参见&lt;a href=&quot;https://www.postgresql.org/docs/13/biblio.html#SQLTR-19075-6&quot;&gt;[sqltr-19075-6]&lt;/a&gt;。有关PostgreSQL支持的JSON类型的详细信息，请参见&lt;a href=&quot;datatype-json&quot;&gt;第8.14节&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="889344cf4fa47381ec5fba6605b2194e6f5635b8" translate="yes" xml:space="preserve">
           <source>To list keys:</source>
@@ -2477,7 +2477,7 @@
         </trans-unit>
         <trans-unit id="10dbb8485ad8b8028e702262aa6a7b5834c5457f" translate="yes" xml:space="preserve">
           <source>To make the backup, you can use the pg_dumpall command from the version you are currently running; see &lt;a href=&quot;backup-dump#BACKUP-DUMP-ALL&quot;&gt;Section 25.1.2&lt;/a&gt; for more details. For best results, however, try to use the pg_dumpall command from PostgreSQL 13.1, since this version contains bug fixes and improvements over older versions. While this advice might seem idiosyncratic since you haven't installed the new version yet, it is advisable to follow it if you plan to install the new version in parallel with the old version. In that case you can complete the installation normally and transfer the data later. This will also decrease the downtime.</source>
-          <target state="new"/>
+          <target state="translated">要进行备份，可以使用当前正在运行的版本中的pg_dumpall命令。有关更多详细信息，请参见&lt;a href=&quot;backup-dump#BACKUP-DUMP-ALL&quot;&gt;第25.1.2节&lt;/a&gt;。为了获得最佳结果，请尝试使用PostgreSQL 13.1中的pg_dumpall命令，因为该版本包含错误修复和对旧版本的改进。尽管由于尚未安装新版本，此建议似乎有些特殊，但如果您打算与旧版本并行安装新版本，建议您遵循该建议。在这种情况下，您可以正常完成安装并稍后再传输数据。这也将减少停机时间。</target>
         </trans-unit>
         <trans-unit id="e42d34197cf02a7569c42521d0a78b2a30e87e2d" translate="yes" xml:space="preserve">
           <source>To make these settings persist over reboots, modify &lt;code&gt;/etc/sysctl.conf&lt;/code&gt;.</source>
@@ -2485,7 +2485,7 @@
         </trans-unit>
         <trans-unit id="ec5d47aae5aa8ab0f1d50656eb690fc96ff2b236" translate="yes" xml:space="preserve">
           <source>To make these settings persist over reboots, see &lt;code&gt;/etc/sysctl.conf&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">要使这些设置在重新启动后仍然存在，请参见 &lt;code&gt;/etc/sysctl.conf&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="16fb8688ad143822900835b4d9dfbd8b94a6f1bd" translate="yes" xml:space="preserve">
           <source>To make use of the backup, you will need to keep all the WAL segment files generated during and after the file system backup. To aid you in doing this, the base backup process creates a &lt;em&gt;backup history file&lt;/em&gt; that is immediately stored into the WAL archive area. This file is named after the first WAL segment file that you need for the file system backup. For example, if the starting WAL file is &lt;code&gt;0000000100001234000055CD&lt;/code&gt; the backup history file will be named something like &lt;code&gt;0000000100001234000055CD.007C9330.backup&lt;/code&gt;. (The second part of the file name stands for an exact position within the WAL file, and can ordinarily be ignored.) Once you have safely archived the file system backup and the WAL segment files used during the backup (as specified in the backup history file), all archived WAL segments with names numerically less are no longer needed to recover the file system backup and can be deleted. However, you should consider keeping several backup sets to be absolutely certain that you can recover your data.</source>
@@ -2573,7 +2573,7 @@
         </trans-unit>
         <trans-unit id="72a7be887fc7e47acf6f1ec4ef9b556ceb37c5e4" translate="yes" xml:space="preserve">
           <source>To prevent spoofing with SSL, the server must be configured to accept only &lt;code&gt;hostssl&lt;/code&gt; connections (&lt;a href=&quot;auth-pg-hba-conf&quot;&gt;Section 20.1&lt;/a&gt;) and have SSL key and certificate files (&lt;a href=&quot;ssl-tcp&quot;&gt;Section 18.9&lt;/a&gt;). The TCP client must connect using &lt;code&gt;sslmode=verify-ca&lt;/code&gt; or &lt;code&gt;verify-full&lt;/code&gt; and have the appropriate root certificate file installed (&lt;a href=&quot;https://www.postgresql.org/docs/13/libpq-ssl.html#LIBQ-SSL-CERTIFICATES&quot;&gt;Section 33.18.1&lt;/a&gt;).</source>
-          <target state="new"/>
+          <target state="translated">为了防止使用SSL进行欺骗，必须将服务器配置为仅接受 &lt;code&gt;hostssl&lt;/code&gt; 连接（&lt;a href=&quot;auth-pg-hba-conf&quot;&gt;第20.1节&lt;/a&gt;），并具有SSL密钥和证书文件（&lt;a href=&quot;ssl-tcp&quot;&gt;第18.9节&lt;/a&gt;）。TCP客户端必须使用 &lt;code&gt;sslmode=verify-ca&lt;/code&gt; 或 &lt;code&gt;verify-full&lt;/code&gt; 进行连接,并安装了适当的根证书文件（&lt;a href=&quot;https://www.postgresql.org/docs/13/libpq-ssl.html#LIBQ-SSL-CERTIFICATES&quot;&gt;第33.18.1节&lt;/a&gt;）。</target>
         </trans-unit>
         <trans-unit id="bc27b676093ff9c2ed0caeb8bb451423cb6132ec" translate="yes" xml:space="preserve">
           <source>To prevent the operation from waiting for other transactions to commit, use either the &lt;code&gt;NOWAIT&lt;/code&gt; or &lt;code&gt;SKIP LOCKED&lt;/code&gt; option. With &lt;code&gt;NOWAIT&lt;/code&gt;, the statement reports an error, rather than waiting, if a selected row cannot be locked immediately. With &lt;code&gt;SKIP LOCKED&lt;/code&gt;, any selected rows that cannot be immediately locked are skipped. Skipping locked rows provides an inconsistent view of the data, so this is not suitable for general purpose work, but can be used to avoid lock contention with multiple consumers accessing a queue-like table. Note that &lt;code&gt;NOWAIT&lt;/code&gt; and &lt;code&gt;SKIP LOCKED&lt;/code&gt; apply only to the row-level lock(s) &amp;mdash; the required &lt;code&gt;ROW SHARE&lt;/code&gt; table-level lock is still taken in the ordinary way (see &lt;a href=&quot;https://www.postgresql.org/docs/12/mvcc.html&quot;&gt;Chapter 13&lt;/a&gt;). You can use &lt;a href=&quot;sql-lock&quot;&gt;LOCK&lt;/a&gt; with the &lt;code&gt;NOWAIT&lt;/code&gt; option first, if you need to acquire the table-level lock without waiting.</source>
@@ -2581,7 +2581,7 @@
         </trans-unit>
         <trans-unit id="b553159d4136d5984c4e16bd4d3e8a393e646772" translate="yes" xml:space="preserve">
           <source>To prevent the operation from waiting for other transactions to commit, use either the &lt;code&gt;NOWAIT&lt;/code&gt; or &lt;code&gt;SKIP LOCKED&lt;/code&gt; option. With &lt;code&gt;NOWAIT&lt;/code&gt;, the statement reports an error, rather than waiting, if a selected row cannot be locked immediately. With &lt;code&gt;SKIP LOCKED&lt;/code&gt;, any selected rows that cannot be immediately locked are skipped. Skipping locked rows provides an inconsistent view of the data, so this is not suitable for general purpose work, but can be used to avoid lock contention with multiple consumers accessing a queue-like table. Note that &lt;code&gt;NOWAIT&lt;/code&gt; and &lt;code&gt;SKIP LOCKED&lt;/code&gt; apply only to the row-level lock(s) &amp;mdash; the required &lt;code&gt;ROW SHARE&lt;/code&gt; table-level lock is still taken in the ordinary way (see &lt;a href=&quot;https://www.postgresql.org/docs/13/mvcc.html&quot;&gt;Chapter 13&lt;/a&gt;). You can use &lt;a href=&quot;sql-lock&quot;&gt;LOCK&lt;/a&gt; with the &lt;code&gt;NOWAIT&lt;/code&gt; option first, if you need to acquire the table-level lock without waiting.</source>
-          <target state="new"/>
+          <target state="translated">为防止操作等待其他事务提交，请使用 &lt;code&gt;NOWAIT&lt;/code&gt; 或 &lt;code&gt;SKIP LOCKED&lt;/code&gt; 选项。使用 &lt;code&gt;NOWAIT&lt;/code&gt; ，如果无法立即锁定所选行，则该语句报告错误，而不是等待。使用&amp;ldquo; &lt;code&gt;SKIP LOCKED&lt;/code&gt; ，将跳过所有不能立即锁定的选定行。跳过锁定的行会提供不一致的数据视图，因此这不适用于一般用途，但是可用于避免在多个使用者访问类似队列的表时发生锁争用。请注意， &lt;code&gt;NOWAIT&lt;/code&gt; 和 &lt;code&gt;SKIP LOCKED&lt;/code&gt; 仅适用于行级锁-所需的行 &lt;code&gt;ROW SHARE&lt;/code&gt; 表级锁仍然以普通方式进行（请参阅&lt;a href=&quot;https://www.postgresql.org/docs/13/mvcc.html&quot;&gt;第13章&lt;/a&gt;）。如果需要不等待就获取表级锁，则可以先将&lt;a href=&quot;sql-lock&quot;&gt;LOCK&lt;/a&gt;与 &lt;code&gt;NOWAIT&lt;/code&gt; 选项一起使用。</target>
         </trans-unit>
         <trans-unit id="5fafa62267d5a132b9de46d4638dc16e7682262f" translate="yes" xml:space="preserve">
           <source>To prevent unencrypted passwords from being sent across the network, written to the server log or otherwise stolen by a database administrator, PostgreSQL allows the user to supply pre-encrypted passwords. Many client programs make use of this functionality and encrypt the password before sending it to the server.</source>
@@ -2589,7 +2589,7 @@
         </trans-unit>
         <trans-unit id="750038db302e8d94eb0a926900beb6c3bdd93c4b" translate="yes" xml:space="preserve">
           <source>To prevent unprivileged users from exploiting the authentication rights of the unix user the postgres server is running as to escalate to superuser rights, only the superuser may set this option on a user mapping.</source>
-          <target state="new"/>
+          <target state="translated">为了防止非特权用户利用运行postgres服务器的unix用户的认证权限来升级到超级用户权限,只有超级用户可以在用户映射上设置这个选项。</target>
         </trans-unit>
         <trans-unit id="c451daeed477af5e11625a2ad40100dc2bdf1542" translate="yes" xml:space="preserve">
           <source>To print your current working directory, use &lt;code&gt;\! pwd&lt;/code&gt;.</source>
@@ -2653,7 +2653,7 @@
         </trans-unit>
         <trans-unit id="62d35a44cda58220e85434adb6b5a58ad9f84bd9" translate="yes" xml:space="preserve">
           <source>To refer to the JSON value being queried (the &lt;em&gt;context item&lt;/em&gt;), use the &lt;code&gt;$&lt;/code&gt; variable in the path expression. It can be followed by one or more &lt;a href=&quot;datatype-json#TYPE-JSONPATH-ACCESSORS&quot;&gt;accessor operators&lt;/a&gt;, which go down the JSON structure level by level to retrieve sub-items of the context item. Each operator that follows deals with the result of the previous evaluation step.</source>
-          <target state="new"/>
+          <target state="translated">要引用要查询的JSON值（&lt;em&gt;上下文项&lt;/em&gt;），请在路径表达式中使用 &lt;code&gt;$&lt;/code&gt; 变量。它后面可以跟随一个或多个&lt;a href=&quot;datatype-json#TYPE-JSONPATH-ACCESSORS&quot;&gt;访问运算符&lt;/a&gt;，这些运算符逐级向下遍历JSON结构以检索上下文项的子项。随后的每个运算符都会处理上一个评估步骤的结果。</target>
         </trans-unit>
         <trans-unit id="b3f35bb3c3217f63e284e67100cd585c002369af" translate="yes" xml:space="preserve">
           <source>To register a Windows event log library with the operating system, issue this command:</source>
@@ -2885,7 +2885,7 @@
         </trans-unit>
         <trans-unit id="2089cdf040a512976a9ff54157e13cd1f1bda41c" translate="yes" xml:space="preserve">
           <source>To require the client to supply a trusted certificate, place certificates of the root certificate authorities (CAs) you trust in a file in the data directory, set the parameter &lt;a href=&quot;runtime-config-connection#GUC-SSL-CA-FILE&quot;&gt;ssl_ca_file&lt;/a&gt; in &lt;code&gt;postgresql.conf&lt;/code&gt; to the new file name, and add the authentication option &lt;code&gt;clientcert=verify-ca&lt;/code&gt; or &lt;code&gt;clientcert=verify-full&lt;/code&gt; to the appropriate &lt;code&gt;hostssl&lt;/code&gt; line(s) in &lt;code&gt;pg_hba.conf&lt;/code&gt;. A certificate will then be requested from the client during SSL connection startup. (See &lt;a href=&quot;https://www.postgresql.org/docs/13/libpq-ssl.html&quot;&gt;Section 33.18&lt;/a&gt; for a description of how to set up certificates on the client.)</source>
-          <target state="new"/>
+          <target state="translated">要要求客户提供受信任的证书，你在数据目录中的文件信任的根证书颁发机构（CA）的地方证书，设置参数&lt;a href=&quot;runtime-config-connection#GUC-SSL-CA-FILE&quot;&gt;ssl_ca_file&lt;/a&gt;在 &lt;code&gt;postgresql.conf&lt;/code&gt; 中的新文件名，并添加认证选项 &lt;code&gt;clientcert=verify-ca&lt;/code&gt; 或 &lt;code&gt;clientcert=verify-full&lt;/code&gt; 到 &lt;code&gt;pg_hba.conf&lt;/code&gt; 中相应的 &lt;code&gt;hostssl&lt;/code&gt; 行。然后，在SSL连接启动期间将从客户端请求证书。（有关如何在客户端上设置证书的说明，请参见&lt;a href=&quot;https://www.postgresql.org/docs/13/libpq-ssl.html&quot;&gt;第33.18节&lt;/a&gt;。）</target>
         </trans-unit>
         <trans-unit id="6aa65fcf4333fcf0b551df531e03fa872e27a539" translate="yes" xml:space="preserve">
           <source>To retrieve data from a table, the table is &lt;em&gt;queried&lt;/em&gt;. An SQL &lt;code&gt;SELECT&lt;/code&gt; statement is used to do this. The statement is divided into a select list (the part that lists the columns to be returned), a table list (the part that lists the tables from which to retrieve the data), and an optional qualification (the part that specifies any restrictions). For example, to retrieve all the rows of table &lt;code&gt;weather&lt;/code&gt;, type:</source>
@@ -2897,11 +2897,11 @@
         </trans-unit>
         <trans-unit id="ae19836eec0ecd61d32d5ba96b2322d307b8b7c9" translate="yes" xml:space="preserve">
           <source>To retrieve the available track segments, you need to use the &lt;code&gt;.key&lt;/code&gt; accessor operator to descend through surrounding JSON objects:</source>
-          <target state="new"/>
+          <target state="translated">要检索可用的轨道段，您需要使用 &lt;code&gt;.key&lt;/code&gt; 访问器运算符来遍历周围的JSON对象：</target>
         </trans-unit>
         <trans-unit id="522d3e3911dd6d630d42f4c9f3f4511ffe28f774" translate="yes" xml:space="preserve">
           <source>To retrieve the contents of an array, you typically use the &lt;code&gt;[*]&lt;/code&gt; operator. For example, the following path will return the location coordinates for all the available track segments:</source>
-          <target state="new"/>
+          <target state="translated">要检索数组的内容，通常使用 &lt;code&gt;[*]&lt;/code&gt; 运算符。例如，以下路径将返回所有可用轨道段的位置坐标：</target>
         </trans-unit>
         <trans-unit id="bb967f785473e839c4078f1c39fcb9477a78913b" translate="yes" xml:space="preserve">
           <source>To return the coordinates of the first segment only, you can specify the corresponding subscript in the &lt;code&gt;[]&lt;/code&gt; accessor operator. Note that the SQL/JSON arrays are 0-relative:</source>
@@ -2909,7 +2909,7 @@
         </trans-unit>
         <trans-unit id="2997dac29f70ddf8f3e7c83a1acb7272e5aecc0e" translate="yes" xml:space="preserve">
           <source>To return the coordinates of the first segment only, you can specify the corresponding subscript in the &lt;code&gt;[]&lt;/code&gt; accessor operator. Recall that JSON array indexes are 0-relative:</source>
-          <target state="new"/>
+          <target state="translated">要仅返回第一段的坐标，可以在 &lt;code&gt;[]&lt;/code&gt; 访问运算符中指定相应的下标。回想一下，JSON数组索引是相对于0的：</target>
         </trans-unit>
         <trans-unit id="1ff702ac9e947fb4cd3f752235dd9e8f46729035" translate="yes" xml:space="preserve">
           <source>To return to the default encoding:</source>
@@ -2917,7 +2917,7 @@
         </trans-unit>
         <trans-unit id="39f7eef3c39aee4bb525459a86951007badf6cc0" translate="yes" xml:space="preserve">
           <source>To revoke a previously-granted privilege, use the fittingly named &lt;a href=&quot;sql-revoke&quot;&gt;REVOKE&lt;/a&gt; command:</source>
-          <target state="new"/>
+          <target state="translated">要撤消先前授予的特权，请使用适当命名的&lt;a href=&quot;sql-revoke&quot;&gt;REVOKE&lt;/a&gt;命令：</target>
         </trans-unit>
         <trans-unit id="406cc6a0a28c1612b545a71cb3737c23188fdb8b" translate="yes" xml:space="preserve">
           <source>To revoke a privilege, use the fittingly named &lt;a href=&quot;sql-revoke&quot;&gt;REVOKE&lt;/a&gt; command:</source>
@@ -2989,7 +2989,7 @@
         </trans-unit>
         <trans-unit id="565b2254b0db4b12b69a3f496fe0855d4e311ee0" translate="yes" xml:space="preserve">
           <source>To specify an upper-case or mixed-case name in &lt;code&gt;-t&lt;/code&gt; and related switches, you need to double-quote the name; else it will be folded to lower case (see &lt;a href=&quot;app-psql#APP-PSQL-PATTERNS&quot;&gt;Patterns&lt;/a&gt; below). But double quotes are special to the shell, so in turn they must be quoted. Thus, to dump a single table with a mixed-case name, you need something like</source>
-          <target state="new"/>
+          <target state="translated">要在 &lt;code&gt;-t&lt;/code&gt; 和相关的开关中指定大写或大小写混合的名称，您需要将名称双引号；否则它将被折叠成小写（请参见下面的&lt;a href=&quot;app-psql#APP-PSQL-PATTERNS&quot;&gt;模式&lt;/a&gt;）。但是双引号对于shell来说是特殊的，因此反过来必须使用双引号。因此，要转储具有大小写混合名称的单个表，您需要</target>
         </trans-unit>
         <trans-unit id="333792e531c8f32efba6f6ddb4b9558b3b16db75" translate="yes" xml:space="preserve">
           <source>To specify an upper-case or mixed-case name in &lt;code&gt;-t&lt;/code&gt; and related switches, you need to double-quote the name; else it will be folded to lower case (see &lt;a href=&quot;app-psql#APP-PSQL-PATTERNS&quot;&gt;Patterns&lt;/a&gt;). But double quotes are special to the shell, so in turn they must be quoted. Thus, to dump a single table with a mixed-case name, you need something like</source>
@@ -3013,7 +3013,7 @@
         </trans-unit>
         <trans-unit id="0d1fa6d44b3018cfb38f5330bc5f7830f724bd55" translate="yes" xml:space="preserve">
           <source>To start &lt;code&gt;postgres&lt;/code&gt; with a specific port, e.g., 1234:</source>
-          <target state="new"/>
+          <target state="translated">要使用特定端口（例如1234）启动 &lt;code&gt;postgres&lt;/code&gt; ：</target>
         </trans-unit>
         <trans-unit id="f290a7625948bd090c0e63e75ca4290799de7fe3" translate="yes" xml:space="preserve">
           <source>To start a single-user mode server, use a command like</source>
@@ -3061,7 +3061,7 @@
         </trans-unit>
         <trans-unit id="aca3788124b57b993c2721a04dc97e7cfe9aa1d6" translate="yes" xml:space="preserve">
           <source>To support matching of rows which include elements without a default B-tree operator class, the following operators are defined for composite type comparison: &lt;code&gt;*=&lt;/code&gt;, &lt;code&gt;*&amp;lt;&amp;gt;&lt;/code&gt;, &lt;code&gt;*&amp;lt;&lt;/code&gt;, &lt;code&gt;*&amp;lt;=&lt;/code&gt;, &lt;code&gt;*&amp;gt;&lt;/code&gt;, and &lt;code&gt;*&amp;gt;=&lt;/code&gt;. These operators compare the internal binary representation of the two rows. Two rows might have a different binary representation even though comparisons of the two rows with the equality operator is true. The ordering of rows under these comparison operators is deterministic but not otherwise meaningful. These operators are used internally for materialized views and might be useful for other specialized purposes such as replication and B-Tree deduplication (see &lt;a href=&quot;btree-implementation#BTREE-DEDUPLICATION&quot;&gt;Section 63.4.2&lt;/a&gt;). They are not intended to be generally useful for writing queries, though.</source>
-          <target state="new"/>
+          <target state="translated">为了支持包含没有默认B-tree运算符类的元素的行的匹配，为复合类型比较定义了以下运算符： &lt;code&gt;*=&lt;/code&gt; ， &lt;code&gt;*&amp;lt;&amp;gt;&lt;/code&gt; ， &lt;code&gt;*&amp;lt;&lt;/code&gt; ， &lt;code&gt;*&amp;lt;=&lt;/code&gt; ， &lt;code&gt;*&amp;gt;&lt;/code&gt; 和 &lt;code&gt;*&amp;gt;=&lt;/code&gt; 。这些运算符比较两行的内部二进制表示形式。即使两行与相等运算符的比较为真，两行​​也可能具有不同的二进制表示形式。这些比较运算符下的行顺序是确定性的，但没有其他意义。这些运算符在内部用于物化视图，并且可能对其他特殊用途（例如复制和B-Tree重复数据删除）有用（请参见&lt;a href=&quot;btree-implementation#BTREE-DEDUPLICATION&quot;&gt;第63.4.2节）。&lt;/a&gt;）。但是，它们一般不打算用于编写查询。</target>
         </trans-unit>
         <trans-unit id="6c766280bc71ea6c99fe469d91b62dcecd981191" translate="yes" xml:space="preserve">
           <source>To support matching of rows which include elements without a default B-tree operator class, the following operators are defined for composite type comparison: &lt;code&gt;*=&lt;/code&gt;, &lt;code&gt;*&amp;lt;&amp;gt;&lt;/code&gt;, &lt;code&gt;*&amp;lt;&lt;/code&gt;, &lt;code&gt;*&amp;lt;=&lt;/code&gt;, &lt;code&gt;*&amp;gt;&lt;/code&gt;, and &lt;code&gt;*&amp;gt;=&lt;/code&gt;. These operators compare the internal binary representation of the two rows. Two rows might have a different binary representation even though comparisons of the two rows with the equality operator is true. The ordering of rows under these comparison operators is deterministic but not otherwise meaningful. These operators are used internally for materialized views and might be useful for other specialized purposes such as replication but are not intended to be generally useful for writing queries.</source>
@@ -3073,7 +3073,7 @@
         </trans-unit>
         <trans-unit id="7094d9589b47d1412c9f6e48415db4d099361388" translate="yes" xml:space="preserve">
           <source>To terminate an individual session while allowing other sessions to continue, use &lt;code&gt;pg_terminate_backend()&lt;/code&gt; (see &lt;a href=&quot;functions-admin#FUNCTIONS-ADMIN-SIGNAL-TABLE&quot;&gt;Table 9.84&lt;/a&gt;) or send a SIGTERM signal to the child process associated with the session.</source>
-          <target state="new"/>
+          <target state="translated">要在允许其他会话继续进行的同时终止单个会话，请使用 &lt;code&gt;pg_terminate_backend()&lt;/code&gt; （请&lt;a href=&quot;functions-admin#FUNCTIONS-ADMIN-SIGNAL-TABLE&quot;&gt;参见表9.84&lt;/a&gt;）或向与该会话关联的子进程发送SIGTERM信号。</target>
         </trans-unit>
         <trans-unit id="b948441d5404b9b545e1ffba5fe2679215c93a3d" translate="yes" xml:space="preserve">
           <source>To terminate the &lt;code&gt;postgres&lt;/code&gt; server normally, the signals &lt;code&gt;SIGTERM&lt;/code&gt;, &lt;code&gt;SIGINT&lt;/code&gt;, or &lt;code&gt;SIGQUIT&lt;/code&gt; can be used. The first will wait for all clients to terminate before quitting, the second will forcefully disconnect all clients, and the third will quit immediately without proper shutdown, resulting in a recovery run during restart.</source>
@@ -3097,7 +3097,7 @@
         </trans-unit>
         <trans-unit id="d272ad6e12f47f5e40efbd76a7ae268c798205f5" translate="yes" xml:space="preserve">
           <source>To the database server it will then look as though you are user &lt;code&gt;joe&lt;/code&gt; on host &lt;code&gt;foo.com&lt;/code&gt; connecting to the &lt;code&gt;localhost&lt;/code&gt; bind address, and it will use whatever authentication procedure was configured for connections by that user to that bind address. Note that the server will not think the connection is SSL-encrypted, since in fact it is not encrypted between the SSH server and the PostgreSQL server. This should not pose any extra security risk because they are on the same machine.</source>
-          <target state="new"/>
+          <target state="translated">对于数据库服务器，它看起来就像您是主机 &lt;code&gt;foo.com&lt;/code&gt; 上的用户 &lt;code&gt;joe&lt;/code&gt; ，正在连接到 &lt;code&gt;localhost&lt;/code&gt; 绑定地址，并且它将使用该用户为该用户到该绑定地址的连接配置的任何身份验证过程。请注意，服务器不会认为该连接是SSL加密的，因为实际上在SSH服务器和PostgreSQL服务器之间未对连接进行加密。这不会造成任何额外的安全风险，因为它们位于同一台计算机上。</target>
         </trans-unit>
         <trans-unit id="27fa29cd778cfa5bac13b40048f336e41ba246ff" translate="yes" xml:space="preserve">
           <source>To track the age of the oldest unfrozen XIDs in a database, &lt;code&gt;VACUUM&lt;/code&gt; stores XID statistics in the system tables &lt;code&gt;pg_class&lt;/code&gt; and &lt;code&gt;pg_database&lt;/code&gt;. In particular, the &lt;code&gt;relfrozenxid&lt;/code&gt; column of a table's &lt;code&gt;pg_class&lt;/code&gt; row contains the freeze cutoff XID that was used by the last aggressive &lt;code&gt;VACUUM&lt;/code&gt; for that table. All rows inserted by transactions with XIDs older than this cutoff XID are guaranteed to have been frozen. Similarly, the &lt;code&gt;datfrozenxid&lt;/code&gt; column of a database's &lt;code&gt;pg_database&lt;/code&gt; row is a lower bound on the unfrozen XIDs appearing in that database &amp;mdash; it is just the minimum of the per-table &lt;code&gt;relfrozenxid&lt;/code&gt; values within the database. A convenient way to examine this information is to execute queries such as:</source>
@@ -3105,7 +3105,7 @@
         </trans-unit>
         <trans-unit id="bec719f5a6615a3436f6843fbf1b1db8f209ea62" translate="yes" xml:space="preserve">
           <source>To trigger failover of a log-shipping standby server, run &lt;code&gt;pg_ctl promote&lt;/code&gt;, call &lt;code&gt;pg_promote()&lt;/code&gt;, or create a trigger file with the file name and path specified by the &lt;code&gt;promote_trigger_file&lt;/code&gt;. If you're planning to use &lt;code&gt;pg_ctl promote&lt;/code&gt; or to call &lt;code&gt;pg_promote()&lt;/code&gt; to fail over, &lt;code&gt;promote_trigger_file&lt;/code&gt; is not required. If you're setting up the reporting servers that are only used to offload read-only queries from the primary, not for high availability purposes, you don't need to promote it.</source>
-          <target state="new"/>
+          <target state="translated">要触发日志传送备用服务器的故障转移，请运行 &lt;code&gt;pg_ctl promote&lt;/code&gt; &lt;code&gt;pg_promote()&lt;/code&gt; ，调用pg_promote（），或创建一个触发器文件，其文件名和路径由 &lt;code&gt;promote_trigger_file&lt;/code&gt; 指定。如果您打算使用 &lt;code&gt;pg_ctl promote&lt;/code&gt; &lt;code&gt;pg_promote()&lt;/code&gt; 或调用pg_promote（）进行故障转移，则不需要 &lt;code&gt;promote_trigger_file&lt;/code&gt; 。如果要设置仅用于从主服务器上卸载只读查询（而不是出于高可用性目的）的报表服务器，则无需升级它。</target>
         </trans-unit>
         <trans-unit id="ab93659339e52adb4a11b32e33a244aa5b607ece" translate="yes" xml:space="preserve">
           <source>To trigger failover of a log-shipping standby server, run &lt;code&gt;pg_ctl promote&lt;/code&gt;, call &lt;code&gt;pg_promote&lt;/code&gt;, or create a trigger file with the file name and path specified by the &lt;code&gt;promote_trigger_file&lt;/code&gt;. If you're planning to use &lt;code&gt;pg_ctl promote&lt;/code&gt; or to call &lt;code&gt;pg_promote&lt;/code&gt; to fail over, &lt;code&gt;promote_trigger_file&lt;/code&gt; is not required. If you're setting up the reporting servers that are only used to offload read-only queries from the primary, not for high availability purposes, you don't need to promote it.</source>
@@ -3169,7 +3169,7 @@
         </trans-unit>
         <trans-unit id="204c9fc68f0716e2f79b30bbdabc1054f228c62c" translate="yes" xml:space="preserve">
           <source>To use colorized output, set the environment variable &lt;code&gt;PG_COLOR&lt;/code&gt; as follows:</source>
-          <target state="new"/>
+          <target state="translated">要使用彩色输出，请如下设置环境变量 &lt;code&gt;PG_COLOR&lt;/code&gt; ：</target>
         </trans-unit>
         <trans-unit id="e28d80b37aa18075f5d4cc483ffa5b0226809b8f" translate="yes" xml:space="preserve">
           <source>To use declarative partitioning in this case, use the following steps:</source>
@@ -3209,7 +3209,7 @@
         </trans-unit>
         <trans-unit id="f11c4d150da0b305c6b3a53698ddafc986a15372" translate="yes" xml:space="preserve">
           <source>To verify a backup while ignoring a file that was added manually to the backup directory, and also skipping checksum verification:</source>
-          <target state="new"/>
+          <target state="translated">要验证备份,同时忽略手动添加到备份目录的文件,并跳过校验和验证。</target>
         </trans-unit>
         <trans-unit id="b12aef90b0765da4396291cbd68b40200f811baa" translate="yes" xml:space="preserve">
           <source>To write a composite value as a literal constant, enclose the field values within parentheses and separate them by commas. You can put double quotes around any field value, and must do so if it contains commas or parentheses. (More details appear &lt;a href=&quot;rowtypes#ROWTYPES-IO-SYNTAX&quot;&gt;below&lt;/a&gt;.) Thus, the general format of a composite constant is the following:</source>
@@ -3245,11 +3245,11 @@
         </trans-unit>
         <trans-unit id="a230feca93e9b8afbf572850a80bd7ee57cef2d3" translate="yes" xml:space="preserve">
           <source>Total amount of WAL bytes generated by the statement</source>
-          <target state="new"/>
+          <target state="translated">语句产生的WAL字节总数。</target>
         </trans-unit>
         <trans-unit id="d83687b2ce879fb045fc3cb3c8969197fea57f55" translate="yes" xml:space="preserve">
           <source>Total amount of data that will be streamed. This is estimated and reported as of the beginning of &lt;code&gt;streaming database files&lt;/code&gt; phase. Note that this is only an approximation since the database may change during &lt;code&gt;streaming database files&lt;/code&gt; phase and WAL log may be included in the backup later. This is always the same value as &lt;code&gt;backup_streamed&lt;/code&gt; once the amount of data streamed exceeds the estimated total size. If the estimation is disabled in pg_basebackup (i.e., &lt;code&gt;--no-estimate-size&lt;/code&gt; option is specified), this is &lt;code&gt;NULL&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">将要流式传输的数据总量。在 &lt;code&gt;streaming database files&lt;/code&gt; 阶段开始时，将对此进行估计和报告。请注意，这只是一个近似值，因为在 &lt;code&gt;streaming database files&lt;/code&gt; 阶段数据库可能会更改，并且WAL日志稍后可能会包含在备份中。一旦流传输的数据量超过估计的总大小，则该值始终与 &lt;code&gt;backup_streamed&lt;/code&gt; 相同。如果在pg_basebackup中禁用了估算（即，指定了 &lt;code&gt;--no-estimate-size&lt;/code&gt; 选项），则为 &lt;code&gt;NULL&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="b94a11c6c4384bcb235fe450b134cbeae2334827" translate="yes" xml:space="preserve">
           <source>Total amount of data written to temporary files by queries in this database. All temporary files are counted, regardless of why the temporary file was created, and regardless of the &lt;a href=&quot;runtime-config-logging#GUC-LOG-TEMP-FILES&quot;&gt;log_temp_files&lt;/a&gt; setting.</source>
@@ -3305,11 +3305,11 @@
         </trans-unit>
         <trans-unit id="6ccd38e7f39b55f68908c8f44a285a49297c5b87" translate="yes" xml:space="preserve">
           <source>Total number of WAL full page images generated by the statement</source>
-          <target state="new"/>
+          <target state="translated">报表产生的WAL整页图片总数。</target>
         </trans-unit>
         <trans-unit id="d1b5a1338a4346cf6785e1053f9330facfc3876a" translate="yes" xml:space="preserve">
           <source>Total number of WAL records generated by the statement</source>
-          <target state="new"/>
+          <target state="translated">报表产生的WAL记录总数。</target>
         </trans-unit>
         <trans-unit id="c1ce6625b6e47aeee73d2c1b1b71597cc6a9a9eb" translate="yes" xml:space="preserve">
           <source>Total number of blocks to be processed in the current phase.</source>
@@ -3325,7 +3325,7 @@
         </trans-unit>
         <trans-unit id="034537a9255995f3a8c4229411cb79c84839a103" translate="yes" xml:space="preserve">
           <source>Total number of heap blocks that will be sampled.</source>
-          <target state="new"/>
+          <target state="translated">将被采样的堆块总数。</target>
         </trans-unit>
         <trans-unit id="139c9a494fed3d2e3c71e34a5377d33fc050686f" translate="yes" xml:space="preserve">
           <source>Total number of local block cache hits by the statement</source>
@@ -3369,7 +3369,7 @@
         </trans-unit>
         <trans-unit id="0dec74abab5b22125ad8d3417834f7d11deb6460" translate="yes" xml:space="preserve">
           <source>Total number of tablespaces that will be streamed.</source>
-          <target state="new"/>
+          <target state="translated">将要流转的表空间总数。</target>
         </trans-unit>
         <trans-unit id="6d52c8d86744555c33141f6cf6855a23715ba448" translate="yes" xml:space="preserve">
           <source>Total number of temp blocks read by the statement</source>
@@ -3385,7 +3385,7 @@
         </trans-unit>
         <trans-unit id="7a2e3368cba08aab3bbc52e0db6c41724c5181bc" translate="yes" xml:space="preserve">
           <source>Total time spent executing the statement, in milliseconds</source>
-          <target state="new"/>
+          <target state="translated">执行该语句所花费的总时间(毫秒)</target>
         </trans-unit>
         <trans-unit id="68f2ac9e60d0e97728209a16e26e37eeb3dc266b" translate="yes" xml:space="preserve">
           <source>Total time spent in the statement, in milliseconds</source>
@@ -3401,7 +3401,7 @@
         </trans-unit>
         <trans-unit id="3de803593f31c4639f990558ee1a07af5052d1e1" translate="yes" xml:space="preserve">
           <source>Total time spent planning the statement, in milliseconds (if &lt;code&gt;pg_stat_statements.track_planning&lt;/code&gt; is enabled, otherwise zero)</source>
-          <target state="new"/>
+          <target state="translated">规划语句所花费的总时间（以毫秒为单位）（如果启用了 &lt;code&gt;pg_stat_statements.track_planning&lt;/code&gt; ，否则为零）</target>
         </trans-unit>
         <trans-unit id="9fdfbad291288b3e0fb3447fb003299fb7e4adba" translate="yes" xml:space="preserve">
           <source>Total time the statement spent reading blocks, in milliseconds (if &lt;a href=&quot;runtime-config-statistics#GUC-TRACK-IO-TIMING&quot;&gt;track_io_timing&lt;/a&gt; is enabled, otherwise zero)</source>
@@ -3437,7 +3437,7 @@
         </trans-unit>
         <trans-unit id="06d8ffe65391f0da38d503880772215ed8a2200b" translate="yes" xml:space="preserve">
           <source>Transaction ID</source>
-          <target state="new"/>
+          <target state="translated">交易ID</target>
         </trans-unit>
         <trans-unit id="20805c5f220ddf62c478af0fa328fd76b59b6fbd" translate="yes" xml:space="preserve">
           <source>Transaction ID (0 if none is assigned)</source>
@@ -3481,7 +3481,7 @@
         </trans-unit>
         <trans-unit id="81482fe22076261a7285e457dec778b14a2c3695" translate="yes" xml:space="preserve">
           <source>Transaction identifiers are also 32-bit quantities. In a long-lived database it is possible for transaction IDs to wrap around. This is not a fatal problem given appropriate maintenance procedures; see &lt;a href=&quot;https://www.postgresql.org/docs/13/maintenance.html&quot;&gt;Chapter 24&lt;/a&gt; for details. It is unwise, however, to depend on the uniqueness of transaction IDs over the long term (more than one billion transactions).</source>
-          <target state="new"/>
+          <target state="translated">交易标识符也是32位的数量。在寿命长的数据库中，交易ID可能会回绕。如果采取适当的维护程序，这不是致命的问题；有关详细信息，请参见&lt;a href=&quot;https://www.postgresql.org/docs/13/maintenance.html&quot;&gt;第24章&lt;/a&gt;。但是，长期依赖交易ID（超过十亿笔交易）的唯一性是不明智的。</target>
         </trans-unit>
         <trans-unit id="ad3cae69d174599e4cc4c127a9de08ea538533e3" translate="yes" xml:space="preserve">
           <source>Transaction management commands</source>
@@ -3493,7 +3493,7 @@
         </trans-unit>
         <trans-unit id="032a6a2e156459be12da14ed3e107d4113138cfd" translate="yes" xml:space="preserve">
           <source>Transaction management commands:</source>
-          <target state="new"/>
+          <target state="translated">事务管理命令。</target>
         </trans-unit>
         <trans-unit id="7bae2f8d1524dbc31720a0e3939f64fa26db9b78" translate="yes" xml:space="preserve">
           <source>Transaction one attempts to acquire a row-level lock on the specified row, but it cannot: transaction two already holds such a lock. So it waits for transaction two to complete. Thus, transaction one is blocked on transaction two, and transaction two is blocked on transaction one: a deadlock condition. PostgreSQL will detect this situation and abort one of the transactions.</source>
@@ -3513,11 +3513,11 @@
         </trans-unit>
         <trans-unit id="d071bbfced054416a7f289525ebee94bea79198f" translate="yes" xml:space="preserve">
           <source>Transactions in progress at the time of the snapshot. A transaction ID that is &lt;code&gt;xmin &amp;lt;= X &amp;lt; xmax&lt;/code&gt; and not in this list was already completed at the time of the snapshot, and thus is either visible or dead according to its commit status. This list does not include the transaction IDs of subtransactions.</source>
-          <target state="new"/>
+          <target state="translated">快照时正在进行的事务。 &lt;code&gt;xmin &amp;lt;= X &amp;lt; xmax&lt;/code&gt; 且不在此列表中的事务ID在快照时已完成，因此根据其提交状态可见或无效。该列表不包括子交易的交易ID。</target>
         </trans-unit>
         <trans-unit id="6a16fa9a914d72a0c50c04e0fc3597d3f514a314" translate="yes" xml:space="preserve">
           <source>Transactions per second (TPS)</source>
-          <target state="new"/>
+          <target state="translated">每秒交易量(TPS)</target>
         </trans-unit>
         <trans-unit id="01df28d63a600d976f605002c1c87ca85d599d36" translate="yes" xml:space="preserve">
           <source>Transactions started during hot standby may issue the following commands:</source>
@@ -3537,39 +3537,39 @@
         </trans-unit>
         <trans-unit id="efa82358149d07c8578392dc98215d57f7bd3811" translate="yes" xml:space="preserve">
           <source>Translates a textual collation name to its OID. A similar result is obtained by casting the string to type &lt;code&gt;regcollation&lt;/code&gt; (see &lt;a href=&quot;datatype-oid&quot;&gt;Section 8.19&lt;/a&gt;); however, this function will return &lt;code&gt;NULL&lt;/code&gt; rather than throwing an error if the name is not found. Also unlike the cast, this does not accept a numeric OID as input.</source>
-          <target state="new"/>
+          <target state="translated">将文本排序规则名称转换为其OID。通过将字符串强制转换为 &lt;code&gt;regcollation&lt;/code&gt; 类型，可以得到类似的结果（请参见&lt;a href=&quot;datatype-oid&quot;&gt;第8.19节&lt;/a&gt;）。但是，如果找不到名称，此函数将返回 &lt;code&gt;NULL&lt;/code&gt; 而不是引发错误。也与强制转换不同，它不接受数字OID作为输入。</target>
         </trans-unit>
         <trans-unit id="ccc164c92dd7b3fef9b61d3c82842d6ee1da4302" translate="yes" xml:space="preserve">
           <source>Translates a textual function or procedure name (with argument types) to its OID. A similar result is obtained by casting the string to type &lt;code&gt;regprocedure&lt;/code&gt; (see &lt;a href=&quot;datatype-oid&quot;&gt;Section 8.19&lt;/a&gt;); however, this function will return &lt;code&gt;NULL&lt;/code&gt; rather than throwing an error if the name is not found. Also unlike the cast, this does not accept a numeric OID as input.</source>
-          <target state="new"/>
+          <target state="translated">将文本函数或过程名称（带有参数类型）转换为其OID。通过将字符串转换为 &lt;code&gt;regprocedure&lt;/code&gt; 类型，可以得到类似的结果（请参阅&lt;a href=&quot;datatype-oid&quot;&gt;第8.19节&lt;/a&gt;）；但是，如果找不到名称，此函数将返回 &lt;code&gt;NULL&lt;/code&gt; 而不是引发错误。也与强制转换不同，它不接受数字OID作为输入。</target>
         </trans-unit>
         <trans-unit id="ef72ee486a99d329e919f18b88ce76c0b03976ee" translate="yes" xml:space="preserve">
           <source>Translates a textual function or procedure name to its OID. A similar result is obtained by casting the string to type &lt;code&gt;regproc&lt;/code&gt; (see &lt;a href=&quot;datatype-oid&quot;&gt;Section 8.19&lt;/a&gt;); however, this function will return &lt;code&gt;NULL&lt;/code&gt; rather than throwing an error if the name is not found or is ambiguous. Also unlike the cast, this does not accept a numeric OID as input.</source>
-          <target state="new"/>
+          <target state="translated">将文本函数或过程名称转换为其OID。通过将字符串转换为 &lt;code&gt;regproc&lt;/code&gt; 类型也可以得到类似的结果（请参见&lt;a href=&quot;datatype-oid&quot;&gt;第8.19节&lt;/a&gt;）；但是，如果未找到名称或名称不明确，则此函数将返回 &lt;code&gt;NULL&lt;/code&gt; 而不是引发错误。也与强制转换不同，它不接受数字OID作为输入。</target>
         </trans-unit>
         <trans-unit id="d3df810a8802c3de4a8975fa62010e275f6693c7" translate="yes" xml:space="preserve">
           <source>Translates a textual operator name (with parameter types) to its OID. A similar result is obtained by casting the string to type &lt;code&gt;regoperator&lt;/code&gt; (see &lt;a href=&quot;datatype-oid&quot;&gt;Section 8.19&lt;/a&gt;); however, this function will return &lt;code&gt;NULL&lt;/code&gt; rather than throwing an error if the name is not found. Also unlike the cast, this does not accept a numeric OID as input.</source>
-          <target state="new"/>
+          <target state="translated">将文本运算符名称（带有参数类型）转换为其OID。通过将字符串转换为类型 &lt;code&gt;regoperator&lt;/code&gt; 可以得到类似的结果（请参见&lt;a href=&quot;datatype-oid&quot;&gt;第8.19节&lt;/a&gt;）。但是，如果找不到名称，此函数将返回 &lt;code&gt;NULL&lt;/code&gt; 而不是引发错误。也与强制转换不同，它不接受数字OID作为输入。</target>
         </trans-unit>
         <trans-unit id="92746faa205cd6961adce584e99c5f21cb92c46c" translate="yes" xml:space="preserve">
           <source>Translates a textual operator name to its OID. A similar result is obtained by casting the string to type &lt;code&gt;regoper&lt;/code&gt; (see &lt;a href=&quot;datatype-oid&quot;&gt;Section 8.19&lt;/a&gt;); however, this function will return &lt;code&gt;NULL&lt;/code&gt; rather than throwing an error if the name is not found or is ambiguous. Also unlike the cast, this does not accept a numeric OID as input.</source>
-          <target state="new"/>
+          <target state="translated">将文本运算符名称转换为其OID。通过将字符串转换为 &lt;code&gt;regoper&lt;/code&gt; 类型，可以得到类似的结果（请参见&lt;a href=&quot;datatype-oid&quot;&gt;第8.19节&lt;/a&gt;）。但是，如果未找到名称或名称不明确，则此函数将返回 &lt;code&gt;NULL&lt;/code&gt; 而不是引发错误。也与强制转换不同，它不接受数字OID作为输入。</target>
         </trans-unit>
         <trans-unit id="dfb773d5eee2a49b6ea78ef980db2e7f30639736" translate="yes" xml:space="preserve">
           <source>Translates a textual relation name to its OID. A similar result is obtained by casting the string to type &lt;code&gt;regclass&lt;/code&gt; (see &lt;a href=&quot;datatype-oid&quot;&gt;Section 8.19&lt;/a&gt;); however, this function will return &lt;code&gt;NULL&lt;/code&gt; rather than throwing an error if the name is not found. Also unlike the cast, this does not accept a numeric OID as input.</source>
-          <target state="new"/>
+          <target state="translated">将文本关系名称转换为其OID。通过将字符串强制转换为 &lt;code&gt;regclass&lt;/code&gt; 类型，可以得到类似的结果（请参见&lt;a href=&quot;datatype-oid&quot;&gt;第8.19节&lt;/a&gt;）。但是，如果找不到名称，此函数将返回 &lt;code&gt;NULL&lt;/code&gt; 而不是引发错误。也与强制转换不同，它不接受数字OID作为输入。</target>
         </trans-unit>
         <trans-unit id="098dc5926b87a21bd111e9afaa29f8b1770028be" translate="yes" xml:space="preserve">
           <source>Translates a textual role name to its OID. A similar result is obtained by casting the string to type &lt;code&gt;regrole&lt;/code&gt; (see &lt;a href=&quot;datatype-oid&quot;&gt;Section 8.19&lt;/a&gt;); however, this function will return &lt;code&gt;NULL&lt;/code&gt; rather than throwing an error if the name is not found. Also unlike the cast, this does not accept a numeric OID as input.</source>
-          <target state="new"/>
+          <target state="translated">将文本角色名称转换为其OID。通过将字符串强制转换为 &lt;code&gt;regrole&lt;/code&gt; 类型，可以得到类似的结果（请参见&lt;a href=&quot;datatype-oid&quot;&gt;第8.19节&lt;/a&gt;）。但是，如果找不到名称，此函数将返回 &lt;code&gt;NULL&lt;/code&gt; 而不是引发错误。也与强制转换不同，它不接受数字OID作为输入。</target>
         </trans-unit>
         <trans-unit id="eb42818718f6870ecc3a5e4e2716f5845d22f9af" translate="yes" xml:space="preserve">
           <source>Translates a textual schema name to its OID. A similar result is obtained by casting the string to type &lt;code&gt;regnamespace&lt;/code&gt; (see &lt;a href=&quot;datatype-oid&quot;&gt;Section 8.19&lt;/a&gt;); however, this function will return &lt;code&gt;NULL&lt;/code&gt; rather than throwing an error if the name is not found. Also unlike the cast, this does not accept a numeric OID as input.</source>
-          <target state="new"/>
+          <target state="translated">将文本模式名称转换为其OID。通过将字符串转换为 &lt;code&gt;regnamespace&lt;/code&gt; 类型，可以得到类似的结果（请参见&lt;a href=&quot;datatype-oid&quot;&gt;第8.19节&lt;/a&gt;）。但是，如果找不到名称，此函数将返回 &lt;code&gt;NULL&lt;/code&gt; 而不是引发错误。也与强制转换不同，它不接受数字OID作为输入。</target>
         </trans-unit>
         <trans-unit id="4723217fb81c0d95526fe2c01ae95fbd721b1761" translate="yes" xml:space="preserve">
           <source>Translates a textual type name to its OID. A similar result is obtained by casting the string to type &lt;code&gt;regtype&lt;/code&gt; (see &lt;a href=&quot;datatype-oid&quot;&gt;Section 8.19&lt;/a&gt;); however, this function will return &lt;code&gt;NULL&lt;/code&gt; rather than throwing an error if the name is not found. Also unlike the cast, this does not accept a numeric OID as input.</source>
-          <target state="new"/>
+          <target state="translated">将文本类型名称转换为其OID。通过将字符串转换为 &lt;code&gt;regtype&lt;/code&gt; 类型，可以得到类似的结果（请参见&lt;a href=&quot;datatype-oid&quot;&gt;第8.19节&lt;/a&gt;）；但是，如果找不到名称，此函数将返回 &lt;code&gt;NULL&lt;/code&gt; 而不是引发错误。也与强制转换不同，它不接受数字OID作为输入。</target>
         </trans-unit>
         <trans-unit id="59a6244fac8a9c9d9686484f98e57e4b38d7e551" translate="yes" xml:space="preserve">
           <source>Translates the given qualified MLS/MCS range into raw format if the mcstrans daemon is running.</source>
@@ -3593,7 +3593,7 @@
         </trans-unit>
         <trans-unit id="525e69424eac00831ef279c5d86304725cc5771e" translate="yes" xml:space="preserve">
           <source>Treating the buffer as a single line primarily affects meta-commands: whatever is in the buffer after a meta-command will be taken as argument(s) to the meta-command, even if it spans multiple lines. (Thus you cannot make meta-command-using scripts this way. Use &lt;code&gt;\i&lt;/code&gt; for that.)</source>
-          <target state="new"/>
+          <target state="translated">将缓冲区视为单行主要影响元命令：元命令后缓冲区中的内容将被视为元命令的参数，即使它跨越多行也是如此。（因此，您不能以这种方式制作使用元命令的脚本。为此，请使用 &lt;code&gt;\i&lt;/code&gt; 。）</target>
         </trans-unit>
         <trans-unit id="22ea8d02160441883e871c64b4bf207437c3c434" translate="yes" xml:space="preserve">
           <source>Tree level of the root page</source>
@@ -3617,7 +3617,7 @@
         </trans-unit>
         <trans-unit id="b403b55ee83f5cefbd6403b1202345b597667eeb" translate="yes" xml:space="preserve">
           <source>Trigger-Based Repl.</source>
-          <target state="new"/>
+          <target state="translated">基于触发器的Repl.</target>
         </trans-unit>
         <trans-unit id="358d2d9b79bd7e7b52f1a586b3f6090ae9e39c21" translate="yes" xml:space="preserve">
           <source>Trigger-based replication systems such as Slony, Londiste and Bucardo won't run on the standby at all, though they will run happily on the primary server as long as the changes are not sent to standby servers to be applied. WAL replay is not trigger-based so you cannot relay from the standby to any system that requires additional database writes or relies on the use of triggers.</source>
@@ -3709,7 +3709,7 @@
         </trans-unit>
         <trans-unit id="7438a25765f88fed7fec2543e2f22ba8fa0da65d" translate="yes" xml:space="preserve">
           <source>True if only superusers are allowed to install this extension (but see &lt;code&gt;trusted&lt;/code&gt;)</source>
-          <target state="new"/>
+          <target state="translated">如果只允许超级用户安装此扩展，则为true（但请参阅 &lt;code&gt;trusted&lt;/code&gt; ）</target>
         </trans-unit>
         <trans-unit id="a35a480c8856109ea6f28e3f43d8363e78cf83fe" translate="yes" xml:space="preserve">
           <source>True if recovery is paused.</source>
@@ -3769,7 +3769,7 @@
         </trans-unit>
         <trans-unit id="49c5deda46593d87b8da1a0a8664bee6e99c35a8" translate="yes" xml:space="preserve">
           <source>True if the extension can be installed by non-superusers with appropriate privileges</source>
-          <target state="new"/>
+          <target state="translated">如果非超级用户能以适当的权限安装扩展,则为真。</target>
         </trans-unit>
         <trans-unit id="42ccdc48d1316985de4ceff096fc1090b18ac5fc" translate="yes" xml:space="preserve">
           <source>True if the rule is an &lt;code&gt;INSTEAD&lt;/code&gt; rule</source>
@@ -3861,7 +3861,7 @@
         </trans-unit>
         <trans-unit id="f15d827fb86d12905958801116bae0132b24288b" translate="yes" xml:space="preserve">
           <source>Truncates &lt;em&gt;&lt;code&gt;v&lt;/code&gt;&lt;/em&gt; to &lt;em&gt;&lt;code&gt;s&lt;/code&gt;&lt;/em&gt; decimal places</source>
-          <target state="new"/>
+          <target state="translated">将&lt;em&gt; &lt;code&gt;v&lt;/code&gt; &lt;/em&gt;截断到&lt;em&gt; &lt;code&gt;s&lt;/code&gt; &lt;/em&gt;小数位</target>
         </trans-unit>
         <trans-unit id="20d769e0b499920cf570c76fa726c85ce63bdb4b" translate="yes" xml:space="preserve">
           <source>Truncates the visibility map for the given relation. This function is useful if you believe that the visibility map for the relation is corrupt and wish to force rebuilding it. The first &lt;code&gt;VACUUM&lt;/code&gt; executed on the given relation after this function is executed will scan every page in the relation and rebuild the visibility map. (Until that is done, queries will treat the visibility map as containing all zeroes.)</source>
@@ -3869,7 +3869,7 @@
         </trans-unit>
         <trans-unit id="f44660614a2ee1a0637096613f6651f9ec6d18c3" translate="yes" xml:space="preserve">
           <source>Truncates to integer (towards zero)</source>
-          <target state="new"/>
+          <target state="translated">截断为整数(向零方向)。</target>
         </trans-unit>
         <trans-unit id="9fc0100312a64373efd7c390d92763a84341669f" translate="yes" xml:space="preserve">
           <source>Trust Authentication</source>
@@ -3885,11 +3885,11 @@
         </trans-unit>
         <trans-unit id="16d4cf557b86ec41315e510d2c0a1e98aa461ec5" translate="yes" xml:space="preserve">
           <source>Trusted procedures are similar to security definer functions or setuid commands. SELinux provides a feature to allow trusted code to run using a security label different from that of the client, generally for the purpose of providing highly controlled access to sensitive data (e.g., rows might be omitted, or the precision of stored values might be reduced). Whether or not a function acts as a trusted procedure is controlled by its security label and the operating system security policy. For example:</source>
-          <target state="new"/>
+          <target state="translated">可信程序类似于安全定义器函数或setuid命令。SELinux提供了一个功能,允许受信任的代码使用不同于客户端的安全标签运行,通常是为了对敏感数据提供高度控制的访问(例如,行可能被省略,或存储值的精度可能被降低)。一个函数是否作为受信任的存储过程是由它的安全标签和操作系统的安全策略控制的。例如:</target>
         </trans-unit>
         <trans-unit id="dda25f309687ab89f219c2e9ed7108ec29e77f02" translate="yes" xml:space="preserve">
           <source>Try to parse WAL files stored in the specified directory, rather than in &lt;code&gt;pg_wal&lt;/code&gt;. This may be useful if the backup is stored in a separate location from the WAL archive.</source>
-          <target state="new"/>
+          <target state="translated">尝试解析存储在指定目录中而不是 &lt;code&gt;pg_wal&lt;/code&gt; 中的WAL文件。如果备份存储在与WAL存档不同的位置，则这可能很有用。</target>
         </trans-unit>
         <trans-unit id="66a91624c0de6e82ae0fef2e1f06a35f0bd22897" translate="yes" xml:space="preserve">
           <source>Trying to update the same row twice in a single statement is not supported. Only one of the modifications takes place, but it is not easy (and sometimes not possible) to reliably predict which one. This also applies to deleting a row that was already updated in the same statement: only the update is performed. Therefore you should generally avoid trying to modify a single row twice in a single statement. In particular avoid writing &lt;code&gt;WITH&lt;/code&gt; sub-statements that could affect the same rows changed by the main statement or a sibling sub-statement. The effects of such a statement will not be predictable.</source>
@@ -3961,7 +3961,7 @@
         </trans-unit>
         <trans-unit id="11fbfd634f8b43b8d0336222eeb84c04d42fc674" translate="yes" xml:space="preserve">
           <source>Turning &lt;code&gt;deduplicate_items&lt;/code&gt; off via &lt;code&gt;ALTER INDEX&lt;/code&gt; prevents future insertions from triggering deduplication, but does not in itself make existing posting list tuples use the standard tuple representation.</source>
-          <target state="new"/>
+          <target state="translated">谈到 &lt;code&gt;deduplicate_items&lt;/code&gt; 关闭通过 &lt;code&gt;ALTER INDEX&lt;/code&gt; 防止未来的插入而触发重复数据删除，但其本身并不使现有的排列表元组使用标准的元组表示。</target>
         </trans-unit>
         <trans-unit id="5ac524768d250e29de07aaee53faeda03896b32c" translate="yes" xml:space="preserve">
           <source>Turning &lt;code&gt;fastupdate&lt;/code&gt; off via &lt;code&gt;ALTER INDEX&lt;/code&gt; prevents future insertions from going into the list of pending index entries, but does not in itself flush previous entries. You might want to &lt;code&gt;VACUUM&lt;/code&gt; the table or call &lt;code&gt;gin_clean_pending_list&lt;/code&gt; function afterward to ensure the pending list is emptied.</source>

@@ -3,6 +3,458 @@
   <file source-language="en" target-language="zh-CN" datatype="htmlbody" original="mariadb">
     <body>
       <group id="mariadb">
+        <trans-unit id="5ce9ef9b96cf4dddf0f0b7976cba82be83a9c57e" translate="yes" xml:space="preserve">
+          <source>Spider maintains an internal dictionary of Table and Index statistics based on separated threads. The statistics are pulled per default on a time line basis and refer to &lt;code&gt;crd&lt;/code&gt; for cardinality and &lt;code&gt;sts&lt;/code&gt; for table status.</source>
+          <target state="translated">Spider会根据单独的线程维护表和索引统计信息的内部字典。统计信息是按时间轴默认拉 &lt;code&gt;crd&lt;/code&gt; ，基数请参见crd，表状态请参见 &lt;code&gt;sts&lt;/code&gt; 。</target>
+        </trans-unit>
+        <trans-unit id="75a753d6c32f1c04e8782fdea4a8cb7a18b31c80" translate="yes" xml:space="preserve">
+          <source>Spider needs a remote connection to the backend server to actually perform the remote query. So this should be setup on each backend server. In this case 172.21.21.2 is the ip address of the spider node limiting access to just that server.</source>
+          <target state="translated">Spider需要远程连接到后端服务器才能真正执行远程查询。所以应该在每个后端服务器上进行设置。本例中172.21.21.2是spider节点的ip地址,限制只访问该服务器。</target>
+        </trans-unit>
+        <trans-unit id="28b033523a397771c9aed4771d2a23c223eaeb29" translate="yes" xml:space="preserve">
+          <source>Spider stores resultsets into memory, but &lt;a href=&quot;../spider-server-system-variables/index#spider_quick_mode&quot;&gt;spider_quick_mode&lt;/a&gt;=3 stores resultsets into internal temporary tables if the resultsets are larger than quick_table_size.</source>
+          <target state="translated">Spider将结果集存储到内存中，但是如果结果集大于quick_table_size ，则&lt;a href=&quot;../spider-server-system-variables/index#spider_quick_mode&quot;&gt;spider_quick_mode&lt;/a&gt; = 3会将结果集存储到内部临时表中。</target>
+        </trans-unit>
+        <trans-unit id="45086e3b1721ec8f278a9de5cbce92d72ee1dc8e" translate="yes" xml:space="preserve">
+          <source>Spider uses the per partitions and per table model to concurrently access the remote backend nodes. For memory workload that property can be used to define multiple partitions on a single remote backend node to better adapt the concurrency to available CPUs in the hardware.</source>
+          <target state="translated">Spider使用每分区和每表模型来并发访问远程后端节点。对于内存工作负载,该属性可用于在单个远程后端节点上定义多个分区,以更好地适应硬件中可用CPU的并发性。</target>
+        </trans-unit>
+        <trans-unit id="fc137dbd6236a1da606d5d44c9ce4b2f829b1ad0" translate="yes" xml:space="preserve">
+          <source>Spider variables available in the CREATE TABLE ... COMMENT clause</source>
+          <target state="translated">在CREATE TABLE...中可以使用蜘蛛变量。评论子句中可用的蜘蛛变量</target>
+        </trans-unit>
+        <trans-unit id="c0f20628bbf4ec7c870d19cfefd67960c094557d" translate="yes" xml:space="preserve">
+          <source>Spider_direct_aggregate</source>
+          <target state="translated">Spider_direct_aggregate</target>
+        </trans-unit>
+        <trans-unit id="656a2ddb97b5b67ba22f75e1103b9f1ab0e0b73f" translate="yes" xml:space="preserve">
+          <source>Spider_direct_order_limit</source>
+          <target state="translated">Spider_direct_order_limit</target>
+        </trans-unit>
+        <trans-unit id="4a504304d186eb52deca1ade7be9882210e11e18" translate="yes" xml:space="preserve">
+          <source>Spider_mon_table_cache_version</source>
+          <target state="translated">Spider_mon_table_cache_version</target>
+        </trans-unit>
+        <trans-unit id="2628c750dee0e0e55e1dfb0a53b9608c243f91be" translate="yes" xml:space="preserve">
+          <source>Spider_mon_table_cache_version_req</source>
+          <target state="translated">Spider_mon_table_cache_version_req</target>
+        </trans-unit>
+        <trans-unit id="1af7745576b24a8ddca96a52c094e00bc90f9e46" translate="yes" xml:space="preserve">
+          <source>Spike memory usage when dealing with large result sets to buffer the rowgroups</source>
+          <target state="translated">在处理大的结果集以缓冲行组时,内存使用量大增。</target>
+        </trans-unit>
+        <trans-unit id="a8f5478836fce60df6d1aa7c78e01b7c68e83c5c" translate="yes" xml:space="preserve">
+          <source>Split brain resolution based on a majority decision, failed node is remove from the list of replicas</source>
+          <target state="translated">根据多数人的决定进行分脑决议,失败的节点从副本列表中删除。</target>
+        </trans-unit>
+        <trans-unit id="0bd9b73fdadcad61305691668c48435130625993" translate="yes" xml:space="preserve">
+          <source>Splitting huge tables into multiple table files.</source>
+          <target state="translated">将庞大的表格分割成多个表格文件。</target>
+        </trans-unit>
+        <trans-unit id="0d2576b56ae7a9cad2f60ffc40fe31f317fe2f1e" translate="yes" xml:space="preserve">
+          <source>Spreading the result of the intermediate memory table into the final table.</source>
+          <target state="translated">将中间内存表的结果分摊到最终表中。</target>
+        </trans-unit>
+        <trans-unit id="e14feef8847b5aa837a050d1a4dffbdeb7834ffd" translate="yes" xml:space="preserve">
+          <source>Sql_slave_skip_counter</source>
+          <target state="translated">Sql_slave_skip_counter</target>
+        </trans-unit>
+        <trans-unit id="86d82726b397bc8ef8d1bad09b15199111e4fbd1" translate="yes" xml:space="preserve">
+          <source>Square of the correlation coefficient. correlation coefficient is the regr_intercept(ColumnY, ColumnX) for linear model</source>
+          <target state="translated">相关系数是线性模型的regr_intercept(ColumnY,ColumnX)的平方。</target>
+        </trans-unit>
+        <trans-unit id="47a3278f023594b94c900b5d792366be2e8b3d39" translate="yes" xml:space="preserve">
+          <source>Square root</source>
+          <target state="translated">平方根</target>
+        </trans-unit>
+        <trans-unit id="16df53085eea45d012180a01d9c65e4d69715793" translate="yes" xml:space="preserve">
+          <source>Square root.</source>
+          <target state="translated">方根。</target>
+        </trans-unit>
+        <trans-unit id="26de45fed54a252a8e7e4981b73e3d73191768e3" translate="yes" xml:space="preserve">
+          <source>Ssl_accept_renegotiates</source>
+          <target state="translated">Ssl_accept_renegotiates</target>
+        </trans-unit>
+        <trans-unit id="00e54c4ae9985bc947142d0f436fe0a4bb4801e1" translate="yes" xml:space="preserve">
+          <source>Ssl_accepts</source>
+          <target state="translated">Ssl_accepts</target>
+        </trans-unit>
+        <trans-unit id="132014db53e2155652a0e533ef6d634df2ee4854" translate="yes" xml:space="preserve">
+          <source>Ssl_callback_cache_hits</source>
+          <target state="translated">Ssl_callback_cache_hits</target>
+        </trans-unit>
+        <trans-unit id="376101db4c41397231491208007b5baa9793745e" translate="yes" xml:space="preserve">
+          <source>Ssl_cipher</source>
+          <target state="translated">Ssl_cipher</target>
+        </trans-unit>
+        <trans-unit id="f129902c4ca4966f3762cf8c864ca0aa4bd218b9" translate="yes" xml:space="preserve">
+          <source>Ssl_cipher_list</source>
+          <target state="translated">Ssl_cipher_list</target>
+        </trans-unit>
+        <trans-unit id="fd8b1a0ec22087ad8b830347f103162e429e4673" translate="yes" xml:space="preserve">
+          <source>Ssl_client_connects</source>
+          <target state="translated">Ssl_client_connects</target>
+        </trans-unit>
+        <trans-unit id="6e93c6f7d9ed31dc2875582caf220c159c066ef4" translate="yes" xml:space="preserve">
+          <source>Ssl_connect_renegotiates</source>
+          <target state="translated">Ssl_connect_renegotiates</target>
+        </trans-unit>
+        <trans-unit id="11d01a9bea8c741dcb0aee908e9a4ab8ac666223" translate="yes" xml:space="preserve">
+          <source>Ssl_ctx_verify_depth</source>
+          <target state="translated">Ssl_ctx_verify_depth</target>
+        </trans-unit>
+        <trans-unit id="70ba62e98048ed7b5ed3e4e457859d0b08734d80" translate="yes" xml:space="preserve">
+          <source>Ssl_ctx_verify_mode</source>
+          <target state="translated">Ssl_ctx_verify_mode</target>
+        </trans-unit>
+        <trans-unit id="4eae68acd4f56abc6cca419909c4a9c7975b0e74" translate="yes" xml:space="preserve">
+          <source>Ssl_default_timeout</source>
+          <target state="translated">Ssl_default_timeout</target>
+        </trans-unit>
+        <trans-unit id="92a467910a8f943fce3b9525124912c6fa65b2f2" translate="yes" xml:space="preserve">
+          <source>Ssl_finished_accepts</source>
+          <target state="translated">Ssl_finished_accepts</target>
+        </trans-unit>
+        <trans-unit id="6b7b099e0c4652501b2e100ffd842f1a5a1d1cf1" translate="yes" xml:space="preserve">
+          <source>Ssl_finished_connects</source>
+          <target state="translated">Ssl_finished_connects</target>
+        </trans-unit>
+        <trans-unit id="5be838f43182213c4b79b821f248aa0d9d60e2f2" translate="yes" xml:space="preserve">
+          <source>Ssl_server_not_after</source>
+          <target state="translated">Ssl_server_not_after</target>
+        </trans-unit>
+        <trans-unit id="931b96b1f3ed0a8029934a185109f6687048eca2" translate="yes" xml:space="preserve">
+          <source>Ssl_server_not_before</source>
+          <target state="translated">Ssl_server_not_before</target>
+        </trans-unit>
+        <trans-unit id="881ff9e0b5fdb2ab225d5e8a92b526b3d9e7bb19" translate="yes" xml:space="preserve">
+          <source>Ssl_session_cache_hits</source>
+          <target state="translated">Ssl_session_cache_hits</target>
+        </trans-unit>
+        <trans-unit id="b7e8a4bb780773b1df408ed8307125f32b611a59" translate="yes" xml:space="preserve">
+          <source>Ssl_session_cache_misses</source>
+          <target state="translated">Ssl_session_cache_misses</target>
+        </trans-unit>
+        <trans-unit id="b78f850240e75743f55f5fb4aef763a2fd839cc8" translate="yes" xml:space="preserve">
+          <source>Ssl_session_cache_mode</source>
+          <target state="translated">Ssl_session_cache_mode</target>
+        </trans-unit>
+        <trans-unit id="aac1a66215e1bc095785f40d66d098e2354a49af" translate="yes" xml:space="preserve">
+          <source>Ssl_session_cache_overflows</source>
+          <target state="translated">Ssl_session_cache_overflows</target>
+        </trans-unit>
+        <trans-unit id="5f217b02edd25cc881d71365d135bdd6ba663328" translate="yes" xml:space="preserve">
+          <source>Ssl_session_cache_size</source>
+          <target state="translated">Ssl_session_cache_size</target>
+        </trans-unit>
+        <trans-unit id="223a4a6faaebfcb8993117fbe32f648e0589a095" translate="yes" xml:space="preserve">
+          <source>Ssl_session_cache_timeouts</source>
+          <target state="translated">Ssl_session_cache_timeouts</target>
+        </trans-unit>
+        <trans-unit id="3f317d709d9e347a02be39294066c28c88bf2012" translate="yes" xml:space="preserve">
+          <source>Ssl_sessions_reused</source>
+          <target state="translated">Ssl_sessions_reused</target>
+        </trans-unit>
+        <trans-unit id="f790305568eee304e81f1905a0253954125c8e5c" translate="yes" xml:space="preserve">
+          <source>Ssl_used_session_cache_entries</source>
+          <target state="translated">Ssl_used_session_cache_entries</target>
+        </trans-unit>
+        <trans-unit id="7a7ed2af550b2248b2b76775d6b078501f4f3102" translate="yes" xml:space="preserve">
+          <source>Ssl_verify_depth</source>
+          <target state="translated">Ssl_verify_depth</target>
+        </trans-unit>
+        <trans-unit id="41e7180ecb0daf4af17dfc34b0ecc2be8e9cc672" translate="yes" xml:space="preserve">
+          <source>Ssl_verify_mode</source>
+          <target state="translated">Ssl_verify_mode</target>
+        </trans-unit>
+        <trans-unit id="d96e5b2dd07c1733b2b013bd82922c22baade37d" translate="yes" xml:space="preserve">
+          <source>Stable</source>
+          <target state="translated">Stable</target>
+        </trans-unit>
+        <trans-unit id="bfdb53a145007cacccc7c6f0046b7ae323b200cf" translate="yes" xml:space="preserve">
+          <source>Stack Trace</source>
+          <target state="translated">堆栈跟踪</target>
+        </trans-unit>
+        <trans-unit id="69f8ee582b599f4c6e250617f0ac3a5347f0fc25" translate="yes" xml:space="preserve">
+          <source>StackExchange discussion</source>
+          <target state="translated">StackExchange讨论</target>
+        </trans-unit>
+        <trans-unit id="d61e423fa2f7b21a89656aedf14c14b885a19660" translate="yes" xml:space="preserve">
+          <source>StackOverflow discussion</source>
+          <target state="translated">StackOverflow讨论</target>
+        </trans-unit>
+        <trans-unit id="9a17c1f3c8ab0dfd28a4cc28833a3096bf45cd3a" translate="yes" xml:space="preserve">
+          <source>StackOverflow discussion of 'Uncorrelated'</source>
+          <target state="translated">StackOverflow对 &quot;不相关 &quot;的讨论</target>
+        </trans-unit>
+        <trans-unit id="44d5acf8883cdd1703f55d9b37e346d72d5d12be" translate="yes" xml:space="preserve">
+          <source>StackOverflow thread</source>
+          <target state="translated">StackOverflow线程</target>
+        </trans-unit>
+        <trans-unit id="5af872d430682fb32620a18d0e1a05d731f7e42f" translate="yes" xml:space="preserve">
+          <source>Stage events summarized by host and event name</source>
+          <target state="translated">按主办方和活动名称汇总的舞台活动</target>
+        </trans-unit>
+        <trans-unit id="89498cdc308607f5640ff2b639d2ef096387dca8" translate="yes" xml:space="preserve">
+          <source>Stage events summarized by thread and event name</source>
+          <target state="translated">按线程和事件名称汇总的阶段性事件</target>
+        </trans-unit>
+        <trans-unit id="7f9d3c47896cad7c921ec23484ee6e5b4a10d7a2" translate="yes" xml:space="preserve">
+          <source>Stage events summarized by user and event name</source>
+          <target state="translated">按用户和事件名称汇总的阶段性事件</target>
+        </trans-unit>
+        <trans-unit id="112c2fae5619bfa7f0d0372b4a14d3c86c7b5ded" translate="yes" xml:space="preserve">
+          <source>Staging has two fields (for this normalization example):</source>
+          <target state="translated">Staging有两个字段(对于这个标准化的例子)。</target>
+        </trans-unit>
+        <trans-unit id="6311b29f9257b2e7203e14540d6e087c4eec4a3f" translate="yes" xml:space="preserve">
+          <source>Staging needs no indexes -- all operations read all rows from it.</source>
+          <target state="translated">Staging不需要索引--所有的操作都会从中读取所有的行。</target>
+        </trans-unit>
+        <trans-unit id="8e59d98cd3a0a0b32bfd0d615493438396cd7573" translate="yes" xml:space="preserve">
+          <source>Staging table</source>
+          <target state="translated">中转台</target>
+        </trans-unit>
+        <trans-unit id="bd4012aed97b7f15f3098f0f4fba1863384f03aa" translate="yes" xml:space="preserve">
+          <source>Standard Indexing</source>
+          <target state="translated">标准指数化</target>
+        </trans-unit>
+        <trans-unit id="3263b2e83ab5c2370a56d77bc9ad1bfb6d49a714" translate="yes" xml:space="preserve">
+          <source>Standard InnoDB Monitor</source>
+          <target state="translated">标准InnoDB监控</target>
+        </trans-unit>
+        <trans-unit id="075758ca1bff7839a76ca1003f5f2ff79e0b00d7" translate="yes" xml:space="preserve">
+          <source>Standard MariaDB</source>
+          <target state="translated">标准MariaDB</target>
+        </trans-unit>
+        <trans-unit id="d7821d68822c904e8ca1b69b99be40cff199c215" translate="yes" xml:space="preserve">
+          <source>Standard Monitor, Lock Monitor, Tablespace Monitor and the Table Monitor.</source>
+          <target state="translated">标准监控、锁定监控、表空间监控和表监控。</target>
+        </trans-unit>
+        <trans-unit id="c5e8b770f70bb67eb4ae6648ee4dcede8876417e" translate="yes" xml:space="preserve">
+          <source>Standard Replication</source>
+          <target state="translated">标准复制</target>
+        </trans-unit>
+        <trans-unit id="aa291c72b59ef3148661afcea15b656029b932a4" translate="yes" xml:space="preserve">
+          <source>Standard Syntax</source>
+          <target state="translated">标准语法</target>
+        </trans-unit>
+        <trans-unit id="fd746f492ad659d3f7460598edb734faace83b3c" translate="yes" xml:space="preserve">
+          <source>Standard deviation</source>
+          <target state="translated">标准偏差</target>
+        </trans-unit>
+        <trans-unit id="df9f5f66c6d3882cf2305d67d9a9474489134d03" translate="yes" xml:space="preserve">
+          <source>Standard deviation.</source>
+          <target state="translated">标准差:</target>
+        </trans-unit>
+        <trans-unit id="2e44ec1d4d7c43c4764988d7a8c32b5514d0f5e8" translate="yes" xml:space="preserve">
+          <source>Standard in can also be used to directly pipe the output from an arbitrary SELECT statement into cpimport. The select statement may select from non-columnstore tables such as &lt;a href=&quot;../myisam/index&quot;&gt;MyISAM&lt;/a&gt; or &lt;a href=&quot;../innodb/index&quot;&gt;InnoDB&lt;/a&gt;. In the example below, the db2.source_table is selected from, using the -N flag to remove non-data formatting. The -q flag tells the mysql client to not cache results which will avoid possible timeouts causing the load to fail.</source>
+          <target state="translated">Standard in也可以用于将任意SELECT语句的输出直接传递到cpimport。select语句可以从非列存储表中选择，例如&lt;a href=&quot;../myisam/index&quot;&gt;MyISAM&lt;/a&gt;或&lt;a href=&quot;../innodb/index&quot;&gt;InnoDB&lt;/a&gt;。在下面的示例中，使用-N标志从中选择db2.source_table，以除去非数据格式。-q标志告​​诉mysql客户端不要缓存结果，这将避免可能的超时导致加载失败。</target>
+        </trans-unit>
+        <trans-unit id="a146c1bf44a084246ad0a8b231f3459df066e644" translate="yes" xml:space="preserve">
+          <source>Standard mode. This is the default option.</source>
+          <target state="translated">标准模式。这是默认选项。</target>
+        </trans-unit>
+        <trans-unit id="0b4ed4f8bfd284dcf220bffbc1b3ac78e1a6853c" translate="yes" xml:space="preserve">
+          <source>Standard syntaxes</source>
+          <target state="translated">标准语法</target>
+        </trans-unit>
+        <trans-unit id="e2332a2fd1fb2703de801d9f9306280cb0330739" translate="yes" xml:space="preserve">
+          <source>Standards Compliance</source>
+          <target state="translated">符合标准</target>
+        </trans-unit>
+        <trans-unit id="a8848d6b689696f956d8e386c0418573d71fca03" translate="yes" xml:space="preserve">
+          <source>Standby Init</source>
+          <target state="translated">待机启动</target>
+        </trans-unit>
+        <trans-unit id="5facdfa7c3d159574526674c7056d788248340d3" translate="yes" xml:space="preserve">
+          <source>Star Replication</source>
+          <target state="translated">星际复制</target>
+        </trans-unit>
+        <trans-unit id="d028d57522b87b3727ab35cae7c96367abd104f2" translate="yes" xml:space="preserve">
+          <source>Staring from &lt;a href=&quot;../what-is-mariadb-104/index&quot;&gt;MariaDB 10.4&lt;/a&gt; it improves the support of &lt;a href=&quot;../window-functions/index&quot;&gt;window functions&lt;/a&gt; (so it is not obligatory to add it) and should remove the argument from the current aggregate.</source>
+          <target state="translated">从&lt;a href=&quot;../what-is-mariadb-104/index&quot;&gt;MariaDB 10.4开始，&lt;/a&gt;它改进了对&lt;a href=&quot;../window-functions/index&quot;&gt;窗口函数&lt;/a&gt;的支持（因此不必添加窗口函数），并且应从当前聚合中删除该参数。</target>
+        </trans-unit>
+        <trans-unit id="952f375412e89ff213a8aca383d18e5691354347" translate="yes" xml:space="preserve">
+          <source>Start</source>
+          <target state="translated">Start</target>
+        </trans-unit>
+        <trans-unit id="3b4ce36c11bd6ba04e3cab9bd375e84b71bdf50a" translate="yes" xml:space="preserve">
+          <source>Start : start a new redistribution to redistribute data equally amongst the current set of DBRoots in the system.</source>
+          <target state="translated">Start:开始一个新的重新分配,将数据平均地重新分配到系统中当前的DBRoots集合中。</target>
+        </trans-unit>
+        <trans-unit id="731e6983fa180bea4cdeb7e205dc801cdf48d5b3" translate="yes" xml:space="preserve">
+          <source>Start &lt;a href=&quot;../mysqltest/index&quot;&gt;mysqltest&lt;/a&gt; client in the dbx debugger.</source>
+          <target state="translated">在dbx调试器中启动&lt;a href=&quot;../mysqltest/index&quot;&gt;mysqltest&lt;/a&gt;客户端。</target>
+        </trans-unit>
+        <trans-unit id="7bf3ffd3bc9049c71cd53b788badd51cb723195e" translate="yes" xml:space="preserve">
+          <source>Start &lt;a href=&quot;../mysqltest/index&quot;&gt;mysqltest&lt;/a&gt; client in the ddd debugger.</source>
+          <target state="translated">在ddd调试器中启动&lt;a href=&quot;../mysqltest/index&quot;&gt;mysqltest&lt;/a&gt;客户端。</target>
+        </trans-unit>
+        <trans-unit id="c34c8b10ec8e8c8f8fca5b5b304415b864f3c2c1" translate="yes" xml:space="preserve">
+          <source>Start &lt;a href=&quot;../mysqltest/index&quot;&gt;mysqltest&lt;/a&gt; client in the gdb debugger.</source>
+          <target state="translated">在gdb调试器中启动&lt;a href=&quot;../mysqltest/index&quot;&gt;mysqltest&lt;/a&gt;客户端。</target>
+        </trans-unit>
+        <trans-unit id="fbace862288660e8063035037a68c847f5abec0f" translate="yes" xml:space="preserve">
+          <source>Start &lt;a href=&quot;../mysqltest/index&quot;&gt;mysqltest&lt;/a&gt; in the selected debugger.</source>
+          <target state="translated">在选定的调试器中启动&lt;a href=&quot;../mysqltest/index&quot;&gt;mysqltest&lt;/a&gt;。</target>
+        </trans-unit>
+        <trans-unit id="6c9c59f4c50f3d3f7186b1dd83c2be4da9d03281" translate="yes" xml:space="preserve">
+          <source>Start &lt;code&gt;&lt;a href=&quot;../datetime/index&quot;&gt;DATETIME&lt;/a&gt;&lt;/code&gt; for a recurring event, &lt;code&gt;NULL&lt;/code&gt; if not defined or not recurring.</source>
+          <target state="translated">为重复发生的事件启动 &lt;code&gt;&lt;a href=&quot;../datetime/index&quot;&gt;DATETIME&lt;/a&gt;&lt;/code&gt; ，如果未定义或不重复发生，则为 &lt;code&gt;NULL&lt;/code&gt; 。</target>
+        </trans-unit>
+        <trans-unit id="fefd542496b47b438eb4239e8ab055ac1d5629b7" translate="yes" xml:space="preserve">
+          <source>Start Cassandra on localhost</source>
+          <target state="translated">在localhost上启动Cassandra</target>
+        </trans-unit>
+        <trans-unit id="d4d6ac90efc956f68f304197c3cb8b592b099a7c" translate="yes" xml:space="preserve">
+          <source>Start Circular Replication on the Cluster</source>
+          <target state="translated">在群集上开始循环复制</target>
+        </trans-unit>
+        <trans-unit id="d24c6991d49997f8d71e88ba0466639b81940f1a" translate="yes" xml:space="preserve">
+          <source>Start Circular Replication on the First Cluster</source>
+          <target state="translated">在第一个集群上开始循环复制</target>
+        </trans-unit>
+        <trans-unit id="b33152a1f58a484900fda02cd52a52c75abf7653" translate="yes" xml:space="preserve">
+          <source>Start MariaDB</source>
+          <target state="translated">启动MariaDB</target>
+        </trans-unit>
+        <trans-unit id="aa8c42329d18303d6de20a4b31c13cf94209989e" translate="yes" xml:space="preserve">
+          <source>Start MariaDB ColumnStore Service for Non-Distributed installations</source>
+          <target state="translated">为非分布式安装启动MariaDB ColumnStore服务。</target>
+        </trans-unit>
+        <trans-unit id="6e9d995ee1f2c6522bf7aee49a718ba559b7a5cc" translate="yes" xml:space="preserve">
+          <source>Start MariaDB ColumnStore Service for Non-Distributed installs</source>
+          <target state="translated">为非分布式安装启动MariaDB ColumnStore服务。</target>
+        </trans-unit>
+        <trans-unit id="106aae192432b50aea37540a2c5e1d52f0a03d83" translate="yes" xml:space="preserve">
+          <source>Start MariaDB using the &lt;code&gt;systemctl&lt;/code&gt; tool:</source>
+          <target state="translated">使用 &lt;code&gt;systemctl&lt;/code&gt; 工具启动MariaDB ：</target>
+        </trans-unit>
+        <trans-unit id="3f2623d1bc9906c805da286afcc186a84a55a8ea" translate="yes" xml:space="preserve">
+          <source>Start Replication on the New Slave</source>
+          <target state="translated">在新的从机上开始复制</target>
+        </trans-unit>
+        <trans-unit id="5887408dd1157f1f5680eed5389de7e2b891a9a7" translate="yes" xml:space="preserve">
+          <source>Start Replication on the Second Cluster's Slave</source>
+          <target state="translated">在第二个群集的从站上开始复制。</target>
+        </trans-unit>
+        <trans-unit id="edeca7f7a8fac04829d233dcdc94720fa4ab7e5c" translate="yes" xml:space="preserve">
+          <source>Start a dedicated thread in Mariabackup to copy InnoDB redo log (&lt;code&gt;ib_logfile*&lt;/code&gt;).</source>
+          <target state="translated">在Mariabackup中启动专用线程以复制InnoDB重做日志（ &lt;code&gt;ib_logfile*&lt;/code&gt; ）。</target>
+        </trans-unit>
+        <trans-unit id="2fb047f4b60660357722f2b442995e78cb630729" translate="yes" xml:space="preserve">
+          <source>Start all slaves.</source>
+          <target state="translated">启动所有的奴隶。</target>
+        </trans-unit>
+        <trans-unit id="ed85fc66cadbc22addd556d5b50da33236a78803" translate="yes" xml:space="preserve">
+          <source>Start applying from last checkpoint.</source>
+          <target state="translated">从最后一个检查点开始申请。</target>
+        </trans-unit>
+        <trans-unit id="b37b2f46962cb634b31c6faae02d751ddd6e9dd9" translate="yes" xml:space="preserve">
+          <source>Start at this page number (0-based).</source>
+          <target state="translated">从这个页码开始(以0为基准)。</target>
+        </trans-unit>
+        <trans-unit id="0feb8b1eab6f06b4cb00b87e63a1a92b54e531c3" translate="yes" xml:space="preserve">
+          <source>Start by doing the MariaDB Connector Packages. Go to that section and install the connectors first.</source>
+          <target state="translated">先做MariaDB连接器包。进入该部分,先安装连接器。</target>
+        </trans-unit>
+        <trans-unit id="fb636ead1b32cf56b1f4709f7fb1276ee2831442" translate="yes" xml:space="preserve">
+          <source>Start distance -- (miles or km) -- see discussion below</source>
+          <target state="translated">起始距离 ----(英里或公里)----见下文讨论</target>
+        </trans-unit>
+        <trans-unit id="3d5d98efcdff53b52db00b5b0fb7dab9b446f950" translate="yes" xml:space="preserve">
+          <source>Start log position and some master information when starting slaves</source>
+          <target state="translated">启动从站时,启动日志位置和一些主站信息。</target>
+        </trans-unit>
+        <trans-unit id="135468fc68cde392814e4131a0650801cbeccbba" translate="yes" xml:space="preserve">
+          <source>Start logging of DDL commands into 'datadir'/ddl.log. This may take a short time as the command has to wait until there all now active DDL commands.</source>
+          <target state="translated">开始将DDL命令记录到'datadir'/ddl.log。这可能需要很短的时间,因为该命令必须等到所有活动的DDL命令。</target>
+        </trans-unit>
+        <trans-unit id="7eafabb2254fc808d8064b8bfa3bb647c5eadc9b" translate="yes" xml:space="preserve">
+          <source>Start mysqld in the selected debugger.</source>
+          <target state="translated">在选定的调试器中启动mysqld。</target>
+        </trans-unit>
+        <trans-unit id="0866928b3022dfede9411e77198bfdd3cb912f74" translate="yes" xml:space="preserve">
+          <source>Start mysqld with the test framework</source>
+          <target state="translated">用测试框架启动mysqld</target>
+        </trans-unit>
+        <trans-unit id="2d3bce94d98633c009dc20661ba27f90ef981bc7" translate="yes" xml:space="preserve">
+          <source>Start output from this row (first row is 1).</source>
+          <target state="translated">从这一行开始输出(第一行是1)。</target>
+        </trans-unit>
+        <trans-unit id="e77277b6df28bdb63b879e548208fbdac6292a64" translate="yes" xml:space="preserve">
+          <source>Start reading log from this lsn.</source>
+          <target state="translated">从这个lsn开始阅读日志。</target>
+        </trans-unit>
+        <trans-unit id="c3490c318f42a029303d233b8595b059fa562e5c" translate="yes" xml:space="preserve">
+          <source>Start reading the binlog at first event having a datetime equal to or later than the argument; the argument must be a date and time in the local time zone, in any format accepted by the MariaDB server for &lt;a href=&quot;../datetime/index&quot;&gt;DATETIME&lt;/a&gt; and &lt;a href=&quot;../timestamp/index&quot;&gt;TIMESTAMP&lt;/a&gt; types, for example: 2014-12-25 11:25:56 (you should probably use quotes for your shell to set it properly). This option is useful for point-in-time recovery.</source>
+          <target state="translated">在第一个事件的日期时间等于或晚于参数的时候开始读取二进制日志；该参数必须是本地时区中的日期和时间，采用MariaDB服务器接受的&lt;a href=&quot;../datetime/index&quot;&gt;DATETIME&lt;/a&gt;和&lt;a href=&quot;../timestamp/index&quot;&gt;TIMESTAMP&lt;/a&gt;类型的任何格式，例如：2014-12-25 11:25:56（您应该在shell中使用引号进行正确设置）。此选项对于时间点恢复很有用。</target>
+        </trans-unit>
+        <trans-unit id="6fa8d7effbc4dcbd2d1c42c7128aa7ecf6e33d86" translate="yes" xml:space="preserve">
+          <source>Start reading the binlog at position &lt;em&gt;pos&lt;/em&gt;. Applies to the first binlog passed on the command line.</source>
+          <target state="translated">开始在位置&lt;em&gt;pos&lt;/em&gt;读取二进制日志。适用于在命令行上传递的第一个binlog。</target>
+        </trans-unit>
+        <trans-unit id="000e03e37ca4022a6de94644ef32472e3ce56a17" translate="yes" xml:space="preserve">
+          <source>Start replication on a slave server.</source>
+          <target state="translated">在从属服务器上开始复制。</target>
+        </trans-unit>
+        <trans-unit id="446fa8392f33eb49c7b07350628e4478fd39054f" translate="yes" xml:space="preserve">
+          <source>Start slave threads.</source>
+          <target state="translated">启动从属线程。</target>
+        </trans-unit>
+        <trans-unit id="a0ceaa7d6c738ef4f86509ef72936686ecae0924" translate="yes" xml:space="preserve">
+          <source>Start the Cluster</source>
+          <target state="translated">启动群组</target>
+        </trans-unit>
+        <trans-unit id="bcac5cb52ea395fa91a30262e794f59a42be3a16" translate="yes" xml:space="preserve">
+          <source>Start the First Cluster</source>
+          <target state="translated">启动第一个群组</target>
+        </trans-unit>
+        <trans-unit id="b59b41287fc7ed4162bb63073be6d089e08d241f" translate="yes" xml:space="preserve">
+          <source>Start the MariaDB Server process on the joiner node. This will depend on your &lt;a href=&quot;../starting-and-stopping-mariadb-starting-and-stopping-mariadb/index&quot;&gt;service manager&lt;/a&gt;.</source>
+          <target state="translated">在联接器节点上启动MariaDB Server进程。这将取决于您的&lt;a href=&quot;../starting-and-stopping-mariadb-starting-and-stopping-mariadb/index&quot;&gt;服务经理&lt;/a&gt;。</target>
+        </trans-unit>
+        <trans-unit id="e5dd15f4d91b48e78172409dea5eba7aaf328567" translate="yes" xml:space="preserve">
+          <source>Start the New Slave</source>
+          <target state="translated">开始新的奴隶</target>
+        </trans-unit>
+        <trans-unit id="3387c6e2e587b4fbae999bf958e1650555677afb" translate="yes" xml:space="preserve">
+          <source>Start the Second Cluster</source>
+          <target state="translated">启动第二组</target>
+        </trans-unit>
+        <trans-unit id="38ac9906dca64ff29e0b83be6d05e7c9211bed40" translate="yes" xml:space="preserve">
+          <source>Start the Slave</source>
+          <target state="translated">启动从机</target>
+        </trans-unit>
+        <trans-unit id="da8a21dc7320cf4428c1f9243187e9e0333e1235" translate="yes" xml:space="preserve">
+          <source>Start the container again. This time the MariaDB server will have networking enabled:</source>
+          <target state="translated">再次启动容器。这次MariaDB服务器将启用网络。</target>
+        </trans-unit>
+        <trans-unit id="5c175616bcb3ae073923a74043cd745fd268562e" translate="yes" xml:space="preserve">
+          <source>Start the mysqld(s) in the dbx debugger.</source>
+          <target state="translated">在dbx调试器中启动mysqld(s)。</target>
+        </trans-unit>
+        <trans-unit id="4a2d58fad1c184522eadfdecc9517481087decc8" translate="yes" xml:space="preserve">
+          <source>Start the mysqld(s) in the ddd debugger.</source>
+          <target state="translated">在ddd调试器中启动mysqld(s)。</target>
+        </trans-unit>
+        <trans-unit id="b17e91ed877b6d24ec92315a4db75812d76803dc" translate="yes" xml:space="preserve">
+          <source>Start the mysqld(s) in the gdb debugger. From &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1036-release-notes/&quot;&gt;MariaDB 10.3.6&lt;/a&gt;, optionally execute specified commands (semicolon-separated) in gdb.</source>
+          <target state="translated">在gdb调试器中启动mysqld。从&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1036-release-notes/&quot;&gt;MariaDB 10.3.6起&lt;/a&gt;，可以选择在gdb中执行指定的命令（以分号分隔）。</target>
+        </trans-unit>
+        <trans-unit id="d31565c607ca39c8e6d16fb4131b8b4cefee60b1" translate="yes" xml:space="preserve">
+          <source>Start the server.</source>
+          <target state="translated">启动服务器。</target>
+        </trans-unit>
+        <trans-unit id="664c12a58175b69435e88b69eb9105c945c03a9d" translate="yes" xml:space="preserve">
+          <source>Start the trace for the particular session.</source>
+          <target state="translated">启动特定会话的跟踪。</target>
+        </trans-unit>
+        <trans-unit id="26dbfe98dc1aab5e360053810ce32b6fc9a20794" translate="yes" xml:space="preserve">
+          <source>Start with &lt;code&gt;sudo service sphinxsearch start&lt;/code&gt; (and stop with &lt;code&gt;sudo service sphinxsearch stop&lt;/code&gt;)</source>
+          <target state="translated">从 &lt;code&gt;sudo service sphinxsearch start&lt;/code&gt; （并以 &lt;code&gt;sudo service sphinxsearch stop&lt;/code&gt; ）</target>
+        </trans-unit>
         <trans-unit id="b2bfecb1bcb2a50ed3d5b0dd09566a5f5b6c75e3" translate="yes" xml:space="preserve">
           <source>Start with released copy of my.cnf / my.ini.</source>
           <target state="translated">从发布的my.cnf/my.ini的副本开始。</target>
@@ -151,6 +603,10 @@
           <source>Starting in &lt;a href=&quot;../what-is-mariadb-53/index&quot;&gt;MariaDB 5.3&lt;/a&gt;, the optimizer will delay discarding potential &lt;code&gt;index_merge&lt;/code&gt; plans until the point where it is really necessary. See &lt;a href=&quot;http://askmonty.org/worklog/?tid=24&quot;&gt;MWL#24&lt;/a&gt; for more information.</source>
           <target state="translated">从&lt;a href=&quot;../what-is-mariadb-53/index&quot;&gt;MariaDB 5.3&lt;/a&gt;开始，优化器将延迟丢弃潜在的 &lt;code&gt;index_merge&lt;/code&gt; 计划，直到确实需要它为止。有关更多信息，请参见&lt;a href=&quot;http://askmonty.org/worklog/?tid=24&quot;&gt;MWL＃24&lt;/a&gt;。</target>
         </trans-unit>
+        <trans-unit id="929f513ed7ca7178bc5dd02ef77cbc4228657ec6" translate="yes" xml:space="preserve">
+          <source>Starting in &lt;a href=&quot;../what-is-mariadb-53/index&quot;&gt;MariaDB 5.3&lt;/a&gt;, the optimizer will delay discarding potential &lt;code&gt;index_merge&lt;/code&gt; plans until the point where it is really necessary. See &lt;a href=&quot;https://mariadb.com/about/worklog/?tid=24&quot;&gt;MWL#24&lt;/a&gt; for more information.</source>
+          <target state="translated">从&lt;a href=&quot;../what-is-mariadb-53/index&quot;&gt;MariaDB 5.3&lt;/a&gt;开始，优化器将延迟丢弃潜在的 &lt;code&gt;index_merge&lt;/code&gt; 计划，直到真正需要它为止。有关更多信息，请参见&lt;a href=&quot;https://mariadb.com/about/worklog/?tid=24&quot;&gt;MWL＃24&lt;/a&gt;。</target>
+        </trans-unit>
         <trans-unit id="affbb102eb2a0835a27e6347b1b2db74a38adcd4" translate="yes" xml:space="preserve">
           <source>Starting in &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-10139-release-notes/&quot;&gt;MariaDB 10.1.39&lt;/a&gt;, &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-10223-release-notes/&quot;&gt;MariaDB 10.2.23&lt;/a&gt;, and &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-10314-release-notes/&quot;&gt;MariaDB 10.3.14&lt;/a&gt;, creating a table with the &lt;code&gt;&lt;a href=&quot;../create-table/index#encrypted&quot;&gt;ENCRYPTED&lt;/a&gt;&lt;/code&gt; table option set to &lt;code&gt;DEFAULT&lt;/code&gt; while the &lt;code&gt;&lt;a href=&quot;../innodb-system-variables/index#innodb_encrypt_tables&quot;&gt;innodb_encrypt_tables&lt;/a&gt;&lt;/code&gt; system variable is set to &lt;code&gt;OFF&lt;/code&gt;, and the &lt;code&gt;&lt;a href=&quot;../innodb-system-variables/index#innodb_default_encryption_key_id&quot;&gt;innodb_default_encryption_key_id&lt;/a&gt;&lt;/code&gt; system variable or the &lt;code&gt;&lt;a href=&quot;../create-table/index#encryption_key_id&quot;&gt;ENCRYPTION_KEY_ID&lt;/a&gt;&lt;/code&gt; table option are &lt;strong&gt;not&lt;/strong&gt; set to &lt;code&gt;1&lt;/code&gt; will no longer fail, and it will no longer throw a warning.</source>
           <target state="translated">从&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-10139-release-notes/&quot;&gt;MariaDB 10.1.39&lt;/a&gt;，&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-10223-release-notes/&quot;&gt;MariaDB 10.2.23&lt;/a&gt;和&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-10314-release-notes/&quot;&gt;MariaDB 10.3.14开始&lt;/a&gt;，创建一个表，该表的 &lt;code&gt;&lt;a href=&quot;../create-table/index#encrypted&quot;&gt;ENCRYPTED&lt;/a&gt;&lt;/code&gt; 表选项设置为 &lt;code&gt;DEFAULT&lt;/code&gt; ,而 &lt;code&gt;&lt;a href=&quot;../innodb-system-variables/index#innodb_encrypt_tables&quot;&gt;innodb_encrypt_tables&lt;/a&gt;&lt;/code&gt; 系统变量设置为 &lt;code&gt;OFF&lt;/code&gt; ，并且 &lt;code&gt;&lt;a href=&quot;../innodb-system-variables/index#innodb_default_encryption_key_id&quot;&gt;innodb_default_encryption_key_id&lt;/a&gt;&lt;/code&gt; 系统变量或 &lt;code&gt;&lt;a href=&quot;../create-table/index#encryption_key_id&quot;&gt;ENCRYPTION_KEY_ID&lt;/a&gt;&lt;/code&gt; 表选项是&lt;strong&gt;不&lt;/strong&gt;设置为 &lt;code&gt;1&lt;/code&gt; 将不再失败，也不会再发出警告。</target>
@@ -275,6 +731,10 @@
           <source>Starting with &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1025-release-notes/&quot;&gt;MariaDB 10.2.5&lt;/a&gt;, a .pkg installer for macOS is available from &lt;a href=&quot;http://mariadb.com/downloads&quot;&gt;http://mariadb.com/downloads&lt;/a&gt;</source>
           <target state="translated">从&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1025-release-notes/&quot;&gt;MariaDB 10.2.5&lt;/a&gt;开始，可从&lt;a href=&quot;http://mariadb.com/downloads&quot;&gt;http://mariadb.com/downloads&lt;/a&gt;获得适用于macOS的.pkg安装程序。</target>
         </trans-unit>
+        <trans-unit id="2855a05ee944d5aaff13b4174a18ff3419927dbd" translate="yes" xml:space="preserve">
+          <source>Starting with &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1025-release-notes/&quot;&gt;MariaDB 10.2.5&lt;/a&gt;, a .pkg installer for macOS is available from &lt;a href=&quot;https://mariadb.com/downloads&quot;&gt;http://mariadb.com/downloads&lt;/a&gt;</source>
+          <target state="translated">从&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1025-release-notes/&quot;&gt;MariaDB 10.2.5&lt;/a&gt;开始，可从&lt;a href=&quot;https://mariadb.com/downloads&quot;&gt;http://mariadb.com/downloads&lt;/a&gt;获得适用于macOS的.pkg安装程序。</target>
+        </trans-unit>
         <trans-unit id="8e1ffd02c68f2964e19d84ed8af8c7a60ba2643d" translate="yes" xml:space="preserve">
           <source>Starting with &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-10320-release-notes/&quot;&gt;MariaDB 10.3.20&lt;/a&gt; we have fixed some issues related to read only slaves:</source>
           <target state="translated">从&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-10320-release-notes/&quot;&gt;MariaDB 10.3.20&lt;/a&gt;开始，我们修复了一些与只读奴隶有关的问题：</target>
@@ -282,6 +742,10 @@
         <trans-unit id="143bf82d13a6477bc9f3166151bda0b5854a499a" translate="yes" xml:space="preserve">
           <source>Starting with &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-527-release-notes/&quot;&gt;MariaDB 5.2.7&lt;/a&gt;, it is possible to build an installer which includes 3rd party products, as described in &lt;a href=&quot;http://askmonty.org/worklog/Other/?tid=200&quot;&gt;MWL#200&lt;/a&gt;. Currently only &lt;a href=&quot;http://www.heidisql.com&quot;&gt;HeidiSQL&lt;/a&gt; support is implemented; it is also included in the official builds. Use the CMake parameter &lt;code&gt;-DWITH_THIRD_PARTY=HeidiSQL&lt;/code&gt; to include it in the installer.</source>
           <target state="translated">从&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-527-release-notes/&quot;&gt;MariaDB 5.2.7&lt;/a&gt;开始，可以构建包含第三方软件的安装程序，如&lt;a href=&quot;http://askmonty.org/worklog/Other/?tid=200&quot;&gt;MWL＃200中所述&lt;/a&gt;。当前仅实现了&lt;a href=&quot;http://www.heidisql.com&quot;&gt;HeidiSQL&lt;/a&gt;支持。它也包含在官方版本中。使用CMake参数 &lt;code&gt;-DWITH_THIRD_PARTY=HeidiSQL&lt;/code&gt; 将其包含在安装程序中。</target>
+        </trans-unit>
+        <trans-unit id="74feba2cae24fe7fdbc5b0bbdca95ecc69ff40ab" translate="yes" xml:space="preserve">
+          <source>Starting with &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-527-release-notes/&quot;&gt;MariaDB 5.2.7&lt;/a&gt;, it is possible to build an installer which includes 3rd party products, as described in &lt;a href=&quot;https://mariadb.com/about/worklog/Other/?tid=200&quot;&gt;MWL#200&lt;/a&gt;. Currently only &lt;a href=&quot;http://www.heidisql.com&quot;&gt;HeidiSQL&lt;/a&gt; support is implemented; it is also included in the official builds. Use the CMake parameter &lt;code&gt;-DWITH_THIRD_PARTY=HeidiSQL&lt;/code&gt; to include it in the installer.</source>
+          <target state="translated">从&lt;a href=&quot;https://mariadb.com/kb/en/mariadb-527-release-notes/&quot;&gt;MariaDB 5.2.7&lt;/a&gt;开始，可以构建包含第三方产品的安装程序，如&lt;a href=&quot;https://mariadb.com/about/worklog/Other/?tid=200&quot;&gt;MWL＃200中所述&lt;/a&gt;。当前仅实现了&lt;a href=&quot;http://www.heidisql.com&quot;&gt;HeidiSQL&lt;/a&gt;支持。它也包含在官方版本中。使用CMake参数 &lt;code&gt;-DWITH_THIRD_PARTY=HeidiSQL&lt;/code&gt; 将其包含在安装程序中。</target>
         </trans-unit>
         <trans-unit id="bdb008327a8714bbcf164ad42873e440f58dce1e" translate="yes" xml:space="preserve">
           <source>Starting with &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-5531-release-notes/&quot;&gt;MariaDB 5.5.31&lt;/a&gt;, MariaDB Server supports atomic writes on Fusion-io devices that use the NVMFS (formerly called DirectFS) file system. Unfortunately, NVMFS was never offered under &amp;lsquo;General Availability&amp;rsquo;, and SanDisk declared that NVMFS would reach end-of-life in December 2015. Therefore, NVMFS support is no longer offered by SanDisk.</source>
@@ -2607,6 +3071,10 @@
           <source>Switch to using the &lt;a href=&quot;http://dev.mysql.com/downloads/connector/php-mysqlnd/&quot;&gt;mysqlnd driver&lt;/a&gt; in PHP (Recommended solution).</source>
           <target state="translated">切换到在PHP中使用&lt;a href=&quot;http://dev.mysql.com/downloads/connector/php-mysqlnd/&quot;&gt;mysqlnd驱动程序&lt;/a&gt;（推荐的解决方案）。</target>
         </trans-unit>
+        <trans-unit id="8d22d9f95b65d56a6ae5aced33888f50899c89eb" translate="yes" xml:space="preserve">
+          <source>Switch to using the &lt;a href=&quot;https://dev.mysql.com/downloads/connector/php-mysqlnd/&quot;&gt;mysqlnd driver&lt;/a&gt; in PHP (Recommended solution).</source>
+          <target state="translated">切换到在PHP中使用&lt;a href=&quot;https://dev.mysql.com/downloads/connector/php-mysqlnd/&quot;&gt;mysqlnd驱动程序&lt;/a&gt;（推荐解决方案）。</target>
+        </trans-unit>
         <trans-unit id="de973c6a02ceb8a2810c4a35201e485b55b83386" translate="yes" xml:space="preserve">
           <source>Switching An Existing Old-Style Slave To Use GTID.</source>
           <target state="translated">将现有的旧式从站切换到使用GTID。</target>
@@ -3534,474 +4002,6 @@
         <trans-unit id="c18ac10fd03631861ce15c1a3b06988c1a39891f" translate="yes" xml:space="preserve">
           <source>System variable name.</source>
           <target state="translated">系统变量名称。</target>
-        </trans-unit>
-        <trans-unit id="7ad713dd9c383ed21d3d39c68e605b097c207569" translate="yes" xml:space="preserve">
-          <source>System variables</source>
-          <target state="translated">系统变量</target>
-        </trans-unit>
-        <trans-unit id="0e4f0bd70f2188b4a3bee8208922e11127ea8c73" translate="yes" xml:space="preserve">
-          <source>System variables added in MariaDB 10.0</source>
-          <target state="translated">在MariaDB 10.0中增加了系统变量。</target>
-        </trans-unit>
-        <trans-unit id="22f85a51313ef8093c1f586b95c0e7f506fae021" translate="yes" xml:space="preserve">
-          <source>System variables added in MariaDB 10.1</source>
-          <target state="translated">在MariaDB 10.1中增加了系统变量。</target>
-        </trans-unit>
-        <trans-unit id="3a389eb0067673470fce7158ce2e16558d3d34df" translate="yes" xml:space="preserve">
-          <source>System variables added in MariaDB 10.2</source>
-          <target state="translated">在MariaDB 10.2中增加了系统变量。</target>
-        </trans-unit>
-        <trans-unit id="e314a62c63aa571b41f04ee9fd06a32c997a75d0" translate="yes" xml:space="preserve">
-          <source>System variables added in MariaDB 10.3</source>
-          <target state="translated">在MariaDB 10.3中增加了系统变量。</target>
-        </trans-unit>
-        <trans-unit id="24bcf22edc70fb6682570ec846ff257c489e071e" translate="yes" xml:space="preserve">
-          <source>System variables added in MariaDB 10.5</source>
-          <target state="translated">在MariaDB 10.5中增加了系统变量。</target>
-        </trans-unit>
-        <trans-unit id="ebf34aa28f1c45874701b470c4af33e58360a3b3" translate="yes" xml:space="preserve">
-          <source>System variables for the Spider storage engine.</source>
-          <target state="translated">Spider存储引擎的系统变量。</target>
-        </trans-unit>
-        <trans-unit id="526a93178ca2c60a500d268823a8f6d55a4d2001" translate="yes" xml:space="preserve">
-          <source>System variables related to the CONNECT storage engine.</source>
-          <target state="translated">与CONNECT存储引擎相关的系统变量。</target>
-        </trans-unit>
-        <trans-unit id="82b77bb783a308a7ea3be93984b48e380c3e9bf2" translate="yes" xml:space="preserve">
-          <source>System-Name : Argument given or defaults to 'columnstore-1'</source>
-          <target state="translated">系统名称:给定的参数或默认为'columnstore-1'。</target>
-        </trans-unit>
-        <trans-unit id="11e03a25cf26588d1d66a59ecff183baf7b91841" translate="yes" xml:space="preserve">
-          <source>System-Name = columnstore-1</source>
-          <target state="translated">系统名称=columnstore-1</target>
-        </trans-unit>
-        <trans-unit id="5732e9ced640af128c59b7228ad5e3472bab657d" translate="yes" xml:space="preserve">
-          <source>System-Name = columnstore-1, when not specified</source>
-          <target state="translated">系统名=columnstore-1,如果没有指定的话。</target>
-        </trans-unit>
-        <trans-unit id="87e911a6cdfefdd68c717c0d75134d6a96c335a2" translate="yes" xml:space="preserve">
-          <source>System-Versioned Tables</source>
-          <target state="translated">系统版本表</target>
-        </trans-unit>
-        <trans-unit id="924e35703b9dda8b15dc09bf254ab799d4d67739" translate="yes" xml:space="preserve">
-          <source>System-Versioning Tables</source>
-          <target state="translated">系统版本表</target>
-        </trans-unit>
-        <trans-unit id="01313eff9533c34a83824198bf27e0fbcbc3031f" translate="yes" xml:space="preserve">
-          <source>System-versioned tables</source>
-          <target state="translated">系统版本的表格</target>
-        </trans-unit>
-        <trans-unit id="2dfe2f4ae97b013ad9bc8af1478025d6713ec72f" translate="yes" xml:space="preserve">
-          <source>System-versioned tables store the history of all changes, not only data which is currently valid. This allows data analysis for any point in time, auditing of changes and comparison of data from different points in time. Typical uses cases are:</source>
-          <target state="translated">系统版本的表格存储所有变化的历史,而不仅仅是当前有效的数据。这样就可以对任何时间点的数据进行分析,对变化进行审计,并对不同时间点的数据进行比较。典型的使用案例有:</target>
-        </trans-unit>
-        <trans-unit id="f1634c67e8d68b66bfa44f0e698d7466fcbc631f" translate="yes" xml:space="preserve">
-          <source>System-versioned tables were first introduced in the SQL:2011 standard.</source>
-          <target state="translated">系统版本的表最早是在SQL:2011标准中引入的。</target>
-        </trans-unit>
-        <trans-unit id="a44a53c54ba77f8a2ae69713f422d9f138899fdb" translate="yes" xml:space="preserve">
-          <source>Systemd</source>
-          <target state="translated">Systemd</target>
-        </trans-unit>
-        <trans-unit id="fb6380a32b4a28fc99266bc512c4368e0a55611c" translate="yes" xml:space="preserve">
-          <source>Systemd Journal</source>
-          <target state="translated">系统日志</target>
-        </trans-unit>
-        <trans-unit id="09b6f45b66dc87bd4af9764a85852ce4d7434e31" translate="yes" xml:space="preserve">
-          <source>Systemd and Bootstrapping</source>
-          <target state="translated">Systemd 和 Bootstrapping</target>
-        </trans-unit>
-        <trans-unit id="352834c447ba5f122100ab4991e5a63fc09629cc" translate="yes" xml:space="preserve">
-          <source>Systemd and Galera Cluster</source>
-          <target state="translated">Systemd和Galera集群</target>
-        </trans-unit>
-        <trans-unit id="ac1e950b66aab4db67c32619f20eea2ec56a42a1" translate="yes" xml:space="preserve">
-          <source>Systemd and Galera Recovery</source>
-          <target state="translated">Systemd和Galera恢复</target>
-        </trans-unit>
-        <trans-unit id="8178584ddd171b01117a3f9931a39cb36c80bc12" translate="yes" xml:space="preserve">
-          <source>Systemd support and the galera_new_cluster script were added in &lt;a href=&quot;../what-is-mariadb-101/index&quot;&gt;MariaDB 10.1&lt;/a&gt;.</source>
-          <target state="translated">&lt;a href=&quot;../what-is-mariadb-101/index&quot;&gt;MariaDB 10.1&lt;/a&gt;中添加了系统支持和galera_new_cluster脚本。</target>
-        </trans-unit>
-        <trans-unit id="a118e405560eb566c0597283fd1fefe9feb09aff" translate="yes" xml:space="preserve">
-          <source>Systems that get too busy can return the &lt;code&gt;too_many_connections&lt;/code&gt; error.</source>
-          <target state="translated">太忙的系统可能会返回 &lt;code&gt;too_many_connections&lt;/code&gt; 错误。</target>
-        </trans-unit>
-        <trans-unit id="b0c29c46d70800f07ee658f400c796f945e477c2" translate="yes" xml:space="preserve">
-          <source>Systems with User Account Control</source>
-          <target state="translated">有用户账户控制的系统</target>
-        </trans-unit>
-        <trans-unit id="8009d009ee3af47f76598b1c6efbb7bd80de9fc8" translate="yes" xml:space="preserve">
-          <source>Systemtap</source>
-          <target state="translated">Systemtap</target>
-        </trans-unit>
-        <trans-unit id="c2c53d66948214258a26ca9ca845d7ac0c17f8e7" translate="yes" xml:space="preserve">
-          <source>T</source>
-          <target state="translated">T</target>
-        </trans-unit>
-        <trans-unit id="8889171cceb3d22939f0c3e89bdcabcfed7dd09a" translate="yes" xml:space="preserve">
-          <source>T(ag) or N(ode)</source>
-          <target state="translated">T(ag)或N(ode)</target>
-        </trans-unit>
-        <trans-unit id="e3c32e0f32f2f40ffdde8926881aebaf96166d09" translate="yes" xml:space="preserve">
-          <source>T. Sexton</source>
-          <target state="translated">T.Sexton</target>
-        </trans-unit>
-        <trans-unit id="c16e503e7f29515df2fa9eb565f14be1530cd4d9" translate="yes" xml:space="preserve">
-          <source>TABID</source>
-          <target state="translated">TABID</target>
-        </trans-unit>
-        <trans-unit id="a4394edb00669dc4429b903f672c10ae13c95e90" translate="yes" xml:space="preserve">
-          <source>TABLE</source>
-          <target state="translated">TABLE</target>
-        </trans-unit>
-        <trans-unit id="e2cbeb1bb9b72faf26e1b0590f1920b6a47a57d5" translate="yes" xml:space="preserve">
-          <source>TABLE_NAME</source>
-          <target state="translated">TABLE_NAME</target>
-        </trans-unit>
-        <trans-unit id="800a8d36c109f4e76d6848dfec376221fd882754" translate="yes" xml:space="preserve">
-          <source>TABLE_NAME indicates the name of the table which was accessed by the failed statement.</source>
-          <target state="translated">TABLE_NAME表示被失败语句访问的表的名称。</target>
-        </trans-unit>
-        <trans-unit id="f203622a5b02b735c7af2572d7ed5868ec9be6b1" translate="yes" xml:space="preserve">
-          <source>TABLE_SCHEMA</source>
-          <target state="translated">TABLE_SCHEMA</target>
-        </trans-unit>
-        <trans-unit id="3ee97fcdf75d163eb07b61287ecd3fe8b66b849a" translate="yes" xml:space="preserve">
-          <source>TABLE_SHARE::free_frm_image()</source>
-          <target state="translated">TABLE_SHARE::free_frm_image()</target>
-        </trans-unit>
-        <trans-unit id="1bce29bd20a6255fe354f1c8363fd366f36433eb" translate="yes" xml:space="preserve">
-          <source>TABLE_SHARE::init_from_binary_frm_image()</source>
-          <target state="translated">TABLE_SHARE::init_from_binary_frm_image()</target>
-        </trans-unit>
-        <trans-unit id="7266557b02ecfb558696e497fca0b31d1c8aa354" translate="yes" xml:space="preserve">
-          <source>TABLE_SHARE::init_from_sql_statement_string()</source>
-          <target state="translated">TABLE_SHARE::init_from_sql_statement_string()</target>
-        </trans-unit>
-        <trans-unit id="8bd936f24a3a01fb61fc8ddeff37fcdfa0aef237" translate="yes" xml:space="preserve">
-          <source>TABLE_SHARE::read_frm_image()</source>
-          <target state="translated">TABLE_SHARE::read_frm_image()</target>
-        </trans-unit>
-        <trans-unit id="772b79a2c42c920731c2b5031f363ea9b5cb6416" translate="yes" xml:space="preserve">
-          <source>TABLE_SHARE::tabledef_version</source>
-          <target state="translated">TABLE_SHARE::tabledef_version</target>
-        </trans-unit>
-        <trans-unit id="0c0c7f7e820c851d27bae5494e39ad7692b988d3" translate="yes" xml:space="preserve">
-          <source>TABLE_STATISTICS</source>
-          <target state="translated">TABLE_STATISTICS</target>
-        </trans-unit>
-        <trans-unit id="c0bc60feab72f7555a110ea439a9e15724c15c50" translate="yes" xml:space="preserve">
-          <source>TAN</source>
-          <target state="translated">TAN</target>
-        </trans-unit>
-        <trans-unit id="79a8ae1a1dc8113ce79d91a2dd2b2beda37588f8" translate="yes" xml:space="preserve">
-          <source>TAN()</source>
-          <target state="translated">TAN()</target>
-        </trans-unit>
-        <trans-unit id="01a225809d8c54e9377298564afdf355fbe08fd9" translate="yes" xml:space="preserve">
-          <source>TARTINE</source>
-          <target state="translated">TARTINE</target>
-        </trans-unit>
-        <trans-unit id="a6303a49483c1564f02d13e3fae9616cb4576fed" translate="yes" xml:space="preserve">
-          <source>TBD</source>
-          <target state="translated">TBD</target>
-        </trans-unit>
-        <trans-unit id="70474a92896b297eb779c60e6ac984ea27de76e1" translate="yes" xml:space="preserve">
-          <source>TBD -- &quot;Row Based Replication&quot; may impact this discussion.</source>
-          <target state="translated">待定 ----&quot;基于行的复制 &quot;可能会影响这一讨论。</target>
-        </trans-unit>
-        <trans-unit id="06b5d1f010ddf43cb50479c4643935ab63ee3969" translate="yes" xml:space="preserve">
-          <source>TBL is also much more flexible. The merged tables must not be &quot;identical&quot;, they just should have the columns defined in the TBL table. If the type of one column in a merged table is not the one of the corresponding column of the TBL table, the column value will be converted. As we have seen, if one column of the TBL table of the TBL column does not exist in one of the merged table, the corresponding value will be set to null. If columns in a sub-table have a different name, they can be accessed by position using the FLAG column option of CONNECT.</source>
-          <target state="translated">TBL也更加灵活。合并后的表不一定是 &quot;完全相同 &quot;的,它们只是应该有TBL表中定义的列。如果合并表中某一列的类型不是TBL表中相应列的类型,则会对列值进行转换。正如我们所看到的,如果TBL表的某一列的类型不存在于合并表的某一列中,相应的值将被设置为空。如果子表中的列有不同的名称,可以使用CONNECT的FLAG列选项按位置访问。</target>
-        </trans-unit>
-        <trans-unit id="640601385e5f88c7aec6664de657092e6833b4e1" translate="yes" xml:space="preserve">
-          <source>TCMalloc is a malloc replacement library optimized for multi-threaded usage.</source>
-          <target state="translated">TCMalloc是一个针对多线程使用而优化的malloc替换库。</target>
-        </trans-unit>
-        <trans-unit id="4982c4158f9eb001881035b3dc5bb6b3a5f1812b" translate="yes" xml:space="preserve">
-          <source>TCP and UDP ports are enabled for permission to bind too. If you are using a different port, or some Galera ports, configure SELinux to be able to use those ports:</source>
-          <target state="translated">TCP和UDP端口也启用权限绑定。如果你使用的是不同的端口,或者一些Galera端口,请配置SELinux能够使用这些端口。</target>
-        </trans-unit>
-        <trans-unit id="0890271a4c494ba516ab3f3ae98c39fc0ed44886" translate="yes" xml:space="preserve">
-          <source>TCP/IP port number, from 0 to 65535. Together with the IP identifies the connection.</source>
-          <target state="translated">TCP/IP端口号,从0到65535。与IP一起标识连接。</target>
-        </trans-unit>
-        <trans-unit id="0bbe2bb164dfa465ce6321e53b237e0b2f45d64e" translate="yes" xml:space="preserve">
-          <source>TERMINATED</source>
-          <target state="translated">TERMINATED</target>
-        </trans-unit>
-        <trans-unit id="7d4e42ef9d04a046b5679f952cb0b6b5c498c73c" translate="yes" xml:space="preserve">
-          <source>TEXT</source>
-          <target state="translated">TEXT</target>
-        </trans-unit>
-        <trans-unit id="f7d8c8c9d11feb8b18d556620f3d64c15100bae8" translate="yes" xml:space="preserve">
-          <source>TEXT / BLOB</source>
-          <target state="translated">文本/BLOB</target>
-        </trans-unit>
-        <trans-unit id="eb23826af5fc45a6a32f75266ed1cb5891f106be" translate="yes" xml:space="preserve">
-          <source>THD is the &quot;run-time&quot; state of a connection, containing all that is needed for a particular client connection, and, among other things, the Lex structure currently being executed.</source>
-          <target state="translated">THD是一个连接的 &quot;运行时 &quot;状态,包含了一个特定的客户端连接所需要的所有内容,除此之外,还有当前正在执行的Lex结构。</target>
-        </trans-unit>
-        <trans-unit id="bd7f8a83e07337beedb291a476a0abdb89ed6b4f" translate="yes" xml:space="preserve">
-          <source>THEN</source>
-          <target state="translated">THEN</target>
-        </trans-unit>
-        <trans-unit id="7a59976fe11e623a45084644a3b2ee9d4f4cfc7d" translate="yes" xml:space="preserve">
-          <source>THIS PAGE IS OBSOLETE, it describes how to build a branch of MariaDB-5.5 w...</source>
-          <target state="translated">这个页面是无意义的,它描述了如何建立一个MariaDB-5.5的分支,并将其与MariaDB-5.5结合起来。</target>
-        </trans-unit>
-        <trans-unit id="ebc65277e616a944cff1b0bffc852005102b2174" translate="yes" xml:space="preserve">
-          <source>THIS PAGE IS OBSOLETE, it describes how to build a branch of MariaDB-5.5 with Cassandra SE. Cassandra SE is a part of &lt;a href=&quot;../what-is-mariadb-100/index&quot;&gt;MariaDB 10.0&lt;/a&gt;, which uses different approach to building.</source>
-          <target state="translated">此页面已过时，它描述了如何使用Cassandra SE构建MariaDB-5.5的分支。Cassandra SE是&lt;a href=&quot;../what-is-mariadb-100/index&quot;&gt;MariaDB 10.0&lt;/a&gt;的一部分，它使用不同的构建方法。</target>
-        </trans-unit>
-        <trans-unit id="5f3cceaafd2155b0194c07694108af214118a5ea" translate="yes" xml:space="preserve">
-          <source>THREAD_ID</source>
-          <target state="translated">THREAD_ID</target>
-        </trans-unit>
-        <trans-unit id="64269f9bd268bf28815bb69e82601cd7e806a37b" translate="yes" xml:space="preserve">
-          <source>TIME</source>
-          <target state="translated">TIME</target>
-        </trans-unit>
-        <trans-unit id="b21bf088de69893fdd10ed9af42f67d797a9f9ca" translate="yes" xml:space="preserve">
-          <source>TIME 'string'</source>
-          <target state="translated">时间'字符串'</target>
-        </trans-unit>
-        <trans-unit id="0d9553ac7a681762f7d06de34321ed3e0020fd61" translate="yes" xml:space="preserve">
-          <source>TIME Function</source>
-          <target state="translated">时间功能</target>
-        </trans-unit>
-        <trans-unit id="8d0b93945b4e9a817e71fa18f8800fd5d802776c" translate="yes" xml:space="preserve">
-          <source>TIME function</source>
-          <target state="translated">时间功能</target>
-        </trans-unit>
-        <trans-unit id="8b36d96e1824182c4a118892810c5729c04d87e8" translate="yes" xml:space="preserve">
-          <source>TIME()</source>
-          <target state="translated">TIME()</target>
-        </trans-unit>
-        <trans-unit id="bf5c2235cf211b590e389d96ed63bdcdbb1fb8f5" translate="yes" xml:space="preserve">
-          <source>TIME, DATE, DATETIME, YEAR</source>
-          <target state="translated">时间,日期,日期时间,年份。</target>
-        </trans-unit>
-        <trans-unit id="d8d3fa8264689ae3402ee6aa3bcde0c303d1facc" translate="yes" xml:space="preserve">
-          <source>TIME/TIMESTAMP/DATETIME columns of old format have been upgraded to the new format.</source>
-          <target state="translated">旧格式的TIME/TIMESTAMP/DATETIME栏已升级为新格式。</target>
-        </trans-unit>
-        <trans-unit id="b223ba90dc989e0a71f1bb46139b005774100712" translate="yes" xml:space="preserve">
-          <source>TIMEDIFF</source>
-          <target state="translated">TIMEDIFF</target>
-        </trans-unit>
-        <trans-unit id="f28873b902414e24ac3a1c5e537317f2cf17883b" translate="yes" xml:space="preserve">
-          <source>TIMEDIFF()</source>
-          <target state="translated">TIMEDIFF()</target>
-        </trans-unit>
-        <trans-unit id="bd2fbf9a8dd610f92f9a6bb0b301696ddc6d0066" translate="yes" xml:space="preserve">
-          <source>TIMEDIFF() returns &lt;code&gt;expr1&lt;/code&gt; - &lt;code&gt;expr2&lt;/code&gt; expressed as a time value. &lt;code&gt;expr1&lt;/code&gt; and &lt;code&gt;expr2&lt;/code&gt; are time or date-and-time expressions, but both must be of the same type.</source>
-          <target state="translated">TIMEDIFF（）返回以时间值表示的 &lt;code&gt;expr1&lt;/code&gt; - &lt;code&gt;expr2&lt;/code&gt; 。 &lt;code&gt;expr1&lt;/code&gt; 和 &lt;code&gt;expr2&lt;/code&gt; 是时间或日期时间表达式，但是两者必须是同一类型。</target>
-        </trans-unit>
-        <trans-unit id="6674a79fdfa67b56257c5029f1f143cf4a8353b2" translate="yes" xml:space="preserve">
-          <source>TIMESTAMP</source>
-          <target state="translated">TIMESTAMP</target>
-        </trans-unit>
-        <trans-unit id="cf8f98a14b5cb6168a605aacd5255e9c6478ad79" translate="yes" xml:space="preserve">
-          <source>TIMESTAMP 'string'</source>
-          <target state="translated">时间标签'字符串'</target>
-        </trans-unit>
-        <trans-unit id="80634f1d1fcfbed7328b53b8951411bd584ce989" translate="yes" xml:space="preserve">
-          <source>TIMESTAMP (second precision), TIMESTAMP(6) (microsecond precision), BIGINT (gets verbatim Cassandra's 64-bit milliseconds-since-epoch)</source>
-          <target state="translated">TIMESTAMP(秒级精度),TIMESTAMP(6)(微秒级精度),BIGINT(逐字获取Cassandra的64位milliseconds-since-epoch)。</target>
-        </trans-unit>
-        <trans-unit id="1b3cb538b571d4a0a4a11d63c83b901188b4a459" translate="yes" xml:space="preserve">
-          <source>TIMESTAMP FUNCTION</source>
-          <target state="translated">时间戳功能</target>
-        </trans-unit>
-        <trans-unit id="5c7248880ba4814dc55782eb06dd43c8f2fde7fb" translate="yes" xml:space="preserve">
-          <source>TIMESTAMP with TO_DAYS(). (version 5.1.43 or later)</source>
-          <target state="translated">使用TO_DAYS()的TIMESTAMP。(5.1.43或更高版本)</target>
-        </trans-unit>
-        <trans-unit id="9dc5f102c500e9bba9ca289d5f86e83a727a1ef4" translate="yes" xml:space="preserve">
-          <source>TIMESTAMPADD</source>
-          <target state="translated">TIMESTAMPADD</target>
-        </trans-unit>
-        <trans-unit id="539ea2d3f9a90b1aa53402a42dee7e6fa92064b2" translate="yes" xml:space="preserve">
-          <source>TIMESTAMPADD()</source>
-          <target state="translated">TIMESTAMPADD()</target>
-        </trans-unit>
-        <trans-unit id="f8585f0700b520818ada464b6303cf99f7c2daeb" translate="yes" xml:space="preserve">
-          <source>TIMESTAMPDIFF</source>
-          <target state="translated">TIMESTAMPDIFF</target>
-        </trans-unit>
-        <trans-unit id="eb32dda9c8fb5923eaabbf94b917b43893b2b6d4" translate="yes" xml:space="preserve">
-          <source>TIMESTAMPDIFF()</source>
-          <target state="translated">TIMESTAMPDIFF()</target>
-        </trans-unit>
-        <trans-unit id="4415efad8f80db2789d8125ffed0553836a393f7" translate="yes" xml:space="preserve">
-          <source>TIME_FORMAT</source>
-          <target state="translated">TIME_FORMAT</target>
-        </trans-unit>
-        <trans-unit id="cf5f31336243a3cc1fe707fe733a389b5a5a700f" translate="yes" xml:space="preserve">
-          <source>TIME_FORMAT()</source>
-          <target state="translated">TIME_FORMAT()</target>
-        </trans-unit>
-        <trans-unit id="fa37ccfadcb7d76faa661cbba9ee98e68dad9fd8" translate="yes" xml:space="preserve">
-          <source>TIME_MS column in INFORMATION_SCHEMA.PROCESSLIST</source>
-          <target state="translated">INFORMATION_SCHEMA.PROCESSLIST中的TIME_MS列。</target>
-        </trans-unit>
-        <trans-unit id="d7b3afcf0774e948bbc8a6f2a5e875f332d8ffb5" translate="yes" xml:space="preserve">
-          <source>TIME_MS column in Information Schema SHOW PROCESSLIST</source>
-          <target state="translated">信息模式中的 TIME_MS 列 SHOW PROCESSLIST</target>
-        </trans-unit>
-        <trans-unit id="da2c89bcab4d5d0e358c9c99f6522c6a92e724a7" translate="yes" xml:space="preserve">
-          <source>TIME_TO_SEC</source>
-          <target state="translated">TIME_TO_SEC</target>
-        </trans-unit>
-        <trans-unit id="69f83ddcc3a791f4fa716ef72c0b6985ce148e06" translate="yes" xml:space="preserve">
-          <source>TIME_TO_SEC()</source>
-          <target state="translated">TIME_TO_SEC()</target>
-        </trans-unit>
-        <trans-unit id="60554c7f8b6c22488789b911a2ad7c9062f18799" translate="yes" xml:space="preserve">
-          <source>TINYBLOB</source>
-          <target state="translated">TINYBLOB</target>
-        </trans-unit>
-        <trans-unit id="4fe5a3682f8029783789ec9b3abba10f67f03ffa" translate="yes" xml:space="preserve">
-          <source>TINYINT</source>
-          <target state="translated">TINYINT</target>
-        </trans-unit>
-        <trans-unit id="228ece34549246be5a5563a66e5d6ebec369256e" translate="yes" xml:space="preserve">
-          <source>TINYINT, BIT</source>
-          <target state="translated">TINYINT,BIT</target>
-        </trans-unit>
-        <trans-unit id="18af004d4e85c8f76a1ae9ebe5cdda901d7acc28" translate="yes" xml:space="preserve">
-          <source>TINYTEXT</source>
-          <target state="translated">TINYTEXT</target>
-        </trans-unit>
-        <trans-unit id="cc4594da47b0dec31f5f5c8f1b972471161bcac6" translate="yes" xml:space="preserve">
-          <source>TIS620 Thai</source>
-          <target state="translated">TIS620 泰语</target>
-        </trans-unit>
-        <trans-unit id="bf654c3810ca0b523f0f93cae09ad8edf4349ba7" translate="yes" xml:space="preserve">
-          <source>TITLE</source>
-          <target state="translated">TITLE</target>
-        </trans-unit>
-        <trans-unit id="d91e1888f2dc09f11a876e25966a6fbd32b9cd87" translate="yes" xml:space="preserve">
-          <source>TLS</source>
-          <target state="translated">TLS</target>
-        </trans-unit>
-        <trans-unit id="64d44699f2842723154d3093571826c5b0ec4ed2" translate="yes" xml:space="preserve">
-          <source>TLS Libraries</source>
-          <target state="translated">TLS图书馆</target>
-        </trans-unit>
-        <trans-unit id="49b6d6607f450b6adf823a0590f90df08f15aa00" translate="yes" xml:space="preserve">
-          <source>TLS Library</source>
-          <target state="translated">TLS图书馆</target>
-        </trans-unit>
-        <trans-unit id="893ddb2e792ad0135a059dd2dfd9ab7f741e16e7" translate="yes" xml:space="preserve">
-          <source>TLS Options</source>
-          <target state="translated">TLS选项</target>
-        </trans-unit>
-        <trans-unit id="c634c6b882ce6ff1896b1877c79e22cd0d02d205" translate="yes" xml:space="preserve">
-          <source>TLS Protocol Version Support</source>
-          <target state="translated">TLS协议版本支持</target>
-        </trans-unit>
-        <trans-unit id="cb3424bc7e867ed715191f35395a759469715d54" translate="yes" xml:space="preserve">
-          <source>TLS Protocol Version Support in GnuTLS</source>
-          <target state="translated">GnuTLS中的TLS协议版本支持</target>
-        </trans-unit>
-        <trans-unit id="fe74c09f9744fbc89674959120d780aa5faa3f5d" translate="yes" xml:space="preserve">
-          <source>TLS Protocol Version Support in OpenSSL</source>
-          <target state="translated">OpenSSL中的TLS协议版本支持</target>
-        </trans-unit>
-        <trans-unit id="9bc92bfb015da15edaac8be1739caa6c407fe9a4" translate="yes" xml:space="preserve">
-          <source>TLS Protocol Version Support in Schannel</source>
-          <target state="translated">在Schannel中支持TLS协议版本</target>
-        </trans-unit>
-        <trans-unit id="94c28cafef0acccea30fcb12c325d426861ce5ef" translate="yes" xml:space="preserve">
-          <source>TLS Protocol Version Support in wolfSSL</source>
-          <target state="translated">wolfSSL的TLS协议版本支持</target>
-        </trans-unit>
-        <trans-unit id="097082ca3d18b5339d44cd3ae6dbd0e3ffd4335e" translate="yes" xml:space="preserve">
-          <source>TLS Protocol Version Support in yaSSL</source>
-          <target state="translated">yaSSL的TLS协议版本支持</target>
-        </trans-unit>
-        <trans-unit id="87e2f892bc124632de76f85a782fb21dd3df6475" translate="yes" xml:space="preserve">
-          <source>TLS Protocol Versions</source>
-          <target state="translated">TLS协议版本</target>
-        </trans-unit>
-        <trans-unit id="11c706437abb9faff0bf7a3cc923f6339cf9c17d" translate="yes" xml:space="preserve">
-          <source>TLS Using OpenSSL Encryption Built into Socat</source>
-          <target state="translated">在Socat中使用OpenSSL加密的TLS。</target>
-        </trans-unit>
-        <trans-unit id="077e79f98f64ff69c52668af32d1a2f9347aaf8a" translate="yes" xml:space="preserve">
-          <source>TLS Using OpenSSL Encryption with Galera-compatible Certificates and Keys</source>
-          <target state="translated">使用与Galera兼容的证书和密钥的OpenSSL加密的TLS。</target>
-        </trans-unit>
-        <trans-unit id="402df598551e6fbe5c0e2884255f6b48c13e4ce2" translate="yes" xml:space="preserve">
-          <source>TLS Using OpenSSL Encryption with MariaDB-compatible Certificates and Keys</source>
-          <target state="translated">使用兼容MariaDB的证书和密钥的OpenSSL加密的TLS系统</target>
-        </trans-unit>
-        <trans-unit id="781752a63431265c4602c573315781335fadf935" translate="yes" xml:space="preserve">
-          <source>TLS and Cryptography Libraries Used by MariaDB</source>
-          <target state="translated">MariaDB使用的TLS和加密库</target>
-        </trans-unit>
-        <trans-unit id="3689ca4964a126c3440b2390a21ce221b22494bc" translate="yes" xml:space="preserve">
-          <source>TLS can be enabled on a replication slave by executing the &lt;code&gt;&lt;a href=&quot;../change-master-to/index&quot;&gt;CHANGE MASTER&lt;/a&gt;&lt;/code&gt; statement. In order to do so, there are a number of options that you would need to set. The specific options that you would need to set would depend on whether you want one-way TLS or two-way TLS, and whether you want to verify the server certificate.</source>
-          <target state="translated">可以通过执行 &lt;code&gt;&lt;a href=&quot;../change-master-to/index&quot;&gt;CHANGE MASTER&lt;/a&gt;&lt;/code&gt; 语句在复制从属服务器上启用TLS 。为此，您需要设置许多选项。您需要设置的特定选项取决于您是单向TLS还是双向TLS，以及是否要验证服务器证书。</target>
-        </trans-unit>
-        <trans-unit id="36a634d32aec35f4fb732dfab338b759b7275ed5" translate="yes" xml:space="preserve">
-          <source>TLS cipher - see &lt;a href=&quot;../grant/index#per-account-tls-options&quot;&gt;TLS options&lt;/a&gt;.</source>
-          <target state="translated">TLS密码-请参阅&lt;a href=&quot;../grant/index#per-account-tls-options&quot;&gt;TLS选项&lt;/a&gt;。</target>
-        </trans-unit>
-        <trans-unit id="04fab5c26c0d234b0a32aeedcc9a281dd803f761" translate="yes" xml:space="preserve">
-          <source>TLS is also enabled even without setting this option when certain other TLS options are set. For example, see the descriptions of the following options:</source>
-          <target state="translated">当设置了某些其他的TLS选项时,即使不设置这个选项也会启用TLS。例如,请看以下选项的说明。</target>
-        </trans-unit>
-        <trans-unit id="eb96064801e9a46efeb1eda9caaa3ee4cab5097b" translate="yes" xml:space="preserve">
-          <source>TLS is not required for this account, but can still be used.</source>
-          <target state="translated">这个账户不需要TLS,但仍然可以使用。</target>
-        </trans-unit>
-        <trans-unit id="1becfc20867e7b541486624fd1341187a7cb8615" translate="yes" xml:space="preserve">
-          <source>TLS type - see &lt;a href=&quot;../grant/index#per-account-tls-options&quot;&gt;TLS options&lt;/a&gt;.</source>
-          <target state="translated">TLS类型-请参阅&lt;a href=&quot;../grant/index#per-account-tls-options&quot;&gt;TLS选项&lt;/a&gt;。</target>
-        </trans-unit>
-        <trans-unit id="08c7874546d1d0e2892bdf5a6b63f06e7dc1856c" translate="yes" xml:space="preserve">
-          <source>TLS using OpenSSL encryption built into &lt;code&gt;socat&lt;/code&gt; (&lt;code&gt;encrypt=2&lt;/code&gt;)</source>
-          <target state="translated">使用Socat中内置的OpenSSL加密的TLS （ &lt;code&gt;socat&lt;/code&gt; &lt;code&gt;encrypt=2&lt;/code&gt; ）</target>
-        </trans-unit>
-        <trans-unit id="3b2f31dddb468951e4122e2d7d6c420e84a4fa11" translate="yes" xml:space="preserve">
-          <source>TLS using OpenSSL encryption with Galera-compatible certificates and keys (&lt;code&gt;encrypt=3&lt;/code&gt;)</source>
-          <target state="translated">TLS使用带有Galera兼容证书和密钥的OpenSSL加密（ &lt;code&gt;encrypt=3&lt;/code&gt; ）</target>
-        </trans-unit>
-        <trans-unit id="ffc4074f42d456f919bd6b3d30db0489923ccf5c" translate="yes" xml:space="preserve">
-          <source>TLS using OpenSSL encryption with MariaDB-compatible certificates and keys (&lt;code&gt;encrypt=4&lt;/code&gt;)</source>
-          <target state="translated">TLS使用带有与MariaDB兼容的证书和密钥的OpenSSL加密（ &lt;code&gt;encrypt=4&lt;/code&gt; ）</target>
-        </trans-unit>
-        <trans-unit id="9af6d0522c5e27203a5c44600564b8a022f0d53b" translate="yes" xml:space="preserve">
-          <source>TLSv1, TLSv1.1</source>
-          <target state="translated">TLSv1,TLSv1.1</target>
-        </trans-unit>
-        <trans-unit id="5f288440e92f44f45d554e8cd500bbeca893e12e" translate="yes" xml:space="preserve">
-          <source>TLSv1, TLSv1.1, TLSv1.2</source>
-          <target state="translated">TLSv1,TLSv1.1,TLSv1.2。</target>
-        </trans-unit>
-        <trans-unit id="32200885efd554a3a81f56b0a63035a0d8056f08" translate="yes" xml:space="preserve">
-          <source>TLSv1, TLSv1.1, TLSv1.2, TLSv1.3</source>
-          <target state="translated">TLSv1,TLSv1.1,TLSv1.2,TLSv1.3。</target>
-        </trans-unit>
-        <trans-unit id="68b21fa42b534db68feacb01527590b9c862f677" translate="yes" xml:space="preserve">
-          <source>TLSv1.0 is disabled by default in &lt;a href=&quot;../what-is-mariadb-104/index&quot;&gt;MariaDB 10.4&lt;/a&gt;. See &lt;a href=&quot;../ssltls-system-variables/index#tls_version&quot;&gt;tls_version&lt;/a&gt; and &lt;a href=&quot;../secure-connections-overview/index#tls-protocol-versions&quot;&gt;TLS Protocol Versions&lt;/a&gt;.</source>
-          <target state="translated">默认情况下，&lt;a href=&quot;../what-is-mariadb-104/index&quot;&gt;MariaDB 10.4中&lt;/a&gt;禁用TLSv1.0 。请参见&lt;a href=&quot;../ssltls-system-variables/index#tls_version&quot;&gt;tls_version&lt;/a&gt;和&lt;a href=&quot;../secure-connections-overview/index#tls-protocol-versions&quot;&gt;TLS协议版本&lt;/a&gt;。</target>
-        </trans-unit>
-        <trans-unit id="ecd1e631142828bc31af3ef0417be6270ee019d0" translate="yes" xml:space="preserve">
-          <source>TLSv1.1,TLSv1.2,TLSv1.3</source>
-          <target state="translated">TLSv1.1,TLSv1.2,TLSv1.3</target>
-        </trans-unit>
-        <trans-unit id="e5806359db7377b64f881d5493c2eb6b76070e6d" translate="yes" xml:space="preserve">
-          <source>TLSv1.3 is a major rewrite of the protocol.</source>
-          <target state="translated">TLSv1.3是对协议的重大重写。</target>
-        </trans-unit>
-        <trans-unit id="2a1b39f0946b76260b6dc6900a6d38c34dd07846" translate="yes" xml:space="preserve">
-          <source>TMPDIR</source>
-          <target state="translated">TMPDIR</target>
         </trans-unit>
       </group>
     </body>

@@ -3,6 +3,46 @@
   <file source-language="en" target-language="zh-CN" datatype="htmlbody" original="influxdata">
     <body>
       <group id="influxdata">
+        <trans-unit id="5bf53ccf7d562553522cb3eaf1b0595e637b96fe" translate="yes" xml:space="preserve">
+          <source>The keyword &lt;code&gt;time&lt;/code&gt; is a special case. &lt;code&gt;time&lt;/code&gt; can be a &lt;a href=&quot;../../concepts/glossary/index#continuous-query-cq&quot;&gt;continuous query&lt;/a&gt; name, database name, &lt;a href=&quot;../../concepts/glossary/index#measurement&quot;&gt;measurement&lt;/a&gt; name, &lt;a href=&quot;../../concepts/glossary/index#retention-policy-rp&quot;&gt;retention policy&lt;/a&gt; name, &lt;a href=&quot;../../concepts/glossary/index#subscription&quot;&gt;subscription&lt;/a&gt; name, and &lt;a href=&quot;../../concepts/glossary/index#user&quot;&gt;user&lt;/a&gt; name. In those cases, &lt;code&gt;time&lt;/code&gt; does not require double quotes in queries. &lt;code&gt;time&lt;/code&gt; cannot be a &lt;a href=&quot;../../concepts/glossary/index#field-key&quot;&gt;field key&lt;/a&gt; or &lt;a href=&quot;../../concepts/glossary/index#tag-key&quot;&gt;tag key&lt;/a&gt;; InfluxDB rejects writes with &lt;code&gt;time&lt;/code&gt; as a field key or tag key and returns an error. See &lt;a href=&quot;../../troubleshooting/frequently-asked-questions/index#time&quot;&gt;Frequently Asked Questions&lt;/a&gt; for more information.</source>
+          <target state="translated">关键字 &lt;code&gt;time&lt;/code&gt; 是一种特殊情况。 &lt;code&gt;time&lt;/code&gt; 可以是&lt;a href=&quot;../../concepts/glossary/index#continuous-query-cq&quot;&gt;连续查询&lt;/a&gt;名称，数据库名称，&lt;a href=&quot;../../concepts/glossary/index#measurement&quot;&gt;度量&lt;/a&gt;名称，&lt;a href=&quot;../../concepts/glossary/index#retention-policy-rp&quot;&gt;保留策略&lt;/a&gt;名称，&lt;a href=&quot;../../concepts/glossary/index#subscription&quot;&gt;订阅&lt;/a&gt;名称和&lt;a href=&quot;../../concepts/glossary/index#user&quot;&gt;用户&lt;/a&gt;名。在这些情况下， &lt;code&gt;time&lt;/code&gt; 不需要查询中的双引号。 &lt;code&gt;time&lt;/code&gt; 不能是&lt;a href=&quot;../../concepts/glossary/index#field-key&quot;&gt;字段键&lt;/a&gt;或&lt;a href=&quot;../../concepts/glossary/index#tag-key&quot;&gt;标签键&lt;/a&gt; ; InfluxDB拒绝将带有 &lt;code&gt;time&lt;/code&gt; 写入作为字段键或标签键，并返回错误。请参阅&lt;a href=&quot;../../troubleshooting/frequently-asked-questions/index#time&quot;&gt;常见问题&lt;/a&gt;更多信息，。</target>
+        </trans-unit>
+        <trans-unit id="6236c678785067ef1030b8f2c6608ac1ec8f5263" translate="yes" xml:space="preserve">
+          <source>The keywords &lt;code&gt;IF&lt;/code&gt;, &lt;code&gt;EXISTS&lt;/code&gt;, and &lt;code&gt;NOT&lt;/code&gt; where removed for this release. This means you no longer need to specify &lt;code&gt;IF NOT EXISTS&lt;/code&gt; for &lt;code&gt;DROP DATABASE&lt;/code&gt; or &lt;code&gt;IF EXISTS&lt;/code&gt; for &lt;code&gt;CREATE DATABASE&lt;/code&gt;. If these are specified, a query parse error is returned.</source>
+          <target state="translated">在此版本中删除了关键字 &lt;code&gt;IF&lt;/code&gt; ， &lt;code&gt;EXISTS&lt;/code&gt; 和 &lt;code&gt;NOT&lt;/code&gt; 。这意味着你不再需要指定 &lt;code&gt;IF NOT EXISTS&lt;/code&gt; 的 &lt;code&gt;DROP DATABASE&lt;/code&gt; 或 &lt;code&gt;IF EXISTS&lt;/code&gt; 用于 &lt;code&gt;CREATE DATABASE&lt;/code&gt; 。如果指定了这些，则返回查询解析错误。</target>
+        </trans-unit>
+        <trans-unit id="855bb473a77c3da36f642b6b0ca24cf0da68fa83" translate="yes" xml:space="preserve">
+          <source>The last query returns one point because the four initial results are duplicate points; they belong to the same series and have the same timestamp. When the system encounters duplicate points, it simply overwrites the previous point with the most recent point.</source>
+          <target state="translated">最后一个查询返回一个点,因为四个初始结果是重复的点;它们属于同一个系列,有相同的时间戳。当系统遇到重复的点时,它只需用最近的点覆盖前一个点。</target>
+        </trans-unit>
+        <trans-unit id="b0f4f0cd33277286575c0ebe23b7610f3a4fc468" translate="yes" xml:space="preserve">
+          <source>The last section &lt;code&gt;DOT&lt;/code&gt; is a &lt;a href=&quot;http://www.graphviz.org&quot;&gt;graphviz dot&lt;/a&gt; formatted string that contains information about the data processing pipeline defined by the TICKscript. The &lt;em&gt;key=value&lt;/em&gt; pairs are stats about each node or edge. The &lt;em&gt;processed&lt;/em&gt; key indicates the number of data points that have passed along the specified edge of the graph. For example in the above the &lt;code&gt;stream0&lt;/code&gt; node (aka the &lt;code&gt;stream&lt;/code&gt; var from the TICKscript) has sent 12 points to the &lt;code&gt;from1&lt;/code&gt; node. The &lt;code&gt;from1&lt;/code&gt; node has also sent 12 points on to the &lt;code&gt;alert2&lt;/code&gt; node. Since Telegraf is configured to only send &lt;code&gt;cpu&lt;/code&gt; data all 12 points match the from/measurement criteria of the &lt;code&gt;from1&lt;/code&gt; node and are passed on.</source>
+          <target state="translated">最后一部分 &lt;code&gt;DOT&lt;/code&gt; 是&lt;a href=&quot;http://www.graphviz.org&quot;&gt;graphviz点&lt;/a&gt;格式的字符串，其中包含有关TICKscript定义的数据处理管道的信息。的&lt;em&gt;键=值&lt;/em&gt;对是关于每个节点或边的统计信息。已&lt;em&gt;处理&lt;/em&gt;键指示沿图的指定边缘传递的数据点的数量。例如，在上述 &lt;code&gt;stream0&lt;/code&gt; 节点（又名 &lt;code&gt;stream&lt;/code&gt; 从TICKscript VAR）已经发送了12分至 &lt;code&gt;from1&lt;/code&gt; 节点。的 &lt;code&gt;from1&lt;/code&gt; 节点还对所发送的12个点 &lt;code&gt;alert2&lt;/code&gt; 节点。由于Telegraf配置为仅发送 &lt;code&gt;cpu&lt;/code&gt; 数据全部12个点都匹配 &lt;code&gt;from1&lt;/code&gt; 节点的from /测量标准并继续传递。</target>
+        </trans-unit>
+        <trans-unit id="fb481a870e76aa073705f3631eccc85532935d7f" translate="yes" xml:space="preserve">
+          <source>The last section &lt;code&gt;DOT&lt;/code&gt; is a &lt;a href=&quot;https://www.graphviz.org&quot;&gt;graphviz dot&lt;/a&gt; formatted string that contains information about the data processing pipeline defined by the TICKscript. The &lt;em&gt;key=value&lt;/em&gt; pairs are stats about each node or edge. The &lt;em&gt;processed&lt;/em&gt; key indicates the number of data points that have passed along the specified edge of the graph. For example in the above the &lt;code&gt;stream0&lt;/code&gt; node (aka the &lt;code&gt;stream&lt;/code&gt; var from the TICKscript) has sent 12 points to the &lt;code&gt;from1&lt;/code&gt; node. The &lt;code&gt;from1&lt;/code&gt; node has also sent 12 points on to the &lt;code&gt;alert2&lt;/code&gt; node. Since Telegraf is configured to only send &lt;code&gt;cpu&lt;/code&gt; data all 12 points match the from/measurement criteria of the &lt;code&gt;from1&lt;/code&gt; node and are passed on.</source>
+          <target state="translated">最后一部分 &lt;code&gt;DOT&lt;/code&gt; 是&lt;a href=&quot;https://www.graphviz.org&quot;&gt;graphviz点&lt;/a&gt;格式的字符串，其中包含有关TICKscript定义的数据处理管道的信息。的&lt;em&gt;键=值&lt;/em&gt;对是关于每个节点或边的统计信息。已&lt;em&gt;处理&lt;/em&gt;键指示沿图的指定边缘传递的数据点的数量。例如，在上述 &lt;code&gt;stream0&lt;/code&gt; 节点（又名 &lt;code&gt;stream&lt;/code&gt; 从TICKscript VAR）已经发送了12分至 &lt;code&gt;from1&lt;/code&gt; 节点。在 &lt;code&gt;from1&lt;/code&gt; 节点也到发送12分 &lt;code&gt;alert2&lt;/code&gt; 节点。由于Telegraf配置为仅发送 &lt;code&gt;cpu&lt;/code&gt; 数据全部12个点都匹配 &lt;code&gt;from1&lt;/code&gt; 节点的from /测量标准，并继续传递。</target>
+        </trans-unit>
+        <trans-unit id="694714aadf4ecbc8ab533904064061b2fc192641" translate="yes" xml:space="preserve">
+          <source>The last section is the footer that stores the offset of the start of the index.</source>
+          <target state="translated">最后一节是存储索引开始的偏移量的页脚。</target>
+        </trans-unit>
+        <trans-unit id="599f719c7a01b1387b50f6d87941a47805d29377" translate="yes" xml:space="preserve">
+          <source>The last two columns in the sample data, called &lt;code&gt;location&lt;/code&gt; and &lt;code&gt;scientist&lt;/code&gt;, are tags. Tags are made up of tag keys and tag values. Both &lt;em&gt;tag keys&lt;/em&gt; and &lt;em&gt;tag values&lt;/em&gt; are stored as strings and record metadata. The tag keys in the sample data are &lt;code&gt;location&lt;/code&gt; and &lt;code&gt;scientist&lt;/code&gt;. The tag key &lt;code&gt;location&lt;/code&gt; has two tag values: &lt;code&gt;1&lt;/code&gt; and &lt;code&gt;2&lt;/code&gt;. The tag key &lt;code&gt;scientist&lt;/code&gt; also has two tag values: &lt;code&gt;langstroth&lt;/code&gt; and &lt;code&gt;perpetua&lt;/code&gt;.</source>
+          <target state="translated">样本数据的最后两列称为 &lt;code&gt;location&lt;/code&gt; 和 &lt;code&gt;scientist&lt;/code&gt; 。标签由标签键和标签值组成。这两个&lt;em&gt;标签键&lt;/em&gt;和&lt;em&gt;标签值&lt;/em&gt;存储为字符串和记录元数据。样本数据中的标签键是 &lt;code&gt;location&lt;/code&gt; 和 &lt;code&gt;scientist&lt;/code&gt; 。标签键 &lt;code&gt;location&lt;/code&gt; 具有两个标签值： &lt;code&gt;1&lt;/code&gt; 和 &lt;code&gt;2&lt;/code&gt; 。标签密钥 &lt;code&gt;scientist&lt;/code&gt; 还具有两个标签值： &lt;code&gt;langstroth&lt;/code&gt; 和 &lt;code&gt;perpetua&lt;/code&gt; 。</target>
+        </trans-unit>
+        <trans-unit id="dea4bcfcc82a901903218009dd2ccd3ec1629114" translate="yes" xml:space="preserve">
+          <source>The latest Chronograf builds are available on InfluxData&amp;rsquo;s &lt;a href=&quot;https://influxdata.com/downloads&quot;&gt;Downloads page&lt;/a&gt;. See Chronograf&amp;rsquo;s &lt;a href=&quot;https://github.com/influxdata/chronograf/blob/master/README.md#from-source&quot;&gt;README&lt;/a&gt; on GitHub for instructions on building from source.</source>
+          <target state="translated">最新的Chronograf版本可在InfluxData的&lt;a href=&quot;https://influxdata.com/downloads&quot;&gt;下载页面上找到&lt;/a&gt;。有关从源代码进行构建的说明，请参阅GitHub上的Chronograf的&lt;a href=&quot;https://github.com/influxdata/chronograf/blob/master/README.md#from-source&quot;&gt;自述&lt;/a&gt;文件。</target>
+        </trans-unit>
+        <trans-unit id="3863b292e3069de2307664b7a788eabdf16bd451" translate="yes" xml:space="preserve">
+          <source>The level at which to log the data. One of: DEBUG, INFO, WARN, ERROR Default: INFO</source>
+          <target state="translated">记录数据的级别。其中之一。DEBUG,INFO,WARN,ERROR 默认:INFO。</target>
+        </trans-unit>
+        <trans-unit id="a872d6b21ad41ac09ecad1a6d7fe86a7bdd4db1f" translate="yes" xml:space="preserve">
+          <source>The life cycle of a query looks like this:</source>
+          <target state="translated">一个查询的生命周期是这样的。</target>
+        </trans-unit>
         <trans-unit id="71e3a428561b6cdfd687886ea10dd000fd97499e" translate="yes" xml:space="preserve">
           <source>The line protocol above uses an &lt;a href=&quot;https://www.ietf.org/rfc/rfc3339.txt&quot;&gt;RFC3339&lt;/a&gt; timestamp. Replace the timestamp with a UNIX timestamp to avoid the error and successfully write the point to InfluxDB:</source>
           <target state="translated">上面的线路协议使用&lt;a href=&quot;https://www.ietf.org/rfc/rfc3339.txt&quot;&gt;RFC3339&lt;/a&gt;时间戳。将时间戳记替换为UNIX时间戳记可避免该错误，并将该点成功写入InfluxDB：</target>
@@ -1617,6 +1657,14 @@ time()&lt;/code&gt; clause&lt;/a&gt;. It also writes its results to the &lt;code
           <source>The syntax is specified using Extended Backus-Naur Form (&amp;ldquo;EBNF&amp;rdquo;). EBNF is the same notation used in the &lt;a href=&quot;http://golang.org/&quot;&gt;Go&lt;/a&gt; programming language specification, which can be found &lt;a href=&quot;https://golang.org/ref/spec&quot;&gt;here&lt;/a&gt;.</source>
           <target state="translated">使用扩展Backus-Naur形式（&amp;ldquo; EBNF&amp;rdquo;）指定语法。EBNF与&lt;a href=&quot;http://golang.org/&quot;&gt;Go&lt;/a&gt;编程语言规范中使用的相同符号，可以在&lt;a href=&quot;https://golang.org/ref/spec&quot;&gt;此处&lt;/a&gt;找到。</target>
         </trans-unit>
+        <trans-unit id="6d9869d97078df4a0ac76b305bc3cdad883195fc" translate="yes" xml:space="preserve">
+          <source>The syntax is specified using Extended Backus-Naur Form (&amp;ldquo;EBNF&amp;rdquo;). EBNF is the same notation used in the &lt;a href=&quot;https://golang.org&quot;&gt;Go&lt;/a&gt; programming language specification, which can be found &lt;a href=&quot;https://golang.org/ref/spec&quot;&gt;here&lt;/a&gt;. Not so coincidentally, InfluxDB is written in Go.</source>
+          <target state="translated">使用扩展Backus-Naur形式（&amp;ldquo; EBNF&amp;rdquo;）指定语法。EBNF与&lt;a href=&quot;https://golang.org&quot;&gt;Go&lt;/a&gt;编程语言规范中使用的相同符号，可以在&lt;a href=&quot;https://golang.org/ref/spec&quot;&gt;此处&lt;/a&gt;找到。并非巧合的是，InfluxDB是用Go编写的。</target>
+        </trans-unit>
+        <trans-unit id="2f57df0a72e9f3c195e41a7022827227ef6b52f2" translate="yes" xml:space="preserve">
+          <source>The syntax is specified using Extended Backus-Naur Form (&amp;ldquo;EBNF&amp;rdquo;). EBNF is the same notation used in the &lt;a href=&quot;https://golang.org/&quot;&gt;Go&lt;/a&gt; programming language specification, which can be found &lt;a href=&quot;https://golang.org/ref/spec&quot;&gt;here&lt;/a&gt;.</source>
+          <target state="translated">使用扩展Backus-Naur形式（&amp;ldquo; EBNF&amp;rdquo;）指定语法。EBNF与&lt;a href=&quot;https://golang.org/&quot;&gt;Go&lt;/a&gt;编程语言规范中使用的相同符号，可以在&lt;a href=&quot;https://golang.org/ref/spec&quot;&gt;此处&lt;/a&gt;找到。</target>
+        </trans-unit>
         <trans-unit id="785da0102fc68dd3bac40ba5b98c74ffc11bb4d7" translate="yes" xml:space="preserve">
           <source>The system does not have access to the meta store when exporting TSM shards. As such, it always creates the &lt;a href=&quot;../../concepts/glossary/index#retention-policy-rp&quot;&gt;retention policy&lt;/a&gt; with infinite duration and replication factor of 1. End users may want to change this prior to re-importing if they are importing to a cluster or want a different duration for retention.</source>
           <target state="translated">导出TSM分片时，系统无权访问元存储。这样，它始终会创建无限期且复制因子为1 的&lt;a href=&quot;../../concepts/glossary/index#retention-policy-rp&quot;&gt;保留策略&lt;/a&gt;。如果最终用户要导入群集或需要不同的保留期限，则可能需要在重新导入之前更改此策略。</target>
@@ -1992,6 +2040,10 @@ time()&lt;/code&gt; clause&lt;/a&gt;. It also writes its results to the &lt;code
         <trans-unit id="3c24634cd4c6415572f816daa64ede2e25d8259a" translate="yes" xml:space="preserve">
           <source>This example assumes that you are using two SSD volumes and that you have mounted them appropriately. This example also assumes that each of those volumes is mounted at &lt;code&gt;/mnt/influx&lt;/code&gt; and &lt;code&gt;/mnt/db&lt;/code&gt;. For more information on how to do that see the Amazon documentation on how to &lt;a href=&quot;http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html&quot;&gt;Add a Volume to Your Instance&lt;/a&gt;.</source>
           <target state="translated">本示例假定您正在使用两个SSD卷，并且已正确安装它们。此示例还假定每个卷都安装在 &lt;code&gt;/mnt/influx&lt;/code&gt; 和 &lt;code&gt;/mnt/db&lt;/code&gt; 。有关如何执行此操作的更多信息，请参阅有关如何&lt;a href=&quot;http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html&quot;&gt;向您的实例添加卷&lt;/a&gt;的Amazon文档。</target>
+        </trans-unit>
+        <trans-unit id="73946c51afaf073aa737fcdde5a140aeaf80b036" translate="yes" xml:space="preserve">
+          <source>This example assumes that you are using two SSD volumes and that you have mounted them appropriately. This example also assumes that each of those volumes is mounted at &lt;code&gt;/mnt/influx&lt;/code&gt; and &lt;code&gt;/mnt/db&lt;/code&gt;. For more information on how to do that see the Amazon documentation on how to &lt;a href=&quot;https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html&quot;&gt;Add a Volume to Your Instance&lt;/a&gt;.</source>
+          <target state="translated">本示例假定您正在使用两个SSD卷，并且已正确安装了它们。此示例还假定每个卷都安装在 &lt;code&gt;/mnt/influx&lt;/code&gt; 和 &lt;code&gt;/mnt/db&lt;/code&gt; 处。有关如何执行此操作的更多信息，请参阅有关如何&lt;a href=&quot;https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html&quot;&gt;向您的实例添加卷&lt;/a&gt;的Amazon文档。</target>
         </trans-unit>
         <trans-unit id="8d4a785dac041355a8143861980eaca791598d31" translate="yes" xml:space="preserve">
           <source>This example is a continuation of the scenario outlined in &lt;a href=&quot;#common-issues-with-basic-syntax&quot;&gt;Common Issues with Basic Syntax&lt;/a&gt;.</source>
@@ -3537,9 +3589,17 @@ time()&lt;/code&gt; clause&lt;/a&gt;. It also writes its results to the &lt;code
           <source>Users of OS X 10.8 and higher can install InfluxDB using the &lt;a href=&quot;http://brew.sh/&quot;&gt;Homebrew&lt;/a&gt; package manager. Once &lt;code&gt;brew&lt;/code&gt; is installed, you can install InfluxDB by running:</source>
           <target state="translated">OS X 10.8和更高版本的用户可以使用&lt;a href=&quot;http://brew.sh/&quot;&gt;Homebrew&lt;/a&gt;软件包管理器安装InfluxDB 。一旦 &lt;code&gt;brew&lt;/code&gt; 安装，您可以通过运行安装InfluxDB：</target>
         </trans-unit>
+        <trans-unit id="0fa1f02d1952dec7568651f809d0a9b2141aad6f" translate="yes" xml:space="preserve">
+          <source>Users of OS X 10.8 and higher can install InfluxDB using the &lt;a href=&quot;https://brew.sh/&quot;&gt;Homebrew&lt;/a&gt; package manager. Once &lt;code&gt;brew&lt;/code&gt; is installed, you can install InfluxDB by running:</source>
+          <target state="translated">OS X 10.8及更高版本的用户可以使用&lt;a href=&quot;https://brew.sh/&quot;&gt;Homebrew&lt;/a&gt;软件包管理器安装InfluxDB 。一旦 &lt;code&gt;brew&lt;/code&gt; 安装，您可以通过运行安装InfluxDB：</target>
+        </trans-unit>
         <trans-unit id="d9616bacd231f9a75225553a95cfde34b87ece9d" translate="yes" xml:space="preserve">
           <source>Users of OS X 10.8 and higher can install Telegraf using the &lt;a href=&quot;http://brew.sh/&quot;&gt;Homebrew&lt;/a&gt; package manager. Once &lt;code&gt;brew&lt;/code&gt; is installed, you can install Telegraf by running:</source>
           <target state="translated">OS X 10.8及更高版本的用户可以使用&lt;a href=&quot;http://brew.sh/&quot;&gt;Homebrew&lt;/a&gt;软件包管理器安装Telegraf 。一旦 &lt;code&gt;brew&lt;/code&gt; 安装，您可以通过运行安装Telegraf：</target>
+        </trans-unit>
+        <trans-unit id="3cfa1d1fb6e18372b35cfa4f3eb0be12ec3d9e8c" translate="yes" xml:space="preserve">
+          <source>Users of OS X 10.8 and higher can install Telegraf using the &lt;a href=&quot;https://brew.sh/&quot;&gt;Homebrew&lt;/a&gt; package manager. Once &lt;code&gt;brew&lt;/code&gt; is installed, you can install Telegraf by running:</source>
+          <target state="translated">OS X 10.8和更高版本的用户可以使用&lt;a href=&quot;https://brew.sh/&quot;&gt;Homebrew&lt;/a&gt;软件包管理器安装Telegraf 。一旦 &lt;code&gt;brew&lt;/code&gt; 安装，您可以通过运行安装Telegraf：</target>
         </trans-unit>
         <trans-unit id="9de61b7e105903d8b4d3495c1deefbc933f13533" translate="yes" xml:space="preserve">
           <source>Users of RocksDB may at this point bring up a feature called ColumnFamilies. When putting time series data into Rocks, it&amp;rsquo;s common to split blocks of time into column families and then drop those when their time is up. It&amp;rsquo;s the same general idea: create a separate area where you can just drop files instead of updating indexes when you delete a large block of data. Dropping a column family is a very efficient operation. However, column families are a fairly new feature and we had another use case for shards.</source>
@@ -3944,66 +4004,6 @@ time()&lt;/code&gt; clause&lt;/a&gt;. It also writes its results to the &lt;code
         <trans-unit id="faa0cf8b8adb1ee85a0c4ad59eb89c8d364bab97" translate="yes" xml:space="preserve">
           <source>Web Admin Interface</source>
           <target state="translated">网页管理界面</target>
-        </trans-unit>
-        <trans-unit id="36deda29e37292cb405bdb1a1c40718752ea5a4f" translate="yes" xml:space="preserve">
-          <source>Web Admin UI Removal</source>
-          <target state="translated">网页管理界面删除</target>
-        </trans-unit>
-        <trans-unit id="53ae454e63bd152bfa3e0e8e72eb0a873edf4c81" translate="yes" xml:space="preserve">
-          <source>Web Page preview. If empty uses the disable-web-page-preview from the configuration.</source>
-          <target state="translated">網頁預覽,如果為空,則使用配置中的disable-webpage-preview。如果为空,则使用配置中的disable-web-page-preview。</target>
-        </trans-unit>
-        <trans-unit id="b07e99de1dcb2dd164ff5723ffa69057ea9fe768" translate="yes" xml:space="preserve">
-          <source>Webhooks input plugin.</source>
-          <target state="translated">Webhooks输入插件。</target>
-        </trans-unit>
-        <trans-unit id="4fde3b8ca2db5451ac076f6132fe9f3a5033aeb1" translate="yes" xml:space="preserve">
-          <source>Well now that we can see the task is running with live data, here is a quick hack to use 100% of one core so you can get some cpu activity:</source>
-          <target state="translated">好了,现在我们可以看到任务正在运行的实时数据,这里是一个快速的黑客使用100%的一个核心,所以你可以得到一些cpu活动。</target>
-        </trans-unit>
-        <trans-unit id="c1a560c62bbd823cb9f9da0ec516e0e1edeab0a1" translate="yes" xml:space="preserve">
-          <source>Well, that was cool and all, but, just to get a simple threshold alert, there are plenty of ways to do that. Why all this pipeline TICKscript stuff? Well, it can quickly be extended to become &lt;em&gt;much&lt;/em&gt; more powerful.</source>
-          <target state="translated">好吧，这很酷，但是，为了获得简单的阈值警报，有很多方法可以做到这一点。为什么所有这些管道TICKscript的东西？那么，它可以迅速地扩展为&lt;em&gt;多&lt;/em&gt;更强大。</target>
-        </trans-unit>
-        <trans-unit id="49f9c2f29ab1a824d04c49f9478c81893f0f1cc1" translate="yes" xml:space="preserve">
-          <source>Well, there we have it. We can now get alerts when the temperatures for our prints deviates from the norm. Hopefully you now have a better understanding of how Kapacitor UDFs work, and have a good working example as a launching point into further work with UDFS.</source>
-          <target state="translated">好了,我们有它。现在,当我们的打印温度偏离正常值时,我们可以收到警报。希望你现在对Kapacitor UDFs的工作原理有了更好的理解,并且有了一个很好的工作实例,作为进一步使用UDFS工作的起点。</target>
-        </trans-unit>
-        <trans-unit id="b41fa28763b8e1fd5daf4b758057c58ccfb47e45" translate="yes" xml:space="preserve">
-          <source>What Kapacitor event handlers are supported in Chronograf?</source>
-          <target state="translated">Chronograf支持哪些Kapacitor事件处理程序?</target>
-        </trans-unit>
-        <trans-unit id="5bc77310d01ddba94a4a6085db551efc9b3b84bf" translate="yes" xml:space="preserve">
-          <source>What applications are supported in Chronograf?</source>
-          <target state="translated">Chronograf支持哪些应用?</target>
-        </trans-unit>
-        <trans-unit id="a7b6efef7ac98b12edbfeb92ae00abaaf4c25c34" translate="yes" xml:space="preserve">
-          <source>What are the configuration recommendations and schema guidelines for writing sparse, historical data?</source>
-          <target state="translated">编写稀疏历史数据的配置建议和模式准则是什么?</target>
-        </trans-unit>
-        <trans-unit id="f42b5c13467524a43cb0672be48a49d9d73e42ec" translate="yes" xml:space="preserve">
-          <source>What are the minimum and maximum integers that InfluxDB can store?</source>
-          <target state="translated">InfluxDB可以存储的最小和最大整数是多少?</target>
-        </trans-unit>
-        <trans-unit id="ed9ea66ae9b7190e3439eab30727cdc65b98efdb" translate="yes" xml:space="preserve">
-          <source>What are the minimum and maximum timestamps that InfluxDB can store?</source>
-          <target state="translated">InfluxDB可以存储的最小和最大时间戳是什么?</target>
-        </trans-unit>
-        <trans-unit id="f3cb5c3fb9ffc362ab21d81144b33bd8a74836b8" translate="yes" xml:space="preserve">
-          <source>What determines the time intervals returned by &lt;code&gt;GROUP BY time()&lt;/code&gt; queries?</source>
-          <target state="translated">什么决定了 &lt;code&gt;GROUP BY time()&lt;/code&gt; 查询返回的时间间隔？</target>
-        </trans-unit>
-        <trans-unit id="e86f369a936d947d92c55f8d3f34703bf66ad4d4" translate="yes" xml:space="preserve">
-          <source>What does a leaderboard need to do?</source>
-          <target state="translated">榜单需要做什么?</target>
-        </trans-unit>
-        <trans-unit id="fe15788e43083d8af2578983bcff700a8b701cd2" translate="yes" xml:space="preserve">
-          <source>What does the status column indicate on the Host List page?</source>
-          <target state="translated">主机列表页面的状态栏表示什么?</target>
-        </trans-unit>
-        <trans-unit id="05497d792bab61a02f90792699131f2dafed7021" translate="yes" xml:space="preserve">
-          <source>What follows is the complete UDF implementation with our &lt;code&gt;info&lt;/code&gt;, &lt;code&gt;init&lt;/code&gt;, and batching methods (as well as everything else we need).</source>
-          <target state="translated">接下来是使用我们的 &lt;code&gt;info&lt;/code&gt; ， &lt;code&gt;init&lt;/code&gt; 和批处理方法（以及我们需要的所有其他方法）的完整UDF实现。</target>
         </trans-unit>
       </group>
     </body>

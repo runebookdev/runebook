@@ -3,6 +3,178 @@
   <file source-language="en" target-language="ru" datatype="htmlbody" original="erlang">
     <body>
       <group id="erlang">
+        <trans-unit id="19737da2fe03d867999d377974efb452c080feda" translate="yes" xml:space="preserve">
+          <source>If P is a nil pattern &lt;code&gt;[]&lt;/code&gt;, then Rep(P) = &lt;code&gt;{nil,ANNO}&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="c7fbdc51ae228be4fbd8c6e7c0ddb45260e0acb0" translate="yes" xml:space="preserve">
+          <source>If P is a nil pattern &lt;code&gt;[]&lt;/code&gt;, then Rep(P) = &lt;code&gt;{nil,LINE}&lt;/code&gt;.</source>
+          <target state="translated">Если P - образец nil &lt;code&gt;[]&lt;/code&gt; , то Rep (P) = &lt;code&gt;{nil,LINE}&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="72a84ce197dfd951db7868fea8973a6459407137" translate="yes" xml:space="preserve">
+          <source>If P is a parenthesized pattern &lt;code&gt;( P_0 )&lt;/code&gt;, then Rep(P) = &lt;code&gt;Rep(P_0)&lt;/code&gt;, that is, parenthesized patterns cannot be distinguished from their bodies.</source>
+          <target state="translated">Если P - это узор в скобках &lt;code&gt;( P_0 )&lt;/code&gt; , то Rep (P) = &lt;code&gt;Rep(P_0)&lt;/code&gt; , то есть узоры в скобках нельзя отличить от их тела.</target>
+        </trans-unit>
+        <trans-unit id="dfc926eeb885550b2057f5eaa3e598f075f5fb9c" translate="yes" xml:space="preserve">
+          <source>If P is a record field index pattern &lt;code&gt;#Name.Field&lt;/code&gt;, where &lt;code&gt;Field&lt;/code&gt; is an atom, then Rep(P) = &lt;code&gt;{record_index,ANNO,Name,Rep(Field)}&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="d6dae07160d27f4934f31cae5e6b4f2d04d1afc9" translate="yes" xml:space="preserve">
+          <source>If P is a record field index pattern &lt;code&gt;#Name.Field&lt;/code&gt;, where &lt;code&gt;Field&lt;/code&gt; is an atom, then Rep(P) = &lt;code&gt;{record_index,LINE,Name,Rep(Field)}&lt;/code&gt;.</source>
+          <target state="translated">Если P - шаблон индекса поля записи &lt;code&gt;#Name.Field&lt;/code&gt; , где &lt;code&gt;Field&lt;/code&gt; - атом, тогда Rep (P) = &lt;code&gt;{record_index,LINE,Name,Rep(Field)}&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="7a6a33479e55d6adf6c5f304da26c896bfab008d" translate="yes" xml:space="preserve">
+          <source>If P is a record pattern &lt;code&gt;#Name{Field_1=P_1, ..., Field_k=P_k}&lt;/code&gt;, where each &lt;code&gt;Field_i&lt;/code&gt; is an atom or &lt;code&gt;_&lt;/code&gt;, then Rep(P) = &lt;code&gt;{record,ANNO,Name,[{record_field,ANNO,Rep(Field_1),Rep(P_1)}, ..., {record_field,ANNO,Rep(Field_k),Rep(P_k)}]}&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="8c817b814455c0bbd5e19cc0a1e27a932ad7ae3e" translate="yes" xml:space="preserve">
+          <source>If P is a record pattern &lt;code&gt;#Name{Field_1=P_1, ..., Field_k=P_k}&lt;/code&gt;, where each &lt;code&gt;Field_i&lt;/code&gt; is an atom or &lt;code&gt;_&lt;/code&gt;, then Rep(P) = &lt;code&gt;{record,LINE,Name,[{record_field,LINE,Rep(Field_1),Rep(P_1)}, ..., {record_field,LINE,Rep(Field_k),Rep(P_k)}]}&lt;/code&gt;.</source>
+          <target state="translated">Если P - шаблон записи &lt;code&gt;#Name{Field_1=P_1, ..., Field_k=P_k}&lt;/code&gt; , где каждое &lt;code&gt;Field_i&lt;/code&gt; является атомом или &lt;code&gt;_&lt;/code&gt; , тогда Rep (P) = &lt;code&gt;{record,LINE,Name,[{record_field,LINE,Rep(Field_1),Rep(P_1)}, ..., {record_field,LINE,Rep(Field_k),Rep(P_k)}]}&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="75542af568a4e6fd74ec30069d26212ef35f7d03" translate="yes" xml:space="preserve">
+          <source>If P is a tuple pattern &lt;code&gt;{P_1, ..., P_k}&lt;/code&gt;, then Rep(P) = &lt;code&gt;{tuple,ANNO,[Rep(P_1), ..., Rep(P_k)]}&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="26f2ebd069093962c3169272794269248d2ef02b" translate="yes" xml:space="preserve">
+          <source>If P is a tuple pattern &lt;code&gt;{P_1, ..., P_k}&lt;/code&gt;, then Rep(P) = &lt;code&gt;{tuple,LINE,[Rep(P_1), ..., Rep(P_k)]}&lt;/code&gt;.</source>
+          <target state="translated">Если P является шаблоном кортежа &lt;code&gt;{P_1, ..., P_k}&lt;/code&gt; , то Rep (P) = &lt;code&gt;{tuple,LINE,[Rep(P_1), ..., Rep(P_k)]}&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="e2f93073cfd79739d9e631820436bac79686fc83" translate="yes" xml:space="preserve">
+          <source>If P is a universal pattern &lt;code&gt;_&lt;/code&gt;, then Rep(P) = &lt;code&gt;{var,ANNO,'_'}&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="1673a195237ed41e2323e9fba0581f25f4bc7a6c" translate="yes" xml:space="preserve">
+          <source>If P is a universal pattern &lt;code&gt;_&lt;/code&gt;, then Rep(P) = &lt;code&gt;{var,LINE,'_'}&lt;/code&gt;.</source>
+          <target state="translated">Если P - универсальный образец &lt;code&gt;_&lt;/code&gt; , то Rep (P) = &lt;code&gt;{var,LINE,'_'}&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="3149c3832edd80b313902a9d154c6d727e573468" translate="yes" xml:space="preserve">
+          <source>If P is a variable pattern &lt;code&gt;V&lt;/code&gt;, then Rep(P) = &lt;code&gt;{var,ANNO,A}&lt;/code&gt;, where A is an atom with a printname consisting of the same characters as &lt;code&gt;V&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="374e95854b4ce10a9075d7ca4749ba4604e1f66b" translate="yes" xml:space="preserve">
+          <source>If P is a variable pattern &lt;code&gt;V&lt;/code&gt;, then Rep(P) = &lt;code&gt;{var,LINE,A}&lt;/code&gt;, where A is an atom with a printname consisting of the same characters as &lt;code&gt;V&lt;/code&gt;.</source>
+          <target state="translated">Если P является переменной модели &lt;code&gt;V&lt;/code&gt; , то Реп (Р) = &lt;code&gt;{var,LINE,A}&lt;/code&gt; , где А представляет собой атом с printname , состоящей из одних и тех же символов , как &lt;code&gt;V&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="037087e53a14f2b5880a3446fa475c0011fde7f9" translate="yes" xml:space="preserve">
+          <source>If P is an atomic literal &lt;code&gt;L&lt;/code&gt;, then Rep(P) = Rep(L).</source>
+          <target state="translated">Если P - атомарный литерал &lt;code&gt;L&lt;/code&gt; , то Rep (P) = Rep (L).</target>
+        </trans-unit>
+        <trans-unit id="faca9ab114984c50875ddef7ab3151e741e59fdd" translate="yes" xml:space="preserve">
+          <source>If P is an operator pattern &lt;code&gt;Op P_0&lt;/code&gt;, where &lt;code&gt;Op&lt;/code&gt; is a unary operator (this is an occurrence of an expression that can be evaluated to a number at compile time), then Rep(P) = &lt;code&gt;{op,ANNO,Op,Rep(P_0)}&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="3611eec9cbc1948d638f692cb3c204535c40a243" translate="yes" xml:space="preserve">
+          <source>If P is an operator pattern &lt;code&gt;Op P_0&lt;/code&gt;, where &lt;code&gt;Op&lt;/code&gt; is a unary operator (this is an occurrence of an expression that can be evaluated to a number at compile time), then Rep(P) = &lt;code&gt;{op,LINE,Op,Rep(P_0)}&lt;/code&gt;.</source>
+          <target state="translated">Если P - шаблон оператора &lt;code&gt;Op P_0&lt;/code&gt; , где &lt;code&gt;Op&lt;/code&gt; - унарный оператор (это вхождение выражения, которое может быть вычислено до числа во время компиляции), то Rep (P) = &lt;code&gt;{op,LINE,Op,Rep(P_0)}&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="3e5c0b3f1ae8df31dec63b9c72633bdc64593894" translate="yes" xml:space="preserve">
+          <source>If P is an operator pattern &lt;code&gt;P_1 Op P_2&lt;/code&gt;, where &lt;code&gt;Op&lt;/code&gt; is a binary operator (this is either an occurrence of &lt;code&gt;++&lt;/code&gt; applied to a literal string or character list, or an occurrence of an expression that can be evaluated to a number at compile time), then Rep(P) = &lt;code&gt;{op,ANNO,Op,Rep(P_1),Rep(P_2)}&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="c20d57a29a11d3b725da4217b551d072cb2d9645" translate="yes" xml:space="preserve">
+          <source>If P is an operator pattern &lt;code&gt;P_1 Op P_2&lt;/code&gt;, where &lt;code&gt;Op&lt;/code&gt; is a binary operator (this is either an occurrence of &lt;code&gt;++&lt;/code&gt; applied to a literal string or character list, or an occurrence of an expression that can be evaluated to a number at compile time), then Rep(P) = &lt;code&gt;{op,LINE,Op,Rep(P_1),Rep(P_2)}&lt;/code&gt;.</source>
+          <target state="translated">Если P - шаблон оператора &lt;code&gt;P_1 Op P_2&lt;/code&gt; , где &lt;code&gt;Op&lt;/code&gt; - бинарный оператор (это либо вхождение &lt;code&gt;++&lt;/code&gt; , примененное к литеральной строке или списку символов, либо вхождение выражения, которое может быть оценено как число во время компиляции ), то Rep (P) = &lt;code&gt;{op,LINE,Op,Rep(P_1),Rep(P_2)}&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="3a50d35a985d1c4853945f370a6dcaf95a405ff8" translate="yes" xml:space="preserve">
+          <source>If PER encoding is wanted:</source>
+          <target state="translated">Если нужна PER-кодировка:</target>
+        </trans-unit>
+        <trans-unit id="8e69f891849831d14d1ae17a1a43b56f2f0e1d17" translate="yes" xml:space="preserve">
+          <source>If Ps is a sequence of patterns &lt;code&gt;P_1, ..., P_k&lt;/code&gt;, then Rep(Ps) = &lt;code&gt;[Rep(P_1), ..., Rep(P_k)]&lt;/code&gt;. Such sequences occur as the list of arguments to a function or fun.</source>
+          <target state="translated">Если Ps представляет собой последовательность шаблонов &lt;code&gt;P_1, ..., P_k&lt;/code&gt; , то Rep (Ps) = &lt;code&gt;[Rep(P_1), ..., Rep(P_k)]&lt;/code&gt; . Такие последовательности встречаются как список аргументов функции или развлечения.</target>
+        </trans-unit>
+        <trans-unit id="ad13e93659ed632a16cc4f4903f37ddc1132e280" translate="yes" xml:space="preserve">
+          <source>If Q is a bitstring generator &lt;code&gt;P &amp;lt;= E&lt;/code&gt;, where &lt;code&gt;P&lt;/code&gt; is a pattern and &lt;code&gt;E&lt;/code&gt; is an expression, then Rep(Q) = &lt;code&gt;{b_generate,ANNO,Rep(P),Rep(E)}&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="db3d9c3be41ff91340aed17068892205b8e19bdf" translate="yes" xml:space="preserve">
+          <source>If Q is a bitstring generator &lt;code&gt;P &amp;lt;= E&lt;/code&gt;, where &lt;code&gt;P&lt;/code&gt; is a pattern and &lt;code&gt;E&lt;/code&gt; is an expression, then Rep(Q) = &lt;code&gt;{b_generate,LINE,Rep(P),Rep(E)}&lt;/code&gt;.</source>
+          <target state="translated">Если Q - генератор битовой строки &lt;code&gt;P &amp;lt;= E&lt;/code&gt; , где &lt;code&gt;P&lt;/code&gt; - шаблон, а &lt;code&gt;E&lt;/code&gt; - выражение, то Rep (Q) = &lt;code&gt;{b_generate,LINE,Rep(P),Rep(E)}&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="50623f16fe5c165b35f76e12f8a3d6ba87d05b14" translate="yes" xml:space="preserve">
+          <source>If Q is a filter &lt;code&gt;E&lt;/code&gt;, where &lt;code&gt;E&lt;/code&gt; is an expression, then Rep(Q) = &lt;code&gt;Rep(E)&lt;/code&gt;.</source>
+          <target state="translated">Если Q - фильтр &lt;code&gt;E&lt;/code&gt; , где &lt;code&gt;E&lt;/code&gt; - выражение, то Rep (Q) = &lt;code&gt;Rep(E)&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="809f12ef8c3064b918954c279d0a931407f3434e" translate="yes" xml:space="preserve">
+          <source>If Q is a generator &lt;code&gt;P &amp;lt;- E&lt;/code&gt;, where &lt;code&gt;P&lt;/code&gt; is a pattern and &lt;code&gt;E&lt;/code&gt; is an expression, then Rep(Q) = &lt;code&gt;{generate,ANNO,Rep(P),Rep(E)}&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="0ed7ef1b4d4a36ddad7dd7fceafbd179ffb47f54" translate="yes" xml:space="preserve">
+          <source>If Q is a generator &lt;code&gt;P &amp;lt;- E&lt;/code&gt;, where &lt;code&gt;P&lt;/code&gt; is a pattern and &lt;code&gt;E&lt;/code&gt; is an expression, then Rep(Q) = &lt;code&gt;{generate,LINE,Rep(P),Rep(E)}&lt;/code&gt;.</source>
+          <target state="translated">Если Q - генератор &lt;code&gt;P &amp;lt;- E&lt;/code&gt; , где &lt;code&gt;P&lt;/code&gt; - образец, а &lt;code&gt;E&lt;/code&gt; - выражение, тогда Rep (Q) = &lt;code&gt;{generate,LINE,Rep(P),Rep(E)}&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="cee5bb555da8992e2b4f0f92c76f0e2b4698cbd0" translate="yes" xml:space="preserve">
+          <source>If R is a relation from X to Y, and S is a relation from Y to Z, the &lt;strong id=&quot;relative_product&quot;&gt;relative product&lt;/strong&gt; of R and S is the relation T from X to Z defined so that x T z if and only if there exists an element y in Y such that x R y and y S z.</source>
+          <target state="translated">Если R - отношение от X к Y, а S - отношение от Y к Z, &lt;strong id=&quot;relative_product&quot;&gt;относительное произведение&lt;/strong&gt; R и S - это отношение T от X к Z, определенное таким образом, что x T z тогда и только тогда, когда существует элемент y в Y такое, что x R y и y S z.</target>
+        </trans-unit>
+        <trans-unit id="618098342145de14043b9d049d0e27a0dbe8a5ba" translate="yes" xml:space="preserve">
+          <source>If R is a relation in X, and if S is defined so that x S y if x R y and not x = y, then S is the &lt;strong id=&quot;strict_relation&quot;&gt;strict&lt;/strong&gt; relation corresponding to R. Conversely, if S is a relation in X, and if R is defined so that x R y if x S y or x = y, then R is the &lt;strong id=&quot;weak_relation&quot;&gt;weak&lt;/strong&gt; relation corresponding to S.</source>
+          <target state="translated">Если R - отношение в X, и если S определено так, что x S y, если x R y, а не x = y, то S - &lt;strong id=&quot;strict_relation&quot;&gt;строгое&lt;/strong&gt; отношение, соответствующее R. Наоборот, если S - отношение в X, и если R определяется так, что x R y, если x S y или x = y, то R - &lt;strong id=&quot;weak_relation&quot;&gt;слабое&lt;/strong&gt; отношение, соответствующее S.</target>
+        </trans-unit>
+        <trans-unit id="6577b63edebfaf6cb114810862f5d1c1f7536b21" translate="yes" xml:space="preserve">
+          <source>If R is an equivalence relation in X, and x is an element of X, the &lt;strong id=&quot;equivalence_class&quot;&gt;equivalence class&lt;/strong&gt; of x with respect to R is the set of all those elements y of X for which x R y holds. The equivalence classes constitute a partitioning of X. Conversely, if C is a partition of X, the relation that holds for any two elements of X if they belong to the same equivalence class, is an equivalence relation induced by the partition C.</source>
+          <target state="translated">Если R является отношением эквивалентности в X, а x является элементом X, &lt;strong id=&quot;equivalence_class&quot;&gt;класс эквивалентности&lt;/strong&gt; x относительно R - это множество всех тех элементов y из X, для которых выполняется x R y. Классы эквивалентности составляют разбиение X. И наоборот, если C является разбиением X, отношение, которое выполняется для любых двух элементов X, если они принадлежат одному классу эквивалентности, является отношением эквивалентности, индуцированным разбиением C.</target>
+        </trans-unit>
+        <trans-unit id="83162ddd20e00fa4a162cbcf127d9c0721481053" translate="yes" xml:space="preserve">
+          <source>If R is an equivalence relation in X, the &lt;strong id=&quot;canonical_map&quot;&gt;canonical map&lt;/strong&gt; is the function that maps every element of X onto its equivalence class.</source>
+          <target state="translated">Если R - отношение эквивалентности в X, &lt;strong id=&quot;canonical_map&quot;&gt;каноническое отображение&lt;/strong&gt; - это функция, которая отображает каждый элемент X в его класс эквивалентности.</target>
+        </trans-unit>
+        <trans-unit id="2e3f4abb96f981c697c50aab79cfafffa5fa7e98" translate="yes" xml:space="preserve">
+          <source>If S is a restriction of R to A, then R is an &lt;strong id=&quot;extension&quot;&gt;extension&lt;/strong&gt; of S to X.</source>
+          <target state="translated">Если S является ограничением R на A, то R является &lt;strong id=&quot;extension&quot;&gt;расширением&lt;/strong&gt; S на X.</target>
+        </trans-unit>
+        <trans-unit id="59bb1dc7653278e89c3f5020133ebdcc7761c491" translate="yes" xml:space="preserve">
+          <source>If S is an element (T, X) of Sets, then T is a &lt;strong id=&quot;valid_type&quot;&gt;valid type&lt;/strong&gt; of X, T is the type of S, and X is the external set of S. &lt;code&gt;&lt;a href=&quot;#from_term-2&quot;&gt;from_term/2&lt;/a&gt;&lt;/code&gt; creates a set from a type and an Erlang term turned into an external set.</source>
+          <target state="translated">Если S является элементом (T, X) наборов, то T - &lt;strong id=&quot;valid_type&quot;&gt;допустимый тип&lt;/strong&gt; X, T - тип S, а X - внешний набор S. &lt;code&gt;&lt;a href=&quot;#from_term-2&quot;&gt;from_term/2&lt;/a&gt;&lt;/code&gt; создает набор из типа и Erlang. термин превратился во внешний набор.</target>
+        </trans-unit>
+        <trans-unit id="d08abf342530f661d47c0b2d46fbf1f0e30add56" translate="yes" xml:space="preserve">
+          <source>If SASL is not included as an application in the &lt;code&gt;.rel&lt;/code&gt; file, a warning is issued because such a release cannot be used in an upgrade. To turn off this warning, add option &lt;code&gt;no_warn_sasl&lt;/code&gt;.</source>
+          <target state="translated">Если SASL не включен как приложение в файл &lt;code&gt;.rel&lt;/code&gt; , выдается предупреждение, так как такой выпуск нельзя использовать при обновлении. Чтобы отключить это предупреждение, добавьте параметр &lt;code&gt;no_warn_sasl&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="8d446165493e24efa50be7a65b22a36a79836aa6" translate="yes" xml:space="preserve">
+          <source>If SNMPv3 is used, these MIBs are loaded by default.</source>
+          <target state="translated">При использовании SNMPv3 данные MIB загружаются по умолчанию.</target>
+        </trans-unit>
+        <trans-unit id="99d068911d44f519900efdb97e0ebd14d390453e" translate="yes" xml:space="preserve">
+          <source>If SetFun is specified as a fun, the fun is applied to each element of the given set and the return value is assumed to be a set.</source>
+          <target state="translated">Если SetFun указан как fun,то fun применяется к каждому элементу данного набора,а возвращаемое значение принимается за набор.</target>
+        </trans-unit>
+        <trans-unit id="e3976f1f032e302393b8bb08320950e629b9d555" translate="yes" xml:space="preserve">
+          <source>If SetFun is specified as a tuple &lt;code&gt;{external, Fun}&lt;/code&gt;, Fun is applied to the external set of each element of the given set and the return value is assumed to be an external set. Selecting the elements of an unordered set as external sets and assembling a new unordered set from a list of external sets is in the present implementation more efficient than modifying each element as a set. However, this optimization can only be used when the elements of the unordered set are atomic or ordered sets. It must also be the case that the type of the elements matches some clause of Fun (the type of the created set is the result of applying Fun to the type of the given set), and that Fun does nothing but selecting, duplicating, or rearranging parts of the elements.</source>
+          <target state="translated">Если SetFun задан как кортеж &lt;code&gt;{external, Fun}&lt;/code&gt; , Fun применяется к внешнему набору каждого элемента данного набора, и предполагается, что возвращаемое значение является внешним набором. Выбор элементов неупорядоченного набора в качестве внешних наборов и сборка нового неупорядоченного набора из списка внешних наборов в настоящей реализации более эффективны, чем изменение каждого элемента как набора. Однако эту оптимизацию можно использовать только в том случае, если элементы неупорядоченного набора являются атомарными или упорядоченными наборами. Также должно быть, что тип элементов соответствует некоторому предложению Fun (тип созданного набора является результатом применения Fun к типу данного набора), и что Fun ничего не делает, кроме выбора, дублирования или перестановка частей элементов.</target>
+        </trans-unit>
+        <trans-unit id="43c0a8b3ea81788001f690f7e87c84083499ae45" translate="yes" xml:space="preserve">
+          <source>If T is &lt;code&gt;( T_0 )&lt;/code&gt;, then Rep(T) = &lt;code&gt;Rep(T_0)&lt;/code&gt;, that is, parenthesized types cannot be distinguished from their bodies.</source>
+          <target state="translated">Если T равно &lt;code&gt;( T_0 )&lt;/code&gt; , то Rep (T) = &lt;code&gt;Rep(T_0)&lt;/code&gt; , то есть типы в скобках нельзя отличить от их тел.</target>
+        </trans-unit>
+        <trans-unit id="3fe813c684b65a78f678a4bec68aa5f263202a79" translate="yes" xml:space="preserve">
+          <source>If T is a bitstring type &lt;code&gt;&amp;lt;&amp;lt;_:M,_:_*N&amp;gt;&amp;gt;&lt;/code&gt;, where &lt;code&gt;M&lt;/code&gt; and &lt;code&gt;N&lt;/code&gt; are singleton integer types, then Rep(T) = &lt;code&gt;{type,ANNO,binary,[Rep(M),Rep(N)]}&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="54d59bcb751b787399eaa6216688da1c771a3508" translate="yes" xml:space="preserve">
+          <source>If T is a bitstring type &lt;code&gt;&amp;lt;&amp;lt;_:M,_:_*N&amp;gt;&amp;gt;&lt;/code&gt;, where &lt;code&gt;M&lt;/code&gt; and &lt;code&gt;N&lt;/code&gt; are singleton integer types, then Rep(T) = &lt;code&gt;{type,LINE,binary,[Rep(M),Rep(N)]}&lt;/code&gt;.</source>
+          <target state="translated">Если T является типом битовой строки &lt;code&gt;&amp;lt;&amp;lt;_:M,_:_*N&amp;gt;&amp;gt;&lt;/code&gt; , где &lt;code&gt;M&lt;/code&gt; и &lt;code&gt;N&lt;/code&gt; являются одноэлементными целочисленными типами, тогда Rep (T) = &lt;code&gt;{type,LINE,binary,[Rep(M),Rep(N)]}&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="7f85dadf01e8f30907411f8ced0faf82947f6804" translate="yes" xml:space="preserve">
+          <source>If T is a fun type &lt;code&gt;fun((...) -&amp;gt; T_0)&lt;/code&gt;, then Rep(T) = &lt;code&gt;{type,ANNO,'fun',[{type,ANNO,any},Rep(T_0)]}&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="2bb0862754ffb06068ede8dc817a72eb1519add3" translate="yes" xml:space="preserve">
+          <source>If T is a fun type &lt;code&gt;fun((...) -&amp;gt; T_0)&lt;/code&gt;, then Rep(T) = &lt;code&gt;{type,LINE,'fun',[{type,LINE,any},Rep(T_0)]}&lt;/code&gt;.</source>
+          <target state="translated">Если T - развлечение типа &lt;code&gt;fun((...) -&amp;gt; T_0)&lt;/code&gt; , то Rep (T) = &lt;code&gt;{type,LINE,'fun',[{type,LINE,any},Rep(T_0)]}&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="a390f10fcd8d8a36def467725d4dda00982dd986" translate="yes" xml:space="preserve">
+          <source>If T is a fun type &lt;code&gt;fun()&lt;/code&gt;, then Rep(T) = &lt;code&gt;{type,ANNO,'fun',[]}&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="7f9d5b99a9c22d7dc1e1078c45173c119d328720" translate="yes" xml:space="preserve">
+          <source>If T is a fun type &lt;code&gt;fun()&lt;/code&gt;, then Rep(T) = &lt;code&gt;{type,LINE,'fun',[]}&lt;/code&gt;.</source>
+          <target state="translated">Если T - забавный тип &lt;code&gt;fun()&lt;/code&gt; , то Rep (T) = &lt;code&gt;{type,LINE,'fun',[]}&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="2b7630c752d5e9079868a01fb10ba5440be40003" translate="yes" xml:space="preserve">
+          <source>If T is a fun type &lt;code&gt;fun(Ft)&lt;/code&gt;, where &lt;code&gt;Ft&lt;/code&gt; is a function type, then Rep(T) = &lt;code&gt;Rep(Ft)&lt;/code&gt;. For Rep(Ft), see below.</source>
+          <target state="translated">Если T - тип &lt;code&gt;fun(Ft)&lt;/code&gt; , где &lt;code&gt;Ft&lt;/code&gt; - тип функции, то Rep (T) = &lt;code&gt;Rep(Ft)&lt;/code&gt; . Относительно Rep (Ft) см. Ниже.</target>
+        </trans-unit>
         <trans-unit id="1adf89e8e92228a60dd07895fb1499d746d2f997" translate="yes" xml:space="preserve">
           <source>If T is a map type &lt;code&gt;#{A_1, ..., A_k}&lt;/code&gt;, where each &lt;code&gt;A_i&lt;/code&gt; is an association type, then Rep(T) = &lt;code&gt;{type,ANNO,map,[Rep(A_1), ..., Rep(A_k)]}&lt;/code&gt;. For Rep(A), see below.</source>
           <target state="new"/>
@@ -2003,6 +2175,10 @@
           <source>If option &lt;code&gt;{tls, tls_options()}&lt;/code&gt; is present, the FTP session is transported over &lt;code&gt;tls&lt;/code&gt; (&lt;code&gt;ftps&lt;/code&gt;, see &lt;code&gt;&lt;a href=&quot;http://www.ietf.org/rfc/rfc4217.txt&quot;&gt;RFC 4217&lt;/a&gt;&lt;/code&gt;). The list &lt;code&gt;tls_options()&lt;/code&gt; can be empty. The function &lt;code&gt;ssl:connect/3&lt;/code&gt; is used for securing both the control connection and the data sessions.</source>
           <target state="translated">Если опция &lt;code&gt;{tls, tls_options()}&lt;/code&gt; присутствует, FTP сессия переносится на &lt;code&gt;tls&lt;/code&gt; ( &lt;code&gt;ftps&lt;/code&gt; см &lt;code&gt;&lt;a href=&quot;http://www.ietf.org/rfc/rfc4217.txt&quot;&gt;RFC 4217&lt;/a&gt;&lt;/code&gt; ). Список &lt;code&gt;tls_options()&lt;/code&gt; может быть пустым. Функция &lt;code&gt;ssl:connect/3&lt;/code&gt; используется для защиты как управляющего соединения, так и сеансов передачи данных.</target>
         </trans-unit>
+        <trans-unit id="ec1a584f866f164173d4d24514175788fabda6fc" translate="yes" xml:space="preserve">
+          <source>If option &lt;code&gt;{tls, tls_options()}&lt;/code&gt; is present, the FTP session is transported over &lt;code&gt;tls&lt;/code&gt; (&lt;code&gt;ftps&lt;/code&gt;, see &lt;code&gt;&lt;a href=&quot;https://www.ietf.org/rfc/rfc4217.txt&quot;&gt;RFC 4217&lt;/a&gt;&lt;/code&gt;). The list &lt;code&gt;tls_options()&lt;/code&gt; can be empty. The function &lt;code&gt;ssl:connect/3&lt;/code&gt; is used for securing both the control connection and the data sessions.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="20a3a531905a20d30fd9f374cce827942989f5e9" translate="yes" xml:space="preserve">
           <source>If option&lt;code&gt;&lt;a href=&quot;#type-hibernate_after_opt&quot;&gt;{hibernate_after,HibernateAfterTimeout}&lt;/a&gt;&lt;/code&gt; is present, the &lt;code&gt;gen_statem&lt;/code&gt; process awaits any message for &lt;code&gt;HibernateAfterTimeout&lt;/code&gt; milliseconds and if no message is received, the process goes into hibernation automatically (by calling &lt;code&gt;&lt;a href=&quot;proc_lib#hibernate-3&quot;&gt;proc_lib:hibernate/3&lt;/a&gt;&lt;/code&gt;).</source>
           <target state="translated">Если параметр &lt;code&gt;&lt;a href=&quot;#type-hibernate_after_opt&quot;&gt;{hibernate_after,HibernateAfterTimeout}&lt;/a&gt;&lt;/code&gt; присутствует, процесс &lt;code&gt;gen_statem&lt;/code&gt; ожидает любого сообщения в течение миллисекунд &lt;code&gt;HibernateAfterTimeout&lt;/code&gt; , а если сообщение не получено, процесс автоматически переходит в режим гибернации (путем вызова &lt;code&gt;&lt;a href=&quot;proc_lib#hibernate-3&quot;&gt;proc_lib:hibernate/3&lt;/a&gt;&lt;/code&gt; ).</target>
@@ -3826,182 +4002,6 @@
         <trans-unit id="1f18562fd499738cfc53fedde95228c6abb3a3c9" translate="yes" xml:space="preserve">
           <source>If the platform implements the IPv4 option &lt;code&gt;IP_PKTOPTIONS&lt;/code&gt;, or the IPv6 option &lt;code&gt;IPV6_PKTOPTIONS&lt;/code&gt; or &lt;code&gt;IPV6_2292PKTOPTIONS&lt;/code&gt; for the socket this value is returned from &lt;code&gt;&lt;a href=&quot;inet#getopts-2&quot;&gt;inet:getopts/2&lt;/a&gt;&lt;/code&gt; when called with the option name &lt;code&gt;&lt;a href=&quot;#type-option_name&quot;&gt;pktoptions&lt;/a&gt;&lt;/code&gt;.</source>
           <target state="new"/>
-        </trans-unit>
-        <trans-unit id="d4dfea1ce63878f9ba8f72e4692fc1e8aa917a62" translate="yes" xml:space="preserve">
-          <source>If the port command is aborted, &lt;code&gt;false&lt;/code&gt; is returned, otherwise &lt;code&gt;true&lt;/code&gt;.</source>
-          <target state="translated">Если команда порта прервана, возвращается &lt;code&gt;false&lt;/code&gt; , в противном случае - &lt;code&gt;true&lt;/code&gt; .</target>
-        </trans-unit>
-        <trans-unit id="c1c15fb5c83bfc2a91269d248f12f67e81fee63b" translate="yes" xml:space="preserve">
-          <source>If the port driver does not support synchronous control operations.</source>
-          <target state="translated">Если драйвер порта не поддерживает операции синхронного управления.</target>
-        </trans-unit>
-        <trans-unit id="0d0817e3d68cbd798c7a2e44b1c69c87bcdb5eaf" translate="yes" xml:space="preserve">
-          <source>If the port driver so decides for any reason (probably something wrong with &lt;code&gt;Operation&lt;/code&gt; or &lt;code&gt;Data&lt;/code&gt;).</source>
-          <target state="translated">Если драйвер порта по какой-либо причине так решит (возможно, что-то не так с &lt;code&gt;Operation&lt;/code&gt; или &lt;code&gt;Data&lt;/code&gt; ).</target>
-        </trans-unit>
-        <trans-unit id="6d151f89de14a3a981ce006759dc3e5172e69a5a" translate="yes" xml:space="preserve">
-          <source>If the port has terminated for some reason.</source>
-          <target state="translated">Если порт по какой-то причине остановился.</target>
-        </trans-unit>
-        <trans-unit id="478c30ae507a35c9772a0df1cd3d96a72d57ca57" translate="yes" xml:space="preserve">
-          <source>If the port identified by &lt;code&gt;Port&lt;/code&gt; is not open, &lt;code&gt;undefined&lt;/code&gt; is returned. If the port is closed and the calling process was previously linked to the port, the exit signal from the port is guaranteed to be delivered before &lt;code&gt;port_info/2&lt;/code&gt; returns &lt;code&gt;undefined&lt;/code&gt;.</source>
-          <target state="translated">Если порт, указанный параметром &lt;code&gt;Port&lt;/code&gt; , не открыт, возвращается значение &lt;code&gt;undefined&lt;/code&gt; . Если порт закрыт и вызывающий процесс был ранее связан с этим портом, сигнал выхода из порта гарантированно будет доставлен до того, как &lt;code&gt;port_info/2&lt;/code&gt; вернет значение &lt;code&gt;undefined&lt;/code&gt; .</target>
-        </trans-unit>
-        <trans-unit id="853a76f0837b416b340a6bf46f68d0b7ffc26aa7" translate="yes" xml:space="preserve">
-          <source>If the port is busy, the calling process is suspended until the port is not busy any more.</source>
-          <target state="translated">Если порт занят,процесс вызова приостанавливается до тех пор,пока порт больше не будет занят.</target>
-        </trans-unit>
-        <trans-unit id="8e93ad76f9dc1354beffe48343ad7231e136396f" translate="yes" xml:space="preserve">
-          <source>If the port is busy, the calling process is suspended until the port is not busy anymore.</source>
-          <target state="translated">Если порт занят,процесс вызова приостанавливается до тех пор,пока порт больше не будет занят.</target>
-        </trans-unit>
-        <trans-unit id="6e75c78d0feb81a1196647eabb58d38723b98522" translate="yes" xml:space="preserve">
-          <source>If the port program closes its &lt;code&gt;stdout&lt;/code&gt; without exiting, option &lt;code&gt;exit_status&lt;/code&gt; does not work.</source>
-          <target state="translated">Если программа порта закрывает свой стандартный &lt;code&gt;stdout&lt;/code&gt; без выхода, опция &lt;code&gt;exit_status&lt;/code&gt; не работает.</target>
-        </trans-unit>
-        <trans-unit id="db113293208f7fe3c23990353c9eaabbd0d53db0" translate="yes" xml:space="preserve">
-          <source>If the port program is to be updated, the code for the &lt;code&gt;gen_server&lt;/code&gt; can be extended with a &lt;code&gt;code_change&lt;/code&gt; function, which closes the old port and opens a new port. (If necessary, the &lt;code&gt;gen_server&lt;/code&gt; can first request data that must be saved from the port program and pass this data to the new port):</source>
-          <target state="translated">Если программа порта должна быть обновлена, код для &lt;code&gt;gen_server&lt;/code&gt; может быть расширен с помощью функции &lt;code&gt;code_change&lt;/code&gt; , которая закрывает старый порт и открывает новый порт. (При необходимости &lt;code&gt;gen_server&lt;/code&gt; может сначала запросить данные, которые должны быть сохранены из программы порта, и передать эти данные в новый порт):</target>
-        </trans-unit>
-        <trans-unit id="38a0c5b075f7274afd3c7af203177b865a7ca3d6" translate="yes" xml:space="preserve">
-          <source>If the process calling &lt;code&gt;erlang:resume_process/1&lt;/code&gt; had not previously increased the suspend count on the process identified by &lt;code&gt;Suspendee&lt;/code&gt;.</source>
-          <target state="translated">Если процесс, вызывающий &lt;code&gt;erlang:resume_process/1&lt;/code&gt; , ранее не увеличивал счетчик приостановки для процесса, указанного &lt;code&gt;Suspendee&lt;/code&gt; .</target>
-        </trans-unit>
-        <trans-unit id="9584990023c5a96bcc22ea4479bca2d11aee6db9" translate="yes" xml:space="preserve">
-          <source>If the process crashes before it has called &lt;code&gt;init_ack/1,2&lt;/code&gt;, &lt;code&gt;Ret = {error, Reason}&lt;/code&gt; will be returned if the calling process traps exits.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="7dde4932a93f8e946ee90206f0656471a4679385" translate="yes" xml:space="preserve">
-          <source>If the process does not exist, a &lt;code&gt;noproc&lt;/code&gt; exception is raised.</source>
-          <target state="translated">Если процесс не существует, &lt;code&gt;noproc&lt;/code&gt; исключение noproc .</target>
-        </trans-unit>
-        <trans-unit id="20b1fa7364ea436067720e9fd90a1b6ba70feb9e" translate="yes" xml:space="preserve">
-          <source>If the process executing the call does not belong to any application, the function returns &lt;code&gt;undefined&lt;/code&gt;.</source>
-          <target state="translated">Если процесс, выполняющий вызов, не принадлежит ни одному приложению, функция возвращает &lt;code&gt;undefined&lt;/code&gt; .</target>
-        </trans-unit>
-        <trans-unit id="581efb60de5599bb6f030da89d279c27e9892d5a" translate="yes" xml:space="preserve">
-          <source>If the process has any message in its message queue, the process is awakened immediately in the same way as described earlier.</source>
-          <target state="translated">Если в очереди сообщений процесса есть какое-либо сообщение,то процесс пробуждается немедленно так же,как описано выше.</target>
-        </trans-unit>
-        <trans-unit id="084bfd0c081f4fee78443d764a32418d4196357e" translate="yes" xml:space="preserve">
-          <source>If the process identified by &lt;code&gt;Pid&lt;/code&gt; has a registered name, also an &lt;code&gt;InfoTuple&lt;/code&gt; with item &lt;code&gt;registered_name&lt;/code&gt; is included.</source>
-          <target state="translated">Если процесс идентифицируется &lt;code&gt;Pid&lt;/code&gt; имеет зарегистрированное название, также &lt;code&gt;InfoTuple&lt;/code&gt; с товаром &lt;code&gt;registered_name&lt;/code&gt; входит.</target>
-        </trans-unit>
-        <trans-unit id="b81261e08e1610fbb4a750870cfa04d7610f65e5" translate="yes" xml:space="preserve">
-          <source>If the process identified by &lt;code&gt;Pid&lt;/code&gt; is not an existing local process.</source>
-          <target state="translated">Если процесс, идентифицированный &lt;code&gt;Pid&lt;/code&gt; , не является существующим локальным процессом.</target>
-        </trans-unit>
-        <trans-unit id="6f56d002efe6106da3a84a3e2016c451482b68c7" translate="yes" xml:space="preserve">
-          <source>If the process identified by &lt;code&gt;Suspendee&lt;/code&gt; has been suspended more times by the calling process than can be represented by the currently used internal data structures. The system limit is &amp;gt; 2,000,000,000 suspends and will never be lower.</source>
-          <target state="translated">Если процесс, указанный параметром &lt;code&gt;Suspendee&lt;/code&gt; , был приостановлен вызывающим процессом больше раз, чем это может быть представлено текущими используемыми внутренними структурами данных. Системный лимит составляет&amp;gt; 2 000 000 000 приостановок и никогда не будет ниже.</target>
-        </trans-unit>
-        <trans-unit id="036dbfabe540cf1c1a2eb6e8693ac0992c59c911" translate="yes" xml:space="preserve">
-          <source>If the process identified by &lt;code&gt;Suspendee&lt;/code&gt; has been suspended more times by the calling process than can be represented by the currently used internal data structures. The system limit is greater than 2,000,000,000 suspends and will never be lower.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="7e6414a88b13aa6c8a9b8f6f5c8c66d946440583" translate="yes" xml:space="preserve">
-          <source>If the process identified by &lt;code&gt;Suspendee&lt;/code&gt; is not alive.</source>
-          <target state="translated">Если процесс, идентифицированный &lt;code&gt;Suspendee&lt;/code&gt; , не работает.</target>
-        </trans-unit>
-        <trans-unit id="641aca5b56bf74307b3adf498b7c5e8e5c4b1259" translate="yes" xml:space="preserve">
-          <source>If the process identified by &lt;code&gt;Suspendee&lt;/code&gt; is the same process as the process calling &lt;code&gt;erlang:suspend_process/2&lt;/code&gt;.</source>
-          <target state="translated">Если процесс, идентифицированный &lt;code&gt;Suspendee&lt;/code&gt; является тем же процессом, что и процесс, вызывающий &lt;code&gt;erlang:suspend_process/2&lt;/code&gt; .</target>
-        </trans-unit>
-        <trans-unit id="651c23453333c69005cd277bbe1fcf8cf3b85f49" translate="yes" xml:space="preserve">
-          <source>If the process identified by &lt;code&gt;Suspendee&lt;/code&gt; resides on another node.</source>
-          <target state="translated">Если процесс, идентифицированный &lt;code&gt;Suspendee&lt;/code&gt; находится на другом узле.</target>
-        </trans-unit>
-        <trans-unit id="e4ca7dc0b151bb1f9cd8a2a4aff6bffd4a0444e4" translate="yes" xml:space="preserve">
-          <source>If the process is alive and a single &lt;code&gt;Item&lt;/code&gt; is specified, the returned value is the corresponding &lt;code&gt;InfoTuple&lt;/code&gt;, unless &lt;code&gt;Item =:= registered_name&lt;/code&gt; and the process has no registered name. In this case, &lt;code&gt;[]&lt;/code&gt; is returned. This strange behavior is because of historical reasons, and is kept for backward compatibility.</source>
-          <target state="translated">Если процесс &lt;code&gt;InfoTuple&lt;/code&gt; указан один &lt;code&gt;Item&lt;/code&gt; , возвращаемое значение является соответствующей инфо-подборкой , если только &lt;code&gt;Item =:= registered_name&lt;/code&gt; и процесс не имеет зарегистрированного имени. В этом случае возвращается &lt;code&gt;[]&lt;/code&gt; . Такое странное поведение объясняется историческими причинами и сохраняется для обратной совместимости.</target>
-        </trans-unit>
-        <trans-unit id="1a9a0fee2f5bd85201e0094b8e33070b42b45236" translate="yes" xml:space="preserve">
-          <source>If the process is to replace its state using the fun &lt;code&gt;StateFun&lt;/code&gt;, &lt;code&gt;handle_system_msg&lt;/code&gt; calls:</source>
-          <target state="translated">Если процесс должен заменить свое состояние с помощью забавного &lt;code&gt;StateFun&lt;/code&gt; , &lt;code&gt;handle_system_msg&lt;/code&gt; вызывает:</target>
-        </trans-unit>
-        <trans-unit id="3df3174e4f4f8d76818b78c9db43318524d54225" translate="yes" xml:space="preserve">
-          <source>If the process is to return its state, &lt;code&gt;handle_system_msg&lt;/code&gt; calls:</source>
-          <target state="translated">Если процесс должен вернуть свое состояние, &lt;code&gt;handle_system_msg&lt;/code&gt; вызывает:</target>
-        </trans-unit>
-        <trans-unit id="54575a5d04700d078536008be3d7a71568b2f2f0" translate="yes" xml:space="preserve">
-          <source>If the process or port is already registered (already has a name).</source>
-          <target state="translated">Если процесс или порт уже зарегистрирован (уже имеет имя).</target>
-        </trans-unit>
-        <trans-unit id="72499bc5509543fc3c3a1dc36c89e29a09a5bee5" translate="yes" xml:space="preserve">
-          <source>If the process potentially can get many messages in its queue, you are advised to set the flag to &lt;code&gt;off_heap&lt;/code&gt;. This because a garbage collection with many messages placed on the heap can become extremely expensive and the process can consume large amounts of memory. Performance of the actual message passing is however generally better when not using flag &lt;code&gt;off_heap&lt;/code&gt;.</source>
-          <target state="translated">Если процесс потенциально может получить много сообщений в своей очереди, рекомендуется установить флаг &lt;code&gt;off_heap&lt;/code&gt; . Это связано с тем, что сборка мусора с большим количеством сообщений, помещенных в кучу, может стать чрезвычайно дорогостоящим, а процесс может потреблять большие объемы памяти. Однако производительность фактической передачи сообщений, как правило, лучше, если не использовать флаг &lt;code&gt;off_heap&lt;/code&gt; .</target>
-        </trans-unit>
-        <trans-unit id="2977b37e3f3fa2bacc4a55c85d9c30b69a4999c8" translate="yes" xml:space="preserve">
-          <source>If the process terminates with another reason than &lt;code&gt;normal&lt;/code&gt; or &lt;code&gt;shutdown&lt;/code&gt;, a crash report is generated. For more information about the crash report, see the SASL User's Guide.</source>
-          <target state="translated">Если процесс завершается по другой причине, кроме &lt;code&gt;normal&lt;/code&gt; или &lt;code&gt;shutdown&lt;/code&gt; , создается отчет о сбое. Для получения дополнительной информации об отчете о сбоях см. Руководство пользователя SASL.</target>
-        </trans-unit>
-        <trans-unit id="24d7be87e875bc81d2fad8f3b3e621f25756c364" translate="yes" xml:space="preserve">
-          <source>If the process was spawned using a fun, &lt;code&gt;initial_call/1&lt;/code&gt; no longer returns the fun, but the module, function for the local function implementing the fun, and the arity, for example, &lt;code&gt;{some_module,-work/3-fun-0-,0}&lt;/code&gt; (meaning that the fun was created in function &lt;code&gt;some_module:work/3&lt;/code&gt;). The reason is that keeping the fun would prevent code upgrade for the module, and that a significant amount of memory could be wasted.</source>
-          <target state="translated">Если процесс был запущен с использованием развлечения, &lt;code&gt;initial_call/1&lt;/code&gt; больше не возвращает удовольствие, но модуль, функция для локальной функции, реализующей удовольствие, и арность, например, &lt;code&gt;{some_module,-work/3-fun-0-,0}&lt;/code&gt; (это означает, что веселье было создано в функции &lt;code&gt;some_module:work/3&lt;/code&gt; ). Причина в том, что веселье помешает обновлению кода модуля и может быть потрачено впустую значительный объем памяти.</target>
-        </trans-unit>
-        <trans-unit id="e063f0c97bd3b9f2ca10490b0726825eb1a13207" translate="yes" xml:space="preserve">
-          <source>If the program is too large to be profiled by &lt;code&gt;fprof&lt;/code&gt; or &lt;code&gt;eprof&lt;/code&gt;, &lt;code&gt;cprof&lt;/code&gt; can be used to locate code parts that are to be more thoroughly profiled using &lt;code&gt;fprof&lt;/code&gt; or &lt;code&gt;eprof&lt;/code&gt;.</source>
-          <target state="translated">Если программа слишком велика для профилирования с помощью &lt;code&gt;fprof&lt;/code&gt; или &lt;code&gt;eprof&lt;/code&gt; , &lt;code&gt;cprof&lt;/code&gt; можно использовать для поиска частей кода, которые необходимо более тщательно профилировать с помощью &lt;code&gt;fprof&lt;/code&gt; или &lt;code&gt;eprof&lt;/code&gt; .</target>
-        </trans-unit>
-        <trans-unit id="5c014cbf0073f75ddbbd2b83b405b67fe36da992" translate="yes" xml:space="preserve">
-          <source>If the provided public key is not found, the authentication fails.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="f62378f1f957382ee8a052b1c61d99645a009e49" translate="yes" xml:space="preserve">
-          <source>If the pure encode/decode performance really is a serious issue, our erl_dist encoder could be used, as the encoding/decoding of the erlang distribution format is much faster than all the other alternatives. Its major drawback is that it is has not been approved as a valid Megaco/H.248 message encoding.</source>
-          <target state="translated">Если производительность чистого кодирования/декодирования действительно является серьезной проблемой,то можно использовать наш кодировщик erl_dist,так как кодирование/декодирование формата распределения erlang происходит намного быстрее,чем все другие альтернативы.Его основным недостатком является то,что он не был одобрен в качестве действительной кодировки сообщений Megaco/H.248.</target>
-        </trans-unit>
-        <trans-unit id="a4deb3a5f5f018b337b5754c6b3743ec42918472" translate="yes" xml:space="preserve">
-          <source>If the quantifier is {0}, the assertion is never obeyed during matching. However, it can contain internal capturing parenthesized groups that are called from elsewhere through the subroutine mechanism.</source>
-          <target state="translated">Если квантификатор {0},то при совпадении утверждение никогда не подчиняется.Однако,оно может содержать внутренние захватывающие группы в скобках,которые вызываются отовсюду через подпрограммный механизм.</target>
-        </trans-unit>
-        <trans-unit id="15a112cbde0806d4bd82db516d60932759dd1e88" translate="yes" xml:space="preserve">
-          <source>If the regular expression contains capturing subpatterns, like in:</source>
-          <target state="translated">Если регулярное выражение содержит захватывающие подмаски,как в:</target>
-        </trans-unit>
-        <trans-unit id="53c05be9c33eb1a96dab74d00ca7378c333d60b5" translate="yes" xml:space="preserve">
-          <source>If the regular expression is previously compiled, the option list can only contain the following options:</source>
-          <target state="translated">Если регулярное выражение было скомпилировано ранее,то список опций может содержать только следующие опции:</target>
-        </trans-unit>
-        <trans-unit id="22619338e12940ef34ae589b0ca2c131b656f3a0" translate="yes" xml:space="preserve">
-          <source>If the regular expression was previously compiled with option &lt;code&gt;unicode&lt;/code&gt;, &lt;code&gt;Subject&lt;/code&gt; is to be provided as a valid Unicode &lt;code&gt;charlist()&lt;/code&gt;, otherwise any &lt;code&gt;iodata()&lt;/code&gt; will do. If compilation is involved and option &lt;code&gt;unicode&lt;/code&gt; is specified, both &lt;code&gt;Subject&lt;/code&gt; and the regular expression are to be specified as valid Unicode &lt;code&gt;charlists()&lt;/code&gt;.</source>
-          <target state="translated">Если регулярное выражение было ранее скомпилировано с опцией &lt;code&gt;unicode&lt;/code&gt; , &lt;code&gt;Subject&lt;/code&gt; должен быть предоставлен как действительный &lt;code&gt;charlist()&lt;/code&gt; символов Unicode () , в противном случае &lt;code&gt;iodata()&lt;/code&gt; любой iodata () . Если задействована компиляция и указана опция &lt;code&gt;unicode&lt;/code&gt; , и &lt;code&gt;Subject&lt;/code&gt; , и регулярное выражение должны быть указаны как допустимые &lt;code&gt;charlists()&lt;/code&gt; символов Unicode () .</target>
-        </trans-unit>
-        <trans-unit id="95cb6c73038fea5d38c77487c266df25c09c2a93" translate="yes" xml:space="preserve">
-          <source>If the release is to be upgraded, it must also include the SASL application.</source>
-          <target state="translated">Если релиз подлежит обновлению,он также должен включать приложение SASL.</target>
-        </trans-unit>
-        <trans-unit id="209b3e073d6604d9f31c31d6ea0d348f2a50c0c5" translate="yes" xml:space="preserve">
-          <source>If the release package is to contain a new Erlang runtime system, the &lt;code&gt;bin&lt;/code&gt; directory of the specified runtime system &lt;code&gt;{erts,Dir}&lt;/code&gt; is copied to &lt;code&gt;erts-ErtsVsn/bin&lt;/code&gt;.</source>
-          <target state="translated">Если пакет выпуска должен содержать новую систему времени выполнения Erlang, каталог &lt;code&gt;bin&lt;/code&gt; указанной системы времени выполнения &lt;code&gt;{erts,Dir}&lt;/code&gt; копируется в &lt;code&gt;erts-ErtsVsn/bin&lt;/code&gt; .</target>
-        </trans-unit>
-        <trans-unit id="363cb8688a551cced7d3018ac246f3d6efe48af3" translate="yes" xml:space="preserve">
-          <source>If the release package is to contain a new Erlang runtime system, the &lt;code&gt;erts-ErtsVsn/bin&lt;/code&gt; directory of the specified runtime system &lt;code&gt;{erts,Dir}&lt;/code&gt; is copied to &lt;code&gt;erts-ErtsVsn/bin&lt;/code&gt;. Some erts executables are not copied by default, if you want to include all executables you can give the &lt;code&gt;erts_all&lt;/code&gt; option.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="f636f7002f64f569ae3d458b76d340d2355447e2" translate="yes" xml:space="preserve">
-          <source>If the reply arrives after the call times out, no message contaminates the caller's message queue, as this function spawns off a middleman process to act as (a void) destination for such an orphan reply. This feature also makes this function more expensive than &lt;code&gt;call/4&lt;/code&gt; at the caller's end.</source>
-          <target state="translated">Если ответ приходит после истечения времени ожидания вызова, никакое сообщение не загрязняет очередь сообщений вызывающего абонента, поскольку эта функция порождает процесс-посредник, который действует как (недействительный) адресат для такого сиротского ответа. Эта функция также делает эту функцию более дорогой, чем &lt;code&gt;call/4&lt;/code&gt; на стороне вызывающего абонента.</target>
-        </trans-unit>
-        <trans-unit id="97bf926e93bf111383afef246646bb072493b10d" translate="yes" xml:space="preserve">
-          <source>If the reply arrives after the call times out, no message contaminates the caller's message queue.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="72de28ff26e478c709ccef28f5ec9b72f45a4e23" translate="yes" xml:space="preserve">
-          <source>If the report browser is used offline, the reports can be copied to another directory specified when starting the browser. If no such directory is specified, the browser reads reports from the SASL &lt;code&gt;error_logger_mf_dir&lt;/code&gt;.</source>
-          <target state="translated">Если браузер отчетов используется в автономном режиме, отчеты можно скопировать в другой каталог, указанный при запуске браузера. Если такой каталог не указан, браузер читает отчеты из SASL &lt;code&gt;error_logger_mf_dir&lt;/code&gt; .</target>
-        </trans-unit>
-        <trans-unit id="d403abf04385b59be919058fa57d3e12c76fe7b9" translate="yes" xml:space="preserve">
-          <source>If the request functions for the SFTP channel return &lt;code&gt;{error, timeout}&lt;/code&gt;, no answer was received from the server within the expected time.</source>
-          <target state="translated">Если функции запроса для канала SFTP возвращают &lt;code&gt;{error, timeout}&lt;/code&gt; , ответ не был получен от сервера в течение ожидаемого времени.</target>
-        </trans-unit>
-        <trans-unit id="68fcf1aa779848125b39efeaf9b8566022844620" translate="yes" xml:space="preserve">
-          <source>If the request is an HTTP/1.1 request, the URI can be in the absolute URI format. In that case, &lt;code&gt;httpd&lt;/code&gt; saves the absolute URI in this field. An Example of an absolute URI is &lt;code&gt;&quot;http://ServerName:Part/cgi-bin/find.pl?person=jocke&quot;&lt;/code&gt;</source>
-          <target state="translated">Если запрос является запросом HTTP / 1.1, URI может быть в формате абсолютного URI. В этом случае &lt;code&gt;httpd&lt;/code&gt; сохраняет абсолютный URI в этом поле. Пример абсолютного URI: &lt;code&gt;&quot;http://ServerName:Part/cgi-bin/find.pl?person=jocke&quot;&lt;/code&gt;</target>
-        </trans-unit>
-        <trans-unit id="bf8c6e0e4e32eeefc924406bd2971a4ed6ef9777" translate="yes" xml:space="preserve">
-          <source>If the request is successfully encoded and sent but the answer times out then a &lt;code&gt;handle_error/4&lt;/code&gt; callback takes place with &lt;code&gt;Reason = timeout&lt;/code&gt;.</source>
-          <target state="translated">Если запрос успешно закодирован и отправлен, но время ответа истекло, выполняется обратный вызов &lt;code&gt;handle_error/4&lt;/code&gt; с &lt;code&gt;Reason = timeout&lt;/code&gt; .</target>
         </trans-unit>
       </group>
     </body>

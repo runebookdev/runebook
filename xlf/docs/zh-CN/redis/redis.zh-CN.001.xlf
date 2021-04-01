@@ -5,7 +5,7 @@
       <group id="redis">
         <trans-unit id="6cbbabd0de1af9aa5bea8c5c86e71564ff432533" translate="yes" xml:space="preserve">
           <source>&quot;All-time&quot; means the maximum latency since the Redis instance was started, or the time that events were reset &lt;a href=&quot;latency-reset&quot;&gt;LATENCY RESET&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">&amp;ldquo;全时&amp;rdquo;是指自Redis实例启动以来或事件重置后的最大延迟&lt;a href=&quot;latency-reset&quot;&gt;LATENCY RESET&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="d090ece0f6a013c7b127d821779608185c9bdd43" translate="yes" xml:space="preserve">
           <source>&quot;master&quot;</source>
@@ -25,7 +25,7 @@
         </trans-unit>
         <trans-unit id="2d2e44552c5ed4f201c3443b31409c829c18d8f0" translate="yes" xml:space="preserve">
           <source>&amp;copy; 2009&amp;ndash;2020 Salvatore Sanfilippo</source>
-          <target state="new"/>
+          <target state="translated">&amp;copy; 2009&amp;ndash;2020 Salvatore Sanfilippo</target>
         </trans-unit>
         <trans-unit id="61ecfe6c066ed9ce69b42cf0699ab184e502a6d4" translate="yes" xml:space="preserve">
           <source>...continues until all replicas for this master are returned.</source>
@@ -37,7 +37,7 @@
         </trans-unit>
         <trans-unit id="9de169c009b09b9b41734a83174207038fcfc8bf" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;auth&quot;&gt;AUTH&lt;/a&gt; -- Authenticate with the given password to the remote instance.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;auth&quot;&gt;AUTH-&lt;/a&gt;使用给定的密码对远程实例进行身份验证。</target>
         </trans-unit>
         <trans-unit id="298f6459896a7afbc1f87466fa10327589bc889f" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;bitfield&quot;&gt;BITFIELD&lt;/a&gt; is able to operate with multiple bit fields in the same command call. It takes a list of operations to perform, and returns an array of replies, where each array matches the corresponding operation in the list of arguments.</source>
@@ -53,7 +53,7 @@
         </trans-unit>
         <trans-unit id="fcb39fa9adcb41d2b221be77d629ae144e570322" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;blmove&quot;&gt;BLMOVE&lt;/a&gt; is the blocking variant of &lt;a href=&quot;lmove&quot;&gt;LMOVE&lt;/a&gt;. When &lt;code&gt;source&lt;/code&gt; contains elements, this command behaves exactly like &lt;a href=&quot;lmove&quot;&gt;LMOVE&lt;/a&gt;. When used inside a &lt;a href=&quot;multi&quot;&gt;MULTI&lt;/a&gt;/&lt;a href=&quot;exec&quot;&gt;EXEC&lt;/a&gt; block, this command behaves exactly like &lt;a href=&quot;lmove&quot;&gt;LMOVE&lt;/a&gt;. When &lt;code&gt;source&lt;/code&gt; is empty, Redis will block the connection until another client pushes to it or until &lt;code&gt;timeout&lt;/code&gt; is reached. A &lt;code&gt;timeout&lt;/code&gt; of zero can be used to block indefinitely.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;blmove&quot;&gt;BLMOVE&lt;/a&gt;是的阻挡变体&lt;a href=&quot;lmove&quot;&gt;LMOVE&lt;/a&gt;。当 &lt;code&gt;source&lt;/code&gt; 包含元素时，此命令的行为与&lt;a href=&quot;lmove&quot;&gt;LMOVE&lt;/a&gt;完全相同。在&lt;a href=&quot;multi&quot;&gt;MULTI&lt;/a&gt; / &lt;a href=&quot;exec&quot;&gt;EXEC&lt;/a&gt;块中使用时，此命令的行为与&lt;a href=&quot;lmove&quot;&gt;LMOVE&lt;/a&gt;完全相同。当 &lt;code&gt;source&lt;/code&gt; 为空时，Redis将阻止连接，直到另一个客户端将其推入或达到 &lt;code&gt;timeout&lt;/code&gt; 为止。甲 &lt;code&gt;timeout&lt;/code&gt; 的零可以用于无限期地阻塞。</target>
         </trans-unit>
         <trans-unit id="47e5c8f772fa453430f8e2dfda323c8ba56c1212" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;blpop&quot;&gt;BLPOP&lt;/a&gt; can be used with pipelining (sending multiple commands and reading the replies in batch), however this setup makes sense almost solely when it is the last command of the pipeline.</source>
@@ -125,7 +125,7 @@
         </trans-unit>
         <trans-unit id="7877824c1da22443476012437fd7bd5ad0fce7d9" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;copy&quot;&gt;COPY&lt;/a&gt; -- Do not remove the key from the local instance.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;copy&quot;&gt;COPY-&lt;/a&gt;不要从本地实例中删除密钥。</target>
         </trans-unit>
         <trans-unit id="8b942248ff5e8e632605cf7a19322b0ffb3e9835" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;debug-object&quot;&gt;DEBUG OBJECT&lt;/a&gt; is a debugging command that should not be used by clients. Check the &lt;a href=&quot;object&quot;&gt;OBJECT&lt;/a&gt; command instead.</source>
@@ -159,13 +159,17 @@
           <source>&lt;a href=&quot;expireat&quot;&gt;EXPIREAT&lt;/a&gt; has the same effect and semantic as &lt;a href=&quot;expire&quot;&gt;EXPIRE&lt;/a&gt;, but instead of specifying the number of seconds representing the TTL (time to live), it takes an absolute &lt;a href=&quot;http://en.wikipedia.org/wiki/Unix_time&quot;&gt;Unix timestamp&lt;/a&gt; (seconds since January 1, 1970). A timestamp in the past will delete the key immediately.</source>
           <target state="translated">&lt;a href=&quot;expireat&quot;&gt;EXPIREAT&lt;/a&gt;具有与&lt;a href=&quot;expire&quot;&gt;EXPIRE&lt;/a&gt;相同的作用和语义，但是它没有指定表示TTL（生存时间）的秒数，而是使用了绝对的&lt;a href=&quot;http://en.wikipedia.org/wiki/Unix_time&quot;&gt;Unix时间戳&lt;/a&gt;（自1970年1月1日以来的秒数）。过去的时间戳会立即删除密钥。</target>
         </trans-unit>
+        <trans-unit id="62b22dbc5f2297073f8570fa61d4f9a94e891fa5" translate="yes" xml:space="preserve">
+          <source>&lt;a href=&quot;expireat&quot;&gt;EXPIREAT&lt;/a&gt; has the same effect and semantic as &lt;a href=&quot;expire&quot;&gt;EXPIRE&lt;/a&gt;, but instead of specifying the number of seconds representing the TTL (time to live), it takes an absolute &lt;a href=&quot;https://en.wikipedia.org/wiki/Unix_time&quot;&gt;Unix timestamp&lt;/a&gt; (seconds since January 1, 1970). A timestamp in the past will delete the key immediately.</source>
+          <target state="translated">&lt;a href=&quot;expireat&quot;&gt;EXPIREAT&lt;/a&gt;具有与&lt;a href=&quot;expire&quot;&gt;EXPIRE&lt;/a&gt;相同的作用和语义，但是它没有指定表示TTL（生存时间）的秒数，而是使用了绝对的&lt;a href=&quot;https://en.wikipedia.org/wiki/Unix_time&quot;&gt;Unix时间戳&lt;/a&gt;（自1970年1月1日以来的秒数）。过去的时间戳会立即删除密钥。</target>
+        </trans-unit>
         <trans-unit id="c00a508fcaefc4b21a2a57ab333e66a1842a7ec0" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;expireat&quot;&gt;EXPIREAT&lt;/a&gt; was introduced in order to convert relative timeouts to absolute timeouts for the AOF persistence mode. Of course, it can be used directly to specify that a given key should expire at a given time in the future.</source>
           <target state="translated">&lt;a href=&quot;expireat&quot;&gt;&lt;/a&gt;引入EXPIREAT是为了将AOF持久性模式的相对超时转换为绝对超时。当然，它可以直接用于指定给定密钥应在将来的给定时间到期。</target>
         </trans-unit>
         <trans-unit id="63424360a225a4ccb8fe41847e8110707c572538" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;get&quot;&gt;GET&lt;/a&gt; -- Return the old value stored at key, or nil when key did not exist.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;get&quot;&gt;GET-&lt;/a&gt;返回存储在key处的旧值；如果key不存在，则返回nil。</target>
         </trans-unit>
         <trans-unit id="0256948e937135d52eae78e100f423a41272e11e" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;get&quot;&gt;GET&lt;/a&gt; arity is 2 since the command only accepts one argument and always has the format &lt;code&gt;GET _key_&lt;/code&gt;.</source>
@@ -201,15 +205,15 @@
         </trans-unit>
         <trans-unit id="2cd100b3945e68b445209aaf2777f69f908fe02e" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;Array reply&lt;/a&gt;: a list of ACL categories or a list of commands inside a given category. The command may return an error if an invalid category name is given as argument.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;数组回复&lt;/a&gt;：ACL类别列表或给定类别内的命令列表。如果为参数指定了无效的类别名称，则该命令可能会返回错误。</target>
         </trans-unit>
         <trans-unit id="3e072b42a4e105e7e9a3adfdf30f4ebb2f1a7a85" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;Array reply&lt;/a&gt;: a list of ACL rule definitions for the user.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;数组回复&lt;/a&gt;：用户的ACL规则定义列表。</target>
         </trans-unit>
         <trans-unit id="15910fe88d88893204377b71be2fd6fe3ca99c1e" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;Array reply&lt;/a&gt;: a list of ACL security events.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;数组回复&lt;/a&gt;：ACL安全事件的列表。</target>
         </trans-unit>
         <trans-unit id="7c52429c4d95e074b8db21a25b8a8357d1a3b806" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;Array reply&lt;/a&gt;: a list of active channels, optionally matching the specified pattern.</source>
@@ -221,7 +225,7 @@
         </trans-unit>
         <trans-unit id="f6152475682db758d2e7a96ad710b4e60c520e30" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;Array reply&lt;/a&gt;: a list of server properties. The reply is a map instead of an array when RESP3 is selected. The command returns an error if the protocol requested does not exist.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;数组回复&lt;/a&gt;：服务器属性列表。选择RESP3时，答复是映射而不是数组。如果请求的协议不存在，该命令将返回错误。</target>
         </trans-unit>
         <trans-unit id="63975dbc5ab6e11639a6a1c05d5503519f5e2e82" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;Array reply&lt;/a&gt;: a list of subcommands and their descriptions</source>
@@ -229,7 +233,7 @@
         </trans-unit>
         <trans-unit id="bde76633eb70f22567a63440df550e9e77183491" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;Array reply&lt;/a&gt;: a list of tracking information sections and their respective values, specifically:</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;数组回复&lt;/a&gt;：跟踪信息部分及其各自值的列表，尤其是：</target>
         </trans-unit>
         <trans-unit id="d268864554befa38e947a1034b4c1845060a6854" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;Array reply&lt;/a&gt;: all elements of the set.</source>
@@ -277,7 +281,7 @@
         </trans-unit>
         <trans-unit id="4447e9d8f9b59b604c597c6ffc372b768b3d845a" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;Array reply&lt;/a&gt;: list of loaded modules. Each element in the list represents a module, and is in itself a list of property names and their values. The following properties is reported for each loaded module:</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;数组回复&lt;/a&gt;：已加载模块的列表。列表中的每个元素代表一个模块，并且本身就是属性名称及其值的列表。报告每个已加载模块的以下属性：</target>
         </trans-unit>
         <trans-unit id="7008901b9444e395b10b1891e0691aeed355ef1b" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;Array reply&lt;/a&gt;: list of popped elements and scores.</source>
@@ -285,7 +289,7 @@
         </trans-unit>
         <trans-unit id="d7a9f384247f42b2ea4d443657c9b82821dfed4b" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;Array reply&lt;/a&gt;: list of scores or &lt;code&gt;nil&lt;/code&gt; associated with the specified &lt;code&gt;member&lt;/code&gt; values (a double precision floating point number), represented as strings.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;数组回复&lt;/a&gt;：与指定 &lt;code&gt;member&lt;/code&gt; 值（双精度浮点数）关联的分数或 &lt;code&gt;nil&lt;/code&gt; 列表，以字符串表示。</target>
         </trans-unit>
         <trans-unit id="768b79d5a771e0adb62f779546145aa9ec061e9f" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;Array reply&lt;/a&gt;: list of values associated with the given fields, in the same order as they are requested.</source>
@@ -301,7 +305,7 @@
         </trans-unit>
         <trans-unit id="b29b511b6a80ca57921b5542f271d7db4e4c8012" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;Array reply&lt;/a&gt;: list representing the membership of the given elements, in the same order as they are requested.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;数组reply&lt;/a&gt;：表示给定元素的成员资格的列表，其顺序与请求的顺序相同。</target>
         </trans-unit>
         <trans-unit id="1d69c2de28454376870835b9ae6eb87c2b3c65ac" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;Array reply&lt;/a&gt;: list with members of the resulting set.</source>
@@ -329,27 +333,27 @@
         </trans-unit>
         <trans-unit id="d590fc1c21dcc4e3339601855092a650609ee293" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;Array reply&lt;/a&gt;: the removed members, or &lt;code&gt;nil&lt;/code&gt; when &lt;code&gt;key&lt;/code&gt; does not exist.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;数组回复&lt;/a&gt;：已删除的成员；如果 &lt;code&gt;key&lt;/code&gt; 不存在， &lt;code&gt;nil&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="cac49343a76b7d7f49ec588c88df33b8470033ea" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;Array reply&lt;/a&gt;: the result of intersection (optionally with their scores, in case the &lt;code&gt;WITHSCORES&lt;/code&gt; option is given).</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;数组回复&lt;/a&gt;：相交的结果（如果给出 &lt;code&gt;WITHSCORES&lt;/code&gt; 选项，则可选地包含其得分）。</target>
         </trans-unit>
         <trans-unit id="07d675c3632f31097196516c1c9de75c8b6dd10c" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;Array reply&lt;/a&gt;: the result of the difference (optionally with their scores, in case the &lt;code&gt;WITHSCORES&lt;/code&gt; option is given).</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;数组回复&lt;/a&gt;：差异的结果（如果提供 &lt;code&gt;WITHSCORES&lt;/code&gt; 选项，则可选地包含其得分）。</target>
         </trans-unit>
         <trans-unit id="8b4a4c18a58c75d77be58bc486629fce05810c92" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;Array reply&lt;/a&gt;: the result of union (optionally with their scores, in case the &lt;code&gt;WITHSCORES&lt;/code&gt; option is given).</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;数组回复&lt;/a&gt;：联合的结果（如果提供 &lt;code&gt;WITHSCORES&lt;/code&gt; 选项，则可选地包含其得分）。</target>
         </trans-unit>
         <trans-unit id="0d4edc707802ff17b22d7943be32d8fd5478cf38" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;Array reply&lt;/a&gt;: the values of the first elements, or &lt;code&gt;nil&lt;/code&gt; when &lt;code&gt;key&lt;/code&gt; does not exist.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;数组答复&lt;/a&gt;：第一个元素的值；如果 &lt;code&gt;key&lt;/code&gt; 不存在， &lt;code&gt;nil&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="70c5bc4b9bbfccce8d8106181933c5e8bcc80d78" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;Array reply&lt;/a&gt;: the values of the last elements, or &lt;code&gt;nil&lt;/code&gt; when &lt;code&gt;key&lt;/code&gt; does not exist.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;数组回复&lt;/a&gt;：最后一个元素的值；如果 &lt;code&gt;key&lt;/code&gt; 不存在，则返回 &lt;code&gt;nil&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="bd962df66dd0c06c471f01d57ba98c740e6db002" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#array-reply&quot;&gt;Array reply&lt;/a&gt;: where the first element is one of &lt;code&gt;master&lt;/code&gt;, &lt;code&gt;slave&lt;/code&gt;, &lt;code&gt;sentinel&lt;/code&gt; and the additional elements are role-specific as illustrated above.</source>
@@ -361,7 +365,7 @@
         </trans-unit>
         <trans-unit id="eb3267da4386d6eee86012ec1f53599537ae1e6f" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#bulk-string-reply&quot;&gt;Bulk string reply&lt;/a&gt; (or verbatim reply when using the RESP3 protocol): the string containing the generative computer art, and a text with the Redis version.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#bulk-string-reply&quot;&gt;批量字符串答复&lt;/a&gt;（或使用RESP3协议时的逐字答复）：包含生成的计算机图形的字符串，以及带有Redis版本的文本。</target>
         </trans-unit>
         <trans-unit id="0060692d109c5852aa6b03fa7716b694d65526b7" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#bulk-string-reply&quot;&gt;Bulk string reply&lt;/a&gt; This command returns the SHA1 digest of the script added into the script cache.</source>
@@ -381,7 +385,7 @@
         </trans-unit>
         <trans-unit id="b057bb332a67214e2a4a458e18172042e7cd632b" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#bulk-string-reply&quot;&gt;Bulk string reply&lt;/a&gt;: The node id.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#bulk-string-reply&quot;&gt;批量字符串答复&lt;/a&gt;：节点ID。</target>
         </trans-unit>
         <trans-unit id="25762762c8c2667fa1ae9d38c2200fef10a8714b" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#bulk-string-reply&quot;&gt;Bulk string reply&lt;/a&gt;: The serialized cluster configuration.</source>
@@ -389,7 +393,7 @@
         </trans-unit>
         <trans-unit id="f5ba04d6a962501f6dbc4d2d9c2152d5b80a6dd0" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#bulk-string-reply&quot;&gt;Bulk string reply&lt;/a&gt;: a unique string, as described at the &lt;a href=&quot;client-list&quot;&gt;CLIENT LIST&lt;/a&gt; page, for the current client.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#bulk-string-reply&quot;&gt;批量字符串回复&lt;/a&gt;：当前客户端的唯一字符串，如&amp;ldquo;&lt;a href=&quot;client-list&quot;&gt;客户端列表&amp;rdquo;&lt;/a&gt;页面中所述。</target>
         </trans-unit>
         <trans-unit id="8291a50a03c48c7923ec73608ce7fc3f57608065" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#bulk-string-reply&quot;&gt;Bulk string reply&lt;/a&gt;: a unique string, formatted as follows:</source>
@@ -401,7 +405,7 @@
         </trans-unit>
         <trans-unit id="4aea6b25841ddff2e06e954e3a51101fa16d948a" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#bulk-string-reply&quot;&gt;Bulk string reply&lt;/a&gt;: by default 64 bytes string representing 256 bits of pseudorandom data. Otherwise if an argument if needed, the output string length is the number of specified bits (rounded to the next multiple of 4) divided by 4.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#bulk-string-reply&quot;&gt;批量字符串回复&lt;/a&gt;：默认情况下，代表256位伪随机数据的64字节字符串。否则，如果需要一个参数，则输出字符串的长度是指定位数（四舍五入到下一个四舍五入的整数）除以4。</target>
         </trans-unit>
         <trans-unit id="42797546d8faff4f9aa92f89bfd2c70972447f29" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#bulk-string-reply&quot;&gt;Bulk string reply&lt;/a&gt;: the element being popped and pushed.</source>
@@ -433,7 +437,7 @@
         </trans-unit>
         <trans-unit id="fa5f1109c9374907cd359659bbf9f94905464578" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#bulk-string-reply&quot;&gt;Bulk string reply&lt;/a&gt;: the removed member, or &lt;code&gt;nil&lt;/code&gt; when &lt;code&gt;key&lt;/code&gt; does not exist.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#bulk-string-reply&quot;&gt;批量字符串答复&lt;/a&gt;：已删除的成员；如果 &lt;code&gt;key&lt;/code&gt; 不存在， &lt;code&gt;nil&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="947373c7837eae7cf3063950a2f1e02de9ee212d" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#bulk-string-reply&quot;&gt;Bulk string reply&lt;/a&gt;: the requested element, or &lt;code&gt;nil&lt;/code&gt; when &lt;code&gt;index&lt;/code&gt; is out of range.</source>
@@ -449,7 +453,7 @@
         </trans-unit>
         <trans-unit id="58978233fe7cee3376f9020992b67c0daf047c20" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#bulk-string-reply&quot;&gt;Bulk string reply&lt;/a&gt;: the username of the current connection.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#bulk-string-reply&quot;&gt;批量字符串答复&lt;/a&gt;：当前连接的用户名。</target>
         </trans-unit>
         <trans-unit id="4f284406d16a47480c00ff3f29a794af6559d4da" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#bulk-string-reply&quot;&gt;Bulk string reply&lt;/a&gt;: the value associated with &lt;code&gt;field&lt;/code&gt;, or &lt;code&gt;nil&lt;/code&gt; when &lt;code&gt;field&lt;/code&gt; is not present in the hash or &lt;code&gt;key&lt;/code&gt; does not exist.</source>
@@ -501,7 +505,7 @@
         </trans-unit>
         <trans-unit id="0503adf8c6abc2ce3ece257f521a52b790426666" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#integer-reply&quot;&gt;Integer reply&lt;/a&gt;: The number of fields that were added.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#integer-reply&quot;&gt;整数回复&lt;/a&gt;：添加的字段数。</target>
         </trans-unit>
         <trans-unit id="89319e35389a0b857d36cb542ef3abb9f6061b45" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#integer-reply&quot;&gt;Integer reply&lt;/a&gt;: The number of keys in the specified hash slot, or an error if the hash slot is invalid.</source>
@@ -521,7 +525,7 @@
         </trans-unit>
         <trans-unit id="ef2105f0d65369d9bdab9c96e694f2b29c3a8cbc" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#integer-reply&quot;&gt;Integer reply&lt;/a&gt;: The number of users that were deleted. This number will not always match the number of arguments since certain users may not exist.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#integer-reply&quot;&gt;整数回复&lt;/a&gt;：已删除的用户数。由于某些用户可能不存在，因此此数字将不总是与参数的数目匹配。</target>
         </trans-unit>
         <trans-unit id="031ec027acdadc31294febc67ac2fa44cfd616b1" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#integer-reply&quot;&gt;Integer reply&lt;/a&gt;: an UNIX time stamp.</source>
@@ -537,7 +541,7 @@
         </trans-unit>
         <trans-unit id="d8a11a13b75c8454450e9f6607be3eaca099e120" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#integer-reply&quot;&gt;Integer reply&lt;/a&gt;: the ID of the client we are redirecting the notifications to. The command returns &lt;code&gt;-1&lt;/code&gt; if client tracking is not enabled, or &lt;code&gt;0&lt;/code&gt; if client tracking is enabled but we are not redirecting the notifications to any client.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#integer-reply&quot;&gt;整数回复&lt;/a&gt;：我们将通知重定向到的客户端的ID。如果未启用客户端跟踪，该命令将返回 &lt;code&gt;-1&lt;/code&gt; ;如果启用了客户端跟踪，则该命令将返回 &lt;code&gt;0&lt;/code&gt; ，但我们不会将通知重定向到任何客户端。</target>
         </trans-unit>
         <trans-unit id="e5320679eebca502eaa82896b5c272af8082c5d4" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#integer-reply&quot;&gt;Integer reply&lt;/a&gt;: the bit value stored at &lt;em&gt;offset&lt;/em&gt;.</source>
@@ -597,7 +601,7 @@
         </trans-unit>
         <trans-unit id="6c7a01d231383c2c599ee1d953e9f8a58ee44d3c" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#integer-reply&quot;&gt;Integer reply&lt;/a&gt;: the number of clients that received the message. Note that in a Redis Cluster, only clients that are connected to the same node as the publishing client are included in the count.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#integer-reply&quot;&gt;整数回复&lt;/a&gt;：接收到该消息的客户端数。请注意，在Redis群集中，仅将与发布客户端连接到同一节点的客户端包括在计数中。</target>
         </trans-unit>
         <trans-unit id="efbb0ebf86774003b900e8e13dd8994e8d673ce5" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#integer-reply&quot;&gt;Integer reply&lt;/a&gt;: the number of elements in the resulting set.</source>
@@ -629,7 +633,7 @@
         </trans-unit>
         <trans-unit id="334e3e05c796cc1a3764e2446a0324552ac609d0" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#integer-reply&quot;&gt;Integer reply&lt;/a&gt;: the number of event time series that were reset.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#integer-reply&quot;&gt;整数回复&lt;/a&gt;：重置的事件时间序列数。</target>
         </trans-unit>
         <trans-unit id="291ab5dcd91e6798ef4d9a5a65a7dd018e6d3e39" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#integer-reply&quot;&gt;Integer reply&lt;/a&gt;: the number of fields that were removed from the hash, not including specified but non existing fields.</source>
@@ -673,23 +677,23 @@
         </trans-unit>
         <trans-unit id="21bf305d3c19ddbfa50aa73a23fe7d2e88372fea" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;Simple string reply&lt;/a&gt; or an error if the password, or username/password pair, is invalid.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;简单的字符串回复&lt;/a&gt;，如果密码或用户名/密码对无效，则返回错误。</target>
         </trans-unit>
         <trans-unit id="3d80b08e53d5f9ba47ec97437edf0c4df077d9b5" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;Simple string reply&lt;/a&gt;: &lt;code&gt;BUMPED&lt;/code&gt; if the epoch was incremented, or &lt;code&gt;STILL&lt;/code&gt; if the node already has the greatest config epoch in the cluster.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;简单的字符串回复&lt;/a&gt;：如果时代增加了，则 &lt;code&gt;BUMPED&lt;/code&gt; ;如果节点已经在集群中具有最大的配置时代，则返回 &lt;code&gt;STILL&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="26a4006fcc50c5a98c791a609cf4cd33d2525570" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;Simple string reply&lt;/a&gt;: &lt;code&gt;Background saving started&lt;/code&gt; if &lt;a href=&quot;bgsave&quot;&gt;BGSAVE&lt;/a&gt; started correctly or &lt;code&gt;Background saving scheduled&lt;/code&gt; when used with the &lt;code&gt;SCHEDULE&lt;/code&gt; subcommand.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;简单的字符串回复&lt;/a&gt;：如果&lt;a href=&quot;bgsave&quot;&gt;BGSAVE&lt;/a&gt;正确 &lt;code&gt;Background saving started&lt;/code&gt; 则开始进行 &lt;code&gt;Background saving scheduled&lt;/code&gt; 如果与 &lt;code&gt;SCHEDULE&lt;/code&gt; 子命令一起使用，则计划进行后台保存。</target>
         </trans-unit>
         <trans-unit id="6f816386b73353e833eec40ca190644f53fced61" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;Simple string reply&lt;/a&gt;: &lt;code&gt;OK&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;简单的字符串回复&lt;/a&gt;： &lt;code&gt;OK&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="d0783bd35592e36785e21f2c6ba9edb12cb11d70" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;Simple string reply&lt;/a&gt;: &lt;code&gt;OK&lt;/code&gt; if &lt;a href=&quot;set&quot;&gt;SET&lt;/a&gt; was executed correctly. &lt;a href=&quot;https://redis.io/topics/protocol#bulk-string-reply&quot;&gt;Bulk string reply&lt;/a&gt;: when &lt;a href=&quot;get&quot;&gt;GET&lt;/a&gt; option is set, the old value stored at key, or nil when key did not exist. &lt;a href=&quot;https://redis.io/topics/protocol#nil-reply&quot;&gt;Null reply&lt;/a&gt;: a Null Bulk Reply is returned if the &lt;a href=&quot;set&quot;&gt;SET&lt;/a&gt; operation was not performed because the user specified the &lt;code&gt;NX&lt;/code&gt; or &lt;code&gt;XX&lt;/code&gt; option but the condition was not met or if user specified the &lt;code&gt;NX&lt;/code&gt; and &lt;a href=&quot;get&quot;&gt;GET&lt;/a&gt; options that do not met.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;简单的字符串回复&lt;/a&gt;： &lt;code&gt;OK&lt;/code&gt; ，如果&lt;a href=&quot;set&quot;&gt;SET&lt;/a&gt;被正确执行。&lt;a href=&quot;https://redis.io/topics/protocol#bulk-string-reply&quot;&gt;批量字符串回复&lt;/a&gt;：设置&lt;a href=&quot;get&quot;&gt;GET&lt;/a&gt;选项时，旧值存储在key处；如果key不存在，则为nil。&lt;a href=&quot;https://redis.io/topics/protocol#nil-reply&quot;&gt;空答复&lt;/a&gt;：如果由于用户指定了 &lt;code&gt;NX&lt;/code&gt; 或 &lt;code&gt;XX&lt;/code&gt; 选项但不满足条件而未执行&lt;a href=&quot;set&quot;&gt;SET&lt;/a&gt;操作，或者如果用户指定了不满足的 &lt;code&gt;NX&lt;/code&gt; 和&lt;a href=&quot;get&quot;&gt;GET&lt;/a&gt;选项，则返回空批量答复。</target>
         </trans-unit>
         <trans-unit id="c9137421435e7031e78d30846bad61e19e503d47" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;Simple string reply&lt;/a&gt;: &lt;code&gt;OK&lt;/code&gt; if &lt;a href=&quot;set&quot;&gt;SET&lt;/a&gt; was executed correctly. &lt;a href=&quot;https://redis.io/topics/protocol#nil-reply&quot;&gt;Null reply&lt;/a&gt;: a Null Bulk Reply is returned if the &lt;a href=&quot;set&quot;&gt;SET&lt;/a&gt; operation was not performed because the user specified the &lt;code&gt;NX&lt;/code&gt; or &lt;code&gt;XX&lt;/code&gt; option but the condition was not met.</source>
@@ -701,11 +705,11 @@
         </trans-unit>
         <trans-unit id="1c4f5580fb235cd00e31a46cb1c3620661396952" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;Simple string reply&lt;/a&gt;: &lt;code&gt;OK&lt;/code&gt; if module was loaded.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;简单的字符串回复&lt;/a&gt;：如果已加载模块，则 &lt;code&gt;OK&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="8803af464aafc399022f190d0b084424c2277c4b" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;Simple string reply&lt;/a&gt;: &lt;code&gt;OK&lt;/code&gt; if module was unloaded.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;简单的字符串回复&lt;/a&gt;：如果模块已卸载，则 &lt;code&gt;OK&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="c01fcbe216d0b2f0ff716f18544ddbcd2fc94031" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;Simple string reply&lt;/a&gt;: &lt;code&gt;OK&lt;/code&gt; if the command was accepted and a manual failover is going to be attempted. An error if the operation cannot be executed, for example if we are talking with a node which is already a master.</source>
@@ -733,19 +737,19 @@
         </trans-unit>
         <trans-unit id="3b1c28a71ec28cf5153538cceaa7522beb6dafad" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;Simple string reply&lt;/a&gt;: &lt;code&gt;OK&lt;/code&gt; if the connection was successfully put in tracking mode or if the tracking mode was successfully disabled. Otherwise an error is returned.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;简单的字符串回复&lt;/a&gt;：如果成功将连接置于跟踪模式或成功禁用了跟踪模式，则为 &lt;code&gt;OK&lt;/code&gt; 。否则，将返回错误。</target>
         </trans-unit>
         <trans-unit id="d1a5b725450b5d0f58fcd0701fc2ff091afc81c0" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;Simple string reply&lt;/a&gt;: &lt;code&gt;OK&lt;/code&gt; if the security log was cleared.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;简单字符串回复&lt;/a&gt;：如果清除了安全日志，则 &lt;code&gt;OK&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="84b95fe0a35042125178f062fee4fdce51ef67ae" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;Simple string reply&lt;/a&gt;: &lt;code&gt;OK&lt;/code&gt; on success.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;简单的字符串回复&lt;/a&gt;： &lt;code&gt;OK&lt;/code&gt; 成功。</target>
         </trans-unit>
         <trans-unit id="52284d19728639ec81c3c8e6288420afde7ec5de" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;Simple string reply&lt;/a&gt;: &lt;code&gt;OK&lt;/code&gt; or an error if the argument is not yes or no.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;简单字符串答复&lt;/a&gt;： &lt;code&gt;OK&lt;/code&gt; ，如果参数不是yes或no，则返回错误。</target>
         </trans-unit>
         <trans-unit id="b089a3050550664e92f327d65ddfe93413662e79" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;Simple string reply&lt;/a&gt;: &lt;code&gt;OK&lt;/code&gt; or an error if the operation fails.</source>
@@ -765,7 +769,7 @@
         </trans-unit>
         <trans-unit id="274f5a935602845e5384d5ae7f75c017c7a5496d" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;Simple string reply&lt;/a&gt;: A simple string reply indicating that the rewriting started or is about to start ASAP, when the call is executed with success.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;简单字符串回复&lt;/a&gt;：简单字符串回复，指示成功执行调用后，重写已开始或即将开始。</target>
         </trans-unit>
         <trans-unit id="ddbb0da6f2fcf04271523471ba1c71d314a0d241" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;Simple string reply&lt;/a&gt;: All the subcommands return &lt;code&gt;OK&lt;/code&gt; if the command was successful. Otherwise an error is returned.</source>
@@ -793,7 +797,7 @@
         </trans-unit>
         <trans-unit id="4ab5321b7ab4610970bf380f5c99a11fa94dd26d" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;Simple string reply&lt;/a&gt;: always &lt;a href=&quot;reset&quot;&gt;RESET&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;简单的字符串回复&lt;/a&gt;：始终为&lt;a href=&quot;reset&quot;&gt;RESET&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="18c4bbe7b1465236f074db82dbbd64ee2984a0f8" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://redis.io/topics/protocol#simple-string-reply&quot;&gt;Simple string reply&lt;/a&gt;: always &lt;code&gt;OK&lt;/code&gt; since &lt;a href=&quot;mset&quot;&gt;MSET&lt;/a&gt; can't fail.</source>
@@ -817,11 +821,11 @@
         </trans-unit>
         <trans-unit id="7d9389fca085b1a7b5e73eb5d9c032624983e1b6" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;latency-graph&quot;&gt;LATENCY GRAPH&lt;/a&gt; lets you intuitively understand the latency trend of an &lt;code&gt;event&lt;/code&gt; via state-of-the-art visualization. It can be used for quickly grasping the situation before resorting to means such parsing the raw data from &lt;a href=&quot;latency-history&quot;&gt;LATENCY HISTORY&lt;/a&gt; or external tooling.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;latency-graph&quot;&gt;LATENCY GRAPH&lt;/a&gt;使您可以通过最新的可视化直观地了解 &lt;code&gt;event&lt;/code&gt; 的延迟趋势。在诉诸于从&lt;a href=&quot;latency-history&quot;&gt;LATENCY HISTORY&lt;/a&gt;或外部工具解析原始数据之类的手段之前，它可以用于快速掌握情况。</target>
         </trans-unit>
         <trans-unit id="60632bf207016cc8f1e0b02fff4881f8cf083c3e" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;lmove&quot;&gt;LMOVE&lt;/a&gt; (or &lt;a href=&quot;blmove&quot;&gt;BLMOVE&lt;/a&gt; for the blocking variant) offers a way to avoid this problem: the consumer fetches the message and at the same time pushes it into a &lt;em&gt;processing&lt;/em&gt; list. It will use the &lt;a href=&quot;lrem&quot;&gt;LREM&lt;/a&gt; command in order to remove the message from the &lt;em&gt;processing&lt;/em&gt; list once the message has been processed.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;lmove&quot;&gt;LMOVE&lt;/a&gt;（或阻塞形式的&lt;a href=&quot;blmove&quot;&gt;BLMOVE&lt;/a&gt;）提供了一种避免此问题的方法：使用者获取消息，同时将其推入&lt;em&gt;处理&lt;/em&gt;列表。一旦&lt;em&gt;处理&lt;/em&gt;完消息，它将使用&lt;a href=&quot;lrem&quot;&gt;LREM&lt;/a&gt;命令从&lt;em&gt;处理&lt;/em&gt;列表中删除消息。</target>
         </trans-unit>
         <trans-unit id="8146b28b81f62433a2d744f49d9906200e53444e" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;mget&quot;&gt;MGET&lt;/a&gt; arity is -2 since the command accepts at a minimum one argument, but up to an unlimited number: &lt;code&gt;MGET _key1_ [key2] [key3] ...&lt;/code&gt;.</source>
@@ -885,7 +889,7 @@
         </trans-unit>
         <trans-unit id="9cf84bb49b4cb754f22b3d9e765cdd491fb29676" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;setbit&quot;&gt;SETBIT&lt;/a&gt; excels at setting single bits, and can be called several times when multiple bits need to be set. To optimize this operation you can replace multiple &lt;a href=&quot;setbit&quot;&gt;SETBIT&lt;/a&gt; calls with a single call to the variadic &lt;a href=&quot;bitfield&quot;&gt;BITFIELD&lt;/a&gt; command and the use of fields of type &lt;code&gt;u1&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;setbit&quot;&gt;SETBIT&lt;/a&gt;擅长设置单个位，当需要设置多个位时可以多次调用。要优化此操作，您可以使用对可变&lt;a href=&quot;bitfield&quot;&gt;字体的BITFIELD&lt;/a&gt;命令的单个调用以及使用 &lt;code&gt;u1&lt;/code&gt; 类型的字段的替换来替换多个&lt;a href=&quot;setbit&quot;&gt;SETBIT&lt;/a&gt;调用。</target>
         </trans-unit>
         <trans-unit id="e1cc429647f3d3a6ed8373af387a43592fc0d84b" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;setex&quot;&gt;SETEX&lt;/a&gt; is atomic, and can be reproduced by using the previous two commands inside an &lt;a href=&quot;multi&quot;&gt;MULTI&lt;/a&gt; / &lt;a href=&quot;exec&quot;&gt;EXEC&lt;/a&gt; block. It is provided as a faster alternative to the given sequence of operations, because this operation is very common when Redis is used as a cache.</source>
@@ -925,15 +929,15 @@
         </trans-unit>
         <trans-unit id="4b49a493a94294aa0802c279d2824c75a402544c" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;zdiff&quot;&gt;ZDIFF&lt;/a&gt; - keys stop after &lt;code&gt;numkeys&lt;/code&gt; count arguments</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;zdiff&quot;&gt;ZDIFF-&lt;/a&gt;键在 &lt;code&gt;numkeys&lt;/code&gt; 个计数参数后停止</target>
         </trans-unit>
         <trans-unit id="6bb97de4e13e1361a5806301bcfdbda867363de9" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;zdiffstore&quot;&gt;ZDIFFSTORE&lt;/a&gt; - keys stop after &lt;code&gt;numkeys&lt;/code&gt; count arguments</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;zdiffstore&quot;&gt;ZDIFFSTORE-&lt;/a&gt;键在 &lt;code&gt;numkeys&lt;/code&gt; 个计数参数后停止</target>
         </trans-unit>
         <trans-unit id="6e51a0a1a293b7ce94094c6efe1a74e0279a0a2d" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;zinter&quot;&gt;ZINTER&lt;/a&gt; - keys stop when &lt;code&gt;WEIGHT&lt;/code&gt; or &lt;code&gt;AGGREGATE&lt;/code&gt; starts</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;zinter&quot;&gt;ZINTER-&lt;/a&gt;当 &lt;code&gt;WEIGHT&lt;/code&gt; 或 &lt;code&gt;AGGREGATE&lt;/code&gt; 开始时，按键停止</target>
         </trans-unit>
         <trans-unit id="cc2b34b71894079f3a4247bae9140accbfa7bd62" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;zinterstore&quot;&gt;ZINTERSTORE&lt;/a&gt; - keys stop when &lt;code&gt;WEIGHT&lt;/code&gt; or &lt;code&gt;AGGREGATE&lt;/code&gt; starts</source>
@@ -949,7 +953,7 @@
         </trans-unit>
         <trans-unit id="2d43d96fb06af73df54968ce4c53b8f01ae94f40" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;zunion&quot;&gt;ZUNION&lt;/a&gt; - keys stop when &lt;code&gt;WEIGHT&lt;/code&gt; or &lt;code&gt;AGGREGATE&lt;/code&gt; starts</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;zunion&quot;&gt;ZUNION&lt;/a&gt; -键停止时 &lt;code&gt;WEIGHT&lt;/code&gt; 或 &lt;code&gt;AGGREGATE&lt;/code&gt; 开始</target>
         </trans-unit>
         <trans-unit id="e6ac10c909d551bbb985cb6f990ce82f84e1591a" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;zunionstore&quot;&gt;ZUNIONSTORE&lt;/a&gt; - keys stop when &lt;code&gt;WEIGHT&lt;/code&gt; or &lt;code&gt;AGGREGATE&lt;/code&gt; starts</source>
@@ -957,19 +961,19 @@
         </trans-unit>
         <trans-unit id="569711c63fe9cc258fbae71ad2b1717eb25ac2f9" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;!&amp;lt;hashedpassword&amp;gt;&lt;/code&gt;: Like &lt;code&gt;#&amp;lt;hashedpassword&amp;gt;&lt;/code&gt; but removes the password instead of adding it.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;!&amp;lt;hashedpassword&amp;gt;&lt;/code&gt; ：与 &lt;code&gt;#&amp;lt;hashedpassword&amp;gt;&lt;/code&gt; 类似，但是删除密码而不是添加密码。</target>
         </trans-unit>
         <trans-unit id="332fe64b4ba3f15b2a3cb0e2784ed0e6ae7243a2" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;#&amp;lt;hashedpassword&amp;gt;&lt;/code&gt;: Add the specified hashed password to the list of user passwords. A Redis hashed password is hashed with SHA256 and translated into a hexadecimal string. Example: &lt;code&gt;#c3ab8ff13720e8ad9047dd39466b3c8974e592c2fa383d4a3960714caef0c4f2&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;#&amp;lt;hashedpassword&amp;gt;&lt;/code&gt; ：将指定的哈希密码添加到用户密码列表中。Redis散列密码使用SHA256散列，并转换为十六进制字符串。示例： &lt;code&gt;#c3ab8ff13720e8ad9047dd39466b3c8974e592c2fa383d4a3960714caef0c4f2&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="8640dd4bf16306e76fc10f269c4d26da9f4dab05" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;amp;&amp;lt;pattern&amp;gt;&lt;/code&gt;: add the specified glob style pattern to the list of Pub/Sub channel patterns accessible by the user. You can add multiple channel patterns to the same user. Example: &lt;code&gt;&amp;amp;chatroom:*&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;amp;&amp;lt;pattern&amp;gt;&lt;/code&gt; ：将指定的glob样式模式添加到用户可访问的Pub / Sub通道模式列表中。您可以将多个通道模式添加到同一用户。示例： &lt;code&gt;&amp;amp;chatroom:*&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="ec34b944a1a531efc5d6a70281547dd46fc46b77" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;= 2.4&lt;/code&gt;: Accepts multiple &lt;code&gt;element&lt;/code&gt; arguments. In Redis versions older than 2.4 it was possible to push a single value per command.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;= 2.4&lt;/code&gt; ：接受多个 &lt;code&gt;element&lt;/code&gt; 参数。在低于2.4的Redis版本中，可以为每个命令推送单个值。</target>
         </trans-unit>
         <trans-unit id="d152642caa36eab07b6d0f1d23a030be20ac3dec" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;= 2.4&lt;/code&gt;: Accepts multiple &lt;code&gt;field&lt;/code&gt; arguments. Redis versions older than 2.4 can only remove a field per call.</source>
@@ -997,163 +1001,163 @@
         </trans-unit>
         <trans-unit id="83a71524c9706106fb9eb052fdcb51e544db835a" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;= 2.6.12&lt;/code&gt;: Added the &lt;code&gt;EX&lt;/code&gt;, &lt;code&gt;PX&lt;/code&gt;, &lt;code&gt;NX&lt;/code&gt; and &lt;code&gt;XX&lt;/code&gt; options.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;= 2.6.12&lt;/code&gt; ：添加了 &lt;code&gt;EX&lt;/code&gt; ， &lt;code&gt;PX&lt;/code&gt; ， &lt;code&gt;NX&lt;/code&gt; 和 &lt;code&gt;XX&lt;/code&gt; 选项。</target>
         </trans-unit>
         <trans-unit id="4901af6b504f674527d7aafc65e07383610e6747" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;= 3.0.0&lt;/code&gt;: Added the &lt;a href=&quot;copy&quot;&gt;COPY&lt;/a&gt; and &lt;code&gt;REPLACE&lt;/code&gt; options.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;= 3.0.0&lt;/code&gt; ：添加了&lt;a href=&quot;copy&quot;&gt;COPY&lt;/a&gt;和 &lt;code&gt;REPLACE&lt;/code&gt; 选项。</target>
         </trans-unit>
         <trans-unit id="98398956d40bb196e7619d8acc034be9d44cc0f0" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;= 3.0.2&lt;/code&gt;: Added the &lt;code&gt;XX&lt;/code&gt;, &lt;code&gt;NX&lt;/code&gt;, &lt;code&gt;CH&lt;/code&gt; and &lt;a href=&quot;incr&quot;&gt;INCR&lt;/a&gt; options.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;= 3.0.2&lt;/code&gt; ：添加了 &lt;code&gt;XX&lt;/code&gt; ， &lt;code&gt;NX&lt;/code&gt; ， &lt;code&gt;CH&lt;/code&gt; 和&lt;a href=&quot;incr&quot;&gt;INCR&lt;/a&gt;选项。</target>
         </trans-unit>
         <trans-unit id="2bea5b4de3db98a2a15eb984285a0fee982b0280" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;= 3.0.6&lt;/code&gt;: Added the &lt;a href=&quot;keys&quot;&gt;KEYS&lt;/a&gt; option.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;= 3.0.6&lt;/code&gt; ：添加了&lt;a href=&quot;keys&quot;&gt;KEYS&lt;/a&gt;选项。</target>
         </trans-unit>
         <trans-unit id="40aba7a03dbfa089c6aed1328024c7117e29b74a" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;= 3.2.2&lt;/code&gt;: Added the &lt;code&gt;SCHEDULE&lt;/code&gt; option.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;= 3.2.2&lt;/code&gt; ：添加了 &lt;code&gt;SCHEDULE&lt;/code&gt; 选项。</target>
         </trans-unit>
         <trans-unit id="a7a30150b3885ca3019925b58e4bfaab88614e62" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;= 3.2&lt;/code&gt;: Added the &lt;code&gt;count&lt;/code&gt; argument.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;= 3.2&lt;/code&gt; ：添加了 &lt;code&gt;count&lt;/code&gt; 参数。</target>
         </trans-unit>
         <trans-unit id="e2ea9f36d3059b4775f75d77e03a660fad36bf90" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;= 4.0.7&lt;/code&gt;: Added the &lt;a href=&quot;auth&quot;&gt;AUTH&lt;/a&gt; option.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;= 4.0.7&lt;/code&gt; ：添加了&lt;a href=&quot;auth&quot;&gt;AUTH&lt;/a&gt;选项。</target>
         </trans-unit>
         <trans-unit id="3ee43e07d0b4b176ae91d9e26f62a182f77684ea" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;= 4.0&lt;/code&gt;: Accepts multiple &lt;code&gt;element&lt;/code&gt; arguments. In Redis versions older than 4.0 it was possible to push a single value per command.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;= 4.0&lt;/code&gt; ：接受多个 &lt;code&gt;element&lt;/code&gt; 参数。在低于4.0的Redis版本中，可以为每个命令推送单个值。</target>
         </trans-unit>
         <trans-unit id="9f742473237dabd90ca797cdb25ef760905e85a2" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;= 6.0.0&lt;/code&gt;: Added ACL style (username and password).</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;= 6.0.0&lt;/code&gt; ：添加了ACL样式（用户名和密码）。</target>
         </trans-unit>
         <trans-unit id="285c15b24d50f9f3e48ed6a2c1a1d448a2caf95d" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;= 6.0.0&lt;/code&gt;: Added the &lt;code&gt;AUTH2&lt;/code&gt; option.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;= 6.0.0&lt;/code&gt; ：添加了 &lt;code&gt;AUTH2&lt;/code&gt; 选项。</target>
         </trans-unit>
         <trans-unit id="e7ceb02b92efdb21741cf63fa3d22015022b2274" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;= 6.0.0&lt;/code&gt;: Added the &lt;code&gt;FULL&lt;/code&gt; option to &lt;code&gt;XINFO STREAM&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;= 6.0.0&lt;/code&gt; ：在 &lt;code&gt;XINFO STREAM&lt;/code&gt; 中添加了 &lt;code&gt;FULL&lt;/code&gt; 选项。</target>
         </trans-unit>
         <trans-unit id="4af1549a1f3069267544622dbebc69bf01104c19" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;= 6.0&lt;/code&gt;: &lt;code&gt;timeout&lt;/code&gt; is interpreted as a double instead of an integer.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;= 6.0&lt;/code&gt; ： &lt;code&gt;timeout&lt;/code&gt; 被解释为双精度而不是整数。</target>
         </trans-unit>
         <trans-unit id="83a1cf52ae47e116a981e6ff4206d8b721834958" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;= 6.0&lt;/code&gt;: Added the &lt;code&gt;KEEPTTL&lt;/code&gt; option.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;= 6.0&lt;/code&gt; ：添加了 &lt;code&gt;KEEPTTL&lt;/code&gt; 选项。</target>
         </trans-unit>
         <trans-unit id="fbba973e8dfca03cd5ec41e4bdcb4b3e54ff20a7" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;= 6.0&lt;/code&gt;: Supports the &lt;a href=&quot;type&quot;&gt;TYPE&lt;/a&gt; subcommand.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;= 6.0&lt;/code&gt; ：支持&lt;a href=&quot;type&quot;&gt;TYPE&lt;/a&gt;子命令。</target>
         </trans-unit>
         <trans-unit id="941a1188610db2faeb638b8c15985f0d524a8dba" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;= 6.2.0&lt;/code&gt;: Added the &lt;code&gt;IDLE&lt;/code&gt; option and exclusive range intervals.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;= 6.2.0&lt;/code&gt; ：添加了 &lt;code&gt;IDLE&lt;/code&gt; 选项和互斥范围间隔。</target>
         </trans-unit>
         <trans-unit id="6bee5ff6ddaeb10d7c9268ffb8c5e2f5d6a6aa77" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;= 6.2.0&lt;/code&gt;: Supports the &lt;code&gt;CREATECONSUMER&lt;/code&gt; subcommand.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;= 6.2.0&lt;/code&gt; ：支持 &lt;code&gt;CREATECONSUMER&lt;/code&gt; 子命令。</target>
         </trans-unit>
         <trans-unit id="a11fed7b45e661ed607d2bcc6a94ecc1d4d1377f" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;= 6.2&lt;/code&gt; Added exclusive ranges.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;= 6.2&lt;/code&gt; 添加了独占范围。</target>
         </trans-unit>
         <trans-unit id="1f590db2b97fea13d3ab4b184d1fc585bed0a493" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;= 6.2&lt;/code&gt;: Added Pub/Sub channel patterns.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;= 6.2&lt;/code&gt; ：添加了发布/订阅频道模式。</target>
         </trans-unit>
         <trans-unit id="2bc582c62fddb4d98b7f1f5b2bb9a37ea165377e" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;= 6.2&lt;/code&gt;: Added the &lt;a href=&quot;get&quot;&gt;GET&lt;/a&gt; option.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;= 6.2&lt;/code&gt; ：添加了&lt;a href=&quot;get&quot;&gt;GET&lt;/a&gt;选项。</target>
         </trans-unit>
         <trans-unit id="37936786fb314f252043ccc8ea194a9bc3e19ec7" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;= 6.2&lt;/code&gt;: Added the &lt;code&gt;NOMKSTREAM&lt;/code&gt; option.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;= 6.2&lt;/code&gt; ：添加了 &lt;code&gt;NOMKSTREAM&lt;/code&gt; 选项。</target>
         </trans-unit>
         <trans-unit id="c13c2057c3929dea40075ab800a2eee9e309857b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;= 6.2&lt;/code&gt;: Added the &lt;code&gt;count&lt;/code&gt; argument.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;= 6.2&lt;/code&gt; ：添加了 &lt;code&gt;count&lt;/code&gt; 参数。</target>
         </trans-unit>
         <trans-unit id="a8cc79dae1191957c2d6bb4d0fc21ae91bdc856b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;=2.8.12&lt;/code&gt;: &lt;code&gt;ID&lt;/code&gt; option.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;=2.8.12&lt;/code&gt; ： &lt;code&gt;ID&lt;/code&gt; 选项。</target>
         </trans-unit>
         <trans-unit id="025114393bca1775c38e0037eed391d3a4acedc2" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;=2.8.12&lt;/code&gt;: Added new filter format.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;=2.8.12&lt;/code&gt; ：添加了新的过滤器格式。</target>
         </trans-unit>
         <trans-unit id="053f3e43d942653dcca6e33a1de3268d6fc52f16" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;=2.8.12&lt;/code&gt;: Added unique client &lt;code&gt;id&lt;/code&gt; field.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;=2.8.12&lt;/code&gt; ：添加了唯一的客户端 &lt;code&gt;id&lt;/code&gt; 字段。</target>
         </trans-unit>
         <trans-unit id="4f05fc7c67e88ef21ca69149ea213c2d9da4e381" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;=3.2&lt;/code&gt;: Added &lt;code&gt;master&lt;/code&gt; type in for &lt;a href=&quot;type&quot;&gt;TYPE&lt;/a&gt; option.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;=3.2&lt;/code&gt; ：在&lt;a href=&quot;type&quot;&gt;TYPE&lt;/a&gt;选项中添加了 &lt;code&gt;master&lt;/code&gt; 类型。</target>
         </trans-unit>
         <trans-unit id="cd66e14be9c4326dab6b817580b7c8c6dc5dc15d" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;=5.0&lt;/code&gt;: Added optional &lt;a href=&quot;type&quot;&gt;TYPE&lt;/a&gt; filter.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;=5.0&lt;/code&gt; ：添加了可选的&lt;a href=&quot;type&quot;&gt;TYPE&lt;/a&gt;过滤器。</target>
         </trans-unit>
         <trans-unit id="ae5e8aedfb1df587089d638fc0eadba6ba331870" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;=5&lt;/code&gt;: Replaced &lt;code&gt;slave&lt;/code&gt;&lt;a href=&quot;type&quot;&gt;TYPE&lt;/a&gt; with &lt;code&gt;replica&lt;/code&gt;. &lt;code&gt;slave&lt;/code&gt; still supported for backward compatibility.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;=5&lt;/code&gt; ：用 &lt;code&gt;replica&lt;/code&gt; 替换了 &lt;code&gt;slave&lt;/code&gt; &lt;a href=&quot;type&quot;&gt;TYPE&lt;/a&gt;。 &lt;code&gt;slave&lt;/code&gt; 仍然支持向后兼容。</target>
         </trans-unit>
         <trans-unit id="d1141d99bccc2b2d85f9ca2cefb8c73025329be8" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;=6.0&lt;/code&gt;: &lt;a href=&quot;auth&quot;&gt;AUTH&lt;/a&gt; excluded from the command's output.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;=6.0&lt;/code&gt; ：&lt;a href=&quot;auth&quot;&gt;AUTH&lt;/a&gt;从命令的输出中排除。</target>
         </trans-unit>
         <trans-unit id="1218bc6a016b1c022e1fccd9fb356a89e9ee5b44" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;=6.2&lt;/code&gt;: &lt;a href=&quot;reset&quot;&gt;RESET&lt;/a&gt; can be called to exit monitor mode.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;=6.2&lt;/code&gt; ：可以调用&lt;a href=&quot;reset&quot;&gt;RESET&lt;/a&gt;退出监视模式。</target>
         </trans-unit>
         <trans-unit id="44eefc74ec3373606d57a5ed94d056621157ef88" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;=6.2&lt;/code&gt;: &lt;a href=&quot;reset&quot;&gt;RESET&lt;/a&gt; can be called to exit subscribed state.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;=6.2&lt;/code&gt; ：可以调用&lt;a href=&quot;reset&quot;&gt;RESET&lt;/a&gt;退出订阅状态。</target>
         </trans-unit>
         <trans-unit id="1f1d046fb8f1f3658596ba0159c572bd6543afe7" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;=6.2&lt;/code&gt;: &lt;code&gt;LADDR&lt;/code&gt; option.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;=6.2&lt;/code&gt; ： &lt;code&gt;LADDR&lt;/code&gt; 选项。</target>
         </trans-unit>
         <trans-unit id="34add57edf900025fe772362753c4eb8ec79828b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;=6.2&lt;/code&gt;: Added &lt;code&gt;laddr&lt;/code&gt; field and the optional &lt;code&gt;ID&lt;/code&gt; filter.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;=6.2&lt;/code&gt; ：添加了 &lt;code&gt;laddr&lt;/code&gt; 字段和可选的 &lt;code&gt;ID&lt;/code&gt; 过滤器。</target>
         </trans-unit>
         <trans-unit id="04a673e1856b6d7640429daf0c5e203b54cd5b0d" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;=6.2&lt;/code&gt;: Added the &lt;code&gt;GT&lt;/code&gt; and &lt;code&gt;LT&lt;/code&gt; options.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;=6.2&lt;/code&gt; ：添加了 &lt;code&gt;GT&lt;/code&gt; 和 &lt;code&gt;LT&lt;/code&gt; 选项。</target>
         </trans-unit>
         <trans-unit id="080406b2f8e7fa35d9b9272a2a5fe7cbfb00c193" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;gt;password&lt;/code&gt;: Add the specified clear text password as an hashed password in the list of the users passwords. Every user can have many active passwords, so that password rotation will be simpler. The specified password is not stored as clear text inside the server. Example: &lt;code&gt;&amp;gt;mypassword&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;gt;password&lt;/code&gt; ：在用户密码列表中，将指定的明文密码作为哈希密码添加。每个用户可以拥有许多有效的密码，因此密码的轮换将更加简单。指定的密码未以明文形式存储在服务器内部。例如： &lt;code&gt;&amp;gt;mypassword&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="ee41dc050003d78fdddf70aef5db0bb9bf42427e" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;lt;= 3.2.0&lt;/code&gt;: Before Redis 3.2.0, an error is returned if source and destination names are the same.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;lt;= 3.2.0&lt;/code&gt; ：在Redis 3.2.0之前，如果源名称和目标名称相同，则返回错误。</target>
         </trans-unit>
         <trans-unit id="efbdbb3fc6dd3be1efaae2643f1523e35adeb35e" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;&amp;lt;password&lt;/code&gt;: Like &lt;code&gt;&amp;gt;password&lt;/code&gt; but removes the password instead of adding it.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&amp;lt;password&lt;/code&gt; ：类似于 &lt;code&gt;&amp;gt;password&lt;/code&gt; ,但是删除密码而不是添加密码。</target>
         </trans-unit>
         <trans-unit id="a553dd659e8f61302ef140faaa0cb627da6061d3" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;+&amp;lt;command&amp;gt;&lt;/code&gt;: add this command to the list of the commands the user can call. Example: &lt;code&gt;+zadd&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;+&amp;lt;command&amp;gt;&lt;/code&gt; ：将此命令添加到用户可以调用的命令列表中。例如： &lt;code&gt;+zadd&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="366c735b421e331d6dd9cfdaeb07340a3779b46b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;+&amp;lt;command&amp;gt;|&amp;lt;subcommand&amp;gt;&lt;/code&gt;: add the specified command to the list of the commands the user can execute, but only for the specified subcommand. Example: &lt;code&gt;+config|get&lt;/code&gt;. Generates an error if the specified command is already allowed in its full version for the specified user. Note: there is no symmetrical command to remove subcommands, you need to remove the whole command and re-add the subcommands you want to allow. This is much safer than removing subcommands, in the future Redis may add new dangerous subcommands, so configuring by subtraction is not good.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;+&amp;lt;command&amp;gt;|&amp;lt;subcommand&amp;gt;&lt;/code&gt; ：将指定的命令添加到用户可以执行的命令列表中，但仅适用于指定的子命令。例如： &lt;code&gt;+config|get&lt;/code&gt; 。如果指定用户的完整版本已允许使用指定命令，则生成错误。注意：没有对称命令可删除子命令，您需要删除整个命令并重新添加要允许的子命令。这比删除子命令安全得多，将来Redis可能会添加新的危险子命令，因此通过减法进行配置不是很好。</target>
         </trans-unit>
         <trans-unit id="c58bb5712b69a986cedce93a7363000108c338b2" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;+@&amp;lt;category&amp;gt;&lt;/code&gt;: add all the commands in the specified category to the list of commands the user is able to execute. Example: &lt;code&gt;+@string&lt;/code&gt; (adds all the string commands). For a list of categories check the &lt;a href=&quot;acl-cat&quot;&gt;ACL CAT&lt;/a&gt; command.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;+@&amp;lt;category&amp;gt;&lt;/code&gt; ：将指定类别中的所有命令添加到用户能够执行的命令列表中。示例： &lt;code&gt;+@string&lt;/code&gt; （添加所有string命令）。有关类别的列表，请检查&lt;a href=&quot;acl-cat&quot;&gt;ACL CAT&lt;/a&gt;命令。</target>
         </trans-unit>
         <trans-unit id="ae54e4c2c501f18d293664a0d015906848ed315b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;-&amp;lt;command&amp;gt;&lt;/code&gt;. Like &lt;code&gt;+&amp;lt;command&amp;gt;&lt;/code&gt; but removes the command instead of adding it.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;-&amp;lt;command&amp;gt;&lt;/code&gt; 。与 &lt;code&gt;+&amp;lt;command&amp;gt;&lt;/code&gt; 类似，但删除命令而不是添加命令。</target>
         </trans-unit>
         <trans-unit id="68b30ed3ef6cc225df5d9dc21b287aea4db630d0" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;-&lt;/code&gt; and &lt;code&gt;+&lt;/code&gt; special IDs</source>
@@ -1161,7 +1165,7 @@
         </trans-unit>
         <trans-unit id="6cdf57a670cfc51e7d6fc718c299a405669305d5" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;-@&amp;lt;category&amp;gt;&lt;/code&gt;: Like &lt;code&gt;+@&amp;lt;category&amp;gt;&lt;/code&gt; but removes all the commands in the category instead of adding them.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;-@&amp;lt;category&amp;gt;&lt;/code&gt; ：与 &lt;code&gt;+@&amp;lt;category&amp;gt;&lt;/code&gt; 类似，但是删除类别中的所有命令，而不是添加它们。</target>
         </trans-unit>
         <trans-unit id="6c68c96a64ce023b34b6c30c041efc57221fd313" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;0&lt;/code&gt; if &lt;code&gt;field&lt;/code&gt; already exists in the hash and no operation was performed.</source>
@@ -1189,7 +1193,7 @@
         </trans-unit>
         <trans-unit id="07c9d718cdc5414bdeb8cbdf03823f20945c303a" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;0&lt;/code&gt; if &lt;code&gt;source&lt;/code&gt; was not copied.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;0&lt;/code&gt; 如果未复制 &lt;code&gt;source&lt;/code&gt; ，则为0。</target>
         </trans-unit>
         <trans-unit id="14262ac0700869ff357af1a9263d20742a687fd8" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;0&lt;/code&gt; if no key was set (at least one key already existed).</source>
@@ -1197,7 +1201,7 @@
         </trans-unit>
         <trans-unit id="2eca0d1ae191d0b5c68da8c00a9a39343593d08c" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;0&lt;/code&gt; if the client wasn't unblocked.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;0&lt;/code&gt; 如果客户端未解除阻止，则为0。</target>
         </trans-unit>
         <trans-unit id="c2861cd3b06dcac8af5ba597b6aaf182b6746c07" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;0&lt;/code&gt; if the element is not a member of &lt;code&gt;source&lt;/code&gt; and no operation was performed.</source>
@@ -1233,7 +1237,7 @@
         </trans-unit>
         <trans-unit id="ef10e3a8edd7061c899c9b9392d8d243fe7bb7bd" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;1&lt;/code&gt; if &lt;code&gt;source&lt;/code&gt; was copied.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;1&lt;/code&gt; 如果复制了 &lt;code&gt;source&lt;/code&gt; ，则为1。</target>
         </trans-unit>
         <trans-unit id="341d2d89bf2d4bfb6d516bebefd62ffd165f4ec3" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;1&lt;/code&gt; if the all the keys were set.</source>
@@ -1241,7 +1245,7 @@
         </trans-unit>
         <trans-unit id="f1b24187c3820176d0992932ec90c3699cbc27cd" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;1&lt;/code&gt; if the client was unblocked successfully.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;1&lt;/code&gt; 如果客户端已成功解除阻止，则为1。</target>
         </trans-unit>
         <trans-unit id="bcdd51deb57a70d0ba07630a412d7d995a6f5301" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;1&lt;/code&gt; if the element is a member of the set.</source>
@@ -1277,15 +1281,15 @@
         </trans-unit>
         <trans-unit id="7ddc285586bf7c22ddf294a2870a01fa101bb68b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;AUTH &amp;lt;username&amp;gt; &amp;lt;password&amp;gt;&lt;/code&gt;: directly authenticate the connection other than switching to the specified protocol. In this way there is no need to call &lt;a href=&quot;auth&quot;&gt;AUTH&lt;/a&gt; before &lt;a href=&quot;hello&quot;&gt;HELLO&lt;/a&gt; when setting up new connections. Note that the username can be set to &quot;default&quot; in order to authenticate against a server that does not use ACLs, but the simpler &lt;code&gt;requirepass&lt;/code&gt; mechanism of Redis before version 6.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;AUTH &amp;lt;username&amp;gt; &amp;lt;password&amp;gt;&lt;/code&gt; ：除了切换到指定协议以外，直接对连接进行身份验证。这样，在建立新连接时，无需在&lt;a href=&quot;hello&quot;&gt;HELLO&lt;/a&gt;之前调用&lt;a href=&quot;auth&quot;&gt;AUTH&lt;/a&gt;。请注意，可以将用户名设置为&amp;ldquo;默认&amp;rdquo;，以便针对不使用ACL的服务器进行身份验证，但是不使用版本6之前的Redis的更简单的 &lt;code&gt;requirepass&lt;/code&gt; 机制。</target>
         </trans-unit>
         <trans-unit id="5acb7c8b068cc49301cd33e4cd2d6d38317af659" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;AUTH2&lt;/code&gt; -- Authenticate with the given username and password pair (Redis 6 or greater ACL auth style).</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;AUTH2&lt;/code&gt; -使用给定的用户名和密码对进行身份验证（Redis 6或更高版本的ACL身份验证样式）。</target>
         </trans-unit>
         <trans-unit id="699f4a1057411debdcb2f7f3d871232bdbab98ac" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;BCAST&lt;/code&gt;: enable tracking in broadcasting mode. In this mode invalidation messages are reported for all the prefixes specified, regardless of the keys requested by the connection. Instead when the broadcasting mode is not enabled, Redis will track which keys are fetched using read-only commands, and will report invalidation messages only for such keys.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;BCAST&lt;/code&gt; ：在广播模式下启用跟踪。在这种模式下，将报告指定的所有前缀的无效消息，而与连接请求的密钥无关。相反，当未启用广播模式时，Redis将使用只读命令跟踪获取了哪些密钥，并将仅报告此类密钥的无效消息。</target>
         </trans-unit>
         <trans-unit id="eb836fd89c30980649b496a65a6cd12d77d066b0" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;BLPOP&lt;/code&gt; inside a &lt;code&gt;MULTI&lt;/code&gt; / &lt;code&gt;EXEC&lt;/code&gt; transaction</source>
@@ -1293,11 +1297,11 @@
         </trans-unit>
         <trans-unit id="8260b4add06d1395315a310037f5329fadd6c1b0" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;BYBOX&lt;/code&gt;: Search inside an axis-aligned rectangle, determined by &lt;code&gt;&amp;lt;height&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;width&amp;gt;&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;BYBOX&lt;/code&gt; ：在由 &lt;code&gt;&amp;lt;height&amp;gt;&lt;/code&gt; 和 &lt;code&gt;&amp;lt;width&amp;gt;&lt;/code&gt; 确定的与轴对齐的矩形内搜索。</target>
         </trans-unit>
         <trans-unit id="0d65c7083e1c9bc6e58d2a82145fa36d7711ea76" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;BYRADIUS&lt;/code&gt;: Similar to &lt;a href=&quot;georadius&quot;&gt;GEORADIUS&lt;/a&gt;, search inside circular area according to given &lt;code&gt;&amp;lt;radius&amp;gt;&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;BYRADIUS&lt;/code&gt; ：类似于&lt;a href=&quot;georadius&quot;&gt;GEORADIUS&lt;/a&gt;，根据给定的 &lt;code&gt;&amp;lt;radius&amp;gt;&lt;/code&gt; 在圆形区域内搜索。</target>
         </trans-unit>
         <trans-unit id="a5f1a178f5cdd8cdf5152e93b36fdb7a83b660dc" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;CLIENT KILL ADDR ip:port&lt;/code&gt;. This is exactly the same as the old three-arguments behavior.</source>
@@ -1309,11 +1313,11 @@
         </trans-unit>
         <trans-unit id="b8189d2f913ff843bb80f1a51af5338f680cff38" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;CLIENT KILL ID client-id&lt;/code&gt;. Allows to kill a client by its unique &lt;code&gt;ID&lt;/code&gt; field. Client &lt;code&gt;ID&lt;/code&gt;'s are retrieved using the &lt;a href=&quot;client-list&quot;&gt;CLIENT LIST&lt;/a&gt; command.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;CLIENT KILL ID client-id&lt;/code&gt; 。允许通过其唯一 &lt;code&gt;ID&lt;/code&gt; 字段杀死客户端。使用&lt;a href=&quot;client-list&quot;&gt;CLIENT LIST&lt;/a&gt;命令检索客户机 &lt;code&gt;ID&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="cdc9d941fea7fd1dcb5cca5e4eb05de354a9aa09" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;CLIENT KILL LADDR ip:port&lt;/code&gt;. Kill all clients connected to specified local (bind) address.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;CLIENT KILL LADDR ip:port&lt;/code&gt; 。杀死所有连接到指定本地（绑定）地址的客户端。</target>
         </trans-unit>
         <trans-unit id="55aa9e9d040d810292c5cbe0fb9ec86006c8c89e" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;CLIENT KILL SKIPME yes/no&lt;/code&gt;. By default this option is set to &lt;code&gt;yes&lt;/code&gt;, that is, the client calling the command will not get killed, however setting this option to &lt;code&gt;no&lt;/code&gt; will have the effect of also killing the client calling the command.</source>
@@ -1321,7 +1325,7 @@
         </trans-unit>
         <trans-unit id="badcef26ac69c8575bee09d042bb365553b77d45" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;CLIENT KILL TYPE type&lt;/code&gt;, where &lt;em&gt;type&lt;/em&gt; is one of &lt;code&gt;normal&lt;/code&gt;, &lt;code&gt;master&lt;/code&gt;, &lt;code&gt;replica&lt;/code&gt; and &lt;code&gt;pubsub&lt;/code&gt;. This closes the connections of &lt;strong&gt;all the clients&lt;/strong&gt; in the specified class. Note that clients blocked into the &lt;a href=&quot;monitor&quot;&gt;MONITOR&lt;/a&gt; command are considered to belong to the &lt;code&gt;normal&lt;/code&gt; class.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;CLIENT KILL TYPE type&lt;/code&gt; ，其中&lt;em&gt;type&lt;/em&gt;是 &lt;code&gt;normal&lt;/code&gt; ， &lt;code&gt;master&lt;/code&gt; ， &lt;code&gt;replica&lt;/code&gt; 和 &lt;code&gt;pubsub&lt;/code&gt; 之一。这将关闭指定类中&lt;strong&gt;所有客户端&lt;/strong&gt;的连接。请注意，被阻塞在&lt;a href=&quot;monitor&quot;&gt;MONITOR&lt;/a&gt;命令中的客户端被认为属于 &lt;code&gt;normal&lt;/code&gt; 类。</target>
         </trans-unit>
         <trans-unit id="11752fd7703f3053fd849cf8479195d68449607c" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;CLIENT KILL TYPE type&lt;/code&gt;, where &lt;em&gt;type&lt;/em&gt; is one of &lt;code&gt;normal&lt;/code&gt;, &lt;code&gt;master&lt;/code&gt;, &lt;code&gt;slave&lt;/code&gt; and &lt;code&gt;pubsub&lt;/code&gt; (the &lt;code&gt;master&lt;/code&gt; type is available from v3.2). This closes the connections of &lt;strong&gt;all the clients&lt;/strong&gt; in the specified class. Note that clients blocked into the &lt;a href=&quot;monitor&quot;&gt;MONITOR&lt;/a&gt; command are considered to belong to the &lt;code&gt;normal&lt;/code&gt; class.</source>
@@ -1329,7 +1333,7 @@
         </trans-unit>
         <trans-unit id="3e64a9e04cb696d74aa291a8da3de8594229ab57" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;CLIENT KILL USER username&lt;/code&gt;. Closes all the connections that are authenticated with the specified &lt;a href=&quot;https://redis.io/topics/acl&quot;&gt;ACL&lt;/a&gt; username, however it returns an error if the username does not map to an existing ACL user.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;CLIENT KILL USER username&lt;/code&gt; 。关闭所有使用指定的&lt;a href=&quot;https://redis.io/topics/acl&quot;&gt;ACL&lt;/a&gt;用户名进行身份验证的连接，但是，如果用户名未映射到现有的ACL用户，它将返回错误。</target>
         </trans-unit>
         <trans-unit id="fef0710bd872cf9a625ed7b0d01b954d4f4b4278" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;COPY&lt;/code&gt; -- Do not remove the key from the local instance.</source>
@@ -1361,11 +1365,11 @@
         </trans-unit>
         <trans-unit id="2e23863487a6f1e1378cb2786068b97f8360c522" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;FROMLONLAT&lt;/code&gt;: Use the given &lt;code&gt;&amp;lt;longitude&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;latitude&amp;gt;&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;FROMLONLAT&lt;/code&gt; ：使用给定的 &lt;code&gt;&amp;lt;longitude&amp;gt;&lt;/code&gt; 和 &lt;code&gt;&amp;lt;latitude&amp;gt;&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="0baa22a11a03f50b1ca5c9a732209609aba63e36" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;FROMMEMBER&lt;/code&gt;: Use the position of the given existing &lt;code&gt;&amp;lt;member&amp;gt;&lt;/code&gt; in the sorted set.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;FROMMEMBER&lt;/code&gt; ：使用给定的现有 &lt;code&gt;&amp;lt;member&amp;gt;&lt;/code&gt; 在排序集中的位置。</target>
         </trans-unit>
         <trans-unit id="fef98736f61e1a786364eb654ce1fb11f47f4232" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;IDLE &amp;lt;ms&amp;gt;&lt;/code&gt;: Set the idle time (last time it was delivered) of the message. If IDLE is not specified, an IDLE of 0 is assumed, that is, the time count is reset because the message has now a new owner trying to process it.</source>
@@ -1381,11 +1385,11 @@
         </trans-unit>
         <trans-unit id="a620f0dc88712199e17b250a803b97a96125f1da" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;JUSTID&lt;/code&gt;: Return just an array of IDs of messages successfully claimed, without returning the actual message. Using this option means the retry counter is not incremented.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;JUSTID&lt;/code&gt; ：仅返回成功声明的消息ID的数组，而不返回实际消息。使用此选项意味着重试计数器不会增加。</target>
         </trans-unit>
         <trans-unit id="703497b810844d3d5410af3e2c8faf26cae512df" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;KEEPTTL&lt;/code&gt; -- Retain the time to live associated with the key.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;KEEPTTL&lt;/code&gt; -保留与密钥关联的生存时间。</target>
         </trans-unit>
         <trans-unit id="5417b35857fc0642ff95207d9855306db80441f5" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;MIGRATING&lt;/code&gt; subcommand: Set a hash slot in &lt;em&gt;migrating&lt;/em&gt; state.</source>
@@ -1401,7 +1405,7 @@
         </trans-unit>
         <trans-unit id="22139c723dca8a13892a3a0499960532b97c2112" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;NOLOOP&lt;/code&gt;: don't send notifications about keys modified by this connection itself.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;NOLOOP&lt;/code&gt; ：不发送有关此连接本身修改的键的通知。</target>
         </trans-unit>
         <trans-unit id="cd0e3ba7650821204046fdf9c4755dd7ba904ffc" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;NX&lt;/code&gt; -- Only set the key if it does not already exist.</source>
@@ -1417,7 +1421,7 @@
         </trans-unit>
         <trans-unit id="b6c92d5715cc621ca2953155b63f6d1040b3820c" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;OBJECT HELP&lt;/code&gt; returns a succinct help text.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;OBJECT HELP&lt;/code&gt; 将返回简洁的帮助文本。</target>
         </trans-unit>
         <trans-unit id="f3480c780052d6d5327144f1f0dc8cf03ca4c9a8" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;OBJECT HELP&lt;/code&gt; returns a succint help text.</source>
@@ -1425,7 +1429,7 @@
         </trans-unit>
         <trans-unit id="2ebd6183929f50ff80b9af0e280a3646321f3699" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;OBJECT IDLETIME &amp;lt;key&amp;gt;&lt;/code&gt; returns the number of seconds since the object stored at the specified key is idle (not requested by read or write operations). While the value is returned in seconds the actual resolution of this timer is 10 seconds, but may vary in future implementations. This subcommand is available when &lt;code&gt;maxmemory-policy&lt;/code&gt; is set to an LRU policy or &lt;code&gt;noeviction&lt;/code&gt; and &lt;code&gt;maxmemory&lt;/code&gt; is set.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;OBJECT IDLETIME &amp;lt;key&amp;gt;&lt;/code&gt; 返回自存储在指定键上的对象处于空闲状态以来的秒数（读取或写入操作不请求）。虽然以秒为单位返回该值，但此计时器的实际分辨率为10秒，但在将来的实现中可能会有所不同。当此子命令可 &lt;code&gt;maxmemory-policy&lt;/code&gt; 设置为LRU策略 &lt;code&gt;noeviction&lt;/code&gt; 和 &lt;code&gt;maxmemory&lt;/code&gt; 设置。</target>
         </trans-unit>
         <trans-unit id="888f9bddf5ef83f498988c713f090f957d312a9c" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;OBJECT IDLETIME &amp;lt;key&amp;gt;&lt;/code&gt; returns the number of seconds since the object stored at the specified key is idle (not requested by read or write operations). While the value is returned in seconds the actual resolution of this timer is 10 seconds, but may vary in future implementations. This subcommand is available when &lt;code&gt;maxmemory-policy&lt;/code&gt; is set to an LRU policy or &lt;code&gt;noeviction&lt;/code&gt;.</source>
@@ -1445,15 +1449,15 @@
         </trans-unit>
         <trans-unit id="93d22bb36d8682b6c2e087826455c7270214d890" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;OPTIN&lt;/code&gt;: when broadcasting is NOT active, normally don't track keys in read only commands, unless they are called immediately after a &lt;code&gt;CLIENT CACHING yes&lt;/code&gt; command.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;OPTIN&lt;/code&gt; ：当广播未激活时，通常不跟踪只读命令中的键，除非在 &lt;code&gt;CLIENT CACHING yes&lt;/code&gt; 命令之后立即调用它们。</target>
         </trans-unit>
         <trans-unit id="fe9812bf6fc63dca07899dad7daac170c6a78e22" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;OPTOUT&lt;/code&gt;: when broadcasting is NOT active, normally track keys in read only commands, unless they are called immediately after a &lt;code&gt;CLIENT CACHING no&lt;/code&gt; command.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;OPTOUT&lt;/code&gt; ：当广播未激活时，通常跟踪只读命令中的键，除非在 &lt;code&gt;CLIENT CACHING no&lt;/code&gt; 命令之后立即调用它们。</target>
         </trans-unit>
         <trans-unit id="3dbbf2c08733248217445e964a4b0ceae7718aae" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;PREFIX &amp;lt;prefix&amp;gt;&lt;/code&gt;: for broadcasting, register a given key prefix, so that notifications will be provided only for keys starting with this string. This option can be given multiple times to register multiple prefixes. If broadcasting is enabled without this option, Redis will send notifications for every key.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;PREFIX &amp;lt;prefix&amp;gt;&lt;/code&gt; ：对于广播，请注册给定的键前缀，以便仅针对以该字符串开头的键提供通知。可以多次赋予此选项以注册多个前缀。如果在没有此选项的情况下启用了广播，则Redis将为每个键发送通知。</target>
         </trans-unit>
         <trans-unit id="a6629a2a7ab460a79b8e2163eeb985a87da0ddcf" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;PX&lt;/code&gt;&lt;em&gt;milliseconds&lt;/em&gt; -- Set the specified expire time, in milliseconds.</source>
@@ -1461,7 +1465,7 @@
         </trans-unit>
         <trans-unit id="f0c43ea2a6c896f466d45f24e414d0e99761206b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;REDIRECT &amp;lt;id&amp;gt;&lt;/code&gt;: send redirection messages to the connection with the specified ID. The connection must exist, you can get the ID of such connection using &lt;a href=&quot;client-id&quot;&gt;CLIENT ID&lt;/a&gt;. If the connection we are redirecting to is terminated, when in RESP3 mode the connection with tracking enabled will receive &lt;code&gt;tracking-redir-broken&lt;/code&gt; push messages in order to signal the condition.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;REDIRECT &amp;lt;id&amp;gt;&lt;/code&gt; ：将重定向消息发送到具有指定ID的连接。该连接必须存在，您可以使用&lt;a href=&quot;client-id&quot;&gt;CLIENT ID&lt;/a&gt;获得该连接的ID。如果我们重定向到的连接已终止，则在RESP3模式下，启用了跟踪的连接将收到 &lt;code&gt;tracking-redir-broken&lt;/code&gt; -redir断开的推送消息，以发出状态通知。</target>
         </trans-unit>
         <trans-unit id="80297e99327c2c150c0093cfc256780a8b53c387" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;REPLACE&lt;/code&gt; -- Replace existing key on the remote instance.</source>
@@ -1473,7 +1477,7 @@
         </trans-unit>
         <trans-unit id="13ea1d19798d3a862a8b4db4f5e7da4813672d6b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;SETNAME &amp;lt;clientname&amp;gt;&lt;/code&gt;: this is equivalent to also call &lt;a href=&quot;client-setname&quot;&gt;CLIENT SETNAME&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;SETNAME &amp;lt;clientname&amp;gt;&lt;/code&gt; ：这等效于也称为&lt;a href=&quot;client-setname&quot;&gt;CLIENT SETNAME&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="4ffbe13e1233b7e9c1174988bffadee0a3b98857" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;SKIP&lt;/code&gt;. This mode skips the reply of command immediately after it.</source>
@@ -1485,11 +1489,11 @@
         </trans-unit>
         <trans-unit id="22c4aa93098e2f4e9012509dce54747bfaf40373" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;STORE&lt;/code&gt;: Store the items in a sorted set populated with their geospatial information.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;STORE&lt;/code&gt; ：将项目存储在已排序的集合中，并按其地理空间信息填充。</target>
         </trans-unit>
         <trans-unit id="6dd2a610ee73ee9b633d0ee8607cd95468e5e519" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;STOREDIST&lt;/code&gt;: Store the items in a sorted set populated with their distance from the center as a floating point number, in the same unit specified in the radius.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;STOREDIST&lt;/code&gt; ：将项目存储在一个排序集中，该集合以其到中心的距离为浮点数，以半径中指定的相同单位存储。</target>
         </trans-unit>
         <trans-unit id="3368cd450f9f6cc2baea198c405095f6d0a009a1" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;TIME &amp;lt;ms-unix-time&amp;gt;&lt;/code&gt;: This is the same as IDLE but instead of a relative amount of milliseconds, it sets the idle time to a specific Unix time (in milliseconds). This is useful in order to rewrite the AOF file generating &lt;a href=&quot;xclaim&quot;&gt;XCLAIM&lt;/a&gt; commands.</source>
@@ -1497,7 +1501,7 @@
         </trans-unit>
         <trans-unit id="02d0547e91cdcd2f25342f4d6bb7cf4157a2111c" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;WITHCOORD&lt;/code&gt;: Also return the longitude and latitude of the matching items.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;WITHCOORD&lt;/code&gt; ：还返回匹配项的经度和纬度。</target>
         </trans-unit>
         <trans-unit id="f68fc34e1d6f2a26a1a2c15ca15742080415f576" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;WITHCOORD&lt;/code&gt;: Also return the longitude,latitude coordinates of the matching items.</source>
@@ -1505,7 +1509,7 @@
         </trans-unit>
         <trans-unit id="f946903450488324f8831b407ef63f52beb38d66" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;WITHDIST&lt;/code&gt;: Also return the distance of the returned items from the specified center. The distance is returned in the same unit as specified for the radius or height and width arguments.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;WITHDIST&lt;/code&gt; ：还返回返回的项目到指定中心的距离。距离以与指定半径或高度和宽度参数相同的单位返回。</target>
         </trans-unit>
         <trans-unit id="72e1da1bf7742af54c060cdc9d133362fecb89c4" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;WITHDIST&lt;/code&gt;: Also return the distance of the returned items from the specified center. The distance is returned in the same unit as the unit specified as the radius argument of the command.</source>
@@ -1557,19 +1561,19 @@
         </trans-unit>
         <trans-unit id="aa9ab796500ad0d3b0ba45503930390c147335b7" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;all&lt;/code&gt;: Return all sections (excluding module generated ones)</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;all&lt;/code&gt; ：返回所有部分（不包括模块生成的部分）</target>
         </trans-unit>
         <trans-unit id="2c90da4abd839ecb47d97be4f5c0afab42b83242" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;allchannels&lt;/code&gt;: alias for &lt;code&gt;&amp;amp;*&lt;/code&gt;, it allows the user to access all Pub/Sub channels.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;allchannels&lt;/code&gt; ： &lt;code&gt;&amp;amp;*&lt;/code&gt; 的别名，它允许用户访问所有Pub / Sub通道。</target>
         </trans-unit>
         <trans-unit id="6f6fd3b59ba484d4661d5ed4441f5e33e41f5630" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;allcommands&lt;/code&gt;: alias of &lt;code&gt;+@all&lt;/code&gt;. Adds all the commands there are in the server, including &lt;em&gt;future commands&lt;/em&gt; loaded via module, to be executed by this user.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;allcommands&lt;/code&gt; ： &lt;code&gt;+@all&lt;/code&gt; all的别名。添加服务器中存在的所有命令，包括&lt;em&gt;将来&lt;/em&gt;通过模块加载的&lt;em&gt;命令&lt;/em&gt;，以由该用户执行。</target>
         </trans-unit>
         <trans-unit id="e3ec1b8e0e3dadefc8c35aa0424a28712bf48508" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;allkeys&lt;/code&gt;: alias for &lt;code&gt;~*&lt;/code&gt;, it allows the user to access all the keys.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;allkeys&lt;/code&gt; ： &lt;code&gt;~*&lt;/code&gt; 别名，它允许用户访问所有键。</target>
         </trans-unit>
         <trans-unit id="edddb993a22213f8ae5d530d19608128b3d90819" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;aof.buffer&lt;/code&gt;: The summed size in bytes of the current and rewrite AOF buffers (see &lt;a href=&quot;info&quot;&gt;INFO&lt;/a&gt;'s &lt;code&gt;aof_buffer_length&lt;/code&gt; and &lt;code&gt;aof_rewrite_buffer_length&lt;/code&gt;, respectively)</source>
@@ -1641,7 +1645,7 @@
         </trans-unit>
         <trans-unit id="de61b3dd6c6c85f4d89184c6aceeac1115fe7e82" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;argv-mem&lt;/code&gt;: incomplete arguments for the next command (already extracted from query buffer)</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;argv-mem&lt;/code&gt; ：下一个命令的参数不完整（已从查询缓冲区中提取）</target>
         </trans-unit>
         <trans-unit id="9c55751797332d8d9b526a675ac4969063b50b6c" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;atomicvar_api&lt;/code&gt;: Atomicvar API used by Redis</source>
@@ -1653,7 +1657,7 @@
         </trans-unit>
         <trans-unit id="666a2695cf4298e987e3316285fbfcc244e56848" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;bcast&lt;/code&gt;: The client uses broadcasting mode.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;bcast&lt;/code&gt; ：客户端使用广播模式。</target>
         </trans-unit>
         <trans-unit id="e0921bad9f229a9389c2e38e52f6a7f7b765b5aa" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;bitop&lt;/code&gt; lib.</source>
@@ -1661,7 +1665,7 @@
         </trans-unit>
         <trans-unit id="63296e3f0c1fbb23ccca811926c200a7dd0df548" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;blocked_clients&lt;/code&gt;: Number of clients pending on a blocking call (&lt;a href=&quot;blpop&quot;&gt;BLPOP&lt;/a&gt;, &lt;a href=&quot;brpop&quot;&gt;BRPOP&lt;/a&gt;, &lt;a href=&quot;brpoplpush&quot;&gt;BRPOPLPUSH&lt;/a&gt;, &lt;a href=&quot;blmove&quot;&gt;BLMOVE&lt;/a&gt;, &lt;a href=&quot;bzpopmin&quot;&gt;BZPOPMIN&lt;/a&gt;, &lt;a href=&quot;bzpopmax&quot;&gt;BZPOPMAX&lt;/a&gt;)</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;blocked_clients&lt;/code&gt; ：阻塞调用中待处理的客户端数量（&lt;a href=&quot;blpop&quot;&gt;BLPOP&lt;/a&gt;，&lt;a href=&quot;brpop&quot;&gt;BRPOP&lt;/a&gt;，&lt;a href=&quot;brpoplpush&quot;&gt;BRPOPLPUSH&lt;/a&gt;，&lt;a href=&quot;blmove&quot;&gt;BLMOVE&lt;/a&gt;，&lt;a href=&quot;bzpopmin&quot;&gt;BZPOPMIN&lt;/a&gt;，&lt;a href=&quot;bzpopmax&quot;&gt;BZPOPMAX&lt;/a&gt;）</target>
         </trans-unit>
         <trans-unit id="0a1dd8d1355938beb39d0e1c2d0f73196261de7e" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;blocked_clients&lt;/code&gt;: Number of clients pending on a blocking call (BLPOP, BRPOP, BRPOPLPUSH)</source>
@@ -1669,15 +1673,15 @@
         </trans-unit>
         <trans-unit id="bcb07e2a295cc75aa5a4558a7b7dac249c9be34c" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;broken_redirect&lt;/code&gt;: The client ID used for redirection isn't valid anymore.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;broken_redirect&lt;/code&gt; ：用于重定向的客户端ID不再有效。</target>
         </trans-unit>
         <trans-unit id="0568e8e24ee465f3defc197d2909c4cd2a3fe3d8" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;caching-no&lt;/code&gt;: The next command won't cache keys (exists only together with &lt;code&gt;optout&lt;/code&gt;).</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;caching-no&lt;/code&gt; ：下一条命令将不缓存密钥（仅与 &lt;code&gt;optout&lt;/code&gt; 一起存在）。</target>
         </trans-unit>
         <trans-unit id="b75f04c9bf76d4288aa6e6868f6bdeb65e670518" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;caching-yes&lt;/code&gt;: The next command will cache keys (exists only together with &lt;code&gt;optin&lt;/code&gt;).</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;caching-yes&lt;/code&gt; ：下 &lt;code&gt;optin&lt;/code&gt; 命令将缓存密钥（仅与optin一起存在）。</target>
         </trans-unit>
         <trans-unit id="24c0bfc56b5937facd337558991cae6163c0423d" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;changes_since_last_save&lt;/code&gt; refers to the number of operations that produced some kind of changes in the dataset since the last time either &lt;a href=&quot;save&quot;&gt;SAVE&lt;/a&gt; or &lt;a href=&quot;bgsave&quot;&gt;BGSAVE&lt;/a&gt; was called.</source>
@@ -1689,7 +1693,7 @@
         </trans-unit>
         <trans-unit id="f9f056eda18d9bc00dbfc7310df95503a7425a2f" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;client_biggest_input_buf&lt;/code&gt;: Biggest input buffer among current client connections</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;client_biggest_input_buf&lt;/code&gt; ：当前客户端连接中最大的输入缓冲区</target>
         </trans-unit>
         <trans-unit id="c2392a37aedbf270d6b854bc28fc404b287a29ac" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;client_biggest_input_buf&lt;/code&gt;: biggest input buffer among current client connections</source>
@@ -1697,7 +1701,7 @@
         </trans-unit>
         <trans-unit id="f0665e8241ec2d142520c43c49fa010d1acc9c9f" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;client_longest_output_list&lt;/code&gt;: Longest output list among current client connections</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;client_longest_output_list&lt;/code&gt; ：当前客户端连接中最长的输出列表</target>
         </trans-unit>
         <trans-unit id="9fb7b84362378176af7de8594d03749190b46118" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;client_longest_output_list&lt;/code&gt;: longest output list among current client connections</source>
@@ -1717,7 +1721,7 @@
         </trans-unit>
         <trans-unit id="7e7817b93be1b11027d13683fa34fc6efffb668d" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;clients_in_timeout_table&lt;/code&gt;: Number of clients in the clients timeout table</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;clients_in_timeout_table&lt;/code&gt; ：客户端超时表中的客户端数</target>
         </trans-unit>
         <trans-unit id="4cb155c6866c785f784b7fdb3af57862475d4bb2" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;cluster&lt;/code&gt;: Redis Cluster section</source>
@@ -1725,7 +1729,7 @@
         </trans-unit>
         <trans-unit id="8378293297e29944fc372120efa594accf2315ae" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;cluster_connections&lt;/code&gt;: An approximation of the number of sockets used by the cluster's bus</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;cluster_connections&lt;/code&gt; ：集群总线使用的套接字数量的近似值</target>
         </trans-unit>
         <trans-unit id="3d26c683ca3ca4ce60da0b69dd830079349a61d3" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;cluster_current_epoch&lt;/code&gt;: The local &lt;code&gt;Current Epoch&lt;/code&gt; variable. This is used in order to create unique increasing version numbers during fail overs.</source>
@@ -1801,7 +1805,7 @@
         </trans-unit>
         <trans-unit id="ab3873ea41080a2e04cdaeb106aa6229bc655a31" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;configured_hz&lt;/code&gt;: The server's configured frequency setting</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;configured_hz&lt;/code&gt; ：服务器的已配置频率设置</target>
         </trans-unit>
         <trans-unit id="5bd1609e184b7224682e9575d08c34e0207cdcfc" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;connected_clients&lt;/code&gt;: Number of client connections (excluding connections from replicas)</source>
@@ -1813,7 +1817,7 @@
         </trans-unit>
         <trans-unit id="f0c7bb8d57eab8c3c5d0e48cc57c3f859bd8790b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;count &amp;gt; 0&lt;/code&gt;: Remove elements equal to &lt;code&gt;element&lt;/code&gt; moving from head to tail.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;count &amp;gt; 0&lt;/code&gt; ：删除等于 &lt;code&gt;element&lt;/code&gt; 移动的元素的元素。</target>
         </trans-unit>
         <trans-unit id="3b1ff8869c8e738a4466372a8c8bf1e9bf4283a6" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;count &amp;gt; 0&lt;/code&gt;: Remove elements equal to &lt;code&gt;value&lt;/code&gt; moving from head to tail.</source>
@@ -1821,7 +1825,7 @@
         </trans-unit>
         <trans-unit id="49ed95d45eb2dc13b9ae1282ce5ebdc9d3906990" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;count &amp;lt; 0&lt;/code&gt;: Remove elements equal to &lt;code&gt;element&lt;/code&gt; moving from tail to head.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;count &amp;lt; 0&lt;/code&gt; ：删除等于从尾到头移动的 &lt;code&gt;element&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="ba40b8d7058909d83882c013f4bc1e77afd98c42" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;count &amp;lt; 0&lt;/code&gt;: Remove elements equal to &lt;code&gt;value&lt;/code&gt; moving from tail to head.</source>
@@ -1829,7 +1833,7 @@
         </trans-unit>
         <trans-unit id="a1c07ae420021783795b0c2dd33cb72eeef5c79c" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;count = 0&lt;/code&gt;: Remove all elements equal to &lt;code&gt;element&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;count = 0&lt;/code&gt; ：删除所有等于 &lt;code&gt;element&lt;/code&gt; 的元素。</target>
         </trans-unit>
         <trans-unit id="c040b7d8a01d8456ce09165ab044d0015f9d0f28" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;count = 0&lt;/code&gt;: Remove all elements equal to &lt;code&gt;value&lt;/code&gt;.</source>
@@ -1869,7 +1873,7 @@
         </trans-unit>
         <trans-unit id="bc0ac6c91120d3c5b5a98bb410f8df776c3d63ac" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;everything&lt;/code&gt;: Includes &lt;code&gt;all&lt;/code&gt; and &lt;code&gt;modules&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;everything&lt;/code&gt; ：包括 &lt;code&gt;all&lt;/code&gt; 和 &lt;code&gt;modules&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="8566e0b3d3d91487347cb7d465fc1c5fc2616626" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;evicted_keys&lt;/code&gt;: Number of evicted keys due to &lt;code&gt;maxmemory&lt;/code&gt; limit</source>
@@ -1881,7 +1885,7 @@
         </trans-unit>
         <trans-unit id="1445bea46e8c6f8839bf45a414eef179da6b43b3" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;expire_cycle_cpu_milliseconds&lt;/code&gt;: The cumulative amount of time spend on active expiry cycles</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;expire_cycle_cpu_milliseconds&lt;/code&gt; ：有效期满周期上花费的累计时间</target>
         </trans-unit>
         <trans-unit id="fddae6b7c1346bcee795c85b7caa0a8eb0c07bf4" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;expired_keys&lt;/code&gt;: Total number of key expiration events</source>
@@ -1889,11 +1893,11 @@
         </trans-unit>
         <trans-unit id="f378daf38690d735e99c4533cddb27e3de9da98a" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;expired_stale_perc&lt;/code&gt;: The percentage of keys probably expired</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;expired_stale_perc&lt;/code&gt; ：密钥可能已过期的百分比</target>
         </trans-unit>
         <trans-unit id="4959e2adfed6d630b2108dc7a006ae59cc0aec41" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;expired_time_cap_reached_count&lt;/code&gt;: The count of times that active expiry cycles have stopped early</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;expired_time_cap_reached_count&lt;/code&gt; ：有效到期周期提前停止的次数</target>
         </trans-unit>
         <trans-unit id="92de7381dc01164610e1cda0033a7229af5660db" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;fail&lt;/code&gt;: Node is in &lt;code&gt;FAIL&lt;/code&gt; state. It was not reachable for multiple nodes that promoted the &lt;code&gt;PFAIL&lt;/code&gt; state to &lt;code&gt;FAIL&lt;/code&gt;.</source>
@@ -1961,7 +1965,7 @@
         </trans-unit>
         <trans-unit id="d0689cf551fb2b0d08b1961735f71c6e9b2bb410" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;hz&lt;/code&gt;: The server's current frequency setting</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;hz&lt;/code&gt; ：服务器的当前频率设置</target>
         </trans-unit>
         <trans-unit id="814fd3f9ef97f0a61158c442ebf3374319e7d6c9" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;hz&lt;/code&gt;: The server's frequency setting</source>
@@ -1977,7 +1981,7 @@
         </trans-unit>
         <trans-unit id="bc766ec484f27e4cc3d20ab79a21e4ce04397109" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;id&lt;/code&gt;: an unique 64-bit client ID.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;id&lt;/code&gt; ：唯一的64位客户端ID。</target>
         </trans-unit>
         <trans-unit id="b1bda4eb1cacc58fcc5d8afc9929ac1d35eed0e6" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;idle&lt;/code&gt;: idle time of the connection in seconds</source>
@@ -1997,15 +2001,15 @@
         </trans-unit>
         <trans-unit id="f7216fccf4b8cf6baabaf30be836f2eb2f1c2c63" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;io_threaded_reads_processed&lt;/code&gt;: Number of read events processed by the main and I/O threads</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;io_threaded_reads_processed&lt;/code&gt; ：主线程和I / O线程处理的读取事件数</target>
         </trans-unit>
         <trans-unit id="8129ddc83f2b3c72b62eba59bdb942f9513b1817" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;io_threaded_writes_processed&lt;/code&gt;: Number of write events processed by the main and I/O threads</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;io_threaded_writes_processed&lt;/code&gt; ：主线程和I / O线程处理的写事件数</target>
         </trans-unit>
         <trans-unit id="6c9ec3aa6422a854628188f9808209b697641f41" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;io_threads_active&lt;/code&gt;: Flag indicating if I/O threads are active</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;io_threads_active&lt;/code&gt; ：指示I / O线程是否处于活动状态的标志</target>
         </trans-unit>
         <trans-unit id="1e23ab4305826d0584db18380ae54f96cfe85a06" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;ip:port&lt;/code&gt;: The node address where clients should contact the node to run queries.</source>
@@ -2013,7 +2017,7 @@
         </trans-unit>
         <trans-unit id="270a88a258c3a16f513203e7b558ec2c78da586a" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;ip:port@cport&lt;/code&gt;: The node address where clients should contact the node to run queries.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;ip:port@cport&lt;/code&gt; ：客户端应与节点联系以运行查询的节点地址。</target>
         </trans-unit>
         <trans-unit id="291f0af420cf08324f52bee6ac610301d0a211a6" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;keys.bytes-per-key&lt;/code&gt;: The ratio between &lt;strong&gt;net memory usage&lt;/strong&gt; (&lt;code&gt;total.allocated&lt;/code&gt; minus &lt;code&gt;startup.allocated&lt;/code&gt;) and &lt;code&gt;keys.count&lt;/code&gt;</source>
@@ -2037,7 +2041,7 @@
         </trans-unit>
         <trans-unit id="5f8a41bd61bedded590e35fd39e3c92d238bb0b8" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;laddr&lt;/code&gt;: address/port of local address client connected to (bind address)</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;laddr&lt;/code&gt; ：连接到的本地地址客户端的地址/端口（绑定地址）</target>
         </trans-unit>
         <trans-unit id="b8248fad4d6ffdc71b385b094bafe2abbfbc52b7" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;latest_fork_usec&lt;/code&gt;: Duration of the latest fork operation in microseconds</source>
@@ -2069,7 +2073,7 @@
         </trans-unit>
         <trans-unit id="1a24643a4ec60a4cdfdf69f48f4893ff213957f4" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;loading_rdb_used_mem&lt;/code&gt;: The memory usage of the server that had generated the RDB file at the time of the file's creation</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;loading_rdb_used_mem&lt;/code&gt; ：创建文件时生成RDB文件的服务器的内存使用情况</target>
         </trans-unit>
         <trans-unit id="54bc84cb5d647f7d245611a75b0f4e6a47881c15" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;loading_start_time&lt;/code&gt;: Epoch-based timestamp of the start of the load operation</source>
@@ -2089,7 +2093,7 @@
         </trans-unit>
         <trans-unit id="5c3f6070e6ac871d998395858ad30edba81f25dc" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;lua.caches&lt;/code&gt;: the summed size in bytes of the overheads of the Lua scripts' caches</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;lua.caches&lt;/code&gt; ：Lua脚本的缓存开销的总大小（以字节为单位）</target>
         </trans-unit>
         <trans-unit id="a6ed881ede82d74c70a2a4663adcf6972b5df79d" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;master&lt;/code&gt;: If the node is a replica, and the master is known, the master node ID, otherwise the &quot;-&quot; character.</source>
@@ -2145,19 +2149,19 @@
         </trans-unit>
         <trans-unit id="5680ee8ed92983ea22d11b8ce00e30f766f93a11" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;master_sync_left_bytes&lt;/code&gt;: Number of bytes left before syncing is complete (may be negative when &lt;code&gt;master_sync_total_bytes&lt;/code&gt; is 0)</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;master_sync_left_bytes&lt;/code&gt; ：同步完成之前剩余的字节数（当 &lt;code&gt;master_sync_total_bytes&lt;/code&gt; 为0时，该值为负）</target>
         </trans-unit>
         <trans-unit id="8716ac374614f070bd6e3e58fca4cd1c5eaee16e" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;master_sync_perc&lt;/code&gt;: The percentage &lt;code&gt;master_sync_read_bytes&lt;/code&gt; from &lt;code&gt;master_sync_total_bytes&lt;/code&gt;, or an approximation that uses &lt;code&gt;loading_rdb_used_mem&lt;/code&gt; when &lt;code&gt;master_sync_total_bytes&lt;/code&gt; is 0</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;master_sync_perc&lt;/code&gt; ： &lt;code&gt;master_sync_read_bytes&lt;/code&gt; 的 &lt;code&gt;master_sync_total_bytes&lt;/code&gt; 百分比，或者当 &lt;code&gt;master_sync_total_bytes&lt;/code&gt; 为0时使用 &lt;code&gt;loading_rdb_used_mem&lt;/code&gt; 的近似值</target>
         </trans-unit>
         <trans-unit id="2bfd156e1559140e96dbd04f463bcedd805cd572" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;master_sync_read_bytes&lt;/code&gt;: Number of bytes already transferred</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;master_sync_read_bytes&lt;/code&gt; ：已传输的字节数</target>
         </trans-unit>
         <trans-unit id="2bd088fb4298efcf15162f466d0c93b7aeaae1d0" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;master_sync_total_bytes&lt;/code&gt;: Total number of bytes that need to be transferred. this may be 0 when the size is unknown (for example, when the &lt;code&gt;repl-diskless-sync&lt;/code&gt; configuration directive is used)</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;master_sync_total_bytes&lt;/code&gt; ：需要传输的字节总数。当大小未知时，它可以为0（例如，当使用 &lt;code&gt;repl-diskless-sync&lt;/code&gt; 配置指令时）</target>
         </trans-unit>
         <trans-unit id="bc21fdd1146fa4c4bba4073b469b7424702f89f0" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;math&lt;/code&gt; lib.</source>
@@ -2165,7 +2169,7 @@
         </trans-unit>
         <trans-unit id="0764a52a4b87ecc5b58c0b283ff413d29c1885fe" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;maxclients&lt;/code&gt;: The value of the &lt;code&gt;maxclients&lt;/code&gt; configuration directive. This is the upper limit for the sum of &lt;code&gt;connected_clients&lt;/code&gt;, &lt;code&gt;connected_slaves&lt;/code&gt; and &lt;code&gt;cluster_connections&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;maxclients&lt;/code&gt; ： &lt;code&gt;maxclients&lt;/code&gt; 配置指令的值。这是 &lt;code&gt;connected_clients&lt;/code&gt; ， &lt;code&gt;connected_slaves&lt;/code&gt; 和 &lt;code&gt;cluster_connections&lt;/code&gt; 的总和的上限。</target>
         </trans-unit>
         <trans-unit id="264ff63840f1fd88caa997a7ac62b59d2937b34e" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;maxmemory&lt;/code&gt;: The value of the &lt;code&gt;maxmemory&lt;/code&gt; configuration directive</source>
@@ -2205,19 +2209,19 @@
         </trans-unit>
         <trans-unit id="acd242d033ab51e8924a653a8f75d3dfafbfc9e9" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;module_fork_in_progress&lt;/code&gt;: Flag indicating a module fork is on-going</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;module_fork_in_progress&lt;/code&gt; ：指示模块派生正在进行的标志</target>
         </trans-unit>
         <trans-unit id="58320459c64e0ed996c72236d4b5a5df86ee37a5" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;module_fork_last_cow_size&lt;/code&gt;: The size in bytes of copy-on-write allocations during the last module fork operation</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;module_fork_last_cow_size&lt;/code&gt; ：最后一次模块派生操作期间写时复制分配的大小（以字节为单位）</target>
         </trans-unit>
         <trans-unit id="4a1c104aad8f4d4ca9cc5e8c29bf1aa0162bdc19" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;modules&lt;/code&gt;: Module related sections</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;modules&lt;/code&gt; ：模块相关部分</target>
         </trans-unit>
         <trans-unit id="6a769def0c3b342307b6da05fd504fd6eadb8475" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;modules&lt;/code&gt;: Modules section</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;modules&lt;/code&gt; ：&amp;ldquo;模块&amp;rdquo;部分</target>
         </trans-unit>
         <trans-unit id="8401d9f1390c809813bc32bd3d1271ab733ce35d" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;multi&lt;/code&gt;: number of commands in a MULTI/EXEC context</source>
@@ -2233,7 +2237,7 @@
         </trans-unit>
         <trans-unit id="673f1ad7800ab1ee3a2bb4c7a04456ddf63dfbc2" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;name&lt;/code&gt;: Name of the module</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;name&lt;/code&gt; ：模块名称</target>
         </trans-unit>
         <trans-unit id="6a436bf2963c1a3b8c958af7c5e07240e0e482f2" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;name&lt;/code&gt;: the name set by the client with &lt;a href=&quot;client-setname&quot;&gt;CLIENT SETNAME&lt;/a&gt;</source>
@@ -2245,7 +2249,7 @@
         </trans-unit>
         <trans-unit id="147657303a81d5e12d6d7c7a341010358290596f" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;nocommands&lt;/code&gt;: alias for &lt;code&gt;-@all&lt;/code&gt;. Removes all the commands, the user will no longer be able to execute anything.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;nocommands&lt;/code&gt; ： &lt;code&gt;-@all&lt;/code&gt; 别名。删除所有命令，用户将不再能够执行任何操作。</target>
         </trans-unit>
         <trans-unit id="588a72abc4c95194bec0e3569653d6a66d738e01" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;noflags&lt;/code&gt;: No flags at all.</source>
@@ -2253,11 +2257,11 @@
         </trans-unit>
         <trans-unit id="ee7ee7abe8646a7328a6876e3d63c60a61097955" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;noloop&lt;/code&gt;: The client isn't notified about keys modified by itself.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;noloop&lt;/code&gt; ：客户端未收到有关其自身修改的密钥的通知。</target>
         </trans-unit>
         <trans-unit id="2295a8f57a2ad718fc8a101a75683ddf9b1fe6f3" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;nopass&lt;/code&gt;: the user is set as a &quot;no password&quot; user. It means that it will be possible to authenticate as such user with any password. By default, the &lt;code&gt;default&lt;/code&gt; special user is set as &quot;nopass&quot;. The &lt;code&gt;nopass&lt;/code&gt; rule will also reset all the configured passwords for the user.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;nopass&lt;/code&gt; ：将该用户设置为&amp;ldquo;无密码&amp;rdquo;用户。这意味着可以使用任何密码来验证该用户身份。默认情况下， &lt;code&gt;default&lt;/code&gt; 特殊用户设置为&amp;ldquo; nopass&amp;rdquo;。该 &lt;code&gt;nopass&lt;/code&gt; 规则也将重置所有用户的配置密码。</target>
         </trans-unit>
         <trans-unit id="f08264cef3e182cc26690ed1532909b6767c5de5" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;obl&lt;/code&gt;: output buffer length</source>
@@ -2265,11 +2269,11 @@
         </trans-unit>
         <trans-unit id="6dc4e4e7860139f767e29a51e1813dfe7dbdb2fc" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;off&lt;/code&gt;: The connection isn't using server assisted client side caching.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;off&lt;/code&gt; ：连接未使用服务器辅助的客户端缓存。</target>
         </trans-unit>
         <trans-unit id="456c5347e83e30f11360f83463f2e87569342036" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;off&lt;/code&gt;: set user as not active, it will be impossible to log as this user. Please note that if a user gets disabled (set to off) after there are connections already authenticated with such a user, the connections will continue to work as expected. To also kill the old connections you can use &lt;a href=&quot;client-kill&quot;&gt;CLIENT KILL&lt;/a&gt; with the user option. An alternative is to delete the user with &lt;a href=&quot;acl-deluser&quot;&gt;ACL DELUSER&lt;/a&gt;, that will result in all the connections authenticated as the deleted user to be disconnected.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;off&lt;/code&gt; ：将用户设置为非活动状态，将无法以该用户身份登录。请注意，如果在已经通过该用户进行身份验证的连接后禁用该用户（将其设置为off），则该连接将继续按预期方式工作。要也终止旧的连接，可以将&lt;a href=&quot;client-kill&quot;&gt;CLIENT KILL&lt;/a&gt;与用户选项一起使用。另一种选择是使用&lt;a href=&quot;acl-deluser&quot;&gt;ACL DELUSER&lt;/a&gt;删除用户，这将导致所有被认证为已删除用户的连接都将断开连接。</target>
         </trans-unit>
         <trans-unit id="bbbcb3aaca80773967cf9f09226457a784353779" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;oll&lt;/code&gt;: output list length (replies are queued in this list when the buffer is full)</source>
@@ -2281,19 +2285,19 @@
         </trans-unit>
         <trans-unit id="f669ed89b0e5ee48624303cd659c30f39f6863c0" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;on&lt;/code&gt;: Server assisted client side caching is enabled for the connection.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;on&lt;/code&gt; ：为连接启用服务器辅助的客户端缓存。</target>
         </trans-unit>
         <trans-unit id="d1bf83f472040956ff3f279a1824de989115564e" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;on&lt;/code&gt;: set the user as active, it will be possible to authenticate as this user using &lt;code&gt;AUTH &amp;lt;username&amp;gt; &amp;lt;password&amp;gt;&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;on&lt;/code&gt; ：将用户设置为活动用户，可以使用 &lt;code&gt;AUTH &amp;lt;username&amp;gt; &amp;lt;password&amp;gt;&lt;/code&gt; 对此用户进行身份验证。</target>
         </trans-unit>
         <trans-unit id="6c1338239ac70a183c1202eac1382ef73b386842" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;optin&lt;/code&gt;: The client does not cache keys by default.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;optin&lt;/code&gt; ：默认情况下，客户端不缓存密钥。</target>
         </trans-unit>
         <trans-unit id="2e0b2e7b657a790b5f539550f069ab5fd4514a37" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;optout&lt;/code&gt;: The client caches keys by default.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;optout&lt;/code&gt; ：默认情况下，客户端缓存密钥。</target>
         </trans-unit>
         <trans-unit id="13338a0bc1218b82c9be0432fdb97dd49851c228" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;os&lt;/code&gt;: Operating system hosting the Redis server</source>
@@ -2309,7 +2313,7 @@
         </trans-unit>
         <trans-unit id="09bf3c6a90b5c55437b2fe4763be03aa49b2d8b3" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;peak.allocated&lt;/code&gt;: Peak memory consumed by Redis in bytes (see &lt;a href=&quot;info&quot;&gt;INFO&lt;/a&gt;'s &lt;code&gt;used_memory_peak&lt;/code&gt;)</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;peak.allocated&lt;/code&gt; ：Redis消耗的峰值内存（以字节为单位）（请参阅&lt;a href=&quot;info&quot;&gt;INFO&lt;/a&gt;的 &lt;code&gt;used_memory_peak&lt;/code&gt; ）</target>
         </trans-unit>
         <trans-unit id="9104c5033ce661c1a0960c0256c747a7e1462163" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;peak.percentage&lt;/code&gt;: The percentage of &lt;code&gt;peak.allocated&lt;/code&gt; out of &lt;code&gt;total.allocated&lt;/code&gt;</source>
@@ -2357,7 +2361,7 @@
         </trans-unit>
         <trans-unit id="92fe7954c975428c9f5ce862a86e9e6d556669a5" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;rdb_changes_since_last_save&lt;/code&gt; refers to the number of operations that produced some kind of changes in the dataset since the last time either &lt;a href=&quot;save&quot;&gt;SAVE&lt;/a&gt; or &lt;a href=&quot;bgsave&quot;&gt;BGSAVE&lt;/a&gt; was called.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;rdb_changes_since_last_save&lt;/code&gt; 是指自上次调用&lt;a href=&quot;save&quot;&gt;SAVE&lt;/a&gt;或&lt;a href=&quot;bgsave&quot;&gt;BGSAVE&lt;/a&gt;以来在数据集中产生某种更改的操作数。</target>
         </trans-unit>
         <trans-unit id="0e1b0e631149e31b0f9b8d6bac185af69540b23d" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;rdb_changes_since_last_save&lt;/code&gt;: Number of changes since the last dump</source>
@@ -2381,7 +2385,7 @@
         </trans-unit>
         <trans-unit id="9fa69d32fbd56417be035fb08ca5eca0195fb799" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;rdb_last_cow_size&lt;/code&gt;: The size in bytes of copy-on-write allocations during the last RDB save operation</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;rdb_last_cow_size&lt;/code&gt; ：上一次RDB保存操作期间写时复制分配的大小（以字节为单位）</target>
         </trans-unit>
         <trans-unit id="31ec0a2188669177796fd5ed7732b24095c34872" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;rdb_last_save_time&lt;/code&gt;: Epoch-based timestamp of last successful RDB save</source>
@@ -2389,7 +2393,7 @@
         </trans-unit>
         <trans-unit id="357e259918283daebf12b43ef58e7238eb19408c" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;redir&lt;/code&gt;: client id of current client tracking redirection</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;redir&lt;/code&gt; ：当前客户端跟踪重定向的客户端ID</target>
         </trans-unit>
         <trans-unit id="5830999758618fbec95f0cb84ec74b9013df9939" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;redis.breakpoint and redis.debug&lt;/code&gt; function in the context of the &lt;a href=&quot;https://redis.io/topics/ldb&quot;&gt;Redis Lua debugger&lt;/a&gt;.</source>
@@ -2453,7 +2457,7 @@
         </trans-unit>
         <trans-unit id="6a9727ee6cf769f12aba8b2c3ca8d9de1e46e53d" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;replication.backlog&lt;/code&gt;: Size in bytes of the replication backlog (see &lt;a href=&quot;info&quot;&gt;INFO&lt;/a&gt;'s &lt;code&gt;repl_backlog_active&lt;/code&gt;)</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;replication.backlog&lt;/code&gt; ：尺寸（参见复制积压的字节&lt;a href=&quot;info&quot;&gt;INFO&lt;/a&gt;的 &lt;code&gt;repl_backlog_active&lt;/code&gt; ）</target>
         </trans-unit>
         <trans-unit id="a057f81f3ebf543b442081cf23f0e823d88e17de" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;replication.backlog&lt;/code&gt;: Size in bytes of the replication backlog (see &lt;a href=&quot;info&quot;&gt;INFO&lt;/a&gt;'s &lt;code&gt;repl_backlog_size&lt;/code&gt;)</source>
@@ -2465,11 +2469,11 @@
         </trans-unit>
         <trans-unit id="65df5fcdcc1925305889fd5c54411266ece07136" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;resetchannels&lt;/code&gt;: removes all channel patterns from the list of Pub/Sub channel patterns the user can access.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;resetchannels&lt;/code&gt; ：从用户可以访问的发布/订阅通道模式列表中删除所有通道模式。</target>
         </trans-unit>
         <trans-unit id="5ee2315dc5d95730b9ebcdd7878d602513446e70" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;resetkeys&lt;/code&gt;: removes all the key patterns from the list of key patterns the user can access.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;resetkeys&lt;/code&gt; ：从用户可以访问的密钥模式列表中删除所有密钥模式。</target>
         </trans-unit>
         <trans-unit id="d4fda8cca4271f45584288721b06d5666e8e23f4" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;role&lt;/code&gt;: Value is &quot;master&quot; if the instance is replica of no one, or &quot;slave&quot; if the instance is a replica of some master instance. Note that a replica can be master of another replica (chained replication).</source>
@@ -2489,7 +2493,7 @@
         </trans-unit>
         <trans-unit id="89e5096ab88aceffb8212aef7189959a6955637b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;server_time_in_usec&lt;/code&gt;: Epoch-based system time with microsecond precision</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;server_time_in_usec&lt;/code&gt; ：基于纪元的系统时间，微秒精度</target>
         </trans-unit>
         <trans-unit id="1c3e299e02d66f7763bd03b36050606a98337677" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;slave&lt;/code&gt;: Node is a replica.</source>
@@ -2569,7 +2573,7 @@
         </trans-unit>
         <trans-unit id="904fe5f1ac4e4db4dda479f37fe4605aa72fcf2a" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;tot-mem&lt;/code&gt;: total memory consumed by this client in its various buffers</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;tot-mem&lt;/code&gt; ：此客户端在其各种缓冲区中消耗的总内存</target>
         </trans-unit>
         <trans-unit id="7a498bccca27f60dfda24f1e659686e8d0e830dd" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;total.allocated&lt;/code&gt;: Total number of bytes allocated by Redis using its allocator (see &lt;a href=&quot;info&quot;&gt;INFO&lt;/a&gt;'s &lt;code&gt;used_memory&lt;/code&gt;)</source>
@@ -2585,7 +2589,7 @@
         </trans-unit>
         <trans-unit id="d83068e206f7307d94a9bc1022cb8ab9b5f64256" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;total_forks&lt;/code&gt;: Total number of fork operations since the server start</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;total_forks&lt;/code&gt; ：自服务器启动以来分叉操作的总数</target>
         </trans-unit>
         <trans-unit id="ddb9178a813478a27e4593a26fff3a0f64d21fbd" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;total_net_input_bytes&lt;/code&gt;: The total number of bytes read from the network</source>
@@ -2597,7 +2601,7 @@
         </trans-unit>
         <trans-unit id="b8ae6397172f63245706d6e00f0a769d888f263b" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;total_reads_processed&lt;/code&gt;: Total number of read events processed</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;total_reads_processed&lt;/code&gt; ：已处理的读取事件总数</target>
         </trans-unit>
         <trans-unit id="ffbec4c806f626a60a4cfe6af281d77a37b8bc37" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;total_system_memory&lt;/code&gt;: The total amount of memory that the Redis host has</source>
@@ -2609,27 +2613,27 @@
         </trans-unit>
         <trans-unit id="fb7948dcbe177ae1b024b855cc9dfbe5390aef57" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;total_writes_processed&lt;/code&gt;: Total number of write events processed</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;total_writes_processed&lt;/code&gt; ：已处理的写入事件总数</target>
         </trans-unit>
         <trans-unit id="381792f4c3048d356d56009554576a2abeb871de" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;tracking_clients&lt;/code&gt;: Number of clients being tracked (&lt;a href=&quot;client-tracking&quot;&gt;CLIENT TRACKING&lt;/a&gt;)</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;tracking_clients&lt;/code&gt; ：被跟踪的客户端数（&lt;a href=&quot;client-tracking&quot;&gt;CLIENT TRACKING&lt;/a&gt;）</target>
         </trans-unit>
         <trans-unit id="21568a3bfb8f0f36758dc6083f7d615df21139ca" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;tracking_total_items&lt;/code&gt;: Number of items, that is the sum of clients number for each key, that are being tracked</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;tracking_total_items&lt;/code&gt; ：要跟踪的项目数，即每个密钥的客户数之和</target>
         </trans-unit>
         <trans-unit id="4b4583ea3b802ba8a2a781314e306b345c0d006c" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;tracking_total_keys&lt;/code&gt;: Number of keys being tracked by the server</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;tracking_total_keys&lt;/code&gt; ：服务器正在跟踪的密钥数</target>
         </trans-unit>
         <trans-unit id="e748a1f26d4e4ced34d3b01cc7fdb07e64e66073" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;tracking_total_prefixes&lt;/code&gt;: Number of tracked prefixes in server's prefix table (only applicable for broadcast mode)</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;tracking_total_prefixes&lt;/code&gt; ：服务器的前缀表中已跟踪前缀的数量（仅适用于广播模式）</target>
         </trans-unit>
         <trans-unit id="b118b4757401e1598e87eb7b6c3f8f276db134ff" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;unexpected_error_replies&lt;/code&gt;: Number of unexpected error replies, that are types of errors from an AOF load or replication</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;unexpected_error_replies&lt;/code&gt; ：意外错误回复的数量，即来自AOF加载或复制的错误类型</target>
         </trans-unit>
         <trans-unit id="db781a30ee27c1d77274c222dc88bb433b11afbc" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;uptime_in_days&lt;/code&gt;: Same value expressed in days</source>
@@ -2645,7 +2649,7 @@
         </trans-unit>
         <trans-unit id="6d569724d89cfda91003844b75e183bdd906bc5f" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;used_cpu_sys&lt;/code&gt;: System CPU consumed by the Redis server, which is the sum of system CPU consumed by all threads of the server process (main thread and background threads)</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;used_cpu_sys&lt;/code&gt; ：Redis服务器消耗的系统CPU，它是服务器进程的所有线程（主线程和后台线程）消耗的系统CPU的总和</target>
         </trans-unit>
         <trans-unit id="1b287b02ee3142edf7304f38f36d07536453e874" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;used_cpu_sys_children&lt;/code&gt;: System CPU consumed by the background processes</source>
@@ -2653,11 +2657,11 @@
         </trans-unit>
         <trans-unit id="21f11ba65a2773ebe0c8ef659d6a1ffa1fd42d2c" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;used_cpu_sys_main_thread&lt;/code&gt;: System CPU consumed by the Redis server main thread</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;used_cpu_sys_main_thread&lt;/code&gt; ：Redis服务器主线程消耗的系统CPU</target>
         </trans-unit>
         <trans-unit id="e3e58d3a9e668c76dc2ab457a7ac3e52ec38676e" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;used_cpu_user&lt;/code&gt;: User CPU consumed by the Redis server, which is the sum of user CPU consumed by all threads of the server process (main thread and background threads)</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;used_cpu_user&lt;/code&gt; ：Redis服务器消耗的用户CPU，这是服务器进程所有线程（主线程和后台线程）消耗的用户CPU的总和</target>
         </trans-unit>
         <trans-unit id="0fac00be35e10304849ab0c04bb8d430ec4729f8" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;used_cpu_user&lt;/code&gt;:User CPU consumed by the Redis server</source>
@@ -2669,11 +2673,15 @@
         </trans-unit>
         <trans-unit id="4cc4736c16fc254bddd47233986c61235a9faf5a" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;used_cpu_user_main_thread&lt;/code&gt;: User CPU consumed by the Redis server main thread</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;used_cpu_user_main_thread&lt;/code&gt; ：Redis服务器主线程消耗的用户CPU</target>
         </trans-unit>
         <trans-unit id="77ca1a3d5b20d2fe23c4fa22849f242d4c267b4d" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;used_memory&lt;/code&gt;: Total number of bytes allocated by Redis using its allocator (either standard &lt;strong&gt;libc&lt;/strong&gt;, &lt;strong&gt;jemalloc&lt;/strong&gt;, or an alternative allocator such as &lt;a href=&quot;http://code.google.com/p/google-perftools/&quot;&gt;&lt;strong&gt;tcmalloc&lt;/strong&gt;&lt;/a&gt;)</source>
           <target state="translated">&lt;code&gt;used_memory&lt;/code&gt; ：Redis使用其分配器（标准&lt;strong&gt;libc&lt;/strong&gt;，&lt;strong&gt;jemalloc&lt;/strong&gt;或其他分配器，例如&lt;a href=&quot;http://code.google.com/p/google-perftools/&quot;&gt;&lt;strong&gt;tcmalloc&lt;/strong&gt;&lt;/a&gt;）分配的字节总数。</target>
+        </trans-unit>
+        <trans-unit id="130203d01bb6cb96a4931244c422d66b8dbd88b6" translate="yes" xml:space="preserve">
+          <source>&lt;code&gt;used_memory&lt;/code&gt;: Total number of bytes allocated by Redis using its allocator (either standard &lt;strong&gt;libc&lt;/strong&gt;, &lt;strong&gt;jemalloc&lt;/strong&gt;, or an alternative allocator such as &lt;a href=&quot;https://code.google.com/p/google-perftools/&quot;&gt;&lt;strong&gt;tcmalloc&lt;/strong&gt;&lt;/a&gt;)</source>
+          <target state="translated">&lt;code&gt;used_memory&lt;/code&gt; ：Redis使用其分配器（标准&lt;strong&gt;libc&lt;/strong&gt;，&lt;strong&gt;jemalloc&lt;/strong&gt;或其他分配器，例如&lt;a href=&quot;https://code.google.com/p/google-perftools/&quot;&gt;&lt;strong&gt;tcmalloc&lt;/strong&gt;&lt;/a&gt;）分配的字节总数。</target>
         </trans-unit>
         <trans-unit id="e5edb87c5fcdf155299748be8ed3a1d847dc6cf8" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;used_memory_dataset&lt;/code&gt;: The size in bytes of the dataset (&lt;code&gt;used_memory_overhead&lt;/code&gt; subtracted from &lt;code&gt;used_memory&lt;/code&gt;)</source>
@@ -2721,11 +2729,11 @@
         </trans-unit>
         <trans-unit id="a4a8ca1c1e26697d33b86803c2cdfbdf68e1dfc1" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;used_memory_scripts&lt;/code&gt;: Number of bytes used by cached Lua scripts</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;used_memory_scripts&lt;/code&gt; ：缓存的Lua脚本使用的字节数</target>
         </trans-unit>
         <trans-unit id="aae09b8c68830c081ead70e0e60de486862382bb" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;used_memory_scripts_human&lt;/code&gt;: Human readable representation of previous value</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;used_memory_scripts_human&lt;/code&gt; ：先前值的人类可读表示形式</target>
         </trans-unit>
         <trans-unit id="b409b28ae2a01206af36cb38e85fd023946f81d1" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;used_memory_startup&lt;/code&gt;: Initial amount of memory consumed by Redis at startup in bytes</source>
@@ -2733,15 +2741,15 @@
         </trans-unit>
         <trans-unit id="d702afbca51bb1f1c0b264975ec9e9ca2a5cb291" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;user&lt;/code&gt;: the authenticated username of the client</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;user&lt;/code&gt; ：客户端的已验证用户名</target>
         </trans-unit>
         <trans-unit id="e7666b28ecf1aaa403c4c9fe8c4cadb678a1f039" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;ver&lt;/code&gt;: Version of the module</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;ver&lt;/code&gt; ：模块版本</target>
         </trans-unit>
         <trans-unit id="874c4d59a169c2d53f7c3ae429f5959f57146193" translate="yes" xml:space="preserve">
           <source>&lt;code&gt;~&amp;lt;pattern&amp;gt;&lt;/code&gt;: add the specified key pattern (glob style pattern, like in the &lt;a href=&quot;keys&quot;&gt;KEYS&lt;/a&gt; command), to the list of key patterns accessible by the user. You can add multiple key patterns to the same user. Example: &lt;code&gt;~objects:*&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;~&amp;lt;pattern&amp;gt;&lt;/code&gt; ：将指定的键模式（例如&lt;a href=&quot;keys&quot;&gt;KEYS&lt;/a&gt;命令中的glob样式模式）添加到用户可访问的键模式列表中。您可以将多个键模式添加到同一用户。例如： &lt;code&gt;~objects:*&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="0779adce6efc8480503ae1ee70342fbc671c005f" translate="yes" xml:space="preserve">
           <source>&lt;em&gt;Note: starting with Redis 5, scripts are always replicated as effects and not sending the script verbatim. So the following section is mostly applicable to Redis version 4 or older.&lt;/em&gt;</source>
@@ -2765,7 +2773,7 @@
         </trans-unit>
         <trans-unit id="22208566ecb85a6f473d3a0c82c02cca1f6156aa" translate="yes" xml:space="preserve">
           <source>&lt;em&gt;denyoom&lt;/em&gt; - reject command if currently out of memory</source>
-          <target state="new"/>
+          <target state="translated">&lt;em&gt;denyoom-&lt;/em&gt;如果当前内存&lt;em&gt;不足&lt;/em&gt;，则拒绝命令</target>
         </trans-unit>
         <trans-unit id="8cc88faeccf37dd9abce525d1e16c903b5653be7" translate="yes" xml:space="preserve">
           <source>&lt;em&gt;fast&lt;/em&gt; - command operates in constant or log(N) time. Used for latency monitoring.</source>
@@ -2921,19 +2929,19 @@
         </trans-unit>
         <trans-unit id="4f5fc2f2faeb9db58eaba5c6db1620e3f4d51b2c" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Available since 6.0.0.&lt;/strong&gt;</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;自6.0.0起可用。&lt;/strong&gt;</target>
         </trans-unit>
         <trans-unit id="349e55c27c4a1f4de3a52296d6579958bfa5b15c" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Available since 6.0.6.&lt;/strong&gt;</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;自6.0.6起可用。&lt;/strong&gt;</target>
         </trans-unit>
         <trans-unit id="9f864e439fc87160a12122e5c8bf4d53ad092c0a" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Available since 6.2.0.&lt;/strong&gt;</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;自6.2.0起可用。&lt;/strong&gt;</target>
         </trans-unit>
         <trans-unit id="53e7321eb80df80fcb4156061a619f522a8236c9" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Available since 6.2.&lt;/strong&gt;</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;自6.2起可用。&lt;/strong&gt;</target>
         </trans-unit>
         <trans-unit id="37ad352b4b8a994d3447d680cfa6aac8d4baddae" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;CH&lt;/strong&gt;: Modify the return value from the number of new elements added, to the total number of elements changed (CH is an abbreviation of &lt;em&gt;changed&lt;/em&gt;). Changed elements are &lt;strong&gt;new elements added&lt;/strong&gt; and elements already existing for which &lt;strong&gt;the score was updated&lt;/strong&gt;. So elements specified in the command line having the same score as they had in the past are not counted. Note: normally the return value of &lt;a href=&quot;zadd&quot;&gt;ZADD&lt;/a&gt; only counts the number of new elements added.</source>
@@ -2953,7 +2961,7 @@
         </trans-unit>
         <trans-unit id="8af4667a1aad5a84d9ec8a060984b3b9f1bdf87f" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;GT&lt;/strong&gt;: Only update existing elements if the new score is &lt;strong&gt;greater than&lt;/strong&gt; the current score. This flag doesn't prevent adding new elements.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;GT&lt;/strong&gt;：仅当新分数&lt;strong&gt;大于&lt;/strong&gt;当前分数时才更新现有元素。此标志不会阻止添加新元素。</target>
         </trans-unit>
         <trans-unit id="a95ec0f36765c66b1ab2481704998d8a28483766" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Hard reset only&lt;/strong&gt;: &lt;code&gt;currentEpoch&lt;/code&gt; and &lt;code&gt;configEpoch&lt;/code&gt; vars are set to 0.</source>
@@ -2989,11 +2997,11 @@
         </trans-unit>
         <trans-unit id="b92dd4e0a23e32e06b39907323e24eca3f233f14" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;LT&lt;/strong&gt;: Only update existing elements if the new score is &lt;strong&gt;less than&lt;/strong&gt; the current score. This flag doesn't prevent adding new elements.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;LT&lt;/strong&gt;：仅当新分数&lt;strong&gt;小于&lt;/strong&gt;当前分数时才更新现有元素。此标志不会阻止添加新元素。</target>
         </trans-unit>
         <trans-unit id="94c28e3e21fc5ed1f5a96b1b64379cfe1c35f660" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Lua to Redis&lt;/strong&gt; conversion table specific for RESP3.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;Lua到&lt;/strong&gt;RESP3的&lt;strong&gt;Redis&lt;/strong&gt;转换表。</target>
         </trans-unit>
         <trans-unit id="080ca67a419bf57eb4ca474c2ead958e0b17c394" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Lua to Redis&lt;/strong&gt; conversion table.</source>
@@ -3009,7 +3017,7 @@
         </trans-unit>
         <trans-unit id="eae47eb67b82e2b9fc26c6a9ac32ec815c2935e3" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Modules generated sections&lt;/strong&gt;: Starting with Redis 6, modules can inject their info into the &lt;a href=&quot;info&quot;&gt;INFO&lt;/a&gt; command, these are excluded by default even when the &lt;code&gt;all&lt;/code&gt; argument is provided (it will include a list of loaded modules but not their generated info fields). To get these you must use either the &lt;code&gt;modules&lt;/code&gt; argument or &lt;code&gt;everything&lt;/code&gt;.,</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;模块生成的部分&lt;/strong&gt;：从Redis 6开始，模块可以将其信息注入&lt;a href=&quot;info&quot;&gt;INFO&lt;/a&gt;命令，即使提供了 &lt;code&gt;all&lt;/code&gt; 参数（默认情况下，它们也将被排除）（它将包括已加载模块的列表，但不包括其生成的信息字段）。要获取这些，您必须使用 &lt;code&gt;modules&lt;/code&gt; 参数或 &lt;code&gt;everything&lt;/code&gt; 。，</target>
         </trans-unit>
         <trans-unit id="4542730e02f1444f396e1eecd3fb084c50899588" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;NX&lt;/strong&gt;: Don't update already existing elements. Always add new elements.</source>
@@ -3017,7 +3025,7 @@
         </trans-unit>
         <trans-unit id="aa921920147c16c1008783f3ee79ad9ef35d5949" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Non standard return value&lt;/strong&gt;, a bulk transfer of the data followed by &lt;a href=&quot;ping&quot;&gt;PING&lt;/a&gt; and write requests from the master.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;非标准返回值&lt;/strong&gt;，数据的大容量传输，后跟&lt;a href=&quot;ping&quot;&gt;PING&lt;/a&gt;和来自主机的写入请求。</target>
         </trans-unit>
         <trans-unit id="c0e14174973d3f14160192d3ec335ea216ce5838" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Non standard return value&lt;/strong&gt;, just dumps the received commands in an infinite flow.</source>
@@ -3041,19 +3049,19 @@
         </trans-unit>
         <trans-unit id="4ab4a67631aaba6fc476ea51d4c52e84df19e3e3" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Note:&lt;/strong&gt; The following pattern is discouraged in favor of &lt;a href=&quot;https://redis.io/topics/distlock&quot;&gt;the Redlock algorithm&lt;/a&gt; which is only a bit more complex to implement, but offers better guarantees and is fault tolerant.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;注意：&lt;/strong&gt;不建议使用以下模式来支持&lt;a href=&quot;https://redis.io/topics/distlock&quot;&gt;Redlock算法&lt;/a&gt;，该算法实现起来稍微复杂一些，但是提供了更好的保证，并且具有容错能力。</target>
         </trans-unit>
         <trans-unit id="e7f24abd7c8c85b89a11f7b735d84e40f293c0e8" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Note:&lt;/strong&gt; config epoch management is performed internally by the cluster, and relies on obtaining a consensus of nodes. The &lt;a href=&quot;cluster-bumpepoch&quot;&gt;CLUSTER BUMPEPOCH&lt;/a&gt; attempts to increment the config epoch &lt;strong&gt;WITHOUT&lt;/strong&gt; getting the consensus, so using it may violate the &quot;last failover wins&quot; rule. Use it with caution.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;注意：&lt;/strong&gt; config epoch管理是由集群内部执行的，它依赖于获得节点的共识。该&lt;a href=&quot;cluster-bumpepoch&quot;&gt;CLUSTER BUMPEPOCH&lt;/a&gt;尝试增加的配置划时代&lt;strong&gt;WITHOUT&lt;/strong&gt;获得共识，因此使用它可能违反了&amp;ldquo;最后的故障切换胜&amp;rdquo;的规则。请谨慎使用。</target>
         </trans-unit>
         <trans-unit id="5f681aa7bf2619cd8d4bc82a09fca69b97fed67c" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Note:&lt;/strong&gt; the doctor has erratic psychological behaviors, so we recommend interacting with it carefully.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;注意：&lt;/strong&gt;医生的心理行为不稳定，因此我们建议您与医生进行仔细的互动。</target>
         </trans-unit>
         <trans-unit id="0f902a881b716cf0d2a0b81af7f8e227f35550c2" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Note:&lt;/strong&gt; the implementation for getting a range of bit offsets from a bitmap is left as an exercise to the reader.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;注意：&lt;/strong&gt;从位图获取一定范围的位偏移的实现留给读者练习。</target>
         </trans-unit>
         <trans-unit id="480b1ec2a7ba19faaf34095bd31fd8c13e719460" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Note:&lt;/strong&gt; there is no &lt;strong&gt;GEODEL&lt;/strong&gt; command because you can use &lt;a href=&quot;zrem&quot;&gt;ZREM&lt;/a&gt; in order to remove elements. The Geo index structure is just a sorted set.</source>
@@ -3065,7 +3073,7 @@
         </trans-unit>
         <trans-unit id="3fb677f73a8d550c5cfe4a23e805eeca4c57f6d0" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Note&lt;/strong&gt;: modules can also be loaded at server startup with &lt;code&gt;loadmodule&lt;/code&gt; configuration directive in &lt;code&gt;redis.conf&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;注意&lt;/strong&gt;：也可以在服务器启动时使用 &lt;code&gt;redis.conf&lt;/code&gt; 中的 &lt;code&gt;loadmodule&lt;/code&gt; 配置指令来加载模块。</target>
         </trans-unit>
         <trans-unit id="2e7b910f0576d349936d98bea109218640bde9ec" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Note&lt;/strong&gt;: this is a string operation because Redis does not have a dedicated integer type. The string stored at the key is interpreted as a base-10 &lt;strong&gt;64 bit signed integer&lt;/strong&gt; to execute the operation.</source>
@@ -3081,11 +3089,11 @@
         </trans-unit>
         <trans-unit id="244fc08d3602d62e84927c3c5d301c8034317f18" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;RESP3 mode conversion rules&lt;/strong&gt;: note that the Lua engine can work in RESP3 mode using the new Redis 6 protocol. In this case there are additional conversion rules, and certain conversions are also modified compared to the RESP2 mode. Please refer to the RESP3 section of this document for more information.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;RESP3模式转换规则&lt;/strong&gt;：请注意，使用新的Redis 6协议，Lua引擎可以在RESP3模式下工作。在这种情况下，存在其他转换规则，并且与RESP2模式相比，某些转换也被修改。请参阅本文档的RESP3部分以获取更多信息。</target>
         </trans-unit>
         <trans-unit id="9e0adc4a9b1d2414f03da39a1ef041847c8b49b1" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Redis to Lua&lt;/strong&gt; conversion table specific to RESP3:</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;Redis&lt;/strong&gt;特定于RESP3的&lt;strong&gt;Lua&lt;/strong&gt;转换表：</target>
         </trans-unit>
         <trans-unit id="6f3ee1f33563f6776e77dae5878a039952e3dce8" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Redis to Lua&lt;/strong&gt; conversion table.</source>
@@ -3109,7 +3117,7 @@
         </trans-unit>
         <trans-unit id="556107b8e9768c921f3dec9b00b1054a332802e3" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;The timeout argument is interpreted as a double value specifying the maximum number of seconds to block&lt;/strong&gt;. A timeout of zero can be used to block indefinitely.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;timeout参数解释为一个double值，该值指定要阻止的最大秒数&lt;/strong&gt;。零超时可以无限期地阻塞。</target>
         </trans-unit>
         <trans-unit id="4908775239d52b8a249c687e49f93d0788e39894" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;The timeout argument is interpreted as an integer value specifying the maximum number of seconds to block&lt;/strong&gt;. A timeout of zero can be used to block indefinitely.</source>
@@ -3121,7 +3129,7 @@
         </trans-unit>
         <trans-unit id="65286337fbd95f12b6dbd7609bce419657c61278" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; For LCS O(strlen(s1)*strlen(s2))</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;时间复杂度：&lt;/strong&gt;对于LCS O（strlen（s1）* strlen（s2））</target>
         </trans-unit>
         <trans-unit id="4c297bf650da1f0e475df73b56cf1ac69d632e5d" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; For each stream mentioned: O(M) with M being the number of elements returned. If M is constant (e.g. always asking for the first 10 elements with COUNT), you can consider it O(1). On the other side when XREADGROUP blocks, XADD will pay the O(N) time in order to serve the N clients blocked on the stream getting new data.</source>
@@ -3129,7 +3137,7 @@
         </trans-unit>
         <trans-unit id="2a32c28191aa7b2da0b44dcbfa9f224c42c1f256" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; For each stream mentioned: O(N) with N being the number of elements being returned, it means that XREAD-ing with a fixed COUNT is O(1). Note that when the BLOCK option is used, XADD will pay O(M) time in order to serve the M clients blocked on the stream getting new data.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;时间复杂度：&lt;/strong&gt;对于提到的每个流：O（N），其中N为要返回的元素数，这意味着具有固定COUNT的XREAD-ing为O（1）。请注意，使用BLOCK选项时，XADD将花费O（M）时间，以便为在流上被阻塞的M个客户端获取新数据提供服务。</target>
         </trans-unit>
         <trans-unit id="bd8b5ee7f2421c47e339ced1729fc4553418147c" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; For each stream mentioned: O(N) with N being the number of elements being returned, it menas that XREAD-ing with a fixed COUNT is O(1). Note that when the BLOCK option is used, XADD will pay O(M) time in order to serve the M clients blocked on the stream getting new data.</source>
@@ -3141,7 +3149,7 @@
         </trans-unit>
         <trans-unit id="f9f66fd7aff4a34cf1299e1361ec8ace3be42cd6" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(1) amortized time considering the typical user.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;时间复杂度：&lt;/strong&gt;考虑典型用户的O（1）摊销时间。</target>
         </trans-unit>
         <trans-unit id="55633d506fbeea6161b511b8a54465821794f5cd" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(1) for all the currently implemented subcommands.</source>
@@ -3157,7 +3165,7 @@
         </trans-unit>
         <trans-unit id="11406908c7956944d717e43c7d0204f76e70c476" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(1) for each field/value pair added, so O(N) to add N field/value pairs when the command is called with multiple field/value pairs.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;时间复杂度：&lt;/strong&gt;每个添加的字段/值对为O（1），因此当调用具有多个字段/值对的命令时，O（N）要添加N个字段/值对。</target>
         </trans-unit>
         <trans-unit id="8eb838dfbc1d23415a7fe8a01586a99b88c8b560" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(1) for each key removed regardless of its size. Then the command does O(N) work in a different thread in order to reclaim memory, where N is the number of allocations the deleted objects where composed of.</source>
@@ -3189,11 +3197,11 @@
         </trans-unit>
         <trans-unit id="8224beb67608f863bcc99e832bf3c09931c63e59" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(1) since the categories and commands are a fixed set.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;时间复杂度：&lt;/strong&gt; O（1），因为类别和命令是固定集合。</target>
         </trans-unit>
         <trans-unit id="1f894f0417f03c09ee9b529c74b588869f634d1f" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(1) to access the key and additional O(N*M) to serialize it, where N is the number of Redis objects composing the value and M their average size. For small string values the time complexity is thus O(1)+O(1*M) where M is small, so simply O(1).</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;时间复杂度：&lt;/strong&gt; O（1）用于访问密钥，其他O（N * M）用于对其进行序列化，其中N是组成该值的Redis对象的数量，M是它们的平均大小。因此，对于较小的字符串值，时间复杂度为O（1）+ O（1 * M），其中M很小，因此简单地为O（1）。</target>
         </trans-unit>
         <trans-unit id="e91064b0a93173883f68e80de9b9109a1b47c2be" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(1) to access the key and additional O(N*M) to serialized it, where N is the number of Redis objects composing the value and M their average size. For small string values the time complexity is thus O(1)+O(1*M) where M is small, so simply O(1).</source>
@@ -3221,7 +3229,7 @@
         </trans-unit>
         <trans-unit id="bf3b7f496a65e5522b9dc1b7e669443ace377ffa" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(L + (N-K)log(N)) worst case where L is the total number of elements in all the sets, N is the size of the first set, and K is the size of the result set.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;时间复杂度：&lt;/strong&gt; O（L +（NK）log（N））最坏的情况，其中L是所有集合中元素的总数，N是第一个集合的大小，K是结果集合的大小。</target>
         </trans-unit>
         <trans-unit id="0395357e538314afbb36cc7212c8f51962579675" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(M*log(N)) with N being the number of elements in the sorted set and M the number of elements to be removed.</source>
@@ -3277,15 +3285,15 @@
         </trans-unit>
         <trans-unit id="c8e85a4ca3be5f0915c51a03733ebbc7a372c660" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(N) where N is the number of elements being checked for membership</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;时间复杂度：&lt;/strong&gt; O（N），其中N是要检查其成员资格的元素数</target>
         </trans-unit>
         <trans-unit id="05df09af2b3ccd9ebe0dace8258bd85ca953d5f9" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(N) where N is the number of elements in the list, for the average case. When searching for elements near the head or the tail of the list, or when the MAXLEN option is provided, the command may run in constant time.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;时间复杂度：&lt;/strong&gt; O（N），其中N是平均情况下列表中元素的数量。当搜索列表的开头或结尾附近的元素时，或者提供MAXLEN选项时，该命令可能会以恒定的时间运行。</target>
         </trans-unit>
         <trans-unit id="be1754ab1e11a40303837cf8c6d9e5080c8b4d4a" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(N) where N is the number of elements returned</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;时间复杂度：&lt;/strong&gt; O（N），其中N是返回的元素数</target>
         </trans-unit>
         <trans-unit id="b2d78dda8ec936c399d001d400dd7443b9ee0c51" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(N) where N is the number of elements to be removed by the operation.</source>
@@ -3337,11 +3345,11 @@
         </trans-unit>
         <trans-unit id="234fbf7057a39690aac3e744557088f824f18eb9" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(N) where N is the number of loaded modules.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;时间复杂度：&lt;/strong&gt; O（N），其中N是已加载模块的数量。</target>
         </trans-unit>
         <trans-unit id="9eb7a9409bf0369b64fc75645b3e9c14e653d7ea" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(N) where N is the number of members being requested.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;时间复杂度：&lt;/strong&gt; O（N），其中N是所请求的成员数。</target>
         </trans-unit>
         <trans-unit id="b3fe05d26b4346f8090d8c22849f30a16797b0db" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(N) where N is the number of members to be removed.</source>
@@ -3389,7 +3397,7 @@
         </trans-unit>
         <trans-unit id="8a4fbf27d75b5b5db8cc54e6e838410633f408ab" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(N) with N being the number of elements returned, so asking for a small fixed number of entries per call is O(1). O(M), where M is the total number of entries scanned when used with the IDLE filter. When the command returns just the summary and the list of consumers is small, it runs in O(1) time; otherwise, an additional O(N) time for iterating every consumer.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;时间复杂度：&lt;/strong&gt; O（N），其中N为返回的元素数，因此每次调用要求固定的条目数为O（1）。O（M），其中M是与IDLE过滤器一起使用时扫描的条目总数。当命令仅返回摘要并且使用者列表较小时，它将在O（1）时间中运行；否则，将花费额外的O（N）时间来迭代每个消费者。</target>
         </trans-unit>
         <trans-unit id="ef329378762b4fc8582540e6f4f372d96643c0a5" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(N) with N being the number of elements returned, so asking for a small fixed number of entries per call is O(1). When the command returns just the summary it runs in O(1) time assuming the list of consumers is small, otherwise there is additional O(N) time needed to iterate every consumer.</source>
@@ -3401,7 +3409,7 @@
         </trans-unit>
         <trans-unit id="b769f2671bdcb91c429c85ba7049bb785fd4c85d" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(N) with N being the number of entries shown.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;时间复杂度：&lt;/strong&gt; O（N），N为显示的条目数。</target>
         </trans-unit>
         <trans-unit id="59133b1321947fe750ca1f0a99b2da85624821b7" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(N) with N being the number of keys in the database, under the assumption that the key names in the database and the given pattern have limited length.</source>
@@ -3421,7 +3429,7 @@
         </trans-unit>
         <trans-unit id="889ce28aded8be26ce965daeccff0e7ab6d4f60c" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(N) worst case for collections, where N is the number of nested items. O(1) for string values.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;时间复杂度：&lt;/strong&gt;对于集合，O（N）最坏的情况，其中N是嵌套项目的数量。字符串值的O（1）。</target>
         </trans-unit>
         <trans-unit id="1c61928ca7fc032cf39eb98cafcca19529e956ff" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(N)+O(M log(M)) with N being the sum of the sizes of the input sorted sets, and M being the number of elements in the resulting sorted set.</source>
@@ -3429,7 +3437,7 @@
         </trans-unit>
         <trans-unit id="5968318f2f90c1bfac421db9f175d780f07bf2f7" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(N)+O(M*log(M)) with N being the sum of the sizes of the input sorted sets, and M being the number of elements in the resulting sorted set.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;时间复杂度：&lt;/strong&gt; O（N）+ O（M * log（M）），其中N是输入排序集合的大小之和，M是所得排序集合中元素的数量。</target>
         </trans-unit>
         <trans-unit id="cb8a0bd08cfdfeed7510f4650479d4f57d5c0b6c" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(N), with N being the number of evicted entries. Constant times are very small however, since entries are organized in macro nodes containing multiple entries that can be released with a single deallocation.</source>
@@ -3437,15 +3445,15 @@
         </trans-unit>
         <trans-unit id="81239567ddd1d1735121c38772afebeabf96f377" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(N). Where N is the number of configured users.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;时间复杂度：&lt;/strong&gt; O（N）。其中N是已配置的用户数。</target>
         </trans-unit>
         <trans-unit id="911b4fa9a8329807caa0415ac3d7022ccc3d4ce9" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(N). Where N is the number of password, command and pattern rules that the user has.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;时间复杂度：&lt;/strong&gt; O（N）。其中N是用户拥有的密码，命令和模式规则的数量。</target>
         </trans-unit>
         <trans-unit id="6e59bdd3196eb6852e3eaef33a3252a3b7a0272e" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(N). Where N is the number of rules provided.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;时间复杂度：&lt;/strong&gt; O（N）。其中N是提供的规则数。</target>
         </trans-unit>
         <trans-unit id="bdc1b429e79e5573e78c3286268eb194772e69ad" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(N*K)+O(M*log(M)) worst case with N being the smallest input sorted set, K being the number of input sorted sets and M being the number of elements in the resulting sorted set.</source>
@@ -3457,7 +3465,7 @@
         </trans-unit>
         <trans-unit id="ffa0e56b07d12c63b932eed91b324ef8dd20295d" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(N+M) where N is the length of the list and M is the number of elements removed.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;时间复杂度：&lt;/strong&gt; O（N + M），其中N是列表的长度，M是已删除元素的数量。</target>
         </trans-unit>
         <trans-unit id="95a8b0c4cc096c7df1535211118cb125332a33c1" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(N+M) where N is the number of clients subscribed to the receiving channel and M is the total number of subscribed patterns (by any client).</source>
@@ -3473,7 +3481,7 @@
         </trans-unit>
         <trans-unit id="c66a53cba15cd2af0a1695247c3a0aa36e2adc99" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(N+log(M)) where N is the number of elements in the grid-aligned bounding box area around the shape provided as the filter and M is the number of items inside the shape</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;时间复杂度：&lt;/strong&gt; O（N + log（M）），其中N是作为过滤器提供的形状周围的网格对齐边界框区域中的元素数，M是形状内的项目数</target>
         </trans-unit>
         <trans-unit id="e20974426ea75cce3c73bf120e5bd4311bbf1748" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Time complexity:&lt;/strong&gt; O(N+log(M)) where N is the number of elements inside the bounding box of the circular area delimited by center and radius and M is the number of items inside the index.</source>
@@ -3569,7 +3577,7 @@
         </trans-unit>
         <trans-unit id="79f2215b8211f0266085dd38bf62ef277714a037" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;flags&lt;/strong&gt;: A list of tracking flags used by the connection. The flags and their meanings are as follows:</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;flags&lt;/strong&gt;：连接使用的跟踪标志列表。标志及其含义如下：</target>
         </trans-unit>
         <trans-unit id="8bff7d4c72f517ddfeda551b647e8e7d1217bc74" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;ft&lt;/strong&gt; for feet.</source>
@@ -3589,11 +3597,11 @@
         </trans-unit>
         <trans-unit id="f65ab91ff705eaf146385fb92e3f79cd354cc871" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;prefixes&lt;/strong&gt;: A list of key prefixes for which notifications are sent to the client.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;prefixs&lt;/strong&gt;：关键字前缀列表，通知会发送给客户端。</target>
         </trans-unit>
         <trans-unit id="d5d5889b4f35b20aa026439c189327fda685cba3" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;redirect&lt;/strong&gt;: The client ID used for notifications redirection, or -1 when none.</source>
-          <target state="new"/>
+          <target state="translated">&lt;strong&gt;redirect&lt;/strong&gt;：用于通知重定向的客户端ID；如果没有，则为-1。</target>
         </trans-unit>
         <trans-unit id="f1d42ce2c0a6643ac20a613b522833d936ce6141" translate="yes" xml:space="preserve">
           <source>@example:</source>
@@ -3609,7 +3617,7 @@
         </trans-unit>
         <trans-unit id="9e66fa09299df120a7f69c64e83980359faba0b3" translate="yes" xml:space="preserve">
           <source>A client may be able to check if the operation succeeded using the &lt;a href=&quot;lastsave&quot;&gt;LASTSAVE&lt;/a&gt; command.</source>
-          <target state="new"/>
+          <target state="translated">客户端可以使用&lt;a href=&quot;lastsave&quot;&gt;LASTSAVE&lt;/a&gt;命令检查操作是否成功。</target>
         </trans-unit>
         <trans-unit id="1557c0a8f4b2cceda8fceff02fc1420f6f4eff1c" translate="yes" xml:space="preserve">
           <source>A client may use GETSET in order to atomically get the current counter value and reset it to zero.</source>
@@ -3629,7 +3637,7 @@
         </trans-unit>
         <trans-unit id="6f4f5def69a34383d0c0ba099fdc329e197223e5" translate="yes" xml:space="preserve">
           <source>A consumer group can be destroyed completely by using the following form:</source>
-          <target state="new"/>
+          <target state="translated">一个消费群体可以通过以下形式被彻底摧毁。</target>
         </trans-unit>
         <trans-unit id="39aaf38b13fe32608e93e62cb065f0bce6d7d689" translate="yes" xml:space="preserve">
           <source>A does no longer known node D (see step 3), so it starts an handshake with D.</source>
@@ -3693,7 +3701,7 @@
         </trans-unit>
         <trans-unit id="479cfb48bf8e24ebd7be595311042ddf37b14add" translate="yes" xml:space="preserve">
           <source>A symmetrical pattern applies to iterating the stream with &lt;a href=&quot;xrevrange&quot;&gt;XREVRANGE&lt;/a&gt;. The only difference is that the client needs to decrement the ID for the subsequent calls. When decrementing an ID with a sequence part of 0, the timestamp needs to be decremented by 1 and the sequence set to 18446744073709551615.</source>
-          <target state="new"/>
+          <target state="translated">对称模式适用于使用&lt;a href=&quot;xrevrange&quot;&gt;XREVRANGE&lt;/a&gt;迭代流。唯一的区别是客户端需要为后续调用减少ID。当递减序列号为0的ID时，需要将时间戳减1，并将序列设置为18446744073709551615。</target>
         </trans-unit>
         <trans-unit id="79fd7f6eb47e05e442bf21424b70a285e07cd4c7" translate="yes" xml:space="preserve">
           <source>A three-element multi-bulk with the first element being the name of the key where a member was popped, the second element being the score of the popped member, and the third element being the popped member itself.</source>
@@ -3701,7 +3709,7 @@
         </trans-unit>
         <trans-unit id="dd483a4936cc58e47c6e0c862b9b256fd5f40d67" translate="yes" xml:space="preserve">
           <source>A three-element multi-bulk with the first element being the name of the key where a member was popped, the second element is the popped member itself, and the third element is the score of the popped element.</source>
-          <target state="new"/>
+          <target state="translated">三元素多分量,第一个元素是弹出成员的键名,第二个元素是弹出的成员本身,第三个元素是弹出元素的分数。</target>
         </trans-unit>
         <trans-unit id="30306183666392fcaecc22c35fce7e7cb3af8d67" translate="yes" xml:space="preserve">
           <source>A timeout of 0 means to block forever.</source>
@@ -3725,63 +3733,63 @@
         </trans-unit>
         <trans-unit id="bc430f327a0dfce882c15dba5919c945f0c506c4" translate="yes" xml:space="preserve">
           <source>ACL CAT  [categoryname]   List the ACL categories or the commands inside a category</source>
-          <target state="new"/>
+          <target state="translated">ACL CAT [categoryname]列出ACL类别或类别内的命令。</target>
         </trans-unit>
         <trans-unit id="7a99f2ae2af74997dec699c3ee26e8588c57d631" translate="yes" xml:space="preserve">
           <source>ACL DELUSER  username [username ...]   Remove the specified ACL users and the associated rules</source>
-          <target state="new"/>
+          <target state="translated">ACL DELUSER username [username ...]删除指定的ACL用户和相关规则。</target>
         </trans-unit>
         <trans-unit id="d663a64f02d722e9b6dea0bd46e9eca64230b913" translate="yes" xml:space="preserve">
           <source>ACL GENPASS  [bits]   Generate a pseudorandom secure password to use for ACL users</source>
-          <target state="new"/>
+          <target state="translated">ACL GENPASS [bits]生成一个伪随机安全密码,供ACL用户使用。</target>
         </trans-unit>
         <trans-unit id="ccd5643086b968b1f31b01ef02819987f26c5b3f" translate="yes" xml:space="preserve">
           <source>ACL GETUSER  username   Get the rules for a specific ACL user</source>
-          <target state="new"/>
+          <target state="translated">ACL GETUSER用户名 获取特定ACL用户的规则。</target>
         </trans-unit>
         <trans-unit id="d619439d71c4f34f055718e677b13c4a9f275fe6" translate="yes" xml:space="preserve">
           <source>ACL HELP   Show helpful text about the different subcommands</source>
-          <target state="new"/>
+          <target state="translated">ACL HELP 显示关于不同子命令的有用文本。</target>
         </trans-unit>
         <trans-unit id="31850beea1f3f69071e6c33928156ade6e00ab45" translate="yes" xml:space="preserve">
           <source>ACL LIST   List the current ACL rules in ACL config file format</source>
-          <target state="new"/>
+          <target state="translated">ACL LIST 以ACL配置文件格式列出当前ACL规则。</target>
         </trans-unit>
         <trans-unit id="35e0627557d51800ee03c74a4ab45c1e764447ec" translate="yes" xml:space="preserve">
           <source>ACL LOAD   Reload the ACLs from the configured ACL file</source>
-          <target state="new"/>
+          <target state="translated">ACL LOAD 从配置的ACL文件中重新加载ACL。</target>
         </trans-unit>
         <trans-unit id="f7757a7da13bd653d8ee430ba3397119594c5d47" translate="yes" xml:space="preserve">
           <source>ACL LOG  [count or RESET]   List latest events denied because of ACLs in place</source>
-          <target state="new"/>
+          <target state="translated">ACL LOG [count or RESET]列出最近一次因为有ACL而被拒绝的事件。</target>
         </trans-unit>
         <trans-unit id="5cb5c1414dee386d2b8fa30e2bbdd0a6a97cfc28" translate="yes" xml:space="preserve">
           <source>ACL SAVE   Save the current ACL rules in the configured ACL file</source>
-          <target state="new"/>
+          <target state="translated">ACL SAVE 在配置的ACL文件中保存当前的ACL规则。</target>
         </trans-unit>
         <trans-unit id="0386be79c39f606185e4b53f1222d64719e174a0" translate="yes" xml:space="preserve">
           <source>ACL SETUSER  username [rule [rule ...]]   Modify or create the rules for a specific ACL user</source>
-          <target state="new"/>
+          <target state="translated">ACL SETUSER用户名[规则[规则...]]。修改或创建特定ACL用户的规则。</target>
         </trans-unit>
         <trans-unit id="27bb308c77e1daac95122fff219a2c6daae7b052" translate="yes" xml:space="preserve">
           <source>ACL USERS   List the username of all the configured ACL rules</source>
-          <target state="new"/>
+          <target state="translated">ACL USERS 列出所有配置的ACL规则的用户名。</target>
         </trans-unit>
         <trans-unit id="2b429eef7f087085b63c833ef1bc25427befe100" translate="yes" xml:space="preserve">
           <source>ACL WHOAMI   Return the name of the user associated to the current connection</source>
-          <target state="new"/>
+          <target state="translated">ACL WHOAMI 返回与当前连接相关联的用户名称。</target>
         </trans-unit>
         <trans-unit id="de304c50ff9bb5fdd452722c0dd161577af28608" translate="yes" xml:space="preserve">
           <source>ACL categories are very useful in order to create ACL rules that include or exclude a large set of commands at once, without specifying every single command. For instance, the following rule will let the user &lt;code&gt;karin&lt;/code&gt; perform everything but the most dangerous operations that may affect the server stability:</source>
-          <target state="new"/>
+          <target state="translated">ACL类别对于创建ACL规则非常有用，该规则可以一次包含或排除大量命令，而无需指定每个命令。例如，以下规则将允许用户 &lt;code&gt;karin&lt;/code&gt; 执行除可能影响服务器稳定性的最危险操作之外的所有操作：</target>
         </trans-unit>
         <trans-unit id="8cd4194a6879685c31702a0f68b0e7134e8b8f11" translate="yes" xml:space="preserve">
           <source>ACL rules are either words like &quot;on&quot;, &quot;off&quot;, &quot;reset&quot;, &quot;allkeys&quot;, or are special rules that start with a special character, and are followed by another string (without any space in between), like &quot;+SET&quot;.</source>
-          <target state="new"/>
+          <target state="translated">ACL规则可以是 &quot;开启&quot;、&quot;关闭&quot;、&quot;重置&quot;、&quot;allkeys &quot;这样的词,也可以是以特殊字符开头,后面跟着另一个字符串(中间没有空格)的特殊规则,比如 &quot;+SET&quot;。</target>
         </trans-unit>
         <trans-unit id="46b7d0e52e6b348d0ca3dd5bb91a67c4c26f9bb9" translate="yes" xml:space="preserve">
           <source>ACL users need a solid password in order to authenticate to the server without security risks. Such password does not need to be remembered by humans, but only by computers, so it can be very long and strong (unguessable by an external attacker). The &lt;a href=&quot;acl-genpass&quot;&gt;ACL GENPASS&lt;/a&gt; command generates a password starting from /dev/urandom if available, otherwise (in systems without /dev/urandom) it uses a weaker system that is likely still better than picking a weak password by hand.</source>
-          <target state="new"/>
+          <target state="translated">ACL用户需要一个可靠的密码才能对服务器进行身份验证，而不会带来安全风险。这样的密码不需要人类记住，而只需计算机即可记住，因此它可以很长很长（外部攻击者无法使用）。该&lt;a href=&quot;acl-genpass&quot;&gt;ACL GENPASS&lt;/a&gt;命令生成从/ dev / urandom的，如有，否则启动密码（系统没有的/ dev / urandom的），它使用了一个较弱的系统很可能仍然比手工采摘弱密码更好。</target>
         </trans-unit>
         <trans-unit id="025e07020e93e25579c1a9621d736dca0c1f26de" translate="yes" xml:space="preserve">
           <source>APPEND</source>
@@ -3797,7 +3805,7 @@
         </trans-unit>
         <trans-unit id="8a19c3946c86f4dea93819cfedf078d402be1b45" translate="yes" xml:space="preserve">
           <source>AUTH  [username] password   Authenticate to the server</source>
-          <target state="new"/>
+          <target state="translated">AUTH [用户名]密码 验证服务器的身份</target>
         </trans-unit>
         <trans-unit id="ffc2673c91de7fcb166409594eaaaec1f96c75c1" translate="yes" xml:space="preserve">
           <source>AUTH  password   Authenticate to the server</source>
@@ -3853,11 +3861,11 @@
         </trans-unit>
         <trans-unit id="a55c334e8c8de33a282dd83cae30a6fa98652879" translate="yes" xml:space="preserve">
           <source>Advanced Pattern: accessing bitmap ranges</source>
-          <target state="new"/>
+          <target state="translated">高级模式:访问位图范围</target>
         </trans-unit>
         <trans-unit id="7de859f0d7f7123c628115946a45405250e8beb6" translate="yes" xml:space="preserve">
           <source>Advances the cluster config epoch.</source>
-          <target state="new"/>
+          <target state="translated">将集群配置的时间提前。</target>
         </trans-unit>
         <trans-unit id="610e6e414b98337a7416af1551f4bb3d49943eed" translate="yes" xml:space="preserve">
           <source>After an &lt;a href=&quot;exec&quot;&gt;EXEC&lt;/a&gt; of a &lt;a href=&quot;multi&quot;&gt;MULTI&lt;/a&gt; block with multiple push operations against the same list.</source>
@@ -3865,7 +3873,7 @@
         </trans-unit>
         <trans-unit id="09dd535abc4afd038e1eb1f87d89a6d8d915ae74" translate="yes" xml:space="preserve">
           <source>After resetting an user, it returns back to the status it has when it was just created: non active (off rule), can't execute any command, can't access any key:</source>
-          <target state="new"/>
+          <target state="translated">重置一个用户后,它又会回到刚创建时的状态:非活动状态(关闭规则),不能执行任何命令,不能访问任何键。</target>
         </trans-unit>
         <trans-unit id="10dc2d316de1e1727affb701a924e28e6d1b2437" translate="yes" xml:space="preserve">
           <source>After running the above script, the result is that only keys A and C will be created on replicas and AOF.</source>
@@ -3877,11 +3885,11 @@
         </trans-unit>
         <trans-unit id="835b666dd0cc3c5f8fd53a30a792d6ad8b5f1dff" translate="yes" xml:space="preserve">
           <source>All the RESP2 old conversions still apply unless specified above.</source>
-          <target state="new"/>
+          <target state="translated">除上述规定外,所有RESP2旧版转换仍适用。</target>
         </trans-unit>
         <trans-unit id="0d589c0f60d25b33b78193aa17f49c88dffd73e4" translate="yes" xml:space="preserve">
           <source>All the RESP2 old conversions still apply.</source>
-          <target state="new"/>
+          <target state="translated">所有RESP2的旧版转换仍然适用。</target>
         </trans-unit>
         <trans-unit id="05778e5c96e8e267630af37ad51cc812ea0ac83f" translate="yes" xml:space="preserve">
           <source>All the additional arguments should not represent key names and can be accessed by Lua using the &lt;code&gt;ARGV&lt;/code&gt; global variable, very similarly to what happens with keys (so &lt;code&gt;ARGV[1]&lt;/code&gt;, &lt;code&gt;ARGV[2]&lt;/code&gt;, ...).</source>
@@ -3909,15 +3917,23 @@
         </trans-unit>
         <trans-unit id="88c113a9d8aff1bf4ece5a62c19847909b0afbe4" translate="yes" xml:space="preserve">
           <source>All the supported parameters have the same meaning of the equivalent configuration parameter used in the &lt;a href=&quot;http://github.com/redis/redis/raw/2.8/redis.conf&quot;&gt;redis.conf&lt;/a&gt; file, with the following important differences:</source>
-          <target state="new"/>
+          <target state="translated">所有受支持的参数与&lt;a href=&quot;http://github.com/redis/redis/raw/2.8/redis.conf&quot;&gt;redis.conf&lt;/a&gt;文件中使用的等效配置参数具有相同的含义，但有以下重要区别：</target>
         </trans-unit>
         <trans-unit id="b1452ac410057b8e4338bbb1b4de1f53561ba2ea" translate="yes" xml:space="preserve">
           <source>All the supported parameters have the same meaning of the equivalent configuration parameter used in the &lt;a href=&quot;http://github.com/redis/redis/raw/6.0/redis.conf&quot;&gt;redis.conf&lt;/a&gt; file, with the following important differences:</source>
-          <target state="new"/>
+          <target state="translated">所有受支持的参数与&lt;a href=&quot;http://github.com/redis/redis/raw/6.0/redis.conf&quot;&gt;redis.conf&lt;/a&gt;文件中使用的等效配置参数具有相同的含义，但有以下重要区别：</target>
+        </trans-unit>
+        <trans-unit id="7bda8cbefb95c91777097a08ac0328f652396225" translate="yes" xml:space="preserve">
+          <source>All the supported parameters have the same meaning of the equivalent configuration parameter used in the &lt;a href=&quot;https://github.com/redis/redis/raw/2.8/redis.conf&quot;&gt;redis.conf&lt;/a&gt; file, with the following important differences:</source>
+          <target state="translated">所有受支持的参数与&lt;a href=&quot;https://github.com/redis/redis/raw/2.8/redis.conf&quot;&gt;redis.conf&lt;/a&gt;文件中使用的等效配置参数具有相同的含义，但有以下重要区别：</target>
+        </trans-unit>
+        <trans-unit id="04377939f44ae64b9c21783c710b26cde2d340b5" translate="yes" xml:space="preserve">
+          <source>All the supported parameters have the same meaning of the equivalent configuration parameter used in the &lt;a href=&quot;https://github.com/redis/redis/raw/6.0/redis.conf&quot;&gt;redis.conf&lt;/a&gt; file, with the following important differences:</source>
+          <target state="translated">所有受支持的参数与&lt;a href=&quot;https://github.com/redis/redis/raw/6.0/redis.conf&quot;&gt;redis.conf&lt;/a&gt;文件中使用的等效配置参数具有相同的含义，但有以下重要区别：</target>
         </trans-unit>
         <trans-unit id="07d70aafc96c2b50e35694bacc42e5a300e72264" translate="yes" xml:space="preserve">
           <source>All-time maximum latency for this event.</source>
-          <target state="new"/>
+          <target state="translated">该事件的所有时间最大延迟。</target>
         </trans-unit>
         <trans-unit id="59c4ef360d3e661521770b94f8bee5b5b98d0b61" translate="yes" xml:space="preserve">
           <source>Almost all modifiers can be used together. The following example will return the first 5 elements, lexicographically sorted in descending order:</source>
@@ -3945,7 +3961,7 @@
         </trans-unit>
         <trans-unit id="421244cf7620490324dcfc2250189d7eb0fa02a2" translate="yes" xml:space="preserve">
           <source>Also, note that once the sequence part of the last ID equals 18446744073709551615, you'll need to increment the timestamp and reset the sequence part to 0. For example, incrementing the ID &lt;code&gt;1526985685298-18446744073709551615&lt;/code&gt; should result in &lt;code&gt;1526985685299-0&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">另外，请注意，一旦最后一个ID的序列部分等于18446744073709709615，您就需要增加时间戳并将序列部分重置为0。例如，增加ID &lt;code&gt;1526985685298-18446744073709551615&lt;/code&gt; 会导致 &lt;code&gt;1526985685299-0&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="ea8c51c6921844728fda67e56ae9ac9b762367f1" translate="yes" xml:space="preserve">
           <source>Alters the last access time of a key(s). A key is ignored if it does not exist.</source>
@@ -3981,27 +3997,11 @@
         </trans-unit>
         <trans-unit id="eb58ab5ebfb56d5e2bfd8b9296c584c2ccf48594" translate="yes" xml:space="preserve">
           <source>An array of strings.</source>
-          <target state="new"/>
+          <target state="translated">一个字符串数组。</target>
         </trans-unit>
         <trans-unit id="fb9ff52a245be210db03256bc0b542759913e5e2" translate="yes" xml:space="preserve">
           <source>An entry is composed of a set of field-value pairs, it is basically a small dictionary. The field-value pairs are stored in the same order they are given by the user, and commands to read the stream such as &lt;a href=&quot;xrange&quot;&gt;XRANGE&lt;/a&gt; or &lt;a href=&quot;xread&quot;&gt;XREAD&lt;/a&gt; are guaranteed to return the fields and values exactly in the same order they were added by &lt;a href=&quot;xadd&quot;&gt;XADD&lt;/a&gt;.</source>
           <target state="translated">一个条目是由一组字段值对组成的，它基本上是一个小词典。字段值对以用户指定的顺序存储，并且保证读取流的命令（例如&lt;a href=&quot;xrange&quot;&gt;XRANGE&lt;/a&gt;或&lt;a href=&quot;xread&quot;&gt;XREAD）&lt;/a&gt;以与&lt;a href=&quot;xadd&quot;&gt;XADD&lt;/a&gt;添加的顺序完全相同的顺序返回字段和值。</target>
-        </trans-unit>
-        <trans-unit id="75d00cd00e1f2b13a890f0d28b95cf6fbe73de9c" translate="yes" xml:space="preserve">
-          <source>An error is returned for out of range indexes.</source>
-          <target state="translated">对于超出范围的索引会返回一个错误。</target>
-        </trans-unit>
-        <trans-unit id="e1e52880ba8cd5516094695a791c7cb25bb9cf75" translate="yes" xml:space="preserve">
-          <source>An error is returned if &lt;code&gt;source&lt;/code&gt; or &lt;code&gt;destination&lt;/code&gt; does not hold a set value.</source>
-          <target state="translated">如果 &lt;code&gt;source&lt;/code&gt; 或 &lt;code&gt;destination&lt;/code&gt; 不具有设置值，则返回错误。</target>
-        </trans-unit>
-        <trans-unit id="c6dddcbd9570408a2bf9a7b091594de5d13db0b1" translate="yes" xml:space="preserve">
-          <source>An error is returned if there is already a background save running or if there is another non-background-save process running, specifically an in-progress AOF rewrite.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="f347bee22b5d2cb10d2901659685fcd72a034c77" translate="yes" xml:space="preserve">
-          <source>An error is returned when &lt;code&gt;key&lt;/code&gt; exists and does not hold a sorted set.</source>
-          <target state="translated">当 &lt;code&gt;key&lt;/code&gt; 存在且不包含排序集时，将返回错误。</target>
         </trans-unit>
       </group>
     </body>

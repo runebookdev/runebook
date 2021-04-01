@@ -533,11 +533,11 @@
         </trans-unit>
         <trans-unit id="6abf22da0f107c51712228d5db063535c6a4d21a" translate="yes" xml:space="preserve">
           <source>If any application-defined SQL functions have potentially dangerous side-effects, or if they could potentially leak sensitive information to an attacker if misused, then tag those functions using the &lt;a href=&quot;c3ref/c_deterministic#sqlitedirectonly&quot;&gt;SQLITE_DIRECTONLY&lt;/a&gt; option on the &quot;enc&quot; parameter. This means that the function can never be run from schema-code even if the trusted-schema option is on.</source>
-          <target state="new"/>
+          <target state="translated">응용 프로그램에서 정의한 SQL 함수에 잠재적으로 위험한 부작용이 있거나 잘못 사용되는 경우 공격자에게 중요한 정보를 유출 할 수있는 경우 &quot;enc&quot;매개 변수에 &lt;a href=&quot;c3ref/c_deterministic#sqlitedirectonly&quot;&gt;SQLITE_DIRECTONLY&lt;/a&gt; 옵션을 사용하여 해당 함수에 태그를 지정합니다 . 즉, trusted-schema 옵션이 켜져 있어도 스키마 코드에서 함수를 실행할 수 없습니다.</target>
         </trans-unit>
         <trans-unit id="452fe80b19e0f85e5121496bd6edf4647e872526" translate="yes" xml:space="preserve">
           <source>If any checksum is incorrect, the &quot;PRAGMA quick_check&quot; command will find it. To verify that checksums are actually enabled and running, use SQL like the following:</source>
-          <target state="new"/>
+          <target state="translated">체크섬이 잘못된 경우 &quot;PRAGMA quick_check&quot;명령이이를 찾습니다. 체크섬이 실제로 활성화되어 실행 중인지 확인하려면 다음과 같은 SQL을 사용하십시오.</target>
         </trans-unit>
         <trans-unit id="b9f8be087686590dab771595e5bd54b7d246dba5" translate="yes" xml:space="preserve">
           <source>If any errors are encountered during compilation, an error message is written into memory obtained from &lt;b&gt;malloc&lt;/b&gt; and the 5th parameter is made to point to that memory. If the 5th parameter is NULL, then no error message is generated. If the 5th parameter is not NULL, then the calling function should dispose of the memory containing the error message by calling &lt;b&gt;sqlite_freemem&lt;/b&gt;.</source>
@@ -717,7 +717,7 @@
         </trans-unit>
         <trans-unit id="f734ad1cf91506e2435f2ec6895dbb828ca868ad" translate="yes" xml:space="preserve">
           <source>If everything is OK, the query above should return a single row where the second column is 1. Any other result indicates either that there is a checksum error, or checksum validation is disabled.</source>
-          <target state="new"/>
+          <target state="translated">모든 것이 정상이면 위의 쿼리는 두 번째 열이 1 인 단일 행을 반환해야합니다. 다른 결과는 체크섬 오류가 있거나 체크섬 유효성 검사가 비활성화되었음을 나타냅니다.</target>
         </trans-unit>
         <trans-unit id="10b7374ac7ffa60e3b709049b312d9aea49ec9de" translate="yes" xml:space="preserve">
           <source>If file-locking is enabled (it is enabled by default), then connections from multiple processes may also read and write the database file. However concurrency is reduced as follows:</source>
@@ -769,7 +769,7 @@
         </trans-unit>
         <trans-unit id="aefd863d94581cbe189ba146626a8379609c65b7" translate="yes" xml:space="preserve">
           <source>If multiple calls to sqlite3_create_function() specify the same function name, and the same number of arguments, and the same preferred text encoding, then the callbacks and other parameters of the second call overwrite the first, and the destructor callback from the first call (if it exists) is invoked.</source>
-          <target state="new"/>
+          <target state="translated">sqlite3_create_function ()에 대한 여러 호출이 동일한 함수 이름, 동일한 수의 인수 및 동일한 선호 텍스트 인코딩을 지정하는 경우 두 번째 호출의 콜백 및 기타 매개 변수가 첫 번째 호출의 소멸자 콜백을 덮어 씁니다 ( 존재하는 경우)가 호출됩니다.</target>
         </trans-unit>
         <trans-unit id="180acf91f65a788cf692bf4d0ecd25eb3f41224e" translate="yes" xml:space="preserve">
           <source>If multiple commands are being executed against the same SQLite database connection at the same time, the autocommit is deferred until the very last command completes. For example, if a SELECT statement is being executed, the execution of the command will pause as each row of the result is returned. During this pause other INSERT, UPDATE, or DELETE commands can be executed against other tables in the database. But none of these changes will commit until the original SELECT statement finishes.</source>
@@ -1461,7 +1461,7 @@
         </trans-unit>
         <trans-unit id="47f803875c1a08bebb885c914c92a3d72ff50a92" translate="yes" xml:space="preserve">
           <source>If the Y parameter to sqlite3_free_filename(Y) is anything other than a NULL pointer or a pointer previously acquired from sqlite3_create_filename(), then bad things such as heap corruption or segfaults may occur. The value Y should be used again after sqlite3_free_filename(Y) has been called. This means that if the &lt;a href=&quot;vfs#sqlite3vfsxopen&quot;&gt;sqlite3_vfs.xOpen()&lt;/a&gt; method of a VFS has been called using Y, then the corresponding [sqlite3_module.xClose() method should also be invoked prior to calling sqlite3_free_filename(Y).</source>
-          <target state="new"/>
+          <target state="translated">sqlite3_free_filename (Y)에 대한 Y 매개 변수가 NULL 포인터 또는 이전에 sqlite3_create_filename ()에서 획득 한 포인터가 아닌 경우 힙 손상 또는 segfault와 같은 나쁜 일이 발생할 수 있습니다. sqlite3_free_filename (Y)이 호출 된 후에 Y 값을 다시 사용해야합니다. 즉 , VFS 의 &lt;a href=&quot;vfs#sqlite3vfsxopen&quot;&gt;sqlite3_vfs.xOpen ()&lt;/a&gt; 메서드가 Y를 사용하여 호출 된 경우 해당 [sqlite3_module.xClose () 메서드도 sqlite3_free_filename (Y)을 호출하기 전에 호출되어야합니다.</target>
         </trans-unit>
         <trans-unit id="74877c4dea96c98f4b3c0b669711d0dd7770d2b9" translate="yes" xml:space="preserve">
           <source>If the _HAVE_SQLITE_CONFIG_H macro is defined then the SQLite source code will attempt to #include a file named &quot;config.h&quot;. The &quot;config.h&quot; file usually contains other configuration options, especially &quot;HAVE_</source>
@@ -2413,11 +2413,11 @@
         </trans-unit>
         <trans-unit id="1a76560d5f1317c75f52d66cf33f56778e31d3b4" translate="yes" xml:space="preserve">
           <source>If this expression returns a non-zero value N, then there exists an embedded NUL at the N-th character position. Thus to count the number fo rows that contain embedded NUL characters:</source>
-          <target state="new"/>
+          <target state="translated">이식이 0이 아닌 값 N을 반환하면 N 번째 문자 위치에 포함 된 NUL이있는 것입니다. 따라서 포함 된 NUL 문자를 포함하는 행의 수를 계산하려면 다음을 수행하십시오.</target>
         </trans-unit>
         <trans-unit id="5f0db89932b716eb4d510a7bedc168db8c08402a" translate="yes" xml:space="preserve">
           <source>If this extension is compiled with -DSQLITE_CKSUMVFS_STATIC and statically linked against the application, initialize it using a single API call as follows:</source>
-          <target state="new"/>
+          <target state="translated">이 확장이 -DSQLITE_CKSUMVFS_STATIC으로 컴파일되고 애플리케이션에 정적으로 링크 된 경우 다음과 같이 단일 API 호출을 사용하여 초기화하십시오.</target>
         </trans-unit>
         <trans-unit id="d8ee4bc759bb4de0d55341a4133e995c0e985e4b" translate="yes" xml:space="preserve">
           <source>If this extension is compiled with the SQLITE_ENABLE_ICU pre-processor symbol defined, then there exists a built-in tokenizer named &quot;icu&quot; implemented using the ICU library. The first argument passed to the xCreate() method (see fts3_tokenizer.h) of this tokenizer may be an ICU locale identifier. For example &quot;tr_TR&quot; for Turkish as used in Turkey, or &quot;en_AU&quot; for English as used in Australia. For example:</source>
@@ -2569,7 +2569,7 @@
         </trans-unit>
         <trans-unit id="406e06acbef99d386159c93608eee295bbb8911c" translate="yes" xml:space="preserve">
           <source>If you &lt;a href=&quot;lang_expr#castexpr&quot;&gt;CAST&lt;/a&gt; a string into a BLOB, then the entire length of the string is shown. For example:</source>
-          <target state="new"/>
+          <target state="translated">당신이 경우 &lt;a href=&quot;lang_expr#castexpr&quot;&gt;CAST&lt;/a&gt; BLOB 형태로 문자열을, 다음 문자열의 전체 길이가 표시됩니다. 예를 들면 다음과 같습니다.</target>
         </trans-unit>
         <trans-unit id="4c77d01ec7cf778a68ddf7a39c6762175e2b9a47" translate="yes" xml:space="preserve">
           <source>If you abuse the library by trying to call &lt;b&gt;sqlite_step&lt;/b&gt; inappropriately it will attempt return SQLITE_MISUSE. This can happen if you call sqlite_step() on the same virtual machine at the same time from two or more threads or if you call sqlite_step() again after it returned SQLITE_DONE or SQLITE_ERROR or if you pass in an invalid virtual machine pointer to sqlite_step(). You should not depend on the SQLITE_MISUSE return code to indicate an error. It is possible that a misuse of the interface will go undetected and result in a program crash. The SQLITE_MISUSE is intended as a debugging aid only - to help you detect incorrect usage prior to a mishap. The misuse detection logic is not guaranteed to work in every case.</source>
@@ -2613,7 +2613,7 @@
         </trans-unit>
         <trans-unit id="165e1548a7d4a581b8c9984a9f7ab5cdc62be5bb" translate="yes" xml:space="preserve">
           <source>If you do this immediately after creating a new database file, before anything else has been written into the file, then that might be all that you need to do. Otherwise, the API call above should be followed by:</source>
-          <target state="new"/>
+          <target state="translated">새 데이터베이스 파일을 만든 후 즉시이 작업을 수행하면 파일에 다른 내용이 기록되기 전에 수행해야 할 모든 작업 일 수 있습니다. 그렇지 않으면 위의 API 호출 뒤에 다음이 와야합니다.</target>
         </trans-unit>
         <trans-unit id="c8e5a488a0f9459d060660cf0d22bea3c48ed8ca" translate="yes" xml:space="preserve">
           <source>If you feel that you need dynamic pointer type strings in your application, that is a strong indicator that you are misusing the pointer-passing interface. Your intended use may be unsafe. Please rethink your design. Determine if you really need to be passing pointers through SQL in the first place. Or perhaps find a different mechanism other than the pointer-passing interfaces described by this article.</source>
@@ -2649,7 +2649,7 @@
         </trans-unit>
         <trans-unit id="6938d0165858c470278846efb2784fece3e6d115" translate="yes" xml:space="preserve">
           <source>If you need an exact answer, you should not use binary64 floating-point values, in SQLite or in any other product. This is not an SQLite limitation. It is a mathematical limitation inherent in the design of floating-point numbers.</source>
-          <target state="new"/>
+          <target state="translated">정확한 답이 필요한 경우 SQLite 또는 다른 제품에서 binary64 부동 소수점 값을 사용해서는 안됩니다. 이것은 SQLite 제한이 아닙니다. 이것은 부동 소수점 숫자의 디자인에 내재 된 수학적 한계입니다.</target>
         </trans-unit>
         <trans-unit id="5e4831ba155a21bf312a9328909ee6b27a5a08fb" translate="yes" xml:space="preserve">
           <source>If you need to verify that the SQLite source code that you have is authentic and has not been modified in any way (perhaps by an adversary) that can be done using a few simple command-line tools. At the root of the SQLite source tree is a file named &quot;manifest&quot;. The manifest file contains the name of every other file in the source tree together with either a SHA1 or SHA3-256 hash for that file. (SHA1 is used for older files and SHA3-256 for newer files.) You can write a script to extract these hashes and verify them against the source code files. The hash name for the check-in is just the SHA3-256 hash of the &quot;manifest&quot; file itself.</source>
@@ -2657,7 +2657,7 @@
         </trans-unit>
         <trans-unit id="a95dfc6dc355d4bcfc654c806aedf507385d37e3" translate="yes" xml:space="preserve">
           <source>If you notice new CVEs associated with SQLite that are not in the table below, please bring them to the attention of the developers on the &lt;a href=&quot;https://sqlite.org/forum/about&quot;&gt;SQLite Forum&lt;/a&gt; so they can be added.</source>
-          <target state="new"/>
+          <target state="translated">아래 표에없는 SQLite와 관련된 새로운 CVE를 발견 한 경우 추가 할 수 있도록 &lt;a href=&quot;https://sqlite.org/forum/about&quot;&gt;SQLite 포럼&lt;/a&gt; 의 개발자에게 알리십시오 .</target>
         </trans-unit>
         <trans-unit id="397118cfe02899896d93de7bdac7c4252da15fbe" translate="yes" xml:space="preserve">
           <source>If you really need to update an R-Tree based on complex queries against the same R-Tree, it is best to run the complex queries first and store the results in a temporary table, then update the R-Tree based on the values stored in the temporary table.</source>
@@ -2665,7 +2665,7 @@
         </trans-unit>
         <trans-unit id="5df7ef5af012df18a05531f4528bcf648f59acb3" translate="yes" xml:space="preserve">
           <source>If you remember nothing else about floating-point values, please don't forget this one key idea.</source>
-          <target state="new"/>
+          <target state="translated">부동 소수점 값에 대해 아무것도 기억하지 못한다면이 핵심 아이디어를 잊지 마십시오.</target>
         </trans-unit>
         <trans-unit id="13da8fa523e1031c91ec41d25db356602a2c65ba" translate="yes" xml:space="preserve">
           <source>If you specify a column a width of 0, then the column width is automatically adjusted to be the maximum of three numbers: 10, the width of the header, and the width of the first row of data. This makes the column width self-adjusting. The default width setting for every column is this auto-adjusting 0 value.</source>
@@ -3097,7 +3097,7 @@
         </trans-unit>
         <trans-unit id="5a4b7cd3ba1686efa11d9b9c015db21adcf22977" translate="yes" xml:space="preserve">
           <source>In CHECK constraints of a table definition.</source>
-          <target state="new"/>
+          <target state="translated">테이블 정의의 CHECK 제약 조건에서.</target>
         </trans-unit>
         <trans-unit id="1207ec4eb27468881c3e5a75c509547ec16346af" translate="yes" xml:space="preserve">
           <source>In DDL</source>
@@ -3105,7 +3105,7 @@
         </trans-unit>
         <trans-unit id="06bb676fb43ba64638eb5aba12a8d226fa52bf86" translate="yes" xml:space="preserve">
           <source>In DEFAULT constraints of a table definition.</source>
-          <target state="new"/>
+          <target state="translated">테이블 정의의 DEFAULT 제약 조건에서.</target>
         </trans-unit>
         <trans-unit id="0fc22d3edb7a25933470b0fc98cd018feb112e2e" translate="yes" xml:space="preserve">
           <source>In DML</source>
@@ -3337,7 +3337,7 @@
         </trans-unit>
         <trans-unit id="0a6f4780ac68779fff537a2221e3188df1c6d53f" translate="yes" xml:space="preserve">
           <source>In all of the above, if F is not the name of a database, journal or WAL filename passed into the VFS from the SQLite core and F is not the return value from &lt;a href=&quot;db_filename&quot;&gt;sqlite3_db_filename()&lt;/a&gt;, then the result is undefined and is likely a memory access violation.</source>
-          <target state="new"/>
+          <target state="translated">위의 모든 항목에서 F가 SQLite 코어에서 VFS로 전달 된 데이터베이스, 저널 또는 WAL 파일 이름이 아니고 F가 &lt;a href=&quot;db_filename&quot;&gt;sqlite3_db_filename ()&lt;/a&gt; 에서 반환 값이 아닌 경우 결과는 정의되지 않고 메모리 일 가능성이 높습니다. 액세스 위반.</target>
         </trans-unit>
         <trans-unit id="650bcf7f3c9667b8bca2e9d81188fd4ca62bdf99" translate="yes" xml:space="preserve">
           <source>In all of the full-text queries above, the right-hand operand of the MATCH operator is a string consisting of a single term. In this case, the MATCH expression evaluates to true for all documents that contain one or more instances of the specified word (&quot;sqlite&quot;, &quot;search&quot; or &quot;database&quot;, depending on which example you look at). Specifying a single term as the right-hand operand of the MATCH operator results in the simplest and most common type of full-text query possible. However more complicated queries are possible, including phrase searches, term-prefix searches and searches for documents containing combinations of terms occurring within a defined proximity of each other. The various ways in which the full-text index may be queried are &lt;a href=&quot;fts3#full_text_index_queries&quot;&gt;described below&lt;/a&gt;.</source>
@@ -3477,11 +3477,11 @@
         </trans-unit>
         <trans-unit id="5bb614f9a4728b882cfa854761e8ce05293a6c53" translate="yes" xml:space="preserve">
           <source>In in TRIGGERSs.</source>
-          <target state="new"/>
+          <target state="translated">TRIGGERS에서.</target>
         </trans-unit>
         <trans-unit id="dc71bff31ad5848828d3dd9115d5b5dfb6294eb3" translate="yes" xml:space="preserve">
           <source>In in VIEWs.</source>
-          <target state="new"/>
+          <target state="translated">VIEWs에서.</target>
         </trans-unit>
         <trans-unit id="f3caa4201cfb419be724f72954ef422185458de8" translate="yes" xml:space="preserve">
           <source>In its default configuration, SQLite API routines return one of 30 integer &lt;a href=&quot;../rescode&quot;&gt;result codes&lt;/a&gt;. However, experience has shown that many of these result codes are too coarse-grained. They do not provide as much information about problems as programmers might like. In an effort to address this, newer versions of SQLite (version 3.3.8 2006-10-09 and later) include support for additional result codes that provide more detailed information about errors. These &lt;a href=&quot;../rescode#extrc&quot;&gt;extended result codes&lt;/a&gt; are enabled or disabled on a per database connection basis using the &lt;a href=&quot;extended_result_codes&quot;&gt;sqlite3_extended_result_codes()&lt;/a&gt; API. Or, the extended code for the most recent error can be obtained using &lt;a href=&quot;errcode&quot;&gt;sqlite3_extended_errcode()&lt;/a&gt;.</source>
@@ -3777,7 +3777,7 @@
         </trans-unit>
         <trans-unit id="7ed9b7e87f45e28428e0b4c11b7a622203b8e9d6" translate="yes" xml:space="preserve">
           <source>In the BLOB output, you can clearly see the NUL character as the 4th character in the 7-character string.</source>
-          <target state="new"/>
+          <target state="translated">BLOB 출력에서 ​​7 자 문자열의 네 번째 문자로 NUL 문자를 명확하게 볼 수 있습니다.</target>
         </trans-unit>
         <trans-unit id="d3bfa67674bb524ce3387e6563f15051a77fe593" translate="yes" xml:space="preserve">
           <source>In the C programming language where &lt;b&gt;&lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;&lt;/b&gt; and &lt;b&gt;&lt;code&gt;||&lt;/code&gt;&lt;/b&gt; are &quot;short-circuit&quot; operators, MC/DC and branch coverage are very nearly the same thing. The primary difference is in boolean vector tests. One can test for any of several bits in bit-vector and still obtain 100% branch test coverage even though the second element of MC/DC - the requirement that each condition in a decision take on every possible outcome - might not be satisfied.</source>
@@ -3817,7 +3817,7 @@
         </trans-unit>
         <trans-unit id="2ff78c844bf874e8944245ab0f90e378a482a538" translate="yes" xml:space="preserve">
           <source>In the WHERE clause of a partial index.</source>
-          <target state="new"/>
+          <target state="translated">부분 인덱스의 WHERE 절에서.</target>
         </trans-unit>
         <trans-unit id="b6311a2e6a2d0640df13bf33c58d5ba4044c66ce" translate="yes" xml:space="preserve">
           <source>In the Windows OS driver, reacquire a SHARED lock if an attempt to acquire an EXCLUSIVE lock fails. Ticket #2354</source>
@@ -3897,7 +3897,7 @@
         </trans-unit>
         <trans-unit id="cee9466acdd5b62aa76761a9bf112fbd7910b30a" translate="yes" xml:space="preserve">
           <source>In the definitions of generated columns.</source>
-          <target state="new"/>
+          <target state="translated">생성 된 열의 정의에서.</target>
         </trans-unit>
         <trans-unit id="d3116d32ea608324199d5e0469ef8b030b799865" translate="yes" xml:space="preserve">
           <source>In the diagram at the right, we show that the information that was held in user space is cleared when the lock is released. This used to be literally true for older versions of SQLite. But more recent versions of SQLite keep the user space information in memory in case it might be needed again at the start of the next transaction. It is cheaper to reuse information that is already in local memory than to transfer the information back from the operating system disk cache or to read it off of the disk drive again. Prior to reusing the information in user space, we must first reacquire the shared lock and then we have to check to make sure that no other process modified the database file while we were not holding a lock. There is a counter in the first page of the database that is incremented every time the database file is modified. We can find out if another process has modified the database by checking that counter. If the database was modified, then the user space cache must be cleared and reread. But it is commonly the case that no changes have been made and the user space cache can be reused for a significant performance savings.</source>
@@ -3965,7 +3965,7 @@
         </trans-unit>
         <trans-unit id="1dc67cb87d0120f285414b41e4beb1e776521f83" translate="yes" xml:space="preserve">
           <source>In the expression part of an index on an expression.</source>
-          <target state="new"/>
+          <target state="translated">식에 대한 인덱스의 식 부분에서.</target>
         </trans-unit>
         <trans-unit id="7ff8ef765e12ede160f30458a862b4edd37cec09" translate="yes" xml:space="preserve">
           <source>In the extreme case where the columns being indexed cover all columns of the PRIMARY KEY, the index will consist of only the columns being indexed. The ex25acde example above demonstrates this. Each entry in the ex25acde index consists of only the columns a, c, d, and e, in that order.</source>

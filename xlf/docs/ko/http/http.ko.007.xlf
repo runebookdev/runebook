@@ -29,7 +29,7 @@
         </trans-unit>
         <trans-unit id="413e001d0b162dbca41b0e7d35c867d5721df5a5" translate="yes" xml:space="preserve">
           <source>Specifies the lifetime of the policy, in seconds (in a similar way to e.g. HSTS policies are time-restricted). The referenced reporting group should have a lifetime at least as long as the NEL policy.</source>
-          <target state="new"/>
+          <target state="translated">정책의 수명을 초 단위로 지정합니다 (예 : HSTS 정책과 유사한 방식으로 시간 제한). 참조 된보고 그룹은 최소한 NEL 정책만큼 긴 수명을 가져야합니다.</target>
         </trans-unit>
         <trans-unit id="6d52f387eaf11730a59df918d4e3a112a2d99212" translate="yes" xml:space="preserve">
           <source>Specifies the maximum amount of time a resource will be considered fresh. Contrary to &lt;code&gt;Expires&lt;/code&gt;, this directive is relative to the time of the request.</source>
@@ -141,7 +141,7 @@
         </trans-unit>
         <trans-unit id="85f30ba6e5f19f51628bda67d9500dab94232f9a" translate="yes" xml:space="preserve">
           <source>Specifying multiple links</source>
-          <target state="new"/>
+          <target state="translated">여러 링크 지정</target>
         </trans-unit>
         <trans-unit id="f65d134dfe7e03e4b9a14898c4ef7cc4877bc321" translate="yes" xml:space="preserve">
           <source>Specifying multiple values is only supported in the &lt;code&gt;Referrer-Policy&lt;/code&gt; HTTP header, and not in the &lt;code&gt;referrerpolicy&lt;/code&gt; attribute.</source>
@@ -912,7 +912,7 @@ Table of Contents
                   (intermediate)   (non-exclusive)    (exclusive)
 
                 Figure 5: Example of Dependency Reordering</source>
-          <target state="new"/>
+          <target state="translated">스트림 우선 순위는 PRIORITY 프레임을 사용하여 변경됩니다. 종속성을 설정하면 스트림이 식별 된 상위 스트림에 종속됩니다. 종속 스트림은 상위 스트림의 우선 순위가 재 지정되면 상위 스트림과 함께 이동합니다. 우선 순위가 재 지정된 스트림에 대해 배타적 플래그를 사용하여 종속성을 설정하면 새 상위 스트림의 모든 종속성이 우선 순위가 재 지정된 스트림에 종속됩니다. 스트림이 자체 종속성 중 하나에 종속 된 경우 이전에 종속 된 스트림이 우선 순위가 재 지정된 스트림의 이전 상위에 종속되도록 먼저 이동됩니다. 이동 된 종속성은 가중치를 유지합니다. 예를 들어 B와 C가 A에 의존하고, D와 E가 C에 의존하고, F가 D에 의존하는 원래의 종속성 트리를 생각해보십시오. A가 D에 의존하게되면 D가 A를 대신합니다. 다른 모든 종속성 관계는 그대로 유지됩니다. F를 제외하고는 동일합니다.우선 순위 재 지정이 배타적이면 A에 종속됩니다. xxxx | / \ | | ADADD / \ / / \ / \ | BC ==&amp;gt; FBC ==&amp;gt; FA 또는 A / \ | / \ / | \ DEEBCBCF | | | FEE (중급) (비 독점) (독점) 그림 5 : 종속성 재정렬의 예</target>
         </trans-unit>
         <trans-unit id="bce8f34f0a23969364026999a31bec5f7b65b0ae" translate="yes" xml:space="preserve">
           <source>Streams are identified with an unsigned 31-bit integer.  Streams
@@ -949,7 +949,7 @@ Table of Contents
    that is unable to establish a new stream identifier can send a GOAWAY
    frame so that the client is forced to open a new connection for new
    streams.</source>
-          <target state="new"/>
+          <target state="translated">스트림은 부호없는 31 비트 정수로 식별됩니다. 클라이언트에 의해 시작된 스트림은 홀수 번호의 스트림 식별자를 사용해야합니다. 서버에 의해 시작된 것은 반드시 짝수 스트림 식별자를 사용해야합니다. 0x0의 스트림 식별자는 연결 제어 메시지에 사용됩니다. 0의 스트림 식별자는 새 스트림을 설정하는 데 사용할 수 없습니다. HTTP / 2로 업그레이드 된 HTTP / 1.1 요청 ( &lt;a href=&quot;#section-3.2&quot;&gt;섹션 3.2&lt;/a&gt; 참조))는 스트림 식별자 1 (0x1)로 응답합니다. 업그레이드가 완료된 후 스트림 0x1은 클라이언트에 대해 &quot;반 폐쇄 (로컬)&quot;상태가됩니다. 따라서 HTTP / 1.1에서 업그레이드하는 클라이언트는 스트림 0x1을 새 스트림 식별자로 선택할 수 없습니다. 새로 설정된 스트림의 식별자는 시작 엔드 포인트가 열거 나 예약 한 모든 스트림보다 숫자 적으로 커야합니다. 이는 HEADERS 프레임을 사용하여 열리는 스트림과 PUSH_PROMISE를 사용하여 예약 된 스트림을 제어합니다. 예기치 않은 스트림 식별자를 수신 한 엔드 포인트는 연결 오류로 응답해야합니다 ( &lt;a href=&quot;#section-5.4.1&quot;&gt;섹션 5.4.1&lt;/a&gt;) PROTOCOL_ERROR 유형입니다. 새 스트림 식별자를 처음 사용하면 값이 낮은 스트림 식별자를 사용하여 해당 피어가 시작했을 수있는 &quot;유휴&quot;상태의 모든 스트림이 암시 적으로 닫힙니다. 예를 들어 클라이언트가 스트림 5에서 프레임을 전송하지 않고 스트림 7에서 HEADERS 프레임을 전송하면 스트림 7의 첫 번째 프레임이 전송되거나 수신 될 때 스트림 5가 &quot;닫힘&quot;상태로 전환됩니다. 스트림 식별자는 재사용 할 수 없습니다. 연결이 오래 지속되면 엔드 포인트가 사용 가능한 스트림 식별자 범위를 고갈시킬 수 있습니다. 새 스트림 식별자를 설정할 수없는 클라이언트는 새 스트림에 대한 새 연결을 설정할 수 있습니다. 새 스트림 식별자를 설정할 수없는 서버는 클라이언트가 새 스트림에 대한 새 연결을 열도록 강제로 GOAWAY 프레임을 보낼 수 있습니다.</target>
         </trans-unit>
         <trans-unit id="a1c0b3831b3706354655bc626dc41410ec27c9ee" translate="yes" xml:space="preserve">
           <source>Strict Transport Security resolves this problem; as long as you've accessed your bank's web site once using HTTPS, and the bank's web site uses Strict Transport Security, your browser will know to automatically use only HTTPS, which prevents hackers from performing this sort of man-in-the-middle attack.</source>
@@ -1049,7 +1049,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="5557d57c74c062096ddfe6fcacebab65584a47fd" translate="yes" xml:space="preserve">
           <source>Supported digest algorithms are defined in &lt;a href=&quot;https://tools.ietf.org/html/rfc3230&quot;&gt;RFC 3230&lt;/a&gt; and &lt;a href=&quot;https://tools.ietf.org/html/rfc5843&quot;&gt;RFC 5843&lt;/a&gt;, and include &lt;code&gt;SHA-256&lt;/code&gt; and &lt;code&gt;SHA-512&lt;/code&gt;. Some of the supported algorithms, including &lt;code&gt;unixsum&lt;/code&gt; and &lt;code&gt;MD5&lt;/code&gt; are subject to collisions and are thus not suitable for applications in which collision-resistance is important.</source>
-          <target state="new"/>
+          <target state="translated">지원되는 다이제스트 알고리즘은 &lt;a href=&quot;https://tools.ietf.org/html/rfc3230&quot;&gt;RFC 3230&lt;/a&gt; 및 &lt;a href=&quot;https://tools.ietf.org/html/rfc5843&quot;&gt;RFC 5843에&lt;/a&gt; 정의되어 있으며 &lt;code&gt;SHA-256&lt;/code&gt; 및 &lt;code&gt;SHA-512&lt;/code&gt; 를 포함 합니다. &lt;code&gt;unixsum&lt;/code&gt; 및 &lt;code&gt;MD5&lt;/code&gt; 를 포함하여 지원되는 알고리즘 중 일부는 충돌의 영향을 받기 때문에 충돌 저항이 중요한 애플리케이션에는 적합하지 않습니다.</target>
         </trans-unit>
         <trans-unit id="9cf8d0d7c981d663797eeaca7523e977bed4ab51" translate="yes" xml:space="preserve">
           <source>Supporting OCSP stapling (that is, the &lt;code&gt;status_request&lt;/code&gt; TLS extension) and providing a &lt;code&gt;SignedCertificateTimestampList&lt;/code&gt;</source>
@@ -1089,7 +1089,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="b10d92078103e058dd32c50f84517f2c9bcce935" translate="yes" xml:space="preserve">
           <source>TCP connection to the server timed out</source>
-          <target state="new"/>
+          <target state="translated">서버에 대한 TCP 연결 시간이 초과되었습니다.</target>
         </trans-unit>
         <trans-unit id="5a056389515bd999bc97e7793f7c147c0b47eac3" translate="yes" xml:space="preserve">
           <source>TCP port number on which the server is listening.</source>
@@ -4742,7 +4742,7 @@ Table of Contents
    A 421 response is cacheable by default, i.e., unless otherwise
    indicated by the method definition or explicit cache controls (see
    &lt;a href=&quot;https://tools.ietf.org/html/rfc7234#section-4.2.2&quot;&gt;Section&amp;nbsp;4.2.2 of [RFC7234]&lt;/a&gt;).</source>
-          <target state="new"/>
+          <target state="translated">421 (Misdirected Request) 상태 코드는 요청이 응답을 생성 할 수없는 서버로 보내 졌음을 나타냅니다. 요청 URI에 포함 된 체계와 권한의 조합에 대한 응답을 생성하도록 구성되지 않은 서버에서 보낼 수 있습니다. 서버로부터 421 (Misdirected Request) 응답을 수신하는 클라이언트는 요청 방법이 멱등 여부에 관계없이 다른 연결을 통해 요청을 재 시도 할 수 있습니다. 이는 연결이 재사용 되거나 ( &lt;a href=&quot;#section-9.1.1&quot;&gt;9.1.1 절&lt;/a&gt; ) 대체 서비스가 선택되면 가능합니다 [ &lt;a href=&quot;#ref-ALT-SVC&quot;&gt;ALT-SVC&lt;/a&gt; ]. 이 상태 코드는 프록시에서 생성하면 안됩니다. 421 응답은 기본적으로 캐시 가능합니다. 즉, 메소드 정의 또는 명시 적 캐시 제어에 의해 달리 표시되지 않는 한 ( &lt;a href=&quot;https://tools.ietf.org/html/rfc7234#section-4.2.2&quot;&gt;[RFC7234]의 섹션 4.2.2&lt;/a&gt; 참조 )).</target>
         </trans-unit>
         <trans-unit id="240b1b41518b4e60c5fb369224ec2a4d545cd292" translate="yes" xml:space="preserve">
           <source>The 422 (Unprocessable Entity) status code means the server
@@ -4934,7 +4934,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="28e20ae8f53246c900d9de361122fb549b4a54cc" translate="yes" xml:space="preserve">
           <source>The &lt;a href=&quot;connection&quot;&gt;&lt;code&gt;Connection&lt;/code&gt;&lt;/a&gt; header with type &lt;code&gt;upgrade&lt;/code&gt; must &lt;em&gt;always&lt;/em&gt; be sent with the &lt;code&gt;Upgrade&lt;/code&gt; header (as shown above).</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;connection&quot;&gt; &lt;code&gt;Connection&lt;/code&gt; &lt;/a&gt; 타입과 헤더 &lt;code&gt;upgrade&lt;/code&gt; 해야한다 &lt;em&gt;항상&lt;/em&gt; 로 전송 &lt;code&gt;Upgrade&lt;/code&gt; 헤더 (로 위 그림 참조).</target>
         </trans-unit>
         <trans-unit id="3168c5253229cb7eddd39a17b55204a0719f1ccb" translate="yes" xml:space="preserve">
           <source>The &lt;a href=&quot;content-type&quot;&gt;&lt;code&gt;Content-Type&lt;/code&gt;&lt;/a&gt; defining the boundary of the multipart body.</source>
@@ -5118,7 +5118,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="77ebeb340729beee4023ffdb21e08feae0d716a2" translate="yes" xml:space="preserve">
           <source>The &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/Quality_values&quot;&gt;quality value&lt;/a&gt; to apply to that option.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/Quality_values&quot;&gt;품질 값은&lt;/a&gt; 해당 옵션에 적용합니다.</target>
         </trans-unit>
         <trans-unit id="8ca3dd995c40f4f12da6eea0a0fb62e8d5df0822" translate="yes" xml:space="preserve">
           <source>The &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/simple_header&quot;&gt;simple headers&lt;/a&gt;, &lt;a href=&quot;accept&quot;&gt;&lt;code&gt;Accept&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;accept-language&quot;&gt;&lt;code&gt;Accept-Language&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;content-language&quot;&gt;&lt;code&gt;Content-Language&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;content-type&quot;&gt;&lt;code&gt;Content-Type&lt;/code&gt;&lt;/a&gt; (but only with a MIME type of its parsed value (ignoring parameters) of either &lt;code&gt;application/x-www-form-urlencoded&lt;/code&gt;, &lt;code&gt;multipart/form-data&lt;/code&gt;, or &lt;code&gt;text/plain&lt;/code&gt;), are always available and don't need to be listed by this header.</source>
@@ -5134,7 +5134,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="7537c29a754763b348491b7f0dbd96e605a4a484" translate="yes" xml:space="preserve">
           <source>The &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Reporting_API&quot;&gt;reporting API&lt;/a&gt; group to send network error reports to (see below).</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Reporting_API&quot;&gt;보고 API의&lt;/a&gt; (아래 참조)에 그룹은 네트워크 오류 보고서를 보낼 수 있습니다.</target>
         </trans-unit>
         <trans-unit id="315a779e6acad1d531dd53b54135b697e3e3e7ed" translate="yes" xml:space="preserve">
           <source>The &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/WebSocket&quot;&gt;&lt;code&gt;WebSocket()&lt;/code&gt;&lt;/a&gt; constructor does all the work of creating an initial HTTP/1.1 connection then handling the handshaking and upgrade process for you.</source>
@@ -5230,7 +5230,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="0f16849e96b723097d3105369f7d2ec73a2c9b25" translate="yes" xml:space="preserve">
           <source>The &lt;a href=&quot;vary&quot;&gt;&lt;code&gt;Vary&lt;/code&gt;&lt;/a&gt; header ensures that the content is cached properly (for instance ensuring that the user is not served a lower-quality image from the cache when &lt;code&gt;Save-Data&lt;/code&gt; header is no longer present [&lt;em&gt;e.g.&lt;/em&gt; after having switched from cellular to Wi-Fi]).</source>
-          <target state="new"/>
+          <target state="translated">은 &lt;a href=&quot;vary&quot;&gt; &lt;code&gt;Vary&lt;/code&gt; &lt;/a&gt; (예 때 사용자가 캐시에서 낮은 품질의 이미지를 제공하지 않도록 보장 내용이 적절 캐시 해당 헤더 보장하지만을 &lt;code&gt;Save-Data&lt;/code&gt; 헤더는 더 이상 존재하는 [ &lt;em&gt;예를 들면&lt;/em&gt; 무선 인터넷을 셀룰러로 전환 후의]) .</target>
         </trans-unit>
         <trans-unit id="ce5a0a42af328d6549a6884a0d4203b5b8180652" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;'src'&lt;/code&gt; origin is used in the iframe &lt;code&gt;allow&lt;/code&gt; attribute only, and is the &lt;em&gt;default&lt;/em&gt;&lt;code&gt;allowlist&lt;/code&gt; value.</source>
@@ -5322,11 +5322,11 @@ Table of Contents
         </trans-unit>
         <trans-unit id="f3c5f0394e6c797409337c3ba59ac4660eea6b49" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;&lt;strong&gt;Accept-CH-Lifetime&lt;/strong&gt;&lt;/code&gt; header is set by the server to specify the persistence of &lt;a href=&quot;accept-ch&quot;&gt;&lt;code&gt;Accept-CH&lt;/code&gt;&lt;/a&gt; header value that specifies for which &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/Client_hints&quot;&gt;Client Hints&lt;/a&gt; headers client should include in subsequent requests.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&lt;strong&gt;Accept-CH-Lifetime&lt;/strong&gt;&lt;/code&gt; 헤더의 지속성 지정하기 위해 서버가 설정되어 &lt;a href=&quot;accept-ch&quot;&gt; &lt;code&gt;Accept-CH&lt;/code&gt; &lt;/a&gt; 지정이있는 것으로 헤더 값 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/Client_hints&quot;&gt;클라이언트 힌트&lt;/a&gt; 헤더 클라이언트가 후속 요청에 포함해야합니다.</target>
         </trans-unit>
         <trans-unit id="1fc84160c5460da89ca680071c3cd21f91aa02e3" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;&lt;strong&gt;Accept-CH&lt;/strong&gt;&lt;/code&gt; header is set by the server to specify which &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/Client_hints&quot;&gt;Client Hints&lt;/a&gt; headers a client should include in subsequent requests.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&lt;strong&gt;Accept-CH&lt;/strong&gt;&lt;/code&gt; 헤더를 지정하기 위해 서버가 설정되어 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/Client_hints&quot;&gt;클라이언트 힌트&lt;/a&gt; 클라이언트가 후속 요청에 포함해야 헤더.</target>
         </trans-unit>
         <trans-unit id="d982342366479f245d9e1687b6642ae3d345e689" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;&lt;strong&gt;Accept-Ranges&lt;/strong&gt;&lt;/code&gt; response HTTP header is a marker used by the server to advertise its support of partial requests. The value of this field indicates the unit that can be used to define a range.</source>
@@ -5350,7 +5350,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="acc0cc776eb12ee2c880638b893d5b55050e39bf" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;&lt;strong&gt;Digest&lt;/strong&gt;&lt;/code&gt; response HTTP header provides a &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/digest&quot;&gt;digest&lt;/a&gt; of the requested resource.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&lt;strong&gt;Digest&lt;/strong&gt;&lt;/code&gt; 응답 HTTP 헤더는이 제공하는 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/digest&quot;&gt;소화&lt;/a&gt; 요청 된 리소스의.</target>
         </trans-unit>
         <trans-unit id="2e78b75471626ac2160cc198bfd26d8ad9f80eb0" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;&lt;strong&gt;Early-Data&lt;/strong&gt;&lt;/code&gt; header is set by an intermediary to indicate that the request has been conveyed in &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/Security/Transport_Layer_Security#TLS_1.3&quot;&gt;TLS early data&lt;/a&gt;, and also indicates that the intermediary understands the &lt;a href=&quot;../status/425&quot;&gt;&lt;code&gt;425 (Too Early)&lt;/code&gt;&lt;/a&gt; status code.</source>
@@ -5414,7 +5414,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="459b5cbc88f2c6244c84b2b7cf57687d4fed7e90" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;&lt;strong&gt;Variant Also Negotiates&lt;/strong&gt;&lt;/code&gt; status code indicates an internal server configuration error in which the chosen variant is itself configured to engage in content negotiation, so is not a proper negotiation endpoint.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&lt;strong&gt;Variant Also Negotiates&lt;/strong&gt;&lt;/code&gt; 상태 코드이므로, 선택된 변형 자체 내용 협상에 참여하도록 구성되어있는 내부 서버 구성 에러를 나타내는 적절한 협상 종점이 아니다.</target>
         </trans-unit>
         <trans-unit id="f06db3329ed9ad8dfc09e37ef09b6402d3732e8a" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;&lt;strong&gt;Via&lt;/strong&gt;&lt;/code&gt; general header is added by proxies, both forward and reverse proxies, and can appear in the request headers and the response headers. It is used for tracking message forwards, avoiding request loops, and identifying the protocol capabilities of senders along the request/response chain.</source>
@@ -5422,7 +5422,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="519d7e47665e940480525b25780c7db7b6681325" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;&lt;strong&gt;Want-Digest&lt;/strong&gt;&lt;/code&gt; HTTP header is primarily used in a HTTP request, to ask the responder to provide a &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/digest&quot;&gt;digest&lt;/a&gt; of the requested resource using the &lt;code&gt;&lt;a href=&quot;digest&quot;&gt;Digest&lt;/a&gt;&lt;/code&gt; response header.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;&lt;strong&gt;Want-Digest&lt;/strong&gt;&lt;/code&gt; HTTP 헤더는 주로 제공하기 위해 응답자에게 물어, HTTP 요청에서 사용되는 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/digest&quot;&gt;소화&lt;/a&gt; 사용하여 요청 된 리소스의 &lt;code&gt;&lt;a href=&quot;digest&quot;&gt;Digest&lt;/a&gt;&lt;/code&gt; 응답 헤더를.</target>
         </trans-unit>
         <trans-unit id="d2a25ab474d784c5f16b25d0aa6fcd7fc6ce7fc3" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;&lt;strong&gt;X-Content-Type-Options&lt;/strong&gt;&lt;/code&gt; response HTTP header is a marker used by the server to indicate that the &lt;a href=&quot;../basics_of_http/mime_types&quot;&gt;MIME types&lt;/a&gt; advertised in the &lt;a href=&quot;content-type&quot;&gt;&lt;code&gt;Content-Type&lt;/code&gt;&lt;/a&gt; headers should not be changed and be followed. This allows to opt-out of &lt;a href=&quot;../basics_of_http/mime_types#MIME_sniffing&quot;&gt;MIME type sniffing&lt;/a&gt;, or, in other words, it is a way to say that the webmasters knew what they were doing.</source>
@@ -5474,11 +5474,11 @@ Table of Contents
         </trans-unit>
         <trans-unit id="f1d16f67263a6c86cf3fcdfef1e4b190e49a0296" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;Accept-Patch&lt;/code&gt; response HTTP header advertises which media-type the server is able to understand in a PATCH request.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;Accept-Patch&lt;/code&gt; 서버를 미디어 - 입력 응답 HTTP 헤더이 광고를 패치 요청에서 이해할 수있다.</target>
         </trans-unit>
         <trans-unit id="6003efca5251790ce42906144c5dccf2f87ad99b" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;Accept-Post&lt;/code&gt; response HTTP header advertises which &lt;a href=&quot;../basics_of_http/mime_types&quot;&gt;media types&lt;/a&gt; are accepted by the server for HTTP post requests.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;Accept-Post&lt;/code&gt; 응답 HTTP 헤더이 광고를 &lt;a href=&quot;../basics_of_http/mime_types&quot;&gt;매체 유형은&lt;/a&gt; HTTP 포스트 요청을 서버에서 사용할 수 있습니다.</target>
         </trans-unit>
         <trans-unit id="f1004b9f5d3731dda0f9cb684f40a19f9053e7da" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;Accept&lt;/code&gt; header</source>
@@ -5670,7 +5670,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="1cd717754d93b6be80da07e08c9fb1185b7e6942" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;DPR&lt;/code&gt; header is a &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/Client_hints&quot;&gt;Client Hints&lt;/a&gt; headers which represents the client device pixel ratio (&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/DPR&quot;&gt;DPR&lt;/a&gt;), which is the the number of physical device pixels corresponding to every CSS pixel.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;DPR&lt;/code&gt; 의 헤더는 인 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/Client_hints&quot;&gt;클라이언트 힌트&lt;/a&gt; 클라이언트 장치 화소 비율 (나타내는 헤더 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/DPR&quot;&gt;DPR&lt;/a&gt; 모든 CSS 화소에 대응하는 물리적 장치의 화소의 수이다).</target>
         </trans-unit>
         <trans-unit id="71ac6b7e2c0b37cbc89c1ece6a483f1521bccee2" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;Date&lt;/code&gt; general HTTP header contains the date and time at which the message was originated.</source>
@@ -5678,7 +5678,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="2eebea2d9e6a6d288555a242f73a9f9b00abe276" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;Device-Memory&lt;/code&gt; header is a &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Device_Memory_API&quot;&gt;Device Memory API&lt;/a&gt; header that works like &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/Client_hints&quot;&gt;Client Hints&lt;/a&gt; header which represents the approximate amount of RAM client device has.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;Device-Memory&lt;/code&gt; 헤더는이다 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Device_Memory_API&quot;&gt;장치 메모리 API의&lt;/a&gt; 같은 작품 것을 헤더 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/Client_hints&quot;&gt;클라이언트 힌트의&lt;/a&gt; RAM 클라이언트 장치의 대략적인 양을 나타내는 헤더가 있습니다.</target>
         </trans-unit>
         <trans-unit id="fca5c6f26004ba8e513493500c35759b7d8670d7" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;Domain&lt;/code&gt; and &lt;code&gt;Path&lt;/code&gt; attributes define the &lt;em&gt;scope&lt;/em&gt; of the cookie: what URLs the cookies should be sent to.</source>
@@ -5870,7 +5870,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="cd701418d7c6bf62926c6ad09e3776653cf803d5" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;SameSite&lt;/code&gt; attribute accepts three values:</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;SameSite&lt;/code&gt; 속성은 세 가지 값을 사용할 수</target>
         </trans-unit>
         <trans-unit id="12bf22b5dbc2a8c45c1d6d8c1615396a45809438" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;SameSite&lt;/code&gt; attribute lets servers require that a cookie shouldn't be sent with cross-origin requests (where &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/Site&quot;&gt;Site&lt;/a&gt; is defined by the registrable domain), which provides some protection against cross-site request forgery attacks (&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/CSRF&quot;&gt;CSRF&lt;/a&gt;).</source>
@@ -5878,27 +5878,27 @@ Table of Contents
         </trans-unit>
         <trans-unit id="c183288b7bfb9b7d64e4bb9f606b605293a750ad" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;SameSite&lt;/code&gt; attribute of the &lt;a href=&quot;../set-cookie&quot;&gt;&lt;code&gt;Set-Cookie&lt;/code&gt;&lt;/a&gt; HTTP response header allows you to declare if your cookie should be restricted to a first-party or same-site context.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;../set-cookie&quot;&gt; &lt;code&gt;Set-Cookie&lt;/code&gt; &lt;/a&gt; HTTP 응답 헤더 의 &lt;code&gt;SameSite&lt;/code&gt; 속성을 사용하면 쿠키를 자사 또는 동일 사이트 컨텍스트로 제한해야하는지 선언 할 수 있습니다.</target>
         </trans-unit>
         <trans-unit id="ff9a7daddb986f8f3e9947219b02e125a02e07a1" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;Save-Data&lt;/code&gt; header field is a boolean which, in requests, indicates the client's preference for reduced data usage. This could be for reasons such as high transfer costs, slow connection speeds, etc.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;Save-Data&lt;/code&gt; 헤더 필드는 요청에, 감소 된 데이터 사용에 대한 고객의 선호도를 나타내는 부울입니다. 이는 높은 전송 비용, 느린 연결 속도 등과 같은 이유 일 수 있습니다.</target>
         </trans-unit>
         <trans-unit id="c5c50e0dbd49e9be339d0014ff98de27f5af6b7c" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;Sec-Fetch-Dest&lt;/code&gt; fetch metadata header indicates the request's destination, that is how the fetched data will be used.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;Sec-Fetch-Dest&lt;/code&gt; 메타 데이터 헤더는 데이터 페치 사용 방식이다 요청의 도착을 나타내는 페치.</target>
         </trans-unit>
         <trans-unit id="31f9900ebfdde4aa1830afd97db024c6b3f830be" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;Sec-Fetch-Mode&lt;/code&gt; fetch metadata header indicates the request's mode.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;Sec-Fetch-Mode&lt;/code&gt; 메타 데이터 헤더가 요청의 모드를 나타냅니다 가져옵니다.</target>
         </trans-unit>
         <trans-unit id="25babdcd9266b9b2ebf26be60ebc0d7bfea878a2" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;Sec-Fetch-Site&lt;/code&gt; fetch metadata header indicates the relationship between a request initiator's origin and the origin of the resource.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;Sec-Fetch-Site&lt;/code&gt; 메타 데이터 헤더 요청 개시제의 기원과 자원의 원점 사이의 관계를 나타내는 페치.</target>
         </trans-unit>
         <trans-unit id="ea3db281f732bb94a4a366b08b7f44ee831dbefd" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;Sec-Fetch-User&lt;/code&gt; fetch metadata header indicates whether or not a navigation request was triggered by a user activation.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;Sec-Fetch-User&lt;/code&gt; 메타 데이터 헤더 네비게이션 요청이 사용자의 활성화에 의해 트리거되었는지 여부를 나타냅니다 가져옵니다.</target>
         </trans-unit>
         <trans-unit id="6374aa4b75562bedbe4aa399825eadf45d2253c3" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;Sec-WebSocket-Protocol&lt;/code&gt; header specifies one or more WebSocket protocols that you wish to use, in order of preference. The first one that is supported by the server will be selected and returned by the server in a &lt;code&gt;Sec-WebSocket-Protocol&lt;/code&gt; header included in the response. You can use this more than once in the header, as well; the result is the same as if you used a comma-delineated list of subprotocol identifiers in a single header.</source>
@@ -5954,7 +5954,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="4e4d1816f1bb2e8b52d94106ccb83a944a14eca8" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;Upgrade&lt;/code&gt; header field may be used by clients to invite a server to switch to one (or more) of the listed protocols, in descending preference order.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;Upgrade&lt;/code&gt; 헤더 필드는 우선 순위를 내림차순으로 나열된 프로토콜 중 하나 (또는 그 이상)로 전환하려면 서버를 초대하는 클라이언트가 사용할 수 있습니다.</target>
         </trans-unit>
         <trans-unit id="48fd812100e724a16068b0d9d88fea979cbef78f" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;Upgrade&lt;/code&gt; header specifies one or more comma-separated protocol names, in order of preference.</source>
@@ -6750,7 +6750,7 @@ Table of Contents
    TCP connection remains in the TIME_WAIT state.  Therefore, a proxy
    cannot rely on SETTINGS_MAX_CONCURRENT_STREAMS alone to limit the
    resources consumed by CONNECT requests.</source>
-          <target state="new"/>
+          <target state="translated">CONNECT 메서드는 TCP 연결의 생성 및 유지 관리에 비해 스트림 생성이 상대적으로 저렴하기 때문에 프록시에 불균형적인로드를 생성하는 데 사용할 수 있습니다. 프록시는 나가는 TCP 연결이 TIME_WAIT 상태로 유지되기 때문에 CONNECT 요청을 전달하는 스트림이 닫히는 것 이상으로 TCP 연결에 대한 일부 리소스를 유지할 수도 있습니다. 따라서 프록시는 SETTINGS_MAX_CONCURRENT_STREAMS에만 의존하여 CONNECT 요청에 사용되는 리소스를 제한 할 수 없습니다.</target>
         </trans-unit>
         <trans-unit id="6a14656993634aa0a74177de15aa55441d492abb" translate="yes" xml:space="preserve">
           <source>The CONNECT method requests that the recipient establish a tunnel to
@@ -6858,7 +6858,7 @@ Table of Contents
    CONTINUATION frame without the END_HEADERS flag set.  A recipient
    that observes violation of this rule MUST respond with a connection
    error (&lt;a href=&quot;#section-5.4.1&quot;&gt;Section 5.4.1&lt;/a&gt;) of type PROTOCOL_ERROR.</source>
-          <target state="new"/>
+          <target state="translated">CONTINUATION 프레임 (유형 = 0x9)은 헤더 블록 조각의 시퀀스를 계속하는 데 사용됩니다 ( &lt;a href=&quot;#section-4.3&quot;&gt;섹션 4.3&lt;/a&gt; ). 이전 프레임이 동일한 스트림에 있고 END_HEADERS 플래그가 설정되지 않은 HEADERS, PUSH_PROMISE 또는 CONTINUATION 프레임이면 원하는 수의 CONTINUATION 프레임을 전송할 수 있습니다. + ------------------------------------------------- -------------- + | 헤더 블록 조각 (*) + ------------------------------------------- -------------------- + 그림 15 : CONTINUATION 프레임 페이로드 CONTINUATION 프레임 페이로드는 헤더 블록 조각을 포함합니다 ( &lt;a href=&quot;#section-4.3&quot;&gt;섹션 4.3&lt;/a&gt; ). CONTINUATION 프레임은 다음 플래그를 정의합니다. END_HEADERS (0x4) : 설정되면 비트 2는이 프레임이 헤더 블록을 종료 함을 나타냅니다 ( &lt;a href=&quot;#section-4.3&quot;&gt;섹션 4.3&lt;/a&gt;). END_HEADERS 비트가 설정되지 않은 경우이 프레임 뒤에 다른 CONTINUATION 프레임이 와야합니다. 수신기는 다른 유형의 프레임 또는 다른 스트림의 프레임 수신을 PROTOCOL_ERROR 유형 의 연결 오류 ( &lt;a href=&quot;#section-5.4.1&quot;&gt;섹션 5.4.1&lt;/a&gt; )로 취급해야합니다. CONTINUATION 프레임 &lt;a href=&quot;#section-4.3&quot;&gt;은 4.3 절에&lt;/a&gt; 정의 된대로 연결 상태를 변경합니다 . CONTINUATION 프레임은 스트림과 연결되어야합니다. 스트림 식별자 필드가 0x0 인 CONTINUATION 프레임이 수신되면 수신자 는 PROTOCOL_ERROR 유형 의 연결 오류 ( &lt;a href=&quot;#section-5.4.1&quot;&gt;섹션 5.4.1&lt;/a&gt; )로 응답해야 합니다. CONTINUATION 프레임 앞에는 END_HEADERS 플래그가 설정되지 않은 HEADERS, PUSH_PROMISE 또는 CONTINUATION 프레임이 와야합니다. 이 규칙의 위반을 관찰 한 수신자는 연결 오류 (&lt;a href=&quot;#section-5.4.1&quot;&gt;&lt;/a&gt;PROTOCOL_ERROR 유형의 섹션 5.4.1 ).</target>
         </trans-unit>
         <trans-unit id="5cc173ef45538302331fa209f0189866cab3850f" translate="yes" xml:space="preserve">
           <source>The COPY method creates a duplicate of the source resource identified
@@ -7591,7 +7591,7 @@ Table of Contents
      cookie: a=b
      cookie: c=d
      cookie: e=f</source>
-          <target state="new"/>
+          <target state="translated">쿠키 헤더 필드 [ &lt;a href=&quot;#ref-COOKIE&quot;&gt;COOKIE&lt;/a&gt; ]는 세미콜론 ( &quot;;&quot;)을 사용하여 쿠키 쌍 (또는 &quot;경로&quot;)을 구분합니다. 이 헤더 필드는 HTTP의 목록 구성 규칙을 따르지 않습니다 ( &lt;a href=&quot;https://tools.ietf.org/html/rfc7230#section-3.2.2&quot;&gt;[RFC7230], 섹션 3.2.2 참조).&lt;/a&gt;), 쿠키 쌍이 다른 이름-값 쌍으로 분리되는 것을 방지합니다. 이렇게하면 개별 쿠키 쌍이 업데이트 될 때 압축 효율성이 크게 감소 할 수 있습니다. 압축 효율성을 높이기 위해 쿠키 헤더 필드는 각각 하나 이상의 쿠키 쌍이있는 별도의 헤더 필드로 분할 될 수 있습니다. 압축 해제 후 쿠키 헤더 필드가 여러 개있는 경우 HTTP / 2가 아닌 컨텍스트로 전달되기 전에 0x3B, 0x20 (ASCII 문자열 &quot;;&quot;)의 2 옥텟 구분 기호를 사용하여 단일 옥텟 문자열로 연결되어야합니다. HTTP / 1.1 연결 또는 일반 HTTP 서버 애플리케이션으로. 따라서 다음 두 쿠키 헤더 필드 목록은 의미 상 동일합니다. 쿠키 : a = b; c = d; e = f 쿠키 : a = b 쿠키 : c = d 쿠키 : e = f</target>
         </trans-unit>
         <trans-unit id="037f56850e2d9507141cb0bfad334028f9b60f2f" translate="yes" xml:space="preserve">
           <source>The Cross-Origin Resource Sharing standard works by adding new &lt;a href=&quot;headers&quot;&gt;HTTP headers&lt;/a&gt; that allow servers to describe the set of origins that are permitted to read that information using a web browser. Additionally, for HTTP request methods that can cause side-effects on server's data (in particular, for HTTP methods other than &lt;a href=&quot;methods/get&quot;&gt;&lt;code&gt;GET&lt;/code&gt;&lt;/a&gt;, or for &lt;a href=&quot;methods/post&quot;&gt;&lt;code&gt;POST&lt;/code&gt;&lt;/a&gt; usage with certain &lt;a href=&quot;basics_of_http/mime_types&quot;&gt;MIME types&lt;/a&gt;), the specification mandates that browsers &quot;preflight&quot; the request, soliciting supported methods from the server with an HTTP &lt;a href=&quot;methods/options&quot;&gt;&lt;code&gt;OPTIONS&lt;/code&gt;&lt;/a&gt; request method, and then, upon &quot;approval&quot; from the server, sending the actual request with the actual HTTP request method. Servers can also notify clients whether &quot;credentials&quot; (including &lt;a href=&quot;cookies&quot;&gt;Cookies&lt;/a&gt; and HTTP Authentication data) should be sent with requests.</source>
@@ -8157,7 +8157,7 @@ Table of Contents
    or privacy-sensitive data.  Logged or otherwise persistently stored
    debug data MUST have adequate safeguards to prevent unauthorized
    access.</source>
-          <target state="new"/>
+          <target state="translated">GOAWAY 프레임 (유형 = 0x7)은 연결 종료를 시작하거나 심각한 오류 조건을 알리는 데 사용됩니다. GOAWAY를 사용하면 엔드 포인트가 이전에 설정된 스트림의 처리를 완료하는 동안 새 스트림 수락을 정상적으로 중지 할 수 있습니다. 이를 통해 서버 유지 관리와 같은 관리 작업을 수행 할 수 있습니다. 새로운 스트림을 시작하는 엔드 포인트와 GOAWAY 프레임을 보내는 원격지간에 고유 한 경쟁 조건이 있습니다. 이 경우를 처리하기 위해 GOAWAY에는이 연결의 송신 엔드 포인트에서 처리되었거나 처리되었을 수있는 마지막 피어 시작 스트림의 스트림 식별자가 포함됩니다. 예를 들어, 서버가 GOAWAY 프레임을 보내는 경우 식별 된 스트림은 클라이언트가 시작한 가장 높은 번호의 스트림입니다. 일단 전송되면송신자는 스트림에 포함 된 마지막 스트림 식별자보다 높은 식별자가있는 경우 수신자가 시작한 스트림에서 전송 된 프레임을 무시합니다. GOAWAY 프레임의 수신자는 새로운 스트림에 대해 새로운 연결을 설정할 수 있지만 연결에서 추가 스트림을 열지 않아야합니다. GOAWAY의 수신자가 GOAWAY 프레임에 표시된 것보다 높은 스트림 식별자를 가진 스트림에서 데이터를 보낸 경우 해당 스트림은 처리되지 않거나 처리되지 않습니다. GOAWAY 프레임의 수신자는 스트림을 전혀 생성되지 않은 것처럼 처리 할 수 ​​있으므로 나중에 새 연결에서 해당 스트림을 다시 시도 할 수 있습니다. 엔드 포인트는 연결을 닫기 전에 항상 GOAWAY 프레임을 보내야 원격 피어가 스트림이 부분적으로 처리되었는지 여부를 알 수 있습니다. 예를 들면HTTP 클라이언트가 서버가 연결을 닫는 동시에 POST를 보내는 경우, 서버가 작동했을 수있는 스트림을 나타 내기 위해 GOAWAY 프레임을 보내지 않으면 클라이언트는 서버가 POST 요청을 처리하기 시작했는지 알 수 없습니다. 엔드 포인트는 오작동하는 피어에 대해 GOAWAY를 보내지 않고 연결을 닫도록 선택할 수 있습니다. GOAWAY 프레임은 연결 닫기 직전에 있지 않을 수 있습니다. 연결에 더 이상 사용하지 않는 GOAWAY의 수신자는 연결을 종료하기 전에 GOAWAY 프레임을 전송해야합니다.+-+ ----------------------------------------------- -------------- + | R | 마지막 스트림 ID (31) | +-+ ----------------------------------------------- -------------- + | 오류 코드 (32) | + ------------------------------------------------- -------------- + | 추가 디버그 데이터 (*) | + ------------------------------------------------- -------------- + 그림 13 : GOAWAY 페이로드 형식 GOAWAY 프레임은 플래그를 정의하지 않습니다. GOAWAY 프레임은 특정 스트림이 아닌 연결에 적용됩니다. 엔드 포인트는 0x0 이외의 스트림 식별자가있는 GOAWAY 프레임을 연결 오류 (&lt;a href=&quot;#section-5.4.1&quot;&gt;5.4.1 절&lt;/a&gt;) PROTOCOL_ERROR 유형입니다. GOAWAY 프레임의 마지막 스트림 식별자에는 GOAWAY 프레임의 송신자가 어떤 조치를 취했거나 아직 조치를 취할 수있는 가장 높은 번호의 스트림 식별자가 포함됩니다. 식별 된 스트림까지 포함하여 모든 스트림이 어떤 방식 으로든 처리되었을 수 있습니다. 스트림이 처리되지 않은 경우 마지막 스트림 식별자를 0으로 설정할 수 있습니다. 참고 :이 컨텍스트에서 &quot;처리됨&quot;은 스트림의 일부 데이터가 결과적으로 일부 조치를 취했을 수있는 상위 소프트웨어 계층으로 전달되었음을 의미합니다. 연결이 GOAWAY 프레임없이 종료되면 마지막 스트림 식별자가 사실상 가능한 가장 높은 스트림 식별자입니다. 연결이 닫히기 전에 완전히 닫히지 않은 더 낮거나 같은 번호의 식별자가있는 스트림에서 요청, 트랜잭션,또는 HTTP GET, PUT 또는 DELETE와 같은 멱등 적 작업을 제외하고는 프로토콜 작업이 불가능합니다. 더 높은 번호의 스트림을 사용하는 모든 프로토콜 활동은 새 연결을 사용하여 안전하게 재 시도 할 수 있습니다. 마지막 스트림 식별자보다 낮거나 같은 번호가 지정된 스트림의 활동은 여전히 ​​성공적으로 완료 될 수 있습니다. GOAWAY 프레임을 보낸 사람은 진행중인 모든 스트림이 완료 될 때까지 연결을 &quot;열린&quot;상태로 유지하면서 GOAWAY 프레임을 전송하여 연결을 정상적으로 종료 할 수 있습니다. 상황이 변하면 엔드 포인트는 여러 GOAWAY 프레임을 보낼 수 있습니다. 예를 들어, 정상 종료 중에 NO_ERROR와 함께 GOAWAY를 보내는 엔드 포인트는 이후에 연결을 즉시 종료해야하는 조건이 발생할 수 있습니다.수신 된 마지막 GOAWAY 프레임의 마지막 스트림 식별자는 어떤 스트림에 대해 작동 할 수 있는지를 나타냅니다. 피어가 이미 다른 연결에서 처리되지 않은 요청을 재 시도했을 수 있으므로 엔드 포인트는 마지막 스트림 식별자에서 보내는 값을 늘리면 안됩니다. 요청을 재 시도 할 수없는 클라이언트는 서버가 연결을 닫을 때 진행중인 모든 요청을 잃게됩니다. 이는 특히 HTTP / 2를 사용하여 클라이언트에 서비스를 제공하지 않을 수있는 중개자에게 해당됩니다. 연결을 정상적으로 종료하려는 서버는 마지막 스트림 식별자가 2 ^ 31-1로 설정된 초기 GOAWAY 프레임과 NO_ERROR 코드를 전송해야합니다. 이는 종료가 임박하고 추가 요청을 시작할 수 없음을 클라이언트에 알립니다. 기내 스트림 생성을위한 시간 (최소 1 회 왕복 시간)을 허용 한 후서버는 업데이트 된 마지막 스트림 식별자와 함께 다른 GOAWAY 프레임을 보낼 수 있습니다. 이렇게하면 요청을 잃지 않고 연결을 완전히 종료 할 수 있습니다. GOAWAY 프레임을 보낸 후 발신자는 식별 된 마지막 스트림보다 높은 식별자를 사용하여 수신자가 시작한 스트림의 프레임을 버릴 수 있습니다. 그러나 연결 상태를 변경하는 프레임은 완전히 무시할 수 없습니다. 예를 들어 HEADERS, PUSH_PROMISE 및 CONTINUATION 프레임은 헤더 압축을 위해 유지되는 상태가 일관되게 유지되도록 최소한으로 처리되어야합니다 (참조송신자는 식별 된 마지막 스트림보다 높은 식별자를 사용하여 수신자가 시작한 스트림에 대한 프레임을 버릴 수 있습니다. 그러나 연결 상태를 변경하는 프레임은 완전히 무시할 수 없습니다. 예를 들어 HEADERS, PUSH_PROMISE 및 CONTINUATION 프레임은 헤더 압축을 위해 유지되는 상태가 일관되게 유지되도록 최소한으로 처리되어야합니다 (참조송신자는 식별 된 마지막 스트림보다 높은 식별자를 사용하여 수신자가 시작한 스트림에 대한 프레임을 버릴 수 있습니다. 그러나 연결 상태를 변경하는 프레임은 완전히 무시할 수 없습니다. 예를 들어 HEADERS, PUSH_PROMISE 및 CONTINUATION 프레임은 헤더 압축을 위해 유지되는 상태가 일관되게 유지되도록 최소한으로 처리되어야합니다 (참조&lt;a href=&quot;#section-4.3&quot;&gt;섹션 4.3&lt;/a&gt; ); 마찬가지로, DATA 프레임은 연결 흐름 제어 창에 포함되어야합니다. 이러한 프레임을 처리하지 못하면 흐름 제어 또는 헤더 압축 상태가 동기화되지 않을 수 있습니다. GOAWAY 프레임에는 연결 종료 이유 가 포함 된 32 비트 오류 코드 ( &lt;a href=&quot;#section-7&quot;&gt;섹션 7&lt;/a&gt; )도 포함되어 있습니다. 엔드 포인트는 GOAWAY 프레임의 페이로드에 불투명 한 데이터를 추가 할 수 있습니다. 추가 디버그 데이터는 진단 목적으로 만 사용되며 의미 값을 전달하지 않습니다. 디버그 정보에는 보안 또는 개인 정보에 민감한 데이터가 포함될 수 있습니다. 기록되거나 영구적으로 저장된 디버그 데이터에는 무단 액세스를 방지하기위한 적절한 보호 장치가 있어야합니다.</target>
         </trans-unit>
         <trans-unit id="5094fc44298eab7b1db803d184d5d22fe3243b4b" translate="yes" xml:space="preserve">
           <source>The General Data Privacy Regulation (GDPR) in the European Union</source>
@@ -8297,7 +8297,7 @@ Table of Contents
    potential for churn in stream prioritization when new streams are
    created.  Prioritization fields in HEADERS frames subsequent to the
    first on a stream reprioritize the stream (&lt;a href=&quot;#section-5.3.3&quot;&gt;Section 5.3.3&lt;/a&gt;).</source>
-          <target state="new"/>
+          <target state="translated">HEADERS 프레임 (유형 = 0x1)은 스트림을 여는 데 사용됩니다 ( &lt;a href=&quot;#section-5.1&quot;&gt;섹션 5.1&lt;/a&gt;), 추가로 헤더 블록 조각을 전달합니다. HEADERS 프레임은 &quot;유휴&quot;, &quot;예약 됨 (로컬)&quot;, &quot;열림&quot;또는 &quot;반 닫힘 (원격)&quot;상태의 스트림으로 전송 될 수 있습니다. + --------------- + | 패드 길이? (8) | +-+ ------------- + --------------------------------- -------------- + | E | 스트림 의존성? (31) | +-+ ------------- + --------------------------------- -------------- + | 무게? (8) | +-+ ------------- + --------------------------------- -------------- + | 헤더 블록 조각 (*) + ------------------------------------------- -------------------- + | 패딩 (*) + --------------------------------------------- ------------------ + 그림 7 : HEADERS 프레임 페이로드 HEADERS 프레임 페이로드에는 다음 필드가 있습니다. Pad Length : 프레임 패딩의 길이를 포함하는 8 비트 필드 옥텟 단위.이 필드는 PADDED 플래그가 설정된 경우에만 존재합니다. E : 스트림 종속성이 배타적임을 나타내는 단일 비트 플래그 (&lt;a href=&quot;#section-5.3&quot;&gt;섹션 5.3&lt;/a&gt; ). 이 필드는 PRIORITY 플래그가 설정된 경우에만 존재합니다. 스트림 종속성 :이 스트림이 의존하는 스트림에 대한 31 비트 스트림 식별자 ( &lt;a href=&quot;#section-5.3&quot;&gt;섹션 5.3&lt;/a&gt; 참조 ). 이 필드는 PRIORITY 플래그가 설정된 경우에만 존재합니다. 가중치 : 스트림의 우선 순위 가중치를 나타내는 부호없는 8 비트 정수입니다 ( &lt;a href=&quot;#section-5.3&quot;&gt;섹션 5.3&lt;/a&gt; 참조 ). 값에 1을 추가하여 1과 256 사이의 가중치를 얻습니다.이 필드는 PRIORITY 플래그가 설정된 경우에만 존재합니다. 헤더 블록 조각 : 헤더 블록 조각 ( &lt;a href=&quot;#section-4.3&quot;&gt;섹션 4.3&lt;/a&gt; ). 패딩 : 패딩 옥텟. HEADERS 프레임은 다음 플래그를 정의합니다. END_STREAM (0x1) : 설정되면 비트 0은 헤더 블록을 나타냅니다 ( &lt;a href=&quot;#section-4.3&quot;&gt;섹션 4.3&lt;/a&gt;)는 엔드 포인트가 식별 된 스트림에 대해 보낼 마지막입니다. HEADERS 프레임은 스트림의 끝을 알리는 END_STREAM 플래그를 전달합니다. 그러나 END_STREAM 플래그가 설정된 HEADERS 프레임 뒤에는 동일한 스트림에서 CONTINUATION 프레임이 올 수 있습니다. 논리적으로 CONTINUATION 프레임은 HEADERS 프레임의 일부입니다. END_HEADERS (0x4) : 설정되면 비트 2는이 프레임이 전체 헤더 블록 ( &lt;a href=&quot;#section-4.3&quot;&gt;섹션 4.3&lt;/a&gt; )을 포함하고 CONTINUATION 프레임이 뒤 따르지 않음을 나타냅니다 . END_HEADERS 플래그가 설정되지 않은 HEADERS 프레임 뒤에는 동일한 스트림에 대한 CONTINUATION 프레임이 와야합니다. 수신자는 다른 유형의 프레임 또는 다른 스트림의 프레임 수신을 연결 오류로 취급해야합니다 ( &lt;a href=&quot;#section-5.4.1&quot;&gt;섹션 5.4.1&lt;/a&gt;) PROTOCOL_ERROR 유형입니다. PADDED (0x8) : 설정된 경우 비트 3은 Pad Length 필드와 설명하는 모든 패딩이 있음을 나타냅니다. PRIORITY (0x20) : 설정되면 비트 5는 배타적 플래그 (E), 스트림 종속성 및 가중치 필드가 있음을 나타냅니다. &lt;a href=&quot;#section-5.3&quot;&gt;섹션 5.3을&lt;/a&gt; 참조하십시오 . HEADERS 프레임의 페이로드는 헤더 블록 조각을 포함합니다 ( &lt;a href=&quot;#section-4.3&quot;&gt;섹션 4.3&lt;/a&gt; ). HEADERS 프레임에 맞지 않는 헤더 블록은 CONTINUATION 프레임에서 계속됩니다 ( &lt;a href=&quot;#section-6.10&quot;&gt;섹션 6.10&lt;/a&gt; ). HEADERS 프레임은 스트림과 연결되어야합니다. 스트림 식별자 필드가 0x0 인 HEADERS 프레임이 수신되면 수신자 는 PROTOCOL_ERROR 유형 의 연결 오류 ( &lt;a href=&quot;#section-5.4.1&quot;&gt;섹션 5.4.1&lt;/a&gt; )로 응답해야 합니다. HEADERS 프레임은 다음에 설명 된대로 연결 상태를 변경합니다.&lt;a href=&quot;#section-4.3&quot;&gt;4.3 항&lt;/a&gt; . HEADERS 프레임에는 패딩이 포함될 수 있습니다. 패딩 필드 및 플래그는 DATA 프레임에 대해 정의 된 것과 동일합니다 ( &lt;a href=&quot;#section-6.1&quot;&gt;섹션 6.1&lt;/a&gt; ). 헤더 블록 조각에 대해 남은 크기를 초과하는 패딩은 PROTOCOL_ERROR로 처리해야합니다. HEADERS 프레임의 우선 순위 정보는 논리적으로 별도의 PRIORITY 프레임과 동일하지만 HEADERS에 포함하면 새 스트림이 생성 될 때 스트림 우선 순위가 변동될 가능성이 없습니다. 스트림의 첫 번째 이후 HEADERS 프레임의 우선 순위 필드는 스트림의 우선 순위를 다시 지정합니다 ( &lt;a href=&quot;#section-5.3.3&quot;&gt;섹션 5.3.3&lt;/a&gt; ).</target>
         </trans-unit>
         <trans-unit id="5fa0cc40bb9e4667e351329947478703648e5a09" translate="yes" xml:space="preserve">
           <source>The HTML of &lt;code&gt;signup.html&lt;/code&gt; looks like this:</source>
@@ -8305,7 +8305,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="7de3d21abd96bd4beb67ffb6ec818595df38d03d" translate="yes" xml:space="preserve">
           <source>The HTTP 1.1 (only) &lt;code&gt;Upgrade&lt;/code&gt; header can be used to upgrade an already established client/server connection to a different protocol (over the same transport protocol). For example, it can be used by a client to upgrade a connection from HTTP 1.1 to HTTP 2.0, or an HTTP or HTTPS connection into a WebSocket.</source>
-          <target state="new"/>
+          <target state="translated">HTTP 1.1 (전용) &lt;code&gt;Upgrade&lt;/code&gt; 헤더를 사용하여 이미 설정된 클라이언트 / 서버 연결을 다른 프로토콜 (동일한 전송 프로토콜을 통해 )로 업그레이드 할 수 있습니다. 예를 들어 클라이언트가 HTTP 1.1에서 HTTP 2.0으로 연결을 업그레이드하거나 HTTP 또는 HTTPS 연결을 WebSocket으로 업그레이드하는 데 사용할 수 있습니다.</target>
         </trans-unit>
         <trans-unit id="9e4ed100d87a6355dfbd6e285bdb4feb98fdc0d9" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../content-security-policy&quot;&gt;&lt;code&gt;Content-Security-Policy&lt;/code&gt;&lt;/a&gt; (CSP) &lt;code&gt;&lt;strong&gt;block-all-mixed-content&lt;/strong&gt;&lt;/code&gt; directive prevents loading any assets over HTTP when the page uses HTTPS.</source>
@@ -8353,7 +8353,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="a5cc0adb408b4a8f77493eae319c581cf4526353" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../content-security-policy&quot;&gt;&lt;code&gt;Content-Security-Policy&lt;/code&gt;&lt;/a&gt; (CSP) &lt;code&gt;&lt;strong&gt;navigate&lt;/strong&gt;&lt;/code&gt;&lt;code&gt;-to&lt;/code&gt; directive restricts the URLs to which a document can initiate navigations by any means including &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form&quot;&gt;&lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt;&lt;/a&gt; (if &lt;a href=&quot;form-action&quot;&gt;&lt;code&gt;form-action&lt;/code&gt;&lt;/a&gt; is not specified), &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a&quot;&gt;&lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Window/location&quot;&gt;&lt;code&gt;window.location&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Window/open&quot;&gt;&lt;code&gt;window.open&lt;/code&gt;&lt;/a&gt;, etc. This is an enforcement on what navigations this document initiates &lt;strong&gt;not&lt;/strong&gt; on what this document is allowed to navigate to.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../content-security-policy&quot;&gt; &lt;code&gt;Content-Security-Policy&lt;/code&gt; &lt;/a&gt; (CSP) &lt;code&gt;&lt;strong&gt;navigate&lt;/strong&gt;&lt;/code&gt; &lt;code&gt;-to&lt;/code&gt; 지시문은 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form&quot;&gt; &lt;code&gt;&amp;lt;form&amp;gt;&lt;/code&gt; &lt;/a&gt; ( &lt;a href=&quot;form-action&quot;&gt; &lt;code&gt;form-action&lt;/code&gt; &lt;/a&gt; 이 지정되지 않은 경우), &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a&quot;&gt; &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; &lt;/a&gt; , &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Window/location&quot;&gt; &lt;code&gt;window.location&lt;/code&gt; &lt;/a&gt; , &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Window/open&quot;&gt; &lt;code&gt;window.open&lt;/code&gt; &lt;/a&gt; 를 포함하여 문서가 탐색을 시작할 수있는 URL을 제한합니다. .open 등이이 문서 동수 내비게이션 무엇에 집행입니다 &lt;strong&gt;하지&lt;/strong&gt; 이 문서를 탐색 할 수 있는지에.</target>
         </trans-unit>
         <trans-unit id="8d107e0a38faf65b9362f0868294c5f1f868d7aa" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../content-security-policy&quot;&gt;&lt;code&gt;Content-Security-Policy&lt;/code&gt;&lt;/a&gt; (CSP) &lt;code&gt;&lt;strong&gt;plugin-types&lt;/strong&gt;&lt;/code&gt; directive restricts the set of plugins that can be embedded into a document by limiting the types of resources which can be loaded.</source>
@@ -8361,7 +8361,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="f6e050006d74c56b081d711041cc2a29932e1bfd" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../content-security-policy&quot;&gt;&lt;code&gt;Content-Security-Policy&lt;/code&gt;&lt;/a&gt; (CSP) &lt;code&gt;&lt;strong&gt;prefetch-src&lt;/strong&gt;&lt;/code&gt; directive specifies valid resources that may be prefetched or prerendered.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../content-security-policy&quot;&gt; &lt;code&gt;Content-Security-Policy&lt;/code&gt; &lt;/a&gt; (CSP) &lt;code&gt;&lt;strong&gt;prefetch-src&lt;/strong&gt;&lt;/code&gt; 지시문은 미리 가져 오거나 미리 렌더링 할 수있는 유효한 리소스를 지정합니다.</target>
         </trans-unit>
         <trans-unit id="6ad6e328ff3b4fb09016b0d4cd3b23b2ef304500" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../content-security-policy&quot;&gt;&lt;code&gt;Content-Security-Policy&lt;/code&gt;&lt;/a&gt; (CSP) &lt;code&gt;&lt;strong&gt;referrer&lt;/strong&gt;&lt;/code&gt; directive used to specify information in the &lt;a href=&quot;../referer&quot;&gt;&lt;code&gt;Referer&lt;/code&gt;&lt;/a&gt; header (with a single &lt;code&gt;r&lt;/code&gt; as this was a typo in the original spec) for links away from a page. This API is deprecated and removed from browsers.</source>
@@ -8369,7 +8369,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="871ccac3ab2ff9b3690d358a4ea40b08884840e9" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../content-security-policy&quot;&gt;&lt;code&gt;Content-Security-Policy&lt;/code&gt;&lt;/a&gt; (CSP) &lt;code&gt;&lt;strong&gt;require-trusted-types-for&lt;/strong&gt;&lt;/code&gt;  directive instructs user agents to control the data passed to DOM XSS sink functions, like &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML&quot;&gt;Element.innerHTML&lt;/a&gt; setter.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../content-security-policy&quot;&gt; &lt;code&gt;Content-Security-Policy&lt;/code&gt; &lt;/a&gt; (CSP) &lt;code&gt;&lt;strong&gt;require-trusted-types-for&lt;/strong&gt;&lt;/code&gt; 지시문은 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML&quot;&gt;Element.innerHTML&lt;/a&gt; setter 와 같은 DOM XSS 싱크 함수에 전달되는 데이터를 제어하도록 사용자 에이전트에 지시합니다 .</target>
         </trans-unit>
         <trans-unit id="8f8670f822879a6c1f70bb6696d4385c9e028089" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../content-security-policy&quot;&gt;&lt;code&gt;Content-Security-Policy&lt;/code&gt;&lt;/a&gt; (CSP) &lt;code&gt;&lt;strong&gt;sandbox&lt;/strong&gt;&lt;/code&gt; directive enables a sandbox for the requested resource similar to the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe&quot;&gt;&lt;code&gt;&amp;lt;iframe&amp;gt;&lt;/code&gt;&lt;/a&gt;&lt;code&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-sandbox&quot;&gt;sandbox&lt;/a&gt;&lt;/code&gt; attribute. It applies restrictions to a page's actions including preventing popups, preventing the execution of plugins and scripts, and enforcing a same-origin policy.</source>
@@ -8377,7 +8377,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="a54e3f9dc9e10d181fcc5b9d14de91d2158ed49a" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../content-security-policy&quot;&gt;&lt;code&gt;Content-Security-Policy&lt;/code&gt;&lt;/a&gt; (CSP) &lt;code&gt;&lt;strong&gt;script-src-attr&lt;/strong&gt;&lt;/code&gt; directive specifies valid sources for JavaScript inline event handlers. This includes only inline script event handlers like &lt;code&gt;onclick&lt;/code&gt;, but not URLs loaded directly into &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script&quot;&gt;&lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;&lt;/a&gt; elements.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../content-security-policy&quot;&gt; &lt;code&gt;Content-Security-Policy&lt;/code&gt; &lt;/a&gt; (CSP) &lt;code&gt;&lt;strong&gt;script-src-attr&lt;/strong&gt;&lt;/code&gt; 지시문은 JavaScript 인라인 이벤트 핸들러의 유효한 소스를 지정합니다. 여기에는 &lt;code&gt;onclick&lt;/code&gt; 과 같은 인라인 스크립트 이벤트 핸들러 만 포함 되며 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script&quot;&gt; &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; &lt;/a&gt; 요소에 직접로드 된 URL 은 포함 되지 않습니다 .</target>
         </trans-unit>
         <trans-unit id="63d32345b8cf84239a5bf4892731d98708512218" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../content-security-policy&quot;&gt;&lt;code&gt;Content-Security-Policy&lt;/code&gt;&lt;/a&gt; (CSP) &lt;code&gt;&lt;strong&gt;script-src&lt;/strong&gt;&lt;/code&gt; directive specifies valid sources for JavaScript. This includes not only URLs loaded directly into &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script&quot;&gt;&lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;&lt;/a&gt; elements, but also things like inline script event handlers (&lt;code&gt;onclick&lt;/code&gt;) and &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/XSLT&quot;&gt;XSLT stylesheets&lt;/a&gt; which can trigger script execution.</source>
@@ -8385,11 +8385,11 @@ Table of Contents
         </trans-unit>
         <trans-unit id="ae949c0f5a7694445f0b27c386a8832b1c5e94b2" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../content-security-policy&quot;&gt;&lt;code&gt;Content-Security-Policy&lt;/code&gt;&lt;/a&gt; (CSP) &lt;code&gt;&lt;strong&gt;style&lt;/strong&gt;&lt;/code&gt;&lt;code&gt;-src-attr&lt;/code&gt; directive specifies valid sources for inline styles applied to individual DOM elements.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../content-security-policy&quot;&gt; &lt;code&gt;Content-Security-Policy&lt;/code&gt; &lt;/a&gt; (CSP) &lt;code&gt;&lt;strong&gt;style&lt;/strong&gt;&lt;/code&gt; &lt;code&gt;-src-attr&lt;/code&gt; 지시문은 개별 DOM 요소에 적용된 인라인 스타일에 대한 유효한 소스를 지정합니다.</target>
         </trans-unit>
         <trans-unit id="4e52836f01982774b986b243c0c4f29e000b612f" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../content-security-policy&quot;&gt;&lt;code&gt;Content-Security-Policy&lt;/code&gt;&lt;/a&gt; (CSP) &lt;code&gt;&lt;strong&gt;style&lt;/strong&gt;&lt;/code&gt;&lt;code&gt;-src-elem&lt;/code&gt; directive specifies valid sources for stylesheets &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style&quot;&gt;&lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt;&lt;/a&gt; elements and &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link&quot;&gt;&lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt;&lt;/a&gt; elements with &lt;code&gt;rel=&quot;stylesheet&quot;&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../content-security-policy&quot;&gt; &lt;code&gt;Content-Security-Policy&lt;/code&gt; &lt;/a&gt; (CSP) &lt;code&gt;&lt;strong&gt;style&lt;/strong&gt;&lt;/code&gt; &lt;code&gt;-src-elem&lt;/code&gt; 지시문 은 &lt;code&gt;rel=&quot;stylesheet&quot;&lt;/code&gt; 가있는&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style&quot;&gt; &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; &lt;/a&gt; 시트 &amp;lt;style&amp;gt; 요소 및 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link&quot;&gt; &lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt; &lt;/a&gt; 요소에 대한 유효한 소스를 지정합니다 .</target>
         </trans-unit>
         <trans-unit id="e2a780dcd99b14cfc49a43bc74102f1ed0b2e3e6" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../content-security-policy&quot;&gt;&lt;code&gt;Content-Security-Policy&lt;/code&gt;&lt;/a&gt; (CSP) &lt;code&gt;&lt;strong&gt;style&lt;/strong&gt;&lt;/code&gt;&lt;code&gt;-src&lt;/code&gt; directive specifies valid sources for stylesheets.</source>
@@ -8397,7 +8397,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="7b3e13bcd5d8d9f7bcf64acc3459db7ca20c7578" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../content-security-policy&quot;&gt;&lt;code&gt;Content-Security-Policy&lt;/code&gt;&lt;/a&gt; (CSP) &lt;code&gt;&lt;strong&gt;trusted-types&lt;/strong&gt;&lt;/code&gt;  directive instructs user agents to restrict the creation of Trusted Types policies - functions that build non-spoofable, typed values intended to be passed to DOM XSS sinks in place of strings.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../content-security-policy&quot;&gt; &lt;code&gt;Content-Security-Policy&lt;/code&gt; &lt;/a&gt; (CSP) &lt;code&gt;&lt;strong&gt;trusted-types&lt;/strong&gt;&lt;/code&gt; 지시문은 사용자 에이전트가 신뢰할 수있는 유형 정책 (문자열 대신 DOM XSS 싱크로 전달되는 스푸핑 불가능한 유형 값을 빌드하는 함수)의 생성을 제한하도록 지시합니다.</target>
         </trans-unit>
         <trans-unit id="591de896ab33256052ca0797fb955116eff15e90" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../content-security-policy&quot;&gt;&lt;code&gt;Content-Security-Policy&lt;/code&gt;&lt;/a&gt; (CSP) &lt;code&gt;&lt;strong&gt;upgrade-insecure-requests&lt;/strong&gt;&lt;/code&gt; directive instructs user agents to treat all of a site's insecure URLs (those served over HTTP) as though they have been replaced with secure URLs (those served over HTTPS). This directive is intended for web sites with large numbers of insecure legacy URLs that need to be rewritten.</source>
@@ -8417,7 +8417,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="9204eef966021c11aedbb0e9fb96b1228c1de8f2" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../content-security-policy&quot;&gt;&lt;code&gt;Content-Security-Policy&lt;/code&gt;&lt;/a&gt; (CSP) &lt;code&gt;script-src-elem&lt;/code&gt; directive specifies valid sources for JavaScript &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script&quot;&gt;&lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;&lt;/a&gt; elements, but not inline script event handlers like &lt;code&gt;onclick&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../content-security-policy&quot;&gt; &lt;code&gt;Content-Security-Policy&lt;/code&gt; &lt;/a&gt; (CSP) &lt;code&gt;script-src-elem&lt;/code&gt; 지시문은 JavaScript &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script&quot;&gt; &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; &lt;/a&gt; 요소의 유효한 소스를 지정 하지만 &lt;code&gt;onclick&lt;/code&gt; 과 같은 인라인 스크립트 이벤트 핸들러는 지정하지 않습니다 .</target>
         </trans-unit>
         <trans-unit id="2aa9970523d0f2da18a413ddfa67a54c01337b6d" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../content-security-policy&quot;&gt;&lt;code&gt;Content-Security-Policy&lt;/code&gt;&lt;/a&gt; (CSP) &lt;code&gt;style-src&lt;/code&gt; directive specifies valid sources for stylesheets.</source>
@@ -8457,11 +8457,11 @@ Table of Contents
         </trans-unit>
         <trans-unit id="e0361bbd3e19dd4db920260e46f1803df2efaa1a" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header &lt;code&gt;accelerometer&lt;/code&gt; directive controls whether the current document is allowed to gather information about the acceleration of the device through the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Accelerometer&quot;&gt;&lt;code&gt;Accelerometer&lt;/code&gt;&lt;/a&gt; interface.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../feature-policy&quot;&gt; &lt;code&gt;Feature-Policy&lt;/code&gt; &lt;/a&gt; 헤더 &lt;code&gt;accelerometer&lt;/code&gt; 지시문은 현재 문서가 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Accelerometer&quot;&gt; &lt;code&gt;Accelerometer&lt;/code&gt; &lt;/a&gt; 인터페이스를 통해 장치의 가속에 대한 정보를 수집 할 수 있는지 여부를 제어합니다 .</target>
         </trans-unit>
         <trans-unit id="92c66228b38d0470e96db98a40225a18c2d3231a" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header &lt;code&gt;ambient-light-sensor&lt;/code&gt; directive controls whether the current document is allowed to gather information about the amount of light in the environment around the device through the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/AmbientLightSensor&quot;&gt;&lt;code&gt;AmbientLightSensor&lt;/code&gt;&lt;/a&gt; interface.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../feature-policy&quot;&gt; &lt;code&gt;Feature-Policy&lt;/code&gt; &lt;/a&gt; 헤더 &lt;code&gt;ambient-light-sensor&lt;/code&gt; 지시문은 현재 문서가 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/AmbientLightSensor&quot;&gt; &lt;code&gt;AmbientLightSensor&lt;/code&gt; &lt;/a&gt; 인터페이스를 통해 기기 주변 환경의 빛의 양에 대한 정보를 수집 할 수 있는지 여부를 제어합니다 .</target>
         </trans-unit>
         <trans-unit id="358c131c1d5a8c89c254e16cfb1b9e90fee71186" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header &lt;code&gt;autoplay&lt;/code&gt; directive controls whether the current document is allowed to autoplay media requested through the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement&quot;&gt;&lt;code&gt;HTMLMediaElement&lt;/code&gt;&lt;/a&gt; interface. When this policy is enabled and there were no user gestures, the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Promise&quot;&gt;&lt;code&gt;Promise&lt;/code&gt;&lt;/a&gt; returned by &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/play&quot;&gt;&lt;code&gt;HTMLMediaElement.play()&lt;/code&gt;&lt;/a&gt; will reject with a &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/DOMException&quot;&gt;&lt;code&gt;DOMException&lt;/code&gt;&lt;/a&gt;. The &lt;code&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#attr-autoplay&quot;&gt;autoplay&lt;/a&gt;&lt;/code&gt; attribute on &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio&quot;&gt;&lt;code&gt;&amp;lt;audio&amp;gt;&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video&quot;&gt;&lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt;&lt;/a&gt; elements will be ignored.</source>
@@ -8473,7 +8473,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="9bd2e515d62f7d6ede21b6f102d6e75bcfdc2806" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header &lt;code&gt;battery&lt;/code&gt; directive controls whether the current document is allowed to gather information about the battery of the device through the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager&quot;&gt;&lt;code&gt;BatteryManager&lt;/code&gt;&lt;/a&gt; interface obtained via &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getBattery&quot;&gt;&lt;code&gt;Navigator.getBattery()&lt;/code&gt;&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../feature-policy&quot;&gt; &lt;code&gt;Feature-Policy&lt;/code&gt; &lt;/a&gt; 헤더 &lt;code&gt;battery&lt;/code&gt; 지시문은 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getBattery&quot;&gt; &lt;code&gt;Navigator.getBattery()&lt;/code&gt; &lt;/a&gt; 를 통해 얻은 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager&quot;&gt; &lt;code&gt;BatteryManager&lt;/code&gt; &lt;/a&gt; 인터페이스를 통해 현재 문서가 기기 배터리에 대한 정보를 수집 할 수 있는지 여부를 제어합니다 .</target>
         </trans-unit>
         <trans-unit id="7087babf47c5844e7ac3510edec835b831437673" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header &lt;code&gt;camera&lt;/code&gt; directive controls whether the current document is allowed to use video input devices. When this policy is enabled, the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise&quot;&gt;&lt;code&gt;Promise&lt;/code&gt;&lt;/a&gt; returned by &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia&quot;&gt;&lt;code&gt;MediaDevices.getUserMedia()&lt;/code&gt;&lt;/a&gt; will reject with a &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/NotAllowedError&quot;&gt;&lt;code&gt;NotAllowedError&lt;/code&gt;&lt;/a&gt;.</source>
@@ -8485,7 +8485,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="a38d3aba5839b81049ae1c111db31f4dd2359f9e" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header &lt;code&gt;display-capture&lt;/code&gt; directive controls whether or not the document is permitted to use &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API&quot;&gt;Screen Capture API&lt;/a&gt;, i.e.,&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia&quot;&gt;&lt;code&gt;getDisplayMedia()&lt;/code&gt;&lt;/a&gt; to capture the screen's contents.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../feature-policy&quot;&gt; &lt;code&gt;Feature-Policy&lt;/code&gt; &lt;/a&gt; 헤더 &lt;code&gt;display-capture&lt;/code&gt; 지시문은 문서가 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API&quot;&gt;Screen Capture API&lt;/a&gt; , 즉 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia&quot;&gt; &lt;code&gt;getDisplayMedia()&lt;/code&gt; &lt;/a&gt; 를 사용하여 화면 내용을 캡처 하도록 허용할지 여부를 제어합니다 .</target>
         </trans-unit>
         <trans-unit id="0509b709eb9c12fa1d36b479d880843a32939bb2" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header &lt;code&gt;document-domain&lt;/code&gt; directive controls whether the current document is allowed to set &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Document/domain&quot;&gt;&lt;code&gt;document.domain&lt;/code&gt;&lt;/a&gt;. When this policy is enabled, attempting to set &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Document/domain&quot;&gt;&lt;code&gt;document.domain&lt;/code&gt;&lt;/a&gt; will fail and cause a &lt;code&gt;SecurityError&lt;/code&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/DOMException&quot;&gt;&lt;code&gt;DOMException&lt;/code&gt;&lt;/a&gt; to be be thrown.</source>
@@ -8509,19 +8509,19 @@ Table of Contents
         </trans-unit>
         <trans-unit id="d1aa24dbbd3715af81f21828a56fabf5ec110953" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header &lt;code&gt;gyroscope&lt;/code&gt; directive controls whether the current document is allowed to gather information about the orientation of the device through the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Gyroscope&quot;&gt;&lt;code&gt;Gyroscope&lt;/code&gt;&lt;/a&gt; interface.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../feature-policy&quot;&gt; &lt;code&gt;Feature-Policy&lt;/code&gt; &lt;/a&gt; 헤더 &lt;code&gt;gyroscope&lt;/code&gt; 지시문은 현재 문서가 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Gyroscope&quot;&gt; &lt;code&gt;Gyroscope&lt;/code&gt; &lt;/a&gt; 인터페이스를 통해 장치의 방향에 대한 정보를 수집 할 수 있는지 여부를 제어합니다 .</target>
         </trans-unit>
         <trans-unit id="85ff5966dce2b9c7b7600a4d4c06b6e4b170f277" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header &lt;code&gt;layout-animations&lt;/code&gt; directive controls whether the current document is allowed to show layout animations.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../feature-policy&quot;&gt; &lt;code&gt;Feature-Policy&lt;/code&gt; &lt;/a&gt; 헤더 &lt;code&gt;layout-animations&lt;/code&gt; 지시문은 현재 문서가 레이아웃 애니메이션을 표시 할 수 있는지 여부를 제어합니다.</target>
         </trans-unit>
         <trans-unit id="79581f7e39deb619df4e34954f818f674b43f16f" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header &lt;code&gt;legacy-image-formats&lt;/code&gt; directive controls whether the current document is allowed to display images in legacy formats.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../feature-policy&quot;&gt; &lt;code&gt;Feature-Policy&lt;/code&gt; &lt;/a&gt; 헤더 &lt;code&gt;legacy-image-formats&lt;/code&gt; 지시문은 현재 문서가 기존 형식으로 이미지를 표시 할 수 있는지 여부를 제어합니다.</target>
         </trans-unit>
         <trans-unit id="dcb5ebff50a1c299f3cfff78c80e0f15d5569925" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header &lt;code&gt;magnetometer&lt;/code&gt; directive controls whether the current document is allowed to gather information about the orientation of the device through the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Magnetometer&quot;&gt;&lt;code&gt;Magnetometer&lt;/code&gt;&lt;/a&gt; interface.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../feature-policy&quot;&gt; &lt;code&gt;Feature-Policy&lt;/code&gt; &lt;/a&gt; 헤더 자 &lt;code&gt;magnetometer&lt;/code&gt; 지시문은 현재 문서가 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Magnetometer&quot;&gt; &lt;code&gt;Magnetometer&lt;/code&gt; &lt;/a&gt; 인터페이스를 통해 장치 방향에 대한 정보를 수집 할 수 있는지 여부를 제어합니다 .</target>
         </trans-unit>
         <trans-unit id="d88583ce1eab6212205a0ce4ec5269a6f045f6b3" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header &lt;code&gt;microphone&lt;/code&gt; directive controls whether the current document is allowed to use audio input devices. When this policy is enabled, the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise&quot;&gt;&lt;code&gt;Promise&lt;/code&gt;&lt;/a&gt; returned by &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia&quot;&gt;&lt;code&gt;MediaDevices.getUserMedia()&lt;/code&gt;&lt;/a&gt; will reject with a &lt;code&gt;NotAllowedError&lt;/code&gt;.</source>
@@ -8533,7 +8533,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="7143f5b43341ab71af365409875146a8699bd3ea" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header &lt;code&gt;oversized-images&lt;/code&gt; directive controls whether the current document is allowed to download and display large images.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../feature-policy&quot;&gt; &lt;code&gt;Feature-Policy&lt;/code&gt; &lt;/a&gt; 헤더 &lt;code&gt;oversized-images&lt;/code&gt; 지시문은 현재 문서가 큰 이미지를 다운로드하고 표시 할 수 있는지 여부를 제어합니다.</target>
         </trans-unit>
         <trans-unit id="ad49b71ef86ec5410e8de76cba85903aa7fec02d" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header &lt;code&gt;payment&lt;/code&gt; directive controls whether the current document is allowed to use the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API&quot;&gt;Payment Request API&lt;/a&gt;. When this policy is enabled, the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest&quot;&gt;&lt;code&gt;PaymentRequest()&lt;/code&gt;&lt;/a&gt; constructor will throw a &lt;code&gt;SecurityError&lt;/code&gt;.</source>
@@ -8541,31 +8541,31 @@ Table of Contents
         </trans-unit>
         <trans-unit id="1bf49ec28a205e1ed0b001dfbdb9aa642280ff0c" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header &lt;code&gt;picture-in-picture&lt;/code&gt; directive controls whether the current document is allowed to play a video in a Picture-in-Picture mode via the corresponding API.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../feature-policy&quot;&gt; &lt;code&gt;Feature-Policy&lt;/code&gt; &lt;/a&gt; 헤더 &lt;code&gt;picture-in-picture&lt;/code&gt; 지시문은 현재 문서가 해당 API를 통해 Picture-in-Picture 모드에서 비디오를 재생할 수 있는지 여부를 제어합니다.</target>
         </trans-unit>
         <trans-unit id="2ebcad6e4fbff3f317a76c00d82e77cbe034d342" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header &lt;code&gt;publickey-credentials-get&lt;/code&gt; directive controls whether the current document is allowed to access &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API&quot;&gt;Web Authentcation API&lt;/a&gt; to create new public-key credentials, i.e, via &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/get&quot;&gt;&lt;code&gt;navigator.credentials.get({publicKey: ..., ...})&lt;/code&gt;&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">는 HTTP &lt;a href=&quot;../feature-policy&quot;&gt; &lt;code&gt;Feature-Policy&lt;/code&gt; &lt;/a&gt; 헤더 &lt;code&gt;publickey-credentials-get&lt;/code&gt; 현재 문서 액세스가 허용되는지 여부를 지시 컨트롤 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API&quot;&gt;웹 Authentcation의 API&lt;/a&gt; 새로운 공개 키 인증서를 만들을 예를 통해 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/get&quot;&gt; &lt;code&gt;navigator.credentials.get({publicKey: ..., ...})&lt;/code&gt; &lt;/a&gt; .</target>
         </trans-unit>
         <trans-unit id="6f5bf4e9f3fed1765343fd59a9718f4cd6d7d27d" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header &lt;code&gt;screen-wake-lock&lt;/code&gt; directive controls whether the current document is allowed to use &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Screen_Wake_Lock_API&quot;&gt;Screen Wake Lock API&lt;/a&gt; to indicate that device should not dim or turn off the screen.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../feature-policy&quot;&gt; &lt;code&gt;Feature-Policy&lt;/code&gt; &lt;/a&gt; 헤더 &lt;code&gt;screen-wake-lock&lt;/code&gt; 지시문은 현재 문서가 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Screen_Wake_Lock_API&quot;&gt;Screen Wake Lock API&lt;/a&gt; 를 사용하여 기기가 화면을 어둡게하거나 꺼서는 안됨을 표시 하도록 허용할지 여부를 제어합니다 .</target>
         </trans-unit>
         <trans-unit id="d480f24830d984d0930580ca8ddada9de45700d1" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header &lt;code&gt;sync-xhr&lt;/code&gt; directive controls whether the current document is allowed to make synchronous &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest&quot;&gt;&lt;code&gt;XMLHttpRequest&lt;/code&gt;&lt;/a&gt; requests.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../feature-policy&quot;&gt; &lt;code&gt;Feature-Policy&lt;/code&gt; &lt;/a&gt; 헤더 &lt;code&gt;sync-xhr&lt;/code&gt; 지시문은 현재 문서가 동기 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest&quot;&gt; &lt;code&gt;XMLHttpRequest&lt;/code&gt; &lt;/a&gt; 요청 을 만들 수 있는지 여부를 제어합니다 .</target>
         </trans-unit>
         <trans-unit id="2a58ad5a409b3b1c3a41e1e839795597dc6204dc" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header &lt;code&gt;unoptimized-images&lt;/code&gt; directive controls whether the current document is allowed to download and display unoptimized images.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../feature-policy&quot;&gt; &lt;code&gt;Feature-Policy&lt;/code&gt; &lt;/a&gt; 헤더 &lt;code&gt;unoptimized-images&lt;/code&gt; 지시문은 현재 문서가 최적화되지 않은 이미지를 다운로드하고 표시 할 수 있는지 여부를 제어합니다.</target>
         </trans-unit>
         <trans-unit id="d80682ef1147e80bdbff00f43c45c04f77992134" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header &lt;code&gt;unsized-media&lt;/code&gt; directive controls whether the current document is allowed to change the size of media elements after the initial layout is complete.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../feature-policy&quot;&gt; &lt;code&gt;Feature-Policy&lt;/code&gt; &lt;/a&gt; 헤더 &lt;code&gt;unsized-media&lt;/code&gt; 지시문은 초기 레이아웃이 완료된 후 현재 문서가 미디어 요소의 크기를 변경할 수 있는지 여부를 제어합니다.</target>
         </trans-unit>
         <trans-unit id="3ad639cf0153cfd80980b0affb3cc2e1e990de76" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header &lt;code&gt;vibrate&lt;/code&gt;  directive controls whether the current document is allowed to trigger device vibrations via &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate&quot;&gt;&lt;code&gt;Navigator.vibrate()&lt;/code&gt;&lt;/a&gt; method of &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Vibration_API&quot;&gt;Vibration API&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../feature-policy&quot;&gt; &lt;code&gt;Feature-Policy&lt;/code&gt; &lt;/a&gt; 헤더 &lt;code&gt;vibrate&lt;/code&gt; 지시문은 현재 문서가 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Vibration_API&quot;&gt;Vibration API&lt;/a&gt; 의 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate&quot;&gt; &lt;code&gt;Navigator.vibrate()&lt;/code&gt; &lt;/a&gt; 메서드를 통해 장치 진동을 트리거 할 수 있는지 여부를 제어합니다 .</target>
         </trans-unit>
         <trans-unit id="596ebd10a4b879fc3f494e6c070eefbc8b1b78da" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header &lt;code&gt;vr&lt;/code&gt; directive controls whether the current document is allowed to use the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API&quot;&gt;WebVR API&lt;/a&gt;. When this policy is enabled, the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise&quot;&gt;&lt;code&gt;Promise&lt;/code&gt;&lt;/a&gt; returned by &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getVRDisplays&quot;&gt;&lt;code&gt;Navigator.getVRDisplays()&lt;/code&gt;&lt;/a&gt; will reject with a &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/DOMException&quot;&gt;&lt;code&gt;DOMException&lt;/code&gt;&lt;/a&gt;.</source>
@@ -8577,15 +8577,15 @@ Table of Contents
         </trans-unit>
         <trans-unit id="15c0f9c5a8e9e08ad03923f24381554ed8b9ab1c" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header &lt;code&gt;wake-lock&lt;/code&gt; directive controls whether the current document is allowed to use Wake Lock API to indicate that device should not enter power-saving mode.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../feature-policy&quot;&gt; &lt;code&gt;Feature-Policy&lt;/code&gt; &lt;/a&gt; 헤더 &lt;code&gt;wake-lock&lt;/code&gt; 지시문은 현재 문서가 Wake Lock API를 사용하여 장치가 절전 모드로 들어 가지 않도록 표시 할 수 있는지 여부를 제어합니다.</target>
         </trans-unit>
         <trans-unit id="269d13c10993281fbc573c770f836b44bc5f308a" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header &lt;code&gt;web-share&lt;/code&gt; directive controls whether the current document is allowed to use the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share&quot;&gt;&lt;code&gt;Navigator.share()&lt;/code&gt;&lt;/a&gt; method of the Web Share API to share text, links, images, and other content to arbitrary destinations of the user's choice.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../feature-policy&quot;&gt; &lt;code&gt;Feature-Policy&lt;/code&gt; &lt;/a&gt; 헤더 &lt;code&gt;web-share&lt;/code&gt; 지시문은 현재 문서가 Web Share API 의 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share&quot;&gt; &lt;code&gt;Navigator.share()&lt;/code&gt; &lt;/a&gt; 메서드 를 사용하여 텍스트, 링크, 이미지 및 기타 콘텐츠를 사용자가 선택한 임의의 대상에 공유 할 수 있는지 여부를 제어합니다 .</target>
         </trans-unit>
         <trans-unit id="62dced3e4a986bc5373d1a7961ad28c776d2c977" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header &lt;code&gt;xr-spatial-tracking&lt;/code&gt; directive controls whether the current document is allowed to use the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API&quot;&gt;WebXR Device API&lt;/a&gt;. This policy controls whether &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/XR/requestSession&quot;&gt;&lt;code&gt;navigator.xr.requestSession()&lt;/code&gt;&lt;/a&gt; can return &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/XRSession&quot;&gt;&lt;code&gt;XRSession&lt;/code&gt;&lt;/a&gt; that requires spatial tracking and whether user agent can indicate support for sessions supporting spatial tracking via &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/XR/isSessionSupported&quot;&gt;&lt;code&gt;navigator.xr.isSessionSupported()&lt;/code&gt;&lt;/a&gt; and &lt;code&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/Events/devicechange&quot;&gt;devicechange&lt;/a&gt;&lt;/code&gt; event on &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Navigator/xr&quot;&gt;&lt;code&gt;navigator.xr&lt;/code&gt;&lt;/a&gt; object.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../feature-policy&quot;&gt; &lt;code&gt;Feature-Policy&lt;/code&gt; &lt;/a&gt; 헤더 &lt;code&gt;xr-spatial-tracking&lt;/code&gt; 지시문은 현재 문서가 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API&quot;&gt;WebXR Device API&lt;/a&gt; 를 사용할 수 있는지 여부를 제어합니다 . 이 정책은 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/XR/requestSession&quot;&gt; &lt;code&gt;navigator.xr.requestSession()&lt;/code&gt; &lt;/a&gt; 이 공간 추적이 필요한 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/XRSession&quot;&gt; &lt;code&gt;XRSession&lt;/code&gt; &lt;/a&gt; 을 반환 할 수 있는지 여부와 사용자 에이전트가 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Navigator/xr&quot;&gt; &lt;code&gt;navigator.xr&lt;/code&gt; &lt;/a&gt; 객체의 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/XR/isSessionSupported&quot;&gt; &lt;code&gt;navigator.xr.isSessionSupported()&lt;/code&gt; &lt;/a&gt; 및 &lt;code&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/Events/devicechange&quot;&gt;devicechange&lt;/a&gt;&lt;/code&gt; 이벤트를 통해 공간 추적을 지원하는 세션에 대한 지원을 표시 할 수 있는지 여부를 제어 합니다.</target>
         </trans-unit>
         <trans-unit id="a4136ce714258747e9ae7bb826711d2f7370051e" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header field's &lt;code&gt;payment&lt;/code&gt; directive controls whether the current document is allowed to use the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API&quot;&gt;Payment Request API&lt;/a&gt;. When this policy is disabled, the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/PaymentRequest&quot;&gt;&lt;code&gt;PaymentRequest()&lt;/code&gt;&lt;/a&gt; constructor will throw a &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/DOMException#exception-SyntaxError&quot;&gt;&lt;code&gt;SyntaxError&lt;/code&gt;&lt;/a&gt;.</source>
@@ -8593,7 +8593,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="085032760c08ad9b9fdf7e3304ad0c84d9aeabf7" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;../feature-policy&quot;&gt;&lt;code&gt;Feature-Policy&lt;/code&gt;&lt;/a&gt; header usb directive controls whether the current document is allowed to use the WebUSB API.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;a href=&quot;../feature-policy&quot;&gt; &lt;code&gt;Feature-Policy&lt;/code&gt; &lt;/a&gt; 헤더 usb 지시문은 현재 문서가 WebUSB API를 사용할 수 있는지 여부를 제어합니다.</target>
         </trans-unit>
         <trans-unit id="90bd59abf141ac2acd0d6eb93603dfbb20ca13bb" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;a href=&quot;content-security-policy&quot;&gt;&lt;code&gt;Content-Security-Policy&lt;/code&gt;&lt;/a&gt; (CSP) &lt;code&gt;&lt;strong&gt;block-all-mixed-content&lt;/strong&gt;&lt;/code&gt; directive prevents loading any assets using HTTP when the page is loaded using HTTPS.</source>
@@ -8729,7 +8729,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="7fbaadcda1376e28783b5f635687be50467a1933" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;code&gt;103 Early Hints&lt;/code&gt; information response status code is primarily intended to be used with the &lt;a href=&quot;../headers/link&quot;&gt;&lt;code&gt;Link&lt;/code&gt;&lt;/a&gt; header to allow the user agent to start preloading resources while the server is still preparing a response.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;code&gt;103 Early Hints&lt;/code&gt; 정보 응답 상태 코드는 주로 &lt;a href=&quot;../headers/link&quot;&gt; &lt;code&gt;Link&lt;/code&gt; &lt;/a&gt; 헤더 와 함께 사용되어 서버가 응답을 준비하는 동안 사용자 에이전트가 리소스를 미리로드 할 수 있도록합니다.</target>
         </trans-unit>
         <trans-unit id="278c46bdc85af7c390f125d693bcbfb316c79076" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;code&gt;200 OK&lt;/code&gt; success status response code indicates that the request has succeeded. A 200 response is cacheable by default.</source>
@@ -8765,7 +8765,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="29e296a48560f66dbcc3ec52c233f4fdb267b76e" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;code&gt;402 Payment Required&lt;/code&gt; is a nonstandard client error status response code that is reserved for future use.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;code&gt;402 Payment Required&lt;/code&gt; 는 향후 사용을 위해 예약 된 비표준 클라이언트 오류 상태 응답 코드입니다.</target>
         </trans-unit>
         <trans-unit id="979b22f333764accadf3c7a12f9ce50117ebb170" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;code&gt;403 Forbidden&lt;/code&gt; client error status response code indicates that the server understood the request but refuses to authorize it.</source>
@@ -8889,15 +8889,15 @@ Table of Contents
         </trans-unit>
         <trans-unit id="e9a358c2e37bd97387c345bc97d49f2b9964bebc" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;code&gt;Cross-Origin-Embedder-Policy&lt;/code&gt; (COEP) response header prevents a document from loading any cross-origin resources that don't explicitly grant the document permission (using &lt;a href=&quot;../cross-origin_resource_policy_(corp)&quot;&gt;CORP&lt;/a&gt; or &lt;a href=&quot;../cors&quot;&gt;CORS&lt;/a&gt;).</source>
-          <target state="new"/>
+          <target state="translated">HTTP COEP ( &lt;code&gt;Cross-Origin-Embedder-Policy&lt;/code&gt; Embedder -Policy ) 응답 헤더는 문서가 &lt;a href=&quot;../cross-origin_resource_policy_(corp)&quot;&gt;CORP&lt;/a&gt; 또는 &lt;a href=&quot;../cors&quot;&gt;CORS&lt;/a&gt; 사용하여 문서 권한을 명시 적으로 부여하지 않은 교차 ​​출처 리소스를로드하지 못하도록합니다 .</target>
         </trans-unit>
         <trans-unit id="bd12a715eb3e020beaec19eacef98180f3c03eb5" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;code&gt;Cross-Origin-Opener-Policy&lt;/code&gt; (COOP) response header allows you to ensure a top-level document does not share a browsing context group with cross-origin documents.</source>
-          <target state="new"/>
+          <target state="translated">HTTP COOP ( &lt;code&gt;Cross-Origin-Opener-Policy&lt;/code&gt; ) 응답 헤더를 사용하면 최상위 문서가 교차 출처 문서와 브라우징 컨텍스트 그룹을 공유하지 않도록 할 수 있습니다.</target>
         </trans-unit>
         <trans-unit id="532f81dfa15429527706f99b56516bbbb7103920" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;code&gt;Cross-Origin-Resource-Policy&lt;/code&gt; response header conveys a desire that the browser blocks no-cors cross-origin/cross-site requests to the given resource.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;code&gt;Cross-Origin-Resource-Policy&lt;/code&gt; 응답 헤더는 브라우저가 주어진 리소스에 대한 no-cors cross-origin / cross-site 요청을 차단하려는 요구를 전달합니다.</target>
         </trans-unit>
         <trans-unit id="1606c56903114379a30109e67a8a9703c7538a88" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;code&gt;Feature-Policy&lt;/code&gt; header provides a mechanism to allow and deny the use of browser features in its own frame, and in content within any &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe&quot;&gt;&lt;code&gt;&amp;lt;iframe&amp;gt;&lt;/code&gt;&lt;/a&gt; elements in the document.</source>
@@ -8909,11 +8909,11 @@ Table of Contents
         </trans-unit>
         <trans-unit id="ffce3b68f1b8be8fa0ab126f01ab7dcd1167232b" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;code&gt;Link&lt;/code&gt; entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link&quot;&gt;&lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt;&lt;/a&gt; element.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;code&gt;Link&lt;/code&gt; entity-header 필드는 HTTP 헤더에서 하나 이상의 링크를 직렬화하는 수단을 제공합니다. 의미 상 HTML &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link&quot;&gt; &lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt; &lt;/a&gt; 요소 와 동일합니다 .</target>
         </trans-unit>
         <trans-unit id="15bba15c0e7df46ed2a8a40b2e760da5664fad96" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;code&gt;NEL&lt;/code&gt; response header is used to configure network request logging.</source>
-          <target state="new"/>
+          <target state="translated">HTTP &lt;code&gt;NEL&lt;/code&gt; 응답 헤더는 네트워크 요청 로깅을 구성하는 데 사용됩니다.</target>
         </trans-unit>
         <trans-unit id="1ee6fbdaf32a73c5d2da4ea87e0ad9941527d763" translate="yes" xml:space="preserve">
           <source>The HTTP &lt;code&gt;Proxy-Authenticate&lt;/code&gt; response header defines the authentication method that should be used to gain access to a resource behind a &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/proxy_server&quot;&gt;proxy server&lt;/a&gt;. It authenticates the request to the proxy server, allowing it to transmit the request further.</source>
@@ -9161,7 +9161,7 @@ Table of Contents
    that contains a character not permitted in a header field value MUST
    be treated as malformed (&lt;a href=&quot;#section-8.1.2.6&quot;&gt;Section 8.1.2.6&lt;/a&gt;).  Valid characters are
    defined by the &quot;field-content&quot; ABNF rule in &lt;a href=&quot;https://tools.ietf.org/html/rfc7230#section-3.2&quot;&gt;Section&amp;nbsp;3.2 of [RFC7230]&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">HTTP / 2 헤더 필드 인코딩은 HTTP / 1.1에서 사용하는 인터넷 메시지 구문에서 유효한 필드 이름이 아닌 이름의 표현을 허용합니다. 유효하지 않은 헤더 필드 이름을 포함하는 요청 또는 응답은 잘못된 형식으로 처리되어야합니다 ( &lt;a href=&quot;#section-8.1.2.6&quot;&gt;8.1.2.6 절&lt;/a&gt; ). 따라서 중개자는 잘못된 필드 이름이 포함 된 HTTP / 2 요청 또는 응답을 HTTP / 1.1 메시지로 변환 할 수 없습니다. 마찬가지로 HTTP / 2는 유효하지 않은 헤더 필드 값을 허용합니다. 인코딩 할 수있는 대부분의 값은 헤더 필드 구문 분석, 캐리지 리턴 (CR, ASCII 0xd), 줄 바꿈 (LF, ASCII 0xa) 및 0 문자 (NUL, ASCII 0x0)를 변경하지 않지만 공격자가 악용 할 수 있습니다. 그대로 번역 된 경우. 헤더 필드 값에 허용되지 않는 문자를 포함하는 모든 요청 또는 응답은 잘못된 형식 (&lt;a href=&quot;#section-8.1.2.6&quot;&gt;8.1.2.6 항&lt;/a&gt; ). 유효한 문자는 &lt;a href=&quot;https://tools.ietf.org/html/rfc7230#section-3.2&quot;&gt;[RFC7230]의 섹션 3.2&lt;/a&gt; 에있는 &quot;field-content&quot;ABNF 규칙에 의해 정의됩니다 .</target>
         </trans-unit>
         <trans-unit id="dc2a35fa99cfd317dd5558de4b34fa07535768f1" translate="yes" xml:space="preserve">
           <source>The HTTP/2 protocol has several prime differences from the HTTP/1.1 version:</source>
@@ -9188,7 +9188,7 @@ Table of Contents
    HTTP, this specification does not define a completely generic frame
    layer.  The frame and stream layers are tailored to the needs of the
    HTTP protocol and server push.</source>
-          <target state="new"/>
+          <target state="translated">HTTP / 2 사양은 네 부분으로 나뉩니다. o HTTP / 2 시작 ( &lt;a href=&quot;#section-3&quot;&gt;섹션 3&lt;/a&gt; )은 HTTP / 2 연결이 시작되는 방법을 다룹니다. o 프레임 ( &lt;a href=&quot;#section-4&quot;&gt;섹션 4&lt;/a&gt; ) 및 스트림 ( &lt;a href=&quot;#section-5&quot;&gt;섹션 5&lt;/a&gt; ) 레이어는 HTTP / 2 프레임이 구조화되고 다중 스트림으로 형성되는 방식을 설명합니다. o 프레임 ( &lt;a href=&quot;#section-6&quot;&gt;섹션 6&lt;/a&gt; ) 및 오류 ( &lt;a href=&quot;#section-7&quot;&gt;섹션 7&lt;/a&gt; ) 정의에는 HTTP / 2에서 사용되는 프레임 및 오류 유형에 대한 세부 사항이 포함됩니다. o HTTP 매핑 ( &lt;a href=&quot;#section-8&quot;&gt;섹션 8&lt;/a&gt; ) 및 추가 요구 사항 ( &lt;a href=&quot;#section-9&quot;&gt;섹션 9&lt;/a&gt;) HTTP 의미 체계가 프레임과 스트림을 사용하여 표현되는 방법을 설명합니다. 일부 프레임 및 스트림 계층 개념은 HTTP와 분리되어 있지만이 사양은 완전히 일반적인 프레임 계층을 정의하지 않습니다. 프레임 및 스트림 계층은 HTTP 프로토콜 및 서버 푸시의 요구에 맞게 조정됩니다.</target>
         </trans-unit>
         <trans-unit id="99fbf8dd0978f7db7e2a91bcbd770cc0ec6b4bcd" translate="yes" xml:space="preserve">
           <source>The Host request-header field specifies the Internet host and port
@@ -9343,19 +9343,19 @@ Table of Contents
         </trans-unit>
         <trans-unit id="49ce1d6f6a8be4676edf766aee4540297f25f76a" translate="yes" xml:space="preserve">
           <source>The HyperText Transfer Protocol (HTTP) &lt;code&gt;&lt;strong&gt;506 Variant Also Negotiates&lt;/strong&gt;&lt;/code&gt; response status code may be given in the context of Transparent Content Negotiation (see &lt;a href=&quot;https://tools.ietf.org/html/rfc2295&quot;&gt;RFC 2295&lt;/a&gt;). This protocol enables a client to retrieve the best variant of a given resource, where the server supports multiple variants.</source>
-          <target state="new"/>
+          <target state="translated">HTTP (HyperText Transfer Protocol) &lt;code&gt;&lt;strong&gt;506 Variant Also Negotiates&lt;/strong&gt;&lt;/code&gt; 응답 상태 코드는 Transparent Content Negotiation의 컨텍스트에서 제공 될 수 있습니다 ( &lt;a href=&quot;https://tools.ietf.org/html/rfc2295&quot;&gt;RFC 2295&lt;/a&gt; 참조 ). 이 프로토콜을 사용하면 클라이언트는 서버가 여러 변형을 지원하는 주어진 리소스의 최상의 변형을 검색 할 수 있습니다.</target>
         </trans-unit>
         <trans-unit id="820e5cef7a998998b0849eeb24e0fff1b6649bae" translate="yes" xml:space="preserve">
           <source>The HyperText Transfer Protocol (HTTP) &lt;code&gt;&lt;strong&gt;507 Insufficient Storage&lt;/strong&gt;&lt;/code&gt; response status code may be given in the context of the Web Distributed Authoring and Versioning (WebDAV) protocol (see &lt;a href=&quot;https://tools.ietf.org/html/rfc4918&quot;&gt;RFC 4918&lt;/a&gt;).</source>
-          <target state="new"/>
+          <target state="translated">HTTP (HyperText Transfer Protocol) &lt;code&gt;&lt;strong&gt;507 Insufficient Storage&lt;/strong&gt;&lt;/code&gt; 응답 상태 코드는 WebDAV (Web Distributed Authoring and Versioning) 프로토콜의 컨텍스트에서 제공 될 수 있습니다 ( &lt;a href=&quot;https://tools.ietf.org/html/rfc4918&quot;&gt;RFC 4918&lt;/a&gt; 참조 ).</target>
         </trans-unit>
         <trans-unit id="76d88c87ab8a315a60aa9543690290ffbfbdb653" translate="yes" xml:space="preserve">
           <source>The HyperText Transfer Protocol (HTTP) &lt;code&gt;&lt;strong&gt;508 Loop Detected&lt;/strong&gt;&lt;/code&gt; response status code may be given in the context of the Web Distributed Authoring and Versioning (WebDAV) protocol.</source>
-          <target state="new"/>
+          <target state="translated">HTTP (HyperText Transfer Protocol) &lt;code&gt;&lt;strong&gt;508 Loop Detected&lt;/strong&gt;&lt;/code&gt; 응답 상태 코드는 WebDAV (Web Distributed Authoring and Versioning) 프로토콜의 컨텍스트에서 제공 될 수 있습니다.</target>
         </trans-unit>
         <trans-unit id="81aa286d5750f499d27f8f17321bc45f7f2ca1f1" translate="yes" xml:space="preserve">
           <source>The HyperText Transfer Protocol (HTTP) &lt;code&gt;&lt;strong&gt;510 Not Extended&lt;/strong&gt;&lt;/code&gt; response status code is sent in the context of the HTTP Extension Framework, defined in &lt;a href=&quot;https://tools.ietf.org/html/rfc2774&quot;&gt;RFC 2774&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">HTTP (HyperText Transfer Protocol) &lt;code&gt;&lt;strong&gt;510 Not Extended&lt;/strong&gt;&lt;/code&gt; 응답 상태 코드는 &lt;a href=&quot;https://tools.ietf.org/html/rfc2774&quot;&gt;RFC 2774에&lt;/a&gt; 정의 된 HTTP 확장 프레임 워크의 컨텍스트에서 전송됩니다 .</target>
         </trans-unit>
         <trans-unit id="2e3eb482b38eeaa5e40d4ddbab8b13b92a13f7fd" translate="yes" xml:space="preserve">
           <source>The Hypertext Transfer Protocol (HTTP) is a stateless application-
@@ -9453,7 +9453,7 @@ Table of Contents
 
    Finally, HTTP/2 also enables more efficient processing of messages
    through use of binary message framing.</source>
-          <target state="new"/>
+          <target state="translated">HTTP (Hypertext Transfer Protocol)는 매우 성공적인 프로토콜입니다. 그러나 HTTP / 1.1이 기본 전송 ( &lt;a href=&quot;https://tools.ietf.org/html/rfc7230#section-6&quot;&gt;[RFC7230], 섹션 6&lt;/a&gt; )을 사용하는 방식에는 오늘날 애플리케이션 성능에 부정적인 영향을 미치는 몇 가지 특성이 있습니다. 특히 HTTP / 1.0은 주어진 TCP 연결에서 한 번에 하나의 요청 만 처리 할 수 ​​있도록 허용했습니다. HTTP / 1.1은 요청 파이프 라이닝을 추가했지만 이것은 부분적으로 요청 동시성을 해결했으며 여전히 헤드 오브 라인 차단 문제를 겪고 있습니다. 따라서 많은 요청을해야하는 HTTP / 1.0 및 HTTP / 1.1 클라이언트는 동시성을 달성하여 대기 시간을 줄이기 위해 서버에 대한 다중 연결을 사용합니다. 또한 HTTP 헤더 필드는 종종 반복적이고 장황하여 불필요한 네트워크 트래픽을 유발할뿐만 아니라 초기 TCP [ &lt;a href=&quot;#ref-TCP&quot;&gt;TCP&lt;/a&gt;] 혼잡 창을 빠르게 채울 수 있습니다. 이로 인해 새 TCP 연결에 여러 요청이있을 때 과도한 지연이 발생할 수 있습니다. HTTP / 2는 기본 연결에 대한 HTTP 의미 체계의 최적화 된 매핑을 정의하여 이러한 문제를 해결합니다. 특히 동일한 연결에서 요청 및 응답 메시지의 인터리빙을 허용하고 HTTP 헤더 필드에 효율적인 코딩을 사용합니다. 또한 요청의 우선 순위를 지정하여 더 중요한 요청을 더 빨리 완료하고 성능을 더욱 향상시킬 수 있습니다. HTTP / 1.x와 비교하여 더 적은 수의 TCP 연결을 사용할 수 있으므로 결과 프로토콜은 네트워크에 더 친숙합니다. 즉, 다른 흐름과 수명이 긴 연결과의 경쟁이 줄어들어 사용 가능한 네트워크 용량을 더 잘 활용할 수 있습니다. 드디어,HTTP / 2는 또한 바이너리 메시지 프레이밍을 사용하여보다 효율적인 메시지 처리를 가능하게합니다.</target>
         </trans-unit>
         <trans-unit id="bfba6f949d10bf9871b3c465a4b0c721c894d894" translate="yes" xml:space="preserve">
           <source>The Hypertext Transfer Protocol (HTTP) is an application-level
@@ -9500,11 +9500,11 @@ Table of Contents
         </trans-unit>
         <trans-unit id="7c3eef52124b6a04770da43e5780935c839f5a5d" translate="yes" xml:space="preserve">
           <source>The IP address is invalid</source>
-          <target state="new"/>
+          <target state="translated">IP 주소가 잘못되었습니다.</target>
         </trans-unit>
         <trans-unit id="6eeb9098fe0eb68f08e0d43612ff763509c93784" translate="yes" xml:space="preserve">
           <source>The IP address is unreachable</source>
-          <target state="new"/>
+          <target state="translated">IP 주소에 연결할 수 없습니다.</target>
         </trans-unit>
         <trans-unit id="2f67a1bb61a74c01a68383ec9ae389f39adb9d3d" translate="yes" xml:space="preserve">
           <source>The If header has two distinct purposes:
@@ -10104,7 +10104,7 @@ Table of Contents
    Receipt of a PING frame with a length field value other than 8 MUST
    be treated as a connection error (&lt;a href=&quot;#section-5.4.1&quot;&gt;Section 5.4.1&lt;/a&gt;) of type
    FRAME_SIZE_ERROR.</source>
-          <target state="new"/>
+          <target state="translated">PING 프레임 (유형 = 0x6)은 발신자의 최소 왕복 시간을 측정하고 유휴 연결이 여전히 작동하는지 여부를 결정하는 메커니즘입니다. PING 프레임은 모든 엔드 포인트에서 전송할 수 있습니다. + ------------------------------------------------- -------------- + | | | 불투명 데이터 (64) | | | + ------------------------------------------------- -------------- + 그림 12 : PING 페이로드 형식 프레임 헤더 외에도 PING 프레임은 페이로드에 8 옥텟의 불투명 데이터를 포함해야합니다. 보낸 사람은 선택한 모든 값을 포함 할 수 있으며 어떤 방식 으로든 해당 옥텟을 사용할 수 있습니다. ACK 플래그를 포함하지 않는 PING 프레임의 수신자는 동일한 페이로드로 응답으로 설정된 ACK 플래그와 함께 PING 프레임을 전송해야합니다. PING 응답은 다른 프레임보다 더 높은 우선 순위를 부여해야합니다. PING 프레임은 다음 플래그를 정의합니다. ACK (0x1) : 설정시,비트 0은이 PING 프레임이 PING 응답임을 나타냅니다. 엔드 포인트는 PING 응답에서이 플래그를 설정해야합니다. 엔드 포인트는이 플래그를 포함하는 PING 프레임에 응답하지 않아야합니다. PING 프레임은 개별 스트림과 연결되지 않습니다. 0x0 이외의 스트림 식별자 필드 값으로 PING 프레임이 수신되면 수신자는 연결 오류 (&lt;a href=&quot;#section-5.4.1&quot;&gt;&lt;/a&gt;PROTOCOL_ERROR 유형의 섹션 5.4.1 ). 길이 필드 값이 8이 아닌 PING 프레임 수신은 FRAME_SIZE_ERROR 유형 의 연결 오류 ( &lt;a href=&quot;#section-5.4.1&quot;&gt;섹션 5.4.1&lt;/a&gt; ) 로 처리 되어야합니다.</target>
         </trans-unit>
         <trans-unit id="d84539c58092eb061728beac8d3510599c78d9e2" translate="yes" xml:space="preserve">
           <source>The POST method is used to request that the origin server accept the
@@ -10249,7 +10249,7 @@ Table of Contents
 
    A PRIORITY frame with a length other than 5 octets MUST be treated as
    a stream error (&lt;a href=&quot;#section-5.4.2&quot;&gt;Section 5.4.2&lt;/a&gt;) of type FRAME_SIZE_ERROR.</source>
-          <target state="new"/>
+          <target state="translated">PRIORITY 프레임 (유형 = 0x2)은 스트림의 송신자 권고 우선 순위를 지정합니다 ( &lt;a href=&quot;#section-5.3&quot;&gt;섹션 5.3&lt;/a&gt; ). 유휴 또는 닫힌 스트림을 포함하여 모든 스트림 상태로 전송할 수 있습니다. +-+ ----------------------------------------------- -------------- + | E | 스트림 종속성 (31) | +-+ ------------- + --------------------------------- -------------- + | 무게 (8) | +-+ ------------- + 그림 8 : PRIORITY 프레임 페이로드 PRIORITY 프레임의 페이로드에는 다음 필드가 포함됩니다. E : 스트림 종속성이 배타적임을 나타내는 단일 비트 플래그 (참조 : &lt;a href=&quot;#section-5.3&quot;&gt;섹션 5.3&lt;/a&gt; ). 스트림 종속성 :이 스트림이 의존하는 스트림에 대한 31 비트 스트림 식별자 ( &lt;a href=&quot;#section-5.3&quot;&gt;섹션 5.3&lt;/a&gt; 참조 ). 가중치 : 스트림의 우선 순위 가중치를 나타내는 부호없는 8 비트 정수 ( &lt;a href=&quot;#section-5.3&quot;&gt;섹션 5.3&lt;/a&gt; 참조)). 값에 1을 더하여 1과 256 사이의 가중치를 얻습니다. PRIORITY 프레임은 플래그를 정의하지 않습니다. PRIORITY 프레임은 항상 스트림을 식별합니다. 0x0의 스트림 식별자로 PRIORITY 프레임이 수신되면 수신자 는 PROTOCOL_ERROR 유형 의 연결 오류 ( &lt;a href=&quot;#section-5.4.1&quot;&gt;섹션 5.4.1&lt;/a&gt; )로 응답해야 합니다. PRIORITY 프레임은 단일 헤더 블록을 구성하는 연속 프레임간에 전송할 수 없지만 모든 상태의 스트림에서 전송할 수 있습니다 ( &lt;a href=&quot;#section-4.3&quot;&gt;섹션 4.3&lt;/a&gt;). 이 프레임은 처리 또는 프레임 전송이 완료된 후에 도착할 수 있으므로 식별 된 스트림에 영향을 미치지 않습니다. &quot;반 닫힘 (원격)&quot;또는 &quot;닫힘&quot;상태에있는 스트림의 경우이 프레임은 식별 된 스트림과 해당 종속 스트림의 처리에만 영향을 줄 수 있습니다. 해당 스트림의 프레임 전송에는 영향을주지 않습니다. PRIORITY 프레임은 &quot;유휴&quot;또는 &quot;닫힘&quot;상태의 스트림에 대해 전송 될 수 있습니다. 이를 통해 사용되지 않거나 닫힌 상위 스트림의 우선 순위를 변경하여 종속 스트림 그룹의 우선 순위를 다시 지정할 수 있습니다. 길이가 5 옥텟이 아닌 PRIORITY 프레임은 FRAME_SIZE_ERROR 유형 의 스트림 오류 ( &lt;a href=&quot;#section-5.4.2&quot;&gt;섹션 5.4.2&lt;/a&gt; ) 로 처리 되어야합니다.</target>
         </trans-unit>
         <trans-unit id="babc13478772ae526be737f6ddcf858ed85d894b" translate="yes" xml:space="preserve">
           <source>The PROPFIND method retrieves properties defined on the resource
@@ -10466,7 +10466,7 @@ Table of Contents
 
    The PUSH_PROMISE frame can include padding.  Padding fields and flags
    are identical to those defined for DATA frames (&lt;a href=&quot;#section-6.1&quot;&gt;Section 6.1&lt;/a&gt;).</source>
-          <target state="new"/>
+          <target state="translated">PUSH_PROMISE 프레임 (유형 = 0x5)은 발신자가 시작하려는 스트림에 앞서 피어 엔드 포인트에 알리는 데 사용됩니다. PUSH_PROMISE 프레임에는 스트림에 대한 추가 컨텍스트를 제공하는 헤더 세트와 함께 엔드 포인트가 생성 할 계획 인 스트림의 서명되지 않은 31 비트 식별자가 포함됩니다. &lt;a href=&quot;#section-8.2&quot;&gt;8.2 절&lt;/a&gt;PUSH_PROMISE 프레임 사용에 대한 자세한 설명이 포함되어 있습니다. + --------------- + | 패드 길이? (8) | +-+ ------------- + --------------------------------- -------------- + | R | 약속 된 스트림 ID (31) | +-+ ----------------------------- + ----------------- -------------- + | 헤더 블록 조각 (*) + ------------------------------------------- -------------------- + | 패딩 (*) + --------------------------------------------- ------------------ + 그림 11 : PUSH_PROMISE 페이로드 형식 PUSH_PROMISE 프레임 페이로드에는 다음 필드가 있습니다. Pad Length : 프레임 패딩 길이를 포함하는 8 비트 필드 옥텟 단위. 이 필드는 PADDED 플래그가 설정된 경우에만 존재합니다. R : 예약 된 단일 비트. 약속 된 스트림 ID : PUSH_PROMISE에서 예약 한 스트림을 식별하는 부호없는 31 비트 정수입니다.약속 된 스트림 식별자는 발신자가 보낸 다음 스트림에 대해 유효한 선택이어야합니다 ( &quot;새 스트림 식별자&quot;참조).&lt;a href=&quot;#section-5.1.1&quot;&gt;섹션 5.1.1&lt;/a&gt; ). 헤더 블록 조각 : 요청 헤더 필드를 포함 하는 헤더 블록 조각 ( &lt;a href=&quot;#section-4.3&quot;&gt;섹션 4.3&lt;/a&gt; ). 패딩 : 패딩 옥텟. PUSH_PROMISE 프레임은 다음 플래그를 정의합니다. END_HEADERS (0x4) : 설정되면 비트 2는이 프레임이 전체 헤더 블록 ( &lt;a href=&quot;#section-4.3&quot;&gt;섹션 4.3&lt;/a&gt; )을 포함하고 CONTINUATION 프레임이 뒤 따르지 않음을 나타냅니다 . END_HEADERS 플래그가 설정되지 않은 PUSH_PROMISE 프레임 뒤에는 동일한 스트림에 대한 CONTINUATION 프레임이 와야합니다. 수신자는 다른 유형의 프레임 또는 다른 스트림의 프레임 수신을 연결 오류로 취급해야합니다 ( &lt;a href=&quot;#section-5.4.1&quot;&gt;섹션 5.4.1&lt;/a&gt;) PROTOCOL_ERROR 유형입니다. PADDED (0x8) : 설정된 경우 비트 3은 Pad Length 필드와 설명하는 모든 패딩이 있음을 나타냅니다. PUSH_PROMISE 프레임은 &quot;open&quot;또는 &quot;half-closed (remote)&quot;상태에있는 피어 시작 스트림에서만 전송되어야합니다. PUSH_PROMISE 프레임의 스트림 식별자는 연결된 스트림을 나타냅니다. 스트림 식별자 필드가 0x0 값을 지정하면 수신자는 연결 오류로 응답해야합니다 ( &lt;a href=&quot;#section-5.4.1&quot;&gt;섹션 5.4.1&lt;/a&gt;) PROTOCOL_ERROR 유형입니다. 약속 된 스트림은 약속 된 순서대로 사용할 필요가 없습니다. PUSH_PROMISE는 나중에 사용하기 위해 스트림 식별자 만 예약합니다. PUSH_PROMISE는 피어 엔드 포인트의 SETTINGS_ENABLE_PUSH 설정이 0으로 설정된 경우 전송되지 않아야합니다.이 설정을 설정하고 승인을받은 엔드 포인트는 PUSH_PROMISE 프레임 수신을 PROTOCOL_ERROR 유형 의 연결 오류 ( &lt;a href=&quot;#section-5.4.1&quot;&gt;섹션 5.4.1&lt;/a&gt; )로 처리해야합니다. . PUSH_PROMISE 프레임의 수신자는 약속 된 스트림 식별자를 참조하는 RST_STREAM을 PUSH_PROMISE의 발신자에게 다시 반환하여 약속 된 스트림을 거부하도록 선택할 수 있습니다. PUSH_PROMISE 프레임은 두 가지 방법으로 연결 상태를 수정합니다. 첫째, 헤더 블록의 포함 ( &lt;a href=&quot;#section-4.3&quot;&gt;섹션 4.3&lt;/a&gt;) 잠재적으로 헤더 압축을 위해 유지되는 상태를 수정합니다. 둘째, PUSH_PROMISE는 나중에 사용하기 위해 스트림을 예약하여 약속 된 스트림이 &quot;reserved&quot;상태가되도록합니다. 송신자는 스트림이 &quot;개방&quot;또는 &quot;반 폐쇄 (원격)&quot;가 아닌 한 스트림에서 PUSH_PROMISE를 보내지 않아야합니다. 발신자는 약속 된 스트림이 새로운 스트림 식별자 ( &lt;a href=&quot;#section-5.1.1&quot;&gt;섹션 5.1.1&lt;/a&gt; )에 대해 유효한 선택인지 확인해야합니다 (즉, 약속 된 스트림은 &quot;유휴&quot;상태에 있어야 함). PUSH_PROMISE는 스트림을 예약하므로 PUSH_PROMISE 프레임을 무시하면 스트림 상태가 불확실 해집니다. 수신자는 &quot;개방&quot;도 아니고 &quot;반 폐쇄 (로컬)&quot;도 아닌 스트림에서 PUSH_PROMISE 수신을 연결 오류로 취급해야합니다 ( &lt;a href=&quot;#section-5.4.1&quot;&gt;섹션 5.4.1&lt;/a&gt;) PROTOCOL_ERROR 유형입니다. 그러나 관련 스트림에서 RST_STREAM을 전송 한 엔드 포인트는 RST_STREAM 프레임이 수신 및 처리되기 전에 생성되었을 수있는 PUSH_PROMISE 프레임을 처리해야합니다. 수신기는 잘못된 스트림 식별자 ( &lt;a href=&quot;#section-5.1.1&quot;&gt;섹션 5.1.1&lt;/a&gt; ) 를 약속하는 PUSH_PROMISE의 수신을 PROTOCOL_ERROR 유형 의 연결 오류 ( &lt;a href=&quot;#section-5.4.1&quot;&gt;섹션 5.4.1&lt;/a&gt; )로 취급해야합니다. 잘못된 스트림 식별자는 현재 &quot;유휴&quot;상태가 아닌 스트림에 대한 식별자입니다. PUSH_PROMISE 프레임은 패딩을 포함 할 수 있습니다. 패딩 필드 및 플래그는 DATA 프레임에 대해 정의 된 것과 동일합니다 ( &lt;a href=&quot;#section-6.1&quot;&gt;섹션 6.1&lt;/a&gt; ).</target>
         </trans-unit>
         <trans-unit id="1975f22fa255d880d63431b9c6a1e839eaebbdbb" translate="yes" xml:space="preserve">
           <source>The PUT method requests that the enclosed entity be stored under the
@@ -10759,7 +10759,7 @@ Table of Contents
 
    A RST_STREAM frame with a length other than 4 octets MUST be treated
    as a connection error (&lt;a href=&quot;#section-5.4.1&quot;&gt;Section 5.4.1&lt;/a&gt;) of type FRAME_SIZE_ERROR.</source>
-          <target state="new"/>
+          <target state="translated">RST_STREAM 프레임 (유형 = 0x3)은 스트림의 즉각적인 종료를 허용합니다. RST_STREAM은 스트림 취소를 요청하거나 오류 조건이 발생했음을 나타 내기 위해 전송됩니다. + ------------------------------------------------- -------------- + | 오류 코드 (32) | + ------------------------------------------------- -------------- + 그림 9 : RST_STREAM 프레임 페이로드 RST_STREAM 프레임은 오류 코드를 식별하는 단일 부호없는 32 비트 정수를 포함합니다 ( &lt;a href=&quot;#section-7&quot;&gt;섹션 7&lt;/a&gt;). 오류 코드는 스트림이 종료되는 이유를 나타냅니다. RST_STREAM 프레임은 플래그를 정의하지 않습니다. RST_STREAM 프레임은 참조 된 스트림을 완전히 종료하고 &quot;닫힌&quot;상태가되도록합니다. 스트림에서 RST_STREAM을 수신 한 후 수신자는 PRIORITY를 제외하고 해당 스트림에 대한 추가 프레임을 보내면 안됩니다. 그러나 RST_STREAM을 전송 한 후 전송 엔드 포인트는 RST_STREAM이 도착하기 전에 피어에 의해 전송되었을 수있는 스트림에서 전송 된 추가 프레임을 수신하고 처리 할 준비가되어 있어야합니다. RST_STREAM 프레임은 스트림과 연결되어야합니다. RST_STREAM 프레임이 0x0의 스트림 식별자로 수신되면 수신자는이를 연결 오류로 취급해야합니다 ( &lt;a href=&quot;#section-5.4.1&quot;&gt;섹션 5.4.1&lt;/a&gt;) PROTOCOL_ERROR 유형입니다. RST_STREAM 프레임은 &quot;유휴&quot;상태의 스트림에 대해 전송되지 않아야합니다. 유휴 스트림을 식별하는 RST_STREAM 프레임이 수신되면 수신자는이를 PROTOCOL_ERROR 유형 의 연결 오류 ( &lt;a href=&quot;#section-5.4.1&quot;&gt;섹션 5.4.1&lt;/a&gt; ) 로 취급해야 합니다. 길이가 4 옥텟이 아닌 RST_STREAM 프레임은 FRAME_SIZE_ERROR 유형 의 연결 오류 ( &lt;a href=&quot;#section-5.4.1&quot;&gt;섹션 5.4.1&lt;/a&gt; ) 로 처리 되어야합니다.</target>
         </trans-unit>
         <trans-unit id="a2e20c61425846c0564c678e617e3a0e40ac8e14" translate="yes" xml:space="preserve">
           <source>The Referer[sic] request-header field allows the client to specify,
@@ -10925,23 +10925,23 @@ Table of Contents
    A SETTINGS frame with a length other than a multiple of 6 octets MUST
    be treated as a connection error (&lt;a href=&quot;#section-5.4.1&quot;&gt;Section 5.4.1&lt;/a&gt;) of type
    FRAME_SIZE_ERROR.</source>
-          <target state="new"/>
+          <target state="translated">SETTINGS 프레임 (유형 = 0x4)은 엔드 포인트가 통신하는 방식에 영향을주는 구성 매개 변수 (예 : 피어 동작에 대한 기본 설정 및 제약)를 전달합니다. SETTINGS 프레임은 해당 매개 변수의 수신을 확인하는데도 사용됩니다. 개별적으로 SETTINGS 매개 변수는 &quot;설정&quot;이라고도합니다. SETTINGS 매개 변수는 협상되지 않습니다. 수신 피어가 사용하는 송신 피어의 특성을 설명합니다. 동일한 매개 변수에 대해 서로 다른 값을 각 피어가 알릴 수 있습니다. 예를 들어 클라이언트는 초기 흐름 제어 창을 높게 설정하고 서버는 리소스를 절약하기 위해 더 낮은 값을 설정할 수 있습니다. SETTINGS 프레임은 연결 시작시 두 엔드 포인트 모두에 의해 전송되어야하며 연결 ​​수명 동안 어느 한 엔드 포인트에 의해 다른 시간에 전송 될 수 있습니다.구현은이 사양에 정의 된 모든 매개 변수를 지원해야합니다. SETTINGS 프레임의 각 매개 변수는 해당 매개 변수의 기존 값을 대체합니다. 매개 변수는 나타나는 순서대로 처리되며 SETTINGS 프레임의 수신자는 매개 변수의 현재 값 이외의 상태를 유지할 필요가 없습니다. 따라서 SETTINGS 매개 변수의 값은 수신자가 보는 마지막 값입니다. SETTINGS 매개 변수는 수신 피어가 승인합니다. 이를 활성화하기 위해 SETTINGS 프레임은 다음 플래그를 정의합니다. ACK (0x1) : 설정되면 비트 0은이 프레임이 피어의 SETTINGS 프레임의 수신 및 적용을 승인 함을 나타냅니다. 이 비트가 설정되면 SETTINGS 프레임의 페이로드가 비어 있어야합니다.ACK 플래그가 설정된 SETTINGS 프레임과 0이 아닌 길이 필드 값을 수신하면 연결 오류 (&lt;a href=&quot;#section-5.4.1&quot;&gt;&lt;/a&gt;FRAME_SIZE_ERROR 유형의 섹션 5.4.1 ). 자세한 내용은 &lt;a href=&quot;#section-6.5.3&quot;&gt;섹션 6.5.3&lt;/a&gt; ( &quot;설정 동기화&quot;)을 참조하십시오 . SETTINGS 프레임은 항상 단일 스트림이 아닌 연결에 적용됩니다. SETTINGS 프레임의 스트림 식별자는 0 (0x0)이어야합니다. 엔드 포인트가 스트림 식별자 필드가 0x0이 아닌 SETTINGS 프레임을 수신하면, 엔드 포인트는 PROTOCOL_ERROR 유형 의 연결 오류 ( &lt;a href=&quot;#section-5.4.1&quot;&gt;섹션 5.4.1&lt;/a&gt; )로 응답해야 합니다. 설정 프레임은 연결 상태에 영향을줍니다. 잘못 구성되거나 불완전한 SETTINGS 프레임은 PROTOCOL_ERROR 유형 의 연결 오류 ( &lt;a href=&quot;#section-5.4.1&quot;&gt;섹션 5.4.1&lt;/a&gt; ) 로 처리되어야 합니다. 길이가 6 옥텟의 배수가 아닌 SETTINGS 프레임은 연결 오류로 처리되어야합니다 ( &lt;a href=&quot;#section-5.4.1&quot;&gt;섹션 5.4.1&lt;/a&gt;) FRAME_SIZE_ERROR 유형.</target>
         </trans-unit>
         <trans-unit id="9f8174334dfb42409bd14d344357a61e0522761d" translate="yes" xml:space="preserve">
           <source>The Sec-Fetch-Dest HTTP Request Header</source>
-          <target state="new"/>
+          <target state="translated">Sec-Fetch-Dest HTTP 요청 헤더</target>
         </trans-unit>
         <trans-unit id="089fba56f3ba935817b0ee0ba0d50c6c7250a452" translate="yes" xml:space="preserve">
           <source>The Sec-Fetch-Mode HTTP Request Header</source>
-          <target state="new"/>
+          <target state="translated">Sec-Fetch-Mode HTTP 요청 헤더</target>
         </trans-unit>
         <trans-unit id="0922dedc70e7039f73de5afb1791c6af1cadc728" translate="yes" xml:space="preserve">
           <source>The Sec-Fetch-Site HTTP Request Header</source>
-          <target state="new"/>
+          <target state="translated">Sec-Fetch-Site HTTP 요청 헤더</target>
         </trans-unit>
         <trans-unit id="8e9ebb888b481c6982054f06f45605ddc268b5db" translate="yes" xml:space="preserve">
           <source>The Sec-Fetch-User HTTP Request Header</source>
-          <target state="new"/>
+          <target state="translated">Sec-Fetch-User HTTP 요청 헤더</target>
         </trans-unit>
         <trans-unit id="f351e70802256078de6c82adb6c9f8135e4ad1a4" translate="yes" xml:space="preserve">
           <source>The Server response-header field contains information about the
@@ -11065,23 +11065,23 @@ Table of Contents
         </trans-unit>
         <trans-unit id="b8418e17a41aec97d3c590fcc65fedf33be9a1c2" translate="yes" xml:space="preserve">
           <source>The TCP connection failed due to reasons not covered by previous errors</source>
-          <target state="new"/>
+          <target state="translated">이전 오류에 포함되지 않은 이유로 인해 TCP 연결이 실패했습니다.</target>
         </trans-unit>
         <trans-unit id="a63d3da83f08f3589783fd322c14eb384668776f" translate="yes" xml:space="preserve">
           <source>The TCP connection was aborted</source>
-          <target state="new"/>
+          <target state="translated">TCP 연결이 중단되었습니다.</target>
         </trans-unit>
         <trans-unit id="ece1a07cee60e2c0d379acd1235868c7480c2fcb" translate="yes" xml:space="preserve">
           <source>The TCP connection was closed by the server</source>
-          <target state="new"/>
+          <target state="translated">TCP 연결이 서버에 의해 닫혔습니다.</target>
         </trans-unit>
         <trans-unit id="796733a0ab45ac90906d6f198849475b13814e44" translate="yes" xml:space="preserve">
           <source>The TCP connection was refused by the server</source>
-          <target state="new"/>
+          <target state="translated">TCP 연결이 서버에서 거부되었습니다.</target>
         </trans-unit>
         <trans-unit id="44cef75a8f9ea523ffedd880063709751f6702f3" translate="yes" xml:space="preserve">
           <source>The TCP connection was reset</source>
-          <target state="new"/>
+          <target state="translated">TCP 연결이 재설정되었습니다.</target>
         </trans-unit>
         <trans-unit id="a033c5a9ee721261b9ef910b0f68478ac7363993" translate="yes" xml:space="preserve">
           <source>The TCP handshake itself is time-consuming, but a TCP connection adapts to its load, becoming more efficient with more sustained (or warm) connections. Short-lived connections do not make use of this efficiency feature of TCP, and performance degrades from optimum by persisting to transmit over a new, cold connection.</source>
@@ -11365,7 +11365,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="b0025b4b69a4ce00bf003d08c44025493d147db8" translate="yes" xml:space="preserve">
           <source>The URI (absolute or relative) must be enclosed between &lt;code&gt;&amp;lt;&lt;/code&gt; and &lt;code&gt;&amp;gt;&lt;/code&gt;:</source>
-          <target state="new"/>
+          <target state="translated">URI (절대 또는 상대)는 &lt;code&gt;&amp;lt;&lt;/code&gt; 및 &lt;code&gt;&amp;gt;&lt;/code&gt; 사이에 포함되어야합니다 .</target>
         </trans-unit>
         <trans-unit id="7dc195e95f3f78e1ec1e89ef97a6a85b571c15d4" translate="yes" xml:space="preserve">
           <source>The URI of the document in which the violation occurred.</source>
@@ -11381,7 +11381,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="20d9b67c973fb9378d4e9a9893dce633fc72be6a" translate="yes" xml:space="preserve">
           <source>The URI reference, must be enclosed between &lt;code&gt;&amp;lt;&lt;/code&gt; and &lt;code&gt;&amp;gt;&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">URI 참조는 &lt;code&gt;&amp;lt;&lt;/code&gt; 및 &lt;code&gt;&amp;gt;&lt;/code&gt; 로 묶어야합니다 .</target>
         </trans-unit>
         <trans-unit id="ab6860a88c4f5fa569a9d2df89c6b4183b5b6406" translate="yes" xml:space="preserve">
           <source>The URI requested by the client is longer than the server is willing to interpret.</source>
@@ -11683,7 +11683,7 @@ Table of Contents
    A WINDOW_UPDATE frame with a length other than 4 octets MUST be
    treated as a connection error (&lt;a href=&quot;#section-5.4.1&quot;&gt;Section 5.4.1&lt;/a&gt;) of type
    FRAME_SIZE_ERROR.</source>
-          <target state="new"/>
+          <target state="translated">WINDOW_UPDATE 프레임 (유형 = 0x8)은 흐름 제어를 구현하는 데 사용됩니다. &lt;a href=&quot;#section-5.2&quot;&gt;5.2 절&lt;/a&gt; 참조개요. 흐름 제어는 각 개별 스트림과 전체 연결의 두 가지 수준에서 작동합니다. 두 가지 유형의 흐름 제어는 홉 단위, 즉 두 끝점 사이에서만 가능합니다. 중개자는 종속 연결간에 WINDOW_UPDATE 프레임을 전달하지 않습니다. 그러나 수신자의 데이터 전송 제한은 간접적으로 원래 발신자에게 흐름 제어 정보의 전파를 유발할 수 있습니다. 흐름 제어는 흐름 제어 대상으로 식별 된 프레임에만 적용됩니다. 이 문서에 정의 된 프레임 유형 중 DATA 프레임 만 포함됩니다. 흐름 제어에서 제외 된 프레임은 수신자가 프레임 처리에 리소스를 할당 할 수없는 경우를 제외하고 반드시 수락 및 처리되어야합니다. 수신기는 스트림 오류 ( &lt;a href=&quot;#section-5.4.2&quot;&gt;섹션 5.4.2&lt;/a&gt; ) 또는 연결 오류 (&lt;a href=&quot;#section-5.4.1&quot;&gt;5.4.1 절&lt;/a&gt;) 프레임을 수락 할 수없는 경우 FLOW_CONTROL_ERROR 유형입니다. +-+ ----------------------------------------------- -------------- + | R | 창 크기 증가 (31) | +-+ ----------------------------------------------- -------------- + 그림 14 : WINDOW_UPDATE 페이로드 형식 WINDOW_UPDATE 프레임의 페이로드는 하나의 예약 된 비트와 보낸 사람이 추가로 전송할 수있는 옥텟 수를 나타내는 부호없는 31 비트 정수입니다. 기존 흐름 제어 창에 추가합니다. 흐름 제어 창 증분에 대한 법적 범위는 1에서 2 ^ 31-1 (2,147,483,647) 옥텟입니다. WINDOW_UPDATE 프레임은 플래그를 정의하지 않습니다. WINDOW_UPDATE 프레임은 스트림 또는 전체 연결에 특정 할 수 있습니다. 전자의 경우 프레임의 스트림 식별자는 영향을받는 스트림을 나타냅니다. 후자의 경우 값 &quot;0&quot;전체 연결이 프레임의 주제임을 나타냅니다. 수신자는 흐름 제어 창 증분이 0 인 WINDOW_UPDATE 프레임의 수신을 스트림 오류 (&lt;a href=&quot;#section-5.4.2&quot;&gt;섹션 5.4.2&lt;/a&gt; ) PROTOCOL_ERROR 유형; 연결 흐름 제어 창의 오류는 연결 오류로 처리되어야합니다 ( &lt;a href=&quot;#section-5.4.1&quot;&gt;섹션 5.4.1&lt;/a&gt; ). WINDOW_UPDATE는 END_STREAM 플래그가있는 프레임을 보낸 피어가 보낼 수 있습니다. 이것은 수신자가 &quot;반 폐쇄 (원격)&quot;또는 &quot;폐쇄&quot;스트림에서 WINDOW_UPDATE 프레임을 수신 할 수 있음을 의미합니다. 수신자는 이것을 오류로 취급해서는 안됩니다 ( &lt;a href=&quot;#section-5.1&quot;&gt;섹션 5.1&lt;/a&gt; 참조 ). 흐름 제어 프레임을 수신하는 수신기는 수신기가이를 연결 오류로 취급하지 않는 한 연결 흐름 제어 창에 대한 기여를 항상 고려해야합니다 ( &lt;a href=&quot;#section-5.4.1&quot;&gt;섹션 5.4.1&lt;/a&gt;). 프레임에 오류가있는 경우에도 필요합니다. 송신자는 흐름 제어 창을 향해 프레임을 계산하지만 수신자가 그렇지 않은 경우 송신자와 수신자의 흐름 제어 창이 다를 수 있습니다. 길이가 4 옥텟이 아닌 WINDOW_UPDATE 프레임은 FRAME_SIZE_ERROR 유형 의 연결 오류 ( &lt;a href=&quot;#section-5.4.1&quot;&gt;섹션 5.4.1&lt;/a&gt; ) 로 처리 되어야합니다.</target>
         </trans-unit>
         <trans-unit id="0176fdb6175026d4c263772f8859cf082f15cf8e" translate="yes" xml:space="preserve">
           <source>The WWW-Authenticate response-header field MUST be included in 401
@@ -12008,7 +12008,7 @@ Table of Contents
         </trans-unit>
         <trans-unit id="87766695ac6340c40537ef09e93a85866ad2734b" translate="yes" xml:space="preserve">
           <source>The amount of device RAM can be used as a fingerprinting variable, so values for the header are intentionally coarse to reduce the potential for its misuse. The header takes on the following values: &lt;code&gt;0.25&lt;/code&gt;, &lt;code&gt;0.5&lt;/code&gt;, &lt;code&gt;1&lt;/code&gt;, &lt;code&gt;2&lt;/code&gt;, &lt;code&gt;4&lt;/code&gt;, &lt;code&gt;8&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">장치 RAM의 양은 핑거 프린팅 변수로 사용될 수 있으므로 헤더의 값은 오용 가능성을 줄이기 위해 의도적으로 대략적으로 지정됩니다. 헤더는 &lt;code&gt;0.25&lt;/code&gt; , &lt;code&gt;0.5&lt;/code&gt; , &lt;code&gt;1&lt;/code&gt; , &lt;code&gt;2&lt;/code&gt; , &lt;code&gt;4&lt;/code&gt; , &lt;code&gt;8&lt;/code&gt; 값을 갖습니다 .</target>
         </trans-unit>
         <trans-unit id="55a9a290f76d786d7b3d83d441f76e13bf0f3dcc" translate="yes" xml:space="preserve">
           <source>The app:categories element can contain a &quot;fixed&quot; attribute, with a

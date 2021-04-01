@@ -3,6 +3,451 @@
   <file source-language="en" target-language="ru" datatype="htmlbody" original="http">
     <body>
       <group id="http">
+        <trans-unit id="1b1db348af514b6bea21a18f53ca916d54264149" translate="yes" xml:space="preserve">
+          <source>URIs and how to access resources on the Web.</source>
+          <target state="translated">URI и как получить доступ к ресурсам в Интернете.</target>
+        </trans-unit>
+        <trans-unit id="6d39406666e0fced7b5feeca9564a556a649dc18" translate="yes" xml:space="preserve">
+          <source>URIs are intended to be shared, not secured, even when they identify
+   secure resources.  URIs are often shown on displays, added to
+   templates when a page is printed, and stored in a variety of
+   unprotected bookmark lists.  It is therefore unwise to include
+   information within a URI that is sensitive, personally identifiable,
+   or a risk to disclose.
+
+   Authors of services ought to avoid GET-based forms for the submission
+   of sensitive data because that data will be placed in the
+   request-target.  Many existing servers, proxies, and user agents log
+   or display the request-target in places where it might be visible to
+   third parties.  Such services ought to use POST-based form submission
+   instead.
+
+   Since the Referer header field tells a target site about the context
+   that resulted in a request, it has the potential to reveal
+   information about the user's immediate browsing history and any
+   personal information that might be found in the referring resource's
+   URI.  Limitations on the Referer header field are described in
+   &lt;a href=&quot;#section-5.5.2&quot;&gt;Section 5.5.2&lt;/a&gt; to address some of its security considerations.</source>
+          <target state="translated">URI предназначены для совместного использования, а не для защиты, даже если они определяют защищенные ресурсы. URI часто отображаются на дисплеях, добавляются в шаблоны при печати страницы и сохраняются в различных списках незащищенных закладок. Поэтому неразумно включать в URI информацию, которая является конфиденциальной, позволяет идентифицировать личность или может быть раскрыта. Авторам служб следует избегать форм на основе GET для отправки конфиденциальных данных, поскольку эти данные будут помещены в целевой объект запроса. Многие существующие серверы, прокси и пользовательские агенты регистрируют или отображают цель запроса в местах, где она может быть видна третьим лицам. Такие службы должны вместо этого использовать отправку форм на основе POST. Поскольку поле заголовка Referer сообщает целевому сайту о контексте, который привел к запросу,он может раскрыть информацию о непосредственной истории просмотров пользователя и любую личную информацию, которая может быть найдена в URI ссылающегося ресурса. Ограничения на поле заголовка Referer описаны в &lt;a href=&quot;#section-5.5.2&quot;&gt;Раздел 5.5.2&lt;/a&gt; посвящен некоторым соображениям безопасности.</target>
+        </trans-unit>
+        <trans-unit id="3cce85850c1e42a1666b59eb99149f8792f48d3c" translate="yes" xml:space="preserve">
+          <source>URIs have been known by many names: WWW addresses, Universal Document
+   Identifiers, Universal Resource Identifiers [&lt;a href=&quot;#ref-3&quot;&gt;3&lt;/a&gt;], and finally the
+   combination of Uniform Resource Locators (URL) [&lt;a href=&quot;#ref-4&quot;&gt;4&lt;/a&gt;] and Names (URN)
+   [&lt;a href=&quot;#ref-20&quot;&gt;20&lt;/a&gt;]. As far as HTTP is concerned, Uniform Resource Identifiers are
+   simply formatted strings which identify--via name, location, or any
+   other characteristic--a resource.</source>
+          <target state="translated">URI известны под разными именами: адреса WWW, универсальные идентификаторы документов, универсальные идентификаторы ресурсов [ &lt;a href=&quot;#ref-3&quot;&gt;3&lt;/a&gt; ] и, наконец, комбинация универсальных указателей ресурсов (URL) [ &lt;a href=&quot;#ref-4&quot;&gt;4&lt;/a&gt; ] и имен (URN) [ &lt;a href=&quot;#ref-20&quot;&gt;20&lt;/a&gt; ]. Что касается HTTP, унифицированные идентификаторы ресурсов - это просто отформатированные строки, которые идентифицируют - по имени, местоположению или любой другой характеристике - ресурс.</target>
+        </trans-unit>
+        <trans-unit id="498e7643a14364976970437ebe13915fd4a1000a" translate="yes" xml:space="preserve">
+          <source>URIs in HTTP can be represented in absolute form or relative to some
+   known base URI [&lt;a href=&quot;#ref-11&quot;&gt;11&lt;/a&gt;], depending upon the context of their use. The two
+   forms are differentiated by the fact that absolute URIs always begin
+   with a scheme name followed by a colon. For definitive information on
+   URL syntax and semantics, see &quot;Uniform Resource Identifiers (URI):
+   Generic Syntax and Semantics,&quot; &lt;a href=&quot;https://tools.ietf.org/html/rfc2396&quot;&gt;RFC 2396&lt;/a&gt; [&lt;a href=&quot;#ref-42&quot;&gt;42&lt;/a&gt;] (which replaces RFCs
+   1738 [&lt;a href=&quot;#ref-4&quot;&gt;4&lt;/a&gt;] and &lt;a href=&quot;https://tools.ietf.org/html/rfc1808&quot;&gt;RFC 1808&lt;/a&gt; [&lt;a href=&quot;#ref-11&quot;&gt;11&lt;/a&gt;]). This specification adopts the
+   definitions of &quot;URI-reference&quot;, &quot;absoluteURI&quot;, &quot;relativeURI&quot;, &quot;port&quot;,
+   &quot;host&quot;,&quot;abs_path&quot;, &quot;rel_path&quot;, and &quot;authority&quot; from that
+   specification.
+
+   The HTTP protocol does not place any a priori limit on the length of
+   a URI. Servers MUST be able to handle the URI of any resource they
+   serve, and SHOULD be able to handle URIs of unbounded length if they
+   provide GET-based forms that could generate such URIs. A server
+   SHOULD return 414 (Request-URI Too Long) status if a URI is longer
+   than the server can handle (see &lt;a href=&quot;#section-10.4.15&quot;&gt;section 10.4.15&lt;/a&gt;).
+
+      Note: Servers ought to be cautious about depending on URI lengths
+      above 255 bytes, because some older client or proxy
+      implementations might not properly support these lengths.</source>
+          <target state="translated">URI в HTTP могут быть представлены в абсолютной форме или относительно некоторого известного базового URI [ &lt;a href=&quot;#ref-11&quot;&gt;11&lt;/a&gt; ], в зависимости от контекста их использования. Эти две формы отличаются тем, что абсолютные URI всегда начинаются с имени схемы, за которым следует двоеточие. Для получения полной информации о синтаксисе и семантике URL-адресов см. &amp;laquo;Uniform Resource Identifiers (URI): Generic Syntax and Semantics&amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2396&quot;&gt;RFC 2396&lt;/a&gt; [ &lt;a href=&quot;#ref-42&quot;&gt;42&lt;/a&gt; ] (который заменяет RFC 1738 [ &lt;a href=&quot;#ref-4&quot;&gt;4&lt;/a&gt; ] и &lt;a href=&quot;https://tools.ietf.org/html/rfc1808&quot;&gt;RFC 1808&lt;/a&gt; [ &lt;a href=&quot;#ref-11&quot;&gt;11]&lt;/a&gt;]). Эта спецификация принимает определения &amp;laquo;URI-ссылка&amp;raquo;, &amp;laquo;absoluteURI&amp;raquo;, &amp;laquo;relativeURI&amp;raquo;, &amp;laquo;port&amp;raquo;, &amp;laquo;host&amp;raquo;, &amp;laquo;abs_path&amp;raquo;, &amp;laquo;rel_path&amp;raquo; и &amp;laquo;Authority&amp;raquo; из этой спецификации. Протокол HTTP не накладывает никаких априорных ограничений на длину URI. Серверы ДОЛЖНЫ иметь возможность обрабатывать URI любого ресурса, который они обслуживают, и ДОЛЖНЫ иметь возможность обрабатывать URI неограниченной длины, если они предоставляют формы на основе GET, которые могут генерировать такие URI. Сервер ДОЛЖЕН возвращать статус 414 (Request-URI Too Long), если URI длиннее, чем сервер может обработать (см. &lt;a href=&quot;#section-10.4.15&quot;&gt;Раздел 10.4.15&lt;/a&gt; ). Примечание. Серверы должны быть осторожны в зависимости от длины URI более 255 байт,потому что некоторые старые реализации клиента или прокси могут не поддерживать эту длину должным образом.</target>
+        </trans-unit>
+        <trans-unit id="cfef62af9614810559e1e5b81b8c27fecbab7b5c" translate="yes" xml:space="preserve">
+          <source>URL redirection, also known as URL forwarding, is a technique to give a page, a form or a whole Web application, more than one URL address. HTTP provides a special kind of responses, &lt;em&gt;&lt;strong&gt;HTTP redirects&lt;/strong&gt;&lt;/em&gt;, to perform this operation used for numerous goals: temporary redirection while site maintenance is ongoing, permanent redirection to keep external links working after a change of the site's architecture, progress pages when uploading a file, and so on.</source>
+          <target state="translated">Перенаправление URL-адресов, также известное как перенаправление URL-адресов, - это метод предоставления странице, форме или целому веб-приложению более одного URL-адреса. HTTP предоставляет особый вид ответов, &lt;em&gt;&lt;strong&gt;HTTP-перенаправления&lt;/strong&gt;&lt;/em&gt; , для выполнения этой операции, используемой для множества целей: временное перенаправление во время обслуживания сайта, постоянное перенаправление для поддержания работы внешних ссылок после изменения архитектуры сайта, страницы прогресса при загрузке файла, и так далее.</target>
+        </trans-unit>
+        <trans-unit id="11053b0e7813cb1ccd4cf628421c47a3253d39a1" translate="yes" xml:space="preserve">
+          <source>URL-embedded JavaScript code</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="621894213e70d0f25d538e3e503f261cb1c92c16" translate="yes" xml:space="preserve">
+          <source>URL/hostname based conditions</source>
+          <target state="translated">условия на основе URL-адреса/имени хоста</target>
+        </trans-unit>
+        <trans-unit id="01f03837323aab32409bb99c50d6c475179c49df" translate="yes" xml:space="preserve">
+          <source>URLs</source>
+          <target state="translated">URLs</target>
+        </trans-unit>
+        <trans-unit id="b9011f5a3d0a8fd5aa8be41c9a2ba56d323a6e48" translate="yes" xml:space="preserve">
+          <source>URLs and URNs</source>
+          <target state="translated">URL-адреса и URN-адреса</target>
+        </trans-unit>
+        <trans-unit id="0d68396d9a72290240763f5089d4a58c9fd02660" translate="yes" xml:space="preserve">
+          <source>URLs appear in many places in requests and responses.
+   Interoperability experience with [&lt;a href=&quot;https://tools.ietf.org/html/rfc2518&quot;&gt;RFC2518&lt;/a&gt;] showed that many clients
+   parsing Multi-Status responses did not fully implement the full
+   Reference Resolution defined in &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-5&quot;&gt;Section&amp;nbsp;5 of [RFC3986]&lt;/a&gt;.  Thus,
+   servers in particular need to be careful in handling URLs in
+   responses, to ensure that clients have enough context to be able to
+   interpret all the URLs.  The rules in this section apply not only to
+   resource URLs in the 'href' element in Multi-Status responses, but
+   also to the Destination and If header resource URLs.
+
+   The sender has a choice between two approaches: using a relative
+   reference, which is resolved against the Request-URI, or a full URI.
+   A server MUST ensure that every 'href' value within a Multi-Status
+   response uses the same format.
+
+   WebDAV only uses one form of relative reference in its extensions,
+   the absolute path.
+
+      Simple-ref = absolute-URI | ( path-absolute [ &quot;?&quot; query ] )
+
+   The absolute-URI, path-absolute and query productions are defined in
+   Sections &lt;a href=&quot;#section-4.3&quot;&gt;4.3&lt;/a&gt;, &lt;a href=&quot;#section-3.3&quot;&gt;3.3&lt;/a&gt;, and &lt;a href=&quot;#section-3.4&quot;&gt;3.4&lt;/a&gt; of [&lt;a href=&quot;https://tools.ietf.org/html/rfc3986&quot;&gt;RFC3986&lt;/a&gt;].
+
+   Within Simple-ref productions, senders MUST NOT:
+
+   o  use dot-segments (&quot;.&quot; or &quot;..&quot;), or
+
+   o  have prefixes that do not match the Request-URI (using the
+      comparison rules defined in &lt;a href=&quot;https://tools.ietf.org/html/rfc2616#section-3.2.3&quot;&gt;Section&amp;nbsp;3.2.3 of [RFC2616]&lt;/a&gt;).
+
+   Identifiers for collections SHOULD end in a '/' character.</source>
+          <target state="translated">URL-адреса появляются во многих местах в запросах и ответах. Опыт взаимодействия с [ &lt;a href=&quot;https://tools.ietf.org/html/rfc2518&quot;&gt;RFC2518&lt;/a&gt; ] показал, что многие клиенты, анализирующие ответы с несколькими состояниями, не полностью реализуют полное разрешение ссылок, определенное в &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-5&quot;&gt;разделе 5 [RFC3986]&lt;/a&gt;, Таким образом, серверы, в частности, должны быть осторожны при обработке URL-адресов в ответах, чтобы гарантировать, что у клиентов достаточно контекста, чтобы иметь возможность интерпретировать все URL-адреса. Правила в этом разделе применяются не только к URL-адресам ресурсов в элементе &amp;laquo;href&amp;raquo; в ответах с несколькими состояниями, но также и к URL-адресам ресурсов заголовка &amp;laquo;Назначение&amp;raquo; и &amp;laquo;Если&amp;raquo;. У отправителя есть выбор между двумя подходами: использование относительной ссылки, которая разрешается с помощью Request-URI, или полного URI. Сервер ДОЛЖЕН гарантировать, что каждое значение href в ответе с несколькими состояниями использует один и тот же формат. WebDAV использует только одну форму относительной ссылки в своих расширениях - абсолютный путь. Simple-ref = absolute-URI | (абсолютный путь [&quot;?&quot; запрос]) Абсолютный URI, абсолютный путь и продукция запроса определены в разделах&lt;a href=&quot;#section-4.3&quot;&gt;4.3&lt;/a&gt; , &lt;a href=&quot;#section-3.3&quot;&gt;3.3&lt;/a&gt; и &lt;a href=&quot;#section-3.4&quot;&gt;3.4&lt;/a&gt; [ &lt;a href=&quot;https://tools.ietf.org/html/rfc3986&quot;&gt;RFC3986&lt;/a&gt; ]. В продуктах Simple-ref отправители НЕ ДОЛЖНЫ: o использовать точечные сегменты (&amp;laquo;.&amp;raquo; Или &amp;laquo;..&amp;raquo;) или o иметь префиксы, которые не соответствуют Request-URI (с использованием правил сравнения, определенных в &lt;a href=&quot;https://tools.ietf.org/html/rfc2616#section-3.2.3&quot;&gt;разделе 3.2.3 [RFC2616]&lt;/a&gt; ). Идентификаторы коллекций ДОЛЖНЫ заканчиваться символом '/'.</target>
+        </trans-unit>
+        <trans-unit id="2c75d09b30def3f5acce02670c0f8d304787deb1" translate="yes" xml:space="preserve">
+          <source>URNs</source>
+          <target state="translated">URNs</target>
+        </trans-unit>
+        <trans-unit id="09716c44992b8bceefcd6d77921ff9ec06e2764d" translate="yes" xml:space="preserve">
+          <source>USB</source>
+          <target state="translated">USB</target>
+        </trans-unit>
+        <trans-unit id="463d4baccb11d04bd39b50170d5669b1473a3d3e" translate="yes" xml:space="preserve">
+          <source>UTF-8 is now well-supported and the overwhelmingly preferred character encoding. To &lt;a href=&quot;https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy&quot;&gt;guarantee better privacy through less configuration-based entropy&lt;/a&gt;, all browsers omit the &lt;code&gt;Accept-Charset&lt;/code&gt; header: Internet Explorer 8+, Safari 5+, Opera 11+, Firefox 10+ and Chrome 27+ no longer send it.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="3395f08e982fbccb7c267f1152a8f77ff4f3d2ba" translate="yes" xml:space="preserve">
+          <source>Unconstrained multiple range requests are susceptible to denial-of-
+   service attacks because the effort required to request many
+   overlapping ranges of the same data is tiny compared to the time,
+   memory, and bandwidth consumed by attempting to serve the requested
+   data in many parts.  Servers ought to ignore, coalesce, or reject
+   egregious range requests, such as requests for more than two
+   overlapping ranges or for many small ranges in a single set,
+   particularly when the ranges are requested out of order for no
+   apparent reason.  Multipart range requests are not designed to
+   support random access.</source>
+          <target state="translated">Неограниченные множественные запросы диапазона чувствительны к атакам типа &quot;отказ в обслуживании&quot;,потому что усилия,необходимые для запроса многих перекрывающихся диапазонов одних и тех же данных крошечные по сравнению с временем,памятью и пропускной способностью,потребляемой при попытке обслуживать запрашиваемые данные во многих частях.Серверы должны игнорировать,объединять или отклонять вопиющие запросы диапазонов,такие как запросы для более чем двух перекрывающихся диапазонов или для многих малых диапазонов в одном наборе,особенно когда диапазоны запрашиваются не в порядке без видимой причины.Запросы на множественные диапазоны не предназначены для поддержки случайного доступа.</target>
+        </trans-unit>
+        <trans-unit id="87b5a91171602746648bcc818bbb122d7646769d" translate="yes" xml:space="preserve">
+          <source>Undeprecates &lt;code&gt;frame-src&lt;/code&gt;.</source>
+          <target state="translated">Не устаревает &lt;code&gt;frame-src&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="7f3058bceb865d591bd6a47330d0826684d098a7" translate="yes" xml:space="preserve">
+          <source>Under construction. The origin server is currently testing its communication of tracking status.</source>
+          <target state="translated">В стадии строительства.В настоящее время сервер происхождения тестирует свою связь отслеживание статуса.</target>
+        </trans-unit>
+        <trans-unit id="93bb4b1c6ee8c5d136c3ae4245fe9019094c3bdf" translate="yes" xml:space="preserve">
+          <source>Understanding The Vary Header - Smashing Magazine</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="4821ae5432f25746ffce2357d74178373c8cf2dd" translate="yes" xml:space="preserve">
+          <source>Understanding XSS Auditor &amp;ndash; Virtue Security</source>
+          <target state="translated">Понимание XSS Auditor - Virtue Security</target>
+        </trans-unit>
+        <trans-unit id="b2f6280ce256054e508e4d6c0d2aed7f16b9ceb5" translate="yes" xml:space="preserve">
+          <source>Unfortunately, the HTTP standard does not specify the format of the page allowing to choose between the available resource, which prevents to easily automatize the process. Besides falling back to the &lt;em&gt;server-driven negotiation&lt;/em&gt;, this method is almost always used in conjunction with scripting, especially with JavaScript redirection: after having checked for the negotiation criteria, the script performs the redirection. A second problem is that one more request is needed in order to fetch the real resource, slowing the availability of the resource to the user.</source>
+          <target state="translated">К сожалению, в стандарте HTTP не указан формат страницы, позволяющий выбирать между доступными ресурсами, что не позволяет легко автоматизировать процесс. Помимо возврата к &lt;em&gt;согласованию&lt;/em&gt; , &lt;em&gt;управляемому сервером&lt;/em&gt; , этот метод почти всегда используется в сочетании со сценарием, особенно с перенаправлением JavaScript: после проверки критериев согласования сценарий выполняет перенаправление. Вторая проблема заключается в том, что для получения реального ресурса требуется еще один запрос, что замедляет доступность ресурса для пользователя.</target>
+        </trans-unit>
+        <trans-unit id="590261af46ebe2219ba617fed793de6d03379f66" translate="yes" xml:space="preserve">
+          <source>Unfortunately, the HTTP standard does not specify the format of the page for choosing between the available resource, which prevents the process being automated. Besides falling back to the &lt;em&gt;server-driven negotiation&lt;/em&gt;, this method is almost always used in conjunction with scripting, especially with JavaScript redirection: after having checked for the negotiation criteria, the script performs the redirection. A second problem is that one more request is needed in order to fetch the real resource, slowing the availability of the resource to the user.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="eba4dbb75ad90a20a4a3d20676386c7ac0143689" translate="yes" xml:space="preserve">
+          <source>Unfortunately, things get a little inaccurate as soon as we take into account concurrency. While a client is locally modifying its new copy of the resource, a second client can fetch the same resource and do the same on its copy. What happens next is very unfortunate: when they commit back to the server, the modifications from the first client are discarded by the next client push, as this second client is unaware of the first client's changes to the resource. The decision on who wins, is not communicated to the other party. Which client's changes are to be kept, will vary with the speed they commit; this depends on the performance of the clients, of the server, and even of the human editing the document at the client. The winner will change from one time to the next. This is a &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/race_condition&quot;&gt;race condition&lt;/a&gt; and leads to problematic behaviors, which are difficult to detect and to debug:</source>
+          <target state="translated">К сожалению, все становится немного неточно, если мы принимаем во внимание параллелизм. Пока клиент локально изменяет свою новую копию ресурса, второй клиент может получить тот же ресурс и сделать то же самое со своей копией. То, что происходит дальше, очень прискорбно: когда они фиксируются обратно на сервер, изменения от первого клиента отбрасываются при следующем нажатии клиента, так как этот второй клиент не знает об изменениях ресурса первым клиентом. Решение о том, кто победит, не сообщается другой стороне. Какие изменения клиента должны быть сохранены, зависит от скорости их фиксации; это зависит от производительности клиентов, сервера и даже человека, редактирующего документ на клиенте. Победитель будет меняться от одного раза к другому. Это состояние &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/race_condition&quot;&gt;гонки&lt;/a&gt;и приводит к проблемному поведению, которое трудно обнаружить и отладить:</target>
+        </trans-unit>
+        <trans-unit id="9d6157fa48e6c6221f34d6df81ed35de4c9f2058" translate="yes" xml:space="preserve">
+          <source>Uniform Resource Identifier (URI): Generic Syntax</source>
+          <target state="translated">Унифицированный идентификатор ресурса (URI):Общий синтаксис</target>
+        </trans-unit>
+        <trans-unit id="5331c3d8fb4de87de8b7a5cbf7bd8ea20f192adf" translate="yes" xml:space="preserve">
+          <source>Uniform Resource Identifiers (URIs) [&lt;a href=&quot;https://tools.ietf.org/html/rfc3986&quot;&gt;RFC3986&lt;/a&gt;] are used throughout
+   HTTP as the means for identifying resources (&lt;a href=&quot;https://tools.ietf.org/html/rfc7231#section-2&quot;&gt;Section&amp;nbsp;2 of [RFC7231]&lt;/a&gt;).
+   URI references are used to target requests, indicate redirects, and
+   define relationships.
+
+   The definitions of &quot;URI-reference&quot;, &quot;absolute-URI&quot;, &quot;relative-part&quot;,
+   &quot;scheme&quot;, &quot;authority&quot;, &quot;port&quot;, &quot;host&quot;, &quot;path-abempty&quot;, &quot;segment&quot;,
+   &quot;query&quot;, and &quot;fragment&quot; are adopted from the URI generic syntax.  An
+   &quot;absolute-path&quot; rule is defined for protocol elements that can
+   contain a non-empty path component.  (This rule differs slightly from
+   the path-abempty rule of &lt;a href=&quot;https://tools.ietf.org/html/rfc3986&quot;&gt;RFC 3986&lt;/a&gt;, which allows for an empty path to
+   be used in references, and path-absolute rule, which does not allow
+   paths that begin with &quot;//&quot;.)  A &quot;partial-URI&quot; rule is defined for
+   protocol elements that can contain a relative URI but not a fragment
+   component.
+
+     URI-reference = &amp;lt;URI-reference, see &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-4.1&quot;&gt;[RFC3986], Section&amp;nbsp;4.1&lt;/a&gt;&amp;gt;
+     absolute-URI  = &amp;lt;absolute-URI, see &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-4.3&quot;&gt;[RFC3986], Section&amp;nbsp;4.3&lt;/a&gt;&amp;gt;
+     relative-part = &amp;lt;relative-part, see &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-4.2&quot;&gt;[RFC3986], Section&amp;nbsp;4.2&lt;/a&gt;&amp;gt;
+     scheme        = &amp;lt;scheme, see &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.1&quot;&gt;[RFC3986], Section&amp;nbsp;3.1&lt;/a&gt;&amp;gt;
+     authority     = &amp;lt;authority, see &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.2&quot;&gt;[RFC3986], Section&amp;nbsp;3.2&lt;/a&gt;&amp;gt;
+     uri-host      = &amp;lt;host, see &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.2.2&quot;&gt;[RFC3986], Section&amp;nbsp;3.2.2&lt;/a&gt;&amp;gt;
+     port          = &amp;lt;port, see &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.2.3&quot;&gt;[RFC3986], Section&amp;nbsp;3.2.3&lt;/a&gt;&amp;gt;
+     path-abempty  = &amp;lt;path-abempty, see &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.3&quot;&gt;[RFC3986], Section&amp;nbsp;3.3&lt;/a&gt;&amp;gt;
+     segment       = &amp;lt;segment, see &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.3&quot;&gt;[RFC3986], Section&amp;nbsp;3.3&lt;/a&gt;&amp;gt;
+     query         = &amp;lt;query, see &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.4&quot;&gt;[RFC3986], Section&amp;nbsp;3.4&lt;/a&gt;&amp;gt;
+     fragment      = &amp;lt;fragment, see &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.5&quot;&gt;[RFC3986], Section&amp;nbsp;3.5&lt;/a&gt;&amp;gt;
+
+     absolute-path = 1*( &quot;/&quot; segment )
+     partial-URI   = relative-part [ &quot;?&quot; query ]
+
+   Each protocol element in HTTP that allows a URI reference will
+   indicate in its ABNF production whether the element allows any form
+   of reference (URI-reference), only a URI in absolute form
+   (absolute-URI), only the path and optional query components, or some
+   combination of the above.  Unless otherwise indicated, URI references
+   are parsed relative to the effective request URI (&lt;a href=&quot;#section-5.5&quot;&gt;Section 5.5&lt;/a&gt;).</source>
+          <target state="translated">Унифицированные идентификаторы ресурсов (URI) [ &lt;a href=&quot;https://tools.ietf.org/html/rfc3986&quot;&gt;RFC3986&lt;/a&gt; ] используются в HTTP как средство идентификации ресурсов ( &lt;a href=&quot;https://tools.ietf.org/html/rfc7231#section-2&quot;&gt;раздел 2 [RFC7231]&lt;/a&gt; ). Ссылки URI используются для нацеливания запросов, указания перенаправления и определения отношений. Определения &amp;laquo;URI-ссылка&amp;raquo;, &amp;laquo;абсолютный-URI&amp;raquo;, &amp;laquo;относительная-часть&amp;raquo;, &amp;laquo;схема&amp;raquo;, &amp;laquo;полномочия&amp;raquo;, &amp;laquo;порт&amp;raquo;, &amp;laquo;хост&amp;raquo;, &amp;laquo;путь-не пусто&amp;raquo;, &amp;laquo;сегмент&amp;raquo;, &amp;laquo;запрос&amp;raquo; , и &amp;laquo;фрагмент&amp;raquo; взяты из универсального синтаксиса URI. Правило &amp;laquo;абсолютного пути&amp;raquo; определено для элементов протокола, которые могут содержать непустой компонент пути. (Это правило немного отличается от правила отсутствия пути в &lt;a href=&quot;https://tools.ietf.org/html/rfc3986&quot;&gt;RFC 3986&lt;/a&gt;, которое позволяет использовать в ссылках пустой путь, и правило абсолютного пути, которое не допускает пути, начинающиеся с &quot;//&quot;.) Правило &quot;частичного URI&quot; определяется для элементов протокола, которые могут содержать относительный URI, но не компонент фрагмента. URI-reference = &amp;lt;URI-ссылка, см. &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-4.1&quot;&gt;[RFC3986], раздел 4.1&lt;/a&gt; &amp;gt; absolute-URI = &amp;lt;absolute-URI, см. &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-4.3&quot;&gt;[RFC3986], раздел 4.3&lt;/a&gt; &amp;gt; relative-part = &amp;lt;relative-part, см. &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-4.2&quot;&gt;[RFC3986], раздел 4.2&lt;/a&gt; &amp;gt; scheme = &amp;lt;scheme, см. &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.1&quot;&gt;[RFC3986], раздел 3.1&lt;/a&gt; &amp;gt; Authority = &amp;lt; &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.2&quot;&gt;Authority&lt;/a&gt; , см. [RFC3986], раздел 3.2 &amp;gt; uri-host = &amp;lt;host, см. &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.2.2&quot;&gt;[RFC3986], раздел 3.2.2&lt;/a&gt; &amp;gt; port = &amp;lt;порт, см&lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.2.3&quot;&gt;[RFC3986], раздел 3.2.3&lt;/a&gt; &amp;gt; path-abempty = &amp;lt;path-abempty, см. &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.3&quot;&gt;[RFC3986], раздел 3.3&lt;/a&gt; &amp;gt; segment = &amp;lt;сегмент, см. &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.3&quot;&gt;[RFC3986], раздел 3.3&lt;/a&gt; &amp;gt; query = &amp;lt;query, см. &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.4&quot;&gt;[RFC3986], раздел 3.4&lt;/a&gt; &amp;gt; fragment = &amp;lt;fragment, см. &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.5&quot;&gt;[RFC3986], раздел 3.5.&lt;/a&gt;&amp;gt; absolute-path = 1 * (сегмент &quot;/&quot;) partial-URI = relative-part [&quot;?&quot; query] Каждый элемент протокола в HTTP, который разрешает ссылку на URI, будет указывать в своем продукте ABNF, допускает ли элемент любую форму ссылки (URI-ссылку), только URI в абсолютной форме (absolute-URI), только путь и необязательный запрос компоненты или некоторая комбинация вышеперечисленного. Если не указано иное, ссылки URI анализируются относительно действующего URI запроса ( &lt;a href=&quot;#section-5.5&quot;&gt;раздел 5.5&lt;/a&gt; ).</target>
+        </trans-unit>
+        <trans-unit id="326e61a6296432fcad1af300f3c896bd0e9d0435" translate="yes" xml:space="preserve">
+          <source>Uniform Resource Names</source>
+          <target state="translated">Унифицированные имена ресурсов</target>
+        </trans-unit>
+        <trans-unit id="0f25e6e17d90b442b15b6c3491b583d0eb8a4b09" translate="yes" xml:space="preserve">
+          <source>Unless dealing with a very old system, which doesn't support a persistent connection, there is no compelling reason to use this model.</source>
+          <target state="translated">Если только мы не имеем дело с очень старой системой,которая не поддерживает постоянное соединение,нет никаких веских причин использовать эту модель.</target>
+        </trans-unit>
+        <trans-unit id="7df067eefe56c18b36ec5afe619983a9a5702d6c" translate="yes" xml:space="preserve">
+          <source>Unless specifically constrained by a cache-control (&lt;a href=&quot;#section-14.9&quot;&gt;section 14.9&lt;/a&gt;)
+   directive, a caching system MAY always store a successful response
+   (see &lt;a href=&quot;#section-13.8&quot;&gt;section 13.8&lt;/a&gt;) as a cache entry, MAY return it without validation
+   if it is fresh, and MAY return it after successful validation. If
+   there is neither a cache validator nor an explicit expiration time
+   associated with a response, we do not expect it to be cached, but
+   certain caches MAY violate this expectation (for example, when little
+   or no network connectivity is available). A client can usually detect
+   that such a response was taken from a cache by comparing the Date
+   header to the current time.
+
+      Note: some HTTP/1.0 caches are known to violate this expectation
+      without providing any Warning.
+
+   However, in some cases it might be inappropriate for a cache to
+   retain an entity, or to return it in response to a subsequent
+   request. This might be because absolute semantic transparency is
+   deemed necessary by the service author, or because of security or
+   privacy considerations. Certain cache-control directives are
+   therefore provided so that the server can indicate that certain
+   resource entities, or portions thereof, are not to be cached
+   regardless of other considerations.
+
+   Note that &lt;a href=&quot;#section-14.8&quot;&gt;section 14.8&lt;/a&gt; normally prevents a shared cache from saving
+   and returning a response to a previous request if that request
+   included an Authorization header.
+
+   A response received with a status code of 200, 203, 206, 300, 301 or
+   410 MAY be stored by a cache and used in reply to a subsequent
+   request, subject to the expiration mechanism, unless a cache-control
+   directive prohibits caching. However, a cache that does not support
+   the Range and Content-Range headers MUST NOT cache 206 (Partial
+   Content) responses.
+
+   A response received with any other status code (e.g. status codes 302
+   and 307) MUST NOT be returned in a reply to a subsequent request
+   unless there are cache-control directives or another header(s) that
+   explicitly allow it. For example, these include the following: an
+   Expires header (&lt;a href=&quot;#section-14.21&quot;&gt;section 14.21&lt;/a&gt;); a &quot;max-age&quot;, &quot;s-maxage&quot;,  &quot;must-
+   revalidate&quot;, &quot;proxy-revalidate&quot;, &quot;public&quot; or &quot;private&quot; cache-control
+   directive (&lt;a href=&quot;#section-14.9&quot;&gt;section 14.9&lt;/a&gt;).</source>
+          <target state="translated">Если специально не ограничено директивой cache-control ( &lt;a href=&quot;#section-14.9&quot;&gt;раздел 14.9&lt;/a&gt; ), система кэширования МОЖЕТ всегда сохранять успешный ответ (см. &lt;a href=&quot;#section-13.8&quot;&gt;Раздел 13.8&lt;/a&gt;) как запись кэша, МОЖЕТ вернуть ее без проверки, если она свежая, и МОЖЕТ вернуть ее после успешной проверки. Если нет ни валидатора кеша, ни явного времени истечения срока действия, связанного с ответом, мы не ожидаем, что он будет кэшироваться, но некоторые кеши МОГУТ нарушить это ожидание (например, когда доступ к сети ограничен или отсутствует). Обычно клиент может определить, что такой ответ был получен из кеша, сравнив заголовок Date с текущим временем. Примечание. Известно, что некоторые кеши HTTP / 1.0 нарушают это ожидание без предупреждения. Однако в некоторых случаях для кэша может быть неприемлемым сохранять объект или возвращать его в ответ на последующий запрос. Это может быть связано с тем, что автор службы считает необходимой абсолютную семантическую прозрачность,или по соображениям безопасности или конфиденциальности. Поэтому предусмотрены определенные директивы управления кешем, чтобы сервер мог указать, что определенные объекты ресурсов или их части не должны кэшироваться независимо от других соображений. Обратите внимание, что&lt;a href=&quot;#section-14.8&quot;&gt;раздел 14.8&lt;/a&gt; обычно не позволяет общему кешу сохранять и возвращать ответ на предыдущий запрос, если этот запрос включал заголовок авторизации. Ответ, полученный с кодом состояния 200, 203, 206, 300, 301 или 410, МОЖЕТ быть сохранен в кэше и использоваться в ответ на последующий запрос с учетом механизма истечения срока действия, если директива управления кешем не запрещает кэширование. Однако кэш, который не поддерживает заголовки Range и Content-Range, НЕ ДОЛЖЕН кэшировать ответы 206 (частичное содержимое). Ответ, полученный с любым другим кодом состояния (например, кодами состояния 302 и 307), НЕ ДОЛЖЕН возвращаться в ответе на последующий запрос, если нет директив управления кешем или других заголовков, которые явно разрешают это. Например, они включают следующее: заголовок Expires (&lt;a href=&quot;#section-14.21&quot;&gt;раздел 14.21&lt;/a&gt; ); директивы &amp;laquo;max-age&amp;raquo;, &amp;laquo;s-maxage&amp;raquo;, &amp;laquo;must-revalidate&amp;raquo;, &amp;laquo;proxy-revalidate&amp;raquo;, &amp;laquo;public&amp;raquo; или &amp;laquo;private&amp;raquo; ( &lt;a href=&quot;#section-14.9&quot;&gt;раздел 14.9&lt;/a&gt; ).</target>
+        </trans-unit>
+        <trans-unit id="6575621a518b7b48c43d42321f561d5d0b99d27e" translate="yes" xml:space="preserve">
+          <source>Unless the origin server explicitly prohibits the caching of their
+   responses, the application of GET and HEAD methods to any resources
+   SHOULD NOT have side effects that would lead to erroneous behavior if
+   these responses are taken from a cache. They MAY still have side
+   effects, but a cache is not required to consider such side effects in
+   its caching decisions. Caches are always expected to observe an
+   origin server's explicit restrictions on caching.
+
+   We note one exception to this rule: since some applications have
+   traditionally used GETs and HEADs with query URLs (those containing a
+   &quot;?&quot; in the rel_path part) to perform operations with significant side
+   effects, caches MUST NOT treat responses to such URIs as fresh unless
+   the server provides an explicit expiration time. This specifically
+   means that responses from HTTP/1.0 servers for such URIs SHOULD NOT
+   be taken from a cache. See &lt;a href=&quot;#section-9.1.1&quot;&gt;section 9.1.1&lt;/a&gt; for related information.</source>
+          <target state="translated">Если исходный сервер явно не запрещает кэширование своих ответов, применение методов GET и HEAD к любым ресурсам НЕ ДОЛЖНО иметь побочных эффектов, которые могут привести к ошибочному поведению, если эти ответы будут взяты из кеша. Они МОГУТ по-прежнему иметь побочные эффекты, но кэш не требуется, чтобы учитывать такие побочные эффекты при принятии решений о кешировании. Кеши всегда должны соблюдать явные ограничения исходного сервера на кэширование. Мы отмечаем одно исключение из этого правила: поскольку некоторые приложения традиционно использовали GET и HEAD с URL-адресами запросов (те, которые содержат &amp;laquo;?&amp;raquo; В части rel_path) для выполнения операций со значительными побочными эффектами, кеши НЕ ДОЛЖНЫ рассматривать ответы на такие URI как свежие. если сервер не предоставляет явное время истечения срока действия.Это, в частности, означает, что ответы от серверов HTTP / 1.0 для таких URI НЕ ДОЛЖНЫ браться из кеша. Видеть&lt;a href=&quot;#section-9.1.1&quot;&gt;раздел 9.1.1&lt;/a&gt; для получения дополнительной информации.</target>
+        </trans-unit>
+        <trans-unit id="a882eb5ce8619bac0f4ca38a47d118a374f590ac" translate="yes" xml:space="preserve">
+          <source>Unless you have a very specific immediate need, don't use this deprecated technique; switch to HTTP/2 instead. In HTTP/2, domain sharding is no longer useful: the HTTP/2 connection is able to handle parallel unprioritized requests very well. Domain sharding is even detrimental to performance. Most HTTP/2 implementations use a technique called &lt;a href=&quot;https://daniel.haxx.se/blog/2016/08/18/http2-connection-coalescing/&quot;&gt;connection coalescing&lt;/a&gt; to revert eventual domain sharding.</source>
+          <target state="translated">Не используйте эту устаревшую технику, если у вас нет очень конкретной сиюминутной потребности; вместо этого переключитесь на HTTP / 2. В HTTP / 2 сегментирование домена больше не используется: соединение HTTP / 2 может очень хорошо обрабатывать параллельные запросы без приоритета. Шардинг домена даже ухудшает производительность. Большинство реализаций HTTP / 2 используют метод, называемый &lt;a href=&quot;https://daniel.haxx.se/blog/2016/08/18/http2-connection-coalescing/&quot;&gt;объединением соединений,&lt;/a&gt; для отмены возможного сегментирования домена.</target>
+        </trans-unit>
+        <trans-unit id="955f79db78c5cf8385c47043fef1a0ffa744352f" translate="yes" xml:space="preserve">
+          <source>Unlike &lt;a href=&quot;#Simple_requests&quot;&gt;&amp;ldquo;simple requests&amp;rdquo; (discussed above)&lt;/a&gt;, &quot;preflighted&quot; requests first send an HTTP request by the &lt;a href=&quot;methods/options&quot;&gt;&lt;code&gt;OPTIONS&lt;/code&gt;&lt;/a&gt; method to the resource on the other domain, in order to determine whether the actual request is safe to send. Cross-site requests are preflighted like this since they may have implications to user data.</source>
+          <target state="translated">В отличие от &lt;a href=&quot;#Simple_requests&quot;&gt;&amp;laquo;простых запросов&amp;raquo; (обсужденных выше)&lt;/a&gt; , &amp;laquo;предварительные&amp;raquo; запросы сначала отправляют HTTP-запрос методом &lt;a href=&quot;methods/options&quot;&gt; &lt;code&gt;OPTIONS&lt;/code&gt; &lt;/a&gt; к ресурсу в другом домене, чтобы определить, является ли фактический запрос безопасным для отправки. Межсайтовые запросы предварительно обрабатываются таким образом, поскольку они могут иметь последствия для пользовательских данных.</target>
+        </trans-unit>
+        <trans-unit id="d273c3c1c262b7b14dbca55da7ae721b5a1b7cec" translate="yes" xml:space="preserve">
+          <source>Unlike &lt;a href=&quot;#Simple_requests&quot;&gt;&amp;ldquo;simple requests&amp;rdquo; (discussed above)&lt;/a&gt;, for &quot;preflighted&quot; requests the browser first sends an HTTP request using the &lt;a href=&quot;methods/options&quot;&gt;&lt;code&gt;OPTIONS&lt;/code&gt;&lt;/a&gt; method to the resource on the other origin, in order to determine if the actual request is safe to send. Cross-site requests are preflighted like this since they may have implications to user data.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="b6e7352000385c24773b5c3b97548547d27dfcec" translate="yes" xml:space="preserve">
+          <source>Unlike subsequent evolutions, there were no HTTP headers, meaning that only HTML files could be transmitted, but no other type of documents. There were no status or error codes: in case of a problem, a specific HTML file was send back with the description of the problem contained in it, for human consumption.</source>
+          <target state="translated">В отличие от последующих эволюций,заголовков HTTP не было,то есть можно было передавать только HTML-файлы,но не было других типов документов.Не было ни статуса,ни кодов ошибок:в случае возникновения проблемы конкретный HTML-файл отправлялся обратно с описанием проблемы,содержащимся в нем,для потребления человеком.</target>
+        </trans-unit>
+        <trans-unit id="dcc5e76d5034fe1dc84b95117a89364e895b52d1" translate="yes" xml:space="preserve">
+          <source>Unlike the previous case, browser history will consider non-www and www URLs as independent entries.</source>
+          <target state="translated">В отличие от предыдущего случая,история браузера будет рассматривать не-www и www URL как независимые записи.</target>
+        </trans-unit>
+        <trans-unit id="7607e9b76ed3569248e88c3e032d8ff230e82e7b" translate="yes" xml:space="preserve">
+          <source>Unoptimized (poorly compressed) images</source>
+          <target state="translated">неоптимизированные (плохо сжатые)изображения</target>
+        </trans-unit>
+        <trans-unit id="b89f58bc5f8bec30721ee6218fbce69f661ae508" translate="yes" xml:space="preserve">
+          <source>Unoptimized images</source>
+          <target state="translated">Оптимизированные изображения</target>
+        </trans-unit>
+        <trans-unit id="245e0bd02f62833b644643c9a2e8742e64c2dd7a" translate="yes" xml:space="preserve">
+          <source>Unrecognized markup in an Atom Publishing Protocol document is
+   considered &quot;foreign markup&quot; as defined in &lt;a href=&quot;#section-6&quot;&gt;Section 6&lt;/a&gt; of the Atom
+   Syndication Format [&lt;a href=&quot;https://tools.ietf.org/html/rfc4287&quot;&gt;RFC4287&lt;/a&gt;].  Foreign markup can be used anywhere
+   within a Category or Service Document unless it is explicitly
+   forbidden.  Processors that encounter foreign markup MUST NOT stop
+   processing and MUST NOT signal an error.  Clients SHOULD preserve
+   foreign markup when transmitting such documents.
+
+   The namespace name &quot;&lt;a href=&quot;http://www.w3.org/2007/app&quot;&gt;http://www.w3.org/2007/app&lt;/a&gt;&quot; is reserved for
+   forward-compatible revisions of the Category and Service Document
+   types.  This does not exclude the addition of elements and attributes
+   that might not be recognized by processors conformant to this
+   specification.  Such unrecognized markup from the
+   &quot;&lt;a href=&quot;http://www.w3.org/2007/app&quot;&gt;http://www.w3.org/2007/app&lt;/a&gt;&quot; namespace MUST be treated as foreign
+   markup.</source>
+          <target state="translated">Нераспознанная разметка в документе протокола публикации Atom считается &amp;laquo;внешней разметкой&amp;raquo;, как определено в &lt;a href=&quot;#section-6&quot;&gt;разделе 6&lt;/a&gt; формата синдикации Atom [ &lt;a href=&quot;https://tools.ietf.org/html/rfc4287&quot;&gt;RFC4287&lt;/a&gt; ]. Внешняя разметка может использоваться в любом месте категории или служебного документа, если это явно не запрещено. Процессоры, обнаружившие внешнюю разметку, НЕ ДОЛЖНЫ останавливать обработку и НЕ ДОЛЖНЫ сигнализировать об ошибке. Клиентам СЛЕДУЕТ сохранять иностранную разметку при передаче таких документов. Имя пространства имен &quot; &lt;a href=&quot;http://www.w3.org/2007/app&quot;&gt;http://www.w3.org/2007/app&lt;/a&gt;&quot;зарезервировано для совместимых с будущими версиями типов документов категории и услуг. Это не исключает добавления элементов и атрибутов, которые могут не распознаваться процессорами, соответствующими этой спецификации. Такая нераспознанная разметка из&quot; &lt;a href=&quot;http://www.w3.org/2007/app&quot;&gt;http: // www. w3.org/2007/app&lt;/a&gt; &quot;ДОЛЖНО рассматриваться как внешняя разметка.</target>
+        </trans-unit>
+        <trans-unit id="b3306d2fbd13d337790c497ed7805bf12ebd8587" translate="yes" xml:space="preserve">
+          <source>Unrecognized markup in an Atom Publishing Protocol document is
+   considered &quot;foreign markup&quot; as defined in &lt;a href=&quot;#section-6&quot;&gt;Section 6&lt;/a&gt; of the Atom
+   Syndication Format [&lt;a href=&quot;https://tools.ietf.org/html/rfc4287&quot;&gt;RFC4287&lt;/a&gt;].  Foreign markup can be used anywhere
+   within a Category or Service Document unless it is explicitly
+   forbidden.  Processors that encounter foreign markup MUST NOT stop
+   processing and MUST NOT signal an error.  Clients SHOULD preserve
+   foreign markup when transmitting such documents.
+
+   The namespace name &quot;&lt;a href=&quot;https://www.w3.org/2007/app&quot;&gt;http://www.w3.org/2007/app&lt;/a&gt;&quot; is reserved for
+   forward-compatible revisions of the Category and Service Document
+   types.  This does not exclude the addition of elements and attributes
+   that might not be recognized by processors conformant to this
+   specification.  Such unrecognized markup from the
+   &quot;&lt;a href=&quot;https://www.w3.org/2007/app&quot;&gt;http://www.w3.org/2007/app&lt;/a&gt;&quot; namespace MUST be treated as foreign
+   markup.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="de81198fe40f54ca54fd480498f47c5bd2c4979b" translate="yes" xml:space="preserve">
+          <source>Unsafe eval expressions</source>
+          <target state="translated">Небезопасные выражения оценки</target>
+        </trans-unit>
+        <trans-unit id="83339b270595929064cc25f1d47c8f0230812a35" translate="yes" xml:space="preserve">
+          <source>Unsafe inline script</source>
+          <target state="translated">небезопасный встроенный скрипт</target>
+        </trans-unit>
+        <trans-unit id="a3661e5b83227307acd4850c07a9aaa4a3205ae7" translate="yes" xml:space="preserve">
+          <source>Unsafe inline styles</source>
+          <target state="translated">Небезопасные встроенные стили</target>
+        </trans-unit>
+        <trans-unit id="b9c54338e2e3842fa7755217571c1728460781da" translate="yes" xml:space="preserve">
+          <source>Unsafe style expressions</source>
+          <target state="translated">Небезопасные выражения стиля</target>
+        </trans-unit>
+        <trans-unit id="51e569288fd4c9764275c80909467d65bb077394" translate="yes" xml:space="preserve">
+          <source>Unsized media</source>
+          <target state="translated">Неразмерные носители</target>
+        </trans-unit>
+        <trans-unit id="5428a4130e5ace79ec66056cc912fe9f4aab15ba" translate="yes" xml:space="preserve">
+          <source>Unsupported digests</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="03d0f6e963af156d3bbc20c425d63949186d2932" translate="yes" xml:space="preserve">
+          <source>Until browsers catch up with the spec, you may be able to work around this limitation by doing one or both of the following:</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="f9c20faccf27f6079a0458f999820126675b4735" translate="yes" xml:space="preserve">
+          <source>Until version 75, downloads for files with this header would fail in Chrome. See &lt;a href=&quot;https://crbug.com/952834&quot;&gt;bug 952834&lt;/a&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="8eb9592768ded8c17e4696edcc1f40830d0ef453" translate="yes" xml:space="preserve">
+          <source>Until version 75, downloads for files with this header would fail in WebView. See &lt;a href=&quot;https://crbug.com/952834&quot;&gt;bug 952834&lt;/a&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="56a7c8e0f8f826b048cc60b6edd36eb21796fb60" translate="yes" xml:space="preserve">
+          <source>Updated. The request resulted in a potential change to the tracking status applicable to this user, user agent, or device.</source>
+          <target state="translated">Обновлено.Запрос привел к потенциальному изменению статуса отслеживания,применимого к данному пользователю,агенту пользователя или устройству.</target>
+        </trans-unit>
+        <trans-unit id="a6f47e00e036c5589eb12e237894b37fb015d365" translate="yes" xml:space="preserve">
+          <source>Upgrade</source>
+          <target state="translated">Upgrade</target>
+        </trans-unit>
+        <trans-unit id="ac2a73c827836daeaf2402394c054c2277994448" translate="yes" xml:space="preserve">
+          <source>Upgrade (RFC 2616)</source>
+          <target state="translated">Обновление (RFC 2616)</target>
+        </trans-unit>
+        <trans-unit id="541adf48138ad8391190feed85e1730b3e897f18" translate="yes" xml:space="preserve">
+          <source>Upgrade Insecure Requests</source>
+          <target state="translated">Обновление Небезопасные запросы</target>
+        </trans-unit>
+        <trans-unit id="03453046fa615930ff26806bfd5e6e667dba241d" translate="yes" xml:space="preserve">
+          <source>Upgrade Insecure Requests&lt;br/&gt;&lt;small&gt;The definition of 'upgrade-insecure-requests' in that specification.&lt;/small&gt;</source>
+          <target state="translated">Небезопасные запросы &lt;br/&gt;&lt;small&gt;на обновление Определение &amp;laquo;небезопасных запросов на обновление&amp;raquo; в этой спецификации.&lt;/small&gt;</target>
+        </trans-unit>
+        <trans-unit id="61c6967492e019e22cb265be59268846e0812c5e" translate="yes" xml:space="preserve">
+          <source>Upgrade-Insecure-Requests</source>
+          <target state="translated">Upgrade-Insecure-Requests</target>
+        </trans-unit>
+        <trans-unit id="3b1e9dd129f9691779584493ef0cbd2760709427" translate="yes" xml:space="preserve">
+          <source>Upgrading HTTP/1.1 Connections</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="373052ca50b595448fddb3ae3555f3abe2335a7b" translate="yes" xml:space="preserve">
+          <source>Upgrading an HTTP connection to use &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/TLS&quot;&gt;TLS&lt;/a&gt; uses the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Upgrade&quot;&gt;&lt;code&gt;Upgrade&lt;/code&gt;&lt;/a&gt; header with the token &lt;code&gt;&quot;TLS/1.0&quot;&lt;/code&gt;. If the switch is made successfully, the original request (which included &lt;code&gt;Upgrade&lt;/code&gt;) is completed as normal, but on the TLS connection.</source>
+          <target state="translated">При обновлении HTTP-соединения для использования &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/TLS&quot;&gt;TLS&lt;/a&gt; используется заголовок &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Upgrade&quot;&gt; &lt;code&gt;Upgrade&lt;/code&gt; &lt;/a&gt; с токеном &lt;code&gt;&quot;TLS/1.0&quot;&lt;/code&gt; . Если переключение выполнено успешно, исходный запрос (который включал &lt;code&gt;Upgrade&lt;/code&gt; ) завершается как обычно, но для TLS-соединения.</target>
+        </trans-unit>
+        <trans-unit id="ab6bbb4d08469c650377ccf5de1a9d9d4253b906" translate="yes" xml:space="preserve">
+          <source>Upgrading to TLS Within HTTP/1.1</source>
+          <target state="translated">Обновление до TLS в пределах HTTP/1.1</target>
+        </trans-unit>
+        <trans-unit id="4a01efdfa6f7b943dbd14d96f1bbda14ed6ca745" translate="yes" xml:space="preserve">
+          <source>Upgrading to a WebSocket connection</source>
+          <target state="translated">Обновление до соединения с WebSocket</target>
+        </trans-unit>
+        <trans-unit id="0df7fec503cc297ba369a863eb42d823f8a3ecf0" translate="yes" xml:space="preserve">
+          <source>Upgrading to an HTTP/2 connection</source>
+          <target state="translated">Обновление до HTTP/2 соединения</target>
+        </trans-unit>
+        <trans-unit id="0bb18642b70b9f8a9c12ccf39487328f306b8e19" translate="yes" xml:space="preserve">
+          <source>Usage</source>
+          <target state="translated">Usage</target>
+        </trans-unit>
+        <trans-unit id="92d99b032888bf69448943e3813f272f0f43c556" translate="yes" xml:space="preserve">
+          <source>Usage notes</source>
+          <target state="translated">Примечания к использованию</target>
+        </trans-unit>
+        <trans-unit id="206d556a43a2ee8de81319e120005dc792bee741" translate="yes" xml:space="preserve">
+          <source>Usage of &lt;code&gt;isInNet()&lt;/code&gt;, &lt;code&gt;isResolvable()&lt;/code&gt; and &lt;code&gt;dnsResolve()&lt;/code&gt; functions should be carefully considered, as they require the DNS server to be consulted. All the other autoconfig-related functions are mere string-matching functions that don't require the use of a DNS server. If a proxy is used, the proxy will perform its DNS lookup which would double the impact on the DNS server. Most of the time these functions are not necessary to achieve the desired result.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="609254f79607923f3629c1a1e3f48cf232c1eba4" translate="yes" xml:space="preserve">
+          <source>Use SOCKS if the primary proxy goes down.</source>
+          <target state="translated">Используйте SOCKS,если основной прокси-сервер не работает.</target>
+        </trans-unit>
+        <trans-unit id="8b4ff35cb43293441d2110cc488f4176d62f368d" translate="yes" xml:space="preserve">
+          <source>Use and Interpretation of HTTP Version Numbers</source>
+          <target state="translated">Использование и интерпретация номеров версий HTTP</target>
+        </trans-unit>
         <trans-unit id="14a29ba383c84d15925a42f871530f52904ae908" translate="yes" xml:space="preserve">
           <source>Use cases</source>
           <target state="translated">Случаи использования</target>
@@ -340,6 +785,18 @@
         <trans-unit id="381f4958cb832cb4d7530e7e9118ab47b34808f2" translate="yes" xml:space="preserve">
           <source>Using the &lt;a href=&quot;http://en.wikipedia.org/wiki/Zlib&quot;&gt;zlib&lt;/a&gt; structure is accepted as a transfer coding name.</source>
           <target state="translated">Использование структуры &lt;a href=&quot;http://en.wikipedia.org/wiki/Zlib&quot;&gt;zlib&lt;/a&gt; принято в качестве имени кодирования передачи.</target>
+        </trans-unit>
+        <trans-unit id="44767d33bedf444cde7332b00fdb1355991b0e7b" translate="yes" xml:space="preserve">
+          <source>Using the &lt;a href=&quot;https://en.wikipedia.org/wiki/Zlib&quot;&gt;zlib&lt;/a&gt; structure (defined in &lt;a href=&quot;https://tools.ietf.org/html/rfc1950&quot;&gt;RFC 1950&lt;/a&gt;) with the &lt;a href=&quot;https://en.wikipedia.org/wiki/DEFLATE&quot;&gt;&lt;em&gt;deflate&lt;/em&gt;&lt;/a&gt; compression algorithm (defined in &lt;a href=&quot;https://tools.ietf.org/html/rfc1951&quot;&gt;RFC 1951&lt;/a&gt;).</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="19b1073362660f5ecde9f927a19d1af3f3a93d1f" translate="yes" xml:space="preserve">
+          <source>Using the &lt;a href=&quot;https://en.wikipedia.org/wiki/Zlib&quot;&gt;zlib&lt;/a&gt; structure (defined in &lt;a href=&quot;https://tools.ietf.org/html/rfc1950&quot;&gt;RFC 1950&lt;/a&gt;), with the &lt;a href=&quot;https://en.wikipedia.org/wiki/DEFLATE&quot;&gt;&lt;em&gt;deflate&lt;/em&gt;&lt;/a&gt; compression algorithm (defined in &lt;a href=&quot;https://tools.ietf.org/html/rfc1952&quot;&gt;RFC 1951&lt;/a&gt;).</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="2614a624675163a9399e347697e4e8da65203593" translate="yes" xml:space="preserve">
+          <source>Using the &lt;a href=&quot;https://en.wikipedia.org/wiki/Zlib&quot;&gt;zlib&lt;/a&gt; structure is accepted as a transfer coding name.</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="c06631425c8e2a5c38beb712ece2894d30377b7f" translate="yes" xml:space="preserve">
           <source>Using the &lt;code&gt;&amp;lt;iframe&amp;gt;&lt;/code&gt;&lt;code&gt;allow&lt;/code&gt; attribute:</source>
@@ -3212,6 +3669,55 @@
                  2015, &amp;lt;&lt;a href=&quot;http://www.rfc-editor.org/info/rfc7525&quot;&gt;http://www.rfc-editor.org/info/rfc7525&lt;/a&gt;&amp;gt;.</source>
           <target state="new"/>
         </trans-unit>
+        <trans-unit id="13d81446b064850295c81668e1d4025891603a3f" translate="yes" xml:space="preserve">
+          <source>[&lt;a id=&quot;ref-ALT-SVC&quot; name=&quot;ref-ALT-SVC&quot;&gt;ALT-SVC&lt;/a&gt;]     Nottingham, M., McManus, P., and J. Reschke, &quot;HTTP
+                 Alternative Services&quot;, Work in Progress, &lt;a href=&quot;https://tools.ietf.org/html/draft-ietf-httpbis-alt-svc-06&quot;&gt;draft-ietf-&lt;/a&gt;&lt;a href=&quot;https://tools.ietf.org/html/draft-ietf-httpbis-alt-svc-06&quot;&gt;httpbis-alt-svc-06&lt;/a&gt;, February 2015.
+
+   [&lt;a id=&quot;ref-BCP90&quot; name=&quot;ref-BCP90&quot;&gt;BCP90&lt;/a&gt;]       Klyne, G., Nottingham, M., and J. Mogul, &quot;Registration
+                 Procedures for Message Header Fields&quot;, &lt;a href=&quot;https://tools.ietf.org/html/bcp90&quot;&gt;BCP 90&lt;/a&gt;,
+                 &lt;a href=&quot;https://tools.ietf.org/html/rfc3864&quot;&gt;RFC 3864&lt;/a&gt;, September 2004,
+                 &amp;lt;&lt;a href=&quot;https://www.rfc-editor.org/info/bcp90&quot;&gt;http://www.rfc-editor.org/info/bcp90&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-BREACH&quot; name=&quot;ref-BREACH&quot;&gt;BREACH&lt;/a&gt;]      Gluck, Y., Harris, N., and A. Prado, &quot;BREACH: Reviving
+                 the CRIME Attack&quot;, July 2013,
+                 &amp;lt;&lt;a href=&quot;http://breachattack.com/resources/&quot;&gt;http://breachattack.com/resources/&lt;/a&gt;
+                 BREACH%20-%20SSL,%20gone%20in%2030%20seconds.pdf&amp;gt;.
+
+   [&lt;a id=&quot;ref-HTML5&quot; name=&quot;ref-HTML5&quot;&gt;HTML5&lt;/a&gt;]       Hickson, I., Berjon, R., Faulkner, S., Leithead, T.,
+                 Doyle Navara, E., O'Connor, E., and S. Pfeiffer,
+                 &quot;HTML5&quot;, W3C Recommendation REC-html5-20141028, October
+                 2014, &amp;lt;&lt;a href=&quot;https://www.w3.org/TR/2014/REC-html5-20141028/&quot;&gt;http://www.w3.org/TR/2014/REC-html5-20141028/&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-RFC3749&quot; name=&quot;ref-RFC3749&quot;&gt;RFC3749&lt;/a&gt;]     Hollenbeck, S., &quot;Transport Layer Security Protocol
+                 Compression Methods&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc3749&quot;&gt;RFC 3749&lt;/a&gt;, DOI 10.17487/RFC3749,
+                 May 2004, &amp;lt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc3749&quot;&gt;http://www.rfc-editor.org/info/rfc3749&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-RFC4492&quot; name=&quot;ref-RFC4492&quot;&gt;RFC4492&lt;/a&gt;]     Blake-Wilson, S., Bolyard, N., Gupta, V., Hawk, C., and
+                 B.  Moeller, &quot;Elliptic Curve Cryptography (ECC) Cipher
+                 Suites for Transport Layer Security (TLS)&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc4492&quot;&gt;RFC 4492&lt;/a&gt;,
+                 DOI 10.17487/RFC4492, May 2006,
+                 &amp;lt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc4492&quot;&gt;http://www.rfc-editor.org/info/rfc4492&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-RFC6585&quot; name=&quot;ref-RFC6585&quot;&gt;RFC6585&lt;/a&gt;]     Nottingham, M. and R. Fielding, &quot;Additional HTTP Status
+                 Codes&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc6585&quot;&gt;RFC 6585&lt;/a&gt;, DOI 10.17487/RFC6585, April 2012,
+                 &amp;lt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc6585&quot;&gt;http://www.rfc-editor.org/info/rfc6585&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-RFC7323&quot; name=&quot;ref-RFC7323&quot;&gt;RFC7323&lt;/a&gt;]     Borman, D., Braden, B., Jacobson, V., and R.
+                 Scheffenegger, Ed., &quot;TCP Extensions for High
+                 Performance&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc7323&quot;&gt;RFC 7323&lt;/a&gt;, DOI 10.17487/RFC7323, September
+                 2014, &amp;lt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc7323&quot;&gt;http://www.rfc-editor.org/info/rfc7323&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-TALKING&quot; name=&quot;ref-TALKING&quot;&gt;TALKING&lt;/a&gt;]     Huang, L., Chen, E., Barth, A., Rescorla, E., and C.
+                 Jackson, &quot;Talking to Yourself for Fun and Profit&quot;,
+                 2011, &amp;lt;&lt;a href=&quot;http://w2spconf.com/2011/papers/websocket.pdf&quot;&gt;http://w2spconf.com/2011/papers/websocket.pdf&lt;/a&gt;&amp;gt;. 
+
+   [&lt;a id=&quot;ref-TLSBCP&quot; name=&quot;ref-TLSBCP&quot;&gt;TLSBCP&lt;/a&gt;]      Sheffer, Y., Holz, R., and P. Saint-Andre,
+                 &quot;Recommendations for Secure Use of Transport Layer
+                 Security (TLS) and Datagram Transport Layer Security
+                 (DTLS)&quot;, &lt;a href=&quot;https://tools.ietf.org/html/bcp195&quot;&gt;BCP 195&lt;/a&gt;, &lt;a href=&quot;https://tools.ietf.org/html/rfc7525&quot;&gt;RFC 7525&lt;/a&gt;, DOI 10.17487/RFC7525, May
+                 2015, &amp;lt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc7525&quot;&gt;http://www.rfc-editor.org/info/rfc7525&lt;/a&gt;&amp;gt;.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="dc821d5e8b6f5141610286985b0b686179701b49" translate="yes" xml:space="preserve">
           <source>[&lt;a id=&quot;ref-BCP115&quot; name=&quot;ref-BCP115&quot;&gt;BCP115&lt;/a&gt;]      Hansen, T., Hardie, T., and L. Masinter, &quot;Guidelines
                  and Registration Procedures for New URI Schemes&quot;,
@@ -3312,6 +3818,107 @@
    [&lt;a id=&quot;ref-RFC6585&quot; name=&quot;ref-RFC6585&quot;&gt;RFC6585&lt;/a&gt;]     Nottingham, M. and R. Fielding, &quot;Additional HTTP Status
                  Codes&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc6585&quot;&gt;RFC 6585&lt;/a&gt;, April 2012.</source>
           <target state="translated">[ &lt;a id=&quot;ref-BCP115&quot; name=&quot;ref-BCP115&quot;&gt;BCP115&lt;/a&gt; ] Хансен, Т., Харди, Т., и Л. Масинтер, &amp;laquo;Рекомендации и процедуры регистрации для новых схем URI&amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/bcp115&quot;&gt;BCP 115&lt;/a&gt; , &lt;a href=&quot;https://tools.ietf.org/html/rfc4395&quot;&gt;RFC 4395&lt;/a&gt; , февраль 2006 г. [ &lt;a id=&quot;ref-BCP13&quot; name=&quot;ref-BCP13&quot;&gt;BCP13&lt;/a&gt; ] Фрид, Н., Кленсин, Дж. и Т. Хансен, &amp;laquo;Спецификации типов носителей и процедуры регистрации&amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/bcp13&quot;&gt;BCP 13&lt;/a&gt; , &lt;a href=&quot;https://tools.ietf.org/html/rfc6838&quot;&gt;RFC 6838&lt;/a&gt; , январь 2013 г. [ &lt;a id=&quot;ref-BCP90&quot; name=&quot;ref-BCP90&quot;&gt;BCP90&lt;/a&gt; ] Клайн, Г., Ноттингем, М., и Дж. Могул, &amp;laquo;Процедуры регистрации для полей заголовков сообщений&amp;raquo; , &lt;a href=&quot;https://tools.ietf.org/html/bcp90&quot;&gt;BCP 90&lt;/a&gt; , &lt;a href=&quot;https://tools.ietf.org/html/rfc3864&quot;&gt;RFC 3864&lt;/a&gt; , сентябрь 2004 г. [ &lt;a id=&quot;ref-Georgiev&quot; name=&quot;ref-Georgiev&quot;&gt;Георгиев&lt;/a&gt;] Георгиев, М., Айенгар, С., Яна, С., Анубхай, Р., Бонех, Д., и В. Шматиков, &amp;laquo;Самый опасный код в мире: проверка SSL-сертификатов в небраузерном ПО&amp;raquo;, In Proceedings of the ACM Conference on Computer and Communications Security (CCS '12), pp. 38-49, October 2012, &amp;lt; &lt;a href=&quot;http://doi.acm.org/10.1145/2382196.2382204&quot;&gt;http://doi.acm.org/10.1145/2382196.2382204&lt;/a&gt; &amp;gt;. [ &lt;a id=&quot;ref-ISO-8859-1&quot; name=&quot;ref-ISO-8859-1&quot;&gt;ISO-8859-1&lt;/a&gt; ] Международная организация по стандартизации, &amp;laquo;Информационные технологии - 8-битные однобайтовые наборы графических символов - Часть 1: Латинский алфавит № 1&amp;raquo;, ISO / IEC 8859-1: 1998, 1998. [ &lt;a id=&quot;ref-Klein&quot; name=&quot;ref-Klein&quot;&gt;Кляйн&lt;/a&gt;] Кляйн, А., &amp;laquo;Разделяй и властвуй - разделение HTTP-ответа, атаки с отравлением веб-кеша и связанные темы&amp;raquo;, март 2004 г., &amp;lt; &lt;a href=&quot;http://packetstormsecurity.com/papers/general/whitepaper_httpresponse.pdf&quot;&gt;http://packetstormsecurity.com/papers &lt;/a&gt;&lt;a href=&quot;http://packetstormsecurity.com/papers/general/whitepaper_httpresponse.pdf&quot;&gt;/ general / whitepaper_httpresponse.pdf&lt;/a&gt; &amp;gt;. [ &lt;a id=&quot;ref-Kri2001&quot; name=&quot;ref-Kri2001&quot;&gt;Kri2001&lt;/a&gt; ] Кристол Д., &amp;laquo;HTTP-файлы cookie: стандарты, конфиденциальность и политика&amp;raquo;, ACM Transactions on Internet Technology 1 (2), ноябрь 2001 г., &amp;lt; &lt;a href=&quot;http://arxiv.org/abs/cs.SE/0105018&quot;&gt;http://arxiv.org/abs/cs.SE/0105018&lt;/a&gt; &amp;gt; , [ &lt;a id=&quot;ref-Linhart&quot; name=&quot;ref-Linhart&quot;&gt;Линхарт&lt;/a&gt; ] Линхарт, К., Кляйн, А., Хелед, Р. и С. Оррин, &amp;laquo;Контрабанда HTTP-запросов&amp;raquo;, июнь 2005 г., &amp;lt; &lt;a href=&quot;http://www.watchfire.com/news/whitepapers.aspx&quot;&gt;http://www.watchfire.com/news/whitepapers.aspx&lt;/a&gt; &amp;gt;.[ &lt;a id=&quot;ref-RFC1919&quot; name=&quot;ref-RFC1919&quot;&gt;RFC1919&lt;/a&gt;] Шатель, М., &amp;laquo;Классические прокси-серверы IP против прозрачных&amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/rfc1919&quot;&gt;RFC 1919&lt;/a&gt; , март 1996 г. [ &lt;a id=&quot;ref-RFC1945&quot; name=&quot;ref-RFC1945&quot;&gt;RFC1945&lt;/a&gt; ] Бернерс-Ли, Т., Филдинг, Р., и Х. Нильсен, &amp;laquo;Протокол передачи гипертекста - HTTP / 1.0&amp;raquo; , &lt;a href=&quot;https://tools.ietf.org/html/rfc1945&quot;&gt;RFC 1945&lt;/a&gt; , май 1996 г. [ &lt;a id=&quot;ref-RFC2045&quot; name=&quot;ref-RFC2045&quot;&gt;RFC2045&lt;/a&gt; ] Фрид, Н. и Н. Боренштейн, &amp;laquo;Многоцелевые расширения почты Интернета (MIME), часть первая: формат тел сообщений в Интернете&amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2045&quot;&gt;RFC 2045&lt;/a&gt; , ноябрь 1996 г. [ &lt;a id=&quot;ref-RFC2047&quot; name=&quot;ref-RFC2047&quot;&gt;RFC2047&lt;/a&gt; ] Мур, К. , &quot;MIME (многоцелевые расширения почты Интернета), часть третья: расширения заголовков сообщений для текста, &lt;a href=&quot;https://tools.ietf.org/html/rfc2047&quot;&gt;отличного от&lt;/a&gt; ASCII&quot;, RFC 2047 , ноябрь 1996 г.[&lt;a id=&quot;ref-RFC2068&quot; name=&quot;ref-RFC2068&quot;&gt;RFC2068&lt;/a&gt; ] Филдинг, Р., Геттис, Дж., Могул, Дж., Нильсен, Х. и Т. Бернерс-Ли, &amp;laquo;Протокол передачи гипертекста - HTTP / 1.1&amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2068&quot;&gt;RFC 2068&lt;/a&gt; , январь 1997 г. [ &lt;a id=&quot;ref-RFC2145&quot; name=&quot;ref-RFC2145&quot;&gt;RFC2145&lt;/a&gt; ] Mogul , Дж., Филдинг, Р., Геттис, Дж. И Х. Нильсен, &amp;laquo;Использование и интерпретация номеров версий HTTP&amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2145&quot;&gt;RFC 2145&lt;/a&gt; , май 1997 г. [ &lt;a id=&quot;ref-RFC2616&quot; name=&quot;ref-RFC2616&quot;&gt;RFC2616&lt;/a&gt; ] Филдинг, Р., Геттис, Дж., Могул, Дж., Фристик, Х., Масинтер, Л., Лич, П., и Т. Бернерс-Ли, &amp;laquo;Протокол передачи гипертекста - HTTP / 1.1&amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2616&quot;&gt;RFC 2616&lt;/a&gt; , июнь 1999 г. [ &lt;a id=&quot;ref-RFC2817&quot; name=&quot;ref-RFC2817&quot;&gt;RFC2817&lt;/a&gt; ] Khare, R. и С. Лоуренс, &amp;laquo;Обновление до TLS в HTTP / 1.1&amp;raquo;,&lt;a href=&quot;https://tools.ietf.org/html/rfc2817&quot;&gt;RFC 2817&lt;/a&gt; , май 2000 г. [ &lt;a id=&quot;ref-RFC2818&quot; name=&quot;ref-RFC2818&quot;&gt;RFC2818&lt;/a&gt; ] Рескорла, E., &amp;laquo;HTTP через TLS&amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2818&quot;&gt;RFC 2818&lt;/a&gt; , май 2000 г. [ &lt;a id=&quot;ref-RFC3040&quot; name=&quot;ref-RFC3040&quot;&gt;RFC3040&lt;/a&gt; ] Купер, И., Мелв, И., и Г. Томлинсон, &amp;laquo;Интернет-репликация и кэширование. Taxonomy &amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/rfc3040&quot;&gt;RFC 3040&lt;/a&gt; , январь 2001 г. [ &lt;a id=&quot;ref-RFC4033&quot; name=&quot;ref-RFC4033&quot;&gt;RFC4033&lt;/a&gt; ] Арендс, Р., Остин, Р., Ларсон, М., Мэсси, Д., и С. Роуз,&amp;laquo; Введение в безопасность DNS и требования &amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/rfc4033&quot;&gt;RFC 4033&lt;/a&gt; , март 2005 г. . [ &lt;a id=&quot;ref-RFC4559&quot; name=&quot;ref-RFC4559&quot;&gt;RFC4559&lt;/a&gt; ] Джаганатан, К., Чжу, Л. и Дж. Брезак, &amp;laquo;Проверка подлинности Kerberos на основе SPNEGO и NTLM HTTP в Microsoft Windows&amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/rfc4559&quot;&gt;RFC 4559&lt;/a&gt;, Июнь 2006 г. [ &lt;a id=&quot;ref-RFC5226&quot; name=&quot;ref-RFC5226&quot;&gt;RFC5226&lt;/a&gt; ] Нартен , Т. и Х. Альвестранд, &amp;laquo;Рекомендации по написанию раздела о соображениях IANA в RFC&amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/bcp26&quot;&gt;BCP 26&lt;/a&gt; , &lt;a href=&quot;https://tools.ietf.org/html/rfc5226&quot;&gt;RFC 5226&lt;/a&gt; , май 2008 г. [ &lt;a id=&quot;ref-RFC5246&quot; name=&quot;ref-RFC5246&quot;&gt;RFC5246&lt;/a&gt; ] Диркс, Т. и Э. Рескорла &amp;raquo;, Протокол безопасности транспортного уровня (TLS) версии 1.2 &amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/rfc5246&quot;&gt;RFC 5246&lt;/a&gt; , август 2008 г. [ &lt;a id=&quot;ref-RFC5322&quot; name=&quot;ref-RFC5322&quot;&gt;RFC5322&lt;/a&gt; ] Резник, П.,&amp;laquo; Формат сообщений Интернета &amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/rfc5322&quot;&gt;RFC 5322&lt;/a&gt; , октябрь 2008 г. [ &lt;a id=&quot;ref-RFC6265&quot; name=&quot;ref-RFC6265&quot;&gt;RFC6265&lt;/a&gt; ] Барт, А.,&amp;laquo; Управление состоянием HTTP &amp;raquo; Механизм &amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/rfc6265&quot;&gt;RFC 6265&lt;/a&gt; , апрель 2011 г. [ &lt;a id=&quot;ref-RFC6585&quot; name=&quot;ref-RFC6585&quot;&gt;RFC6585&lt;/a&gt;] Ноттингем, М. и Р. Филдинг, &amp;laquo;Дополнительные коды состояния HTTP&amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/rfc6585&quot;&gt;RFC 6585&lt;/a&gt; , апрель 2012 г.</target>
+        </trans-unit>
+        <trans-unit id="e22ffcdb41bf816acc3e43ac28059305162c9982" translate="yes" xml:space="preserve">
+          <source>[&lt;a id=&quot;ref-BCP115&quot; name=&quot;ref-BCP115&quot;&gt;BCP115&lt;/a&gt;]      Hansen, T., Hardie, T., and L. Masinter, &quot;Guidelines
+                 and Registration Procedures for New URI Schemes&quot;,
+                 &lt;a href=&quot;https://tools.ietf.org/html/bcp115&quot;&gt;BCP 115&lt;/a&gt;, &lt;a href=&quot;https://tools.ietf.org/html/rfc4395&quot;&gt;RFC 4395&lt;/a&gt;, February 2006.
+
+   [&lt;a id=&quot;ref-BCP13&quot; name=&quot;ref-BCP13&quot;&gt;BCP13&lt;/a&gt;]       Freed, N., Klensin, J., and T. Hansen, &quot;Media Type
+                 Specifications and Registration Procedures&quot;, &lt;a href=&quot;https://tools.ietf.org/html/bcp13&quot;&gt;BCP 13&lt;/a&gt;,
+                 &lt;a href=&quot;https://tools.ietf.org/html/rfc6838&quot;&gt;RFC 6838&lt;/a&gt;, January 2013.
+
+   [&lt;a id=&quot;ref-BCP90&quot; name=&quot;ref-BCP90&quot;&gt;BCP90&lt;/a&gt;]       Klyne, G., Nottingham, M., and J. Mogul, &quot;Registration
+                 Procedures for Message Header Fields&quot;, &lt;a href=&quot;https://tools.ietf.org/html/bcp90&quot;&gt;BCP 90&lt;/a&gt;,
+                 &lt;a href=&quot;https://tools.ietf.org/html/rfc3864&quot;&gt;RFC 3864&lt;/a&gt;, September 2004.
+
+   [&lt;a id=&quot;ref-Georgiev&quot; name=&quot;ref-Georgiev&quot;&gt;Georgiev&lt;/a&gt;]    Georgiev, M., Iyengar, S., Jana, S., Anubhai, R.,
+                 Boneh, D., and V. Shmatikov, &quot;The Most Dangerous Code
+                 in the World: Validating SSL Certificates in Non-
+                 browser Software&quot;, In Proceedings of the 2012 ACM
+                 Conference on Computer and Communications Security (CCS
+                 '12), pp. 38-49, October 2012,
+                 &amp;lt;&lt;a href=&quot;http://doi.acm.org/10.1145/2382196.2382204&quot;&gt;http://doi.acm.org/10.1145/2382196.2382204&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-ISO-8859-1&quot; name=&quot;ref-ISO-8859-1&quot;&gt;ISO-8859-1&lt;/a&gt;]  International Organization for Standardization,
+                 &quot;Information technology -- 8-bit single-byte coded
+                 graphic character sets -- Part 1: Latin alphabet No.
+                 1&quot;, ISO/IEC 8859-1:1998, 1998.
+
+   [&lt;a id=&quot;ref-Klein&quot; name=&quot;ref-Klein&quot;&gt;Klein&lt;/a&gt;]       Klein, A., &quot;Divide and Conquer - HTTP Response
+                 Splitting, Web Cache Poisoning Attacks, and Related
+                 Topics&quot;, March 2004, &amp;lt;&lt;a href=&quot;http://packetstormsecurity.com/papers/general/whitepaper_httpresponse.pdf&quot;&gt;http://packetstormsecurity.com/&lt;/a&gt;&lt;a href=&quot;http://packetstormsecurity.com/papers/general/whitepaper_httpresponse.pdf&quot;&gt;papers/general/whitepaper_httpresponse.pdf&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-Kri2001&quot; name=&quot;ref-Kri2001&quot;&gt;Kri2001&lt;/a&gt;]     Kristol, D., &quot;HTTP Cookies: Standards, Privacy, and
+                 Politics&quot;, ACM Transactions on Internet
+                 Technology 1(2), November 2001,
+                 &amp;lt;&lt;a href=&quot;https://arxiv.org/abs/cs.SE/0105018&quot;&gt;http://arxiv.org/abs/cs.SE/0105018&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-Linhart&quot; name=&quot;ref-Linhart&quot;&gt;Linhart&lt;/a&gt;]     Linhart, C., Klein, A., Heled, R., and S. Orrin, &quot;HTTP
+                 Request Smuggling&quot;, June 2005,
+                 &amp;lt;&lt;a href=&quot;http://www.watchfire.com/news/whitepapers.aspx&quot;&gt;http://www.watchfire.com/news/whitepapers.aspx&lt;/a&gt;&amp;gt;. 
+
+   [&lt;a id=&quot;ref-RFC1919&quot; name=&quot;ref-RFC1919&quot;&gt;RFC1919&lt;/a&gt;]     Chatel, M., &quot;Classical versus Transparent IP Proxies&quot;,
+                 &lt;a href=&quot;https://tools.ietf.org/html/rfc1919&quot;&gt;RFC 1919&lt;/a&gt;, March 1996.
+
+   [&lt;a id=&quot;ref-RFC1945&quot; name=&quot;ref-RFC1945&quot;&gt;RFC1945&lt;/a&gt;]     Berners-Lee, T., Fielding, R., and H. Nielsen,
+                 &quot;Hypertext Transfer Protocol -- HTTP/1.0&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc1945&quot;&gt;RFC 1945&lt;/a&gt;,
+                 May 1996.
+
+   [&lt;a id=&quot;ref-RFC2045&quot; name=&quot;ref-RFC2045&quot;&gt;RFC2045&lt;/a&gt;]     Freed, N. and N. Borenstein, &quot;Multipurpose Internet
+                 Mail Extensions (MIME) Part One: Format of Internet
+                 Message Bodies&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2045&quot;&gt;RFC 2045&lt;/a&gt;, November 1996.
+
+   [&lt;a id=&quot;ref-RFC2047&quot; name=&quot;ref-RFC2047&quot;&gt;RFC2047&lt;/a&gt;]     Moore, K., &quot;MIME (Multipurpose Internet Mail
+                 Extensions) Part Three: Message Header Extensions for
+                 Non-ASCII Text&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2047&quot;&gt;RFC 2047&lt;/a&gt;, November 1996.
+
+   [&lt;a id=&quot;ref-RFC2068&quot; name=&quot;ref-RFC2068&quot;&gt;RFC2068&lt;/a&gt;]     Fielding, R., Gettys, J., Mogul, J., Nielsen, H., and
+                 T. Berners-Lee, &quot;Hypertext Transfer Protocol --
+                 HTTP/1.1&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2068&quot;&gt;RFC 2068&lt;/a&gt;, January 1997.
+
+   [&lt;a id=&quot;ref-RFC2145&quot; name=&quot;ref-RFC2145&quot;&gt;RFC2145&lt;/a&gt;]     Mogul, J., Fielding, R., Gettys, J., and H. Nielsen,
+                 &quot;Use and Interpretation of HTTP Version Numbers&quot;,
+                 &lt;a href=&quot;https://tools.ietf.org/html/rfc2145&quot;&gt;RFC 2145&lt;/a&gt;, May 1997.
+
+   [&lt;a id=&quot;ref-RFC2616&quot; name=&quot;ref-RFC2616&quot;&gt;RFC2616&lt;/a&gt;]     Fielding, R., Gettys, J., Mogul, J., Frystyk, H.,
+                 Masinter, L., Leach, P., and T. Berners-Lee, &quot;Hypertext
+                 Transfer Protocol -- HTTP/1.1&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2616&quot;&gt;RFC 2616&lt;/a&gt;, June 1999.
+
+   [&lt;a id=&quot;ref-RFC2817&quot; name=&quot;ref-RFC2817&quot;&gt;RFC2817&lt;/a&gt;]     Khare, R. and S. Lawrence, &quot;Upgrading to TLS Within
+                 HTTP/1.1&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2817&quot;&gt;RFC 2817&lt;/a&gt;, May 2000.
+
+   [&lt;a id=&quot;ref-RFC2818&quot; name=&quot;ref-RFC2818&quot;&gt;RFC2818&lt;/a&gt;]     Rescorla, E., &quot;HTTP Over TLS&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2818&quot;&gt;RFC 2818&lt;/a&gt;, May 2000.
+
+   [&lt;a id=&quot;ref-RFC3040&quot; name=&quot;ref-RFC3040&quot;&gt;RFC3040&lt;/a&gt;]     Cooper, I., Melve, I., and G. Tomlinson, &quot;Internet Web
+                 Replication and Caching Taxonomy&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc3040&quot;&gt;RFC 3040&lt;/a&gt;,
+                 January 2001.
+
+   [&lt;a id=&quot;ref-RFC4033&quot; name=&quot;ref-RFC4033&quot;&gt;RFC4033&lt;/a&gt;]     Arends, R., Austein, R., Larson, M., Massey, D., and S.
+                 Rose, &quot;DNS Security Introduction and Requirements&quot;,
+                 &lt;a href=&quot;https://tools.ietf.org/html/rfc4033&quot;&gt;RFC 4033&lt;/a&gt;, March 2005.
+
+   [&lt;a id=&quot;ref-RFC4559&quot; name=&quot;ref-RFC4559&quot;&gt;RFC4559&lt;/a&gt;]     Jaganathan, K., Zhu, L., and J. Brezak, &quot;SPNEGO-based
+                 Kerberos and NTLM HTTP Authentication in Microsoft
+                 Windows&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc4559&quot;&gt;RFC 4559&lt;/a&gt;, June 2006.
+
+   [&lt;a id=&quot;ref-RFC5226&quot; name=&quot;ref-RFC5226&quot;&gt;RFC5226&lt;/a&gt;]     Narten, T. and H. Alvestrand, &quot;Guidelines for Writing
+                 an IANA Considerations Section in RFCs&quot;, &lt;a href=&quot;https://tools.ietf.org/html/bcp26&quot;&gt;BCP 26&lt;/a&gt;,
+                 &lt;a href=&quot;https://tools.ietf.org/html/rfc5226&quot;&gt;RFC 5226&lt;/a&gt;, May 2008. 
+
+   [&lt;a id=&quot;ref-RFC5246&quot; name=&quot;ref-RFC5246&quot;&gt;RFC5246&lt;/a&gt;]     Dierks, T. and E. Rescorla, &quot;The Transport Layer
+                 Security (TLS) Protocol Version 1.2&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc5246&quot;&gt;RFC 5246&lt;/a&gt;,
+                 August 2008.
+
+   [&lt;a id=&quot;ref-RFC5322&quot; name=&quot;ref-RFC5322&quot;&gt;RFC5322&lt;/a&gt;]     Resnick, P., &quot;Internet Message Format&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc5322&quot;&gt;RFC 5322&lt;/a&gt;,
+                 October 2008.
+
+   [&lt;a id=&quot;ref-RFC6265&quot; name=&quot;ref-RFC6265&quot;&gt;RFC6265&lt;/a&gt;]     Barth, A., &quot;HTTP State Management Mechanism&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc6265&quot;&gt;RFC 6265&lt;/a&gt;,
+                 April 2011.
+
+   [&lt;a id=&quot;ref-RFC6585&quot; name=&quot;ref-RFC6585&quot;&gt;RFC6585&lt;/a&gt;]     Nottingham, M. and R. Fielding, &quot;Additional HTTP Status
+                 Codes&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc6585&quot;&gt;RFC 6585&lt;/a&gt;, April 2012.</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="709bdcb38d1223b2efcf9537053ac448ee82c675" translate="yes" xml:space="preserve">
           <source>[&lt;a id=&quot;ref-BCP13&quot; name=&quot;ref-BCP13&quot;&gt;BCP13&lt;/a&gt;]    Freed, N., Klensin, J., and T. Hansen, &quot;Media Type
@@ -3591,6 +4198,102 @@
                  &amp;lt;&lt;a href=&quot;http://www.rfc-editor.org/info/rfc5246&quot;&gt;http://www.rfc-editor.org/info/rfc5246&lt;/a&gt;&amp;gt;.</source>
           <target state="new"/>
         </trans-unit>
+        <trans-unit id="99e8caa0ad5d3cca08d3b3871930dc3325f42053" translate="yes" xml:space="preserve">
+          <source>[&lt;a id=&quot;ref-COMPRESSION&quot; name=&quot;ref-COMPRESSION&quot;&gt;COMPRESSION&lt;/a&gt;] Peon, R. and H. Ruellan, &quot;HPACK: Header Compression for
+                 HTTP/2&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc7541&quot;&gt;RFC 7541&lt;/a&gt;, DOI 10.17487/RFC7541, May 2015,
+                 &amp;lt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc7541&quot;&gt;http://www.rfc-editor.org/info/rfc7541&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-COOKIE&quot; name=&quot;ref-COOKIE&quot;&gt;COOKIE&lt;/a&gt;]      Barth, A., &quot;HTTP State Management Mechanism&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc6265&quot;&gt;RFC 6265&lt;/a&gt;,
+                 DOI 10.17487/RFC6265, April 2011,
+                 &amp;lt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc6265&quot;&gt;http://www.rfc-editor.org/info/rfc6265&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-FIPS186&quot; name=&quot;ref-FIPS186&quot;&gt;FIPS186&lt;/a&gt;]     NIST, &quot;Digital Signature Standard (DSS)&quot;, FIPS PUB
+                 186-4, July 2013,
+                 &amp;lt;&lt;a href=&quot;https://dx.doi.org/10.6028/NIST.FIPS.186-4&quot;&gt;http://dx.doi.org/10.6028/NIST.FIPS.186-4&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-RFC2119&quot; name=&quot;ref-RFC2119&quot;&gt;RFC2119&lt;/a&gt;]     Bradner, S., &quot;Key words for use in RFCs to Indicate
+                 Requirement Levels&quot;, &lt;a href=&quot;https://tools.ietf.org/html/bcp14&quot;&gt;BCP 14&lt;/a&gt;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2119&quot;&gt;RFC 2119&lt;/a&gt;, DOI 10.17487/
+                 &lt;a href=&quot;https://tools.ietf.org/html/rfc2119&quot;&gt;RFC2119&lt;/a&gt;, March 1997,
+                 &amp;lt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc2119&quot;&gt;http://www.rfc-editor.org/info/rfc2119&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-RFC2818&quot; name=&quot;ref-RFC2818&quot;&gt;RFC2818&lt;/a&gt;]     Rescorla, E., &quot;HTTP Over TLS&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2818&quot;&gt;RFC 2818&lt;/a&gt;, DOI 10.17487/
+                 &lt;a href=&quot;https://tools.ietf.org/html/rfc2818&quot;&gt;RFC2818&lt;/a&gt;, May 2000,
+                 &amp;lt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc2818&quot;&gt;http://www.rfc-editor.org/info/rfc2818&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-RFC3986&quot; name=&quot;ref-RFC3986&quot;&gt;RFC3986&lt;/a&gt;]     Berners-Lee, T., Fielding, R., and L. Masinter,
+                 &quot;Uniform Resource Identifier (URI): Generic Syntax&quot;,
+                 STD 66, &lt;a href=&quot;https://tools.ietf.org/html/rfc3986&quot;&gt;RFC 3986&lt;/a&gt;, DOI 10.17487/RFC3986, January 2005,
+                 &amp;lt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc3986&quot;&gt;http://www.rfc-editor.org/info/rfc3986&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-RFC4648&quot; name=&quot;ref-RFC4648&quot;&gt;RFC4648&lt;/a&gt;]     Josefsson, S., &quot;The Base16, Base32, and Base64 Data
+                 Encodings&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc4648&quot;&gt;RFC 4648&lt;/a&gt;, DOI 10.17487/RFC4648, October
+                 2006, &amp;lt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc4648&quot;&gt;http://www.rfc-editor.org/info/rfc4648&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-RFC5226&quot; name=&quot;ref-RFC5226&quot;&gt;RFC5226&lt;/a&gt;]     Narten, T. and H. Alvestrand, &quot;Guidelines for Writing
+                 an IANA Considerations Section in RFCs&quot;, &lt;a href=&quot;https://tools.ietf.org/html/bcp26&quot;&gt;BCP 26&lt;/a&gt;,
+                 &lt;a href=&quot;https://tools.ietf.org/html/rfc5226&quot;&gt;RFC 5226&lt;/a&gt;, DOI 10.17487/RFC5226, May 2008,
+                 &amp;lt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc5226&quot;&gt;http://www.rfc-editor.org/info/rfc5226&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-RFC5234&quot; name=&quot;ref-RFC5234&quot;&gt;RFC5234&lt;/a&gt;]     Crocker, D., Ed. and P. Overell, &quot;Augmented BNF for
+                 Syntax Specifications: ABNF&quot;, STD 68, &lt;a href=&quot;https://tools.ietf.org/html/rfc5234&quot;&gt;RFC 5234&lt;/a&gt;,
+                 DOI 10.17487/ &lt;a href=&quot;https://tools.ietf.org/html/rfc5234&quot;&gt;RFC5234&lt;/a&gt;, January 2008,
+                 &amp;lt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc5234&quot;&gt;http://www.rfc-editor.org/info/rfc5234&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-RFC7230&quot; name=&quot;ref-RFC7230&quot;&gt;RFC7230&lt;/a&gt;]     Fielding, R., Ed. and J. Reschke, Ed., &quot;Hypertext
+                 Transfer Protocol (HTTP/1.1): Message Syntax and
+                 Routing&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc7230&quot;&gt;RFC 7230&lt;/a&gt;, DOI 10.17487/RFC7230, June 2014,
+                 &amp;lt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc7230&quot;&gt;http://www.rfc-editor.org/info/rfc7230&lt;/a&gt;&amp;gt;. 
+
+   [&lt;a id=&quot;ref-RFC7231&quot; name=&quot;ref-RFC7231&quot;&gt;RFC7231&lt;/a&gt;]     Fielding, R., Ed. and J. Reschke, Ed., &quot;Hypertext
+                 Transfer Protocol (HTTP/1.1): Semantics and Content&quot;,
+                 &lt;a href=&quot;https://tools.ietf.org/html/rfc7231&quot;&gt;RFC 7231&lt;/a&gt;, DOI 10.17487/RFC7231, June 2014,
+                 &amp;lt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc7231&quot;&gt;http://www.rfc-editor.org/info/rfc7231&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-RFC7232&quot; name=&quot;ref-RFC7232&quot;&gt;RFC7232&lt;/a&gt;]     Fielding, R., Ed. and J. Reschke, Ed., &quot;Hypertext
+                 Transfer Protocol (HTTP/1.1): Conditional Requests&quot;,
+                 &lt;a href=&quot;https://tools.ietf.org/html/rfc7232&quot;&gt;RFC 7232&lt;/a&gt;, DOI 10.17487/RFC7232, June 2014,
+                 &amp;lt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc7232&quot;&gt;http://www.rfc-editor.org/info/rfc7232&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-RFC7233&quot; name=&quot;ref-RFC7233&quot;&gt;RFC7233&lt;/a&gt;]     Fielding, R., Ed., Lafon, Y., Ed., and J. Reschke, Ed.,
+                 &quot;Hypertext Transfer Protocol (HTTP/1.1): Range
+                 Requests&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc7233&quot;&gt;RFC 7233&lt;/a&gt;, DOI 10.17487/RFC7233, June 2014,
+                 &amp;lt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc7233&quot;&gt;http://www.rfc-editor.org/info/rfc7233&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-RFC7234&quot; name=&quot;ref-RFC7234&quot;&gt;RFC7234&lt;/a&gt;]     Fielding, R., Ed., Nottingham, M., Ed., and J. Reschke,
+                 Ed., &quot;Hypertext Transfer Protocol (HTTP/1.1): Caching&quot;,
+                 &lt;a href=&quot;https://tools.ietf.org/html/rfc7234&quot;&gt;RFC 7234&lt;/a&gt;, DOI 10.17487/RFC7234, June 2014,
+                 &amp;lt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc7234&quot;&gt;http://www.rfc-editor.org/info/rfc7234&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-RFC7235&quot; name=&quot;ref-RFC7235&quot;&gt;RFC7235&lt;/a&gt;]     Fielding, R., Ed. and J. Reschke, Ed., &quot;Hypertext
+                 Transfer Protocol (HTTP/1.1): Authentication&quot;,
+                 &lt;a href=&quot;https://tools.ietf.org/html/rfc7235&quot;&gt;RFC 7235&lt;/a&gt;, DOI 10.17487/RFC7235, June 2014,
+                 &amp;lt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc7235&quot;&gt;http://www.rfc-editor.org/info/rfc7235&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-TCP&quot; name=&quot;ref-TCP&quot;&gt;TCP&lt;/a&gt;]         Postel, J., &quot;Transmission Control Protocol&quot;, STD 7, &lt;a href=&quot;https://tools.ietf.org/html/rfc793&quot;&gt;RFC&lt;/a&gt;&lt;a href=&quot;https://tools.ietf.org/html/rfc793&quot;&gt;793&lt;/a&gt;, DOI 10.17487/RFC0793, September 1981,
+                 &amp;lt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc793&quot;&gt;http://www.rfc-editor.org/info/rfc793&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-TLS-ALPN&quot; name=&quot;ref-TLS-ALPN&quot;&gt;TLS-ALPN&lt;/a&gt;]    Friedl, S., Popov, A., Langley, A., and E. Stephan,
+                 &quot;Transport Layer Security (TLS) Application-Layer
+                 Protocol Negotiation Extension&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc7301&quot;&gt;RFC 7301&lt;/a&gt;,
+                 DOI 10.17487/RFC7301, July 2014,
+                 &amp;lt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc7301&quot;&gt;http://www.rfc-editor.org/info/rfc7301&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-TLS-ECDHE&quot; name=&quot;ref-TLS-ECDHE&quot;&gt;TLS-ECDHE&lt;/a&gt;]   Rescorla, E., &quot;TLS Elliptic Curve Cipher Suites with
+                 SHA-256/384 and AES Galois Counter Mode (GCM)&quot;,
+                 &lt;a href=&quot;https://tools.ietf.org/html/rfc5289&quot;&gt;RFC 5289&lt;/a&gt;, DOI 10.17487/RFC5289, August 2008,
+                 &amp;lt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc5289&quot;&gt;http://www.rfc-editor.org/info/rfc5289&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-TLS-EXT&quot; name=&quot;ref-TLS-EXT&quot;&gt;TLS-EXT&lt;/a&gt;]     Eastlake 3rd, D., &quot;Transport Layer Security (TLS)
+                 Extensions: Extension Definitions&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc6066&quot;&gt;RFC 6066&lt;/a&gt;,
+                 DOI 10.17487/RFC6066, January 2011,
+                 &amp;lt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc6066&quot;&gt;http://www.rfc-editor.org/info/rfc6066&lt;/a&gt;&amp;gt;. 
+
+   [&lt;a id=&quot;ref-TLS12&quot; name=&quot;ref-TLS12&quot;&gt;TLS12&lt;/a&gt;]       Dierks, T. and E. Rescorla, &quot;The Transport Layer
+                 Security (TLS) Protocol Version 1.2&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc5246&quot;&gt;RFC 5246&lt;/a&gt;,
+                 DOI 10.17487/ &lt;a href=&quot;https://tools.ietf.org/html/rfc5246&quot;&gt;RFC5246&lt;/a&gt;, August 2008,
+                 &amp;lt;&lt;a href=&quot;https://www.rfc-editor.org/info/rfc5246&quot;&gt;http://www.rfc-editor.org/info/rfc5246&lt;/a&gt;&amp;gt;.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="be465035882a640817e7c019d9758fba1f0298fa" translate="yes" xml:space="preserve">
           <source>[&lt;a id=&quot;ref-NOTE-detect-lost-update&quot; name=&quot;ref-NOTE-detect-lost-update&quot;&gt;NOTE-detect-lost-update&lt;/a&gt;]
               Nielsen, H. and D. LaLiberte, &quot;Editing the Web: Detecting
@@ -3606,6 +4309,22 @@
    [&lt;a id=&quot;ref-RNC&quot; name=&quot;ref-RNC&quot;&gt;RNC&lt;/a&gt;]      Clark, J., &quot;RELAX NG Compact Syntax&quot;, December 2001,
               &amp;lt;&lt;a href=&quot;http://www.oasis-open.org/committees/relax-ng/compact-20021121.html&quot;&gt;http://www.oasis-open.org/committees/relax-ng/&lt;/a&gt;&lt;a href=&quot;http://www.oasis-open.org/committees/relax-ng/compact-20021121.html&quot;&gt;compact-20021121.html&lt;/a&gt;&amp;gt;.</source>
           <target state="translated">[ &lt;a id=&quot;ref-NOTE-detect-lost-update&quot; name=&quot;ref-NOTE-detect-lost-update&quot;&gt;ПРИМЕЧАНИЕ-обнаружение-потерянное-обновление&lt;/a&gt; ] Нильсен, Х. и Д. Лалиберте, &amp;laquo;Редактирование сети: обнаружение проблемы утерянного обновления с помощью незарезервированной проверки&amp;raquo;, Консорциум World Wide Web ПРИМЕЧАНИЕ ПРИМЕЧАНИЕ-обнаружение-потерянное-обновление, май 1999 г., &amp;lt; &lt;a href=&quot;http://www.w3.org/1999/04/Editing/&quot;&gt;http://www.w3.org/1999/04/Editing/&lt;/a&gt; &amp;gt;. [ &lt;a id=&quot;ref-REC-webarch&quot; name=&quot;ref-REC-webarch&quot;&gt;REC-webarch&lt;/a&gt; ] Уолш, Н. и И. Джейкобс, &amp;laquo;Архитектура всемирной паутины, том первый&amp;raquo;, W3C REC-webarch-20041215, декабрь 2004 г., &amp;lt; &lt;a href=&quot;http://www.w3.org/TR/2004/REC-webarch-20041215&quot;&gt;http://www.w3.org/TR/ 2004 / REC-webarch-20041215&lt;/a&gt; &amp;gt;. [ &lt;a id=&quot;ref-RNC&quot; name=&quot;ref-RNC&quot;&gt;RNC&lt;/a&gt; ] Кларк, Дж., &quot;RELAX NG Compact Syntax&quot;, декабрь 2001 г., &amp;lt; &lt;a href=&quot;http://www.oasis-open.org/committees/relax-ng/compact-20021121.html&quot;&gt;http://www.oasis-open.org/committees/relax-ng/ &lt;/a&gt;&lt;a href=&quot;http://www.oasis-open.org/committees/relax-ng/compact-20021121.html&quot;&gt;compact-20021121.HTML&lt;/a&gt;&amp;gt;.</target>
+        </trans-unit>
+        <trans-unit id="a30f9293b178ed9dea9f3a54ecd208f9c0e63c9c" translate="yes" xml:space="preserve">
+          <source>[&lt;a id=&quot;ref-NOTE-detect-lost-update&quot; name=&quot;ref-NOTE-detect-lost-update&quot;&gt;NOTE-detect-lost-update&lt;/a&gt;]
+              Nielsen, H. and D. LaLiberte, &quot;Editing the Web: Detecting
+              the Lost Update Problem Using Unreserved Checkout&quot;, World
+              Wide Web Consortium NOTE NOTE-detect-lost-update, May
+              1999, &amp;lt;&lt;a href=&quot;https://www.w3.org/1999/04/Editing/&quot;&gt;http://www.w3.org/1999/04/Editing/&lt;/a&gt;&amp;gt;. 
+
+   [&lt;a id=&quot;ref-REC-webarch&quot; name=&quot;ref-REC-webarch&quot;&gt;REC-webarch&lt;/a&gt;]
+              Walsh, N. and I. Jacobs, &quot;Architecture of the World Wide
+              Web, Volume One&quot;, W3C REC REC-webarch-20041215, December
+              2004, &amp;lt;&lt;a href=&quot;https://www.w3.org/TR/2004/REC-webarch-20041215&quot;&gt;http://www.w3.org/TR/2004/REC-webarch-20041215&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-RNC&quot; name=&quot;ref-RNC&quot;&gt;RNC&lt;/a&gt;]      Clark, J., &quot;RELAX NG Compact Syntax&quot;, December 2001,
+              &amp;lt;&lt;a href=&quot;http://www.oasis-open.org/committees/relax-ng/compact-20021121.html&quot;&gt;http://www.oasis-open.org/committees/relax-ng/&lt;/a&gt;&lt;a href=&quot;http://www.oasis-open.org/committees/relax-ng/compact-20021121.html&quot;&gt;compact-20021121.html&lt;/a&gt;&amp;gt;.</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="9b0101cca3163bcad6c18b71db53c2de9c25f26c" translate="yes" xml:space="preserve">
           <source>[&lt;a id=&quot;ref-REC-XML&quot; name=&quot;ref-REC-XML&quot;&gt;REC-XML&lt;/a&gt;]          Bray, T., Paoli, J., Sperberg-McQueen, C., Maler,
@@ -3653,6 +4372,53 @@
                       Universally Unique IDentifier (UUID) URN
                       Namespace&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc4122&quot;&gt;RFC 4122&lt;/a&gt;, July 2005.</source>
           <target state="translated">[ &lt;a id=&quot;ref-REC-XML&quot; name=&quot;ref-REC-XML&quot;&gt;REC-XML&lt;/a&gt; ] Брей, Т., Паоли, Дж., Сперберг-Маккуин, К., Малер, Э. и Ф. Йерго, &quot;Extensible Markup Language (XML) 1.0 (четвертое издание)&quot;, W3C REC-xml -20060816, август 2006 г., &amp;lt; &lt;a href=&quot;http://www.w3.org/TR/2006/REC-xml-20060816/&quot;&gt;http://www.w3.org/TR/2006/REC-xml-20060816/&lt;/a&gt; &amp;gt;. [ &lt;a id=&quot;ref-REC-XML-INFOSET&quot; name=&quot;ref-REC-XML-INFOSET&quot;&gt;REC-XML-INFOSET&lt;/a&gt; ] Коуэн, Дж. И Р. Тобин, &amp;laquo;Информационный набор XML (второе издание)&amp;raquo;, W3C REC-xml-infoset-20040204, февраль 2004 г., &amp;lt; &lt;a href=&quot;http://www.w3.org/TR/2004/REC-xml-infoset-20040204/&quot;&gt;http://www.w3.org/TR / 2004 / &lt;/a&gt;&lt;a href=&quot;http://www.w3.org/TR/2004/REC-xml-infoset-20040204/&quot;&gt;REC-xml-infoset-20040204 /&lt;/a&gt; &amp;gt;. [ &lt;a id=&quot;ref-REC-XML-NAMES&quot; name=&quot;ref-REC-XML-NAMES&quot;&gt;REC-XML-NAMES&lt;/a&gt;] Брей Т., Холландер Д., Лейман А. и Р. Тобин, &amp;laquo;Пространства имен в XML 1.0 (второе издание)&amp;raquo;, W3C REC-xml-names-20060816, август 2006 г., &amp;lt; &lt;a href=&quot;http://www.w3.org/TR/2006/REC-xml-names-20060816/&quot;&gt;http: // &lt;/a&gt;&lt;a href=&quot;http://www.w3.org/TR/2006/REC-xml-names-20060816/&quot;&gt;www. .w3.org / TR / 2006 / REC-xml-names-20060816 /&lt;/a&gt; &amp;gt;. [ &lt;a id=&quot;ref-RFC2119&quot; name=&quot;ref-RFC2119&quot;&gt;RFC2119&lt;/a&gt; ] Брэднер, С., &amp;laquo;Ключевые слова для использования в RFC для обозначения уровней требований&amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/bcp14&quot;&gt;BCP 14&lt;/a&gt; , &lt;a href=&quot;https://tools.ietf.org/html/rfc2119&quot;&gt;RFC 2119&lt;/a&gt; , март 1997 г. [ &lt;a id=&quot;ref-RFC2277&quot; name=&quot;ref-RFC2277&quot;&gt;RFC2277&lt;/a&gt; ] Альвестранд, Х., &amp;laquo;Политика IETF в отношении наборов символов и языков&amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/bcp18&quot;&gt;BCP 18&lt;/a&gt; , &lt;a href=&quot;https://tools.ietf.org/html/rfc2277&quot;&gt;RFC 2277&lt;/a&gt; , январь 1998 г. [ &lt;a id=&quot;ref-RFC2616&quot; name=&quot;ref-RFC2616&quot;&gt;RFC2616&lt;/a&gt;] Филдинг, Р., Геттис, Дж., Могул, Дж., Фристик, Х., Масинтер, Л., Лич, П., и Т. Бернерс-Ли, &amp;laquo;Протокол передачи гипертекста - HTTP / 1.1&amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2616&quot;&gt;RFC 2616&lt;/a&gt; , июнь 1999 г. [ &lt;a id=&quot;ref-RFC2617&quot; name=&quot;ref-RFC2617&quot;&gt;RFC2617&lt;/a&gt; ] Franks, J., Hallam-Baker, P., Hostetler, J., Lawrence, S., Leach, P., Luotonen, A., and L. Stewart, &quot;HTTP Authentication: Basic and Digest Access Authentication &amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2617&quot;&gt;RFC 2617&lt;/a&gt; , июнь 1999 г. [ &lt;a id=&quot;ref-RFC3339&quot; name=&quot;ref-RFC3339&quot;&gt;RFC3339&lt;/a&gt; ] Klyne, G., Ed. и К. Ньюман, &amp;laquo;Дата и время в Интернете: отметки времени&amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/rfc3339&quot;&gt;RFC 3339&lt;/a&gt; , июль 2002 г. [ &lt;a id=&quot;ref-RFC3629&quot; name=&quot;ref-RFC3629&quot;&gt;RFC3629&lt;/a&gt;] Йерго, Ф., &amp;laquo;UTF-8, формат преобразования ISO 10646&amp;raquo;, STD 63, &lt;a href=&quot;https://tools.ietf.org/html/rfc3629&quot;&gt;RFC 3629&lt;/a&gt; , ноябрь 2003 г. [ &lt;a id=&quot;ref-RFC3986&quot; name=&quot;ref-RFC3986&quot;&gt;RFC3986&lt;/a&gt; ] Бернерс-Ли, Т., Филдинг, Р., и Л. Масинтер, &amp;laquo;Uniform Идентификатор ресурса (URI): общий синтаксис &quot;, STD 66, &lt;a href=&quot;https://tools.ietf.org/html/rfc3986&quot;&gt;RFC 3986&lt;/a&gt; , январь 2005 г. [ &lt;a id=&quot;ref-RFC4122&quot; name=&quot;ref-RFC4122&quot;&gt;RFC4122&lt;/a&gt; ] Лич, П., Миллинг, М., и Р. Зальц,&quot; Пространство имен URN универсального уникального идентификатора (UUID) &quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc4122&quot;&gt;RFC 4122&lt;/a&gt; , июль 2005 г.</target>
+        </trans-unit>
+        <trans-unit id="f31533fdfc03928d7ff1a47ec674f70b3379f567" translate="yes" xml:space="preserve">
+          <source>[&lt;a id=&quot;ref-REC-XML&quot; name=&quot;ref-REC-XML&quot;&gt;REC-XML&lt;/a&gt;]          Bray, T., Paoli, J., Sperberg-McQueen, C., Maler,
+                      E., and F. Yergeau, &quot;Extensible Markup Language
+                      (XML) 1.0 (Fourth Edition)&quot;, W3C REC-xml-20060816,
+                      August 2006,
+                      &amp;lt;&lt;a href=&quot;https://www.w3.org/TR/2006/REC-xml-20060816/&quot;&gt;http://www.w3.org/TR/2006/REC-xml-20060816/&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-REC-XML-INFOSET&quot; name=&quot;ref-REC-XML-INFOSET&quot;&gt;REC-XML-INFOSET&lt;/a&gt;]  Cowan, J. and R. Tobin, &quot;XML Information Set
+                      (Second Edition)&quot;, W3C REC-xml-infoset-20040204,
+                      February 2004, &amp;lt;&lt;a href=&quot;https://www.w3.org/TR/2004/REC-xml-infoset-20040204/&quot;&gt;http://www.w3.org/TR/2004/&lt;/a&gt;&lt;a href=&quot;https://www.w3.org/TR/2004/REC-xml-infoset-20040204/&quot;&gt;REC-xml-infoset-20040204/&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-REC-XML-NAMES&quot; name=&quot;ref-REC-XML-NAMES&quot;&gt;REC-XML-NAMES&lt;/a&gt;]    Bray, T., Hollander, D., Layman, A., and R. Tobin,
+                      &quot;Namespaces in XML 1.0 (Second Edition)&quot;, W3C REC-
+                      xml-names-20060816, August 2006, &amp;lt;&lt;a href=&quot;https://www.w3.org/TR/2006/REC-xml-names-20060816/&quot;&gt;http://&lt;/a&gt;&lt;a href=&quot;https://www.w3.org/TR/2006/REC-xml-names-20060816/&quot;&gt;www.w3.org/TR/2006/REC-xml-names-20060816/&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-RFC2119&quot; name=&quot;ref-RFC2119&quot;&gt;RFC2119&lt;/a&gt;]          Bradner, S., &quot;Key words for use in RFCs to
+                      Indicate Requirement Levels&quot;, &lt;a href=&quot;https://tools.ietf.org/html/bcp14&quot;&gt;BCP 14&lt;/a&gt;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2119&quot;&gt;RFC 2119&lt;/a&gt;,
+                      March 1997.
+
+   [&lt;a id=&quot;ref-RFC2277&quot; name=&quot;ref-RFC2277&quot;&gt;RFC2277&lt;/a&gt;]          Alvestrand, H., &quot;IETF Policy on Character Sets and
+                      Languages&quot;, &lt;a href=&quot;https://tools.ietf.org/html/bcp18&quot;&gt;BCP 18&lt;/a&gt;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2277&quot;&gt;RFC 2277&lt;/a&gt;, January 1998.
+
+   [&lt;a id=&quot;ref-RFC2616&quot; name=&quot;ref-RFC2616&quot;&gt;RFC2616&lt;/a&gt;]          Fielding, R., Gettys, J., Mogul, J., Frystyk, H.,
+                      Masinter, L., Leach, P., and T. Berners-Lee,
+                      &quot;Hypertext Transfer Protocol -- HTTP/1.1&quot;,
+                      &lt;a href=&quot;https://tools.ietf.org/html/rfc2616&quot;&gt;RFC 2616&lt;/a&gt;, June 1999. 
+
+   [&lt;a id=&quot;ref-RFC2617&quot; name=&quot;ref-RFC2617&quot;&gt;RFC2617&lt;/a&gt;]          Franks, J., Hallam-Baker, P., Hostetler, J.,
+                      Lawrence, S., Leach, P., Luotonen, A., and L.
+                      Stewart, &quot;HTTP Authentication: Basic and Digest
+                      Access Authentication&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2617&quot;&gt;RFC 2617&lt;/a&gt;, June 1999.
+
+   [&lt;a id=&quot;ref-RFC3339&quot; name=&quot;ref-RFC3339&quot;&gt;RFC3339&lt;/a&gt;]          Klyne, G., Ed. and C. Newman, &quot;Date and Time on
+                      the Internet: Timestamps&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc3339&quot;&gt;RFC 3339&lt;/a&gt;, July 2002.
+
+   [&lt;a id=&quot;ref-RFC3629&quot; name=&quot;ref-RFC3629&quot;&gt;RFC3629&lt;/a&gt;]          Yergeau, F., &quot;UTF-8, a transformation format of
+                      ISO 10646&quot;, STD 63, &lt;a href=&quot;https://tools.ietf.org/html/rfc3629&quot;&gt;RFC 3629&lt;/a&gt;, November 2003.
+
+   [&lt;a id=&quot;ref-RFC3986&quot; name=&quot;ref-RFC3986&quot;&gt;RFC3986&lt;/a&gt;]          Berners-Lee, T., Fielding, R., and L. Masinter,
+                      &quot;Uniform Resource Identifier (URI): Generic
+                      Syntax&quot;, STD 66, &lt;a href=&quot;https://tools.ietf.org/html/rfc3986&quot;&gt;RFC 3986&lt;/a&gt;, January 2005.
+
+   [&lt;a id=&quot;ref-RFC4122&quot; name=&quot;ref-RFC4122&quot;&gt;RFC4122&lt;/a&gt;]          Leach, P., Mealling, M., and R. Salz, &quot;A
+                      Universally Unique IDentifier (UUID) URN
+                      Namespace&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc4122&quot;&gt;RFC 4122&lt;/a&gt;, July 2005.</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="f109ae6f660a3e51addf064374205f31f9fc1367" translate="yes" xml:space="preserve">
           <source>[&lt;a id=&quot;ref-REC-xml&quot; name=&quot;ref-REC-xml&quot;&gt;REC-xml&lt;/a&gt;]  Yergeau, F., Paoli, J., Bray, T., Sperberg-McQueen, C.,
@@ -3732,6 +4498,85 @@
    [&lt;a id=&quot;ref-RFC4346&quot; name=&quot;ref-RFC4346&quot;&gt;RFC4346&lt;/a&gt;]  Dierks, T. and E. Rescorla, &quot;The Transport Layer Security
               (TLS) Protocol Version 1.1&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc4346&quot;&gt;RFC 4346&lt;/a&gt;, April 2006.</source>
           <target state="translated">[ &lt;a id=&quot;ref-REC-xml&quot; name=&quot;ref-REC-xml&quot;&gt;REC-xml&lt;/a&gt; ] Йерго, Ф., Паоли, Дж., Брей, Т., Сперберг-Маккуин, К. и Э. Малер, &amp;laquo;Extensible Markup Language (XML) 1.0 (четвертое издание)&amp;raquo;, Консорциум World Wide Web Рекомендация REC-xml-20060816, август 2006 г., &amp;lt; &lt;a href=&quot;http://www.w3.org/TR/2006/REC-xml-20060816&quot;&gt;http://www.w3.org/TR/2006/REC-xml-20060816&lt;/a&gt; &amp;gt;. [ &lt;a id=&quot;ref-REC-xml-infoset&quot; name=&quot;ref-REC-xml-infoset&quot;&gt;REC-xml-infoset&lt;/a&gt; ] Коуэн, Дж. И Р. Тобин, &amp;laquo;Информационный набор XML (второе издание)&amp;raquo;, Рекомендация консорциума World Wide Web REC-xml- infoset-20040204, февраль 2004 г., &amp;lt; &lt;a href=&quot;http://www.w3.org/TR/2004/REC-xml-infoset-20040204&quot;&gt;http: //www.w3 .org / TR / 2004 / REC-xml-infoset-20040204&lt;/a&gt; &amp;gt;. [ &lt;a id=&quot;ref-REC-xml-names&quot; name=&quot;ref-REC-xml-names&quot;&gt;REC-xml-names&lt;/a&gt;] Холландер, Д., Брей, Т., Тобин, Р., и А. Лейман, &amp;laquo;Пространства имен в XML 1.0 (второе издание)&amp;raquo;, Рекомендация консорциума World Wide Web REC-xml-names-20060816, август 2006 г., &amp;lt; &lt;a href=&quot;http://www.w3.org/TR/2006/REC-xml-names-20060816&quot;&gt;http : //www.w3.org/TR/2006/REC-xml-names-20060816&lt;/a&gt; &amp;gt;. [ &lt;a id=&quot;ref-REC-xmlbase&quot; name=&quot;ref-REC-xmlbase&quot;&gt;REC-xmlbase&lt;/a&gt; ] Марш, Дж., &quot;XML Base&quot;, W3C REC W3C.REC-xmlbase-20010627, июнь 2001 г., &amp;lt; &lt;a href=&quot;http://www.w3.org/TR/2001/REC-xmlbase-20010627&quot;&gt;http://www.w3.org/TR/2001/REC-xmlbase-20010627&lt;/a&gt; &amp;gt;. [ &lt;a id=&quot;ref-REC-xmldsig-core&quot; name=&quot;ref-REC-xmldsig-core&quot;&gt;REC-xmldsig-core&lt;/a&gt; ] Соло, Д., Ригл, Дж. И Д. Истлейк, &amp;laquo;Синтаксис и обработка подписи XML&amp;raquo;, Рекомендация консорциума World Wide Web REC-xmldsig-core-20020212, февраль 2002 г., &amp;lt;&lt;a href=&quot;http://www.w3.org/TR/2002/REC-xmldsig-core-20020212&quot;&gt;http://www.w3.org/TR/2002/REC-xmldsig-core-20020212&lt;/a&gt; &amp;gt;. [ &lt;a id=&quot;ref-REC-xmlenc-core&quot; name=&quot;ref-REC-xmlenc-core&quot;&gt;REC-xmlenc-core&lt;/a&gt; ] Истлейк Д. и Дж. Ригл, &amp;laquo;Синтаксис и обработка шифрования XML&amp;raquo;, Рекомендация Консорциума World Wide Web REC-xmlenc-core-20021210, декабрь 2002 г., &amp;lt; &lt;a href=&quot;http://www.w3.org/TR/2002/REC-xmlenc-core-20021210&quot;&gt;http://www.w3.org / TR / 2002 / REC-xmlenc-core-20021210&lt;/a&gt; &amp;gt;. [ &lt;a id=&quot;ref-RFC2119&quot; name=&quot;ref-RFC2119&quot;&gt;RFC2119&lt;/a&gt; ] Брэднер, С., &amp;laquo;Ключевые слова для использования в RFC для обозначения уровней требований&amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/bcp14&quot;&gt;BCP 14&lt;/a&gt; , &lt;a href=&quot;https://tools.ietf.org/html/rfc2119&quot;&gt;RFC 2119&lt;/a&gt; , март 1997 г. [ &lt;a id=&quot;ref-RFC2246&quot; name=&quot;ref-RFC2246&quot;&gt;RFC2246&lt;/a&gt; ] Диркс, Т. и К. Аллен, &amp;laquo;Протокол TLS версии 1.0&amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2246&quot;&gt;RFC 2246&lt;/a&gt; , январь 1999 г. [ &lt;a id=&quot;ref-RFC2616&quot; name=&quot;ref-RFC2616&quot;&gt;RFC2616&lt;/a&gt;] Филдинг, Р., Геттис, Дж., Могул, Дж., Фристик, Х., Масинтер, Л., Лич, П., и Т. Бернерс-Ли, &amp;laquo;Протокол передачи гипертекста - HTTP / 1.1&amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2616&quot;&gt;RFC 2616&lt;/a&gt; , июнь 1999 г. [ &lt;a id=&quot;ref-RFC2617&quot; name=&quot;ref-RFC2617&quot;&gt;RFC2617&lt;/a&gt; ] Franks, J., Hallam-Baker, P., Hostetler, J., Lawrence, S., Leach, P., Luotonen, A., and L. Stewart, &quot;HTTP Authentication: Basic and Digest Access Authentication &amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2617&quot;&gt;RFC 2617&lt;/a&gt; , июнь 1999 г. [ &lt;a id=&quot;ref-RFC2818&quot; name=&quot;ref-RFC2818&quot;&gt;RFC2818&lt;/a&gt; ] Рескорла, Э.,&amp;laquo; HTTP через TLS &amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2818&quot;&gt;RFC 2818&lt;/a&gt; , май 2000 г. [ &lt;a id=&quot;ref-RFC3023&quot; name=&quot;ref-RFC3023&quot;&gt;RFC3023&lt;/a&gt; ] Мурата, М., Сен-Лоран, С. и Д. Кон, &quot;Типы носителей XML&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc3023&quot;&gt;RFC 3023&lt;/a&gt; , январь 2001 г. [ &lt;a id=&quot;ref-RFC3629&quot; name=&quot;ref-RFC3629&quot;&gt;RFC3629&lt;/a&gt;] Yergeau, F., &amp;laquo;UTF-8, формат преобразования ISO 10646&amp;raquo;, STD 63, &lt;a href=&quot;https://tools.ietf.org/html/rfc3629&quot;&gt;RFC 3629&lt;/a&gt; , ноябрь 2003 г. [ &lt;a id=&quot;ref-RFC3864&quot; name=&quot;ref-RFC3864&quot;&gt;RFC3864&lt;/a&gt; ] Klyne, G., Nottingham, M., and J. Mogul, &amp;laquo;Процедуры регистрации для Поля заголовка сообщения &amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/bcp90&quot;&gt;BCP 90&lt;/a&gt; , &lt;a href=&quot;https://tools.ietf.org/html/rfc3864&quot;&gt;RFC 3864&lt;/a&gt; , сентябрь 2004 г. [ &lt;a id=&quot;ref-RFC3986&quot; name=&quot;ref-RFC3986&quot;&gt;RFC3986&lt;/a&gt; ] Бернерс-Ли, Т., Филдинг, Р., и Л. Масинтер,&amp;laquo; Универсальный идентификатор ресурса (URI): общий синтаксис &amp;raquo;, STD 66, &lt;a href=&quot;https://tools.ietf.org/html/rfc3986&quot;&gt;RFC &lt;/a&gt;&lt;a href=&quot;https://tools.ietf.org/html/rfc3986&quot;&gt;3986&lt;/a&gt; , январь 2005 г. [ &lt;a id=&quot;ref-RFC3987&quot; name=&quot;ref-RFC3987&quot;&gt;RFC3987&lt;/a&gt; ] Duerst, M. и M. Suignard, &amp;laquo;Internationalized Resource Identifiers (IRI)&amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/rfc3987&quot;&gt;RFC 3987&lt;/a&gt; , январь 2005 г. [ &lt;a id=&quot;ref-RFC4287&quot; name=&quot;ref-RFC4287&quot;&gt;RFC4287&lt;/a&gt;] Nottingham, M. и R. Sayre, &amp;laquo;Формат синдикации Atom&amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/rfc4287&quot;&gt;RFC 4287&lt;/a&gt; , декабрь 2005 г. [ &lt;a id=&quot;ref-RFC4288&quot; name=&quot;ref-RFC4288&quot;&gt;RFC4288&lt;/a&gt; ] Фрид, Н. и Дж. Кленсин, &amp;laquo;Спецификации типов носителей и процедуры регистрации&amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/bcp13&quot;&gt;BCP 13&lt;/a&gt; , &lt;a href=&quot;https://tools.ietf.org/html/rfc4288&quot;&gt;RFC 4288&lt;/a&gt; , Декабрь 2005 г. [ &lt;a id=&quot;ref-RFC4346&quot; name=&quot;ref-RFC4346&quot;&gt;RFC4346&lt;/a&gt; ] Диркс, Т. и Э. Рескорла, &amp;laquo;Протокол безопасности транспортного уровня (TLS) версии 1.1&amp;raquo;, &lt;a href=&quot;https://tools.ietf.org/html/rfc4346&quot;&gt;RFC 4346&lt;/a&gt; , апрель 2006 г.</target>
+        </trans-unit>
+        <trans-unit id="0e6474e3325fd19a71f854980af1652d6400ce66" translate="yes" xml:space="preserve">
+          <source>[&lt;a id=&quot;ref-REC-xml&quot; name=&quot;ref-REC-xml&quot;&gt;REC-xml&lt;/a&gt;]  Yergeau, F., Paoli, J., Bray, T., Sperberg-McQueen, C.,
+              and E. Maler, &quot;Extensible Markup Language (XML) 1.0
+              (Fourth Edition)&quot;, World Wide Web Consortium
+              Recommendation REC-xml-20060816, August 2006,
+              &amp;lt;&lt;a href=&quot;https://www.w3.org/TR/2006/REC-xml-20060816&quot;&gt;http://www.w3.org/TR/2006/REC-xml-20060816&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-REC-xml-infoset&quot; name=&quot;ref-REC-xml-infoset&quot;&gt;REC-xml-infoset&lt;/a&gt;]
+              Cowan, J. and R. Tobin, &quot;XML Information Set (Second
+              Edition)&quot;, World Wide Web Consortium Recommendation REC-
+              xml-infoset-20040204, February 2004,
+              &amp;lt;&lt;a href=&quot;https://www.w3.org/TR/2004/REC-xml-infoset-20040204&quot;&gt;http://www.w3.org/TR/2004/REC-xml-infoset-20040204&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-REC-xml-names&quot; name=&quot;ref-REC-xml-names&quot;&gt;REC-xml-names&lt;/a&gt;]
+              Hollander, D., Bray, T., Tobin, R., and A. Layman,
+              &quot;Namespaces in XML 1.0 (Second Edition)&quot;, World Wide Web
+              Consortium Recommendation REC-xml-names-20060816, August
+              2006, &amp;lt;&lt;a href=&quot;https://www.w3.org/TR/2006/REC-xml-names-20060816&quot;&gt;http://www.w3.org/TR/2006/REC-xml-names-20060816&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-REC-xmlbase&quot; name=&quot;ref-REC-xmlbase&quot;&gt;REC-xmlbase&lt;/a&gt;]
+              Marsh, J., &quot;XML Base&quot;, W3C REC W3C.REC-xmlbase-20010627,
+              June 2001,
+              &amp;lt;&lt;a href=&quot;https://www.w3.org/TR/2001/REC-xmlbase-20010627&quot;&gt;http://www.w3.org/TR/2001/REC-xmlbase-20010627&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-REC-xmldsig-core&quot; name=&quot;ref-REC-xmldsig-core&quot;&gt;REC-xmldsig-core&lt;/a&gt;]
+              Solo, D., Reagle, J., and D. Eastlake, &quot;XML-Signature
+              Syntax and Processing&quot;, World Wide Web Consortium
+              Recommendation REC-xmldsig-core-20020212, February 2002,
+              &amp;lt;&lt;a href=&quot;https://www.w3.org/TR/2002/REC-xmldsig-core-20020212&quot;&gt;http://www.w3.org/TR/2002/REC-xmldsig-core-20020212&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-REC-xmlenc-core&quot; name=&quot;ref-REC-xmlenc-core&quot;&gt;REC-xmlenc-core&lt;/a&gt;]
+              Eastlake, D. and J. Reagle, &quot;XML Encryption Syntax and
+              Processing&quot;, World Wide Web Consortium Recommendation REC-
+              xmlenc-core-20021210, December 2002,
+              &amp;lt;&lt;a href=&quot;https://www.w3.org/TR/2002/REC-xmlenc-core-20021210&quot;&gt;http://www.w3.org/TR/2002/REC-xmlenc-core-20021210&lt;/a&gt;&amp;gt;.
+
+   [&lt;a id=&quot;ref-RFC2119&quot; name=&quot;ref-RFC2119&quot;&gt;RFC2119&lt;/a&gt;]  Bradner, S., &quot;Key words for use in RFCs to Indicate
+              Requirement Levels&quot;, &lt;a href=&quot;https://tools.ietf.org/html/bcp14&quot;&gt;BCP 14&lt;/a&gt;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2119&quot;&gt;RFC 2119&lt;/a&gt;, March 1997. 
+
+   [&lt;a id=&quot;ref-RFC2246&quot; name=&quot;ref-RFC2246&quot;&gt;RFC2246&lt;/a&gt;]  Dierks, T. and C. Allen, &quot;The TLS Protocol Version 1.0&quot;,
+              &lt;a href=&quot;https://tools.ietf.org/html/rfc2246&quot;&gt;RFC 2246&lt;/a&gt;, January 1999.
+
+   [&lt;a id=&quot;ref-RFC2616&quot; name=&quot;ref-RFC2616&quot;&gt;RFC2616&lt;/a&gt;]  Fielding, R., Gettys, J., Mogul, J., Frystyk, H.,
+              Masinter, L., Leach, P., and T. Berners-Lee, &quot;Hypertext
+              Transfer Protocol -- HTTP/1.1&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2616&quot;&gt;RFC 2616&lt;/a&gt;, June 1999.
+
+   [&lt;a id=&quot;ref-RFC2617&quot; name=&quot;ref-RFC2617&quot;&gt;RFC2617&lt;/a&gt;]  Franks, J., Hallam-Baker, P., Hostetler, J., Lawrence, S.,
+              Leach, P., Luotonen, A., and L. Stewart, &quot;HTTP
+              Authentication: Basic and Digest Access Authentication&quot;,
+              &lt;a href=&quot;https://tools.ietf.org/html/rfc2617&quot;&gt;RFC 2617&lt;/a&gt;, June 1999.
+
+   [&lt;a id=&quot;ref-RFC2818&quot; name=&quot;ref-RFC2818&quot;&gt;RFC2818&lt;/a&gt;]  Rescorla, E., &quot;HTTP Over TLS&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2818&quot;&gt;RFC 2818&lt;/a&gt;, May 2000.
+
+   [&lt;a id=&quot;ref-RFC3023&quot; name=&quot;ref-RFC3023&quot;&gt;RFC3023&lt;/a&gt;]  Murata, M., St. Laurent, S., and D. Kohn, &quot;XML Media
+              Types&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc3023&quot;&gt;RFC 3023&lt;/a&gt;, January 2001.
+
+   [&lt;a id=&quot;ref-RFC3629&quot; name=&quot;ref-RFC3629&quot;&gt;RFC3629&lt;/a&gt;]  Yergeau, F., &quot;UTF-8, a transformation format of ISO
+              10646&quot;, STD 63, &lt;a href=&quot;https://tools.ietf.org/html/rfc3629&quot;&gt;RFC 3629&lt;/a&gt;, November 2003.
+
+   [&lt;a id=&quot;ref-RFC3864&quot; name=&quot;ref-RFC3864&quot;&gt;RFC3864&lt;/a&gt;]  Klyne, G., Nottingham, M., and J. Mogul, &quot;Registration
+              Procedures for Message Header Fields&quot;, &lt;a href=&quot;https://tools.ietf.org/html/bcp90&quot;&gt;BCP 90&lt;/a&gt;, &lt;a href=&quot;https://tools.ietf.org/html/rfc3864&quot;&gt;RFC 3864&lt;/a&gt;,
+              September 2004.
+
+   [&lt;a id=&quot;ref-RFC3986&quot; name=&quot;ref-RFC3986&quot;&gt;RFC3986&lt;/a&gt;]  Berners-Lee, T., Fielding, R., and L. Masinter, &quot;Uniform
+              Resource Identifier (URI): Generic Syntax&quot;, STD 66, &lt;a href=&quot;https://tools.ietf.org/html/rfc3986&quot;&gt;RFC&lt;/a&gt;&lt;a href=&quot;https://tools.ietf.org/html/rfc3986&quot;&gt;3986&lt;/a&gt;, January 2005.
+
+   [&lt;a id=&quot;ref-RFC3987&quot; name=&quot;ref-RFC3987&quot;&gt;RFC3987&lt;/a&gt;]  Duerst, M. and M. Suignard, &quot;Internationalized Resource
+              Identifiers (IRIs)&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc3987&quot;&gt;RFC 3987&lt;/a&gt;, January 2005.
+
+   [&lt;a id=&quot;ref-RFC4287&quot; name=&quot;ref-RFC4287&quot;&gt;RFC4287&lt;/a&gt;]  Nottingham, M. and R. Sayre, &quot;The Atom Syndication
+              Format&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc4287&quot;&gt;RFC 4287&lt;/a&gt;, December 2005.
+
+   [&lt;a id=&quot;ref-RFC4288&quot; name=&quot;ref-RFC4288&quot;&gt;RFC4288&lt;/a&gt;]  Freed, N. and J. Klensin, &quot;Media Type Specifications and
+              Registration Procedures&quot;, &lt;a href=&quot;https://tools.ietf.org/html/bcp13&quot;&gt;BCP 13&lt;/a&gt;, &lt;a href=&quot;https://tools.ietf.org/html/rfc4288&quot;&gt;RFC 4288&lt;/a&gt;, December 2005.
+
+   [&lt;a id=&quot;ref-RFC4346&quot; name=&quot;ref-RFC4346&quot;&gt;RFC4346&lt;/a&gt;]  Dierks, T. and E. Rescorla, &quot;The Transport Layer Security
+              (TLS) Protocol Version 1.1&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc4346&quot;&gt;RFC 4346&lt;/a&gt;, April 2006.</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="aa753c7ca1de65f848d19927144998faa06fdb5d" translate="yes" xml:space="preserve">
           <source>[&lt;a id=&quot;ref-RFC0793&quot; name=&quot;ref-RFC0793&quot;&gt;RFC0793&lt;/a&gt;]     Postel, J., &quot;Transmission Control Protocol&quot;, STD 7,
@@ -4460,6 +5305,33 @@
    below, and it can contain extension elements as defined in &lt;a href=&quot;https://tools.ietf.org/html/rfc4287#section-6&quot;&gt;Section&amp;nbsp;6
    of [RFC4287]&lt;/a&gt;.</source>
           <target state="translated">namespace app = &quot; &lt;a href=&quot;http://www.w3.org/2007/app&quot;&gt;http://www.w3.org/2007/app&lt;/a&gt; &quot; pubControl = element app: control {atomCommonAttributes, pubDraft? &amp;amp; extensionElement} pubDraft = element app: draft {&quot;yes&quot; | &quot;no&quot;} Элемент &quot;app: control&quot; МОЖЕТ быть дочерним по отношению к элементу atom: entry, который создается или обновляется через протокол публикации Atom. Элемент app: control ДОЛЖЕН появляться в записи только один раз. Элемент app: control считается внешней разметкой, как определено в &lt;a href=&quot;https://tools.ietf.org/html/rfc4287#section-6&quot;&gt;разделе 6 [RFC4287]&lt;/a&gt; . Элемент app: control и его дочерние элементы МОГУТ быть включены в Atom Feed или Entry Documents. Элемент app: control может содержать элемент app: draft, как определено ниже,и он может содержать элементы расширения, как определено в&lt;a href=&quot;https://tools.ietf.org/html/rfc4287#section-6&quot;&gt;Раздел 6 [RFC4287]&lt;/a&gt; .</target>
+        </trans-unit>
+        <trans-unit id="e861edf8e52e6136c3a8d02c9a88ccf0b9ab93df" translate="yes" xml:space="preserve">
+          <source>namespace app = &quot;&lt;a href=&quot;https://www.w3.org/2007/app&quot;&gt;http://www.w3.org/2007/app&lt;/a&gt;&quot;
+
+    pubControl =
+       element app:control {
+       atomCommonAttributes,
+       pubDraft?
+       &amp;amp; extensionElement
+    }
+
+    pubDraft =
+      element app:draft { &quot;yes&quot; | &quot;no&quot; } 
+
+   The &quot;app:control&quot; element MAY appear as a child of an atom:entry that
+   is being created or updated via the Atom Publishing Protocol.  The
+   app:control element MUST appear only once in an Entry.  The app:
+   control element is considered foreign markup as defined in &lt;a href=&quot;https://tools.ietf.org/html/rfc4287#section-6&quot;&gt;Section&amp;nbsp;6
+   of [RFC4287]&lt;/a&gt;.
+
+   The app:control element and its child elements MAY be included in
+   Atom Feed or Entry Documents.
+
+   The app:control element can contain an &quot;app:draft&quot; element as defined
+   below, and it can contain extension elements as defined in &lt;a href=&quot;https://tools.ietf.org/html/rfc4287#section-6&quot;&gt;Section&amp;nbsp;6
+   of [RFC4287]&lt;/a&gt;.</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="fd1286353570c5703799ba76999323b7c7447b06" translate="yes" xml:space="preserve">
           <source>no</source>

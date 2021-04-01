@@ -3,6 +3,170 @@
   <file source-language="en" target-language="ja" datatype="htmlbody" original="d">
     <body>
       <group id="d">
+        <trans-unit id="5acb9506d75a51ad2e949d226d6eb45b0c67820e" translate="yes" xml:space="preserve">
+          <source>D can still explicitly allocate memory using core.stdc.stdlib.malloc() and core.stdc.stdlib.free(), these are useful for connecting to C functions that expect malloc'd buffers, etc.</source>
+          <target state="translated">D は core.stdc.stdlib.malloc()と core.stdc.stdlib.free()を使って明示的にメモリを割り当てることができますが、これらは malloc されたバッファなどを期待する C 関数に接続するのに便利です。</target>
+        </trans-unit>
+        <trans-unit id="17e8e7c234c8b135698e2569ad7c740d6032f484" translate="yes" xml:space="preserve">
+          <source>D cannot directly call C++ special member functions, and vice versa. These include constructors, destructors, conversion operators, operator overloading, and allocators.</source>
+          <target state="translated">D は C++の特殊なメンバ関数を直接呼び出すことはできませんが、その逆も同様です。これらには、コンストラクタ、デストラクタ、変換演算子、演算子のオーバーロード、およびアロケータが含まれます。</target>
+        </trans-unit>
+        <trans-unit id="0fb4b87546a27bc737044f6f7e9773793eda6a11" translate="yes" xml:space="preserve">
+          <source>D code can be embedded using lines beginning with at least three hyphens &lt;code&gt;-&lt;/code&gt;, backticks &lt;code&gt;`&lt;/code&gt; or tildes &lt;code&gt;~&lt;/code&gt; (ignoring whitespace) to delineate the code section:</source>
+          <target state="translated">Dコードは、少なくとも3つのハイフン &lt;code&gt;-&lt;/code&gt; 、バッククォート &lt;code&gt;`&lt;/code&gt; またはチルダ &lt;code&gt;~&lt;/code&gt; （空白を無視）で始まる行を使用して埋め込んで、コードセクションを区切ることができます。</target>
+        </trans-unit>
+        <trans-unit id="dcedc4ea27f9fbbf3eaeba264e973e8baac897d0" translate="yes" xml:space="preserve">
+          <source>D code gets automatic syntax highlighting. To include code in another language without syntax highlighting, add a language string at the end of the top delimiter line:</source>
+          <target state="translated">D のコードには、自動的にシンタックスハイライトが適用されます。構文の強調表示を行わずに他の言語のコードを含めるには、先頭の区切り行の最後に言語文字列を追加します。</target>
+        </trans-unit>
+        <trans-unit id="db2576347b92e13d169d9d3a8ec611d68f429441" translate="yes" xml:space="preserve">
+          <source>D constrains integral types to specific sizes. But efficiency of different sizes varies from machine to machine, pointer sizes vary, and the maximum integer size varies. &lt;b&gt;stdint&lt;/b&gt; offers a portable way of trading off size vs efficiency, in a manner compatible with the</source>
+          <target state="translated">Dは、整数型を特定のサイズに制限します。ただし、さまざまなサイズの効率はマシンごとに異なり、ポインターのサイズもさまざまで、最大整数サイズもさまざまです。&lt;b&gt;stdint&lt;/b&gt;は、サイズと効率をトレードオフするポータブルな方法を提供します。</target>
+        </trans-unit>
+        <trans-unit id="507bee50e6e5c4a08c20f7a821523744843dab1d" translate="yes" xml:space="preserve">
+          <source>D conventions are:</source>
+          <target state="translated">Dの規約は</target>
+        </trans-unit>
+        <trans-unit id="9a11c2269497647472aad8b1a5fbcb4adc87a952" translate="yes" xml:space="preserve">
+          <source>D does not support bit fields. If needed, they can be emulated with shift and mask operations, or use the &lt;a href=&quot;https://dlang.org/phobos/std_bitmanip.html#bitfields&quot;&gt;std.bitmanip.bitfields&lt;/a&gt; library type. &lt;a href=&quot;https://dlang.org/htod.html&quot;&gt;htod&lt;/a&gt; will convert bit fields to inline functions that do the right shift and masks.</source>
+          <target state="translated">Dはビットフィールドをサポートしていません。必要に応じて、シフトおよびマスク操作でエミュレートするか、&lt;a href=&quot;https://dlang.org/phobos/std_bitmanip.html#bitfields&quot;&gt;std.bitmanip.bitfields&lt;/a&gt;ライブラリタイプを使用できます。&lt;a href=&quot;https://dlang.org/htod.html&quot;&gt;htod&lt;/a&gt;は、ビットフィールドを、右シフトとマスクを行うインライン関数に変換します。</target>
+        </trans-unit>
+        <trans-unit id="10392eddc0ec6cd68606fb4c53a826525a44407e" translate="yes" xml:space="preserve">
+          <source>D does not support declaring variables of anonymous struct types. In such a case you can define a named struct in D and make it private:</source>
+          <target state="translated">D は匿名構造体型の変数宣言をサポートしていません。このような場合は、Dで名前付き構造体を定義し、それをプライベートにすることができます。</target>
+        </trans-unit>
+        <trans-unit id="b5ed1c9e2e5b85b71f5da5cc74c0dc2f3e444e1a" translate="yes" xml:space="preserve">
+          <source>D exception handling fits right in with that.</source>
+          <target state="translated">Dの例外処理はそれにぴったりです。</target>
+        </trans-unit>
+        <trans-unit id="2996c849bb3b528029f848ec1204d0c07cdcd623" translate="yes" xml:space="preserve">
+          <source>D features not available with &lt;b&gt;BetterC&lt;/b&gt;:</source>
+          <target state="translated">&lt;b&gt;BetterC&lt;/b&gt;では使用できないD機能：</target>
+        </trans-unit>
+        <trans-unit id="883282b9d057cb0d92c679117bdb3b124bb34d24" translate="yes" xml:space="preserve">
+          <source>D grammar allows declarations only as statements. However in AST representation it can be part of any expression. This is used, for example, during internal syntax re-writes to inject hidden symbols.</source>
+          <target state="translated">D文法では宣言は文としてしか使えません。しかし、AST表現では、宣言は任意の式の一部になることができます。これは、例えば、内部構文の書き換えの際に、隠されたシンボルを注入するために使用されます。</target>
+        </trans-unit>
+        <trans-unit id="bff43f4fa297f3c093df3b2ac4a91965cf38a6b0" translate="yes" xml:space="preserve">
+          <source>D has reference types, but they are implicit. For example, classes are always referred to by reference; this means that class instances can never reside on the stack or be passed as function parameters.</source>
+          <target state="translated">D は参照型を持っていますが、それは暗黙のうちです。例えば、クラスは常に参照によって参照されます。これは、クラスインスタンスがスタックに常駐したり、関数のパラメータとして渡されたりすることができないことを意味します。</target>
+        </trans-unit>
+        <trans-unit id="1b55a6666e706c8c18a3807c207816e092af0934" translate="yes" xml:space="preserve">
+          <source>D has some support for interfacing with Objective-C. It supports classes, subclasses, instance variables, instance and class methods. It is only available on macOS, compiling for 64bit.</source>
+          <target state="translated">D は Objective-C とのインターフェイスをいくつかサポートしています。クラス、サブクラス、インスタンス変数、インスタンスメソッド、クラスメソッドをサポートしています。これはmacOSでのみ利用可能で、64bit用にコンパイルされています。</target>
+        </trans-unit>
+        <trans-unit id="19426ac046e36206df7c1df586ad586f184cd03e" translate="yes" xml:space="preserve">
+          <source>D has types that are not represented in existing C or C++ debuggers. These are dynamic arrays, associative arrays, and delegates. Representing these types as structs causes problems because function calling conventions for structs are often different than that for these types, which causes C/C++ debuggers to misrepresent things. For these debuggers, they are represented as a C type which does match the calling conventions for the type.</source>
+          <target state="translated">Dには、既存のCやC++デバッガでは表現されていない型があります。これらの型は、動的配列、連想配列、およびデリゲートです。これらの型を構造体として表現すると、構造体の関数呼び出し規約がこれらの型とは異なることが多く、C/C++デバッガが誤った表現をしてしまうという問題が発生します。これらのデバッガのために、これらの型は型の呼び出し規約と一致するCの型として表現されています。</target>
+        </trans-unit>
+        <trans-unit id="121b6728c073450cbfd13591bf64f1dacb90a45f" translate="yes" xml:space="preserve">
+          <source>D has types that are not represented in existing C or C++ debuggers. These are dynamic arrays, associative arrays, and delegates. Representing these types as structs causes problems because function calling conventions for structs are often different than that for these types, which causes C/C++ debuggers to misrepresent things. For these debuggers, they are represented as a C type which does match the calling conventions for the type. The &lt;b&gt;dmd&lt;/b&gt; compiler will generate only C symbolic type info with the &lt;b&gt;-gc&lt;/b&gt; compiler switch.</source>
+          <target state="translated">Dには、既存のCまたはC ++デバッガーでは表現されない型があります。これらは、動的配列、連想配列、およびデリゲートです。これらの型を構造体として表すと、構造体の関数呼び出し規約がこれらの型のものと異なることがよくあり、C / C ++デバッガーが誤った表現をするため、問題が発生します。これらのデバッガーの場合、それらはC型として表され、その型の呼び出し規約と一致します。&lt;b&gt;DMD&lt;/b&gt;コンパイラが持つ唯一のCシンボリック型情報が生成されます&lt;b&gt;-gc&lt;/b&gt;コンパイラスイッチを。</target>
+        </trans-unit>
+        <trans-unit id="0d7dc7a95854603cb8d9462f5cc1ad1a152da8c2" translate="yes" xml:space="preserve">
+          <source>D header file for C99</source>
+          <target state="translated">C99用Dヘッダファイル</target>
+        </trans-unit>
+        <trans-unit id="ed764989e25528a9844d96827752e35b6e2e9eea" translate="yes" xml:space="preserve">
+          <source>D header file for C99.</source>
+          <target state="translated">C99用のDヘッダファイル。</target>
+        </trans-unit>
+        <trans-unit id="7ad95cc9683672fd46f6a22377da886b23e6e760" translate="yes" xml:space="preserve">
+          <source>D header file for interaction with C++ std::array.</source>
+          <target state="translated">C++の std::array とのインタラクション用の D ヘッダファイル.</target>
+        </trans-unit>
+        <trans-unit id="4f35219179c87ed75b46610654f6f3ed6dbd80a3" translate="yes" xml:space="preserve">
+          <source>D header file for interaction with C++ std::string.</source>
+          <target state="translated">C++std::stringとの相互作用のためのDヘッダファイル.</target>
+        </trans-unit>
+        <trans-unit id="8745691e9f4a9ab07ce82e5bf211832a13541675" translate="yes" xml:space="preserve">
+          <source>D header file for interaction with C++ std::string_view.</source>
+          <target state="translated">C++std::string_viewとの相互作用のためのDヘッダファイル。</target>
+        </trans-unit>
+        <trans-unit id="0fa30a4a6e6e6ac7b257dba8aee80922db2a59d4" translate="yes" xml:space="preserve">
+          <source>D header file for interaction with C++ std::type_traits.</source>
+          <target state="translated">C++std::type_traitsとの相互作用のためのDヘッダファイル。</target>
+        </trans-unit>
+        <trans-unit id="e89f07a65806c6e223faa5fc9abe0d71cc5e02bb" translate="yes" xml:space="preserve">
+          <source>D header file for interaction with C++ std::vector.</source>
+          <target state="translated">C++std::vector とのインタラクション用の D ヘッダファイル.</target>
+        </trans-unit>
+        <trans-unit id="5824cf94dceeaf8ce80dcdea0f69c87be67a1def" translate="yes" xml:space="preserve">
+          <source>D is a general-purpose systems programming language with a C-like syntax that compiles to native code. It is statically typed and supports both automatic (garbage collected) and manual memory management. D programs are structured as modules that can be compiled separately and linked with external libraries to create native libraries or executables.</source>
+          <target state="translated">D は、ネイティブコードにコンパイルされる C ライクな構文を持つ汎用システムプログラミング言語です。静的型付けされており、自動(ガベージコレクション)と手動のメモリ管理の両方をサポートしています。Dプログラムはモジュールとして構造化されており、個別にコンパイルしたり、外部ライブラリとリンクしてネイティブライブラリや実行ファイルを作成したりすることができます。</target>
+        </trans-unit>
+        <trans-unit id="f4523654c6ad41f53f1cb538f5b3376ea8b5d67c" translate="yes" xml:space="preserve">
+          <source>D is a systems programming language with support for garbage collection. Usually it is not necessary to free memory explicitly. Just allocate as needed, and the garbage collector will periodically return all unused memory to the pool of available memory.</source>
+          <target state="translated">Dはガベージコレクションをサポートするシステムプログラミング言語です。通常、明示的にメモリを解放する必要はありません。必要に応じて割り当てるだけで、ガベージコレクタは定期的にすべての未使用メモリを利用可能なメモリプールに返します。</target>
+        </trans-unit>
+        <trans-unit id="e55199a6ff4a3d3957959784edcd8f8e4b27511c" translate="yes" xml:space="preserve">
+          <source>D is designed to fit comfortably with a C compiler for the target system. D makes up for not having its own VM by relying on the target environment's C runtime library. It would be senseless to attempt to port to D or write D wrappers for the vast array of C APIs available. How much easier it is to just call them directly.</source>
+          <target state="translated">D は、ターゲットシステム用の C コンパイラに快適にフィットするように設計されています。D は、ターゲット環境の C ランタイムライブラリに依存することで、独自の VM を持たないことを補っています。D に移植しようとしたり、利用可能な膨大な数の C API のために D のラッパーを書いたりするのは無意味なことです。それらを直接呼び出せば、どれだけ簡単になることか。</target>
+        </trans-unit>
+        <trans-unit id="cc6ee9028bb527b99c9d4c56e23cdd8645b43dac" translate="yes" xml:space="preserve">
+          <source>D is statically typed. Every expression has a type. Types constrain the values an expression can hold, and determine the semantics of operations on those values.</source>
+          <target state="translated">Dは静的に型付けされています。すべての式は型を持っています。型は式が保持できる値を制約し、それらの値に対する操作のセマンティクスを決定します。</target>
+        </trans-unit>
+        <trans-unit id="4cbe911218e52a81c61994de4956c194b77f145c" translate="yes" xml:space="preserve">
+          <source>D language counterpart to C++ std::array.</source>
+          <target state="translated">C++の std::array に対応する D 言語.</target>
+        </trans-unit>
+        <trans-unit id="d67cb3c014edbba57daff299226c50e7d26383c4" translate="yes" xml:space="preserve">
+          <source>D language counterpart to C++ std::basic_string.</source>
+          <target state="translated">C++のstd::basic_stringに対応するD言語.</target>
+        </trans-unit>
+        <trans-unit id="41ac364d23fcf29b68564ddbcd4409f706b80280" translate="yes" xml:space="preserve">
+          <source>D language counterpart to C++ std::basic_string_view.</source>
+          <target state="translated">C++のstd::basic_string_viewのD言語対応版.</target>
+        </trans-unit>
+        <trans-unit id="9f0d936e12f702e1c17150706af894a23276e3c6" translate="yes" xml:space="preserve">
+          <source>D language types specify only a minimum precision, not a maximum. The &lt;code&gt;toPrec()&lt;/code&gt; function forces rounding of the argument &lt;code&gt;f&lt;/code&gt; to the precision of the specified floating point type &lt;code&gt;T&lt;/code&gt;. The rounding mode used is inevitably target-dependent, but will be done in a way to maximize accuracy. In most cases, the default is round-to-nearest.</source>
+          <target state="translated">D言語タイプは、最大ではなく最小の精度のみを指定します。 &lt;code&gt;toPrec()&lt;/code&gt; の引数の丸め関数力 &lt;code&gt;f&lt;/code&gt; 指定浮動小数点型の精度 &lt;code&gt;T&lt;/code&gt; 。使用される丸めモードは必然的にターゲットに依存しますが、精度を最大化する方法で実行されます。ほとんどの場合、デフォルトは四捨五入です。</target>
+        </trans-unit>
+        <trans-unit id="9d7d4857e53f3903d163814c3fd126b718eac23d" translate="yes" xml:space="preserve">
+          <source>D makes this simple. All member initializations must be determinable by the compiler at compile time, hence there is no order-of-evaluation dependency for member initializations, and it is not possible to read a value that has not been initialized. Dynamic initialization is performed by a static constructor, defined with a special syntax &lt;code&gt;static this()&lt;/code&gt;.</source>
+          <target state="translated">Dはこれを簡単にします。すべてのメンバー初期化は、コンパイル時にコンパイラーによって判別可能でなければならないため、メンバー初期化には評価順序の依存関係はなく、初期化されていない値を読み取ることはできません。動的な初期化は、特別な構文 &lt;code&gt;static this()&lt;/code&gt; で定義された静的コンストラクターによって実行されます。</target>
+        </trans-unit>
+        <trans-unit id="348b41b262e2ee87f7ee9a58be800f10e55e96d7" translate="yes" xml:space="preserve">
+          <source>D makes use of the Codeview OEM generic type record indicated by &lt;code&gt;LF_OEM&lt;/code&gt; (0x0015). The format is:</source>
+          <target state="translated">Dは、 &lt;code&gt;LF_OEM&lt;/code&gt; （0x0015）で示されるCodeview OEMジェネリック型レコードを利用します。形式は次のとおりです。</target>
+        </trans-unit>
+        <trans-unit id="f05a7b018a28bc978c0088c176ce00074272430c" translate="yes" xml:space="preserve">
+          <source>D programs generally require:</source>
+          <target state="translated">Dプログラムは一般的に必要です。</target>
+        </trans-unit>
+        <trans-unit id="9d19d04a51d14b6f326e1ab50d8689f157419398" translate="yes" xml:space="preserve">
+          <source>D provides an easy way to call C functions and operating system API functions, as compatibility with both is essential. The</source>
+          <target state="translated">Dは、Cの関数とオペレーティングシステムのAPI関数の両方との互換性が不可欠なので、簡単に呼び出す方法を提供します。そのため、C言語の関数とオペレーティングシステムのAPI関数を簡単に呼び出すことができます。</target>
+        </trans-unit>
+        <trans-unit id="2b7505970a750559a4a0dcb9c95b55f7ba6c9212" translate="yes" xml:space="preserve">
+          <source>D runtime type identification uses completely different techniques than C++. The two are incompatible.</source>
+          <target state="translated">Dのランタイム型識別は、C++とは全く異なる技術を使用しています。この2つは互換性がありません。</target>
+        </trans-unit>
+        <trans-unit id="2f074b4f5342d38c9e4b97593d5d852288629b0d" translate="yes" xml:space="preserve">
+          <source>D structs and classes have different semantics whereas C++ structs and classes are basically the same. The use of a D struct or class depends on the C++ implementation and not on the used C++ keyword. When mapping a D &lt;code&gt;class&lt;/code&gt; onto a C++ &lt;code&gt;struct&lt;/code&gt;, use &lt;code&gt;extern(C++, struct)&lt;/code&gt; to avoid linking problems with C++ compilers (notably MSVC) that distinguish between C++'s &lt;code&gt;class&lt;/code&gt; and &lt;code&gt;struct&lt;/code&gt; when mangling. Conversely, use &lt;code&gt;extern(C++, class)&lt;/code&gt; to map a D &lt;code&gt;struct&lt;/code&gt; onto a C++ &lt;code&gt;class&lt;/code&gt;.</source>
+          <target state="translated">Dの構造体とクラスはセマンティクスが異なりますが、C ++の構造体とクラスは基本的に同じです。D構造体またはクラスの使用は、使用されるC ++キーワードではなく、C ++実装に依存します。D &lt;code&gt;class&lt;/code&gt; をC ++ &lt;code&gt;struct&lt;/code&gt; にマッピングするときは、 &lt;code&gt;extern(C++, struct)&lt;/code&gt; を使用して、C ++ の &lt;code&gt;class&lt;/code&gt; と &lt;code&gt;struct&lt;/code&gt; を区別するC ++コンパイラ（特にMSVC）とのリンクの問題を回避します。逆に、 &lt;code&gt;extern(C++, class)&lt;/code&gt; を使用して、D &lt;code&gt;struct&lt;/code&gt; をC ++ &lt;code&gt;class&lt;/code&gt; にマップします。</target>
+        </trans-unit>
+        <trans-unit id="413b9f9ee5f4a33c9e8e2c74310bb7e1520feb22" translate="yes" xml:space="preserve">
+          <source>D structs and unions are analogous to C's.</source>
+          <target state="translated">D構造体と組合はC構造体に類推されます。</target>
+        </trans-unit>
+        <trans-unit id="b0e98f6d2eaf06b89533f60085e7a9609ecffc56" translate="yes" xml:space="preserve">
+          <source>D style variadic function</source>
+          <target state="translated">Dスタイルバリアディック機能</target>
+        </trans-unit>
+        <trans-unit id="c9234fe1a36dd900caaf3d14d414557e453441fe" translate="yes" xml:space="preserve">
+          <source>D supports bitfields in the standard library: see &lt;a href=&quot;https://dlang.org/phobos/std_bitmanip.html#bitfields&quot;&gt;&lt;code&gt;std.bitmanip.bitfields&lt;/code&gt;&lt;/a&gt;.</source>
+          <target state="translated">Dは標準ライブラリのビットフィールドをサポートしています&lt;a href=&quot;https://dlang.org/phobos/std_bitmanip.html#bitfields&quot;&gt; &lt;code&gt;std.bitmanip.bitfields&lt;/code&gt; &lt;/a&gt;参照してください。</target>
+        </trans-unit>
+        <trans-unit id="0a3e7acb063a730b948300d255921be3f44a2bd6" translate="yes" xml:space="preserve">
+          <source>D symbol identifiers to source representation.</source>
+          <target state="translated">D シンボル識別子をソース表現に変換します。</target>
+        </trans-unit>
+        <trans-unit id="63b2085b5ee886bb893b17cc3825c3a7bac6abcc" translate="yes" xml:space="preserve">
+          <source>D takes a pragmatic approach that assumes a couple modest accommodations can solve a significant chunk of the problem:</source>
+          <target state="translated">Dは、カップルのささやかな宿泊施設が問題のかなりの部分を解決することができると仮定して、実用的なアプローチを取っています。</target>
+        </trans-unit>
         <trans-unit id="076ea0cddc7cd8818920bc029904f93dd150a22a" translate="yes" xml:space="preserve">
           <source>D understands how C function names are &quot;mangled&quot; and the correct C function call/return sequence.</source>
           <target state="translated">Dは、C言語の関数名がどのように「こじつけ」されているか、正しいC言語の関数の呼び出し/戻りの順序を理解しています。</target>
@@ -803,6 +967,10 @@
           <source>Define LinearCongruentialEngine generators with well-chosen parameters. &lt;code&gt;MinstdRand0&lt;/code&gt; implements Park and Miller's &quot;minimal standard&quot; &lt;a href=&quot;http://wikipedia.org/wiki/Park%E2%80%93Miller_random_number_generator&quot;&gt;generator&lt;/a&gt; that uses 16807 for the multiplier. &lt;code&gt;MinstdRand&lt;/code&gt; implements a variant that has slightly better spectral behavior by using the multiplier 48271. Both generators are rather simplistic.</source>
           <target state="translated">適切に選択されたパラメータを使用して、LinearCongruentialEngineジェネレータを定義します。 &lt;code&gt;MinstdRand0&lt;/code&gt; は、乗数に16807を使用するParkおよびMillerの「最小標準」&lt;a href=&quot;http://wikipedia.org/wiki/Park%E2%80%93Miller_random_number_generator&quot;&gt;ジェネレータ&lt;/a&gt;を実装しています。 &lt;code&gt;MinstdRand&lt;/code&gt; は、乗算器48271を使用することにより、スペクトル動作がわずかに改善されたバリアントを実装します。どちらのジェネレータもかなり単純化されています。</target>
         </trans-unit>
+        <trans-unit id="073997141f7a62781b86828c7a9a7d7df73f9d16" translate="yes" xml:space="preserve">
+          <source>Define LinearCongruentialEngine generators with well-chosen parameters. &lt;code&gt;MinstdRand0&lt;/code&gt; implements Park and Miller's &quot;minimal standard&quot; &lt;a href=&quot;https://wikipedia.org/wiki/Park%E2%80%93Miller_random_number_generator&quot;&gt;generator&lt;/a&gt; that uses 16807 for the multiplier. &lt;code&gt;MinstdRand&lt;/code&gt; implements a variant that has slightly better spectral behavior by using the multiplier 48271. Both generators are rather simplistic.</source>
+          <target state="translated">適切に選択されたパラメーターを使用してLinearCongruentialEngineジェネレーターを定義します。 &lt;code&gt;MinstdRand0&lt;/code&gt; は、乗数に16807を使用するPark andMillerの「最小標準」&lt;a href=&quot;https://wikipedia.org/wiki/Park%E2%80%93Miller_random_number_generator&quot;&gt;ジェネレーター&lt;/a&gt;を実装します。 &lt;code&gt;MinstdRand&lt;/code&gt; は、乗数48271を使用することにより、スペクトル動作がわずかに優れたバリアントを実装します。どちらのジェネレーターもかなり単純化されています。</target>
+        </trans-unit>
         <trans-unit id="2a32a694b454b48f0c6093b3ea95bcc7ae1e63ab" translate="yes" xml:space="preserve">
           <source>Define New Collating Sequences</source>
           <target state="translated">新しい照合シーケンスの定義</target>
@@ -1410,6 +1578,10 @@
         <trans-unit id="43c99522dee5ed94beb8731d90acc43ed9c784ee" translate="yes" xml:space="preserve">
           <source>Detaches from the current file (throwing on failure), and then runs a command by calling the C standard library function &lt;a href=&quot;http://opengroup.org/onlinepubs/007908799/xsh/popen.html&quot;&gt;popen&lt;/a&gt;.</source>
           <target state="translated">現在のファイルから切り離し（失敗するとスロー）、C標準ライブラリ関数&lt;a href=&quot;http://opengroup.org/onlinepubs/007908799/xsh/popen.html&quot;&gt;popenを&lt;/a&gt;呼び出してコマンドを実行します。</target>
+        </trans-unit>
+        <trans-unit id="57bdba4a21f2a94d4edb4431fa5a0dd46d80e939" translate="yes" xml:space="preserve">
+          <source>Detaches from the current file (throwing on failure), and then runs a command by calling the C standard library function &lt;a href=&quot;https://opengroup.org/onlinepubs/007908799/xsh/popen.html&quot;&gt;popen&lt;/a&gt;.</source>
+          <target state="translated">現在のファイルから切り離し（失敗時にスロー）、C標準ライブラリ関数&lt;a href=&quot;https://opengroup.org/onlinepubs/007908799/xsh/popen.html&quot;&gt;popenを&lt;/a&gt;呼び出してコマンドを実行します。</target>
         </trans-unit>
         <trans-unit id="bd15bb413d37f7450fabf4b76fbb1eddbcbd1e62" translate="yes" xml:space="preserve">
           <source>Detaches from the underlying file. If the sole owner, calls &lt;code&gt;close&lt;/code&gt;.</source>
@@ -2183,6 +2355,14 @@
           <source>Distributed under the &lt;a href=&quot;http://www.boost.org/LICENSE_1_0.txt&quot;&gt;Boost Software License 1.0&lt;/a&gt;. (See accompanying file LICENSE)</source>
           <target state="translated">&lt;a href=&quot;http://www.boost.org/LICENSE_1_0.txt&quot;&gt;Boost Software License 1.0の&lt;/a&gt;下で配布されます。（添付ファイルLICENSEを参照）</target>
         </trans-unit>
+        <trans-unit id="66bad9be669ed560e9a54fc66baf3603e98d93ee" translate="yes" xml:space="preserve">
+          <source>Distributed under the &lt;a href=&quot;https://www.boost.org/LICENSE_1_0.txt&quot;&gt;Boost Software License 1.0&lt;/a&gt;.</source>
+          <target state="translated">&lt;a href=&quot;https://www.boost.org/LICENSE_1_0.txt&quot;&gt;Boost Software License1.0の&lt;/a&gt;下で配布されます。</target>
+        </trans-unit>
+        <trans-unit id="7859de8d4a829c3bf0f9aefeae6a9f597e4258ab" translate="yes" xml:space="preserve">
+          <source>Distributed under the &lt;a href=&quot;https://www.boost.org/LICENSE_1_0.txt&quot;&gt;Boost Software License 1.0&lt;/a&gt;. (See accompanying file LICENSE)</source>
+          <target state="translated">&lt;a href=&quot;https://www.boost.org/LICENSE_1_0.txt&quot;&gt;Boost Software License1.0の&lt;/a&gt;下で配布されます。（添付ファイルLICENSEを参照）</target>
+        </trans-unit>
         <trans-unit id="ba891575bb154c2b907934064ce520b42404b90b" translate="yes" xml:space="preserve">
           <source>Distributed under the Boost Software License, Version 1.0. (See accompanying file LICENSE_1_0.txt or copy at &lt;a href=&quot;http://%20boost.org/LICENSE_1_0.txt&quot;&gt;boost.org/LICENSE_1_0.txt&lt;/a&gt;).</source>
           <target state="translated">Boost Software License、Version 1.0の下で配布されます。（添付ファイルLICENSE_1_0.txtを参照するか、&lt;a href=&quot;http://%20boost.org/LICENSE_1_0.txt&quot;&gt;boost.org&lt;/a&gt; /LICENSE_1_0.txtにコピーしてください）。</target>
@@ -2190,6 +2370,10 @@
         <trans-unit id="6ab74f49d93f10ad089666bb7d00d1c70aa92f62" translate="yes" xml:space="preserve">
           <source>Distributed under the Boost Software License, Version 1.0. (See accompanying file LICENSE_1_0.txt or copy at &lt;a href=&quot;http://boost.org/LICENSE_1_0.txt&quot;&gt;boost.org/LICENSE_1_0.txt&lt;/a&gt;).</source>
           <target state="translated">Boost Software License、Version 1.0の下で配布されます。（添付ファイルLICENSE_1_0.txtを参照するか、&lt;a href=&quot;http://boost.org/LICENSE_1_0.txt&quot;&gt;boost.org&lt;/a&gt; /LICENSE_1_0.txtにコピーしてください）。</target>
+        </trans-unit>
+        <trans-unit id="7dd8ab5f4ba23f62268005f9a218258f47a3175d" translate="yes" xml:space="preserve">
+          <source>Distributed under the Boost Software License, Version 1.0. (See accompanying file LICENSE_1_0.txt or copy at &lt;a href=&quot;https://boost.org/LICENSE_1_0.txt&quot;&gt;boost.org/LICENSE_1_0.txt&lt;/a&gt;).</source>
+          <target state="translated">Boostソフトウェアライセンスバージョン1.0で配布されます。（添付ファイルLICENSE_1_0.txtを参照するか、&lt;a href=&quot;https://boost.org/LICENSE_1_0.txt&quot;&gt;boost.org&lt;/a&gt; / LICENSE_1_0.txtにコピーしてください）。</target>
         </trans-unit>
         <trans-unit id="0a2d39b8d8ded48a2849b3ea1a1dcbcd9d0e8dbe" translate="yes" xml:space="preserve">
           <source>Ditto</source>
@@ -3818,190 +4002,6 @@
         <trans-unit id="4135d93181c7c7b6f7eebfce73c4b88f3696363b" translate="yes" xml:space="preserve">
           <source>Enumerator &lt;code&gt;start&lt;/code&gt;</source>
           <target state="translated">列挙子の &lt;code&gt;start&lt;/code&gt;</target>
-        </trans-unit>
-        <trans-unit id="f3104dd45718e6d1ac6a03b91ae67193ae8361f0" translate="yes" xml:space="preserve">
-          <source>Enums</source>
-          <target state="translated">Enums</target>
-        </trans-unit>
-        <trans-unit id="91b5a4505ff4388b543e615403e943b213e146be" translate="yes" xml:space="preserve">
-          <source>Enums must have at least one member.</source>
-          <target state="translated">列挙型は、少なくとも1つのメンバを持つ必要があります。</target>
-        </trans-unit>
-        <trans-unit id="1173b2e11bd16e5dc36c119a4b84f02be11626b5" translate="yes" xml:space="preserve">
-          <source>Environment variables</source>
-          <target state="translated">環境変数</target>
-        </trans-unit>
-        <trans-unit id="af2c16f78a14f7f4e0c19bb8444d3b5d1ddbd6bc" translate="yes" xml:space="preserve">
-          <source>Eponymous Templates</source>
-          <target state="translated">エピニオンテンプレート</target>
-        </trans-unit>
-        <trans-unit id="98960d79731e92f6a1481f64f5023d43b91903f0" translate="yes" xml:space="preserve">
-          <source>Equal to &lt;a href=&quot;etc_c_curl#CURLcode&quot;&gt;&lt;code&gt;etc.c.curl.CURLcode&lt;/code&gt;&lt;/a&gt;</source>
-          <target state="translated">&lt;a href=&quot;etc_c_curl#CURLcode&quot;&gt; &lt;code&gt;etc.c.curl.CURLcode&lt;/code&gt; &lt;/a&gt;と等しい</target>
-        </trans-unit>
-        <trans-unit id="eb253eb5985c5dedcf6ea0e168a624316301f2da" translate="yes" xml:space="preserve">
-          <source>Equality Expressions</source>
-          <target state="translated">平等な表現</target>
-        </trans-unit>
-        <trans-unit id="d0f7f003b5eae761303767b178c5b32ad771e92d" translate="yes" xml:space="preserve">
-          <source>Equality comparisons (==, !=, is, !is) are permitted between all pointers, without restriction.</source>
-          <target state="translated">すべてのポインタ間で等値比較(==,!=,is,!is)は、制限なく許可されています。</target>
-        </trans-unit>
-        <trans-unit id="d0efd94caf98a8617b53c3b12681dbbfdad08e3c" translate="yes" xml:space="preserve">
-          <source>Equality expressions compare the two operands for equality (&lt;code&gt;==&lt;/code&gt;) or inequality (&lt;code&gt;!=&lt;/code&gt;). The type of the result is &lt;code&gt;bool&lt;/code&gt;.</source>
-          <target state="translated">等価式は、2つのオペランドの等価（ &lt;code&gt;==&lt;/code&gt; ）または不等価（ &lt;code&gt;!=&lt;/code&gt; ）を比較します。結果のタイプは &lt;code&gt;bool&lt;/code&gt; です。</target>
-        </trans-unit>
-        <trans-unit id="a821b59480ce2414bd6165847b5c1fb14cb79065" translate="yes" xml:space="preserve">
-          <source>Equivalence is defined by the predicate &lt;code&gt;pred&lt;/code&gt;, which can be either binary, which is passed to &lt;a href=&quot;std_functional#binaryFun&quot;&gt;&lt;code&gt;std.functional.binaryFun&lt;/code&gt;&lt;/a&gt;, or unary, which is passed to &lt;a href=&quot;std_functional#unaryFun&quot;&gt;&lt;code&gt;std.functional.unaryFun&lt;/code&gt;&lt;/a&gt;. In the binary form, two range elements &lt;code&gt;a&lt;/code&gt; and &lt;code&gt;b&lt;/code&gt; are considered equivalent if &lt;code&gt;pred(a,b)&lt;/code&gt; is true. In unary form, two elements are considered equivalent if &lt;code&gt;pred(a) == pred(b)&lt;/code&gt; is true.</source>
-          <target state="translated">同等性は、述語 &lt;code&gt;pred&lt;/code&gt; によって定義されます。述語predは、&lt;a href=&quot;std_functional#binaryFun&quot;&gt; &lt;code&gt;std.functional.binaryFun&lt;/code&gt; &lt;/a&gt;に渡されるバイナリ、またはstd.functional.unaryFunに渡されるunaryのいずれか&lt;a href=&quot;std_functional#unaryFun&quot;&gt; &lt;code&gt;std.functional.unaryFun&lt;/code&gt; &lt;/a&gt;。バイナリ形式では、 &lt;code&gt;pred(a,b)&lt;/code&gt; がtrueの場合、2つの範囲要素 &lt;code&gt;a&lt;/code&gt; と &lt;code&gt;b&lt;/code&gt; は同等と見なされます。単項形式では、 &lt;code&gt;pred(a) == pred(b)&lt;/code&gt; がtrueの場合、2つの要素は同等と見なされます。</target>
-        </trans-unit>
-        <trans-unit id="f3d4d9eeca49f09a17fcd8a54a0fa4787c33d0da" translate="yes" xml:space="preserve">
-          <source>Equivalent elements separated by an intervening non-equivalent element will appear in separate subranges; this function only considers adjacent equivalence. Elements in the subranges will always appear in the same order they appear in the original range.</source>
-          <target state="translated">介在する非等価要素によって区切られた等価要素は、別々のサブレンジに表示されます。この関数は,隣接する等価性のみを考慮します.サブレンジ内の要素は,常に元の範囲内に現れる順序と同じ順序で現れます.</target>
-        </trans-unit>
-        <trans-unit id="15ed9b5cca8803ef06cb9688dbc5af4fe192a4a4" translate="yes" xml:space="preserve">
-          <source>Equivalent to &lt;code&gt;file.writef(fmt, args, '\n')&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;file.writef(fmt, args, '\n')&lt;/code&gt; 同等です。</target>
-        </trans-unit>
-        <trans-unit id="ce6d1bc952023308db732f8f94e2b34d7940aa93" translate="yes" xml:space="preserve">
-          <source>Equivalent to &lt;code&gt;fmax(x-y, 0)&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;fmax(x-y, 0)&lt;/code&gt; と同じです。</target>
-        </trans-unit>
-        <trans-unit id="8e86802e906e78082747bcdbd4222e541b464705" translate="yes" xml:space="preserve">
-          <source>Equivalent to &lt;code&gt;write(args, '\n')&lt;/code&gt;. Calling &lt;code&gt;writeln&lt;/code&gt; without arguments is valid and just prints a newline to the standard output.</source>
-          <target state="translated">同等の &lt;code&gt;write(args, '\n')&lt;/code&gt; 。引数なしで &lt;code&gt;writeln&lt;/code&gt; を呼び出すことは有効であり、改行を標準出力に出力するだけです。</target>
-        </trans-unit>
-        <trans-unit id="d1a5bc7d4ab0b05ff1942fc426e894258a7dcb1a" translate="yes" xml:space="preserve">
-          <source>Equivalent to &lt;code&gt;writef(fmt, args, '\n')&lt;/code&gt;.</source>
-          <target state="translated">&lt;code&gt;writef(fmt, args, '\n')&lt;/code&gt; 同等です。</target>
-        </trans-unit>
-        <trans-unit id="7f2f6a15cf8da2b27e5a4af47b58e7ad71c0b3d9" translate="yes" xml:space="preserve">
-          <source>Error</source>
-          <target state="translated">Error</target>
-        </trans-unit>
-        <trans-unit id="c73f93f4b9a02f4e5a949fd11052e3a166c6f2ac" translate="yes" xml:space="preserve">
-          <source>Error Codes And Messages</source>
-          <target state="translated">エラーコードとメッセージ</target>
-        </trans-unit>
-        <trans-unit id="7fc353a0378a6af6e63cb4e746bbbbd0e56d46cc" translate="yes" xml:space="preserve">
-          <source>Error Logging Interface</source>
-          <target state="translated">エラーロギングインタフェース</target>
-        </trans-unit>
-        <trans-unit id="ebaf4b5ec788b16d6d54392acc5fde873dbc786a" translate="yes" xml:space="preserve">
-          <source>Error exceptions get handled one way or another. There is nothing like a NULL pointer return indicating an error, followed by trying to use that NULL pointer.</source>
-          <target state="translated">エラー例外はいずれかの方法で処理されます。エラーを示すNULLポインタが返された後に、そのNULLポインタを使用しようとすることほどのものはありません。</target>
-        </trans-unit>
-        <trans-unit id="a623c8e1a198390969227d2d0b456f83bf23e21d" translate="yes" xml:space="preserve">
-          <source>Error function</source>
-          <target state="translated">エラー関数</target>
-        </trans-unit>
-        <trans-unit id="34d6de902e8eedf56209e7c63d5376af7cf4d10e" translate="yes" xml:space="preserve">
-          <source>Error message</source>
-          <target state="translated">エラーメッセージ</target>
-        </trans-unit>
-        <trans-unit id="50c855f2252890155a086cc4373ee4123aab7e7a" translate="yes" xml:space="preserve">
-          <source>Error message from sqlite3_mprintf()</source>
-          <target state="translated">sqlite3_mprintf()からのエラーメッセージ</target>
-        </trans-unit>
-        <trans-unit id="2252ea1e4cbf7755de129147ae3fdbeb59b1c86e" translate="yes" xml:space="preserve">
-          <source>ErrorExp</source>
-          <target state="translated">ErrorExp</target>
-        </trans-unit>
-        <trans-unit id="813b5f9ec8deffdd987c925d7e6501434e44711b" translate="yes" xml:space="preserve">
-          <source>ErrorExp &lt;strong id=&quot;arrayOpInvalidError&quot;&gt;arrayOpInvalidError&lt;/strong&gt;(Expression e);</source>
-          <target state="translated">ErrorExp &lt;strong id=&quot;arrayOpInvalidError&quot;&gt;arrayOpInvalidError&lt;/strong&gt;（式e）;</target>
-        </trans-unit>
-        <trans-unit id="805e86a8cbf628e38e4c45612c005a504009e79a" translate="yes" xml:space="preserve">
-          <source>Errors</source>
-          <target state="translated">Errors</target>
-        </trans-unit>
-        <trans-unit id="36fd0b0b802c6a97f7436e7a54204bfe482a5123" translate="yes" xml:space="preserve">
-          <source>Errors are not part of the normal flow of a program. Errors are exceptional, unusual, and unexpected.</source>
-          <target state="translated">エラーはプログラムの通常の流れの一部ではありません。エラーとは、例外的なもの、異常なもの、予想外のものを指します。</target>
-        </trans-unit>
-        <trans-unit id="e66bc34f0c40669df2318f69c4904fa255dc47c1" translate="yes" xml:space="preserve">
-          <source>Errors throw a ZlibException.</source>
-          <target state="translated">エラーはZlibExceptionをスローします。</target>
-        </trans-unit>
-        <trans-unit id="21208fcb40762782f0bd5de0b94d3c459b091b72" translate="yes" xml:space="preserve">
-          <source>Es &lt;code&gt;es&lt;/code&gt;</source>
-          <target state="translated">エス &lt;code&gt;es&lt;/code&gt;</target>
-        </trans-unit>
-        <trans-unit id="b4cfe1f435f06beaae8e7d7c6d43e5dddbe640bb" translate="yes" xml:space="preserve">
-          <source>Escape</source>
-          <target state="translated">Escape</target>
-        </trans-unit>
-        <trans-unit id="3e13e2405c74a25265ee4e281ccf78feafc5234d" translate="yes" xml:space="preserve">
-          <source>Escape Sequences</source>
-          <target state="translated">脱出シーケンス</target>
-        </trans-unit>
-        <trans-unit id="7a8244906137fd404125079316acd1c376574734" translate="yes" xml:space="preserve">
-          <source>Escapes URL strings (converts all letters consider illegal in URLs to their %XX versions). This function returns a new allocated string or NULL if an error occurred.</source>
-          <target state="translated">URL 文字列をエスケープします (URL で不正とみなされるすべての文字を %XX のバージョンに変換します)。この関数は新しい確保された文字列を返すか、エラーが発生した場合はNULLを返します。</target>
-        </trans-unit>
-        <trans-unit id="c62c2a45ea9630e69c7b0296a18169ca1da2c6cd" translate="yes" xml:space="preserve">
-          <source>Escapes a filename to be used for shell redirection with &lt;a href=&quot;#spawnShell&quot;&gt;&lt;code&gt;spawnShell&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;#pipeShell&quot;&gt;&lt;code&gt;pipeShell&lt;/code&gt;&lt;/a&gt; or &lt;a href=&quot;#executeShell&quot;&gt;&lt;code&gt;executeShell&lt;/code&gt;&lt;/a&gt;.</source>
-          <target state="translated">&lt;a href=&quot;#spawnShell&quot;&gt; &lt;code&gt;spawnShell&lt;/code&gt; &lt;/a&gt;、&lt;a href=&quot;#pipeShell&quot;&gt; &lt;code&gt;pipeShell&lt;/code&gt; 、&lt;/a&gt;または&lt;a href=&quot;#executeShell&quot;&gt; &lt;code&gt;executeShell&lt;/code&gt; &lt;/a&gt;を使用したシェルリダイレクトに使用するファイル名をエスケープします。</target>
-        </trans-unit>
-        <trans-unit id="334839f3a4af8ebe642ad214739fca50dd79b867" translate="yes" xml:space="preserve">
-          <source>Escapes an argv-style argument array to be used with &lt;a href=&quot;#spawnShell&quot;&gt;&lt;code&gt;spawnShell&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;#pipeShell&quot;&gt;&lt;code&gt;pipeShell&lt;/code&gt;&lt;/a&gt; or &lt;a href=&quot;#executeShell&quot;&gt;&lt;code&gt;executeShell&lt;/code&gt;&lt;/a&gt;.</source>
-          <target state="translated">&lt;a href=&quot;#spawnShell&quot;&gt; &lt;code&gt;spawnShell&lt;/code&gt; &lt;/a&gt;、&lt;a href=&quot;#pipeShell&quot;&gt; &lt;code&gt;pipeShell&lt;/code&gt; 、&lt;/a&gt;または&lt;a href=&quot;#executeShell&quot;&gt; &lt;code&gt;executeShell&lt;/code&gt; &lt;/a&gt;で使用されるargvスタイルの引数配列をエスケープします。</target>
-        </trans-unit>
-        <trans-unit id="c42e53a2ef68cf047319483e6444a0150025a7f7" translate="yes" xml:space="preserve">
-          <source>Essentially just calls &lt;code&gt;checkNestedReference() for each variable reference in &lt;/code&gt;e`.</source>
-          <target state="translated">基本的に &lt;code&gt;checkNestedReference() for each variable reference in &lt;/code&gt; e`の各変数参照に対してcheckNestedReference（）を呼び出すだけです。</target>
-        </trans-unit>
-        <trans-unit id="37eefc2536d5ec542e4520a234de4d178700f2f2" translate="yes" xml:space="preserve">
-          <source>Establish a connection. If the socket is blocking, connect waits for the connection to be made. If the socket is nonblocking, connect returns immediately and the connection attempt is still in progress.</source>
-          <target state="translated">接続を確立します。ソケットがブロックされている場合、connect は接続の確立を待ちます。ソケットがブロックされていない場合、connect はすぐに戻り、接続の試みは進行中です。</target>
-        </trans-unit>
-        <trans-unit id="cb2a5e97585ee713b7b435ea0059ffc0b575e976" translate="yes" xml:space="preserve">
-          <source>Estimated cost of using this index</source>
-          <target state="translated">この指標を使用した場合の推定コスト</target>
-        </trans-unit>
-        <trans-unit id="4dc2b41f9f62ae24f4ee1bdb98221a2c0df13e48" translate="yes" xml:space="preserve">
-          <source>Ethiopic</source>
-          <target state="translated">Ethiopic</target>
-        </trans-unit>
-        <trans-unit id="50a8bee7f3f7f91e053f811fb77da91693c7dedd" translate="yes" xml:space="preserve">
-          <source>Ethiopic Extended</source>
-          <target state="translated">エチオピア拡張</target>
-        </trans-unit>
-        <trans-unit id="0b1c5f04c3cf37f71157c85cf3538322e5bf9da1" translate="yes" xml:space="preserve">
-          <source>Ethiopic Extended-A</source>
-          <target state="translated">エチオピアの拡張A</target>
-        </trans-unit>
-        <trans-unit id="7c8438f345294d8ae21cfe001be4e6de5852f8b9" translate="yes" xml:space="preserve">
-          <source>Ethiopic Supplement</source>
-          <target state="translated">エチオピアのサプリメント</target>
-        </trans-unit>
-        <trans-unit id="ec4e1ce13e95c935383dc5219130b98c64fd292a" translate="yes" xml:space="preserve">
-          <source>Evaluate &amp;gt;,&amp;lt;=, etc. Resolves slices before comparing. Returns 0 or 1</source>
-          <target state="translated">&amp;gt;、&amp;lt;=などを評価します。比較する前にスライスを解決します。0または1を返します</target>
-        </trans-unit>
-        <trans-unit id="63a877dc2e3925ab0262cba5e336e32067b1f868" translate="yes" xml:space="preserve">
-          <source>Evaluate ==, !=. Resolves slices before comparing. Returns 0 or 1</source>
-          <target state="translated">比較する前にスライスを解決します。0または1を返します。</target>
-        </trans-unit>
-        <trans-unit id="b8465fee9c60fa18c66485376de57ad47eb492b1" translate="yes" xml:space="preserve">
-          <source>Evaluate An SQL Statement</source>
-          <target state="translated">SQLステートメントの評価</target>
-        </trans-unit>
-        <trans-unit id="f0a33e70cc28b1c16a65e2ac8b3f23349a36f271" translate="yes" xml:space="preserve">
-          <source>Evaluate builtin function. Return result; NULL if cannot evaluate it.</source>
-          <target state="translated">組み込み関数を評価します。評価できない場合は NULL を返します。</target>
-        </trans-unit>
-        <trans-unit id="ba342f0fe13aca65712f2259febed282817e389a" translate="yes" xml:space="preserve">
-          <source>Evaluate is, !is. Resolves slices before comparing. Returns 0 or 1</source>
-          <target state="translated">評価は、! 比較する前にスライスを解決します。0または1を返します。</target>
-        </trans-unit>
-        <trans-unit id="0dfd6ef81633d9cb47cabec388bec88396961ba5" translate="yes" xml:space="preserve">
-          <source>Evaluate polynomial A(x) = a&lt;sub&gt;0&lt;/sub&gt; + a&lt;sub&gt;1&lt;/sub&gt;x + a&lt;sub&gt;2&lt;/sub&gt;x&lt;sup&gt;2&lt;/sup&gt; + a&lt;sub&gt;3&lt;/sub&gt;x&lt;sup&gt;3&lt;/sup&gt;; ...</source>
-          <target state="translated">多項式A（x）= a &lt;sub&gt;0&lt;/sub&gt; + a &lt;sub&gt;1&lt;/sub&gt; x + a &lt;sub&gt;2&lt;/sub&gt; x &lt;sup&gt;2&lt;/sup&gt; + a &lt;sub&gt;3&lt;/sub&gt; x &lt;sup&gt;3を評価し&lt;/sup&gt;ます。...</target>
-        </trans-unit>
-        <trans-unit id="a5be27aeb62439a889f10e6c829e770637dd9146" translate="yes" xml:space="preserve">
-          <source>Evaluates to &lt;code&gt;AliasSeq!(F!(T[0]), F!(T[1]), ..., F!(T[$ - 1]))&lt;/code&gt;.</source>
-          <target state="translated">評価された &lt;code&gt;AliasSeq!(F!(T[0]), F!(T[1]), ..., F!(T[$ - 1]))&lt;/code&gt; 。</target>
         </trans-unit>
       </group>
     </body>

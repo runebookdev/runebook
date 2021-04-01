@@ -3,6 +3,734 @@
   <file source-language="en" target-language="es" datatype="htmlbody" original="http">
     <body>
       <group id="http">
+        <trans-unit id="20d9b67c973fb9378d4e9a9893dce633fc72be6a" translate="yes" xml:space="preserve">
+          <source>The URI reference, must be enclosed between &lt;code&gt;&amp;lt;&lt;/code&gt; and &lt;code&gt;&amp;gt;&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="ab6860a88c4f5fa569a9d2df89c6b4183b5b6406" translate="yes" xml:space="preserve">
+          <source>The URI requested by the client is longer than the server is willing to interpret.</source>
+          <target state="translated">La URI solicitada por el cliente es más larga de lo que el servidor está dispuesto a interpretar.</target>
+        </trans-unit>
+        <trans-unit id="3c5fb5f7c661d221d889ac05db6f82fe9c0205e8" translate="yes" xml:space="preserve">
+          <source>The URI where the user agent should report &lt;code&gt;Expect-CT&lt;/code&gt; failures.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="2631108f4b94ab9a2cb00980acaf8c1f780ff904" translate="yes" xml:space="preserve">
+          <source>The URL &lt;code&gt;http://example.com/&lt;/code&gt; will be redirected to &lt;code&gt;http://www.example.com/&lt;/code&gt;, as will any files or directories under it (&lt;code&gt;http://example.com/index.html&lt;/code&gt; will be redirected to &lt;code&gt;http://www.example.com/index.html&lt;/code&gt;)</source>
+          <target state="translated">La URL &lt;code&gt;http://example.com/&lt;/code&gt; ser&amp;aacute; redirigida a &lt;code&gt;http://www.example.com/&lt;/code&gt; , al igual que cualquier archivo o directorio debajo de ella ( &lt;code&gt;http://example.com/index.html&lt;/code&gt; se redirigir&amp;aacute; a &lt;code&gt;http://www.example.com/index.html&lt;/code&gt; )</target>
+        </trans-unit>
+        <trans-unit id="5efef24fc6384dd41fb192a1bf80a33651bde15a" translate="yes" xml:space="preserve">
+          <source>The URL &lt;code&gt;https://example.com/&lt;/code&gt; will be redirected to &lt;code&gt;https://www.example.com/&lt;/code&gt;, as will any files or directories under it (&lt;code&gt;https://example.com/some-page&lt;/code&gt; will be redirected to &lt;code&gt;https://www.example.com/some-page&lt;/code&gt;)</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="ab68e1cdf6b3b2fc5d165ae5d131fcb809d37323" translate="yes" xml:space="preserve">
+          <source>The URL being accessed. The path and query components of &lt;code&gt;https://&lt;/code&gt; URLs are stripped. In Chrome (versions 52 to 73), you can disable this by setting &lt;code&gt;PacHttpsUrlStrippingEnabled&lt;/code&gt; to &lt;code&gt;false&lt;/code&gt; in policy or by launching with the &lt;code&gt;--unsafe-pac-url&lt;/code&gt; command-line flag (in Chrome 74, only the flag works, and from 75 onward, there is no way to disable path-stripping; as of Chrome 81, path-stripping does not apply to HTTP URLs, but there is interest in changing this behavior to match HTTPS); in Firefox, the preference is &lt;code&gt;network.proxy.autoconfig_url.include_path&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="328f9c5a6f56c9b38378bbbf4afce0ee4c1c87e1" translate="yes" xml:space="preserve">
+          <source>The URL being accessed. The path and query components of &lt;code&gt;https://&lt;/code&gt; URLs are stripped. In Chrome, you can disable this by setting &lt;code&gt;PacHttpsUrlStrippingEnabled&lt;/code&gt; to &lt;code&gt;false&lt;/code&gt;, in Firefox the preference is &lt;code&gt;network.proxy.autoconfig_url.include_path&lt;/code&gt;.</source>
+          <target state="translated">La URL a la que se accede. Se eliminan los componentes de ruta y consulta de las URL &lt;code&gt;https://&lt;/code&gt; . En Chrome, puede desactivar esto configurando &lt;code&gt;PacHttpsUrlStrippingEnabled&lt;/code&gt; en &lt;code&gt;false&lt;/code&gt; , en Firefox la preferencia es &lt;code&gt;network.proxy.autoconfig_url.include_path&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="1aac5516d3c0193c8b37aa0f0d853eb420d0c8fa" translate="yes" xml:space="preserve">
+          <source>The URL of the requested resource has been changed permanently. The new URL is given in the response.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="0186dd865b14f3a2fc2d2ec7512e14fe948697fc" translate="yes" xml:space="preserve">
+          <source>The Upgrade general-header allows the client to specify what
+   additional communication protocols it supports and would like to use
+   if the server finds it appropriate to switch protocols. The server
+   MUST use the Upgrade header field within a 101 (Switching Protocols)
+   response to indicate which protocol(s) are being switched.
+
+       Upgrade        = &quot;Upgrade&quot; &quot;:&quot; 1#product
+
+   For example,
+
+       Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11
+
+   The Upgrade header field is intended to provide a simple mechanism
+   for transition from HTTP/1.1 to some other, incompatible protocol. It
+   does so by allowing the client to advertise its desire to use another
+   protocol, such as a later version of HTTP with a higher major version
+   number, even though the current request has been made using HTTP/1.1.
+   This eases the difficult transition between incompatible protocols by
+   allowing the client to initiate a request in the more commonly
+   supported protocol while indicating to the server that it would like
+   to use a &quot;better&quot; protocol if available (where &quot;better&quot; is determined
+   by the server, possibly according to the nature of the method and/or
+   resource being requested).
+
+   The Upgrade header field only applies to switching application-layer
+   protocols upon the existing transport-layer connection. Upgrade
+   cannot be used to insist on a protocol change; its acceptance and use
+   by the server is optional. The capabilities and nature of the
+   application-layer communication after the protocol change is entirely
+   dependent upon the new protocol chosen, although the first action
+   after changing the protocol MUST be a response to the initial HTTP
+   request containing the Upgrade header field.
+
+   The Upgrade header field only applies to the immediate connection.
+   Therefore, the upgrade keyword MUST be supplied within a Connection
+   header field (&lt;a href=&quot;#section-14.10&quot;&gt;section 14.10&lt;/a&gt;) whenever Upgrade is present in an
+   HTTP/1.1 message. 
+
+   The Upgrade header field cannot be used to indicate a switch to a
+   protocol on a different connection. For that purpose, it is more
+   appropriate to use a 301, 302, 303, or 305 redirection response.
+
+   This specification only defines the protocol name &quot;HTTP&quot; for use by
+   the family of Hypertext Transfer Protocols, as defined by the HTTP
+   version rules of &lt;a href=&quot;#section-3.1&quot;&gt;section 3.1&lt;/a&gt; and future updates to this
+   specification. Any token can be used as a protocol name; however, it
+   will only be useful if both the client and server associate the name
+   with the same protocol.</source>
+          <target state="translated">El encabezado general Actualizar permite al cliente especificar qu&amp;eacute; protocolos de comunicaci&amp;oacute;n adicionales admite y le gustar&amp;iacute;a usar si el servidor lo considera apropiado para cambiar de protocolo. El servidor DEBE usar el campo de encabezado de actualizaci&amp;oacute;n dentro de una respuesta 101 (protocolos de conmutaci&amp;oacute;n) para indicar qu&amp;eacute; protocolo (s) se est&amp;aacute;n cambiando. Upgrade = &quot;Upgrade&quot; &quot;:&quot; 1 # producto Por ejemplo, Upgrade: HTTP / 2.0, SHTTP / 1.3, IRC / 6.9, RTA / x11 El campo de encabezado de actualizaci&amp;oacute;n est&amp;aacute; destinado a proporcionar un mecanismo simple para la transici&amp;oacute;n de HTTP / 1.1 a algunos otro protocolo incompatible. Lo hace permitiendo que el cliente anuncie su deseo de utilizar otro protocolo, como una versi&amp;oacute;n posterior de HTTP con un n&amp;uacute;mero de versi&amp;oacute;n principal m&amp;aacute;s alto, aunque la solicitud actual se haya realizado mediante HTTP / 1.1.Esto facilita la dif&amp;iacute;cil transici&amp;oacute;n entre protocolos incompatibles al permitir que el cliente inicie una solicitud en el protocolo m&amp;aacute;s com&amp;uacute;nmente admitido mientras le indica al servidor que le gustar&amp;iacute;a usar un protocolo &quot;mejor&quot; si est&amp;aacute; disponible (donde el servidor determina &quot;mejor&quot; , posiblemente seg&amp;uacute;n la naturaleza del m&amp;eacute;todo y / o recurso solicitado). El campo de encabezado de actualizaci&amp;oacute;n solo se aplica al cambio de protocolos de capa de aplicaci&amp;oacute;n en la conexi&amp;oacute;n de capa de transporte existente. La actualizaci&amp;oacute;n no se puede utilizar para insistir en un cambio de protocolo; su aceptaci&amp;oacute;n y uso por parte del servidor es opcional. Las capacidades y la naturaleza de la comunicaci&amp;oacute;n de la capa de aplicaci&amp;oacute;n despu&amp;eacute;s del cambio de protocolo dependen completamente del nuevo protocolo elegido.aunque la primera acci&amp;oacute;n despu&amp;eacute;s de cambiar el protocolo DEBE ser una respuesta a la solicitud HTTP inicial que contiene el campo de encabezado Upgrade. El campo de encabezado de actualizaci&amp;oacute;n solo se aplica a la conexi&amp;oacute;n inmediata. Por lo tanto, la palabra clave de actualizaci&amp;oacute;n DEBE proporcionarse dentro de un campo de encabezado de conexi&amp;oacute;n (&lt;a href=&quot;#section-14.10&quot;&gt;secci&amp;oacute;n 14.10&lt;/a&gt; ) siempre que Upgrade est&amp;eacute; presente en un mensaje HTTP / 1.1. El campo de encabezado de actualizaci&amp;oacute;n no se puede utilizar para indicar un cambio a un protocolo en una conexi&amp;oacute;n diferente. Para ese prop&amp;oacute;sito, es m&amp;aacute;s apropiado usar una respuesta de redirecci&amp;oacute;n 301, 302, 303 o 305. Esta especificaci&amp;oacute;n solo define el nombre de protocolo &quot;HTTP&quot; para su uso por la familia de protocolos de transferencia de hipertexto, seg&amp;uacute;n lo definido por las reglas de la versi&amp;oacute;n HTTP de la &lt;a href=&quot;#section-3.1&quot;&gt;secci&amp;oacute;n 3.1&lt;/a&gt; y futuras actualizaciones de esta especificaci&amp;oacute;n. Se puede usar cualquier token como nombre de protocolo; sin embargo, solo ser&amp;aacute; &amp;uacute;til si tanto el cliente como el servidor asocian el nombre con el mismo protocolo.</target>
+        </trans-unit>
+        <trans-unit id="956c514c873571fd13c43a02eba30c85c739c04b" translate="yes" xml:space="preserve">
+          <source>The User-Agent (&lt;a href=&quot;#section-5.5.3&quot;&gt;Section 5.5.3&lt;/a&gt;), Via (&lt;a href=&quot;https://tools.ietf.org/html/rfc7230#section-5.7.1&quot;&gt;Section&amp;nbsp;5.7.1 of [RFC7230]&lt;/a&gt;), and
+   Server (&lt;a href=&quot;#section-7.4.2&quot;&gt;Section 7.4.2&lt;/a&gt;) header fields often reveal information about
+   the respective sender's software systems.  In theory, this can make
+   it easier for an attacker to exploit known security holes; in
+   practice, attackers tend to try all potential holes regardless of the
+   apparent software versions being used.
+
+   Proxies that serve as a portal through a network firewall ought to
+   take special precautions regarding the transfer of header information
+   that might identify hosts behind the firewall.  The Via header field
+   allows intermediaries to replace sensitive machine names with
+   pseudonyms.</source>
+          <target state="translated">Los campos de encabezado User-Agent ( &lt;a href=&quot;#section-5.5.3&quot;&gt;Secci&amp;oacute;n 5.5.3&lt;/a&gt; ), Via ( &lt;a href=&quot;https://tools.ietf.org/html/rfc7230#section-5.7.1&quot;&gt;Secci&amp;oacute;n 5.7.1 de [RFC7230]&lt;/a&gt; ) y Servidor ( &lt;a href=&quot;#section-7.4.2&quot;&gt;Secci&amp;oacute;n 7.4.2&lt;/a&gt; ) a menudo revelan informaci&amp;oacute;n sobre los sistemas de software del remitente respectivo. En teor&amp;iacute;a, esto puede facilitar que un atacante explote los agujeros de seguridad conocidos; en la pr&amp;aacute;ctica, los atacantes tienden a probar todos los agujeros potenciales independientemente de las versiones de software aparentes que se est&amp;eacute;n utilizando. Los servidores proxy que sirven como portal a trav&amp;eacute;s de un firewall de red deben tomar precauciones especiales con respecto a la transferencia de informaci&amp;oacute;n de encabezado que podr&amp;iacute;a identificar a los hosts detr&amp;aacute;s del firewall. El campo de encabezado Via permite a los intermediarios reemplazar nombres de m&amp;aacute;quinas confidenciales con seud&amp;oacute;nimos.</target>
+        </trans-unit>
+        <trans-unit id="d9bc48b6946945b170102521a95dcc585d202997" translate="yes" xml:space="preserve">
+          <source>The User-Agent header</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="37ab671dc85571491b078190122b8c7014630aae" translate="yes" xml:space="preserve">
+          <source>The User-Agent request-header field contains information about the
+   user agent originating the request. This is for statistical purposes,
+   the tracing of protocol violations, and automated recognition of user
+   agents for the sake of tailoring responses to avoid particular user
+   agent limitations. User agents SHOULD include this field with
+   requests. The field can contain multiple product tokens (&lt;a href=&quot;#section-3.8&quot;&gt;section 3.8&lt;/a&gt;)
+   and comments identifying the agent and any subproducts which form a
+   significant part of the user agent. By convention, the product tokens
+   are listed in order of their significance for identifying the
+   application.
+
+       User-Agent     = &quot;User-Agent&quot; &quot;:&quot; 1*( product | comment )
+
+   Example:
+
+       User-Agent: CERN-LineMode/2.15 libwww/2.17b3</source>
+          <target state="translated">El campo de encabezado de solicitud de agente de usuario contiene informaci&amp;oacute;n sobre el agente de usuario que origina la solicitud. Esto es para fines estad&amp;iacute;sticos, el seguimiento de violaciones de protocolo y el reconocimiento autom&amp;aacute;tico de agentes de usuario con el fin de adaptar las respuestas para evitar limitaciones particulares de agentes de usuario. Los agentes de usuario DEBER&amp;Iacute;AN incluir este campo con las solicitudes. El campo puede contener varios tokens de producto ( &lt;a href=&quot;#section-3.8&quot;&gt;secci&amp;oacute;n 3.8&lt;/a&gt; ) y comentarios que identifican al agente y cualquier subproducto que forme una parte significativa del agente de usuario. Por convenci&amp;oacute;n, los tokens de producto se enumeran en orden de importancia para identificar la aplicaci&amp;oacute;n. User-Agent = &quot;User-Agent&quot; &quot;:&quot; 1 * (producto | comentario) Ejemplo: User-Agent: CERN-LineMode / 2.15 libwww / 2.17b3</target>
+        </trans-unit>
+        <trans-unit id="0145d328878d74d7d6f76ae8e632bd27f666b2da" translate="yes" xml:space="preserve">
+          <source>The Vary field value indicates the set of request-header fields that
+   fully determines, while the response is fresh, whether a cache is
+   permitted to use the response to reply to a subsequent request
+   without revalidation. For uncacheable or stale responses, the Vary
+   field value advises the user agent about the criteria that were used
+   to select the representation. A Vary field value of &quot;*&quot; implies that
+   a cache cannot determine from the request headers of a subsequent
+   request whether this response is the appropriate representation. See
+   &lt;a href=&quot;#section-13.6&quot;&gt;section 13.6&lt;/a&gt; for use of the Vary header field by caches.
+
+       Vary  = &quot;Vary&quot; &quot;:&quot; ( &quot;*&quot; | 1#field-name )
+
+   An HTTP/1.1 server SHOULD include a Vary header field with any
+   cacheable response that is subject to server-driven negotiation.
+   Doing so allows a cache to properly interpret future requests on that
+   resource and informs the user agent about the presence of negotiation 
+
+   on that resource. A server MAY include a Vary header field with a
+   non-cacheable response that is subject to server-driven negotiation,
+   since this might provide the user agent with useful information about
+   the dimensions over which the response varies at the time of the
+   response.
+
+   A Vary field value consisting of a list of field-names signals that
+   the representation selected for the response is based on a selection
+   algorithm which considers ONLY the listed request-header field values
+   in selecting the most appropriate representation. A cache MAY assume
+   that the same selection will be made for future requests with the
+   same values for the listed field names, for the duration of time for
+   which the response is fresh.
+
+   The field-names given are not limited to the set of standard
+   request-header fields defined by this specification. Field names are
+   case-insensitive.
+
+   A Vary field value of &quot;*&quot; signals that unspecified parameters not
+   limited to the request-headers (e.g., the network address of the
+   client), play a role in the selection of the response representation.
+   The &quot;*&quot; value MUST NOT be generated by a proxy server; it may only be
+   generated by an origin server.</source>
+          <target state="translated">El valor del campo Vary indica el conjunto de campos de encabezado de solicitud que determina completamente, mientras que la respuesta es reciente, si un cach&amp;eacute; puede usar la respuesta para responder a una solicitud posterior sin revalidaci&amp;oacute;n. Para las respuestas obsoletas o que no se pueden almacenar en cach&amp;eacute;, el valor del campo Vary informa al agente de usuario sobre los criterios que se utilizaron para seleccionar la representaci&amp;oacute;n. Un valor de campo Vary de &quot;*&quot; implica que una cach&amp;eacute; no puede determinar a partir de los encabezados de solicitud de una solicitud posterior si esta respuesta es la representaci&amp;oacute;n adecuada. Ver &lt;a href=&quot;#section-13.6&quot;&gt;secci&amp;oacute;n 13.6&lt;/a&gt;para el uso del campo de encabezado Vary por cach&amp;eacute;s. Vary = &quot;Vary&quot; &quot;:&quot; (&quot;*&quot; | 1 # field-name) Un servidor HTTP / 1.1 DEBE incluir un campo de encabezado Vary con cualquier respuesta almacenable en cach&amp;eacute; que est&amp;eacute; sujeta a la negociaci&amp;oacute;n dirigida por el servidor. Hacerlo permite que una cach&amp;eacute; interprete correctamente las solicitudes futuras sobre ese recurso e informa al agente de usuario sobre la presencia de negociaci&amp;oacute;n en ese recurso. Un servidor PUEDE incluir un campo de encabezado Vary con una respuesta que no se puede almacenar en cach&amp;eacute; y que est&amp;aacute; sujeta a una negociaci&amp;oacute;n impulsada por el servidor, ya que esto podr&amp;iacute;a proporcionar al agente de usuario informaci&amp;oacute;n &amp;uacute;til sobre las dimensiones sobre las que var&amp;iacute;a la respuesta en el momento de la respuesta.Un valor de campo Vary que consiste en una lista de nombres de campo indica que la representaci&amp;oacute;n seleccionada para la respuesta se basa en un algoritmo de selecci&amp;oacute;n que considera &amp;Uacute;NICAMENTE los valores del campo de encabezado de solicitud enumerados al seleccionar la representaci&amp;oacute;n m&amp;aacute;s apropiada. Una cach&amp;eacute; PUEDE suponer que se realizar&amp;aacute; la misma selecci&amp;oacute;n para solicitudes futuras con los mismos valores para los nombres de campo enumerados, durante el tiempo durante el cual la respuesta est&amp;eacute; actualizada. Los nombres de campo dados no se limitan al conjunto de campos de encabezado de solicitud est&amp;aacute;ndar definidos por esta especificaci&amp;oacute;n. Los nombres de campo no distinguen entre may&amp;uacute;sculas y min&amp;uacute;sculas. Un valor de campo Vary de &quot;*&quot; indica que los par&amp;aacute;metros no especificados no limitados a los encabezados de solicitud (por ejemplo, la direcci&amp;oacute;n de red del cliente), juegan un papel en la selecci&amp;oacute;n de la representaci&amp;oacute;n de respuesta. Los &quot;* &quot;El valor NO DEBE ser generado por un servidor proxy; solo puede ser generado por un servidor de origen.</target>
+        </trans-unit>
+        <trans-unit id="c4eba333151816238416f3ddeba94021b6342f57" translate="yes" xml:space="preserve">
+          <source>The Vary response header</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="46218eb322ca25f8d1c7432adb208448ace419bd" translate="yes" xml:space="preserve">
+          <source>The Via general-header field MUST be used by gateways and proxies to
+   indicate the intermediate protocols and recipients between the user
+   agent and the server on requests, and between the origin server and
+   the client on responses. It is analogous to the &quot;Received&quot; field of
+   &lt;a href=&quot;https://tools.ietf.org/html/rfc822&quot;&gt;RFC 822&lt;/a&gt; [&lt;a href=&quot;#ref-9&quot;&gt;9&lt;/a&gt;] and is intended to be used for tracking message forwards,
+   avoiding request loops, and identifying the protocol capabilities of
+   all senders along the request/response chain.
+
+      Via =  &quot;Via&quot; &quot;:&quot; 1#( received-protocol received-by [ comment ] )
+      received-protocol = [ protocol-name &quot;/&quot; ] protocol-version
+      protocol-name     = token
+      protocol-version  = token
+      received-by       = ( host [ &quot;:&quot; port ] ) | pseudonym
+      pseudonym         = token
+
+   The received-protocol indicates the protocol version of the message
+   received by the server or client along each segment of the
+   request/response chain. The received-protocol version is appended to
+   the Via field value when the message is forwarded so that information
+   about the protocol capabilities of upstream applications remains
+   visible to all recipients. 
+
+   The protocol-name is optional if and only if it would be &quot;HTTP&quot;. The
+   received-by field is normally the host and optional port number of a
+   recipient server or client that subsequently forwarded the message.
+   However, if the real host is considered to be sensitive information,
+   it MAY be replaced by a pseudonym. If the port is not given, it MAY
+   be assumed to be the default port of the received-protocol.
+
+   Multiple Via field values represents each proxy or gateway that has
+   forwarded the message. Each recipient MUST append its information
+   such that the end result is ordered according to the sequence of
+   forwarding applications.
+
+   Comments MAY be used in the Via header field to identify the software
+   of the recipient proxy or gateway, analogous to the User-Agent and
+   Server header fields. However, all comments in the Via field are
+   optional and MAY be removed by any recipient prior to forwarding the
+   message.
+
+   For example, a request message could be sent from an HTTP/1.0 user
+   agent to an internal proxy code-named &quot;fred&quot;, which uses HTTP/1.1 to
+   forward the request to a public proxy at nowhere.com, which completes
+   the request by forwarding it to the origin server at www.ics.uci.edu.
+   The request received by www.ics.uci.edu would then have the following
+   Via header field:
+
+       Via: 1.0 fred, 1.1 nowhere.com (Apache/1.1)
+
+   Proxies and gateways used as a portal through a network firewall
+   SHOULD NOT, by default, forward the names and ports of hosts within
+   the firewall region. This information SHOULD only be propagated if
+   explicitly enabled. If not enabled, the received-by host of any host
+   behind the firewall SHOULD be replaced by an appropriate pseudonym
+   for that host.
+
+   For organizations that have strong privacy requirements for hiding
+   internal structures, a proxy MAY combine an ordered subsequence of
+   Via header field entries with identical received-protocol values into
+   a single such entry. For example,
+
+       Via: 1.0 ricky, 1.1 ethel, 1.1 fred, 1.0 lucy
+
+        could be collapsed to
+
+       Via: 1.0 ricky, 1.1 mertz, 1.0 lucy 
+
+   Applications SHOULD NOT combine multiple entries unless they are all
+   under the same organizational control and the hosts have already been
+   replaced by pseudonyms. Applications MUST NOT combine entries which
+   have different received-protocol values.</source>
+          <target state="translated">Las puertas de enlace y los proxies DEBEN utilizar el campo Via general-header para indicar los protocolos intermedios y los destinatarios entre el agente de usuario y el servidor en las solicitudes, y entre el servidor de origen y el cliente en las respuestas. Es an&amp;aacute;logo al campo &quot;Recibido&quot; de &lt;a href=&quot;https://tools.ietf.org/html/rfc822&quot;&gt;RFC 822&lt;/a&gt; [ &lt;a href=&quot;#ref-9&quot;&gt;9&lt;/a&gt;] y est&amp;aacute; destinado a ser utilizado para rastrear reenv&amp;iacute;os de mensajes, evitar bucles de solicitud e identificar las capacidades de protocolo de todos los remitentes a lo largo de la cadena de solicitud / respuesta. V&amp;iacute;a = &quot;V&amp;iacute;a&quot; &quot;:&quot; 1 # (protocolo recibido recibido por [comentario]) protocolo recibido = [nombre-protocolo &quot;/&quot;] versi&amp;oacute;n-protocolo nombre-protocolo = token versi&amp;oacute;n-protocolo = token recibido-por = (host [&quot;:&quot; puerto]) | pseud&amp;oacute;nimo pseud&amp;oacute;nimo = token El protocolo-recibido indica la versi&amp;oacute;n de protocolo del mensaje recibido por el servidor o cliente a lo largo de cada segmento de la cadena de solicitud / respuesta.La versi&amp;oacute;n del protocolo recibido se agrega al valor del campo V&amp;iacute;a cuando se reenv&amp;iacute;a el mensaje para que la informaci&amp;oacute;n sobre las capacidades del protocolo de las aplicaciones ascendentes permanezca visible para todos los destinatarios. El nombre del protocolo es opcional si y solo si fuera &quot;HTTP&quot;. El campo de recepci&amp;oacute;n es normalmente el host y el n&amp;uacute;mero de puerto opcional de un servidor o cliente destinatario que posteriormente reenvi&amp;oacute; el mensaje. Sin embargo, si el host real se considera informaci&amp;oacute;n confidencial, PUEDE ser reemplazado por un seud&amp;oacute;nimo. Si no se proporciona el puerto, PUEDE suponerse que es el puerto predeterminado del protocolo recibido. Varios valores de campo V&amp;iacute;a representan cada proxy o puerta de enlace que ha reenviado el mensaje.Cada destinatario DEBE adjuntar su informaci&amp;oacute;n de modo que el resultado final se ordene de acuerdo con la secuencia de aplicaciones de reenv&amp;iacute;o. Los comentarios PUEDEN usarse en el campo de encabezado Via para identificar el software del proxy o puerta de enlace del destinatario, de forma an&amp;aacute;loga a los campos de encabezado de User-Agent y Server. Sin embargo, todos los comentarios en el campo V&amp;iacute;a son opcionales y cualquier destinatario PUEDE eliminarlos antes de reenviar el mensaje. Por ejemplo, se podr&amp;iacute;a enviar un mensaje de solicitud desde un agente de usuario HTTP / 1.0 a un proxy interno llamado en c&amp;oacute;digo &quot;fred&quot;, que usa HTTP / 1.1 para reenviar la solicitud a un proxy p&amp;uacute;blico en nowhere.com, que completa la solicitud mediante reenviarlo al servidor de origen en www.ics.uci.edu. La solicitud recibida por www.ics.uci.edu tendr&amp;iacute;a entonces el siguiente campo de encabezado Via: Via: 1.0 fred, 1.1 nowhere.com (Apache / 1.1) Los proxies y puertas de enlace utilizados como portal a trav&amp;eacute;s de un firewall de red NO DEBEN, de forma predeterminada, reenviar los nombres y puertos de los hosts dentro de la regi&amp;oacute;n del firewall. Esta informaci&amp;oacute;n solo DEBE ser propagada si est&amp;aacute; habilitada expl&amp;iacute;citamente. Si no est&amp;aacute; habilitado, el host recibido por cualquier host detr&amp;aacute;s del firewall DEBER&amp;Iacute;A ser reemplazado por un seud&amp;oacute;nimo apropiado para ese host. Para organizaciones que tienen fuertes requisitos de privacidad para ocultar estructuras internas, un proxy PUEDE combinar una subsecuencia ordenada de entradas de campo de encabezado Via con valores de protocolo recibido id&amp;eacute;nticos en una sola entrada de este tipo. Por ejemplo, Via: 1.0 ricky, 1.1 ethel, 1.1 fred, 1.0 lucy podr&amp;iacute;a colapsarse en Via: 1.0 ricky, 1.1 mertz, 1.0 Las aplicaciones de lucy NO DEBEN combinar m&amp;uacute;ltiples entradas a menos que est&amp;eacute;n todas bajo el mismo control organizacional y los hosts ya hayan sido reemplazados por seud&amp;oacute;nimos. Las aplicaciones NO DEBEN combinar entradas que tengan diferentes valores de protocolo recibido.</target>
+        </trans-unit>
+        <trans-unit id="324e73fe5f7adaaf8050e5c44d8fcd8a74dfca98" translate="yes" xml:space="preserve">
+          <source>The WINDOW_UPDATE frame (type=0x8) is used to implement flow control;
+   see &lt;a href=&quot;#section-5.2&quot;&gt;Section 5.2&lt;/a&gt; for an overview.
+
+   Flow control operates at two levels: on each individual stream and on
+   the entire connection.
+
+   Both types of flow control are hop by hop, that is, only between the
+   two endpoints.  Intermediaries do not forward WINDOW_UPDATE frames
+   between dependent connections.  However, throttling of data transfer
+   by any receiver can indirectly cause the propagation of flow-control
+   information toward the original sender.
+
+   Flow control only applies to frames that are identified as being
+   subject to flow control.  Of the frame types defined in this
+   document, this includes only DATA frames.  Frames that are exempt
+   from flow control MUST be accepted and processed, unless the receiver
+   is unable to assign resources to handling the frame.  A receiver MAY
+   respond with a stream error (&lt;a href=&quot;#section-5.4.2&quot;&gt;Section 5.4.2&lt;/a&gt;) or connection error
+   (&lt;a href=&quot;#section-5.4.1&quot;&gt;Section 5.4.1&lt;/a&gt;) of type FLOW_CONTROL_ERROR if it is unable to accept
+   a frame.
+
+    +-+-------------------------------------------------------------+
+    |R|              Window Size Increment (31)                     |
+    +-+-------------------------------------------------------------+
+
+                  Figure 14: WINDOW_UPDATE Payload Format
+
+   The payload of a WINDOW_UPDATE frame is one reserved bit plus an
+   unsigned 31-bit integer indicating the number of octets that the
+   sender can transmit in addition to the existing flow-control window.
+   The legal range for the increment to the flow-control window is 1 to
+   2^31-1 (2,147,483,647) octets.
+
+   The WINDOW_UPDATE frame does not define any flags.
+
+   The WINDOW_UPDATE frame can be specific to a stream or to the entire
+   connection.  In the former case, the frame's stream identifier
+   indicates the affected stream; in the latter, the value &quot;0&quot; indicates
+   that the entire connection is the subject of the frame.
+
+   A receiver MUST treat the receipt of a WINDOW_UPDATE frame with an
+   flow-control window increment of 0 as a stream error (&lt;a href=&quot;#section-5.4.2&quot;&gt;Section 5.4.2&lt;/a&gt;)
+   of type PROTOCOL_ERROR; errors on the connection flow-control window
+   MUST be treated as a connection error (&lt;a href=&quot;#section-5.4.1&quot;&gt;Section 5.4.1&lt;/a&gt;). 
+
+   WINDOW_UPDATE can be sent by a peer that has sent a frame bearing the
+   END_STREAM flag.  This means that a receiver could receive a
+   WINDOW_UPDATE frame on a &quot;half-closed (remote)&quot; or &quot;closed&quot; stream.
+   A receiver MUST NOT treat this as an error (see &lt;a href=&quot;#section-5.1&quot;&gt;Section 5.1&lt;/a&gt;).
+
+   A receiver that receives a flow-controlled frame MUST always account
+   for its contribution against the connection flow-control window,
+   unless the receiver treats this as a connection error
+   (&lt;a href=&quot;#section-5.4.1&quot;&gt;Section 5.4.1&lt;/a&gt;).  This is necessary even if the frame is in error.
+   The sender counts the frame toward the flow-control window, but if
+   the receiver does not, the flow-control window at the sender and
+   receiver can become different.
+
+   A WINDOW_UPDATE frame with a length other than 4 octets MUST be
+   treated as a connection error (&lt;a href=&quot;#section-5.4.1&quot;&gt;Section 5.4.1&lt;/a&gt;) of type
+   FRAME_SIZE_ERROR.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="0176fdb6175026d4c263772f8859cf082f15cf8e" translate="yes" xml:space="preserve">
+          <source>The WWW-Authenticate response-header field MUST be included in 401
+   (Unauthorized) response messages. The field value consists of at
+   least one challenge that indicates the authentication scheme(s) and
+   parameters applicable to the Request-URI.
+
+       WWW-Authenticate  = &quot;WWW-Authenticate&quot; &quot;:&quot; 1#challenge
+
+   The HTTP access authentication process is described in &quot;HTTP
+   Authentication: Basic and Digest Access Authentication&quot; [&lt;a href=&quot;#ref-43&quot;&gt;43&lt;/a&gt;]. User
+   agents are advised to take special care in parsing the WWW-
+   Authenticate field value as it might contain more than one challenge,
+   or if more than one WWW-Authenticate header field is provided, the
+   contents of a challenge itself can contain a comma-separated list of
+   authentication parameters.</source>
+          <target state="translated">El campo de encabezado de respuesta WWW-Authenticate DEBE estar incluido en los mensajes de respuesta 401 (no autorizados). El valor del campo consta de al menos un desaf&amp;iacute;o que indica los esquemas de autenticaci&amp;oacute;n y los par&amp;aacute;metros aplicables al Request-URI. WWW-Authenticate = &quot;WWW-Authenticate&quot; &quot;:&quot; 1 # desaf&amp;iacute;o El proceso de autenticaci&amp;oacute;n de acceso HTTP se describe en &quot;Autenticaci&amp;oacute;n HTTP: Autenticaci&amp;oacute;n de acceso b&amp;aacute;sica y impl&amp;iacute;cita&quot; [ &lt;a href=&quot;#ref-43&quot;&gt;43&lt;/a&gt; ]. Se recomienda a los agentes de usuario que tengan especial cuidado al analizar el valor del campo WWW-Authenticate, ya que puede contener m&amp;aacute;s de un desaf&amp;iacute;o, o si se proporciona m&amp;aacute;s de un campo de encabezado WWW-Authenticate, el contenido de un desaf&amp;iacute;o en s&amp;iacute; puede contener una coma separada lista de par&amp;aacute;metros de autenticaci&amp;oacute;n.</target>
+        </trans-unit>
+        <trans-unit id="7a35f374a20f06c6368a7744257833df18d21fb6" translate="yes" xml:space="preserve">
+          <source>The Warning general-header field is used to carry additional
+   information about the status or transformation of a message which
+   might not be reflected in the message. This information is typically
+   used to warn about a possible lack of semantic transparency from
+   caching operations or transformations applied to the entity body of
+   the message.
+
+   Warning headers are sent with responses using:
+
+       Warning    = &quot;Warning&quot; &quot;:&quot; 1#warning-value
+
+       warning-value = warn-code SP warn-agent SP warn-text
+                                             [SP warn-date]
+
+       warn-code  = 3DIGIT
+       warn-agent = ( host [ &quot;:&quot; port ] ) | pseudonym
+                       ; the name or pseudonym of the server adding
+                       ; the Warning header, for use in debugging
+       warn-text  = quoted-string
+       warn-date  = &amp;lt;&quot;&amp;gt; HTTP-date &amp;lt;&quot;&amp;gt;
+
+   A response MAY carry more than one Warning header.
+
+   The warn-text SHOULD be in a natural language and character set that
+   is most likely to be intelligible to the human user receiving the
+   response. This decision MAY be based on any available knowledge, such
+   as the location of the cache or user, the Accept-Language field in a
+   request, the Content-Language field in a response, etc. The default
+   language is English and the default character set is ISO-8859-1.
+
+   If a character set other than ISO-8859-1 is used, it MUST be encoded
+   in the warn-text using the method described in &lt;a href=&quot;https://tools.ietf.org/html/rfc2047&quot;&gt;RFC 2047&lt;/a&gt; [&lt;a href=&quot;#ref-14&quot;&gt;14&lt;/a&gt;].
+
+   Warning headers can in general be applied to any message, however
+   some specific warn-codes are specific to caches and can only be
+   applied to response messages. New Warning headers SHOULD be added
+   after any existing Warning headers. A cache MUST NOT delete any
+   Warning header that it received with a message. However, if a cache
+   successfully validates a cache entry, it SHOULD remove any Warning
+   headers previously attached to that entry except as specified for 
+
+   specific Warning codes. It MUST then add any Warning headers received
+   in the validating response. In other words, Warning headers are those
+   that would be attached to the most recent relevant response.
+
+   When multiple Warning headers are attached to a response, the user
+   agent ought to inform the user of as many of them as possible, in the
+   order that they appear in the response. If it is not possible to
+   inform the user of all of the warnings, the user agent SHOULD follow
+   these heuristics:
+
+      - Warnings that appear early in the response take priority over
+        those appearing later in the response.
+
+      - Warnings in the user's preferred character set take priority
+        over warnings in other character sets but with identical warn-
+        codes and warn-agents.
+
+   Systems that generate multiple Warning headers SHOULD order them with
+   this user agent behavior in mind.
+
+   Requirements for the behavior of caches with respect to Warnings are
+   stated in &lt;a href=&quot;#section-13.1.2&quot;&gt;section 13.1.2&lt;/a&gt;.
+
+   This is a list of the currently-defined warn-codes, each with a
+   recommended warn-text in English, and a description of its meaning.
+
+   110 Response is stale
+     MUST be included whenever the returned response is stale.
+
+   111 Revalidation failed
+     MUST be included if a cache returns a stale response because an
+     attempt to revalidate the response failed, due to an inability to
+     reach the server.
+
+   112 Disconnected operation
+     SHOULD be included if the cache is intentionally disconnected from
+     the rest of the network for a period of time.
+
+   113 Heuristic expiration
+     MUST be included if the cache heuristically chose a freshness
+     lifetime greater than 24 hours and the response's age is greater
+     than 24 hours.
+
+   199 Miscellaneous warning
+     The warning text MAY include arbitrary information to be presented
+     to a human user, or logged. A system receiving this warning MUST
+     NOT take any automated action, besides presenting the warning to
+     the user. 
+
+   214 Transformation applied
+     MUST be added by an intermediate cache or proxy if it applies any
+     transformation changing the content-coding (as specified in the
+     Content-Encoding header) or media-type (as specified in the
+     Content-Type header) of the response, or the entity-body of the
+     response, unless this Warning code already appears in the response.
+
+   299 Miscellaneous persistent warning
+     The warning text MAY include arbitrary information to be presented
+     to a human user, or logged. A system receiving this warning MUST
+     NOT take any automated action.
+
+   If an implementation sends a message with one or more Warning headers
+   whose version is HTTP/1.0 or lower, then the sender MUST include in
+   each warning-value a warn-date that matches the date in the response.
+
+   If an implementation receives a message with a warning-value that
+   includes a warn-date, and that warn-date is different from the Date
+   value in the response, then that warning-value MUST be deleted from
+   the message before storing, forwarding, or using it. (This prevents
+   bad consequences of naive caching of Warning header fields.) If all
+   of the warning-values are deleted for this reason, the Warning header
+   MUST be deleted as well.</source>
+          <target state="translated">El campo de encabezado general de Advertencia se utiliza para llevar informaci&amp;oacute;n adicional sobre el estado o la transformaci&amp;oacute;n de un mensaje que podr&amp;iacute;a no reflejarse en el mensaje. Esta informaci&amp;oacute;n se utiliza normalmente para advertir sobre una posible falta de transparencia sem&amp;aacute;ntica de las operaciones de almacenamiento en cach&amp;eacute; o las transformaciones aplicadas al cuerpo de la entidad del mensaje. Los encabezados de advertencia se env&amp;iacute;an con respuestas usando: Advertencia = &quot;Advertencia&quot; &quot;:&quot; 1 # valor-advertencia valor-advertencia = c&amp;oacute;digo-advertencia SP warn-agent SP warn-text [SP warn-date] warn-code = 3DIGIT warn-agent = (host [&quot;:&quot; puerto]) | seud&amp;oacute;nimo el nombre o seud&amp;oacute;nimo del servidor que agrega; el encabezado de Advertencia,para usar en la depuraci&amp;oacute;n warn-text = quoted-string warn-date = &amp;lt;&quot;&amp;gt; HTTP-date &amp;lt;&quot;&amp;gt; Una respuesta PUEDE llevar m&amp;aacute;s de un encabezado de Advertencia. El texto de advertencia DEBE estar en un lenguaje natural y un conjunto de caracteres que probablemente sea inteligible para el usuario humano que recibe la respuesta. Esta decisi&amp;oacute;n PUEDE basarse en cualquier conocimiento disponible, como la ubicaci&amp;oacute;n del cach&amp;eacute; o del usuario, el campo Accept-Language en una solicitud, el campo Content-Language en una respuesta, etc. El idioma predeterminado es el ingl&amp;eacute;s y el juego de caracteres predeterminado es ISO-8859-1. Si se utiliza un conjunto de caracteres diferente a ISO-8859-1, DEBE estar codificado en el texto de advertencia utilizando el m&amp;eacute;todo descrito enEl texto de advertencia DEBE estar en un lenguaje natural y un conjunto de caracteres que probablemente sea inteligible para el usuario humano que recibe la respuesta. Esta decisi&amp;oacute;n PUEDE basarse en cualquier conocimiento disponible, como la ubicaci&amp;oacute;n del cach&amp;eacute; o del usuario, el campo Accept-Language en una solicitud, el campo Content-Language en una respuesta, etc. El idioma predeterminado es el ingl&amp;eacute;s y el juego de caracteres predeterminado es ISO-8859-1. Si se utiliza un conjunto de caracteres diferente a ISO-8859-1, DEBE estar codificado en el texto de advertencia utilizando el m&amp;eacute;todo descrito enEl texto de advertencia DEBE estar en un lenguaje natural y un conjunto de caracteres que probablemente sea inteligible para el usuario humano que recibe la respuesta. Esta decisi&amp;oacute;n PUEDE basarse en cualquier conocimiento disponible, como la ubicaci&amp;oacute;n del cach&amp;eacute; o del usuario, el campo Accept-Language en una solicitud, el campo Content-Language en una respuesta, etc. El idioma predeterminado es el ingl&amp;eacute;s y el juego de caracteres predeterminado es ISO-8859-1. Si se utiliza un conjunto de caracteres diferente a ISO-8859-1, DEBE estar codificado en el texto de advertencia utilizando el m&amp;eacute;todo descrito enel campo Contenido-Idioma en una respuesta, etc. El idioma predeterminado es ingl&amp;eacute;s y el juego de caracteres predeterminado es ISO-8859-1. Si se utiliza un conjunto de caracteres diferente a ISO-8859-1, DEBE estar codificado en el texto de advertencia utilizando el m&amp;eacute;todo descrito enel campo Contenido-Idioma en una respuesta, etc. El idioma predeterminado es ingl&amp;eacute;s y el juego de caracteres predeterminado es ISO-8859-1. Si se utiliza un conjunto de caracteres diferente a ISO-8859-1, DEBE estar codificado en el texto de advertencia utilizando el m&amp;eacute;todo descrito en&lt;a href=&quot;https://tools.ietf.org/html/rfc2047&quot;&gt;RFC 2047&lt;/a&gt; [ &lt;a href=&quot;#ref-14&quot;&gt;14&lt;/a&gt;]. En general, los encabezados de advertencia se pueden aplicar a cualquier mensaje, sin embargo, algunos c&amp;oacute;digos de advertencia espec&amp;iacute;ficos son espec&amp;iacute;ficos de las cach&amp;eacute;s y solo se pueden aplicar a los mensajes de respuesta. Se DEBEN agregar nuevos encabezados de advertencia despu&amp;eacute;s de cualquier encabezado de advertencia existente. Un cach&amp;eacute; NO DEBE eliminar ning&amp;uacute;n encabezado de advertencia que haya recibido con un mensaje. Sin embargo, si un cach&amp;eacute; valida con &amp;eacute;xito una entrada de cach&amp;eacute;, DEBER&amp;Iacute;A eliminar cualquier encabezado de advertencia previamente adjunto a esa entrada, excepto seg&amp;uacute;n lo especificado para c&amp;oacute;digos de advertencia espec&amp;iacute;ficos. A continuaci&amp;oacute;n, DEBE agregar cualquier encabezado de advertencia recibido en la respuesta de validaci&amp;oacute;n. En otras palabras, los encabezados de Advertencia son aquellos que se adjuntar&amp;iacute;an a la respuesta relevante m&amp;aacute;s reciente. Cuando se adjuntan varios encabezados de advertencia a una respuesta, el agente de usuario debe informar al usuario de tantos como sea posible,en el orden en que aparecen en la respuesta. Si no es posible informar al usuario de todas las advertencias, el agente de usuario DEBE seguir estas heur&amp;iacute;sticas: - Las advertencias que aparecen al principio de la respuesta tienen prioridad sobre las que aparecen m&amp;aacute;s tarde en la respuesta. - Las advertencias en el juego de caracteres preferido del usuario tienen prioridad sobre las advertencias en otros juegos de caracteres pero con c&amp;oacute;digos de advertencia y agentes de advertencia id&amp;eacute;nticos. Los sistemas que generan m&amp;uacute;ltiples encabezados de advertencia DEBEN ordenarlos teniendo en cuenta este comportamiento de agente de usuario. Los requisitos para el comportamiento de las cach&amp;eacute;s con respecto a las advertencias se establecen en- Las advertencias que aparecen al principio de la respuesta tienen prioridad sobre las que aparecen m&amp;aacute;s tarde en la respuesta. - Las advertencias en el juego de caracteres preferido del usuario tienen prioridad sobre las advertencias en otros juegos de caracteres pero con c&amp;oacute;digos de advertencia y agentes de advertencia id&amp;eacute;nticos. Los sistemas que generan m&amp;uacute;ltiples encabezados de advertencia DEBEN ordenarlos teniendo en cuenta este comportamiento de agente de usuario. Los requisitos para el comportamiento de las cach&amp;eacute;s con respecto a las advertencias se establecen en- Las advertencias que aparecen al principio de la respuesta tienen prioridad sobre las que aparecen m&amp;aacute;s tarde en la respuesta. - Las advertencias en el juego de caracteres preferido del usuario tienen prioridad sobre las advertencias en otros juegos de caracteres pero con c&amp;oacute;digos de advertencia y agentes de advertencia id&amp;eacute;nticos. Los sistemas que generan m&amp;uacute;ltiples encabezados de advertencia DEBEN ordenarlos teniendo en cuenta este comportamiento de agente de usuario. Los requisitos para el comportamiento de las cach&amp;eacute;s con respecto a las advertencias se establecen enLos requisitos para el comportamiento de las cach&amp;eacute;s con respecto a las advertencias se establecen enLos requisitos para el comportamiento de las cach&amp;eacute;s con respecto a las advertencias se establecen en&lt;a href=&quot;#section-13.1.2&quot;&gt;secci&amp;oacute;n 13.1.2&lt;/a&gt;. Esta es una lista de los c&amp;oacute;digos de advertencia definidos actualmente, cada uno con un texto de advertencia recomendado en ingl&amp;eacute;s y una descripci&amp;oacute;n de su significado. 110 La respuesta es obsoleta DEBE incluirse siempre que la respuesta devuelta sea obsoleta. 111 La revalidaci&amp;oacute;n fallida DEBE incluirse si un cach&amp;eacute; devuelve una respuesta obsoleta porque fall&amp;oacute; un intento de revalidar la respuesta, debido a la imposibilidad de llegar al servidor. 112 La operaci&amp;oacute;n desconectada DEBE incluirse si la cach&amp;eacute; se desconecta intencionalmente del resto de la red durante un per&amp;iacute;odo de tiempo. 113 La caducidad heur&amp;iacute;stica DEBE incluirse si la cach&amp;eacute; eligi&amp;oacute; heur&amp;iacute;sticamente una vida &amp;uacute;til de frescura superior a 24 horas y la antig&amp;uuml;edad de la respuesta es superior a 24 horas.199 Advertencias miscel&amp;aacute;neas El texto de advertencia PUEDE incluir informaci&amp;oacute;n arbitraria para ser presentada a un usuario humano o registrado. Un sistema que reciba esta advertencia NO DEBE realizar ninguna acci&amp;oacute;n automatizada, adem&amp;aacute;s de presentar la advertencia al usuario. 214 La transformaci&amp;oacute;n aplicada DEBE ser agregada por un cach&amp;eacute; intermedio o proxy si aplica alguna transformaci&amp;oacute;n que cambie la codificaci&amp;oacute;n de contenido (como se especifica en el encabezado Content-Encoding) o el tipo de medio (como se especifica en el encabezado Content-Type) de la respuesta, o el cuerpo de la entidad de la respuesta, a menos que este c&amp;oacute;digo de advertencia ya aparezca en la respuesta. 299 Advertencias persistentes miscel&amp;aacute;neas El texto de advertencia PUEDE incluir informaci&amp;oacute;n arbitraria para ser presentada a un usuario humano o registrada. Un sistema que reciba esta advertencia NO DEBE realizar ninguna acci&amp;oacute;n automatizada.Si una implementaci&amp;oacute;n env&amp;iacute;a un mensaje con uno o m&amp;aacute;s encabezados de advertencia cuya versi&amp;oacute;n es HTTP / 1.0 o inferior, entonces el remitente DEBE incluir en cada valor de advertencia una fecha de advertencia que coincida con la fecha de la respuesta. Si una implementaci&amp;oacute;n recibe un mensaje con un valor de advertencia que incluye una fecha de advertencia, y esa fecha de advertencia es diferente del valor de Fecha en la respuesta, entonces ese valor de advertencia DEBE eliminarse del mensaje antes de almacenarlo, reenviarlo o us&amp;aacute;ndolo. (Esto evita las malas consecuencias del almacenamiento en cach&amp;eacute; ingenuo de los campos de encabezado de Advertencia). Si todos los valores de advertencia se eliminan por este motivo, el encabezado de Advertencia DEBE eliminarse tambi&amp;eacute;n.entonces el remitente DEBE incluir en cada valor de advertencia una fecha de advertencia que coincida con la fecha de la respuesta. Si una implementaci&amp;oacute;n recibe un mensaje con un valor de advertencia que incluye una fecha de advertencia, y esa fecha de advertencia es diferente del valor de Fecha en la respuesta, entonces ese valor de advertencia DEBE eliminarse del mensaje antes de almacenarlo, reenviarlo o us&amp;aacute;ndolo. (Esto evita las malas consecuencias del almacenamiento en cach&amp;eacute; ingenuo de los campos de encabezado de Advertencia). Si todos los valores de advertencia se eliminan por este motivo, el encabezado de Advertencia DEBE eliminarse tambi&amp;eacute;n.entonces el remitente DEBE incluir en cada valor de advertencia una fecha de advertencia que coincida con la fecha de la respuesta. Si una implementaci&amp;oacute;n recibe un mensaje con un valor de advertencia que incluye una fecha de advertencia, y esa fecha de advertencia es diferente del valor de Fecha en la respuesta, entonces ese valor de advertencia DEBE eliminarse del mensaje antes de almacenarlo, reenviarlo o us&amp;aacute;ndolo. (Esto evita las malas consecuencias del almacenamiento en cach&amp;eacute; ingenuo de los campos de encabezado de Advertencia). Si todos los valores de advertencia se eliminan por este motivo, el encabezado de Advertencia DEBE eliminarse tambi&amp;eacute;n.(Esto evita las malas consecuencias del almacenamiento en cach&amp;eacute; ingenuo de los campos de encabezado de Advertencia). Si todos los valores de advertencia se eliminan por este motivo, el encabezado de Advertencia DEBE eliminarse tambi&amp;eacute;n.(Esto evita las malas consecuencias del almacenamiento en cach&amp;eacute; ingenuo de los campos de encabezado de Advertencia). Si todos los valores de advertencia se eliminan por este motivo, el encabezado de Advertencia DEBE eliminarse tambi&amp;eacute;n.</target>
+        </trans-unit>
+        <trans-unit id="650ee0647a2c1fdd4db296e88e9d7457a6d4e9da" translate="yes" xml:space="preserve">
+          <source>The Web APIs have native methods to encode or decode to base64: &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding&quot;&gt;Base64 encoding and decoding&lt;/a&gt;.</source>
+          <target state="translated">Las API web tienen m&amp;eacute;todos nativos para codificar o decodificar en base64: &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding&quot;&gt;codificaci&amp;oacute;n y decodificaci&amp;oacute;n de Base64&lt;/a&gt; .</target>
+        </trans-unit>
+        <trans-unit id="56faf444060ee49993107fee26b7ba0d66f5e281" translate="yes" xml:space="preserve">
+          <source>The Web Origin Concept</source>
+          <target state="translated">El Concepto de Origen de la Web</target>
+        </trans-unit>
+        <trans-unit id="215d6bd38f0870c1defdd62eb60f6f1375d1790f" translate="yes" xml:space="preserve">
+          <source>The Web Runtime uses the same user agent string as desktop Firefox.</source>
+          <target state="translated">El Web Runtime utiliza la misma cadena de agente de usuario que el Firefox de escritorio.</target>
+        </trans-unit>
+        <trans-unit id="941232b2ff4433cb0bd6270438632894b53fb59c" translate="yes" xml:space="preserve">
+          <source>The Web page is temporarily not available for reasons that have not been unforeseen. That way, search engines don't update their links.</source>
+          <target state="translated">La página web no está disponible temporalmente por razones que no han sido imprevistas.De esta manera,los motores de búsqueda no actualizan sus enlaces.</target>
+        </trans-unit>
+        <trans-unit id="55fa8ca3dd54f0ec3aab1401af4719063aeb4a24" translate="yes" xml:space="preserve">
+          <source>The Web page is temporarily not available for reasons that have not been unforeseen. That way, search engines don't update their links. Better than &lt;code&gt;302&lt;/code&gt; when non-GET links/operations are available on the site.</source>
+          <target state="translated">La p&amp;aacute;gina Web no est&amp;aacute; disponible temporalmente por motivos que no han sido imprevistos. De esa forma, los motores de b&amp;uacute;squeda no actualizan sus enlaces. Mejor que &lt;code&gt;302&lt;/code&gt; cuando los enlaces / operaciones que no son GET est&amp;aacute;n disponibles en el sitio.</target>
+        </trans-unit>
+        <trans-unit id="d6e1f00a886091957899f1d426a1a907509a4636" translate="yes" xml:space="preserve">
+          <source>The Web page is temporarily unavailable for unforeseen reasons.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="d83272b4a920a61a8fef1340e4de8c385bd7ee81" translate="yes" xml:space="preserve">
+          <source>The Web page is temporarily unavailable for unforeseen reasons. Better than &lt;code&gt;302&lt;/code&gt; when non-&lt;code&gt;GET&lt;/code&gt; operations are available on the site.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="ad5e46a03efafad9853b734ee0d593694b072117" translate="yes" xml:space="preserve">
+          <source>The Web server</source>
+          <target state="translated">El servidor web</target>
+        </trans-unit>
+        <trans-unit id="95924074d7e37faf6b144a7b43119f38c76fd2f0" translate="yes" xml:space="preserve">
+          <source>The WebSocket Protocol</source>
+          <target state="translated">El Protocolo WebSocket</target>
+        </trans-unit>
+        <trans-unit id="09ee06d1ee05107c094545645447a824d3d94f1b" translate="yes" xml:space="preserve">
+          <source>The WebSocket protocol version the client wishes to use when communicating with the server. This number should be the most recent version possible listed in the &lt;a href=&quot;https://www.iana.org/assignments/websocket/websocket.xml#version-number&quot;&gt;IANA WebSocket Version Number Registry&lt;/a&gt;. The most recent final version of the WebSocket protocol is version 13.</source>
+          <target state="translated">La versi&amp;oacute;n del protocolo WebSocket que el cliente desea utilizar cuando se comunica con el servidor. Este n&amp;uacute;mero debe ser la versi&amp;oacute;n m&amp;aacute;s reciente posible que figura en el &lt;a href=&quot;https://www.iana.org/assignments/websocket/websocket.xml#version-number&quot;&gt;Registro de n&amp;uacute;meros de versi&amp;oacute;n de IANA WebSocket&lt;/a&gt; . La versi&amp;oacute;n final m&amp;aacute;s reciente del protocolo WebSocket es la versi&amp;oacute;n 13.</target>
+        </trans-unit>
+        <trans-unit id="e242f211ed018b0f56d726778881102bd4b4068c" translate="yes" xml:space="preserve">
+          <source>The XML namespace extension ([&lt;a href=&quot;#ref-REC-XML-NAMES&quot;&gt;REC-XML-NAMES&lt;/a&gt;]) is used in this
+   specification in order to allow for new XML elements to be added
+   without fear of colliding with other element names.  Although WebDAV
+   request and response bodies can be extended by arbitrary XML
+   elements, which can be ignored by the message recipient, an XML
+   element in the &quot;DAV:&quot; namespace SHOULD NOT be used in the request or
+   response body unless that XML element is explicitly defined in an
+   IETF RFC reviewed by a WebDAV working group.
+
+   For WebDAV to be both extensible and backwards-compatible, both
+   clients and servers need to know how to behave when unexpected or
+   unrecognized command extensions are received.  For XML processing,
+   this means that clients and servers MUST process received XML
+   documents as if unexpected elements and attributes (and all children
+   of unrecognized elements) were not there.  An unexpected element or
+   attribute includes one that may be used in another context but is not
+   expected here.  Ignoring such items for purposes of processing can of
+   course be consistent with logging all information or presenting for
+   debugging.
+
+   This restriction also applies to the processing, by clients, of DAV
+   property values where unexpected XML elements SHOULD be ignored
+   unless the property's schema declares otherwise.
+
+   This restriction does not apply to setting dead DAV properties on the
+   server where the server MUST record all XML elements. 
+
+   Additionally, this restriction does not apply to the use of XML where
+   XML happens to be the content type of the entity body, for example,
+   when used as the body of a PUT.
+
+   Processing instructions in XML SHOULD be ignored by recipients.
+   Thus, specifications extending WebDAV SHOULD NOT use processing
+   instructions to define normative behavior.
+
+   XML DTD fragments are included for all the XML elements defined in
+   this specification.  However, correct XML will not be valid according
+   to any DTD due to namespace usage and extension rules.  In
+   particular:
+
+   o  Elements (from this specification) are in the &quot;DAV:&quot; namespace,
+
+   o  Element ordering is irrelevant unless otherwise stated,
+
+   o  Extension attributes MAY be added,
+
+   o  For element type definitions of &quot;ANY&quot;, the normative text
+      definition for that element defines what can be in it and what
+      that means.
+
+   o  For element type definitions of &quot;#PCDATA&quot;, extension elements MUST
+      NOT be added.
+
+   o  For other element type definitions, including &quot;EMPTY&quot;, extension
+      elements MAY be added.
+
+   Note that this means that elements containing elements cannot be
+   extended to contain text, and vice versa.
+
+   With DTD validation relaxed by the rules above, the constraints
+   described by the DTD fragments are normative (see for example
+   &lt;a href=&quot;#appendix-A&quot;&gt;Appendix A&lt;/a&gt;).  A recipient of a WebDAV message with an XML body MUST
+   NOT validate the XML document according to any hard-coded or
+   dynamically-declared DTD.
+
+   Note that this section describes backwards-compatible extensibility
+   rules.  There might also be times when an extension is designed not
+   to be backwards-compatible, for example, defining an extension that
+   reuses an XML element defined in this document but omitting one of
+   the child elements required by the DTDs in this specification.</source>
+          <target state="translated">La extensi&amp;oacute;n del espacio de nombres XML ([ &lt;a href=&quot;#ref-REC-XML-NAMES&quot;&gt;REC-XML-NAMES&lt;/a&gt;]) se usa en esta especificaci&amp;oacute;n para permitir que se agreguen nuevos elementos XML sin temor a chocar con otros nombres de elementos. Aunque los cuerpos de solicitud y respuesta de WebDAV se pueden ampliar mediante elementos XML arbitrarios, que el destinatario del mensaje puede ignorar, un elemento XML en el espacio de nombres &quot;DAV:&quot; NO DEBE usarse en el cuerpo de la solicitud o la respuesta a menos que ese elemento XML est&amp;eacute; definido expl&amp;iacute;citamente en un RFC del IETF revisado por un grupo de trabajo de WebDAV. Para que WebDAV sea extensible y compatible con versiones anteriores, tanto los clientes como los servidores deben saber c&amp;oacute;mo comportarse cuando se reciben extensiones de comando inesperadas o no reconocidas. Para el procesamiento de XML,esto significa que los clientes y servidores DEBEN procesar los documentos XML recibidos como si los elementos y atributos inesperados (y todos los elementos secundarios de los elementos no reconocidos) no estuvieran all&amp;iacute;. Un elemento o atributo inesperado incluye uno que puede usarse en otro contexto pero que no se espera aqu&amp;iacute;. Por supuesto, ignorar dichos elementos para fines de procesamiento puede ser coherente con el registro de toda la informaci&amp;oacute;n o la presentaci&amp;oacute;n para depuraci&amp;oacute;n. Esta restricci&amp;oacute;n tambi&amp;eacute;n se aplica al procesamiento, por parte de los clientes, de valores de propiedad DAV donde los elementos XML inesperados DEBER&amp;Iacute;AN ignorarse a menos que el esquema de la propiedad declare lo contrario. Esta restricci&amp;oacute;n no se aplica a la configuraci&amp;oacute;n de propiedades DAV muertas en el servidor donde el servidor DEBE registrar todos los elementos XML. Adicionalmente,esta restricci&amp;oacute;n no se aplica al uso de XML donde XML es el tipo de contenido del cuerpo de la entidad, por ejemplo, cuando se usa como el cuerpo de un PUT. Los destinatarios DEBER&amp;Iacute;AN ignorar las instrucciones de procesamiento en XML. Por lo tanto, las especificaciones que ampl&amp;iacute;an WebDAV NO DEBEN utilizar instrucciones de procesamiento para definir el comportamiento normativo. Se incluyen fragmentos XML DTD para todos los elementos XML definidos en esta especificaci&amp;oacute;n. Sin embargo, el XML correcto no ser&amp;aacute; v&amp;aacute;lido seg&amp;uacute;n ninguna DTD debido al uso del espacio de nombres y las reglas de extensi&amp;oacute;n. En particular: o Los elementos (de esta especificaci&amp;oacute;n) est&amp;aacute;n en el espacio de nombres &quot;DAV:&quot;, o El orden de los elementos es irrelevante a menos que se indique lo contrario, o PUEDEN agregarse atributos de extensi&amp;oacute;n, o Para las definiciones de tipo de elemento de &quot;ANY&quot;,la definici&amp;oacute;n de texto normativo para ese elemento define lo que puede haber en &amp;eacute;l y lo que eso significa. o Para las definiciones de tipo de elemento de &quot;#PCDATA&quot;, NO SE DEBEN agregar elementos de extensi&amp;oacute;n. o Para otras definiciones de tipos de elementos, incluido &quot;VAC&amp;Iacute;O&quot;, se PUEDEN agregar elementos de extensi&amp;oacute;n. Tenga en cuenta que esto significa que los elementos que contienen elementos no se pueden ampliar para contener texto y viceversa. Con la validaci&amp;oacute;n DTD relajada por las reglas anteriores, las restricciones descritas por los fragmentos DTD son normativas (ver por ejemploTenga en cuenta que esto significa que los elementos que contienen elementos no se pueden ampliar para contener texto y viceversa. Con la validaci&amp;oacute;n DTD relajada por las reglas anteriores, las restricciones descritas por los fragmentos DTD son normativas (ver por ejemploTenga en cuenta que esto significa que los elementos que contienen elementos no se pueden ampliar para contener texto y viceversa. Con la validaci&amp;oacute;n DTD relajada por las reglas anteriores, las restricciones descritas por los fragmentos DTD son normativas (ver por ejemplo &lt;a href=&quot;#appendix-A&quot;&gt;Ap&amp;eacute;ndice A&lt;/a&gt; ). Un destinatario de un mensaje WebDAV con un cuerpo XML NO DEBE validar el documento XML de acuerdo con ning&amp;uacute;n DTD codificado o declarado din&amp;aacute;micamente. Tenga en cuenta que esta secci&amp;oacute;n describe las reglas de extensibilidad compatibles con versiones anteriores. Tambi&amp;eacute;n puede haber ocasiones en las que una extensi&amp;oacute;n est&amp;eacute; dise&amp;ntilde;ada para no ser compatible con versiones anteriores, por ejemplo, definir una extensi&amp;oacute;n que reutiliza un elemento XML definido en este documento pero omitiendo uno de los elementos secundarios requeridos por las DTD en esta especificaci&amp;oacute;n.</target>
+        </trans-unit>
+        <trans-unit id="5abb61434aba6cac3c3255f0777b6e4ab04de6f1" translate="yes" xml:space="preserve">
+          <source>The abbreviation for each format links to a longer description of the format, its capabilities, and detailed browser compatibility information; including which versions introduced support and specific special features that may have been introduced later.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="b298dd5e10b677f7b1f3b1962b7f374d92022229" translate="yes" xml:space="preserve">
+          <source>The ability to lock a resource provides a mechanism for serializing
+   access to that resource.  Using a lock, an authoring client can
+   provide a reasonable guarantee that another principal will not modify
+   a resource while it is being edited.  In this way, a client can
+   prevent the &quot;lost update&quot; problem.
+
+   This specification allows locks to vary over two client-specified
+   parameters, the number of principals involved (exclusive vs. shared)
+   and the type of access to be granted.  This document defines locking
+   for only one access type, write.  However, the syntax is extensible,
+   and permits the eventual specification of locking for other access
+   types.</source>
+          <target state="translated">La capacidad de bloquear un recurso proporciona un mecanismo para serializar el acceso a ese recurso.Usando un bloqueo,un cliente de autoría puede proporcionar una garantía razonable de que otro director no modificará un recurso mientras se está editando.De esta manera,un cliente puede evitar el problema de la &quot;actualización perdida&quot;.Esta especificación permite que los bloqueos varíen en dos parámetros especificados por el cliente,el número de directores implicados (exclusivo o compartido)y el tipo de acceso que se concederá.En este documento se define el bloqueo para un solo tipo de acceso,el de escritura.Sin embargo,la sintaxis es extensible y permite especificar eventualmente el bloqueo para otros tipos de acceso.</target>
+        </trans-unit>
+        <trans-unit id="3b06c2527b7380abe2e2e286d29197b000c1f987" translate="yes" xml:space="preserve">
+          <source>The above Content Security Policy will allow inline &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script&quot;&gt;&lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt;&lt;/a&gt; elements</source>
+          <target state="translated">La Pol&amp;iacute;tica de seguridad de contenido anterior permitir&amp;aacute; elementos &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script&quot;&gt; &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; en&lt;/a&gt; l&amp;iacute;nea</target>
+        </trans-unit>
+        <trans-unit id="38b5b1c5b09838d3f34e6ad848719f979f8adbe4" translate="yes" xml:space="preserve">
+          <source>The above Content Security Policy will allow inline styles like the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style&quot;&gt;&lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt;&lt;/a&gt; element, and the &lt;code&gt;style&lt;/code&gt; attribute on any element:</source>
+          <target state="translated">La Pol&amp;iacute;tica de seguridad de contenido anterior permitir&amp;aacute; estilos en l&amp;iacute;nea como el elemento &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style&quot;&gt; &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; &lt;/a&gt; y el atributo de &lt;code&gt;style&lt;/code&gt; en cualquier elemento:</target>
+        </trans-unit>
+        <trans-unit id="fccee75b555f59c4fe0c1b6040c213d2c31d26f2" translate="yes" xml:space="preserve">
+          <source>The above checks to see if the &lt;a href=&quot;headers/origin&quot;&gt;&lt;code&gt;Origin&lt;/code&gt;&lt;/a&gt; header sent by the browser (obtained through $_SERVER['HTTP_ORIGIN']) matches '&lt;a href=&quot;http://arunranga.com&quot;&gt;http://arunranga.com&lt;/a&gt;'. If yes, it returns &lt;a href=&quot;headers/access-control-allow-origin&quot;&gt;&lt;code&gt;Access-Control-Allow-Origin&lt;/code&gt;&lt;/a&gt;&lt;code&gt;: &lt;a href=&quot;http://arunranga.com&quot;&gt;http://arunranga.com&lt;/a&gt;&lt;/code&gt;. This example can be &lt;a href=&quot;http://arunranga.com/examples/access-control/&quot;&gt;seen running here&lt;/a&gt;.</source>
+          <target state="translated">Lo anterior comprueba si el encabezado &lt;a href=&quot;headers/origin&quot;&gt; &lt;code&gt;Origin&lt;/code&gt; &lt;/a&gt; enviado por el navegador (obtenido a trav&amp;eacute;s de $ _SERVER ['HTTP_ORIGIN']) coincide con ' &lt;a href=&quot;http://arunranga.com&quot;&gt;http://arunranga.com&lt;/a&gt; '. Si es as&amp;iacute;, devuelve &lt;a href=&quot;headers/access-control-allow-origin&quot;&gt; &lt;code&gt;Access-Control-Allow-Origin&lt;/code&gt; &lt;/a&gt; &lt;code&gt;: &lt;a href=&quot;http://arunranga.com&quot;&gt;http://arunranga.com&lt;/a&gt;&lt;/code&gt; . Este ejemplo se puede &lt;a href=&quot;http://arunranga.com/examples/access-control/&quot;&gt;ver corriendo aqu&amp;iacute;&lt;/a&gt; .</target>
+        </trans-unit>
+        <trans-unit id="ded9ed730bf997dd582fce073e6812fd63d3ebf3" translate="yes" xml:space="preserve">
+          <source>The above code would have made several incorrect assumptions:</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="ced1ab96d2e07e89bba3cc71ef4220a4d87bd67e" translate="yes" xml:space="preserve">
+          <source>The above example will use the proxy for everything except local hosts in the mozilla.org domain, with the further exception that hosts &lt;code&gt;www.mozilla.org&lt;/code&gt; and &lt;code&gt;merchant.mozilla.org&lt;/code&gt; will go through the proxy.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="bde7701a5c7f870f1548d1541023a9c35cec39e4" translate="yes" xml:space="preserve">
+          <source>The above example will use the proxy for everything except local hosts in the mozilla.org domain, with the further exception that hosts www.mozilla.org and merchant.mozilla.org will go through the proxy.</source>
+          <target state="translated">En el ejemplo anterior se utilizará el proxy para todo,excepto para los hosts locales del dominio mozilla.org,con la excepción,además,de que los hosts www.mozilla.org y merchant.mozilla.org pasarán por el proxy.</target>
+        </trans-unit>
+        <trans-unit id="7aeeb6c5396c82b22fb67dae5cbdfb5d930395d8" translate="yes" xml:space="preserve">
+          <source>The above permissions may be cached for 86,400 seconds (1 day).</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="517f24a05885574e21ddf60556499b7755bb7037" translate="yes" xml:space="preserve">
+          <source>The above requires consulting the DNS every time; it can be grouped intelligently with other rules so that DNS is consulted only if other rules do not yield a result:</source>
+          <target state="translated">Lo anterior requiere consultar el DNS cada vez;puede agruparse inteligentemente con otras reglas de manera que el DNS sea consultado sólo si otras reglas no dan resultado:</target>
+        </trans-unit>
+        <trans-unit id="5a1d7213c66cb3708576c9dee4e5fbc7b85eeee8" translate="yes" xml:space="preserve">
+          <source>The added security is only provided if the user accessing the document is using a browser supporting &lt;code&gt;X-Frame-Options&lt;/code&gt;.</source>
+          <target state="translated">La seguridad adicional solo se proporciona si el usuario que accede al documento est&amp;aacute; utilizando un navegador compatible con &lt;code&gt;X-Frame-Options&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="442c6996e10d8c8b2aa1a7ff243ac87908709eb2" translate="yes" xml:space="preserve">
+          <source>The added security is provided only if the user accessing the document is using a browser that supports &lt;code&gt;X-Frame-Options&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="bc4cf5be0bdff2d41464e3aec79f3206f5e9a290" translate="yes" xml:space="preserve">
+          <source>The address of the previous web page from which a link to the currently requested page was followed.</source>
+          <target state="translated">La dirección de la página web anterior de la que se siguió un enlace a la página actualmente solicitada.</target>
+        </trans-unit>
+        <trans-unit id="b7f363462ba0e835d6efe5f6a4a754557a175395" translate="yes" xml:space="preserve">
+          <source>The allow list is &lt;code&gt;'self'&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="3a13999e890799ba528c66f4b10225cdce017aa2" translate="yes" xml:space="preserve">
+          <source>The allowlist is a list of origins that takes one of the following values:</source>
+          <target state="translated">La lista de permisos es una lista de orígenes que toma uno de los siguientes valores:</target>
+        </trans-unit>
+        <trans-unit id="393e3579b1c31fc17a2e5e0bd2a662711c3a5e42" translate="yes" xml:space="preserve">
+          <source>The alternative and de-facto standard versions of this header are the &lt;a href=&quot;x-forwarded-for&quot;&gt;&lt;code&gt;X-Forwarded-For&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;x-forwarded-host&quot;&gt;&lt;code&gt;X-Forwarded-Host&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;x-forwarded-proto&quot;&gt;&lt;code&gt;X-Forwarded-Proto&lt;/code&gt;&lt;/a&gt; headers.</source>
+          <target state="translated">Las versiones est&amp;aacute;ndar alternativa y de facto de este encabezado son los encabezados &lt;a href=&quot;x-forwarded-for&quot;&gt; &lt;code&gt;X-Forwarded-For&lt;/code&gt; &lt;/a&gt; , &lt;a href=&quot;x-forwarded-host&quot;&gt; &lt;code&gt;X-Forwarded-Host&lt;/code&gt; &lt;/a&gt; y &lt;a href=&quot;x-forwarded-proto&quot;&gt; &lt;code&gt;X-Forwarded-Proto&lt;/code&gt; &lt;/a&gt; .</target>
+        </trans-unit>
+        <trans-unit id="87766695ac6340c40537ef09e93a85866ad2734b" translate="yes" xml:space="preserve">
+          <source>The amount of device RAM can be used as a fingerprinting variable, so values for the header are intentionally coarse to reduce the potential for its misuse. The header takes on the following values: &lt;code&gt;0.25&lt;/code&gt;, &lt;code&gt;0.5&lt;/code&gt;, &lt;code&gt;1&lt;/code&gt;, &lt;code&gt;2&lt;/code&gt;, &lt;code&gt;4&lt;/code&gt;, &lt;code&gt;8&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="55a9a290f76d786d7b3d83d441f76e13bf0f3dcc" translate="yes" xml:space="preserve">
+          <source>The app:categories element can contain a &quot;fixed&quot; attribute, with a
+   value of either &quot;yes&quot; or &quot;no&quot;, indicating whether the list of
+   categories is a fixed or an open set.  The absence of the &quot;fixed&quot;
+   attribute is equivalent to the presence of a &quot;fixed&quot; attribute with a
+   value of &quot;no&quot;.
+
+   Alternatively, the app:categories element MAY contain an &quot;href&quot;
+   attribute, whose value MUST be an IRI reference identifying a
+   Category Document.  If the &quot;href&quot; attribute is provided, the app:
+   categories element MUST be empty and MUST NOT have the &quot;fixed&quot; or
+   &quot;scheme&quot; attributes.</source>
+          <target state="translated">El elemento app:categories puede contener un atributo &quot;fijo&quot;,con un valor de &quot;sí&quot; o &quot;no&quot;,que indica si la lista de categorías es un conjunto fijo o abierto.La ausencia del atributo &quot;fijo&quot; equivale a la presencia de un atributo &quot;fijo&quot; con un valor de &quot;no&quot;.Alternativamente,el elemento app:categories PUEDE contener un atributo &quot;href&quot;,cuyo valor DEBE ser una referencia IRI que identifique un documento de la categoría.Si se proporciona el atributo &quot;href&quot;,el elemento app:categories DEBE estar vacío y NO DEBE tener los atributos &quot;fijo&quot; o &quot;esquema&quot;.</target>
+        </trans-unit>
+        <trans-unit id="41b7617765ea8bb8c7b2ba0dc382b82fa950ce4a" translate="yes" xml:space="preserve">
+          <source>The app:collection element MAY appear as a child of an atom:feed or
+   atom:source element in an Atom Feed Document.  Its content identifies
+   a Collection by which new Entries can be added to appear in the feed.
+   When it appears in an atom:feed or atom:source element, the app:
+   collection element is considered foreign markup as defined in &lt;a href=&quot;https://tools.ietf.org/html/rfc4287#section-6&quot;&gt;Section&lt;/a&gt;&lt;a href=&quot;https://tools.ietf.org/html/rfc4287#section-6&quot;&gt;6 of [RFC4287]&lt;/a&gt;.</source>
+          <target state="translated">El elemento app: collection PUEDE aparecer como hijo de un elemento atom: feed o atom: source en un documento Atom Feed. Su contenido identifica una colecci&amp;oacute;n mediante la cual se pueden agregar nuevas entradas para que aparezcan en el feed. Cuando aparece en un elemento atom: feed o atom: source, el elemento app: collection se considera marcado externo como se define en la &lt;a href=&quot;https://tools.ietf.org/html/rfc4287#section-6&quot;&gt;Secci&amp;oacute;n &lt;/a&gt;&lt;a href=&quot;https://tools.ietf.org/html/rfc4287#section-6&quot;&gt;6 de [RFC4287]&lt;/a&gt; .</target>
+        </trans-unit>
+        <trans-unit id="784a9192f7175993193ec2889d2de31d1902f984" translate="yes" xml:space="preserve">
+          <source>The app:collection element MUST contain an &quot;href&quot; attribute, whose
+   value gives the IRI of the Collection.</source>
+          <target state="translated">El elemento app:collection DEBE contener un atributo &quot;href&quot;,cuyo valor da el IRI de la Colección.</target>
+        </trans-unit>
+        <trans-unit id="7a08eb3336f8f673ed58387417f07a2fa35ffa86" translate="yes" xml:space="preserve">
+          <source>The app:workspace element MUST contain one &quot;atom:title&quot; element (as
+   defined in [&lt;a href=&quot;https://tools.ietf.org/html/rfc4287&quot;&gt;RFC4287&lt;/a&gt;]), giving a human-readable title for the
+   Workspace.</source>
+          <target state="translated">El elemento app: workspace DEBE contener un elemento &quot;atom: title&quot; (como se define en [ &lt;a href=&quot;https://tools.ietf.org/html/rfc4287&quot;&gt;RFC4287&lt;/a&gt; ]), dando un t&amp;iacute;tulo legible por humanos para el Workspace.</target>
+        </trans-unit>
+        <trans-unit id="31dd4c2d31d8ecfa729e47a41ac595124e30799a" translate="yes" xml:space="preserve">
+          <source>The application/http type can be used to enclose a pipeline of one or
+   more HTTP request or response messages (not intermixed).
+
+   Type name:  application
+
+   Subtype name:  http
+
+   Required parameters:  N/A
+
+   Optional parameters:  version, msgtype
+
+      version:  The HTTP-version number of the enclosed messages (e.g.,
+         &quot;1.1&quot;).  If not present, the version can be determined from the
+         first line of the body. 
+
+      msgtype:  The message type -- &quot;request&quot; or &quot;response&quot;.  If not
+         present, the type can be determined from the first line of the
+         body.
+
+   Encoding considerations:  HTTP messages enclosed by this type are in
+      &quot;binary&quot; format; use of an appropriate Content-Transfer-Encoding
+      is required when transmitted via email.
+
+   Security considerations:  see &lt;a href=&quot;#section-9&quot;&gt;Section 9&lt;/a&gt;
+
+   Interoperability considerations:  N/A
+
+   Published specification:  This specification (see &lt;a href=&quot;#section-8.3.2&quot;&gt;Section 8.3.2&lt;/a&gt;).
+
+   Applications that use this media type:  N/A
+
+   Fragment identifier considerations:  N/A
+
+   Additional information:
+
+      Deprecated alias names for this type:  N/A
+
+      Magic number(s):  N/A
+
+      File extension(s):  N/A
+
+      Macintosh file type code(s):  N/A
+
+   Person and email address to contact for further information:
+      See Authors' Addresses section.
+
+   Intended usage:  COMMON
+
+   Restrictions on usage:  N/A
+
+   Author:  See Authors' Addresses section.
+
+   Change controller:  IESG</source>
+          <target state="translated">El tipo application / http se puede utilizar para incluir una canalizaci&amp;oacute;n de una o m&amp;aacute;s solicitudes HTTP o mensajes de respuesta (no entremezclados). Nombre de tipo: aplicaci&amp;oacute;n Nombre de subtipo: http Par&amp;aacute;metros obligatorios: N / A Par&amp;aacute;metros opcionales: versi&amp;oacute;n, tipo de mensaje versi&amp;oacute;n: El n&amp;uacute;mero de versi&amp;oacute;n HTTP de los mensajes adjuntos (por ejemplo, &quot;1.1&quot;). Si no est&amp;aacute; presente, la versi&amp;oacute;n se puede determinar desde la primera l&amp;iacute;nea del cuerpo. msgtype: el tipo de mensaje: &quot;solicitud&quot; o &quot;respuesta&quot;. Si no est&amp;aacute; presente, el tipo se puede determinar desde la primera l&amp;iacute;nea del cuerpo. Consideraciones de codificaci&amp;oacute;n: Los mensajes HTTP incluidos en este tipo est&amp;aacute;n en formato &quot;binario&quot;; Se requiere el uso de una codificaci&amp;oacute;n de transferencia de contenido adecuada cuando se transmite por correo electr&amp;oacute;nico. Consideraciones de Seguridad:ver &lt;a href=&quot;#section-9&quot;&gt;Secci&amp;oacute;n 9&lt;/a&gt; Consideraciones de interoperabilidad: N / A Especificaci&amp;oacute;n publicada: Esta especificaci&amp;oacute;n (consulte la &lt;a href=&quot;#section-8.3.2&quot;&gt;Secci&amp;oacute;n 8.3.2&lt;/a&gt; ). Aplicaciones que utilizan este tipo de medio: N / A Consideraciones sobre el identificador de fragmentos: N / A Informaci&amp;oacute;n adicional: Nombres de alias obsoletos para este tipo: N / A N&amp;uacute;mero (s) m&amp;aacute;gico: N / A Extensiones de archivo: N / A Archivo Macintosh c&amp;oacute;digo (s) de tipo: N / A Persona y direcci&amp;oacute;n de correo electr&amp;oacute;nico de contacto para obtener m&amp;aacute;s informaci&amp;oacute;n: Consulte la secci&amp;oacute;n Direcciones de los autores. Uso previsto: COM&amp;Uacute;N Restricciones de uso: N / A Autor: Consulte la secci&amp;oacute;n Direcciones de los autores. Cambiar controlador: IESG</target>
+        </trans-unit>
+        <trans-unit id="79aee5e9b1bd229aa07d406e676deb28b27cc227" translate="yes" xml:space="preserve">
+          <source>The article &lt;a href=&quot;cors&quot;&gt;covering the HTTP headers used by both clients and servers is here&lt;/a&gt;, and should be considered prerequisite reading.</source>
+          <target state="translated">El art&amp;iacute;culo que &lt;a href=&quot;cors&quot;&gt;cubre los encabezados HTTP utilizados tanto por clientes como por servidores est&amp;aacute; aqu&amp;iacute;&lt;/a&gt; , y debe considerarse una lectura de requisito previo.</target>
+        </trans-unit>
+        <trans-unit id="06b805071003db0b0483630bf1631444f9c65f63" translate="yes" xml:space="preserve">
+          <source>The asterisk is a special value representing any resource.</source>
+          <target state="translated">El asterisco es un valor especial que representa cualquier recurso.</target>
+        </trans-unit>
         <trans-unit id="74a66c2c405c525c313119a786fdc5a7536e3be4" translate="yes" xml:space="preserve">
           <source>The asterisk is a special value representing any resource. They are only useful when uploading a resource, usually with &lt;a href=&quot;../methods/put&quot;&gt;&lt;code&gt;PUT&lt;/code&gt;&lt;/a&gt;, to check if another resource with the identity has already been uploaded before.</source>
           <target state="translated">El asterisco es un valor especial que representa cualquier recurso. Solo son &amp;uacute;tiles cuando se carga un recurso, generalmente con &lt;a href=&quot;../methods/put&quot;&gt; &lt;code&gt;PUT&lt;/code&gt; &lt;/a&gt; , para verificar si ya se carg&amp;oacute; otro recurso con la identidad antes.</target>
@@ -565,6 +1293,91 @@ Acknowledgement
 
 Dusseault                   Standards Track                   [Page 127]</source>
           <target state="translated">La definici&amp;oacute;n de estado de la colecci&amp;oacute;n se ha corregido para que ya no var&amp;iacute;e seg&amp;uacute;n el Request-URI (consulte la &lt;a href=&quot;#section-5.2&quot;&gt;Secci&amp;oacute;n 5.2&lt;/a&gt; ). La propiedad DAV: source introducida en la &lt;a href=&quot;https://tools.ietf.org/html/rfc2518#section-4.6&quot;&gt;Secci&amp;oacute;n 4.6 de [RFC2518]&lt;/a&gt; se elimin&amp;oacute; debido a la falta de experiencia en implementaci&amp;oacute;n. El encabezado DAV ahora permite extensiones no IETF a trav&amp;eacute;s de URI adem&amp;aacute;s de tokens de clase de cumplimiento. Ahora tambi&amp;eacute;n se puede usar en solicitudes, aunque esta especificaci&amp;oacute;n no define ninguna sem&amp;aacute;ntica asociada para las clases de cumplimiento definidas aqu&amp;iacute; (consulte la &lt;a href=&quot;#section-10.1&quot;&gt;Secci&amp;oacute;n 10.1&lt;/a&gt; ). En &lt;a href=&quot;https://tools.ietf.org/html/rfc2518&quot;&gt;RFC 2518&lt;/a&gt; , la definici&amp;oacute;n del encabezado de profundidad ( &lt;a href=&quot;#section-9.2&quot;&gt;secci&amp;oacute;n 9.2&lt;/a&gt;) requiri&amp;oacute; que, de forma predeterminada, los encabezados de solicitud se aplicaran a cada recurso en el alcance. Seg&amp;uacute;n la experiencia de implementaci&amp;oacute;n, el valor predeterminado ahora se ha revertido (consulte la &lt;a href=&quot;#section-10.2&quot;&gt;Secci&amp;oacute;n 10.2&lt;/a&gt; ). Las definiciones del c&amp;oacute;digo de estado HTTP 102 ( &lt;a href=&quot;https://tools.ietf.org/html/rfc2518#section-10.1&quot;&gt;[RFC2518], Secci&amp;oacute;n 10.1&lt;/a&gt; ) y el encabezado de respuesta Status-URI ( &lt;a href=&quot;#section-9.7&quot;&gt;Secci&amp;oacute;n 9.7&lt;/a&gt; ) se han eliminado debido a la falta de implementaci&amp;oacute;n. El formato TimeType utilizado en el encabezado de la solicitud Timeout y el elemento XML &quot;timeout&quot; sol&amp;iacute;an ser extensibles. Ahora, solo se permiten los dos formatos definidos por esta especificaci&amp;oacute;n (consulte la &lt;a href=&quot;#section-10.7&quot;&gt;Secci&amp;oacute;n 10.7&lt;/a&gt;). Direcci&amp;oacute;n del autor Lisa Dusseault (editora) CommerceNet 2064 Edgewood Dr. Palo Alto, CA 94303 Correo electr&amp;oacute;nico de EE. UU .: ldusseault@commerce.net Declaraci&amp;oacute;n completa de derechos de autor Copyright (C) The IETF Trust (2007). Este documento est&amp;aacute; sujeto a los derechos, licencias y restricciones contenidos en &lt;a href=&quot;https://tools.ietf.org/html/bcp78&quot;&gt;BCP 78&lt;/a&gt;, y salvo que en el mismo se establezca, los autores conservan todos sus derechos. Este documento y la informaci&amp;oacute;n contenida en el mismo se proporcionan &quot;TAL CUAL&quot; y EL COLABORADOR, LA ORGANIZACI&amp;Oacute;N QUE REPRESENTA O EST&amp;Aacute; PATROCINADA POR (SI LA HAY), LA SOCIEDAD DE INTERNET, EL FIDEICOMISO DE IETF Y EL GRUPO DE TAREAS DE INGENIER&amp;Iacute;A DE INTERNET RECHAZAN TODO GARANT&amp;Iacute;AS, EXPRESAS O IMPL&amp;Iacute;CITAS, INCLUYENDO, PERO NO LIMITADO A CUALQUIER GARANT&amp;Iacute;A DE QUE EL USO DE LA INFORMACI&amp;Oacute;N AQU&amp;Iacute; NO INFRINGIR&amp;Aacute; NING&amp;Uacute;N DERECHO O CUALQUIER GARANT&amp;Iacute;A IMPL&amp;Iacute;CITA DE COMERCIABILIDAD O IDONEIDAD PARA UN PROP&amp;Oacute;SITO EN PARTICULAR.Propiedad Intelectual El IETF no toma posici&amp;oacute;n con respecto a la validez o alcance de cualquier Derecho de Propiedad Intelectual u otros derechos que puedan ser reclamados relacionados con la implementaci&amp;oacute;n o uso de la tecnolog&amp;iacute;a descrita en este documento o la medida en que cualquier licencia bajo tales derechos podr&amp;iacute;a o podr&amp;iacute;a no estar disponible; tampoco representa que haya realizado ning&amp;uacute;n esfuerzo independiente para identificar tales derechos. La informaci&amp;oacute;n sobre los procedimientos con respecto a los derechos en los documentos RFC se puede encontrar en&lt;a href=&quot;https://tools.ietf.org/html/bcp78&quot;&gt;BCP 78&lt;/a&gt; y &lt;a href=&quot;https://tools.ietf.org/html/bcp79&quot;&gt;BCP 79&lt;/a&gt; . Se pueden obtener copias de las divulgaciones de DPI realizadas a la Secretar&amp;iacute;a de la IETF y cualquier garant&amp;iacute;a de licencias que estar&amp;aacute;n disponibles, o el resultado de un intento de obtener una licencia general o permiso para el uso de dichos derechos de propiedad por parte de los implementadores o usuarios de esta especificaci&amp;oacute;n. del repositorio de IPR en l&amp;iacute;nea del IETF en &lt;a href=&quot;http://www.ietf.org/ipr&quot;&gt;http://www.ietf.org/ipr&lt;/a&gt;. El IETF invita a cualquier parte interesada a que le informe sobre los derechos de autor, patentes o solicitudes de patentes, u otros derechos de propiedad que puedan cubrir la tecnolog&amp;iacute;a que pueda ser necesaria para implementar este est&amp;aacute;ndar. Env&amp;iacute;e la informaci&amp;oacute;n al IETF a ietf-ipr@ietf.org. Reconocimiento La financiaci&amp;oacute;n para la funci&amp;oacute;n de editor de RFC actualmente la proporciona Internet Society. Seguimiento de normas de Dusseault [P&amp;aacute;gina 127]</target>
+        </trans-unit>
+        <trans-unit id="d99304cab5a0a7e332856cbdd7a338da56a3c7a0" translate="yes" xml:space="preserve">
+          <source>The definition of collection state has been fixed so it doesn't vary
+   anymore depending on the Request-URI (see &lt;a href=&quot;#section-5.2&quot;&gt;Section 5.2&lt;/a&gt;).
+
+   The DAV:source property introduced in &lt;a href=&quot;https://tools.ietf.org/html/rfc2518#section-4.6&quot;&gt;Section&amp;nbsp;4.6 of [RFC2518]&lt;/a&gt; was
+   removed due to lack of implementation experience.
+
+   The DAV header now allows non-IETF extensions through URIs in
+   addition to compliance class tokens.  It also can now be used in
+   requests, although this specification does not define any associated
+   semantics for the compliance classes defined in here (see
+   &lt;a href=&quot;#section-10.1&quot;&gt;Section 10.1&lt;/a&gt;).
+
+   In &lt;a href=&quot;https://tools.ietf.org/html/rfc2518&quot;&gt;RFC 2518&lt;/a&gt;, the definition of the Depth header (&lt;a href=&quot;#section-9.2&quot;&gt;Section 9.2&lt;/a&gt;)
+   required that, by default, request headers would be applied to each
+   resource in scope.  Based on implementation experience, the default
+   has now been reversed (see &lt;a href=&quot;#section-10.2&quot;&gt;Section 10.2&lt;/a&gt;).
+
+   The definitions of HTTP status code 102 (&lt;a href=&quot;https://tools.ietf.org/html/rfc2518#section-10.1&quot;&gt;[RFC2518], Section&amp;nbsp;10.1&lt;/a&gt;) and
+   the Status-URI response header (&lt;a href=&quot;#section-9.7&quot;&gt;Section 9.7&lt;/a&gt;) have been removed due to
+   lack of implementation.
+
+   The TimeType format used in the Timeout request header and the
+   &quot;timeout&quot; XML element used to be extensible.  Now, only the two
+   formats defined by this specification are allowed (see &lt;a href=&quot;#section-10.7&quot;&gt;Section 10.7&lt;/a&gt;).
+
+Author's Address
+
+   Lisa Dusseault (editor)
+   CommerceNet
+   2064 Edgewood Dr.
+   Palo Alto, CA  94303
+   US
+
+   EMail: ldusseault@commerce.net 
+
+Full Copyright Statement
+
+   Copyright (C) The IETF Trust (2007).
+
+   This document is subject to the rights, licenses and restrictions
+   contained in &lt;a href=&quot;https://tools.ietf.org/html/bcp78&quot;&gt;BCP 78&lt;/a&gt;, and except as set forth therein, the authors
+   retain all their rights.
+
+   This document and the information contained herein are provided on an
+   &quot;AS IS&quot; basis and THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS
+   OR IS SPONSORED BY (IF ANY), THE INTERNET SOCIETY, THE IETF TRUST AND
+   THE INTERNET ENGINEERING TASK FORCE DISCLAIM ALL WARRANTIES, EXPRESS
+   OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF
+   THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED
+   WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+
+Intellectual Property
+
+   The IETF takes no position regarding the validity or scope of any
+   Intellectual Property Rights or other rights that might be claimed to
+   pertain to the implementation or use of the technology described in
+   this document or the extent to which any license under such rights
+   might or might not be available; nor does it represent that it has
+   made any independent effort to identify any such rights.  Information
+   on the procedures with respect to rights in RFC documents can be
+   found in &lt;a href=&quot;https://tools.ietf.org/html/bcp78&quot;&gt;BCP 78&lt;/a&gt; and &lt;a href=&quot;https://tools.ietf.org/html/bcp79&quot;&gt;BCP 79&lt;/a&gt;.
+
+   Copies of IPR disclosures made to the IETF Secretariat and any
+   assurances of licenses to be made available, or the result of an
+   attempt made to obtain a general license or permission for the use of
+   such proprietary rights by implementers or users of this
+   specification can be obtained from the IETF on-line IPR repository at
+   &lt;a href=&quot;https://www.ietf.org/ipr&quot;&gt;http://www.ietf.org/ipr&lt;/a&gt;.
+
+   The IETF invites any interested party to bring to its attention any
+   copyrights, patents or patent applications, or other proprietary
+   rights that may cover technology that may be required to implement
+   this standard.  Please address the information to the IETF at
+   ietf-ipr@ietf.org.
+
+Acknowledgement
+
+   Funding for the RFC Editor function is currently provided by the
+   Internet Society.
+
+
+Dusseault                   Standards Track                   [Page 127]</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="846eb07b1348486cd629ae2d294bdd353ad9d018" translate="yes" xml:space="preserve">
           <source>The definition of validator weakness has been expanded and clarified.
@@ -3880,6 +4693,43 @@ Dusseault                   Standards Track                   [Page 127]</source
    appCategories = appInlineCategories | appOutOfLineCategories</source>
           <target state="translated">La ra&amp;iacute;z de un documento de categor&amp;iacute;a es el elemento &quot;aplicaci&amp;oacute;n: categor&amp;iacute;as&quot;. Un elemento de aplicaci&amp;oacute;n: categor&amp;iacute;as puede contener cero o m&amp;aacute;s elementos de categor&amp;iacute;a de &amp;aacute;tomo del espacio de nombres Atom Syndication Format [ &lt;a href=&quot;https://tools.ietf.org/html/rfc4287&quot;&gt;RFC4287&lt;/a&gt; ] (&quot; &lt;a href=&quot;http://www.w3.org/2005/Atom&quot;&gt;http://www.w3.org/2005/Atom&lt;/a&gt;&quot;). Un elemento secundario atom: category que no tiene el atributo&quot; esquema &quot;hereda el atributo de su aplicaci&amp;oacute;n: categor&amp;iacute;as principales. Un elemento secundario atom: category con un atributo&quot; esquema &quot;existente no hereda el valor&quot; esquema &quot;de su aplicaci&amp;oacute;n : elemento principal de categor&amp;iacute;as atomCategory = elemento atom: categor&amp;iacute;a {atomCommonAttributes, t&amp;eacute;rmino de atributo {texto}, esquema de atributo {atomURI} ?, etiqueta de atributo {texto} ?, undefinedContent} appInlineCategories = elemento app: categor&amp;iacute;as {atributo fijo {&quot;s&amp;iacute;&quot; | &quot;no&quot;} ?, esquema de atributos {atomURI} ?, (atomCategory *, undefinedContent)} appOutOfLineCategories = elemento app:categor&amp;iacute;as {atributo href {atomURI}, undefinedContent} appCategories = appInlineCategories | appOutOfLineCategories</target>
         </trans-unit>
+        <trans-unit id="fef4f8a780f08176e8e14b516880c85ee26ea9ec" translate="yes" xml:space="preserve">
+          <source>The root of a Category Document is the &quot;app:categories&quot; element.  An
+   app:categories element can contain zero or more atom:category
+   elements from the Atom Syndication Format [&lt;a href=&quot;https://tools.ietf.org/html/rfc4287&quot;&gt;RFC4287&lt;/a&gt;] namespace
+   (&quot;&lt;a href=&quot;https://www.w3.org/2005/Atom&quot;&gt;http://www.w3.org/2005/Atom&lt;/a&gt;&quot;).
+
+   An atom:category child element that has no &quot;scheme&quot; attribute
+   inherits the attribute from its app:categories parent.  An atom:
+   category child element with an existing &quot;scheme&quot; attribute does not
+   inherit the &quot;scheme&quot; value of its app:categories parent element. 
+
+   atomCategory =
+       element atom:category {
+          atomCommonAttributes,
+          attribute term { text },
+          attribute scheme { atomURI }?,
+          attribute label { text }?,
+          undefinedContent
+       }
+
+   appInlineCategories =
+       element app:categories {
+           attribute fixed { &quot;yes&quot; | &quot;no&quot; }?,
+           attribute scheme { atomURI }?,
+           (atomCategory*,
+           undefinedContent)
+       }
+
+   appOutOfLineCategories =
+       element app:categories {
+           attribute href { atomURI },
+           undefinedContent
+       }
+
+   appCategories = appInlineCategories | appOutOfLineCategories</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="dac1669f4b5c683593043fc93e45f9e39b9b3183" translate="yes" xml:space="preserve">
           <source>The root of a Service Document is the &quot;app:service&quot; element.
 
@@ -3897,6 +4747,24 @@ Dusseault                   Standards Track                   [Page 127]</source
            &amp;amp; extensionElement* )
       }</source>
           <target state="translated">La ra&amp;iacute;z de un documento de servicio es el elemento &quot;app: service&quot;. El elemento app: service es el contenedor de informaci&amp;oacute;n de servicio asociada con uno o m&amp;aacute;s espacios de trabajo. Un elemento app: service DEBE contener uno o m&amp;aacute;s elementos app: workspace. espacio de nombres app = &quot; &lt;a href=&quot;http://www.w3.org/2007/app&quot;&gt;http://www.w3.org/2007/app&lt;/a&gt; &quot; start = appService appService = elemento app: service {appCommonAttributes, (appWorkspace + &amp;amp; extensionElement *)}</target>
+        </trans-unit>
+        <trans-unit id="ceb4a04dc46cc5a61959158a72cd9b73ca3e0669" translate="yes" xml:space="preserve">
+          <source>The root of a Service Document is the &quot;app:service&quot; element.
+
+   The app:service element is the container for service information
+   associated with one or more Workspaces.  An app:service element MUST
+   contain one or more app:workspace elements.
+
+   namespace app = &quot;&lt;a href=&quot;https://www.w3.org/2007/app&quot;&gt;http://www.w3.org/2007/app&lt;/a&gt;&quot;
+   start = appService
+
+   appService =
+      element app:service {
+         appCommonAttributes,
+         ( appWorkspace+
+           &amp;amp; extensionElement* )
+      }</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="7cc82da0d72b8678f1e0f58ad59a34e42ed94203" translate="yes" xml:space="preserve">
           <source>The same challenge and response mechanism can be used for &lt;em&gt;proxy authentication&lt;/em&gt;. As both resource authentication and proxy authentication can coexist, a different set of headers and status codes is needed. In the case of proxies, the challenging status code is &lt;a href=&quot;status/407&quot;&gt;&lt;code&gt;407&lt;/code&gt;&lt;/a&gt; (Proxy Authentication Required), the &lt;a href=&quot;headers/proxy-authenticate&quot;&gt;&lt;code&gt;Proxy-Authenticate&lt;/code&gt;&lt;/a&gt; response header contains at least one challenge applicable to the proxy, and the &lt;a href=&quot;headers/proxy-authorization&quot;&gt;&lt;code&gt;Proxy-Authorization&lt;/code&gt;&lt;/a&gt; request header is used for providing the credentials to the proxy server.</source>
@@ -5830,6 +6698,327 @@ Intellectual Property
 Gregorio &amp;amp; de hOra          Standards Track                    [Page 53]</source>
           <target state="translated">Este ap&amp;eacute;ndice es informativo. El esquema Relax NG excluye expl&amp;iacute;citamente elementos en el espacio de nombres del Protocolo Atom que no est&amp;aacute;n definidos en esta revisi&amp;oacute;n de la especificaci&amp;oacute;n. Los requisitos para los procesadores del protocolo Atom que encuentran tal marcado se dan en las Secciones &lt;a href=&quot;#section-6.2&quot;&gt;6.2&lt;/a&gt; y &lt;a href=&quot;#section-6.3&quot;&gt;6.3&lt;/a&gt; de [ &lt;a href=&quot;https://tools.ietf.org/html/rfc4287&quot;&gt;RFC4287&lt;/a&gt; ]. El esquema para los documentos de servicio: # - * - rnc - * - # RELAX NG Gram&amp;aacute;tica de sintaxis compacta para el espacio de nombres del protocolo Atom app = &quot; &lt;a href=&quot;http://www.w3.org/2007/app&quot;&gt;http://www.w3.org/2007/app&lt;/a&gt; &quot; namespace atom = &quot; &lt;a href=&quot;http://www.w3.org/2005/Atom&quot;&gt;http: // www.w3.org/2005/Atom&lt;/a&gt; &quot;espacio de nombres xsd =&quot; &lt;a href=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;http://www.w3.org/2001/XMLSchema&lt;/a&gt; &quot;espacio de nombres xhtml =&quot; &lt;a href=&quot;http://www.w3.org/1999/xhtml&quot;&gt;http://www.w3.org/1999/xhtml&lt;/a&gt;&quot;namespace local =&quot; &quot;start = appService # common: attrs atomURI = text appCommonAttributes = atributo xml: base {atomURI} ?, atributo xml: lang {atomLanguageTag} ?, atributo xml: space {&quot; predeterminado &quot;|&quot; preservado &quot;}? , undefinedAttribute * atomCommonAttributes = appCommonAttributes undefinedAttribute = atributo * - (xml: base | xml: space | xml: lang | local: *) {text} atomLanguageTag = xsd: string {pattern = &quot;([A-Za-z] {1 , 8} (- [A-Za-z0-9] {1,8}) *)? &quot;} AtomDateConstruct = appCommonAttributes, xsd: dateTime # app: service appService = element app: service {appCommonAttributes, (appWorkspace + &amp;amp; extensionElement * )} # aplicaci&amp;oacute;n: espacio de trabajo appWorkspace = elemento aplicaci&amp;oacute;n:espacio de trabajo {appCommonAttributes, (atomTitle &amp;amp; appCollection * &amp;amp; extensionSansTitleElement *)} atomTitle = element atom: title {atomTextConstruct} # app: collection appCollection = element app: collection {appCommonAttributes, atributo href {atomURI}, (atomTitle * &amp;amp; appAcceptories &amp;amp; extensionSansTitleElement *)} # aplicaci&amp;oacute;n: categor&amp;iacute;as atomCategory = elemento &amp;aacute;tomo: categor&amp;iacute;a {atomCommonAttributes, t&amp;eacute;rmino de atributo {texto}, esquema de atributo {atomURI} ?, etiqueta de atributo {texto} ?, undefinedContent} appInlineCategories = elemento aplicaci&amp;oacute;n: categor&amp;iacute;as {atributo fijo { &quot;si&quot; | &quot;No&quot; }?,esquema de atributos {atomURI} ?, (atomCategory *, undefinedContent)} appOutOfLineCategories = elemento app: categor&amp;iacute;as {atributo href {atomURI}, undefinedContent} appCategories = appInlineCategories | appOutOfLineCategories # app: accept appAccept = element app: accept {appCommonAttributes, (text?)} # Simple Extension simpleSansTitleExtensionElement = element * - (app: * | atom: title) {text} simpleExtensionElement = element * - (app: *) { texto} # Extensi&amp;oacute;n estructurada estructuradoSansTitleExtensionElement = elemento * - (aplicaci&amp;oacute;n: * | &amp;aacute;tomo: t&amp;iacute;tulo) {(atributo * {texto} +, (texto | cualquierElemento) *) | (atributo * {texto} *, (texto ?,anyElement +, (texto | anyElement) *))} structureExtensionElement = elemento * - (aplicaci&amp;oacute;n: *) {(atributo * {texto} +, (texto | cualquierElemento) *) | (atributo * {texto} *, (texto ?, anyElement +, (texto | anyElement) *))} # Otro Extensibilidad extensionSansTitleElement = simpleSansTitleExtensionElement | estructuradoSansTitleExtensionElement extensionElement = simpleExtensionElement | structureExtensionElement undefinedContent = (texto | anyForeignElement) * # Extensiones anyElement = elemento * {(atributo * {texto} | texto | anyElement) *} anyForeignElement = elemento * - aplicaci&amp;oacute;n: * {(atributo * {texto} | texto | anyElement) * } atomPlainTextConstruct = atomCommonAttributes,tipo de atributo {&quot;texto&quot; | &quot;html&quot;} ?, texto atomXHTMLTextConstruct = atomCommonAttributes, tipo de atributo {&quot;xhtml&quot;}, xhtmlDiv atomTextConstruct = atomPlainTextConstruct | atomXHTMLTextConstruct anyXHTML = elemento xhtml: * {(atributo * {texto} | texto | anyXHTML) *} xhtmlDiv = elemento xhtml: div {(atributo * {texto} | texto | anyXHTML) *} # EOF El esquema para documentos de categor&amp;iacute;a: # - * - rnc - * - # RELAX NG Compact Syntax Grammar for the Atom Protocol namespace app = &quot;xhtmlDiv atomTextConstruct = atomPlainTextConstruct | atomXHTMLTextConstruct anyXHTML = elemento xhtml: * {(atributo * {texto} | texto | anyXHTML) *} xhtmlDiv = elemento xhtml: div {(atributo * {texto} | texto | anyXHTML) *} # EOF El esquema para documentos de categor&amp;iacute;a: # - * - rnc - * - # RELAX NG Compact Syntax Grammar for the Atom Protocol namespace app = &quot;xhtmlDiv atomTextConstruct = atomPlainTextConstruct | atomXHTMLTextConstruct anyXHTML = elemento xhtml: * {(atributo * {texto} | texto | anyXHTML) *} xhtmlDiv = elemento xhtml: div {(atributo * {texto} | texto | anyXHTML) *} # EOF El esquema para documentos de categor&amp;iacute;a: # - * - rnc - * - # RELAX NG Compact Syntax Grammar for the Atom Protocol namespace app = &quot;&lt;a href=&quot;http://www.w3.org/2007/app&quot;&gt;http://www.w3.org/2007/app&lt;/a&gt; &quot;espacio de nombres atom =&quot; &lt;a href=&quot;http://www.w3.org/2005/Atom&quot;&gt;http://www.w3.org/2005/Atom&lt;/a&gt; &quot;espacio de nombres xsd =&quot; &lt;a href=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;http://www.w3.org/2001/XMLSchema&lt;/a&gt;&quot;namespace local =&quot; &quot;start = appCategories atomCommonAttributes = atributo xml: base {atomURI} ?, atributo xml: lang {atomLanguageTag} ?, undefinedAttribute * undefinedAttribute = atributo * - (xml: base | xml: lang | local: *) { text} atomURI = text atomLanguageTag = xsd: string {pattern = &quot;([A-Za-z] {1,8} (- [A-Za-z0-9] {1,8}) *)?&quot;} atomCategory = elemento atom: categor&amp;iacute;a {atomCommonAttributes, atributo t&amp;eacute;rmino {texto}, esquema de atributo {atomURI} ?, etiqueta de atributo {texto} ?, undefinedContent} appInlineCategories = elemento aplicaci&amp;oacute;n: categor&amp;iacute;as {atributo fijo {&quot;s&amp;iacute;&quot; | &quot;no&quot;} ?, esquema de atributos {atomURI} ?, (atomCategory *,undefinedContent)} appOutOfLineCategories = elemento app: categor&amp;iacute;as {atributo href {atomURI}, (vac&amp;iacute;o)} appCategories = appInlineCategories | appOutOfLineCategories # Extensibilidad undefinedContent = (texto | anyForeignElement) * anyElement = elemento * {(atributo * {texto} | texto | anyElement) *} anyForeignElement = elemento * - &amp;aacute;tomo: * {(atributo * {texto} | texto | cualquierElemento) * } # Direcciones de los autores de EOF Joe Gregorio (editor) Google EMail: joe@bitworking.org URI:(vac&amp;iacute;o)} appCategories = appInlineCategories | appOutOfLineCategories # Extensibilidad undefinedContent = (texto | anyForeignElement) * anyElement = elemento * {(atributo * {texto} | texto | anyElement) *} anyForeignElement = elemento * - &amp;aacute;tomo: * {(atributo * {texto} | texto | cualquierElemento) * } # Direcciones de los autores de EOF Joe Gregorio (editor) Google EMail: joe@bitworking.org URI:(vac&amp;iacute;o)} appCategories = appInlineCategories | appOutOfLineCategories # Extensibilidad undefinedContent = (texto | anyForeignElement) * anyElement = elemento * {(atributo * {texto} | texto | anyElement) *} anyForeignElement = elemento * - &amp;aacute;tomo: * {(atributo * {texto} | texto | cualquierElemento) * } # Direcciones de los autores de EOF Joe Gregorio (editor) Google EMail: joe@bitworking.org URI:* {(atributo * {texto} | texto | anyElement) *} # Direcciones de los autores de EOF Joe Gregorio (editor) Google EMail: joe@bitworking.org URI:* {(atributo * {texto} | texto | anyElement) *} # Direcciones de los autores de EOF Joe Gregorio (editor) Google EMail: joe@bitworking.org URI: &lt;a href=&quot;http://bitworking.org/&quot;&gt;http://bitworking.org/&lt;/a&gt; Bill de hOra (editor) NewBay Software Correo electr&amp;oacute;nico: bill@dehora.net URI: &lt;a href=&quot;http://dehora.net/&quot;&gt;http://dehora.net/&lt;/a&gt; Declaraci&amp;oacute;n de derechos de autor completa Copyright (C) The IETF Trust (2007). Este documento est&amp;aacute; sujeto a los derechos, licencias y restricciones contenidos en &lt;a href=&quot;https://tools.ietf.org/html/bcp78&quot;&gt;BCP 78&lt;/a&gt;, y salvo que en el mismo se establezca, los autores conservan todos sus derechos. Este documento y la informaci&amp;oacute;n contenida en el mismo se proporcionan &quot;TAL CUAL&quot; y EL COLABORADOR, LA ORGANIZACI&amp;Oacute;N QUE REPRESENTA O EST&amp;Aacute; PATROCINADA POR (SI LA HAY), LA SOCIEDAD DE INTERNET, EL FIDEICOMISO DE IETF Y EL GRUPO DE TAREAS DE INGENIER&amp;Iacute;A DE INTERNET RECHAZAN TODO GARANT&amp;Iacute;AS, EXPRESAS O IMPL&amp;Iacute;CITAS, INCLUYENDO, PERO NO LIMITADO A CUALQUIER GARANT&amp;Iacute;A DE QUE EL USO DE LA INFORMACI&amp;Oacute;N AQU&amp;Iacute; NO INFRINGIR&amp;Aacute; NING&amp;Uacute;N DERECHO O CUALQUIER GARANT&amp;Iacute;A IMPL&amp;Iacute;CITA DE COMERCIABILIDAD O IDONEIDAD PARA UN PROP&amp;Oacute;SITO EN PARTICULAR.Propiedad Intelectual El IETF no toma posici&amp;oacute;n con respecto a la validez o alcance de cualquier Derecho de Propiedad Intelectual u otros derechos que puedan ser reclamados relacionados con la implementaci&amp;oacute;n o uso de la tecnolog&amp;iacute;a descrita en este documento o la medida en que cualquier licencia bajo tales derechos podr&amp;iacute;a o podr&amp;iacute;a no estar disponible; tampoco representa que haya realizado ning&amp;uacute;n esfuerzo independiente para identificar tales derechos. La informaci&amp;oacute;n sobre los procedimientos con respecto a los derechos en los documentos RFC se puede encontrar en&lt;a href=&quot;https://tools.ietf.org/html/bcp78&quot;&gt;BCP 78&lt;/a&gt; y &lt;a href=&quot;https://tools.ietf.org/html/bcp79&quot;&gt;BCP 79&lt;/a&gt; . Se pueden obtener copias de las divulgaciones de DPI realizadas a la Secretar&amp;iacute;a de la IETF y cualquier garant&amp;iacute;a de que las licencias est&amp;eacute;n disponibles, o el resultado de un intento de obtener una licencia general o permiso para el uso de dichos derechos de propiedad por parte de los implementadores o usuarios de esta especificaci&amp;oacute;n. del repositorio de IPR en l&amp;iacute;nea del IETF en &lt;a href=&quot;http://www.ietf.org/ipr&quot;&gt;http://www.ietf.org/ipr&lt;/a&gt; . El IETF invita a cualquier parte interesada a que le informe sobre los derechos de autor, patentes o solicitudes de patentes, u otros derechos de propiedad que puedan cubrir la tecnolog&amp;iacute;a que pueda ser necesaria para implementar este est&amp;aacute;ndar. Env&amp;iacute;e la informaci&amp;oacute;n al IETF a ietf-ipr@ietf.org. Gregorio &amp;amp; de hOra Standards Track [P&amp;aacute;gina 53]</target>
         </trans-unit>
+        <trans-unit id="376ee4b0fb6e42f61d30baa685ce2b6ad2d15600" translate="yes" xml:space="preserve">
+          <source>This appendix is informative.
+
+   The Relax NG schema explicitly excludes elements in the Atom Protocol
+   namespace that are not defined in this revision of the specification.
+   Requirements for Atom Protocol processors encountering such markup
+   are given in Sections &lt;a href=&quot;#section-6.2&quot;&gt;6.2&lt;/a&gt; and &lt;a href=&quot;#section-6.3&quot;&gt;6.3&lt;/a&gt; of [&lt;a href=&quot;https://tools.ietf.org/html/rfc4287&quot;&gt;RFC4287&lt;/a&gt;].
+
+   The Schema for Service Documents:
+
+   # -*- rnc -*- # RELAX NG Compact Syntax Grammar for the Atom Protocol
+
+   namespace app = &quot;&lt;a href=&quot;https://www.w3.org/2007/app&quot;&gt;http://www.w3.org/2007/app&lt;/a&gt;&quot;
+   namespace atom = &quot;&lt;a href=&quot;https://www.w3.org/2005/Atom&quot;&gt;http://www.w3.org/2005/Atom&lt;/a&gt;&quot;
+   namespace xsd = &quot;&lt;a href=&quot;https://www.w3.org/2001/XMLSchema&quot;&gt;http://www.w3.org/2001/XMLSchema&lt;/a&gt;&quot;
+   namespace xhtml = &quot;&lt;a href=&quot;https://www.w3.org/1999/xhtml&quot;&gt;http://www.w3.org/1999/xhtml&lt;/a&gt;&quot;
+   namespace local = &quot;&quot;
+
+   start = appService
+
+   # common:attrs
+
+   atomURI = text
+
+   appCommonAttributes =
+      attribute xml:base { atomURI }?,
+      attribute xml:lang { atomLanguageTag  }?,
+      attribute xml:space {&quot;default&quot;|&quot;preserved&quot;}?,
+      undefinedAttribute*
+
+   atomCommonAttributes = appCommonAttributes
+
+   undefinedAttribute = attribute * - (xml:base | xml:space  | xml:lang
+     | local:*) { text }
+
+   atomLanguageTag = xsd:string {
+      pattern = &quot;([A-Za-z]{1,8}(-[A-Za-z0-9]{1,8})*)?&quot;
+   } 
+
+   atomDateConstruct =
+       appCommonAttributes,
+       xsd:dateTime
+
+   # app:service
+   appService =
+      element app:service {
+         appCommonAttributes,
+         ( appWorkspace+
+           &amp;amp; extensionElement* )
+      }
+
+   # app:workspace
+
+   appWorkspace =
+      element app:workspace {
+         appCommonAttributes,
+         ( atomTitle
+           &amp;amp; appCollection*
+           &amp;amp; extensionSansTitleElement* )
+      }
+
+   atomTitle = element atom:title { atomTextConstruct }
+
+   # app:collection
+
+   appCollection =
+      element app:collection {
+         appCommonAttributes,
+         attribute href { atomURI  },
+         ( atomTitle
+           &amp;amp; appAccept*
+           &amp;amp; appCategories*
+           &amp;amp; extensionSansTitleElement* )
+      }
+
+   # app:categories
+
+   atomCategory =
+       element atom:category {
+          atomCommonAttributes,
+          attribute term { text },
+          attribute scheme { atomURI }?,
+          attribute label { text }?,
+          undefinedContent
+       } 
+
+   appInlineCategories =
+       element app:categories {
+           attribute fixed { &quot;yes&quot; | &quot;no&quot; }?,
+           attribute scheme { atomURI }?,
+           (atomCategory*,
+           undefinedContent)
+       }
+
+   appOutOfLineCategories =
+       element app:categories {
+           attribute href { atomURI },
+           undefinedContent
+       }
+
+   appCategories = appInlineCategories | appOutOfLineCategories
+
+   # app:accept
+
+   appAccept =
+      element app:accept {
+            appCommonAttributes,
+            ( text? )
+      }
+
+   # Simple Extension
+
+   simpleSansTitleExtensionElement =
+      element * - (app:*|atom:title) {
+         text
+      }
+
+   simpleExtensionElement =
+      element * - (app:*) {
+         text
+      }
+
+   # Structured Extension
+
+   structuredSansTitleExtensionElement =
+      element * - (app:*|atom:title) {
+         (attribute * { text }+,
+            (text|anyElement)*)
+       | (attribute * { text }*,
+          (text?, anyElement+, (text|anyElement)*))
+      } 
+
+   structuredExtensionElement =
+      element * - (app:*) {
+         (attribute * { text }+,
+            (text|anyElement)*)
+       | (attribute * { text }*,
+          (text?, anyElement+, (text|anyElement)*))
+      }
+
+   # Other Extensibility
+
+   extensionSansTitleElement =
+    simpleSansTitleExtensionElement|structuredSansTitleExtensionElement
+
+   extensionElement = simpleExtensionElement |
+      structuredExtensionElement
+
+   undefinedContent = (text|anyForeignElement)*
+
+   # Extensions
+
+   anyElement =
+      element * {
+         (attribute * { text }
+          | text
+          | anyElement)*
+      }
+
+   anyForeignElement =
+       element * - app:* {
+          (attribute * { text }
+           | text
+           | anyElement)*
+       }
+
+   atomPlainTextConstruct =
+       atomCommonAttributes,
+       attribute type { &quot;text&quot; | &quot;html&quot; }?,
+       text
+
+   atomXHTMLTextConstruct =
+       atomCommonAttributes,
+       attribute type { &quot;xhtml&quot; },
+       xhtmlDiv
+
+   atomTextConstruct = atomPlainTextConstruct | atomXHTMLTextConstruct 
+
+   anyXHTML = element xhtml:* {
+       (attribute * { text }
+        | text
+        | anyXHTML)*
+   }
+
+   xhtmlDiv = element xhtml:div {
+     (attribute * { text }
+      | text
+      | anyXHTML)*
+   }
+
+   # EOF
+
+   The Schema for Category Documents:
+
+   # -*- rnc -*- # RELAX NG Compact Syntax Grammar for the Atom Protocol
+
+   namespace app = &quot;&lt;a href=&quot;https://www.w3.org/2007/app&quot;&gt;http://www.w3.org/2007/app&lt;/a&gt;&quot;
+   namespace atom = &quot;&lt;a href=&quot;https://www.w3.org/2005/Atom&quot;&gt;http://www.w3.org/2005/Atom&lt;/a&gt;&quot;
+   namespace xsd = &quot;&lt;a href=&quot;https://www.w3.org/2001/XMLSchema&quot;&gt;http://www.w3.org/2001/XMLSchema&lt;/a&gt;&quot;
+   namespace local = &quot;&quot;
+
+   start = appCategories
+
+   atomCommonAttributes =
+      attribute xml:base { atomURI }?,
+      attribute xml:lang { atomLanguageTag }?,
+      undefinedAttribute*
+
+   undefinedAttribute = attribute * - (xml:base | xml:lang | local:*) {
+     text }
+
+   atomURI = text
+
+   atomLanguageTag = xsd:string {
+      pattern = &quot;([A-Za-z]{1,8}(-[A-Za-z0-9]{1,8})*)?&quot;
+   }
+
+   atomCategory =
+       element atom:category {
+          atomCommonAttributes,
+          attribute term { text },
+          attribute scheme { atomURI }?,
+          attribute label { text }?,
+          undefinedContent
+       } 
+
+   appInlineCategories =
+       element app:categories {
+           attribute fixed { &quot;yes&quot; | &quot;no&quot; }?,
+           attribute scheme { atomURI }?,
+           (atomCategory*,
+           undefinedContent)
+       }
+
+   appOutOfLineCategories =
+       element app:categories {
+           attribute href { atomURI },
+           (empty)
+       }
+
+   appCategories = appInlineCategories | appOutOfLineCategories
+
+   # Extensibility
+
+   undefinedContent = (text|anyForeignElement)*
+
+   anyElement =
+      element * {
+         (attribute * { text }
+          | text
+          | anyElement)*
+      }
+
+   anyForeignElement =
+       element * - atom:* {
+          (attribute * { text }
+           | text
+           | anyElement)*
+       }
+
+   # EOF 
+
+Authors' Addresses
+
+   Joe Gregorio (editor)
+   Google
+
+   EMail: joe@bitworking.org
+   URI:   &lt;a href=&quot;http://bitworking.org/&quot;&gt;http://bitworking.org/&lt;/a&gt;
+
+
+   Bill de hOra (editor)
+   NewBay Software
+
+   EMail: bill@dehora.net
+   URI:   &lt;a href=&quot;http://dehora.net/&quot;&gt;http://dehora.net/&lt;/a&gt; 
+
+Full Copyright Statement
+
+   Copyright (C) The IETF Trust (2007).
+
+   This document is subject to the rights, licenses and restrictions
+   contained in &lt;a href=&quot;https://tools.ietf.org/html/bcp78&quot;&gt;BCP 78&lt;/a&gt;, and except as set forth therein, the authors
+   retain all their rights.
+
+   This document and the information contained herein are provided on an
+   &quot;AS IS&quot; basis and THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS
+   OR IS SPONSORED BY (IF ANY), THE INTERNET SOCIETY, THE IETF TRUST AND
+   THE INTERNET ENGINEERING TASK FORCE DISCLAIM ALL WARRANTIES, EXPRESS
+   OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF
+   THE INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED
+   WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+
+Intellectual Property
+
+   The IETF takes no position regarding the validity or scope of any
+   Intellectual Property Rights or other rights that might be claimed to
+   pertain to the implementation or use of the technology described in
+   this document or the extent to which any license under such rights
+   might or might not be available; nor does it represent that it has
+   made any independent effort to identify any such rights.  Information
+   on the procedures with respect to rights in RFC documents can be
+   found in &lt;a href=&quot;https://tools.ietf.org/html/bcp78&quot;&gt;BCP 78&lt;/a&gt; and &lt;a href=&quot;https://tools.ietf.org/html/bcp79&quot;&gt;BCP 79&lt;/a&gt;.
+
+   Copies of IPR disclosures made to the IETF Secretariat and any
+   assurances of licenses to be made available, or the result of an
+   attempt made to obtain a general license or permission for the use of
+   such proprietary rights by implementers or users of this
+   specification can be obtained from the IETF on-line IPR repository at
+   &lt;a href=&quot;https://www.ietf.org/ipr&quot;&gt;http://www.ietf.org/ipr&lt;/a&gt;.
+
+   The IETF invites any interested party to bring to its attention any
+   copyrights, patents or patent applications, or other proprietary
+   rights that may cover technology that may be required to implement
+   this standard.  Please address the information to the IETF at
+   ietf-ipr@ietf.org.
+
+
+Gregorio &amp;amp; de hOra          Standards Track                    [Page 53]</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="2da261bce7b3f1d3df96b4c74a292834af8e4041" translate="yes" xml:space="preserve">
           <source>This article documents the default values for the HTTP &lt;code&gt;&lt;a href=&quot;../headers/accept&quot;&gt;Accept&lt;/a&gt;&lt;/code&gt; header for specific inputs and browser versions.</source>
           <target state="translated">Este art&amp;iacute;culo documenta los valores predeterminados para el encabezado HTTP &lt;code&gt;&lt;a href=&quot;../headers/accept&quot;&gt;Accept&lt;/a&gt;&lt;/code&gt; para entradas espec&amp;iacute;ficas y versiones del navegador.</target>
@@ -7321,6 +8510,12 @@ Gregorio &amp;amp; de hOra          Standards Track                    [Page 53]
    &quot;&lt;a href=&quot;http://www.w3.org/2007/app&quot;&gt;http://www.w3.org/2007/app&lt;/a&gt;&quot; namespace.</source>
           <target state="translated">Esta especificaci&amp;oacute;n define una extensi&amp;oacute;n estructurada de formato Atom, como se define en la &lt;a href=&quot;https://tools.ietf.org/html/rfc4287#section-6&quot;&gt;Secci&amp;oacute;n 6 de [RFC4287]&lt;/a&gt; , para el control de publicaci&amp;oacute;n dentro del espacio de nombres &quot; &lt;a href=&quot;http://www.w3.org/2007/app&quot;&gt;http://www.w3.org/2007/app&lt;/a&gt; &quot;.</target>
         </trans-unit>
+        <trans-unit id="f80a35fbab3f9992f08f744dd97f2a63efb69f30" translate="yes" xml:space="preserve">
+          <source>This specification defines an Atom Format Structured Extension, as
+   defined in &lt;a href=&quot;https://tools.ietf.org/html/rfc4287#section-6&quot;&gt;Section&amp;nbsp;6 of [RFC4287]&lt;/a&gt;, for publishing control within the
+   &quot;&lt;a href=&quot;https://www.w3.org/2007/app&quot;&gt;http://www.w3.org/2007/app&lt;/a&gt;&quot; namespace.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="91a1e7bdc7ea038fc4979f4ad8ada34b2e46af01" translate="yes" xml:space="preserve">
           <source>This specification defines the HTTP status codes
 
@@ -7340,6 +8535,26 @@ Gregorio &amp;amp; de hOra          Standards Track                    [Page 53]
    Note: the HTTP status code 102 (Processing) has been removed in this
    specification; its IANA registration should continue to reference &lt;a href=&quot;https://tools.ietf.org/html/rfc2518&quot;&gt;RFC&lt;/a&gt;&lt;a href=&quot;https://tools.ietf.org/html/rfc2518&quot;&gt;2518&lt;/a&gt;.</source>
           <target state="translated">Esta especificaci&amp;oacute;n define los c&amp;oacute;digos de estado HTTP o 207 Multi-Estado ( &lt;a href=&quot;#section-11.1&quot;&gt;Secci&amp;oacute;n 11.1&lt;/a&gt; ) o 422 Entidad no procesable ( &lt;a href=&quot;#section-11.2&quot;&gt;Secci&amp;oacute;n 11.2&lt;/a&gt; ), o 423 Bloqueado ( &lt;a href=&quot;#section-11.3&quot;&gt;Secci&amp;oacute;n 11.3&lt;/a&gt; ), o 424 Dependencia fallida ( &lt;a href=&quot;#section-11.4&quot;&gt;Secci&amp;oacute;n 11.4&lt;/a&gt; ) y o 507 Almacenamiento insuficiente ( &lt;a href=&quot;#section-11.5&quot;&gt;Secci&amp;oacute;n 11.5&lt;/a&gt; ) , para ser actualizado en el registro en &amp;lt; &lt;a href=&quot;http://www.iana.org/assignments/http-status-codes&quot;&gt;http://www.iana.org/assignments/http-status-codes&lt;/a&gt; &amp;gt;. Nota: el c&amp;oacute;digo de estado HTTP 102 (Procesando) se ha eliminado en esta especificaci&amp;oacute;n; su registro IANA debe seguir haciendo referencia a &lt;a href=&quot;https://tools.ietf.org/html/rfc2518&quot;&gt;RFC &lt;/a&gt;&lt;a href=&quot;https://tools.ietf.org/html/rfc2518&quot;&gt;2518&lt;/a&gt; .</target>
+        </trans-unit>
+        <trans-unit id="bef5e316682c63f30811489603820e0f2350bf1b" translate="yes" xml:space="preserve">
+          <source>This specification defines the HTTP status codes
+
+   o  207 Multi-Status (&lt;a href=&quot;#section-11.1&quot;&gt;Section 11.1&lt;/a&gt;)
+
+   o  422 Unprocessable Entity (&lt;a href=&quot;#section-11.2&quot;&gt;Section 11.2&lt;/a&gt;),
+
+   o  423 Locked (&lt;a href=&quot;#section-11.3&quot;&gt;Section 11.3&lt;/a&gt;),
+
+   o  424 Failed Dependency (&lt;a href=&quot;#section-11.4&quot;&gt;Section 11.4&lt;/a&gt;) and
+
+   o  507 Insufficient Storage (&lt;a href=&quot;#section-11.5&quot;&gt;Section 11.5&lt;/a&gt;),
+
+   to be updated in the registry at
+   &amp;lt;&lt;a href=&quot;https://www.iana.org/assignments/http-status-codes&quot;&gt;http://www.iana.org/assignments/http-status-codes&lt;/a&gt;&amp;gt;.
+
+   Note: the HTTP status code 102 (Processing) has been removed in this
+   specification; its IANA registration should continue to reference &lt;a href=&quot;https://tools.ietf.org/html/rfc2518&quot;&gt;RFC&lt;/a&gt;&lt;a href=&quot;https://tools.ietf.org/html/rfc2518&quot;&gt;2518&lt;/a&gt;.</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="7e1fe7c5f8c6eb66628d934996aa12f9c804ee43" translate="yes" xml:space="preserve">
           <source>This specification defines two URI schemes:
@@ -7395,6 +8610,34 @@ Gregorio &amp;amp; de hOra          Standards Track                    [Page 53]
    formats, and hence does not require them to be &quot;valid&quot; in the sense
    used by [&lt;a href=&quot;#ref-REC-xml&quot;&gt;REC-xml&lt;/a&gt;].</source>
           <target state="translated">Esta especificaci&amp;oacute;n define dos tipos de documentos: Documentos de categor&amp;iacute;a y Documentos de servicio. Un documento de categor&amp;iacute;a ( &lt;a href=&quot;#section-7&quot;&gt;secci&amp;oacute;n 7&lt;/a&gt; ) contiene listas de categor&amp;iacute;as especificadas mediante el elemento &quot;atom: category&quot; del formato &lt;a href=&quot;https://tools.ietf.org/html/rfc4287#section-4.2.2&quot;&gt;de distribuci&amp;oacute;n de&lt;/a&gt; Atom (consulte la secci&amp;oacute;n 4.2.2 de [RFC4287] ). Un documento de servicio ( &lt;a href=&quot;#section-8&quot;&gt;secci&amp;oacute;n 8&lt;/a&gt; ) agrupa las colecciones disponibles en espacios de trabajo. El nombre del espacio de nombres [ &lt;a href=&quot;#ref-REC-xml-names&quot;&gt;REC-xml-names&lt;/a&gt; ] para cualquier tipo de documento es: &lt;a href=&quot;http://www.w3.org/2007/app&quot;&gt;http://www.w3.org/2007/app&lt;/a&gt; Los documentos XML del protocolo de publicaci&amp;oacute;n Atom DEBEN tener un &quot;espacio de nombres bien formado&quot; como se especifica en la Secci&amp;oacute;n 7 de [ &lt;a href=&quot;#ref-REC-xml-names&quot;&gt;REC-xml-names&lt;/a&gt;]. Esta especificaci&amp;oacute;n utiliza el prefijo &quot;aplicaci&amp;oacute;n:&quot; para el nombre del espacio de nombres. El prefijo &quot;atom:&quot; se utiliza para &quot; &lt;a href=&quot;http://www.w3.org/2005/Atom&quot;&gt;http://www.w3.org/2005/Atom&lt;/a&gt; &quot;, el nombre del espacio de nombres del formato de &lt;a href=&quot;https://tools.ietf.org/html/rfc4287&quot;&gt;distribuci&amp;oacute;n&lt;/a&gt; Atom [ RFC4287 ]. Estos prefijos de espacio de nombres no son sem&amp;aacute;nticamente significativos. Esta especificaci&amp;oacute;n no define ning&amp;uacute;n DTD para los formatos del protocolo Atom y, por lo tanto, no requiere que sean &quot;v&amp;aacute;lidos&quot; en el sentido utilizado por [ &lt;a href=&quot;#ref-REC-xml&quot;&gt;REC-xml&lt;/a&gt; ].</target>
+        </trans-unit>
+        <trans-unit id="709fc44c610c764f985fd1a97796dd531a062cb2" translate="yes" xml:space="preserve">
+          <source>This specification defines two kinds of documents -- Category
+   Documents and Service Documents.
+
+   A Category Document (&lt;a href=&quot;#section-7&quot;&gt;Section 7&lt;/a&gt;) contains lists of categories
+   specified using the &quot;atom:category&quot; element from the Atom Syndication
+   Format (see &lt;a href=&quot;https://tools.ietf.org/html/rfc4287#section-4.2.2&quot;&gt;Section&amp;nbsp;4.2.2 of [RFC4287]&lt;/a&gt;).
+
+   A Service Document (&lt;a href=&quot;#section-8&quot;&gt;Section 8&lt;/a&gt;) groups available Collections into
+   Workspaces.
+
+   The namespace name [&lt;a href=&quot;#ref-REC-xml-names&quot;&gt;REC-xml-names&lt;/a&gt;] for either kind of document is:
+
+       &lt;a href=&quot;https://www.w3.org/2007/app&quot;&gt;http://www.w3.org/2007/app&lt;/a&gt;
+
+   Atom Publishing Protocol XML Documents MUST be &quot;namespace-well-
+   formed&quot; as specified in Section 7 of [&lt;a href=&quot;#ref-REC-xml-names&quot;&gt;REC-xml-names&lt;/a&gt;].
+
+   This specification uses the prefix &quot;app:&quot; for the namespace name.
+   The prefix &quot;atom:&quot; is used for &quot;&lt;a href=&quot;https://www.w3.org/2005/Atom&quot;&gt;http://www.w3.org/2005/Atom&lt;/a&gt;&quot;, the
+   namespace name of the Atom Syndication Format [&lt;a href=&quot;https://tools.ietf.org/html/rfc4287&quot;&gt;RFC4287&lt;/a&gt;].  These
+   namespace prefixes are not semantically significant.
+
+   This specification does not define any DTDs for Atom Protocol
+   formats, and hence does not require them to be &quot;valid&quot; in the sense
+   used by [&lt;a href=&quot;#ref-REC-xml&quot;&gt;REC-xml&lt;/a&gt;].</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="6f49469a7f998d6aa7fb1c171080afd01320be81" translate="yes" xml:space="preserve">
           <source>This specification does not define the behavior of the PUT method for
@@ -8867,433 +10110,6 @@ Gregorio &amp;amp; de hOra          Standards Track                    [Page 53]
    State Token - A URI that represents a state of a resource.  Lock
    tokens are the only state tokens defined in this specification.</source>
           <target state="translated">URI / URL: un identificador uniforme de recursos y un localizador uniforme de recursos, respectivamente. Estos t&amp;eacute;rminos (y la distinci&amp;oacute;n entre ellos) se definen en [ &lt;a href=&quot;https://tools.ietf.org/html/rfc3986&quot;&gt;RFC3986&lt;/a&gt; ]. Mapeo de URI / URL: una relaci&amp;oacute;n entre un URI absoluto y un recurso. Dado que un recurso puede representar elementos que no se pueden recuperar en la red, as&amp;iacute; como aquellos que s&amp;iacute; lo son, es posible que un recurso tenga cero, una o muchas asignaciones de URI. La asignaci&amp;oacute;n de un recurso a un URI de esquema &quot;http&quot; permite enviar solicitudes de protocolo HTTP al recurso mediante el URI. Segmento de ruta: informalmente, los caracteres que se encuentran entre barras (&quot;/&quot;) en un URI. Formalmente, como se define en la &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.3&quot;&gt;Secci&amp;oacute;n 3.3 de [RFC3986]&lt;/a&gt;. Colecci&amp;oacute;n: informalmente, un recurso que tambi&amp;eacute;n act&amp;uacute;a como un contenedor de referencias a recursos secundarios. Formalmente, un recurso que contiene un conjunto de asignaciones entre segmentos de ruta y recursos y cumple con los requisitos definidos en la &lt;a href=&quot;#section-5&quot;&gt;Secci&amp;oacute;n 5&lt;/a&gt;. Miembro interno (de una colecci&amp;oacute;n): informalmente, un recurso secundario de una colecci&amp;oacute;n. Formalmente, un recurso al que hace referencia un mapeo de segmento de ruta incluido en la colecci&amp;oacute;n. URL de miembro interno (de una colecci&amp;oacute;n): una URL de un miembro interno, que consta de la URL de la colecci&amp;oacute;n (incluida la barra inclinada) m&amp;aacute;s el segmento de ruta que identifica al miembro interno. Miembro (de una colecci&amp;oacute;n): informalmente, un &quot;descendiente&quot; de una colecci&amp;oacute;n. Formalmente, un miembro interno de la colecci&amp;oacute;n o, de forma recursiva, un miembro de un miembro interno. URL de miembro (de una colecci&amp;oacute;n): una URL que es una URL de miembro interno de la colecci&amp;oacute;n en s&amp;iacute; o es una URL de miembro interno de un miembro de esa colecci&amp;oacute;n. Propiedad: un par de nombre / valor que contiene informaci&amp;oacute;n descriptiva sobre un recurso.Live Property: una propiedad cuya sem&amp;aacute;ntica y sintaxis son impuestas por el servidor. Por ejemplo, la propiedad en vivo DAV: getcontentlength tiene su valor, la longitud de la entidad devuelta por una solicitud GET, calculada autom&amp;aacute;ticamente por el servidor. Propiedad muerta: una propiedad cuya sem&amp;aacute;ntica y sintaxis no son impuestas por el servidor. El servidor solo registra el valor de una propiedad muerta; el cliente es responsable de mantener la coherencia de la sintaxis y la sem&amp;aacute;ntica de una propiedad muerta. Principal: un actor humano o computacional distinto que inicia el acceso a los recursos de la red. Token de estado: un URI que representa el estado de un recurso. Los tokens de bloqueo son los &amp;uacute;nicos tokens de estado definidos en esta especificaci&amp;oacute;n.getcontentlength tiene su valor, la longitud de la entidad devuelta por una solicitud GET, calculada autom&amp;aacute;ticamente por el servidor. Propiedad muerta: una propiedad cuya sem&amp;aacute;ntica y sintaxis no son impuestas por el servidor. El servidor solo registra el valor de una propiedad muerta; el cliente es responsable de mantener la coherencia de la sintaxis y la sem&amp;aacute;ntica de una propiedad muerta. Principal: un actor humano o computacional distinto que inicia el acceso a los recursos de la red. Token de estado: un URI que representa el estado de un recurso. Los tokens de bloqueo son los &amp;uacute;nicos tokens de estado definidos en esta especificaci&amp;oacute;n.getcontentlength tiene su valor, la longitud de la entidad devuelta por una solicitud GET, calculada autom&amp;aacute;ticamente por el servidor. Propiedad muerta: una propiedad cuya sem&amp;aacute;ntica y sintaxis no son impuestas por el servidor. El servidor solo registra el valor de una propiedad muerta; el cliente es responsable de mantener la coherencia de la sintaxis y la sem&amp;aacute;ntica de una propiedad muerta. Principal: un actor humano o computacional distinto que inicia el acceso a los recursos de la red. Token de estado: un URI que representa el estado de un recurso. Los tokens de bloqueo son los &amp;uacute;nicos tokens de estado definidos en esta especificaci&amp;oacute;n.El servidor solo registra el valor de una propiedad muerta; el cliente es responsable de mantener la coherencia de la sintaxis y la sem&amp;aacute;ntica de una propiedad muerta. Principal: un actor humano o computacional distinto que inicia el acceso a los recursos de la red. Token de estado: un URI que representa el estado de un recurso. Los tokens de bloqueo son los &amp;uacute;nicos tokens de estado definidos en esta especificaci&amp;oacute;n.El servidor solo registra el valor de una propiedad muerta; el cliente es responsable de mantener la coherencia de la sintaxis y la sem&amp;aacute;ntica de una propiedad muerta. Principal: un actor humano o computacional distinto que inicia el acceso a los recursos de la red. Token de estado: un URI que representa el estado de un recurso. Los tokens de bloqueo son los &amp;uacute;nicos tokens de estado definidos en esta especificaci&amp;oacute;n.</target>
-        </trans-unit>
-        <trans-unit id="1b1db348af514b6bea21a18f53ca916d54264149" translate="yes" xml:space="preserve">
-          <source>URIs and how to access resources on the Web.</source>
-          <target state="translated">URI y cómo acceder a los recursos en la Web.</target>
-        </trans-unit>
-        <trans-unit id="6d39406666e0fced7b5feeca9564a556a649dc18" translate="yes" xml:space="preserve">
-          <source>URIs are intended to be shared, not secured, even when they identify
-   secure resources.  URIs are often shown on displays, added to
-   templates when a page is printed, and stored in a variety of
-   unprotected bookmark lists.  It is therefore unwise to include
-   information within a URI that is sensitive, personally identifiable,
-   or a risk to disclose.
-
-   Authors of services ought to avoid GET-based forms for the submission
-   of sensitive data because that data will be placed in the
-   request-target.  Many existing servers, proxies, and user agents log
-   or display the request-target in places where it might be visible to
-   third parties.  Such services ought to use POST-based form submission
-   instead.
-
-   Since the Referer header field tells a target site about the context
-   that resulted in a request, it has the potential to reveal
-   information about the user's immediate browsing history and any
-   personal information that might be found in the referring resource's
-   URI.  Limitations on the Referer header field are described in
-   &lt;a href=&quot;#section-5.5.2&quot;&gt;Section 5.5.2&lt;/a&gt; to address some of its security considerations.</source>
-          <target state="translated">Los URI est&amp;aacute;n pensados ​​para ser compartidos, no protegidos, incluso cuando identifican recursos seguros. Los URI a menudo se muestran en pantallas, se agregan a las plantillas cuando se imprime una p&amp;aacute;gina y se almacenan en una variedad de listas de marcadores desprotegidas. Por lo tanto, no es aconsejable incluir informaci&amp;oacute;n dentro de un URI que sea confidencial, identificable personalmente o que exista riesgo de divulgaci&amp;oacute;n. Los autores de los servicios deben evitar los formularios basados ​​en GET para el env&amp;iacute;o de datos sensibles porque esos datos se colocar&amp;aacute;n en el destino de la solicitud. Muchos servidores, proxies y agentes de usuario existentes registran o muestran el destino de la solicitud en lugares donde podr&amp;iacute;a ser visible para terceros. En su lugar, dichos servicios deber&amp;iacute;an utilizar el env&amp;iacute;o de formularios basados ​​en POST. Dado que el campo de encabezado Referer le dice a un sitio de destino sobre el contexto que result&amp;oacute; en una solicitud,tiene el potencial de revelar informaci&amp;oacute;n sobre el historial de navegaci&amp;oacute;n inmediato del usuario y cualquier informaci&amp;oacute;n personal que pueda encontrarse en el URI del recurso de referencia. Las limitaciones en el campo del encabezado Referer se describen en &lt;a href=&quot;#section-5.5.2&quot;&gt;Secci&amp;oacute;n 5.5.2&lt;/a&gt; para abordar algunas de sus consideraciones de seguridad.</target>
-        </trans-unit>
-        <trans-unit id="3cce85850c1e42a1666b59eb99149f8792f48d3c" translate="yes" xml:space="preserve">
-          <source>URIs have been known by many names: WWW addresses, Universal Document
-   Identifiers, Universal Resource Identifiers [&lt;a href=&quot;#ref-3&quot;&gt;3&lt;/a&gt;], and finally the
-   combination of Uniform Resource Locators (URL) [&lt;a href=&quot;#ref-4&quot;&gt;4&lt;/a&gt;] and Names (URN)
-   [&lt;a href=&quot;#ref-20&quot;&gt;20&lt;/a&gt;]. As far as HTTP is concerned, Uniform Resource Identifiers are
-   simply formatted strings which identify--via name, location, or any
-   other characteristic--a resource.</source>
-          <target state="translated">Los URI se conocen por muchos nombres: direcciones WWW, identificadores universales de documentos, identificadores universales de recursos [ &lt;a href=&quot;#ref-3&quot;&gt;3&lt;/a&gt; ] y, finalmente, la combinaci&amp;oacute;n de localizadores uniformes de recursos (URL) [ &lt;a href=&quot;#ref-4&quot;&gt;4&lt;/a&gt; ] y nombres (URN) [ &lt;a href=&quot;#ref-20&quot;&gt;20&lt;/a&gt; ]. En lo que respecta a HTTP, los identificadores uniformes de recursos son simplemente cadenas formateadas que identifican, a trav&amp;eacute;s del nombre, la ubicaci&amp;oacute;n o cualquier otra caracter&amp;iacute;stica, un recurso.</target>
-        </trans-unit>
-        <trans-unit id="498e7643a14364976970437ebe13915fd4a1000a" translate="yes" xml:space="preserve">
-          <source>URIs in HTTP can be represented in absolute form or relative to some
-   known base URI [&lt;a href=&quot;#ref-11&quot;&gt;11&lt;/a&gt;], depending upon the context of their use. The two
-   forms are differentiated by the fact that absolute URIs always begin
-   with a scheme name followed by a colon. For definitive information on
-   URL syntax and semantics, see &quot;Uniform Resource Identifiers (URI):
-   Generic Syntax and Semantics,&quot; &lt;a href=&quot;https://tools.ietf.org/html/rfc2396&quot;&gt;RFC 2396&lt;/a&gt; [&lt;a href=&quot;#ref-42&quot;&gt;42&lt;/a&gt;] (which replaces RFCs
-   1738 [&lt;a href=&quot;#ref-4&quot;&gt;4&lt;/a&gt;] and &lt;a href=&quot;https://tools.ietf.org/html/rfc1808&quot;&gt;RFC 1808&lt;/a&gt; [&lt;a href=&quot;#ref-11&quot;&gt;11&lt;/a&gt;]). This specification adopts the
-   definitions of &quot;URI-reference&quot;, &quot;absoluteURI&quot;, &quot;relativeURI&quot;, &quot;port&quot;,
-   &quot;host&quot;,&quot;abs_path&quot;, &quot;rel_path&quot;, and &quot;authority&quot; from that
-   specification.
-
-   The HTTP protocol does not place any a priori limit on the length of
-   a URI. Servers MUST be able to handle the URI of any resource they
-   serve, and SHOULD be able to handle URIs of unbounded length if they
-   provide GET-based forms that could generate such URIs. A server
-   SHOULD return 414 (Request-URI Too Long) status if a URI is longer
-   than the server can handle (see &lt;a href=&quot;#section-10.4.15&quot;&gt;section 10.4.15&lt;/a&gt;).
-
-      Note: Servers ought to be cautious about depending on URI lengths
-      above 255 bytes, because some older client or proxy
-      implementations might not properly support these lengths.</source>
-          <target state="translated">Los URI en HTTP se pueden representar en forma absoluta o en relaci&amp;oacute;n con alg&amp;uacute;n URI base conocido [ &lt;a href=&quot;#ref-11&quot;&gt;11&lt;/a&gt; ], dependiendo del contexto de su uso. Las dos formas se diferencian por el hecho de que los URI absolutos siempre comienzan con un nombre de esquema seguido de dos puntos. Para obtener informaci&amp;oacute;n definitiva sobre la sintaxis y la sem&amp;aacute;ntica de las URL, consulte &quot;Identificadores uniformes de recursos (URI): sintaxis y sem&amp;aacute;ntica gen&amp;eacute;ricas&quot;, &lt;a href=&quot;https://tools.ietf.org/html/rfc2396&quot;&gt;RFC 2396&lt;/a&gt; [ &lt;a href=&quot;#ref-42&quot;&gt;42&lt;/a&gt; ] (que reemplaza a las RFC 1738 [ &lt;a href=&quot;#ref-4&quot;&gt;4&lt;/a&gt; ] y &lt;a href=&quot;https://tools.ietf.org/html/rfc1808&quot;&gt;RFC 1808&lt;/a&gt; [ &lt;a href=&quot;#ref-11&quot;&gt;11&lt;/a&gt;]). Esta especificaci&amp;oacute;n adopta las definiciones de &quot;referencia URI&quot;, &quot;absolutaURI&quot;, &quot;relativaURI&quot;, &quot;puerto&quot;, &quot;host&quot;, &quot;abs_path&quot;, &quot;rel_path&quot; y &quot;autoridad&quot; de esa especificaci&amp;oacute;n. El protocolo HTTP no impone ning&amp;uacute;n l&amp;iacute;mite a priori en la longitud de un URI. Los servidores DEBEN poder manejar el URI de cualquier recurso al que presten servicio y DEBEN poder manejar URI de longitud ilimitada si proporcionan formularios basados ​​en GET que puedan generar dichos URI. Un servidor DEBE devolver el estado 414 (Request-URI Too Long) si un URI es m&amp;aacute;s largo de lo que el servidor puede manejar (consulte la &lt;a href=&quot;#section-10.4.15&quot;&gt;secci&amp;oacute;n 10.4.15&lt;/a&gt; ). Nota: Los servidores deben tener cuidado al depender de longitudes de URI superiores a 255 bytes,porque es posible que algunas implementaciones de proxy o cliente m&amp;aacute;s antiguas no admitan adecuadamente estas longitudes.</target>
-        </trans-unit>
-        <trans-unit id="cfef62af9614810559e1e5b81b8c27fecbab7b5c" translate="yes" xml:space="preserve">
-          <source>URL redirection, also known as URL forwarding, is a technique to give a page, a form or a whole Web application, more than one URL address. HTTP provides a special kind of responses, &lt;em&gt;&lt;strong&gt;HTTP redirects&lt;/strong&gt;&lt;/em&gt;, to perform this operation used for numerous goals: temporary redirection while site maintenance is ongoing, permanent redirection to keep external links working after a change of the site's architecture, progress pages when uploading a file, and so on.</source>
-          <target state="translated">La redirecci&amp;oacute;n de URL, tambi&amp;eacute;n conocida como reenv&amp;iacute;o de URL, es una t&amp;eacute;cnica para dar a una p&amp;aacute;gina, un formulario o una aplicaci&amp;oacute;n web completa, m&amp;aacute;s de una direcci&amp;oacute;n URL. HTTP proporciona un tipo especial de respuestas, &lt;em&gt;&lt;strong&gt;redirecciones HTTP&lt;/strong&gt;&lt;/em&gt; , para realizar esta operaci&amp;oacute;n que se utiliza para numerosos objetivos: redirecci&amp;oacute;n temporal mientras el mantenimiento del sitio est&amp;aacute; en curso, redirecci&amp;oacute;n permanente para mantener los enlaces externos funcionando despu&amp;eacute;s de un cambio en la arquitectura del sitio, p&amp;aacute;ginas de progreso al cargar un archivo, y as&amp;iacute;.</target>
-        </trans-unit>
-        <trans-unit id="11053b0e7813cb1ccd4cf628421c47a3253d39a1" translate="yes" xml:space="preserve">
-          <source>URL-embedded JavaScript code</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="621894213e70d0f25d538e3e503f261cb1c92c16" translate="yes" xml:space="preserve">
-          <source>URL/hostname based conditions</source>
-          <target state="translated">Condiciones basadas en URL/nombre de host</target>
-        </trans-unit>
-        <trans-unit id="01f03837323aab32409bb99c50d6c475179c49df" translate="yes" xml:space="preserve">
-          <source>URLs</source>
-          <target state="translated">URLs</target>
-        </trans-unit>
-        <trans-unit id="b9011f5a3d0a8fd5aa8be41c9a2ba56d323a6e48" translate="yes" xml:space="preserve">
-          <source>URLs and URNs</source>
-          <target state="translated">URLs y URNs</target>
-        </trans-unit>
-        <trans-unit id="0d68396d9a72290240763f5089d4a58c9fd02660" translate="yes" xml:space="preserve">
-          <source>URLs appear in many places in requests and responses.
-   Interoperability experience with [&lt;a href=&quot;https://tools.ietf.org/html/rfc2518&quot;&gt;RFC2518&lt;/a&gt;] showed that many clients
-   parsing Multi-Status responses did not fully implement the full
-   Reference Resolution defined in &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-5&quot;&gt;Section&amp;nbsp;5 of [RFC3986]&lt;/a&gt;.  Thus,
-   servers in particular need to be careful in handling URLs in
-   responses, to ensure that clients have enough context to be able to
-   interpret all the URLs.  The rules in this section apply not only to
-   resource URLs in the 'href' element in Multi-Status responses, but
-   also to the Destination and If header resource URLs.
-
-   The sender has a choice between two approaches: using a relative
-   reference, which is resolved against the Request-URI, or a full URI.
-   A server MUST ensure that every 'href' value within a Multi-Status
-   response uses the same format.
-
-   WebDAV only uses one form of relative reference in its extensions,
-   the absolute path.
-
-      Simple-ref = absolute-URI | ( path-absolute [ &quot;?&quot; query ] )
-
-   The absolute-URI, path-absolute and query productions are defined in
-   Sections &lt;a href=&quot;#section-4.3&quot;&gt;4.3&lt;/a&gt;, &lt;a href=&quot;#section-3.3&quot;&gt;3.3&lt;/a&gt;, and &lt;a href=&quot;#section-3.4&quot;&gt;3.4&lt;/a&gt; of [&lt;a href=&quot;https://tools.ietf.org/html/rfc3986&quot;&gt;RFC3986&lt;/a&gt;].
-
-   Within Simple-ref productions, senders MUST NOT:
-
-   o  use dot-segments (&quot;.&quot; or &quot;..&quot;), or
-
-   o  have prefixes that do not match the Request-URI (using the
-      comparison rules defined in &lt;a href=&quot;https://tools.ietf.org/html/rfc2616#section-3.2.3&quot;&gt;Section&amp;nbsp;3.2.3 of [RFC2616]&lt;/a&gt;).
-
-   Identifiers for collections SHOULD end in a '/' character.</source>
-          <target state="translated">Las URL aparecen en muchos lugares en solicitudes y respuestas. La experiencia de interoperabilidad con [ &lt;a href=&quot;https://tools.ietf.org/html/rfc2518&quot;&gt;RFC2518&lt;/a&gt; ] mostr&amp;oacute; que muchos clientes que analizaban las respuestas de varios estados no implementaban por completo la Resoluci&amp;oacute;n de referencia completa definida en la &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-5&quot;&gt;Secci&amp;oacute;n 5 de [RFC3986]&lt;/a&gt;. Por lo tanto, los servidores en particular deben tener cuidado al manejar las URL en las respuestas, para asegurarse de que los clientes tengan suficiente contexto para poder interpretar todas las URL. Las reglas de esta secci&amp;oacute;n se aplican no solo a las URL de recursos en el elemento 'href' en las respuestas de varios estados, sino tambi&amp;eacute;n a las URL de recursos de encabezado If y de destino. El remitente puede elegir entre dos enfoques: usar una referencia relativa, que se resuelve con el Request-URI, o un URI completo. Un servidor DEBE asegurarse de que cada valor 'href' dentro de una respuesta de estado m&amp;uacute;ltiple use el mismo formato. WebDAV solo usa una forma de referencia relativa en sus extensiones, la ruta absoluta. Simple-ref = absoluto-URI | (ruta-absoluta [&quot;?&quot; consulta]) Las producciones de URI absoluta, ruta-absoluta y consulta se definen en las secciones&lt;a href=&quot;#section-4.3&quot;&gt;4.3&lt;/a&gt; , &lt;a href=&quot;#section-3.3&quot;&gt;3.3&lt;/a&gt; y &lt;a href=&quot;#section-3.4&quot;&gt;3.4&lt;/a&gt; de [ &lt;a href=&quot;https://tools.ietf.org/html/rfc3986&quot;&gt;RFC3986&lt;/a&gt; ]. Dentro de las producciones de Simple-ref, los remitentes NO DEBEN: o usar segmentos de puntos (&quot;.&quot; O &quot;..&quot;), o o tener prefijos que no coincidan con la Solicitud-URI (usando las reglas de comparaci&amp;oacute;n definidas en la &lt;a href=&quot;https://tools.ietf.org/html/rfc2616#section-3.2.3&quot;&gt;Secci&amp;oacute;n 3.2.3 de [RFC2616]&lt;/a&gt; ). Los identificadores de las colecciones DEBER&amp;Iacute;AN terminar en un car&amp;aacute;cter '/'.</target>
-        </trans-unit>
-        <trans-unit id="2c75d09b30def3f5acce02670c0f8d304787deb1" translate="yes" xml:space="preserve">
-          <source>URNs</source>
-          <target state="translated">URNs</target>
-        </trans-unit>
-        <trans-unit id="09716c44992b8bceefcd6d77921ff9ec06e2764d" translate="yes" xml:space="preserve">
-          <source>USB</source>
-          <target state="translated">USB</target>
-        </trans-unit>
-        <trans-unit id="463d4baccb11d04bd39b50170d5669b1473a3d3e" translate="yes" xml:space="preserve">
-          <source>UTF-8 is now well-supported and the overwhelmingly preferred character encoding. To &lt;a href=&quot;https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy&quot;&gt;guarantee better privacy through less configuration-based entropy&lt;/a&gt;, all browsers omit the &lt;code&gt;Accept-Charset&lt;/code&gt; header: Internet Explorer 8+, Safari 5+, Opera 11+, Firefox 10+ and Chrome 27+ no longer send it.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="3395f08e982fbccb7c267f1152a8f77ff4f3d2ba" translate="yes" xml:space="preserve">
-          <source>Unconstrained multiple range requests are susceptible to denial-of-
-   service attacks because the effort required to request many
-   overlapping ranges of the same data is tiny compared to the time,
-   memory, and bandwidth consumed by attempting to serve the requested
-   data in many parts.  Servers ought to ignore, coalesce, or reject
-   egregious range requests, such as requests for more than two
-   overlapping ranges or for many small ranges in a single set,
-   particularly when the ranges are requested out of order for no
-   apparent reason.  Multipart range requests are not designed to
-   support random access.</source>
-          <target state="translated">Las solicitudes de múltiples rangos sin restricciones son susceptibles de ataques de denegación de servicio porque el esfuerzo requerido para solicitar muchos rangos superpuestos de los mismos datos es minúsculo en comparación con el tiempo,la memoria y el ancho de banda consumidos al intentar servir los datos solicitados en muchas partes.Los servidores deben ignorar,fusionar o rechazar las solicitudes de rangos atroces,como las solicitudes de más de dos rangos superpuestos o de muchos rangos pequeños en un solo conjunto,en particular cuando los rangos se solicitan fuera de servicio sin razón aparente.Las solicitudes de rangos múltiples no están diseñadas para apoyar el acceso aleatorio.</target>
-        </trans-unit>
-        <trans-unit id="87b5a91171602746648bcc818bbb122d7646769d" translate="yes" xml:space="preserve">
-          <source>Undeprecates &lt;code&gt;frame-src&lt;/code&gt;.</source>
-          <target state="translated">Anula &lt;code&gt;frame-src&lt;/code&gt; .</target>
-        </trans-unit>
-        <trans-unit id="7f3058bceb865d591bd6a47330d0826684d098a7" translate="yes" xml:space="preserve">
-          <source>Under construction. The origin server is currently testing its communication of tracking status.</source>
-          <target state="translated">En construcción.El servidor de origen está probando actualmente su comunicación de estado de rastreo.</target>
-        </trans-unit>
-        <trans-unit id="93bb4b1c6ee8c5d136c3ae4245fe9019094c3bdf" translate="yes" xml:space="preserve">
-          <source>Understanding The Vary Header - Smashing Magazine</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="4821ae5432f25746ffce2357d74178373c8cf2dd" translate="yes" xml:space="preserve">
-          <source>Understanding XSS Auditor &amp;ndash; Virtue Security</source>
-          <target state="translated">Comprensi&amp;oacute;n del auditor XSS - Virtue Security</target>
-        </trans-unit>
-        <trans-unit id="b2f6280ce256054e508e4d6c0d2aed7f16b9ceb5" translate="yes" xml:space="preserve">
-          <source>Unfortunately, the HTTP standard does not specify the format of the page allowing to choose between the available resource, which prevents to easily automatize the process. Besides falling back to the &lt;em&gt;server-driven negotiation&lt;/em&gt;, this method is almost always used in conjunction with scripting, especially with JavaScript redirection: after having checked for the negotiation criteria, the script performs the redirection. A second problem is that one more request is needed in order to fetch the real resource, slowing the availability of the resource to the user.</source>
-          <target state="translated">Desafortunadamente, el est&amp;aacute;ndar HTTP no especifica el formato de la p&amp;aacute;gina permitiendo elegir entre el recurso disponible, lo que impide automatizar f&amp;aacute;cilmente el proceso. Adem&amp;aacute;s de recurrir a la &lt;em&gt;negociaci&amp;oacute;n impulsada por&lt;/em&gt; el &lt;em&gt;servidor&lt;/em&gt; , este m&amp;eacute;todo casi siempre se utiliza junto con el script, especialmente con la redirecci&amp;oacute;n de JavaScript: despu&amp;eacute;s de haber verificado los criterios de negociaci&amp;oacute;n, el script realiza la redirecci&amp;oacute;n. Un segundo problema es que se necesita una solicitud m&amp;aacute;s para obtener el recurso real, lo que ralentiza la disponibilidad del recurso para el usuario.</target>
-        </trans-unit>
-        <trans-unit id="590261af46ebe2219ba617fed793de6d03379f66" translate="yes" xml:space="preserve">
-          <source>Unfortunately, the HTTP standard does not specify the format of the page for choosing between the available resource, which prevents the process being automated. Besides falling back to the &lt;em&gt;server-driven negotiation&lt;/em&gt;, this method is almost always used in conjunction with scripting, especially with JavaScript redirection: after having checked for the negotiation criteria, the script performs the redirection. A second problem is that one more request is needed in order to fetch the real resource, slowing the availability of the resource to the user.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="eba4dbb75ad90a20a4a3d20676386c7ac0143689" translate="yes" xml:space="preserve">
-          <source>Unfortunately, things get a little inaccurate as soon as we take into account concurrency. While a client is locally modifying its new copy of the resource, a second client can fetch the same resource and do the same on its copy. What happens next is very unfortunate: when they commit back to the server, the modifications from the first client are discarded by the next client push, as this second client is unaware of the first client's changes to the resource. The decision on who wins, is not communicated to the other party. Which client's changes are to be kept, will vary with the speed they commit; this depends on the performance of the clients, of the server, and even of the human editing the document at the client. The winner will change from one time to the next. This is a &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/race_condition&quot;&gt;race condition&lt;/a&gt; and leads to problematic behaviors, which are difficult to detect and to debug:</source>
-          <target state="translated">Desafortunadamente, las cosas se vuelven un poco inexactas tan pronto como tomamos en cuenta la concurrencia. Mientras un cliente est&amp;aacute; modificando localmente su nueva copia del recurso, un segundo cliente puede buscar el mismo recurso y hacer lo mismo con su copia. Lo que sucede a continuaci&amp;oacute;n es muy desafortunado: cuando regresan al servidor, las modificaciones del primer cliente son descartadas por el siguiente empuje del cliente, ya que este segundo cliente desconoce los cambios del primer cliente en el recurso. La decisi&amp;oacute;n sobre qui&amp;eacute;n gana no se comunica a la otra parte. Los cambios de los clientes que se conservar&amp;aacute;n variar&amp;aacute;n con la velocidad a la que se comprometan; esto depende del rendimiento de los clientes, del servidor e incluso de la persona que edita el documento en el cliente. El ganador cambiar&amp;aacute; de una vez a otra. Esta es una &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/race_condition&quot;&gt;condici&amp;oacute;n de carrera&lt;/a&gt;y conduce a comportamientos problem&amp;aacute;ticos, que son dif&amp;iacute;ciles de detectar y depurar:</target>
-        </trans-unit>
-        <trans-unit id="9d6157fa48e6c6221f34d6df81ed35de4c9f2058" translate="yes" xml:space="preserve">
-          <source>Uniform Resource Identifier (URI): Generic Syntax</source>
-          <target state="translated">Identificador Uniforme de Recursos (URI):Sintaxis genérica</target>
-        </trans-unit>
-        <trans-unit id="5331c3d8fb4de87de8b7a5cbf7bd8ea20f192adf" translate="yes" xml:space="preserve">
-          <source>Uniform Resource Identifiers (URIs) [&lt;a href=&quot;https://tools.ietf.org/html/rfc3986&quot;&gt;RFC3986&lt;/a&gt;] are used throughout
-   HTTP as the means for identifying resources (&lt;a href=&quot;https://tools.ietf.org/html/rfc7231#section-2&quot;&gt;Section&amp;nbsp;2 of [RFC7231]&lt;/a&gt;).
-   URI references are used to target requests, indicate redirects, and
-   define relationships.
-
-   The definitions of &quot;URI-reference&quot;, &quot;absolute-URI&quot;, &quot;relative-part&quot;,
-   &quot;scheme&quot;, &quot;authority&quot;, &quot;port&quot;, &quot;host&quot;, &quot;path-abempty&quot;, &quot;segment&quot;,
-   &quot;query&quot;, and &quot;fragment&quot; are adopted from the URI generic syntax.  An
-   &quot;absolute-path&quot; rule is defined for protocol elements that can
-   contain a non-empty path component.  (This rule differs slightly from
-   the path-abempty rule of &lt;a href=&quot;https://tools.ietf.org/html/rfc3986&quot;&gt;RFC 3986&lt;/a&gt;, which allows for an empty path to
-   be used in references, and path-absolute rule, which does not allow
-   paths that begin with &quot;//&quot;.)  A &quot;partial-URI&quot; rule is defined for
-   protocol elements that can contain a relative URI but not a fragment
-   component.
-
-     URI-reference = &amp;lt;URI-reference, see &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-4.1&quot;&gt;[RFC3986], Section&amp;nbsp;4.1&lt;/a&gt;&amp;gt;
-     absolute-URI  = &amp;lt;absolute-URI, see &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-4.3&quot;&gt;[RFC3986], Section&amp;nbsp;4.3&lt;/a&gt;&amp;gt;
-     relative-part = &amp;lt;relative-part, see &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-4.2&quot;&gt;[RFC3986], Section&amp;nbsp;4.2&lt;/a&gt;&amp;gt;
-     scheme        = &amp;lt;scheme, see &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.1&quot;&gt;[RFC3986], Section&amp;nbsp;3.1&lt;/a&gt;&amp;gt;
-     authority     = &amp;lt;authority, see &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.2&quot;&gt;[RFC3986], Section&amp;nbsp;3.2&lt;/a&gt;&amp;gt;
-     uri-host      = &amp;lt;host, see &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.2.2&quot;&gt;[RFC3986], Section&amp;nbsp;3.2.2&lt;/a&gt;&amp;gt;
-     port          = &amp;lt;port, see &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.2.3&quot;&gt;[RFC3986], Section&amp;nbsp;3.2.3&lt;/a&gt;&amp;gt;
-     path-abempty  = &amp;lt;path-abempty, see &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.3&quot;&gt;[RFC3986], Section&amp;nbsp;3.3&lt;/a&gt;&amp;gt;
-     segment       = &amp;lt;segment, see &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.3&quot;&gt;[RFC3986], Section&amp;nbsp;3.3&lt;/a&gt;&amp;gt;
-     query         = &amp;lt;query, see &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.4&quot;&gt;[RFC3986], Section&amp;nbsp;3.4&lt;/a&gt;&amp;gt;
-     fragment      = &amp;lt;fragment, see &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.5&quot;&gt;[RFC3986], Section&amp;nbsp;3.5&lt;/a&gt;&amp;gt;
-
-     absolute-path = 1*( &quot;/&quot; segment )
-     partial-URI   = relative-part [ &quot;?&quot; query ]
-
-   Each protocol element in HTTP that allows a URI reference will
-   indicate in its ABNF production whether the element allows any form
-   of reference (URI-reference), only a URI in absolute form
-   (absolute-URI), only the path and optional query components, or some
-   combination of the above.  Unless otherwise indicated, URI references
-   are parsed relative to the effective request URI (&lt;a href=&quot;#section-5.5&quot;&gt;Section 5.5&lt;/a&gt;).</source>
-          <target state="translated">Los identificadores uniformes de recursos (URI) [ &lt;a href=&quot;https://tools.ietf.org/html/rfc3986&quot;&gt;RFC3986&lt;/a&gt; ] se utilizan en HTTP como medio para identificar recursos ( &lt;a href=&quot;https://tools.ietf.org/html/rfc7231#section-2&quot;&gt;Secci&amp;oacute;n 2 de [RFC7231]&lt;/a&gt; ). Las referencias de URI se utilizan para orientar solicitudes, indicar redireccionamientos y definir relaciones. Las definiciones de &quot;referencia-URI&quot;, &quot;URI-absoluta&quot;, &quot;parte relativa&quot;, &quot;esquema&quot;, &quot;autoridad&quot;, &quot;puerto&quot;, &quot;host&quot;, &quot;ruta-vac&amp;iacute;a&quot;, &quot;segmento&quot;, &quot;consulta&quot; , y &quot;fragment&quot; se adoptan de la sintaxis gen&amp;eacute;rica de URI. Se define una regla de &quot;ruta absoluta&quot; para los elementos de protocolo que pueden contener un componente de ruta no vac&amp;iacute;o. (Esta regla difiere ligeramente de la regla de vaciado de ruta de &lt;a href=&quot;https://tools.ietf.org/html/rfc3986&quot;&gt;RFC 3986&lt;/a&gt;, que permite utilizar una ruta vac&amp;iacute;a en las referencias, y la regla de ruta absoluta, que no permite rutas que comiencen con &quot;//&quot;). Se define una regla de &quot;URI parcial&quot; para los elementos de protocolo que pueden contener un URI pero no un componente de fragmento. URI-reference = &amp;lt;URI-reference, vea &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-4.1&quot;&gt;[RFC3986], Secci&amp;oacute;n 4.1&lt;/a&gt; &amp;gt; absolute-URI = &amp;lt;absolute-URI, vea &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-4.3&quot;&gt;[RFC3986], Secci&amp;oacute;n 4.3&lt;/a&gt; &amp;gt; parte-relativa = &amp;lt;parte-relativa, vea &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-4.2&quot;&gt;[RFC3986], Secci&amp;oacute;n 4.2&lt;/a&gt; &amp;gt; esquema = &amp;lt;esquema, consulte &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.1&quot;&gt;[RFC3986], Secci&amp;oacute;n 3.1&lt;/a&gt; &amp;gt; autoridad = &amp;lt;autoridad, consulte &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.2&quot;&gt;[RFC3986], Secci&amp;oacute;n 3.2&lt;/a&gt; &amp;gt; uri-host = &amp;lt;host, consulte &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.2.2&quot;&gt;[RFC3986], Secci&amp;oacute;n 3.2.2&lt;/a&gt; &amp;gt; puerto = &amp;lt;puerto, ver&lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.2.3&quot;&gt;[RFC3986], Secci&amp;oacute;n 3.2.3&lt;/a&gt; &amp;gt; ruta-abempty = &amp;lt;ruta-abempty, consulte &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.3&quot;&gt;[RFC3986], Secci&amp;oacute;n 3.3&lt;/a&gt; &amp;gt; segmento = &amp;lt;segmento, consulte &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.3&quot;&gt;[RFC3986], Secci&amp;oacute;n 3.3&lt;/a&gt; &amp;gt; consulta = &amp;lt;consulta, consulte &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.4&quot;&gt;[RFC3986], Secci&amp;oacute;n 3.4&lt;/a&gt; &amp;gt; fragment = &amp;lt;fragment, consulte &lt;a href=&quot;https://tools.ietf.org/html/rfc3986#section-3.5&quot;&gt;[RFC3986], Secci&amp;oacute;n 3.5&lt;/a&gt;&amp;gt; ruta-absoluta = 1 * (segmento &quot;/&quot;) URI-parcial = parte-relativa [&quot;?&quot; consulta] Cada elemento de protocolo en HTTP que permite una referencia URI indicar&amp;aacute; en su producci&amp;oacute;n ABNF si el elemento permite alguna forma de referencia (referencia URI), solo un URI en forma absoluta (URI absoluto), solo la ruta y consulta opcional componentes, o alguna combinaci&amp;oacute;n de los anteriores. A menos que se indique lo contrario, las referencias de URI se analizan en relaci&amp;oacute;n con la URI de solicitud efectiva ( &lt;a href=&quot;#section-5.5&quot;&gt;Secci&amp;oacute;n 5.5&lt;/a&gt; ).</target>
-        </trans-unit>
-        <trans-unit id="326e61a6296432fcad1af300f3c896bd0e9d0435" translate="yes" xml:space="preserve">
-          <source>Uniform Resource Names</source>
-          <target state="translated">Nombres de recursos uniformes</target>
-        </trans-unit>
-        <trans-unit id="0f25e6e17d90b442b15b6c3491b583d0eb8a4b09" translate="yes" xml:space="preserve">
-          <source>Unless dealing with a very old system, which doesn't support a persistent connection, there is no compelling reason to use this model.</source>
-          <target state="translated">A menos que se trate de un sistema muy antiguo,que no soporta una conexión persistente,no hay ninguna razón de peso para usar este modelo.</target>
-        </trans-unit>
-        <trans-unit id="7df067eefe56c18b36ec5afe619983a9a5702d6c" translate="yes" xml:space="preserve">
-          <source>Unless specifically constrained by a cache-control (&lt;a href=&quot;#section-14.9&quot;&gt;section 14.9&lt;/a&gt;)
-   directive, a caching system MAY always store a successful response
-   (see &lt;a href=&quot;#section-13.8&quot;&gt;section 13.8&lt;/a&gt;) as a cache entry, MAY return it without validation
-   if it is fresh, and MAY return it after successful validation. If
-   there is neither a cache validator nor an explicit expiration time
-   associated with a response, we do not expect it to be cached, but
-   certain caches MAY violate this expectation (for example, when little
-   or no network connectivity is available). A client can usually detect
-   that such a response was taken from a cache by comparing the Date
-   header to the current time.
-
-      Note: some HTTP/1.0 caches are known to violate this expectation
-      without providing any Warning.
-
-   However, in some cases it might be inappropriate for a cache to
-   retain an entity, or to return it in response to a subsequent
-   request. This might be because absolute semantic transparency is
-   deemed necessary by the service author, or because of security or
-   privacy considerations. Certain cache-control directives are
-   therefore provided so that the server can indicate that certain
-   resource entities, or portions thereof, are not to be cached
-   regardless of other considerations.
-
-   Note that &lt;a href=&quot;#section-14.8&quot;&gt;section 14.8&lt;/a&gt; normally prevents a shared cache from saving
-   and returning a response to a previous request if that request
-   included an Authorization header.
-
-   A response received with a status code of 200, 203, 206, 300, 301 or
-   410 MAY be stored by a cache and used in reply to a subsequent
-   request, subject to the expiration mechanism, unless a cache-control
-   directive prohibits caching. However, a cache that does not support
-   the Range and Content-Range headers MUST NOT cache 206 (Partial
-   Content) responses.
-
-   A response received with any other status code (e.g. status codes 302
-   and 307) MUST NOT be returned in a reply to a subsequent request
-   unless there are cache-control directives or another header(s) that
-   explicitly allow it. For example, these include the following: an
-   Expires header (&lt;a href=&quot;#section-14.21&quot;&gt;section 14.21&lt;/a&gt;); a &quot;max-age&quot;, &quot;s-maxage&quot;,  &quot;must-
-   revalidate&quot;, &quot;proxy-revalidate&quot;, &quot;public&quot; or &quot;private&quot; cache-control
-   directive (&lt;a href=&quot;#section-14.9&quot;&gt;section 14.9&lt;/a&gt;).</source>
-          <target state="translated">A menos que est&amp;eacute; espec&amp;iacute;ficamente restringido por una directiva de control de cach&amp;eacute; ( &lt;a href=&quot;#section-14.9&quot;&gt;secci&amp;oacute;n 14.9&lt;/a&gt; ), un sistema de almacenamiento en cach&amp;eacute; PUEDE siempre almacenar una respuesta exitosa (ver &lt;a href=&quot;#section-13.8&quot;&gt;secci&amp;oacute;n 13.8&lt;/a&gt;) como una entrada de cach&amp;eacute;, PUEDE devolverlo sin validaci&amp;oacute;n si est&amp;aacute; nuevo, y PUEDE devolverlo despu&amp;eacute;s de una validaci&amp;oacute;n exitosa. Si no hay un validador de cach&amp;eacute; ni un tiempo de vencimiento expl&amp;iacute;cito asociado con una respuesta, no esperamos que se almacene en cach&amp;eacute;, pero ciertas cach&amp;eacute;s PUEDEN violar esta expectativa (por ejemplo, cuando hay poca o ninguna conectividad de red disponible). Por lo general, un cliente puede detectar que dicha respuesta se tom&amp;oacute; de un cach&amp;eacute; comparando el encabezado Date con la hora actual. Nota: se sabe que algunas cach&amp;eacute;s HTTP / 1.0 violan esta expectativa sin proporcionar ninguna advertencia. Sin embargo, en algunos casos puede ser inapropiado que un cach&amp;eacute; retenga una entidad o la devuelva en respuesta a una solicitud posterior. Esto puede deberse a que el autor del servicio considera necesaria la transparencia sem&amp;aacute;ntica absoluta,o por consideraciones de seguridad o privacidad. Por lo tanto, se proporcionan ciertas directivas de control de cach&amp;eacute; para que el servidor pueda indicar que ciertas entidades de recursos, o partes de las mismas, no deben almacenarse en cach&amp;eacute; independientemente de otras consideraciones. Tenga en cuenta que&lt;a href=&quot;#section-14.8&quot;&gt;la secci&amp;oacute;n 14.8&lt;/a&gt; normalmente evita que una cach&amp;eacute; compartida guarde y devuelva una respuesta a una solicitud anterior si esa solicitud incluye un encabezado de autorizaci&amp;oacute;n. Una respuesta recibida con un c&amp;oacute;digo de estado de 200, 203, 206, 300, 301 o 410 PUEDE ser almacenada por una cach&amp;eacute; y utilizada en respuesta a una solicitud posterior, sujeta al mecanismo de expiraci&amp;oacute;n, a menos que una directiva de control de cach&amp;eacute; proh&amp;iacute;ba el almacenamiento en cach&amp;eacute;. Sin embargo, un cach&amp;eacute; que no admita los encabezados Range y Content-Range NO DEBE almacenar en cach&amp;eacute; 206 respuestas (contenido parcial). Una respuesta recibida con cualquier otro c&amp;oacute;digo de estado (por ejemplo, c&amp;oacute;digos de estado 302 y 307) NO DEBE devolverse en una respuesta a una solicitud posterior a menos que haya directivas de control de cach&amp;eacute; u otro encabezado que lo permita expl&amp;iacute;citamente. Por ejemplo, estos incluyen lo siguiente: un encabezado Expires (&lt;a href=&quot;#section-14.21&quot;&gt;secci&amp;oacute;n 14.21&lt;/a&gt; ); una directiva de control de cach&amp;eacute; &quot;max-age&quot;, &quot;s-maxage&quot;, &quot;must-revalidate&quot;, &quot;proxy-revalidate&quot;, &quot;public&quot; o &quot;private&quot; ( &lt;a href=&quot;#section-14.9&quot;&gt;secci&amp;oacute;n 14.9&lt;/a&gt; ).</target>
-        </trans-unit>
-        <trans-unit id="6575621a518b7b48c43d42321f561d5d0b99d27e" translate="yes" xml:space="preserve">
-          <source>Unless the origin server explicitly prohibits the caching of their
-   responses, the application of GET and HEAD methods to any resources
-   SHOULD NOT have side effects that would lead to erroneous behavior if
-   these responses are taken from a cache. They MAY still have side
-   effects, but a cache is not required to consider such side effects in
-   its caching decisions. Caches are always expected to observe an
-   origin server's explicit restrictions on caching.
-
-   We note one exception to this rule: since some applications have
-   traditionally used GETs and HEADs with query URLs (those containing a
-   &quot;?&quot; in the rel_path part) to perform operations with significant side
-   effects, caches MUST NOT treat responses to such URIs as fresh unless
-   the server provides an explicit expiration time. This specifically
-   means that responses from HTTP/1.0 servers for such URIs SHOULD NOT
-   be taken from a cache. See &lt;a href=&quot;#section-9.1.1&quot;&gt;section 9.1.1&lt;/a&gt; for related information.</source>
-          <target state="translated">A menos que el servidor de origen proh&amp;iacute;ba expl&amp;iacute;citamente el almacenamiento en cach&amp;eacute; de sus respuestas, la aplicaci&amp;oacute;n de los m&amp;eacute;todos GET y HEAD a cualquier recurso NO DEBE tener efectos secundarios que conduzcan a un comportamiento err&amp;oacute;neo si estas respuestas se toman de un cach&amp;eacute;. PUEDEN tener efectos secundarios, pero no se requiere un cach&amp;eacute; para considerar dichos efectos secundarios en sus decisiones de almacenamiento en cach&amp;eacute;. Siempre se espera que los cach&amp;eacute;s respeten las restricciones expl&amp;iacute;citas del servidor de origen sobre el almacenamiento en cach&amp;eacute;. Observamos una excepci&amp;oacute;n a esta regla: dado que algunas aplicaciones han usado tradicionalmente GET y HEAD con URL de consulta (las que contienen un &quot;?&quot; En la parte rel_path) para realizar operaciones con efectos secundarios importantes, las cach&amp;eacute;s NO DEBEN tratar las respuestas a tales URI como si fueran nuevas. a menos que el servidor proporcione una fecha de vencimiento expl&amp;iacute;cita.Esto significa espec&amp;iacute;ficamente que las respuestas de los servidores HTTP / 1.0 para tales URI NO DEBEN tomarse de un cach&amp;eacute;. Ver&lt;a href=&quot;#section-9.1.1&quot;&gt;secci&amp;oacute;n 9.1.1&lt;/a&gt; para obtener informaci&amp;oacute;n relacionada.</target>
-        </trans-unit>
-        <trans-unit id="a882eb5ce8619bac0f4ca38a47d118a374f590ac" translate="yes" xml:space="preserve">
-          <source>Unless you have a very specific immediate need, don't use this deprecated technique; switch to HTTP/2 instead. In HTTP/2, domain sharding is no longer useful: the HTTP/2 connection is able to handle parallel unprioritized requests very well. Domain sharding is even detrimental to performance. Most HTTP/2 implementations use a technique called &lt;a href=&quot;https://daniel.haxx.se/blog/2016/08/18/http2-connection-coalescing/&quot;&gt;connection coalescing&lt;/a&gt; to revert eventual domain sharding.</source>
-          <target state="translated">A menos que tenga una necesidad inmediata muy espec&amp;iacute;fica, no utilice esta t&amp;eacute;cnica obsoleta; cambie a HTTP / 2 en su lugar. En HTTP / 2, la fragmentaci&amp;oacute;n del dominio ya no es &amp;uacute;til: la conexi&amp;oacute;n HTTP / 2 puede manejar muy bien solicitudes paralelas sin prioridad. La fragmentaci&amp;oacute;n de dominios es incluso perjudicial para el rendimiento. La mayor&amp;iacute;a de las implementaciones de HTTP / 2 utilizan una t&amp;eacute;cnica denominada &lt;a href=&quot;https://daniel.haxx.se/blog/2016/08/18/http2-connection-coalescing/&quot;&gt;uni&amp;oacute;n de conexiones&lt;/a&gt; para revertir la eventual fragmentaci&amp;oacute;n del dominio.</target>
-        </trans-unit>
-        <trans-unit id="955f79db78c5cf8385c47043fef1a0ffa744352f" translate="yes" xml:space="preserve">
-          <source>Unlike &lt;a href=&quot;#Simple_requests&quot;&gt;&amp;ldquo;simple requests&amp;rdquo; (discussed above)&lt;/a&gt;, &quot;preflighted&quot; requests first send an HTTP request by the &lt;a href=&quot;methods/options&quot;&gt;&lt;code&gt;OPTIONS&lt;/code&gt;&lt;/a&gt; method to the resource on the other domain, in order to determine whether the actual request is safe to send. Cross-site requests are preflighted like this since they may have implications to user data.</source>
-          <target state="translated">A diferencia de las &lt;a href=&quot;#Simple_requests&quot;&gt;&quot;solicitudes simples&quot; (discutidas anteriormente)&lt;/a&gt; , las solicitudes &quot;preflight&quot; env&amp;iacute;an primero una solicitud HTTP mediante el m&amp;eacute;todo &lt;a href=&quot;methods/options&quot;&gt; &lt;code&gt;OPTIONS&lt;/code&gt; &lt;/a&gt; al recurso en el otro dominio, para determinar si la solicitud real es segura de enviar. Las solicitudes entre sitios se revisan previamente de esta manera, ya que pueden tener implicaciones en los datos del usuario.</target>
-        </trans-unit>
-        <trans-unit id="d273c3c1c262b7b14dbca55da7ae721b5a1b7cec" translate="yes" xml:space="preserve">
-          <source>Unlike &lt;a href=&quot;#Simple_requests&quot;&gt;&amp;ldquo;simple requests&amp;rdquo; (discussed above)&lt;/a&gt;, for &quot;preflighted&quot; requests the browser first sends an HTTP request using the &lt;a href=&quot;methods/options&quot;&gt;&lt;code&gt;OPTIONS&lt;/code&gt;&lt;/a&gt; method to the resource on the other origin, in order to determine if the actual request is safe to send. Cross-site requests are preflighted like this since they may have implications to user data.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="b6e7352000385c24773b5c3b97548547d27dfcec" translate="yes" xml:space="preserve">
-          <source>Unlike subsequent evolutions, there were no HTTP headers, meaning that only HTML files could be transmitted, but no other type of documents. There were no status or error codes: in case of a problem, a specific HTML file was send back with the description of the problem contained in it, for human consumption.</source>
-          <target state="translated">A diferencia de las evoluciones posteriores,no había cabeceras HTTP,lo que significaba que sólo se podían transmitir archivos HTML,pero ningún otro tipo de documentos.No había códigos de estado o de error:en caso de problema,se enviaba un archivo HTML específico con la descripción del problema que contenía,para consumo humano.</target>
-        </trans-unit>
-        <trans-unit id="dcc5e76d5034fe1dc84b95117a89364e895b52d1" translate="yes" xml:space="preserve">
-          <source>Unlike the previous case, browser history will consider non-www and www URLs as independent entries.</source>
-          <target state="translated">A diferencia del caso anterior,el historial del navegador considerará las URL no www y www como entradas independientes.</target>
-        </trans-unit>
-        <trans-unit id="7607e9b76ed3569248e88c3e032d8ff230e82e7b" translate="yes" xml:space="preserve">
-          <source>Unoptimized (poorly compressed) images</source>
-          <target state="translated">Imágenes no optimizadas (mal comprimidas)</target>
-        </trans-unit>
-        <trans-unit id="b89f58bc5f8bec30721ee6218fbce69f661ae508" translate="yes" xml:space="preserve">
-          <source>Unoptimized images</source>
-          <target state="translated">Imágenes no optimizadas</target>
-        </trans-unit>
-        <trans-unit id="245e0bd02f62833b644643c9a2e8742e64c2dd7a" translate="yes" xml:space="preserve">
-          <source>Unrecognized markup in an Atom Publishing Protocol document is
-   considered &quot;foreign markup&quot; as defined in &lt;a href=&quot;#section-6&quot;&gt;Section 6&lt;/a&gt; of the Atom
-   Syndication Format [&lt;a href=&quot;https://tools.ietf.org/html/rfc4287&quot;&gt;RFC4287&lt;/a&gt;].  Foreign markup can be used anywhere
-   within a Category or Service Document unless it is explicitly
-   forbidden.  Processors that encounter foreign markup MUST NOT stop
-   processing and MUST NOT signal an error.  Clients SHOULD preserve
-   foreign markup when transmitting such documents.
-
-   The namespace name &quot;&lt;a href=&quot;http://www.w3.org/2007/app&quot;&gt;http://www.w3.org/2007/app&lt;/a&gt;&quot; is reserved for
-   forward-compatible revisions of the Category and Service Document
-   types.  This does not exclude the addition of elements and attributes
-   that might not be recognized by processors conformant to this
-   specification.  Such unrecognized markup from the
-   &quot;&lt;a href=&quot;http://www.w3.org/2007/app&quot;&gt;http://www.w3.org/2007/app&lt;/a&gt;&quot; namespace MUST be treated as foreign
-   markup.</source>
-          <target state="translated">El marcado no reconocido en un documento del Protocolo de publicaci&amp;oacute;n Atom se considera &quot;marcado externo&quot; seg&amp;uacute;n se define en la &lt;a href=&quot;#section-6&quot;&gt;Secci&amp;oacute;n 6&lt;/a&gt; del Formato de &lt;a href=&quot;https://tools.ietf.org/html/rfc4287&quot;&gt;distribuci&amp;oacute;n&lt;/a&gt; Atom [ RFC4287 ]. El marcado extranjero se puede utilizar en cualquier lugar dentro de una categor&amp;iacute;a o documento de servicio a menos que est&amp;eacute; expl&amp;iacute;citamente prohibido. Los procesadores que se encuentran con marcas externas NO DEBEN detener el procesamiento y NO DEBEN se&amp;ntilde;alar un error. Los clientes DEBEN preservar el marcado extranjero al transmitir dichos documentos. El nombre del espacio de nombres &quot; &lt;a href=&quot;http://www.w3.org/2007/app&quot;&gt;http://www.w3.org/2007/app&lt;/a&gt;&quot;est&amp;aacute; reservado para revisiones compatibles con versiones posteriores de los tipos de documentos de categor&amp;iacute;a y servicio. Esto no excluye la adici&amp;oacute;n de elementos y atributos que pueden no ser reconocidos por los procesadores que cumplen con esta especificaci&amp;oacute;n. Este marcado no reconocido de&quot; &lt;a href=&quot;http://www.w3.org/2007/app&quot;&gt;http: // www. w3.org/2007/app&lt;/a&gt; &quot;El espacio de nombres DEBE tratarse como marcado externo.</target>
-        </trans-unit>
-        <trans-unit id="de81198fe40f54ca54fd480498f47c5bd2c4979b" translate="yes" xml:space="preserve">
-          <source>Unsafe eval expressions</source>
-          <target state="translated">Expresiones de evaluación inseguras</target>
-        </trans-unit>
-        <trans-unit id="83339b270595929064cc25f1d47c8f0230812a35" translate="yes" xml:space="preserve">
-          <source>Unsafe inline script</source>
-          <target state="translated">Guión inseguro en línea</target>
-        </trans-unit>
-        <trans-unit id="a3661e5b83227307acd4850c07a9aaa4a3205ae7" translate="yes" xml:space="preserve">
-          <source>Unsafe inline styles</source>
-          <target state="translated">Estilos en línea inseguros</target>
-        </trans-unit>
-        <trans-unit id="b9c54338e2e3842fa7755217571c1728460781da" translate="yes" xml:space="preserve">
-          <source>Unsafe style expressions</source>
-          <target state="translated">Expresiones de estilo inseguro</target>
-        </trans-unit>
-        <trans-unit id="51e569288fd4c9764275c80909467d65bb077394" translate="yes" xml:space="preserve">
-          <source>Unsized media</source>
-          <target state="translated">Medios de comunicación sin tamaño</target>
-        </trans-unit>
-        <trans-unit id="5428a4130e5ace79ec66056cc912fe9f4aab15ba" translate="yes" xml:space="preserve">
-          <source>Unsupported digests</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="03d0f6e963af156d3bbc20c425d63949186d2932" translate="yes" xml:space="preserve">
-          <source>Until browsers catch up with the spec, you may be able to work around this limitation by doing one or both of the following:</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="f9c20faccf27f6079a0458f999820126675b4735" translate="yes" xml:space="preserve">
-          <source>Until version 75, downloads for files with this header would fail in Chrome. See &lt;a href=&quot;https://crbug.com/952834&quot;&gt;bug 952834&lt;/a&gt;.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="8eb9592768ded8c17e4696edcc1f40830d0ef453" translate="yes" xml:space="preserve">
-          <source>Until version 75, downloads for files with this header would fail in WebView. See &lt;a href=&quot;https://crbug.com/952834&quot;&gt;bug 952834&lt;/a&gt;.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="56a7c8e0f8f826b048cc60b6edd36eb21796fb60" translate="yes" xml:space="preserve">
-          <source>Updated. The request resulted in a potential change to the tracking status applicable to this user, user agent, or device.</source>
-          <target state="translated">Actualizado.La solicitud dio lugar a un posible cambio en el estado de seguimiento aplicable a este usuario,agente de usuario o dispositivo.</target>
-        </trans-unit>
-        <trans-unit id="a6f47e00e036c5589eb12e237894b37fb015d365" translate="yes" xml:space="preserve">
-          <source>Upgrade</source>
-          <target state="translated">Upgrade</target>
-        </trans-unit>
-        <trans-unit id="ac2a73c827836daeaf2402394c054c2277994448" translate="yes" xml:space="preserve">
-          <source>Upgrade (RFC 2616)</source>
-          <target state="translated">Actualización (RFC 2616)</target>
-        </trans-unit>
-        <trans-unit id="541adf48138ad8391190feed85e1730b3e897f18" translate="yes" xml:space="preserve">
-          <source>Upgrade Insecure Requests</source>
-          <target state="translated">Solicitudes de actualización de las solicitudes inseguras</target>
-        </trans-unit>
-        <trans-unit id="03453046fa615930ff26806bfd5e6e667dba241d" translate="yes" xml:space="preserve">
-          <source>Upgrade Insecure Requests&lt;br/&gt;&lt;small&gt;The definition of 'upgrade-insecure-requests' in that specification.&lt;/small&gt;</source>
-          <target state="translated">Solicitudes inseguras de actualizaci&amp;oacute;n &lt;br/&gt;&lt;small&gt;La definici&amp;oacute;n de 'solicitudes inseguras de actualizaci&amp;oacute;n' en esa especificaci&amp;oacute;n.&lt;/small&gt;</target>
-        </trans-unit>
-        <trans-unit id="61c6967492e019e22cb265be59268846e0812c5e" translate="yes" xml:space="preserve">
-          <source>Upgrade-Insecure-Requests</source>
-          <target state="translated">Upgrade-Insecure-Requests</target>
-        </trans-unit>
-        <trans-unit id="3b1e9dd129f9691779584493ef0cbd2760709427" translate="yes" xml:space="preserve">
-          <source>Upgrading HTTP/1.1 Connections</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="373052ca50b595448fddb3ae3555f3abe2335a7b" translate="yes" xml:space="preserve">
-          <source>Upgrading an HTTP connection to use &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/TLS&quot;&gt;TLS&lt;/a&gt; uses the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Upgrade&quot;&gt;&lt;code&gt;Upgrade&lt;/code&gt;&lt;/a&gt; header with the token &lt;code&gt;&quot;TLS/1.0&quot;&lt;/code&gt;. If the switch is made successfully, the original request (which included &lt;code&gt;Upgrade&lt;/code&gt;) is completed as normal, but on the TLS connection.</source>
-          <target state="translated">La actualizaci&amp;oacute;n de una conexi&amp;oacute;n HTTP para usar &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/TLS&quot;&gt;TLS&lt;/a&gt; utiliza el encabezado de &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Upgrade&quot;&gt; &lt;code&gt;Upgrade&lt;/code&gt; &lt;/a&gt; con el token &lt;code&gt;&quot;TLS/1.0&quot;&lt;/code&gt; . Si el cambio se realiza correctamente, la solicitud original (que inclu&amp;iacute;a la &lt;code&gt;Upgrade&lt;/code&gt; ) se completa normalmente, pero en la conexi&amp;oacute;n TLS.</target>
-        </trans-unit>
-        <trans-unit id="ab6bbb4d08469c650377ccf5de1a9d9d4253b906" translate="yes" xml:space="preserve">
-          <source>Upgrading to TLS Within HTTP/1.1</source>
-          <target state="translated">Actualización a TLS dentro de HTTP/1.1</target>
-        </trans-unit>
-        <trans-unit id="4a01efdfa6f7b943dbd14d96f1bbda14ed6ca745" translate="yes" xml:space="preserve">
-          <source>Upgrading to a WebSocket connection</source>
-          <target state="translated">Actualizando a una conexión WebSocket</target>
-        </trans-unit>
-        <trans-unit id="0df7fec503cc297ba369a863eb42d823f8a3ecf0" translate="yes" xml:space="preserve">
-          <source>Upgrading to an HTTP/2 connection</source>
-          <target state="translated">Actualización a una conexión HTTP/2</target>
-        </trans-unit>
-        <trans-unit id="0bb18642b70b9f8a9c12ccf39487328f306b8e19" translate="yes" xml:space="preserve">
-          <source>Usage</source>
-          <target state="translated">Usage</target>
-        </trans-unit>
-        <trans-unit id="92d99b032888bf69448943e3813f272f0f43c556" translate="yes" xml:space="preserve">
-          <source>Usage notes</source>
-          <target state="translated">Notas de uso</target>
-        </trans-unit>
-        <trans-unit id="206d556a43a2ee8de81319e120005dc792bee741" translate="yes" xml:space="preserve">
-          <source>Usage of &lt;code&gt;isInNet()&lt;/code&gt;, &lt;code&gt;isResolvable()&lt;/code&gt; and &lt;code&gt;dnsResolve()&lt;/code&gt; functions should be carefully considered, as they require the DNS server to be consulted. All the other autoconfig-related functions are mere string-matching functions that don't require the use of a DNS server. If a proxy is used, the proxy will perform its DNS lookup which would double the impact on the DNS server. Most of the time these functions are not necessary to achieve the desired result.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="609254f79607923f3629c1a1e3f48cf232c1eba4" translate="yes" xml:space="preserve">
-          <source>Use SOCKS if the primary proxy goes down.</source>
-          <target state="translated">Usa SOCKS si el proxy primario se cae.</target>
-        </trans-unit>
-        <trans-unit id="8b4ff35cb43293441d2110cc488f4176d62f368d" translate="yes" xml:space="preserve">
-          <source>Use and Interpretation of HTTP Version Numbers</source>
-          <target state="translated">Uso e interpretación de los números de versión HTTP</target>
         </trans-unit>
       </group>
     </body>

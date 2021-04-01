@@ -3,6 +3,334 @@
   <file source-language="en" target-language="zh-CN" datatype="htmlbody" original="apache_http_server">
     <body>
       <group id="apache_http_server">
+        <trans-unit id="8756a987e4626cbc150ea90cde893c53ad4cc39d" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;MaxThreads&lt;/code&gt; directive sets the desired maximum number worker threads allowable. The default value is also the compiled in hard limit. Therefore it can only be lowered, for example:</source>
+          <target state="translated">该 &lt;code&gt;MaxThreads&lt;/code&gt; 指令集所需的最大数量的工作线程允许的。默认值也是编译硬限制。因此只能降低它，例如：</target>
+        </trans-unit>
+        <trans-unit id="bd6d119b3a51a6f6abe14d4bbff1d67e47275c10" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;MimeMagicFile&lt;/code&gt; directive can be used to enable this module, the default file is distributed at &lt;code&gt;conf/magic&lt;/code&gt;. Non-rooted paths are relative to the &lt;code&gt;&lt;a href=&quot;core#serverroot&quot;&gt;ServerRoot&lt;/a&gt;&lt;/code&gt;. Virtual hosts will use the same file as the main server unless a more specific setting is used, in which case the more specific setting overrides the main server's file.</source>
+          <target state="translated">该 &lt;code&gt;MimeMagicFile&lt;/code&gt; 指令可以用来启用此模块，默认的文件是在分布式 &lt;code&gt;conf/magic&lt;/code&gt; 。无根路径是相对于 &lt;code&gt;&lt;a href=&quot;core#serverroot&quot;&gt;ServerRoot&lt;/a&gt;&lt;/code&gt; 的。除非使用更特定的设置，否则虚拟主机将使用与主服务器相同的文件，在这种情况下，更特定的设置将覆盖主服务器的文件。</target>
+        </trans-unit>
+        <trans-unit id="37a63ef02527eb11f7ba2607d3309dc21ca0e8b5" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;MinSpareServers&lt;/code&gt; directive sets the desired minimum number of &lt;em&gt;idle&lt;/em&gt; child server processes. An idle process is one which is not handling a request. If there are fewer than &lt;code&gt;MinSpareServers&lt;/code&gt; idle, then the parent process creates new children: It will spawn one, wait a second, then spawn two, wait a second, then spawn four, and it will continue exponentially until it is spawning 32 children per second. It will stop whenever it satisfies the &lt;code&gt;MinSpareServers&lt;/code&gt; setting.</source>
+          <target state="translated">该 &lt;code&gt;MinSpareServers&lt;/code&gt; 指令设置的所需的最小数量的&lt;em&gt;空闲&lt;/em&gt;子服务器进程。空闲进程是不处理请求的进程。如果空闲的少于 &lt;code&gt;MinSpareServers&lt;/code&gt; ，则父进程将创建新的子进程：它将先生成一个，再等待一秒钟，然后生成两个，再等待一秒钟，再生成四个，然后将以指数方式继续进行，直到每秒每秒生成32个孩子。 。只要满足 &lt;code&gt;MinSpareServers&lt;/code&gt; 设置，它将停止。</target>
+        </trans-unit>
+        <trans-unit id="a39d9126c94dbac6b8178b32fe80bb04df2be254" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ModMimeUsePathInfo&lt;/code&gt; directive is used to combine the filename with the &lt;code&gt;path_info&lt;/code&gt; URL component to apply &lt;code&gt;&lt;a href=&quot;mod_mime&quot;&gt;mod_mime&lt;/a&gt;&lt;/code&gt;'s directives to the request. The default value is &lt;code&gt;Off&lt;/code&gt; - therefore, the &lt;code&gt;path_info&lt;/code&gt; component is ignored.</source>
+          <target state="translated">该 &lt;code&gt;ModMimeUsePathInfo&lt;/code&gt; 指令用于与文件名结合 &lt;code&gt;path_info&lt;/code&gt; URL组件应用 &lt;code&gt;&lt;a href=&quot;mod_mime&quot;&gt;mod_mime&lt;/a&gt;&lt;/code&gt; 的指令请求。默认值为&amp;ldquo; &lt;code&gt;Off&lt;/code&gt; -因此，会忽略 &lt;code&gt;path_info&lt;/code&gt; 组件。</target>
+        </trans-unit>
+        <trans-unit id="a242de3e43bd169a351b111ef9110c5d893663cb" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;Mutex&lt;/code&gt; directive can be used to change the underlying implementation used for mutexes, in order to relieve functional or performance problems with &lt;a href=&quot;https://httpd.apache.org/docs/2.4/en/glossary.html#apr&quot;&gt;APR&lt;/a&gt;'s default choice.</source>
+          <target state="translated">该 &lt;code&gt;Mutex&lt;/code&gt; 指令可以用来改变用于互斥体的底层实现，为了缓解与功能或性能的问题&lt;a href=&quot;https://httpd.apache.org/docs/2.4/en/glossary.html#apr&quot;&gt;APR&lt;/a&gt;的默认选择。</target>
+        </trans-unit>
+        <trans-unit id="df8b98e4bb74d6c8ceef3f4e236769ff929b7720" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;Mutex&lt;/code&gt; directive is typically used in the following exceptional situations:</source>
+          <target state="translated">该 &lt;code&gt;Mutex&lt;/code&gt; 指令通常用在以下例外情况：</target>
+        </trans-unit>
+        <trans-unit id="855ba960702ac258fb09fad1f9a712de86e138e1" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;Mutex&lt;/code&gt; directive sets the mechanism, and optionally the lock file location, that httpd and modules use to serialize access to resources. Specify &lt;code&gt;default&lt;/code&gt; as the second argument to change the settings for all mutexes; specify a mutex name (see table below) as the second argument to override defaults only for that mutex.</source>
+          <target state="translated">该 &lt;code&gt;Mutex&lt;/code&gt; 指令设置的机制，以及可选的锁文件的位置，即httpd和模块使用串行访问的资源。将 &lt;code&gt;default&lt;/code&gt; 指定为第二个参数以更改所有互斥锁的设置。指定互斥量名称（请参见下表）作为第二个参数，以仅覆盖该互斥量的默认值。</target>
+        </trans-unit>
+        <trans-unit id="b8a82757b936b82a2fb81837eacdd53a7d36d784" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;NameWidth&lt;/code&gt; keyword allows you to specify the width of the filename column in bytes.</source>
+          <target state="translated">该 &lt;code&gt;NameWidth&lt;/code&gt; 关键字允许您指定以字节为单位的文件名列的宽度。</target>
+        </trans-unit>
+        <trans-unit id="bf652253d2658dc6dd02d33373dbf346ecd67732" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;NegotiatedOnly&lt;/code&gt; option provides that every extension following the base name must correlate to a recognized &lt;code&gt;&lt;a href=&quot;mod_mime&quot;&gt;mod_mime&lt;/a&gt;&lt;/code&gt; extension for content negotiation, &lt;em&gt;e.g.&lt;/em&gt; Charset, Content-Type, Language, or Encoding. This is the strictest implementation with the fewest unexpected side effects, and is the default behavior.</source>
+          <target state="translated">该 &lt;code&gt;NegotiatedOnly&lt;/code&gt; 选项提供以下基本名称每个扩展名必须关联到一个公认的 &lt;code&gt;&lt;a href=&quot;mod_mime&quot;&gt;mod_mime&lt;/a&gt;&lt;/code&gt; 扩展内容协商，&lt;em&gt;如&lt;/em&gt;字符集，内容类型，语言或编码。这是最严格的实现，具有最少的意外副作用，并且是默认行为。</target>
+        </trans-unit>
+        <trans-unit id="52c9993765ba5c194ab54d2997f26f486ae5425d" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;Off&lt;/code&gt; setting, which is the default, suppresses the footer line (and is therefore compatible with the behavior of Apache-1.2 and below). The &lt;code&gt;On&lt;/code&gt; setting simply adds a line with the server version number and &lt;code&gt;&lt;a href=&quot;#servername&quot;&gt;ServerName&lt;/a&gt;&lt;/code&gt; of the serving virtual host, and the &lt;code&gt;EMail&lt;/code&gt; setting additionally creates a &quot;mailto:&quot; reference to the &lt;code&gt;&lt;a href=&quot;#serveradmin&quot;&gt;ServerAdmin&lt;/a&gt;&lt;/code&gt; of the referenced document.</source>
+          <target state="translated">&amp;ldquo; &lt;code&gt;Off&lt;/code&gt; 设置是默认设置，它禁止显示页脚行（因此与Apache-1.2及更低版本的行为兼容）。&amp;ldquo; &lt;code&gt;On&lt;/code&gt; 设置仅添加带有服务器版本号和所服务虚拟主机的 &lt;code&gt;&lt;a href=&quot;#servername&quot;&gt;ServerName&lt;/a&gt;&lt;/code&gt; 的行，而&amp;ldquo; &lt;code&gt;EMail&lt;/code&gt; 设置还创建一个对引用文档的 &lt;code&gt;&lt;a href=&quot;#serveradmin&quot;&gt;ServerAdmin&lt;/a&gt;&lt;/code&gt; 的&amp;ldquo; mailto：&amp;rdquo;引用。</target>
+        </trans-unit>
+        <trans-unit id="58b2be23f10b16e376a727a7d3c19c27b51c0641" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;OmitPID&lt;/code&gt; keyword suppresses the addition of the httpd parent process id from the lock file name.</source>
+          <target state="translated">该 &lt;code&gt;OmitPID&lt;/code&gt; 关键字抑制除了从锁定的文件名的httpd父进程ID的。</target>
+        </trans-unit>
+        <trans-unit id="469b774a02b89cab7e30f3a204c7b32e7dd8bd2d" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;Options&lt;/code&gt; directive controls which server features are available in a particular directory.</source>
+          <target state="translated">该 &lt;code&gt;Options&lt;/code&gt; 指令控制该服务器功能在特定目录可用。</target>
+        </trans-unit>
+        <trans-unit id="f5c740835079b24daee0cfc6b038cae6ce5fd04c" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;Order&lt;/code&gt; directive controls the order of access directive processing only within each phase of the server's configuration processing. This implies, for example, that an &lt;code&gt;&lt;a href=&quot;#allow&quot;&gt;Allow&lt;/a&gt;&lt;/code&gt; or &lt;code&gt;&lt;a href=&quot;#deny&quot;&gt;Deny&lt;/a&gt;&lt;/code&gt; directive occurring in a &lt;code&gt;&lt;a href=&quot;core#location&quot;&gt;&amp;lt;Location&amp;gt;&lt;/a&gt;&lt;/code&gt; section will always be evaluated after an &lt;code&gt;&lt;a href=&quot;#allow&quot;&gt;Allow&lt;/a&gt;&lt;/code&gt; or &lt;code&gt;&lt;a href=&quot;#deny&quot;&gt;Deny&lt;/a&gt;&lt;/code&gt; directive occurring in a &lt;code&gt;&lt;a href=&quot;core#directory&quot;&gt;&amp;lt;Directory&amp;gt;&lt;/a&gt;&lt;/code&gt; section or &lt;code&gt;.htaccess&lt;/code&gt; file, regardless of the setting of the &lt;code&gt;Order&lt;/code&gt; directive. For details on the merging of configuration sections, see the documentation on &lt;a href=&quot;../sections&quot;&gt;How Directory, Location and Files sections work&lt;/a&gt;.</source>
+          <target state="translated">该 &lt;code&gt;Order&lt;/code&gt; 指令控制访问指令仅在服务器的配置的每个阶段内处理订单。这意味着，例如，一个 &lt;code&gt;&lt;a href=&quot;#allow&quot;&gt;Allow&lt;/a&gt;&lt;/code&gt; 或 &lt;code&gt;&lt;a href=&quot;#deny&quot;&gt;Deny&lt;/a&gt;&lt;/code&gt; 在一个指令中发生 &lt;code&gt;&lt;a href=&quot;core#location&quot;&gt;&amp;lt;Location&amp;gt;&lt;/a&gt;&lt;/code&gt; 部分将总是被评估后的 &lt;code&gt;&lt;a href=&quot;#allow&quot;&gt;Allow&lt;/a&gt;&lt;/code&gt; 或 &lt;code&gt;&lt;a href=&quot;#deny&quot;&gt;Deny&lt;/a&gt;&lt;/code&gt; 在一个指令中发生 &lt;code&gt;&lt;a href=&quot;core#directory&quot;&gt;&amp;lt;Directory&amp;gt;&lt;/a&gt;&lt;/code&gt; 部或 &lt;code&gt;.htaccess&lt;/code&gt; 文件，而不管的设定的 &lt;code&gt;Order&lt;/code&gt; 指令。有关合并配置部分的详细信息，请参阅&amp;ldquo; &lt;a href=&quot;../sections&quot;&gt;目录，位置和文件&amp;rdquo;部分的工作方式&lt;/a&gt;文档。</target>
+        </trans-unit>
+        <trans-unit id="207bc357beb72a07c77745f5ab04464adf46ad23" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;Order&lt;/code&gt; directive, along with the &lt;code&gt;&lt;a href=&quot;#allow&quot;&gt;Allow&lt;/a&gt;&lt;/code&gt; and &lt;code&gt;&lt;a href=&quot;#deny&quot;&gt;Deny&lt;/a&gt;&lt;/code&gt; directives, controls a three-pass access control system. The first pass processes either all &lt;code&gt;&lt;a href=&quot;#allow&quot;&gt;Allow&lt;/a&gt;&lt;/code&gt; or all &lt;code&gt;&lt;a href=&quot;#deny&quot;&gt;Deny&lt;/a&gt;&lt;/code&gt; directives, as specified by the &lt;code&gt;&lt;a href=&quot;#order&quot;&gt;Order&lt;/a&gt;&lt;/code&gt; directive. The second pass parses the rest of the directives (&lt;code&gt;&lt;a href=&quot;#deny&quot;&gt;Deny&lt;/a&gt;&lt;/code&gt; or &lt;code&gt;&lt;a href=&quot;#allow&quot;&gt;Allow&lt;/a&gt;&lt;/code&gt;). The third pass applies to all requests which do not match either of the first two.</source>
+          <target state="translated">该 &lt;code&gt;Order&lt;/code&gt; 指令，与沿 &lt;code&gt;&lt;a href=&quot;#allow&quot;&gt;Allow&lt;/a&gt;&lt;/code&gt; 和 &lt;code&gt;&lt;a href=&quot;#deny&quot;&gt;Deny&lt;/a&gt;&lt;/code&gt; 指令，控制三通道门禁控制系统。第一遍处理 &lt;code&gt;&lt;a href=&quot;#order&quot;&gt;Order&lt;/a&gt;&lt;/code&gt; 指令指定的所有 &lt;code&gt;&lt;a href=&quot;#allow&quot;&gt;Allow&lt;/a&gt;&lt;/code&gt; 指令或所有 &lt;code&gt;&lt;a href=&quot;#deny&quot;&gt;Deny&lt;/a&gt;&lt;/code&gt; 指令。第二遍解析其余指令（ &lt;code&gt;&lt;a href=&quot;#deny&quot;&gt;Deny&lt;/a&gt;&lt;/code&gt; 或 &lt;code&gt;&lt;a href=&quot;#allow&quot;&gt;Allow&lt;/a&gt;&lt;/code&gt; ）。第三遍适用于所有与前两个都不匹配的请求。</target>
+        </trans-unit>
+        <trans-unit id="48927642bad1dbcb462ae859bef010c13854f2ff" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;OutputSed&lt;/code&gt; directive specifies the &lt;code&gt;sed&lt;/code&gt; command to execute on the response.</source>
+          <target state="translated">所述 &lt;code&gt;OutputSed&lt;/code&gt; 指令指定 &lt;code&gt;sed&lt;/code&gt; 命令的响应执行。</target>
+        </trans-unit>
+        <trans-unit id="94c2978780147c4c5795aee4fb3e08caa7fd6f37" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;PT&lt;/code&gt; flag implies the &lt;code&gt;L&lt;/code&gt; flag: rewriting will be stopped in order to pass the request to the next phase of processing.</source>
+          <target state="translated">的 &lt;code&gt;PT&lt;/code&gt; 标志意味着 &lt;code&gt;L&lt;/code&gt; 标志：将重写，以便将请求传递到处理的下一阶段被停止。</target>
+        </trans-unit>
+        <trans-unit id="a0ff01d8e7ff8ac6f2fa074f205ba57883b34783" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;PeerExtList(&lt;em&gt;object-ID&lt;/em&gt;)&lt;/code&gt; function expects to find zero or more instances of the X.509 certificate extension identified by the given &lt;em&gt;object ID&lt;/em&gt; (OID) in the client certificate. The expression evaluates to true if the left-hand side string matches exactly against the value of an extension identified with this OID. (If multiple extensions with the same OID are present, at least one extension must match).</source>
+          <target state="translated">所述 &lt;code&gt;PeerExtList(&lt;em&gt;object-ID&lt;/em&gt;)&lt;/code&gt; 功能希望找到由给定所确定的X.509证书扩展的零个或多个实例&lt;em&gt;对象ID&lt;/em&gt;在客户证书中（OID）。如果左侧字符串与与此OID标识的扩展名的值完全匹配，则该表达式的计算结果为true。（如果存在多个具有相同OID的扩展名，则至少一个扩展名必须匹配）。</target>
+        </trans-unit>
+        <trans-unit id="ddd965d7691e70338d0469f9a3625debed77cc8e" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;PidFile&lt;/code&gt; directive sets the file to which the server records the process id of the daemon. If the filename is not absolute then it is assumed to be relative to the &lt;code&gt;&lt;a href=&quot;core#serverroot&quot;&gt;ServerRoot&lt;/a&gt;&lt;/code&gt;.</source>
+          <target state="translated">该 &lt;code&gt;PidFile&lt;/code&gt; 指令设定服务器用于记录守护程序的进程ID文件。如果文件名不是绝对文件名，则假定它是相对于 &lt;code&gt;&lt;a href=&quot;core#serverroot&quot;&gt;ServerRoot&lt;/a&gt;&lt;/code&gt; 的。</target>
+        </trans-unit>
+        <trans-unit id="76e7b1a8f3e7d0d92481816fc797a410cebd477a" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;PidFile&lt;/code&gt; is subject to the same warnings about log file placement and &lt;a href=&quot;../misc/security_tips#serverroot&quot;&gt;security&lt;/a&gt;.</source>
+          <target state="translated">该 &lt;code&gt;PidFile&lt;/code&gt; 受有关日志文件的位置和相同的警告信息&lt;a href=&quot;../misc/security_tips#serverroot&quot;&gt;的安全&lt;/a&gt;。</target>
+        </trans-unit>
+        <trans-unit id="de06118d58b504228b24c69c4f2a18979f822cc1" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;PreservesContentLength&lt;/code&gt; keyword specifies that the filter preserves the content length. This is not the default, as most filters change the content length. In the event that the filter doesn't modify the length, this keyword should be specified.</source>
+          <target state="translated">所述 &lt;code&gt;PreservesContentLength&lt;/code&gt; 关键字指定的过滤器保留内容长度。这不是默认设置，因为大多数过滤器都会更改内容长度。如果过滤器未修改长度，则应指定此关键字。</target>
+        </trans-unit>
+        <trans-unit id="c6baacdfe63b6eb368df66a9386a7d5d560891d9" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;PrivilegesMode&lt;/code&gt; directive allows you to select either &lt;var&gt;FAST&lt;/var&gt; or &lt;var&gt;SECURE&lt;/var&gt; mode. You can mix modes, using &lt;var&gt;FAST&lt;/var&gt; mode for trusted users and fully-audited code paths, while imposing SECURE mode where an untrusted user has scope to introduce code.</source>
+          <target state="translated">该 &lt;code&gt;PrivilegesMode&lt;/code&gt; 指令允许您选择 &lt;var&gt;FAST&lt;/var&gt; 或 &lt;var&gt;SECURE&lt;/var&gt; 模式。您可以混合模式，对受信任的用户和经过完全审核的代码路径使用 &lt;var&gt;FAST&lt;/var&gt; 模式，而在不受信任的用户可以引入代码的范围内使用SECURE模式。</target>
+        </trans-unit>
+        <trans-unit id="e1527722f657eab31d1b2106ccc0badb4ec20789" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ProtocolEcho&lt;/code&gt; directive enables or disables the echo server.</source>
+          <target state="translated">该 &lt;code&gt;ProtocolEcho&lt;/code&gt; 指令启用或禁用回声服务器。</target>
+        </trans-unit>
+        <trans-unit id="4045ad0738598223f1baf290cc56f16213c2475b" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ProxyBadHeader&lt;/code&gt; directive determines the behavior of &lt;code&gt;&lt;a href=&quot;mod_proxy&quot;&gt;mod_proxy&lt;/a&gt;&lt;/code&gt; if it receives syntactically invalid response header lines (&lt;em&gt;i.e.&lt;/em&gt; containing no colon) from the origin server. The following arguments are possible:</source>
+          <target state="translated">如果 &lt;code&gt;ProxyBadHeader&lt;/code&gt; 指令从源服务器接收到语法上无效的响应头行（&lt;em&gt;即&lt;/em&gt;，不包含冒号），则它确定 &lt;code&gt;&lt;a href=&quot;mod_proxy&quot;&gt;mod_proxy&lt;/a&gt;&lt;/code&gt; 的行为。以下参数是可能的：&lt;em&gt;&lt;/em&gt;</target>
+        </trans-unit>
+        <trans-unit id="978f50a7a4d11fa6ec90c37f8fd99f34f41c888f" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ProxyBlock&lt;/code&gt; directive specifies a list of words, hosts and/or domains, separated by spaces. HTTP, HTTPS, and FTP document requests to sites whose names contain matched words, hosts or domains are &lt;em&gt;blocked&lt;/em&gt; by the proxy server. The proxy module will also attempt to determine IP addresses of list items which may be hostnames during startup, and cache them for match test as well. That may slow down the startup time of the server.</source>
+          <target state="translated">所述 &lt;code&gt;ProxyBlock&lt;/code&gt; 指令指定的话，主机和/或结构域，由空格分隔的列表。对名称包含匹配的单词，主机或域的站点的HTTP，HTTPS和FTP文档请求&lt;em&gt;被&lt;/em&gt;代理服务器&lt;em&gt;阻止&lt;/em&gt;。代理模块还将尝试确定列表项的IP地址，这些列表项可能是启动期间的主机名，并且也将其缓存以进行匹配测试。这可能会减慢服务器的启动时间。</target>
+        </trans-unit>
+        <trans-unit id="1bd6cb629e4911e631c6079eb55a93088666f26f" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ProxyExpressDBMFile&lt;/code&gt; directive points to the location of the Express map DBM file. This file serves to map the incoming server name, obtained from the Host: header, to a backend URL.</source>
+          <target state="translated">该 &lt;code&gt;ProxyExpressDBMFile&lt;/code&gt; 指令指向快递地图DBM文件的位置。该文件用于将从Host：标头获得的传入服务器名称映射到后端URL。</target>
+        </trans-unit>
+        <trans-unit id="df4a3563619867849bac584e307099d96cefe2f5" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ProxyExpressDBMType&lt;/code&gt; directive controls the DBM type expected by the module. The default is the default DBM type created with &lt;code&gt;&lt;a href=&quot;../programs/httxt2dbm&quot;&gt;httxt2dbm&lt;/a&gt;&lt;/code&gt;.</source>
+          <target state="translated">该 &lt;code&gt;ProxyExpressDBMType&lt;/code&gt; 指令控制由模块预期DBM类型。默认值是使用 &lt;code&gt;&lt;a href=&quot;../programs/httxt2dbm&quot;&gt;httxt2dbm&lt;/a&gt;&lt;/code&gt; 创建的默认DBM类型。</target>
+        </trans-unit>
+        <trans-unit id="92eb7ee34a93af990ddb39d906088f81afd5aa79" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ProxyExpressEnable&lt;/code&gt; directive controls whether the module will be active.</source>
+          <target state="translated">该 &lt;code&gt;ProxyExpressEnable&lt;/code&gt; 指令控制该模块是否会被激活。</target>
+        </trans-unit>
+        <trans-unit id="446053fbb2d7ac3ddbdf68da7e1968d31ed35b5b" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ProxyFtpDirCharset&lt;/code&gt; directive defines the character set to be set for FTP directory listings in HTML generated by &lt;code&gt;&lt;a href=&quot;mod_proxy_ftp&quot;&gt;mod_proxy_ftp&lt;/a&gt;&lt;/code&gt;.</source>
+          <target state="translated">该 &lt;code&gt;ProxyFtpDirCharset&lt;/code&gt; 指令定义的字符集通过生成HTML FTP目录列表进行设置 &lt;code&gt;&lt;a href=&quot;mod_proxy_ftp&quot;&gt;mod_proxy_ftp&lt;/a&gt;&lt;/code&gt; 模块。</target>
+        </trans-unit>
+        <trans-unit id="6ce78758313c9b35047cac1c0ee77244969e2a65" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ProxyFtpEscapeWildcards&lt;/code&gt; directive controls whether wildcard characters (&quot;*?[{~&quot;) in requested filenames are escaped with backslash before sending them to the FTP server. That is the default behavior, but many FTP servers don't know about the escaping and try to serve the literal filenames they were sent, including the backslashes in the names.</source>
+          <target state="translated">该 &lt;code&gt;ProxyFtpEscapeWildcards&lt;/code&gt; 指令控制是否通配符（&amp;ldquo;*？[{〜&amp;rdquo;）中要求的文件名它们发送到FTP服务器之前用反斜杠转义。这是默认行为，但是许多FTP服务器不知道转义，而是尝试提供发送的原义文件名，包括名称中的反斜杠。</target>
+        </trans-unit>
+        <trans-unit id="aa80f7a5601790221401e6771c57ddc89a5c598e" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ProxyFtpListOnWildcard&lt;/code&gt; directive controls whether wildcard characters (&quot;*?[{~&quot;) in requested filenames cause &lt;code&gt;&lt;a href=&quot;mod_proxy_ftp&quot;&gt;mod_proxy_ftp&lt;/a&gt;&lt;/code&gt; to return a listing of files instead of downloading a file. By default (value on), they do.</source>
+          <target state="translated">该 &lt;code&gt;ProxyFtpListOnWildcard&lt;/code&gt; 指令控制是否通配符（&amp;ldquo;*？[{〜&amp;rdquo;）中要求的文件名事业 &lt;code&gt;&lt;a href=&quot;mod_proxy_ftp&quot;&gt;mod_proxy_ftp&lt;/a&gt;&lt;/code&gt; 模块返回文件的列表，而不是下载文件。默认情况下（启用值），它们会执行。</target>
+        </trans-unit>
+        <trans-unit id="34d810ef116b0d8d9ad66887ba204114c4c98dfb" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ProxyHCExpr&lt;/code&gt; directive allows for creating a named condition expression that checks the response headers of the backend server to determine its health. This named condition can then be assigned to balancer members via the &lt;code&gt;hcexpr&lt;/code&gt; parameter.</source>
+          <target state="translated">该 &lt;code&gt;ProxyHCExpr&lt;/code&gt; 指令允许创建一个名为条件表达式检查后端服务器的响应头，以确定其健康状况。然后可以通过 &lt;code&gt;hcexpr&lt;/code&gt; 参数将此命名条件分配给平衡器成员。</target>
+        </trans-unit>
+        <trans-unit id="5ce318cb530bc0f759078bf0660069da794da5b8" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ProxyHCTemplate&lt;/code&gt; directive allows for creating a named set (template) of health check parameters that can then be assigned to balancer members via the &lt;code&gt;hctemplate&lt;/code&gt; parameter.</source>
+          <target state="translated">该 &lt;code&gt;ProxyHCTemplate&lt;/code&gt; 指令允许创建的然后可以通过分配到平衡器成员健康检查参数的命名集（模板） &lt;code&gt;hctemplate&lt;/code&gt; 参数。</target>
+        </trans-unit>
+        <trans-unit id="b33a2b8a7be08fcbaf30aeb0d102ca567ff4c2e0" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ProxyIOBufferSize&lt;/code&gt; directive adjusts the size of the internal buffer which is used as a scratchpad for the data between input and output. The size must be at least &lt;code&gt;512&lt;/code&gt;.</source>
+          <target state="translated">所述 &lt;code&gt;ProxyIOBufferSize&lt;/code&gt; 指令调整其被用作输入和输出之间的数据的暂存器中的内部缓冲器的大小。大小必须至少为 &lt;code&gt;512&lt;/code&gt; 。</target>
+        </trans-unit>
+        <trans-unit id="e185b02916358aeff4d52556a1d270bd9f7cd480" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ProxyMaxForwards&lt;/code&gt; directive specifies the maximum number of proxies through which a request may pass if there's no &lt;code&gt;Max-Forwards&lt;/code&gt; header supplied with the request. This may be set to prevent infinite proxy loops or a DoS attack.</source>
+          <target state="translated">所述 &lt;code&gt;ProxyMaxForwards&lt;/code&gt; 指令指定代理的最大数量，通过该如果没有请求可以通过 &lt;code&gt;Max-Forwards&lt;/code&gt; 报头与所述请求中提供。可以设置此项以防止无限代理循环或DoS攻击。</target>
+        </trans-unit>
+        <trans-unit id="146b8f5c5b583a1efc65e9fa44b07bbf6178f8a3" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ProxyReceiveBufferSize&lt;/code&gt; directive specifies an explicit (TCP/IP) network buffer size for proxied HTTP and FTP connections, for increased throughput. It has to be greater than &lt;code&gt;512&lt;/code&gt; or set to &lt;code&gt;0&lt;/code&gt; to indicate that the system's default buffer size should be used.</source>
+          <target state="translated">所述 &lt;code&gt;ProxyReceiveBufferSize&lt;/code&gt; 指令指定的显式（TCP / IP）网络缓冲区大小为代理的HTTP和FTP连接，以增加吞吐量。它必须大于 &lt;code&gt;512&lt;/code&gt; 或设置为 &lt;code&gt;0&lt;/code&gt; 以指示应使用系统的默认缓冲区大小。</target>
+        </trans-unit>
+        <trans-unit id="edb4e4ae64a5d1c78dfd7ed938a960715054ca65" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ProxyRemoteMatch&lt;/code&gt; is identical to the &lt;code&gt;&lt;a href=&quot;#proxyremote&quot;&gt;ProxyRemote&lt;/a&gt;&lt;/code&gt; directive, except that the first argument is a &lt;a href=&quot;https://httpd.apache.org/docs/2.4/en/glossary.html#regex&quot;&gt;regular expression&lt;/a&gt; match against the requested URL.</source>
+          <target state="translated">所述 &lt;code&gt;ProxyRemoteMatch&lt;/code&gt; 是相同的 &lt;code&gt;&lt;a href=&quot;#proxyremote&quot;&gt;ProxyRemote&lt;/a&gt;&lt;/code&gt; 指令，所不同的是第一个参数是一个&lt;a href=&quot;https://httpd.apache.org/docs/2.4/en/glossary.html#regex&quot;&gt;正则表达式&lt;/a&gt;对所请求的URL的匹配。</target>
+        </trans-unit>
+        <trans-unit id="aa084d8828ecacafedd572f431e2fb8ab5a2f6cc" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ProxySCGIInternalRedirect&lt;/code&gt; enables the backend to internally redirect the gateway to a different URL. This feature originates in &lt;code&gt;&lt;a href=&quot;mod_cgi&quot;&gt;mod_cgi&lt;/a&gt;&lt;/code&gt;, which internally redirects the response if the response status is &lt;code&gt;OK&lt;/code&gt; (&lt;code&gt;200&lt;/code&gt;) and the response contains a &lt;code&gt;Location&lt;/code&gt; (or configured alternate header) and its value starts with a slash (&lt;code&gt;/&lt;/code&gt;). This value is interpreted as a new local URL that Apache httpd internally redirects to.</source>
+          <target state="translated">该 &lt;code&gt;ProxySCGIInternalRedirect&lt;/code&gt; 使后端到网关内部重定向到一个不同的URL。此功能起源于 &lt;code&gt;&lt;a href=&quot;mod_cgi&quot;&gt;mod_cgi&lt;/a&gt;&lt;/code&gt; ，如果响应状态为 &lt;code&gt;OK&lt;/code&gt; （ &lt;code&gt;200&lt;/code&gt; ）并且响应包含 &lt;code&gt;Location&lt;/code&gt; （或配置的备用标头）并且其值以斜杠（ &lt;code&gt;/&lt;/code&gt; ）开头，则该模块在内部重定向响应。该值被解释为Apache httpd内部重定向到的新本地URL。</target>
+        </trans-unit>
+        <trans-unit id="741a9d147882b9d7d924ecb1b6e46913b2896731" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ProxySCGISendfile&lt;/code&gt; argument determines the gateway behaviour:</source>
+          <target state="translated">该 &lt;code&gt;ProxySCGISendfile&lt;/code&gt; 参数确定网关行为：</target>
+        </trans-unit>
+        <trans-unit id="49882af03eb55d05451faea7724ab17b01657e65" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ProxySCGISendfile&lt;/code&gt; directive enables the SCGI backend to let files be served directly by the gateway. This is useful for performance purposes &amp;mdash; httpd can use &lt;code&gt;sendfile&lt;/code&gt; or other optimizations, which are not possible if the file comes over the backend socket. Additionally, the file contents are not transmitted twice.</source>
+          <target state="translated">该 &lt;code&gt;ProxySCGISendfile&lt;/code&gt; 指令使SCGI的后端，让文件由网关直接服务。这对于提高性能很有用 &lt;code&gt;sendfile&lt;/code&gt; 可以使用sendfile或其他优化，如果文件来自后端套接字，则不可能。此外，文件内容不会发送两次。</target>
+        </trans-unit>
+        <trans-unit id="f163e8e6321eac0a97541af0a8c72e8206d8319c" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;RLimit&lt;/code&gt;* directives are used to limit the amount of resources which can be used by processes forked off from the httpd children. In particular, this will control resources used by CGI scripts and SSI exec commands.</source>
+          <target state="translated">所述 &lt;code&gt;RLimit&lt;/code&gt; *指令用于限制可以通过从子httpd分叉关闭过程中使用的资源量。特别是，这将控制CGI脚本和SSI exec命令使用的资源。</target>
+        </trans-unit>
+        <trans-unit id="831e0c0010b9edcb4e8f63f1bf1b21cad9c7bcaa" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ReadmeName&lt;/code&gt; directive sets the name of the file that will be appended to the end of the index listing. &lt;var&gt;Filename&lt;/var&gt; is the name of the file to include, and is taken to be relative to the location being indexed. If &lt;var&gt;Filename&lt;/var&gt; begins with a slash, as in example 2, it will be taken to be relative to the &lt;code&gt;&lt;a href=&quot;core#documentroot&quot;&gt;DocumentRoot&lt;/a&gt;&lt;/code&gt;.</source>
+          <target state="translated">该 &lt;code&gt;ReadmeName&lt;/code&gt; 指令集将追加到索引列表的末尾文件的名称。 &lt;var&gt;Filename&lt;/var&gt; 是要包含的文件的名称，并且被视为相对于要建立索引的位置而言。如果 &lt;var&gt;Filename&lt;/var&gt; 以斜杠开头，如示例2所示，它将被视为相对于 &lt;code&gt;&lt;a href=&quot;core#documentroot&quot;&gt;DocumentRoot&lt;/a&gt;&lt;/code&gt; 。</target>
+        </trans-unit>
+        <trans-unit id="469f0f35ec8e6ed0f301d1bef84b93e1cbbabdb8" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;Redirect&lt;/code&gt; directive maps an old URL into a new one by asking the client to refetch the resource at the new location.</source>
+          <target state="translated">该 &lt;code&gt;Redirect&lt;/code&gt; 指令通过询问客户在新的位置重新获取资源映射旧网址进入一个新的。</target>
+        </trans-unit>
+        <trans-unit id="5fe78c451560ba9010d052d464d137d0b8399929" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;RegisteredMethods&lt;/code&gt; option should &lt;strong&gt;not&lt;/strong&gt; be toggled for forward proxy hosts, as the methods supported by the origin servers are unknown to the proxy server.</source>
+          <target state="translated">该 &lt;code&gt;RegisteredMethods&lt;/code&gt; 选项应该&lt;strong&gt;不会&lt;/strong&gt;被切换为转发代理主机，由原始服务器所支持的方法是未知的代理服务器。</target>
+        </trans-unit>
+        <trans-unit id="64350918c017f0e3bdc4ce615f7af67e0515a3b0" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;RemoteIPProxyProtocol&lt;/code&gt; directive enables or disables the reading and handling of the PROXY protocol connection header. If enabled with the &lt;code&gt;On&lt;/code&gt; flag, the upstream client &lt;em&gt;must&lt;/em&gt; send the header every time it opens a connection or the connection will be aborted unless it is in the list of disabled hosts provided by the &lt;code&gt;&lt;a href=&quot;#remoteipproxyprotocolexceptions&quot;&gt;RemoteIPProxyProtocolExceptions&lt;/a&gt;&lt;/code&gt; directive.</source>
+          <target state="translated">所述 &lt;code&gt;RemoteIPProxyProtocol&lt;/code&gt; 指令允许或禁止的读出和处理PROXY协议连接头部的。如果启用了 &lt;code&gt;On&lt;/code&gt; 标志，则上游客户端每次打开连接时都&lt;em&gt;必须&lt;/em&gt;发送标头，否则该连接将被中止，除非它在 &lt;code&gt;&lt;a href=&quot;#remoteipproxyprotocolexceptions&quot;&gt;RemoteIPProxyProtocolExceptions&lt;/a&gt;&lt;/code&gt; 指令提供的禁用主机列表中。</target>
+        </trans-unit>
+        <trans-unit id="c8ffa9c340f19c6199a33dac5ce42f70acfa99dc" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;RemoteIPProxyProtocol&lt;/code&gt; directive enables or disables the reading and handling of the PROXY protocol connection header. Sometimes it is desirable to require clients to provide the PROXY header, but permit other clients to connect without it. This directive allows a server administrator to configure a single host or CIDR range of hosts that may do so. This is generally useful for monitoring and administrative traffic to a virtual host direct to the server behind the upstream load balancer.</source>
+          <target state="translated">所述 &lt;code&gt;RemoteIPProxyProtocol&lt;/code&gt; 指令允许或禁止的读出和处理PROXY协议连接头部的。有时，要求客户端提供PROXY标头，但允许其他客户端在没有它的情况下进行连接是理想的。该指令允许服务器管理员配置单个主机或CIDR范围内的主机。这通常对于监视和管理到虚拟主机的流量（直接流向上游负载均衡器后面的服务器）非常有用。</target>
+        </trans-unit>
+        <trans-unit id="ae5d227503f00da08ff20e2a9939e4b54fa74c76" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;RemoveCharset&lt;/code&gt; directive removes any character set associations for files with the given extensions. This allows &lt;code&gt;.htaccess&lt;/code&gt; files in subdirectories to undo any associations inherited from parent directories or the server config files.</source>
+          <target state="translated">该 &lt;code&gt;RemoveCharset&lt;/code&gt; 指令删除任何字符集的关联与给定扩展名的文件。这允许子目录中的 &lt;code&gt;.htaccess&lt;/code&gt; 文件撤消从父目录或服务器配置文件继承的任何关联。</target>
+        </trans-unit>
+        <trans-unit id="69b4a1cd54a7542b44670f3215ca2d5fa8e67e5c" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;RemoveEncoding&lt;/code&gt; directive removes any encoding associations for files with the given extensions. This allows &lt;code&gt;.htaccess&lt;/code&gt; files in subdirectories to undo any associations inherited from parent directories or the server config files. An example of its use might be:</source>
+          <target state="translated">该 &lt;code&gt;RemoveEncoding&lt;/code&gt; 指令删除任何编码协会与给定扩展名的文件。这允许子目录中的 &lt;code&gt;.htaccess&lt;/code&gt; 文件撤消从父目录或服务器配置文件继承的任何关联。其用法的一个示例可能是：</target>
+        </trans-unit>
+        <trans-unit id="e4a5e8dc4cd1086dc1762f4e655ce6973e61a7c3" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;RemoveHandler&lt;/code&gt; directive removes any handler associations for files with the given extensions. This allows &lt;code&gt;.htaccess&lt;/code&gt; files in subdirectories to undo any associations inherited from parent directories or the server config files. An example of its use might be:</source>
+          <target state="translated">该 &lt;code&gt;RemoveHandler&lt;/code&gt; 指令删除任何处理协会与给定扩展名的文件。这允许子目录中的 &lt;code&gt;.htaccess&lt;/code&gt; 文件撤消从父目录或服务器配置文件继承的任何关联。其用法的一个示例可能是：</target>
+        </trans-unit>
+        <trans-unit id="c964cbda619d88084dcbcced8fc7ebed80dd896d" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;RemoveInputFilter&lt;/code&gt; directive removes any input &lt;a href=&quot;../filter&quot;&gt;filter&lt;/a&gt; associations for files with the given extensions. This allows &lt;code&gt;.htaccess&lt;/code&gt; files in subdirectories to undo any associations inherited from parent directories or the server config files.</source>
+          <target state="translated">该 &lt;code&gt;RemoveInputFilter&lt;/code&gt; 指令删除任何输入&lt;a href=&quot;../filter&quot;&gt;滤波&lt;/a&gt;协会与给定扩展名的文件。这允许子目录中的 &lt;code&gt;.htaccess&lt;/code&gt; 文件撤消从父目录或服务器配置文件继承的任何关联。</target>
+        </trans-unit>
+        <trans-unit id="067e40d40a9add74d02e5617c937a640845971cb" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;RemoveLanguage&lt;/code&gt; directive removes any language associations for files with the given extensions. This allows &lt;code&gt;.htaccess&lt;/code&gt; files in subdirectories to undo any associations inherited from parent directories or the server config files.</source>
+          <target state="translated">该 &lt;code&gt;RemoveLanguage&lt;/code&gt; 指令删除任何语言协会与给定扩展名的文件。这允许子目录中的 &lt;code&gt;.htaccess&lt;/code&gt; 文件撤消从父目录或服务器配置文件继承的任何关联。</target>
+        </trans-unit>
+        <trans-unit id="f82c512d1dab46f2925e480a7738a3c60032ee37" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;RemoveOutputFilter&lt;/code&gt; directive removes any output &lt;a href=&quot;../filter&quot;&gt;filter&lt;/a&gt; associations for files with the given extensions. This allows &lt;code&gt;.htaccess&lt;/code&gt; files in subdirectories to undo any associations inherited from parent directories or the server config files.</source>
+          <target state="translated">该 &lt;code&gt;RemoveOutputFilter&lt;/code&gt; 指令删除任何输出&lt;a href=&quot;../filter&quot;&gt;滤波&lt;/a&gt;协会与给定扩展名的文件。这允许子目录中的 &lt;code&gt;.htaccess&lt;/code&gt; 文件撤消从父目录或服务器配置文件继承的任何关联。</target>
+        </trans-unit>
+        <trans-unit id="92c60cbfeb10085f7e085f9dd8dbe9195a913a0e" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;RemoveType&lt;/code&gt; directive removes any &lt;a href=&quot;https://httpd.apache.org/docs/2.4/en/glossary.html#media-type&quot;&gt;media type&lt;/a&gt; associations for files with the given extensions. This allows &lt;code&gt;.htaccess&lt;/code&gt; files in subdirectories to undo any associations inherited from parent directories or the server config files. An example of its use might be:</source>
+          <target state="translated">该 &lt;code&gt;RemoveType&lt;/code&gt; 指令删除任何&lt;a href=&quot;https://httpd.apache.org/docs/2.4/en/glossary.html#media-type&quot;&gt;媒体类型&lt;/a&gt;的关联与给定扩展名的文件。这允许子目录中的 &lt;code&gt;.htaccess&lt;/code&gt; 文件撤消从父目录或服务器配置文件继承的任何关联。其用法的一个示例可能是：</target>
+        </trans-unit>
+        <trans-unit id="713f70c6e6443a921374045e32b3edfa3e60722d" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;RequestHeader&lt;/code&gt; directive may be followed by an additional argument, which may be any of:</source>
+          <target state="translated">所述 &lt;code&gt;RequestHeader&lt;/code&gt; 指令之后可以是一个额外的参数，其可以是任何的：</target>
+        </trans-unit>
+        <trans-unit id="243b03130625c7468a074d3de07b183ccca5169a" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;Require ldap-attribute&lt;/code&gt; directive allows the administrator to grant access based on attributes of the authenticated user in the LDAP directory. If the attribute in the directory matches the value given in the configuration, access is granted.</source>
+          <target state="translated">该 &lt;code&gt;Require ldap-attribute&lt;/code&gt; 指令允许基于LDAP目录中的身份验证的用户的属性管理员授予访问权限。如果目录中的属性与配置中给定的值匹配，则授予访问权限。</target>
+        </trans-unit>
+        <trans-unit id="4d236ee0f6eb912cb62f3c598015f64c66860c20" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;Require ldap-dn&lt;/code&gt; directive allows the administrator to grant access based on distinguished names. It specifies a DN that must match for access to be granted. If the distinguished name that was retrieved from the directory server matches the distinguished name in the &lt;code&gt;Require ldap-dn&lt;/code&gt;, then authorization is granted. Note: do not surround the distinguished name with quotes.</source>
+          <target state="translated">该 &lt;code&gt;Require ldap-dn&lt;/code&gt; 指令允许基于专有名称的管理员授予访问权限。它指定必须匹配才能授予访问权限的DN。如果从目录服务器检索的专有名称与 &lt;code&gt;Require ldap-dn&lt;/code&gt; 中的专有名称匹配，则将授予授权。注意：专有名称不要用引号引起来。</target>
+        </trans-unit>
+        <trans-unit id="fbe9021e5c8640a0e4e3bd2ec557717967ae7bb4" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;Require ldap-filter&lt;/code&gt; directive allows the administrator to grant access based on a complex LDAP search filter. If the dn returned by the filter search matches the authenticated user dn, access is granted.</source>
+          <target state="translated">该 &lt;code&gt;Require ldap-filter&lt;/code&gt; 指令允许基于复杂的LDAP搜索过滤器的管理员授予访问权限。如果过滤器搜索返回的dn与经过身份验证的用户dn匹配，则授予访问权限。</target>
+        </trans-unit>
+        <trans-unit id="5ef88e5123b08953dd5e184d8f555ee39fb22c40" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;Require ldap-user&lt;/code&gt; directive specifies what usernames can access the resource. Once &lt;code&gt;&lt;a href=&quot;mod_authnz_ldap&quot;&gt;mod_authnz_ldap&lt;/a&gt;&lt;/code&gt; has retrieved a unique DN from the directory, it does an LDAP compare operation using the username specified in the &lt;code&gt;Require ldap-user&lt;/code&gt; to see if that username is part of the just-fetched LDAP entry. Multiple users can be granted access by putting multiple usernames on the line, separated with spaces. If a username has a space in it, then it must be surrounded with double quotes. Multiple users can also be granted access by using multiple &lt;code&gt;Require ldap-user&lt;/code&gt; directives, with one user per line. For example, with a &lt;code&gt;&lt;a href=&quot;#authldapurl&quot;&gt;AuthLDAPURL&lt;/a&gt;&lt;/code&gt; of &lt;code&gt;ldap://ldap/o=Example?cn&lt;/code&gt; (i.e., &lt;code&gt;cn&lt;/code&gt; is used for searches), the following Require directives could be used to restrict access:</source>
+          <target state="translated">该 &lt;code&gt;Require ldap-user&lt;/code&gt; 指令指定的用户名什么可以访问的资源。一旦 &lt;code&gt;&lt;a href=&quot;mod_authnz_ldap&quot;&gt;mod_authnz_ldap&lt;/a&gt;&lt;/code&gt; 从目录中检索到唯一的DN，它将使用 &lt;code&gt;Require ldap-user&lt;/code&gt; 中指定的用户名执行LDAP比较操作，以查看该用户名是否为刚获取的LDAP条目的一部分。通过将多个用户名放在行中并用空格分隔，可以授予多个用户访问权限。如果用户名中有空格，则必须用双引号将其引起来。还可以通过使用多个 &lt;code&gt;Require ldap-user&lt;/code&gt; 指令（每行一个用户）来授予多个用户访问权限。例如，具有 &lt;code&gt;&lt;a href=&quot;#authldapurl&quot;&gt;AuthLDAPURL&lt;/a&gt;&lt;/code&gt; 的 &lt;code&gt;ldap://ldap/o=Example?cn&lt;/code&gt; （即， &lt;code&gt;cn&lt;/code&gt; 用于搜索），以下Require指令可用于限制访问：</target>
+        </trans-unit>
+        <trans-unit id="8ce414fb159ae14c3d70b751923bf486df3ea44a" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;RewriteBase&lt;/code&gt; directive specifies the URL prefix to be used for per-directory (htaccess) &lt;code&gt;&lt;a href=&quot;#rewriterule&quot;&gt;RewriteRule&lt;/a&gt;&lt;/code&gt; directives that substitute a relative path.</source>
+          <target state="translated">的 &lt;code&gt;RewriteBase&lt;/code&gt; 指令指定要用于每目录（htaccess的）URL前缀 &lt;code&gt;&lt;a href=&quot;#rewriterule&quot;&gt;RewriteRule&lt;/a&gt;&lt;/code&gt; 指示该代用品的相对路径。</target>
+        </trans-unit>
+        <trans-unit id="d0f0d14bdb86ea947f4f38920ee65518563161b3" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;RewriteCond&lt;/code&gt; directive defines a rule condition. One or more &lt;code&gt;RewriteCond&lt;/code&gt; can precede a &lt;code&gt;&lt;a href=&quot;#rewriterule&quot;&gt;RewriteRule&lt;/a&gt;&lt;/code&gt; directive. The following rule is then only used if both the current state of the URI matches its pattern, &lt;strong&gt;and&lt;/strong&gt; if these conditions are met.</source>
+          <target state="translated">该 &lt;code&gt;RewriteCond&lt;/code&gt; 指令定义了一个规则的条件。一个或多个 &lt;code&gt;RewriteCond&lt;/code&gt; 可以位于 &lt;code&gt;&lt;a href=&quot;#rewriterule&quot;&gt;RewriteRule&lt;/a&gt;&lt;/code&gt; 指令之前。然后，仅当URI的当前状态与它的模式都匹配&lt;strong&gt;并且&lt;/strong&gt;满足这些条件时，才使用以下规则。</target>
+        </trans-unit>
+        <trans-unit id="56a552381de520bf80bb3e059c66a9bc2921f095" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;RewriteEngine&lt;/code&gt; directive enables or disables the runtime rewriting engine. If it is set to &lt;code&gt;off&lt;/code&gt; this module does no runtime processing at all. It does not even update the &lt;code&gt;SCRIPT_URx&lt;/code&gt; environment variables.</source>
+          <target state="translated">该 &lt;code&gt;RewriteEngine&lt;/code&gt; 叙述指令启用或禁用运行时重写引擎。如果将其设置为 &lt;code&gt;off&lt;/code&gt; 此模块完全不执行任何运行时处理。它甚至不更新 &lt;code&gt;SCRIPT_URx&lt;/code&gt; 环境变量。</target>
+        </trans-unit>
+        <trans-unit id="1b9670cd0760982afc3779130c37c8069f52beff" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;RewriteMap&lt;/code&gt; directive defines a &lt;em&gt;Rewriting Map&lt;/em&gt; which can be used inside rule substitution strings by the mapping-functions to insert/substitute fields through a key lookup. The source of this lookup can be of various types.</source>
+          <target state="translated">所述 &lt;code&gt;RewriteMap&lt;/code&gt; 指令指令定义一个&lt;em&gt;重写地图&lt;/em&gt;可以规则替换字符串内由映射函数被用于插入通过键查找/替代的字段。查找的来源可以有多种类型。</target>
+        </trans-unit>
+        <trans-unit id="1c92685ac24c0b2506efe1e5934f88cc414f2b08" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;RewriteOptions&lt;/code&gt; directive sets some special options for the current per-server or per-directory configuration. The &lt;em&gt;Option&lt;/em&gt; string can currently only be one of the following:</source>
+          <target state="translated">该 &lt;code&gt;RewriteOptions&lt;/code&gt; 指令集当前每服务器或者每目录配置一些特殊选项。该&lt;em&gt;选项&lt;/em&gt;字符串目前只能是以下情况之一：</target>
+        </trans-unit>
+        <trans-unit id="85f960d06e41d2fd8dcd316784d2939f44322000" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;RewriteRule&lt;/code&gt; directive is the real rewriting workhorse. The directive can occur more than once, with each instance defining a single rewrite rule. The order in which these rules are defined is important - this is the order in which they will be applied at run-time.</source>
+          <target state="translated">该 &lt;code&gt;RewriteRule&lt;/code&gt; 指令才是真正改写主力。该指令可以多次出现，每个实例定义一个重写规则。定义这些规则的顺序很重要-这是它们在运行时应用的顺序。</target>
+        </trans-unit>
+        <trans-unit id="8fc59b3abfd7475187e5c82df250cf88faf15383" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;SSIETag&lt;/code&gt; directive suppresses this behaviour, and allows the server to generate an &lt;code&gt;ETag&lt;/code&gt; header. This can be used to enable caching of the output. Note that a backend server or dynamic content generator may generate an ETag of its own, ignoring &lt;code&gt;no-etag&lt;/code&gt;, and this ETag will be passed by &lt;code&gt;&lt;a href=&quot;mod_include&quot;&gt;mod_include&lt;/a&gt;&lt;/code&gt; regardless of the value of this setting. &lt;code&gt;SSIETag&lt;/code&gt; can take on the following values:</source>
+          <target state="translated">该 &lt;code&gt;SSIETag&lt;/code&gt; 指令禁止这种行为，并允许服务器生成 &lt;code&gt;ETag&lt;/code&gt; 的头。这可用于启用输出缓存。请注意，后端服务器或动态内容生成器可能会生成自己的ETag，而忽略 &lt;code&gt;no-etag&lt;/code&gt; ，并且无论此设置的值如何，此ETag都会由 &lt;code&gt;&lt;a href=&quot;mod_include&quot;&gt;mod_include&lt;/a&gt;&lt;/code&gt; 传递。 &lt;code&gt;SSIETag&lt;/code&gt; 可以采用以下值：</target>
+        </trans-unit>
+        <trans-unit id="c62153d56a94e14cb5ba8d7b8e86f764b4e3df10" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;SSIErrorMsg&lt;/code&gt; directive changes the error message displayed when &lt;code&gt;&lt;a href=&quot;mod_include&quot;&gt;mod_include&lt;/a&gt;&lt;/code&gt; encounters an error. For production servers you may consider changing the default error message to &lt;code&gt;&quot;&amp;lt;!-- Error --&amp;gt;&quot;&lt;/code&gt; so that the message is not presented to the user.</source>
+          <target state="translated">当 &lt;code&gt;&lt;a href=&quot;mod_include&quot;&gt;mod_include&lt;/a&gt;&lt;/code&gt; 遇到错误时， &lt;code&gt;SSIErrorMsg&lt;/code&gt; 指令更改显示的错误消息。对于生产服务器，您可以考虑将默认错误消息更改为 &lt;code&gt;&quot;&amp;lt;!-- Error --&amp;gt;&quot;&lt;/code&gt; 以使该消息不会显示给用户。</target>
+        </trans-unit>
+        <trans-unit id="07c745a2589d38b38daaaef30a33dc9acbc14e47" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;SSILastModified&lt;/code&gt; directive overrides this behaviour, and allows the &lt;code&gt;Last-Modified&lt;/code&gt; header to be respected if already present, or set if the header is not already present. This can be used to enable caching of the output. &lt;code&gt;SSILastModified&lt;/code&gt; can take on the following values:</source>
+          <target state="translated">该 &lt;code&gt;SSILastModified&lt;/code&gt; 指令覆盖此行为，并允许 &lt;code&gt;Last-Modified&lt;/code&gt; 头，如果已经存在的尊重，或者设定如果标题是不存在的。这可用于启用输出缓存。 &lt;code&gt;SSILastModified&lt;/code&gt; 可以采用以下值：</target>
+        </trans-unit>
+        <trans-unit id="d46109fbeaeda0f4b6a7bee26de973ddc50665e3" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;SSL_SECURE_RENEG&lt;/code&gt; environment variable can be used from an SSI or CGI script to determine whether secure renegotiation is supported for a given SSL connection.</source>
+          <target state="translated">该 &lt;code&gt;SSL_SECURE_RENEG&lt;/code&gt; 环境变量可以从SSI或CGI脚本被用来确定安全的重新协商是否支持给定的SSL连接。</target>
+        </trans-unit>
+        <trans-unit id="de9234e34e039cbd2cce88e7045d4de005c36c09" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ScriptAlias&lt;/code&gt; directive has the same behavior as the &lt;code&gt;&lt;a href=&quot;#alias&quot;&gt;Alias&lt;/a&gt;&lt;/code&gt; directive, except that in addition it marks the target directory as containing CGI scripts that will be processed by &lt;code&gt;&lt;a href=&quot;mod_cgi&quot;&gt;mod_cgi&lt;/a&gt;&lt;/code&gt;'s cgi-script handler. URLs with a case-sensitive (%-decoded) path beginning with &lt;var&gt;URL-path&lt;/var&gt; will be mapped to scripts beginning with the second argument, which is a full pathname in the local filesystem.</source>
+          <target state="translated">该 &lt;code&gt;ScriptAlias&lt;/code&gt; 指令,指令具有相同的行为作为 &lt;code&gt;&lt;a href=&quot;#alias&quot;&gt;Alias&lt;/a&gt;&lt;/code&gt; 指令，但是，除了它标志着目标目录作为包含CGI脚本将被处理 &lt;code&gt;&lt;a href=&quot;mod_cgi&quot;&gt;mod_cgi&lt;/a&gt;&lt;/code&gt; 一样的CGI脚本处理程序。具有以 &lt;var&gt;URL-path&lt;/var&gt; path开头的区分大小写（％解码）路径的URL将被映射到以第二个参数开头的脚本，该参数是本地文件系统中的完整路径名。</target>
+        </trans-unit>
+        <trans-unit id="68acc0d42490bf582d6f9e6753ece18e1a299f88" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ScriptLog&lt;/code&gt; directive sets the CGI script error logfile. If no &lt;code&gt;ScriptLog&lt;/code&gt; is given, no error log is created. If given, any CGI errors are logged into the filename given as argument. If this is a relative file or path it is taken relative to the &lt;code&gt;&lt;a href=&quot;core#serverroot&quot;&gt;ServerRoot&lt;/a&gt;&lt;/code&gt;.</source>
+          <target state="translated">该 &lt;code&gt;ScriptLog&lt;/code&gt; 指令设置CGI脚本错误日志文件。如果未提供 &lt;code&gt;ScriptLog&lt;/code&gt; ，则不会创建错误日志。如果给出，则任何CGI错误都将记录到作为参数给出的文件名中。如果这是相对文件或路径，则相对于 &lt;code&gt;&lt;a href=&quot;core#serverroot&quot;&gt;ServerRoot&lt;/a&gt;&lt;/code&gt; 采取。</target>
+        </trans-unit>
+        <trans-unit id="b85563f489b494dd0649c84db9666544afbc5ab4" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ServerAdmin&lt;/code&gt; sets the contact address that the server includes in any error messages it returns to the client. If the &lt;code&gt;httpd&lt;/code&gt; doesn't recognize the supplied argument as an URL, it assumes, that it's an &lt;var&gt;email-address&lt;/var&gt; and prepends it with &lt;code&gt;mailto:&lt;/code&gt; in hyperlink targets. However, it's recommended to actually use an email address, since there are a lot of CGI scripts that make that assumption. If you want to use an URL, it should point to another server under your control. Otherwise users may not be able to contact you in case of errors.</source>
+          <target state="translated">所述 &lt;code&gt;ServerAdmin&lt;/code&gt; 设置联系人地址，所述服务器在它返回到客户端的任何错误消息包括。如果 &lt;code&gt;httpd&lt;/code&gt; 不能将提供的参数识别为URL，则假定它是一个 &lt;var&gt;email-address&lt;/var&gt; 并在超链接目标中添加 &lt;code&gt;mailto:&lt;/code&gt; ：。但是，建议使用实际的电子邮件地址，因为有许多CGI脚本可以进行此假设。如果要使用URL，则它应指向您控制下的另一台服务器。否则，如果出现错误，用户可能无法与您联系。</target>
+        </trans-unit>
+        <trans-unit id="4a79115a05069fe02e06b3b78b6c9f833777341e" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ServerAlias&lt;/code&gt; directive sets the alternate names for a host, for use with &lt;a href=&quot;../vhosts/name-based&quot;&gt;name-based virtual hosts&lt;/a&gt;. The &lt;code&gt;ServerAlias&lt;/code&gt; may include wildcards, if appropriate.</source>
+          <target state="translated">该 &lt;code&gt;ServerAlias&lt;/code&gt; 指令设置备用名称为主机，与使用&lt;a href=&quot;../vhosts/name-based&quot;&gt;基于域名的虚拟主机&lt;/a&gt;。该 &lt;code&gt;ServerAlias&lt;/code&gt; 可以包含通配符，如果合适的话。</target>
+        </trans-unit>
+        <trans-unit id="2d6ec5a2eeab9c9f2e0aaa9be5377be801378073" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ServerName&lt;/code&gt; directive may appear anywhere within the definition of a server. However, each appearance overrides the previous appearance (within that server).</source>
+          <target state="translated">该 &lt;code&gt;ServerName&lt;/code&gt; 指令可能会出现一个服务器的定义内的任何地方。但是，每个外观都会覆盖先前的外观（在该服务器内）。</target>
+        </trans-unit>
+        <trans-unit id="b4496b84e94af2335c447b8949ed7b550d61558c" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ServerName&lt;/code&gt; directive sets the request scheme, hostname and port that the server uses to identify itself.</source>
+          <target state="translated">该 &lt;code&gt;ServerName&lt;/code&gt; 指令设置请求方案，主机名和端口服务器用于标识自身。</target>
+        </trans-unit>
+        <trans-unit id="9d3122af841d6fb35cea31c44dc05186784ba6e3" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ServerPath&lt;/code&gt; directive sets the legacy URL pathname for a host, for use with &lt;a href=&quot;../vhosts/index&quot;&gt;name-based virtual hosts&lt;/a&gt;.</source>
+          <target state="translated">该 &lt;code&gt;ServerPath&lt;/code&gt; 指令设置传统的URL路径为主机，与使用&lt;a href=&quot;../vhosts/index&quot;&gt;基于域名的虚拟主机&lt;/a&gt;。</target>
+        </trans-unit>
+        <trans-unit id="447c006b438923833d051bdf3e7f7c92a8d7c7d2" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ServerRoot&lt;/code&gt; directive sets the directory in which the server lives. Typically it will contain the subdirectories &lt;code&gt;conf/&lt;/code&gt; and &lt;code&gt;logs/&lt;/code&gt;. Relative paths in other configuration directives (such as &lt;code&gt;&lt;a href=&quot;#include&quot;&gt;Include&lt;/a&gt;&lt;/code&gt; or &lt;code&gt;&lt;a href=&quot;mod_so#loadmodule&quot;&gt;LoadModule&lt;/a&gt;&lt;/code&gt;, for example) are taken as relative to this directory.</source>
+          <target state="translated">该 &lt;code&gt;ServerRoot&lt;/code&gt; 的指令集的服务器所居住的目录。通常，它将包含子目录 &lt;code&gt;conf/&lt;/code&gt; 和 &lt;code&gt;logs/&lt;/code&gt; 。其他配置指令（例如 &lt;code&gt;&lt;a href=&quot;#include&quot;&gt;Include&lt;/a&gt;&lt;/code&gt; 或 &lt;code&gt;&lt;a href=&quot;mod_so#loadmodule&quot;&gt;LoadModule&lt;/a&gt;&lt;/code&gt; ）中的相对路径被视为相对于此目录。</target>
+        </trans-unit>
+        <trans-unit id="9419ead675b5023fb59e852cbdbfda02581ade73" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;ServerSignature&lt;/code&gt; directive allows the configuration of a trailing footer line under server-generated documents (error messages, &lt;code&gt;&lt;a href=&quot;mod_proxy&quot;&gt;mod_proxy&lt;/a&gt;&lt;/code&gt; ftp directory listings, &lt;code&gt;&lt;a href=&quot;mod_info&quot;&gt;mod_info&lt;/a&gt;&lt;/code&gt; output, ...). The reason why you would want to enable such a footer line is that in a chain of proxies, the user often has no possibility to tell which of the chained servers actually produced a returned error message.</source>
+          <target state="translated">该 &lt;code&gt;ServerSignature&lt;/code&gt; 指令允许在服务器生成的文档（错误信息，后躯线的配置 &lt;code&gt;&lt;a href=&quot;mod_proxy&quot;&gt;mod_proxy&lt;/a&gt;&lt;/code&gt; 的 ftp目录列表， &lt;code&gt;&lt;a href=&quot;mod_info&quot;&gt;mod_info&lt;/a&gt;&lt;/code&gt; 输出，...）。之所以要启用这样的页脚行，是因为在代理链中，用户通常无法分辨哪个链式服务器实际产生了返回的错误消息。</target>
+        </trans-unit>
+        <trans-unit id="87d7a656dfbfa8f77cfc60799ae0419051b12b6c" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;Session&lt;/code&gt; directive enables a session for the directory or location container. Further directives control where the session will be stored and how privacy is maintained.</source>
+          <target state="translated">该 &lt;code&gt;Session&lt;/code&gt; 指令允许的目录或位置容器会话。其他指令控制会话的存储位置以及如何维护隐私。</target>
+        </trans-unit>
+        <trans-unit id="3581218c8006dba78b105a8a57fa59c1d26a7efe" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;SessionCookieName2&lt;/code&gt; directive specifies the name and optional attributes of an RFC2965 compliant cookie inside which the session will be stored. RFC2965 cookies are set using the &lt;code&gt;Set-Cookie2&lt;/code&gt; HTTP header.</source>
+          <target state="translated">该 &lt;code&gt;SessionCookieName2&lt;/code&gt; 指令指定的名称和RFC2965兼容的cookie里面的会议将被存储其中的可选属性。RFC2965 cookie使用 &lt;code&gt;Set-Cookie2&lt;/code&gt; HTTP标头设置。</target>
+        </trans-unit>
+        <trans-unit id="73eb531e517f03332ca3f819a512afe742aa0c25" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;SessionCookieName&lt;/code&gt; directive specifies the name and optional attributes of an RFC2109 compliant cookie inside which the session will be stored. RFC2109 cookies are set using the &lt;code&gt;Set-Cookie&lt;/code&gt; HTTP header.</source>
+          <target state="translated">该 &lt;code&gt;SessionCookieName&lt;/code&gt; 指令指定的名称和RFC2109兼容的cookie里面的会议将被存储其中的可选属性。使用 &lt;code&gt;Set-Cookie&lt;/code&gt; HTTP标头设置 RFC2109 cookie 。</target>
+        </trans-unit>
+        <trans-unit id="3ceda7bf6c33969658896de8929697901b953a46" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;SessionCookieRemove&lt;/code&gt; flag controls whether the cookies containing the session will be removed from the headers during request processing.</source>
+          <target state="translated">所述 &lt;code&gt;SessionCookieRemove&lt;/code&gt; 标志控制是否包含会话饼干将从报头请求处理过程中被除去。</target>
+        </trans-unit>
+        <trans-unit id="7f386d77442a21c2f57fef72d7ac2d54f295033f" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;SessionCryptoCipher&lt;/code&gt; directive allows the cipher to be used during encryption. If not specified, the cipher defaults to &lt;code&gt;aes256&lt;/code&gt;.</source>
+          <target state="translated">该 &lt;code&gt;SessionCryptoCipher&lt;/code&gt; 指令允许在加密过程中使用的密码。如果未指定，则密码默认为 &lt;code&gt;aes256&lt;/code&gt; 。</target>
+        </trans-unit>
+        <trans-unit id="6da9fa22befc785c4869ea1efda287df125572b6" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;SessionCryptoDriver&lt;/code&gt; directive specifies the name of the crypto driver to be used for encryption. If not specified, the driver defaults to the recommended driver compiled into APR-util.</source>
+          <target state="translated">该 &lt;code&gt;SessionCryptoDriver&lt;/code&gt; 用于加密的加密驱动器的指令指定的名称。如果未指定，则驱动程序默认为编译为APR-util的推荐驱动程序。</target>
+        </trans-unit>
         <trans-unit id="eacedf2736a086ef64645b67445cd7b94e720876" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;SessionCryptoPassphrase&lt;/code&gt; directive specifies the keys to be used to enable symmetrical encryption on the contents of the session before writing the session, or decrypting the contents of the session after reading the session.</source>
           <target state="translated">所述 &lt;code&gt;SessionCryptoPassphrase&lt;/code&gt; 指令指定键被用于写入会话，或读取会话之后解密所述会话的内容之前，以使该会话的内容对称加密。</target>
@@ -106,6 +434,10 @@
         <trans-unit id="fe74dadd13532eba738a1017a1451a723e874bd5" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;TypesConfig&lt;/code&gt; directive sets the location of the &lt;a href=&quot;https://httpd.apache.org/docs/2.4/en/glossary.html#media-type&quot;&gt;media types&lt;/a&gt; configuration file. &lt;var&gt;File-path&lt;/var&gt; is relative to the &lt;code&gt;&lt;a href=&quot;core#serverroot&quot;&gt;ServerRoot&lt;/a&gt;&lt;/code&gt;. This file sets the default list of mappings from filename extensions to content types. Most administrators use the &lt;code&gt;mime.types&lt;/code&gt; file provided by their OS, which associates common filename extensions with the official list of IANA registered media types maintained at &lt;a href=&quot;http://www.iana.org/assignments/media-types/index.html&quot;&gt;http://www.iana.org/assignments/media-types/index.html&lt;/a&gt; as well as a large number of unofficial types. This simplifies the &lt;code&gt;httpd.conf&lt;/code&gt; file by providing the majority of media-type definitions, and may be overridden by &lt;code&gt;&lt;a href=&quot;#addtype&quot;&gt;AddType&lt;/a&gt;&lt;/code&gt; directives as needed. You should not edit the &lt;code&gt;mime.types&lt;/code&gt; file, because it may be replaced when you upgrade your server.</source>
           <target state="translated">该 &lt;code&gt;TypesConfig&lt;/code&gt; 指令设置的位置&lt;a href=&quot;https://httpd.apache.org/docs/2.4/en/glossary.html#media-type&quot;&gt;的媒体类型&lt;/a&gt;的配置文件。 &lt;var&gt;File-path&lt;/var&gt; 是相对于 &lt;code&gt;&lt;a href=&quot;core#serverroot&quot;&gt;ServerRoot&lt;/a&gt;&lt;/code&gt; 的。该文件设置从文件扩展名到内容类型的默认映射列表。大多数管理员使用 &lt;code&gt;mime.types&lt;/code&gt; 通过他们的操作系统，其共同文件扩展名与IANA的正式名单提供关联文件中注册维持在媒体类型&lt;a href=&quot;http://www.iana.org/assignments/media-types/index.html&quot;&gt;http://www.iana.org/assignments/media-types/index.html&lt;/a&gt;以及作为大量的非官方类型。通过提供大多数媒体类型定义，这简化了 &lt;code&gt;httpd.conf&lt;/code&gt; 文件，并且可以被 &lt;code&gt;&lt;a href=&quot;#addtype&quot;&gt;AddType&lt;/a&gt;&lt;/code&gt; 覆盖。根据需要的指令。您不应编辑 &lt;code&gt;mime.types&lt;/code&gt; 文件，因为升级服务器时可能会替换该文件。</target>
+        </trans-unit>
+        <trans-unit id="2dd7003f19d2654f2242b05fc894ff130176dcec" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;TypesConfig&lt;/code&gt; directive sets the location of the &lt;a href=&quot;https://httpd.apache.org/docs/2.4/en/glossary.html#media-type&quot;&gt;media types&lt;/a&gt; configuration file. &lt;var&gt;File-path&lt;/var&gt; is relative to the &lt;code&gt;&lt;a href=&quot;core#serverroot&quot;&gt;ServerRoot&lt;/a&gt;&lt;/code&gt;. This file sets the default list of mappings from filename extensions to content types. Most administrators use the &lt;code&gt;mime.types&lt;/code&gt; file provided by their OS, which associates common filename extensions with the official list of IANA registered media types maintained at &lt;a href=&quot;https://www.iana.org/assignments/media-types/index.html&quot;&gt;http://www.iana.org/assignments/media-types/index.html&lt;/a&gt; as well as a large number of unofficial types. This simplifies the &lt;code&gt;httpd.conf&lt;/code&gt; file by providing the majority of media-type definitions, and may be overridden by &lt;code&gt;&lt;a href=&quot;#addtype&quot;&gt;AddType&lt;/a&gt;&lt;/code&gt; directives as needed. You should not edit the &lt;code&gt;mime.types&lt;/code&gt; file, because it may be replaced when you upgrade your server.</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="3d58d4fdb1e17ba09081eb178e2fca0f198d20d5" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;UNIQUE_ID&lt;/code&gt; environment variable is constructed by encoding the 144-bit (32-bit IP address, 32 bit pid, 32 bit time stamp, 16 bit counter, 32 bit thread index) quadruple using the alphabet &lt;code&gt;[A-Za-z0-9@-]&lt;/code&gt; in a manner similar to MIME base64 encoding, producing 24 characters. The MIME base64 alphabet is actually &lt;code&gt;[A-Za-z0-9+/]&lt;/code&gt; however &lt;code&gt;+&lt;/code&gt; and &lt;code&gt;/&lt;/code&gt; need to be specially encoded in URLs, which makes them less desirable. All values are encoded in network byte ordering so that the encoding is comparable across architectures of different byte ordering. The actual ordering of the encoding is: time stamp, IP address, pid, counter. This ordering has a purpose, but it should be emphasized that applications should not dissect the encoding. Applications should treat the entire encoded &lt;code&gt;UNIQUE_ID&lt;/code&gt; as an opaque token, which can be compared against other &lt;code&gt;UNIQUE_ID&lt;/code&gt;s for equality only.</source>
@@ -302,6 +634,10 @@
         <trans-unit id="e6647b85dccf2c127f8f4ea48d03ed4614f09367" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;httpready&lt;/code&gt; accept filter buffers entire HTTP requests at the kernel level. Once an entire request is received, the kernel then sends it to the server. See the &lt;a href=&quot;http://www.freebsd.org/cgi/man.cgi?query=accf_http&amp;amp;sektion=9&quot;&gt; accf_http(9)&lt;/a&gt; man page for more details. Since HTTPS requests are encrypted, only the &lt;a href=&quot;http://www.freebsd.org/cgi/man.cgi?query=accf_data&amp;amp;sektion=9&quot;&gt; accf_data(9)&lt;/a&gt; filter is used.</source>
           <target state="translated">该 &lt;code&gt;httpready&lt;/code&gt; 在内核级别接受滤波器缓冲器整个HTTP请求。一旦接收到整个请求，内核便将其发送到服务器。有关更多详细信息，请参见&lt;a href=&quot;http://www.freebsd.org/cgi/man.cgi?query=accf_http&amp;amp;sektion=9&quot;&gt;accf_http（9）&lt;/a&gt;手册页。由于HTTPS请求已加密，因此仅使用&lt;a href=&quot;http://www.freebsd.org/cgi/man.cgi?query=accf_data&amp;amp;sektion=9&quot;&gt;accf_data（9）&lt;/a&gt;过滤器。</target>
+        </trans-unit>
+        <trans-unit id="d9b575ff20e5cc20e80db3e1a6ee787f275c29bc" translate="yes" xml:space="preserve">
+          <source>The &lt;code&gt;httpready&lt;/code&gt; accept filter buffers entire HTTP requests at the kernel level. Once an entire request is received, the kernel then sends it to the server. See the &lt;a href=&quot;https://www.freebsd.org/cgi/man.cgi?query=accf_http&amp;amp;sektion=9&quot;&gt; accf_http(9)&lt;/a&gt; man page for more details. Since HTTPS requests are encrypted, only the &lt;a href=&quot;https://www.freebsd.org/cgi/man.cgi?query=accf_data&amp;amp;sektion=9&quot;&gt; accf_data(9)&lt;/a&gt; filter is used.</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="417f65e59a3fa1d74a869960621e550a319b5ba7" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;if&lt;/code&gt; element works like an if statement in a programming language. The test condition is evaluated and if the result is true, then the text until the next &lt;code&gt;elif&lt;/code&gt;, &lt;code&gt;else&lt;/code&gt; or &lt;code&gt;endif&lt;/code&gt; element is included in the output stream.</source>
@@ -583,6 +919,10 @@
           <source>The Apache HTTP Server can be downloaded from the &lt;a href=&quot;http://httpd.apache.org/download.cgi&quot;&gt;Apache HTTP Server download site&lt;/a&gt;, which lists several mirrors. Most users of Apache on unix-like systems will be better off downloading and compiling a source version. The build process (described below) is easy, and it allows you to customize your server to suit your needs. In addition, binary releases are often not up to date with the latest source releases. If you do download a binary, follow the instructions in the &lt;code&gt;INSTALL.bindist&lt;/code&gt; file inside the distribution.</source>
           <target state="translated">可以从&lt;a href=&quot;http://httpd.apache.org/download.cgi&quot;&gt;Apache HTTP Server下载站点&lt;/a&gt;下载Apache HTTP Server，该站点列出了多个镜像。在类似Unix的系统上使用Apache的大多数用户，最好下载并编译源代码版本。构建过程（如下所述）很容易，它使您可以自定义服务器以满足自己的需要。另外，二进制版本通常不是最新的源版本。如果您确实下载了二进制文件，请按照发行版中 &lt;code&gt;INSTALL.bindist&lt;/code&gt; 文件中的说明进行操作。</target>
         </trans-unit>
+        <trans-unit id="e778f8b3db5fa8ec6587a2c2b66af88b2eac7e9b" translate="yes" xml:space="preserve">
+          <source>The Apache HTTP Server can be downloaded from the &lt;a href=&quot;https://httpd.apache.org/download.cgi&quot;&gt;Apache HTTP Server download site&lt;/a&gt;, which lists several mirrors. Most users of Apache on unix-like systems will be better off downloading and compiling a source version. The build process (described below) is easy, and it allows you to customize your server to suit your needs. In addition, binary releases are often not up to date with the latest source releases. If you do download a binary, follow the instructions in the &lt;code&gt;INSTALL.bindist&lt;/code&gt; file inside the distribution.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="ae744855f68fe9af0b4aae155c1f9223dc127338" translate="yes" xml:space="preserve">
           <source>The Apache HTTP Server handles requests in several phases. At each of these phases, one or more modules may be called upon to handle that portion of the request lifecycle. Phases include things like URL-to-filename translation, authentication, authorization, content, and logging. (This is not an exhaustive list.)</source>
           <target state="translated">Apache HTTP服务器在几个阶段处理请求。在每一个阶段,一个或多个模块可以被调用来处理请求生命周期的那一部分。这些阶段包括URL到文件名的翻译、认证、授权、内容和日志等。(这不是一个详尽的列表。)</target>
@@ -590,6 +930,10 @@
         <trans-unit id="72d11b98a27b8f5a18fb0d8d9703303074e0841c" translate="yes" xml:space="preserve">
           <source>The Apache HTTP Server has a good record for security and a developer community highly concerned about security issues. But it is inevitable that some problems -- small or large -- will be discovered in software after it is released. For this reason, it is crucial to keep aware of updates to the software. If you have obtained your version of the HTTP Server directly from Apache, we highly recommend you subscribe to the &lt;a href=&quot;http://httpd.apache.org/lists.html#http-announce&quot;&gt;Apache HTTP Server Announcements List&lt;/a&gt; where you can keep informed of new releases and security updates. Similar services are available from most third-party distributors of Apache software.</source>
           <target state="translated">Apache HTTP Server在安全性方面有良好的记录，并且开发人员社区高度关注安全性问题。但是，不可避免的是，某些问题（无论大小）都会在发布后在软件中发现。因此，保持对软件更新的了解至关重要。如果您直接从Apache获得HTTP Server的版本，我们强烈建议您订阅&lt;a href=&quot;http://httpd.apache.org/lists.html#http-announce&quot;&gt;Apache HTTP Server公告列表&lt;/a&gt;，在其中可以随时了解新版本和安全更新。大多数第三方Apache软件发行商都可以提供类似的服务。</target>
+        </trans-unit>
+        <trans-unit id="ceed4ccb4fa3fd8e62e647a9bc57d09d486a555b" translate="yes" xml:space="preserve">
+          <source>The Apache HTTP Server has a good record for security and a developer community highly concerned about security issues. But it is inevitable that some problems -- small or large -- will be discovered in software after it is released. For this reason, it is crucial to keep aware of updates to the software. If you have obtained your version of the HTTP Server directly from Apache, we highly recommend you subscribe to the &lt;a href=&quot;https://httpd.apache.org/lists.html#http-announce&quot;&gt;Apache HTTP Server Announcements List&lt;/a&gt; where you can keep informed of new releases and security updates. Similar services are available from most third-party distributors of Apache software.</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="7d8561937672c7fc208b74f206a4c6acb32b80ef" translate="yes" xml:space="preserve">
           <source>The Apache HTTP Server is a modular program where the administrator can choose the functionality to include in the server by selecting a set of modules. Modules will be compiled as Dynamic Shared Objects (DSOs) that exist separately from the main &lt;code&gt;&lt;a href=&quot;programs/httpd&quot;&gt;httpd&lt;/a&gt;&lt;/code&gt; binary file. DSO modules may be compiled at the time the server is built, or they may be compiled and added at a later time using the Apache Extension Tool (&lt;code&gt;&lt;a href=&quot;programs/apxs&quot;&gt;apxs&lt;/a&gt;&lt;/code&gt;).</source>
@@ -599,6 +943,10 @@
           <source>The Apache HTTP Server is configured via simple text files. These files may be located any of a variety of places, depending on how exactly you installed the server. Common locations for these files may be found &lt;a href=&quot;http://wiki.apache.org/httpd/DistrosDefaultLayout&quot;&gt;in the httpd wiki&lt;/a&gt;. If you installed httpd from source, the default location of the configuration files is &lt;code&gt;/usr/local/apache2/conf&lt;/code&gt;. The default configuration file is usually called &lt;code&gt;httpd.conf&lt;/code&gt;. This, too, can vary in third-party distributions of the server.</source>
           <target state="translated">通过简单的文本文件配置Apache HTTP Server。这些文件可能位于各种位置，具体取决于您安装服务器的方式。这些文件的公共位置可以&lt;a href=&quot;http://wiki.apache.org/httpd/DistrosDefaultLayout&quot;&gt;在httpd Wiki中&lt;/a&gt;找到。如果从源安装了httpd，则配置文件的默认位置为 &lt;code&gt;/usr/local/apache2/conf&lt;/code&gt; 。默认配置文件通常称为 &lt;code&gt;httpd.conf&lt;/code&gt; 。这在服务器的第三方发行版中也可能有所不同。</target>
         </trans-unit>
+        <trans-unit id="388034618a49f209c113afeb13a0ead6fb0ae027" translate="yes" xml:space="preserve">
+          <source>The Apache HTTP Server is configured via simple text files. These files may be located any of a variety of places, depending on how exactly you installed the server. Common locations for these files may be found &lt;a href=&quot;https://wiki.apache.org/httpd/DistrosDefaultLayout&quot;&gt;in the httpd wiki&lt;/a&gt;. If you installed httpd from source, the default location of the configuration files is &lt;code&gt;/usr/local/apache2/conf&lt;/code&gt;. The default configuration file is usually called &lt;code&gt;httpd.conf&lt;/code&gt;. This, too, can vary in third-party distributions of the server.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="aa2a087c2e36e51d0222ac85bd926ca9588b6e8d" translate="yes" xml:space="preserve">
           <source>The Apache HTTP Server is designed to be a powerful and flexible web server that can work on a very wide variety of platforms in a range of different environments. Different platforms and different environments often require different features, or may have different ways of implementing the same feature most efficiently. Apache httpd has always accommodated a wide variety of environments through its modular design. This design allows the webmaster to choose which features will be included in the server by selecting which modules to load either at compile-time or at run-time.</source>
           <target state="translated">Apache HTTP服务器被设计成一个强大而灵活的Web服务器,它可以工作在非常广泛的平台上,在一系列不同的环境中。不同的平台和不同的环境往往需要不同的功能,或者可能有不同的方式来最有效地实现同一功能。Apache httpd一直通过其模块化设计来适应各种环境。这种设计使得网站管理员可以通过选择在编译时或运行时加载哪些模块来选择服务器将包含哪些功能。</target>
@@ -606,6 +954,10 @@
         <trans-unit id="a6bebc5af4cb9a1982a6b85f9b90bbb9c9e96841" translate="yes" xml:space="preserve">
           <source>The Apache HTTP Server module &lt;code&gt;&lt;a href=&quot;../mod/mod_ssl&quot;&gt;mod_ssl&lt;/a&gt;&lt;/code&gt; provides an interface to the &lt;a href=&quot;http://www.openssl.org/&quot;&gt;OpenSSL&lt;/a&gt; library, which provides Strong Encryption using the Secure Sockets Layer and Transport Layer Security protocols.</source>
           <target state="translated">Apache HTTP Server模块 &lt;code&gt;&lt;a href=&quot;../mod/mod_ssl&quot;&gt;mod_ssl&lt;/a&gt;&lt;/code&gt; 提供了&lt;a href=&quot;http://www.openssl.org/&quot;&gt;OpenSSL&lt;/a&gt;库的接口，该库使用安全套接字层和传输层安全协议提供了强加密功能。</target>
+        </trans-unit>
+        <trans-unit id="5c07d008a28b492f116e62ba1c3de5301fd1949d" translate="yes" xml:space="preserve">
+          <source>The Apache HTTP Server module &lt;code&gt;&lt;a href=&quot;../mod/mod_ssl&quot;&gt;mod_ssl&lt;/a&gt;&lt;/code&gt; provides an interface to the &lt;a href=&quot;https://www.openssl.org/&quot;&gt;OpenSSL&lt;/a&gt; library, which provides Strong Encryption using the Secure Sockets Layer and Transport Layer Security protocols.</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="78e3842edffd98561dbb16d4d15d5f114f561545" translate="yes" xml:space="preserve">
           <source>The Apache HTTP Server provides a variety of different mechanisms for logging everything that happens on your server, from the initial request, through the URL mapping process, to the final resolution of the connection, including any errors that may have occurred in the process. In addition to this, third-party modules may provide logging capabilities, or inject entries into the existing log files, and applications such as CGI programs, or PHP scripts, or other handlers, may send messages to the server error log.</source>
@@ -722,6 +1074,10 @@
         <trans-unit id="5d9c418d51ba979194f654ecf47c771b02641ddf" translate="yes" xml:space="preserve">
           <source>The HTTP protocol contains built in support for an in-line caching mechanism &lt;a href=&quot;http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html&quot;&gt; described by section 13 of RFC2616&lt;/a&gt;, and the &lt;code&gt;&lt;a href=&quot;mod/mod_cache&quot;&gt;mod_cache&lt;/a&gt;&lt;/code&gt; module can be used to take advantage of this.</source>
           <target state="translated">HTTP协议包含&lt;a href=&quot;http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html&quot;&gt;对RFC2616的第13节所描述&lt;/a&gt;的 &lt;code&gt;&lt;a href=&quot;mod/mod_cache&quot;&gt;mod_cache&lt;/a&gt;&lt;/code&gt; 缓存机制的内置支持，可以使用mod_cache模块来利用这一点。</target>
+        </trans-unit>
+        <trans-unit id="58093a7e000708eb45c9fc06a30c965fa6d6ca4a" translate="yes" xml:space="preserve">
+          <source>The HTTP protocol contains built in support for an in-line caching mechanism &lt;a href=&quot;https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html&quot;&gt; described by section 13 of RFC2616&lt;/a&gt;, and the &lt;code&gt;&lt;a href=&quot;mod/mod_cache&quot;&gt;mod_cache&lt;/a&gt;&lt;/code&gt; module can be used to take advantage of this.</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="58d0c5112d3b9a6ef6a8fd8b917680b89376f4c5" translate="yes" xml:space="preserve">
           <source>The HTTP protocol does allow the cache to serve stale data under certain circumstances, such as when an attempt to freshen the data with an origin server has failed with a 5xx error, or when another request is already in the process of freshening the given entry. In these cases a &lt;code&gt;Warning&lt;/code&gt; header is added to the response.</source>
@@ -1367,6 +1723,10 @@
           <source>The bug reporting page and dev-httpd mailing list are &lt;em&gt;not&lt;/em&gt; provided to answer questions about configuration or running Apache. Before you submit a bug report or request, first consult this document, the &lt;a href=&quot;http://wiki.apache.org/httpd/FAQ&quot;&gt;Frequently Asked Questions&lt;/a&gt; page and the other relevant documentation topics. If you still have a question or problem, post it to the &lt;a href=&quot;news://developer-forums.novell.com/novell.devsup.webserver&quot;&gt; novell.devsup.webserver&lt;/a&gt; newsgroup, where many Apache users are more than willing to answer new and obscure questions about using Apache on NetWare.</source>
           <target state="translated">&lt;em&gt;没有&lt;/em&gt;提供错误报告页面和dev-httpd邮件列表来回答有关配置或运行Apache的问题。在提交错误报告或请求之前，请先查阅本文档，&amp;ldquo; &lt;a href=&quot;http://wiki.apache.org/httpd/FAQ&quot;&gt;常见问题&amp;rdquo;&lt;/a&gt;页面和其他相关文档主题。如果您仍然有疑问或问题，请将其发布到&lt;a href=&quot;news://developer-forums.novell.com/novell.devsup.webserver&quot;&gt;novell.devsup.webserver&lt;/a&gt;新闻组，在此新闻组中，许多Apache用户都乐于回答有关在NetWare上使用Apache的新问题。</target>
         </trans-unit>
+        <trans-unit id="b09b050cdb686538f55bcc5b63fca3c44ba9342c" translate="yes" xml:space="preserve">
+          <source>The bug reporting page and dev-httpd mailing list are &lt;em&gt;not&lt;/em&gt; provided to answer questions about configuration or running Apache. Before you submit a bug report or request, first consult this document, the &lt;a href=&quot;https://wiki.apache.org/httpd/FAQ&quot;&gt;Frequently Asked Questions&lt;/a&gt; page and the other relevant documentation topics. If you still have a question or problem, post it to the &lt;a href=&quot;news://developer-forums.novell.com/novell.devsup.webserver&quot;&gt; novell.devsup.webserver&lt;/a&gt; newsgroup, where many Apache users are more than willing to answer new and obscure questions about using Apache on NetWare.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="dfb0e30e59534bcc5c446bff0e7caca4112bea40" translate="yes" xml:space="preserve">
           <source>The cached entity was invalidated by a request method other than GET or HEAD.</source>
           <target state="translated">缓存的实体被GET或HEAD以外的请求方法宣告无效。</target>
@@ -1646,6 +2006,10 @@
         <trans-unit id="9699c1573eb42b2a9eee43711e092b0d32014ea3" translate="yes" xml:space="preserve">
           <source>The current CGI specification is available in the &lt;a href=&quot;http://www.ietf.org/rfc/rfc3875&quot;&gt;Common Gateway Interface RFC&lt;/a&gt;.</source>
           <target state="translated">当前的CGI规范可在&lt;a href=&quot;http://www.ietf.org/rfc/rfc3875&quot;&gt;通用网关接口RFC中找到&lt;/a&gt;。</target>
+        </trans-unit>
+        <trans-unit id="86a9b494939cfbdd391a01e87daf478e35f0f002" translate="yes" xml:space="preserve">
+          <source>The current CGI specification is available in the &lt;a href=&quot;https://www.ietf.org/rfc/rfc3875&quot;&gt;Common Gateway Interface RFC&lt;/a&gt;.</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="a767a2e65f4be15af5619cdd15ab67afa77554e7" translate="yes" xml:space="preserve">
           <source>The current URI can be the initial URI as requested by the client, the result of a previous round of mod_rewrite processing, or the result of a prior rule in the current round of mod_rewrite processing.</source>
@@ -2707,6 +3071,10 @@
           <source>The full definition of which responses can be cached by an HTTP cache is defined in &lt;a href=&quot;http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html#sec13.4&quot;&gt; RFC2616 Section 13.4 Response Cacheability&lt;/a&gt;, and can be summed up as follows:</source>
           <target state="translated">&lt;a href=&quot;http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html#sec13.4&quot;&gt;RFC2616第13.4节&amp;ldquo;响应&lt;/a&gt;缓存能力&amp;rdquo;中定义了HTTP缓存可以缓存的响应的完整定义，可以总结如下：</target>
         </trans-unit>
+        <trans-unit id="1a2a46983bcab9444e187963aaaa9f10a1b72ca0" translate="yes" xml:space="preserve">
+          <source>The full definition of which responses can be cached by an HTTP cache is defined in &lt;a href=&quot;https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html#sec13.4&quot;&gt; RFC2616 Section 13.4 Response Cacheability&lt;/a&gt;, and can be summed up as follows:</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="6f27a0246abbc256a2dc7a619dccd5a0000bcac7" translate="yes" xml:space="preserve">
           <source>The full list of headers recognized is available in the &lt;a href=&quot;mod/mod_negotiation#typemaps&quot;&gt;mod_negotiation typemap&lt;/a&gt; documentation.</source>
           <target state="translated">可以在&lt;a href=&quot;mod/mod_negotiation#typemaps&quot;&gt;mod_negotiation typemap&lt;/a&gt;文档中找到已识别的标头的完整列表。</target>
@@ -2819,6 +3187,10 @@
           <source>The httpd binary is built with the help of several patches to third party packages, which ensure the released code is buildable and debuggable. These patches are available and distributed from &lt;a href=&quot;http://www.apache.org/dist/httpd/binaries/win32/patches_applied/&quot;&gt;http://www.apache.org/dist/httpd/binaries/win32/patches_applied/&lt;/a&gt; and are recommended to be applied to obtain identical results as the &quot;official&quot; ASF distributed binaries.</source>
           <target state="translated">httpd二进制文件是在第三方软件包的多个修补程序的帮助下构建的，可确保发布的代码可构建和调试。这些修补程序可从&lt;a href=&quot;http://www.apache.org/dist/httpd/binaries/win32/patches_applied/&quot;&gt;http://www.apache.org/dist/httpd/binaries/win32/patches_applied/&lt;/a&gt;获得和分发，建议将其应用于获得与&amp;ldquo;官方&amp;rdquo; ASF分布式二进制文件相同的结果。</target>
         </trans-unit>
+        <trans-unit id="23eed5da5d7a0445c900a8b339abc3218a79767b" translate="yes" xml:space="preserve">
+          <source>The httpd binary is built with the help of several patches to third party packages, which ensure the released code is buildable and debuggable. These patches are available and distributed from &lt;a href=&quot;https://www.apache.org/dist/httpd/binaries/win32/patches_applied/&quot;&gt;http://www.apache.org/dist/httpd/binaries/win32/patches_applied/&lt;/a&gt; and are recommended to be applied to obtain identical results as the &quot;official&quot; ASF distributed binaries.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="381367eafd54603791e9412433719381c33c0856" translate="yes" xml:space="preserve">
           <source>The imagemap module adds some new features that were not possible with previously distributed imagemap programs.</source>
           <target state="translated">映像图模块增加了一些新的功能,这些功能在以前的分布式映像图程序中是不可能实现的。</target>
@@ -2906,6 +3278,10 @@
         <trans-unit id="c4c3e5181b69415aeef0b9e92a181b7357a50307" translate="yes" xml:space="preserve">
           <source>The language(s) of the variant, as an Internet standard language tag (&lt;a href=&quot;http://www.ietf.org/rfc/rfc1766.txt&quot;&gt;RFC 1766&lt;/a&gt;). An example is &lt;code&gt;en&lt;/code&gt;, meaning English. If the variant contains more than one language, they are separated by a comma.</source>
           <target state="translated">变体的语言，作为Internet标准语言标签（&lt;a href=&quot;http://www.ietf.org/rfc/rfc1766.txt&quot;&gt;RFC 1766&lt;/a&gt;）。 &lt;code&gt;en&lt;/code&gt; 就是一个例子，意思是英语。如果变体包含多种语言，则用逗号分隔。</target>
+        </trans-unit>
+        <trans-unit id="41a9e35b8cc8bf6dca2d24081323f6895c217806" translate="yes" xml:space="preserve">
+          <source>The language(s) of the variant, as an Internet standard language tag (&lt;a href=&quot;https://www.ietf.org/rfc/rfc1766.txt&quot;&gt;RFC 1766&lt;/a&gt;). An example is &lt;code&gt;en&lt;/code&gt;, meaning English. If the variant contains more than one language, they are separated by a comma.</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="d706496109e8997da6167e7cda14333fceb60126" translate="yes" xml:space="preserve">
           <source>The largest size of the form in bytes that will be parsed for the login details</source>
@@ -3626,382 +4002,6 @@
         <trans-unit id="ac3e5402bd52e06dfac29ef8de25a8b06046ef1b" translate="yes" xml:space="preserve">
           <source>The private key may also be combined with the certificate in the file given by &lt;code&gt;&lt;a href=&quot;#sslcertificatefile&quot;&gt;SSLCertificateFile&lt;/a&gt;&lt;/code&gt;, but this practice is highly discouraged. If it is used, the certificate files using such an embedded key must be configured after the certificates using a separate key file.</source>
           <target state="translated">私钥也可以与 &lt;code&gt;&lt;a href=&quot;#sslcertificatefile&quot;&gt;SSLCertificateFile&lt;/a&gt;&lt;/code&gt; 给出的文件中的证书结合使用，但是强烈建议不要这样做。如果使用它，则必须在使用单独密钥文件的证书之后配置使用这种嵌入式密钥的证书文件。</target>
-        </trans-unit>
-        <trans-unit id="f058c3c38afbb7fe051cb5db47f41a6e3464e0ac" translate="yes" xml:space="preserve">
-          <source>The process ID of the child that serviced the request.</source>
-          <target state="translated">服务于该请求的子程序ID。</target>
-        </trans-unit>
-        <trans-unit id="e74808826fe3800467942ebcd4d65008e82804b8" translate="yes" xml:space="preserve">
-          <source>The process ID or thread ID of the child that serviced the request. Valid formats are &lt;code&gt;pid&lt;/code&gt;, &lt;code&gt;tid&lt;/code&gt;, and &lt;code&gt;hextid&lt;/code&gt;. &lt;code&gt;hextid&lt;/code&gt; requires APR 1.2.0 or higher.</source>
-          <target state="translated">为请求提供服务的子进程的进程ID或线程ID。有效格式为 &lt;code&gt;pid&lt;/code&gt; ， &lt;code&gt;tid&lt;/code&gt; 和 &lt;code&gt;hextid&lt;/code&gt; 。 &lt;code&gt;hextid&lt;/code&gt; 需要APR 1.2.0或更高版本。</target>
-        </trans-unit>
-        <trans-unit id="80d9eeabc8adb22377d6079b9a168fbb94347041" translate="yes" xml:space="preserve">
-          <source>The process management directives are also different:</source>
-          <target state="translated">流程管理指令也不同。</target>
-        </trans-unit>
-        <trans-unit id="c54f4d571ea5929870b2e77d31fd2117c27379f2" translate="yes" xml:space="preserve">
-          <source>The process of doing a search and then a bind is the most time-consuming aspect of LDAP operation, especially if the directory is large. The search/bind cache is used to cache all searches that resulted in successful binds. Negative results (&lt;em&gt;i.e.&lt;/em&gt;, unsuccessful searches, or searches that did not result in a successful bind) are not cached. The rationale behind this decision is that connections with invalid credentials are only a tiny percentage of the total number of connections, so by not caching invalid credentials, the size of the cache is reduced.</source>
-          <target state="translated">进行搜索然后进行绑定的过程是LDAP操作最耗时的方面，尤其是在目录很大的情况下。搜索/绑定缓存用于缓存所有导致绑定成功的搜索。否定结果（&lt;em&gt;即&lt;/em&gt;，不成功的搜索或未成功绑定的搜索）不会被缓存。该决定的基本原理是，具有无效凭据的连接仅占连接总数的一小部分，因此，通过不缓存无效凭据，可以减少缓存的大小。</target>
-        </trans-unit>
-        <trans-unit id="bce1715aa2ef093c2a2b79c23e8c0bd69faaa0ad" translate="yes" xml:space="preserve">
-          <source>The protective nonce used in the &lt;code&gt;balancer-manager&lt;/code&gt; application page. The default is to use an automatically determined UUID-based nonce, to provide for further protection for the page. If set, then the nonce is set to that value. A setting of &lt;code&gt;None&lt;/code&gt; disables all nonce checking.</source>
-          <target state="translated">&lt;code&gt;balancer-manager&lt;/code&gt; 应用程序页面中使用的保护性随机数。默认设置是使用自动确定的基于UUID的随机数，为页面提供进一步的保护。如果已设置，则现时设置为该值。设置为 &lt;code&gt;None&lt;/code&gt; 将禁用所有随机数检查。</target>
-        </trans-unit>
-        <trans-unit id="fb7b3c94b2646b13478f70d301f7df220ee97eda" translate="yes" xml:space="preserve">
-          <source>The protocol is designed to support a range of choices for specific algorithms used for cryptography, digests and signatures. This allows algorithm selection for specific servers to be made based on legal, export or other concerns and also enables the protocol to take advantage of new algorithms. Choices are negotiated between client and server when establishing a protocol session.</source>
-          <target state="translated">该协议旨在支持对加密、摘要和签名所使用的具体算法的一系列选择。这使特定服务器的算法选择能够基于法律、出口或其他方面的考虑,并使该协议能够利用新的算法。在建立协议会话时,客户端和服务器之间进行协商选择。</target>
-        </trans-unit>
-        <trans-unit id="7fa12b7fda95b63be9bf1bcee66f56d93948e892" translate="yes" xml:space="preserve">
-          <source>The protocol parameters negotiated between the client and server. This will only be printed if SSL is used.</source>
-          <target state="translated">客户端和服务器之间协商的协议参数。只有在使用SSL的情况下才会打印。</target>
-        </trans-unit>
-        <trans-unit id="5211ae5a79162a03c7762ee9695492eac0a267cb" translate="yes" xml:space="preserve">
-          <source>The protocol to use with the Certificate Authority.</source>
-          <target state="translated">与证书颁发机构使用的协议。</target>
-        </trans-unit>
-        <trans-unit id="a52569fd918d8e53baba3e5b4f2f11ca1220a4b3" translate="yes" xml:space="preserve">
-          <source>The protocol used by the request</source>
-          <target state="translated">请求使用的协议</target>
-        </trans-unit>
-        <trans-unit id="fe23d5608e256fa567a661b8ca9c5cec198d4785" translate="yes" xml:space="preserve">
-          <source>The protocol used, f.x. &lt;code&gt;HTTP/1.1&lt;/code&gt;</source>
-          <target state="translated">所使用的协议，fx &lt;code&gt;HTTP/1.1&lt;/code&gt;</target>
-        </trans-unit>
-        <trans-unit id="82cd1d925b48a51e669239690278bca5b4433025" translate="yes" xml:space="preserve">
-          <source>The proxy manages the configuration of origin servers and their communication parameters in objects called</source>
-          <target state="translated">代理管理原点服务器的配置和它们的通信参数,这些对象称为</target>
-        </trans-unit>
-        <trans-unit id="219fc5485a43c65cc33c719d38b560399c6ca1e8" translate="yes" xml:space="preserve">
-          <source>The purpose of the &lt;code&gt;&amp;lt;Limit&amp;gt;&lt;/code&gt; directive is to restrict the effect of the access controls to the nominated HTTP methods. For all other methods, the access restrictions that are enclosed in the &lt;code&gt;&amp;lt;Limit&amp;gt;&lt;/code&gt; bracket &lt;strong&gt;will have no effect&lt;/strong&gt;. The following example applies the access control only to the methods &lt;code&gt;POST&lt;/code&gt;, &lt;code&gt;PUT&lt;/code&gt;, and &lt;code&gt;DELETE&lt;/code&gt;, leaving all other methods unprotected:</source>
-          <target state="translated">&lt;code&gt;&amp;lt;Limit&amp;gt;&lt;/code&gt; 指令的目的是将访问控制的影响限制为指定的HTTP方法。对于所有其他方法， &lt;code&gt;&amp;lt;Limit&amp;gt;&lt;/code&gt; 括号内的访问限制&lt;strong&gt;将无效&lt;/strong&gt;。以下示例仅将访问控制应用于方法 &lt;code&gt;POST&lt;/code&gt; ， &lt;code&gt;PUT&lt;/code&gt; 和 &lt;code&gt;DELETE&lt;/code&gt; ，而所有其他方法均不受保护：</target>
-        </trans-unit>
-        <trans-unit id="760d9da8c98a57ba8a0a55cd9458e3e1878f2738" translate="yes" xml:space="preserve">
-          <source>The purpose of this priority system is to always make use of available bandwidth while allowing precedence and weight to be given to specific streams. Since, normally, all streams are initiated by the client, it is also the one that sets these priorities.</source>
-          <target state="translated">这种优先级系统的目的是始终利用现有的带宽,同时允许对特定的流给予优先和权重。因为,通常情况下,所有的流都是由客户端发起的,所以也是由客户端来设定这些优先级。</target>
-        </trans-unit>
-        <trans-unit id="b600eb953c3cb8012c8fe7f31fde5547edff8106" translate="yes" xml:space="preserve">
-          <source>The push diary records a digest (currently using a 64 bit number) of pushed resources (their URL) to avoid duplicate pushes on the same connection. These value are not persisted, so clients opening a new connection will experience known pushes again. There is ongoing work to enable a client to disclose a digest of the resources it already has, so the diary maybe initialized by the client on each connection setup.</source>
-          <target state="translated">推送日记记录了被推送的资源(它们的URL)的摘要(目前使用64位数),以避免同一连接上的重复推送。这些值不会被持久化,所以客户端打开一个新的连接将再次经历已知的推送。目前正在进行的工作是让客户端能够公开它已经拥有的资源的摘要,所以日记也许会在每次连接设置时由客户端初始化。</target>
-        </trans-unit>
-        <trans-unit id="49da144e419ab9eccbe4f8c43f4fd19993cf078e" translate="yes" xml:space="preserve">
-          <source>The query name is passed to the database driver as a label for an SQL prepared statement, and will therefore need to follow any rules (such as case-sensitivity) required for your database.</source>
-          <target state="translated">查询名称作为SQL准备好的语句的标签传递给数据库驱动程序,因此需要遵循数据库所需的任何规则(例如大小写敏感度)。</target>
-        </trans-unit>
-        <trans-unit id="ab47d2bc2fc5bac7c492cf34ee0128609759f69e" translate="yes" xml:space="preserve">
-          <source>The query string (prepended with a &lt;code&gt;?&lt;/code&gt; if a query string exists, otherwise an empty string).</source>
-          <target state="translated">查询字符串（如果存在查询字符串，则以 &lt;code&gt;?&lt;/code&gt; 开头，否则为空字符串）。</target>
-        </trans-unit>
-        <trans-unit id="f71aa6f9222a9f4436bd07a11aace6dd5e56c9be" translate="yes" xml:space="preserve">
-          <source>The query string arguments extracted from the request (f.x. &lt;code&gt;foo=bar&amp;amp;name=johnsmith&lt;/code&gt;)</source>
-          <target state="translated">从请求中提取的查询字符串参数（fx &lt;code&gt;foo=bar&amp;amp;name=johnsmith&lt;/code&gt; ）</target>
-        </trans-unit>
-        <trans-unit id="cad93859c8bbff93fcb08166de70cbb525c71c30" translate="yes" xml:space="preserve">
-          <source>The query string of the current request</source>
-          <target state="translated">当前请求的查询字符串</target>
-        </trans-unit>
-        <trans-unit id="76f18382e1d55c12dcf293c1c2ae1eaad518fc70" translate="yes" xml:space="preserve">
-          <source>The question of &quot;&lt;em&gt;Where should I put that directive?&lt;/em&gt;&quot; is generally answered by considering where you want a directive to be effective. If it is a global setting, it should appear in the configuration file, outside of any &lt;code&gt;&lt;a href=&quot;mod/core#directory&quot;&gt;&amp;lt;Directory&amp;gt;&lt;/a&gt;&lt;/code&gt;, &lt;code&gt;&lt;a href=&quot;mod/core#location&quot;&gt;&amp;lt;Location&amp;gt;&lt;/a&gt;&lt;/code&gt;, &lt;code&gt;&lt;a href=&quot;mod/core#virtualhost&quot;&gt;&amp;lt;VirtualHost&amp;gt;&lt;/a&gt;&lt;/code&gt;, or other section. If it is to apply only to a particular directory, then it should go inside a &lt;code&gt;&lt;a href=&quot;mod/core#directory&quot;&gt;&amp;lt;Directory&amp;gt;&lt;/a&gt;&lt;/code&gt; section referring to that directory, and so on. See the &lt;a href=&quot;sections&quot;&gt;Configuration Sections&lt;/a&gt; document for further discussion of these sections.</source>
-          <target state="translated">的&amp;ldquo;这个问题&lt;em&gt;我应该在哪里把该指令？&lt;/em&gt; &amp;rdquo;你想要一个指令是有效的，一般考虑回答。如果是全局设置，则它应出现在配置文件中任何 &lt;code&gt;&lt;a href=&quot;mod/core#directory&quot;&gt;&amp;lt;Directory&amp;gt;&lt;/a&gt;&lt;/code&gt; ， &lt;code&gt;&lt;a href=&quot;mod/core#location&quot;&gt;&amp;lt;Location&amp;gt;&lt;/a&gt;&lt;/code&gt; ， &lt;code&gt;&lt;a href=&quot;mod/core#virtualhost&quot;&gt;&amp;lt;VirtualHost&amp;gt;&lt;/a&gt;&lt;/code&gt; 或其他部分之外。如果仅应用于特定目录，则应放在引用该目录的 &lt;code&gt;&lt;a href=&quot;mod/core#directory&quot;&gt;&amp;lt;Directory&amp;gt;&lt;/a&gt;&lt;/code&gt; 节中，依此类推。有关这些部分的进一步讨论，请参见&amp;ldquo; &lt;a href=&quot;sections&quot;&gt;配置部分&amp;rdquo;&lt;/a&gt;文档。</target>
-        </trans-unit>
-        <trans-unit id="7edba04b5cac71b71bdacd60acd1c928c6bd3e65" translate="yes" xml:space="preserve">
-          <source>The range of the &lt;code&gt;MaxSpareThreads&lt;/code&gt; value is restricted. Apache httpd will correct the given value automatically according to the following rules:</source>
-          <target state="translated">&lt;code&gt;MaxSpareThreads&lt;/code&gt; 值的范围受到限制。Apache httpd将根据以下规则自动更正给定值：</target>
-        </trans-unit>
-        <trans-unit id="2eef9d00b98202cf39c74a565c4e6050bf655308" translate="yes" xml:space="preserve">
-          <source>The rate of transfer as calculated by the formula &lt;code&gt;totalread / 1024 / timetaken&lt;/code&gt;</source>
-          <target state="translated">通过公式 &lt;code&gt;totalread / 1024 / timetaken&lt;/code&gt; 计算出的传输速率</target>
-        </trans-unit>
-        <trans-unit id="c32755fb5f19b66eab39ed7c1145155e5bf7227f" translate="yes" xml:space="preserve">
-          <source>The realm name to which the user name belongs. See &lt;a href=&quot;http://tools.ietf.org/html/rfc2617#section-3.2.1&quot;&gt; http://tools.ietf.org/html/rfc2617#section-3.2.1&lt;/a&gt; for more details.</source>
-          <target state="translated">用户名所属的领域名称。有关更多详细信息，请参见&lt;a href=&quot;http://tools.ietf.org/html/rfc2617#section-3.2.1&quot;&gt;http://tools.ietf.org/html/rfc2617#section-3.2.1&lt;/a&gt;。</target>
-        </trans-unit>
-        <trans-unit id="d766840794f4ec358d1f121d0e23b75f585a1011" translate="yes" xml:space="preserve">
-          <source>The realm name used for authorization (if applicable).</source>
-          <target state="translated">用于授权的境界名称(如果适用)。</target>
-        </trans-unit>
-        <trans-unit id="6e84b1fcb9e17be90a74bb5160becb6ae0da0e19" translate="yes" xml:space="preserve">
-          <source>The reason is that the SSL protocol is a separate layer which encapsulates the HTTP protocol. So the SSL session is a separate transaction, that takes place before the HTTP session has begun. The server receives an SSL request on IP address X and port Y (usually 443). Since the SSL request did not contain any Host: field, the server had no way to decide which SSL virtual host to use. Usually, it just used the first one it found which matched the port and IP address specified.</source>
-          <target state="translated">原因是SSL协议是一个独立的层,它封装了HTTP协议。所以SSL会话是一个独立的事务,在HTTP会话开始之前就已经发生了。服务器在IP地址X和端口Y(通常是443)上收到一个SSL请求。由于SSL请求中不包含任何Host:字段,服务器没有办法决定使用哪个SSL虚拟主机。通常,它只是使用它找到的第一个与指定的端口和IP地址相匹配的虚拟主机。</target>
-        </trans-unit>
-        <trans-unit id="b8b67733fb6d4415b64106783be62912fc578d19" translate="yes" xml:space="preserve">
-          <source>The reason is very technical, and a somewhat &quot;chicken and egg&quot; problem. The SSL protocol layer stays below the HTTP protocol layer and encapsulates HTTP. When an SSL connection (HTTPS) is established Apache/mod_ssl has to negotiate the SSL protocol parameters with the client. For this, mod_ssl has to consult the configuration of the virtual server (for instance it has to look for the cipher suite, the server certificate, etc.). But in order to go to the correct virtual server Apache has to know the &lt;code&gt;Host&lt;/code&gt; HTTP header field. To do this, the HTTP request header has to be read. This cannot be done before the SSL handshake is finished, but the information is needed in order to complete the SSL handshake phase. See the next question for how to circumvent this issue.</source>
-          <target state="translated">原因是非常技术性的，还有一个&amp;ldquo;鸡和蛋&amp;rdquo;的问题。 SSL协议层位于HTTP协议层之下，并封装HTTP。建立SSL连接（HTTPS）后，Apache / mod_ssl必须与客户端协商SSL协议参数。为此，mod_ssl必须咨询虚拟服务器的配置（例如，它必须寻找密码套件，服务器证书等）。但是，为了转到正确的虚拟服务器，Apache必须知道 &lt;code&gt;Host&lt;/code&gt; HTTP标头字段。为此，必须读取HTTP请求标头。无法在SSL握手完成之前完成此操作，但是需要信息才能完成SSL握手阶段。请参阅下一个问题，以了解如何规避此问题。</target>
-        </trans-unit>
-        <trans-unit id="6ec055201b4a18b8a4f2cac6f430e113be0db16f" translate="yes" xml:space="preserve">
-          <source>The reason this dialog pops up at startup and every re-start is that the RSA private key inside your server.key file is stored in encrypted format for security reasons. The pass-phrase is needed to decrypt this file, so it can be read and parsed. Removing the pass-phrase removes a layer of security from your server - proceed with caution!</source>
-          <target state="translated">这个对话框在启动和每次重启时都会弹出,原因是出于安全考虑,你的server.key文件中的RSA私钥是以加密格式存储的。通行证是解密这个文件所需要的,所以它可以被读取和解析。去除密码后,你的服务器就失去了一层安全保护--请谨慎行事!</target>
-        </trans-unit>
-        <trans-unit id="83d4b8797d69ab0989122052059637197b14e518" translate="yes" xml:space="preserve">
-          <source>The recommended method of invoking the &lt;code&gt;&lt;a href=&quot;programs/httpd&quot;&gt;httpd&lt;/a&gt;&lt;/code&gt; executable is to use the &lt;code&gt;&lt;a href=&quot;programs/apachectl&quot;&gt;apachectl&lt;/a&gt;&lt;/code&gt; control script. This script sets certain environment variables that are necessary for &lt;code&gt;&lt;a href=&quot;programs/httpd&quot;&gt;httpd&lt;/a&gt;&lt;/code&gt; to function correctly under some operating systems, and then invokes the &lt;code&gt;&lt;a href=&quot;programs/httpd&quot;&gt;httpd&lt;/a&gt;&lt;/code&gt; binary. &lt;code&gt;&lt;a href=&quot;programs/apachectl&quot;&gt;apachectl&lt;/a&gt;&lt;/code&gt; will pass through any command line arguments, so any &lt;code&gt;&lt;a href=&quot;programs/httpd&quot;&gt;httpd&lt;/a&gt;&lt;/code&gt; options may also be used with &lt;code&gt;&lt;a href=&quot;programs/apachectl&quot;&gt;apachectl&lt;/a&gt;&lt;/code&gt;. You may also directly edit the &lt;code&gt;&lt;a href=&quot;programs/apachectl&quot;&gt;apachectl&lt;/a&gt;&lt;/code&gt; script by changing the &lt;code&gt;HTTPD&lt;/code&gt; variable near the top to specify the correct location of the &lt;code&gt;&lt;a href=&quot;programs/httpd&quot;&gt;httpd&lt;/a&gt;&lt;/code&gt; binary and any command-line arguments that you wish to be &lt;em&gt;always&lt;/em&gt; present.</source>
-          <target state="translated">推荐的调用 &lt;code&gt;&lt;a href=&quot;programs/httpd&quot;&gt;httpd&lt;/a&gt;&lt;/code&gt; 可执行文件的方法是使用 &lt;code&gt;&lt;a href=&quot;programs/apachectl&quot;&gt;apachectl&lt;/a&gt;&lt;/code&gt; 控制脚本。该脚本设置了某些环境变量，这些变量对于 &lt;code&gt;&lt;a href=&quot;programs/httpd&quot;&gt;httpd&lt;/a&gt;&lt;/code&gt; 在某些操作系统下正常运行是必需的，然后调用 &lt;code&gt;&lt;a href=&quot;programs/httpd&quot;&gt;httpd&lt;/a&gt;&lt;/code&gt; 二进制文件。 &lt;code&gt;&lt;a href=&quot;programs/apachectl&quot;&gt;apachectl&lt;/a&gt;&lt;/code&gt; 将通过任何命令行参数，因此 &lt;code&gt;&lt;a href=&quot;programs/apachectl&quot;&gt;apachectl&lt;/a&gt;&lt;/code&gt; 也可以使用任何 &lt;code&gt;&lt;a href=&quot;programs/httpd&quot;&gt;httpd&lt;/a&gt;&lt;/code&gt; 选项。您也可以通过更改顶部附近的 &lt;code&gt;HTTPD&lt;/code&gt; 变量来直接编辑 &lt;code&gt;&lt;a href=&quot;programs/apachectl&quot;&gt;apachectl&lt;/a&gt;&lt;/code&gt; 脚本，以指定 &lt;code&gt;&lt;a href=&quot;programs/httpd&quot;&gt;httpd&lt;/a&gt;&lt;/code&gt; 二进制文件的正确位置以及希望&lt;em&gt;始终&lt;/em&gt;保留的任何命令行参数&lt;em&gt;&lt;/em&gt; 当下。</target>
-        </trans-unit>
-        <trans-unit id="493cf83622f2329f1fc3e059dc37d53aea27aec5" translate="yes" xml:space="preserve">
-          <source>The regular expression above - &lt;code&gt;!\.&lt;/code&gt; - will match any request that does not contain the literal &lt;code&gt;.&lt;/code&gt; character.</source>
-          <target state="translated">上面的正则表达式- &lt;code&gt;!\.&lt;/code&gt; -将匹配任何不包含文字的请求 &lt;code&gt;.&lt;/code&gt; 字符。</target>
-        </trans-unit>
-        <trans-unit id="fe1e4e974f4da05f51c7b9c0c9bd6c9e0c752f6f" translate="yes" xml:space="preserve">
-          <source>The regular expression above - &lt;code&gt;^(/source/.+\.php)s$&lt;/code&gt; - will match any request that starts with &lt;code&gt;/source/&lt;/code&gt; followed by 1 or n characters followed by &lt;code&gt;.phps&lt;/code&gt; literally. The backreference $1 referrers to the captured match within parenthesis of the regular expression.</source>
-          <target state="translated">-上面的正则表达式 &lt;code&gt;^(/source/.+\.php)s$&lt;/code&gt; -将匹配以开始任何请求 &lt;code&gt;/source/&lt;/code&gt; 后跟1或n接着字符 &lt;code&gt;.phps&lt;/code&gt; 字面。向后引用$ 1引用正则表达式括号内的已捕获匹配。</target>
-        </trans-unit>
-        <trans-unit id="4aeecd48ee66100d3bbed17710e2043b6ea34f25" translate="yes" xml:space="preserve">
-          <source>The regular expression argument is compared against the current basic authentication username. The substitution argument may contain backreferences, but has no other variable interpolation.</source>
-          <target state="translated">正则表达式参数与当前基本认证用户名进行比较。替换参数可以包含反向引用,但没有其他变量插值。</target>
-        </trans-unit>
-        <trans-unit id="f0718d599caa9df01175f39d655ec64dafa52b32" translate="yes" xml:space="preserve">
-          <source>The relevant changes in the source are &lt;code&gt;#ifdef&lt;/code&gt;'ed into two categories:</source>
-          <target state="translated">源代码中的相关更改分为 &lt;code&gt;#ifdef&lt;/code&gt; 两种：</target>
-        </trans-unit>
-        <trans-unit id="a0a6bda3f8410bca8b72413db5d8d12a09f4c9bc" translate="yes" xml:space="preserve">
-          <source>The removed prefix always ends with a slash, meaning the matching occurs against a string which &lt;em&gt;never&lt;/em&gt; has a leading slash. Therefore, a &lt;em&gt;Pattern&lt;/em&gt; with &lt;code&gt;^/&lt;/code&gt; never matches in per-directory context.</source>
-          <target state="translated">删除的前缀始终以斜杠结尾，这意味着匹配是针对&lt;em&gt;从未&lt;/em&gt;有前导斜杠的字符串进行的。因此，带有 &lt;code&gt;^/&lt;/code&gt; 的&lt;em&gt;模式&lt;/em&gt;在每个目录上下文中都不会匹配。</target>
-        </trans-unit>
-        <trans-unit id="4a57727305e45a8aaa5b310310356cdfd28b1187" translate="yes" xml:space="preserve">
-          <source>The reply to a CPing request</source>
-          <target state="translated">对CPing请求的回复</target>
-        </trans-unit>
-        <trans-unit id="63ff1fd7a351de8e0baad845693903fa23c2f9d1" translate="yes" xml:space="preserve">
-          <source>The request URI parsed from the command line string.</source>
-          <target state="translated">从命令行字符串中解析出的请求URI。</target>
-        </trans-unit>
-        <trans-unit id="70bffb10e5b2405463683c5eac2b39beca6d98b6" translate="yes" xml:space="preserve">
-          <source>The request header is added to the existing set of headers, even if this header already exists. This can result in two (or more) headers having the same name. This can lead to unforeseen consequences, and in general &lt;code&gt;set&lt;/code&gt;, &lt;code&gt;append&lt;/code&gt; or &lt;code&gt;merge&lt;/code&gt; should be used instead.</source>
-          <target state="translated">即使此标头已经存在，请求标头也会添加到现有的标头集中。这可能导致两个（或多个）具有相同名称的标头。这可能会导致无法预料的后果，通常应使用 &lt;code&gt;set&lt;/code&gt; ， &lt;code&gt;append&lt;/code&gt; 或 &lt;code&gt;merge&lt;/code&gt; 代替。</target>
-        </trans-unit>
-        <trans-unit id="6db184f79e84a2b764ad0b05362c76a16069434d" translate="yes" xml:space="preserve">
-          <source>The request header is appended to any existing header of the same name, unless the value to be appended already appears in the existing header's comma-delimited list of values. When a new value is merged onto an existing header it is separated from the existing header with a comma. This is the HTTP standard way of giving a header multiple values. Values are compared in a case sensitive manner, and after all format specifiers have been processed. Values in double quotes are considered different from otherwise identical unquoted values.</source>
-          <target state="translated">请求头被附加到任何同名的现有头中,除非要附加的值已经出现在现有头的逗号分隔的值列表中。当一个新的值被合并到一个现有的头中时,它与现有的头用逗号分开。这是HTTP标准的方式,让一个头有多个值。值的比较是以区分大小写的方式进行的,并且是在所有格式指定符被处理之后。双引号中的值被认为与其他相同的未引号的值不同。</target>
-        </trans-unit>
-        <trans-unit id="ef7b2ebe709406da72eee4ccd86ab1b0e2146b1b" translate="yes" xml:space="preserve">
-          <source>The request header is appended to any existing header of the same name. When a new value is merged onto an existing header it is separated from the existing header with a comma. This is the HTTP standard way of giving a header multiple values.</source>
-          <target state="translated">请求头被附加到任何现有的同名头中。当一个新的值被合并到一个现有的头中时,它与现有的头用逗号分开。这是HTTP标准的方式,让一个头有多个值。</target>
-        </trans-unit>
-        <trans-unit id="b23c922de88d3c110600e91fc8da66cfb85daa81" translate="yes" xml:space="preserve">
-          <source>The request header is set, but only if there is no previous header with this name.</source>
-          <target state="translated">请求头被设置,但只有在之前没有这个名称的头的情况下才会被设置。</target>
-        </trans-unit>
-        <trans-unit id="2491a6f09bc28dce2e7377aed3c56c85b7eda814" translate="yes" xml:space="preserve">
-          <source>The request header is set, replacing any previous header with this name</source>
-          <target state="translated">设置了请求头,用这个名称代替之前的任何头</target>
-        </trans-unit>
-        <trans-unit id="4036b70c931363691f621f10b3559f6471d3cb2d" translate="yes" xml:space="preserve">
-          <source>The request header of this name is removed, if it exists. If there are multiple headers of the same name, all will be removed. &lt;var&gt;value&lt;/var&gt; must be omitted.</source>
-          <target state="translated">如果该名称的请求标头存在，则将其删除。如果有多个同名标题，则将全部删除。 &lt;var&gt;value&lt;/var&gt; 必须省略。</target>
-        </trans-unit>
-        <trans-unit id="09b023372c4f76c81aa40ecf09588ed13cef9248" translate="yes" xml:space="preserve">
-          <source>The request line from the client is given in double quotes. The request line contains a great deal of useful information. First, the method used by the client is &lt;code&gt;GET&lt;/code&gt;. Second, the client requested the resource &lt;code&gt;/apache_pb.gif&lt;/code&gt;, and third, the client used the protocol &lt;code&gt;HTTP/1.0&lt;/code&gt;. It is also possible to log one or more parts of the request line independently. For example, the format string &quot;&lt;code&gt;%m %U%q %H&lt;/code&gt;&quot; will log the method, path, query-string, and protocol, resulting in exactly the same output as &quot;&lt;code&gt;%r&lt;/code&gt;&quot;.</source>
-          <target state="translated">客户端的请求行以双引号引起来。请求行包含大量有用的信息。首先，客户端使用的方法是 &lt;code&gt;GET&lt;/code&gt; 。第二，客户端请求资源 &lt;code&gt;/apache_pb.gif&lt;/code&gt; ，第三，客户端使用协议 &lt;code&gt;HTTP/1.0&lt;/code&gt; 。也可以独立记录请求行的一个或多个部分。例如，格式字符串&amp;ldquo; &lt;code&gt;%m %U%q %H&lt;/code&gt; &amp;rdquo;将记录方法，路径，查询字符串和协议，从而得到与&amp;ldquo; &lt;code&gt;%r&lt;/code&gt; &amp;rdquo; 完全相同的输出。</target>
-        </trans-unit>
-        <trans-unit id="3fecdefee95e69e1ef8222b78d133f51a0118ea4" translate="yes" xml:space="preserve">
-          <source>The request log ID from the error log (or '-' if nothing has been logged to the error log for this request). Look for the matching error log line to see what request caused what error.</source>
-          <target state="translated">错误日志中的请求日志ID(如果此请求没有记录到错误日志,则为'-')。查找匹配的错误日志行,以查看是什么请求导致了什么错误。</target>
-        </trans-unit>
-        <trans-unit id="50d74bb8c92eafb9a405cbebe8b356f93b5a01c6" translate="yes" xml:space="preserve">
-          <source>The request method, f.x. &lt;code&gt;GET&lt;/code&gt; or &lt;code&gt;POST&lt;/code&gt;.</source>
-          <target state="translated">请求方法fx &lt;code&gt;GET&lt;/code&gt; 或 &lt;code&gt;POST&lt;/code&gt; 。</target>
-        </trans-unit>
-        <trans-unit id="e8fde8cd95a6e35abfc84efe8214acd4a5fdcb61" translate="yes" xml:space="preserve">
-          <source>The request method.</source>
-          <target state="translated">请求方法。</target>
-        </trans-unit>
-        <trans-unit id="920cbf65026f74bdd906fdd6a9ec518577bd1f5a" translate="yes" xml:space="preserve">
-          <source>The request must be a HTTP GET request.</source>
-          <target state="translated">该请求必须是HTTP GET请求。</target>
-        </trans-unit>
-        <trans-unit id="79ae2844322c59dad69df061c53d6a2a7e0f7ff9" translate="yes" xml:space="preserve">
-          <source>The request protocol.</source>
-          <target state="translated">请求协议;</target>
-        </trans-unit>
-        <trans-unit id="83a24bb8c079f724755652d47264e87ad466d90e" translate="yes" xml:space="preserve">
-          <source>The request string as sent by the client, f.x. &lt;code&gt;GET /foo/bar HTTP/1.1&lt;/code&gt;.</source>
-          <target state="translated">客户端发送的请求字符串fx &lt;code&gt;GET /foo/bar HTTP/1.1&lt;/code&gt; 。</target>
-        </trans-unit>
-        <trans-unit id="0d781e777212b0f36ca15046c8e34f95ce4c130f" translate="yes" xml:space="preserve">
-          <source>The request_rec is mapped in as a userdata. It has a metatable which lets you do useful things with it. For the most part it has the same fields as the request_rec struct, many of which are writable as well as readable. (The table fields' content can be changed, but the fields themselves cannot be set to different tables.)</source>
-          <target state="translated">request_rec被映射为一个用户数据。它有一个元数据(metatable),你可以用它做一些有用的事情。大多数情况下,它的字段与 request_rec 结构的字段相同,其中许多字段是可写也可读的。表字段的内容可以改变,但字段本身不能设置到不同的表)。</target>
-        </trans-unit>
-        <trans-unit id="6a1ebc8d9f133c9522ed54e40234c293416d51c8" translate="yes" xml:space="preserve">
-          <source>The request_rec object has (at least) the following methods:</source>
-          <target state="translated">request_rec对象有(至少)以下方法。</target>
-        </trans-unit>
-        <trans-unit id="5f9463cd8983fa746d82bdfc34322a9dfa285cd3" translate="yes" xml:space="preserve">
-          <source>The response header is added to the existing set of headers, even if this header already exists. This can result in two (or more) headers having the same name. This can lead to unforeseen consequences, and in general &lt;code&gt;set&lt;/code&gt;, &lt;code&gt;append&lt;/code&gt; or &lt;code&gt;merge&lt;/code&gt; should be used instead.</source>
-          <target state="translated">即使该标头已经存在，也会将响应标头添加到现有的标头集中。这可能导致两个（或多个）具有相同名称的标头。这可能会导致无法预料的后果，通常应使用 &lt;code&gt;set&lt;/code&gt; ， &lt;code&gt;append&lt;/code&gt; 或 &lt;code&gt;merge&lt;/code&gt; 代替。</target>
-        </trans-unit>
-        <trans-unit id="bd11740ab9c2a6e13bcf4e5ad655e4dc1d921496" translate="yes" xml:space="preserve">
-          <source>The response header is appended to any existing header of the same name, unless the value to be appended already appears in the header's comma-delimited list of values. When a new value is merged onto an existing header it is separated from the existing header with a comma. This is the HTTP standard way of giving a header multiple values. Values are compared in a case sensitive manner, and after all format specifiers have been processed. Values in double quotes are considered different from otherwise identical unquoted values.</source>
-          <target state="translated">响应头被附加到任何现有的同名头中,除非要附加的值已经出现在头的逗号分隔的值列表中。当一个新的值被合并到一个现有的头中时,它与现有的头用逗号分开。这是HTTP标准的方式,让一个头有多个值。值的比较是以区分大小写的方式进行的,并且是在所有格式指定符被处理之后。双引号中的值被认为与其他相同的未引号的值不同。</target>
-        </trans-unit>
-        <trans-unit id="98a73150df4c031860c029e076fe37d1e44c19f3" translate="yes" xml:space="preserve">
-          <source>The response header is appended to any existing header of the same name. When a new value is merged onto an existing header it is separated from the existing header with a comma. This is the HTTP standard way of giving a header multiple values.</source>
-          <target state="translated">响应头被附加到任何现有的同名头中。当一个新的值被合并到一个现有的头中时,它与现有的头用逗号分开。这是HTTP标准的方式,让一个头有多个值。</target>
-        </trans-unit>
-        <trans-unit id="44b4bf26afa166112aba1fdb66f2cbefc4b3f577" translate="yes" xml:space="preserve">
-          <source>The response header is set, replacing any previous header with this name. The &lt;var&gt;value&lt;/var&gt; may be a format string.</source>
-          <target state="translated">设置了响应头，并用该名称替换任何先前的头。该 &lt;var&gt;value&lt;/var&gt; 可以是格式字符串。</target>
-        </trans-unit>
-        <trans-unit id="279050fe0c9a3e86e8124d37e98baaf7772452c8" translate="yes" xml:space="preserve">
-          <source>The response header of this name is removed, if it exists. If there are multiple headers of the same name, all will be removed. &lt;var&gt;value&lt;/var&gt; must be omitted.</source>
-          <target state="translated">该名称的响应头（如果存在）将被删除。如果有多个同名标题，则将全部删除。 &lt;var&gt;value&lt;/var&gt; 必须省略。</target>
-        </trans-unit>
-        <trans-unit id="859e3fba0d1d587e3de01436806d5db94247b30c" translate="yes" xml:space="preserve">
-          <source>The response was served from cache.</source>
-          <target state="translated">响应是由缓存服务的。</target>
-        </trans-unit>
-        <trans-unit id="29750d1f7ce2fff7f65e08999855c369ad7f8fbd" translate="yes" xml:space="preserve">
-          <source>The response was served from the upstream server.</source>
-          <target state="translated">响应是由上游服务器提供的。</target>
-        </trans-unit>
-        <trans-unit id="af0e97eebe4f45e8b34e349314a730d9fbe233d0" translate="yes" xml:space="preserve">
-          <source>The response was stale and was successfully revalidated, then served from cache.</source>
-          <target state="translated">响应是陈旧的,重新验证成功后,从缓存中服务。</target>
-        </trans-unit>
-        <trans-unit id="8d1a9c3520f6869f7b463f296b43235c4a9a9d13" translate="yes" xml:space="preserve">
-          <source>The rest of the arguments give the names of variables to set, and optionally values to which they should be set. These take the form of</source>
-          <target state="translated">其余的参数给出了要设置的变量名称,以及它们应该被设置的可选值。这些参数的形式是</target>
-        </trans-unit>
-        <trans-unit id="a8f2607a0807abd736c5b2cbeb597556d9b6d05d" translate="yes" xml:space="preserve">
-          <source>The result of &lt;code&gt;&lt;a href=&quot;#cachedirlevels&quot;&gt;CacheDirLevels&lt;/a&gt;&lt;/code&gt;* &lt;code&gt;CacheDirLength&lt;/code&gt; must not be higher than 20.</source>
-          <target state="translated">&lt;code&gt;&lt;a href=&quot;#cachedirlevels&quot;&gt;CacheDirLevels&lt;/a&gt;&lt;/code&gt; * &lt;code&gt;CacheDirLength&lt;/code&gt; 的结果不得大于20。</target>
-        </trans-unit>
-        <trans-unit id="ed3b53c3b416c267c2397d94025af5d3771cadfc" translate="yes" xml:space="preserve">
-          <source>The result of &lt;code&gt;CacheDirLevels&lt;/code&gt;* &lt;code&gt;&lt;a href=&quot;#cachedirlength&quot;&gt;CacheDirLength&lt;/a&gt;&lt;/code&gt; must not be higher than 20.</source>
-          <target state="translated">&lt;code&gt;CacheDirLevels&lt;/code&gt; * &lt;code&gt;&lt;a href=&quot;#cachedirlength&quot;&gt;CacheDirLength&lt;/a&gt;&lt;/code&gt; 的结果不得大于20。</target>
-        </trans-unit>
-        <trans-unit id="8a29084a322afa1b6074a6632ff9c6f392570d3d" translate="yes" xml:space="preserve">
-          <source>The result of the &lt;code&gt;Require&lt;/code&gt; directive may be negated through the use of the &lt;code&gt;not&lt;/code&gt; option. As with the other negated authorization directive &lt;code&gt;&amp;lt;RequireNone&amp;gt;&lt;/code&gt;, when the &lt;code&gt;Require&lt;/code&gt; directive is negated it can only fail or return a neutral result, and therefore may never independently authorize a request.</source>
-          <target state="translated">可以通过使用 &lt;code&gt;not&lt;/code&gt; 选项来否定 &lt;code&gt;Require&lt;/code&gt; 指令的结果。与其他否定授权指令 &lt;code&gt;&amp;lt;RequireNone&amp;gt;&lt;/code&gt; 一样，当 &lt;code&gt;Require&lt;/code&gt; 指令被否定时，它只会失败或返回中立的结果，因此可能永远不会独立授权请求。</target>
-        </trans-unit>
-        <trans-unit id="aa0604063b0766e21ec522fb70a4647c7d28ba94" translate="yes" xml:space="preserve">
-          <source>The result set returned by &lt;code&gt;db:select&lt;/code&gt; or by the prepared statement functions created through &lt;code&gt;db:prepare&lt;/code&gt; can be used to fetch rows synchronously or asynchronously, depending on the row number specified:</source>
-          <target state="translated">&lt;code&gt;db:select&lt;/code&gt; 或通过 &lt;code&gt;db:prepare&lt;/code&gt; 创建的prepared语句函数返回的结果集可用于同步或异步获取行，具体取决于指定的行号：</target>
-        </trans-unit>
-        <trans-unit id="82ccd7d3f3ec42a4210c819c0e31b6e9b17235bf" translate="yes" xml:space="preserve">
-          <source>The reuse-algorithm above is used here, too. In other words: The external program is called only once per unique Pass Phrase.</source>
-          <target state="translated">这里也使用了上面的复用算法。换句话说。外部程序在每个独特的Pass Phrase中只被调用一次。</target>
-        </trans-unit>
-        <trans-unit id="c6b1299360bb30e185d328c28d3a641e00f2f4dd" translate="yes" xml:space="preserve">
-          <source>The rewrite engine may be used in &lt;a href=&quot;../howto/htaccess&quot;&gt;.htaccess&lt;/a&gt; files and in &lt;code&gt;&lt;a href=&quot;core#directory&quot;&gt;&amp;lt;Directory&amp;gt;&lt;/a&gt;&lt;/code&gt; sections, with some additional complexity.</source>
-          <target state="translated">重写引擎可能会在&lt;a href=&quot;../howto/htaccess&quot;&gt;.htaccess&lt;/a&gt;文件和 &lt;code&gt;&lt;a href=&quot;core#directory&quot;&gt;&amp;lt;Directory&amp;gt;&lt;/a&gt;&lt;/code&gt; 部分中使用，但会带来一些额外的复杂性。</target>
-        </trans-unit>
-        <trans-unit id="f7021a5b2bffe981b660fb924c6241282c295b89" translate="yes" xml:space="preserve">
-          <source>The route information found in the request.</source>
-          <target state="translated">请求中发现的路线信息。</target>
-        </trans-unit>
-        <trans-unit id="9084bb1b594acab4159ae997d54b810debe0e66a" translate="yes" xml:space="preserve">
-          <source>The route of the worker chosen.</source>
-          <target state="translated">选择的工人路线。</target>
-        </trans-unit>
-        <trans-unit id="7472ac85bd942389e3f638374d7268eac694beec" translate="yes" xml:space="preserve">
-          <source>The rules are applied in order. As soon as a match is found, it is used and detection is stopped.</source>
-          <target state="translated">规则依次应用。一旦发现匹配,立即使用,并停止检测。</target>
-        </trans-unit>
-        <trans-unit id="5a8e8f15082406217b31731672c796af664d560a" translate="yes" xml:space="preserve">
-          <source>The salt for a CRYPT password is the first two characters (converted to a binary value). To validate &lt;code&gt;myPassword&lt;/code&gt; against &lt;code&gt;rqXexS6ZhobKA&lt;/code&gt;</source>
-          <target state="translated">CRYPT密码的盐是前两个字符（转换为二进制值）。针对 &lt;code&gt;rqXexS6ZhobKA&lt;/code&gt; 验证 &lt;code&gt;myPassword&lt;/code&gt;</target>
-        </trans-unit>
-        <trans-unit id="10a965c725ba0e5a97c5bf45dbc9915afdf61061" translate="yes" xml:space="preserve">
-          <source>The salt for an MD5 password is between &lt;code&gt;$apr1$&lt;/code&gt; and the following &lt;code&gt;$&lt;/code&gt; (as a Base64-encoded binary value - max 8 chars). To validate &lt;code&gt;myPassword&lt;/code&gt; against &lt;code&gt;$apr1$r31.....$HqJZimcKQFAMYayBlzkrA/&lt;/code&gt;</source>
-          <target state="translated">MD5密码的盐值介于 &lt;code&gt;$apr1$&lt;/code&gt; 和其后的 &lt;code&gt;$&lt;/code&gt; 之间（作为Base64编码的二进制值-最多8个字符）。要针对 &lt;code&gt;$apr1$r31.....$HqJZimcKQFAMYayBlzkrA/&lt;/code&gt; 验证 &lt;code&gt;myPassword&lt;/code&gt;</target>
-        </trans-unit>
-        <trans-unit id="f7b8d07c294a1ce03f367eef9ea74a7037f1ce5d" translate="yes" xml:space="preserve">
-          <source>The same as the above but dispatching on handler (classic SSI behaviour; .shtml files get processed).</source>
-          <target state="translated">与上述相同,但在处理程序上进行派发(经典的SSI行为;.shtml文件得到处理)。</target>
-        </trans-unit>
-        <trans-unit id="0442966403dc1b3219c5df6aca2cc9cfeef408c7" translate="yes" xml:space="preserve">
-          <source>The same is true for the &lt;code&gt;&lt;a href=&quot;mod/mod_proxy#proxypass&quot;&gt;ProxyPass&lt;/a&gt;&lt;/code&gt; directives:</source>
-          <target state="translated">&lt;code&gt;&lt;a href=&quot;mod/mod_proxy#proxypass&quot;&gt;ProxyPass&lt;/a&gt;&lt;/code&gt; 指令也是如此：</target>
-        </trans-unit>
-        <trans-unit id="e514a17125c8fdda0aed23b2659108281fcf887b" translate="yes" xml:space="preserve">
-          <source>The scheme part of the request's URI</source>
-          <target state="translated">请求URI的方案部分。</target>
-        </trans-unit>
-        <trans-unit id="bcd25dc216a1eef0e9912bc79d719562fae3b2d2" translate="yes" xml:space="preserve">
-          <source>The scheme/hostname/port portion of &lt;code&gt;ProxyPass&lt;/code&gt; may contain variables, but only the ones available when the directive is parsed (for example, using &lt;code&gt;&lt;a href=&quot;core#define&quot;&gt;Define&lt;/a&gt;&lt;/code&gt;). For all the other use cases, please consider using &lt;code&gt;&lt;a href=&quot;mod_rewrite&quot;&gt;mod_rewrite&lt;/a&gt;&lt;/code&gt; instead.</source>
-          <target state="translated">&lt;code&gt;ProxyPass&lt;/code&gt; 的scheme / hostname / port部分可能包含变量，但仅在解析指令时可用的变量（例如，使用 &lt;code&gt;&lt;a href=&quot;core#define&quot;&gt;Define&lt;/a&gt;&lt;/code&gt; ）。对于所有其他用例，请考虑改为使用 &lt;code&gt;&lt;a href=&quot;mod_rewrite&quot;&gt;mod_rewrite&lt;/a&gt;&lt;/code&gt; 。</target>
-        </trans-unit>
-        <trans-unit id="84e2ac55ae2cf25719c9d0e97343d559389e18ae" translate="yes" xml:space="preserve">
-          <source>The schemes to configure above in &lt;code&gt;ProxyPassReverse&lt;/code&gt; for reverse proxying &lt;code&gt;h2&lt;/code&gt; (or &lt;code&gt;h2c&lt;/code&gt;) protocols are the usual &lt;code&gt;https&lt;/code&gt; (resp. &lt;code&gt;http&lt;/code&gt;) as expected/used by the user agent.</source>
-          <target state="translated">配置在上述方案 &lt;code&gt;ProxyPassReverse&lt;/code&gt; 为反向代理 &lt;code&gt;h2&lt;/code&gt; （或 &lt;code&gt;h2c&lt;/code&gt; ）协议是通常的 &lt;code&gt;https&lt;/code&gt; （相应的 &lt;code&gt;http&lt;/code&gt; ）如预期/使用的用户代理。</target>
-        </trans-unit>
-        <trans-unit id="cf38f2ae9f94c5ac28b9c4ef9eaaaa7745f084d4" translate="yes" xml:space="preserve">
-          <source>The scope of the search. Can be either &lt;code&gt;one&lt;/code&gt; or &lt;code&gt;sub&lt;/code&gt;. Note that a scope of &lt;code&gt;base&lt;/code&gt; is also supported by RFC 2255, but is not supported by this module. If the scope is not provided, or if &lt;code&gt;base&lt;/code&gt; scope is specified, the default is to use a scope of &lt;code&gt;sub&lt;/code&gt;.</source>
-          <target state="translated">搜索范围。可以是 &lt;code&gt;one&lt;/code&gt; 或 &lt;code&gt;sub&lt;/code&gt; 。请注意，RFC 2255也支持 &lt;code&gt;base&lt;/code&gt; 范围，但此模块不支持该范围。如果未提供范围，或者指定了 &lt;code&gt;base&lt;/code&gt; 范围，则默认值为使用 &lt;code&gt;sub&lt;/code&gt; 的范围。</target>
-        </trans-unit>
-        <trans-unit id="746fe9db991dfefb75cb7c51805de0482138962d" translate="yes" xml:space="preserve">
-          <source>The script contains the following section.</source>
-          <target state="translated">该脚本包含以下部分:</target>
-        </trans-unit>
-        <trans-unit id="f46ae52baad385b5621008071cd551595b121b75" translate="yes" xml:space="preserve">
-          <source>The search and bind cache is controlled with the &lt;code&gt;&lt;a href=&quot;#ldapcacheentries&quot;&gt;LDAPCacheEntries&lt;/a&gt;&lt;/code&gt; and &lt;code&gt;&lt;a href=&quot;#ldapcachettl&quot;&gt;LDAPCacheTTL&lt;/a&gt;&lt;/code&gt; directives.</source>
-          <target state="translated">搜索和绑定高速缓存由 &lt;code&gt;&lt;a href=&quot;#ldapcacheentries&quot;&gt;LDAPCacheEntries&lt;/a&gt;&lt;/code&gt; 和 &lt;code&gt;&lt;a href=&quot;#ldapcachettl&quot;&gt;LDAPCacheTTL&lt;/a&gt;&lt;/code&gt; 指令控制。</target>
-        </trans-unit>
-        <trans-unit id="4e36f3e5fa9c55210d20260d993ded0a709bf348" translate="yes" xml:space="preserve">
-          <source>The second RewriteCond assumes that you have HostNameLookups turned on, so that client IP addresses will be resolved. If that's not the case, you should drop the second RewriteCond, and drop the &lt;code&gt;[OR]&lt;/code&gt; flag from the first RewriteCond.</source>
-          <target state="translated">第二个RewriteCond假定您已打开HostNameLookups，以便将解析客户端IP地址。如果不是这种情况，则应删除第二个RewriteCond，并从第一个RewriteCond中删除 &lt;code&gt;[OR]&lt;/code&gt; 标志。</target>
-        </trans-unit>
-        <trans-unit id="ae510d1586d457e5cc7d397ae1b3f39e98bf7d6e" translate="yes" xml:space="preserve">
-          <source>The second argument (&lt;em&gt;regex&lt;/em&gt;) is a &lt;a href=&quot;https://httpd.apache.org/docs/2.4/en/glossary.html#regex&quot;&gt;regular expression&lt;/a&gt;. If the &lt;em&gt;regex&lt;/em&gt; matches against the &lt;em&gt;attribute&lt;/em&gt;, then the remainder of the arguments are evaluated.</source>
-          <target state="translated">第二个参数（&lt;em&gt;regex&lt;/em&gt;）是一个&lt;a href=&quot;https://httpd.apache.org/docs/2.4/en/glossary.html#regex&quot;&gt;正则表达式&lt;/a&gt;。如果&lt;em&gt;正则表达式&lt;/em&gt;与&lt;em&gt;attribute&lt;/em&gt;相匹配，则将评估其余参数。</target>
-        </trans-unit>
-        <trans-unit id="0a00a8113066ae3196199ec8b72592aaa256ff14" translate="yes" xml:space="preserve">
-          <source>The second argument specifies what will be written to the log file. It can specify either a &lt;var&gt;nickname&lt;/var&gt; defined by a previous &lt;code&gt;&lt;a href=&quot;#logformat&quot;&gt;LogFormat&lt;/a&gt;&lt;/code&gt; directive, or it can be an explicit &lt;var&gt;format&lt;/var&gt; string as described in the &lt;a href=&quot;#formats&quot;&gt;log formats&lt;/a&gt; section.</source>
-          <target state="translated">第二个参数指定将写入日志文件的内容。它可以指定由先前的 &lt;code&gt;&lt;a href=&quot;#logformat&quot;&gt;LogFormat&lt;/a&gt;&lt;/code&gt; 指令定义的 &lt;var&gt;nickname&lt;/var&gt; ，也可以是&lt;a href=&quot;#formats&quot;&gt;日志格式&lt;/a&gt;部分中所述的显式 &lt;var&gt;format&lt;/var&gt; 字符串。</target>
-        </trans-unit>
-        <trans-unit id="27ee932e80424b2481601bc8398a3aed9c3aa8c4" translate="yes" xml:space="preserve">
-          <source>The second consideration is one of security. You are permitting users to modify server configuration, which may result in changes over which you have no control. Carefully consider whether you want to give your users this privilege. Note also that giving users less privileges than they need will lead to additional technical support requests. Make sure you clearly tell your users what level of privileges you have given them. Specifying exactly what you have set &lt;code&gt;&lt;a href=&quot;../mod/core#allowoverride&quot;&gt;AllowOverride&lt;/a&gt;&lt;/code&gt; to, and pointing them to the relevant documentation, will save yourself a lot of confusion later.</source>
-          <target state="translated">第二个考虑因素是安全性。您允许用户修改服务器配置，这可能会导致您无法控制的更改。请仔细考虑您是否要授予用户此特权。还请注意，为用户提供少于其所需特权的特权将导致其他技术支持请求。确保您清楚地告诉用户您所授予的特权级别。确切指定您将 &lt;code&gt;&lt;a href=&quot;../mod/core#allowoverride&quot;&gt;AllowOverride&lt;/a&gt;&lt;/code&gt; 设置为的内容，然后将它们指向相关的文档，这样可以避免以后造成很多混乱。</target>
-        </trans-unit>
-        <trans-unit id="512b8b5a40232b55db9f493d932b536a3e148e88" translate="yes" xml:space="preserve">
-          <source>The second directive you need to add to your server configuration is</source>
-          <target state="translated">第二个需要添加到服务器配置的指令是</target>
-        </trans-unit>
-        <trans-unit id="a3cba0c79748e556e8f075b6f58bf9c3cb43aa9a" translate="yes" xml:space="preserve">
-          <source>The second form of the &lt;code&gt;LogFormat&lt;/code&gt; directive associates an explicit &lt;var&gt;format&lt;/var&gt; with a &lt;var&gt;nickname&lt;/var&gt;. This &lt;var&gt;nickname&lt;/var&gt; can then be used in subsequent &lt;code&gt;LogFormat&lt;/code&gt; or &lt;code&gt;&lt;a href=&quot;#customlog&quot;&gt;CustomLog&lt;/a&gt;&lt;/code&gt; directives rather than repeating the entire format string. A &lt;code&gt;LogFormat&lt;/code&gt; directive that defines a nickname &lt;strong&gt;does nothing else&lt;/strong&gt; -- that is, it &lt;em&gt;only&lt;/em&gt; defines the nickname, it doesn't actually apply the format and make it the default. Therefore, it will not affect subsequent &lt;code&gt;&lt;a href=&quot;#transferlog&quot;&gt;TransferLog&lt;/a&gt;&lt;/code&gt; directives. In addition, &lt;code&gt;LogFormat&lt;/code&gt; cannot use one nickname to define another nickname. Note that the nickname should not contain percent signs (&lt;code&gt;%&lt;/code&gt;).</source>
-          <target state="translated">&lt;code&gt;LogFormat&lt;/code&gt; 指令的第二种形式将显式 &lt;var&gt;format&lt;/var&gt; 与 &lt;var&gt;nickname&lt;/var&gt; 相关联。然后，可以在后续的 &lt;code&gt;LogFormat&lt;/code&gt; 或 &lt;code&gt;&lt;a href=&quot;#customlog&quot;&gt;CustomLog&lt;/a&gt;&lt;/code&gt; 指令中使用此 &lt;var&gt;nickname&lt;/var&gt; 而不用重复整个格式字符串。一个 &lt;code&gt;LogFormat&lt;/code&gt; 的定义昵称指令&lt;strong&gt;并没有别的&lt;/strong&gt; -也就是说，它&lt;em&gt;只是&lt;/em&gt;定义了昵称，它实际上并没有适用的格式，并使其成为默认。因此，它不会影响后续的 &lt;code&gt;&lt;a href=&quot;#transferlog&quot;&gt;TransferLog&lt;/a&gt;&lt;/code&gt; 指令。另外， &lt;code&gt;LogFormat&lt;/code&gt; &lt;strong&gt;&lt;/strong&gt;&lt;em&gt;&lt;/em&gt;不能使用一个昵称来定义另一个昵称。请注意，昵称中不得包含百分号（ &lt;code&gt;%&lt;/code&gt; ）。</target>
-        </trans-unit>
-        <trans-unit id="7031103de7f69d4d5cc3d8a2b6fb48d498698cfc" translate="yes" xml:space="preserve">
-          <source>The second method of signaling the &lt;code&gt;&lt;a href=&quot;programs/httpd&quot;&gt;httpd&lt;/a&gt;&lt;/code&gt; processes is to use the &lt;code&gt;-k&lt;/code&gt; command line options: &lt;code&gt;stop&lt;/code&gt;, &lt;code&gt;restart&lt;/code&gt;, &lt;code&gt;graceful&lt;/code&gt; and &lt;code&gt;graceful-stop&lt;/code&gt;, as described below. These are arguments to the &lt;code&gt;&lt;a href=&quot;programs/httpd&quot;&gt;httpd&lt;/a&gt;&lt;/code&gt; binary, but we recommend that you send them using the &lt;code&gt;&lt;a href=&quot;programs/apachectl&quot;&gt;apachectl&lt;/a&gt;&lt;/code&gt; control script, which will pass them through to &lt;code&gt;&lt;a href=&quot;programs/httpd&quot;&gt;httpd&lt;/a&gt;&lt;/code&gt;.</source>
-          <target state="translated">发出 &lt;code&gt;&lt;a href=&quot;programs/httpd&quot;&gt;httpd&lt;/a&gt;&lt;/code&gt; 进程信号的第二种方法是使用 &lt;code&gt;-k&lt;/code&gt; 命令行选项： &lt;code&gt;stop&lt;/code&gt; ， &lt;code&gt;restart&lt;/code&gt; ， &lt;code&gt;graceful&lt;/code&gt; 和 &lt;code&gt;graceful-stop&lt;/code&gt; ，如下所述。这些是 &lt;code&gt;&lt;a href=&quot;programs/httpd&quot;&gt;httpd&lt;/a&gt;&lt;/code&gt; 二进制文件的参数，但是我们建议您使用 &lt;code&gt;&lt;a href=&quot;programs/apachectl&quot;&gt;apachectl&lt;/a&gt;&lt;/code&gt; 控制脚本将其发送，该脚本会将它们传递给 &lt;code&gt;&lt;a href=&quot;programs/httpd&quot;&gt;httpd&lt;/a&gt;&lt;/code&gt; 。</target>
-        </trans-unit>
-        <trans-unit id="79e11b7c82e1bde1d74086661daf6b7c4c03d7ea" translate="yes" xml:space="preserve">
-          <source>The second part of the current time</source>
-          <target state="translated">当前时间的第二部分</target>
-        </trans-unit>
-        <trans-unit id="7e1ecc8e7b76513577a4ecbc841829984969eef9" translate="yes" xml:space="preserve">
-          <source>The second setting, &lt;code&gt;&lt;a href=&quot;#mdcertificateagreement&quot;&gt;MDCertificateAgreement&lt;/a&gt;&lt;/code&gt;, is the URL of the Terms of Service of the CA. When you configure the URL, you confirm that you have read and agree to the terms described in the linked document. Before you do that, the CA will not hand out certificates to you.</source>
-          <target state="translated">第二个设置 &lt;code&gt;&lt;a href=&quot;#mdcertificateagreement&quot;&gt;MDCertificateAgreement&lt;/a&gt;&lt;/code&gt; 是CA服务条款的URL。配置URL时，请确认您已阅读并同意链接文档中描述的条款。在执行此操作之前，CA不会将证书分发给您。</target>
-        </trans-unit>
-        <trans-unit id="43832c85f986a0d8e5febf5a303c8a3ef2f3f6b3" translate="yes" xml:space="preserve">
-          <source>The second way is to compile the module as a DLL, a shared library that can be loaded into the server at runtime, using the &lt;code&gt;LoadModule&lt;/code&gt; directive. These module DLLs can be distributed and run on any Apache httpd for Windows installation, without recompilation of the server.</source>
-          <target state="translated">第二种方法是将模块编译为DLL，这是一个共享库，可以使用 &lt;code&gt;LoadModule&lt;/code&gt; 指令在运行时将其加载到服务器中。这些模块DLL可以在Windows安装的任何Apache httpd上分发和运行，而无需重新编译服务器。</target>
-        </trans-unit>
-        <trans-unit id="d39ddd3fc016fe34d58cd058d004cf664874119a" translate="yes" xml:space="preserve">
-          <source>The second way of implementing stickyness is URL encoding. The web server searches for a query parameter in the URL of the request. The name of the parameter is specified again using &lt;var&gt;stickysession&lt;/var&gt;. The value of the parameter is used to lookup a member worker with &lt;var&gt;route&lt;/var&gt; equal to that value. Since it is not easy to extract and manipulate all URL links contained in responses, generally the work of adding the parameters to each link is done by the back-end generating the content. In some cases it might be feasible doing this via the web server using &lt;code&gt;&lt;a href=&quot;mod_substitute&quot;&gt;mod_substitute&lt;/a&gt;&lt;/code&gt; or &lt;code&gt;&lt;a href=&quot;mod_sed&quot;&gt;mod_sed&lt;/a&gt;&lt;/code&gt;. This can have negative impact on performance though.</source>
-          <target state="translated">实现粘性的第二种方法是URL编码。 Web服务器在请求的URL中搜索查询参数。使用 &lt;var&gt;stickysession&lt;/var&gt; 再次指定参数的名称。该参数的值用于查找 &lt;var&gt;route&lt;/var&gt; 等于该值的成员worker 。由于提取和处理响应中包含的所有URL链接并不容易，因此通常将参数添加到每个链接的工作是由生成内容的后端完成的。在某些情况下，使用 &lt;code&gt;&lt;a href=&quot;mod_substitute&quot;&gt;mod_substitute&lt;/a&gt;&lt;/code&gt; 或 &lt;code&gt;&lt;a href=&quot;mod_sed&quot;&gt;mod_sed&lt;/a&gt;&lt;/code&gt; 通过Web服务器执行此操作可能是可行的。但是，这可能会对性能产生负面影响。</target>
-        </trans-unit>
-        <trans-unit id="ace9f21e1d07cef907712b53bee82357cb943d52" translate="yes" xml:space="preserve">
-          <source>The sections that follow describe the various &lt;em&gt;MapType&lt;/em&gt;s that may be used, and give examples of each.</source>
-          <target state="translated">以下各节描述了可以使用的各种&lt;em&gt;MapType&lt;/em&gt;，并给出了每种示例。</target>
-        </trans-unit>
-        <trans-unit id="46685aa491784e99160461354891915e95352ea8" translate="yes" xml:space="preserve">
-          <source>The security checks require that the TSL protocol is at least TLSv1.2 and that none of the ciphers listed in RFC 7540, Appendix A is used. These checks will be extended once new security requirements come into place.</source>
-          <target state="translated">安全检查要求TSL协议至少是TLSv1.2,并且没有使用RFC 7540附录A中所列的任何一种密码。一旦有了新的安全要求,这些检查将被扩大。</target>
-        </trans-unit>
-        <trans-unit id="5565c6aa6cdf5cfa88e1987ded67c2aaecfa66ee" translate="yes" xml:space="preserve">
-          <source>The semaphore API allows for a denial of service attack by any CGIs running under the same uid as the webserver (&lt;em&gt;i.e.&lt;/em&gt;, all CGIs, unless you use something like &lt;code&gt;&lt;a href=&quot;../programs/suexec&quot;&gt;suexec&lt;/a&gt;&lt;/code&gt; or &lt;code&gt;cgiwrapper&lt;/code&gt;).</source>
-          <target state="translated">信号量API允许任何在与Web服务器相同的uid下运行的CGI（&lt;em&gt;即&lt;/em&gt;所有CGI，除非您使用 &lt;code&gt;&lt;a href=&quot;../programs/suexec&quot;&gt;suexec&lt;/a&gt;&lt;/code&gt; 或 &lt;code&gt;cgiwrapper&lt;/code&gt; 之类的东西）拒绝服务攻击。</target>
-        </trans-unit>
-        <trans-unit id="2cba25e5c77d2fe070e30e14d1709eceb8aeed17" translate="yes" xml:space="preserve">
-          <source>The semaphore ownership is not recovered if a thread in the process holding the mutex segfaults, resulting in a hang of the web server.</source>
-          <target state="translated">如果持有mutex的进程中的线程发生了segfault,导致web服务器挂起,那么semaphore的所有权将无法恢复。</target>
-        </trans-unit>
-        <trans-unit id="b4a3b58bb33c04c1c5fb87f40173d35be048e411" translate="yes" xml:space="preserve">
-          <source>The serial of the client certificate</source>
-          <target state="translated">客户证书的序列号</target>
-        </trans-unit>
-        <trans-unit id="c9fa76ced1160b80254fe2c13299298569038057" translate="yes" xml:space="preserve">
-          <source>The serial of the server certificate</source>
-          <target state="translated">服务器证书的序列号</target>
         </trans-unit>
       </group>
     </body>

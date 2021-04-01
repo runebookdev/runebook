@@ -123,6 +123,10 @@
           <source>&lt;a href=&quot;https://github.com/openresty/lua-resty-string&quot;&gt;lua-resty-string&lt;/a&gt; library based on &lt;a href=&quot;http://luajit.org/ext_ffi.html&quot;&gt;LuaJIT FFI&lt;/a&gt;.</source>
           <target state="translated">&lt;a href=&quot;https://github.com/openresty/lua-resty-string&quot;&gt;&lt;/a&gt;基于&lt;a href=&quot;http://luajit.org/ext_ffi.html&quot;&gt;LuaJIT FFI的&lt;/a&gt;lua-resty-string库。</target>
         </trans-unit>
+        <trans-unit id="2384de042df3dfbcd9932422632ef841bfb46511" translate="yes" xml:space="preserve">
+          <source>&lt;a href=&quot;https://github.com/openresty/lua-resty-string&quot;&gt;lua-resty-string&lt;/a&gt; library based on &lt;a href=&quot;https://luajit.org/ext_ffi.html&quot;&gt;LuaJIT FFI&lt;/a&gt;.</source>
+          <target state="translated">&lt;a href=&quot;https://github.com/openresty/lua-resty-string&quot;&gt;&lt;/a&gt;基于&lt;a href=&quot;https://luajit.org/ext_ffi.html&quot;&gt;LuaJIT FFI的&lt;/a&gt;lua-resty-string库。</target>
+        </trans-unit>
         <trans-unit id="ee443d0ee86721182108a4f79ec93db95b12b502" translate="yes" xml:space="preserve">
           <source>&lt;a href=&quot;https://github.com/openresty/lua-resty-upload&quot;&gt;lua-resty-upload&lt;/a&gt; library based on ngx_lua cosocket.</source>
           <target state="translated">&lt;a href=&quot;https://github.com/openresty/lua-resty-upload&quot;&gt;&lt;/a&gt;基于ngx_lua cosocket的lua-resty-upload库。</target>
@@ -1523,6 +1527,10 @@
           <source>According to the current implementation, each &quot;running timer&quot; will take one (fake) connection record from the global connection record list configured by the standard &lt;a href=&quot;http://nginx.org/en/docs/ngx_core_module.html#worker_connections&quot;&gt;worker_connections&lt;/a&gt; directive in &lt;code&gt;nginx.conf&lt;/code&gt;. So ensure that the &lt;a href=&quot;http://nginx.org/en/docs/ngx_core_module.html#worker_connections&quot;&gt;worker_connections&lt;/a&gt; directive is set to a large enough value that takes into account both the real connections and fake connections required by timer callbacks (as limited by the &lt;a href=&quot;#lua_max_running_timers&quot;&gt;lua_max_running_timers&lt;/a&gt; directive).</source>
           <target state="translated">根据当前的实现，每个&amp;ldquo;运行计时器&amp;rdquo;将从 &lt;code&gt;nginx.conf&lt;/code&gt; 中的标准&lt;a href=&quot;http://nginx.org/en/docs/ngx_core_module.html#worker_connections&quot;&gt;worker_connections&lt;/a&gt;指令配置的全局连接记录列表中获取一个（伪）连接记录。因此，请确保将&lt;a href=&quot;http://nginx.org/en/docs/ngx_core_module.html#worker_connections&quot;&gt;worker_connections&lt;/a&gt;指令设置为足够大的值，该值应同时考虑到计时器回调所需的实际连接和虚假连接（受&lt;a href=&quot;#lua_max_running_timers&quot;&gt;lua_max_running_timers&lt;/a&gt;指令限制）。</target>
         </trans-unit>
+        <trans-unit id="2ba7b60e5283f7cdae36f90cd4038d93871d89bc" translate="yes" xml:space="preserve">
+          <source>According to the current implementation, each &quot;running timer&quot; will take one (fake) connection record from the global connection record list configured by the standard &lt;a href=&quot;https://nginx.org/en/docs/ngx_core_module.html#worker_connections&quot;&gt;worker_connections&lt;/a&gt; directive in &lt;code&gt;nginx.conf&lt;/code&gt;. So ensure that the &lt;a href=&quot;https://nginx.org/en/docs/ngx_core_module.html#worker_connections&quot;&gt;worker_connections&lt;/a&gt; directive is set to a large enough value that takes into account both the real connections and fake connections required by timer callbacks (as limited by the &lt;a href=&quot;#lua_max_running_timers&quot;&gt;lua_max_running_timers&lt;/a&gt; directive).</source>
+          <target state="translated">根据当前的实现，每个&amp;ldquo;运行计时器&amp;rdquo;将从 &lt;code&gt;nginx.conf&lt;/code&gt; 中的标准&lt;a href=&quot;https://nginx.org/en/docs/ngx_core_module.html#worker_connections&quot;&gt;worker_connections&lt;/a&gt;指令配置的全局连接记录列表中获取一个（伪）连接记录。因此，请确保将&lt;a href=&quot;https://nginx.org/en/docs/ngx_core_module.html#worker_connections&quot;&gt;worker_connections&lt;/a&gt;指令设置为足够大的值，该值应同时考虑到计时器回调所需的实际连接和虚假连接（受&lt;a href=&quot;#lua_max_running_timers&quot;&gt;lua_max_running_timers&lt;/a&gt;指令限制）。</target>
+        </trans-unit>
         <trans-unit id="36df347778ebed9addba2dc65ea73cee56a56f08" translate="yes" xml:space="preserve">
           <source>According to the current implementation, however, if the client closes the connection before the Lua code finishes reading the request body data via &lt;a href=&quot;#ngxreqsocket&quot;&gt;ngx.req.socket&lt;/a&gt;, then ngx_lua will neither stop all the running &quot;light threads&quot; nor call the user callback (if &lt;a href=&quot;#ngxon_abort&quot;&gt;ngx.on_abort&lt;/a&gt; has been called). Instead, the reading operation on &lt;a href=&quot;#ngxreqsocket&quot;&gt;ngx.req.socket&lt;/a&gt; will just return the error message &quot;client aborted&quot; as the second return value (the first return value is surely &lt;code&gt;nil&lt;/code&gt;).</source>
           <target state="translated">但是，根据当前的实现，如果客户端在Lua代码完成通过&lt;a href=&quot;#ngxreqsocket&quot;&gt;ngx.req.socket&lt;/a&gt;读取请求主体数据之前关闭连接，则ngx_lua既不会停止所有正在运行的&amp;ldquo;轻线程&amp;rdquo;，也不会调用用户回调（如果&lt;a href=&quot;#ngxon_abort&quot;&gt;ngx.on_abort&lt;/a&gt;已被调用）。取而代之的是，对&lt;a href=&quot;#ngxreqsocket&quot;&gt;ngx.req.socket&lt;/a&gt;的读取操作将仅返回错误消息&amp;ldquo;客户端已中止&amp;rdquo;作为第二个返回值（第一个返回值肯定为 &lt;code&gt;nil&lt;/code&gt; ）。</target>
@@ -1590,6 +1598,10 @@
         <trans-unit id="e79f20788c9b831a084b8454905c3f8ad5ba2da4" translate="yes" xml:space="preserve">
           <source>Also, the Lua load balancer can work with the standard upstream connection pool mechanism, i.e., the standard &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive&quot;&gt;keepalive&lt;/a&gt; directive. Just ensure that the &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive&quot;&gt;keepalive&lt;/a&gt; directive is used &lt;em&gt;after&lt;/em&gt; this &lt;code&gt;balancer_by_lua_block&lt;/code&gt; directive in a single &lt;code&gt;upstream {}&lt;/code&gt; configuration block.</source>
           <target state="translated">同样，Lua负载平衡器可以与标准上游连接池机制（即标准&lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive&quot;&gt;keepalive&lt;/a&gt;指令）一起使用。只要确保在单个 &lt;code&gt;upstream {}&lt;/code&gt; 配置块中的此 &lt;code&gt;balancer_by_lua_block&lt;/code&gt; 指令&lt;em&gt;之后&lt;/em&gt;使用了&lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive&quot;&gt;keepalive&lt;/a&gt;指令即可。&lt;em&gt;&lt;/em&gt;</target>
+        </trans-unit>
+        <trans-unit id="1da35d1658d3edf63fcb2e71dc1e08e69a47c746" translate="yes" xml:space="preserve">
+          <source>Also, the Lua load balancer can work with the standard upstream connection pool mechanism, i.e., the standard &lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive&quot;&gt;keepalive&lt;/a&gt; directive. Just ensure that the &lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive&quot;&gt;keepalive&lt;/a&gt; directive is used &lt;em&gt;after&lt;/em&gt; this &lt;code&gt;balancer_by_lua_block&lt;/code&gt; directive in a single &lt;code&gt;upstream {}&lt;/code&gt; configuration block.</source>
+          <target state="translated">同样，Lua负载平衡器可以与标准上游连接池机制（即标准&lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive&quot;&gt;keepalive&lt;/a&gt;指令）一起使用。只要确保在单个 &lt;code&gt;upstream {}&lt;/code&gt; 配置块中的此 &lt;code&gt;balancer_by_lua_block&lt;/code&gt; 指令&lt;em&gt;之后&lt;/em&gt;使用了&lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive&quot;&gt;keepalive&lt;/a&gt;指令即可。&lt;em&gt;&lt;/em&gt;</target>
         </trans-unit>
         <trans-unit id="5bfd0d3bc10f0b0f49a46364458a52787db0dffb" translate="yes" xml:space="preserve">
           <source>Also, the bytecode files generated by LuaJIT 2.1 is &lt;em&gt;not&lt;/em&gt; compatible with LuaJIT 2.0, and vice versa. The support for LuaJIT 2.1 bytecode was first added in ngx_lua v0.9.3.</source>
@@ -1687,6 +1699,10 @@
           <source>As the standard Lua 5.1 interpreter's VM is not fully resumable, the methods &lt;a href=&quot;#ngxlocationcapture&quot;&gt;ngx.location.capture&lt;/a&gt;, &lt;a href=&quot;#ngxlocationcapture_multi&quot;&gt;ngx.location.capture_multi&lt;/a&gt;, &lt;a href=&quot;#ngxredirect&quot;&gt;ngx.redirect&lt;/a&gt;, &lt;a href=&quot;#ngxexec&quot;&gt;ngx.exec&lt;/a&gt;, and &lt;a href=&quot;#ngxexit&quot;&gt;ngx.exit&lt;/a&gt; cannot be used within the context of a Lua &lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#pdf-pcall&quot;&gt;pcall()&lt;/a&gt; or &lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#pdf-xpcall&quot;&gt;xpcall()&lt;/a&gt; or even the first line of the &lt;code&gt;for ... in ...&lt;/code&gt; statement when the standard Lua 5.1 interpreter is used and the &lt;code&gt;attempt to yield across metamethod/C-call boundary&lt;/code&gt; error will be produced. Please use LuaJIT 2.x, which supports a fully resumable VM, to avoid this.</source>
           <target state="translated">由于标准的Lua 5.1解释器的VM无法完全&lt;a href=&quot;#ngxlocationcapture&quot;&gt;恢复&lt;/a&gt;，&lt;a href=&quot;#ngxlocationcapture_multi&quot;&gt;因此&lt;/a&gt;ngx.location.capture，ngx.location.capture_multi，&lt;a href=&quot;#ngxredirect&quot;&gt;ngx.redirect&lt;/a&gt;，&lt;a href=&quot;#ngxexec&quot;&gt;ngx.exec&lt;/a&gt;和&lt;a href=&quot;#ngxexit&quot;&gt;ngx.exit&lt;/a&gt;方法不能在Lua &lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#pdf-pcall&quot;&gt;pcall（）&lt;/a&gt;的上下文中使用。或&lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#pdf-xpcall&quot;&gt;xpcall（）&lt;/a&gt;或什至在使用标准Lua 5.1解释器时 &lt;code&gt;for ... in ...&lt;/code&gt; 语句的第一行，并且将 &lt;code&gt;attempt to yield across metamethod/C-call boundary&lt;/code&gt; 错误的结果。为了避免这种情况，请使用支持完全可恢复的VM的LuaJIT2.x。</target>
         </trans-unit>
+        <trans-unit id="31209a87e9cff0e1996365a52545238151b8a744" translate="yes" xml:space="preserve">
+          <source>As the standard Lua 5.1 interpreter's VM is not fully resumable, the methods &lt;a href=&quot;#ngxlocationcapture&quot;&gt;ngx.location.capture&lt;/a&gt;, &lt;a href=&quot;#ngxlocationcapture_multi&quot;&gt;ngx.location.capture_multi&lt;/a&gt;, &lt;a href=&quot;#ngxredirect&quot;&gt;ngx.redirect&lt;/a&gt;, &lt;a href=&quot;#ngxexec&quot;&gt;ngx.exec&lt;/a&gt;, and &lt;a href=&quot;#ngxexit&quot;&gt;ngx.exit&lt;/a&gt; cannot be used within the context of a Lua &lt;a href=&quot;https://www.lua.org/manual/5.1/manual.html#pdf-pcall&quot;&gt;pcall()&lt;/a&gt; or &lt;a href=&quot;https://www.lua.org/manual/5.1/manual.html#pdf-xpcall&quot;&gt;xpcall()&lt;/a&gt; or even the first line of the &lt;code&gt;for ... in ...&lt;/code&gt; statement when the standard Lua 5.1 interpreter is used and the &lt;code&gt;attempt to yield across metamethod/C-call boundary&lt;/code&gt; error will be produced. Please use LuaJIT 2.x, which supports a fully resumable VM, to avoid this.</source>
+          <target state="translated">由于标准的Lua 5.1解释器的VM无法完全&lt;a href=&quot;#ngxexec&quot;&gt;恢复&lt;/a&gt;，因此不能在Lua &lt;a href=&quot;https://www.lua.org/manual/5.1/manual.html#pdf-pcall&quot;&gt;pcall（）&lt;/a&gt;的上下文中使用&lt;a href=&quot;#ngxlocationcapture&quot;&gt;ngx.location.capture&lt;/a&gt;，&lt;a href=&quot;#ngxlocationcapture_multi&quot;&gt;ngx.location.capture_multi&lt;/a&gt;，&lt;a href=&quot;#ngxredirect&quot;&gt;ngx.redirect&lt;/a&gt;，ngx.exec和&lt;a href=&quot;#ngxexit&quot;&gt;ngx.exit&lt;/a&gt;方法。或&lt;a href=&quot;https://www.lua.org/manual/5.1/manual.html#pdf-xpcall&quot;&gt;xpcall（）&lt;/a&gt;或什至在使用标准Lua 5.1解释器时 &lt;code&gt;for ... in ...&lt;/code&gt; 语句的第一行，并且将 &lt;code&gt;attempt to yield across metamethod/C-call boundary&lt;/code&gt; 错误的结果。为了避免这种情况，请使用支持完全可恢复的VM的LuaJIT2.x。</target>
+        </trans-unit>
         <trans-unit id="1ee79b73c99a603b36a28f4da8c38f526195ee3d" translate="yes" xml:space="preserve">
           <source>As with other access phase handlers, &lt;a href=&quot;#access_by_lua&quot;&gt;access_by_lua&lt;/a&gt; will &lt;em&gt;not&lt;/em&gt; run in subrequests.</source>
           <target state="translated">与其他访问阶段处理程序一样，&lt;a href=&quot;#access_by_lua&quot;&gt;access_by_lua&lt;/a&gt;将&lt;em&gt;不会&lt;/em&gt;在子请求中运行。</target>
@@ -1734,6 +1750,10 @@
         <trans-unit id="cc085d42cb3c86bf7992490ce09f48337af2ea11" translate="yes" xml:space="preserve">
           <source>Because the Lua code in this context runs before Nginx forks its worker processes (if any), data or code loaded here will enjoy the &lt;a href=&quot;http://en.wikipedia.org/wiki/Copy-on-write&quot;&gt;Copy-on-write (COW)&lt;/a&gt; feature provided by many operating systems among all the worker processes, thus saving a lot of memory.</source>
           <target state="translated">由于在这种情况下，Lua代码在Nginx派生其工作进程（如果有）之前运行，因此在此处加载的数据或代码将享受所有操作系统在所有工作进程中提供&lt;a href=&quot;http://en.wikipedia.org/wiki/Copy-on-write&quot;&gt;的写时复制（COW）&lt;/a&gt;功能，从而节省了很多内存。</target>
+        </trans-unit>
+        <trans-unit id="0beae072640b4acb91c9d7ef2e9effec9cd12e1c" translate="yes" xml:space="preserve">
+          <source>Because the Lua code in this context runs before Nginx forks its worker processes (if any), data or code loaded here will enjoy the &lt;a href=&quot;https://en.wikipedia.org/wiki/Copy-on-write&quot;&gt;Copy-on-write (COW)&lt;/a&gt; feature provided by many operating systems among all the worker processes, thus saving a lot of memory.</source>
+          <target state="translated">由于在这种情况下，Lua代码在Nginx派生其工作进程（如果有）之前运行，因此在此处加载的数据或代码将享受所有操作系统在所有工作进程中提供&lt;a href=&quot;https://en.wikipedia.org/wiki/Copy-on-write&quot;&gt;的写时复制（COW）&lt;/a&gt;功能，从而节省了很多内存。</target>
         </trans-unit>
         <trans-unit id="f5605db73db672c4d88b10182faf4547b8c0ffd3" translate="yes" xml:space="preserve">
           <source>Because this API function does not create new Lua strings nor new Lua tables, it is much faster than &lt;a href=&quot;#ngxrematch&quot;&gt;ngx.re.match&lt;/a&gt;. It should be used wherever possible.</source>
@@ -1787,6 +1807,10 @@
           <source>Both IP addresses and domain names can be specified as the &lt;code&gt;host&lt;/code&gt; argument. In case of domain names, this method will use Nginx core's dynamic resolver to parse the domain name without blocking and it is required to configure the &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_core_module.html#resolver&quot;&gt;resolver&lt;/a&gt; directive in the &lt;code&gt;nginx.conf&lt;/code&gt; file like this:</source>
           <target state="translated">IP地址和域名都可以指定为 &lt;code&gt;host&lt;/code&gt; 参数。如果是域名，此方法将使用Nginx核心的动态解析器​​来解析域名而不会阻塞，并且需要在 &lt;code&gt;nginx.conf&lt;/code&gt; 文件中配置&lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_core_module.html#resolver&quot;&gt;解析器&lt;/a&gt;指令，如下所示：</target>
         </trans-unit>
+        <trans-unit id="369a8e09f8461b013ea816bc31c7a3bb6fae7bc7" translate="yes" xml:space="preserve">
+          <source>Both IP addresses and domain names can be specified as the &lt;code&gt;host&lt;/code&gt; argument. In case of domain names, this method will use Nginx core's dynamic resolver to parse the domain name without blocking and it is required to configure the &lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_core_module.html#resolver&quot;&gt;resolver&lt;/a&gt; directive in the &lt;code&gt;nginx.conf&lt;/code&gt; file like this:</source>
+          <target state="translated">IP地址和域名都可以指定为 &lt;code&gt;host&lt;/code&gt; 参数。如果是域名，此方法将使用Nginx核心的动态解析器​​来解析域名而不会阻塞，并且需要在 &lt;code&gt;nginx.conf&lt;/code&gt; 文件中配置&lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_core_module.html#resolver&quot;&gt;解析器&lt;/a&gt;指令，如下所示：</target>
+        </trans-unit>
         <trans-unit id="9b010286216cbc849fdecb1ec167816122fac8fa" translate="yes" xml:space="preserve">
           <source>Bugs and Patches</source>
           <target state="translated">漏洞和补丁</target>
@@ -1810,6 +1834,10 @@
         <trans-unit id="76de2c4f5adeff8aa8d422f168e13846bb716a34" translate="yes" xml:space="preserve">
           <source>But if you create subrequests to access other locations configured by Nginx upstream modules, then you should configure those upstream modules to ignore client connection abortions if they are not by default. For example, by default the standard &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_proxy_module.html&quot;&gt;ngx_http_proxy_module&lt;/a&gt; will terminate both the subrequest and the main request as soon as the client closes the connection, so it is important to turn on the &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_ignore_client_abort&quot;&gt;proxy_ignore_client_abort&lt;/a&gt; directive in your location block configured by &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_proxy_module.html&quot;&gt;ngx_http_proxy_module&lt;/a&gt;:</source>
           <target state="translated">但是，如果您创建子请求以访问由Nginx上游模块配置的其他位置，则应将这些上游模块配置为忽略客户端连接中止（如果默认情况下不是）。例如，默认情况下，标准&lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_proxy_module.html&quot;&gt;ngx_http_proxy_module&lt;/a&gt;会在客户端关闭连接后立即终止子请求和主请求，因此在&lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_proxy_module.html&quot;&gt;ngx_http_proxy_module&lt;/a&gt;配置的位置块中打开&lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_ignore_client_abort&quot;&gt;proxy_ignore_client_abort&lt;/a&gt;指令很重要：</target>
+        </trans-unit>
+        <trans-unit id="2a43ef5c84b9487d185c00cd5d067a5465c95f27" translate="yes" xml:space="preserve">
+          <source>But if you create subrequests to access other locations configured by Nginx upstream modules, then you should configure those upstream modules to ignore client connection abortions if they are not by default. For example, by default the standard &lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_proxy_module.html&quot;&gt;ngx_http_proxy_module&lt;/a&gt; will terminate both the subrequest and the main request as soon as the client closes the connection, so it is important to turn on the &lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_ignore_client_abort&quot;&gt;proxy_ignore_client_abort&lt;/a&gt; directive in your location block configured by &lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_proxy_module.html&quot;&gt;ngx_http_proxy_module&lt;/a&gt;:</source>
+          <target state="translated">但是，如果您创建子请求以访问由Nginx上游模块配置的其他位置，则应将这些上游模块配置为忽略客户端连接中止（如果默认情况下不是）。例如，默认情况下，标准&lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_proxy_module.html&quot;&gt;ngx_http_proxy_module&lt;/a&gt;会在客户端关闭连接后立即终止子请求和主请求，因此在&lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_proxy_module.html&quot;&gt;ngx_http_proxy_module&lt;/a&gt;配置的位置块中打开&lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_ignore_client_abort&quot;&gt;proxy_ignore_client_abort&lt;/a&gt;指令很重要：</target>
         </trans-unit>
         <trans-unit id="dc8605cdbf72dbe7967a34c8860108a861c33718" translate="yes" xml:space="preserve">
           <source>But note that, the &lt;a href=&quot;#lua_shared_dict&quot;&gt;lua_shared_dict&lt;/a&gt;'s shm storage will not be cleared through a config reload (via the &lt;code&gt;HUP&lt;/code&gt; signal, for example). So if you do &lt;em&gt;not&lt;/em&gt; want to re-initialize the shm storage in your &lt;code&gt;init_by_lua&lt;/code&gt; code in this case, then you just need to set a custom flag in the shm storage and always check the flag in your &lt;code&gt;init_by_lua&lt;/code&gt; code.</source>
@@ -1890,6 +1918,10 @@
         <trans-unit id="1ffdd76c61bd2bc1c63d37327c812517458b60a1" translate="yes" xml:space="preserve">
           <source>Computes the &lt;a href=&quot;http://en.wikipedia.org/wiki/HMAC&quot;&gt;HMAC-SHA1&lt;/a&gt; digest of the argument &lt;code&gt;str&lt;/code&gt; and turns the result using the secret key &lt;code&gt;&amp;lt;secret_key&amp;gt;&lt;/code&gt;.</source>
           <target state="translated">计算参数 &lt;code&gt;str&lt;/code&gt; 的&lt;a href=&quot;http://en.wikipedia.org/wiki/HMAC&quot;&gt;HMAC-SHA1&lt;/a&gt;摘要，并使用密钥 &lt;code&gt;&amp;lt;secret_key&amp;gt;&lt;/code&gt; 转换结果。</target>
+        </trans-unit>
+        <trans-unit id="17d6b7e58a666666af99165c4d729a31104d8dd2" translate="yes" xml:space="preserve">
+          <source>Computes the &lt;a href=&quot;https://en.wikipedia.org/wiki/HMAC&quot;&gt;HMAC-SHA1&lt;/a&gt; digest of the argument &lt;code&gt;str&lt;/code&gt; and turns the result using the secret key &lt;code&gt;&amp;lt;secret_key&amp;gt;&lt;/code&gt;.</source>
+          <target state="translated">计算参数 &lt;code&gt;str&lt;/code&gt; 的&lt;a href=&quot;https://en.wikipedia.org/wiki/HMAC&quot;&gt;HMAC-SHA1&lt;/a&gt;摘要，并使用密钥 &lt;code&gt;&amp;lt;secret_key&amp;gt;&lt;/code&gt; 转换结果。</target>
         </trans-unit>
         <trans-unit id="c2f96250746eda72a409d432d944a3717e9602df" translate="yes" xml:space="preserve">
           <source>Configuring the argument to &lt;code&gt;0&lt;/code&gt; essentially turns off the periodical memory trimming altogether.</source>
@@ -2035,6 +2067,10 @@
           <source>Do &lt;em&gt;not&lt;/em&gt; initialize your own Lua global variables in this context because use of Lua global variables have performance penalties and can lead to global namespace pollution (see the &lt;a href=&quot;#lua-variable-scope&quot;&gt;Lua Variable Scope&lt;/a&gt; section for more details). The recommended way is to use proper &lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#5.3&quot;&gt;Lua module&lt;/a&gt; files (but do not use the standard Lua function &lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#pdf-module&quot;&gt;module()&lt;/a&gt; to define Lua modules because it pollutes the global namespace as well) and call &lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#pdf-require&quot;&gt;require()&lt;/a&gt; to load your own module files in &lt;code&gt;init_by_lua&lt;/code&gt; or other contexts (&lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#pdf-require&quot;&gt;require()&lt;/a&gt; does cache the loaded Lua modules in the global &lt;code&gt;package.loaded&lt;/code&gt; table in the Lua registry so your modules will only loaded once for the whole Lua VM instance).</source>
           <target state="translated">千万&lt;em&gt;不能&lt;/em&gt;初始化自己的Lua的全局变量在这种情况下，因为使用Lua的全局变量有性能损失，并可能导致全局命名空间污染（见&lt;a href=&quot;#lua-variable-scope&quot;&gt;Lua的变量的作用域&lt;/a&gt;获取更多详细信息）。推荐的方法是使用适当的&lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#5.3&quot;&gt;Lua模块&lt;/a&gt;文件（但不要使用标准的Lua函数&lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#pdf-module&quot;&gt;module（）&lt;/a&gt;来定义Lua模块，因为它也会污染全局名称空间），并调用&lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#pdf-require&quot;&gt;require（）&lt;/a&gt;将自己的模块文件加载到 &lt;code&gt;init_by_lua&lt;/code&gt; 或其他文件中contexts（&lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#pdf-require&quot;&gt;require（）&lt;/a&gt;确实将加载的Lua模块缓存在全局 &lt;code&gt;package.loaded&lt;/code&gt; 表在Lua注册表中，因此您的模块对于整个Lua VM实例将仅加载一次）。</target>
         </trans-unit>
+        <trans-unit id="ee1a6fac1e434d5da3ae43b5925a008daea6b3e1" translate="yes" xml:space="preserve">
+          <source>Do &lt;em&gt;not&lt;/em&gt; initialize your own Lua global variables in this context because use of Lua global variables have performance penalties and can lead to global namespace pollution (see the &lt;a href=&quot;#lua-variable-scope&quot;&gt;Lua Variable Scope&lt;/a&gt; section for more details). The recommended way is to use proper &lt;a href=&quot;https://www.lua.org/manual/5.1/manual.html#5.3&quot;&gt;Lua module&lt;/a&gt; files (but do not use the standard Lua function &lt;a href=&quot;https://www.lua.org/manual/5.1/manual.html#pdf-module&quot;&gt;module()&lt;/a&gt; to define Lua modules because it pollutes the global namespace as well) and call &lt;a href=&quot;https://www.lua.org/manual/5.1/manual.html#pdf-require&quot;&gt;require()&lt;/a&gt; to load your own module files in &lt;code&gt;init_by_lua&lt;/code&gt; or other contexts (&lt;a href=&quot;https://www.lua.org/manual/5.1/manual.html#pdf-require&quot;&gt;require()&lt;/a&gt; does cache the loaded Lua modules in the global &lt;code&gt;package.loaded&lt;/code&gt; table in the Lua registry so your modules will only loaded once for the whole Lua VM instance).</source>
+          <target state="translated">千万&lt;em&gt;不能&lt;/em&gt;初始化自己的Lua的全局变量在这种情况下，因为使用Lua的全局变量有性能损失，并可能导致全局命名空间污染（见&lt;a href=&quot;#lua-variable-scope&quot;&gt;Lua的变量的作用域&lt;/a&gt;获取更多详细信息）。推荐的方法是使用适当的&lt;a href=&quot;https://www.lua.org/manual/5.1/manual.html#5.3&quot;&gt;Lua模块&lt;/a&gt;文件（但不要使用标准的Lua函数&lt;a href=&quot;https://www.lua.org/manual/5.1/manual.html#pdf-module&quot;&gt;module（）&lt;/a&gt;来定义Lua模块，因为它也会污染全局名称空间），并调用&lt;a href=&quot;https://www.lua.org/manual/5.1/manual.html#pdf-require&quot;&gt;require（）&lt;/a&gt;将自己的模块文件加载到 &lt;code&gt;init_by_lua&lt;/code&gt; 或其他文件中contexts（&lt;a href=&quot;https://www.lua.org/manual/5.1/manual.html#pdf-require&quot;&gt;require（）&lt;/a&gt;确实将加载的Lua模块缓存在全局 &lt;code&gt;package.loaded&lt;/code&gt; 表在Lua注册表中，因此您的模块对于整个Lua VM实例将只加载一次）。</target>
+        </trans-unit>
         <trans-unit id="df34d24999db01b1b2d79ab927d026249fdac918" translate="yes" xml:space="preserve">
           <source>Do not activate the &lt;code&gt;o&lt;/code&gt; option for regular expressions (and/or &lt;code&gt;replace&lt;/code&gt; string arguments for &lt;a href=&quot;#ngxresub&quot;&gt;ngx.re.sub&lt;/a&gt; and &lt;a href=&quot;#ngxregsub&quot;&gt;ngx.re.gsub&lt;/a&gt;) that are generated &lt;em&gt;on the fly&lt;/em&gt; and give rise to infinite variations to avoid hitting the specified limit.</source>
           <target state="translated">不要激活&lt;em&gt;即时&lt;/em&gt;生成的正则表达式的 &lt;code&gt;o&lt;/code&gt; 选项（和/或 &lt;code&gt;replace&lt;/code&gt; &lt;a href=&quot;#ngxresub&quot;&gt;ngx.re.sub&lt;/a&gt;和&lt;a href=&quot;#ngxregsub&quot;&gt;ngx.re.gsub的&lt;/a&gt;字符串参数），并引起无限的变化以避免达到指定的限制。&lt;em&gt;&lt;/em&gt;</target>
@@ -2047,6 +2083,10 @@
           <source>Do not use this directive and other content handler directives in the same location. For example, this directive and the &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass&quot;&gt;proxy_pass&lt;/a&gt; directive should not be used in the same location.</source>
           <target state="translated">不要在同一位置使用此指令和其他内容处理程序指令。例如，此指令和&lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass&quot;&gt;proxy_pass&lt;/a&gt;指令不应在同一位置使用。</target>
         </trans-unit>
+        <trans-unit id="278ac53e5ea9702607ab7ddc6bd516089815cea1" translate="yes" xml:space="preserve">
+          <source>Do not use this directive and other content handler directives in the same location. For example, this directive and the &lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass&quot;&gt;proxy_pass&lt;/a&gt; directive should not be used in the same location.</source>
+          <target state="translated">不要在同一位置使用此指令和其他内容处理程序指令。例如，此指令和&lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass&quot;&gt;proxy_pass&lt;/a&gt;指令不应在同一位置使用。</target>
+        </trans-unit>
         <trans-unit id="ccf0613f0197b9bbdd423e70af9e75fdaedae896" translate="yes" xml:space="preserve">
           <source>Does SSL/TLS handshake on the currently established connection.</source>
           <target state="translated">对当前建立的连接进行SSL/TLS握手。</target>
@@ -2055,9 +2095,17 @@
           <source>Does an internal redirect to &lt;code&gt;uri&lt;/code&gt; with &lt;code&gt;args&lt;/code&gt; and is similar to the &lt;a href=&quot;http://github.com/openresty/echo-nginx-module#echo_exec&quot;&gt;echo_exec&lt;/a&gt; directive of the &lt;a href=&quot;http://github.com/openresty/echo-nginx-module&quot;&gt;echo-nginx-module&lt;/a&gt;.</source>
           <target state="translated">使用 &lt;code&gt;args&lt;/code&gt; 内部重定向到 &lt;code&gt;uri&lt;/code&gt; ，类似于&lt;a href=&quot;http://github.com/openresty/echo-nginx-module&quot;&gt;echo-nginx-module&lt;/a&gt;的&lt;a href=&quot;http://github.com/openresty/echo-nginx-module#echo_exec&quot;&gt;echo_exec&lt;/a&gt;指令。</target>
         </trans-unit>
+        <trans-unit id="8fa1167b598e656f9bc1d177e2743016f56c9ca5" translate="yes" xml:space="preserve">
+          <source>Does an internal redirect to &lt;code&gt;uri&lt;/code&gt; with &lt;code&gt;args&lt;/code&gt; and is similar to the &lt;a href=&quot;https://github.com/openresty/echo-nginx-module#echo_exec&quot;&gt;echo_exec&lt;/a&gt; directive of the &lt;a href=&quot;https://github.com/openresty/echo-nginx-module&quot;&gt;echo-nginx-module&lt;/a&gt;.</source>
+          <target state="translated">使用 &lt;code&gt;args&lt;/code&gt; 内部重定向到 &lt;code&gt;uri&lt;/code&gt; ，类似于&lt;a href=&quot;https://github.com/openresty/echo-nginx-module&quot;&gt;echo-nginx-module&lt;/a&gt;的&lt;a href=&quot;https://github.com/openresty/echo-nginx-module#echo_exec&quot;&gt;echo_exec&lt;/a&gt;指令。</target>
+        </trans-unit>
         <trans-unit id="045d83da712ca79a4c6422d852804b994e647f90" translate="yes" xml:space="preserve">
           <source>Download the latest version of Nginx &lt;a href=&quot;http://nginx.org/&quot;&gt;HERE&lt;/a&gt; (See &lt;a href=&quot;#nginx-compatibility&quot;&gt;Nginx Compatibility&lt;/a&gt;)</source>
           <target state="translated">下载最新版本的Nginx &lt;a href=&quot;http://nginx.org/&quot;&gt;HERE&lt;/a&gt;（请参阅&lt;a href=&quot;#nginx-compatibility&quot;&gt;Nginx兼容性&lt;/a&gt;）</target>
+        </trans-unit>
+        <trans-unit id="d84120022bff0f8056098f851d2f4c8e8fa357c5" translate="yes" xml:space="preserve">
+          <source>Download the latest version of Nginx &lt;a href=&quot;https://nginx.org/&quot;&gt;HERE&lt;/a&gt; (See &lt;a href=&quot;#nginx-compatibility&quot;&gt;Nginx Compatibility&lt;/a&gt;)</source>
+          <target state="translated">下载最新版本的Nginx &lt;a href=&quot;https://nginx.org/&quot;&gt;HERE&lt;/a&gt;（请参阅&lt;a href=&quot;#nginx-compatibility&quot;&gt;Nginx兼容性&lt;/a&gt;）</target>
         </trans-unit>
         <trans-unit id="5d40ecb5ccbedf533d02f870ffdd9ea9baf019eb" translate="yes" xml:space="preserve">
           <source>Download the latest version of ngx_lua &lt;a href=&quot;https://github.com/openresty/lua-nginx-module/tags&quot;&gt;HERE&lt;/a&gt;.</source>
@@ -2247,9 +2295,17 @@
           <source>For example, on Linux, you can configure the standard &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_core_module.html#listen&quot;&gt;listen&lt;/a&gt; directive in your &lt;code&gt;nginx.conf&lt;/code&gt; file like this:</source>
           <target state="translated">例如，在Linux上，您可以像下面这样在 &lt;code&gt;nginx.conf&lt;/code&gt; 文件中配置标准&lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_core_module.html#listen&quot;&gt;监听&lt;/a&gt;指令：</target>
         </trans-unit>
+        <trans-unit id="f77cdda8bc7d70f4463a815f4d6cfab8ffa5be9d" translate="yes" xml:space="preserve">
+          <source>For example, on Linux, you can configure the standard &lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_core_module.html#listen&quot;&gt;listen&lt;/a&gt; directive in your &lt;code&gt;nginx.conf&lt;/code&gt; file like this:</source>
+          <target state="translated">例如，在Linux上，您可以像下面这样在 &lt;code&gt;nginx.conf&lt;/code&gt; 文件中配置标准&lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_core_module.html#listen&quot;&gt;监听&lt;/a&gt;指令：</target>
+        </trans-unit>
         <trans-unit id="524deba8612f94c182a1072d829569a8b92cae95" translate="yes" xml:space="preserve">
           <source>For example, the following &lt;a href=&quot;http://github.com/openresty/set-misc-nginx-module&quot;&gt;set-misc-nginx-module&lt;/a&gt; directives can be invoked this way:</source>
           <target state="translated">例如，可以通过这种方式调用以下&lt;a href=&quot;http://github.com/openresty/set-misc-nginx-module&quot;&gt;set-misc-nginx-module&lt;/a&gt;指令：</target>
+        </trans-unit>
+        <trans-unit id="b0305dd31462049a72e323e1ddbf8db3ce9e6d22" translate="yes" xml:space="preserve">
+          <source>For example, the following &lt;a href=&quot;https://github.com/openresty/set-misc-nginx-module&quot;&gt;set-misc-nginx-module&lt;/a&gt; directives can be invoked this way:</source>
+          <target state="translated">例如，可以通过这种方式调用以下&lt;a href=&quot;https://github.com/openresty/set-misc-nginx-module&quot;&gt;set-misc-nginx-module&lt;/a&gt;指令：</target>
         </trans-unit>
         <trans-unit id="888ee1307c04ff5268bdb5c014c373a9f9e022d8" translate="yes" xml:space="preserve">
           <source>For example, the following nginx config snippet</source>
@@ -2339,6 +2395,10 @@
           <source>Here is an example of gathering average data for &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_upstream_module.html#var_upstream_response_time&quot;&gt;$upstream_response_time&lt;/a&gt;:</source>
           <target state="translated">这是一个收集&lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_upstream_module.html#var_upstream_response_time&quot;&gt;$ upstream_response_time的&lt;/a&gt;平均数据的示例：</target>
         </trans-unit>
+        <trans-unit id="c764ee4b998c9952e81d78aaa8367bf67d520b97" translate="yes" xml:space="preserve">
+          <source>Here is an example of gathering average data for &lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_upstream_module.html#var_upstream_response_time&quot;&gt;$upstream_response_time&lt;/a&gt;:</source>
+          <target state="translated">这是一个收集&lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_upstream_module.html#var_upstream_response_time&quot;&gt;$ upstream_response_time的&lt;/a&gt;平均数据的示例：</target>
+        </trans-unit>
         <trans-unit id="064f9b0b02634e2215035a4195d5910c0f16b45e" translate="yes" xml:space="preserve">
           <source>Here is an example of overriding a response header (or adding one if absent) in our Lua header filter:</source>
           <target state="translated">下面是一个在Lua头过滤器中覆盖响应头的例子(如果没有,则添加一个)。</target>
@@ -2403,6 +2463,14 @@
           <source>Identical to the standard Lua &lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.status&quot;&gt;coroutine.status&lt;/a&gt; API.</source>
           <target state="translated">与标准Lua &lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.status&quot;&gt;coroutine.status&lt;/a&gt; API 相同。</target>
         </trans-unit>
+        <trans-unit id="c605f34924b33894668023a12dda2efe1463826b" translate="yes" xml:space="preserve">
+          <source>Identical to the standard Lua &lt;a href=&quot;https://www.lua.org/manual/5.1/manual.html#pdf-coroutine.running&quot;&gt;coroutine.running&lt;/a&gt; API.</source>
+          <target state="translated">与标准Lua &lt;a href=&quot;https://www.lua.org/manual/5.1/manual.html#pdf-coroutine.running&quot;&gt;coroutine.running&lt;/a&gt; API相同。</target>
+        </trans-unit>
+        <trans-unit id="74edc0ad52ffe240716233be22b2d1a7fd0aacaf" translate="yes" xml:space="preserve">
+          <source>Identical to the standard Lua &lt;a href=&quot;https://www.lua.org/manual/5.1/manual.html#pdf-coroutine.status&quot;&gt;coroutine.status&lt;/a&gt; API.</source>
+          <target state="translated">与标准Lua &lt;a href=&quot;https://www.lua.org/manual/5.1/manual.html#pdf-coroutine.status&quot;&gt;coroutine.status&lt;/a&gt; API相同。</target>
+        </trans-unit>
         <trans-unit id="6878ecfb6c510244611be91a3cc9a15d0bebd1a8" translate="yes" xml:space="preserve">
           <source>Idle connections in the pool will be monitored for any exceptional events like connection abortion or unexpected incoming data on the line, in which cases the connection in question will be closed and removed from the pool.</source>
           <target state="translated">池中的闲置连接将被监控,以防止发生任何特殊事件,如连接中止或线路上意外传入的数据,在这种情况下,有关连接将被关闭并从池中移除。</target>
@@ -2451,9 +2519,17 @@
           <source>If the &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_rewrite_module.html&quot;&gt;ngx_http_rewrite_module&lt;/a&gt;'s &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_rewrite_module.html#rewrite&quot;&gt;rewrite&lt;/a&gt; directive is used to change the URI and initiate location re-lookups (internal redirections), then any &lt;a href=&quot;#rewrite_by_lua&quot;&gt;rewrite_by_lua&lt;/a&gt; or &lt;a href=&quot;#rewrite_by_lua_file&quot;&gt;rewrite_by_lua_file&lt;/a&gt; code sequences within the current location will not be executed. For example,</source>
           <target state="translated">如果使用&lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_rewrite_module.html&quot;&gt;ngx_http_rewrite_module&lt;/a&gt;的&lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_rewrite_module.html#rewrite&quot;&gt;rewrite&lt;/a&gt;伪指令更改URI并启动位置重新查找（内部重定向），则将不执行当前位置内的任何&lt;a href=&quot;#rewrite_by_lua&quot;&gt;rewrite_by_lua&lt;/a&gt;或&lt;a href=&quot;#rewrite_by_lua_file&quot;&gt;rewrite_by_lua_file&lt;/a&gt;代码序列。例如，</target>
         </trans-unit>
+        <trans-unit id="195b2b529191b33e53991a0c90b5cd5c9bdd0d08" translate="yes" xml:space="preserve">
+          <source>If the &lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_rewrite_module.html&quot;&gt;ngx_http_rewrite_module&lt;/a&gt;'s &lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_rewrite_module.html#rewrite&quot;&gt;rewrite&lt;/a&gt; directive is used to change the URI and initiate location re-lookups (internal redirections), then any &lt;a href=&quot;#rewrite_by_lua&quot;&gt;rewrite_by_lua&lt;/a&gt; or &lt;a href=&quot;#rewrite_by_lua_file&quot;&gt;rewrite_by_lua_file&lt;/a&gt; code sequences within the current location will not be executed. For example,</source>
+          <target state="translated">如果使用&lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_rewrite_module.html&quot;&gt;ngx_http_rewrite_module&lt;/a&gt;的&lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_rewrite_module.html#rewrite&quot;&gt;rewrite&lt;/a&gt;指令更改URI并启动位置重新查找（内部重定向），则将不执行当前位置内的任何&lt;a href=&quot;#rewrite_by_lua&quot;&gt;rewrite_by_lua&lt;/a&gt;或&lt;a href=&quot;#rewrite_by_lua_file&quot;&gt;rewrite_by_lua_file&lt;/a&gt;代码序列。例如，</target>
+        </trans-unit>
         <trans-unit id="26fdab53986200d577625b93f4ba51c258927eea" translate="yes" xml:space="preserve">
           <source>If the &lt;code&gt;buffer_size&lt;/code&gt; argument is specified, then its value will be used for the size of the memory buffer for body writing with &lt;a href=&quot;#ngxreqappend_body&quot;&gt;ngx.req.append_body&lt;/a&gt;. If the argument is omitted, then the value specified by the standard &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_core_module.html#client_body_buffer_size&quot;&gt;client_body_buffer_size&lt;/a&gt; directive will be used instead.</source>
           <target state="translated">如果指定了 &lt;code&gt;buffer_size&lt;/code&gt; 参数，则其值将用于通过&lt;a href=&quot;#ngxreqappend_body&quot;&gt;ngx.req.append_body&lt;/a&gt;进行主体写入的内存缓冲区的大小。如果省略该参数，则将使用标准&lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_core_module.html#client_body_buffer_size&quot;&gt;client_body_buffer_size&lt;/a&gt;指令指定的值。</target>
+        </trans-unit>
+        <trans-unit id="e028e968df9e5a8cf99eb7746b37e805cf599f53" translate="yes" xml:space="preserve">
+          <source>If the &lt;code&gt;buffer_size&lt;/code&gt; argument is specified, then its value will be used for the size of the memory buffer for body writing with &lt;a href=&quot;#ngxreqappend_body&quot;&gt;ngx.req.append_body&lt;/a&gt;. If the argument is omitted, then the value specified by the standard &lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_core_module.html#client_body_buffer_size&quot;&gt;client_body_buffer_size&lt;/a&gt; directive will be used instead.</source>
+          <target state="translated">如果指定了 &lt;code&gt;buffer_size&lt;/code&gt; 参数，则其值将用于通过&lt;a href=&quot;#ngxreqappend_body&quot;&gt;ngx.req.append_body&lt;/a&gt;进行主体写入的内存缓冲区的大小。如果省略该参数，则将使用标准&lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_core_module.html#client_body_buffer_size&quot;&gt;client_body_buffer_size&lt;/a&gt;指令指定的值。</target>
         </trans-unit>
         <trans-unit id="97ddceaa2265c38bb2f1c03973ee7b4ef7796a07" translate="yes" xml:space="preserve">
           <source>If the &lt;code&gt;key&lt;/code&gt; argument already exists in the dictionary (and not expired for sure), the &lt;code&gt;success&lt;/code&gt; return value will be &lt;code&gt;false&lt;/code&gt; and the &lt;code&gt;err&lt;/code&gt; return value will be &lt;code&gt;&quot;exists&quot;&lt;/code&gt;.</source>
@@ -2567,6 +2643,10 @@
           <source>If you are using the &lt;a href=&quot;http://openresty.org/en/linux-packages.html&quot;&gt;official pre-built packages&lt;/a&gt; for &lt;a href=&quot;https://openresty.org/&quot;&gt;OpenResty&lt;/a&gt; 1.11.2.1 or later, then everything should work out of the box.</source>
           <target state="translated">如果您使用的是&lt;a href=&quot;https://openresty.org/&quot;&gt;OpenResty&lt;/a&gt; 1.11.2.1或更高版本的&lt;a href=&quot;http://openresty.org/en/linux-packages.html&quot;&gt;官方预编译软件包&lt;/a&gt;，则应立即使用所有功能。</target>
         </trans-unit>
+        <trans-unit id="0069d9a0bcf3c8a161d910efd6bd83655f4f59c9" translate="yes" xml:space="preserve">
+          <source>If you are using the &lt;a href=&quot;https://openresty.org/en/linux-packages.html&quot;&gt;official pre-built packages&lt;/a&gt; for &lt;a href=&quot;https://openresty.org/&quot;&gt;OpenResty&lt;/a&gt; 1.11.2.1 or later, then everything should work out of the box.</source>
+          <target state="translated">如果您使用的是&lt;a href=&quot;https://openresty.org/&quot;&gt;OpenResty&lt;/a&gt; 1.11.2.1或更高版本的&lt;a href=&quot;https://openresty.org/en/linux-packages.html&quot;&gt;官方预编译软件包&lt;/a&gt;，则应立即使用所有功能。</target>
+        </trans-unit>
         <trans-unit id="66d4ab64171ccd6fcfa24ef69863eb5f4231d67c" translate="yes" xml:space="preserve">
           <source>If you are using the &lt;code&gt;ngx.re.*&lt;/code&gt; implementation of &lt;a href=&quot;https://github.com/openresty/lua-resty-core&quot;&gt;lua-resty-core&lt;/a&gt; by loading the &lt;code&gt;resty.core.regex&lt;/code&gt; module (or just the &lt;code&gt;resty.core&lt;/code&gt; module), then an LRU cache is used for the regex cache being used here.</source>
           <target state="translated">如果通过加载 &lt;code&gt;resty.core.regex&lt;/code&gt; 模块（或只是 &lt;code&gt;resty.core&lt;/code&gt; 模块）来使用&lt;a href=&quot;https://github.com/openresty/lua-resty-core&quot;&gt;lua-resty-core&lt;/a&gt;的 &lt;code&gt;ngx.re.*&lt;/code&gt; 实现，则LRU缓存用于此处使用的regex缓存。</target>
@@ -2578,6 +2658,10 @@
         <trans-unit id="7f048479ab0021ca0341874e956da0fd566de45f" translate="yes" xml:space="preserve">
           <source>If you want to access the system environment variable, say, &lt;code&gt;foo&lt;/code&gt;, in Lua via the standard Lua API &lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#pdf-os.getenv&quot;&gt;os.getenv&lt;/a&gt;, then you should also list this environment variable name in your &lt;code&gt;nginx.conf&lt;/code&gt; file via the &lt;a href=&quot;http://nginx.org/en/docs/ngx_core_module.html#env&quot;&gt;env directive&lt;/a&gt;. For example,</source>
           <target state="translated">如果要通过标准Lua API &lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#pdf-os.getenv&quot;&gt;os.getenv&lt;/a&gt;访问Lua中的系统环境变量 &lt;code&gt;foo&lt;/code&gt; ，则还应该通过&lt;a href=&quot;http://nginx.org/en/docs/ngx_core_module.html#env&quot;&gt;env指令&lt;/a&gt;在 &lt;code&gt;nginx.conf&lt;/code&gt; 文件中列出此环境变量名称。例如，</target>
+        </trans-unit>
+        <trans-unit id="874d54012593ea6ca8b981ab5fce40f47e132468" translate="yes" xml:space="preserve">
+          <source>If you want to access the system environment variable, say, &lt;code&gt;foo&lt;/code&gt;, in Lua via the standard Lua API &lt;a href=&quot;https://www.lua.org/manual/5.1/manual.html#pdf-os.getenv&quot;&gt;os.getenv&lt;/a&gt;, then you should also list this environment variable name in your &lt;code&gt;nginx.conf&lt;/code&gt; file via the &lt;a href=&quot;https://nginx.org/en/docs/ngx_core_module.html#env&quot;&gt;env directive&lt;/a&gt;. For example,</source>
+          <target state="translated">如果要通过标准Lua API &lt;a href=&quot;https://www.lua.org/manual/5.1/manual.html#pdf-os.getenv&quot;&gt;os.getenv&lt;/a&gt;访问Lua中的系统环境变量 &lt;code&gt;foo&lt;/code&gt; ，则还应该通过&lt;a href=&quot;https://nginx.org/en/docs/ngx_core_module.html#env&quot;&gt;env指令&lt;/a&gt;在 &lt;code&gt;nginx.conf&lt;/code&gt; 文件中列出此环境变量名称。例如，</target>
         </trans-unit>
         <trans-unit id="d3345fe0380d28ca31796be10a97afe321dd4927" translate="yes" xml:space="preserve">
           <source>If you want to use dot in the Lua module name when calling &lt;code&gt;require&lt;/code&gt;, as in</source>
@@ -2651,6 +2735,10 @@
           <source>In synchronous mode, the function will not return until all output data has been written into the system send buffer or until the &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_core_module.html#send_timeout&quot;&gt;send_timeout&lt;/a&gt; setting has expired. Note that using the Lua coroutine mechanism means that this function does not block the Nginx event loop even in the synchronous mode.</source>
           <target state="translated">在同步模式下，该功能将不会返回，除非所有输出数据都已写入系统发送缓冲区或&lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_core_module.html#send_timeout&quot;&gt;send_timeout&lt;/a&gt;设置到期。请注意，使用Lua协程机制意味着即使在同步模式下，此功能也不会阻止Nginx事件循环。</target>
         </trans-unit>
+        <trans-unit id="cee67f1067bfbb1d1b6fbc0b0dc39b62383885ef" translate="yes" xml:space="preserve">
+          <source>In synchronous mode, the function will not return until all output data has been written into the system send buffer or until the &lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_core_module.html#send_timeout&quot;&gt;send_timeout&lt;/a&gt; setting has expired. Note that using the Lua coroutine mechanism means that this function does not block the Nginx event loop even in the synchronous mode.</source>
+          <target state="translated">在同步模式下，该功能将不会返回，直到所有输出数据都已写入系统发送缓冲区或&lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_core_module.html#send_timeout&quot;&gt;send_timeout&lt;/a&gt;设置到期为止。请注意，使用Lua协程机制意味着即使在同步模式下，此函数也不会阻止Nginx事件循环。</target>
+        </trans-unit>
         <trans-unit id="802426cce4f3045aa39317d15827a3ba9e7c29b0" translate="yes" xml:space="preserve">
           <source>Increments the (numerical) value for &lt;code&gt;key&lt;/code&gt; in the shm-based dictionary &lt;a href=&quot;#ngxshareddict&quot;&gt;ngx.shared.DICT&lt;/a&gt; by the step value &lt;code&gt;value&lt;/code&gt;. Returns the new resulting number if the operation is successfully completed or &lt;code&gt;nil&lt;/code&gt; and an error message otherwise.</source>
           <target state="translated">将基于shm的字典&lt;a href=&quot;#ngxshareddict&quot;&gt;ngx.shared.DICT&lt;/a&gt;中的 &lt;code&gt;key&lt;/code&gt; 的（数字）值增加step值 &lt;code&gt;value&lt;/code&gt; 。如果操作成功完成，则返回新的结果编号，否则返回 &lt;code&gt;nil&lt;/code&gt; ，否则返回错误消息。</target>
@@ -2662,6 +2750,10 @@
         <trans-unit id="590b0cababa8662b5343717a1ba8909d9c98efc2" translate="yes" xml:space="preserve">
           <source>Install LuaJIT 2.0 or 2.1 (recommended) or Lua 5.1 (Lua 5.2 is &lt;em&gt;not&lt;/em&gt; supported yet). LuaJIT can be downloaded from the &lt;a href=&quot;http://luajit.org/download.html&quot;&gt;LuaJIT project website&lt;/a&gt; and Lua 5.1, from the &lt;a href=&quot;http://www.lua.org/&quot;&gt;Lua project website&lt;/a&gt;. Some distribution package managers also distribute LuaJIT and/or Lua.</source>
           <target state="translated">安装LuaJIT 2.0或2.1（推荐）或Lua 5.1（&lt;em&gt;尚不&lt;/em&gt;支持Lua 5.2 ）。可以从&lt;a href=&quot;http://luajit.org/download.html&quot;&gt;LuaJIT项目网站&lt;/a&gt;下载LuaJIT，从&lt;a href=&quot;http://www.lua.org/&quot;&gt;Lua项目网站&lt;/a&gt;下载Lua 5.1 。一些分发包管理器还分发LuaJIT和/或Lua。</target>
+        </trans-unit>
+        <trans-unit id="c841f44436c78941c4d9eff3f25e70056a421dea" translate="yes" xml:space="preserve">
+          <source>Install LuaJIT 2.0 or 2.1 (recommended) or Lua 5.1 (Lua 5.2 is &lt;em&gt;not&lt;/em&gt; supported yet). LuaJIT can be downloaded from the &lt;a href=&quot;https://luajit.org/download.html&quot;&gt;LuaJIT project website&lt;/a&gt; and Lua 5.1, from the &lt;a href=&quot;https://www.lua.org/&quot;&gt;Lua project website&lt;/a&gt;. Some distribution package managers also distribute LuaJIT and/or Lua.</source>
+          <target state="translated">安装LuaJIT 2.0或2.1（推荐）或Lua 5.1（&lt;em&gt;尚不&lt;/em&gt;支持Lua 5.2 ）。可以从&lt;a href=&quot;https://luajit.org/download.html&quot;&gt;LuaJIT项目网站&lt;/a&gt;下载LuaJIT，从&lt;a href=&quot;https://www.lua.org/&quot;&gt;Lua项目网站&lt;/a&gt;下载Lua 5.1 。一些分发程序包管理器还分发LuaJIT和/或Lua。</target>
         </trans-unit>
         <trans-unit id="c81b79df3c6448eae7c4f80428b54cd5692a17d7" translate="yes" xml:space="preserve">
           <source>Installation</source>
@@ -2702,6 +2794,10 @@
         <trans-unit id="4980218dbb51a70cacc02d4763a046d96c95cdfb" translate="yes" xml:space="preserve">
           <source>It is &lt;em&gt;highly&lt;/em&gt; recommended to use &lt;a href=&quot;http://openresty.org&quot;&gt;OpenResty releases&lt;/a&gt; which integrate Nginx, ngx_lua, LuaJIT 2.1, as well as other powerful companion Nginx modules and Lua libraries. It is discouraged to build this module with nginx yourself since it is tricky to set up exactly right. Also, the stock nginx cores have various limitations and long standing bugs that can make some of this modules' features become disabled, not work properly, or run slower. The same applies to LuaJIT as well. OpenResty includes its own version of LuaJIT which gets specifically optimized and enhanced for the OpenResty environment.</source>
           <target state="translated">这是&lt;em&gt;强烈&lt;/em&gt;建议使用&lt;a href=&quot;http://openresty.org&quot;&gt;OpenResty发布&lt;/a&gt;其整合的Nginx，ngx_lua，LuaJIT 2.1，以及其他强大的同伴Nginx的模块和Lua库。不建议您自己使用nginx来构建此模块，因为要正确地设置它很棘手。而且，现有的nginx内核具有各种局限性和长期存在的错误，这些错误可能导致该模块的某些功能被禁用，无法正常工作或运行缓慢。LuaJIT也是如此。OpenResty包含自己的LuaJIT版本，该版本针对OpenResty环境进行了专门优化和增强。</target>
+        </trans-unit>
+        <trans-unit id="e84af29f7e1a02a9705188628a1572247ba9bb84" translate="yes" xml:space="preserve">
+          <source>It is &lt;em&gt;highly&lt;/em&gt; recommended to use &lt;a href=&quot;https://openresty.org&quot;&gt;OpenResty releases&lt;/a&gt; which integrate Nginx, ngx_lua, LuaJIT 2.1, as well as other powerful companion Nginx modules and Lua libraries. It is discouraged to build this module with nginx yourself since it is tricky to set up exactly right. Also, the stock nginx cores have various limitations and long standing bugs that can make some of this modules' features become disabled, not work properly, or run slower. The same applies to LuaJIT as well. OpenResty includes its own version of LuaJIT which gets specifically optimized and enhanced for the OpenResty environment.</source>
+          <target state="translated">这是&lt;em&gt;强烈&lt;/em&gt;建议使用&lt;a href=&quot;https://openresty.org&quot;&gt;OpenResty发布&lt;/a&gt;其整合的Nginx，ngx_lua，LuaJIT 2.1，以及其他强大的同伴Nginx的模块和Lua库。不建议自己使用nginx来构建此模块，因为要正确地设置它很棘手。同样，现有的nginx内核具有各种局限性和长期存在的错误，这些错误可能导致该模块的某些功能被禁用，无法正常工作或运行速度变慢。 LuaJIT也是如此。 OpenResty包含自己的LuaJIT版本，该版本针对OpenResty环境进行了专门优化和增强。</target>
         </trans-unit>
         <trans-unit id="182b3d046d25f95d8271b373f8b64c013f197a36" translate="yes" xml:space="preserve">
           <source>It is also possible to directly require the packages in external Lua modules:</source>
@@ -3119,9 +3215,17 @@
           <source>Note that subrequests issued by &lt;a href=&quot;#ngxlocationcapture&quot;&gt;ngx.location.capture&lt;/a&gt; inherit all the request headers of the current request by default and that this may have unexpected side effects on the subrequest responses. For example, when using the standard &lt;code&gt;ngx_proxy&lt;/code&gt; module to serve subrequests, an &quot;Accept-Encoding: gzip&quot; header in the main request may result in gzipped responses that cannot be handled properly in Lua code. Original request headers should be ignored by setting &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass_request_headers&quot;&gt;proxy_pass_request_headers&lt;/a&gt; to &lt;code&gt;off&lt;/code&gt; in subrequest locations.</source>
           <target state="translated">请注意，默认情况下，由&lt;a href=&quot;#ngxlocationcapture&quot;&gt;ngx.location.capture&lt;/a&gt;发出的子请求继承了当前请求的所有请求标头，这可能会对子请求响应产生意外的副作用。例如，当使用标准的 &lt;code&gt;ngx_proxy&lt;/code&gt; 模块满足子请求时，主请求中的&amp;ldquo; Accept-Encoding：gzip&amp;rdquo;标头可能会导致无法在Lua代码中正确处理压缩后的响应。通过在子请求位置将&lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass_request_headers&quot;&gt;proxy_pass_request_headers&lt;/a&gt;设置为 &lt;code&gt;off&lt;/code&gt; ，可以忽略原始请求标头。</target>
         </trans-unit>
+        <trans-unit id="18a5aecb3c6f3b305e355957cd6fd4141e621cf7" translate="yes" xml:space="preserve">
+          <source>Note that subrequests issued by &lt;a href=&quot;#ngxlocationcapture&quot;&gt;ngx.location.capture&lt;/a&gt; inherit all the request headers of the current request by default and that this may have unexpected side effects on the subrequest responses. For example, when using the standard &lt;code&gt;ngx_proxy&lt;/code&gt; module to serve subrequests, an &quot;Accept-Encoding: gzip&quot; header in the main request may result in gzipped responses that cannot be handled properly in Lua code. Original request headers should be ignored by setting &lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass_request_headers&quot;&gt;proxy_pass_request_headers&lt;/a&gt; to &lt;code&gt;off&lt;/code&gt; in subrequest locations.</source>
+          <target state="translated">请注意，默认情况下，由&lt;a href=&quot;#ngxlocationcapture&quot;&gt;ngx.location.capture&lt;/a&gt;发出的子请求继承了当前请求的所有请求标头，这可能会对子请求响应产生意外的副作用。例如，当使用标准 &lt;code&gt;ngx_proxy&lt;/code&gt; 模块满足子请求时，主请求中的&amp;ldquo; Accept-Encoding：gzip&amp;rdquo;标头可能会导致无法在Lua代码中正确处理压缩后的响应。通过在子请求位置将&lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass_request_headers&quot;&gt;proxy_pass_request_headers&lt;/a&gt;设置为 &lt;code&gt;off&lt;/code&gt; ，可以忽略原始请求标头。</target>
+        </trans-unit>
         <trans-unit id="79df2901fb5d3ee02055928105ad97a59018aae1" translate="yes" xml:space="preserve">
           <source>Note that the &lt;a href=&quot;#ngxvarvariable&quot;&gt;ngx.var.HEADER&lt;/a&gt; API call, which uses core &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_core_module.html#var_http_&quot;&gt;$http_HEADER&lt;/a&gt; variables, may be more preferable for reading individual request headers.</source>
           <target state="translated">请注意，使用核心&lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_core_module.html#var_http_&quot;&gt;$ http_HEADER&lt;/a&gt;变量的&lt;a href=&quot;#ngxvarvariable&quot;&gt;ngx.var.HEADER&lt;/a&gt; API调用对于读取单个请求标头可能更可取。</target>
+        </trans-unit>
+        <trans-unit id="6e67141029d9b6f4230c3ed230683614e3f726ff" translate="yes" xml:space="preserve">
+          <source>Note that the &lt;a href=&quot;#ngxvarvariable&quot;&gt;ngx.var.HEADER&lt;/a&gt; API call, which uses core &lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_core_module.html#var_http_&quot;&gt;$http_HEADER&lt;/a&gt; variables, may be more preferable for reading individual request headers.</source>
+          <target state="translated">请注意，使用核心&lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_core_module.html#var_http_&quot;&gt;$ http_HEADER&lt;/a&gt;变量的&lt;a href=&quot;#ngxvarvariable&quot;&gt;ngx.var.HEADER&lt;/a&gt; API调用对于读取单个请求标头可能更可取。</target>
         </trans-unit>
         <trans-unit id="67a51ca95a947300c8f414535f67f2618e187c4f" translate="yes" xml:space="preserve">
           <source>Note that the &lt;a href=&quot;http://mdounin.ru/hg/ngx_http_auth_request_module/&quot;&gt;ngx_auth_request&lt;/a&gt; module can be approximated by using &lt;a href=&quot;#access_by_lua&quot;&gt;access_by_lua&lt;/a&gt;:</source>
@@ -3155,6 +3259,10 @@
           <source>Note that the log level specified in the standard &lt;a href=&quot;http://nginx.org/r/error_log&quot;&gt;error_log&lt;/a&gt; directive &lt;em&gt;does&lt;/em&gt; have effect on this capturing facility. It only captures log messages of a level no lower than the specified log level in the &lt;a href=&quot;http://nginx.org/r/error_log&quot;&gt;error_log&lt;/a&gt; directive. The user can still choose to set an even higher filtering log level on the fly via the Lua API function &lt;a href=&quot;https://github.com/openresty/lua-resty-core/blob/master/lib/ngx/errlog.md#set_filter_level&quot;&gt;errlog.set_filter_level&lt;/a&gt;. So it is more flexible than the static &lt;a href=&quot;http://nginx.org/r/error_log&quot;&gt;error_log&lt;/a&gt; directive.</source>
           <target state="translated">请注意，标准&lt;a href=&quot;http://nginx.org/r/error_log&quot;&gt;error_log&lt;/a&gt;指令&lt;em&gt;中&lt;/em&gt;指定的日志级别&lt;em&gt;确实&lt;/em&gt;对此捕获工具有效。它仅捕获不低于&lt;a href=&quot;http://nginx.org/r/error_log&quot;&gt;error_log&lt;/a&gt;指令中指定的日志级别的日志消息。用户仍然可以选择通过Lua API函数&lt;a href=&quot;https://github.com/openresty/lua-resty-core/blob/master/lib/ngx/errlog.md#set_filter_level&quot;&gt;errlog.set_filter_level&lt;/a&gt;即时设置更高的过滤日志级别。因此，它比静态&lt;a href=&quot;http://nginx.org/r/error_log&quot;&gt;error_log&lt;/a&gt;指令更灵活。</target>
         </trans-unit>
+        <trans-unit id="1e0f716ef06d1a22aed8ffeacd3a97e5c3b502c0" translate="yes" xml:space="preserve">
+          <source>Note that the log level specified in the standard &lt;a href=&quot;https://nginx.org/r/error_log&quot;&gt;error_log&lt;/a&gt; directive &lt;em&gt;does&lt;/em&gt; have effect on this capturing facility. It only captures log messages of a level no lower than the specified log level in the &lt;a href=&quot;https://nginx.org/r/error_log&quot;&gt;error_log&lt;/a&gt; directive. The user can still choose to set an even higher filtering log level on the fly via the Lua API function &lt;a href=&quot;https://github.com/openresty/lua-resty-core/blob/master/lib/ngx/errlog.md#set_filter_level&quot;&gt;errlog.set_filter_level&lt;/a&gt;. So it is more flexible than the static &lt;a href=&quot;https://nginx.org/r/error_log&quot;&gt;error_log&lt;/a&gt; directive.</source>
+          <target state="translated">请注意，标准&lt;a href=&quot;https://nginx.org/r/error_log&quot;&gt;error_log&lt;/a&gt;指令&lt;em&gt;中&lt;/em&gt;指定的日志级别&lt;em&gt;确实&lt;/em&gt;对此捕获工具有效。它仅捕获不低于&lt;a href=&quot;https://nginx.org/r/error_log&quot;&gt;error_log&lt;/a&gt;指令中指定的日志级别的日志消息。用户仍然可以选择通过Lua API函数&lt;a href=&quot;https://github.com/openresty/lua-resty-core/blob/master/lib/ngx/errlog.md#set_filter_level&quot;&gt;errlog.set_filter_level&lt;/a&gt;即时设置更高的过滤日志级别。因此，它比静态的&lt;a href=&quot;https://nginx.org/r/error_log&quot;&gt;error_log&lt;/a&gt;指令更加灵活。</target>
+        </trans-unit>
         <trans-unit id="ef3ecbd1bc71a20a034bc8a316195134d0cfd59f" translate="yes" xml:space="preserve">
           <source>Note that the value of an expired key is not guaranteed to be available so one should never rely on the availability of expired items.</source>
           <target state="translated">需要注意的是,过期键的值是不能保证可用的,所以千万不要依赖过期项目的可用性。</target>
@@ -3182,6 +3290,14 @@
         <trans-unit id="8e3d5c6d6e30193a16dcba5b440dd21fac4f6d95" translate="yes" xml:space="preserve">
           <source>Note that this handler always runs &lt;em&gt;after&lt;/em&gt; the standard &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_rewrite_module.html&quot;&gt;ngx_http_rewrite_module&lt;/a&gt;. So the following will work as expected:</source>
           <target state="translated">请注意，此处理程序始终&lt;em&gt;在&lt;/em&gt;标准&lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_rewrite_module.html&quot;&gt;ngx_http_rewrite_module &lt;/a&gt;&lt;em&gt;之后&lt;/em&gt;运行。因此，以下将按预期工作：</target>
+        </trans-unit>
+        <trans-unit id="d54f8b5ccd59dfd260cfdc04906a30d7003e27f1" translate="yes" xml:space="preserve">
+          <source>Note that this handler always runs &lt;em&gt;after&lt;/em&gt; the standard &lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_access_module.html&quot;&gt;ngx_http_access_module&lt;/a&gt;. So the following will work as expected:</source>
+          <target state="translated">请注意，此处理程序始终&lt;em&gt;在&lt;/em&gt;标准&lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_access_module.html&quot;&gt;ngx_http_access_module&lt;/a&gt;&lt;em&gt;之后&lt;/em&gt;运行。因此，以下将按预期工作：</target>
+        </trans-unit>
+        <trans-unit id="4b0ec4deaac17da168250c24cbfe1e36a48b0ab7" translate="yes" xml:space="preserve">
+          <source>Note that this handler always runs &lt;em&gt;after&lt;/em&gt; the standard &lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_rewrite_module.html&quot;&gt;ngx_http_rewrite_module&lt;/a&gt;. So the following will work as expected:</source>
+          <target state="translated">请注意，此处理程序始终&lt;em&gt;在&lt;/em&gt;标准&lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_rewrite_module.html&quot;&gt;ngx_http_rewrite_module&lt;/a&gt;&lt;em&gt;之后&lt;/em&gt;运行。因此，以下将按预期工作：</target>
         </trans-unit>
         <trans-unit id="4c3114da95df93d38fa2f4849cd93af3ba3cc641" translate="yes" xml:space="preserve">
           <source>Note that this method call terminates the processing of the current request and that it &lt;em&gt;must&lt;/em&gt; be called before &lt;a href=&quot;#ngxsend_headers&quot;&gt;ngx.send_headers&lt;/a&gt; or explicit response body outputs by either &lt;a href=&quot;#ngxprint&quot;&gt;ngx.print&lt;/a&gt; or &lt;a href=&quot;#ngxsay&quot;&gt;ngx.say&lt;/a&gt;.</source>
@@ -3218,6 +3334,10 @@
         <trans-unit id="d86f91b6b98ea753d4b1937f9cffe9e00293a081" translate="yes" xml:space="preserve">
           <source>Note, however, you still need to configure the &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_certificate&quot;&gt;ssl_certificate&lt;/a&gt; and &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_certificate_key&quot;&gt;ssl_certificate_key&lt;/a&gt; directives even though you will not use this static certificate and private key at all. This is because the NGINX core requires their appearance otherwise you are seeing the following error while starting NGINX:</source>
           <target state="translated">但是请注意，即使您根本不会使用此静态证书和私钥，您仍然需要配置&lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_certificate&quot;&gt;ssl_certificate&lt;/a&gt;和&lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_certificate_key&quot;&gt;ssl_certificate_key&lt;/a&gt;指令。这是因为NGINX核心需要其外观，否则在启动NGINX时会看到以下错误：</target>
+        </trans-unit>
+        <trans-unit id="429cbdb1e638ce27ed2755a0abfebc291e39c4ad" translate="yes" xml:space="preserve">
+          <source>Note, however, you still need to configure the &lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_certificate&quot;&gt;ssl_certificate&lt;/a&gt; and &lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_certificate_key&quot;&gt;ssl_certificate_key&lt;/a&gt; directives even though you will not use this static certificate and private key at all. This is because the NGINX core requires their appearance otherwise you are seeing the following error while starting NGINX:</source>
+          <target state="translated">但是请注意，即使您根本不会使用此静态证书和私钥，仍然需要配置&lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_certificate&quot;&gt;ssl_certificate&lt;/a&gt;和&lt;a href=&quot;https://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_certificate_key&quot;&gt;ssl_certificate_key&lt;/a&gt;指令。这是因为NGINX核心需要其外观，否则在启动NGINX时会看到以下错误：</target>
         </trans-unit>
         <trans-unit id="6f8fee789de2239f32252fc0ea860eb1196d61fb" translate="yes" xml:space="preserve">
           <source>Number literals can be used directly as the argument, for instance,</source>
@@ -3551,6 +3671,10 @@
           <source>Returns the current time stamp (in the format &lt;code&gt;yyyy-mm-dd hh:mm:ss&lt;/code&gt;) of the nginx cached time (no syscall involved unlike Lua's &lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#pdf-os.date&quot;&gt;os.date&lt;/a&gt; function).</source>
           <target state="translated">返回nginx缓存时间的当前时间戳（格式为 &lt;code&gt;yyyy-mm-dd hh:mm:ss&lt;/code&gt; ）（与Lua的&lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#pdf-os.date&quot;&gt;os.date&lt;/a&gt;函数不同，不涉及任何系统调用）。</target>
         </trans-unit>
+        <trans-unit id="5cba1b1ccdb8789a04440bda092f7751dbc7fa02" translate="yes" xml:space="preserve">
+          <source>Returns the current time stamp (in the format &lt;code&gt;yyyy-mm-dd hh:mm:ss&lt;/code&gt;) of the nginx cached time (no syscall involved unlike Lua's &lt;a href=&quot;https://www.lua.org/manual/5.1/manual.html#pdf-os.date&quot;&gt;os.date&lt;/a&gt; function).</source>
+          <target state="translated">返回nginx缓存时间的当前时间戳（格式为 &lt;code&gt;yyyy-mm-dd hh:mm:ss&lt;/code&gt; ）（与Lua的&lt;a href=&quot;https://www.lua.org/manual/5.1/manual.html#pdf-os.date&quot;&gt;os.date&lt;/a&gt;函数不同，不涉及任何系统调用）。</target>
+        </trans-unit>
         <trans-unit id="157a2eb1202ffa160d25f94918b1c4a164d3b96f" translate="yes" xml:space="preserve">
           <source>Returns the elapsed seconds from the epoch for the current time stamp from the nginx cached time (no syscall involved unlike Lua's date library).</source>
           <target state="translated">从nginx缓存的时间中返回当前时间戳的历时秒数(与Lua的日期库不同,不涉及syscall)。</target>
@@ -3582,6 +3706,10 @@
         <trans-unit id="7bc2bb362672c906aa0961a72569d5656909009f" translate="yes" xml:space="preserve">
           <source>Returns the total number of the Nginx worker processes (i.e., the value configured by the &lt;a href=&quot;http://nginx.org/en/docs/ngx_core_module.html#worker_processes&quot;&gt;worker_processes&lt;/a&gt; directive in &lt;code&gt;nginx.conf&lt;/code&gt;).</source>
           <target state="translated">返回Nginx工作进程的总数（即， &lt;code&gt;nginx.conf&lt;/code&gt; 中&lt;a href=&quot;http://nginx.org/en/docs/ngx_core_module.html#worker_processes&quot;&gt;worker_processes&lt;/a&gt;指令配置的值）。</target>
+        </trans-unit>
+        <trans-unit id="46867d7f3030f92e533b5e99d6444233321f15ab" translate="yes" xml:space="preserve">
+          <source>Returns the total number of the Nginx worker processes (i.e., the value configured by the &lt;a href=&quot;https://nginx.org/en/docs/ngx_core_module.html#worker_processes&quot;&gt;worker_processes&lt;/a&gt; directive in &lt;code&gt;nginx.conf&lt;/code&gt;).</source>
+          <target state="translated">返回Nginx工作进程的总数（即， &lt;code&gt;nginx.conf&lt;/code&gt; 中&lt;a href=&quot;https://nginx.org/en/docs/ngx_core_module.html#worker_processes&quot;&gt;worker_processes&lt;/a&gt;指令配置的值）。</target>
         </trans-unit>
         <trans-unit id="7aa1ee19879e7de344e8f22603276950ed7e49c0" translate="yes" xml:space="preserve">
           <source>Rewrite the current request's (parsed) URI by the &lt;code&gt;uri&lt;/code&gt; argument. The &lt;code&gt;uri&lt;/code&gt; argument must be a Lua string and cannot be of zero length, or a Lua exception will be thrown.</source>
@@ -3811,6 +3939,10 @@
           <source>Similar to &lt;a href=&quot;#ngxrematch&quot;&gt;ngx.re.match&lt;/a&gt; but only returns the beginning index (&lt;code&gt;from&lt;/code&gt;) and end index (&lt;code&gt;to&lt;/code&gt;) of the matched substring. The returned indexes are 1-based and can be fed directly into the &lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#pdf-string.sub&quot;&gt;string.sub&lt;/a&gt; API function to obtain the matched substring.</source>
           <target state="translated">与&lt;a href=&quot;#ngxrematch&quot;&gt;ngx.re.match&lt;/a&gt;类似，但只返回匹配子字符串的开始索引（ &lt;code&gt;from&lt;/code&gt; ）和结束索引（ &lt;code&gt;to&lt;/code&gt; ）。返回的索引基于1，可以直接馈入&lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#pdf-string.sub&quot;&gt;string.sub&lt;/a&gt; API函数以获得匹配的子字符串。</target>
         </trans-unit>
+        <trans-unit id="7f106a3c684f7fc0ea95d1745f4122867a726669" translate="yes" xml:space="preserve">
+          <source>Similar to &lt;a href=&quot;#ngxrematch&quot;&gt;ngx.re.match&lt;/a&gt; but only returns the beginning index (&lt;code&gt;from&lt;/code&gt;) and end index (&lt;code&gt;to&lt;/code&gt;) of the matched substring. The returned indexes are 1-based and can be fed directly into the &lt;a href=&quot;https://www.lua.org/manual/5.1/manual.html#pdf-string.sub&quot;&gt;string.sub&lt;/a&gt; API function to obtain the matched substring.</source>
+          <target state="translated">与&lt;a href=&quot;#ngxrematch&quot;&gt;ngx.re.match&lt;/a&gt;类似，但仅返回匹配子字符串的开始索引（ &lt;code&gt;from&lt;/code&gt; ）和结束索引（ &lt;code&gt;to&lt;/code&gt; ）。返回的索引基于1，可以直接输入&lt;a href=&quot;https://www.lua.org/manual/5.1/manual.html#pdf-string.sub&quot;&gt;string.sub&lt;/a&gt; API函数以获得匹配的子字符串。</target>
+        </trans-unit>
         <trans-unit id="352a600c32c28300072d08110bbef4ac25e0a611" translate="yes" xml:space="preserve">
           <source>Similar to &lt;a href=&quot;#ngxrematch&quot;&gt;ngx.re.match&lt;/a&gt;, but returns a Lua iterator instead, so as to let the user programmer iterate all the matches over the &lt;code&gt;&amp;lt;subject&amp;gt;&lt;/code&gt; string argument with the PCRE &lt;code&gt;regex&lt;/code&gt;.</source>
           <target state="translated">与&lt;a href=&quot;#ngxrematch&quot;&gt;ngx.re.match&lt;/a&gt;相似，但是返回一个Lua迭代器，以便用户程序员使用PCRE &lt;code&gt;regex&lt;/code&gt; 迭代 &lt;code&gt;&amp;lt;subject&amp;gt;&lt;/code&gt; 字符串参数上的所有匹配项。</target>
@@ -3870,138 +4002,6 @@
         <trans-unit id="0cb7d3acef2ccff8f98e4ce7fb079207bcab4918" translate="yes" xml:space="preserve">
           <source>Similar to the &lt;a href=&quot;#set_by_lua&quot;&gt;set_by_lua&lt;/a&gt; directive except that</source>
           <target state="translated">与&lt;a href=&quot;#set_by_lua&quot;&gt;set_by_lua&lt;/a&gt;指令类似，除了</target>
-        </trans-unit>
-        <trans-unit id="fd19f212fee4e1f793bdebc71c579667c1d9ffed" translate="yes" xml:space="preserve">
-          <source>Similar to the standard Lua &lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.create&quot;&gt;coroutine.create&lt;/a&gt; API, but works in the context of the Lua coroutines created by ngx_lua.</source>
-          <target state="translated">与标准Lua &lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.create&quot;&gt;coroutine.create&lt;/a&gt; API 相似，但在ngx_lua创建的Lua协程的上下文中工作。</target>
-        </trans-unit>
-        <trans-unit id="abeec72461dbd86196a2df49e71ede29e7798178" translate="yes" xml:space="preserve">
-          <source>Similar to the standard Lua &lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.resume&quot;&gt;coroutine.resume&lt;/a&gt; API, but works in the context of the Lua coroutines created by ngx_lua.</source>
-          <target state="translated">与标准Lua &lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.resume&quot;&gt;coroutine.resume&lt;/a&gt; API 相似，但在ngx_lua创建的Lua协程的上下文中工作。</target>
-        </trans-unit>
-        <trans-unit id="78010ee7daa3e2bd4ab094d2de04942d6ebe347e" translate="yes" xml:space="preserve">
-          <source>Similar to the standard Lua &lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.wrap&quot;&gt;coroutine.wrap&lt;/a&gt; API, but works in the context of the Lua coroutines created by ngx_lua.</source>
-          <target state="translated">与标准Lua &lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.wrap&quot;&gt;coroutine.wrap&lt;/a&gt; API 相似，但在ngx_lua创建的Lua协程的上下文中工作。</target>
-        </trans-unit>
-        <trans-unit id="44cfb6fec7a73bbbf8e3dc21c4669043c1f4919f" translate="yes" xml:space="preserve">
-          <source>Similar to the standard Lua &lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.yield&quot;&gt;coroutine.yield&lt;/a&gt; API, but works in the context of the Lua coroutines created by ngx_lua.</source>
-          <target state="translated">与标准Lua &lt;a href=&quot;http://www.lua.org/manual/5.1/manual.html#pdf-coroutine.yield&quot;&gt;coroutine.yield&lt;/a&gt; API 相似，但在ngx_lua创建的Lua协程的上下文中工作。</target>
-        </trans-unit>
-        <trans-unit id="07958eaee11a6c0bba997479f92fbd7e2e3f86a2" translate="yes" xml:space="preserve">
-          <source>Similarly, Nginx config</source>
-          <target state="translated">同样,Nginx配置</target>
-        </trans-unit>
-        <trans-unit id="12e5f5cf12f71667ff3409c62673b043f11cab80" translate="yes" xml:space="preserve">
-          <source>Similarly, if using the standard Lua 5.1 interpreter with ngx_lua, Lua compatible bytecode files must be generated using the &lt;code&gt;luac&lt;/code&gt; commandline utility as shown:</source>
-          <target state="translated">同样，如果将标准的Lua 5.1解释器与ngx_lua一起使用，则必须使用 &lt;code&gt;luac&lt;/code&gt; 命令行实用程序生成与Lua兼容的字节码文件，如下所示：</target>
-        </trans-unit>
-        <trans-unit id="a856e6846e8b4073e471221248e04de15e34b684" translate="yes" xml:space="preserve">
-          <source>Similarly, the following directives provided by &lt;a href=&quot;http://github.com/openresty/encrypted-session-nginx-module&quot;&gt;encrypted-session-nginx-module&lt;/a&gt; can be invoked from within Lua too:</source>
-          <target state="translated">类似地，&lt;a href=&quot;http://github.com/openresty/encrypted-session-nginx-module&quot;&gt;encrypted-session-nginx-module&lt;/a&gt;提供的以下指令也可以在Lua内部调用：</target>
-        </trans-unit>
-        <trans-unit id="9b248a256a7a9510bdb3499e5ff809ca2d82a4d6" translate="yes" xml:space="preserve">
-          <source>Since &lt;code&gt;v0.8.3&lt;/code&gt; this function returns &lt;code&gt;1&lt;/code&gt; on success, or returns &lt;code&gt;nil&lt;/code&gt; and a string describing the error otherwise.</source>
-          <target state="translated">从 &lt;code&gt;v0.8.3&lt;/code&gt; 开始,此函数成功返回 &lt;code&gt;1&lt;/code&gt; ，否则返回 &lt;code&gt;nil&lt;/code&gt; 和否则描述错误的字符串。</target>
-        </trans-unit>
-        <trans-unit id="b18a9990f544a1d0b6d5c1397202597ea48e6a16" translate="yes" xml:space="preserve">
-          <source>Since the &lt;code&gt;0.6.9&lt;/code&gt; release, all the header names in the Lua table returned are converted to the pure lower-case form by default, unless the &lt;code&gt;raw&lt;/code&gt; argument is set to &lt;code&gt;true&lt;/code&gt; (default to &lt;code&gt;false&lt;/code&gt;).</source>
-          <target state="translated">从 &lt;code&gt;0.6.9&lt;/code&gt; 版本开始，默认情况下，除非将 &lt;code&gt;raw&lt;/code&gt; 参数设置为 &lt;code&gt;true&lt;/code&gt; （默认为 &lt;code&gt;false&lt;/code&gt; ），否则默认情况下，返回的Lua表中的所有标头名称都将转换为纯小写形式。</target>
-        </trans-unit>
-        <trans-unit id="d69ce11201e400cd85895b093071d277aadae953" translate="yes" xml:space="preserve">
-          <source>Since the &lt;code&gt;0.7.20&lt;/code&gt; release, The &lt;code&gt;0&lt;/code&gt; time argument can also be specified.</source>
-          <target state="translated">从 &lt;code&gt;0.7.20&lt;/code&gt; 版本开始，还可以指定 &lt;code&gt;0&lt;/code&gt; 时间参数。</target>
-        </trans-unit>
-        <trans-unit id="f5502b62197033b6f4ce57f00533a3d35bb5eb77" translate="yes" xml:space="preserve">
-          <source>Since the &lt;code&gt;0.9.16&lt;/code&gt; release, an optional boolean-typed &lt;code&gt;no_padding&lt;/code&gt; argument can be specified to control whether the base64 padding should be appended to the resulting digest (default to &lt;code&gt;false&lt;/code&gt;, i.e., with padding enabled).</source>
-          <target state="translated">从 &lt;code&gt;0.9.16&lt;/code&gt; 版本开始，可以指定可选的布尔类型的 &lt;code&gt;no_padding&lt;/code&gt; 参数来控制是否应将base64填充附加到结果摘要（默认为 &lt;code&gt;false&lt;/code&gt; ，即启用填充）。</target>
-        </trans-unit>
-        <trans-unit id="070ee59a56a6ad95645e5072a7dcf4e41b4bb037" translate="yes" xml:space="preserve">
-          <source>Since the &lt;code&gt;0.9.3&lt;/code&gt; release, an optional 5th argument, &lt;code&gt;nth&lt;/code&gt;, is supported to specify which (submatch) capture's indexes to return. When &lt;code&gt;nth&lt;/code&gt; is 0 (which is the default), the indexes for the whole matched substring is returned; when &lt;code&gt;nth&lt;/code&gt; is 1, then the 1st submatch capture's indexes are returned; when &lt;code&gt;nth&lt;/code&gt; is 2, then the 2nd submatch capture is returned, and so on. When the specified submatch does not have a match, then two &lt;code&gt;nil&lt;/code&gt; values will be returned. Below is an example for this:</source>
-          <target state="translated">从 &lt;code&gt;0.9.3&lt;/code&gt; 版本开始，支持使用可选的第5个参数 &lt;code&gt;nth&lt;/code&gt; 来指定要返回哪个（子匹配）捕获的索引。当 &lt;code&gt;nth&lt;/code&gt; 为0（默认值）时，返回整个匹配子字符串的索引；否则，返回0。当 &lt;code&gt;nth&lt;/code&gt; 为1时，则返回第一个子匹配捕获的索引；当 &lt;code&gt;nth&lt;/code&gt; 为2时，则返回第二个子匹配捕获，依此类推。当指定的子匹配项不匹配时，将返回两个 &lt;code&gt;nil&lt;/code&gt; 值。下面是一个示例：</target>
-        </trans-unit>
-        <trans-unit id="61e4b5917b2fec2373b25326528f336425506795" translate="yes" xml:space="preserve">
-          <source>Since the &lt;code&gt;v0.7.18&lt;/code&gt; release, connecting to a datagram unix domain socket file is also possible on Linux:</source>
-          <target state="translated">从 &lt;code&gt;v0.7.18&lt;/code&gt; 版本开始，在Linux上也可以连接到数据报unix域套接字文件：</target>
-        </trans-unit>
-        <trans-unit id="210812f589792cb707bcf4b21ae05cf8653b5483" translate="yes" xml:space="preserve">
-          <source>Since the &lt;code&gt;v0.8.8&lt;/code&gt; release, this method no longer automatically closes the current connection when the read timeout error happens. For other connection errors, this method always automatically closes the connection.</source>
-          <target state="translated">从 &lt;code&gt;v0.8.8&lt;/code&gt; 版本开始，当发生读取超时错误时，此方法不再自动关闭当前连接。对于其他连接错误，此方法始终自动关闭连接。</target>
-        </trans-unit>
-        <trans-unit id="fa2ca56726c04febc5e980583e98a176acf7e5eb" translate="yes" xml:space="preserve">
-          <source>Since the &lt;code&gt;v0.9.0&lt;/code&gt; release, this function accepts an optional boolean &lt;code&gt;raw&lt;/code&gt; argument. When this argument is &lt;code&gt;true&lt;/code&gt;, this function returns a full-duplex cosocket object wrapping around the raw downstream connection socket, upon which you can call the &lt;a href=&quot;#tcpsockreceive&quot;&gt;receive&lt;/a&gt;, &lt;a href=&quot;#tcpsockreceiveuntil&quot;&gt;receiveuntil&lt;/a&gt;, and &lt;a href=&quot;#tcpsocksend&quot;&gt;send&lt;/a&gt; methods.</source>
-          <target state="translated">从 &lt;code&gt;v0.9.0&lt;/code&gt; 版本开始，此函数接受可选的布尔 &lt;code&gt;raw&lt;/code&gt; 参数。当此参数为 &lt;code&gt;true&lt;/code&gt; 时，此函数返回环绕原始下游连接套接字的全双工cosocket对象，您可以在其上调用&lt;a href=&quot;#tcpsockreceive&quot;&gt;receive&lt;/a&gt;，&lt;a href=&quot;#tcpsockreceiveuntil&quot;&gt;receiveuntil&lt;/a&gt;和&lt;a href=&quot;#tcpsocksend&quot;&gt;send&lt;/a&gt;方法。</target>
-        </trans-unit>
-        <trans-unit id="f58b124b53b6bcd71b3599b330c2fa8d10290482" translate="yes" xml:space="preserve">
-          <source>Sleeping API function &lt;a href=&quot;#ngxsleep&quot;&gt;ngx.sleep&lt;/a&gt;.</source>
-          <target state="translated">睡眠API函数&lt;a href=&quot;#ngxsleep&quot;&gt;ngx.sleep&lt;/a&gt;。</target>
-        </trans-unit>
-        <trans-unit id="27359c4bc78ac00841adea22743e9d0c89171f7b" translate="yes" xml:space="preserve">
-          <source>Sleeps for the specified seconds without blocking. One can specify time resolution up to 0.001 seconds (i.e., one milliseconds).</source>
-          <target state="translated">在指定的秒数内无阻挡地睡眠,可以指定时间分辨率为0.001秒(即一毫秒)。可以指定最高0.001秒的时间分辨率(即一毫秒)。</target>
-        </trans-unit>
-        <trans-unit id="fcaea81dce16b1cf54b7811c26aa438c76e61061" translate="yes" xml:space="preserve">
-          <source>So even if the return value of the &lt;code&gt;free_space&lt;/code&gt; method is zero, there may be room in already assigned pages, so you may successfully set a new key value pair to the shared dict without getting &lt;code&gt;true&lt;/code&gt; for &lt;code&gt;forcible&lt;/code&gt; or non nil &lt;code&gt;err&lt;/code&gt; from the &lt;code&gt;ngx.shared.DICT.set&lt;/code&gt;.</source>
-          <target state="translated">所以，即使返回值 &lt;code&gt;free_space&lt;/code&gt; 方法是零，有可能是房间已经分配的页面，所以你可能会成功地设置新的键值对，共享的字典没有得到 &lt;code&gt;true&lt;/code&gt; 的 &lt;code&gt;forcible&lt;/code&gt; 或非零 &lt;code&gt;err&lt;/code&gt; 从 &lt;code&gt;ngx.shared.DICT.set&lt;/code&gt; 。</target>
-        </trans-unit>
-        <trans-unit id="e92df4b1ec1954469ddb78f2bfe169443436c7e4" translate="yes" xml:space="preserve">
-          <source>So if the total number of workers is &lt;code&gt;N&lt;/code&gt;, then this method may return a number between 0 and &lt;code&gt;N - 1&lt;/code&gt; (inclusive).</source>
-          <target state="translated">因此，如果工人总数为 &lt;code&gt;N&lt;/code&gt; ，则此方法可能返回0到 &lt;code&gt;N - 1&lt;/code&gt; （含N）之间的数字。</target>
-        </trans-unit>
-        <trans-unit id="84efbedcec6f11d239871ca18a28099a361421bc" translate="yes" xml:space="preserve">
-          <source>Socket objects that have not invoked this method (and associated connections) will be closed when the socket object is released by the Lua GC (Garbage Collector) or the current client HTTP request finishes processing.</source>
-          <target state="translated">当套接字对象被Lua GC(Garbage Collector)释放或当前客户端HTTP请求处理完毕时,没有调用该方法的套接字对象(以及相关连接)将被关闭。</target>
-        </trans-unit>
-        <trans-unit id="da9e7f8bbe4de19071db0a2c4e2d02421a8b6d82" translate="yes" xml:space="preserve">
-          <source>Some special nginx variables like &lt;code&gt;$args&lt;/code&gt; and &lt;code&gt;$limit_rate&lt;/code&gt; can be assigned a value, many others are not, like &lt;code&gt;$query_string&lt;/code&gt;, &lt;code&gt;$arg_PARAMETER&lt;/code&gt;, and &lt;code&gt;$http_NAME&lt;/code&gt;.</source>
-          <target state="translated">像一些特殊的Nginx变量 &lt;code&gt;$args&lt;/code&gt; 和 &lt;code&gt;$limit_rate&lt;/code&gt; 可以分配一个值，很多人都没有，像 &lt;code&gt;$query_string&lt;/code&gt; ， &lt;code&gt;$arg_PARAMETER&lt;/code&gt; ，和 &lt;code&gt;$http_NAME&lt;/code&gt; 。</target>
-        </trans-unit>
-        <trans-unit id="23bafa371fcfd7ad9f80116e1d8ac3329001abeb" translate="yes" xml:space="preserve">
-          <source>Spawns a new user &quot;light thread&quot; with the Lua function &lt;code&gt;func&lt;/code&gt; as well as those optional arguments &lt;code&gt;arg1&lt;/code&gt;, &lt;code&gt;arg2&lt;/code&gt;, and etc. Returns a Lua thread (or Lua coroutine) object represents this &quot;light thread&quot;.</source>
-          <target state="translated">使用Lua函数 &lt;code&gt;func&lt;/code&gt; 以及那些可选参数 &lt;code&gt;arg1&lt;/code&gt; ， &lt;code&gt;arg2&lt;/code&gt; 等产生一个新的用户&amp;ldquo;轻线程&amp;rdquo; 。返回一个表示此&amp;ldquo;轻线程&amp;rdquo;的Lua线程（或Lua协程）对象。</target>
-        </trans-unit>
-        <trans-unit id="b26851b1e02485c8402ed45e82946b5e8b4e49f4" translate="yes" xml:space="preserve">
-          <source>Special Escaping Sequences</source>
-          <target state="translated">特殊逃逸序列</target>
-        </trans-unit>
-        <trans-unit id="5cb52b844506853e4a52ad9c6f20086d874f14dd" translate="yes" xml:space="preserve">
-          <source>Special PCRE Sequences</source>
-          <target state="translated">特殊PCRE序列</target>
-        </trans-unit>
-        <trans-unit id="87e4093eff26b9142f958fcee21b9d4f56a5d1a4" translate="yes" xml:space="preserve">
-          <source>Specifies a file path with trusted CA certificates in the PEM format used to verify the certificate of the SSL/TLS server in the &lt;a href=&quot;#tcpsocksslhandshake&quot;&gt;tcpsock:sslhandshake&lt;/a&gt; method.</source>
-          <target state="translated">指定文件路径，该文件路径带有PEM格式的受信任CA证书，用于通过&lt;a href=&quot;#tcpsocksslhandshake&quot;&gt;tcpsock：sslhandshake&lt;/a&gt;方法验证SSL / TLS服务器的证书。</target>
-        </trans-unit>
-        <trans-unit id="c347c78b21148a184b1541a95d7738ad4d4964bb" translate="yes" xml:space="preserve">
-          <source>Specifies a file with revoked certificates (CRL) in the PEM format used to verify the certificate of the SSL/TLS server in the &lt;a href=&quot;#tcpsocksslhandshake&quot;&gt;tcpsock:sslhandshake&lt;/a&gt; method.</source>
-          <target state="translated">使用&lt;a href=&quot;#tcpsocksslhandshake&quot;&gt;tcpsock：sslhandshake&lt;/a&gt;方法以PEM格式指定具有已吊销证书（CRL）的文件，该文件用于验证SSL / TLS服务器的证书。</target>
-        </trans-unit>
-        <trans-unit id="f13e6d25b00a0894c6bf2e21f820b44a958897e7" translate="yes" xml:space="preserve">
-          <source>Specifies the &quot;match limit&quot; used by the PCRE library when executing the &lt;a href=&quot;#ngxrematch&quot;&gt;ngx.re API&lt;/a&gt;. To quote the PCRE manpage, &quot;the limit ... has the effect of limiting the amount of backtracking that can take place.&quot;</source>
-          <target state="translated">指定执行&lt;a href=&quot;#ngxrematch&quot;&gt;ngx.re API&lt;/a&gt;时PCRE库使用的&amp;ldquo;匹配限制&amp;rdquo; 。引用PCRE手册，&amp;ldquo;限制...具有限制可以发生的回溯量的作用。&amp;rdquo;</target>
-        </trans-unit>
-        <trans-unit id="06604fef4a9a0145840989ba5d3f572ef573fc4d" translate="yes" xml:space="preserve">
-          <source>Specifies the buffer size used by cosocket reading operations.</source>
-          <target state="translated">指定cosocket读取操作所使用的缓冲区大小。</target>
-        </trans-unit>
-        <trans-unit id="86f57a1ce0e0207ebdd37f76c124f3c3408b8d46" translate="yes" xml:space="preserve">
-          <source>Specifies the enabled ciphers for requests to a SSL/TLS server in the &lt;a href=&quot;#tcpsocksslhandshake&quot;&gt;tcpsock:sslhandshake&lt;/a&gt; method. The ciphers are specified in the format understood by the OpenSSL library.</source>
-          <target state="translated">在&lt;a href=&quot;#tcpsocksslhandshake&quot;&gt;tcpsock：sslhandshake&lt;/a&gt;方法中指定对SSL / TLS服务器的请求启用的密码。密码以OpenSSL库可以理解的格式指定。</target>
-        </trans-unit>
-        <trans-unit id="40bf5d4700cdb8bb9cbbbf1f6fe23f6536bf9f48" translate="yes" xml:space="preserve">
-          <source>Specifies the maximum number of entries allowed in the worker process level compiled regex cache.</source>
-          <target state="translated">指定工人进程级编译的regex缓存中允许的最大条目数。</target>
-        </trans-unit>
-        <trans-unit id="5d63539570ca6ce5791e9cfd872d9cd907599e94" translate="yes" xml:space="preserve">
-          <source>Specifies the size limit (in terms of connection count) for every cosocket connection pool associated with every remote server (i.e., identified by either the host-port pair or the unix domain socket file path).</source>
-          <target state="translated">指定与每个远程服务器相关联的每个 cosocket 连接池(即由主机端口对或 unix 域套接字文件路径识别)的大小限制(以连接数为单位)。</target>
-        </trans-unit>
-        <trans-unit id="0b1ce80ed42032256c9f54372fef7910c76cd177" translate="yes" xml:space="preserve">
-          <source>Specifies whether to use the MIME type specified by the &lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_core_module.html#default_type&quot;&gt;default_type&lt;/a&gt; directive for the default value of the &lt;code&gt;Content-Type&lt;/code&gt; response header. Deactivate this directive if a default &lt;code&gt;Content-Type&lt;/code&gt; response header for Lua request handlers is not desired.</source>
-          <target state="translated">指定是否将&lt;a href=&quot;http://nginx.org/en/docs/http/ngx_http_core_module.html#default_type&quot;&gt;default_type&lt;/a&gt;指令指定的MIME类型用作 &lt;code&gt;Content-Type&lt;/code&gt; 响应标头的默认值。如果不需要Lua请求处理程序的默认 &lt;code&gt;Content-Type&lt;/code&gt; 响应标头，请停用此指令。</target>
-        </trans-unit>
-        <trans-unit id="0959c81ee3e6fc80a3d3e5ab47968630562045fd" translate="yes" xml:space="preserve">
-          <source>Specify &lt;code&gt;options&lt;/code&gt; to control how the match operation will be performed. The following option characters are supported:</source>
-          <target state="translated">指定 &lt;code&gt;options&lt;/code&gt; 以控制匹配操作的执行方式。支持以下选项字符：</target>
         </trans-unit>
       </group>
     </body>

@@ -3,6 +3,110 @@
   <file source-language="en" target-language="zh-CN" datatype="htmlbody" original="typescript">
     <body>
       <group id="typescript">
+        <trans-unit id="7a30e2c325b4e7b632ea33292d372bb91480fbed" translate="yes" xml:space="preserve">
+          <source>In order to understand type checking with JSX, you must first understand the difference between intrinsic elements and value-based elements. Given a JSX expression &lt;code&gt;&amp;lt;expr /&amp;gt;&lt;/code&gt;, &lt;code&gt;expr&lt;/code&gt; may either refer to something intrinsic to the environment (e.g. a &lt;code&gt;div&lt;/code&gt; or &lt;code&gt;span&lt;/code&gt; in a DOM environment) or to a custom component that you&amp;rsquo;ve created. This is important for two reasons:</source>
+          <target state="translated">为了了解JSX的类型检查，您必须首先了解内在元素和基于值的元素之间的区别。给定一个JSX表达式 &lt;code&gt;&amp;lt;expr /&amp;gt;&lt;/code&gt; ， &lt;code&gt;expr&lt;/code&gt; 可以引用该环境固有的内容（例如DOM环境中的 &lt;code&gt;div&lt;/code&gt; 或 &lt;code&gt;span&lt;/code&gt; ）或已创建的自定义组件。这很重要，原因有两个：</target>
+        </trans-unit>
+        <trans-unit id="2c6b1f2bc59ac8b4cd64d29de8b2d3e100cb6d4f" translate="yes" xml:space="preserve">
+          <source>In order to use JSX you must do two things.</source>
+          <target state="translated">为了使用JSX,你必须做两件事。</target>
+        </trans-unit>
+        <trans-unit id="2425b2f241ed01dc603f0c439b76c219ccaf89d0" translate="yes" xml:space="preserve">
+          <source>In other words, &lt;code&gt;x&lt;/code&gt; must be &lt;code&gt;1&lt;/code&gt; when it gets compared to &lt;code&gt;2&lt;/code&gt;, meaning that the above check is making an invalid comparison.</source>
+          <target state="translated">换句话说， &lt;code&gt;x&lt;/code&gt; 与 &lt;code&gt;2&lt;/code&gt; 比较时必须为 &lt;code&gt;1&lt;/code&gt; ，这意味着上述检查正在进行无效的比较。</target>
+        </trans-unit>
+        <trans-unit id="7e1538e5dd442871789cc5ecc7783750fa78d9ea" translate="yes" xml:space="preserve">
+          <source>In other words, TypeScript now catches the above bug, which may be a breaking change for some users, but will largely be helpful.</source>
+          <target state="translated">换句话说,TypeScript现在抓住了上面的bug,这对一些用户来说可能是一个突破性的变化,但很大程度上会有帮助。</target>
+        </trans-unit>
+        <trans-unit id="93e13237760bfc497efa3e019beaf296fba0f599" translate="yes" xml:space="preserve">
+          <source>In other words, hitting go-to-definition on a declaration from a &lt;code&gt;.d.ts&lt;/code&gt; file generated with &lt;code&gt;--declarationMap&lt;/code&gt; will take you to the source file (&lt;code&gt;.ts&lt;/code&gt;) location where that declaration was defined, and not to the &lt;code&gt;.d.ts&lt;/code&gt;.</source>
+          <target state="translated">换句话说，打去到清晰的从声明 &lt;code&gt;.d.ts&lt;/code&gt; 与生成的文件 &lt;code&gt;--declarationMap&lt;/code&gt; 将带你到源文件（ &lt;code&gt;.ts&lt;/code&gt; 这里被定义的声明）的位置，而不是到 &lt;code&gt;.d.ts&lt;/code&gt; 。</target>
+        </trans-unit>
+        <trans-unit id="4c2ced57a304d01037d71bbb4f8dbc6d272f4c53" translate="yes" xml:space="preserve">
+          <source>In other words, instead of producing the type</source>
+          <target state="translated">换句话说,不是产生类型</target>
+        </trans-unit>
+        <trans-unit id="13c9723a82ddbb23b59c0ac5eb80038fe61fb8ae" translate="yes" xml:space="preserve">
+          <source>In our example, we knew that all uses of &lt;code&gt;x&lt;/code&gt; would be initialized so it makes more sense to use definite assignment assertions than non-null assertions.</source>
+          <target state="translated">在我们的示例中，我们知道 &lt;code&gt;x&lt;/code&gt; 的所有用法都将被初始化，因此使用确定的赋值断言比非空断言更有意义。</target>
+        </trans-unit>
+        <trans-unit id="e09a40d13c5b9150cdb7cb04b404685efc24c2e1" translate="yes" xml:space="preserve">
+          <source>In our examples, we&amp;rsquo;ve been able to freely access the members that we declared throughout our programs. If you&amp;rsquo;re familiar with classes in other languages, you may have noticed in the above examples we haven&amp;rsquo;t had to use the word &lt;code&gt;public&lt;/code&gt; to accomplish this; for instance, C# requires that each member be explicitly labeled &lt;code&gt;public&lt;/code&gt; to be visible. In TypeScript, each member is &lt;code&gt;public&lt;/code&gt; by default.</source>
+          <target state="translated">在我们的示例中，我们已经能够自由访问在整个程序中声明的成员。如果您熟悉其他语言的类，您可能已经注意到在上面的示例中，我们不必使用 &lt;code&gt;public&lt;/code&gt; 一词来完成此任务。例如，C＃要求将每个成员显式标记为 &lt;code&gt;public&lt;/code&gt; 才能可见。在TypeScript中，默认情况下每个成员都是 &lt;code&gt;public&lt;/code&gt; 的。</target>
+        </trans-unit>
+        <trans-unit id="077f32db3171bafea36c02345fca8439c23de1f0" translate="yes" xml:space="preserve">
+          <source>In our first example using interfaces, TypeScript lets us pass &lt;code&gt;{ size: number; label: string; }&lt;/code&gt; to something that only expected a &lt;code&gt;{ label: string; }&lt;/code&gt;. We also just learned about optional properties, and how they&amp;rsquo;re useful when describing so-called &amp;ldquo;option bags&amp;rdquo;.</source>
+          <target state="translated">在使用接口的第一个示例中，TypeScript让我们传递 &lt;code&gt;{ size: number; label: string; }&lt;/code&gt; 只能期望 &lt;code&gt;{ label: string; }&lt;/code&gt; 。我们还刚刚了解了可选属性，以及它们在描述所谓的&amp;ldquo;选项袋&amp;rdquo;时的作用。</target>
+        </trans-unit>
+        <trans-unit id="b5509d814ae50a61b30f1663160809aaacc3c863" translate="yes" xml:space="preserve">
+          <source>In our last example, we had to declare a readonly member &lt;code&gt;name&lt;/code&gt; and a constructor parameter &lt;code&gt;theName&lt;/code&gt; in the &lt;code&gt;Octopus&lt;/code&gt; class. This is needed in order to have the value of &lt;code&gt;theName&lt;/code&gt; accessible after the &lt;code&gt;Octopus&lt;/code&gt; constructor is executed. &lt;em&gt;Parameter properties&lt;/em&gt; let you create and initialize a member in one place. Here&amp;rsquo;s a further revision of the previous &lt;code&gt;Octopus&lt;/code&gt; class using a parameter property:</source>
+          <target state="translated">在最后一个示例中，我们 &lt;code&gt;theName&lt;/code&gt; 在 &lt;code&gt;Octopus&lt;/code&gt; 类中声明一个只读成员 &lt;code&gt;name&lt;/code&gt; 和一个构造函数参数theName。这是为了使 &lt;code&gt;Octopus&lt;/code&gt; 构造函数执行后可访问 &lt;code&gt;theName&lt;/code&gt; 的值。&lt;em&gt;使用参数属性，&lt;/em&gt;您可以在一处创建和初始化成员。这是使用参数属性对先前的章 &lt;code&gt;Octopus&lt;/code&gt; 的进一步修订：&lt;em&gt;&lt;/em&gt;</target>
+        </trans-unit>
+        <trans-unit id="a2a7cf3a706d3a1af3a4cb37abf72ef77d6e4707" translate="yes" xml:space="preserve">
+          <source>In playing with the example, you may notice that the TypeScript compiler can figure out the type even if you only have types on one side of the equation:</source>
+          <target state="translated">在玩这个例子的时候,你可能会注意到TypeScript编译器可以计算出类型,即使你只在等式的一边有类型。</target>
+        </trans-unit>
+        <trans-unit id="9c1b4684fb04512e6c7b40289668510482450dd8" translate="yes" xml:space="preserve">
+          <source>In practical terms, strict null checking mode requires that all files in a compilation are null- and undefined-aware.</source>
+          <target state="translated">在实际应用中,严格的空检查模式要求编译中的所有文件都是空和未定义的。</target>
+        </trans-unit>
+        <trans-unit id="948caf57846c2d397905854f03d5c34bfc0a420b" translate="yes" xml:space="preserve">
+          <source>In practice string literal types combine nicely with union types, type guards, and type aliases. You can use these features together to get enum-like behavior with strings.</source>
+          <target state="translated">在实践中,字符串文字类型与联合类型、类型守卫和类型别名结合得很好。你可以将这些特性结合起来使用,以获得类似枚举的行为。</target>
+        </trans-unit>
+        <trans-unit id="6bafe310667e5e4e7564369b651bf5008fd49779" translate="yes" xml:space="preserve">
+          <source>In pre-ES2015 targets, the most faithful emit for constructs like &lt;code&gt;for&lt;/code&gt;/&lt;code&gt;of&lt;/code&gt; loops and array spreads can be a bit heavy. For this reason, TypeScript uses a simpler emit by default that only supports array types, and supports iterating on other types using the &lt;code&gt;--downlevelIteration&lt;/code&gt; flag. The looser default without &lt;code&gt;--downlevelIteration&lt;/code&gt; works fairly well; however, there were some common cases where the transformation of array spreads had observable differences. For example, the following array containing a spread</source>
+          <target state="translated">在ES2015之前的目标中，最忠实的辐射对于诸如 &lt;code&gt;for&lt;/code&gt; / &lt;code&gt;of&lt;/code&gt; 循环和数组扩展可能会有点沉重。因此，TypeScript默认使用更简单的发射，该发射仅支持数组类型，并使用 &lt;code&gt;--downlevelIteration&lt;/code&gt; 标志支持对其他类型的迭代。没有 &lt;code&gt;--downlevelIteration&lt;/code&gt; 的较宽松的默认设置效果很好；但是，在一些常见情况下，数组扩展的转换具有可观察到的差异。例如，以下包含价差的数组</target>
+        </trans-unit>
+        <trans-unit id="d8dc065deb2345b3fc2204f90ad4ee7eedf78bff" translate="yes" xml:space="preserve">
+          <source>In previous sections, we created generic identity functions that worked over a range of types. In this section, we&amp;rsquo;ll explore the type of the functions themselves and how to create generic interfaces.</source>
+          <target state="translated">在前面的部分中，我们创建了可在多种类型上使用的通用标识函数。在本节中，我们将探讨函数本身的类型以及如何创建通用接口。</target>
+        </trans-unit>
+        <trans-unit id="f628a9f7456d28c2ae0af03d23563c657fc921e2" translate="yes" xml:space="preserve">
+          <source>In previous versions of TypeScript, it was an error to merge classes and functions under any circumstances. Now, ambient classes and functions (classes/functions with the &lt;code&gt;declare&lt;/code&gt; modifier, or in &lt;code&gt;.d.ts&lt;/code&gt; files) can merge. This means that now you can write the following:</source>
+          <target state="translated">在以前的TypeScript版本中，在任何情况下合并类和函数都是错误的。现在，环境类和函数（带有 &lt;code&gt;declare&lt;/code&gt; 修饰符的类/函数，或 &lt;code&gt;.d.ts&lt;/code&gt; 文件中的类/函数）可以合并。这意味着现在您可以编写以下内容：</target>
+        </trans-unit>
+        <trans-unit id="f22c95046aa4c7055bed172e8f2f4e6828c3f4e5" translate="yes" xml:space="preserve">
+          <source>In previous versions of TypeScript, the language didn&amp;rsquo;t allow &lt;code&gt;get&lt;/code&gt; and &lt;code&gt;set&lt;/code&gt; accessors in ambient contexts (like in &lt;code&gt;declare&lt;/code&gt;-d classes, or in &lt;code&gt;.d.ts&lt;/code&gt; files in general). The rationale was that accessors weren&amp;rsquo;t distinct from properties as far as writing and reading to these properties; however, &lt;a href=&quot;https://github.com/tc39/proposal-class-fields/issues/248&quot;&gt;because ECMAScript&amp;rsquo;s class fields proposal may have differing behavior from in existing versions of TypeScript&lt;/a&gt;, we realized we needed a way to communicate this different behavior to provide appropriate errors in subclasses.</source>
+          <target state="translated">在打字稿的早期版本，语言没有让 &lt;code&gt;get&lt;/code&gt; 和 &lt;code&gt;set&lt;/code&gt; 访问器周围环境（如在 &lt;code&gt;declare&lt;/code&gt; -d课程，或在 &lt;code&gt;.d.ts&lt;/code&gt; 一般文件）。理由是，就属性的读写而言，访问器与属性没有区别。但是，&lt;a href=&quot;https://github.com/tc39/proposal-class-fields/issues/248&quot;&gt;由于ECMAScript的类字段提议可能具有与现有版本的TypeScript不同的行为&lt;/a&gt;，因此我们意识到我们需要一种传达这种不同行为的方法，以在子类中提供适当的错误。</target>
+        </trans-unit>
+        <trans-unit id="d06dc1f53a697259b064554b5aae5fbdd8fa0f1e" translate="yes" xml:space="preserve">
+          <source>In prior versions of TypeScript, this controlled what encoding was used when reading text files from disk. Today, TypeScript assumes UTF-8 encoding, but will correctly detect UTF-16 (BE and LE) or UTF-8 BOMs.</source>
+          <target state="translated">在以前的TypeScript版本中,这控制了从磁盘读取文本文件时使用什么编码。今天,TypeScript假设UTF-8编码,但会正确检测UTF-16(BE和LE)或UTF-8 BOMs。</target>
+        </trans-unit>
+        <trans-unit id="3cd7367e12bf3be0daca8711d8c00eca9148e271" translate="yes" xml:space="preserve">
+          <source>In prior versions of TypeScript, unions of callable types could &lt;em&gt;only&lt;/em&gt; be invoked if they had identical parameter lists.</source>
+          <target state="translated">在早期版本的TypeScript中，&lt;em&gt;只有&lt;/em&gt;在具有相同参数列表的情况&lt;em&gt;下，&lt;/em&gt;才能调用可调用类型的并集。</target>
+        </trans-unit>
+        <trans-unit id="6c9fb325d7fa06659600b395394db2f6b03b95fa" translate="yes" xml:space="preserve">
+          <source>In regular type checking mode the inferred type of &lt;code&gt;z&lt;/code&gt; is &lt;code&gt;any&lt;/code&gt; because of widening, but in strict null checking mode the inferred type of &lt;code&gt;z&lt;/code&gt; is &lt;code&gt;null&lt;/code&gt; (and therefore, absent a type annotation, &lt;code&gt;null&lt;/code&gt; is the only possible value for &lt;code&gt;z&lt;/code&gt;).</source>
+          <target state="translated">在常规类型检查模式下， &lt;code&gt;z&lt;/code&gt; 的推断类型由于加宽而为 &lt;code&gt;any&lt;/code&gt; 类型，但在严格的null检查模式下， &lt;code&gt;z&lt;/code&gt; 的推断类型为 &lt;code&gt;null&lt;/code&gt; （因此，如果没有类型注释，则 &lt;code&gt;null&lt;/code&gt; 是 &lt;code&gt;z&lt;/code&gt; 唯一可能的值）。</target>
+        </trans-unit>
+        <trans-unit id="7f54adc2fc21b0868ad3536236db9c436bfd98c6" translate="yes" xml:space="preserve">
+          <source>In short using this general type, we can model React&amp;rsquo;s specific behavior for things like &lt;code&gt;defaultProps&lt;/code&gt; and, to some extent, &lt;code&gt;propTypes&lt;/code&gt;.</source>
+          <target state="translated">简而言之，使用这种通用类型，我们可以为诸如 &lt;code&gt;defaultProps&lt;/code&gt; 以及某种程度上 &lt;code&gt;propTypes&lt;/code&gt; 之类的模型建模React的特定行为。</target>
+        </trans-unit>
+        <trans-unit id="3e40e3de53767b82c408d32adbf7faeb04be447e" translate="yes" xml:space="preserve">
+          <source>In short, what this means is that you&amp;rsquo;ll be able to appropriately narrow down values from iterators when dealing with them directly.</source>
+          <target state="translated">简而言之，这意味着您可以在直接处理迭代器时适当缩小迭代器的值。</target>
+        </trans-unit>
+        <trans-unit id="24b474a2b5b3fe83952a8beed2dac6888a114bac" translate="yes" xml:space="preserve">
+          <source>In some cases where no type annotations are present, TypeScript will fall back to a type of &lt;code&gt;any&lt;/code&gt; for a variable when it cannot infer the type.</source>
+          <target state="translated">在某些不存在类型注释的情况下，TypeScript在无法推断类型时会回退到该变量的 &lt;code&gt;any&lt;/code&gt; 类型。</target>
+        </trans-unit>
+        <trans-unit id="d6cb0b5b618417fb0993aeb5137486599cc6a685" translate="yes" xml:space="preserve">
+          <source>In some cases, you may want to only load a module under some conditions. In TypeScript, we can use the pattern shown below to implement this and other advanced loading scenarios to directly invoke the module loaders without losing type safety.</source>
+          <target state="translated">在某些情况下,你可能只想在某些条件下加载一个模块。在TypeScript中,我们可以使用下面所示的模式来实现这种和其他高级加载场景,直接调用模块加载器而不失去类型安全。</target>
+        </trans-unit>
+        <trans-unit id="e8107f519ee938815a808bcba6bd65a28adcacb9" translate="yes" xml:space="preserve">
+          <source>In some situations, not all type information is available or its declaration would take an inappropriate amount of effort. These may occur for values from code that has been written without TypeScript or a 3rd party library. In these cases, we might want to opt-out of type checking. To do so, we label these values with the &lt;code&gt;any&lt;/code&gt; type:</source>
+          <target state="translated">在某些情况下，并非所有类型信息都可用，否则其声明将花费不适当的精力。对于未使用TypeScript或第3方库编写的代码中的值，可能会发生这种情况。在这些情况下，我们可能要选择退出类型检查。为此，我们将这些值标记为 &lt;code&gt;any&lt;/code&gt; 类型：</target>
+        </trans-unit>
+        <trans-unit id="c99a1ed58829ceab5559116a15c7379e705e9cf2" translate="yes" xml:space="preserve">
+          <source>In strict null checking mode the compiler requires every reference to a local variable of a type that doesn&amp;rsquo;t include &lt;code&gt;undefined&lt;/code&gt; to be preceded by an assignment to that variable in every possible preceding code path.</source>
+          <target state="translated">在严格的空检查模式下，编译器要求对每个不包含 &lt;code&gt;undefined&lt;/code&gt; 类型的局部变量的引用都必须在每个可能的在前代码路径中对该变量进行赋值。</target>
+        </trans-unit>
         <trans-unit id="90cda15a62a8aabc97010caa6808ab78ddacdf3d" translate="yes" xml:space="preserve">
           <source>In strict null checking mode, the &lt;code&gt;null&lt;/code&gt; and &lt;code&gt;undefined&lt;/code&gt; values are &lt;em&gt;not&lt;/em&gt; in the domain of every type and are only assignable to themselves and &lt;code&gt;any&lt;/code&gt; (the one exception being that &lt;code&gt;undefined&lt;/code&gt; is also assignable to &lt;code&gt;void&lt;/code&gt;). So, whereas &lt;code&gt;T&lt;/code&gt; and &lt;code&gt;T | undefined&lt;/code&gt; are considered synonymous in regular type checking mode (because &lt;code&gt;undefined&lt;/code&gt; is considered a subtype of any &lt;code&gt;T&lt;/code&gt;), they are different types in strict type checking mode, and only &lt;code&gt;T | undefined&lt;/code&gt; permits &lt;code&gt;undefined&lt;/code&gt; values. The same is true for the relationship of &lt;code&gt;T&lt;/code&gt; to &lt;code&gt;T | null&lt;/code&gt;.</source>
           <target state="translated">在严格的null检查模式下， &lt;code&gt;null&lt;/code&gt; 和 &lt;code&gt;undefined&lt;/code&gt; 值&lt;em&gt;不在&lt;/em&gt;每种类型的域中，并且只能分配给它们自己和 &lt;code&gt;any&lt;/code&gt; （一个例外是 &lt;code&gt;undefined&lt;/code&gt; 也可以分配给 &lt;code&gt;void&lt;/code&gt; ）。因此，而 &lt;code&gt;T&lt;/code&gt; 和 &lt;code&gt;T | undefined&lt;/code&gt; 在常规类型检查模式下被视为同义词（因为 &lt;code&gt;undefined&lt;/code&gt; 被视为任何 &lt;code&gt;T&lt;/code&gt; 的子类型），它们在严格类型检查模式下是不同的类型，只有 &lt;code&gt;T | undefined&lt;/code&gt; 允许 &lt;code&gt;undefined&lt;/code&gt; 值。同样是真实的关系 &lt;code&gt;T&lt;/code&gt; 到 &lt;code&gt;T | null&lt;/code&gt; 。</target>
@@ -17,15 +121,15 @@
         </trans-unit>
         <trans-unit id="6bb5ff5bf0dceac10cc35060c81ee9faad7242ab" translate="yes" xml:space="preserve">
           <source>In the 20+ years since its standardization, JavaScript has come a very long way. While in 2020, JavaScript can be used on servers, in data science, and even on IoT devices, it is important to remember its most popular use case: web browsers.</source>
-          <target state="new"/>
+          <target state="translated">在其标准化后的20多年里,JavaScript已经走过了非常漫长的道路。虽然在2020年,JavaScript可以用在服务器上,用在数据科学中,甚至用在物联网设备上,但要记住它最受欢迎的用例:Web浏览器。</target>
         </trans-unit>
         <trans-unit id="6db5a8c7126c3ff13b89dab79253baece66850d2" translate="yes" xml:space="preserve">
           <source>In the Template section you&amp;rsquo;ll find a number of declaration files that serve as a useful starting point when writing a new file. If you already know what your structure is, see the d.ts Template section in the sidebar.</source>
-          <target state="new"/>
+          <target state="translated">在&amp;ldquo;模板&amp;rdquo;部分，您将找到许多声明文件，这些声明文件是编写新文件时的有用起点。如果您已经知道结构是什么，请参阅侧栏中的d.ts模板部分。</target>
         </trans-unit>
         <trans-unit id="548f3708a85b8745e47e7af1b59669e8ecf4cfa7" translate="yes" xml:space="preserve">
           <source>In the above case:</source>
-          <target state="new"/>
+          <target state="translated">在上述情况下:</target>
         </trans-unit>
         <trans-unit id="79540091a75f3fdf1fb7b3a682d8e9c3c45c75f2" translate="yes" xml:space="preserve">
           <source>In the above example, &lt;code&gt;&amp;lt;foo /&amp;gt;&lt;/code&gt; will work fine but &lt;code&gt;&amp;lt;bar /&amp;gt;&lt;/code&gt; will result in an error since it has not been specified on &lt;code&gt;JSX.IntrinsicElements&lt;/code&gt;.</source>
@@ -41,11 +145,11 @@
         </trans-unit>
         <trans-unit id="c61ebd05e2312c5e85ecc6cef6e59dba4f593f68" translate="yes" xml:space="preserve">
           <source>In the above example, if we&amp;rsquo;re importing from &lt;code&gt;&quot;package-name&quot;&lt;/code&gt;, TypeScript will try to resolve from &lt;code&gt;[...]/node_modules/package-name/ts3.1/index.d.ts&lt;/code&gt; (and other relevant paths) when running in TypeScript 3.1. If we import from &lt;code&gt;package-name/foo&lt;/code&gt;, we&amp;rsquo;ll try to look for &lt;code&gt;[...]/node_modules/package-name/ts3.1/foo.d.ts&lt;/code&gt; and &lt;code&gt;[...]/node_modules/package-name/ts3.1/foo/index.d.ts&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">在上面的示例中，如果我们从 &lt;code&gt;&quot;package-name&quot;&lt;/code&gt; 导入，TypeScript将尝试从 &lt;code&gt;[...]/node_modules/package-name/ts3.1/index.d.ts&lt;/code&gt; （以及其他相关路径）进行解析。在TypeScript 3.1中运行时。如果我们从 &lt;code&gt;package-name/foo&lt;/code&gt; 导入，我们将尝试寻找 &lt;code&gt;[...]/node_modules/package-name/ts3.1/foo.d.ts&lt;/code&gt; 和 &lt;code&gt;[...]/node_modules/package-name/ts3.1/foo/index.d.ts&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="bf0ee9dcee21963bf1982f4a5b086175197a8510" translate="yes" xml:space="preserve">
           <source>In the above form, the mixin&amp;rsquo;s have no underlying knowledge of the class which can make it hard to create the design you want.</source>
-          <target state="new"/>
+          <target state="translated">在上述形式中，mixin不了解该类的基础知识，这可能会使创建所需的设计变得困难。</target>
         </trans-unit>
         <trans-unit id="b37f0e6648f951eed9141c60cd7cf7e3ccaa9494" translate="yes" xml:space="preserve">
           <source>In the above, &lt;code&gt;x&lt;/code&gt; and &lt;code&gt;y&lt;/code&gt; are compatible because their structures do not use the type argument in a differentiating way. Changing this example by adding a member to &lt;code&gt;Empty&amp;lt;T&amp;gt;&lt;/code&gt; shows how this works:</source>
@@ -69,7 +173,7 @@
         </trans-unit>
         <trans-unit id="8ab389301f78b38cc120b50ad55981dfdf9ab9b4" translate="yes" xml:space="preserve">
           <source>In the example above, the &lt;code&gt;methods&lt;/code&gt; object in the argument to &lt;code&gt;makeObject&lt;/code&gt; has a contextual type that includes &lt;code&gt;ThisType&amp;lt;D &amp;amp; M&amp;gt;&lt;/code&gt; and therefore the type of &lt;a href=&quot;functions#this&quot;&gt;this&lt;/a&gt; in methods within the &lt;code&gt;methods&lt;/code&gt; object is &lt;code&gt;{ x: number, y: number } &amp;amp; { moveBy(dx: number, dy: number): number }&lt;/code&gt;. Notice how the type of the &lt;code&gt;methods&lt;/code&gt; property simultaneously is an inference target and a source for the &lt;code&gt;this&lt;/code&gt; type in methods.</source>
-          <target state="new"/>
+          <target state="translated">在上面的示例中， &lt;code&gt;makeObject&lt;/code&gt; 的参数中的 &lt;code&gt;methods&lt;/code&gt; 对象具有上下文类型，其中包括 &lt;code&gt;ThisType&amp;lt;D &amp;amp; M&amp;gt;&lt;/code&gt; ，因此，在 &lt;code&gt;methods&lt;/code&gt; 对象内的方法中，&lt;a href=&quot;functions#this&quot;&gt;此&lt;/a&gt;方法的类型为 &lt;code&gt;{ x: number, y: number } &amp;amp; { moveBy(dx: number, dy: number): number }&lt;/code&gt; 。注意如何的类型 &lt;code&gt;methods&lt;/code&gt; 属性是同时推断目标和用于源 &lt;code&gt;this&lt;/code&gt; 类型的方法。</target>
         </trans-unit>
         <trans-unit id="95157007d65e1f4f235f4c91408fe5a0cb118ec2" translate="yes" xml:space="preserve">
           <source>In the example above, the &lt;code&gt;methods&lt;/code&gt; object in the argument to &lt;code&gt;makeObject&lt;/code&gt; has a contextual type that includes &lt;code&gt;ThisType&amp;lt;D &amp;amp; M&amp;gt;&lt;/code&gt; and therefore the type of &lt;code&gt;this&lt;/code&gt; in methods within the &lt;code&gt;methods&lt;/code&gt; object is &lt;code&gt;{ x: number, y: number } &amp;amp; { moveBy(dx: number, dy: number): number }&lt;/code&gt;. Notice how the type of the &lt;code&gt;methods&lt;/code&gt; property simultaneously is an inference target and a source for the &lt;code&gt;this&lt;/code&gt; type in methods.</source>
@@ -81,7 +185,7 @@
         </trans-unit>
         <trans-unit id="a3d9dddab39b8eb943f3877822ffa8bdb3bae451" translate="yes" xml:space="preserve">
           <source>In the first &lt;code&gt;length&lt;/code&gt;, T is not necessary; notice that it&amp;rsquo;s only referenced once, so it&amp;rsquo;s not being used to constrain the type of the return value or other parameters.</source>
-          <target state="new"/>
+          <target state="translated">在第一个 &lt;code&gt;length&lt;/code&gt; ，T不是必需的；请注意，它仅被引用一次，因此没有被用于限制返回值或其他参数的类型。</target>
         </trans-unit>
         <trans-unit id="e74ceca454671112b40bc5e5f6a4f738b5ff4300" translate="yes" xml:space="preserve">
           <source>In the following example, each input element will be printed out one at a time with a 400ms delay:</source>
@@ -89,7 +193,7 @@
         </trans-unit>
         <trans-unit id="d0896b9003166f205cee791b2a20d447c0e588fb" translate="yes" xml:space="preserve">
           <source>In the interests of clarity and brevity, the main content of the Handbook will not explore every edge case or minutiae of the features being covered. You can find more details on particular concepts in the reference articles.</source>
-          <target state="new"/>
+          <target state="translated">为了简洁明了,本手册的主要内容不会探讨所涵盖的每一个边缘案例或功能的细枝末节。你可以在参考文章中找到关于特定概念的更多细节。</target>
         </trans-unit>
         <trans-unit id="8c77483272b3e6dc467114f873247e6bedc0a970" translate="yes" xml:space="preserve">
           <source>In the last line we construct an instance of the &lt;code&gt;Greeter&lt;/code&gt; class using &lt;code&gt;new&lt;/code&gt;. This calls into the constructor we defined earlier, creating a new object with the &lt;code&gt;Greeter&lt;/code&gt; shape, and running the constructor to initialize it.</source>
@@ -129,7 +233,7 @@
         </trans-unit>
         <trans-unit id="9c7ec405a4a58ac2e2e3c9c60919a90fae57f264" translate="yes" xml:space="preserve">
           <source>In these examples, the properties list is &lt;code&gt;keyof T&lt;/code&gt; and the resulting type is some variant of &lt;code&gt;T[P]&lt;/code&gt;. This is a good template for any general use of mapped types. That&amp;rsquo;s because this kind of transformation is &lt;a href=&quot;https://wikipedia.org/wiki/Homomorphism&quot;&gt;homomorphic&lt;/a&gt;, which means that the mapping applies only to properties of &lt;code&gt;T&lt;/code&gt; and no others. The compiler knows that it can copy all the existing property modifiers before adding any new ones. For example, if &lt;code&gt;Person.name&lt;/code&gt; was readonly, &lt;code&gt;Partial&amp;lt;Person&amp;gt;.name&lt;/code&gt; would be readonly and optional.</source>
-          <target state="new"/>
+          <target state="translated">在这些示例中，属性列表是 &lt;code&gt;keyof T&lt;/code&gt; ，而结果类型是 &lt;code&gt;T[P]&lt;/code&gt; 某种变体。对于映射类型的任何常规使用，这都是一个很好的模板。这是因为这种变换是&lt;a href=&quot;https://wikipedia.org/wiki/Homomorphism&quot;&gt;同态的&lt;/a&gt;，这意味着映射仅适用于 &lt;code&gt;T&lt;/code&gt; 的属性，而不适用于其他属性。编译器知道在添加任何新的属性修饰符之前，它可以复制所有现有的属性修饰符。例如，如果 &lt;code&gt;Person.name&lt;/code&gt; 为只读，则 &lt;code&gt;Partial&amp;lt;Person&amp;gt;.name&lt;/code&gt; 将为只读且可选。</target>
         </trans-unit>
         <trans-unit id="ed7a5a445e563d2e25cbaa994041bb2fd2483e73" translate="yes" xml:space="preserve">
           <source>In this above example, &lt;code&gt;g&lt;/code&gt; captured the variable &lt;code&gt;a&lt;/code&gt; declared in &lt;code&gt;f&lt;/code&gt;. At any point that &lt;code&gt;g&lt;/code&gt; gets called, the value of &lt;code&gt;a&lt;/code&gt; will be tied to the value of &lt;code&gt;a&lt;/code&gt; in &lt;code&gt;f&lt;/code&gt;. Even if &lt;code&gt;g&lt;/code&gt; is called once &lt;code&gt;f&lt;/code&gt; is done running, it will be able to access and modify &lt;code&gt;a&lt;/code&gt;.</source>
@@ -141,11 +245,11 @@
         </trans-unit>
         <trans-unit id="ca269f81daa4e288c099aeabd210add3bf701ab7" translate="yes" xml:space="preserve">
           <source>In this case, you can tell the TypeScript file resolver to support a number of custom prefixes to find code. This pattern can be used to avoid long relative paths within your codebase.</source>
-          <target state="new"/>
+          <target state="translated">在这种情况下,你可以告诉TypeScript文件解析器支持一些自定义前缀来查找代码。这种模式可以用来避免在你的代码库中出现长的相对路径。</target>
         </trans-unit>
         <trans-unit id="e0ee66fa54ed1af4b6530c2bbfb39ea8c9308255" translate="yes" xml:space="preserve">
           <source>In this case, you can use a &lt;code&gt;switch&lt;/code&gt; statement to narrow down which type is represented at runtime:</source>
-          <target state="new"/>
+          <target state="translated">在这种情况下，可以使用 &lt;code&gt;switch&lt;/code&gt; 语句来缩小运行时表示的类型：</target>
         </trans-unit>
         <trans-unit id="e82ac6e4567b6044965f051115c0822a64abe344" translate="yes" xml:space="preserve">
           <source>In this example if &lt;code&gt;someValue&lt;/code&gt; isn&amp;rsquo;t equal to &lt;code&gt;42&lt;/code&gt;, then &lt;code&gt;assert&lt;/code&gt; will throw an &lt;code&gt;AssertionError&lt;/code&gt;.</source>
@@ -189,7 +293,7 @@
         </trans-unit>
         <trans-unit id="daba3c5117e7e15297eb31c7463a628f5e08b0ec" translate="yes" xml:space="preserve">
           <source>In this introduction, I assume you know the following:</source>
-          <target state="new"/>
+          <target state="translated">在这个介绍中,我假设你知道以下内容。</target>
         </trans-unit>
         <trans-unit id="344769647b81b7e0305ef0d99ae5fb65a087fe6f" translate="yes" xml:space="preserve">
           <source>In this mode, references to modules and packages (e.g. &lt;code&gt;import&lt;/code&gt;s and &lt;code&gt;/// &amp;lt;reference type=&quot;...&quot; /&amp;gt;&lt;/code&gt; directives) are all resolved relative to the location of the symbolic link file, rather than relative to the path that the symbolic link resolves to. For a more concrete example, we&amp;rsquo;ll defer to &lt;a href=&quot;https://nodejs.org/api/cli.html#cli_preserve_symlinks&quot;&gt;the documentation on the Node.js website&lt;/a&gt;.</source>
@@ -225,7 +329,7 @@
         </trans-unit>
         <trans-unit id="b2065108186f788b7e824c4d623ba210ab88b1c4" translate="yes" xml:space="preserve">
           <source>Include - &lt;code&gt;include&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">包含- &lt;code&gt;include&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="4dbe40d3f9dd76b0ebc598a2769c3f694b16d1ea" translate="yes" xml:space="preserve">
           <source>Include modules imported with &lt;code&gt;.json&lt;/code&gt; extension.</source>
@@ -245,7 +349,7 @@
         </trans-unit>
         <trans-unit id="67c5ad4060ac33b6d094ebba765d48e9ee51b0ef" translate="yes" xml:space="preserve">
           <source>Incremental - &lt;code&gt;incremental&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">增量- &lt;code&gt;incremental&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="9bc53de5c2f8d2c282bf0578d8a05703182b23ad" translate="yes" xml:space="preserve">
           <source>Incremental file watching for composite projects in &lt;code&gt;--build --watch&lt;/code&gt;</source>
@@ -253,7 +357,7 @@
         </trans-unit>
         <trans-unit id="7deed7a63ea26f03a02053b178171e4c34213f53" translate="yes" xml:space="preserve">
           <source>Incremental typing in JavaScript &lt;a href=&quot;jsdoc-supported-types&quot;&gt;via JSDoc&lt;/a&gt;</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;jsdoc-supported-types&quot;&gt;通过JSDoc&lt;/a&gt;在JavaScript中进行增量输入</target>
         </trans-unit>
         <trans-unit id="5eccb92925bc3929eabb42f52bbdf91059031375" translate="yes" xml:space="preserve">
           <source>Index types</source>
@@ -269,7 +373,7 @@
         </trans-unit>
         <trans-unit id="0adbe17edc35b59357a465c0c0744f9ea42fd3f6" translate="yes" xml:space="preserve">
           <source>Individual library components</source>
-          <target state="new"/>
+          <target state="translated">图书馆的各个组成部分</target>
         </trans-unit>
         <trans-unit id="3260fe038f2a1e9f4a6bf5d1a731cf910deb01de" translate="yes" xml:space="preserve">
           <source>Inference from mapped types</source>
@@ -297,11 +401,11 @@
         </trans-unit>
         <trans-unit id="9c7561073b85798bf28e57100cdf96cfe8bdcf3e" translate="yes" xml:space="preserve">
           <source>Inline Source Map - &lt;code&gt;inlineSourceMap&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">内联源地图 &lt;code&gt;inlineSourceMap&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="424e6831576ffef65176196315c29ac68ac4bf21" translate="yes" xml:space="preserve">
           <source>Inline Sources - &lt;code&gt;inlineSources&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">内联来源 &lt;code&gt;inlineSources&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="b568d47f2e244743b1fd7472db836ef9769c21f8" translate="yes" xml:space="preserve">
           <source>Input</source>
@@ -337,7 +441,7 @@
         </trans-unit>
         <trans-unit id="481ebcf06d3a6af9b20dbe32b1d7d942a9bbaeef" translate="yes" xml:space="preserve">
           <source>Instead of &lt;code&gt;Object&lt;/code&gt;, use the non-primitive &lt;code&gt;object&lt;/code&gt; type (&lt;a href=&quot;https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-2.html#object-type&quot;&gt;added in TypeScript 2.2&lt;/a&gt;).</source>
-          <target state="new"/>
+          <target state="translated">代替 &lt;code&gt;Object&lt;/code&gt; ，使用非原始 &lt;code&gt;object&lt;/code&gt; 类型（&lt;a href=&quot;https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-2.html#object-type&quot;&gt;在TypeScript 2.2中添加&lt;/a&gt;）。</target>
         </trans-unit>
         <trans-unit id="ee6363c045a14fb760ecdd97fa1210a76455315e" translate="yes" xml:space="preserve">
           <source>Instead of &lt;code&gt;any&lt;/code&gt;, we can use a &lt;em&gt;union type&lt;/em&gt; for the &lt;code&gt;padding&lt;/code&gt; parameter:</source>
@@ -349,7 +453,7 @@
         </trans-unit>
         <trans-unit id="7820345e86f733909d6d0cf768d7afc07da46bf5" translate="yes" xml:space="preserve">
           <source>Instead of importing helpers with &lt;a href=&quot;#importHelpers&quot;&gt;&lt;code&gt;importHelpers&lt;/code&gt;&lt;/a&gt;, you can provide implementations in the global scope for the helpers you use and completely turn off emitting of helper functions.</source>
-          <target state="new"/>
+          <target state="translated">无需使用&lt;a href=&quot;#importHelpers&quot;&gt; &lt;code&gt;importHelpers&lt;/code&gt; &lt;/a&gt;导入帮助程序，而是可以在全局范围内为您使用的帮助程序提供实现，并完全关闭辅助功能的发出。</target>
         </trans-unit>
         <trans-unit id="f41af89aee0ce0aa8f256c662d27ad424fd39973" translate="yes" xml:space="preserve">
           <source>Instead of working with any and all types, we&amp;rsquo;d like to constrain this function to work with any and all types that also have the &lt;code&gt;.length&lt;/code&gt; property. As long as the type has this member, we&amp;rsquo;ll allow it, but it&amp;rsquo;s required to have at least this member. To do so, we must list our requirement as a constraint on what T can be.</source>
@@ -357,7 +461,7 @@
         </trans-unit>
         <trans-unit id="56c1302b0e9b5a2d049280773df6dd17a03e760a" translate="yes" xml:space="preserve">
           <source>Instead, use the types &lt;code&gt;number&lt;/code&gt;, &lt;code&gt;string&lt;/code&gt;, &lt;code&gt;boolean&lt;/code&gt;, &lt;code&gt;object&lt;/code&gt; and &lt;code&gt;symbol&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">而是使用类型 &lt;code&gt;number&lt;/code&gt; ， &lt;code&gt;string&lt;/code&gt; ， &lt;code&gt;boolean&lt;/code&gt; ， &lt;code&gt;object&lt;/code&gt; 和 &lt;code&gt;symbol&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="9e88339b09438dc6ef45500af5364169862881c3" translate="yes" xml:space="preserve">
           <source>Instead, we need a way of capturing the type of the argument in such a way that we can also use it to denote what is being returned. Here, we will use a &lt;em&gt;type variable&lt;/em&gt;, a special kind of variable that works on types rather than values.</source>
@@ -421,7 +525,7 @@
         </trans-unit>
         <trans-unit id="a018a82309e992e850b9031373cff79ce1cccba4" translate="yes" xml:space="preserve">
           <source>Interested in learning more?</source>
-          <target state="new"/>
+          <target state="translated">有兴趣了解更多吗?</target>
         </trans-unit>
         <trans-unit id="7b4db7ef1fa23cfb5e115a2a2c89d46a6a2ebc4a" translate="yes" xml:space="preserve">
           <source>Interface</source>
@@ -457,7 +561,7 @@
         </trans-unit>
         <trans-unit id="084148d39f0e6339840f9abce4a71b7b8a28568e" translate="yes" xml:space="preserve">
           <source>Intersection and Union types are one of the ways in which you can compose types.</source>
-          <target state="new"/>
+          <target state="translated">交集和联合类型是组成类型的方法之一。</target>
         </trans-unit>
         <trans-unit id="b87d8878892520ebb9edc358d8dd9e3d44011f0c" translate="yes" xml:space="preserve">
           <source>Intersection types</source>
@@ -465,7 +569,7 @@
         </trans-unit>
         <trans-unit id="b78d51b88c1d1feb693e6d11fb2eab9417d88d2e" translate="yes" xml:space="preserve">
           <source>Intersection types are closely related to union types, but they are used very differently. An intersection type combines multiple types into one. This allows you to add together existing types to get a single type that has all the features you need. For example, &lt;code&gt;Person &amp;amp; Serializable &amp;amp; Loggable&lt;/code&gt; is a type which is all of &lt;code&gt;Person&lt;/code&gt;&lt;em&gt;and&lt;/em&gt;&lt;code&gt;Serializable&lt;/code&gt;&lt;em&gt;and&lt;/em&gt;&lt;code&gt;Loggable&lt;/code&gt;. That means an object of this type will have all members of all three types.</source>
-          <target state="new"/>
+          <target state="translated">交叉点类型与联合类型紧密相关，但是使用方式却大不相同。相交类型将多种类型组合为一种。这使您可以将现有类型加在一起，以获得具有所需所有功能的单个类型。例如， &lt;code&gt;Person &amp;amp; Serializable &amp;amp; Loggable&lt;/code&gt; 是所有 &lt;code&gt;Person&lt;/code&gt; &lt;em&gt;和&lt;/em&gt; &lt;code&gt;Serializable&lt;/code&gt; &lt;em&gt;and &lt;/em&gt; &lt;code&gt;Loggable&lt;/code&gt; 的类型。这意味着此类型的对象将具有所有三种类型的所有成员。</target>
         </trans-unit>
         <trans-unit id="564a9241fc2a9fe2599b22267f67a36231a5fd3e" translate="yes" xml:space="preserve">
           <source>Intersections</source>
@@ -473,7 +577,7 @@
         </trans-unit>
         <trans-unit id="024b4beab6775314e602953c2f94088fe4678bde" translate="yes" xml:space="preserve">
           <source>Intrinsic String Manipulation Types</source>
-          <target state="new"/>
+          <target state="translated">固有的字符串操作类型</target>
         </trans-unit>
         <trans-unit id="c8bf0e8c1ae3e60a82098f1409f6db85661db7a9" translate="yes" xml:space="preserve">
           <source>Intrinsic elements</source>
@@ -485,7 +589,7 @@
         </trans-unit>
         <trans-unit id="5929e5c75cee5abeee0333968fe15c20cd3d7eef" translate="yes" xml:space="preserve">
           <source>Intro to the TSConfig Reference</source>
-          <target state="new"/>
+          <target state="translated">TSConfig参考资料介绍</target>
         </trans-unit>
         <trans-unit id="2473e96bc614a911821242119918a241a41836d6" translate="yes" xml:space="preserve">
           <source>Introduction</source>
@@ -493,7 +597,7 @@
         </trans-unit>
         <trans-unit id="7f426c016099b5f664f1e39e6247678f1b9e5312" translate="yes" xml:space="preserve">
           <source>Introduction to the DOM</source>
-          <target state="new"/>
+          <target state="translated">DOM简介</target>
         </trans-unit>
         <trans-unit id="92a605a41a1bfb9eec6573b6d10084310be8afb9" translate="yes" xml:space="preserve">
           <source>Introduction: Deep Dive</source>
@@ -537,15 +641,15 @@
         </trans-unit>
         <trans-unit id="92c7543673d428591b536d245bf2f8a34c3f3bdf" translate="yes" xml:space="preserve">
           <source>Is your build output mostly the same as your source input files? Use &lt;code&gt;tsc&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">构建输出与源输入文件基本相同吗？使用 &lt;code&gt;tsc&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="8e2b2e48ddaed31be99cbca83c7b264785d54b10" translate="yes" xml:space="preserve">
           <source>Isolated Modules - &lt;code&gt;isolatedModules&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">隔离模块 &lt;code&gt;isolatedModules&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="54054e6683cbfd13efd0196ccd3001db60a01e75" translate="yes" xml:space="preserve">
           <source>It also ships with a mapped type &lt;code&gt;Readonly&amp;lt;T&amp;gt;&lt;/code&gt; that makes all properties &lt;code&gt;readonly&lt;/code&gt;:</source>
-          <target state="new"/>
+          <target state="translated">它还带有映射类型 &lt;code&gt;Readonly&amp;lt;T&amp;gt;&lt;/code&gt; ，该映射类型使所有属性 &lt;code&gt;readonly&lt;/code&gt; ：</target>
         </trans-unit>
         <trans-unit id="95f0156bbb4c60fc06035b7f6f73dc250490e988" translate="yes" xml:space="preserve">
           <source>It can also be used as a global variable, but only inside of a script. (A script is a file with no imports or exports.)</source>
@@ -557,11 +661,11 @@
         </trans-unit>
         <trans-unit id="683cf85c60231c18d1e9862199f167cc8ac3cdf5" translate="yes" xml:space="preserve">
           <source>It can be tempting to think that the types &lt;code&gt;Number&lt;/code&gt;, &lt;code&gt;String&lt;/code&gt;, &lt;code&gt;Boolean&lt;/code&gt;, &lt;code&gt;Symbol&lt;/code&gt;, or &lt;code&gt;Object&lt;/code&gt; are the same as the lowercase versions recommended above. These types do not refer to the language primitives however, and almost never should be used as a type.</source>
-          <target state="new"/>
+          <target state="translated">可能会想到类型 &lt;code&gt;Number&lt;/code&gt; ， &lt;code&gt;String&lt;/code&gt; ， &lt;code&gt;Boolean&lt;/code&gt; ， &lt;code&gt;Symbol&lt;/code&gt; 或 &lt;code&gt;Object&lt;/code&gt; 与上面建议的小写版本相同。但是，这些类型不引用语言原语，并且几乎绝不应该将其用作类型。</target>
         </trans-unit>
         <trans-unit id="b38dbabfa59d50143ee85c5c345800b0f340110b" translate="yes" xml:space="preserve">
           <source>It does not change the behavior of your code, or otherwise change the behavior of TypeScript&amp;rsquo;s checking and emitting process.</source>
-          <target state="new"/>
+          <target state="translated">它不会改变代码的行为，也不会改变TypeScript的检查和发出过程的行为。</target>
         </trans-unit>
         <trans-unit id="4806c2a5b8c0aca238175b098dcd2585b109419d" translate="yes" xml:space="preserve">
           <source>It does not have an initializer and the preceding enum member was a &lt;em&gt;numeric&lt;/em&gt; constant. In this case the value of the current enum member will be the value of the preceding enum member plus one.</source>
@@ -577,7 +681,7 @@
         </trans-unit>
         <trans-unit id="c6c1d1a64c5c77319ef0ca3b0e9b3ec9e20641bd" translate="yes" xml:space="preserve">
           <source>It is also worth noting that, for Node.js applications, modules are the default and &lt;strong&gt;we recommended modules over namespaces in modern code&lt;/strong&gt;.</source>
-          <target state="new"/>
+          <target state="translated">还要注意的是，对于Node.js应用程序，模块是默认&lt;strong&gt;模块&lt;/strong&gt;，&lt;strong&gt;我们建议模块优先于现代代码中的名称空间&lt;/strong&gt;。</target>
         </trans-unit>
         <trans-unit id="99b3cb57ca8b4b1d02c5836ced85b9301080e00f" translate="yes" xml:space="preserve">
           <source>It is also worth noting that, for Node.js applications, modules are the default and the recommended approach to structure your code.</source>
@@ -597,7 +701,7 @@
         </trans-unit>
         <trans-unit id="3789f800d631595c74b86aed0db3fe5327908530" translate="yes" xml:space="preserve">
           <source>It is not a mechanism that &lt;strong&gt;prevents&lt;/strong&gt; a file from being included in the codebase - it simply changes what the &lt;code&gt;include&lt;/code&gt; setting finds.</source>
-          <target state="new"/>
+          <target state="translated">它不是&lt;strong&gt;防止&lt;/strong&gt;文件包含在代码库中的机制，它只是更改了 &lt;code&gt;include&lt;/code&gt; 设置的查找内容。</target>
         </trans-unit>
         <trans-unit id="1efd3564ec8a22d45891c5ad072535fbd6663440" translate="yes" xml:space="preserve">
           <source>It is not possible to use &lt;code&gt;infer&lt;/code&gt; declarations in constraint clauses for regular type parameters:</source>
@@ -629,11 +733,11 @@
         </trans-unit>
         <trans-unit id="9c6a38098d06734f39da99f25d9ab37fea049fd8" translate="yes" xml:space="preserve">
           <source>It would be an error to specify &lt;code&gt;rootDir&lt;/code&gt; as &lt;code&gt;core&lt;/code&gt;&lt;em&gt;and&lt;/em&gt;&lt;code&gt;include&lt;/code&gt; as &lt;code&gt;*&lt;/code&gt; because it creates a file (&lt;code&gt;helpers.ts&lt;/code&gt;) that would need to be emitted &lt;em&gt;outside&lt;/em&gt; the &lt;code&gt;outDir&lt;/code&gt; (i.e. &lt;code&gt;../helpers.js&lt;/code&gt;).</source>
-          <target state="new"/>
+          <target state="translated">将 &lt;code&gt;rootDir&lt;/code&gt; 指定为 &lt;code&gt;core&lt;/code&gt; &lt;em&gt;并&lt;/em&gt; &lt;code&gt;include&lt;/code&gt; 为 &lt;code&gt;*&lt;/code&gt; 将是错误的，因为它将创建一个文件（ &lt;code&gt;helpers.ts&lt;/code&gt; ），该文件需要在 &lt;code&gt;outDir&lt;/code&gt; &lt;em&gt;之外&lt;/em&gt;发出（即 &lt;code&gt;../helpers.js&lt;/code&gt; ）。</target>
         </trans-unit>
         <trans-unit id="d57b32bfac61e19b63383ba6ca826d555cc838b5" translate="yes" xml:space="preserve">
           <source>It would be much better if once we performed the check, we could know the type of &lt;code&gt;pet&lt;/code&gt; within each branch.</source>
-          <target state="new"/>
+          <target state="translated">如果我们执行了检查，然后知道每个分支中的 &lt;code&gt;pet&lt;/code&gt; 类型，那就更好了。</target>
         </trans-unit>
         <trans-unit id="dae1101862749291ae4f393bc2ced9ae6e2e1e04" translate="yes" xml:space="preserve">
           <source>It&amp;rsquo;s also common to try to access a method before &lt;code&gt;await&lt;/code&gt;-ing or &lt;code&gt;.then()&lt;/code&gt;-ing a &lt;code&gt;Promise&lt;/code&gt;. This is another example, among many others, where we&amp;rsquo;re able to do better.</source>
@@ -661,11 +765,11 @@
         </trans-unit>
         <trans-unit id="a2ffa790ea2c3349ed046c358aae967ad51e1cec" translate="yes" xml:space="preserve">
           <source>It&amp;rsquo;s important to note that ts-loader will need to run before any other loader that deals with &lt;code&gt;.js&lt;/code&gt; files.</source>
-          <target state="new"/>
+          <target state="translated">重要的是要注意，ts-loader必须在运行任何其他处理 &lt;code&gt;.js&lt;/code&gt; 文件的加载器之前运行。</target>
         </trans-unit>
         <trans-unit id="b692de3183276b518dabfb631757e7af1419f734" translate="yes" xml:space="preserve">
           <source>It&amp;rsquo;s important to remember that TypeScript uses the same &lt;em&gt;runtime&lt;/em&gt; as JavaScript, so any resources about how to accomplish specific runtime behavior (converting a string to a number, displaying an alert, writing a file to disk, etc.) will always apply equally well to TypeScript programs. Don&amp;rsquo;t limit yourself to TypeScript-specific resources!</source>
-          <target state="new"/>
+          <target state="translated">重要的是要记住，TypeScript与JavaScript使用相同的&lt;em&gt;运行时&lt;/em&gt;，因此有关如何完成特定运行时行为（将字符串转换为数字，显示警报，将文件写入磁盘等）的所有资源都将同样适用于TypeScript程序。不要局限于TypeScript专用资源！</target>
         </trans-unit>
         <trans-unit id="ad109c65e3188cac84e48f320d15d4fae5d7f0a7" translate="yes" xml:space="preserve">
           <source>It&amp;rsquo;s not uncommon for an API to expect a specific set of strings for certain values. For instance, consider a UI library that can move elements across the screen while controlling the &lt;a href=&quot;https://en.wikipedia.org/wiki/Inbetweening&quot;&gt;&amp;ldquo;easing&amp;rdquo; of the animation.&lt;/a&gt;</source>
@@ -673,11 +777,11 @@
         </trans-unit>
         <trans-unit id="4b18ceff60d615281a03cf2a9ea16d87dd519931" translate="yes" xml:space="preserve">
           <source>It&amp;rsquo;s possible you really &lt;em&gt;did&lt;/em&gt; intend to divide a number by an array, perhaps just to see what happens, but most of the time, though, this is a programming mistake. TypeScript&amp;rsquo;s type checker is designed to allow correct programs through while still catching as many common errors as possible. (Later, we&amp;rsquo;ll learn about settings you can use to configure how strictly TypeScript checks your code.)</source>
-          <target state="new"/>
+          <target state="translated">这是可能的，你真的&lt;em&gt;没&lt;/em&gt;打算通过一个数组来划分一个数字，也许只是看看会发生什么，但大部分的时间，虽然，这是一个编程错误。TypeScript的类型检查器旨在允许正确的程序通过，同时仍然捕获尽可能多的常见错误。（稍后，我们将学习可用于配置TypeScript检查代码的严格程度的设置。）</target>
         </trans-unit>
         <trans-unit id="c163602d3325175e90ecde073b2e8d099514998d" translate="yes" xml:space="preserve">
           <source>It&amp;rsquo;s worth noting that &lt;code&gt;files&lt;/code&gt;, &lt;code&gt;include&lt;/code&gt; and &lt;code&gt;exclude&lt;/code&gt; from the inheriting config file &lt;em&gt;overwrite&lt;/em&gt; those from the base config file, and that circularity between configuration files is not allowed.</source>
-          <target state="new"/>
+          <target state="translated">值得注意的是，继承配置文件中的 &lt;code&gt;files&lt;/code&gt; ， &lt;code&gt;include&lt;/code&gt; 和 &lt;code&gt;exclude&lt;/code&gt; &lt;em&gt;覆盖&lt;/em&gt;基本配置文件中的文件，并且不允许配置文件之间的循环。</target>
         </trans-unit>
         <trans-unit id="1423913ba24c08e5752678ce9b4d9c6bc28a43a2" translate="yes" xml:space="preserve">
           <source>It&amp;rsquo;s worth pointing out that the type checker does not require that these properties come in any sort of order, only that the properties the interface requires are present and have the required type.</source>
@@ -705,23 +809,23 @@
         </trans-unit>
         <trans-unit id="7aec719645d59e0338990dc21d17c20ab20b5e3a" translate="yes" xml:space="preserve">
           <source>JS Class extensions</source>
-          <target state="new"/>
+          <target state="translated">JS类扩展</target>
         </trans-unit>
         <trans-unit id="53889159f973b9fcdbf5533d3f8b2fee581e75e1" translate="yes" xml:space="preserve">
           <source>JS Projects Utilizing TypeScript</source>
-          <target state="new"/>
+          <target state="translated">利用TypeScript的JS项目</target>
         </trans-unit>
         <trans-unit id="cad13379ffbb44dfeef3669b43a6cf7eda0226c2" translate="yes" xml:space="preserve">
           <source>JSDoc Property Modifiers</source>
-          <target state="new"/>
+          <target state="translated">JSDoc属性修改器</target>
         </trans-unit>
         <trans-unit id="196b2a7280a3752416773c234c6662e07ab87209" translate="yes" xml:space="preserve">
           <source>JSDoc Reference</source>
-          <target state="new"/>
+          <target state="translated">JSDoc参考</target>
         </trans-unit>
         <trans-unit id="5d193b4e629fd62bb8a4297db587f6b30503894f" translate="yes" xml:space="preserve">
           <source>JSDoc annotated functions are excluded from this rule. Use JSDoc optional parameter syntax (&lt;code&gt;[&lt;/code&gt;&lt;code&gt;]&lt;/code&gt;) to express optionality. e.g.:</source>
-          <target state="new"/>
+          <target state="translated">JSDoc注释的函数从此规则中排除。使用JSDoc可选参数语法（ &lt;code&gt;[&lt;/code&gt; &lt;code&gt;]&lt;/code&gt; ）表示可选性。例如：</target>
         </trans-unit>
         <trans-unit id="e3449392ff6bd7faf1750366c59ea9d2cae9f435" translate="yes" xml:space="preserve">
           <source>JSDoc annotated functions are excluded from this rule. Use JSDoc optional parameter syntax to express optionality. e.g.:</source>
@@ -733,7 +837,7 @@
         </trans-unit>
         <trans-unit id="b57ab1e3e810539c8d1ec0a2a10337c1c2186c67" translate="yes" xml:space="preserve">
           <source>JSDoc annotations come before a declaration will be used to set the type of that declaration. For example:</source>
-          <target state="new"/>
+          <target state="translated">JSDoc注解出现在声明之前,将用于设置该声明的类型。例如</target>
         </trans-unit>
         <trans-unit id="56567b264de0a6e662152c49ade304ca30e42a64" translate="yes" xml:space="preserve">
           <source>JSDoc types are used for type information</source>
@@ -745,11 +849,11 @@
         </trans-unit>
         <trans-unit id="200185b1255b1a221ca2903c5a111895d54bee5e" translate="yes" xml:space="preserve">
           <source>JSX - &lt;code&gt;jsx&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">JSX - &lt;code&gt;jsx&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="e3a12fc57c5b8ab36078ef438cd9ea85d576a140" translate="yes" xml:space="preserve">
           <source>JSX Factory - &lt;code&gt;jsxFactory&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">JSX工厂 &lt;code&gt;jsxFactory&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="c9a7b3c3bca23e176771346061c84e126c239c19" translate="yes" xml:space="preserve">
           <source>JSX allows you to embed expressions between tags by surrounding the expressions with curly braces (&lt;code&gt;{ }&lt;/code&gt;).</source>
@@ -781,19 +885,19 @@
         </trans-unit>
         <trans-unit id="0a68962be09173771bec34eb689c44a3c96b2537" translate="yes" xml:space="preserve">
           <source>JavaScript (also known as ECMAScript) started its life as a simple scripting language for browsers. At the time it was invented, it was expected to be used for short snippets of code embedded in a web page &amp;mdash; writing more than a few dozen lines of code would have been somewhat unusual. Due to this, early web browsers executed such code pretty slowly. Over time, though, JS became more and more popular, and web developers started using it to create interactive experiences.</source>
-          <target state="new"/>
+          <target state="translated">JavaScript（也称为ECMAScript）作为一种用于浏览器的简单脚本语言开始了其生活。当它被发明时，它被期望用于网页中嵌入的简短代码片段&amp;mdash;编写几十行代码在某种程度上是不寻常的。因此，早期的Web浏览器执行此类代码的速度非常慢。但是，随着时间的流逝，JS变得越来越流行，并且Web开发人员开始使用它来创建交互式体验。</target>
         </trans-unit>
         <trans-unit id="f9d9a3e1ce5dffeacdf5c830a6c6440a69613ddc" translate="yes" xml:space="preserve">
           <source>JavaScript also allows accessing properties which aren&amp;rsquo;t present:</source>
-          <target state="new"/>
+          <target state="translated">JavaScript还允许访问不存在的属性：</target>
         </trans-unit>
         <trans-unit id="88b453322efee2df3d69cc86054aa88030b8bd03" translate="yes" xml:space="preserve">
           <source>JavaScript defines 8 built-in types:</source>
-          <target state="new"/>
+          <target state="translated">JavaScript定义了8种内置类型。</target>
         </trans-unit>
         <trans-unit id="21c885f8940580133691e264e6c024d89b341481" translate="yes" xml:space="preserve">
           <source>JavaScript does have some limited primitives like &lt;code&gt;typeof&lt;/code&gt; and &lt;code&gt;instanceof&lt;/code&gt;, but remember that these operators are still working on the values as they exist in the type-erased output code. For example, &lt;code&gt;typeof (new Car())&lt;/code&gt; will be &lt;code&gt;&quot;object&quot;&lt;/code&gt;, not &lt;code&gt;Car&lt;/code&gt; or &lt;code&gt;&quot;Car&quot;&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">JavaScript确实有一些有限的原语，例如 &lt;code&gt;typeof&lt;/code&gt; 和 &lt;code&gt;instanceof&lt;/code&gt; ，但请记住，这些运算符仍在处理值，因为它们存在于类型擦除的输出代码中。例如， &lt;code&gt;typeof (new Car())&lt;/code&gt; 将是 &lt;code&gt;&quot;object&quot;&lt;/code&gt; ，而不是 &lt;code&gt;Car&lt;/code&gt; 或 &lt;code&gt;&quot;Car&quot;&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="5814b75aeb763bc1d09322412eaf957f2d26543e" translate="yes" xml:space="preserve">
           <source>JavaScript has a lot of different module syntaxes or conventions: the one in the ECMAScript standard, the one Node already supports (CommonJS), AMD, System.js, and more! For the most part, TypeScript would default to auto-importing using ECMAScript module syntax, which was often inappropriate in certain TypeScript projects with different compiler settings, or in Node projects with plain JavaScript and &lt;code&gt;require&lt;/code&gt; calls.</source>
@@ -801,7 +905,7 @@
         </trans-unit>
         <trans-unit id="98cdb2f49473d8f457b2b983ae7b2e9569316471" translate="yes" xml:space="preserve">
           <source>JavaScript has boxed equivalents of primitive types that contain the methods that programmers associate with those types. TypeScript reflects this with, for example, the difference between the primitive type &lt;code&gt;number&lt;/code&gt; and the boxed type &lt;code&gt;Number&lt;/code&gt;. The boxed types are rarely needed, since their methods return primitives.</source>
-          <target state="new"/>
+          <target state="translated">JavaScript具有基本类型的盒装等效项，其中包含程序员与这些类型相关联的方法。TypeScript通过例如原始类型 &lt;code&gt;number&lt;/code&gt; 和装箱类型 &lt;code&gt;Number&lt;/code&gt; 之间的差异来反映这一点。盒装类型很少需要，因为它们的方法返回原语。</target>
         </trans-unit>
         <trans-unit id="6de0d5c33105af7de987fd16c4c5f05a9230e4fc" translate="yes" xml:space="preserve">
           <source>JavaScript is inherently a very dynamic language. It&amp;rsquo;s not uncommon for a single JavaScript function to return different types of objects based on the shape of the arguments passed in.</source>
@@ -809,15 +913,15 @@
         </trans-unit>
         <trans-unit id="3fa9627af8c315eed2d8a18ed7ec36d91039abb7" translate="yes" xml:space="preserve">
           <source>JavaScript projects can use a &lt;code&gt;jsconfig.json&lt;/code&gt; file instead, which acts almost the same but has some JavaScript-related compiler flags enabled by default.</source>
-          <target state="new"/>
+          <target state="translated">JavaScript项目可以改用 &lt;code&gt;jsconfig.json&lt;/code&gt; 文件，该文件的作用几乎相同，但是默认情况下启用了一些与JavaScript相关的编译器标志。</target>
         </trans-unit>
         <trans-unit id="da1195a91c56a7095e67e44a18fe31d7c0292fae" translate="yes" xml:space="preserve">
           <source>JavaScript&amp;rsquo;s equality operator (&lt;code&gt;==&lt;/code&gt;) &lt;em&gt;coerces&lt;/em&gt; its arguments, leading to unexpected behavior:</source>
-          <target state="new"/>
+          <target state="translated">JavaScript的相等运算符（ &lt;code&gt;==&lt;/code&gt; ）&lt;em&gt;强制&lt;/em&gt;其参数，从而导致意外行为：</target>
         </trans-unit>
         <trans-unit id="6db5a96d3e3aba783d7007c3a17e6f71e51a7e0e" translate="yes" xml:space="preserve">
           <source>JavaScript&amp;rsquo;s modern module syntax is a bit like Haskell&amp;rsquo;s, except that any file with &lt;code&gt;import&lt;/code&gt; or &lt;code&gt;export&lt;/code&gt; is implicitly a module:</source>
-          <target state="new"/>
+          <target state="translated">JavaScript的现代模块语法有点像Haskell的语法，不同之处在于任何带有 &lt;code&gt;import&lt;/code&gt; 或 &lt;code&gt;export&lt;/code&gt; 文件都隐式地是一个模块：</target>
         </trans-unit>
         <trans-unit id="7196497deb2208abcd944f2734a4a8cd07bbe990" translate="yes" xml:space="preserve">
           <source>Jspm</source>
@@ -833,7 +937,7 @@
         </trans-unit>
         <trans-unit id="f568f7b7378d75e427e395efb94692dbc6539719" translate="yes" xml:space="preserve">
           <source>Just as there is a one-to-one correspondence between JS files and modules, TypeScript has a one-to-one correspondence between module source files and their emitted JS files. One effect of this is that it&amp;rsquo;s not possible to concatenate multiple module source files depending on the module system you target. For instance, you can&amp;rsquo;t use the &lt;code&gt;outFile&lt;/code&gt; option while targeting &lt;code&gt;commonjs&lt;/code&gt; or &lt;code&gt;umd&lt;/code&gt;, but with TypeScript 1.8 and later, &lt;a href=&quot;https://www.typescriptlang.org/docs/handbook/release-notes/typescript-1-8.html#concatenate-amd-and-system-modules-with---outfile&quot;&gt;it&amp;rsquo;s possible&lt;/a&gt; to use &lt;code&gt;outFile&lt;/code&gt; when targeting &lt;code&gt;amd&lt;/code&gt; or &lt;code&gt;system&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">就像JS文件和模块之间存在一一对应关系一样，TypeScript在模块源文件与其发出的JS文件之间也具有一一对应关系。这样做的一个效果是，不可能根据您要定位的模块系统来连接多个模块源文件。例如，在定位 &lt;code&gt;commonjs&lt;/code&gt; 或 &lt;code&gt;umd&lt;/code&gt; 时不能使用 &lt;code&gt;outFile&lt;/code&gt; 选项，但是在TypeScript 1.8及更高版本中，定位 &lt;code&gt;amd&lt;/code&gt; 或 &lt;code&gt;system&lt;/code&gt; 时&lt;a href=&quot;https://www.typescriptlang.org/docs/handbook/release-notes/typescript-1-8.html#concatenate-amd-and-system-modules-with---outfile&quot;&gt;可以&lt;/a&gt;使用 &lt;code&gt;outFile&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="e42c4ea3c8c69c9835a8ffa699912e1dc17b476c" translate="yes" xml:space="preserve">
           <source>Just as there is a one-to-one correspondence between JS files and modules, TypeScript has a one-to-one correspondence between module source files and their emitted JS files. One effect of this is that it&amp;rsquo;s not possible to concatenate multiple module source files depending on the module system you target. For instance, you can&amp;rsquo;t use the &lt;code&gt;outFile&lt;/code&gt; option while targeting &lt;code&gt;commonjs&lt;/code&gt; or &lt;code&gt;umd&lt;/code&gt;, but with TypeScript 1.8 and later, &lt;a href=&quot;release-notes/typescript-1-8#concatenate-amd-and-system-modules-with---outfile&quot;&gt;it&amp;rsquo;s possible&lt;/a&gt; to use &lt;code&gt;outFile&lt;/code&gt; when targeting &lt;code&gt;amd&lt;/code&gt; or &lt;code&gt;system&lt;/code&gt;.</source>
@@ -841,7 +945,7 @@
         </trans-unit>
         <trans-unit id="d3ce9925cfd88bf773f747d79c2d2f37e043fb9f" translate="yes" xml:space="preserve">
           <source>Just as with &lt;code&gt;for / of&lt;/code&gt;, &lt;code&gt;downlevelIteration&lt;/code&gt; will use &lt;code&gt;Symbol.iterator&lt;/code&gt; (if present) to more accurately emulate ES 6 behavior.</source>
-          <target state="new"/>
+          <target state="translated">正如 &lt;code&gt;for / of&lt;/code&gt; ， &lt;code&gt;downlevelIteration&lt;/code&gt; 将使用 &lt;code&gt;Symbol.iterator&lt;/code&gt; （如果存在）以更精确地模拟ES 6行为。</target>
         </trans-unit>
         <trans-unit id="f2ceed31b51e352f32e51cd21fbc2af5be43b412" translate="yes" xml:space="preserve">
           <source>Just as with interface, putting the type parameter on the class itself lets us make sure all of the properties of the class are working with the same type.</source>
@@ -897,7 +1001,7 @@
         </trans-unit>
         <trans-unit id="652c3d36f013f3eb41d356a2dc9496bad6b87cd2" translate="yes" xml:space="preserve">
           <source>Keeping the same runtime behavior as JavaScript is a foundational promise of TypeScript because it means you can easily transition between the two languages without worrying about subtle differences that might make your program stop working.</source>
-          <target state="new"/>
+          <target state="translated">保持与JavaScript相同的运行时行为是TypeScript的基本承诺,因为这意味着你可以很容易地在这两种语言之间转换,而不用担心微妙的差异可能会使你的程序停止工作。</target>
         </trans-unit>
         <trans-unit id="a22c16410dc4eafc94fbc317a11af2903d7b50a3" translate="yes" xml:space="preserve">
           <source>Key Concepts</source>
@@ -905,15 +1009,15 @@
         </trans-unit>
         <trans-unit id="e3f555e673324c6ef7fc096a52a9695768dbceba" translate="yes" xml:space="preserve">
           <source>Keyof Strings Only - &lt;code&gt;keyofStringsOnly&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">仅Keyof字符串 &lt;code&gt;keyofStringsOnly&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="842ec99d82ed307bd84f2310114874cbd9666b4e" translate="yes" xml:space="preserve">
           <source>Labels are very rare in JavaScript and typically indicate an attempt to write an object literal:</source>
-          <target state="new"/>
+          <target state="translated">标签在JavaScript中是非常罕见的,通常表示试图写一个对象文字。</target>
         </trans-unit>
         <trans-unit id="3366a00a2d7b488f6edaccf084d0f236fe293734" translate="yes" xml:space="preserve">
           <source>Language service plugins are a way to provide additional information to a user based on existing TypeScript files. They can enhance existing messages between TypeScript and an editor, or to provide their own error messages.</source>
-          <target state="new"/>
+          <target state="translated">语言服务插件是一种基于现有TypeScript文件向用户提供额外信息的方式。它们可以增强TypeScript和编辑器之间的现有信息,或者提供自己的错误信息。</target>
         </trans-unit>
         <trans-unit id="eaf7e256a5a476287d569594d43c22027adc861c" translate="yes" xml:space="preserve">
           <source>Lastly, we create a helper function that will do the mixing for us. This will run through the properties of each of the mixins and copy them over to the target of the mixins, filling out the stand-in properties with their implementations.</source>
@@ -929,19 +1033,19 @@
         </trans-unit>
         <trans-unit id="a8ce8ab803d2f69beb12ecc965c63513d9c144ec" translate="yes" xml:space="preserve">
           <source>Learn how to use a &lt;a href=&quot;tsconfig-json&quot;&gt;&lt;code&gt;tsconfig.json&lt;/code&gt;&lt;/a&gt; files.</source>
-          <target state="new"/>
+          <target state="translated">了解如何使用&lt;a href=&quot;tsconfig-json&quot;&gt; &lt;code&gt;tsconfig.json&lt;/code&gt; &lt;/a&gt;文件。</target>
         </trans-unit>
         <trans-unit id="f574e7a40077551e582b33afc9de1c41b4ea1f26" translate="yes" xml:space="preserve">
           <source>Learn how to work in an &lt;a href=&quot;compiler-options-in-msbuild&quot;&gt;MSBuild project&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">了解如何在&lt;a href=&quot;compiler-options-in-msbuild&quot;&gt;MSBuild项目中工作&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="c8a698431922622bdba500ba547874a9e36cb868" translate="yes" xml:space="preserve">
           <source>Learn how to write declaration files to describe existing JavaScript. Important for DefinitelyTyped contributions.</source>
-          <target state="new"/>
+          <target state="translated">学习如何编写声明文件来描述现有的JavaScript。对DefinitelyTyped贡献很重要。</target>
         </trans-unit>
         <trans-unit id="c1f5cb90f300e2c9d89b461fd1882c4957ea2a20" translate="yes" xml:space="preserve">
           <source>Learning JavaScript and TypeScript</source>
-          <target state="new"/>
+          <target state="translated">学习JavaScript和TypeScript</target>
         </trans-unit>
         <trans-unit id="6bb28e55ee1d62a9d6d258deae5c6e572957f877" translate="yes" xml:space="preserve">
           <source>Learning how to use &lt;code&gt;this&lt;/code&gt; in JavaScript is something of a rite of passage. Since TypeScript is a superset of JavaScript, TypeScript developers also need to learn how to use &lt;code&gt;this&lt;/code&gt; and how to spot when it&amp;rsquo;s not being used correctly. Fortunately, TypeScript lets you catch incorrect uses of &lt;code&gt;this&lt;/code&gt; with a couple of techniques. If you need to learn how &lt;code&gt;this&lt;/code&gt; works in JavaScript, though, first read Yehuda Katz&amp;rsquo;s &lt;a href=&quot;http://yehudakatz.com/2011/08/11/understanding-javascript-function-invocation-and-this/&quot;&gt;Understanding JavaScript Function Invocation and &amp;ldquo;this&amp;rdquo;&lt;/a&gt;. Yehuda&amp;rsquo;s article explains the inner workings of &lt;code&gt;this&lt;/code&gt; very well, so we&amp;rsquo;ll just cover the basics here.</source>
@@ -969,7 +1073,7 @@
         </trans-unit>
         <trans-unit id="31f50512e5bac716ad2127f4d6b19108bf103d8e" translate="yes" xml:space="preserve">
           <source>Let&amp;rsquo;s go back and write the code for a version of &lt;code&gt;padLeft&lt;/code&gt; which uses union types. We could write it with type predicates as follows:</source>
-          <target state="new"/>
+          <target state="translated">让我们回过头来编写使用联合类型的 &lt;code&gt;padLeft&lt;/code&gt; 版本的代码。我们可以使用类型谓词来编写它，如下所示：</target>
         </trans-unit>
         <trans-unit id="b1e0b8ac0a49ba6917defbab6438fe121a7b57d4" translate="yes" xml:space="preserve">
           <source>Let&amp;rsquo;s go back and write the code for the version of &lt;code&gt;padLeft&lt;/code&gt; that uses union types. We could write it with type predicates as follows:</source>
@@ -1055,13 +1159,17 @@
           <source>Let&amp;rsquo;s write our first TypeScript file using React. First, create a file named &lt;code&gt;Hello.tsx&lt;/code&gt; in &lt;code&gt;src/components&lt;/code&gt; and write the following:</source>
           <target state="translated">让我们使用React编写我们的第一个TypeScript文件。首先，在 &lt;code&gt;src/components&lt;/code&gt; 中创建一个名为 &lt;code&gt;Hello.tsx&lt;/code&gt; 的文件，并编写以下内容：</target>
         </trans-unit>
+        <trans-unit id="2eef507232d254af5e9e59f7ec1b8cab255e33eb" translate="yes" xml:space="preserve">
+          <source>Lets explore a TypeScript script that adds a &lt;code&gt;&amp;lt;p&amp;gt;Hello, World!&amp;lt;/p&amp;gt;&lt;/code&gt; element to the &lt;code&gt;#app&lt;/code&gt; element.</source>
+          <target state="translated">让我们探索一个TypeScript脚本，该脚本将 &lt;code&gt;&amp;lt;p&amp;gt;Hello, World!&amp;lt;/p&amp;gt;&lt;/code&gt; 元素添加到 &lt;code&gt;#app&lt;/code&gt; 元素中。</target>
+        </trans-unit>
         <trans-unit id="aae2739f68fb37ce086c5c2093758c62b36667b3" translate="yes" xml:space="preserve">
           <source>Lets explore a TypeScript script that adds a &lt;code&gt;&amp;lt;p&amp;gt;Hello, World&amp;lt;/p&amp;gt;&lt;/code&gt; element to the &lt;code&gt;#app&lt;/code&gt; element.</source>
-          <target state="new"/>
+          <target state="translated">让我们研究一下将 &lt;code&gt;&amp;lt;p&amp;gt;Hello, World&amp;lt;/p&amp;gt;&lt;/code&gt; 元素添加到 &lt;code&gt;#app&lt;/code&gt; 元素的TypeScript脚本。</target>
         </trans-unit>
         <trans-unit id="a7305992657ab0909fb4eb83c394c6114c9f6b07" translate="yes" xml:space="preserve">
           <source>Lets you set a base directory to resolve non-absolute module names.</source>
-          <target state="new"/>
+          <target state="translated">让你设置一个基础目录来解析非绝对模块名。</target>
         </trans-unit>
         <trans-unit id="166644bb8752dfdaa61026de73139cfde0a4a540" translate="yes" xml:space="preserve">
           <source>LettersOnlyValidator.ts</source>
@@ -1069,7 +1177,7 @@
         </trans-unit>
         <trans-unit id="0282b6f4a590ade8d83152438864b31e1ed6a0e7" translate="yes" xml:space="preserve">
           <source>Lib - &lt;code&gt;lib&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">库 &lt;code&gt;lib&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="875c3c9135ee949f84870492409833fc57642b20" translate="yes" xml:space="preserve">
           <source>Libraries can also use &lt;code&gt;this&lt;/code&gt; parameters to declare how callbacks will be invoked.</source>
@@ -1153,7 +1261,7 @@
         </trans-unit>
         <trans-unit id="7d787f38e64660d964087ea17b902351795b7ef8" translate="yes" xml:space="preserve">
           <source>Like most C-descended languages, TypeScript requires declaration of type parameters:</source>
-          <target state="new"/>
+          <target state="translated">像大多数C-descended语言一样,TypeScript需要声明类型参数。</target>
         </trans-unit>
         <trans-unit id="e100fe20d9c089d3990a58c235d7844235322341" translate="yes" xml:space="preserve">
           <source>Like other special JS checking behaviors, this behavior can be changed by specifying a JSDoc type for the variable. For example:</source>
@@ -1173,15 +1281,15 @@
         </trans-unit>
         <trans-unit id="17904ff532be036b7cb87941e7bed2e100c68152" translate="yes" xml:space="preserve">
           <source>Linter Checks</source>
-          <target state="new"/>
+          <target state="translated">林特检查</target>
         </trans-unit>
         <trans-unit id="885980150a8aa23ee2581fde57cdd77e524c220a" translate="yes" xml:space="preserve">
           <source>List Emitted Files - &lt;code&gt;listEmittedFiles&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">列出发射的文件 &lt;code&gt;listEmittedFiles&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="ef72f198033a01dd1518070e6ebb3e26bd88d5da" translate="yes" xml:space="preserve">
           <source>List Files - &lt;code&gt;listFiles&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">列表文件 &lt;code&gt;listFiles&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="5359c0166343c48f9f035c401a1a6fd47a5d3c30" translate="yes" xml:space="preserve">
           <source>List of</source>
@@ -1189,7 +1297,7 @@
         </trans-unit>
         <trans-unit id="0a9f639b79fa294ae337e3e6ef448a4796481e4d" translate="yes" xml:space="preserve">
           <source>List of folders to include type definitions from. See &lt;a href=&quot;https://www.typescriptlang.org/tsconfig#types&quot;&gt;@types, &amp;mdash;typeRoots and &amp;mdash;types&lt;/a&gt; for more details.</source>
-          <target state="new"/>
+          <target state="translated">包含类型定义的文件夹列表。有关更多详细信息&lt;a href=&quot;https://www.typescriptlang.org/tsconfig#types&quot;&gt;，&lt;/a&gt;请参见@types，&amp;mdash;typeRoots和&amp;mdash;types。</target>
         </trans-unit>
         <trans-unit id="465c88588b5cdd41299c2edcb1468c48ae202ec0" translate="yes" xml:space="preserve">
           <source>List of folders to include type definitions from. See &lt;a href=&quot;tsconfig-json#types-typeroots-and-types&quot;&gt;@types, &amp;ndash;typeRoots and &amp;ndash;types&lt;/a&gt; for more details.</source>
@@ -1197,7 +1305,7 @@
         </trans-unit>
         <trans-unit id="dc93386b00a8c2f17516b547e96b3b9822dd074a" translate="yes" xml:space="preserve">
           <source>List of language service plugins to run inside the editor.</source>
-          <target state="new"/>
+          <target state="translated">在编辑器内运行的语言服务插件列表。</target>
         </trans-unit>
         <trans-unit id="6ced5dd028928de0448e70e83b68d98333283e39" translate="yes" xml:space="preserve">
           <source>List of library files to be included in the compilation.</source>
@@ -1205,7 +1313,7 @@
         </trans-unit>
         <trans-unit id="9230df08537df807ad2117d7fc0d39c84158a446" translate="yes" xml:space="preserve">
           <source>List of names of type definitions to include. See &lt;a href=&quot;https://www.typescriptlang.org/tsconfig#types&quot;&gt;@types, &amp;mdash;typeRoots and &amp;mdash;types&lt;/a&gt; for more details.</source>
-          <target state="new"/>
+          <target state="translated">要包括的类型定义的名称列表。有关更多详细信息&lt;a href=&quot;https://www.typescriptlang.org/tsconfig#types&quot;&gt;，&lt;/a&gt;请参见@types，&amp;mdash;typeRoots和&amp;mdash;types。</target>
         </trans-unit>
         <trans-unit id="bcb7afa9aa95b8c02629a8477085e1d618f28bc0" translate="yes" xml:space="preserve">
           <source>List of names of type definitions to include. See &lt;a href=&quot;tsconfig-json#types-typeroots-and-types&quot;&gt;@types, &amp;ndash;typeRoots and &amp;ndash;types&lt;/a&gt; for more details.</source>
@@ -1217,11 +1325,11 @@
         </trans-unit>
         <trans-unit id="de64a9e9a2fea78c8d6ba63c5e5b1387423f2076" translate="yes" xml:space="preserve">
           <source>Literal Narrowing</source>
-          <target state="new"/>
+          <target state="translated">字面意义上的窄化</target>
         </trans-unit>
         <trans-unit id="c5f9843abf3eea470a268920f6429a30a79e8c27" translate="yes" xml:space="preserve">
           <source>Literal Types</source>
-          <target state="new"/>
+          <target state="translated">字面类型</target>
         </trans-unit>
         <trans-unit id="bb25bc49f0293214d4dc209e4fc9026643313119" translate="yes" xml:space="preserve">
           <source>Literal type widening can be controlled through explicit type annotations. Specifically, when an expression of a literal type is inferred for a const location without a type annotation, that &lt;code&gt;const&lt;/code&gt; variable gets a widening literal type inferred. But when a &lt;code&gt;const&lt;/code&gt; location has an explicit literal type annotation, the &lt;code&gt;const&lt;/code&gt; variable gets a non-widening literal type.</source>
@@ -1257,7 +1365,7 @@
         </trans-unit>
         <trans-unit id="f24374818cfbd2c002fceb8b97034ee88dd96257" translate="yes" xml:space="preserve">
           <source>Location of default .d.ts</source>
-          <target state="new"/>
+          <target state="translated">默认.d.ts的位置</target>
         </trans-unit>
         <trans-unit id="f34ec36309212ab4f733a475011c562c23d0e729" translate="yes" xml:space="preserve">
           <source>Log.ts</source>
@@ -1317,7 +1425,7 @@
         </trans-unit>
         <trans-unit id="e04dbd57e91d78d0c5bec01a4fe02f73a4ba1540" translate="yes" xml:space="preserve">
           <source>Map Root - &lt;code&gt;mapRoot&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">地图根 &lt;code&gt;mapRoot&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="b39eaaa138d38f75f9ba15b0ecb54217b1f43d1d" translate="yes" xml:space="preserve">
           <source>Mapped Types</source>
@@ -1349,11 +1457,11 @@
         </trans-unit>
         <trans-unit id="e877b2873e30b35f125ca0ad5fb9dc583519caa0" translate="yes" xml:space="preserve">
           <source>Max Node Module JS Depth - &lt;code&gt;maxNodeModuleJsDepth&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">最大节点模块JS深度 &lt;code&gt;maxNodeModuleJsDepth&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="6746fd6ef4bdedacc9e255f7e5c953f3f9081507" translate="yes" xml:space="preserve">
           <source>Maybe it was easy to spot out for some experienced JavaScript developers, but the inner &lt;code&gt;for&lt;/code&gt;-loop will accidentally overwrite the variable &lt;code&gt;i&lt;/code&gt; because &lt;code&gt;i&lt;/code&gt; refers to the same function-scoped variable. As experienced developers know by now, similar sorts of bugs slip through code reviews and can be an endless source of frustration.</source>
-          <target state="new"/>
+          <target state="translated">也许对于一些有经验的JavaScript开发人员来说很容易发现，但是 &lt;code&gt;for&lt;/code&gt; -loop的内部会意外覆盖变量 &lt;code&gt;i&lt;/code&gt; ,因为 &lt;code&gt;i&lt;/code&gt; 引用的是相同的作用域变量。正如经验丰富的开发人员目前所知道的那样，类似的错误会贯穿代码审查，并可能导致无尽的挫败感。</target>
         </trans-unit>
         <trans-unit id="d61fb1c71d97cf23364513b6c042480baf71317b" translate="yes" xml:space="preserve">
           <source>Maybe it was easy to spot out for some, but the inner &lt;code&gt;for&lt;/code&gt;-loop will accidentally overwrite the variable &lt;code&gt;i&lt;/code&gt; because &lt;code&gt;i&lt;/code&gt; refers to the same function-scoped variable. As experienced developers know by now, similar sorts of bugs slip through code reviews and can be an endless source of frustration.</source>
@@ -1461,11 +1569,11 @@
         </trans-unit>
         <trans-unit id="bf3760256feac6cc46ec45ef674425285cde51d6" translate="yes" xml:space="preserve">
           <source>Modern browsers support all ES6 features, so &lt;code&gt;ES6&lt;/code&gt; is a good choice. You might choose to set a lower target if your code is deployed to older environments, or a higher target if your code is guaranteed to run in newer environments.</source>
-          <target state="new"/>
+          <target state="translated">现代浏览器支持所有ES6功能，因此 &lt;code&gt;ES6&lt;/code&gt; 是一个不错的选择。如果将代码部署到较旧的环境中，则可以选择设置较低的目标，如果可以保证代码可以在较新的环境中运行，则可以选择较高的目标。</target>
         </trans-unit>
         <trans-unit id="a6b8e599868465369a62573e28c7d5b2c17c8067" translate="yes" xml:space="preserve">
           <source>Modify the html by removing one of the &lt;code&gt;p&lt;/code&gt; tags, but keep the text.</source>
-          <target state="new"/>
+          <target state="translated">通过删除 &lt;code&gt;p&lt;/code&gt; 标记之一来修改html ，但保留文本。</target>
         </trans-unit>
         <trans-unit id="8686e36f3c455dfff0e15750343932a50c4f9345" translate="yes" xml:space="preserve">
           <source>Modular Libraries</source>
@@ -1477,7 +1585,7 @@
         </trans-unit>
         <trans-unit id="680e2cdf724785f8d2fb8c99fb4ac60b980c1748" translate="yes" xml:space="preserve">
           <source>Module - &lt;code&gt;module&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">模块- &lt;code&gt;module&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="679935999c06d0d64c305facc48d71ad3d62a359" translate="yes" xml:space="preserve">
           <source>Module Augmentation</source>
@@ -1489,7 +1597,7 @@
         </trans-unit>
         <trans-unit id="3f1f355f5558be61bf0295855b4e35d7e9e193c7" translate="yes" xml:space="preserve">
           <source>Module Resolution - &lt;code&gt;moduleResolution&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">模块分辨率 &lt;code&gt;moduleResolution&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="e38eacd064c21c297854627bdac879933ce99fef" translate="yes" xml:space="preserve">
           <source>Module Resolution Strategies</source>
@@ -1517,19 +1625,19 @@
         </trans-unit>
         <trans-unit id="de70d79767a9e812db99a7c477172374c0a8abe1" translate="yes" xml:space="preserve">
           <source>Module system</source>
-          <target state="new"/>
+          <target state="translated">模块系统</target>
         </trans-unit>
         <trans-unit id="0e1df43e7e9f83fc7173a7334ad19fcc3cc8e8bc" translate="yes" xml:space="preserve">
           <source>Module: Class</source>
-          <target state="new"/>
+          <target state="translated">模块。课堂</target>
         </trans-unit>
         <trans-unit id="f261737e777673d28880af66138654486e39e3bc" translate="yes" xml:space="preserve">
           <source>Module: Function</source>
-          <target state="new"/>
+          <target state="translated">模块。功能:</target>
         </trans-unit>
         <trans-unit id="3b2f8f319a1e5fc06c98c20b985a907aed2cafd5" translate="yes" xml:space="preserve">
           <source>Module: Plugin</source>
-          <target state="new"/>
+          <target state="translated">模块:插件</target>
         </trans-unit>
         <trans-unit id="04e9462c0ff02bb9032b92abd45881a3c7e15fb7" translate="yes" xml:space="preserve">
           <source>Modules</source>
@@ -1537,11 +1645,11 @@
         </trans-unit>
         <trans-unit id="48e09f525757a351dfe7b299e6750c6d122d7d38" translate="yes" xml:space="preserve">
           <source>Modules .d.ts</source>
-          <target state="new"/>
+          <target state="translated">模块.d.ts</target>
         </trans-unit>
         <trans-unit id="12d8406349015ac16eed554df9f310ef31446573" translate="yes" xml:space="preserve">
           <source>Modules also have a dependency on a module loader (such as CommonJs/Require.js) or a runtime which supports ES Modules. Modules provide for better code reuse, stronger isolation and better tooling support for bundling.</source>
-          <target state="new"/>
+          <target state="translated">模块还依赖于模块加载器(如CommonJs/Require.js)或支持ES模块的运行时。模块提供了更好的代码重用,更强的隔离性和更好的工具支持捆绑。</target>
         </trans-unit>
         <trans-unit id="a30c7f6e8f418488e99ab172a19da443b4fdc2aa" translate="yes" xml:space="preserve">
           <source>Modules also have a dependency on a module loader (such as CommonJs/Require.js). For a small JS application this might not be optimal, but for larger applications, the cost comes with long term modularity and maintainability benefits. Modules provide for better code reuse, stronger isolation and better tooling support for bundling.</source>
@@ -1565,7 +1673,7 @@
         </trans-unit>
         <trans-unit id="eb465684cf64b809ea4e18738ce52c8fd9a32f30" translate="yes" xml:space="preserve">
           <source>Modules can contain both code and declarations.</source>
-          <target state="new"/>
+          <target state="translated">模块可以包含代码和声明。</target>
         </trans-unit>
         <trans-unit id="5b28d96858ba2eea0c5a37016b2613ff4945fbf0" translate="yes" xml:space="preserve">
           <source>Modules can import types declared in other modules. But non-module global scripts cannot access types declared in modules. Enter &lt;code&gt;import&lt;/code&gt; types.</source>
@@ -1577,7 +1685,7 @@
         </trans-unit>
         <trans-unit id="252a052c9420d6ecb6b140e66b5a6e193c6c9859" translate="yes" xml:space="preserve">
           <source>Modules import one another using a module loader. At runtime the module loader is responsible for locating and executing all dependencies of a module before executing it. Well-known module loaders used in JavaScript are Node.js&amp;rsquo;s loader for &lt;a href=&quot;https://wikipedia.org/wiki/CommonJS&quot;&gt;CommonJS&lt;/a&gt; modules and the &lt;a href=&quot;http://requirejs.org/&quot;&gt;RequireJS&lt;/a&gt; loader for &lt;a href=&quot;https://github.com/amdjs/amdjs-api/blob/master/AMD.md&quot;&gt;AMD&lt;/a&gt; modules in Web applications.</source>
-          <target state="new"/>
+          <target state="translated">模块使用模块加载器相互导入。在运行时，模块加载程序负责在执行模块之前查找并执行模块的所有依赖关系。JavaScript中使用的著名模块加载器是用于Web应用程序中的&lt;a href=&quot;https://wikipedia.org/wiki/CommonJS&quot;&gt;CommonJS&lt;/a&gt;模块的Node.js加载器和用于&lt;a href=&quot;https://github.com/amdjs/amdjs-api/blob/master/AMD.md&quot;&gt;AMD&lt;/a&gt;模块的&lt;a href=&quot;http://requirejs.org/&quot;&gt;RequireJS&lt;/a&gt;加载器。</target>
         </trans-unit>
         <trans-unit id="f58764143073eae1cd29c9babec8bc1672b59332" translate="yes" xml:space="preserve">
           <source>Modules were always parsed in strict mode as per ES6, but for non-ES6 targets this was not respected in the generated code. Starting with TypeScript 1.8, emitted modules are always in strict mode. This shouldn&amp;rsquo;t have any visible changes in most code as TS considers most strict mode errors as errors at compile time, but it means that some things which used to silently fail at runtime in your TS code, like assigning to &lt;code&gt;NaN&lt;/code&gt;, will now loudly fail. You can reference the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode&quot;&gt;MDN Article&lt;/a&gt; on strict mode for a detailed list of the differences between strict mode and non-strict mode.</source>
@@ -1594,6 +1702,10 @@
         <trans-unit id="341a196acd33aea44262f80c4074a8f29f17eab0" translate="yes" xml:space="preserve">
           <source>More details can be found at &lt;a href=&quot;http://docs.nuget.org/Consume/Package-Manager-Dialog&quot;&gt;Package Manager Dialog&lt;/a&gt; and &lt;a href=&quot;https://github.com/Microsoft/TypeScript/wiki/Nightly-drops#using-nuget-with-msbuild&quot;&gt;using nightly builds with NuGet&lt;/a&gt;</source>
           <target state="translated">可以在&lt;a href=&quot;http://docs.nuget.org/Consume/Package-Manager-Dialog&quot;&gt;Package Manager对话框中&lt;/a&gt;找到更多详细信息，并&lt;a href=&quot;https://github.com/Microsoft/TypeScript/wiki/Nightly-drops#using-nuget-with-msbuild&quot;&gt;使用NuGet的每晚构建&lt;/a&gt;</target>
+        </trans-unit>
+        <trans-unit id="0b8c100979f382dfa286c98e3a8ee4186cc2f221" translate="yes" xml:space="preserve">
+          <source>More details can be found at &lt;a href=&quot;https://docs.nuget.org/Consume/Package-Manager-Dialog&quot;&gt;Package Manager Dialog&lt;/a&gt; and &lt;a href=&quot;https://github.com/Microsoft/TypeScript/wiki/Nightly-drops#using-nuget-with-msbuild&quot;&gt;using nightly builds with NuGet&lt;/a&gt;</source>
+          <target state="translated">可以在&lt;a href=&quot;https://docs.nuget.org/Consume/Package-Manager-Dialog&quot;&gt;Package Manager对话框中&lt;/a&gt;找到更多详细信息，并&lt;a href=&quot;https://github.com/Microsoft/TypeScript/wiki/Nightly-drops#using-nuget-with-msbuild&quot;&gt;使用NuGet的每晚构建&lt;/a&gt;</target>
         </trans-unit>
         <trans-unit id="53846a07e48104da9e41b5b1360721c3ad76cfc9" translate="yes" xml:space="preserve">
           <source>More details: &lt;a href=&quot;https://github.com/Microsoft/TypeScriptSamples/tree/master/jspm&quot;&gt;TypeScriptSamples/jspm&lt;/a&gt;</source>
@@ -1633,11 +1745,11 @@
         </trans-unit>
         <trans-unit id="752dbfdfe70e9a653727ad54bd026e4e1adbb672" translate="yes" xml:space="preserve">
           <source>More of a gotcha than a constraint. The class expression pattern creates singletons, so they can&amp;rsquo;t be mapped at the type system to support different variable types.</source>
-          <target state="new"/>
+          <target state="translated">更多的是陷阱而不是约束。类表达式模式创建单例，因此无法在类型系统上将它们映射为支持不同的变量类型。</target>
         </trans-unit>
         <trans-unit id="87404c3db1a136e631f5512bc31b4108095e74c7" translate="yes" xml:space="preserve">
           <source>More on Functions</source>
-          <target state="new"/>
+          <target state="translated">更多关于功能</target>
         </trans-unit>
         <trans-unit id="2090b67c917ff081773b34229e30e6990c49b179" translate="yes" xml:space="preserve">
           <source>More plainly, that code snippet is the same as writing the following.</source>
@@ -1645,7 +1757,7 @@
         </trans-unit>
         <trans-unit id="e65b8445ad886f1be93458429fb5dd37c90a50bb" translate="yes" xml:space="preserve">
           <source>More than this, JS has become popular enough to be used outside the context of browsers, such as implementing JS servers using node.js. The &amp;ldquo;run anywhere&amp;rdquo; nature of JS makes it an attractive choice for cross-platform development. There are many developers these days that use &lt;em&gt;only&lt;/em&gt; JavaScript to program their entire stack!</source>
-          <target state="new"/>
+          <target state="translated">不仅如此，JS已经变得足够流行，可以在浏览器的上下文之外使用，例如使用node.js实现JS服务器。JS的&amp;ldquo;随处运行&amp;rdquo;性质使它成为跨平台开发的有吸引力的选择。如今，有许多开发人员&lt;em&gt;仅&lt;/em&gt;使用JavaScript对其整个堆栈进行编程！</target>
         </trans-unit>
         <trans-unit id="ba3ba120356f7dea7aa61a6e3ef6b6565d3edcce" translate="yes" xml:space="preserve">
           <source>Most popular libraries are now available as UMD packages. Examples include &lt;a href=&quot;https://jquery.com/&quot;&gt;jQuery&lt;/a&gt;, &lt;a href=&quot;http://momentjs.com/&quot;&gt;Moment.js&lt;/a&gt;, &lt;a href=&quot;https://lodash.com/&quot;&gt;lodash&lt;/a&gt;, and many more.</source>
@@ -1653,7 +1765,7 @@
         </trans-unit>
         <trans-unit id="94b01864f5579af47acd49be012292e69db8aa02" translate="yes" xml:space="preserve">
           <source>Most programming languages would throw an error when these sorts of errors occur, some would do so during compilation &amp;mdash; before any code is running. When writing small programs, such quirks are annoying but manageable; when writing applications with hundreds or thousands of lines of code, these constant surprises are a serious problem.</source>
-          <target state="new"/>
+          <target state="translated">大多数编程语言会在发生此类错误时引发错误，有些会在编译期间（在运行任何代码之前）引发错误。在编写小型程序时，这种怪癖很烦人，但很容易管理。当编写具有成百上千行代码的应用程序时，这些不断的惊喜是一个严重的问题。</target>
         </trans-unit>
         <trans-unit id="638f05be2eca8814a76fc1ca76ad8fd857366420" translate="yes" xml:space="preserve">
           <source>Moving to TypeScript Files</source>
@@ -1685,7 +1797,7 @@
         </trans-unit>
         <trans-unit id="aede1800680b8eed7745689bb8cd192726458952" translate="yes" xml:space="preserve">
           <source>Mutually exclusive with &lt;a href=&quot;#sourceMap&quot;&gt;&lt;code&gt;sourceMap&lt;/code&gt;&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">与&lt;a href=&quot;#sourceMap&quot;&gt; &lt;code&gt;sourceMap&lt;/code&gt; 互斥&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="2e944fe6e675e7e28c8ee6b40790b0f75443bf77" translate="yes" xml:space="preserve">
           <source>MyClass.ts</source>
@@ -1769,7 +1881,7 @@
         </trans-unit>
         <trans-unit id="b69558e9b061498c09673bf8df0b367bf33694fd" translate="yes" xml:space="preserve">
           <source>Named types just give a name to a type; for assignability purposes there&amp;rsquo;s no difference between the type alias &lt;code&gt;One&lt;/code&gt; and the interface type &lt;code&gt;Two&lt;/code&gt; below. They both have a property &lt;code&gt;p: string&lt;/code&gt;. (Type aliases behave differently from interfaces with respect to recursive definitions and type parameters, however.)</source>
-          <target state="new"/>
+          <target state="translated">命名类型只是给类型起一个名字。出于可分配性的目的，下面的别名类型 &lt;code&gt;One&lt;/code&gt; 和接口类型 &lt;code&gt;Two&lt;/code&gt; 之间没有区别。它们都有一个属性 &lt;code&gt;p: string&lt;/code&gt; 。 （但是，在递归定义和类型参数方面，类型别名的行为不同于接口的行为。）</target>
         </trans-unit>
         <trans-unit id="0449e1003dd0cdd92ab163e844540614258e8b38" translate="yes" xml:space="preserve">
           <source>Namespace</source>
@@ -1793,7 +1905,7 @@
         </trans-unit>
         <trans-unit id="0b0a6e9c59b25d6d7bd54387d9652cfedae85b49" translate="yes" xml:space="preserve">
           <source>Namespaces are a TypeScript-specific way to organize code.</source>
-          <target state="new"/>
+          <target state="translated">命名空间是一种TypeScript特有的组织代码的方式。</target>
         </trans-unit>
         <trans-unit id="13339d851d51b5c81981062cf249473168c678ea" translate="yes" xml:space="preserve">
           <source>Namespaces are flexible enough to also merge with other types of declarations. To do so, the namespace declaration must follow the declaration it will merge with. The resulting declaration has properties of both declaration types. TypeScript uses this capability to model some of the patterns in JavaScript as well as other programming languages.</source>
@@ -1801,7 +1913,7 @@
         </trans-unit>
         <trans-unit id="3952a1181de40dbd2a06ce80db7e580384e74ec9" translate="yes" xml:space="preserve">
           <source>Namespaces are important to avoid naming collisions in the global scope. For example, you might have &lt;code&gt;My.Application.Customer.AddForm&lt;/code&gt; and &lt;code&gt;My.Application.Order.AddForm&lt;/code&gt; &amp;mdash; two types with the same name, but a different namespace. This, however, is not an issue with modules. Within a module, there&amp;rsquo;s no plausible reason to have two objects with the same name. From the consumption side, the consumer of any given module gets to pick the name that they will use to refer to the module, so accidental naming conflicts are impossible.</source>
-          <target state="new"/>
+          <target state="translated">命名空间对于避免在全局范围内命名冲突很重要。例如，您可能具有 &lt;code&gt;My.Application.Customer.AddForm&lt;/code&gt; 和 &lt;code&gt;My.Application.Order.AddForm&lt;/code&gt; &amp;mdash;两种类型具有相同的名称，但名称空间不同。但是，这不是模块的问题。在一个模块中，没有任何理由使两个对象具有相同的名称。从使用方面来看，任何给定模块的使用者都可以选择他们将用来引用该模块的名称，因此，不可能发生意外的命名冲突。</target>
         </trans-unit>
         <trans-unit id="0fd9b6444054278bf7680e4f8067f50258da5add" translate="yes" xml:space="preserve">
           <source>Namespaces are important to avoid naming collisions in the global scope. For example, you might have &lt;code&gt;My.Application.Customer.AddForm&lt;/code&gt; and &lt;code&gt;My.Application.Order.AddForm&lt;/code&gt; &amp;ndash; two types with the same name, but a different namespace. This, however, is not an issue with modules. Within a module, there&amp;rsquo;s no plausible reason to have two objects with the same name. From the consumption side, the consumer of any given module gets to pick the name that they will use to refer to the module, so accidental naming conflicts are impossible.</source>
@@ -1813,11 +1925,11 @@
         </trans-unit>
         <trans-unit id="558fb2926bc952cf7a6b78aa83d90ef0f04f4eb8" translate="yes" xml:space="preserve">
           <source>Namespaces are simply named JavaScript objects in the global namespace. This makes namespaces a very simple construct to use. Unlike modules, they can span multiple files, and can be concatenated using &lt;code&gt;--outFile&lt;/code&gt;. Namespaces can be a good way to structure your code in a Web Application, with all dependencies included as &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; tags in your HTML page.</source>
-          <target state="new"/>
+          <target state="translated">命名空间在全局命名空间中只是命名为JavaScript对象。这使名称空间成为一个非常简单的构造。与模块不同，它们可以跨多个文件，并且可以使用 &lt;code&gt;--outFile&lt;/code&gt; 进行串联。命名空间是在Web应用程序中构建代码的一种好方法，所有依赖项都作为 &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; 标记包含在HTML页面中。</target>
         </trans-unit>
         <trans-unit id="abfc41609e10694546f23e6fe8ec31d3b441731d" translate="yes" xml:space="preserve">
           <source>Namespaces in Module Code</source>
-          <target state="new"/>
+          <target state="translated">模块代码中的命名空间</target>
         </trans-unit>
         <trans-unit id="362b423baafd1e7b201b94eb4694146a945d2f27" translate="yes" xml:space="preserve">
           <source>Namespacing</source>
@@ -1897,7 +2009,7 @@
         </trans-unit>
         <trans-unit id="3249cca6099abd4cca11ff2add4d8cce20a25fa1" translate="yes" xml:space="preserve">
           <source>New Line - &lt;code&gt;newLine&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">新线 &lt;code&gt;newLine&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="70bbb8ec99677d5bef2d3951d16be6268f24f3eb" translate="yes" xml:space="preserve">
           <source>New TypeScript Playground</source>
@@ -1909,7 +2021,7 @@
         </trans-unit>
         <trans-unit id="3f170caead65df254d786032a409a6f6d204bca6" translate="yes" xml:space="preserve">
           <source>Next Steps</source>
-          <target state="new"/>
+          <target state="translated">下一步工作</target>
         </trans-unit>
         <trans-unit id="7ba10c954271506a3bcae23fd68b8232b3e4e8de" translate="yes" xml:space="preserve">
           <source>Next we have an example of how to override the constructor.</source>
@@ -1937,7 +2049,7 @@
         </trans-unit>
         <trans-unit id="d23baf839f3be80e72847391d0e91cd097e57246" translate="yes" xml:space="preserve">
           <source>Next, we then use the class directly. Here we create a new variable called &lt;code&gt;greeterMaker&lt;/code&gt;. This variable will hold the class itself, or said another way its constructor function. Here we use &lt;code&gt;typeof Greeter&lt;/code&gt;, that is &amp;ldquo;give me the type of the &lt;code&gt;Greeter&lt;/code&gt; class itself&amp;rdquo; rather than the instance type. Or, more precisely, &amp;ldquo;give me the type of the symbol called &lt;code&gt;Greeter&lt;/code&gt;,&amp;rdquo; which is the type of the constructor function. This type will contain all of the static members of Greeter along with the constructor that creates instances of the &lt;code&gt;Greeter&lt;/code&gt; class. We show this by using &lt;code&gt;new&lt;/code&gt; on &lt;code&gt;greeterMaker&lt;/code&gt;, creating new instances of &lt;code&gt;Greeter&lt;/code&gt; and invoking them as before. It is also good to mention that changing static property is frowned upon, here &lt;code&gt;greeter3&lt;/code&gt; has &lt;code&gt;&quot;Hey there!&quot;&lt;/code&gt; instead of &lt;code&gt;&quot;Hello, there&quot;&lt;/code&gt; on &lt;code&gt;standardGreeting&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">接下来，我们直接使用该类。在这里，我们创建了一个名为 &lt;code&gt;greeterMaker&lt;/code&gt; 的新变量。这个变量将保存类本身，或者用另一种方式表示其构造函数。在这里，我们使用 &lt;code&gt;typeof Greeter&lt;/code&gt; ，即&amp;ldquo;给我 &lt;code&gt;Greeter&lt;/code&gt; 类本身的类型&amp;rdquo;，而不是实例类型。或者更确切地说，&amp;ldquo;给我称为 &lt;code&gt;Greeter&lt;/code&gt; 的符号的类型&amp;rdquo;，这是构造函数的类型。该类型将包含Greeter的所有静态成员，以及创建 &lt;code&gt;Greeter&lt;/code&gt; 类实例的构造函数。我们通过在 &lt;code&gt;greeterMaker&lt;/code&gt; 上使用 &lt;code&gt;new&lt;/code&gt; 来展示这一点，并创建 &lt;code&gt;Greeter&lt;/code&gt; 的新实例。并像以前一样调用它们。这也是很好的一提的是不断变化的静态属性是令人难以接受的，在这里 &lt;code&gt;greeter3&lt;/code&gt; 有 &lt;code&gt;&quot;Hey there!&quot;&lt;/code&gt; 而不是 &lt;code&gt;standardGreeting&lt;/code&gt; 上的 &lt;code&gt;&quot;Hello, there&quot;&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="48fd249b15120ba7e0e8c493ff3db4c13ad95d86" translate="yes" xml:space="preserve">
           <source>Next, we&amp;rsquo;ll add development-time dependencies on the &lt;a href=&quot;https://www.npmjs.com/package/ts-loader&quot;&gt;ts-loader&lt;/a&gt; and &lt;a href=&quot;https://www.npmjs.com/package/source-map-loader&quot;&gt;source-map-loader&lt;/a&gt;.</source>
@@ -1949,7 +2061,7 @@
         </trans-unit>
         <trans-unit id="65015e14839407ce052eab7ebecff46c96ec532e" translate="yes" xml:space="preserve">
           <source>Next, we&amp;rsquo;ve also added the &lt;code&gt;@readonly&lt;/code&gt; modifier to ensure that a property is only ever written to during initialization.</source>
-          <target state="new"/>
+          <target state="translated">接下来，我们还添加了 &lt;code&gt;@readonly&lt;/code&gt; 修饰符，以确保仅在初始化期间写入属性。</target>
         </trans-unit>
         <trans-unit id="3da6f66c39205de12c1b0ea85576f12a60c67429" translate="yes" xml:space="preserve">
           <source>Nightly Builds</source>
@@ -1969,31 +2081,31 @@
         </trans-unit>
         <trans-unit id="137f56df766041937e987c0af9dc02adfcc4755b" translate="yes" xml:space="preserve">
           <source>No &amp;ldquo;main&amp;rdquo; field</source>
-          <target state="new"/>
+          <target state="translated">没有&amp;ldquo;主要&amp;rdquo;领域</target>
         </trans-unit>
         <trans-unit id="7f2bbc3e501b46e56dd329eeeb31b55fa0b1f266" translate="yes" xml:space="preserve">
           <source>No &amp;ldquo;types&amp;rdquo; field</source>
-          <target state="new"/>
+          <target state="translated">没有&amp;ldquo;类型&amp;rdquo;字段</target>
         </trans-unit>
         <trans-unit id="947828c2d274f8a21e38e5dd1c59c5dea679fff4" translate="yes" xml:space="preserve">
           <source>No Emit - &lt;code&gt;noEmit&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">禁止 &lt;code&gt;noEmit&lt;/code&gt; -禁止发射</target>
         </trans-unit>
         <trans-unit id="517bdc2dcead288c404ef1a218dadda3060ef0b5" translate="yes" xml:space="preserve">
           <source>No Emit Helpers - &lt;code&gt;noEmitHelpers&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">没有 &lt;code&gt;noEmitHelpers&lt;/code&gt; 助手-noEmitHelpers</target>
         </trans-unit>
         <trans-unit id="03f8de53c793590eccee3c9ce2ed4caeb14a5452" translate="yes" xml:space="preserve">
           <source>No Emit On Error - &lt;code&gt;noEmitOnError&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">错误时不 &lt;code&gt;noEmitOnError&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="7b1eb323a13015b5221c0cd99fda83cbd652752c" translate="yes" xml:space="preserve">
           <source>No Error Truncation - &lt;code&gt;noErrorTruncation&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">无错误截断 &lt;code&gt;noErrorTruncation&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="8026bb65899345422d9472e2fb88c6be373e8549" translate="yes" xml:space="preserve">
           <source>No Fallthrough Cases In Switch - &lt;code&gt;noFallthroughCasesInSwitch&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">交换机中没有失败案例 &lt;code&gt;noFallthroughCasesInSwitch&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="d7957143496bc3e4f3d8bec258d34ddbf9a66c00" translate="yes" xml:space="preserve">
           <source>No Implicit &lt;code&gt;any&lt;/code&gt;</source>
@@ -2005,39 +2117,39 @@
         </trans-unit>
         <trans-unit id="fa3c1c5d879a76450e09d3b73229dae5a7fb02f8" translate="yes" xml:space="preserve">
           <source>No Implicit Any - &lt;code&gt;noImplicitAny&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">没有隐含的任何 &lt;code&gt;noImplicitAny&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="10c71f4c5d6c858e8b215dbb144dbf6d05414836" translate="yes" xml:space="preserve">
           <source>No Implicit Returns - &lt;code&gt;noImplicitReturns&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">没有隐式回报 &lt;code&gt;noImplicitReturns&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="5134182dd86f7b3181089a2100da25c6c0bc7cf4" translate="yes" xml:space="preserve">
           <source>No Implicit This - &lt;code&gt;noImplicitThis&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">没有隐含的 &lt;code&gt;noImplicitThis&lt;/code&gt; -没有隐含的暗示</target>
         </trans-unit>
         <trans-unit id="763fcaff914bd4c20f0951a9a84eab99aa002c2b" translate="yes" xml:space="preserve">
           <source>No Implicit Use Strict - &lt;code&gt;noImplicitUseStrict&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">没有隐式使用严格 &lt;code&gt;noImplicitUseStrict&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="00b77ce03e2df58d71af1d4f405d9bf1ac7e9005" translate="yes" xml:space="preserve">
           <source>No Lib - &lt;code&gt;noLib&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">无库 &lt;code&gt;noLib&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="592cae7a1118d335c8f2c20593f693616662691c" translate="yes" xml:space="preserve">
           <source>No Resolve - &lt;code&gt;noResolve&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">没有消退- &lt;code&gt;noResolve&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="675ae146fc17269a9c7ab5f87fa461ad1c19cf8e" translate="yes" xml:space="preserve">
           <source>No Strict Generic Checks - &lt;code&gt;noStrictGenericChecks&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">没有严格的通用检查 &lt;code&gt;noStrictGenericChecks&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="36e5a62628a8609c8c2ea29d4e598862499087d1" translate="yes" xml:space="preserve">
           <source>No Unused Locals - &lt;code&gt;noUnusedLocals&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">没有未使用的 &lt;code&gt;noUnusedLocals&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="56c92a5c1d34b1db353f920c96e229f154407160" translate="yes" xml:space="preserve">
           <source>No Unused Parameters - &lt;code&gt;noUnusedParameters&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">没有未使用的参数 &lt;code&gt;noUnusedParameters&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="2b9fbfb21cfa0b34035ba18cef71091f735deb52" translate="yes" xml:space="preserve">
           <source>No type is a subtype of or assignable to &lt;code&gt;never&lt;/code&gt; (except &lt;code&gt;never&lt;/code&gt; itself).</source>
@@ -2049,15 +2161,19 @@
         </trans-unit>
         <trans-unit id="5c47793ac8ba8a46e72ec2594c5dca3b16c44344" translate="yes" xml:space="preserve">
           <source>Node 10</source>
-          <target state="new"/>
+          <target state="translated">节点10</target>
         </trans-unit>
         <trans-unit id="1c07c40cb823fe2596e38b4e3bb579fa72706bed" translate="yes" xml:space="preserve">
           <source>Node 12</source>
-          <target state="new"/>
+          <target state="translated">节点12</target>
+        </trans-unit>
+        <trans-unit id="b43fdbd3b2c6a5806d127c28acb9f482a0bab1f3" translate="yes" xml:space="preserve">
+          <source>Node 14</source>
+          <target state="translated">节点14</target>
         </trans-unit>
         <trans-unit id="1f07679d61eb1484f3fbb7f03c094ced47df3b09" translate="yes" xml:space="preserve">
           <source>Nominal Reified Type Systems</source>
-          <target state="new"/>
+          <target state="translated">名义重化型系统</target>
         </trans-unit>
         <trans-unit id="05004c27291ee5258d4639719f948e95da6af52b" translate="yes" xml:space="preserve">
           <source>Non-Goals</source>
@@ -2065,7 +2181,7 @@
         </trans-unit>
         <trans-unit id="116d53de6ee6ef67d2d4805314ad0787f638003a" translate="yes" xml:space="preserve">
           <source>Non-Module Files</source>
-          <target state="new"/>
+          <target state="translated">非模块文件</target>
         </trans-unit>
         <trans-unit id="0dc5564786f44ffe5d739e06a70c0a346cb415f8" translate="yes" xml:space="preserve">
           <source>Non-function members of the interfaces should be unique. If they are not unique, they must be of the same type. The compiler will issue an error if the interfaces both declare a non-function member of the same name, but of different types.</source>
@@ -2113,7 +2229,7 @@
         </trans-unit>
         <trans-unit id="9fd029d8465bd91c3c7282b62d1066fe73ce0eee" translate="yes" xml:space="preserve">
           <source>Normally, TypeScript would return silently on success.</source>
-          <target state="new"/>
+          <target state="translated">通常情况下,TypeScript会在成功后无声地返回。</target>
         </trans-unit>
         <trans-unit id="3d901c000076266c2726be52567eee3a9e906da5" translate="yes" xml:space="preserve">
           <source>Not all merges are allowed in TypeScript. Currently, classes can not merge with other classes or with variables. For information on mimicking class merging, see the &lt;a href=&quot;mixins&quot;&gt;Mixins in TypeScript&lt;/a&gt; section.</source>
@@ -2131,9 +2247,13 @@
           <source>Note any tags which are not explicitly listed below (such as &lt;code&gt;@async&lt;/code&gt;) are not yet supported.</source>
           <target state="translated">请注意，尚不支持下面未明确列出的任何标签（例如 &lt;code&gt;@async&lt;/code&gt; ）。</target>
         </trans-unit>
+        <trans-unit id="8717f9c00739ed6489469366e14a0bc6d63a8887" translate="yes" xml:space="preserve">
+          <source>Note if using TypeScript 4.2, prefer &lt;a href=&quot;#explainFiles&quot;&gt;&lt;code&gt;explainFiles&lt;/code&gt;&lt;/a&gt; which offers an explanation of why a file was added too.</source>
+          <target state="translated">请注意，如果使用TypeScript 4.2，则最好使用&lt;a href=&quot;#explainFiles&quot;&gt; &lt;code&gt;explainFiles&lt;/code&gt; &lt;/a&gt;，该文件也说明了为什么还要添加文件。</target>
+        </trans-unit>
         <trans-unit id="9f5feea3e404674922df60252466104fa5c5fc9e" translate="yes" xml:space="preserve">
           <source>Note that &lt;code&gt;@enum&lt;/code&gt; is quite different from, and much simpler than, TypeScript&amp;rsquo;s &lt;code&gt;enum&lt;/code&gt;. However, unlike TypeScript&amp;rsquo;s enums, &lt;code&gt;@enum&lt;/code&gt; can have any type:</source>
-          <target state="new"/>
+          <target state="translated">需要注意的是 &lt;code&gt;@enum&lt;/code&gt; 是完全不同的，而且比，打字稿的更加简单 &lt;code&gt;enum&lt;/code&gt; 。然而，与打字稿的枚举， &lt;code&gt;@enum&lt;/code&gt; 可以有任何类型：</target>
         </trans-unit>
         <trans-unit id="034f4525d05999ff963000183c0ac076ec562336" translate="yes" xml:space="preserve">
           <source>Note that &lt;code&gt;@enum&lt;/code&gt; is quite different from, and much simpler than, Typescript&amp;rsquo;s &lt;code&gt;enum&lt;/code&gt;. However, unlike Typescript&amp;rsquo;s enums, &lt;code&gt;@enum&lt;/code&gt; can have any type:</source>
@@ -2149,11 +2269,15 @@
         </trans-unit>
         <trans-unit id="a8635b5b3c1a94603cc953231075f37144a428de" translate="yes" xml:space="preserve">
           <source>Note that &lt;code&gt;keyof any&lt;/code&gt; represents the type of any value that can be used as an index to an object. In otherwords, &lt;code&gt;keyof any&lt;/code&gt; is currently equal to &lt;code&gt;string | number | symbol&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">请注意， &lt;code&gt;keyof any&lt;/code&gt; 表示可以用作对象索引的任何值的类型。换句话说， &lt;code&gt;keyof any&lt;/code&gt; 当前等于 &lt;code&gt;string | number | symbol&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="1258e6d6b1a495d8e56ed02d68cc95af53525487" translate="yes" xml:space="preserve">
           <source>Note that &lt;code&gt;y&lt;/code&gt; has an extra &lt;code&gt;location&lt;/code&gt; property, but this does not create an error. Only members of the target type (&lt;code&gt;Named&lt;/code&gt; in this case) are considered when checking for compatibility.</source>
           <target state="translated">请注意， &lt;code&gt;y&lt;/code&gt; 具有额外的 &lt;code&gt;location&lt;/code&gt; 属性，但这不会产生错误。目标类型（只有成员 &lt;code&gt;Named&lt;/code&gt; 在这种情况下）的兼容性检查时被考虑。</target>
+        </trans-unit>
+        <trans-unit id="851055dd6dee2383c5b008f867f0f4cd2bb01af3" translate="yes" xml:space="preserve">
+          <source>Note that &lt;code&gt;y&lt;/code&gt; has an extra &lt;code&gt;owner&lt;/code&gt; property, but this does not create an error. Only members of the target type (&lt;code&gt;Pet&lt;/code&gt; in this case) are considered when checking for compatibility.</source>
+          <target state="translated">请注意， &lt;code&gt;y&lt;/code&gt; 具有额外的 &lt;code&gt;owner&lt;/code&gt; 属性，但这不会产生错误。检查兼容性时，仅考虑目标类型的成员（在这种情况下为 &lt;code&gt;Pet&lt;/code&gt; ）。</target>
         </trans-unit>
         <trans-unit id="52de29b3288a647d26453cfca4097defc33488b8" translate="yes" xml:space="preserve">
           <source>Note that TypeScript treats &lt;code&gt;null&lt;/code&gt; and &lt;code&gt;undefined&lt;/code&gt; differently in order to match JavaScript semantics. &lt;code&gt;string | null&lt;/code&gt; is a different type than &lt;code&gt;string | undefined&lt;/code&gt; and &lt;code&gt;string | undefined | null&lt;/code&gt;.</source>
@@ -2161,7 +2285,7 @@
         </trans-unit>
         <trans-unit id="9d964565fed797b8fe69da21280237178f8dd90d" translate="yes" xml:space="preserve">
           <source>Note that TypeScript will never write an output file to a directory outside of &lt;code&gt;outDir&lt;/code&gt;, and will never skip emitting a file. For this reason, &lt;code&gt;rootDir&lt;/code&gt; also enforces that all files which need to be emitted are underneath the &lt;code&gt;rootDir&lt;/code&gt; path.</source>
-          <target state="new"/>
+          <target state="translated">请注意，TypeScript永远不会将输出文件写入 &lt;code&gt;outDir&lt;/code&gt; 之外的目录，并且永远不会跳过发出文件。因此， &lt;code&gt;rootDir&lt;/code&gt; 还强制将所有需要发出的文件都放在 &lt;code&gt;rootDir&lt;/code&gt; 路径下。</target>
         </trans-unit>
         <trans-unit id="fad3fa5b17d28ad4ad1296cea04ea7aae98a3e8a" translate="yes" xml:space="preserve">
           <source>Note that as with &lt;code&gt;tsconfig.json&lt;/code&gt; / &lt;code&gt;-p&lt;/code&gt;, existing TypeScript project properties will not be respected - all settings should be managed using your tsconfig file.</source>
@@ -2169,11 +2293,11 @@
         </trans-unit>
         <trans-unit id="49f454e4294f1faa6bdcf0d5b1903082b8d7d4af" translate="yes" xml:space="preserve">
           <source>Note that calling a method on a numeric literal requires it to be in parentheses to aid the parser.</source>
-          <target state="new"/>
+          <target state="translated">请注意,在数字文字上调用方法时,需要将其放在括号中以帮助解析器。</target>
         </trans-unit>
         <trans-unit id="af06da8b751f486668f66523aec780426d9aaf88" translate="yes" xml:space="preserve">
           <source>Note that functions and arrays are objects at runtime, but have their own predicates.</source>
-          <target state="new"/>
+          <target state="translated">请注意,函数和数组在运行时是对象,但有自己的谓词。</target>
         </trans-unit>
         <trans-unit id="b588c9ab272861e6d668b1d11af54118f839ddd3" translate="yes" xml:space="preserve">
           <source>Note that global variables declared with &lt;code&gt;let&lt;/code&gt; and &lt;code&gt;const&lt;/code&gt; don&amp;rsquo;t show up on &lt;code&gt;globalThis&lt;/code&gt;.</source>
@@ -2197,7 +2321,7 @@
         </trans-unit>
         <trans-unit id="4521e5d9ffa1f2a7a2398a1ba71b06034b84ba66" translate="yes" xml:space="preserve">
           <source>Note that inference will work in any order, but intellisense will only work left-to-right, so TypeScript prefers to declare &lt;code&gt;map&lt;/code&gt; with the array first:</source>
-          <target state="new"/>
+          <target state="translated">请注意，推理可以以任何顺序进行，但是intellisense只能从左到右进行，因此TypeScript倾向于先声明数组的 &lt;code&gt;map&lt;/code&gt; ：</target>
         </trans-unit>
         <trans-unit id="d0af180e34bef9f30805628b530dfa3020972dea" translate="yes" xml:space="preserve">
           <source>Note that it&amp;rsquo;s possible to define many types in the global scope when writing a global declaration file. We strongly discourage this as it leads to possible unresolvable name conflicts when many declaration files are in a project.</source>
@@ -2225,7 +2349,7 @@
         </trans-unit>
         <trans-unit id="8e52a12186dadc57595c17ea6c93216559c79848" translate="yes" xml:space="preserve">
           <source>Note that the return type of &lt;code&gt;area&lt;/code&gt; is inferred to be &lt;code&gt;number&lt;/code&gt; because TypeScript knows the function is total. If some variant is not covered, the return type of &lt;code&gt;area&lt;/code&gt; will be &lt;code&gt;number | undefined&lt;/code&gt; instead.</source>
-          <target state="new"/>
+          <target state="translated">注意，因为TypeScript知道函数是合计的，所以将 &lt;code&gt;area&lt;/code&gt; 的返回类型推断为 &lt;code&gt;number&lt;/code&gt; 。如果未涵盖某些变体，则 &lt;code&gt;area&lt;/code&gt; 的返回类型将为 &lt;code&gt;number | undefined&lt;/code&gt; 取而代之的是undefined。</target>
         </trans-unit>
         <trans-unit id="d805d68393f371b58b5632620fd80bca6ffff116" translate="yes" xml:space="preserve">
           <source>Note that this collapsing should only occur when all overloads have the same return type.</source>
@@ -2249,7 +2373,7 @@
         </trans-unit>
         <trans-unit id="ca498eaf7012359010349b6f8e9e80f634eacb51" translate="yes" xml:space="preserve">
           <source>Note that using &lt;code&gt;export default&lt;/code&gt; in your .d.ts files requires &lt;a href=&quot;https://www.typescriptlang.org/tsconfig#esModuleInterop&quot;&gt;&lt;code&gt;esModuleInterop: true&lt;/code&gt;&lt;/a&gt; to work. If you can&amp;rsquo;t have &lt;code&gt;esModuleInterop: true&lt;/code&gt; in your project, such as when you&amp;rsquo;re submitting a PR to Definitely Typed, you&amp;rsquo;ll have to use the &lt;code&gt;export=&lt;/code&gt; syntax instead. This older syntax is harder to use but works everywhere. Here&amp;rsquo;s how the above example would have to be written using &lt;code&gt;export=&lt;/code&gt;:</source>
-          <target state="new"/>
+          <target state="translated">请注意，在.d.ts文件中使用 &lt;code&gt;export default&lt;/code&gt; 需要&lt;a href=&quot;https://www.typescriptlang.org/tsconfig#esModuleInterop&quot;&gt; &lt;code&gt;esModuleInterop: true&lt;/code&gt; &lt;/a&gt;才能工作。如果您的项目中没有 &lt;code&gt;esModuleInterop: true&lt;/code&gt; ，例如将PR提交给Definitely Typed时，则必须使用 &lt;code&gt;export=&lt;/code&gt; 语法。这种较旧的语法较难使用，但可在任何地方使用。这是上面示例必须使用 &lt;code&gt;export=&lt;/code&gt; 编写的方式：</target>
         </trans-unit>
         <trans-unit id="eead77930da9ed7756b7450464191e29579bb786" translate="yes" xml:space="preserve">
           <source>Note that we cannot add to type aliases (&lt;code&gt;type s = string;&lt;/code&gt;) using an interface.</source>
@@ -2275,6 +2399,10 @@
           <source>Note that while this example uses &lt;a href=&quot;https://reactjs.org/docs/components-and-props.html#functional-and-class-components&quot;&gt;function components&lt;/a&gt;, we could also make our example a little &lt;em&gt;classier&lt;/em&gt; as well.</source>
           <target state="translated">请注意，虽然这个例子使用&lt;a href=&quot;https://reactjs.org/docs/components-and-props.html#functional-and-class-components&quot;&gt;功能不同的组件&lt;/a&gt;，我们也可以让我们的例子中一点点&lt;em&gt;分类器&lt;/em&gt;为好。</target>
         </trans-unit>
+        <trans-unit id="34251a04d5ba8fb11fec4ca7f77a83e669f75693" translate="yes" xml:space="preserve">
+          <source>Note, conditional types are not permitted to reference themselves recursively. For example the following is an error.</source>
+          <target state="translated">注意,条件类型不允许递归引用自己。例如下面是一个错误。</target>
+        </trans-unit>
         <trans-unit id="f4126eba79591c06a88ec80a2218d901b6a7fced" translate="yes" xml:space="preserve">
           <source>Note: &lt;code&gt;&quot;ESNext&quot;&lt;/code&gt; targets latest supported</source>
           <target state="translated">注意： &lt;code&gt;&quot;ESNext&quot;&lt;/code&gt; 针对最新支持的对象</target>
@@ -2285,11 +2413,11 @@
         </trans-unit>
         <trans-unit id="9d7cb6b652ecb3fc440c1897098d4132f67f5630" translate="yes" xml:space="preserve">
           <source>Note: &lt;code&gt;node&lt;/code&gt; module resolution is the most-commonly used in the TypeScript community and is recommended for most projects. If you are having resolution problems with &lt;code&gt;import&lt;/code&gt;s and &lt;code&gt;export&lt;/code&gt;s in TypeScript, try setting &lt;code&gt;moduleResolution: &quot;node&quot;&lt;/code&gt; to see if it fixes the issue.</source>
-          <target state="new"/>
+          <target state="translated">注意： &lt;code&gt;node&lt;/code&gt; 模块分辨率是TypeScript社区中最常用的方法，建议大多数项目使用。如果您在TypeScript中的 &lt;code&gt;import&lt;/code&gt; 和 &lt;code&gt;export&lt;/code&gt; 遇到解析问题，请尝试设置 &lt;code&gt;moduleResolution: &quot;node&quot;&lt;/code&gt; 以查看它是否解决了该问题。</target>
         </trans-unit>
         <trans-unit id="b385aa9974c78d1114e7d19ac34ae3cecb189cbb" translate="yes" xml:space="preserve">
           <source>Note: &lt;code&gt;outFile&lt;/code&gt; cannot be used unless &lt;code&gt;module&lt;/code&gt; is &lt;code&gt;None&lt;/code&gt;, &lt;code&gt;System&lt;/code&gt;, or &lt;code&gt;AMD&lt;/code&gt;. This option &lt;em&gt;cannot&lt;/em&gt; be used to bundle CommonJS or ES6 modules.</source>
-          <target state="new"/>
+          <target state="translated">注意：除非 &lt;code&gt;module&lt;/code&gt; 为 &lt;code&gt;None&lt;/code&gt; ， &lt;code&gt;System&lt;/code&gt; 或 &lt;code&gt;AMD&lt;/code&gt; ，否则不能使用 &lt;code&gt;outFile&lt;/code&gt; 。此选项&lt;em&gt;不能&lt;/em&gt;用于捆绑CommonJS或ES6模块。&lt;em&gt;&lt;/em&gt;</target>
         </trans-unit>
         <trans-unit id="eff587a71ddbf90b7c884baa1aa1a82827ace5dd" translate="yes" xml:space="preserve">
           <source>Note: Avoid using &lt;code&gt;Object&lt;/code&gt; in favor of the non-primitive &lt;code&gt;object&lt;/code&gt; type as described in our &lt;a href=&quot;declaration-files/do-s-and-don-ts#general-types&quot;&gt;Do&amp;rsquo;s and Don&amp;rsquo;ts&lt;/a&gt; section.</source>
@@ -2297,7 +2425,7 @@
         </trans-unit>
         <trans-unit id="93a51f16eac9cd871496fa3f38f5e48ecd5fea51" translate="yes" xml:space="preserve">
           <source>Note: Error messages only show up in JS codebases with &lt;a href=&quot;tsconfig-json&quot;&gt;a JSConfig&lt;/a&gt; and &lt;a href=&quot;https://www.typescriptlang.org/tsconfig#checkJs&quot;&gt;&lt;code&gt;checkJs&lt;/code&gt;&lt;/a&gt; enabled.</source>
-          <target state="new"/>
+          <target state="translated">注：错误消息只在JS代码库与显示&lt;a href=&quot;tsconfig-json&quot;&gt;一个JSConfig&lt;/a&gt;和&lt;a href=&quot;https://www.typescriptlang.org/tsconfig#checkJs&quot;&gt; &lt;code&gt;checkJs&lt;/code&gt; &lt;/a&gt;启用。</target>
         </trans-unit>
         <trans-unit id="c1444747b0861651e319b205e1c59d9ae374ba31" translate="yes" xml:space="preserve">
           <source>Note: Function Components were formerly known as Stateless Function Components (SFC). As Function Components can no longer be considered stateless in recent versions of react, the type &lt;code&gt;SFC&lt;/code&gt; and its alias &lt;code&gt;StatelessComponent&lt;/code&gt; were deprecated.</source>
@@ -2313,7 +2441,7 @@
         </trans-unit>
         <trans-unit id="019f04b9d1d907c729221ba8c0d3f15ea3b9e489" translate="yes" xml:space="preserve">
           <source>Note: In &lt;em&gt;very&lt;/em&gt; old versions of TypeScript namespaces were called &amp;lsquo;Internal Modules&amp;rsquo;, these pre-date JavaScript module systems.</source>
-          <target state="new"/>
+          <target state="translated">注意：在&lt;em&gt;很&lt;/em&gt;旧的TypeScript名称空间版本中，这些名称早于JavaScript模块系统，称为&amp;ldquo;内部模块&amp;rdquo;。</target>
         </trans-unit>
         <trans-unit id="e941b79a012efff59ecdd0cbaa4fcd9aa032b565" translate="yes" xml:space="preserve">
           <source>Note: Most changes do not require you to install a new version of the VS TypeScript plugin.</source>
@@ -2513,7 +2641,7 @@
         </trans-unit>
         <trans-unit id="6f30ea04179dac8c71c16f96f3f1582920ec3fad" translate="yes" xml:space="preserve">
           <source>Now the type of the array propagates into the &lt;code&gt;ArrayMetadata&lt;/code&gt; type.</source>
-          <target state="new"/>
+          <target state="translated">现在，数组的类型传播为 &lt;code&gt;ArrayMetadata&lt;/code&gt; 类型。</target>
         </trans-unit>
         <trans-unit id="586d73d271314d06733d1c62bea37895a7824b97" translate="yes" xml:space="preserve">
           <source>Now to extend this to add support for input with numbers in bases other than 10, let&amp;rsquo;s create &lt;code&gt;ProgrammerCalculator.ts&lt;/code&gt;</source>
@@ -2553,7 +2681,7 @@
         </trans-unit>
         <trans-unit id="0b80d5fe66868146461ed39d9590423def0cc437" translate="yes" xml:space="preserve">
           <source>Now, for the remainder of the &lt;code&gt;createElement&lt;/code&gt; definition: &lt;code&gt;(tagName: K, options?: ElementCreationOptions): HTMLElementTagNameMap[K]&lt;/code&gt;. The first argument &lt;code&gt;tagName&lt;/code&gt; is defined as the generic parameter &lt;code&gt;K&lt;/code&gt; . The TypeScript interpreter is smart enough to &lt;em&gt;infer&lt;/em&gt; the generic parameter from this argument. This means that the developer does not actually have to specify the generic parameter when using the method; whatever value is passed to the &lt;code&gt;tagName&lt;/code&gt; argument will be inferred as &lt;code&gt;K&lt;/code&gt; and thus can be used throughout the remainder of the definition. Which is exactly what happens; the return value &lt;code&gt;HTMLElementTagNameMap[K]&lt;/code&gt; takes the &lt;code&gt;tagName&lt;/code&gt; argument and uses it to return the corresponding type. This definition is how the &lt;code&gt;p&lt;/code&gt; variable from the code snippet gets a type of &lt;code&gt;HTMLParagraphElement&lt;/code&gt;. And if the code was &lt;code&gt;document.createElement('a')&lt;/code&gt;, then it would be an element of type &lt;code&gt;HTMLAnchorElement&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">现在，对于其余的 &lt;code&gt;createElement&lt;/code&gt; 定义： &lt;code&gt;(tagName: K, options?: ElementCreationOptions): HTMLElementTagNameMap[K]&lt;/code&gt; 。第一个参数 &lt;code&gt;tagName&lt;/code&gt; 被定义为通用参数 &lt;code&gt;K&lt;/code&gt; 。 TypeScript解释器足够聪明，可以从此参数&lt;em&gt;推断&lt;/em&gt;出通用参数。这意味着开发人员在使用该方法时实际上不必指定泛型参数。传递给 &lt;code&gt;tagName&lt;/code&gt; 参数的任何值都将被推断为 &lt;code&gt;K&lt;/code&gt; ，因此可以在定义的其余部分中使用。到底发生了什么？返回值 &lt;code&gt;HTMLElementTagNameMap[K]&lt;/code&gt; 采用 &lt;code&gt;tagName&lt;/code&gt; 参数，并使用它返回相应的类型。此定义是代码段中的 &lt;code&gt;p&lt;/code&gt; 变量如何获取 &lt;code&gt;HTMLParagraphElement&lt;/code&gt; 类型。并且如果代码是 &lt;code&gt;document.createElement('a')&lt;/code&gt; ，那么它将是 &lt;code&gt;HTMLAnchorElement&lt;/code&gt; 类型的元素。</target>
         </trans-unit>
         <trans-unit id="32b6a0eecd0bd91b730d6782f43f8351f9e8957b" translate="yes" xml:space="preserve">
           <source>NuGet</source>
@@ -2605,15 +2733,15 @@
         </trans-unit>
         <trans-unit id="8ec915a9d6271aa88a6e6bab3fe9b7a8d9dc2808" translate="yes" xml:space="preserve">
           <source>OOP in TypeScript</source>
-          <target state="new"/>
+          <target state="translated">TypeScript中的OOP</target>
         </trans-unit>
         <trans-unit id="54e96ab681e7258c80946a74a514f141957d53b7" translate="yes" xml:space="preserve">
           <source>OOP programmers are accustomed to being able to query the type of any value, even a generic one:</source>
-          <target state="new"/>
+          <target state="translated">OOP程序员习惯于能够查询任何值的类型,即使是一个通用值。</target>
         </trans-unit>
         <trans-unit id="adeb8baadb7619ed1ee71c0d637100cf68745ddb" translate="yes" xml:space="preserve">
           <source>OOP programmers are often surprised by two particular aspects of structural typing.</source>
-          <target state="new"/>
+          <target state="translated">OOP程序员经常会对结构类型的两个特殊方面感到惊讶。</target>
         </trans-unit>
         <trans-unit id="2883f191bc5ebfdc16c0813eff659b35363ea69b" translate="yes" xml:space="preserve">
           <source>Object</source>
@@ -2625,7 +2753,7 @@
         </trans-unit>
         <trans-unit id="cbf147d445453a6660add525598d56066b954b1c" translate="yes" xml:space="preserve">
           <source>Object Types</source>
-          <target state="new"/>
+          <target state="translated">对象类型</target>
         </trans-unit>
         <trans-unit id="a7dc9622d9872b2041ea4b92f628450cd8b88097" translate="yes" xml:space="preserve">
           <source>Object destructuring</source>
@@ -2633,7 +2761,7 @@
         </trans-unit>
         <trans-unit id="1ccb033a21e86f3dd077314deacc164caf7a1572" translate="yes" xml:space="preserve">
           <source>Object literal type syntax closely mirrors object literal value syntax:</source>
-          <target state="new"/>
+          <target state="translated">对象字面类型语法与对象字面值语法紧密对应。</target>
         </trans-unit>
         <trans-unit id="7cd3db8976f376a1f019b5d0fed0df37b11861ba" translate="yes" xml:space="preserve">
           <source>Object literals are open-ended</source>
@@ -2649,7 +2777,7 @@
         </trans-unit>
         <trans-unit id="e39aafc54b41f807d4c66cedbf76e1c69bb09f15" translate="yes" xml:space="preserve">
           <source>Object spread also has a couple of other surprising limits. First, it only includes an objects&amp;rsquo; &lt;a href=&quot;https://developer.mozilla.org/docs/Web/JavaScript/Enumerability_and_ownership_of_properties&quot;&gt;own, enumerable properties&lt;/a&gt;. Basically, that means you lose methods when you spread instances of an object:</source>
-          <target state="new"/>
+          <target state="translated">对象传播还具有其他一些令人惊讶的限制。首先，它仅包含对象&lt;a href=&quot;https://developer.mozilla.org/docs/Web/JavaScript/Enumerability_and_ownership_of_properties&quot;&gt;自己的可枚举属性&lt;/a&gt;。基本上，这意味着您在传播对象实例时会丢失方法：</target>
         </trans-unit>
         <trans-unit id="5eeac8ca658c85a10aefd3ffe0bf35ef9f80485c" translate="yes" xml:space="preserve">
           <source>Object spread also has a couple of other surprising limits. First, it only includes an objects&amp;rsquo; &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties&quot;&gt;own, enumerable properties&lt;/a&gt;. Basically, that means you lose methods when you spread instances of an object:</source>
@@ -2661,11 +2789,11 @@
         </trans-unit>
         <trans-unit id="e74f2b06a5fbe1c04ad866d78d3e98d6af48f45f" translate="yes" xml:space="preserve">
           <source>Occasionally, you&amp;rsquo;ll run into a library that expects a parameter to be either a &lt;code&gt;number&lt;/code&gt; or a &lt;code&gt;string&lt;/code&gt;. For instance, take the following function:</source>
-          <target state="new"/>
+          <target state="translated">有时，您会遇到一个期望参数为 &lt;code&gt;number&lt;/code&gt; 或 &lt;code&gt;string&lt;/code&gt; 。例如，采用以下功能：</target>
         </trans-unit>
         <trans-unit id="6b8b413b8349b0d2cda00f56b58728dca71d8f18" translate="yes" xml:space="preserve">
           <source>Of course, any of these types can be declared using TypeScript syntax in a single-line &lt;code&gt;@typedef&lt;/code&gt;:</source>
-          <target state="new"/>
+          <target state="translated">当然，可以使用TypeScript语法在单行 &lt;code&gt;@typedef&lt;/code&gt; 中声明所有这些类型：</target>
         </trans-unit>
         <trans-unit id="896953fcb00b0eb5b0ba4da3b193100a1b6c1094" translate="yes" xml:space="preserve">
           <source>Of course, any of these types can be declared using Typescript syntax in a single-line &lt;code&gt;@typedef&lt;/code&gt;:</source>
@@ -2685,7 +2813,7 @@
         </trans-unit>
         <trans-unit id="58d8c4b2203739a560ee5629e213ae51b2e9cc9a" translate="yes" xml:space="preserve">
           <source>Offers a way to configure the root directory for where declaration files are emitted.</source>
-          <target state="new"/>
+          <target state="translated">提供了一种配置根目录的方法,用于发出声明文件的地方。</target>
         </trans-unit>
         <trans-unit id="4d23057a19f87b1d7a3f861f468248c8e5a5974a" translate="yes" xml:space="preserve">
           <source>Official TypeScript NuGet package</source>
@@ -2729,7 +2857,7 @@
         </trans-unit>
         <trans-unit id="b121f75269ef9070c6142e71c944032a79d56440" translate="yes" xml:space="preserve">
           <source>On operating systems like Linux, TypeScript installs directory watchers (as opposed to file watchers) on &lt;code&gt;node_modules&lt;/code&gt; and many of its subdirectories to detect changes in dependencies. This is because the number of available file watchers is often eclipsed by the of files in &lt;code&gt;node_modules&lt;/code&gt;, whereas there are way fewer directories to track.</source>
-          <target state="new"/>
+          <target state="translated">在Linux之类的操作系统上，TypeScript在 &lt;code&gt;node_modules&lt;/code&gt; 及其许多子目录上安装目录监视程序（与文件监视程序相对），以检测依赖性的变化。这是因为可用的文件监视程序的数量通常被 &lt;code&gt;node_modules&lt;/code&gt; 中文件的数量所掩盖，而要跟踪的目录更少。</target>
         </trans-unit>
         <trans-unit id="74944d3dcee80b1604d42865751a7ceaa698e35d" translate="yes" xml:space="preserve">
           <source>On the last line of the snippet you can see that even assigning the entire &lt;code&gt;ReadonlyArray&lt;/code&gt; back to a normal array is illegal. You can still override it with a type assertion, though:</source>
@@ -2765,11 +2893,11 @@
         </trans-unit>
         <trans-unit id="efd9fd3ef569813fe54f40f7a5348da23bd676a1" translate="yes" xml:space="preserve">
           <source>Once you start thinking of types as sets, certain operations become very natural. For example, in C#, it&amp;rsquo;s awkward to pass around a value that is &lt;em&gt;either&lt;/em&gt; a &lt;code&gt;string&lt;/code&gt; or &lt;code&gt;int&lt;/code&gt;, because there isn&amp;rsquo;t a single type that represents this sort of value.</source>
-          <target state="new"/>
+          <target state="translated">一旦开始将类型视为集合，某些操作就变得非常自然。例如，在C＃中，这是尴尬绕过一个值，&lt;em&gt;或者&lt;/em&gt;一个 &lt;code&gt;string&lt;/code&gt; 或 &lt;code&gt;int&lt;/code&gt; ，因为没有一个单一的类型，表示这种价值。</target>
         </trans-unit>
         <trans-unit id="cd09b9672aef2e12094c6286dae7bf22bea682c2" translate="yes" xml:space="preserve">
           <source>Once you&amp;rsquo;re feeling comfortable, you can come back to read &lt;a href=&quot;typescript-in-5-minutes&quot;&gt;TypeScript for JavaScript Programmers&lt;/a&gt;, then start on &lt;a href=&quot;intro&quot;&gt;the handbook&lt;/a&gt; or explore the &lt;a href=&quot;https://www.typescriptlang.org/play#show-examples&quot;&gt;Playground examples&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">感到自在之后，您可以返回阅读&lt;a href=&quot;typescript-in-5-minutes&quot;&gt;适用于JavaScript程序员的TypeScript&lt;/a&gt;，然后开始阅读&lt;a href=&quot;intro&quot;&gt;手册&lt;/a&gt;或浏览&lt;a href=&quot;https://www.typescriptlang.org/play#show-examples&quot;&gt;Playground示例&lt;/a&gt;。</target>
         </trans-unit>
         <trans-unit id="1f601e0447efc6c6f5c004e85bc2178722596428" translate="yes" xml:space="preserve">
           <source>One advantage of this is that the callable constructor pattern can be easily expressed while also allowing namespaces to merge with these declarations (since &lt;code&gt;var&lt;/code&gt; declarations can&amp;rsquo;t merge with &lt;code&gt;namespace&lt;/code&gt;s).</source>
@@ -2805,7 +2933,7 @@
         </trans-unit>
         <trans-unit id="7b053fca39618dd4a858f60861664a6e5ed2adab" translate="yes" xml:space="preserve">
           <source>One is the &lt;code&gt;as&lt;/code&gt;-syntax:</source>
-          <target state="new"/>
+          <target state="translated">一种是 &lt;code&gt;as&lt;/code&gt; -syntax：</target>
         </trans-unit>
         <trans-unit id="82aa3486d66599c6818535555fcde271410599f0" translate="yes" xml:space="preserve">
           <source>One of TypeScript&amp;rsquo;s core principles is that type checking focuses on the &lt;em&gt;shape&lt;/em&gt; that values have. This is sometimes called &amp;ldquo;duck typing&amp;rdquo; or &amp;ldquo;structural subtyping&amp;rdquo;. In TypeScript, interfaces fill the role of naming these types, and are a powerful way of defining contracts within your code as well as contracts with code outside of your project.</source>
@@ -2813,7 +2941,7 @@
         </trans-unit>
         <trans-unit id="c757d0f6603eddb47aa6c55cbe608a6509f704fb" translate="yes" xml:space="preserve">
           <source>One of TypeScript&amp;rsquo;s core principles is that type checking focuses on the &lt;em&gt;shape&lt;/em&gt; that values have. This is sometimes called &amp;ldquo;duck typing&amp;rdquo; or &amp;ldquo;structural typing&amp;rdquo;.</source>
-          <target state="new"/>
+          <target state="translated">TypeScript的核心原则之一是类型检查的重点是值的&lt;em&gt;形状&lt;/em&gt;。有时称为&amp;ldquo;鸭式打字&amp;rdquo;或&amp;ldquo;结构式打字&amp;rdquo;。</target>
         </trans-unit>
         <trans-unit id="5aea8e823173035ff216b848c6b0d54b8b96fd4c" translate="yes" xml:space="preserve">
           <source>One of the most common uses of interfaces in languages like C# and Java, that of explicitly enforcing that a class meets a particular contract, is also possible in TypeScript.</source>
@@ -2825,7 +2953,7 @@
         </trans-unit>
         <trans-unit id="48a39bde8026af120315f595a3ebaf87946a36c6" translate="yes" xml:space="preserve">
           <source>One style of exporting in CommonJS is to export a function. Because a function is also an object, then extra fields can be added are included in the export.</source>
-          <target state="new"/>
+          <target state="translated">CommonJS中导出的一种方式是导出一个函数。因为一个函数也是一个对象,那么在导出时可以添加额外的字段。</target>
         </trans-unit>
         <trans-unit id="7eacbc50348f5b3ec9e3e6415d394dd711448525" translate="yes" xml:space="preserve">
           <source>One such example is an object that acts as both a function and an object, with additional properties:</source>
@@ -2845,7 +2973,7 @@
         </trans-unit>
         <trans-unit id="7c44d3d53fcf28280aed7f275c80df87912e368d" translate="yes" xml:space="preserve">
           <source>Only emit &lt;code&gt;.d.ts&lt;/code&gt; declaration files.</source>
-          <target state="new"/>
+          <target state="translated">仅发出 &lt;code&gt;.d.ts&lt;/code&gt; 声明文件。</target>
         </trans-unit>
         <trans-unit id="9c4c4f095c25b9e726d79098915a46e4ea92ff63" translate="yes" xml:space="preserve">
           <source>Open &lt;code&gt;greeter.html&lt;/code&gt; in the browser to run your first simple TypeScript web application!</source>
@@ -2877,7 +3005,7 @@
         </trans-unit>
         <trans-unit id="7639a6c68ad000bff451144276aba49f18f3a141" translate="yes" xml:space="preserve">
           <source>Optional Global Usage</source>
-          <target state="new"/>
+          <target state="translated">可选全局用法</target>
         </trans-unit>
         <trans-unit id="f7c6bcdff008088c9ae3335f40deda7169b35c83" translate="yes" xml:space="preserve">
           <source>Optional Module Loading and Other Advanced Loading Scenarios</source>
@@ -2941,11 +3069,11 @@
         </trans-unit>
         <trans-unit id="df58492b3818e56d4c38cba029dab1a47423cc16" translate="yes" xml:space="preserve">
           <source>Or a number:</source>
-          <target state="new"/>
+          <target state="translated">或一个数字。</target>
         </trans-unit>
         <trans-unit id="c98dcc822443a4b856eb1d3e76f5a1ef879a05c5" translate="yes" xml:space="preserve">
           <source>Or by marking each export individually:</source>
-          <target state="new"/>
+          <target state="translated">或者通过对每个出口进行单独标记。</target>
         </trans-unit>
         <trans-unit id="81b391e677894347f3d7eaa5c625ce0c39681863" translate="yes" xml:space="preserve">
           <source>Or ignore trailing elements, or other elements:</source>
@@ -2981,7 +3109,7 @@
         </trans-unit>
         <trans-unit id="62cda73390e4d48b545b79bfcdb477a68054f2e3" translate="yes" xml:space="preserve">
           <source>Other important TypeScript types</source>
-          <target state="new"/>
+          <target state="translated">其他重要的TypeScript类型</target>
         </trans-unit>
         <trans-unit id="62510ab9b0c9768adbae646ef408d2a62b45617c" translate="yes" xml:space="preserve">
           <source>Other types from Closure also work:</source>
@@ -2997,7 +3125,7 @@
         </trans-unit>
         <trans-unit id="f12741a8f50c8d0742198f4cc7b9b0054355cfbe" translate="yes" xml:space="preserve">
           <source>Otherwise &lt;code&gt;Node&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">否则的 &lt;code&gt;Node&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="b3fdc1e6ff5294bca808cf4bfb8838d0fec37709" translate="yes" xml:space="preserve">
           <source>Otherwise use &lt;code&gt;--keyofStringsOnly&lt;/code&gt; compiler option to disable the new behavior.</source>
@@ -3009,7 +3137,7 @@
         </trans-unit>
         <trans-unit id="2fe09ba85c2f62b83a765f71cc1cff43f6cbaef7" translate="yes" xml:space="preserve">
           <source>Otherwise, these functions accept any arguments and will return &lt;code&gt;any&lt;/code&gt;:</source>
-          <target state="new"/>
+          <target state="translated">否则，这些函数将接受任何参数，并将返回 &lt;code&gt;any&lt;/code&gt; ：</target>
         </trans-unit>
         <trans-unit id="9fd652f329cdb87b5184f532624c12babcba184a" translate="yes" xml:space="preserve">
           <source>Otherwise, we assume that you&amp;rsquo;re already using &lt;a href=&quot;https://nodejs.org/&quot;&gt;Node.js&lt;/a&gt; with &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;npm&lt;/a&gt;.</source>
@@ -3017,7 +3145,7 @@
         </trans-unit>
         <trans-unit id="6a8d8f3092b4cff717b9df2b61723845c6880cb0" translate="yes" xml:space="preserve">
           <source>Otherwise, we recommend submitting the types to DefinitelyTyped, which will publish them to the &lt;code&gt;@types&lt;/code&gt; organization on npm.</source>
-          <target state="new"/>
+          <target state="translated">否则，我们建议将类型提交给DefinitelyTyped，它将在npm上将它们发布到 &lt;code&gt;@types&lt;/code&gt; 组织。</target>
         </trans-unit>
         <trans-unit id="784cfa9d141a3fe82c06f16ad3a9456778056b89" translate="yes" xml:space="preserve">
           <source>Our First Interface</source>
@@ -3029,15 +3157,15 @@
         </trans-unit>
         <trans-unit id="9be54203007d8d30f26947bb7d7851872869089d" translate="yes" xml:space="preserve">
           <source>Out - &lt;code&gt;out&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">输出- &lt;code&gt;out&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="dcdf8d59b6859bfc492a315ea8318c5d9803cadf" translate="yes" xml:space="preserve">
           <source>Out Dir - &lt;code&gt;outDir&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">外出目录 &lt;code&gt;outDir&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="27a751e953fed78cf12f40a39506ec48371ed775" translate="yes" xml:space="preserve">
           <source>Out File - &lt;code&gt;outFile&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">输出文件 &lt;code&gt;outFile&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="4bed336194a9a5c86b6a734f03b3570d2aae1a68" translate="yes" xml:space="preserve">
           <source>Output</source>
@@ -3061,7 +3189,7 @@
         </trans-unit>
         <trans-unit id="c9668372e49b3da9f21e77e4a98e554bc74a9a36" translate="yes" xml:space="preserve">
           <source>Over 20 years after its introduction to the programming community, JavaScript is now one of the most widespread cross-platform languages ever created. Starting as a small scripting language for adding trivial interactivity to webpages, JavaScript has grown to be a language of choice for both frontend and backend applications of every size. While the size, scope, and complexity of programs written in JavaScript has grown exponentially, the ability of the JavaScript language to express the relationships between different units of code has not. Combined with JavaScript&amp;rsquo;s rather peculiar runtime semantics, this mismatch between language and program complexity has made JavaScript development a difficult task to manage at scale.</source>
-          <target state="new"/>
+          <target state="translated">在进入编程社区20多年后，JavaScript现已成为有史以来使用最广泛的跨平台语言之一。JavaScript最初是一种用于向网页添加微不足道的交互性的小型脚本语言，如今已成长为各种规模的前端和后端应用程序的首选语言。尽管用JavaScript编写的程序的大小，范围和复杂性呈指数增长，但是JavaScript语言表达不同代码单元之间的关系的能力却没有。结合JavaScript特有的运行时语义，语言和程序复杂性之间的这种不匹配使JavaScript开发成为难以大规模管理的任务。</target>
         </trans-unit>
         <trans-unit id="fcc1811db5df29bd6fe9b10089bc778dd03521da" translate="yes" xml:space="preserve">
           <source>Overall Structure</source>
@@ -3097,7 +3225,7 @@
         </trans-unit>
         <trans-unit id="84bd5a555866968aa5aa6d7b7d92dc740334b9d1" translate="yes" xml:space="preserve">
           <source>Packages under the &lt;a href=&quot;https://www.npmjs.com/~types&quot;&gt;@types&lt;/a&gt; organization are published automatically from &lt;a href=&quot;https://github.com/DefinitelyTyped/DefinitelyTyped&quot;&gt;DefinitelyTyped&lt;/a&gt; using the &lt;a href=&quot;https://github.com/microsoft/DefinitelyTyped-tools/tree/master/packages/publisher&quot;&gt;types-publisher tool&lt;/a&gt;. To get your declarations published as an @types package, please submit a pull request to &lt;a href=&quot;https://github.com/DefinitelyTyped/DefinitelyTyped&quot;&gt;DefinitelyTyped&lt;/a&gt;. You can find more details in the &lt;a href=&quot;http://definitelytyped.org/guides/contributing.html&quot;&gt;contribution guidelines page&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;https://www.npmjs.com/~types&quot;&gt;@types&lt;/a&gt;组织下的软件包是使用&lt;a href=&quot;https://github.com/microsoft/DefinitelyTyped-tools/tree/master/packages/publisher&quot;&gt;types-publisher工具&lt;/a&gt;从&lt;a href=&quot;https://github.com/DefinitelyTyped/DefinitelyTyped&quot;&gt;DefinitelyTyped&lt;/a&gt;自动发布的。要使您的声明以@types包的形式发布，请向&lt;a href=&quot;https://github.com/DefinitelyTyped/DefinitelyTyped&quot;&gt;DefinitelyTyped&lt;/a&gt;提交拉取请求。您可以在&lt;a href=&quot;http://definitelytyped.org/guides/contributing.html&quot;&gt;贡献准则页面中&lt;/a&gt;找到更多详细信息。</target>
         </trans-unit>
         <trans-unit id="6c05990a1953dff830b4e694fd34e78ad2c4e758" translate="yes" xml:space="preserve">
           <source>Packaging dependent declarations</source>
@@ -3145,7 +3273,7 @@
         </trans-unit>
         <trans-unit id="b5be6f8582750be194de793f18c152404f2f31a1" translate="yes" xml:space="preserve">
           <source>Pass it an element id string and it will return either &lt;code&gt;HTMLElement&lt;/code&gt; or &lt;code&gt;null&lt;/code&gt; . This method introduces one of the most important types, &lt;code&gt;HTMLElement&lt;/code&gt;. It serves as the base interface for every other element interface. For example, the &lt;code&gt;p&lt;/code&gt; variable in the code example is of type &lt;code&gt;HTMLParagraphElement&lt;/code&gt;. Also take note that this method can return &lt;code&gt;null&lt;/code&gt;. This is because the method can&amp;rsquo;t be certain pre-runtime if it will be able to actually find the specified element or not. In the last line of the code snippet, the new &lt;em&gt;optional chaining&lt;/em&gt; operator is used in order to call &lt;code&gt;appendChild&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">向其传递元素ID字符串，它将返回 &lt;code&gt;HTMLElement&lt;/code&gt; 或 &lt;code&gt;null&lt;/code&gt; 。此方法介绍了最重要的类型之一 &lt;code&gt;HTMLElement&lt;/code&gt; 。它充当所有其他元素接口的基础接口。例如，代码示例中的 &lt;code&gt;p&lt;/code&gt; 变量为 &lt;code&gt;HTMLParagraphElement&lt;/code&gt; 类型。另请注意，此方法可以返回 &lt;code&gt;null&lt;/code&gt; 。这是因为如果该方法能够实际找到指定的元素，则该方法无法在运行前确定。在代码片段的最后一行，使用了新的&lt;em&gt;可选链接&lt;/em&gt;运算符，以便调用 &lt;code&gt;appendChild&lt;/code&gt; 。</target>
         </trans-unit>
         <trans-unit id="1acacf2ed7601dbe25241b7869667be2f4398d94" translate="yes" xml:space="preserve">
           <source>Passing &lt;code&gt;--reactNamespace &amp;lt;JSX factory Name&amp;gt;&lt;/code&gt; along with &lt;code&gt;--jsx react&lt;/code&gt; allows for using a different JSX factory from the default &lt;code&gt;React&lt;/code&gt;.</source>
@@ -3157,7 +3285,7 @@
         </trans-unit>
         <trans-unit id="a3a3e9569fa3eb5fb1f186e97032bcfd280061ac" translate="yes" xml:space="preserve">
           <source>Paths - &lt;code&gt;paths&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">路径- &lt;code&gt;paths&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="08f69b52b9788ae6bcf8bfd7c8d5cd0f9c96b35d" translate="yes" xml:space="preserve">
           <source>Patterns that are known NOT to be supported</source>
@@ -3185,7 +3313,7 @@
         </trans-unit>
         <trans-unit id="b9fa3258f08647142ce462aa1c6002ef1e1b8662" translate="yes" xml:space="preserve">
           <source>Platform specific</source>
-          <target state="new"/>
+          <target state="translated">特定平台</target>
         </trans-unit>
         <trans-unit id="a68eb230823a2defe94e6d3f9718ef2ec069c259" translate="yes" xml:space="preserve">
           <source>Playground</source>
@@ -3213,15 +3341,15 @@
         </trans-unit>
         <trans-unit id="1ee1de1fe598e71ad53be227754dfcb283d7c826" translate="yes" xml:space="preserve">
           <source>Plugins - &lt;code&gt;plugins&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">插件- &lt;code&gt;plugins&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="d901da355d2ea7de032bab6160e7791b0cc0d9bd" translate="yes" xml:space="preserve">
           <source>Point-free programming</source>
-          <target state="new"/>
+          <target state="translated">无点编程</target>
         </trans-unit>
         <trans-unit id="9a6adebfdf8f61c41e82811b81640f526a81d347" translate="yes" xml:space="preserve">
           <source>Point-free programming &amp;mdash; heavy use of currying and function composition &amp;mdash; is possible in JavaScript, but can be verbose. In TypeScript, type inference often fails for point-free programs, so you&amp;rsquo;ll end up specifying type parameters instead of value parameters. The result is so verbose that it&amp;rsquo;s usually better to avoid point-free programming.</source>
-          <target state="new"/>
+          <target state="translated">无点编程（大量使用curring和函数组合）在JavaScript中是可能的，但可能很冗长。在TypeScript中，对于无点程序，类型推断通常会失败，因此您将最终指定类型参数而不是值参数。结果太冗长，通常最好避免无点编程。</target>
         </trans-unit>
         <trans-unit id="ead1b84f2b03206f8601dd6f8465bb1307c87f49" translate="yes" xml:space="preserve">
           <source>Polymorphic &lt;code&gt;this&lt;/code&gt; types</source>
@@ -3261,19 +3389,19 @@
         </trans-unit>
         <trans-unit id="3718a89b87a1c09f9d2b2ab9ae6694d53dd18a75" translate="yes" xml:space="preserve">
           <source>Preserve Const Enums - &lt;code&gt;preserveConstEnums&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">保留常量枚举- &lt;code&gt;preserveConstEnums&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="144537ff5fbb1fe2e7112d7a59fca5f0abb8a715" translate="yes" xml:space="preserve">
           <source>Preserve Symlinks - &lt;code&gt;preserveSymlinks&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">保留符号链接- &lt;code&gt;preserveSymlinks&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="43e1ce16ca2c523a57cb24a6559708ada861d29c" translate="yes" xml:space="preserve">
           <source>Preserve Watch Output - &lt;code&gt;preserveWatchOutput&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">保留观察输出- &lt;code&gt;preserveWatchOutput&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="a1f0d63b565582e80417d45fc9ee92a490e7a966" translate="yes" xml:space="preserve">
           <source>Preserve: &lt;code&gt;&quot;preserve&quot;&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">保留： &lt;code&gt;&quot;preserve&quot;&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="7cb4715a3e34715298728de107fabd8f250241bb" translate="yes" xml:space="preserve">
           <source>Prettier &lt;code&gt;--pretty&lt;/code&gt; output</source>
@@ -3285,7 +3413,7 @@
         </trans-unit>
         <trans-unit id="7570791dbea8739420c045a800b27168c94bfd74" translate="yes" xml:space="preserve">
           <source>Pretty - &lt;code&gt;pretty&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">漂亮- &lt;code&gt;pretty&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="0b0889dea75b7bf162c4dd45848c6ca53d9ef522" translate="yes" xml:space="preserve">
           <source>Preventing Name Conflicts</source>
@@ -3293,7 +3421,7 @@
         </trans-unit>
         <trans-unit id="f3be47e0536b2f1e3942d188698143c3820e4e15" translate="yes" xml:space="preserve">
           <source>Previous versions of this document recommended a way to write mixins where you created both the runtime and type hierarchies separately, then merged them at the end:</source>
-          <target state="new"/>
+          <target state="translated">本文档以前的版本推荐了一种编写混搭的方式,即分别创建运行时和类型层次结构,然后在最后将它们合并。</target>
         </trans-unit>
         <trans-unit id="d3f367a0268c7a11de846832dd78b1be0177bcf5" translate="yes" xml:space="preserve">
           <source>Previously CommonJS/AMD/UMD modules were treated in the same way as ES6 modules, resulting in a couple of problems. Namely:</source>
@@ -3333,7 +3461,7 @@
         </trans-unit>
         <trans-unit id="ebc73e847f1b3cd8d1dfb14f901fe12098f69eb7" translate="yes" xml:space="preserve">
           <source>Previously, this document details the &lt;code&gt;HTMLElement&lt;/code&gt; interface extends from &lt;code&gt;Element&lt;/code&gt; which extends from &lt;code&gt;Node&lt;/code&gt;. In the DOM API there is a concept of &lt;em&gt;children&lt;/em&gt; elements. For example in the following HTML, the &lt;code&gt;p&lt;/code&gt; tags are children of the &lt;code&gt;div&lt;/code&gt; element</source>
-          <target state="new"/>
+          <target state="translated">以前，本文档详细介绍了 &lt;code&gt;HTMLElement&lt;/code&gt; 接口，该接口从 &lt;code&gt;Element&lt;/code&gt; 扩展，而Element从 &lt;code&gt;Node&lt;/code&gt; 扩展。在DOM API存在的概念，&lt;em&gt;儿童&lt;/em&gt;的元素。例如，在以下HTML中， &lt;code&gt;p&lt;/code&gt; 标签是 &lt;code&gt;div&lt;/code&gt; 元素的子元素</target>
         </trans-unit>
         <trans-unit id="9db6c336a1faa6c435e85a6b4d2c798009098564" translate="yes" xml:space="preserve">
           <source>Previously, this structure was rather awkward to work with if you used a single tsconfig file:</source>
@@ -3349,11 +3477,15 @@
         </trans-unit>
         <trans-unit id="2c60c8260c586544fdf204a6918f732b286ae58d" translate="yes" xml:space="preserve">
           <source>Print names of files part of the compilation. This is useful when you are not sure that TypeScript has included a file you expected.</source>
-          <target state="new"/>
+          <target state="translated">打印编译文件的名称。当你不确定TypeScript已经包含了你所期望的文件时,这很有用。</target>
+        </trans-unit>
+        <trans-unit id="d8836994012dab85127a8b7fc5fd4ab0a0f4d486" translate="yes" xml:space="preserve">
+          <source>Print names of files which TypeScript sees as a part of your project and the reason they are part of the compilation.</source>
+          <target state="translated">打印TypeScript视为你的项目的一部分的文件名,以及它们是编译的一部分的原因。</target>
         </trans-unit>
         <trans-unit id="b896feedfc6257fcbba34c3460737798c67b71a9" translate="yes" xml:space="preserve">
           <source>Print names of generated files part of the compilation to the terminal.</source>
-          <target state="new"/>
+          <target state="translated">将编译过程中生成的文件名打印到终端。</target>
         </trans-unit>
         <trans-unit id="220c873ce1ef6bbe0f0ef43fc4cd6015a80b747a" translate="yes" xml:space="preserve">
           <source>Print names of generated files part of the compilation.</source>
@@ -3377,7 +3509,7 @@
         </trans-unit>
         <trans-unit id="9c8599d61f9484e744e8b2658bec61eec3a61688" translate="yes" xml:space="preserve">
           <source>Prior to TypeScript 3.8, you can import a type using &lt;code&gt;import&lt;/code&gt;. With TypeScript 3.8, you can import a type using the &lt;code&gt;import&lt;/code&gt; statement, or using &lt;code&gt;import type&lt;/code&gt;.</source>
-          <target state="new"/>
+          <target state="translated">在TypeScript 3.8之前，您可以使用 &lt;code&gt;import&lt;/code&gt; 导入类型。使用TypeScript 3.8，您可以使用 &lt;code&gt;import&lt;/code&gt; 语句或使用 &lt;code&gt;import type&lt;/code&gt; 来导入类型。</target>
         </trans-unit>
         <trans-unit id="d2ca142f68efb0104a146fa7d73e2068d50895f3" translate="yes" xml:space="preserve">
           <source>Private and Protected Constructors</source>
@@ -3401,7 +3533,7 @@
         </trans-unit>
         <trans-unit id="dff8cdae331a987352af975febbbf5bf3497c075" translate="yes" xml:space="preserve">
           <source>Project Options</source>
-          <target state="new"/>
+          <target state="translated">项目选择</target>
         </trans-unit>
         <trans-unit id="7793a73613168871bf96397b630c7423c4486ca5" translate="yes" xml:space="preserve">
           <source>Project References</source>
@@ -3461,7 +3593,7 @@
         </trans-unit>
         <trans-unit id="c138392855d638ba9e2bf29899810a7e57e84035" translate="yes" xml:space="preserve">
           <source>Project references are a way to structure your TypeScript programs into smaller pieces. Using Project References can greatly improve build and editor interaction times, enforce logical separation between components, and organize your code in new and improved ways.</source>
-          <target state="new"/>
+          <target state="translated">项目引用是一种将你的TypeScript程序结构化为小块的方法。使用项目引用可以极大地改善构建和编辑器的交互时间,强制执行组件之间的逻辑分离,并以新的和改进的方式组织你的代码。</target>
         </trans-unit>
         <trans-unit id="4c6c967b1595e112d0adf09d5676eb35634edcb7" translate="yes" xml:space="preserve">
           <source>Project references can solve all of these problems and more.</source>
@@ -3497,7 +3629,7 @@
         </trans-unit>
         <trans-unit id="1af723998a3965fbd8fb5f43c4ba52d973f2b4be" translate="yes" xml:space="preserve">
           <source>Properties with relative paths found in the configuration file, which aren&amp;rsquo;t excluded from inheritance, will be resolved relative to the configuration file they originated in.</source>
-          <target state="new"/>
+          <target state="translated">在配置文件中找到的具有相对路径的属性（不会从继承中排除）将相对于它们所源自的配置文件进行解析。</target>
         </trans-unit>
         <trans-unit id="3cbcb3278bdf5d0340f45b88be40ef4d53f50ba6" translate="yes" xml:space="preserve">
           <source>Property Decorators</source>
@@ -3525,7 +3657,7 @@
         </trans-unit>
         <trans-unit id="d26fd4d0603b6fec3f71df5845863025dd055f63" translate="yes" xml:space="preserve">
           <source>Providing Type Hints in JS via JSDoc</source>
-          <target state="new"/>
+          <target state="translated">通过JSDoc在JS中提供类型提示。</target>
         </trans-unit>
         <trans-unit id="a1146ed26ee333eed6d3996e25afdde504ab9e9b" translate="yes" xml:space="preserve">
           <source>Public by default</source>
@@ -3537,7 +3669,7 @@
         </trans-unit>
         <trans-unit id="51ca411182511e3fdf77719b4e3e0c22adc6e606" translate="yes" xml:space="preserve">
           <source>Publish to</source>
-          <target state="new"/>
+          <target state="translated">发布到</target>
         </trans-unit>
         <trans-unit id="4aeb4ef1d8df7836057d41c034dc834be57b173f" translate="yes" xml:space="preserve">
           <source>Publish to &lt;a href=&quot;https://www.npmjs.com/~types&quot;&gt;@types&lt;/a&gt;</source>
@@ -3577,15 +3709,15 @@
         </trans-unit>
         <trans-unit id="c25bd9f882a3a8b49796dbe73c56bf10103c4152" translate="yes" xml:space="preserve">
           <source>Question to ask yourself while looking at a library you are trying to type.</source>
-          <target state="new"/>
+          <target state="translated">在看想打字的库时,要问自己一个问题。</target>
         </trans-unit>
         <trans-unit id="ab61ee9bc98f1490cb74d9856a2bcfdb903bd123" translate="yes" xml:space="preserve">
           <source>Quick introductions based on your background or preference.</source>
-          <target state="new"/>
+          <target state="translated">根据你的背景或喜好快速介绍。</target>
         </trans-unit>
         <trans-unit id="d8f6fe9f8c69850190c5d7fab3738cc93bedaed0" translate="yes" xml:space="preserve">
           <source>Raise error on &amp;lsquo;this&amp;rsquo; expressions with an implied &amp;lsquo;any&amp;rsquo; type.</source>
-          <target state="new"/>
+          <target state="translated">使用隐含的&amp;ldquo; any&amp;rdquo;类型引发&amp;ldquo; this&amp;rdquo;表达式的错误。</target>
         </trans-unit>
         <trans-unit id="224762d86a9baf2c769b2d7a923fbcab59d453ee" translate="yes" xml:space="preserve">
           <source>Raise error on &lt;code&gt;this&lt;/code&gt; expressions with an implied &lt;code&gt;any&lt;/code&gt; type.</source>
@@ -3657,23 +3789,23 @@
         </trans-unit>
         <trans-unit id="7f185bfe20f1f619f8c9bb6aa99786b71328866a" translate="yes" xml:space="preserve">
           <source>React 17 dev transform: &lt;code&gt;&quot;react-jsxdev&quot;&lt;/code&gt;&lt;sup&gt;&lt;a href=&quot;https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;</source>
-          <target state="new"/>
+          <target state="translated">React 17开发人员转换： &lt;code&gt;&quot;react-jsxdev&quot;&lt;/code&gt; &lt;sup&gt;&lt;a href=&quot;https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;</target>
         </trans-unit>
         <trans-unit id="7d97070f74a67941c76e5ea64885d0e08627efa5" translate="yes" xml:space="preserve">
           <source>React 17 transform: &lt;code&gt;&quot;react-jsx&quot;&lt;/code&gt;&lt;sup&gt;&lt;a href=&quot;https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;</source>
-          <target state="new"/>
+          <target state="translated">React 17转换： &lt;code&gt;&quot;react-jsx&quot;&lt;/code&gt; &lt;sup&gt;&lt;a href=&quot;https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;</target>
         </trans-unit>
         <trans-unit id="ae4b21d845bd34b4e6b6216731b5271028fb8f60" translate="yes" xml:space="preserve">
           <source>React Namespace - &lt;code&gt;reactNamespace&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">React命名空间 &lt;code&gt;reactNamespace&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="ee67e7a559cad7f7f0016ea4240d3102eab0e39c" translate="yes" xml:space="preserve">
           <source>React Native</source>
-          <target state="new"/>
+          <target state="translated">React Native</target>
         </trans-unit>
         <trans-unit id="fa58cb746f54f27aa90a8d689bba8023af13c2bb" translate="yes" xml:space="preserve">
           <source>React Native: &lt;code&gt;&quot;react-native&quot;&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">React Native: &lt;code&gt;&quot;react-native&quot;&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="58842bd13325c48a2698202bdb55d3b757360943" translate="yes" xml:space="preserve">
           <source>React integration</source>
@@ -3685,7 +3817,7 @@
         </trans-unit>
         <trans-unit id="0ab19aed84f407a0ba739f934e0edb923766280c" translate="yes" xml:space="preserve">
           <source>Read and understand commonly-used TypeScript syntax and patterns</source>
-          <target state="new"/>
+          <target state="translated">阅读并理解常用的TypeScript语法和模式。</target>
         </trans-unit>
         <trans-unit id="91699c24f2e0a9b9e92adecd16c0b3f7f436f6cb" translate="yes" xml:space="preserve">
           <source>Read in any files it understands in the &lt;code&gt;src&lt;/code&gt; directory (with &lt;code&gt;include&lt;/code&gt;).</source>
@@ -3693,7 +3825,7 @@
         </trans-unit>
         <trans-unit id="bc4702822c3373e5ee67caa1dc26cc74db6df18f" translate="yes" xml:space="preserve">
           <source>Read the full Handbook &lt;a href=&quot;intro&quot;&gt;from start to finish&lt;/a&gt; (30m)</source>
-          <target state="new"/>
+          <target state="translated">&lt;a href=&quot;intro&quot;&gt;从头到尾&lt;/a&gt;阅读完整的手册（30m）</target>
         </trans-unit>
         <trans-unit id="2a5eba8a5ad07b0a44f5a4a457fdc20c1b7dbf7f" translate="yes" xml:space="preserve">
           <source>Read-only properties and index signatures</source>
@@ -3763,9 +3895,13 @@
           <source>Redirect output structure to the directory.</source>
           <target state="translated">将输出结构重定向到该目录。</target>
         </trans-unit>
+        <trans-unit id="db1c784524e1b54011a95823026161f7c8517fe0" translate="yes" xml:space="preserve">
+          <source>Reference</source>
+          <target state="translated">Reference</target>
+        </trans-unit>
         <trans-unit id="f70cca9ad50ad5b8ed87a8010b088c10db5dda71" translate="yes" xml:space="preserve">
           <source>Reference Example</source>
-          <target state="new"/>
+          <target state="translated">参考示例</target>
         </trans-unit>
         <trans-unit id="4712f8dca718bd28253a5790647646c3533841da" translate="yes" xml:space="preserve">
           <source>Referenced projects must have the new &lt;code&gt;composite&lt;/code&gt; setting enabled. This setting is needed to ensure TypeScript can quickly determine where to find the outputs of the referenced project. Enabling the &lt;code&gt;composite&lt;/code&gt; flag changes a few things:</source>
@@ -3773,11 +3909,11 @@
         </trans-unit>
         <trans-unit id="4d6f89c160b09f2d6743dec6ea31f5aef184e7a5" translate="yes" xml:space="preserve">
           <source>References - &lt;code&gt;references&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">参考- &lt;code&gt;references&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="2e7e105e2839b4e1b747e4c6dae363b4ac3c64d8" translate="yes" xml:space="preserve">
           <source>References to &lt;code&gt;const enum&lt;/code&gt; members</source>
-          <target state="new"/>
+          <target state="translated">引用 &lt;code&gt;const enum&lt;/code&gt; 成员</target>
         </trans-unit>
         <trans-unit id="f716fe211e8cbfb1b5ac185fb3d6bbbbc2b34ab2" translate="yes" xml:space="preserve">
           <source>Referring to objects in the value space as types doesn&amp;rsquo;t work unless the object also creates a type, like a constructor function.</source>
@@ -3786,6 +3922,10 @@
         <trans-unit id="fda05af620d8f7d239d3f6e8e81b4403108f221e" translate="yes" xml:space="preserve">
           <source>Reflection</source>
           <target state="translated">Reflection</target>
+        </trans-unit>
+        <trans-unit id="af394298cb93f9a4ef6530d4f5256cfb8c8ddc2c" translate="yes" xml:space="preserve">
+          <source>Reiterating &lt;a href=&quot;https://www.typescriptlang.org/handbook/basic-types.html&quot;&gt;Basic Types&lt;/a&gt;:</source>
+          <target state="translated">重申&lt;a href=&quot;https://www.typescriptlang.org/handbook/basic-types.html&quot;&gt;基本类型&lt;/a&gt;：</target>
         </trans-unit>
         <trans-unit id="917df91e1730cb55ff8aba76f721651a6b54a840" translate="yes" xml:space="preserve">
           <source>Related</source>
@@ -3817,7 +3957,7 @@
         </trans-unit>
         <trans-unit id="4ae2f2f99c6da082f0672c95b34c59cd80c40a24" translate="yes" xml:space="preserve">
           <source>Remove Comments - &lt;code&gt;removeComments&lt;/code&gt;</source>
-          <target state="new"/>
+          <target state="translated">删除评论 &lt;code&gt;removeComments&lt;/code&gt;</target>
         </trans-unit>
         <trans-unit id="f11d0e5af8f40be276413a0572f57b6d8abf9e52" translate="yes" xml:space="preserve">
           <source>Remove all comments except copy-right header comments beginning with &lt;code&gt;/*!&lt;/code&gt;</source>
@@ -3829,7 +3969,7 @@
         </trans-unit>
         <trans-unit id="d619a6862a4f7b32d4a58f285cc5c61b509d1673" translate="yes" xml:space="preserve">
           <source>Removes the &lt;a href=&quot;functions#this-parameters&quot;&gt;&lt;code&gt;this&lt;/code&gt;&lt;/a&gt; parameter from &lt;code&gt;Type&lt;/code&gt;. If &lt;code&gt;Type&lt;/code&gt; has no explicitly declared &lt;code&gt;this&lt;/code&gt; parameter, the result is simply &lt;code&gt;Type&lt;/code&gt;. Otherwise, a new function type with no &lt;code&gt;this&lt;/code&gt; parameter is created from &lt;code&gt;Type&lt;/code&gt;. Generics are erased and only the last overload signature is propagated into the new function type.</source>
-          <target state="new"/>
+          <target state="translated">从 &lt;code&gt;Type&lt;/code&gt; 中删除&lt;a href=&quot;functions#this-parameters&quot;&gt; &lt;code&gt;this&lt;/code&gt; &lt;/a&gt;参数。如果 &lt;code&gt;Type&lt;/code&gt; 没有显式声明 &lt;code&gt;this&lt;/code&gt; 参数，则结果就是 &lt;code&gt;Type&lt;/code&gt; 。否则，将从 &lt;code&gt;Type&lt;/code&gt; 创建一个没有 &lt;code&gt;this&lt;/code&gt; 参数的新函数类型。泛型将被擦除，只有最后的重载签名才会传播到新的函数类型中。</target>
         </trans-unit>
         <trans-unit id="458347c4b08c20b7988b89261e9a532ec566adc1" translate="yes" xml:space="preserve">
           <source>Replace the contents of the &lt;code&gt;tsconfig.json&lt;/code&gt; file with:</source>
@@ -3845,7 +3985,7 @@
         </trans-unit>
         <trans-unit id="28ff576f8c9a47a52a73ccec4dfa5490f20abc5a" translate="yes" xml:space="preserve">
           <source>Report errors for fallthrough cases in switch statements. Ensures that any non-empty case inside a switch statement includes either &lt;code&gt;break&lt;/code&gt; or &lt;code&gt;return&lt;/code&gt;. This means you won&amp;rsquo;t accidentally ship a case fallthrough bug.</source>
-          <target state="new"/>
+          <target state="translated">在switch语句中报告失败情况的错误。确保switch语句内的任何非空情况都包括 &lt;code&gt;break&lt;/code&gt; 或 &lt;code&gt;return&lt;/code&gt; 。这意味着您不会意外地发送案例失败漏洞。</target>
         </trans-unit>
         <trans-unit id="f8c20651b90e6cd8477684950f963b02e2099736" translate="yes" xml:space="preserve">
           <source>Report errors in &lt;code&gt;.js&lt;/code&gt; files. Use in conjunction with &lt;code&gt;--allowJs&lt;/code&gt;.</source>
@@ -3853,7 +3993,7 @@
         </trans-unit>
         <trans-unit id="9859c2bfd11829e29389ef6176aef839ff246a67" translate="yes" xml:space="preserve">
           <source>Report errors on unused local variables.</source>
-          <target state="new"/>
+          <target state="translated">报告未使用的局部变量的错误。</target>
         </trans-unit>
         <trans-unit id="c2375f497601629902de6816b8348dc646a011d3" translate="yes" xml:space="preserve">
           <source>Report errors on unused locals.</source>
@@ -3861,147 +4001,7 @@
         </trans-unit>
         <trans-unit id="c070f2ba00c2432442f5870f3f9104c630e23e08" translate="yes" xml:space="preserve">
           <source>Report errors on unused parameters in functions.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="4e4da7a34ece0e23f3bacbbf60ec3ad07461c31d" translate="yes" xml:space="preserve">
-          <source>Report errors on unused parameters.</source>
-          <target state="translated">报告未使用参数的错误。</target>
-        </trans-unit>
-        <trans-unit id="d1c09f6c73919c0ebd1abbfd86f69d2cd3437aeb" translate="yes" xml:space="preserve">
-          <source>Report module resolution log messages.</source>
-          <target state="translated">报告模块解析日志信息。</target>
-        </trans-unit>
-        <trans-unit id="99bc390ff55a2eb33efc222d7c8bb02d1504d6e7" translate="yes" xml:space="preserve">
-          <source>Required type parameters must not follow optional type parameters.</source>
-          <target state="translated">必需的类型参数不能跟在可选的类型参数后面。</target>
-        </trans-unit>
-        <trans-unit id="6b52890a8d8bb281f971e8b6c6fc68eebe6bbc98" translate="yes" xml:space="preserve">
-          <source>Required&amp;lt;T&amp;gt;</source>
-          <target state="translated">Required&amp;lt;T&amp;gt;</target>
-        </trans-unit>
-        <trans-unit id="cdc1d535ad72977d21e2597085ca79e9eac4c98a" translate="yes" xml:space="preserve">
-          <source>Required, optional, and default parameters all have one thing in common: they talk about one parameter at a time. Sometimes, you want to work with multiple parameters as a group, or you may not know how many parameters a function will ultimately take. In JavaScript, you can work with the arguments directly using the &lt;code&gt;arguments&lt;/code&gt; variable that is visible inside every function body.</source>
-          <target state="translated">必需参数，可选参数和默认参数都有一个共同点：它们一次只讨论一个参数。有时，您想将多个参数作为一个组来使用，或者您可能不知道一个函数最终将使用多少个参数。在JavaScript中，您可以直接使用每个函数体内可见的 &lt;code&gt;arguments&lt;/code&gt; 变量来处理参数。</target>
-        </trans-unit>
-        <trans-unit id="6f3ece0cdbc888dc6e6e500ee3d259d041d3cdae" translate="yes" xml:space="preserve">
-          <source>Requires either &lt;code&gt;sourceMap&lt;/code&gt; or &lt;code&gt;inlineSourceMap&lt;/code&gt; to be set.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="bb59a7085d1d1d9d3f072f5c7166cfdbf3c3fa4d" translate="yes" xml:space="preserve">
-          <source>Resolve &lt;code&gt;keyof&lt;/code&gt; to string valued property names only (no numbers or symbols).</source>
-          <target state="translated">&lt;code&gt;keyof&lt;/code&gt; 将keyof解析为字符串值的属性名称（不包含数字或符号）。</target>
-        </trans-unit>
-        <trans-unit id="6500c452861f317427f27ca99511d2efa2c4566a" translate="yes" xml:space="preserve">
-          <source>Resolve JSON Module - &lt;code&gt;resolveJsonModule&lt;/code&gt;</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="3e884a460b4d82c0f0401e11f902d2d3991a0a50" translate="yes" xml:space="preserve">
-          <source>Rest Parameters</source>
-          <target state="translated">休息参数</target>
-        </trans-unit>
-        <trans-unit id="beeb7a77ad3e842a8cb47b5d6131631a494608b1" translate="yes" xml:space="preserve">
-          <source>Rest elements in tuple types</source>
-          <target state="translated">元组类型中的其余元素</target>
-        </trans-unit>
-        <trans-unit id="50be0fe30fc10dc88af852c9cb7c36370f77be27" translate="yes" xml:space="preserve">
-          <source>Rest elements in tuple types.</source>
-          <target state="translated">在元组类型中休息元素。</target>
-        </trans-unit>
-        <trans-unit id="387816de015267e69071ea349b674f6e1d757b14" translate="yes" xml:space="preserve">
-          <source>Rest parameters with tuple types</source>
-          <target state="translated">带有元组类型的其余参数</target>
-        </trans-unit>
-        <trans-unit id="191ff62bcfa7d34e1a815740c74afda07b8c1e33" translate="yes" xml:space="preserve">
-          <source>Results in an output such as:</source>
-          <target state="translated">结果是这样的输出:</target>
-        </trans-unit>
-        <trans-unit id="69fa7005e9e1a4d2f5ae93f2373b3b809a4f2af9" translate="yes" xml:space="preserve">
-          <source>Results in the following generated code:</source>
-          <target state="translated">结果生成以下代码。</target>
-        </trans-unit>
-        <trans-unit id="02d55b2baf2725bcbe0634735b4de01c005aa3e5" translate="yes" xml:space="preserve">
-          <source>Results in:</source>
-          <target state="translated">结果在:</target>
-        </trans-unit>
-        <trans-unit id="acde6ca95b6974ed08c6f806127b9ecb63b7289c" translate="yes" xml:space="preserve">
-          <source>Rethinking Types</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="854f4c1b2de1f042fed1a2f43dfb41e328c62875" translate="yes" xml:space="preserve">
-          <source>Rethinking the Class</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="642d8f2cc4c0bf44f7ec4417fc288bf230277121" translate="yes" xml:space="preserve">
-          <source>Return Types of Callbacks</source>
-          <target state="translated">回调的返回类型</target>
-        </trans-unit>
-        <trans-unit id="d87cabec32902153d1d79b8b11bc188472a6cc03" translate="yes" xml:space="preserve">
-          <source>Return types as inference targets</source>
-          <target state="translated">作为推理目标的返回类型</target>
-        </trans-unit>
-        <trans-unit id="af8759585cf2cfe7a7c8a45a7ecabdbfd11cd2db" translate="yes" xml:space="preserve">
-          <source>ReturnType&amp;lt;T&amp;gt;</source>
-          <target state="translated">ReturnType&amp;lt;T&amp;gt;</target>
-        </trans-unit>
-        <trans-unit id="251cfcc8db7eb197ba54907567e2b369dc7b23af" translate="yes" xml:space="preserve">
-          <source>Reusable Types (Interfaces)</source>
-          <target state="translated">可重复使用类型(接口)</target>
-        </trans-unit>
-        <trans-unit id="d6640a4d11aa6f54309d2fb5c213135e2c58c777" translate="yes" xml:space="preserve">
-          <source>Reusable Types (Type Aliases)</source>
-          <target state="translated">可重复使用类型(类型别名</target>
-        </trans-unit>
-        <trans-unit id="221e6da1276e8997b6b6f436b2f947172bae0726" translate="yes" xml:space="preserve">
-          <source>Reverse mappings</source>
-          <target state="translated">反向映射</target>
-        </trans-unit>
-        <trans-unit id="9a135d61c072a9901e22aab7a06796f5a0db008c" translate="yes" xml:space="preserve">
-          <source>Right click on &lt;code&gt;scripts&lt;/code&gt; and click &lt;strong&gt;New Item&lt;/strong&gt;. Then choose &lt;strong&gt;TypeScript File&lt;/strong&gt; and name the file &lt;code&gt;app.ts&lt;/code&gt;</source>
-          <target state="translated">右键单击 &lt;code&gt;scripts&lt;/code&gt; ，然后单击&amp;ldquo; &lt;strong&gt;新建项目&amp;rdquo;&lt;/strong&gt;。然后选择&lt;strong&gt;TypeScript File&lt;/strong&gt;并将&lt;strong&gt;文件&lt;/strong&gt;命名为 &lt;code&gt;app.ts&lt;/code&gt;</target>
-        </trans-unit>
-        <trans-unit id="46718d1e29791accf85fa69e3063268fff2968e4" translate="yes" xml:space="preserve">
-          <source>Right click on the &lt;code&gt;wwwroot&lt;/code&gt; folder (if you don&amp;rsquo;t see the folder try building the project) and add a New Item named &lt;code&gt;index.html&lt;/code&gt; inside. Use the following code for &lt;code&gt;index.html &lt;/code&gt;</source>
-          <target state="translated">右键单击 &lt;code&gt;wwwroot&lt;/code&gt; 文件夹（如果看不到该文件夹​​，请尝试构建项目），然后在其中添加一个名为 &lt;code&gt;index.html&lt;/code&gt; 的新项。对 &lt;code&gt;index.html &lt;/code&gt; 使用以下代码</target>
-        </trans-unit>
-        <trans-unit id="77c4e77f51ec4dad132664992b8975f2dfbe92c9" translate="yes" xml:space="preserve">
-          <source>Right click on the &lt;code&gt;wwwroot&lt;/code&gt; folder (if you don&amp;rsquo;t see the folder try building the project) and add a New Item named &lt;code&gt;index.html&lt;/code&gt; inside. Use the following code for &lt;code&gt;index.html&lt;/code&gt;</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="f52ba130a82d88fb66ffcaad9e4d91c2445da38b" translate="yes" xml:space="preserve">
-          <source>Right click on the project and click &lt;strong&gt;New Item&lt;/strong&gt;. Then choose &lt;strong&gt;JavaScript File&lt;/strong&gt; and use the name of &lt;code&gt;gulpfile.js&lt;/code&gt;</source>
-          <target state="translated">右键单击该项目，然后单击&amp;ldquo; &lt;strong&gt;新建项目&amp;rdquo;&lt;/strong&gt;。然后选择&lt;strong&gt;JavaScript File&lt;/strong&gt;并使用 &lt;code&gt;gulpfile.js&lt;/code&gt; 的名称</target>
-        </trans-unit>
-        <trans-unit id="7e501a41bf28a9903be39bc35a602a8ca106603f" translate="yes" xml:space="preserve">
-          <source>Right-Click -&amp;gt; Manage NuGet Packages</source>
-          <target state="translated">右键单击-&amp;gt;管理NuGet软件包</target>
-        </trans-unit>
-        <trans-unit id="4404226825fd8913da119eed59015272595b178d" translate="yes" xml:space="preserve">
-          <source>Root Dir - &lt;code&gt;rootDir&lt;/code&gt;</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="46607474e45e56af8b5a3efd5baf9b86a8244110" translate="yes" xml:space="preserve">
-          <source>Root Dirs - &lt;code&gt;rootDirs&lt;/code&gt;</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="5045f031d11028d3e898f4dd9c0e8f030ca21936" translate="yes" xml:space="preserve">
-          <source>Root Fields</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="a49cce94f7aee86f9844fd38022767d62fef80bd" translate="yes" xml:space="preserve">
-          <source>Roughly speaking, once TypeScript&amp;rsquo;s compiler is done with checking your code, it &lt;em&gt;erases&lt;/em&gt; the types to produce the resulting &amp;ldquo;compiled&amp;rdquo; code. This means that once your code is compiled, the resulting plain JS code has no type information.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="c8a67c2b7fee671c0d27e33fbdf91828d8346fc3" translate="yes" xml:space="preserve">
-          <source>Run &lt;code&gt;tsc --init&lt;/code&gt; in a directory to create an initial &lt;code&gt;tsconfig.json&lt;/code&gt; in this directory with preset defaults. Optionally pass command line arguments along with &lt;code&gt;--init&lt;/code&gt; to be stored in your initial tsconfig.json on creation.</source>
-          <target state="translated">在目录中运行 &lt;code&gt;tsc --init&lt;/code&gt; 以使用默认默认值在此目录中创建初始 &lt;code&gt;tsconfig.json&lt;/code&gt; 。（可选）在创建时将命令行参数以及 &lt;code&gt;--init&lt;/code&gt; 一起存储在您的初始tsconfig.json中。</target>
-        </trans-unit>
-        <trans-unit id="9aa34d67108614684377b79ebc1738ed47fa9c79" translate="yes" xml:space="preserve">
-          <source>Run the TypeScript compiler to generate the corresponding d.ts files for JS files</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="7418ce51bc901e2c720b082e836bfd88f7024c62" translate="yes" xml:space="preserve">
-          <source>Run the application and make sure that it works.</source>
-          <target state="translated">运行应用程序,并确保它的工作。</target>
+          <target state="translated">报告函数中未使用参数的错误。</target>
         </trans-unit>
       </group>
     </body>

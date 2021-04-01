@@ -3,6 +3,130 @@
   <file source-language="en" target-language="ru" datatype="htmlbody" original="erlang">
     <body>
       <group id="erlang">
+        <trans-unit id="4a4f0e1b5b9cde6b772cb89e0e6bdb0a6ab6de56" translate="yes" xml:space="preserve">
+          <source>CR, LF, or CRLF only</source>
+          <target state="translated">Только CR,LF или CRLF.</target>
+        </trans-unit>
+        <trans-unit id="d5ab3cb5603f8a4df9b9b5741bc8bf57061a02e7" translate="yes" xml:space="preserve">
+          <source>CRL cache</source>
+          <target state="translated">CRL-кэш</target>
+        </trans-unit>
+        <trans-unit id="8e2fa37cd7a6f667709e92e12f402a4fd5543726" translate="yes" xml:space="preserve">
+          <source>CRL validation is supported.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="022add99e35c24f3ac862da0a40f1d2f32554546" translate="yes" xml:space="preserve">
+          <source>CRLstatus</source>
+          <target state="translated">CRLstatus</target>
+        </trans-unit>
+        <trans-unit id="3d8d83bcad675694b718b08da5328dd4f850b82a" translate="yes" xml:space="preserve">
+          <source>CTH Execution Order</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="0be6f7027968e8a0c958298b44e28e9e66535873" translate="yes" xml:space="preserve">
+          <source>CTH Processes and Tables</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="ff86d60418e1cef1253cf01c43b18051224fcb54" translate="yes" xml:space="preserve">
+          <source>CTHs are run with the same process scoping as normal test suites, that is, a different process executes the &lt;code&gt;init_per_suite&lt;/code&gt; hooks then the &lt;code&gt;init_per_group&lt;/code&gt; or &lt;code&gt;per_testcase&lt;/code&gt; hooks. So if you want to spawn a process in the CTH, you cannot link with the CTH process, as it exits after the post hook ends. Also, if you for some reason need an ETS table with your CTH, you must spawn a process that handles it.</source>
+          <target state="translated">CTH запускаются с той же областью процесса, что и обычные тестовые наборы, то есть другой процесс выполняет хуки &lt;code&gt;init_per_suite&lt;/code&gt; ,а затем хуки &lt;code&gt;init_per_group&lt;/code&gt; или &lt;code&gt;per_testcase&lt;/code&gt; . Поэтому, если вы хотите создать процесс в CTH, вы не можете связать его с процессом CTH, поскольку он завершается после завершения обработчика post. Кроме того, если вам по какой-то причине нужна таблица ETS с вашим CTH, вы должны создать процесс, который ее обрабатывает.</target>
+        </trans-unit>
+        <trans-unit id="7e6e1792db904ba826af372ccec45b6e25fb5024" translate="yes" xml:space="preserve">
+          <source>CTHs can also be added within a test suite. This is done by returning &lt;code&gt;{ct_hooks,[CTH]}&lt;/code&gt; in the configuration list from &lt;code&gt;&lt;a href=&quot;common_test#Module:suite-0&quot;&gt;suite/0&lt;/a&gt;&lt;/code&gt;, &lt;code&gt;&lt;a href=&quot;common_test#Module:init_per_suite-1&quot;&gt;init_per_suite/1&lt;/a&gt;&lt;/code&gt;, or &lt;code&gt;&lt;a href=&quot;common_test#Module:init_per_group-2&quot;&gt;init_per_group/2&lt;/a&gt;&lt;/code&gt;.</source>
+          <target state="translated">CTH также можно добавить в набор тестов. Это делается путем возврата &lt;code&gt;{ct_hooks,[CTH]}&lt;/code&gt; в списке конфигурации из &lt;code&gt;&lt;a href=&quot;common_test#Module:suite-0&quot;&gt;suite/0&lt;/a&gt;&lt;/code&gt; , &lt;code&gt;&lt;a href=&quot;common_test#Module:init_per_suite-1&quot;&gt;init_per_suite/1&lt;/a&gt;&lt;/code&gt; или &lt;code&gt;&lt;a href=&quot;common_test#Module:init_per_group-2&quot;&gt;init_per_group/2&lt;/a&gt;&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="fd9865647296ea1525fdd1865f581111a13d82e1" translate="yes" xml:space="preserve">
+          <source>CTHs can also be added within a test suite. This is done by returning &lt;code&gt;{ct_hooks,[CTH]}&lt;/code&gt; in the configuration list from &lt;code&gt;&lt;a href=&quot;ct_suite#Module:suite-0&quot;&gt;suite/0&lt;/a&gt;&lt;/code&gt;, &lt;code&gt;&lt;a href=&quot;ct_suite#Module:init_per_suite-1&quot;&gt; init_per_suite/1&lt;/a&gt;&lt;/code&gt;, or &lt;code&gt;&lt;a href=&quot;ct_suite#Module:init_per_group-2&quot;&gt; init_per_group/2&lt;/a&gt;&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="cebcaf761552337b6a6de3a9db00451f69633f4b" translate="yes" xml:space="preserve">
+          <source>CTHs can be used to synchronize test runs with external user applications. The init function can, for example, start and/or communicate with an application that has the purpose of preparing the SUT for an upcoming test run, or initialize a database for saving test data to during the test run. The terminate function can similarly order such an application to reset the SUT after the test run, and/or tell the application to finish active sessions and terminate. Any system error- or progress reports generated during the init- or termination stage are saved in the &lt;code&gt;&lt;a href=&quot;run_test_chapter#pre_post_test_io_log&quot;&gt;Pre- and Post Test I/O Log&lt;/a&gt;&lt;/code&gt;. (This is also true for any printouts made with &lt;code&gt;ct:log/2&lt;/code&gt; and &lt;code&gt;ct:pal/2&lt;/code&gt;).</source>
+          <target state="translated">CTH можно использовать для синхронизации тестовых прогонов с внешними пользовательскими приложениями. Функция init может, например, запускать и / или связываться с приложением, целью которого является подготовка SUT к предстоящему тесту, или инициализировать базу данных для сохранения тестовых данных во время выполнения теста. Функция завершения может аналогичным образом приказать такому приложению сбросить ТУС после выполнения теста и / или сообщить приложению о завершении активных сеансов и завершении. Любые системные сообщения об ошибках или отчеты о ходе выполнения, созданные на этапе инициации или завершения, сохраняются в журнале &lt;code&gt;&lt;a href=&quot;run_test_chapter#pre_post_test_io_log&quot;&gt;Pre- and Post Test I/O Log&lt;/a&gt;&lt;/code&gt; до и после тестирования . (Это также верно для любых распечаток, сделанных с помощью &lt;code&gt;ct:log/2&lt;/code&gt; и &lt;code&gt;ct:pal/2&lt;/code&gt; ).</target>
+        </trans-unit>
+        <trans-unit id="1413152f77878171b8b1aa5bd33bfea4b91b1e35" translate="yes" xml:space="preserve">
+          <source>CTHs cannot be added here right now. That feature may be added in a later release, but it would right now break backwards compatibility.</source>
+          <target state="translated">КТГ не может быть добавлена сюда прямо сейчас.Эта функция может быть добавлена в более позднем выпуске,но это нарушит обратную совместимость прямо сейчас.</target>
+        </trans-unit>
+        <trans-unit id="27930480546a406089acbe7e97d210e59cf3f0a5" translate="yes" xml:space="preserve">
+          <source>Caches a new session or updates an already cached one. Is only called from the cache handling process.</source>
+          <target state="translated">Кэширует новую сессию или обновляет уже кэшированную.Вызывается только из процесса обработки кэша.</target>
+        </trans-unit>
+        <trans-unit id="a61c27140fecb8e4a22ce80c81760b45147855bd" translate="yes" xml:space="preserve">
+          <source>Calculate scheduler utilizations for the time interval from when &lt;code&gt;Sample&lt;/code&gt; was taken and &quot;now&quot;. The same as calling &lt;code&gt;scheduler:utilization(Sample, scheduler:sample_all())&lt;/code&gt;.</source>
+          <target state="translated">Рассчитайте использование планировщика для временного интервала от момента взятия &lt;code&gt;Sample&lt;/code&gt; до &amp;laquo;сейчас&amp;raquo;. То же, что и вызов &lt;code&gt;scheduler:utilization(Sample, scheduler:sample_all())&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="3159ceb44a5156030b65aa273f276c3747dcacc9" translate="yes" xml:space="preserve">
+          <source>Calculates a key for later use in &lt;code&gt;&lt;a href=&quot;#driver_async&quot;&gt;driver_async&lt;/a&gt;&lt;/code&gt;. The keys are evenly distributed so that a fair mapping between port IDs and async thread IDs is achieved.</source>
+          <target state="translated">Вычисляет ключ для последующего использования в &lt;code&gt;&lt;a href=&quot;#driver_async&quot;&gt;driver_async&lt;/a&gt;&lt;/code&gt; . Ключи распределяются равномерно, так что достигается справедливое сопоставление между идентификаторами портов и идентификаторами асинхронных потоков.</target>
+        </trans-unit>
+        <trans-unit id="97a16654177af632fa24a3c60a60a85917da19f0" translate="yes" xml:space="preserve">
+          <source>Calculates a ssh fingerprint from a public host key as openssh does.</source>
+          <target state="translated">Вычисляет отпечаток ssh с открытого ключа хоста,как это делает openssh.</target>
+        </trans-unit>
+        <trans-unit id="96b67c5752326af1f998bcfc9d0641aa609cb938" translate="yes" xml:space="preserve">
+          <source>Calculates an MD5 redundancy check for the code of the module (compilation date and other attributes are not included).</source>
+          <target state="translated">Вычисляет проверку MD5 резервирования для кода модуля (дата компиляции и другие атрибуты не включены).</target>
+        </trans-unit>
+        <trans-unit id="49556b91adcf0245cb3d710749c75861fa022a4f" translate="yes" xml:space="preserve">
+          <source>Calculates and returns the length of queue &lt;code&gt;Q&lt;/code&gt;.</source>
+          <target state="translated">Вычисляет и возвращает длину очереди &lt;code&gt;Q&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="2e81ece084c83acdfbcc583fdce8e53ba5b901b1" translate="yes" xml:space="preserve">
+          <source>Calculates scheduler utilizations for the time interval between the two samples obtained from calling &lt;code&gt;&lt;a href=&quot;#sample-0&quot;&gt;sample/0&lt;/a&gt;&lt;/code&gt; or &lt;code&gt;&lt;a href=&quot;#sample_all-0&quot;&gt;sample_all/0&lt;/a&gt;&lt;/code&gt;.</source>
+          <target state="translated">Вычисляет использование планировщика для временного интервала между двумя выборками, полученными при вызове &lt;code&gt;&lt;a href=&quot;#sample-0&quot;&gt;sample/0&lt;/a&gt;&lt;/code&gt; или &lt;code&gt;&lt;a href=&quot;#sample_all-0&quot;&gt;sample_all/0&lt;/a&gt;&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="227b790ced77d840153cd69f4b9d2467f87af6d9" translate="yes" xml:space="preserve">
+          <source>Calculates the Adler-32 checksum for &lt;code&gt;Data&lt;/code&gt;.</source>
+          <target state="translated">Вычисляет контрольную сумму Adler-32 для &lt;code&gt;Data&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="f486ba07e5a51271bcf5c7397d6baef999b087f1" translate="yes" xml:space="preserve">
+          <source>Calculates the CRC checksum for &lt;code&gt;Data&lt;/code&gt;.</source>
+          <target state="translated">Вычисляет контрольную сумму CRC для &lt;code&gt;Data&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="59cabfc35187ea21aad19caf8aed979cfcc7efbb" translate="yes" xml:space="preserve">
+          <source>Calculates the time difference &lt;code&gt;Tdiff = T2 - T1&lt;/code&gt; in &lt;strong&gt;microseconds&lt;/strong&gt;, where &lt;code&gt;T1&lt;/code&gt; and &lt;code&gt;T2&lt;/code&gt; are time-stamp tuples on the same format as returned from &lt;code&gt; erlang:timestamp/0&lt;/code&gt; or &lt;code&gt; os:timestamp/0&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="7a8a87c52d80ef29c6c7f4e720f1eb69b8f5e769" translate="yes" xml:space="preserve">
+          <source>Calculates the time difference &lt;code&gt;Tdiff = T2 - T1&lt;/code&gt; in &lt;strong&gt;microseconds&lt;/strong&gt;, where &lt;code&gt;T1&lt;/code&gt; and &lt;code&gt;T2&lt;/code&gt; are time-stamp tuples on the same format as returned from &lt;code&gt;erlang:timestamp/0&lt;/code&gt; or &lt;code&gt;os:timestamp/0&lt;/code&gt;.</source>
+          <target state="translated">Вычисляет разницу во времени &lt;code&gt;Tdiff = T2 - T1&lt;/code&gt; в &lt;strong&gt;микросекундах&lt;/strong&gt; , где &lt;code&gt;T1&lt;/code&gt; и &lt;code&gt;T2&lt;/code&gt; - это кортежи отметок времени в том же формате, что и возвращенные из &lt;code&gt;erlang:timestamp/0&lt;/code&gt; или &lt;code&gt;os:timestamp/0&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="31e631ed71da6b22331e1ba2c1ab40350acc8c94" translate="yes" xml:space="preserve">
+          <source>Calculates, without doing the encoding, the maximum byte size for a term encoded in the Erlang external term format. The following condition applies always:</source>
+          <target state="translated">Вычисляет,без кодирования,максимальный размер байта для термина,закодированного во внешнем терминологическом формате Erlang.При этом всегда действует следующее условие:</target>
+        </trans-unit>
+        <trans-unit id="d9a2b0161d342ba687bae1cf3bd6fc16726fc85e" translate="yes" xml:space="preserve">
+          <source>Call ::= FunSpec &lt;code&gt;-&amp;gt;&lt;/code&gt; FunSpec | &lt;code&gt;{&lt;/code&gt;MFA&lt;code&gt;,&lt;/code&gt; MFA&lt;code&gt;}&lt;/code&gt; | AtomConst &lt;code&gt;-&amp;gt;&lt;/code&gt; AtomConst | &lt;code&gt;{&lt;/code&gt;AtomConst&lt;code&gt;,&lt;/code&gt; AtomConst&lt;code&gt;}&lt;/code&gt;</source>
+          <target state="translated">Вызов :: = FunSpec &lt;code&gt;-&amp;gt;&lt;/code&gt; FunSpec | &lt;code&gt;{&lt;/code&gt; МИД &lt;code&gt;,&lt;/code&gt; МИД &lt;code&gt;}&lt;/code&gt; | АтомКонст &lt;code&gt;-&amp;gt;&lt;/code&gt; АтомКонст | &lt;code&gt;{&lt;/code&gt; AtomConst &lt;code&gt;,&lt;/code&gt; AtomConst &lt;code&gt;}&lt;/code&gt;</target>
+        </trans-unit>
+        <trans-unit id="ecdbacce8a3993e206cefb1a9385869bf9d9f72a" translate="yes" xml:space="preserve">
+          <source>Call &lt;code&gt;&lt;a href=&quot;#connect-1&quot;&gt;connect/1,2&lt;/a&gt;&lt;/code&gt; to establish a connection to a server, then pass the returned handle to &lt;code&gt;&lt;a href=&quot;#session-1&quot;&gt;session/1-3&lt;/a&gt;&lt;/code&gt; to establish a NETCONF session on a new SSH channel. Each call to &lt;code&gt;&lt;a href=&quot;#session-1&quot;&gt;session/1-3&lt;/a&gt;&lt;/code&gt; establishes a new session on the same connection, and results in a hello message to the server.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="ff341ca2509327aaf0ceb26b489066bc294ca073" translate="yes" xml:space="preserve">
+          <source>Call &lt;code&gt;&lt;a href=&quot;#enif_schedule_nif&quot;&gt; enif_schedule_nif&lt;/a&gt;&lt;/code&gt;, pass to it a pointer to the dirty NIF to be executed, and indicate with argument &lt;code&gt;flags&lt;/code&gt; whether it expects the operation to be CPU-bound or I/O-bound.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="e87defee9508517c6c10659d4e0fee5236449ad6" translate="yes" xml:space="preserve">
+          <source>Call &lt;code&gt;&lt;a href=&quot;#enif_schedule_nif&quot;&gt;enif_schedule_nif&lt;/a&gt;&lt;/code&gt;, pass to it a pointer to the dirty NIF to be executed, and indicate with argument &lt;code&gt;flags&lt;/code&gt; whether it expects the operation to be CPU-bound or I/O-bound.</source>
+          <target state="translated">Вызовите &lt;code&gt;&lt;a href=&quot;#enif_schedule_nif&quot;&gt;enif_schedule_nif&lt;/a&gt;&lt;/code&gt; , передайте ему указатель на грязный NIF, который должен быть выполнен, и укажите с помощью &lt;code&gt;flags&lt;/code&gt; аргументов , ожидает ли он, что операция будет связана с процессором или вводом-выводом.</target>
+        </trans-unit>
+        <trans-unit id="69bfcf4495124cb65edd6183c66a7288de41dd51" translate="yes" xml:space="preserve">
+          <source>Call &lt;code&gt;analyze&lt;/code&gt; with &lt;code&gt;total&lt;/code&gt; option when profiling has been stopped to display the results per function call, that is in which function calls the time has been spent.</source>
+          <target state="translated">Вызов &lt;code&gt;analyze&lt;/code&gt; с опцией &lt;code&gt;total&lt;/code&gt; , когда профилирование было остановлено, чтобы отобразить результаты для каждого вызова функции, то есть на вызовы какой функции было потрачено время.</target>
+        </trans-unit>
+        <trans-unit id="166bcff3bd03bad3b22be129a767e953b92bb7c5" translate="yes" xml:space="preserve">
+          <source>Call &lt;code&gt;info&lt;/code&gt;:</source>
+          <target state="translated">Информация &lt;code&gt;info&lt;/code&gt; звонке :</target>
+        </trans-unit>
+        <trans-unit id="9b32de2da67e0b479c6558da688c298d2c8d61df" translate="yes" xml:space="preserve">
+          <source>Call Graph Edges (*).</source>
+          <target state="translated">Звоните в &quot;График краев&quot; (*).</target>
+        </trans-unit>
+        <trans-unit id="ee61800f5d1b4760400245c96aa2f8c30730dd00" translate="yes" xml:space="preserve">
+          <source>Call Graph Vertices (*).</source>
+          <target state="translated">Вызовите графические вершины (*).</target>
+        </trans-unit>
         <trans-unit id="35c6e799b94495d942c887de378767b8bf60fab5" translate="yes" xml:space="preserve">
           <source>Call Statistics</source>
           <target state="new"/>
@@ -3878,130 +4002,6 @@
         <trans-unit id="19f5c5b5e2440fd1432aaad4d1dccfb67de8582b" translate="yes" xml:space="preserve">
           <source>Converts &lt;code&gt;&lt;a href=&quot;#type-erl_cipher_suite&quot;&gt;erl_cipher_suite()&lt;/a&gt;&lt;/code&gt; to OpenSSL name string.</source>
           <target state="new"/>
-        </trans-unit>
-        <trans-unit id="00d1f5a857dbd91b22c2e606f74ae73b3d9ca632" translate="yes" xml:space="preserve">
-          <source>Converts &lt;code&gt;&lt;a href=&quot;#type-erl_cipher_suite&quot;&gt;erl_cipher_suite()&lt;/a&gt;&lt;/code&gt; to RFC name string.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="12bd127af4ad25815294c36888f6e3b3cb5271a2" translate="yes" xml:space="preserve">
-          <source>Converts &lt;code&gt;Key&lt;/code&gt; to an OBJECT IDENTIFIER.</source>
-          <target state="translated">Преобразует &lt;code&gt;Key&lt;/code&gt; в ИДЕНТИФИКАТОР ОБЪЕКТА.</target>
-        </trans-unit>
-        <trans-unit id="64acc9e991da9583e9d8988fd1ae350af1f7d94a" translate="yes" xml:space="preserve">
-          <source>Converts &lt;code&gt;Path&lt;/code&gt; to a form accepted by the command shell and native applications on the current platform. On Windows, forward slashes are converted to backward slashes. On all platforms, the name is normalized as done by &lt;code&gt;&lt;a href=&quot;#join-1&quot;&gt;join/1&lt;/a&gt;&lt;/code&gt;.</source>
-          <target state="translated">Преобразует &lt;code&gt;Path&lt;/code&gt; в форму, принимаемую командной оболочкой и собственными приложениями на текущей платформе. В Windows косая черта преобразуется в обратную косую черту. На всех платформах имя нормализуется, как это сделано с помощью &lt;code&gt;&lt;a href=&quot;#join-1&quot;&gt;join/1&lt;/a&gt;&lt;/code&gt; .</target>
-        </trans-unit>
-        <trans-unit id="ea3719a7fe934bac8263241169003d73b077c876" translate="yes" xml:space="preserve">
-          <source>Converts &lt;code&gt;String&lt;/code&gt; to a case-agnostic comparable string. Function &lt;code&gt;casefold/1&lt;/code&gt; is preferred over &lt;code&gt;lowercase/1&lt;/code&gt; when two strings are to be compared for equality. See also &lt;code&gt;&lt;a href=&quot;#equal-4&quot;&gt;equal/4&lt;/a&gt;&lt;/code&gt;.</source>
-          <target state="translated">Преобразует &lt;code&gt;String&lt;/code&gt; в сопоставимую строку без учета регистра. Функция &lt;code&gt;casefold/1&lt;/code&gt; предпочтительнее &lt;code&gt;lowercase/1&lt;/code&gt; когда две строки сравниваются на равенство. См. Также &lt;code&gt;&lt;a href=&quot;#equal-4&quot;&gt;equal/4&lt;/a&gt;&lt;/code&gt; .</target>
-        </trans-unit>
-        <trans-unit id="83e6c836c0fe9bf44d0723384551fd211532d6a7" translate="yes" xml:space="preserve">
-          <source>Converts &lt;code&gt;String&lt;/code&gt; to a list of grapheme clusters.</source>
-          <target state="translated">Преобразует &lt;code&gt;String&lt;/code&gt; в список кластеров графем.</target>
-        </trans-unit>
-        <trans-unit id="d925e32023288904ae94a121d00ca3faaf1f0cb6" translate="yes" xml:space="preserve">
-          <source>Converts &lt;code&gt;String&lt;/code&gt; to lowercase.</source>
-          <target state="translated">Преобразует &lt;code&gt;String&lt;/code&gt; в нижний регистр.</target>
-        </trans-unit>
-        <trans-unit id="64e823d13feb3b6235edac36b29ebd1b351753fe" translate="yes" xml:space="preserve">
-          <source>Converts &lt;code&gt;String&lt;/code&gt; to titlecase.</source>
-          <target state="translated">Преобразует &lt;code&gt;String&lt;/code&gt; в titlecase.</target>
-        </trans-unit>
-        <trans-unit id="40712f79e161abafd2f0cece5db1aa7f56d35ac2" translate="yes" xml:space="preserve">
-          <source>Converts &lt;code&gt;String&lt;/code&gt; to uppercase.</source>
-          <target state="translated">Преобразует &lt;code&gt;String&lt;/code&gt; в верхний регистр.</target>
-        </trans-unit>
-        <trans-unit id="814be0b57ea4927c8c3826c53afee5e64f538f9e" translate="yes" xml:space="preserve">
-          <source>Converts &lt;code&gt;Subject&lt;/code&gt; to a list of &lt;code&gt;byte()&lt;/code&gt;s, each representing the value of one byte. &lt;code&gt;part()&lt;/code&gt; denotes which part of the &lt;code&gt;binary()&lt;/code&gt; to convert.</source>
-          <target state="translated">Преобразует &lt;code&gt;Subject&lt;/code&gt; в список &lt;code&gt;byte()&lt;/code&gt; , каждый из которых представляет значение одного байта. &lt;code&gt;part()&lt;/code&gt; обозначает, какую часть &lt;code&gt;binary()&lt;/code&gt; преобразовать.</target>
-        </trans-unit>
-        <trans-unit id="84357bb46ef942f3222928aff9a548ada141350b" translate="yes" xml:space="preserve">
-          <source>Converts &lt;code&gt;X&lt;/code&gt;, &lt;code&gt;Y&lt;/code&gt;, &lt;code&gt;Z&lt;/code&gt; to pid &lt;code&gt;&amp;lt;X.Y.Z&amp;gt;&lt;/code&gt;. This function is only to be used when debugging.</source>
-          <target state="translated">Преобразует &lt;code&gt;X&lt;/code&gt; , &lt;code&gt;Y&lt;/code&gt; , &lt;code&gt;Z&lt;/code&gt; в pid &lt;code&gt;&amp;lt;X.Y.Z&amp;gt;&lt;/code&gt; . Эту функцию следует использовать только при отладке.</target>
-        </trans-unit>
-        <trans-unit id="e870de6673fb58678c90b76e38c40fdef81ef7e8" translate="yes" xml:space="preserve">
-          <source>Converts Universal Time Coordinated (UTC) date and time to local date and time in the form &lt;code&gt;{{Year, Month, Day}, {Hour, Minute, Second}}&lt;/code&gt; if supported by the underlying OS. Otherwise no conversion is done, and &lt;code&gt;Universaltime&lt;/code&gt; is returned. Example:</source>
-          <target state="translated">Преобразует дату и время в формате всемирного координированного времени (UTC) в местную дату и время в форме &lt;code&gt;{{Year, Month, Day}, {Hour, Minute, Second}}&lt;/code&gt; если это поддерживается базовой ОС. В противном случае преобразование не выполняется и возвращается &lt;code&gt;Universaltime&lt;/code&gt; . Пример:</target>
-        </trans-unit>
-        <trans-unit id="dfd120e608567bf8e0e047df635cd48870a704de" translate="yes" xml:space="preserve">
-          <source>Converts a DateAndTime list to a list of possible universal time(s). The universal time value on the same format as defined in calendar(3).</source>
-          <target state="translated">Преобразует список DateAndTime в список возможных универсальных времен.Значение универсального времени в том же формате,который определен в календаре(3).</target>
-        </trans-unit>
-        <trans-unit id="be2ab7a898419e8c5bc5fb6864e946862fab27d5" translate="yes" xml:space="preserve">
-          <source>Converts a DateAndTime list to a printable string, according to the DISPLAY-HINT definition in RFC2579, with the extension that it also allows the values &quot;hours from UTC&quot; = 14 together with &quot;minutes from UTC&quot; = 0.</source>
-          <target state="translated">Преобразовывает список DateAndTime в строку для печати,в соответствии с определением DISPLAY-HINT в RFC2579,с расширением,которое также позволяет значения &quot;часы от UTC&quot;=14 вместе с &quot;минутами от UTC&quot;=0.</target>
-        </trans-unit>
-        <trans-unit id="6e6041bd2c7a5e4ff13a4f7ea74a578cac2bcdd0" translate="yes" xml:space="preserve">
-          <source>Converts a DateAndTime list to a printable string, according to the DISPLAY-HINT definition in RFC2579.</source>
-          <target state="translated">Преобразует список DateAndTime в строку для печати в соответствии с определением DISPLAY-HINT в RFC2579.</target>
-        </trans-unit>
-        <trans-unit id="df82c9aad820e9aeb421a06ce9d86abf62090da6" translate="yes" xml:space="preserve">
-          <source>Converts a POSIX error code to a string (by calling &lt;code&gt;erl_posix_msg:message/1&lt;/code&gt;).</source>
-          <target state="translated">Преобразует код ошибки POSIX в строку (путем вызова &lt;code&gt;erl_posix_msg:message/1&lt;/code&gt; ).</target>
-        </trans-unit>
-        <trans-unit id="7cb36a1d5c42c93d73e9a9490af62b196a3459ce" translate="yes" xml:space="preserve">
-          <source>Converts a dictionary to a list representation.</source>
-          <target state="translated">Преобразует словарь в представление списка.</target>
-        </trans-unit>
-        <trans-unit id="5145233388e4e63192922244ccdc8aad08c100c4" translate="yes" xml:space="preserve">
-          <source>Converts a line in an Apache-like configuration file to an &lt;code&gt;{Option, Value}&lt;/code&gt; tuple. Some more complex configuration options, such as &lt;code&gt;directory&lt;/code&gt; and &lt;code&gt;security_directory&lt;/code&gt;, create an accumulator. This function only needs clauses for the options implemented by this particular callback module.</source>
-          <target state="translated">Преобразует строку в файле конфигурации, подобном Apache &lt;code&gt;{Option, Value}&lt;/code&gt; кортеж {Option, Value} . Некоторые более сложные параметры конфигурации, такие как &lt;code&gt;directory&lt;/code&gt; и &lt;code&gt;security_directory&lt;/code&gt; , создают аккумулятор. Эта функция нуждается только в предложениях для параметров, реализованных этим конкретным модулем обратного вызова.</target>
-        </trans-unit>
-        <trans-unit id="1ba2baaacb5bd1fa86bcae22233808d6f9af2ca7" translate="yes" xml:space="preserve">
-          <source>Converts a list to an extendible array. &lt;code&gt;Default&lt;/code&gt; is used as the value for uninitialized entries of the array. If &lt;code&gt;List&lt;/code&gt; is not a proper list, the call fails with reason &lt;code&gt;badarg&lt;/code&gt;.</source>
-          <target state="translated">Преобразует список в расширяемый массив. &lt;code&gt;Default&lt;/code&gt; используется как значение для неинициализированных записей массива. Если &lt;code&gt;List&lt;/code&gt; не является правильным списком, вызов завершится ошибкой по причине &lt;code&gt;badarg&lt;/code&gt; .</target>
-        </trans-unit>
-        <trans-unit id="46ccd780115ddb3db3a4fceec0e82dd6e0b6fc95" translate="yes" xml:space="preserve">
-          <source>Converts a local time value to a list of possible DateAndTime list(s). The local time value on the same format as defined in calendar(3).</source>
-          <target state="translated">Преобразует значение местного времени в список возможных списков DateAndTime.Значение местного времени в том же формате,который определен в календаре(3).</target>
-        </trans-unit>
-        <trans-unit id="0677e1933e311ee3ab43091b45e003180be5b30d" translate="yes" xml:space="preserve">
-          <source>Converts a port handle to the Erlang term format, usable in &lt;code&gt;&lt;a href=&quot;#erl_drv_output_term&quot;&gt; erl_drv_output_term&lt;/a&gt;&lt;/code&gt; and &lt;code&gt;&lt;a href=&quot;#erl_drv_send_term&quot;&gt; erl_drv_send_term&lt;/a&gt;&lt;/code&gt;.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="1ed8f6dfcb33426ca4e1a7205c23417d3a9d60fa" translate="yes" xml:space="preserve">
-          <source>Converts a port handle to the Erlang term format, usable in &lt;code&gt;&lt;a href=&quot;#erl_drv_output_term&quot;&gt;erl_drv_output_term&lt;/a&gt;&lt;/code&gt; and &lt;code&gt;&lt;a href=&quot;#erl_drv_send_term&quot;&gt;erl_drv_send_term&lt;/a&gt;&lt;/code&gt;.</source>
-          <target state="translated">Преобразует дескриптор порта в формат терминов Erlang, который можно использовать в &lt;code&gt;&lt;a href=&quot;#erl_drv_output_term&quot;&gt;erl_drv_output_term&lt;/a&gt;&lt;/code&gt; и &lt;code&gt;&lt;a href=&quot;#erl_drv_send_term&quot;&gt;erl_drv_send_term&lt;/a&gt;&lt;/code&gt; .</target>
-        </trans-unit>
-        <trans-unit id="f1537e7dd396d1f3ae28bd863e00e7d4f2a0ff80" translate="yes" xml:space="preserve">
-          <source>Converts a positive integer to the smallest possible representation in a binary digit representation, either big endian or little endian.</source>
-          <target state="translated">Преобразовывает положительное целое число в наименьшее возможное представление в двоичном представлении,либо на большом эндиане,либо на маленьком эндиане.</target>
-        </trans-unit>
-        <trans-unit id="4b06d2c3db2372af5cb08f262a3a235fead48580" translate="yes" xml:space="preserve">
-          <source>Converts a possibly deep list filename consisting of characters and atoms into the corresponding flat string filename.</source>
-          <target state="translated">Преобразование возможного глубокого имени файла списка,состоящего из символов и атомов,в соответствующее плоское имя файла строки.</target>
-        </trans-unit>
-        <trans-unit id="bcdf5ec8404937f0cc26b604615b645a3d632e2c" translate="yes" xml:space="preserve">
-          <source>Converts a possibly deep list of characters and binaries into a Normalized Form of canonical equivalent Composed characters according to the Unicode standard.</source>
-          <target state="translated">Преобразует возможно глубокий список символов и двоичных файлов в Нормализованную форму канонических эквивалентов Композитных символов в соответствии со стандартом Юникод.</target>
-        </trans-unit>
-        <trans-unit id="25cde6c5eb02ad4f574bba02ec1c6f1c1e5ac62f" translate="yes" xml:space="preserve">
-          <source>Converts a possibly deep list of characters and binaries into a Normalized Form of canonical equivalent Decomposed characters according to the Unicode standard.</source>
-          <target state="translated">Преобразует возможно глубокий список символов и двоичных файлов в Нормализованную форму канонических эквивалентов Разложенных символов в соответствии со стандартом Юникод.</target>
-        </trans-unit>
-        <trans-unit id="3756e2cde9505923edd4d4e14aa5e042f713b23b" translate="yes" xml:space="preserve">
-          <source>Converts a possibly deep list of characters and binaries into a Normalized Form of compatibly equivalent Composed characters according to the Unicode standard.</source>
-          <target state="translated">Преобразует возможно глубокий список символов и двоичных файлов в Нормализованную Форму Комбинированных Символов в соответствии со стандартом Юникод.</target>
-        </trans-unit>
-        <trans-unit id="530b1c8ab020feea5c4599c3a34122f44f338da2" translate="yes" xml:space="preserve">
-          <source>Converts a possibly deep list of characters and binaries into a Normalized Form of compatibly equivalent Decomposed characters according to the Unicode standard.</source>
-          <target state="translated">Преобразует возможно глубокий список символов и двоичных файлов в Нормализованную форму комбинированно эквивалентных Разложенных символов в соответствии со стандартом Юникод.</target>
-        </trans-unit>
-        <trans-unit id="eea7568b698b464020aabc3712d814408bd4a0f7" translate="yes" xml:space="preserve">
-          <source>Converts a possibly deep list of integers and binaries into a list of integers representing Unicode characters. The binaries in the input can have characters encoded as one of the following:</source>
-          <target state="translated">Преобразовывает возможно глубокий список целых чисел и двоичных файлов в список целых чисел,представляющих символы Юникода.Двоичные файлы во входных данных могут иметь символы,закодированные как одно из следующих:</target>
-        </trans-unit>
-        <trans-unit id="24b7abb99fbb61c37725003b7ae6ea6832706f64" translate="yes" xml:space="preserve">
-          <source>Converts a relative &lt;code&gt;Filename&lt;/code&gt; and returns an absolute name. No attempt is made to create the shortest absolute name, as this can give incorrect results on file systems that allow links.</source>
-          <target state="translated">Преобразует относительное имя &lt;code&gt;Filename&lt;/code&gt; и возвращает абсолютное имя. Не предпринимается никаких попыток создать кратчайшее абсолютное имя, так как это может привести к неверным результатам в файловых системах, допускающих ссылки.</target>
-        </trans-unit>
-        <trans-unit id="671a1aeac87b27d23dd6ee2e34e272472de95a3a" translate="yes" xml:space="preserve">
-          <source>Converts a specified number of seconds into days, hours, minutes, and seconds. &lt;code&gt;Time&lt;/code&gt; is always non-negative, but &lt;code&gt;Days&lt;/code&gt; is negative if argument &lt;code&gt;Seconds&lt;/code&gt; is.</source>
-          <target state="translated">Преобразует указанное количество секунд в дни, часы, минуты и секунды. &lt;code&gt;Time&lt;/code&gt; всегда неотрицательно, но &lt;code&gt;Days&lt;/code&gt; отрицательно, если аргумент &lt;code&gt;Seconds&lt;/code&gt; имеет значение.</target>
-        </trans-unit>
-        <trans-unit id="ed3af2f954d658c30bda990c05b304fc42cc2658" translate="yes" xml:space="preserve">
-          <source>Converts a specified system time into local date and time.</source>
-          <target state="translated">Преобразовывает указанное системное время в местную дату и время.</target>
         </trans-unit>
       </group>
     </body>

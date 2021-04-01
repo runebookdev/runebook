@@ -437,7 +437,7 @@
         </trans-unit>
         <trans-unit id="2dd7003f19d2654f2242b05fc894ff130176dcec" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;TypesConfig&lt;/code&gt; directive sets the location of the &lt;a href=&quot;https://httpd.apache.org/docs/2.4/en/glossary.html#media-type&quot;&gt;media types&lt;/a&gt; configuration file. &lt;var&gt;File-path&lt;/var&gt; is relative to the &lt;code&gt;&lt;a href=&quot;core#serverroot&quot;&gt;ServerRoot&lt;/a&gt;&lt;/code&gt;. This file sets the default list of mappings from filename extensions to content types. Most administrators use the &lt;code&gt;mime.types&lt;/code&gt; file provided by their OS, which associates common filename extensions with the official list of IANA registered media types maintained at &lt;a href=&quot;https://www.iana.org/assignments/media-types/index.html&quot;&gt;http://www.iana.org/assignments/media-types/index.html&lt;/a&gt; as well as a large number of unofficial types. This simplifies the &lt;code&gt;httpd.conf&lt;/code&gt; file by providing the majority of media-type definitions, and may be overridden by &lt;code&gt;&lt;a href=&quot;#addtype&quot;&gt;AddType&lt;/a&gt;&lt;/code&gt; directives as needed. You should not edit the &lt;code&gt;mime.types&lt;/code&gt; file, because it may be replaced when you upgrade your server.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;TypesConfig&lt;/code&gt; はのディレクティブはの場所に設定&lt;a href=&quot;https://httpd.apache.org/docs/2.4/en/glossary.html#media-type&quot;&gt;メディアタイプの&lt;/a&gt;設定ファイルを。 &lt;var&gt;File-path&lt;/var&gt; は &lt;code&gt;&lt;a href=&quot;core#serverroot&quot;&gt;ServerRoot&lt;/a&gt;&lt;/code&gt; からの相対パスです。このファイルは、ファイル名拡張子からコンテンツタイプへのマッピングのデフォルトリストを設定します。ほとんどの管理者は、使用 &lt;code&gt;mime.types&lt;/code&gt; に維持メディアタイプIANAの公式リストと共通のファイル名の拡張子を関連付け、そのOSが提供するファイルを登録し&lt;a href=&quot;https://www.iana.org/assignments/media-types/index.html&quot;&gt;http://www.iana.org/assignments/media-types/index.html&lt;/a&gt;うまくように多数の非公式タイプとして。これにより、メディアタイプ定義の大部分が提供されるため、 &lt;code&gt;httpd.conf&lt;/code&gt; ファイルが簡素化され、 &lt;code&gt;&lt;a href=&quot;#addtype&quot;&gt;AddType&lt;/a&gt;&lt;/code&gt; によってオーバーライドされる可能性があります。必要に応じてディレクティブ。 &lt;code&gt;mime.types&lt;/code&gt; ファイルは、サーバーのアップグレード時に置き換えられる可能性があるため、編集しないでください。</target>
         </trans-unit>
         <trans-unit id="3d58d4fdb1e17ba09081eb178e2fca0f198d20d5" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;UNIQUE_ID&lt;/code&gt; environment variable is constructed by encoding the 144-bit (32-bit IP address, 32 bit pid, 32 bit time stamp, 16 bit counter, 32 bit thread index) quadruple using the alphabet &lt;code&gt;[A-Za-z0-9@-]&lt;/code&gt; in a manner similar to MIME base64 encoding, producing 24 characters. The MIME base64 alphabet is actually &lt;code&gt;[A-Za-z0-9+/]&lt;/code&gt; however &lt;code&gt;+&lt;/code&gt; and &lt;code&gt;/&lt;/code&gt; need to be specially encoded in URLs, which makes them less desirable. All values are encoded in network byte ordering so that the encoding is comparable across architectures of different byte ordering. The actual ordering of the encoding is: time stamp, IP address, pid, counter. This ordering has a purpose, but it should be emphasized that applications should not dissect the encoding. Applications should treat the entire encoded &lt;code&gt;UNIQUE_ID&lt;/code&gt; as an opaque token, which can be compared against other &lt;code&gt;UNIQUE_ID&lt;/code&gt;s for equality only.</source>
@@ -637,7 +637,7 @@
         </trans-unit>
         <trans-unit id="d9b575ff20e5cc20e80db3e1a6ee787f275c29bc" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;httpready&lt;/code&gt; accept filter buffers entire HTTP requests at the kernel level. Once an entire request is received, the kernel then sends it to the server. See the &lt;a href=&quot;https://www.freebsd.org/cgi/man.cgi?query=accf_http&amp;amp;sektion=9&quot;&gt; accf_http(9)&lt;/a&gt; man page for more details. Since HTTPS requests are encrypted, only the &lt;a href=&quot;https://www.freebsd.org/cgi/man.cgi?query=accf_data&amp;amp;sektion=9&quot;&gt; accf_data(9)&lt;/a&gt; filter is used.</source>
-          <target state="new"/>
+          <target state="translated">&lt;code&gt;httpready&lt;/code&gt; フィルタバッファにカーネルレベルで全体のHTTP要求を受け入れます。リクエスト全体が受信されると、カーネルはそれをサーバーに送信します。詳細については、&lt;a href=&quot;https://www.freebsd.org/cgi/man.cgi?query=accf_http&amp;amp;sektion=9&quot;&gt;accf_http（9）の&lt;/a&gt;マニュアルページを参照してください。HTTPSリクエストは暗号化されているため、&lt;a href=&quot;https://www.freebsd.org/cgi/man.cgi?query=accf_data&amp;amp;sektion=9&quot;&gt;accf_data（9）&lt;/a&gt;フィルターのみが使用されます。</target>
         </trans-unit>
         <trans-unit id="417f65e59a3fa1d74a869960621e550a319b5ba7" translate="yes" xml:space="preserve">
           <source>The &lt;code&gt;if&lt;/code&gt; element works like an if statement in a programming language. The test condition is evaluated and if the result is true, then the text until the next &lt;code&gt;elif&lt;/code&gt;, &lt;code&gt;else&lt;/code&gt; or &lt;code&gt;endif&lt;/code&gt; element is included in the output stream.</source>
@@ -921,7 +921,7 @@
         </trans-unit>
         <trans-unit id="e778f8b3db5fa8ec6587a2c2b66af88b2eac7e9b" translate="yes" xml:space="preserve">
           <source>The Apache HTTP Server can be downloaded from the &lt;a href=&quot;https://httpd.apache.org/download.cgi&quot;&gt;Apache HTTP Server download site&lt;/a&gt;, which lists several mirrors. Most users of Apache on unix-like systems will be better off downloading and compiling a source version. The build process (described below) is easy, and it allows you to customize your server to suit your needs. In addition, binary releases are often not up to date with the latest source releases. If you do download a binary, follow the instructions in the &lt;code&gt;INSTALL.bindist&lt;/code&gt; file inside the distribution.</source>
-          <target state="new"/>
+          <target state="translated">Apache HTTPサーバーは、いくつかのミラーがリストされているApacheHTTP&lt;a href=&quot;https://httpd.apache.org/download.cgi&quot;&gt;サーバーのダウンロードサイト&lt;/a&gt;からダウンロードできます。 UNIXライクなシステムでApacheを使用するほとんどのユーザーは、ソースバージョンをダウンロードしてコンパイルすることをお勧めします。ビルドプロセス（以下で説明）は簡単で、ニーズに合わせてサーバーをカスタマイズできます。さらに、バイナリリリースは、最新のソースリリースで最新ではないことがよくあります。バイナリをダウンロードする場合は、ディストリビューション内の &lt;code&gt;INSTALL.bindist&lt;/code&gt; ファイルの指示に従ってください。</target>
         </trans-unit>
         <trans-unit id="ae744855f68fe9af0b4aae155c1f9223dc127338" translate="yes" xml:space="preserve">
           <source>The Apache HTTP Server handles requests in several phases. At each of these phases, one or more modules may be called upon to handle that portion of the request lifecycle. Phases include things like URL-to-filename translation, authentication, authorization, content, and logging. (This is not an exhaustive list.)</source>
@@ -933,7 +933,7 @@
         </trans-unit>
         <trans-unit id="ceed4ccb4fa3fd8e62e647a9bc57d09d486a555b" translate="yes" xml:space="preserve">
           <source>The Apache HTTP Server has a good record for security and a developer community highly concerned about security issues. But it is inevitable that some problems -- small or large -- will be discovered in software after it is released. For this reason, it is crucial to keep aware of updates to the software. If you have obtained your version of the HTTP Server directly from Apache, we highly recommend you subscribe to the &lt;a href=&quot;https://httpd.apache.org/lists.html#http-announce&quot;&gt;Apache HTTP Server Announcements List&lt;/a&gt; where you can keep informed of new releases and security updates. Similar services are available from most third-party distributors of Apache software.</source>
-          <target state="new"/>
+          <target state="translated">Apache HTTPサーバーは、セキュリティに関して優れた記録を持っており、開発者コミュニティはセキュリティの問題について非常に懸念しています。しかし、リリース後にソフトウェアでいくつかの問題（小規模または大規模）が発見されることは避けられません。このため、ソフトウェアの更新を常に把握しておくことが重要です。ご使用のバージョンのHTTPサーバーをApacheから直接入手した場合は、&lt;a href=&quot;https://httpd.apache.org/lists.html#http-announce&quot;&gt;Apache HTTPサーバーアナウンスリスト&lt;/a&gt;に登録して、新しいリリースやセキュリティアップデートの情報を入手することを強くお勧めします。同様のサービスは、Apacheソフトウェアのほとんどのサードパーティディストリビューターから入手できます。</target>
         </trans-unit>
         <trans-unit id="7d8561937672c7fc208b74f206a4c6acb32b80ef" translate="yes" xml:space="preserve">
           <source>The Apache HTTP Server is a modular program where the administrator can choose the functionality to include in the server by selecting a set of modules. Modules will be compiled as Dynamic Shared Objects (DSOs) that exist separately from the main &lt;code&gt;&lt;a href=&quot;programs/httpd&quot;&gt;httpd&lt;/a&gt;&lt;/code&gt; binary file. DSO modules may be compiled at the time the server is built, or they may be compiled and added at a later time using the Apache Extension Tool (&lt;code&gt;&lt;a href=&quot;programs/apxs&quot;&gt;apxs&lt;/a&gt;&lt;/code&gt;).</source>
@@ -945,7 +945,7 @@
         </trans-unit>
         <trans-unit id="388034618a49f209c113afeb13a0ead6fb0ae027" translate="yes" xml:space="preserve">
           <source>The Apache HTTP Server is configured via simple text files. These files may be located any of a variety of places, depending on how exactly you installed the server. Common locations for these files may be found &lt;a href=&quot;https://wiki.apache.org/httpd/DistrosDefaultLayout&quot;&gt;in the httpd wiki&lt;/a&gt;. If you installed httpd from source, the default location of the configuration files is &lt;code&gt;/usr/local/apache2/conf&lt;/code&gt;. The default configuration file is usually called &lt;code&gt;httpd.conf&lt;/code&gt;. This, too, can vary in third-party distributions of the server.</source>
-          <target state="new"/>
+          <target state="translated">Apache HTTPサーバーは、単純なテキストファイルを介して構成されます。これらのファイルは、サーバーをどの程度正確にインストールしたかに応じて、さまざまな場所に配置される可能性があります。これらのファイルの一般的な場所&lt;a href=&quot;https://wiki.apache.org/httpd/DistrosDefaultLayout&quot;&gt;は、httpdwikiにあります&lt;/a&gt;。ソースからhttpdをインストールした場合、構成ファイルのデフォルトの場所は &lt;code&gt;/usr/local/apache2/conf&lt;/code&gt; です。デフォルトの設定ファイルは通常 &lt;code&gt;httpd.conf&lt;/code&gt; と呼ばれます。これも、サーバーのサードパーティのディストリビューションによって異なる場合があります。</target>
         </trans-unit>
         <trans-unit id="aa2a087c2e36e51d0222ac85bd926ca9588b6e8d" translate="yes" xml:space="preserve">
           <source>The Apache HTTP Server is designed to be a powerful and flexible web server that can work on a very wide variety of platforms in a range of different environments. Different platforms and different environments often require different features, or may have different ways of implementing the same feature most efficiently. Apache httpd has always accommodated a wide variety of environments through its modular design. This design allows the webmaster to choose which features will be included in the server by selecting which modules to load either at compile-time or at run-time.</source>
@@ -957,7 +957,7 @@
         </trans-unit>
         <trans-unit id="5c07d008a28b492f116e62ba1c3de5301fd1949d" translate="yes" xml:space="preserve">
           <source>The Apache HTTP Server module &lt;code&gt;&lt;a href=&quot;../mod/mod_ssl&quot;&gt;mod_ssl&lt;/a&gt;&lt;/code&gt; provides an interface to the &lt;a href=&quot;https://www.openssl.org/&quot;&gt;OpenSSL&lt;/a&gt; library, which provides Strong Encryption using the Secure Sockets Layer and Transport Layer Security protocols.</source>
-          <target state="new"/>
+          <target state="translated">Apache HTTPサーバーモジュール &lt;code&gt;&lt;a href=&quot;../mod/mod_ssl&quot;&gt;mod_ssl&lt;/a&gt;&lt;/code&gt; は、&lt;a href=&quot;https://www.openssl.org/&quot;&gt;OpenSSL&lt;/a&gt;ライブラリへのインターフェイスを提供します。これは、Secure SocketsLayerおよびTransportLayerSecurityプロトコルを使用した強力な暗号化を提供します。</target>
         </trans-unit>
         <trans-unit id="78e3842edffd98561dbb16d4d15d5f114f561545" translate="yes" xml:space="preserve">
           <source>The Apache HTTP Server provides a variety of different mechanisms for logging everything that happens on your server, from the initial request, through the URL mapping process, to the final resolution of the connection, including any errors that may have occurred in the process. In addition to this, third-party modules may provide logging capabilities, or inject entries into the existing log files, and applications such as CGI programs, or PHP scripts, or other handlers, may send messages to the server error log.</source>
@@ -1077,7 +1077,7 @@
         </trans-unit>
         <trans-unit id="58093a7e000708eb45c9fc06a30c965fa6d6ca4a" translate="yes" xml:space="preserve">
           <source>The HTTP protocol contains built in support for an in-line caching mechanism &lt;a href=&quot;https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html&quot;&gt; described by section 13 of RFC2616&lt;/a&gt;, and the &lt;code&gt;&lt;a href=&quot;mod/mod_cache&quot;&gt;mod_cache&lt;/a&gt;&lt;/code&gt; module can be used to take advantage of this.</source>
-          <target state="new"/>
+          <target state="translated">HTTPプロトコルには&lt;a href=&quot;https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html&quot;&gt;、RFC2616のセクション13で説明されている&lt;/a&gt;インラインキャッシュメカニズムのサポートが組み込まれており、 &lt;code&gt;&lt;a href=&quot;mod/mod_cache&quot;&gt;mod_cache&lt;/a&gt;&lt;/code&gt; モジュールを使用してこれを利用できます。</target>
         </trans-unit>
         <trans-unit id="58d0c5112d3b9a6ef6a8fd8b917680b89376f4c5" translate="yes" xml:space="preserve">
           <source>The HTTP protocol does allow the cache to serve stale data under certain circumstances, such as when an attempt to freshen the data with an origin server has failed with a 5xx error, or when another request is already in the process of freshening the given entry. In these cases a &lt;code&gt;Warning&lt;/code&gt; header is added to the response.</source>
@@ -1725,7 +1725,7 @@
         </trans-unit>
         <trans-unit id="b09b050cdb686538f55bcc5b63fca3c44ba9342c" translate="yes" xml:space="preserve">
           <source>The bug reporting page and dev-httpd mailing list are &lt;em&gt;not&lt;/em&gt; provided to answer questions about configuration or running Apache. Before you submit a bug report or request, first consult this document, the &lt;a href=&quot;https://wiki.apache.org/httpd/FAQ&quot;&gt;Frequently Asked Questions&lt;/a&gt; page and the other relevant documentation topics. If you still have a question or problem, post it to the &lt;a href=&quot;news://developer-forums.novell.com/novell.devsup.webserver&quot;&gt; novell.devsup.webserver&lt;/a&gt; newsgroup, where many Apache users are more than willing to answer new and obscure questions about using Apache on NetWare.</source>
-          <target state="new"/>
+          <target state="translated">バグ報告ページとdev-httpdメーリングリストは、Apacheの設定や実行に関する質問に答える&lt;em&gt;ために&lt;/em&gt;提供されて&lt;em&gt;いません&lt;/em&gt;。バグレポートまたはリクエストを送信する前に、まずこのドキュメント、&lt;a href=&quot;https://wiki.apache.org/httpd/FAQ&quot;&gt;よくある質問の&lt;/a&gt;ページ、およびその他の関連するドキュメントのトピックを参照してください。それでも質問や問題がある場合は、&lt;a href=&quot;news://developer-forums.novell.com/novell.devsup.webserver&quot;&gt;novel.devsup.webserver&lt;/a&gt;ニュースグループに投稿してください。多くのApacheユーザーは、NetWareでのApacheの使用に関する新しいあいまいな質問に喜んで答えます。</target>
         </trans-unit>
         <trans-unit id="dfb0e30e59534bcc5c446bff0e7caca4112bea40" translate="yes" xml:space="preserve">
           <source>The cached entity was invalidated by a request method other than GET or HEAD.</source>
@@ -2009,7 +2009,7 @@
         </trans-unit>
         <trans-unit id="86a9b494939cfbdd391a01e87daf478e35f0f002" translate="yes" xml:space="preserve">
           <source>The current CGI specification is available in the &lt;a href=&quot;https://www.ietf.org/rfc/rfc3875&quot;&gt;Common Gateway Interface RFC&lt;/a&gt;.</source>
-          <target state="new"/>
+          <target state="translated">現在のCGI仕様は、&lt;a href=&quot;https://www.ietf.org/rfc/rfc3875&quot;&gt;Common Gateway InterfaceRFCで&lt;/a&gt;入手できます。</target>
         </trans-unit>
         <trans-unit id="a767a2e65f4be15af5619cdd15ab67afa77554e7" translate="yes" xml:space="preserve">
           <source>The current URI can be the initial URI as requested by the client, the result of a previous round of mod_rewrite processing, or the result of a prior rule in the current round of mod_rewrite processing.</source>
@@ -3073,7 +3073,7 @@
         </trans-unit>
         <trans-unit id="1a2a46983bcab9444e187963aaaa9f10a1b72ca0" translate="yes" xml:space="preserve">
           <source>The full definition of which responses can be cached by an HTTP cache is defined in &lt;a href=&quot;https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html#sec13.4&quot;&gt; RFC2616 Section 13.4 Response Cacheability&lt;/a&gt;, and can be summed up as follows:</source>
-          <target state="new"/>
+          <target state="translated">HTTPキャッシュによってキャッシュできる応答の完全な定義は、&lt;a href=&quot;https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html#sec13.4&quot;&gt;RFC2616セクション13.4応答&lt;/a&gt;キャッシュ可能性で定義されており、次のように要約できます。</target>
         </trans-unit>
         <trans-unit id="6f27a0246abbc256a2dc7a619dccd5a0000bcac7" translate="yes" xml:space="preserve">
           <source>The full list of headers recognized is available in the &lt;a href=&quot;mod/mod_negotiation#typemaps&quot;&gt;mod_negotiation typemap&lt;/a&gt; documentation.</source>
@@ -3189,7 +3189,7 @@
         </trans-unit>
         <trans-unit id="23eed5da5d7a0445c900a8b339abc3218a79767b" translate="yes" xml:space="preserve">
           <source>The httpd binary is built with the help of several patches to third party packages, which ensure the released code is buildable and debuggable. These patches are available and distributed from &lt;a href=&quot;https://www.apache.org/dist/httpd/binaries/win32/patches_applied/&quot;&gt;http://www.apache.org/dist/httpd/binaries/win32/patches_applied/&lt;/a&gt; and are recommended to be applied to obtain identical results as the &quot;official&quot; ASF distributed binaries.</source>
-          <target state="new"/>
+          <target state="translated">httpdバイナリは、サードパーティパッケージへのいくつかのパッチの助けを借りて構築されており、リリースされたコードがビルド可能でデバッグ可能であることを保証します。これらのパッチは&lt;a href=&quot;https://www.apache.org/dist/httpd/binaries/win32/patches_applied/&quot;&gt;http://www.apache.org/dist/httpd/binaries/win32/patches_applied/&lt;/a&gt;から入手および配布されており、「公式」ASF配布バイナリと同じ結果を得るために適用することをお勧めします。</target>
         </trans-unit>
         <trans-unit id="381367eafd54603791e9412433719381c33c0856" translate="yes" xml:space="preserve">
           <source>The imagemap module adds some new features that were not possible with previously distributed imagemap programs.</source>
@@ -3281,7 +3281,7 @@
         </trans-unit>
         <trans-unit id="41a9e35b8cc8bf6dca2d24081323f6895c217806" translate="yes" xml:space="preserve">
           <source>The language(s) of the variant, as an Internet standard language tag (&lt;a href=&quot;https://www.ietf.org/rfc/rfc1766.txt&quot;&gt;RFC 1766&lt;/a&gt;). An example is &lt;code&gt;en&lt;/code&gt;, meaning English. If the variant contains more than one language, they are separated by a comma.</source>
-          <target state="new"/>
+          <target state="translated">インターネット標準言語タグとしてのバリアントの言語（&lt;a href=&quot;https://www.ietf.org/rfc/rfc1766.txt&quot;&gt;RFC 1766&lt;/a&gt;）。例は英語を意味する &lt;code&gt;en&lt;/code&gt; です。バリアントに複数の言語が含まれている場合、それらはコンマで区切られます。</target>
         </trans-unit>
         <trans-unit id="d706496109e8997da6167e7cda14333fceb60126" translate="yes" xml:space="preserve">
           <source>The largest size of the form in bytes that will be parsed for the login details</source>

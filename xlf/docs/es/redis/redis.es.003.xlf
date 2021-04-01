@@ -3,6 +3,30 @@
   <file source-language="en" target-language="es" datatype="htmlbody" original="redis">
     <body>
       <group id="redis">
+        <trans-unit id="3d6762a6aa2cf0aca37a59f773d7789ef284a403" translate="yes" xml:space="preserve">
+          <source>Note: an important part of this behavior is that the PRNG that Redis implements as &lt;code&gt;math.random&lt;/code&gt; and &lt;code&gt;math.randomseed&lt;/code&gt; is guaranteed to have the same output regardless of the architecture of the system running Redis. 32-bit, 64-bit, big-endian and little-endian systems will all produce the same output.</source>
+          <target state="translated">Nota: una parte importante de este comportamiento es que el PRNG que Redis implementa como &lt;code&gt;math.random&lt;/code&gt; y &lt;code&gt;math.randomseed&lt;/code&gt; est&amp;aacute; garantizado para tener el mismo resultado independientemente de la arquitectura del sistema que ejecuta Redis. Los sistemas de 32 bits, 64 bits, big-endian y little-endian producir&amp;aacute;n la misma salida.</target>
+        </trans-unit>
+        <trans-unit id="19d14832252be8ae1106f6c63fb642cd3e9e2df4" translate="yes" xml:space="preserve">
+          <source>Note: as a side effect of calling this function, it is possible that the HyperLogLog is modified, since the last 8 bytes encode the latest computed cardinality for caching purposes. So &lt;a href=&quot;pfcount&quot;&gt;PFCOUNT&lt;/a&gt; is technically a write command.</source>
+          <target state="translated">Nota: como efecto secundario de llamar a esta funci&amp;oacute;n, es posible que se modifique HyperLogLog, ya que los &amp;uacute;ltimos 8 bytes codifican la &amp;uacute;ltima cardinalidad calculada para fines de almacenamiento en cach&amp;eacute;. Entonces, &lt;a href=&quot;pfcount&quot;&gt;PFCOUNT&lt;/a&gt; es t&amp;eacute;cnicamente un comando de escritura.</target>
+        </trans-unit>
+        <trans-unit id="ca716680732d1d3e7b5dc5d38bf23aaa2688e964" translate="yes" xml:space="preserve">
+          <source>Note: as you can see Lua arrays are returned as Redis multi bulk replies, that is a Redis return type that your client library will likely convert into an Array type in your programming language.</source>
+          <target state="translated">Nota:como puede ver,los arrays Lua se devuelven como respuestas multi-bulto Redis,es decir,un tipo de retorno Redis que su biblioteca cliente probablemente convertirá en un tipo de Array en su lenguaje de programación.</target>
+        </trans-unit>
+        <trans-unit id="a094e9a0339a167054eac3028e87a3e324531dab" translate="yes" xml:space="preserve">
+          <source>Note: of course as usually it is not guaranteed that the error text remains the same, however the error code will remain &lt;code&gt;-UNBLOCKED&lt;/code&gt;.</source>
+          <target state="translated">Nota: por supuesto, como de costumbre, no se garantiza que el texto del error siga siendo el mismo, sin embargo, el c&amp;oacute;digo de error permanecer&amp;aacute; &lt;code&gt;-UNBLOCKED&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="3ba013a44d25a035abd0e8ad87d8b610e34b72b2" translate="yes" xml:space="preserve">
+          <source>Note: the command has a complexity of just O(log(N)) because it uses elements ranks (see &lt;a href=&quot;zrank&quot;&gt;ZRANK&lt;/a&gt;) to get an idea of the range. Because of this there is no need to do a work proportional to the size of the range.</source>
+          <target state="translated">Nota: el comando tiene una complejidad de solo O (log (N)) porque usa rangos de elementos (ver &lt;a href=&quot;zrank&quot;&gt;ZRANK&lt;/a&gt; ) para tener una idea del rango. Debido a esto, no es necesario realizar un trabajo proporcional al tama&amp;ntilde;o de la gama.</target>
+        </trans-unit>
+        <trans-unit id="a4cf334aa22d4d43d68ebc7afbb42dd9e08a0e09" translate="yes" xml:space="preserve">
+          <source>Note: we use the &lt;strong&gt;COUNT&lt;/strong&gt; option in the example, so that for each stream the call will return at maximum two elements per stream.</source>
+          <target state="translated">Nota: utilizamos la opci&amp;oacute;n &lt;strong&gt;COUNT&lt;/strong&gt; en el ejemplo, de modo que para cada flujo, la llamada devolver&amp;aacute; un m&amp;aacute;ximo de dos elementos por flujo.</target>
+        </trans-unit>
         <trans-unit id="70440046a3dc2e079f23ee1c57dfa76669b732aa" translate="yes" xml:space="preserve">
           <source>Notes</source>
           <target state="translated">Notes</target>
@@ -3578,6 +3602,10 @@ SET&lt;/code&gt;.</source>
           <source>There is &lt;a href=&quot;http://www.lua.org/pil/19.1.html&quot;&gt;no simple way to have nils inside Lua arrays&lt;/a&gt;, this is a result of Lua table semantics, so when Redis converts a Lua array into Redis protocol the conversion is stopped if a nil is encountered.</source>
           <target state="translated">No &lt;a href=&quot;http://www.lua.org/pil/19.1.html&quot;&gt;hay una forma sencilla de tener nulos dentro de las matrices Lua&lt;/a&gt; , esto es el resultado de la sem&amp;aacute;ntica de la tabla Lua, por lo que cuando Redis convierte una matriz Lua en el protocolo Redis, la conversi&amp;oacute;n se detiene si se encuentra un nil.</target>
         </trans-unit>
+        <trans-unit id="b1c93389b4b0093ccfd4821330160b8a97df2879" translate="yes" xml:space="preserve">
+          <source>There is &lt;a href=&quot;https://www.lua.org/pil/19.1.html&quot;&gt;no simple way to have nils inside Lua arrays&lt;/a&gt;, this is a result of Lua table semantics, so when Redis converts a Lua array into Redis protocol the conversion is stopped if a nil is encountered.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="1181df382608fdc99dac69533a65959f383591cd" translate="yes" xml:space="preserve">
           <source>There is a different way to fix this issue without using scripting, but using Redis lists instead of counters. The implementation is more complex and uses more advanced features but has the advantage of remembering the IP addresses of the clients currently performing an API call, that may be useful or not depending on the application.</source>
           <target state="translated">Hay una forma diferente de arreglar este problema sin usar scripts,pero usando listas Redis en lugar de contadores.La implementación es más compleja y utiliza características más avanzadas,pero tiene la ventaja de recordar las direcciones IP de los clientes que actualmente realizan una llamada a la API,que puede ser útil o no dependiendo de la aplicación.</target>
@@ -3977,34 +4005,6 @@ SET&lt;/code&gt;.</source>
         <trans-unit id="eabc7eeeb462a96b3b77723425f464bf9ccbef27" translate="yes" xml:space="preserve">
           <source>This way we have a 60 second window to inform all the nodes in the cluster that we want to remove a node.</source>
           <target state="translated">De esta manera tenemos una ventana de 60 segundos para informar a todos los nodos del cúmulo que queremos eliminar un nodo.</target>
-        </trans-unit>
-        <trans-unit id="e40460902c1181221678071c434b045c404620fa" translate="yes" xml:space="preserve">
-          <source>This will swap database 0 with database 1. All the clients connected with database 0 will immediately see the new data, exactly like all the clients connected with database 1 will see the data that was formerly of database 0.</source>
-          <target state="translated">Esto intercambiará la base de datos 0 con la base de datos 1.Todos los clientes conectados con la base de datos 0 verán inmediatamente los nuevos datos,exactamente como todos los clientes conectados con la base de datos 1 verán los datos que antes eran de la base de datos 0.</target>
-        </trans-unit>
-        <trans-unit id="d5bfb565b7330daf67d56a70b8a026b02f7b8efa" translate="yes" xml:space="preserve">
-          <source>Tip: setting names to connections is a good way to debug connection leaks due to bugs in the application using Redis.</source>
-          <target state="translated">Consejo:establecer nombres para las conexiones es una buena manera de depurar las fugas de conexión debidas a errores en la aplicación usando Redis.</target>
-        </trans-unit>
-        <trans-unit id="ff53653923ebddab009510a619b44980ec4c2bad" translate="yes" xml:space="preserve">
-          <source>To call the command without elements but just the variable name is valid, this will result into no operation performed if the variable already exists, or just the creation of the data structure if the key does not exist (in the latter case 1 is returned).</source>
-          <target state="translated">Llamar el comando sin elementos pero sólo el nombre de la variable es válido,esto resultará en que no se realice ninguna operación si la variable ya existe,o sólo la creación de la estructura de datos si la clave no existe (en este último caso se devuelve 1).</target>
-        </trans-unit>
-        <trans-unit id="480b89cfe665e37f5248f03df59af64d3763158a" translate="yes" xml:space="preserve">
-          <source>To continue iterating the two streams I'll call:</source>
-          <target state="translated">Para continuar iterando las dos corrientes llamaré:</target>
-        </trans-unit>
-        <trans-unit id="0314c05fdc90b76eea71abe37038408de3a97e39" translate="yes" xml:space="preserve">
-          <source>To create a new cluster ADDSLOTS is used in order to initially setup master nodes splitting the available hash slots among them.</source>
-          <target state="translated">Para crear un nuevo grupo se utiliza ADDSLOTS para configurar inicialmente nodos maestros que dividen las ranuras hash disponibles entre ellos.</target>
-        </trans-unit>
-        <trans-unit id="44bff97be54184d5c7829a3927adcbbc623cd71d" translate="yes" xml:space="preserve">
-          <source>To create a new consumer group, use the following form:</source>
-          <target state="translated">Para crear un nuevo grupo de consumidores,utilice el siguiente formulario:</target>
-        </trans-unit>
-        <trans-unit id="89c4cf93004db2e7ed530c2bd4661a6d909ed66e" translate="yes" xml:space="preserve">
-          <source>To do so the web application may simply increment a key every time the user performs a page view, creating the key name concatenating the User ID and a string representing the current date.</source>
-          <target state="translated">Para ello,la aplicación web puede simplemente incrementar una tecla cada vez que el usuario realiza una vista de página,creando el nombre de la tecla concatenando el ID de usuario y una cadena que representa la fecha actual.</target>
         </trans-unit>
       </group>
     </body>

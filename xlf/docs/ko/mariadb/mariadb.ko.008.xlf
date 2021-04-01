@@ -3,6 +3,138 @@
   <file source-language="en" target-language="ko" datatype="htmlbody" original="mariadb">
     <body>
       <group id="mariadb">
+        <trans-unit id="9818b79aa728eda1ee40bfba1e1c8d35b57c9d79" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Determines the method of flushing dirty blocks from the InnoDB &lt;a href=&quot;../xtradbinnodb-memory-buffer/index&quot;&gt;buffer pool&lt;/a&gt;. If set to &lt;code&gt;native&lt;/code&gt; or &lt;code&gt;0&lt;/code&gt;, the original InnoDB method is used. The maximum checkpoint age is determined by the total length of all transaction log files. When the checkpoint age reaches the maximum checkpoint age, blocks are flushed. This can cause lag if there are many updates per second and many blocks with an almost identical age need to be flushed. If set to &lt;code&gt;estimate&lt;/code&gt; or &lt;code&gt;1&lt;/code&gt;, the default, the oldest modified age will be compared with the maximum age capacity. If it's more than 1/4 of this age, blocks are flushed every second. The number of blocks flushed is determined by the number of modified blocks, the LSN progress speed and the average age of all modified blocks. It's therefore independent of the &lt;a href=&quot;#innodb_io_capacity&quot;&gt;innodb_io_capacity&lt;/a&gt; for the 1-second loop, but not entirely so for the 10-second loop. If set to &lt;code&gt;keep_average&lt;/code&gt; or &lt;code&gt;2&lt;/code&gt;, designed specifically for SSD cards, a shorter loop cycle is used in an attempt to keep the I/O rate constant. Removed in &lt;a href=&quot;../what-is-mariadb-100/index&quot;&gt;MariaDB 10.0&lt;/a&gt;/XtraDB 5.6 and replaced with InnoDB flushing method from MySQL 5.6.</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; InnoDB &lt;a href=&quot;../xtradbinnodb-memory-buffer/index&quot;&gt;버퍼 풀&lt;/a&gt; 에서 더티 블록을 플러시하는 방법을 결정합니다 . &lt;code&gt;native&lt;/code&gt; 또는 &lt;code&gt;0&lt;/code&gt; 으로 설정 되면 원래 InnoDB 메소드가 사용됩니다. 최대 체크 포인트 보존 기간은 모든 트랜잭션 로그 파일의 총 길이에 의해 결정됩니다. 검사 점 에이지가 최대 검사 점 에이지에 도달하면 블록이 플러시됩니다. 초당 업데이트가 많고 수명이 거의 동일한 블록을 플러시해야하는 경우 지연이 발생할 수 있습니다. &lt;code&gt;estimate&lt;/code&gt; 또는 &lt;code&gt;1&lt;/code&gt; 로 설정된 경우기본적으로 가장 오래된 수정 연령이 최대 연령 용량과 비교됩니다. 이 연령의 1/4 이상이면 블록이 1 초마다 플러시됩니다. 플러시 된 블록 수는 수정 된 블록 수, LSN 진행 속도 및 모든 수정 된 블록의 평균 수명에 따라 결정됩니다. 따라서 1 초 루프 의 경우 &lt;a href=&quot;#innodb_io_capacity&quot;&gt;innodb_io_capacity&lt;/a&gt; 와는 독립적 이지만 10 초 루프의 경우에는 그렇지 않습니다. &lt;code&gt;keep_average&lt;/code&gt; 또는 &lt;code&gt;2&lt;/code&gt; 로 설정하면 SSD 카드 용으로 특별히 설계된 경우 I / O 속도를 일정하게 유지하기 위해 짧은 루프주기가 사용됩니다. &lt;a href=&quot;../what-is-mariadb-100/index&quot;&gt;MariaDB 10.0&lt;/a&gt; / XtraDB 5.6 에서 제거되었으며 MySQL 5.6의 InnoDB 플러싱 방법으로 대체되었습니다.</target>
+        </trans-unit>
+        <trans-unit id="0f9441b6cfd4b9802486c83540e2cca07a3d8d47" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Determines the mode used for &lt;a href=&quot;../replication/index&quot;&gt;replication&lt;/a&gt; error checking and conflict resolution. STRICT mode is the default, and catches all all errors and conflicts. IDEMPOTENT mode suppresses duplicate key or no key errors, which can be useful in certain replication scenarios, such as when there are multiple masters, or circular replication.</source>
+          <target state="translated">&lt;strong&gt;설명 : &lt;/strong&gt;&lt;a href=&quot;../replication/index&quot;&gt;복제&lt;/a&gt; 오류 검사 및 충돌 해결에 사용되는 모드를 결정합니다 . STRICT 모드가 기본값이며 모든 오류와 충돌을 모두 포착합니다. IDEMPOTENT 모드는 중복 키 또는 키 오류 없음을 억제합니다. 이는 여러 마스터가 있거나 순환 복제와 같은 특정 복제 시나리오에서 유용 할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="5023b8ebf57166faf61e4edccd87054479029347" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Determines the number of replication events that are grouped together. Experimental implementation aimed to assist with bottlenecks when a single slave faces a large commit time delay. If set to &lt;code&gt;0&lt;/code&gt; (the default), there is no grouping.</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 그룹화되는 복제 이벤트 수를 결정합니다. 실험적 구현은 단일 슬레이브가 커밋 시간 지연에 직면 할 때 병목 현상을 해결하기위한 것입니다. &lt;code&gt;0&lt;/code&gt; (기본값)으로 설정하면 그룹이 없습니다.</target>
+        </trans-unit>
+        <trans-unit id="9ecdfabe18cfec17cccf9f5d62f6b8cbcea66530" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Determines the priority of the background Sweeper thread. Possible values are '&lt;code&gt;0&lt;/code&gt;' (Low), '&lt;code&gt;1&lt;/code&gt;' (Normal), or '&lt;code&gt;2&lt;/code&gt;' (High). The Sweeper is responsible for removing deleted records and index entries (deleted records also result from UPDATE statements). If many old deleted records accumulate search operations become slower. Therefore it may improve performance to increase the priority of the Sweeper on a machine with 4 or more cores.</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 백그라운드 스위퍼 스레드의 우선 순위를 결정합니다. 가능한 값은 ' &lt;code&gt;0&lt;/code&gt; '(낮음), ' &lt;code&gt;1&lt;/code&gt; '(정상) 또는 ' &lt;code&gt;2&lt;/code&gt; '(높음)입니다. 스위퍼는 삭제 된 레코드 및 색인 항목을 제거합니다 (삭제 된 레코드도 UPDATE 문에서 생성됨). 많은 오래된 삭제 된 레코드가 누적되면 검색 작업이 느려집니다. 따라서 코어가 4 개 이상인 컴퓨터에서 스위퍼의 우선 순위를 높이기 위해 성능이 향상 될 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="214c452aecb7c9b7f6b7b1de46b43b342bebe3e4" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Determines the type conversion mode on the slave when using &lt;a href=&quot;../binary-log-formats/index#row-based&quot;&gt;row-based&lt;/a&gt;&lt;a href=&quot;../replication/index&quot;&gt;replication&lt;/a&gt;, including replications in MariaDB Galera cluster. Multiple options can be set, delimited by commas. If left empty, the default, type conversions are disallowed. The variable is dynamic and a change in its value takes effect immediately. This variable tells the server what to do if the table definition is different between the master and slave (for example a column is 'int' on the master and 'bigint' on the slave).</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; MariaDB Galera 클러스터의 복제를 포함 하여 &lt;a href=&quot;../binary-log-formats/index#row-based&quot;&gt;행 기반 &lt;/a&gt;&lt;a href=&quot;../replication/index&quot;&gt;복제를&lt;/a&gt; 사용할 때 슬레이브의 유형 변환 모드를 결정 합니다. 쉼표로 구분하여 여러 옵션을 설정할 수 있습니다. 비워두면 기본적으로 유형 변환이 허용되지 않습니다. 변수는 동적이며 값 변경은 즉시 적용됩니다. 이 변수는 마스터와 슬레이브간에 테이블 정의가 다른 경우 서버에 수행 할 작업을 알려줍니다 (예 : 열은 마스터에서 'int'이고 슬레이브에서 'bigint'입니다).</target>
+        </trans-unit>
+        <trans-unit id="ff1f92c79a1fdf3488e2cf0a0d05d7d6f97b969b" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Determines whether &lt;a href=&quot;../innodb/index&quot;&gt;InnoDB&lt;/a&gt; mutexes are timed. &lt;code&gt;OFF&lt;/code&gt;, the default, disables mutex timing, while &lt;code&gt;ON&lt;/code&gt; enables it. See also &lt;a href=&quot;../show-engine/index&quot;&gt;SHOW ENGINE&lt;/a&gt; for more on mutex statistics. Deprecated in &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-5539-release-notes/&quot;&gt;MariaDB 5.5.39&lt;/a&gt;, as has no effect anymore.</source>
+          <target state="translated">&lt;strong&gt;설명 : &lt;/strong&gt;&lt;a href=&quot;../innodb/index&quot;&gt;InnoDB&lt;/a&gt; 뮤텍스가 시간 초과 되는지 여부를 결정합니다 . 기본값 인 &lt;code&gt;OFF&lt;/code&gt; 는 뮤텍스 타이밍을 비활성화하고 &lt;code&gt;ON&lt;/code&gt; 은 활성화합니다. 뮤텍스 통계에 대한 자세한 내용은 &lt;a href=&quot;../show-engine/index&quot;&gt;엔진&lt;/a&gt; 보기를 참조하십시오 . 에서 사용되지 않는 &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-5539-release-notes/&quot;&gt;MariaDB 5.5.39&lt;/a&gt; 뿐 더 이상 영향을주지 않습니다.</target>
+        </trans-unit>
+        <trans-unit id="393142dc467f72aba982f6f283f6083f2777088a" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Determines whether &lt;a href=&quot;../replication/index&quot;&gt;replication&lt;/a&gt; is row-based, statement-based or mixed. Statement-based was the default until &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1023-release-notes/&quot;&gt;MariaDB 10.2.3&lt;/a&gt;. Be careful of changing the binary log format when a replication environment is already running. See &lt;a href=&quot;../binary-log-formats/index&quot;&gt;Binary Log Formats&lt;/a&gt;. Starting from &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-10022-release-notes/&quot;&gt;MariaDB 10.0.22&lt;/a&gt; a slave will apply any events it gets from the master, regardless of the binary log format. &lt;code&gt;binlog_format&lt;/code&gt; only applies to normal (not replicated) updates.</source>
+          <target state="translated">&lt;strong&gt;설명 : &lt;/strong&gt;&lt;a href=&quot;../replication/index&quot;&gt;복제&lt;/a&gt; 가 행 기반, 명령문 기반 또는 혼합 인지 판별합니다 . Statement-based는 &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1023-release-notes/&quot;&gt;MariaDB 10.2.3&lt;/a&gt; 까지의 기본값이었습니다 . 복제 환경이 이미 실행중인 경우 이진 로그 형식을 변경하는 데주의하십시오. &lt;a href=&quot;../binary-log-formats/index&quot;&gt;이진 로그 형식을&lt;/a&gt; 참조하십시오 . &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-10022-release-notes/&quot;&gt;MariaDB 10.0.22&lt;/a&gt; 부터 슬레이브는 바이너리 로그 형식에 관계없이 마스터에서받는 모든 이벤트를 적용합니다. &lt;code&gt;binlog_format&lt;/code&gt; 은 일반적인 (복제되지 않은) 업데이트에만 적용됩니다.</target>
+        </trans-unit>
+        <trans-unit id="d6b18f58f9ac57593f865f40707f1abe496e7e89" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Determines whether a user can set the variable &lt;a href=&quot;#innodb_flush_log_at_trx_commit&quot;&gt;innodb_flush_log_at_trx_commit&lt;/a&gt;. If set to &lt;code&gt;1&lt;/code&gt;, a user cannot reset the value with a SET command, while if set to &lt;code&gt;1&lt;/code&gt;, a user can reset the value of &lt;code&gt;innodb_flush_log_at_trx_commit&lt;/code&gt;. XtraDB only. Added as a deprecated and ignored option in &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1026-release-notes/&quot;&gt;MariaDB 10.2.6&lt;/a&gt; (which uses InnoDB as default instead of XtraDB) to allow for easier upgrades.</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 사용자가 &lt;a href=&quot;#innodb_flush_log_at_trx_commit&quot;&gt;innodb_flush_log_at_trx_commit&lt;/a&gt; 변수를 설정할 수 있는지 여부를 결정합니다 . &lt;code&gt;1&lt;/code&gt; 로 설정 하면 사용자는 SET 명령으로 값을 재설정 할 수 없지만 &lt;code&gt;1&lt;/code&gt; 로 설정 &lt;code&gt;innodb_flush_log_at_trx_commit&lt;/code&gt; 값을 재설정 할 수 있습니다 . XtraDB 전용. &lt;a href=&quot;https://mariadb.com/kb/en/mariadb-1026-release-notes/&quot;&gt;MariaDB 10.2.6&lt;/a&gt; 에서 더 이상 사용되지 않고 무시되는 옵션으로 추가되어 (XtraDB 대신 InnoDB를 기본값으로 사용) 업그레이드가 더 쉬워졌습니다.</target>
+        </trans-unit>
+        <trans-unit id="1b93982ce15bba1373caee3978363c49b7a57878" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Determines whether flushing a page from the &lt;a href=&quot;../xtradbinnodb-memory-buffer/index&quot;&gt;buffer pool&lt;/a&gt; will flush other dirty pages in the same group of pages (extent). In high write environments, if flushing is not aggressive enough, it can fall behind resulting in higher memory usage, or if flushing is too aggressive, cause excess I/O activity. SSD devices, with low seek times, would be less likely to require dirty neighbor flushing to be set.</source>
+          <target state="translated">&lt;strong&gt;설명 : &lt;/strong&gt;&lt;a href=&quot;../xtradbinnodb-memory-buffer/index&quot;&gt;버퍼 풀&lt;/a&gt; 에서 페이지를 플러시 할 때 동일한 페이지 그룹 (확장자)의 다른 더티 페이지를 플러시 할지 여부를 결정합니다 . 쓰기가 많은 환경에서 플러시가 충분히 공격적이지 않으면 메모리 사용이 줄어들거나 플러시가 너무 공격적인 경우 과도한 I / O 활동이 발생합니다. 탐색 시간이 짧은 SSD 장치는 더티 이웃 플러싱을 설정하지 않아도됩니다.</target>
+        </trans-unit>
+        <trans-unit id="885cccdd76a25a194097b2a3cdd6f90e70bdbc3b" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Determines whether index and data should use page checksums for extra safety. Can be overridden per table with PAGE_CHECKSUM clause in &lt;a href=&quot;../create-table/index&quot;&gt;CREATE TABLE&lt;/a&gt;.</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 인덱스 및 데이터가 페이지 체크섬을 사용하여 추가 안전을 사용해야하는지 여부를 결정합니다. &lt;a href=&quot;../create-table/index&quot;&gt;CREATE TABLE의&lt;/a&gt; PAGE_CHECKSUM 절을 사용하여 테이블 당 재정의 할 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="2696f7fb6e9608804609ddfbf8baed6cbbdcb8ba" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Determines whether view updates can be made with an UPDATE or DELETE statement with a LIMIT clause if the view does not contain all primary or not null unique key columns from the underlying table. &lt;code&gt;0&lt;/code&gt; prohibits this, while &lt;code&gt;1&lt;/code&gt; permits it while issuing a warning (the default).</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 보기에 기본 테이블의 기본 또는 널이 아닌 고유 키 열이 모두 포함되지 않은 경우 LIMIT 절을 사용하여 UPDATE 또는 DELETE 문으로보기를 갱신 할 수 있는지 여부를 결정합니다. &lt;code&gt;0&lt;/code&gt; 은 이것을 금지하고 &lt;code&gt;1&lt;/code&gt; 은 경고를 발행하는 동안 허용합니다 (기본값).</target>
+        </trans-unit>
+        <trans-unit id="a1c335a57fed8aed1a37b4bb4e326dfd4e2b179b" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Determines whether, when dirty pages are flushed to the data file, neighboring pages in the data file are flushed at the same time. If set to &lt;code&gt;none&lt;/code&gt;, the feature is disabled. If set to &lt;code&gt;area&lt;/code&gt;, the default, the standard InnoDB behavior is used. For each page to be flushed, dirty neighboring pages are flushed too. If there's little head seek delay, such as SSD or large enough write buffer, one of the other two options may be more efficient. If set to &lt;code&gt;cont&lt;/code&gt;, for each page to be flushed, neighboring contiguous blocks are flushed at the same time. Being contiguous, a sequential I/O is used, unlike the random I/O used in &lt;code&gt;area&lt;/code&gt;. Replaced by &lt;a href=&quot;#innodb_flush_neighbors&quot;&gt;innodb_flush_neighbors&lt;/a&gt; in &lt;a href=&quot;../what-is-mariadb-100/index&quot;&gt;MariaDB 10.0&lt;/a&gt;/XtraDB 5.6.</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 더티 페이지가 데이터 파일로 플러시 될 때 데이터 파일의 인접 페이지가 동시에 플러시되는지 여부를 결정합니다. &lt;code&gt;none&lt;/code&gt; 으로 설정 하면 기능이 비활성화됩니다. 기본값 인 &lt;code&gt;area&lt;/code&gt; 로 설정 하면 표준 InnoDB 동작이 사용됩니다. 각 페이지를 플러시 할 때 주변의 더러운 페이지도 플러시됩니다. SSD 또는 충분한 쓰기 버퍼와 같은 헤드 탐색 지연이 적 으면 다른 두 옵션 중 하나가 더 효율적일 수 있습니다. &lt;code&gt;cont&lt;/code&gt; 로 설정하면 각 페이지가 플러시 될 때마다 인접한 인접 블록이 플러시됩니다. 연속적이므로 &lt;code&gt;area&lt;/code&gt; 에서 사용되는 임의의 I / O와 달리 순차적 I / O가 사용됩니다 . &lt;a href=&quot;../what-is-mariadb-100/index&quot;&gt;MariaDB 10.0&lt;/a&gt; 에서 &lt;a href=&quot;#innodb_flush_neighbors&quot;&gt;innodb_flush_neighbors&lt;/a&gt; 로 대체 됨/ XtraDB 5.6.</target>
+        </trans-unit>
+        <trans-unit id="344bd8abb2305e0e119e54033812a6cb291d66bc" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Determines which additional warnings are logged. Setting to &lt;code&gt;0&lt;/code&gt; disables additional warning logging. Note that this does not prevent all warnings, there is a core set of warnings that will always be written to the error log. The additional warnings are as follows:</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 기록 될 추가 경고를 결정합니다. &lt;code&gt;0&lt;/code&gt; 으로 설정 하면 추가 경고 로깅이 비활성화됩니다. 이렇게해도 모든 경고를 막을 수는 없으며 항상 오류 로그에 기록되는 핵심 경고 세트가 있습니다. 추가 경고는 다음과 같습니다.</target>
+        </trans-unit>
+        <trans-unit id="e4653eaaba573c431d7faa5ec516c9ac62e25bdc" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Determines, whether the connection between plugin and eperi Gateway is tested at server startup.</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 서버 시작시 플러그인과 eperi Gateway 간의 연결을 테스트할지 여부를 결정합니다.</target>
+        </trans-unit>
+        <trans-unit id="67c90cf957560d26fd71b9143dd0f4249eb442ca" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Determines, whether the plugin should register callback functions for OpenSSL thread support.</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 플러그인이 OpenSSL 스레드 지원을위한 콜백 함수를 등록해야하는지 여부를 결정합니다.</target>
+        </trans-unit>
+        <trans-unit id="f5aaa110968121aa02ffb249755755b7ff5eb1d1" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Diagnostic variable intended only to be set at runtime. It specifies the qualified name (for example &lt;code&gt;test/ft_innodb&lt;/code&gt;) of an InnoDB table that has a &lt;a href=&quot;../full-text-indexes/index&quot;&gt;FULLTEXT index&lt;/a&gt;, and after being set the INFORMATION_SCHEMA tables &lt;a href=&quot;../information-schema-innodb_ft_index_table-table/index&quot;&gt;INNODB_FT_INDEX_TABLE&lt;/a&gt;, &lt;a href=&quot;../information-schema-innodb_ft_index_cache-table/index&quot;&gt;INNODB_FT_INDEX_CACHE&lt;/a&gt;, INNODB_FT_CONFIG, &lt;a href=&quot;../information-schema-innodb_ft_deleted-table/index&quot;&gt;INNODB_FT_DELETED&lt;/a&gt;, and &lt;a href=&quot;../information-schema-innodb_ft_being_deleted-table/index&quot;&gt;INNODB_FT_BEING_DELETED&lt;/a&gt; will contain search index information for the specified table.</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 진단 변수는 런타임시에만 설정됩니다. &lt;a href=&quot;../full-text-indexes/index&quot;&gt;FULLTEXT 색인&lt;/a&gt; 이있는 InnoDB 테이블 의 규정 된 이름 (예 : &lt;code&gt;test/ft_innodb&lt;/code&gt; )을 지정하고 INFORMATION_SCHEMA 테이블 &lt;a href=&quot;../information-schema-innodb_ft_index_table-table/index&quot;&gt;INNODB_FT_INDEX_TABLE&lt;/a&gt; , &lt;a href=&quot;../information-schema-innodb_ft_index_cache-table/index&quot;&gt;INNODB_FT_INDEX_CACHE&lt;/a&gt; , INNODB_FT_INDEX_CACHE, &lt;a href=&quot;../information-schema-innodb_ft_deleted-table/index&quot;&gt;INNODB_FT_INDEX_CACHE&lt;/a&gt; , INNODB_FT_CONFIG, INNODB_FT_DELETED 및 &lt;a href=&quot;../information-schema-innodb_ft_being_deleted-table/index&quot;&gt;INNOD_DELETED에 대한&lt;/a&gt; INNOD_DELETED 테이블에 대한 INNOD_DELETED 테이블에 대한 정보 가 포함됩니다.</target>
+        </trans-unit>
+        <trans-unit id="a303a4b67cb3332b4599cd906907a871928025e5" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Directory for storing temporary tables and files. Can specify a list (separated by semicolons in Windows, and colons in Unix that will then be used in round-robin fashion. This can be used for load balancing across several disks. Note that if the server is a replication slave, and &lt;a href=&quot;#slave_load_tmpdir&quot;&gt;slave_load_tmpdir&lt;/a&gt;, which overrides tmpdir for slave replication, is not set, you should not set tmpdir to a directory that is cleared when the machine restarts, or else replication may fail.</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 임시 테이블 및 파일을 저장하기위한 디렉토리입니다. 다음 라운드 로빈 방식으로 사용되는 유닉스에서 윈도우에서 세미콜론과 콜론으로 구분 된 목록을 (를 지정할 수 있습니다.이 여러 디스크에 걸쳐로드 밸런싱을 위해 사용할 수 있습니다. 주 서버가 리플리케이션 슬레이브, 그리고 경우 그 &lt;a href=&quot;#slave_load_tmpdir&quot;&gt;slave_load_tmpdir&lt;/a&gt; , 슬레이브 복제에 대해 tmpdir을 대체하는, 설정되어 있지 않거나 tmpdir을 기계가 다시 시작될 때 지워지는 디렉토리로 설정하지 않아야합니다. 그렇지 않으면 복제가 실패 할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="0208a7b8d85675f3ebcb7795b41b2d15384f3d38" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Directory for temporary files during DDL operations.</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; DDL 조작 중 임시 파일의 디렉토리.</target>
+        </trans-unit>
+        <trans-unit id="c56cf076fe14bac1e4e1cf7c8e8d5c865bdd2919" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Directory path for all &lt;a href=&quot;../innodb/index&quot;&gt;InnoDB&lt;/a&gt; data files in the shared tablespace (assuming &lt;a href=&quot;#innodb_file_per_table&quot;&gt;innodb_file_per_table&lt;/a&gt; is not enabled). File-specific information can be added in &lt;a href=&quot;#innodb_data_file_path&quot;&gt;innodb_data_file_path&lt;/a&gt;, as well as absolute paths if innodb_data_home_dir is set to an empty string.</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 공유 테이블 스페이스의 모든 &lt;a href=&quot;../innodb/index&quot;&gt;InnoDB&lt;/a&gt; 데이터 파일에 대한 디렉토리 경로입니다 ( &lt;a href=&quot;#innodb_file_per_table&quot;&gt;innodb_file_per_table&lt;/a&gt; 이 사용 불가능 하다고 가정 ). innodb_data_home_dir이 빈 문자열로 설정된 경우 절대 경로뿐만 아니라 &lt;a href=&quot;#innodb_data_file_path&quot;&gt;innodb_data_file_path에&lt;/a&gt; 파일 특정 정보를 추가 할 수 있습니다 .</target>
+        </trans-unit>
+        <trans-unit id="fb95683d212b20281fdb31e12fd4a691585f0764" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Directory where GCache files are placed.</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; GCache 파일이있는 디렉토리입니다.</target>
+        </trans-unit>
+        <trans-unit id="a16e50392c1d6326b4fe04c2f77547061cbd502a" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Directory where the &lt;a href=&quot;../data-types-character-sets-and-collations/index&quot;&gt;character sets&lt;/a&gt; are installed.</source>
+          <target state="translated">&lt;strong&gt;설명 : &lt;/strong&gt;&lt;a href=&quot;../data-types-character-sets-and-collations/index&quot;&gt;문자 세트&lt;/a&gt; 가 설치된 디렉토리 입니다.</target>
+        </trans-unit>
+        <trans-unit id="861b27559157b2f735df7b14166e490759aa7c8d" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Directory where the TokuDB bulk loaders temporary files are stored. Can be very large, and useful to place on a separate disk. By default the variable is empty, in which case the regular &lt;a href=&quot;../server-system-variables/index#datadir&quot;&gt;datadir&lt;/a&gt; is used. &lt;a href=&quot;#tokudb_load_save_space&quot;&gt;tokudb_load_save_space&lt;/a&gt; determines whether the data is compressed or not. The error message &lt;code&gt;ERROR 1030 (HY000): Got error 1 from storage engine&lt;/code&gt; could indicate that the disk has run out of space.</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; TokuDB 벌크 로더 임시 파일이 저장되는 디렉토리입니다. 매우 클 수 있으며 별도의 디스크에 배치하는 데 유용합니다. 기본적으로 변수는 비어 있으며,이 경우 일반 &lt;a href=&quot;../server-system-variables/index#datadir&quot;&gt;datadir&lt;/a&gt; 이 사용됩니다. &lt;a href=&quot;#tokudb_load_save_space&quot;&gt;tokudb_load_save_space&lt;/a&gt; 는 데이터 압축 여부를 결정합니다. 오류 메시지 &lt;code&gt;ERROR 1030 (HY000): Got error 1 from storage engine&lt;/code&gt; 하여 디스크 공간이 부족함을 나타낼 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="7fd80fb6496a7d108a073d800619eea8d6c5e27b" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Directory where the TokuDB data is stored. By default the variable is empty, in which case the regular &lt;a href=&quot;../server-system-variables/index#datadir&quot;&gt;datadir&lt;/a&gt; is used.</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; TokuDB 데이터가 저장된 디렉토리입니다. 기본적으로 변수는 비어 있으며,이 경우 일반 &lt;a href=&quot;../server-system-variables/index#datadir&quot;&gt;datadir&lt;/a&gt; 이 사용됩니다.</target>
+        </trans-unit>
+        <trans-unit id="a0c0066271821e1964eb33e013eefe56bf4115fa" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Directory where the TokuDB log files are stored. By default the variable is empty, in which case the regular &lt;a href=&quot;../server-system-variables/index#datadir&quot;&gt;datadir&lt;/a&gt; is used.</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; TokuDB 로그 파일이 저장된 디렉토리입니다. 기본적으로 변수는 비어 있으며,이 경우 일반 &lt;a href=&quot;../server-system-variables/index#datadir&quot;&gt;datadir&lt;/a&gt; 이 사용됩니다.</target>
+        </trans-unit>
+        <trans-unit id="a1d38b1b5ee620c1cd661503b1ff56eb35dda82b" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Directory where the data is stored.</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 데이터가 저장된 디렉토리입니다.</target>
+        </trans-unit>
+        <trans-unit id="08e99334772053a287775a4d3f61a33b00f8212b" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Directory where the slave stores temporary files for &lt;a href=&quot;../replication/index&quot;&gt;replicating&lt;/a&gt;&lt;a href=&quot;../load-data-infile/index&quot;&gt;LOAD DATA INFILE&lt;/a&gt; statements. If not set, the slave will use &lt;a href=&quot;#tmpdir&quot;&gt;tmpdir&lt;/a&gt;. Should be set to a disk-based directory that will survive restarts, or else replication may fail.</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 슬레이브가 &lt;a href=&quot;../load-data-infile/index&quot;&gt;LOAD DATA INFILE&lt;/a&gt; 문 을 &lt;a href=&quot;../replication/index&quot;&gt;복제&lt;/a&gt; 하기위한 임시 파일을 저장하는 디렉토리 입니다. 설정하지 않으면 슬레이브는 &lt;a href=&quot;#tmpdir&quot;&gt;tmpdir&lt;/a&gt; 을 사용 합니다. 재시작 후에도 디스크 기반 디렉토리로 설정해야합니다. 그렇지 않으면 복제가 실패 할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="8432c8306d00fff7ee5d459e2fb325a4c2c30f44" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Directory where wsrep provider will store its internal files.</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; wsrep 제공자가 내부 파일을 저장할 디렉토리입니다.</target>
+        </trans-unit>
+        <trans-unit id="a05a024ecc18f8783029fb21882cf01c5e32ac53" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Disable &lt;a href=&quot;../secure-connections-overview/index&quot;&gt;TLS connections&lt;/a&gt;.</source>
+          <target state="translated">&lt;strong&gt;설명 : &lt;/strong&gt;&lt;a href=&quot;../secure-connections-overview/index&quot;&gt;TLS 연결을&lt;/a&gt; 비활성화 합니다 .</target>
+        </trans-unit>
+        <trans-unit id="35f71c79a950b335ce8a4f2f6e43d71991c28a19" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Disable all rocksdb background operations.</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 모든 rockdb 백그라운드 작업을 비활성화합니다.</target>
+        </trans-unit>
+        <trans-unit id="d72a39dd7f7c32752382c02c216c272a37c253f3" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Disable some potential unsafe optimizations. For 5.2, &lt;a href=&quot;../insert-delayed/index&quot;&gt;INSERT DELAYED&lt;/a&gt; is disabled, &lt;a href=&quot;../myisam-system-variables/index#myisam_recover_options&quot;&gt;myisam_recover_options&lt;/a&gt; is set to DEFAULT (automatically recover crashed MyISAM files) and the &lt;a href=&quot;../query-cache/index&quot;&gt;query cache&lt;/a&gt; is disabled. For &lt;a href=&quot;../aria/index&quot;&gt;Aria&lt;/a&gt; tables, disable bulk insert optimization to enable one to use &lt;a href=&quot;../aria_read_log/index&quot;&gt;aria_read_log&lt;/a&gt; to recover tables even if tables are deleted (good for testing recovery).</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 잠재적으로 안전하지 않은 최적화를 비활성화합니다. 5.2의 경우 &lt;a href=&quot;../insert-delayed/index&quot;&gt;INSERT DELAYED&lt;/a&gt; 가 비활성화되고 &lt;a href=&quot;../myisam-system-variables/index#myisam_recover_options&quot;&gt;myisam_recover_options&lt;/a&gt; 가 DEFAULT (충돌 된 MyISAM 파일 자동 복구)로 설정되고 &lt;a href=&quot;../query-cache/index&quot;&gt;쿼리 캐시&lt;/a&gt; 가 비활성화됩니다. 들어 &lt;a href=&quot;../aria/index&quot;&gt;아리아&lt;/a&gt; 테이블, 비활성화 대량 삽입 최적화 한 사용 할 수 있도록 &lt;a href=&quot;../aria_read_log/index&quot;&gt;aria_read_log&lt;/a&gt; 테이블 (복구 테스트를위한 좋은)을 삭제하는 경우에도 테이블을 복구 할 수 있습니다.</target>
+        </trans-unit>
+        <trans-unit id="1bd653fb62fbc6603f039d04ff2986137476bf6e" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Disable system thread alarm calls. Disabling it may be useful in debugging or testing, never do it in production.</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 시스템 스레드 알람 호출을 비활성화합니다. 이 기능을 비활성화하면 디버깅 또는 테스트에 유용 할 수 있지만 프로덕션에서는 절대 사용하지 마십시오.</target>
+        </trans-unit>
+        <trans-unit id="da23641f1986cd9b542bb7c0006d1a6dd9d4627d" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Disabled by default, enabling it reverts index hints to those used before MySQL 5.1.17. Enabling may lead to replication errors. Being replaced by &lt;a href=&quot;#old_mode&quot;&gt;old_mode&lt;/a&gt;. Before &lt;a href=&quot;../what-is-mariadb-55/index&quot;&gt;MariaDB 5.5&lt;/a&gt;, the variable was read-only and global in scope only.</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 기본적으로 비활성화되어 인덱스 힌트를 MySQL 5.1.17 이전에 사용 된 힌트로 되돌립니다. 활성화하면 복제 오류가 발생할 수 있습니다. &lt;a href=&quot;#old_mode&quot;&gt;old_mode&lt;/a&gt; 로 대체되고 있습니다. &lt;a href=&quot;../what-is-mariadb-55/index&quot;&gt;MariaDB 5.5&lt;/a&gt; 이전 에는 변수가 읽기 전용이고 범위 내에서만 전역이었습니다.</target>
+        </trans-unit>
+        <trans-unit id="2ea8da45c29d91d9d0d9ba19b12da77f15de01cd" translate="yes" xml:space="preserve">
+          <source>&lt;strong&gt;Description:&lt;/strong&gt; Disables &lt;a href=&quot;#-new&quot;&gt;--new&lt;/a&gt; in 5.2. In 5.1 used to disable some new potentially unsafe functions.</source>
+          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 5.2에서 &lt;a href=&quot;#-new&quot;&gt;--new&lt;/a&gt; 를 비활성화합니다 . 5.1에서는 잠재적으로 안전하지 않은 일부 새로운 기능을 비활성화하는 데 사용되었습니다.</target>
+        </trans-unit>
         <trans-unit id="4b504b9d5e05ba4c67116db25395cf5dc9e0922e" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Description:&lt;/strong&gt; Disables the specified counters in the &lt;a href=&quot;../information-schema-innodb_metrics-table/index&quot;&gt;INFORMATION_SCHEMA.INNODB_METRICS&lt;/a&gt; table.</source>
           <target state="translated">&lt;strong&gt;설명 : &lt;/strong&gt;&lt;a href=&quot;../information-schema-innodb_metrics-table/index&quot;&gt;INFORMATION_SCHEMA.INNODB_METRICS&lt;/a&gt; 테이블 에서 지정된 카운터를 비활성화합니다 .</target>
@@ -3870,138 +4002,6 @@
         <trans-unit id="41517b473458da9dddd14a9adfad399f4fb69e97" translate="yes" xml:space="preserve">
           <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of second read records on the backend server when using background search. When the first records are found from &lt;code&gt;&lt;a href=&quot;#spider_bgs_first_read&quot;&gt;spider_bgs_first_read&lt;/a&gt;&lt;/code&gt;, the engine continues scanning a range adding a &lt;code&gt;LIMIT&lt;/code&gt; of &lt;code&gt;&lt;a href=&quot;#spider_bgs_first_read&quot;&gt;spider_bgs_first_read&lt;/a&gt;&lt;/code&gt; and &lt;code&gt;&lt;a href=&quot;#spider_bgs_second_read&quot;&gt;spider_bgs_second_read&lt;/a&gt;&lt;/code&gt;.</source>
           <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 백그라운드 검색을 사용할 때 백엔드 서버의 두 번째 읽기 레코드 수입니다. &lt;code&gt;&lt;a href=&quot;#spider_bgs_first_read&quot;&gt;spider_bgs_first_read&lt;/a&gt;&lt;/code&gt; 에서 첫 번째 레코드가 발견 되면 엔진은 &lt;code&gt;&lt;a href=&quot;#spider_bgs_first_read&quot;&gt;spider_bgs_first_read&lt;/a&gt;&lt;/code&gt; 및 &lt;code&gt;&lt;a href=&quot;#spider_bgs_second_read&quot;&gt;spider_bgs_second_read&lt;/a&gt;&lt;/code&gt; &lt;code&gt;LIMIT&lt;/code&gt; 를 추가하여 범위를 계속 스캔합니다 .</target>
-        </trans-unit>
-        <trans-unit id="a1bf128f05324de7a4fc7c5550a83c860844822c" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of seconds since the last &lt;a href=&quot;../flush/index&quot;&gt;FLUSH STATUS&lt;/a&gt;.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 마지막 &lt;a href=&quot;../flush/index&quot;&gt;FLUSH STATUS&lt;/a&gt; 이후의 시간 (초) 입니다.</target>
-        </trans-unit>
-        <trans-unit id="4ca31a6c150cf708253a1201663a1fa468143110" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of seconds the server has been running.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 서버가 실행 된 시간 (초)입니다.</target>
-        </trans-unit>
-        <trans-unit id="31b012abdfe3a817d967afc02073e97676c201c0" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of seconds to wait for lock.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 잠금 대기 시간 (초)입니다.</target>
-        </trans-unit>
-        <trans-unit id="66a5b13fbcca2ea851b12c80f5b83754846fd359" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of semisynchronous slaves.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 반동기 슬레이브의 수입니다.</target>
-        </trans-unit>
-        <trans-unit id="cb72c1e17ec276048e8acc7a4b674602872c7b9a" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of sessions removed from the session cache because it was full. The global value can be flushed by &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH STATUS&lt;/a&gt;&lt;/code&gt;.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 세션 캐시가 가득 차서 세션 캐시에서 제거 된 세션 수입니다. &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH STATUS&lt;/a&gt;&lt;/code&gt; 로 전역 값을 플러시 할 수 있습니다 .</target>
-        </trans-unit>
-        <trans-unit id="60923f9d547dc150a2466b143c8b518a0398c4ca" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of sessions retrieved from the session cache. The global value can be flushed by &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH STATUS&lt;/a&gt;&lt;/code&gt;.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 세션 캐시에서 검색된 세션 수입니다. &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH STATUS&lt;/a&gt;&lt;/code&gt; 로 전역 값을 플러시 할 수 있습니다 .</target>
-        </trans-unit>
-        <trans-unit id="e94de362e752d9eea64e5f071036d5fc5cc8e087" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of sessions reused. The global value can be flushed by &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH STATUS&lt;/a&gt;&lt;/code&gt;.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 재사용 된 세션 수. &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH STATUS&lt;/a&gt;&lt;/code&gt; 로 전역 값을 플러시 할 수 있습니다 .</target>
-        </trans-unit>
-        <trans-unit id="3fea84c0f9a67e8f0b3ffb692c6cbce7433e8ee6" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of sessions that are currently waiting for slave replies.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 현재 슬레이브 응답을 기다리는 세션 수입니다.</target>
-        </trans-unit>
-        <trans-unit id="5cac955a33b8edc10584d4f8b9962631ccf22fc7" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of sessions which have timed out. The global value can be flushed by &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH STATUS&lt;/a&gt;&lt;/code&gt;.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 시간이 초과 된 세션 수입니다. &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH STATUS&lt;/a&gt;&lt;/code&gt; 로 전역 값을 플러시 할 수 있습니다 .</target>
-        </trans-unit>
-        <trans-unit id="9111079b02f0460ea6208c17777736a316851162" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of shared libraries that the server has opened to load &lt;a href=&quot;../plugins/index&quot;&gt;plugins&lt;/a&gt;.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 서버가 부하에게 개방했다고 공유 라이브러리의 수 &lt;a href=&quot;../plugins/index&quot;&gt;플러그인&lt;/a&gt; .</target>
-        </trans-unit>
-        <trans-unit id="67e1cf2d045db727e4588505230b736c6da4f6bf" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of single-delete keys written.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 쓴 단일 삭제 키 수입니다.</target>
-        </trans-unit>
-        <trans-unit id="848d65b736dcac7b1839bb97faf2dd6bcfe82009" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of single-row queries.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 단일 행 쿼리 수입니다.</target>
-        </trans-unit>
-        <trans-unit id="f948801876717df06de56de4c6f1004dd72a2ec7" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of slave SQL threads running.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 실행중인 슬레이브 SQL 스레드 수.</target>
-        </trans-unit>
-        <trans-unit id="c8e8f4273ac8b03fe746cae4bcd9b11f07bccf58" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of slave threads used to apply Galera write sets in parallel. The Galera slave threads are able to determine which write sets are safe to apply in parallel. However, if your cluster nodes seem to have frequent consistency problems, then setting the value to &lt;code&gt;1&lt;/code&gt; will probably fix the problem. See &lt;a href=&quot;../about-galera-replication/index#galera-slave-threads&quot;&gt;About Galera Replication: Galera Slave Threads&lt;/a&gt; for more information.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; Galera 쓰기 세트를 병렬로 적용하는 데 사용되는 슬레이브 스레드 수입니다. Galera 슬레이브 스레드는 병렬로 적용하기에 안전한 쓰기 세트를 결정할 수 있습니다. 그러나 클러스터 노드에 일관성 문제가 자주 발생하는 경우 값을 &lt;code&gt;1&lt;/code&gt; 로 설정 하면 문제가 해결 될 수 있습니다. 자세한 &lt;a href=&quot;../about-galera-replication/index#galera-slave-threads&quot;&gt;내용은 Galera 복제 정보 : Galera 슬레이브 스레드&lt;/a&gt; 를 참조하십시오.</target>
-        </trans-unit>
-        <trans-unit id="54c21cce699c9cd0e753b9532e7159b3f922a91a" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of slaves connected.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 연결된 슬레이브 수입니다.</target>
-        </trans-unit>
-        <trans-unit id="84130f458764a121581c01db9a18d04a6d6dde67" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of snapshot conflict errors that have occurred during transactions that forced a rollback.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 롤백을 강제 실행 한 트랜잭션 중에 발생한 스냅 샷 충돌 오류 수입니다.</target>
-        </trans-unit>
-        <trans-unit id="03ba020410f2f845e66278b71e5eba95b38308c1" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of sorts which used a full table scan.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 전체 테이블 스캔을 사용한 정렬 수입니다.</target>
-        </trans-unit>
-        <trans-unit id="dd6175ee18241cda451f9e6c920b2c38aac185bb" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of sorts which used a range.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 범위를 사용한 정렬 수입니다.</target>
-        </trans-unit>
-        <trans-unit id="adf692c64c02d3eef66679fa6657685a30058b51" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of stage event instruments that could not be loaded. The global value can be flushed by &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH STATUS&lt;/a&gt;&lt;/code&gt;.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 로드 할 수없는 스테이지 이벤트 기기 수. &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH STATUS&lt;/a&gt;&lt;/code&gt; 로 전역 값을 플러시 할 수 있습니다 .</target>
-        </trans-unit>
-        <trans-unit id="feab2f66dab1931ef5fbf5bdeab03b077bdc3ce5" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of statement instruments that could not be loaded. The global value can be flushed by &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH STATUS&lt;/a&gt;&lt;/code&gt;.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 로드 할 수없는 명세서 도구의 수입니다. &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH STATUS&lt;/a&gt;&lt;/code&gt; 로 전역 값을 플러시 할 수 있습니다 .</target>
-        </trans-unit>
-        <trans-unit id="2735a0590e4185604c562f56b63218cb066a5acf" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of statements about which profiling information is maintained. If set to &lt;code&gt;0&lt;/code&gt;, no profiles are stored. See &lt;a href=&quot;../show-profiles/index&quot;&gt;SHOW PROFILES&lt;/a&gt;.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 프로파일 링 정보가 유지 보수되는 명령문 수. &lt;code&gt;0&lt;/code&gt; 으로 설정하면 프로파일이 저장되지 않습니다. &lt;a href=&quot;../show-profiles/index&quot;&gt;프로필 표시를&lt;/a&gt; 참조하십시오 .</target>
-        </trans-unit>
-        <trans-unit id="20a93392c8cd4cc22581d3c5a9855cdfb23bc492" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of statements executed by the server, excluding COM_PING and COM_STATISTICS. Differs from &lt;a href=&quot;#questions&quot;&gt;Questions&lt;/a&gt; in that it also counts statements executed within &lt;a href=&quot;../stored-programs-and-views/index&quot;&gt;stored programs&lt;/a&gt;.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; COM_PING 및 COM_STATISTICS를 제외한 서버에서 실행 한 명령문 수입니다. &lt;a href=&quot;../stored-programs-and-views/index&quot;&gt;저장된 프로그램&lt;/a&gt; 내에서 실행 된 명령문도 계산한다는 점 에서 &lt;a href=&quot;#questions&quot;&gt;질문&lt;/a&gt; 과 다릅니다 .</target>
-        </trans-unit>
-        <trans-unit id="679584683ca5397bf11d3c686c8b09178860771c" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of statements executed by the server, excluding COM_PING, COM_STATISTICS, COM_STMT_PREPARE, COM_STMT_CLOSE, and COM_STMT_RESET statements. Differs from &lt;a href=&quot;#queries&quot;&gt;Queries&lt;/a&gt; in that it doesn't count statements executed within &lt;a href=&quot;../stored-programs-and-views/index&quot;&gt;stored programs&lt;/a&gt;.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; COM_PING, COM_STATISTICS, COM_STMT_PREPARE, COM_STMT_CLOSE 및 COM_STMT_RESET 문을 제외한 서버에서 실행 된 문 수입니다. &lt;a href=&quot;../stored-programs-and-views/index&quot;&gt;저장된 프로그램&lt;/a&gt; 내에서 실행 된 명령문을 계산하지 않는다는 점 에서 &lt;a href=&quot;#queries&quot;&gt;쿼리&lt;/a&gt; 와 다릅니다 .</target>
-        </trans-unit>
-        <trans-unit id="0428c8ff61b786658424d8d20bf306e92f4a677f" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of subqueries (excluding subqueries in the FROM clause) used.</source>
-          <target state="translated">&lt;strong&gt;설명 : 사용&lt;/strong&gt; 된 하위 쿼리 수 (FROM 절에서 하위 쿼리 제외).</target>
-        </trans-unit>
-        <trans-unit id="627e02de6cf199583ac31749f945522fc357452a" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of successful TLS sessions in client mode. The global value can be flushed by &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH STATUS&lt;/a&gt;&lt;/code&gt;.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 클라이언트 모드에서 성공한 TLS 세션 수입니다. &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH STATUS&lt;/a&gt;&lt;/code&gt; 로 전역 값을 플러시 할 수 있습니다 .</target>
-        </trans-unit>
-        <trans-unit id="a048b2284a7ef389b2520edae25b34264c6775d2" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of successful TLS sessions in server mode. The global value can be flushed by &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH STATUS&lt;/a&gt;&lt;/code&gt;.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 서버 모드에서 성공한 TLS 세션 수입니다. &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH STATUS&lt;/a&gt;&lt;/code&gt; 로 전역 값을 플러시 할 수 있습니다 .</target>
-        </trans-unit>
-        <trans-unit id="9f4a84f0266e388c1df19a2c9a122c9bb95da00a" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of successful broadcast updates (an update that affects all rows in a dictionary).</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 성공적인 브로드 캐스트 업데이트 수 (사전의 모든 행에 영향을주는 업데이트).</target>
-        </trans-unit>
-        <trans-unit id="7a15b341c2681d228fc6b65ff360706ec2cb03e2" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of syncs made on RocksDB WAL file.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; RocksDB WAL 파일에서 수행 된 동기화 수.</target>
-        </trans-unit>
-        <trans-unit id="6ac216446f54533da77e8ba5964ffb884036afa8" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of table definitions that can be cached. Table definitions are taken from the .frm files, and if there are a large number of tables increasing the cache size can speed up table opening. Unlike the &lt;a href=&quot;#table_open_cache&quot;&gt;table_open_cache&lt;/a&gt;, as the table_definition_cache doesn't use file descriptors, and is much smaller.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 캐시 할 수있는 테이블 정의 수입니다. 테이블 정의는 .frm 파일에서 가져 오며, 테이블 수가 많으면 캐시 크기가 증가하면 테이블을 빠르게 열 수 있습니다. &lt;a href=&quot;#table_open_cache&quot;&gt;table_open_cache&lt;/a&gt; 와 달리 table_definition_cache는 파일 설명자를 사용하지 않으므로 훨씬 작습니다.</target>
-        </trans-unit>
-        <trans-unit id="ef8293ca8e6e271f43fc07d67a504474cd34d7f6" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of table locks which had to wait. Indicates table lock contention. The global value can be flushed by &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH STATUS&lt;/a&gt;&lt;/code&gt;.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 대기해야하는 테이블 잠금 수입니다. 테이블 잠금 경합을 나타냅니다. &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH STATUS&lt;/a&gt;&lt;/code&gt; 로 전역 값을 플러시 할 수 있습니다 .</target>
-        </trans-unit>
-        <trans-unit id="36f1965d88f7622c7255adf8b08b39460edcdf93" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of table locks which were completed immediately. The global value can be flushed by &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH STATUS&lt;/a&gt;&lt;/code&gt;.</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 즉시 완료된 테이블 잠금 수. &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH STATUS&lt;/a&gt;&lt;/code&gt; 로 전역 값을 플러시 할 수 있습니다 .</target>
-        </trans-unit>
-        <trans-unit id="8594b980705590add86d515e677499911ab50ccd" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of table permissions granted (rows in the &lt;a href=&quot;mysql.tables_priv-table&quot;&gt;mysql.tables_priv table&lt;/a&gt;).</source>
-          <target state="translated">&lt;strong&gt;설명 :&lt;/strong&gt; 부여 된 테이블 권한 수 ( &lt;a href=&quot;mysql.tables_priv-table&quot;&gt;mysql.tables_priv 테이블의&lt;/a&gt; 행 ).</target>
-        </trans-unit>
-        <trans-unit id="61375765b8410dbcd086aae6e523e031b54e6107" translate="yes" xml:space="preserve">
-          <source>&lt;strong&gt;Description:&lt;/strong&gt; Number of tables opened that are using &lt;a href=&quot;../server-system-variables/index#delay_key_write&quot;&gt;delay_key_write&lt;/a&gt;. The global value can be flushed by &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH STATUS&lt;/a&gt;&lt;/code&gt;.</source>
-          <target state="translated">&lt;strong&gt;설명 : &lt;/strong&gt;&lt;a href=&quot;../server-system-variables/index#delay_key_write&quot;&gt;delay_key_write를&lt;/a&gt; 사용중인 열린 테이블 수입니다 . &lt;code&gt;&lt;a href=&quot;../flush/index&quot;&gt;FLUSH STATUS&lt;/a&gt;&lt;/code&gt; 로 전역 값을 플러시 할 수 있습니다 .</target>
         </trans-unit>
       </group>
     </body>

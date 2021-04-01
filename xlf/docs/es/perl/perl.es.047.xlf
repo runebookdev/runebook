@@ -3,6 +3,234 @@
   <file source-language="en" target-language="es" datatype="htmlbody" original="perl">
     <body>
       <group id="perl">
+        <trans-unit id="83d174f108cd7d61c427811f31c1c3a17b3fd039" translate="yes" xml:space="preserve">
+          <source>Opens a directory named EXPR for processing by &lt;code&gt;&lt;a href=&quot;functions/readdir&quot;&gt;readdir&lt;/a&gt;&lt;/code&gt;, &lt;code&gt;&lt;a href=&quot;functions/telldir&quot;&gt;telldir&lt;/a&gt;&lt;/code&gt;, &lt;code&gt;&lt;a href=&quot;functions/seekdir&quot;&gt;seekdir&lt;/a&gt;&lt;/code&gt;, &lt;code&gt;&lt;a href=&quot;functions/rewinddir&quot;&gt;rewinddir&lt;/a&gt;&lt;/code&gt;, and &lt;code&gt;&lt;a href=&quot;functions/closedir&quot;&gt;closedir&lt;/a&gt;&lt;/code&gt;. Returns true if successful. DIRHANDLE may be an expression whose value can be used as an indirect dirhandle, usually the real dirhandle name. If DIRHANDLE is an undefined scalar variable (or array or hash element), the variable is assigned a reference to a new anonymous dirhandle; that is, it's autovivified. DIRHANDLEs have their own namespace separate from FILEHANDLEs.</source>
+          <target state="translated">Abre un directorio llamado EXPR para ser procesado por &lt;code&gt;&lt;a href=&quot;functions/readdir&quot;&gt;readdir&lt;/a&gt;&lt;/code&gt; , &lt;code&gt;&lt;a href=&quot;functions/telldir&quot;&gt;telldir&lt;/a&gt;&lt;/code&gt; , &lt;code&gt;&lt;a href=&quot;functions/seekdir&quot;&gt;seekdir&lt;/a&gt;&lt;/code&gt; , &lt;code&gt;&lt;a href=&quot;functions/rewinddir&quot;&gt;rewinddir&lt;/a&gt;&lt;/code&gt; y &lt;code&gt;&lt;a href=&quot;functions/closedir&quot;&gt;closedir&lt;/a&gt;&lt;/code&gt; . Devuelve verdadero si tiene &amp;eacute;xito. DIRHANDLE puede ser una expresi&amp;oacute;n cuyo valor se puede usar como un identificador de directorio indirecto, generalmente el nombre real del identificador de directorio. Si DIRHANDLE es una variable escalar indefinida (o matriz o elemento hash), a la variable se le asigna una referencia a un nuevo dirhandle an&amp;oacute;nimo; es decir, est&amp;aacute; autovivificado. Los DIRHANDLE tienen su propio espacio de nombres separado de los FILEHANDLE.</target>
+        </trans-unit>
+        <trans-unit id="bde0bd94d408d74305c3ef236f8e210809c61889" translate="yes" xml:space="preserve">
+          <source>Opens a directory named EXPR for processing by &lt;code&gt;&lt;a href=&quot;readdir&quot;&gt;readdir&lt;/a&gt;&lt;/code&gt;, &lt;code&gt;&lt;a href=&quot;telldir&quot;&gt;telldir&lt;/a&gt;&lt;/code&gt;, &lt;code&gt;&lt;a href=&quot;seekdir&quot;&gt;seekdir&lt;/a&gt;&lt;/code&gt;, &lt;code&gt;&lt;a href=&quot;rewinddir&quot;&gt;rewinddir&lt;/a&gt;&lt;/code&gt;, and &lt;code&gt;&lt;a href=&quot;closedir&quot;&gt;closedir&lt;/a&gt;&lt;/code&gt;. Returns true if successful. DIRHANDLE may be an expression whose value can be used as an indirect dirhandle, usually the real dirhandle name. If DIRHANDLE is an undefined scalar variable (or array or hash element), the variable is assigned a reference to a new anonymous dirhandle; that is, it's autovivified. DIRHANDLEs have their own namespace separate from FILEHANDLEs.</source>
+          <target state="translated">Abre un directorio llamado EXPR para ser procesado por &lt;code&gt;&lt;a href=&quot;readdir&quot;&gt;readdir&lt;/a&gt;&lt;/code&gt; , &lt;code&gt;&lt;a href=&quot;telldir&quot;&gt;telldir&lt;/a&gt;&lt;/code&gt; , &lt;code&gt;&lt;a href=&quot;seekdir&quot;&gt;seekdir&lt;/a&gt;&lt;/code&gt; , &lt;code&gt;&lt;a href=&quot;rewinddir&quot;&gt;rewinddir&lt;/a&gt;&lt;/code&gt; y &lt;code&gt;&lt;a href=&quot;closedir&quot;&gt;closedir&lt;/a&gt;&lt;/code&gt; . Devuelve verdadero si tiene &amp;eacute;xito. DIRHANDLE puede ser una expresi&amp;oacute;n cuyo valor se puede usar como un identificador de directorio indirecto, generalmente el nombre real del identificador de directorio. Si DIRHANDLE es una variable escalar indefinida (o matriz o elemento hash), a la variable se le asigna una referencia a un nuevo dirhandle an&amp;oacute;nimo; es decir, est&amp;aacute; autovivificado. Los DIRHANDLE tienen su propio espacio de nombres separado de los FILEHANDLE.</target>
+        </trans-unit>
+        <trans-unit id="249fc18914652625c802e629d561a8d541cf9f3e" translate="yes" xml:space="preserve">
+          <source>Opens a file descriptor [&lt;code&gt;$ivFD&lt;/code&gt;] based on an already open Win32 native file handle, &lt;code&gt;$hNativeHandle&lt;/code&gt;. This just calls the Win32-specific C routine &lt;code&gt;_open_osfhandle()&lt;/code&gt; or Perl's &quot;improved&quot; version called &lt;code&gt;win32_open_osfhandle()&lt;/code&gt;. Prior to Perl5.005 and in Cygwin Perl, C's &lt;code&gt;_open_osfhandle()&lt;/code&gt; is called which will fail if &lt;code&gt;GetFileType($hNativeHandle)&lt;/code&gt; would return &lt;code&gt;FILE_TYPE_UNKNOWN&lt;/code&gt;. For Perl5.005 and later, &lt;code&gt;OsFHandleOpenFd&lt;/code&gt; calls &lt;code&gt;win32_open_osfhandle()&lt;/code&gt; from the Perl DLL which doesn't have this restriction.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="b2665f3d96f1b25c433ed44735df54d5716eb0ca" translate="yes" xml:space="preserve">
+          <source>Opens a pair of connected pipes like the corresponding system call. Note that if you set up a loop of piped processes, deadlock can occur unless you are very careful. In addition, note that Perl's pipes use IO buffering, so you may need to set &lt;a href=&quot;perlvar#%24%7C&quot;&gt;&lt;code&gt;$|&lt;/code&gt;&lt;/a&gt; to flush your WRITEHANDLE after each command, depending on the application.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="ef6eec3f73e02b66c5dbdd58e24c78d1b02394cb" translate="yes" xml:space="preserve">
+          <source>Opens a pair of connected pipes like the corresponding system call. Note that if you set up a loop of piped processes, deadlock can occur unless you are very careful. In addition, note that Perl's pipes use IO buffering, so you may need to set &lt;code&gt;$|&lt;/code&gt; to flush your WRITEHANDLE after each command, depending on the application.</source>
+          <target state="translated">Abre un par de tuber&amp;iacute;as conectadas como la correspondiente llamada al sistema. Tenga en cuenta que si configura un bucle de procesos canalizados, se puede producir un punto muerto a menos que tenga mucho cuidado. Adem&amp;aacute;s, tenga en cuenta que las tuber&amp;iacute;as de Perl utilizan b&amp;uacute;fer de E / S, por lo que es posible que deba establecer &lt;code&gt;$|&lt;/code&gt; para vaciar su WRITEHANDLE despu&amp;eacute;s de cada comando, dependiendo de la aplicaci&amp;oacute;n.</target>
+        </trans-unit>
+        <trans-unit id="97d9deba78acd708222827724c50fc7000bf21a2" translate="yes" xml:space="preserve">
+          <source>Opens a socket of the specified kind and attaches it to filehandle SOCKET. DOMAIN, TYPE, and PROTOCOL are specified the same as for the syscall of the same name. You should &lt;code&gt;&lt;a href=&quot;functions/use&quot;&gt;use&lt;/a&gt; Socket&lt;/code&gt; first to get the proper definitions imported. See the examples in &lt;a href=&quot;perlipc#Sockets%3a-Client%2fServer-Communication&quot;&gt;Sockets: Client/Server Communication in perlipc&lt;/a&gt;.</source>
+          <target state="translated">Abre un conector del tipo especificado y lo conecta al identificador de archivo SOCKET. DOMAIN, TYPE y PROTOCOL se especifican de la misma forma que para la llamada al sistema del mismo nombre. Primero debe &lt;code&gt;&lt;a href=&quot;functions/use&quot;&gt;use&lt;/a&gt; Socket&lt;/code&gt; para importar las definiciones adecuadas. Vea los ejemplos en &lt;a href=&quot;perlipc#Sockets%3a-Client%2fServer-Communication&quot;&gt;Sockets: comunicaci&amp;oacute;n cliente / servidor en perlipc&lt;/a&gt; .</target>
+        </trans-unit>
+        <trans-unit id="1bf5e36d7b7be8ff46fbdc02b28950f2a5493007" translate="yes" xml:space="preserve">
+          <source>Opens a socket of the specified kind and attaches it to filehandle SOCKET. DOMAIN, TYPE, and PROTOCOL are specified the same as for the syscall of the same name. You should &lt;code&gt;&lt;a href=&quot;use&quot;&gt;use&lt;/a&gt; Socket&lt;/code&gt; first to get the proper definitions imported. See the examples in &lt;a href=&quot;../perlipc#Sockets%3a-Client%2fServer-Communication&quot;&gt;Sockets: Client/Server Communication in perlipc&lt;/a&gt;.</source>
+          <target state="translated">Abre un conector del tipo especificado y lo conecta al identificador de archivo SOCKET. DOMAIN, TYPE y PROTOCOL se especifican de la misma forma que para la llamada al sistema del mismo nombre. Primero debe &lt;code&gt;&lt;a href=&quot;use&quot;&gt;use&lt;/a&gt; Socket&lt;/code&gt; para importar las definiciones adecuadas. Vea los ejemplos en &lt;a href=&quot;../perlipc#Sockets%3a-Client%2fServer-Communication&quot;&gt;Sockets: comunicaci&amp;oacute;n cliente / servidor en perlipc&lt;/a&gt; .</target>
+        </trans-unit>
+        <trans-unit id="bd4febc0253215fa9b6c0a61a1123c275d66541f" translate="yes" xml:space="preserve">
+          <source>Opens a socket of the specified kind and attaches it to filehandle SOCKET. DOMAIN, TYPE, and PROTOCOL are specified the same as for the syscall of the same name. You should &lt;code&gt;use Socket&lt;/code&gt; first to get the proper definitions imported. See the examples in &lt;a href=&quot;perlipc#Sockets%3A-Client%2FServer-Communication&quot;&gt;&quot;Sockets: Client/Server Communication&quot; in perlipc&lt;/a&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="3b29b07c25945e487dbff4de1e81a446b3bf071a" translate="yes" xml:space="preserve">
+          <source>Opens a socket of the specified kind and returns it. Domain, type, and protocol are specified the same as for the syscall of the same name.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="f043104d316702a10e0ee9e23884fe89eeee7102" translate="yes" xml:space="preserve">
+          <source>Opens the file whose filename is given by EXPR, and associates it with FILEHANDLE.</source>
+          <target state="translated">Abre el archivo cuyo nombre de archivo es dado por EXPR,y lo asocia con FILEHANDLE.</target>
+        </trans-unit>
+        <trans-unit id="f8d3156ec9740e3cf785b92426587c9913bf7a48" translate="yes" xml:space="preserve">
+          <source>Opens the file whose filename is given by FILENAME, and associates it with FILEHANDLE. If FILEHANDLE is an expression, its value is used as the real filehandle wanted; an undefined scalar will be suitably autovivified. This function calls the underlying operating system's</source>
+          <target state="translated">Abre el archivo cuyo nombre de archivo es dado por FILENAME,y lo asocia con FILEHANDLE.Si FILEHANDLE es una expresión,su valor se utiliza como el verdadero filehandle deseado;un escalar no definido será adecuadamente autovivificado.Esta función llama al sistema operativo subyacente</target>
+        </trans-unit>
+        <trans-unit id="4b9ccea513e25adc54a594c4a2c7b7e82197b4e8" translate="yes" xml:space="preserve">
+          <source>Opens the file whose filename is given by FILENAME, and associates it with FILEHANDLE. If FILEHANDLE is an expression, its value is used as the real filehandle wanted; an undefined scalar will be suitably autovivified. This function calls the underlying operating system's &lt;a href=&quot;http://man.he.net/man2/open&quot;&gt;open(2)&lt;/a&gt; function with the parameters FILENAME, MODE, and PERMS.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="4d5a806f4d052ec496b3b922107438a0577f84fc" translate="yes" xml:space="preserve">
+          <source>Opens the syslog. &lt;code&gt;$ident&lt;/code&gt; is prepended to every message. &lt;code&gt;$logopt&lt;/code&gt; contains zero or more of the options detailed below. &lt;code&gt;$facility&lt;/code&gt; specifies the part of the system to report about, for example &lt;code&gt;LOG_USER&lt;/code&gt; or &lt;code&gt;LOG_LOCAL0&lt;/code&gt; : see &lt;a href=&quot;#Facilities&quot;&gt;Facilities&lt;/a&gt; for a list of well-known facilities, and your &lt;code&gt;syslog(3)&lt;/code&gt; documentation for the facilities available in your system. Check &lt;a href=&quot;#SEE-ALSO&quot;&gt;SEE ALSO&lt;/a&gt; for useful links. Facility can be given as a string or a numeric macro.</source>
+          <target state="translated">Abre el syslog. &lt;code&gt;$ident&lt;/code&gt; se antepone a cada mensaje. &lt;code&gt;$logopt&lt;/code&gt; contiene cero o m&amp;aacute;s de las opciones detalladas a continuaci&amp;oacute;n. &lt;code&gt;$facility&lt;/code&gt; especifica la parte del sistema sobre la que informar, por ejemplo, &lt;code&gt;LOG_USER&lt;/code&gt; o &lt;code&gt;LOG_LOCAL0&lt;/code&gt; : consulte &lt;a href=&quot;#Facilities&quot;&gt;Instalaciones&lt;/a&gt; para obtener una lista de instalaciones conocidas y la documentaci&amp;oacute;n de &lt;code&gt;syslog(3)&lt;/code&gt; para conocer las instalaciones disponibles en su sistema. Consulte &lt;a href=&quot;#SEE-ALSO&quot;&gt;VER TAMBI&amp;Eacute;N&lt;/a&gt; para obtener enlaces &amp;uacute;tiles. La facilidad se puede dar como una cadena o una macro num&amp;eacute;rica.</target>
+        </trans-unit>
+        <trans-unit id="d67ac2c393c850f9198943cd6ad27b36c7d7a81b" translate="yes" xml:space="preserve">
+          <source>Opens the syslog. &lt;code&gt;$ident&lt;/code&gt; is prepended to every message. &lt;code&gt;$logopt&lt;/code&gt; contains zero or more of the options detailed below. &lt;code&gt;$facility&lt;/code&gt; specifies the part of the system to report about, for example &lt;code&gt;LOG_USER&lt;/code&gt; or &lt;code&gt;LOG_LOCAL0&lt;/code&gt;: see &lt;a href=&quot;#Facilities&quot;&gt;&quot;Facilities&quot;&lt;/a&gt; for a list of well-known facilities, and your &lt;code&gt;syslog(3)&lt;/code&gt; documentation for the facilities available in your system. Check &lt;a href=&quot;#SEE-ALSO&quot;&gt;&quot;SEE ALSO&quot;&lt;/a&gt; for useful links. Facility can be given as a string or a numeric macro.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="1d7ead7f438c26f4d24f0c5553cfa1b2b48237a8" translate="yes" xml:space="preserve">
+          <source>Operand with no preceding operator in regex; marked by &amp;lt;-- HERE in m/%s/</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="d7befdfbc60eb47b3289957505fb12ce62daabea" translate="yes" xml:space="preserve">
+          <source>Operating System Interfaces</source>
+          <target state="translated">Interfaces del sistema operativo</target>
+        </trans-unit>
+        <trans-unit id="b9967a65c2c4c5007de8b77bf65865521f0d26c6" translate="yes" xml:space="preserve">
+          <source>Operating on references to hashes.</source>
+          <target state="translated">Operando con referencias a los hashes.</target>
+        </trans-unit>
+        <trans-unit id="ac9fb6f30a90f215146103f81004effdabcea9ae" translate="yes" xml:space="preserve">
+          <source>Operation &quot;%s&quot; returns its argument for UTF-16 surrogate U+%X</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="7b576c5bb0b11a4350e3bf4fdc21259831b2084c" translate="yes" xml:space="preserve">
+          <source>Operation &quot;%s&quot; returns its argument for non-Unicode code point 0x%X</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="d671b8f2f76102a15b0bf4d4a39249d6ad4b4ece" translate="yes" xml:space="preserve">
+          <source>Operation &quot;%s&quot;: no method found, %s</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="c28848b2a51553304abcd6de3ae0236ffb496efe" translate="yes" xml:space="preserve">
+          <source>Operations with overloaded operators preserve the arguments which is exactly what you expect.</source>
+          <target state="translated">Las operaciones con operadores sobrecargados conservan los argumentos,que es exactamente lo que se espera.</target>
+        </trans-unit>
+        <trans-unit id="d4e4327f6fb8077a49e03daa6c0ea206ecb5c16a" translate="yes" xml:space="preserve">
+          <source>Operations with overloaded operators preserve the arguments, which is exactly what you expect.</source>
+          <target state="translated">Las operaciones con operadores sobrecargados conservan los argumentos,que es exactamente lo que se espera.</target>
+        </trans-unit>
+        <trans-unit id="f921f14a57cf5d524fbd5fad00e7ed999feb448d" translate="yes" xml:space="preserve">
+          <source>Operator Names and Operator Lists</source>
+          <target state="translated">Nombres de los operadores y listas de operadores</target>
+        </trans-unit>
+        <trans-unit id="f299c884a708c75ca75144e361f0c5cf282b235f" translate="yes" xml:space="preserve">
+          <source>Operator Overloading</source>
+          <target state="translated">Sobrecarga del operador</target>
+        </trans-unit>
+        <trans-unit id="53d6250055dd8231245476710d174685174b7d89" translate="yes" xml:space="preserve">
+          <source>Operator Precedence and Associativity</source>
+          <target state="translated">Precedencia y asociatividad del operador</target>
+        </trans-unit>
+        <trans-unit id="11c9953040dd3157f9326929003c9899b7cffb21" translate="yes" xml:space="preserve">
+          <source>Operator associativity</source>
+          <target state="translated">La asociatividad de los operadores</target>
+        </trans-unit>
+        <trans-unit id="08ca8c19d61f0facd586cd4f482f39a253b12167" translate="yes" xml:space="preserve">
+          <source>Operator implementations (the values) can be subroutines, references to subroutines, or anonymous subroutines - in other words, anything legal inside a &lt;code&gt;&amp;amp;{ ... }&lt;/code&gt; call. Values specified as strings are interpreted as method names. Thus</source>
+          <target state="translated">Las implementaciones del operador (los valores) pueden ser subrutinas, referencias a subrutinas o subrutinas an&amp;oacute;nimas; en otras palabras, cualquier cosa legal dentro de una llamada &lt;code&gt;&amp;amp;{ ... }&lt;/code&gt; . Los valores especificados como cadenas se interpretan como nombres de m&amp;eacute;todos. As&amp;iacute;</target>
+        </trans-unit>
+        <trans-unit id="4f99a8916efac564a63d50ce560cad0dd70e1540" translate="yes" xml:space="preserve">
+          <source>Operator names are typically small lowercase words like enterloop, leaveloop, last, next, redo etc. Sometimes they are rather cryptic like gv2cv, i_ncmp and ftsvtx.</source>
+          <target state="translated">Los nombres de los operadores son típicamente palabras en minúsculas como enterloop,leaveloop,last,next,redo etc.A veces son bastante crípticos como gv2cv,i_ncmp y ftsvtx.</target>
+        </trans-unit>
+        <trans-unit id="0bc65caf3b0a75a378aedfadf66730c78a4537cf" translate="yes" xml:space="preserve">
+          <source>Operator or semicolon missing before %s</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="685048571a4f4db99cb190b311def264fc71eb0e" translate="yes" xml:space="preserve">
+          <source>Operator precedence</source>
+          <target state="translated">Precedencia del operador</target>
+        </trans-unit>
+        <trans-unit id="b559bbb40846a93d37a125fab7a9a1b57c0dd2f9" translate="yes" xml:space="preserve">
+          <source>Operator precedence and associativity work in Perl more or less like they do in mathematics.</source>
+          <target state="translated">La precedencia de los operadores y la asociatividad funcionan en Perl más o menos como en las matemáticas.</target>
+        </trans-unit>
+        <trans-unit id="6852b1cd2bb1031ac4d81d694fd94535c3eb3d11" translate="yes" xml:space="preserve">
+          <source>Operator tags can be used to refer to groups (or sets) of operators. Tag names always begin with a colon. The Opcode module defines several optags and the user can define others using the define_optag function.</source>
+          <target state="translated">Las etiquetas de los operadores pueden utilizarse para referirse a grupos (o conjuntos)de operadores.Los nombres de las etiquetas siempre comienzan con dos puntos.El módulo Opcode define varios optags y el usuario puede definir otros utilizando la función define_optag.</target>
+        </trans-unit>
+        <trans-unit id="093964ff1bd20f7f1bfa027cf984852f6646a0fc" translate="yes" xml:space="preserve">
+          <source>Operator vs literal overloading</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="e90414358dbfff0a68e4eb5d68a16978cf197d5a" translate="yes" xml:space="preserve">
+          <source>Operators</source>
+          <target state="translated">Operators</target>
+        </trans-unit>
+        <trans-unit id="63e0a2d0a1f37e46caa267d78be1feaf655b0cda" translate="yes" xml:space="preserve">
+          <source>Operators dealing with filenames are examples.</source>
+          <target state="translated">Los operadores que se ocupan de los nombres de los archivos son ejemplos.</target>
+        </trans-unit>
+        <trans-unit id="55ddd8565a51d103a65dc3c453ea6bce04b13905" translate="yes" xml:space="preserve">
+          <source>Operators such as &lt;code&gt;**&lt;/code&gt; , &lt;code&gt;&lt;a href=&quot;functions/sin&quot;&gt;sin&lt;/a&gt;&lt;/code&gt; and &lt;code&gt;&lt;a href=&quot;functions/exp&quot;&gt;exp&lt;/a&gt;&lt;/code&gt; force arguments to floating point format.</source>
+          <target state="translated">Los operadores como &lt;code&gt;**&lt;/code&gt; , &lt;code&gt;&lt;a href=&quot;functions/sin&quot;&gt;sin&lt;/a&gt;&lt;/code&gt; y &lt;code&gt;&lt;a href=&quot;functions/exp&quot;&gt;exp&lt;/a&gt;&lt;/code&gt; fuerzan los argumentos al formato de punto flotante.</target>
+        </trans-unit>
+        <trans-unit id="004496b42fcc360f8e82fa5c56c3b096a2155421" translate="yes" xml:space="preserve">
+          <source>Operators such as &lt;code&gt;**&lt;/code&gt;, &lt;code&gt;sin&lt;/code&gt; and &lt;code&gt;exp&lt;/code&gt; force arguments to floating point format.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="5c1c419f9c87704707f20d16f008ba41b567fa7e" translate="yes" xml:space="preserve">
+          <source>Operators which expect a string</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="192b9459597426145afa81f1d9a3ad900bb8bd5d" translate="yes" xml:space="preserve">
+          <source>Operators which expect an integer</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="864704fd78dbf2c79b9e58c4ea43f3220669cded" translate="yes" xml:space="preserve">
+          <source>Ops such as chdir obviously effect the process as a whole and not just the code in the compartment. Ops such as rand and srand have a similar but more subtle effect.</source>
+          <target state="translated">Las operaciones como chdir obviamente afectan al proceso en su conjunto y no sólo al código del compartimento.Operaciones como rand y srand tienen un efecto similar pero más sutil.</target>
+        </trans-unit>
+        <trans-unit id="977af567e0cb291a9f2082343e1b048e5433a7e1" translate="yes" xml:space="preserve">
+          <source>Opsets may be manipulated using the perl bit vector operators &amp;amp; (and), | (or), ^ (xor) and ~ (negate/invert).</source>
+          <target state="translated">Los opsets se pueden manipular utilizando los operadores de vector de bits de Perl &amp;amp; (y), | (o), ^ (xor) y ~ (negar / invertir).</target>
+        </trans-unit>
+        <trans-unit id="0b7b13995f2b05a4fbd9b6bef85fdd40cc461955" translate="yes" xml:space="preserve">
+          <source>OptiPerl</source>
+          <target state="translated">OptiPerl</target>
+        </trans-unit>
+        <trans-unit id="6221772a58b20793863ce371d773cbe75426798d" translate="yes" xml:space="preserve">
+          <source>OptiPerl is a Windows IDE with simulated CGI environment, including debugger and syntax-highlighting editor.</source>
+          <target state="translated">OptiPerl es un IDE de Windows con un entorno CGI simulado,que incluye un depurador y un editor de resaltado de sintaxis.</target>
+        </trans-unit>
+        <trans-unit id="3aefe0ba1ba6e76e7b11557d066b96b14e2c986e" translate="yes" xml:space="preserve">
+          <source>Optimisation data; subject to change.</source>
+          <target state="translated">Datos de optimización;sujetos a cambios.</target>
+        </trans-unit>
+        <trans-unit id="6169946bff1ab1bb2fe62a2ebdb2dd4fa18f40fb" translate="yes" xml:space="preserve">
+          <source>Optimisation flags; subject to change.</source>
+          <target state="translated">Banderas de optimización;sujetas a cambios.</target>
+        </trans-unit>
+        <trans-unit id="fdf5e093149fa15365c797b12b39a00d5ec3a138" translate="yes" xml:space="preserve">
+          <source>Optimization</source>
+          <target state="translated">Optimization</target>
+        </trans-unit>
+        <trans-unit id="6bc76b02fc66f0ca691dc22aabcdcd333e409136" translate="yes" xml:space="preserve">
+          <source>Optimization of regular expressions</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="18a333060bee7f2ee65af71205072e100d62bacc" translate="yes" xml:space="preserve">
+          <source>Optimized-away statements are rendered as '???'. This includes statements that have a compile-time side-effect, such as the obscure</source>
+          <target state="translated">Las declaraciones optimizadas se presentan como '???'.Esto incluye declaraciones que tienen un efecto secundario en tiempo de compilación,como la oscura</target>
+        </trans-unit>
+        <trans-unit id="40dbe8ccfe714d9a944d448d1c3b1b3c2bfff946" translate="yes" xml:space="preserve">
+          <source>Optimizing</source>
+          <target state="translated">Optimizing</target>
+        </trans-unit>
+        <trans-unit id="3e1ccc3d0caaae646e1ab71f59e1842b2b4f1166" translate="yes" xml:space="preserve">
+          <source>Optimizing that any further is a job for &lt;code&gt;p5p&lt;/code&gt; .</source>
+          <target state="translated">Optimizar eso es un trabajo para &lt;code&gt;p5p&lt;/code&gt; .</target>
+        </trans-unit>
+        <trans-unit id="7d18d459b985af7984ff90200899087216246ead" translate="yes" xml:space="preserve">
+          <source>Optimizing that any further is a job for &lt;code&gt;p5p&lt;/code&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
+        <trans-unit id="2b89db00fb49023ab4c0f78acb572909bcf10d35" translate="yes" xml:space="preserve">
+          <source>Option Format</source>
+          <target state="translated">Opción Formato</target>
+        </trans-unit>
+        <trans-unit id="f506dd24a9e7c79211553ebe1422f91140092c4a" translate="yes" xml:space="preserve">
+          <source>Option Stickiness</source>
+          <target state="translated">Opción Pegajosidad</target>
+        </trans-unit>
+        <trans-unit id="8b0267bbb54c30709fbd963f611e8c9f6fcd1f57" translate="yes" xml:space="preserve">
+          <source>Option words are separated by commas (not whitespace) and follow the usual conventions of compiler backend options.</source>
+          <target state="translated">Las palabras de opción están separadas por comas (no por espacios en blanco)y siguen las convenciones habituales de las opciones de fondo del compilador.</target>
+        </trans-unit>
+        <trans-unit id="bd62828c4813996c3de7a8b7f837c827369e6d5e" translate="yes" xml:space="preserve">
+          <source>Option, Argument, Parameter, and Configuration File Processing</source>
+          <target state="translated">Procesamiento de opciones,argumentos,parámetros y archivos de configuración</target>
+        </trans-unit>
+        <trans-unit id="16df76c37a27e75c2b404f915ffcff82e54620ed" translate="yes" xml:space="preserve">
+          <source>Optional - called when the layer is about to be removed.</source>
+          <target state="translated">Opcional-se llama cuando la capa está a punto de ser eliminada.</target>
+        </trans-unit>
+        <trans-unit id="279393da5192f90d67ca2ac7c82f748509f343b9" translate="yes" xml:space="preserve">
+          <source>Optional - if not present a lower layer does the open. If present, called after the layer is pushed for opens which pass a numeric file descriptor. This function is subject to change as there is no easy way to get a lower layer to do the open and then regain control.</source>
+          <target state="translated">Opcional-si no está presente una capa inferior hace la apertura.Si está presente,se llama después de que la capa es empujada para abre que pasan un descriptor de archivo numérico.Esta función está sujeta a cambios ya que no hay una forma fácil de conseguir que una capa inferior haga la apertura y luego recuperar el control.</target>
+        </trans-unit>
         <trans-unit id="66c7071a6fa7cb2bb38d9b2c01a05a137c430add" translate="yes" xml:space="preserve">
           <source>Optional - if not present a lower layer does the open. If present, called after the layer is pushed for sysopen style opens which pass a numeric mode and permissions. This function is subject to change as there is no easy way to get a lower layer to do the open and then regain control.</source>
           <target state="translated">Opcional-si no está presente una capa inferior hace la apertura.Si está presente,se llama después de que la capa se empuja para el estilo de apertura del sistema que pasa un modo numérico y permisos.Esta función está sujeta a cambios ya que no hay una forma fácil de conseguir que una capa inferior haga la apertura y luego recuperar el control.</target>
@@ -955,6 +1183,10 @@
           <source>Other places to ask questions are on the &lt;a href=&quot;http://www.perlmonks.org/&quot;&gt;PerlMonks site&lt;/a&gt; or &lt;a href=&quot;http://stackoverflow.com/questions/tagged/perl&quot;&gt;stackoverflow&lt;/a&gt;.</source>
           <target state="new"/>
         </trans-unit>
+        <trans-unit id="eff2560893d19c2c55727026197bd5c9f824665a" translate="yes" xml:space="preserve">
+          <source>Other places to ask questions are on the &lt;a href=&quot;http://www.perlmonks.org/&quot;&gt;PerlMonks site&lt;/a&gt; or &lt;a href=&quot;https://stackoverflow.com/questions/tagged/perl&quot;&gt;stackoverflow&lt;/a&gt;.</source>
+          <target state="new"/>
+        </trans-unit>
         <trans-unit id="94bfe5471f8f9572c8f23295ec358290aa5c0ef5" translate="yes" xml:space="preserve">
           <source>Other prebuilt perl binaries</source>
           <target state="translated">Otros binarios de perl preconstruidos</target>
@@ -994,6 +1226,10 @@
         <trans-unit id="7aec5a2099bba9d9c155d5ff98c8d088a4d87e95" translate="yes" xml:space="preserve">
           <source>Other useful sources include the Unicode Glossary &lt;a href=&quot;http://unicode.org/glossary/&quot;&gt;http://unicode.org/glossary/&lt;/a&gt;, the Free On-Line Dictionary of Computing &lt;a href=&quot;http://foldoc.org/&quot;&gt;http://foldoc.org/&lt;/a&gt;, the Jargon File &lt;a href=&quot;http://catb.org/~esr/jargon/&quot;&gt;http://catb.org/~esr/jargon/&lt;/a&gt;, and Wikipedia &lt;a href=&quot;http://www.wikipedia.org/&quot;&gt;http://www.wikipedia.org/&lt;/a&gt;.</source>
           <target state="translated">Otras fuentes &amp;uacute;tiles incluyen el glosario Unicode &lt;a href=&quot;http://unicode.org/glossary/&quot;&gt;http://unicode.org/glossary/&lt;/a&gt; , el diccionario gratuito en l&amp;iacute;nea de computaci&amp;oacute;n &lt;a href=&quot;http://foldoc.org/&quot;&gt;http://foldoc.org/&lt;/a&gt; , el archivo de jerga &lt;a href=&quot;http://catb.org/~esr/jargon/&quot;&gt;http://catb.org/~esr/jargon /&lt;/a&gt; y Wikipedia &lt;a href=&quot;http://www.wikipedia.org/&quot;&gt;http://www.wikipedia.org/&lt;/a&gt; .</target>
+        </trans-unit>
+        <trans-unit id="5f5dd742cfba9578ec74fc251e10af0088578a8c" translate="yes" xml:space="preserve">
+          <source>Other useful sources include the Unicode Glossary &lt;a href=&quot;https://unicode.org/glossary/&quot;&gt;http://unicode.org/glossary/&lt;/a&gt;, the Free On-Line Dictionary of Computing &lt;a href=&quot;http://foldoc.org/&quot;&gt;http://foldoc.org/&lt;/a&gt;, the Jargon File &lt;a href=&quot;http://catb.org/~esr/jargon/&quot;&gt;http://catb.org/~esr/jargon/&lt;/a&gt;, and Wikipedia &lt;a href=&quot;https://www.wikipedia.org/&quot;&gt;http://www.wikipedia.org/&lt;/a&gt;.</source>
+          <target state="new"/>
         </trans-unit>
         <trans-unit id="55c0500d3b5f8d60d79cf605a490c073a4b14076" translate="yes" xml:space="preserve">
           <source>Other voting mechanisms may also be used instead (e.g. sending mail to perl5-porters and at least two other committers responding to the list giving their assent), as long as the same number of votes is gathered in a transparent manner. Specifically, proposals of which changes to cherry-pick must be visible to everyone on perl5-porters so that the views of everyone interested may be heard.</source>
@@ -3766,242 +4002,6 @@
         <trans-unit id="6708632816e3f269f58a404db243454e1641a932" translate="yes" xml:space="preserve">
           <source>PeerAddrInfo =&amp;gt; ARRAY</source>
           <target state="new"/>
-        </trans-unit>
-        <trans-unit id="46d2192e63cd05faab929cd650436f61dca14ce8" translate="yes" xml:space="preserve">
-          <source>PeerHost =&amp;gt; STRING</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="8d075a3ed08988dae4c16a7043806162ccac9817" translate="yes" xml:space="preserve">
-          <source>PeerHost AND LocalHost PARSING</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="fa91cf15a151119bf0702338d553a73e0af264a2" translate="yes" xml:space="preserve">
-          <source>PeerPort =&amp;gt; STRING</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="a759d273b63a64efde6b41235362623a3e0e2136" translate="yes" xml:space="preserve">
-          <source>PeerService =&amp;gt; STRING</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="dff756efe8f5dd0813ab9c374e52c792233eda90" translate="yes" xml:space="preserve">
-          <source>Pennsylvania</source>
-          <target state="translated">Pennsylvania</target>
-        </trans-unit>
-        <trans-unit id="3d7bbafed59a27c1513d780d5e784c2a12ef1dc5" translate="yes" xml:space="preserve">
-          <source>People frequently expect it to work like this. So it does.</source>
-          <target state="translated">La gente a menudo espera que funcione así.Y así es.</target>
-        </trans-unit>
-        <trans-unit id="bc1de57d7a939bd26a67e8c9562637156f53e824" translate="yes" xml:space="preserve">
-          <source>People have a hard time remembering that some functions default to $_, or @ARGV, or whatever, but that others which you might expect to do not.</source>
-          <target state="translated">A la gente le cuesta recordar que algunas funciones están predeterminadas en $_,o @ARGV,o lo que sea,pero que otras no.</target>
-        </trans-unit>
-        <trans-unit id="af3c23d7810d9feb567b332e5161af8d9bd9f452" translate="yes" xml:space="preserve">
-          <source>People like to see their strings nicely sorted--or as Unicode parlance goes, collated. But again, what do you mean by collate?</source>
-          <target state="translated">A la gente le gusta ver sus cuerdas bien ordenadas...o como dice la jerga de Unicode,cotejadas.Pero,de nuevo,¿qué quieres decir con cotejar?</target>
-        </trans-unit>
-        <trans-unit id="895626deb1f05ce05a822ae049fef844846a6710" translate="yes" xml:space="preserve">
-          <source>People sometimes point out that &lt;a href=&quot;../db_file&quot;&gt;DB_File&lt;/a&gt; will do something similar, and ask why &lt;code&gt;Tie::File&lt;/code&gt; module is necessary.</source>
-          <target state="translated">La gente a veces se&amp;ntilde;ala que &lt;a href=&quot;../db_file&quot;&gt;DB_File&lt;/a&gt; har&amp;aacute; algo similar y pregunta por qu&amp;eacute; es necesario el m&amp;oacute;dulo &lt;code&gt;Tie::File&lt;/code&gt; .</target>
-        </trans-unit>
-        <trans-unit id="e4fa6539419b00af03d768603a4618e5be18322c" translate="yes" xml:space="preserve">
-          <source>People sometimes point out that &lt;a href=&quot;db_file&quot;&gt;DB_File&lt;/a&gt; will do something similar, and ask why &lt;code&gt;Tie::File&lt;/code&gt; module is necessary.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="99dcc00aba3ea5fec8f203b99f7aa0dc52bd345a" translate="yes" xml:space="preserve">
-          <source>Per default all untar operations are done with the perl module Archive::Tar; by setting this variable to true the external tar command is used if available; on Unix this is usually preferred because they have a reliable and fast gnutar implementation.</source>
-          <target state="translated">Por defecto todas las operaciones de untar se realizan con el módulo perl Archive::Tar;al establecer esta variable como verdadera se utiliza el comando externo tar si está disponible;en Unix se suele preferir esto porque tienen una implementación gnutar fiable y rápida.</target>
-        </trans-unit>
-        <trans-unit id="c4f661f9e3bbabdfe8977d8e07c04f728f007afa" translate="yes" xml:space="preserve">
-          <source>Per-Interpreter Variables</source>
-          <target state="translated">Variables por intérprete</target>
-        </trans-unit>
-        <trans-unit id="2559c9f59f217f32b3e891e1ab6877c4f55356cc" translate="yes" xml:space="preserve">
-          <source>Per-instance Data</source>
-          <target state="translated">Datos por sustancia</target>
-        </trans-unit>
-        <trans-unit id="637c16442a8f555cae097e71247c5fc7ee45adfd" translate="yes" xml:space="preserve">
-          <source>Per-instance flag bits</source>
-          <target state="translated">Bocados de bandera por sustancia</target>
-        </trans-unit>
-        <trans-unit id="24a428fdaa34dbb9d25a2ae2897474ba4a8b3383" translate="yes" xml:space="preserve">
-          <source>Perceptive Perl hackers may have noticed that a &lt;code&gt;for&lt;/code&gt; loop has a return value, and that this value can be captured by wrapping the loop in a &lt;code&gt;&lt;a href=&quot;functions/do&quot;&gt;do&lt;/a&gt;&lt;/code&gt; block. The reward for this discovery is this cautionary advice: The return value of a &lt;code&gt;for&lt;/code&gt; loop is unspecified and may change without notice. Do not rely on it.</source>
-          <target state="translated">Los hackers perceptivos de Perl pueden haber notado que un bucle &lt;code&gt;for&lt;/code&gt; tiene un valor de retorno, y que este valor puede capturarse envolviendo el bucle en un bloque &lt;code&gt;&lt;a href=&quot;functions/do&quot;&gt;do&lt;/a&gt;&lt;/code&gt; . La recompensa por este descubrimiento es este consejo de advertencia: el valor de retorno de un bucle &lt;code&gt;for&lt;/code&gt; no est&amp;aacute; especificado y puede cambiar sin previo aviso. No confies en eso.</target>
-        </trans-unit>
-        <trans-unit id="6e85b222ac46dc12730aecc629694a020c6eeb78" translate="yes" xml:space="preserve">
-          <source>Perceptive Perl hackers may have noticed that a &lt;code&gt;for&lt;/code&gt; loop has a return value, and that this value can be captured by wrapping the loop in a &lt;code&gt;do&lt;/code&gt; block. The reward for this discovery is this cautionary advice: The return value of a &lt;code&gt;for&lt;/code&gt; loop is unspecified and may change without notice. Do not rely on it.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="07e9965ae0a1c370ab69fb29d7dbc17ad92d7783" translate="yes" xml:space="preserve">
-          <source>Perform a stream ping. If the tcp connection isn't already open, it opens it. It then sends some data and waits for a reply. It leaves the stream open on exit.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="4d0ad0b2d6ac0afcdcc0122fc81922056578805a" translate="yes" xml:space="preserve">
-          <source>Perform a udp echo ping. Construct a message of at least the one-byte sequence number and any additional data bytes. Send the message out and wait for a message to come back. If we get a message, make sure all of its parts match. If they do, we are done. Otherwise go back and wait for the message until we run out of time. Return the result of our efforts.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="79aed27967237d1d2c231b08b0c043db2872fef5" translate="yes" xml:space="preserve">
-          <source>Perform an in-place trimming of leading and trailing whitespace from the first argument provided to the function.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="ec8bd6ff6508298e4713b89624c59cb269e84e9c" translate="yes" xml:space="preserve">
-          <source>Perform assignment to the &lt;code&gt;func_args&lt;/code&gt; attribute.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="2c46ae69f753cf6246720edd2c4a9cebd27597f5" translate="yes" xml:space="preserve">
-          <source>Perform cache scanning ('atstart', 'atexit' or 'never')?</source>
-          <target state="translated">¿Realizar un escaneo de la caché ('atstart','atexit' o 'never')?</target>
-        </trans-unit>
-        <trans-unit id="c63fc543a09237e1df38dff5523874d7739bd5c9" translate="yes" xml:space="preserve">
-          <source>Perform sorting on one type of platform only.</source>
-          <target state="translated">Realizar la clasificación en un solo tipo de plataforma.</target>
-        </trans-unit>
-        <trans-unit id="c27007b93a4bc1c8de4cbbfbb0c5571ba69e57a4" translate="yes" xml:space="preserve">
-          <source>Perform the equivalent of &lt;code&gt;&lt;a href=&quot;../functions/splice&quot;&gt;splice&lt;/a&gt;&lt;/code&gt; on the array.</source>
-          <target state="translated">Realice el equivalente de &lt;code&gt;&lt;a href=&quot;../functions/splice&quot;&gt;splice&lt;/a&gt;&lt;/code&gt; en la matriz.</target>
-        </trans-unit>
-        <trans-unit id="f4070651c463f5c50952530e94f62331111d1bf1" translate="yes" xml:space="preserve">
-          <source>Perform the equivalent of &lt;code&gt;&lt;a href=&quot;functions/splice&quot;&gt;splice&lt;/a&gt;&lt;/code&gt; on the array.</source>
-          <target state="translated">Realice el equivalente de &lt;code&gt;&lt;a href=&quot;functions/splice&quot;&gt;splice&lt;/a&gt;&lt;/code&gt; en la matriz.</target>
-        </trans-unit>
-        <trans-unit id="ed35d3518038453f5800bc06513fa8bdaa2767df" translate="yes" xml:space="preserve">
-          <source>Perform the equivalent of &lt;code&gt;splice&lt;/code&gt; on the array.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="64184a2388a7346fec59e49f0f94873466b15963" translate="yes" xml:space="preserve">
-          <source>Perform whatever actions the command line args specified. The &lt;code&gt;prove&lt;/code&gt; command line tool consists of the following code:</source>
-          <target state="translated">Realice las acciones que especifique la l&amp;iacute;nea de comandos. La herramienta de l&amp;iacute;nea de comandos de &lt;code&gt;prove&lt;/code&gt; consta del siguiente c&amp;oacute;digo:</target>
-        </trans-unit>
-        <trans-unit id="0cb883fc85b1fd84aaebb7319c682c586a065641" translate="yes" xml:space="preserve">
-          <source>Performance considerations</source>
-          <target state="translated">Consideraciones sobre el rendimiento</target>
-        </trans-unit>
-        <trans-unit id="8b696788f6758fff45816e3f44d267110dbc7d28" translate="yes" xml:space="preserve">
-          <source>Performance issues</source>
-          <target state="translated">Problemas de rendimiento</target>
-        </trans-unit>
-        <trans-unit id="75fbc5c30da07f1356bcf407f1026c09ad8550fb" translate="yes" xml:space="preserve">
-          <source>Performance testing</source>
-          <target state="translated">Pruebas de rendimiento</target>
-        </trans-unit>
-        <trans-unit id="d9a7e43f70de19f613749fe02de0e154833f44cd" translate="yes" xml:space="preserve">
-          <source>Performing Perl pattern matches and substitutions from your C program</source>
-          <target state="translated">Realizando coincidencias de patrones de Perl y sustituciones de su programa C</target>
-        </trans-unit>
-        <trans-unit id="3561dc2da1552ce45c86dea5a0a9894997990d1e" translate="yes" xml:space="preserve">
-          <source>Performs a TCP echo. It writes the given string to the socket and then reads it back. It returns 1 on success, 0 on failure.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="a965e83c4b09bcea3d12be93ff1b3ea645513eea" translate="yes" xml:space="preserve">
-          <source>Performs a callback to the Perl sub specified by the SV.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="b82005b8824a2b9aeaec337d4f6692160e086478" translate="yes" xml:space="preserve">
-          <source>Performs a callback to the Perl sub whose name is in the SV. See &lt;a href=&quot;perlcall&quot;&gt;perlcall&lt;/a&gt;.</source>
-          <target state="translated">Realiza una devoluci&amp;oacute;n de llamada al sub de Perl cuyo nombre est&amp;aacute; en el SV. Ver &lt;a href=&quot;perlcall&quot;&gt;perlcall&lt;/a&gt; .</target>
-        </trans-unit>
-        <trans-unit id="c9a6e4b7d6eb6de9cfa7c1c05de09156f5313aec" translate="yes" xml:space="preserve">
-          <source>Performs a callback to the specified Perl method. The blessed object must be on the stack. See &lt;a href=&quot;perlcall&quot;&gt;perlcall&lt;/a&gt;.</source>
-          <target state="translated">Realiza una devoluci&amp;oacute;n de llamada al m&amp;eacute;todo Perl especificado. El objeto bendecido debe estar en la pila. Ver &lt;a href=&quot;perlcall&quot;&gt;perlcall&lt;/a&gt; .</target>
-        </trans-unit>
-        <trans-unit id="7f3fb532eda4a585d8b90e5f5df9aa47f234c3a5" translate="yes" xml:space="preserve">
-          <source>Performs a callback to the specified Perl sub. See &lt;a href=&quot;perlcall&quot;&gt;perlcall&lt;/a&gt;.</source>
-          <target state="translated">Realiza una devoluci&amp;oacute;n de llamada al sub de Perl especificado. Ver &lt;a href=&quot;perlcall&quot;&gt;perlcall&lt;/a&gt; .</target>
-        </trans-unit>
-        <trans-unit id="d6c45982ba770a19e61a195555dad69e694989fd" translate="yes" xml:space="preserve">
-          <source>Performs a callback to the specified named and package-scoped Perl subroutine with &lt;code&gt;argv&lt;/code&gt; (a &lt;code&gt;NULL&lt;/code&gt;-terminated array of strings) as arguments. See &lt;a href=&quot;perlcall&quot;&gt;perlcall&lt;/a&gt;.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="49600604ba37ec7bb2caf7fae02578e1f3fb4be1" translate="yes" xml:space="preserve">
-          <source>Performs a callback to the specified named and package-scoped Perl subroutine with &lt;code&gt;argv&lt;/code&gt; (a NULL-terminated array of strings) as arguments. See &lt;a href=&quot;perlcall&quot;&gt;perlcall&lt;/a&gt;.</source>
-          <target state="translated">Realiza una devoluci&amp;oacute;n de llamada a la subrutina Perl especificada con nombre y &amp;aacute;mbito de paquete con &lt;code&gt;argv&lt;/code&gt; (una matriz de cadenas terminada en NULL) como argumentos. Ver &lt;a href=&quot;perlcall&quot;&gt;perlcall&lt;/a&gt; .</target>
-        </trans-unit>
-        <trans-unit id="a93173811bef953ad5c7fb92a164bcccd11d68ac" translate="yes" xml:space="preserve">
-          <source>Performs a logical format of [part of] the disk. &lt;code&gt;$opOutBuf&lt;/code&gt; should be &lt;code&gt;[]&lt;/code&gt;. &lt;code&gt;$pInBuf&lt;/code&gt; should contain a &lt;code&gt;VERIFY_INFORMATION&lt;/code&gt; data structure:</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="8a85f5d1bfcb6901403b71c0162984e3d90d98b0" translate="yes" xml:space="preserve">
-          <source>Performs a mapping at several places inside &lt;code&gt;PARAGRAPH&lt;/code&gt; loop.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="ada148fba94bb82b7e37d39db36e65570e59f9e9" translate="yes" xml:space="preserve">
-          <source>Performs an &lt;code&gt;hv_iternext&lt;/code&gt; , &lt;code&gt;hv_iterkey&lt;/code&gt; , and &lt;code&gt;hv_iterval&lt;/code&gt; in one operation.</source>
-          <target state="translated">Realiza &lt;code&gt;hv_iternext&lt;/code&gt; , &lt;code&gt;hv_iterkey&lt;/code&gt; y &lt;code&gt;hv_iterval&lt;/code&gt; en una sola operaci&amp;oacute;n.</target>
-        </trans-unit>
-        <trans-unit id="6cba5f16ad57dc74bb0f4aa303ceff45a83b2485" translate="yes" xml:space="preserve">
-          <source>Performs an &lt;code&gt;hv_iternext&lt;/code&gt;, &lt;code&gt;hv_iterkey&lt;/code&gt;, and &lt;code&gt;hv_iterval&lt;/code&gt; in one operation.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="08fa9ec15a0ad6b718fdf2229eda1c22f6e3ebcd" translate="yes" xml:space="preserve">
-          <source>Performs some preprocessing to the string to ensure that it has the correct characteristics of a version. Flags the object if it contains an underscore (which denotes this is an alpha version). The boolean qv denotes that the version should be interpreted as if it had multiple decimals, even if it doesn't.</source>
-          <target state="translated">Realiza algún preprocesamiento a la cadena para asegurar que tiene las características correctas de una versión.Marca el objeto si contiene un guión bajo (lo que denota que se trata de una versión alfa).El qv booleano denota que la versión debe ser interpretada como si tuviera múltiples decimales,incluso si no los tiene.</target>
-        </trans-unit>
-        <trans-unit id="8509e18df89af9b03f62a1a48a7b2cabc5f8fb27" translate="yes" xml:space="preserve">
-          <source>Performs the default fixup of the arguments part of an &lt;code&gt;entersub&lt;/code&gt; op tree. This consists of applying list context to each of the argument ops. This is the standard treatment used on a call marked with &lt;code&gt;&amp;amp;&lt;/code&gt; , or a method call, or a call through a subroutine reference, or any other call where the callee can't be identified at compile time, or a call where the callee has no prototype.</source>
-          <target state="translated">Realiza la correcci&amp;oacute;n predeterminada de los argumentos que forman parte de un &amp;aacute;rbol de operaciones de &lt;code&gt;entersub&lt;/code&gt; . Consiste en aplicar contexto de lista a cada una de las operaciones de argumento. Este es el tratamiento est&amp;aacute;ndar que se usa en una llamada marcada con &lt;code&gt;&amp;amp;&lt;/code&gt; , o una llamada a un m&amp;eacute;todo, o una llamada a trav&amp;eacute;s de una referencia de subrutina, o cualquier otra llamada en la que no se puede identificar al destinatario en tiempo de compilaci&amp;oacute;n, o en una llamada en la que el destinatario no tiene prototipo.</target>
-        </trans-unit>
-        <trans-unit id="dcd4f6dd1d93f7b286764b64bc6640cc06f23fc9" translate="yes" xml:space="preserve">
-          <source>Performs the default fixup of the arguments part of an &lt;code&gt;entersub&lt;/code&gt; op tree. This consists of applying list context to each of the argument ops. This is the standard treatment used on a call marked with &lt;code&gt;&amp;amp;&lt;/code&gt;, or a method call, or a call through a subroutine reference, or any other call where the callee can't be identified at compile time, or a call where the callee has no prototype.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="f72b3c1a72c8131e9de33c78c73bf05b880137dc" translate="yes" xml:space="preserve">
-          <source>Performs the fixup of the arguments part of an &lt;code&gt;entersub&lt;/code&gt; op tree based on a subroutine prototype. This makes various modifications to the argument ops, from applying context up to inserting &lt;code&gt;refgen&lt;/code&gt; ops, and checking the number and syntactic types of arguments, as directed by the prototype. This is the standard treatment used on a subroutine call, not marked with &lt;code&gt;&amp;amp;&lt;/code&gt; , where the callee can be identified at compile time and has a prototype.</source>
-          <target state="translated">Realiza la reparaci&amp;oacute;n de los argumentos que forman parte de un &amp;aacute;rbol de operaciones &lt;code&gt;entersub&lt;/code&gt; basado en un prototipo de subrutina. Esto hace varias modificaciones a las operaciones de argumento, desde la aplicaci&amp;oacute;n de contexto hasta la inserci&amp;oacute;n de operaciones de &lt;code&gt;refgen&lt;/code&gt; y la verificaci&amp;oacute;n del n&amp;uacute;mero y los tipos sint&amp;aacute;cticos de argumentos, seg&amp;uacute;n lo indicado por el prototipo. Este es el tratamiento est&amp;aacute;ndar utilizado en una llamada de subrutina, no marcado con &lt;code&gt;&amp;amp;&lt;/code&gt; , donde el destinatario puede identificarse en tiempo de compilaci&amp;oacute;n y tiene un prototipo.</target>
-        </trans-unit>
-        <trans-unit id="4f92bca3cb1656fef11c8172e4312cdfd95b4758" translate="yes" xml:space="preserve">
-          <source>Performs the fixup of the arguments part of an &lt;code&gt;entersub&lt;/code&gt; op tree based on a subroutine prototype. This makes various modifications to the argument ops, from applying context up to inserting &lt;code&gt;refgen&lt;/code&gt; ops, and checking the number and syntactic types of arguments, as directed by the prototype. This is the standard treatment used on a subroutine call, not marked with &lt;code&gt;&amp;amp;&lt;/code&gt;, where the callee can be identified at compile time and has a prototype.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="6157a20bbb392600596ac64ab923dad03e358522" translate="yes" xml:space="preserve">
-          <source>Performs the fixup of the arguments part of an &lt;code&gt;entersub&lt;/code&gt; op tree either based on a subroutine prototype or using default list-context processing. This is the standard treatment used on a subroutine call, not marked with &lt;code&gt;&amp;amp;&lt;/code&gt; , where the callee can be identified at compile time.</source>
-          <target state="translated">Realiza la reparaci&amp;oacute;n de los argumentos que forman parte de un &amp;aacute;rbol de operaciones &lt;code&gt;entersub&lt;/code&gt; , ya sea bas&amp;aacute;ndose en un prototipo de subrutina o utilizando el procesamiento de contexto de lista predeterminado. Este es el tratamiento est&amp;aacute;ndar que se usa en una llamada de subrutina, no marcado con &lt;code&gt;&amp;amp;&lt;/code&gt; , donde se puede identificar al destinatario en el momento de la compilaci&amp;oacute;n.</target>
-        </trans-unit>
-        <trans-unit id="ffdb85a69182d619eb9ec1084216af019391ff8b" translate="yes" xml:space="preserve">
-          <source>Performs the fixup of the arguments part of an &lt;code&gt;entersub&lt;/code&gt; op tree either based on a subroutine prototype or using default list-context processing. This is the standard treatment used on a subroutine call, not marked with &lt;code&gt;&amp;amp;&lt;/code&gt;, where the callee can be identified at compile time.</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="ad00a766edb2027fe626d56fc86fda79a018bfe9" translate="yes" xml:space="preserve">
-          <source>Perhaps I don't need a complete test harness. If I already have a TAP test log that I need to parse all I need is TAP::Parser and the various classes it depends upon. Here's the code I need to run a test and parse its TAP output</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="710b350b3985543df26a6fea7ac3e9557988bb88" translate="yes" xml:space="preserve">
-          <source>Perhaps the most common mistake programmers make is to attempt to optimize their code before a program actually does anything useful - this is a bad idea. There's no point in having an extremely fast program that doesn't work. The first job is to get a program to</source>
-          <target state="translated">Tal vez el error más común que cometen los programadores es intentar optimizar su código antes de que un programa haga algo realmente útil-esto es una mala idea.No tiene sentido tener un programa extremadamente rápido que no funciona.El primer trabajo es conseguir que un programa</target>
-        </trans-unit>
-        <trans-unit id="f111d810e7ca920bda8f128569fc002610c45314" translate="yes" xml:space="preserve">
-          <source>Perl</source>
-          <target state="translated">Perl</target>
-        </trans-unit>
-        <trans-unit id="6e211e278fc97780451705c4eb99e429ff84722f" translate="yes" xml:space="preserve">
-          <source>Perl %s required (did you mean %s?)--this is only %s, stopped</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="57d705397ece0db459660f487bdc69be0c678860" translate="yes" xml:space="preserve">
-          <source>Perl %s required--this is only %s, stopped</source>
-          <target state="new"/>
-        </trans-unit>
-        <trans-unit id="c1f70e71f78a6960e6bfc54f17ed9725d674c2b0" translate="yes" xml:space="preserve">
-          <source>Perl 5 Documentation</source>
-          <target state="translated">Documentación de Perl 5</target>
-        </trans-unit>
-        <trans-unit id="8f5e9c26fdc65b3f883a3cb850a843ffd41fb0f9" translate="yes" xml:space="preserve">
-          <source>Perl 5 Porters</source>
-          <target state="translated">Perl 5 Portadores</target>
-        </trans-unit>
-        <trans-unit id="142bd9030035d40d81779a4f9a904554905faa01" translate="yes" xml:space="preserve">
-          <source>Perl 5 has extension mechanisms, modules and XS, specifically to avoid the need to keep changing the Perl interpreter. You can write modules that export functions, you can give those functions prototypes so they can be called like built-in functions, you can even write XS code to mess with the runtime data structures of the Perl interpreter if you want to implement really complicated things.</source>
-          <target state="translated">Perl 5 tiene mecanismos de extensión,módulos y XS,específicamente para evitar la necesidad de seguir cambiando el intérprete de Perl.Puedes escribir módulos que exporten funciones,puedes dar a esas funciones prototipos para que puedan ser llamadas como funciones incorporadas,incluso puedes escribir código XS para meterte con las estructuras de datos en tiempo de ejecución del intérprete de Perl si quieres implementar cosas realmente complicadas.</target>
-        </trans-unit>
-        <trans-unit id="365a603ab08b813cf9c586a16f80eeba34a1d121" translate="yes" xml:space="preserve">
-          <source>Perl 5 is developed by a community, not a corporate entity. Every change contributed to the Perl core is the result of a donation. Typically, these donations are contributions of code or time by individual members of our community. On occasion, these donations come in the form of corporate or organizational sponsorship of a particular individual or project.</source>
-          <target state="translated">El Perl 5 es desarrollado por una comunidad,no por una entidad corporativa.Cada cambio contribuido al núcleo de Perl es el resultado de una donación.Típicamente,estas donaciones son contribuciones de código o tiempo por miembros individuales de nuestra comunidad.En ocasiones,estas donaciones vienen en forma de patrocinio corporativo u organizacional de un individuo o proyecto en particular.</target>
-        </trans-unit>
-        <trans-unit id="c7abcac9fa9f634d755f347614a5c92a44d2c3e5" translate="yes" xml:space="preserve">
-          <source>Perl 5 was successfully compiled and tested on:</source>
-          <target state="translated">El Perl 5 fue compilado y probado con éxito:</target>
-        </trans-unit>
-        <trans-unit id="c7ebebb63cc5cd6e093751f9acf8676fc8362950" translate="yes" xml:space="preserve">
-          <source>Perl 5.10 added three specials, &lt;code&gt;${^MATCH}&lt;/code&gt; , &lt;code&gt;${^PREMATCH}&lt;/code&gt; , and &lt;code&gt;${^POSTMATCH}&lt;/code&gt; to do the same job but without the global performance penalty. Perl 5.10 only sets these variables if you compile or execute the regular expression with the &lt;code&gt;/p&lt;/code&gt; modifier.</source>
-          <target state="translated">Perl 5.10 agreg&amp;oacute; tres especiales, &lt;code&gt;${^MATCH}&lt;/code&gt; , &lt;code&gt;${^PREMATCH}&lt;/code&gt; y &lt;code&gt;${^POSTMATCH}&lt;/code&gt; para hacer el mismo trabajo pero sin la penalizaci&amp;oacute;n de rendimiento global. Perl 5.10 solo establece estas variables si compila o ejecuta la expresi&amp;oacute;n regular con el modificador &lt;code&gt;/p&lt;/code&gt; .</target>
         </trans-unit>
       </group>
     </body>
