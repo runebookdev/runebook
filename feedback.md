@@ -2,11 +2,11 @@
 
 Issue
 
-[#458](https://github.com/runebookdev/runebook/issues/458)
+[#434](https://github.com/runebookdev/runebook/issues/434)
 
 User
 
-[runebookdev](https://github.com/runebookdev/)
+[kawaway](https://github.com/kawaway/)
 
 Language
 
@@ -17,27 +17,27 @@ ja
 Document
 
 ```
-angular
+dom
 ```
 
 
 English
 
 ```
-In <a href="glossary#schematic">schematics</a>, a virtual file system represented by the <code>Tree</code> class. Schematic <a href="glossary#rule">rules</a> take a tree object as input, operate on them, and return a new tree object.
+A <a href="domstring"><code>DOMString</code></a> specifying the candidate's media stream identification tag which uniquely identifies the media stream within the component with which the candidate is associated, or <code>null</code> if no such association exists.
 ```
 
 Before
 
 ```
-では<a href="glossary#schematic">回路図</a>、仮想ファイルシステムは、によって表される <code>Tree</code> クラス。スケマティック<a href="glossary#rule">ルール</a>は、ツリーオブジェクトを入力として受け取り、それらを操作して、新しいツリーオブジェクトを返します。
+A <a href="domstring"> <code>DOMString</code> </a>一意候補が関連する、またはしているコンポーネント内のメディアストリーム識別候補のメディアストリーム識別タグ指定 <code>null</code> そのような関連付けが存在しない場合に。
 ```
 
 
 After
 
 ```
-<a href="glossary#schematic">Schematics</a> は、<code>Tree</code> クラスで表される仮想ファイルシステムです。Schematics の<a href="glossary#rule">ルール</a>は、Tree オブジェクトを入力として受け取り、それらを操作して、新しい Treeオブジェクトを返します。
+A <a href="domstring"> <code>DOMString</code> </a>候補が関連付けられているコンポーネント内のメディアストリームを一意に識別する候補のメディアストリーム識別タグを指定する。そのような関連付けが存在しない場合は <code>null</code> を指定する。
 ```
 
 ---
