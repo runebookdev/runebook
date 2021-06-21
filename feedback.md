@@ -2,42 +2,42 @@
 
 Issue
 
-[#418](https://github.com/runebookdev/runebook/issues/418)
+[#419](https://github.com/runebookdev/runebook/issues/419)
 
 User
 
-[aalvarezp](https://github.com/aalvarezp/)
+[kawabet](https://github.com/kawabet/)
 
 Language
 
 ```
-es
+ja
 ```
 
 Document
 
 ```
-django
+django_rest_framework
 ```
 
 
 English
 
 ```
-A callable that takes the value of the <code>CheckboxInput</code> and returns <code>True</code> if the checkbox should be checked for that value.
+<strong>Note</strong>: With the exception of <code>DjangoObjectPermissions</code>, the provided permission classes in <code>rest_framework.permissions</code><strong>do not</strong> implement the methods necessary to check object permissions.
 ```
 
 Before
 
 ```
-Un invocable que toma el valor de <code>CheckboxInput</code> y devuelve <code>True</code> si la casilla de verificaci&oacute;n se debe marcar para ese valor.
+<strong>注</strong>：を除き <code>DjangoObjectPermissions</code> 、中に提供するアクセス権クラス <code>rest_framework.permissions</code> は<strong>していない</strong>オブジェクト権限をチェックするために必要なメソッドを実装します。
 ```
 
 
 After
 
 ```
-Un invocable que toma el valor de <code>CheckboxInput</code> y devuelve <code>True</code> si la casilla de verificación se debe marcar para ese valor.
+<strong>注</strong>：<code>DjangoObjectPermissions</code>を除いて、<code>rest_framework.permissions</code>で提供されるアクセス許可クラスは、オブジェクトのアクセス許可を確認するために必要なメソッドを実装していません。
 ```
 
 ---
