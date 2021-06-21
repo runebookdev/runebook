@@ -2,7 +2,7 @@
 
 Issue
 
-[#397](https://github.com/runebookdev/runebook/issues/397)
+[#398](https://github.com/runebookdev/runebook/issues/398)
 
 User
 
@@ -24,20 +24,20 @@ ruby
 English
 
 ```
-Public Class Methods
+Public Instance Methods
 ```
 
 Before
 
 ```
-Métodos de clase pública
+Métodos de instancia pública
 ```
 
 
 After
 
 ```
-Métodos de clase públicos
+Métodos de instancia públicos
 ```
 
 ---
