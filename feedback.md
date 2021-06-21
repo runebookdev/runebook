@@ -2,11 +2,11 @@
 
 Issue
 
-[#432](https://github.com/runebookdev/runebook/issues/432)
+[#433](https://github.com/runebookdev/runebook/issues/433)
 
 User
 
-[dodo0211](https://github.com/dodo0211/)
+[redJihun](https://github.com/redJihun/)
 
 Language
 
@@ -17,27 +17,27 @@ ko
 Document
 
 ```
-php
+tensorflow
 ```
 
 
 English
 
 ```
-<strong><code>true</code></strong> to output SSL certification information to <code>STDERR</code> on secure transfers.
+4-D Tensor of shape <code>[batch, height, width, channels]</code> or 3-D Tensor of shape <code>[height, width, channels]</code>.
 ```
 
 Before
 
 ```
-<strong> <code>true</code> </strong>보안 전송시SSL 인증 정보를 <code>STDERR</code> 에출력하려면<strong> true</strong> 입니다.
+모양의 4 차원 텐서 <code>[batch, height, width, channels]</code> 또는 모양의 3 차원 텐서 <code>[height, width, channels]</code> .
 ```
 
 
 After
 
 ```
-<strong> <code>true</code> </strong>보안 전송시SSL 인증 정보를 <code>STDERR</code> 에 출력하려면<strong> true</strong> 입니다.
+<code>[batch, height, width, channels]</code> 모양의 4 차원 텐서 또는 <code>[height, width, channels]</code> 모양의 3 차원 텐서.
 ```
 
 ---
