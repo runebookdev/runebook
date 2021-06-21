@@ -1,18 +1,44 @@
 # Feedback History
 
-[#416](https://github.com/runebookdev/runebook/issues/416) 
-by [runebookdev](https://github.com/runebookdev)
+Issue
 
-ja/docs/cmake
+[#365](https://github.com/runebookdev/runebook/issues/365)
 
-> Importing and Exporting Guide
+User
 
-Before:
+[runebookdev](https://github.com/runebookdev/)
 
-> 輸出入ガイド
+Language
 
-After:
+```
+ja
+```
 
-> インポートとエクスポートのガイド
+Document
+
+```
+postgresql
+```
+
+
+English
+
+```
+See Also
+```
+
+Before
+
+```
+も参照してください。
+```
+
+
+After
+
+```
+参照
+```
 
 ---
+Thanks!
