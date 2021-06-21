@@ -2,7 +2,7 @@
 
 Issue
 
-[#455](https://github.com/runebookdev/runebook/issues/455)
+[#456](https://github.com/runebookdev/runebook/issues/456)
 
 User
 
@@ -24,20 +24,20 @@ babel
 English
 
 ```
-In
+You can read more about configuring plugin options <a href="../plugins/index#plugin-options">here</a>
 ```
 
 Before
 
 ```
-In
+You can read more about configuring plugin options <a href="../plugins/index#plugin-options">here</a>
 ```
 
 
 After
 
 ```
-入力
+より詳細なプラグイン オプションの設定については、<a href="../plugins/index#plugin-options">こちら</a><a href="./plugins/index#plugin-options"></a> を参照してください。
 ```
 
 ---
