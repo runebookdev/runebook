@@ -2,42 +2,42 @@
 
 Issue
 
-[#400](https://github.com/runebookdev/runebook/issues/400)
+[#401](https://github.com/runebookdev/runebook/issues/401)
 
 User
 
-[JaeHyeokSim](https://github.com/JaeHyeokSim/)
+[Otogeja](https://github.com/Otogeja/)
 
 Language
 
 ```
-ko
+ja
 ```
 
 Document
 
 ```
-php
+pygame
 ```
 
 
 English
 
 ```
-Returns <strong><code>true</code></strong> on success or <strong><code>false</code></strong> on failure.
+Get information about the current windowing system
 ```
 
 Before
 
 ```
-성공하면 <strong> <code>false</code> </strong> 를, 실패하면 <strong>false</strong> 를 반환 <strong> <code>true</code> </strong> .<strong></strong>
+現在の窓ガラスについての情報を得る
 ```
 
 
 After
 
 ```
-성공하면 <strong> <code>true</code> </strong> 를, 실패하면 <strong><code>false</code></strong> 를 반환
+現在の ウインドウについての情報を得る
 ```
 
 ---
