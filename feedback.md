@@ -2,43 +2,42 @@
 
 Issue
 
-[#437](https://github.com/runebookdev/runebook/issues/437)
+[#438](https://github.com/runebookdev/runebook/issues/438)
 
 User
 
-[stopguard](https://github.com/stopguard/)
+[juggernautjp](https://github.com/juggernautjp/)
 
 Language
 
 ```
-ru
+ja
 ```
 
 Document
 
 ```
-redis
+electron
 ```
 
 
 English
 
 ```
-We provide two implementations of this pattern using <a href="incr">INCR</a>, where we assume that the problem to solve is limiting the number of API calls to a maximum of <em>ten requests per second per IP address</em>.
+Class: Menu
 ```
 
 Before
 
 ```
-Мы предоставляем две реализации этого шаблона с использованием <a href="incr">INCR</a> , где мы предполагаем, что проблема, которую необходимо решить, ограничивает количество вызовов API максимум <em>десятью запросами в секунду на IP-адрес</em> .
+クラスのご案内 メニュー
 ```
 
 
 After
 
 ```
-Мы предоставляем две реализации этого шаблона с использованием <a href="incr">INCR</a> , где мы предполагаем, что проблема, которую необходимо решить, ограничивает количество вызовов API максимум <em>десятью запросами в секунду на IP-адрес</em> .
-Бесит всплывающее окно.
+Menu クラス
 ```
 
 ---
