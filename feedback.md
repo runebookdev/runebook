@@ -2,42 +2,43 @@
 
 Issue
 
-[#433](https://github.com/runebookdev/runebook/issues/433)
+[#437](https://github.com/runebookdev/runebook/issues/437)
 
 User
 
-[redJihun](https://github.com/redJihun/)
+[stopguard](https://github.com/stopguard/)
 
 Language
 
 ```
-ko
+ru
 ```
 
 Document
 
 ```
-tensorflow
+redis
 ```
 
 
 English
 
 ```
-4-D Tensor of shape <code>[batch, height, width, channels]</code> or 3-D Tensor of shape <code>[height, width, channels]</code>.
+We provide two implementations of this pattern using <a href="incr">INCR</a>, where we assume that the problem to solve is limiting the number of API calls to a maximum of <em>ten requests per second per IP address</em>.
 ```
 
 Before
 
 ```
-모양의 4 차원 텐서 <code>[batch, height, width, channels]</code> 또는 모양의 3 차원 텐서 <code>[height, width, channels]</code> .
+Мы предоставляем две реализации этого шаблона с использованием <a href="incr">INCR</a> , где мы предполагаем, что проблема, которую необходимо решить, ограничивает количество вызовов API максимум <em>десятью запросами в секунду на IP-адрес</em> .
 ```
 
 
 After
 
 ```
-<code>[batch, height, width, channels]</code> 모양의 4 차원 텐서 또는 <code>[height, width, channels]</code> 모양의 3 차원 텐서.
+Мы предоставляем две реализации этого шаблона с использованием <a href="incr">INCR</a> , где мы предполагаем, что проблема, которую необходимо решить, ограничивает количество вызовов API максимум <em>десятью запросами в секунду на IP-адрес</em> .
+Бесит всплывающее окно.
 ```
 
 ---
