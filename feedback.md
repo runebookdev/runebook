@@ -2,7 +2,7 @@
 
 Issue
 
-[#439](https://github.com/runebookdev/runebook/issues/439)
+[#440](https://github.com/runebookdev/runebook/issues/440)
 
 User
 
@@ -24,20 +24,20 @@ electron
 English
 
 ```
-Class: MenuItem
+Add items to native application menus and context menus.
 ```
 
 Before
 
 ```
-クラスを使用しています。メニュー項目
+ネイティブアプリケーションメニューやコンテキストメニューに項目を追加します。
 ```
 
 
 After
 
 ```
-MenuItem クラス
+ネイティブ アプリケーションのメニューやコンテキストメニューに項目を追加します。
 ```
 
 ---
