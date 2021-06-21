@@ -2,7 +2,7 @@
 
 Issue
 
-[#445](https://github.com/runebookdev/runebook/issues/445)
+[#447](https://github.com/runebookdev/runebook/issues/447)
 
 User
 
@@ -24,20 +24,20 @@ babel
 English
 
 ```
-Installation
+Usage
 ```
 
 Before
 
 ```
-Installation
+Usage
 ```
 
 
 After
 
 ```
-インストール方法
+設定方法
 ```
 
 ---
