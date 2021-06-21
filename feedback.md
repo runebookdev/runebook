@@ -2,7 +2,7 @@
 
 Issue
 
-[#457](https://github.com/runebookdev/runebook/issues/457)
+[#442](https://github.com/runebookdev/runebook/issues/442)
 
 User
 
@@ -17,27 +17,27 @@ ja
 Document
 
 ```
-babel
+electron
 ```
 
 
 English
 
 ```
-References
+Returns <code>Menu</code>
 ```
 
 Before
 
 ```
-References
+返品 <code>Menu</code>
 ```
 
 
 After
 
 ```
-参考文献
+返値 <code>Menu</code>
 ```
 
 ---
