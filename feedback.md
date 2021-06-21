@@ -2,11 +2,11 @@
 
 Issue
 
-[#405](https://github.com/runebookdev/runebook/issues/405)
+[#406](https://github.com/runebookdev/runebook/issues/406)
 
 User
 
-[tkoba965](https://github.com/tkoba965/)
+[Summer498](https://github.com/Summer498/)
 
 Language
 
@@ -17,27 +17,27 @@ ja
 Document
 
 ```
-cmake
+gcc
 ```
 
 
 English
 
 ```
-If <a href="../prop_tgt/skip_build_rpath#prop_tgt:SKIP_BUILD_RPATH" id="index-1-prop_tgt:SKIP_BUILD_RPATH"><code>SKIP_BUILD_RPATH</code></a>, <a href="../variable/cmake_skip_rpath#variable:CMAKE_SKIP_RPATH" id="index-1-variable:CMAKE_SKIP_RPATH"><code>CMAKE_SKIP_RPATH</code></a> or <a href="../variable/cmake_skip_install_rpath#variable:CMAKE_SKIP_INSTALL_RPATH" id="index-1-variable:CMAKE_SKIP_INSTALL_RPATH"><code>CMAKE_SKIP_INSTALL_RPATH</code></a> were used to strip the directory portion of the <code>install_name</code> of a target, one may set <code>INSTALL_NAME_DIR=""</code> instead.
+If you are writing a header file that must work when included in ISO C programs, write <code><strong>typeof</strong></code> instead of <code>typeof</code>. See <a href="alternate-keywords#Alternate-Keywords">Alternate Keywords</a>.
 ```
 
 Before
 
 ```
-場合<a href="../prop_tgt/skip_build_rpath#prop_tgt:SKIP_BUILD_RPATH" id="index-1-prop_tgt:SKIP_BUILD_RPATH"> <code>SKIP_BUILD_RPATH</code> </a>、<a href="../variable/cmake_skip_rpath#variable:CMAKE_SKIP_RPATH" id="index-1-variable:CMAKE_SKIP_RPATH"> <code>CMAKE_SKIP_RPATH</code> </a>又は<a href="../variable/cmake_skip_install_rpath#variable:CMAKE_SKIP_INSTALL_RPATH" id="index-1-variable:CMAKE_SKIP_INSTALL_RPATH"> <code>CMAKE_SKIP_INSTALL_RPATH</code> は</a>ディレクトリ部分剥離するために使用された <code>install_name</code> ターゲットを、一つは設定してもよい <code>INSTALL_NAME_DIR=""</code> 代わりに。
+ISO Cプログラムに含まれたときに必須の作業というヘッダファイルを作成している場合、書き込みが <code>__typeof__</code> の代わりに <code>typeof</code> 演算。<a href="alternate-keywords#Alternate-Keywords">代替キーワードを</a>参照してください。
 ```
 
 
 After
 
 ```
-もし<a href="../prop_tgt/skip_build_rpath#prop_tgt:SKIP_BUILD_RPATH" id="index-1-prop_tgt:SKIP_BUILD_RPATH"> <code>SKIP_BUILD_RPATH</code> </a>、<a href="../variable/cmake_skip_rpath#variable:CMAKE_SKIP_RPATH" id="index-1-variable:CMAKE_SKIP_RPATH"> <code>CMAKE_SKIP_RPATH</code> </a>又は<a href="../variable/cmake_skip_install_rpath#variable:CMAKE_SKIP_INSTALL_RPATH" id="index-1-variable:CMAKE_SKIP_INSTALL_RPATH"> <code>CMAKE_SKIP_INSTALL_RPATH</code> を</a> <code>install_name</code> ターゲットを空にするために使いたければ <code>INSTALL_NAME_DIR=""</code> を指定します。
+ISO Cプログラムに含まれたときに機能するべきヘッダファイルを作成している場合、<code>typeof</code> の代わりに<code><strong>typeof</strong></code>と書いてください。<a href="alternate-keywords#Alternate-Keywords">代替キーワードを</a>参照してください。
 ```
 
 ---
