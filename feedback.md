@@ -2,7 +2,7 @@
 
 Issue
 
-[#452](https://github.com/runebookdev/runebook/issues/452)
+[#453](https://github.com/runebookdev/runebook/issues/453)
 
 User
 
@@ -24,20 +24,20 @@ babel
 English
 
 ```
-Out (<code>loose === true</code>)
+Out (<code>loose === false</code>)
 ```
 
 Before
 
 ```
-Out ( <code>loose === true</code> )
+Out ( <code>loose === false</code> )
 ```
 
 
 After
 
 ```
-出力 ( <code>loose === true</code> の場合)
+出力 ( <code>loose === false</code> )
 ```
 
 ---
