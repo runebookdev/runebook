@@ -2,42 +2,42 @@
 
 Issue
 
-[#398](https://github.com/runebookdev/runebook/issues/398)
+[#400](https://github.com/runebookdev/runebook/issues/400)
 
 User
 
-[andrewtblake](https://github.com/andrewtblake/)
+[JaeHyeokSim](https://github.com/JaeHyeokSim/)
 
 Language
 
 ```
-es
+ko
 ```
 
 Document
 
 ```
-ruby
+php
 ```
 
 
 English
 
 ```
-Public Instance Methods
+Returns <strong><code>true</code></strong> on success or <strong><code>false</code></strong> on failure.
 ```
 
 Before
 
 ```
-Métodos de instancia pública
+성공하면 <strong> <code>false</code> </strong> 를, 실패하면 <strong>false</strong> 를 반환 <strong> <code>true</code> </strong> .<strong></strong>
 ```
 
 
 After
 
 ```
-Métodos de instancia públicos
+성공하면 <strong> <code>true</code> </strong> 를, 실패하면 <strong><code>false</code></strong> 를 반환
 ```
 
 ---
