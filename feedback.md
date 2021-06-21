@@ -2,11 +2,11 @@
 
 Issue
 
-[#436](https://github.com/runebookdev/runebook/issues/436)
+[#450](https://github.com/runebookdev/runebook/issues/450)
 
 User
 
-[ryota2357](https://github.com/ryota2357/)
+[juggernautjp](https://github.com/juggernautjp/)
 
 Language
 
@@ -17,27 +17,27 @@ ja
 Document
 
 ```
-dart
+babel
 ```
 
 
 English
 
 ```
-<a href="../dart-core/iterable/single">single</a> &rarr; E
+Example
 ```
 
 Before
 
 ```
-<a href="../dart-core/iterable/single">シングル</a> &rarr;E
+Example
 ```
 
 
 After
 
 ```
-<a href="../dart-core/iterable/single">single</a> →E
+例
 ```
 
 ---
