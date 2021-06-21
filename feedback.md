@@ -2,11 +2,11 @@
 
 Issue
 
-[#434](https://github.com/runebookdev/runebook/issues/434)
+[#436](https://github.com/runebookdev/runebook/issues/436)
 
 User
 
-[kawaway](https://github.com/kawaway/)
+[ryota2357](https://github.com/ryota2357/)
 
 Language
 
@@ -17,27 +17,27 @@ ja
 Document
 
 ```
-dom
+dart
 ```
 
 
 English
 
 ```
-A <a href="domstring"><code>DOMString</code></a> specifying the candidate's media stream identification tag which uniquely identifies the media stream within the component with which the candidate is associated, or <code>null</code> if no such association exists.
+<a href="../dart-core/iterable/single">single</a> &rarr; E
 ```
 
 Before
 
 ```
-A <a href="domstring"> <code>DOMString</code> </a>一意候補が関連する、またはしているコンポーネント内のメディアストリーム識別候補のメディアストリーム識別タグ指定 <code>null</code> そのような関連付けが存在しない場合に。
+<a href="../dart-core/iterable/single">シングル</a> &rarr;E
 ```
 
 
 After
 
 ```
-A <a href="domstring"> <code>DOMString</code> </a>候補が関連付けられているコンポーネント内のメディアストリームを一意に識別する候補のメディアストリーム識別タグを指定する。そのような関連付けが存在しない場合は <code>null</code> を指定する。
+<a href="../dart-core/iterable/single">single</a> →E
 ```
 
 ---
