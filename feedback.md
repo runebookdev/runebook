@@ -2,7 +2,7 @@
 
 Issue
 
-[#401](https://github.com/runebookdev/runebook/issues/401)
+[#402](https://github.com/runebookdev/runebook/issues/402)
 
 User
 
@@ -24,20 +24,20 @@ pygame
 English
 
 ```
-Get information about the current windowing system
+<strong>width</strong> (<em>int</em>) --
 ```
 
 Before
 
 ```
-現在の窓ガラスについての情報を得る
+<strong>幅</strong>（<em>int</em>）-
 ```
 
 
 After
 
 ```
-現在の ウインドウについての情報を得る
+<strong>width</strong>（<em>int</em>）-
 ```
 
 ---
