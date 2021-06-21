@@ -2,7 +2,7 @@
 
 Issue
 
-[#440](https://github.com/runebookdev/runebook/issues/440)
+[#441](https://github.com/runebookdev/runebook/issues/441)
 
 User
 
@@ -24,20 +24,20 @@ electron
 English
 
 ```
-Add items to native application menus and context menus.
+Returns <code>Menu | null</code> - The application menu, if set, or <code>null</code>, if not set.
 ```
 
 Before
 
 ```
-ネイティブアプリケーションメニューやコンテキストメニューに項目を追加します。
+返品 <code>Menu | null</code> 設定されている場合はアプリケーションメニュー、設定されていない場合は <code>null</code> 。
 ```
 
 
 After
 
 ```
-ネイティブ アプリケーションのメニューやコンテキストメニューに項目を追加します。
+返値 <code>Menu | null</code> 設定されている場合はアプリケーション メニュー、設定されていない場合は <code>null</code> 。
 ```
 
 ---
