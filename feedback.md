@@ -2,7 +2,7 @@
 
 Issue
 
-[#413](https://github.com/runebookdev/runebook/issues/413)
+[#414](https://github.com/runebookdev/runebook/issues/414)
 
 User
 
@@ -24,20 +24,20 @@ django
 English
 
 ```
-If the <a href="../../ref/class-based-views/mixins-editing#django.views.generic.edit.ModelFormMixin.model"><code>model</code></a> attribute is given, that model class will be used.
+If a <a href="../../ref/class-based-views/mixins-single-object#django.views.generic.detail.SingleObjectMixin.queryset"><code>queryset</code></a> is given, the model for that queryset will be used.
 ```
 
 Before
 
 ```
-Si el <a href="../../ref/class-based-views/mixins-editing#django.views.generic.edit.ModelFormMixin.model"> <code>model</code> o</a> se da atributo, se utilizar&aacute; esa clase modelo.
+Si se proporciona un <a href="../../ref/class-based-views/mixins-single-object#django.views.generic.detail.SingleObjectMixin.queryset"> <code>queryset</code> </a> consultas, se utilizar&aacute; el modelo para ese conjunto de consultas.
 ```
 
 
 After
 
 ```
-Si el atributo <a href="../../ref/class-based-views/mixins-editing#django.views.generic.edit.ModelFormMixin.model"> <code>model</code> </a> es dado, se utilizará esa clase modelo.
+Si se proporciona un <a href="../../ref/class-based-views/mixins-single-object#django.views.generic.detail.SingleObjectMixin.queryset"> <code>queryset</code> </a> , el modelo para ese queryset (o consulta) sera usado.
 ```
 
 ---
