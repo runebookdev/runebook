@@ -2,7 +2,7 @@
 
 Issue
 
-[#411](https://github.com/runebookdev/runebook/issues/411)
+[#412](https://github.com/runebookdev/runebook/issues/412)
 
 User
 
@@ -24,20 +24,20 @@ django
 English
 
 ```
-Basic forms
+Given a contact form:
 ```
 
 Before
 
 ```
-Formas básicas
+Dato un modulo di contatto:
 ```
 
 
 After
 
 ```
-Formularios Básicos
+Dando un formulario de contacto:
 ```
 
 ---
