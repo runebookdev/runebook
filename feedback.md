@@ -2,11 +2,11 @@
 
 Issue
 
-[#403](https://github.com/runebookdev/runebook/issues/403)
+[#365](https://github.com/runebookdev/runebook/issues/365)
 
 User
 
-[babydaemons](https://github.com/babydaemons/)
+[runebookdev](https://github.com/runebookdev/)
 
 Language
 
@@ -17,27 +17,27 @@ ja
 Document
 
 ```
-cpp
+postgresql
 ```
 
 
 English
 
 ```
-input sequence
+See Also
 ```
 
 Before
 
 ```
-にゅうりょくシーケンス
+も参照してください。
 ```
 
 
 After
 
 ```
-入力シーケンス
+参照
 ```
 
 ---
