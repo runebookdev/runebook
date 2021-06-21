@@ -2,7 +2,7 @@
 
 Issue
 
-[#453](https://github.com/runebookdev/runebook/issues/453)
+[#454](https://github.com/runebookdev/runebook/issues/454)
 
 User
 
@@ -30,14 +30,14 @@ Out (<code>loose === false</code>)
 Before
 
 ```
-Out ( <code>loose === false</code> )
+出力 ( <code>loose === false</code> )
 ```
 
 
 After
 
 ```
-出力 ( <code>loose === false</code> )
+出力 ( <code>loose === false</code> の場合)
 ```
 
 ---
