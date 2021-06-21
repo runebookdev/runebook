@@ -2,11 +2,11 @@
 
 Issue
 
-[#444](https://github.com/runebookdev/runebook/issues/444)
+[#445](https://github.com/runebookdev/runebook/issues/445)
 
 User
 
-[gkkachi](https://github.com/gkkachi/)
+[juggernautjp](https://github.com/juggernautjp/)
 
 Language
 
@@ -17,27 +17,27 @@ ja
 Document
 
 ```
-puppeteer
+babel
 ```
 
 
 English
 
 ```
-This function will return a <a href="#class-jshandle">JSHandle</a> by default, however if your <code>pageFunction</code> returns an HTML element you will get back an <code>ElementHandle</code>:
+Installation
 ```
 
 Before
 
 ```
-この関数は戻ります<a href="#class-jshandle">JSHandleを</a>お使いの場合は、デフォルトで <code>pageFunction</code> は、あなたが戻って取得するHTML要素を返し <code>ElementHandle</code> は：
+Installation
 ```
 
 
 After
 
 ```
-この関数はデフォルトで<a href="#class-jshandle">JSHandle</a>を返します。しかし、 <code>pageFunction</code> がHTML要素を返す場合には <code>ElementHandle</code> を返します：
+インストール方法
 ```
 
 ---
