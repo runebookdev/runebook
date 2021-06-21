@@ -2,42 +2,42 @@
 
 Issue
 
-[#426](https://github.com/runebookdev/runebook/issues/426)
+[#430](https://github.com/runebookdev/runebook/issues/430)
 
 User
 
-[simonNozaki](https://github.com/simonNozaki/)
+[ohjaekyun](https://github.com/ohjaekyun/)
 
 Language
 
 ```
-ja
+ko
 ```
 
 Document
 
 ```
-kotlin
+pytorch
 ```
 
 
 English
 
 ```
-Java Interoperability
+<strong>vdim</strong> &ndash; total number of features in value. Default: None.
 ```
 
 Before
 
 ```
-ジャバ相互運用性
+<strong>vdim</strong> &ndash; 가치있는 총 기능 수입니다. 기본값 : 없음.
 ```
 
 
 After
 
 ```
-Java相互運用性
+<strong>vdim</strong> – value 값의 총 기능 수입니다. 기본값 : 없음.
 ```
 
 ---
