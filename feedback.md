@@ -2,7 +2,7 @@
 
 Issue
 
-[#421](https://github.com/runebookdev/runebook/issues/421)
+[#422](https://github.com/runebookdev/runebook/issues/422)
 
 User
 
@@ -24,20 +24,20 @@ sequelize
 English
 
 ```
-This adds a default hook to all models, which is run if the model does not define its own <code>beforeCreate</code> hook:
+Permanent Hooks (with <code>sequelize.addHook</code>)
 ```
 
 Before
 
 ```
-Esto agrega un gancho predeterminado a todos los modelos, que se ejecuta si el modelo no define el suyo propio <code>beforeCreate</code> hook:
+None
 ```
 
 
 After
 
 ```
-Esto agrega un gancho predeterminado a todos los modelos, que se ejecuta si el modelo no define su propio gancho <code>beforeCreate</code>:
+Ganchos permanentes (con <code>sequelize.addHook</code>)
 ```
 
 ---
