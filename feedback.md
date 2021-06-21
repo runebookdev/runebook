@@ -2,42 +2,42 @@
 
 Issue
 
-[#365](https://github.com/runebookdev/runebook/issues/365)
+[#397](https://github.com/runebookdev/runebook/issues/397)
 
 User
 
-[runebookdev](https://github.com/runebookdev/)
+[andrewtblake](https://github.com/andrewtblake/)
 
 Language
 
 ```
-ja
+es
 ```
 
 Document
 
 ```
-postgresql
+ruby
 ```
 
 
 English
 
 ```
-See Also
+Public Class Methods
 ```
 
 Before
 
 ```
-も参照してください。
+Métodos de clase pública
 ```
 
 
 After
 
 ```
-参照
+Métodos de clase públicos
 ```
 
 ---
