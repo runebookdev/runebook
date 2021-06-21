@@ -2,7 +2,7 @@
 
 Issue
 
-[#438](https://github.com/runebookdev/runebook/issues/438)
+[#439](https://github.com/runebookdev/runebook/issues/439)
 
 User
 
@@ -24,20 +24,20 @@ electron
 English
 
 ```
-Class: Menu
+Class: MenuItem
 ```
 
 Before
 
 ```
-クラスのご案内 メニュー
+クラスを使用しています。メニュー項目
 ```
 
 
 After
 
 ```
-Menu クラス
+MenuItem クラス
 ```
 
 ---
