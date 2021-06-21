@@ -2,42 +2,42 @@
 
 Issue
 
-[#422](https://github.com/runebookdev/runebook/issues/422)
+[#423](https://github.com/runebookdev/runebook/issues/423)
 
 User
 
-[jvasque](https://github.com/jvasque/)
+[simonNozaki](https://github.com/simonNozaki/)
 
 Language
 
 ```
-es
+ja
 ```
 
 Document
 
 ```
-sequelize
+kotlin
 ```
 
 
 English
 
 ```
-Permanent Hooks (with <code>sequelize.addHook</code>)
+What does this signature say? It says that every time I append a string to something (a <code>StringBuilder</code>, some kind of a log, a console, etc.) I have to catch those <code>IOExceptions</code>. Why? Because it might be performing IO (<code>Writer</code> also implements <code>Appendable</code>)&hellip; So it results in this kind of code all over the place:
 ```
 
 Before
 
 ```
-None
+この署名は何と言っていますか？何か（ <code>StringBuilder</code> 、ある種のログ、コンソールなど）に文字列を追加するたびに、それらの <code>IOExceptions</code> をキャッチする必要があると書かれています。どうして？IOを実行している可能性があるため（ <code>Writer</code> は <code>Appendable</code> も実装しています）&hellip;したがって、この種のコードがいたるところに発生します。
 ```
 
 
 After
 
 ```
-Ganchos permanentes (con <code>sequelize.addHook</code>)
+このシグネチャは何を伝えているでしょうか？ <code>StringBuilder</code> 、ある種のログ、コンソールなどのなにかに文字列を付け加えるたび、それらの <code>IOExceptions</code> をキャッチする必要があると書かれています。なぜでしょうか？文字列が付け加えられたものがIOを実行している可能性があるため（ <code>Writer</code> は <code>Appendable</code> も実装しています）…したがって、この種のコードがいたるところに発生します。
 ```
 
 ---
