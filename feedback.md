@@ -2,11 +2,11 @@
 
 Issue
 
-[#420](https://github.com/runebookdev/runebook/issues/420)
+[#421](https://github.com/runebookdev/runebook/issues/421)
 
 User
 
-[blas-meca](https://github.com/blas-meca/)
+[jvasque](https://github.com/jvasque/)
 
 Language
 
@@ -17,27 +17,27 @@ es
 Document
 
 ```
-django_rest_framework
+sequelize
 ```
 
 
 English
 
 ```
-Example
+This adds a default hook to all models, which is run if the model does not define its own <code>beforeCreate</code> hook:
 ```
 
 Before
 
 ```
-Example
+Esto agrega un gancho predeterminado a todos los modelos, que se ejecuta si el modelo no define el suyo propio <code>beforeCreate</code> hook:
 ```
 
 
 After
 
 ```
-Ejemplo
+Esto agrega un gancho predeterminado a todos los modelos, que se ejecuta si el modelo no define su propio gancho <code>beforeCreate</code>:
 ```
 
 ---
