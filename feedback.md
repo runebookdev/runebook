@@ -2,42 +2,42 @@
 
 Issue
 
-[#426](https://github.com/runebookdev/runebook/issues/426)
+[#410](https://github.com/runebookdev/runebook/issues/410)
 
 User
 
-[simonNozaki](https://github.com/simonNozaki/)
+[miltoncastro](https://github.com/miltoncastro/)
 
 Language
 
 ```
-ja
+es
 ```
 
 Document
 
 ```
-kotlin
+django
 ```
 
 
 English
 
 ```
-Java Interoperability
+Django&rsquo;s <em>generic views</em> were developed to ease that pain. They take certain common idioms and patterns found in view development and abstract them so that you can quickly write common views of data without having to write too much code.
 ```
 
 Before
 
 ```
-ジャバ相互運用性
+Las <em>opiniones gen&eacute;ricas</em> de Django se desarrollaron para aliviar ese dolor. Toman ciertos modismos y patrones comunes que se encuentran en el desarrollo de vistas y los resumen para que pueda escribir r&aacute;pidamente vistas comunes de datos sin tener que escribir demasiado c&oacute;digo.
 ```
 
 
 After
 
 ```
-Java相互運用性
+Las <em style="null;/*startDM*/background-color: rgba(0, 0, 0, 0) !important;/*endDM*/">vistas genéricas</em> de Django se desarrollaron para aliviar ese sufrimiento. Toman ciertos modismos y patrones comunes que se encuentran en el desarrollo de las vistas y los abstrae para que puedas escribir rápidamente vistas comunes de datos sin tener que escribir demasiado código.
 ```
 
 ---
