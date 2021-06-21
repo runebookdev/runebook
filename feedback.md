@@ -2,42 +2,42 @@
 
 Issue
 
-[#403](https://github.com/runebookdev/runebook/issues/403)
+[#404](https://github.com/runebookdev/runebook/issues/404)
 
 User
 
-[babydaemons](https://github.com/babydaemons/)
+[fengruichao](https://github.com/fengruichao/)
 
 Language
 
 ```
-ja
+zh-CN
 ```
 
 Document
 
 ```
-cpp
+ansible
 ```
 
 
 English
 
 ```
-input sequence
+<p>Verifying collections with <code>ansible-galaxy</code></p>
 ```
 
 Before
 
 ```
-にゅうりょくシーケンス
+None
 ```
 
 
 After
 
 ```
-入力シーケンス
+使用 <code>ansible-galaxy</code> 验证集合
 ```
 
 ---
