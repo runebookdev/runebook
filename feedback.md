@@ -2,7 +2,7 @@
 
 Issue
 
-[#450](https://github.com/runebookdev/runebook/issues/450)
+[#451](https://github.com/runebookdev/runebook/issues/451)
 
 User
 
@@ -24,20 +24,20 @@ babel
 English
 
 ```
-Example
+When <code>true</code>, this transform will pretend <code>document.all</code> does not exist, and perform loose equality checks with <code>null</code> instead of strict equality checks against both <code>null</code> and <code>undefined</code>.
 ```
 
 Before
 
 ```
-Example
+場合は <code>true</code> 、これがふります変換 <code>document.all</code> の存在しない、として緩やかな平等のチェックを行う <code>null</code> 代わりの両方に対する厳密な等価性チェックの <code>null</code> と <code>undefined</code> 。
 ```
 
 
 After
 
 ```
-例
+<code>true</code> の場合、この変換は、<code>document.all</code> が存在しないことを装い、<code>null</code>と<code>undefined</code> の両方に対する厳格な等値性チェックの代わりに、<code>null</code> との緩やかな等値性チェックを実行します。
 ```
 
 ---
