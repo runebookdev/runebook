@@ -2,11 +2,11 @@
 
 Issue
 
-[#402](https://github.com/runebookdev/runebook/issues/402)
+[#403](https://github.com/runebookdev/runebook/issues/403)
 
 User
 
-[Otogeja](https://github.com/Otogeja/)
+[babydaemons](https://github.com/babydaemons/)
 
 Language
 
@@ -17,27 +17,27 @@ ja
 Document
 
 ```
-pygame
+cpp
 ```
 
 
 English
 
 ```
-<strong>width</strong> (<em>int</em>) --
+input sequence
 ```
 
 Before
 
 ```
-<strong>幅</strong>（<em>int</em>）-
+にゅうりょくシーケンス
 ```
 
 
 After
 
 ```
-<strong>width</strong>（<em>int</em>）-
+入力シーケンス
 ```
 
 ---
